@@ -805,6 +805,8 @@ public class BagController : XSingleton<BagController>
                     bagGridComponent.equipAttributeImage =
                         ResourcesConfig.GetEquipSprite((EquipTable)list[i]);
                     bagGridComponent.EquipType = EquipType.Equip;
+                    
+                  //  bagGridComponent.animator.Play("GreenEdge");
 
                     // 隐藏数量显示
                     Transform countTransform = bagGridins.transform.Find("Count");

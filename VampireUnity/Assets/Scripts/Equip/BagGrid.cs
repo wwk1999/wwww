@@ -17,6 +17,7 @@ public class BagGrid : MonoBehaviour
     public Button gridButton;
     [NonSerialized]public Sprite equipAttributeImage;
     public GameObject E;
+    public Animator animator;
 
     private void Awake()
     {

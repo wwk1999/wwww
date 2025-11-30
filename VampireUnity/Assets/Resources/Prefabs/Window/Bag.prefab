@@ -768,6 +768,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridButton: {fileID: 2811050456265791224}
+  E: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &1157466259873372192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridButton: {fileID: 1689856422995949865}
+  E: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &1585649141474179200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,6 +1694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridButton: {fileID: 8189177402800775771}
+  E: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &2653737563999461541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridButton: {fileID: 7151249709741326923}
+  E: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &3188404627260510961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4489,6 +4497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridButton: {fileID: 5408345742374291841}
+  E: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &5695873175978259670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5449,7 +5459,6 @@ MonoBehaviour:
   defenseText: {fileID: 5155799666060739887}
   hpText: {fileID: 2713917073095214172}
   playerButton: {fileID: 0}
-  attributeButton: {fileID: 8791486365761631228}
   playerDamageAttributeText: {fileID: 1289087293378421537}
   playerHPAttributeText: {fileID: 2713917073095214172}
   playerDefenseAttributeText: {fileID: 5155799666060739887}
@@ -6110,6 +6119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridButton: {fileID: 8169915979516956108}
+  E: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &8362839587972069945
 GameObject:
   m_ObjectHideFlags: 0
