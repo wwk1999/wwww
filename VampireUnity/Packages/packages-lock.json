@@ -1,14 +1,13 @@
 {
   "dependencies": {
     "com.coffee.ui-particle": {
-      "version": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
+      "version": "file:com.coffee.ui-particle",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
-      },
-      "hash": "4b98abd7469b10d55c9c623830cb6e1518f72731"
+      }
     },
     "com.unity.burst": {
       "version": "1.8.21",
@@ -181,15 +180,6 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.cn"
-    },
-    "me.qiankanglai.loopscrollrect": {
-      "version": "https://github.com/qiankanglai/LoopScrollRect.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0"
-      },
-      "hash": "b07d7b59b944f46605c674069594e989f039018e"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
