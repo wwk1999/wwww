@@ -107,6 +107,20 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>HuoShanHelmetQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>HuoShanNecklaceQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>HuoShanShoeQueue = new Queue<GameObject>();
+    
+    [NonReorderable]public Queue<GameObject>PurpleCloakQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PurpleClothQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PurpleRingQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PurpleHelmetQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PurpleNecklaceQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PurpleShoeQueue = new Queue<GameObject>();
+    
+    [NonReorderable]public Queue<GameObject>OrangeCloakQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>OrangeClothQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>OrangeRingQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>OrangeHelmetQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>OrangeNecklaceQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>OrangeShoeQueue = new Queue<GameObject>();
 
 
 
@@ -257,6 +271,42 @@ public class GameController : XSingleton<GameController>
                         return HuoShanNecklaceQueue.Dequeue();
                 }
                break;
+           
+            case PlayerEquipConfig.EquipLevel.Purple:
+                switch (monsterEquip.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return PurpleCloakQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return PurpleClothQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return PurpleRingQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return PurpleShoeQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return PurpleHelmetQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return PurpleNecklaceQueue.Dequeue();
+                }
+                break;
+            
+            case PlayerEquipConfig.EquipLevel.Orange:
+                switch (monsterEquip.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return OrangeCloakQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return OrangeClothQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return OrangeRingQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return OrangeShoeQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return OrangeHelmetQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return OrangeNecklaceQueue.Dequeue();
+                }
+                break;
         }
 
         return equip;

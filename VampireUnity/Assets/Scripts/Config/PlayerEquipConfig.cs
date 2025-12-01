@@ -19,6 +19,8 @@ public class PlayerEquipConfig : MonoBehaviour
         Primary ,
         Green ,
         Blue ,
+        Purple ,
+        Orange ,
         TreeMan,
         HuoShan ,
         ZhaoZe

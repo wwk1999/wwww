@@ -42,6 +42,20 @@ namespace Tool
             {"HuoShanNecklace", "火山项链"},
             {"HuoShanRing", "火山戒指"},
             {"HuoShanShoe", "火山鞋子"},
+            
+            {"PurpleCloak", "虚空披风"},
+            {"PurpleCloth", "虚空衣服"},
+            {"PurpleHelmet", "虚空头盔"},
+            {"PurpleNecklace", "虚空项链"},
+            {"PurpleRing", "虚空戒指"},
+            {"PurpleShoe", "虚空鞋子"},
+            
+            {"OrangeCloak", "炽炎披风"},
+            {"OrangeCloth", "炽炎衣服"},
+            {"OrangeHelmet", "炽炎头盔"},
+            {"OrangeNecklace", "炽炎项链"},
+            {"OrangeRing", "炽炎戒指"},
+            {"OrangeShoe", "炽炎鞋子"},
         };
     }
 }

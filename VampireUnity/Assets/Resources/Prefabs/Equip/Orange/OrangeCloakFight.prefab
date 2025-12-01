@@ -212,30 +212,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8562913918296545211}
     m_Modifications:
-    - target: {fileID: 8250302192183325840, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250302192183373282, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250302192183399554, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
@@ -246,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
       propertyPath: m_LocalRotation.w
@@ -276,17 +252,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8250302192196887184, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
       propertyPath: m_Name
       value: BeamOrange
-      objectReference: {fileID: 0}
-    - target: {fileID: 8435275282485463736, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

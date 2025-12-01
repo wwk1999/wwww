@@ -203,12 +203,12 @@ public class ResourcesConfig : MonoBehaviour
         ZhaoZeNecklace = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeNecklace");
         
         //紫色套装
-        ZhaoZeCloth= Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloth");
-        ZhaoZeCloak = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloak");
-        ZhaoZeShoe = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleShoe");
-        ZhaoZeHelmet = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleHelmet");
-        ZhaoZeRing = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleRing");
-        ZhaoZeNecklace = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleNecklace");
+        PurpleCloth= Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloth");
+        PurpleCloak = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloak");
+        PurpleShoe = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleShoe");
+        PurpleHelmet = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleHelmet");
+        PurpleRing = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleRing");
+        PurpleNecklace = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleNecklace");
         
         //橙色套装
         OrangeCloth= Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeCloth");
