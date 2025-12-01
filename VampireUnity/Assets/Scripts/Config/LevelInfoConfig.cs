@@ -1,7 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using Equip;
 using UnityEngine;
 
+public class DiaoLuoConfig
+{
+    public static int SuitId = 0;
+    public int EquipType;
+    public DiaoLuoConfig(int suitid,int equipType)
+    {
+        SuitId = suitid;
+        EquipType = equipType;
+    }
+}
+
+public enum MonsterTypeByName
+{
+    None,
+    Snot,
+    Bat,
+    Spider,
+    Bee,
+    TreeMan,
+    XiaoHuo,
+    DaZui,
+    DunDi,
+    ChongZi,
+    HuoShanBoss,
+    ShiRenHua,
+    XiYi,
+    JiaChong,
+    ShiRenBoss,
+    QingWa
+}
 public class LevelInfoConfig 
 {
     public static bool IsOneGame = true; //第一次游戏
@@ -13,13 +44,36 @@ public class LevelInfoConfig
         set=>PlayerData.S.maxGameLevel=value;
     }
     public static LevelType CurrentGameLevelType = LevelType.Normal;
-    public static List<Sprite> LevelDiaoLuo1 = new List<Sprite>();//关卡1掉落列表
-    public static List<Sprite> LevelDiaoLuo2 = new List<Sprite>();//关卡2掉落列表
-    public static List<Sprite> LevelDiaoLuo3 = new List<Sprite>();//关卡3掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo1 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo2 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo3 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo4 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo5 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo6 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo7 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo8 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo9 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo10 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo11 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> LevelDiaoLuo12 = new List<DiaoLuoConfig>();//关卡1掉落列表
+
     
+
     public static int[] LevelMonsterCount= new int[100];//关卡敌人数量
 
-    public static List<MonsterBase> LevelMonster = new List<MonsterBase>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster1 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster2 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster3 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster4 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster5 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster6 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster7 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster8 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster9 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster10 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster11 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster12 = new List<MonsterTypeByName>();//关卡敌人列表
+
    
     public static void InitGameLevel()
     {
@@ -45,55 +99,255 @@ public class LevelInfoConfig
         LevelMonsterCount[19] = 50;
         LevelMonsterCount[20] = 100;
         LevelMonsterCount[21] = 100;
+        
+        
         if (IsOneGame)
         {
-            LevelDiaoLuo1.Add(ResourcesConfig.PrimaryCloak);
-            LevelDiaoLuo1.Add(ResourcesConfig.PrimaryCloth);
-            LevelDiaoLuo1.Add(ResourcesConfig.PrimaryShoe);
-            LevelDiaoLuo1.Add(ResourcesConfig.PrimaryHelmet);
-            LevelDiaoLuo1.Add(ResourcesConfig.PrimaryNecklace);
-            LevelDiaoLuo1.Add(ResourcesConfig.PrimaryRing);
-        }
-
-        if (IsOneGame)
-        {
-            LevelDiaoLuo2.Add(ResourcesConfig.PrimaryCloak);
-            LevelDiaoLuo2.Add(ResourcesConfig.PrimaryCloth);
-            LevelDiaoLuo2.Add(ResourcesConfig.PrimaryShoe);
-            LevelDiaoLuo2.Add(ResourcesConfig.PrimaryHelmet);
-            LevelDiaoLuo2.Add(ResourcesConfig.PrimaryNecklace);
-            LevelDiaoLuo2.Add(ResourcesConfig.PrimaryRing);
-
-            LevelDiaoLuo2.Add(ResourcesConfig.WhiteDivision);
-            LevelDiaoLuo2.Add(ResourcesConfig.WhiteExplosion);
-            LevelDiaoLuo2.Add(ResourcesConfig.WhiteDuration);
-            LevelDiaoLuo2.Add(ResourcesConfig.WhiteScale);
-            LevelDiaoLuo2.Add(ResourcesConfig.WhitePenetrate);
-            LevelDiaoLuo2.Add(ResourcesConfig.WhiteExtremeSpeed);
+            LevelMonster1.Add(MonsterTypeByName.Bat);
+            LevelMonster1.Add(MonsterTypeByName.Snot);
+            LevelMonster1.Add(MonsterTypeByName.Spider);
         }
         
         if (IsOneGame)
         {
-            LevelDiaoLuo3.Add(ResourcesConfig.PrimaryCloak);
-            LevelDiaoLuo3.Add(ResourcesConfig.PrimaryCloth);
-            LevelDiaoLuo3.Add(ResourcesConfig.PrimaryShoe);
-            LevelDiaoLuo3.Add(ResourcesConfig.PrimaryHelmet);
-            LevelDiaoLuo3.Add(ResourcesConfig.PrimaryNecklace);
-            LevelDiaoLuo3.Add(ResourcesConfig.PrimaryRing);
+            LevelMonster2.Add(MonsterTypeByName.Bat);
+            LevelMonster2.Add(MonsterTypeByName.Snot);
+            LevelMonster2.Add(MonsterTypeByName.Spider);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster3.Add(MonsterTypeByName.Bat);
+            LevelMonster3.Add(MonsterTypeByName.Snot);
+            LevelMonster3.Add(MonsterTypeByName.Spider);
+            LevelMonster3.Add(MonsterTypeByName.Bee);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster4.Add(MonsterTypeByName.Bat);
+            LevelMonster4.Add(MonsterTypeByName.Snot);
+            LevelMonster4.Add(MonsterTypeByName.Spider);
+            LevelMonster4.Add(MonsterTypeByName.Bee);
+            LevelMonster4.Add(MonsterTypeByName.TreeMan);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster5.Add(MonsterTypeByName.XiaoHuo);
+            LevelMonster5.Add(MonsterTypeByName.ChongZi);
+            LevelMonster5.Add(MonsterTypeByName.DunDi);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster6.Add(MonsterTypeByName.XiaoHuo);
+            LevelMonster6.Add(MonsterTypeByName.ChongZi);
+            LevelMonster6.Add(MonsterTypeByName.DunDi);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster7.Add(MonsterTypeByName.XiaoHuo);
+            LevelMonster7.Add(MonsterTypeByName.ChongZi);
+            LevelMonster7.Add(MonsterTypeByName.DunDi);
+            LevelMonster7.Add(MonsterTypeByName.DaZui);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster8.Add(MonsterTypeByName.XiaoHuo);
+            LevelMonster8.Add(MonsterTypeByName.ChongZi);
+            LevelMonster8.Add(MonsterTypeByName.DunDi);
+            LevelMonster8.Add(MonsterTypeByName.DaZui);
+            LevelMonster8.Add(MonsterTypeByName.HuoShanBoss);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster9.Add(MonsterTypeByName.JiaChong);
+            LevelMonster9.Add(MonsterTypeByName.XiYi);
+            LevelMonster9.Add(MonsterTypeByName.QingWa);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster10.Add(MonsterTypeByName.JiaChong);
+            LevelMonster10.Add(MonsterTypeByName.XiYi);
+            LevelMonster10.Add(MonsterTypeByName.QingWa);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster11.Add(MonsterTypeByName.JiaChong);
+            LevelMonster11.Add(MonsterTypeByName.XiYi);
+            LevelMonster11.Add(MonsterTypeByName.QingWa);
+            LevelMonster11.Add(MonsterTypeByName.ShiRenHua);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster12.Add(MonsterTypeByName.JiaChong);
+            LevelMonster12.Add(MonsterTypeByName.XiYi);
+            LevelMonster12.Add(MonsterTypeByName.QingWa);
+            LevelMonster11.Add(MonsterTypeByName.ShiRenHua);
+            LevelMonster11.Add(MonsterTypeByName.ShiRenBoss);
+        }
+        
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo1.Add(new DiaoLuoConfig(1,1));
+            LevelDiaoLuo1.Add(new DiaoLuoConfig(1,2));
+            LevelDiaoLuo1.Add(new DiaoLuoConfig(1,3));
+            LevelDiaoLuo1.Add(new DiaoLuoConfig(1,4));
+            LevelDiaoLuo1.Add(new DiaoLuoConfig(1,5));
+            LevelDiaoLuo1.Add(new DiaoLuoConfig(1,6));
+        }
 
-            LevelDiaoLuo3.Add(ResourcesConfig.TreeManCloak);
-            LevelDiaoLuo3.Add(ResourcesConfig.TreeManCloth);
-            LevelDiaoLuo3.Add(ResourcesConfig.TreeManShoe);
-            LevelDiaoLuo3.Add(ResourcesConfig.TreeManHelmet);
-            LevelDiaoLuo3.Add(ResourcesConfig.TreeManNecklace);
-            LevelDiaoLuo3.Add(ResourcesConfig.TreeManRing);
-
-            LevelDiaoLuo3.Add(ResourcesConfig.WhiteDivision);
-            LevelDiaoLuo3.Add(ResourcesConfig.WhiteExplosion);
-            LevelDiaoLuo3.Add(ResourcesConfig.WhiteDuration);
-            LevelDiaoLuo3.Add(ResourcesConfig.WhiteScale);
-            LevelDiaoLuo3.Add(ResourcesConfig.WhitePenetrate);
-            LevelDiaoLuo3.Add(ResourcesConfig.WhiteExtremeSpeed);
+        if (IsOneGame)
+        {
+            LevelDiaoLuo2.Add(new DiaoLuoConfig(1,1));
+            LevelDiaoLuo2.Add(new DiaoLuoConfig(1,2));
+            LevelDiaoLuo2.Add(new DiaoLuoConfig(1,3));
+            LevelDiaoLuo2.Add(new DiaoLuoConfig(1,4));
+            LevelDiaoLuo2.Add(new DiaoLuoConfig(1,5));
+            LevelDiaoLuo2.Add(new DiaoLuoConfig(1,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,1));
+            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,2));
+            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,3));
+            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,4));
+            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,5));
+            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(1,1));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(1,2));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(1,3));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(1,4));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(1,5));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(1,6));
+            
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(101,1));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(101,2));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(101,3));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(101,4));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(101,5));
+            LevelDiaoLuo4.Add(new DiaoLuoConfig(101,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo5.Add(new DiaoLuoConfig(1,1));
+            LevelDiaoLuo5.Add(new DiaoLuoConfig(1,2));
+            LevelDiaoLuo5.Add(new DiaoLuoConfig(1,3));
+            LevelDiaoLuo5.Add(new DiaoLuoConfig(1,4));
+            LevelDiaoLuo5.Add(new DiaoLuoConfig(1,5));
+            LevelDiaoLuo5.Add(new DiaoLuoConfig(1,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,1));
+            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,2));
+            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,3));
+            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,4));
+            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,5));
+            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(1,1));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(1,2));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(1,3));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(1,4));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(1,5));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(1,6));
+            
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(2,1));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(2,2));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(2,3));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(2,4));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(2,5));
+            LevelDiaoLuo7.Add(new DiaoLuoConfig(2,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(1,1));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(1,2));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(1,3));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(1,4));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(1,5));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(1,6));
+            
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(2,1));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(2,2));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(2,3));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(2,4));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(2,5));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(2,6));
+            
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(102,1));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(102,2));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(102,3));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(102,4));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(102,5));
+            LevelDiaoLuo8.Add(new DiaoLuoConfig(102,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo9.Add(new DiaoLuoConfig(2,1));
+            LevelDiaoLuo9.Add(new DiaoLuoConfig(2,2));
+            LevelDiaoLuo9.Add(new DiaoLuoConfig(2,3));
+            LevelDiaoLuo9.Add(new DiaoLuoConfig(2,4));
+            LevelDiaoLuo9.Add(new DiaoLuoConfig(2,5));
+            LevelDiaoLuo9.Add(new DiaoLuoConfig(2,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo10.Add(new DiaoLuoConfig(2,1));
+            LevelDiaoLuo10.Add(new DiaoLuoConfig(2,2));
+            LevelDiaoLuo10.Add(new DiaoLuoConfig(2,3));
+            LevelDiaoLuo10.Add(new DiaoLuoConfig(2,4));
+            LevelDiaoLuo10.Add(new DiaoLuoConfig(2,5));
+            LevelDiaoLuo10.Add(new DiaoLuoConfig(2,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo11.Add(new DiaoLuoConfig(2,1));
+            LevelDiaoLuo11.Add(new DiaoLuoConfig(2,2));
+            LevelDiaoLuo11.Add(new DiaoLuoConfig(2,3));
+            LevelDiaoLuo11.Add(new DiaoLuoConfig(2,4));
+            LevelDiaoLuo11.Add(new DiaoLuoConfig(2,5));
+            LevelDiaoLuo11.Add(new DiaoLuoConfig(2,6));
+        }
+        
+        if (IsOneGame)
+        {
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(2,1));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(2,2));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(2,3));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(2,4));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(2,5));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(2,6));
+            
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(103,1));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(103,2));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(103,3));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(103,4));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(103,5));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(103,6));
         }
     }
    public static LevelInfoItem LevelInfoItem1= new LevelInfoItem
