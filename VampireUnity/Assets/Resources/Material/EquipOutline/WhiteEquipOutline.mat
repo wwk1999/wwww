@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e6b121e8d0d1d41c1ad22738c53449eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -44,7 +44,7 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     - _OutlineAlpha: 1
-    - _OutlineWidth: 0.01
+    - _OutlineWidth: 15
     - _UseTextureAlpha: 1
     - _UseVertexColor: 0
     m_Colors:

@@ -52,6 +52,22 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ZhaoZeRing;
     public static Sprite ZhaoZeNecklace;
     
+    // Resource紫色套装
+    public static Sprite PurpleCloth;
+    public static Sprite PurpleCloak;
+    public static Sprite PurpleShoe;
+    public static Sprite PurpleHelmet;
+    public static Sprite PurpleRing;
+    public static Sprite PurpleNecklace;
+    
+    // Resource金色套装
+    public static Sprite OrangeCloth;
+    public static Sprite OrangeCloak;
+    public static Sprite OrangeShoe;
+    public static Sprite OrangeHelmet;
+    public static Sprite OrangeRing;
+    public static Sprite OrangeNecklace;
+    
     // Resource武器源石
     public static Sprite WhiteDivision;
     public static Sprite WhiteDuration;
@@ -186,6 +202,22 @@ public class ResourcesConfig : MonoBehaviour
         ZhaoZeRing = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeRing");
         ZhaoZeNecklace = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeNecklace");
         
+        //紫色套装
+        ZhaoZeCloth= Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloth");
+        ZhaoZeCloak = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloak");
+        ZhaoZeShoe = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleShoe");
+        ZhaoZeHelmet = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleHelmet");
+        ZhaoZeRing = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleRing");
+        ZhaoZeNecklace = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleNecklace");
+        
+        //橙色套装
+        OrangeCloth= Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeCloth");
+        OrangeCloak = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeCloak");
+        OrangeShoe = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeShoe");
+        OrangeHelmet = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeHelmet");
+        OrangeRing = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeRing");
+        OrangeNecklace = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeNecklace");
+        
         //武器源石
         WhiteDivision = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteDivision");
         WhiteDuration = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteDuration");
@@ -293,6 +325,43 @@ public class ResourcesConfig : MonoBehaviour
                         return BlueShoe;
                 }
                 break;
+            
+            case 4:
+                switch (equipTable.equip_type_id)
+                {
+                    case 1:
+                        return PurpleCloak;
+                    case 2:
+                        return PurpleCloth;
+                    case 3:
+                        return PurpleHelmet;
+                    case 4:
+                        return PurpleNecklace;
+                    case 5:
+                        return PurpleRing;
+                    case 6:
+                        return PurpleShoe;
+                }
+                break;
+            
+            case 5:
+                switch (equipTable.equip_type_id)
+                {
+                    case 1:
+                        return OrangeCloak;
+                    case 2:
+                        return OrangeCloth;
+                    case 3:
+                        return OrangeHelmet;
+                    case 4:
+                        return OrangeNecklace;
+                    case 5:
+                        return OrangeRing;
+                    case 6:
+                        return OrangeShoe;
+                }
+                break;
+            
             case 101:
                 switch (equipTable.equip_type_id)
                 {

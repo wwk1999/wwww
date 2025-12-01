@@ -103,6 +103,7 @@
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ChangeSizeColor.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanBoss.cs" />
     <Compile Include="Assets\Scripts\Config\ResourcesConfig.cs" />
+    <Compile Include="Assets\Scripts\Equip\Purple\PurpleHelmet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManJumpTrigger.cs" />
     <Compile Include="Assets\Scripts\Skill\FourNormalAttack.cs" />
@@ -115,6 +116,8 @@
     <Compile Include="Assets\Scripts\Mysql\PlayerInfoController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Equip\BagExitButton.cs" />
+    <Compile Include="Assets\Scripts\Equip\Orange\OrangeNecklace.cs" />
+    <Compile Include="Assets\Scripts\Equip\Purple\PurpleNecklace.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ForEffects\LookAtTarget.cs" />
     <Compile Include="Assets\Scripts\Config\RankConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PickUpController.cs" />
@@ -147,6 +150,8 @@
     <Compile Include="Assets\Scripts\Mysql\SourceStoneTable.cs" />
     <Compile Include="Assets\Scripts\Gloabl\PrimaryWeapon.cs" />
     <Compile Include="Assets\Scripts\Skill\PrimaryExTrigger.cs" />
+    <Compile Include="Assets\Scripts\Equip\Orange\OrangeCloth.cs" />
+    <Compile Include="Assets\Scripts\Equip\Purple\PurpleCloth.cs" />
     <Compile Include="Assets\Scripts\Tool\Entrance.cs" />
     <Compile Include="Assets\External Resources\VFX_Resources\Scripts\PFX_ProjectilesWeapon.cs" />
     <Compile Include="Assets\Scripts\Mysql\EquipTable.cs" />
@@ -156,6 +161,7 @@
     <Compile Include="Assets\Scripts\UIFrameWork\PanelManager.cs" />
     <Compile Include="Assets\Scripts\Skill\IceExplosion.cs" />
     <Compile Include="Assets\Scripts\Equip\MonsterEquip.cs" />
+    <Compile Include="Assets\Scripts\Equip\Purple\PurpleShoe.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\DestroyObject.cs" />
     <Compile Include="Assets\Scripts\Skill\DashShadow.cs" />
     <Compile Include="Assets\Scripts\Fight\UI\BagButtonFight.cs" />
@@ -169,6 +175,7 @@
     <Compile Include="Assets\Scripts\Equip\MonsterWeaponSource.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXLightFlicker.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Equip\Orange\OrangeShoe.cs" />
     <Compile Include="Assets\Scripts\Tool\ClickFx.cs" />
     <Compile Include="Assets\Scripts\Skill\FireTrigger.cs" />
     <Compile Include="Assets\Scripts\Tool\CircleAttack.cs" />
@@ -176,6 +183,7 @@
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXPortalScript.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\EliteBeeMonster.cs" />
     <Compile Include="Assets\Scripts\Equip\FightEquipAttribute.cs" />
+    <Compile Include="Assets\Scripts\Equip\Orange\OrangeHelmet.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXRotation.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipAttributePanel.cs" />
     <Compile Include="Assets\Scripts\Window\SceneLoading1.cs" />
@@ -212,6 +220,7 @@
     <Compile Include="Assets\Scripts\Skill\IceExTrigger.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenCloak.cs" />
     <Compile Include="Assets\External Resources\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Scripts\Equip\Purple\PurpleRing.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloth.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenRing.cs" />
     <Compile Include="Assets\Scripts\Tool\ImageAnimation.cs" />
@@ -298,10 +307,12 @@
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManShoe.cs" />
     <Compile Include="Assets\Scripts\Config\LevelInfoItem.cs" />
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Demo scenes\DemoShooting.cs" />
+    <Compile Include="Assets\Scripts\Equip\Orange\OrangeRing.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloth.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanRing.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\VariousMouseOrbit.cs" />
     <Compile Include="Assets\Scripts\Tool\ScrollLimit.cs" />
+    <Compile Include="Assets\Scripts\Equip\Orange\OrangeCloak.cs" />
     <Compile Include="Assets\Scripts\Server\RankServer.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\VariousEffectsScene.cs" />
     <Compile Include="Assets\Scripts\Mysql\UserTable.cs" />
@@ -314,6 +325,7 @@
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Penetrate.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkill1Bullet.cs" />
     <Compile Include="Assets\Scripts\Tool\EquipName.cs" />
+    <Compile Include="Assets\Scripts\Equip\Purple\PurpleCloak.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\NewMaterialChange.cs" />
     <Compile Include="Assets\Scripts\Mysql\EquipController.cs" />
