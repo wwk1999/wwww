@@ -797,16 +797,38 @@ public class BagController : XSingleton<BagController>
 
                     Button bagGridButton = bagGridImageTransform.GetComponent<Button>();
 
-                    bagGridButton.image.sprite = ResourcesConfig.GetEquipSprite((EquipTable)list[i]);
+                    bagGridButton.image.sprite = ResourcesConfig.GetEquipSprite(list[i]);
 
                     // 设置装备属性图标
                     BagGrid bagGridComponent = bagGridins.GetComponent<BagGrid>();
 
                     bagGridComponent.equipAttributeImage =
-                        ResourcesConfig.GetEquipSprite((EquipTable)list[i]);
+                        ResourcesConfig.GetEquipSprite(list[i]);
                     bagGridComponent.EquipType = EquipType.Equip;
-                    
-                  //  bagGridComponent.animator.Play("GreenEdge");
+
+                    //播放边框动画
+                    switch (list[i].Quality)
+                    {
+                        case 1:
+                            bagGridComponent.animator.Play("WhiteEdge");
+                            break;
+                        case 2:
+                            bagGridComponent.animator.Play("GreenEdge");
+                            break;
+                        case 3:
+                            bagGridComponent.animator.Play("BlueEdge");
+                            break;
+                        case 4:
+                            bagGridComponent.animator.Play("PurpleEdge");
+                            break;
+                        case 5:
+                            bagGridComponent.animator.Play("OrangeEdge");
+                            break;
+                        case 6:
+                            bagGridComponent.animator.Play("RedEdge");
+                            break;
+                        
+                    }
 
                     // 隐藏数量显示
                     Transform countTransform = bagGridins.transform.Find("Count");
