@@ -111,6 +111,18 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite EliteBeeIcon;
     public static Sprite BossTreeManIcon;
     
+    public static Sprite ChongZiIcon;
+    public static Sprite XiaoHuoIcon;
+    public static Sprite DunDiicon;
+    public static Sprite DaZuiIcon;
+    public static Sprite BossHuoShanIcon;
+    
+    public static Sprite QingWaIcon;
+    public static Sprite JiaChongIcon;
+    public static Sprite XiYiicon;
+    public static Sprite ShiRenHuaIcon;
+    public static Sprite BossShiRenIcon;
+    
     //颜色背景
     public static Sprite WhiteBg;
     public static Sprite GreenBg;
@@ -257,14 +269,221 @@ public class ResourcesConfig : MonoBehaviour
         
         
         //关卡界面怪物icon
-        SnotIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/Snot");
-        BatIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/Bat");
-        Spidericon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/Spider");
-        EliteBeeIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/EliteBee");
-        BossTreeManIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/BossTreeMan");
+        SnotIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/snot");
+        BatIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/bat");
+        Spidericon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/spider");
+        EliteBeeIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/bee");
+        BossTreeManIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/treeman");
+        
+        ChongZiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/chongzi");
+        DunDiicon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dundi");
+        XiaoHuoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiaohuo");
+        DaZuiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dazui");
+        BossHuoShanIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/huoshanboss");
+        
+        JiaChongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/jiachong");
+        XiYiicon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiyi");
+        QingWaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/qingwa");
+        ShiRenHuaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenhua");
+        BossShiRenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenboss");
     }
 
-    public static Sprite GetEquipSprite(EquipTable equipTable)
+    public static Sprite GetEquipColorBgByQuality(int quality)
+    {
+        switch (quality)
+        {
+            case 1:
+                return WhiteBg;
+            case 2:
+                return GreenBg;
+            case 3:
+                return BlueBg;
+            case 4:
+                return PurpleBg;
+            case 5:
+                return OrangeBg;
+        }
+
+        return null;
+    }
+    
+    public static Sprite GetEquipColorBgBySuitId(int suitId)
+    {
+        switch (suitId)
+        {
+            case 1:
+                return WhiteBg;
+            case 2:
+                return GreenBg;
+            case 3:
+                return BlueBg;
+            case 4:
+                return PurpleBg;
+            case 5:
+                return OrangeBg;
+            case 101:
+                return GreenBg;
+            case 102:
+                return BlueBg;
+            case 103:
+                return BlueBg;
+        }
+
+        return null;
+    }
+
+    public static Sprite GetEquipSprite(DiaoLuoConfig equipTable)
+    {
+        switch (equipTable.SuitId)
+        {
+            case 1:
+                
+                        switch (equipTable.EquipType)
+                        {
+                            case 1:
+                                return PrimaryCloak;
+                            case 2:
+                                return PrimaryCloth;
+                            case 3:
+                                return PrimaryHelmet;
+                            case 4:
+                                return PrimaryNecklace;
+                            case 5:
+                                return PrimaryRing;
+                            case 6:
+                                return PrimaryShoe;
+                        }
+                        break;
+               
+            case 2:
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return GreenCloak;
+                    case 2:
+                        return GreenCloth;
+                    case 3:
+                        return GreenHelmet;
+                    case 4:
+                        return GreenNecklace;
+                    case 5:
+                        return GreenRing;
+                    case 6:
+                        return GreenShoe;
+                }
+                break;
+            
+            case 3:
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return BlueCloak;
+                    case 2:
+                        return BlueCloth;
+                    case 3:
+                        return BlueHelmet;
+                    case 4:
+                        return BlueNecklace;
+                    case 5:
+                        return BlueRing;
+                    case 6:
+                        return BlueShoe;
+                }
+                break;
+            
+            case 4:
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return PurpleCloak;
+                    case 2:
+                        return PurpleCloth;
+                    case 3:
+                        return PurpleHelmet;
+                    case 4:
+                        return PurpleNecklace;
+                    case 5:
+                        return PurpleRing;
+                    case 6:
+                        return PurpleShoe;
+                }
+                break;
+            
+            case 5:
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return OrangeCloak;
+                    case 2:
+                        return OrangeCloth;
+                    case 3:
+                        return OrangeHelmet;
+                    case 4:
+                        return OrangeNecklace;
+                    case 5:
+                        return OrangeRing;
+                    case 6:
+                        return OrangeShoe;
+                }
+                break;
+            
+            case 101:
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return TreeManCloak;
+                    case 2:
+                        return TreeManCloth;
+                    case 3:
+                        return TreeManHelmet;
+                    case 4:
+                        return TreeManNecklace;
+                    case 5:
+                        return TreeManRing;
+                    case 6:
+                        return TreeManShoe;
+                }
+                break;
+            case 102:
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return HuoShanCloak;
+                    case 2:
+                        return HuoShanCloth;
+                    case 3:
+                        return HuoShanHelmet;
+                    case 4:
+                        return HuoShanNecklace;
+                    case 5:
+                        return HuoShanRing;
+                    case 6:
+                        return HuoShanShoe;
+                }
+                break;
+            
+            case 103:
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return ZhaoZeCloak;
+                    case 2:
+                        return ZhaoZeCloth;
+                    case 3:
+                        return ZhaoZeHelmet;
+                    case 4:
+                        return ZhaoZeNecklace;
+                    case 5:
+                        return ZhaoZeRing;
+                    case 6:
+                        return ZhaoZeShoe;
+                }
+                break;
+        }
+        return null;
+    }
+    
+     public static Sprite GetEquipSprite(EquipTable equipTable)
     {
         switch (equipTable.suitid)
         {

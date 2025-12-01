@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DiaoLuoConfig
 {
-    public static int SuitId = 0;
+    public int SuitId = 0;
     public int EquipType;
     public DiaoLuoConfig(int suitid,int equipType)
     {

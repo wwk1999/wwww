@@ -453,6 +453,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitButton: {fileID: 5272422502149309582}
   tiaozhanButton: {fileID: 4467522640782288794}
+  LevelNameText: {fileID: 4455148409562539696}
+  TuiJianLevelText: {fileID: 5846547960935143545}
+  MonsterListContent: {fileID: 3410150108572788177}
+  DiaoLuoListContent: {fileID: 2192562194069739849}
 --- !u!1 &2192562194069739849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2164,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4626817638551008914}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9149244
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

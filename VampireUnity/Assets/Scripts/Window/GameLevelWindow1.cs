@@ -468,7 +468,9 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 1;
            HideLevelInfo();
-          levelInfo.SetActive(true);
+           levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 1;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level2Button.onClick.AddListener(() =>
         {
@@ -478,6 +480,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 2;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 2;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level3Button.onClick.AddListener(() =>
         {
@@ -487,6 +491,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 3;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 3;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level4Button.onClick.AddListener(() =>
         {
@@ -496,6 +502,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 4;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 4;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level5Button.onClick.AddListener(() =>
         {
@@ -505,6 +513,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 5;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 5;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level6Button.onClick.AddListener(() =>
         {
@@ -514,6 +524,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 6;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 6;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level7Button.onClick.AddListener(() =>
         {
@@ -523,6 +535,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 7;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 7;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level8Button.onClick.AddListener(() =>
         {
@@ -532,6 +546,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 8;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 8;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level9Button.onClick.AddListener(() =>
         {
@@ -541,6 +557,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 9;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 9;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level10Button.onClick.AddListener(() =>
         {
@@ -550,6 +568,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 10;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 10;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level11Button.onClick.AddListener(() =>
         {
@@ -559,6 +579,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 11;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 11;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level12Button.onClick.AddListener(() =>
         {
@@ -568,6 +590,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 12;
            HideLevelInfo();
            levelInfo.SetActive(true);
+           levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 12;
+           levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         level13Button.onClick.AddListener(() =>
         {
