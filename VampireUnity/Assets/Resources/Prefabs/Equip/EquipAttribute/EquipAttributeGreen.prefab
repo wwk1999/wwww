@@ -760,10 +760,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u4E4B\u773C"
+  m_text: "\u865A\u7A7A\u4E4B\u773C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: f45930c161c12414f8c5594d50b8ca4d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 36cfcda6f3ee42eea705fc63954b5fbb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
