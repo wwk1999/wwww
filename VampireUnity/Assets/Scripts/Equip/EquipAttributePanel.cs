@@ -45,17 +45,17 @@ public class EquipAttributePanel : MonoBehaviour
         //基础属性
         if (equip.equip_type_id == 1 || equip.equip_type_id == 4 || equip.equip_type_id == 5)
         {
-            baseAttributeText1.text = "生命值 :";
-            baseAttributeText2.text = "防御 :";
-            baseAttributeCount1.text = equip.HP.ToString();
-            baseAttributeCount2.text = equip.Defense.ToString();
-        }
-        else
-        {
             baseAttributeText1.text = "攻击 :";
             baseAttributeText2.text = "暴击 :";
             baseAttributeCount1.text = equip.Damage.ToString();
             baseAttributeCount2.text = equip.CRIT.ToString();
+        }
+        else
+        {
+            baseAttributeText1.text = "生命值 :";
+            baseAttributeText2.text = "防御 :";
+            baseAttributeCount1.text = equip.HP.ToString();
+            baseAttributeCount2.text = equip.Defense.ToString();
         }
         
         

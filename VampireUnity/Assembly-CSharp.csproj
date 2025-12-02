@@ -278,6 +278,7 @@
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryHelmet.cs" />
     <Compile Include="Assets\Scripts\Skill\TwoNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Window\MainWindow1.cs" />
+    <Compile Include="Assets\Scripts\Config\EntryConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\StoneBoss.cs" />
     <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />

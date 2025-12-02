@@ -25,6 +25,7 @@ public class PlayerEquipConfig : MonoBehaviour
         HuoShan ,
         ZhaoZe
     }
+    
     public static int HelmetId
     {
         get => PlayerData.S.helmetid;
