@@ -23,6 +23,7 @@ public class EquipAttributePanel : MonoBehaviour
     public TextMeshProUGUI baseAttributeCount2;
     public Image equipBg;
     public Image equipImage;
+    public Animator animator;
 
 
 
@@ -62,26 +63,33 @@ public class EquipAttributePanel : MonoBehaviour
         {
             case 1:
                 quality.text = "普通";
+                animator.Play("WhiteEdge");
                 equipBg.sprite = ResourcesConfig.WhiteBg;
                 break;
             case 2:
                 quality.text = "优秀";
+                animator.Play("GreenEdge");
+
                 equipBg.sprite = ResourcesConfig.GreenBg;
                 break;
             case 3:
                 quality.text = "精良";
+                animator.Play("BlueEdge");
                 equipBg.sprite = ResourcesConfig.BlueBg;
                 break;
             case 4:
                 quality.text = "史诗";
+                animator.Play("PurpleEdge");
                 equipBg.sprite = ResourcesConfig.PurpleBg;
                 break;
             case 5:
                 quality.text = "传说";
+                animator.Play("OrangeEdge");
                 equipBg.sprite = ResourcesConfig.OrangeBg;
                 break;
             case 6:
                 quality.text = "神话";
+                animator.Play("RedEdge");
                 equipBg.sprite = ResourcesConfig.OrangeBg;
                 break;
         }
