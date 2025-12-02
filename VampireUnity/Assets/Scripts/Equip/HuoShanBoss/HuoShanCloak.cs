@@ -28,6 +28,8 @@ public class HuoShanCloak : EquipBase
 
         EquipAttributes.CRIT=random.Next(4,8);
         EquipAttributes.Damage=random.Next(4,8);
+        
+        InitEntry();
     }
    
 }

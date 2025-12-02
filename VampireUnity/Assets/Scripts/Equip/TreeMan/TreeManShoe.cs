@@ -24,6 +24,7 @@ public class TreeManShoe : EquipBase
         
         EquipAttributes.Defense=random.Next(1,4);
         EquipAttributes.HP=random.Next(10,20);
+        InitEntry();
             
     }
     

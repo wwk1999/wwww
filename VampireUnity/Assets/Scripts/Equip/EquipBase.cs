@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Equip;
 using Mysql;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum SuitType
 {
@@ -21,7 +23,42 @@ public class EquipBase : BagObjectBase
     [NonSerialized]public SuitType suitType = SuitType.None; // 装备套装类型
     
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
+    
+    [NonSerialized]public List<DamageEntryInfo> damageEntryInfos=new List<DamageEntryInfo>();
+    [NonSerialized]public List<DefenseEntryInfo> defenseEntryInfos=new List<DefenseEntryInfo>();
 
+
+    public void InitEntry()
+    {
+        if (EquipAttributes.equip_type_id == 1 || EquipAttributes.equip_type_id == 4 ||
+            EquipAttributes.equip_type_id == 5)
+        {
+            for (int i = 1; i < EquipAttributes.Quality; i++)
+            {
+               var damageEntryInfo=new DamageEntryInfo();
+               int randomIndex = Random.Range(0, EntryConfig.DamageEntryList.Count);
+               damageEntryInfo.DamageEntry = EntryConfig.DamageEntryList[randomIndex];
+               float randomValue=Random.Range(EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].minValue, EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].maxValue);
+               float value = Mathf.Round(randomValue*100)/100;
+               damageEntryInfo.Value = value;
+               damageEntryInfos.Add(damageEntryInfo);
+            }
+        }
+        else
+        {
+            for (int i = 1; i < EquipAttributes.Quality; i++)
+            {
+                var DefenseEntryInfo=new DefenseEntryInfo();
+                int randomIndex = Random.Range(0, EntryConfig.DefenseEntryList.Count);
+                DefenseEntryInfo.DefenseEntry = EntryConfig.DefenseEntryList[randomIndex];
+                float randomValue=Random.Range(EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].minValue, EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].maxValue);
+                float value = Mathf.Round(randomValue*100)/100;
+                DefenseEntryInfo.Value = value;
+                defenseEntryInfos.Add(DefenseEntryInfo);
+            }
+        }
+    }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public EquipBase(string equipName,SuitType suitType,EquipTable equipAttribute)
     {

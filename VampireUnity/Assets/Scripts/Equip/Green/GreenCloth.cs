@@ -25,7 +25,7 @@ public class GreenCloth : EquipBase
         
         EquipAttributes.Defense=random.Next(1,4);
         EquipAttributes.HP=random.Next(10,20);
-            
+        InitEntry();
     }
     
 }

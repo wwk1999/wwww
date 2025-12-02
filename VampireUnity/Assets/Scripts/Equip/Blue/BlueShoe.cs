@@ -25,7 +25,8 @@ public class BlueShoe : EquipBase
         EquipAttributes.Quality = 3;
         
         EquipAttributes.Defense=random.Next(1,4);
-        EquipAttributes.HP=random.Next(10,20);            
+        EquipAttributes.HP=random.Next(10,20); 
+        InitEntry();
     }
     
 }

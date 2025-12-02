@@ -23,7 +23,7 @@ public class TreeManHelmet : EquipBase
         
         EquipAttributes.Defense=random.Next(4,7);
         EquipAttributes.HP=random.Next(12,20);
-            
+        InitEntry();
     }
     
 }

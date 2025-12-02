@@ -24,6 +24,7 @@ public class OrangeCloak :EquipBase
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.CRIT=random.Next(4,8);
-        EquipAttributes.Damage=random.Next(4,8);            
+        EquipAttributes.Damage=random.Next(4,8);  
+        InitEntry();
     }
 }

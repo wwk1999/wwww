@@ -24,7 +24,7 @@ public class BlueHelmet : EquipBase
         
         EquipAttributes.Defense=random.Next(1,3);
         EquipAttributes.HP=random.Next(5,10);
-            
+        InitEntry();
     }
     
 }

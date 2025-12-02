@@ -25,7 +25,7 @@ public class BlueRing : EquipBase
         
         EquipAttributes.Damage=random.Next(2,5);
         EquipAttributes.CRIT=random.Next(3,6);
-            
+        InitEntry();
     }
     
 }

@@ -75,15 +75,11 @@ public class GlobalPlayerAttribute
        get => PlayerInfoConfig.GetPlayerAttack();
    }
    public static int PlayerMoveSpeed=3;
-   public static int PlayerAttackSpeed=0;
    public static int PlayerCRIT=0;
-   public static int PlayerCRITDamage=0;
-   public static int PlayerBloodSuck=0;
    public static int PlayerDefense
    {
        get => PlayerInfoConfig.GetPlayerDenfence();
    }
-   public static int PlayerGoodFortune=0;
    
    //装备属性
    public static int EquipMaxHp
@@ -95,15 +91,11 @@ public class GlobalPlayerAttribute
    {
        get => GetEquipDamage();
    }
-
    
-   public static int EquipAttackSpeed=0;
-
    public static int EquipCRIT
    {
        get => GetEquipCRIT();
    }
-   
 
    public static int EquipDefense
    {
@@ -111,14 +103,33 @@ public class GlobalPlayerAttribute
    }
    
    //总属性
+   
+   //基础属性
    public static int TotalMaxHp => PlayerMaxHp + EquipMaxHp;
    public static int TotalDamage=> PlayerDamage + EquipDamage;
-   //public static int TotalAttackSpeed => PlayerAttackSpeed + EquipAttackSpeed;
    public static int TotalCRIT => PlayerCRIT + EquipCRIT;
-   //public static int TotalBloodSuck => PlayerBloodSuck + EquipBloodSuck;
    public static int TotalDefense => PlayerDefense + EquipDefense;
-   //public static int TotalGoodFortune => PlayerGoodFortune + EquipGoodFortune;
    
+   //附加词条属性
+
+   public int KillReplyHpFixed=0;
+   public int KillReplyHpPercent=0;
+   public int MaxHpPercent=0;
+   public int MaxDefensePercent=0;
+   public int DamageReductionPercent=0;
+   public int DamageReductionPercentForNormal=0;
+   public int DamageReductionPercentForBoss=0;
+   public int ReplyHpFixed=0;
+   public int ReplyHpPercent=0;
+
+
+   public int CRITDamage = 0;
+   public int DamageSpeed = 0; 
+   public int DamageAddForNormal = 0;
+   public int DamageAddForBoss = 0;
+   public int Penetrate = 0;
+   public int DamageAddPercent = 0;
+   public int BloodSuck = 0;
    
    
    public static int GetEquipMaxHp()
