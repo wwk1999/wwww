@@ -19,15 +19,12 @@ public class TreeManCloak : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "TreeManCloak";
         EquipAttributes.suitid = 101;
-        EquipAttributes.suitname = "树人套装";
         EquipAttributes.equip_type_id = 1;
-        EquipAttributes.equip_type_name = "手套";
         //暂时写死
         EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 2;
-        EquipAttributes.CRIT=random.Next(10,18);
-        EquipAttributes.CRITDamage=random.Next(12,22);
-            
+        EquipAttributes.CRIT=random.Next(4,8);
+        EquipAttributes.Damage=random.Next(4,8);            
     }
     
    

@@ -20,14 +20,11 @@ public class BlueNecklace : EquipBase
             // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
             EquipAttributes.EquipName = "BlueNecklace";
             EquipAttributes.suitid =3;
-            EquipAttributes.suitname = "None";
             EquipAttributes.equip_type_id = 4;
-            EquipAttributes.equip_type_name = "项链";
-            EquipAttributes.Userid = GlobalUserInfo.Userid;
             EquipAttributes.Quality = 3;
-            EquipAttributes.GoodFortune=random.Next(5,10);
-            EquipAttributes.BloodSuck=random.Next(5,10);
             
+            EquipAttributes.CRIT=random.Next(4,8);
+            EquipAttributes.Damage=random.Next(4,8);
         }
        
 }

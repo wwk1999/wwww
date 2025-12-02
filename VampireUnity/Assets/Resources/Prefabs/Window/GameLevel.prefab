@@ -3999,6 +3999,7 @@ GameObject:
   - component: {fileID: 3238721419605996148}
   - component: {fileID: 6717851271012764442}
   - component: {fileID: 6570670281593061133}
+  - component: {fileID: 2242629786427736556}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -4108,6 +4109,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2242629786427736556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932265573279164458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcceec5f6ecf4400bfa94c34540181f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  upOffset: 0
+  rightOffset: 0
 --- !u!1 &5005358466872699380
 GameObject:
   m_ObjectHideFlags: 0
@@ -8473,34 +8489,35 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2006137113235349116, guid: 514c101d9b8944c46921bf6227b136ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3298476094485119019}
+    - targetCorrespondingSourceObject: {fileID: 8600934919713382386, guid: 514c101d9b8944c46921bf6227b136ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4746303593838968014}
   m_SourcePrefab: {fileID: 100100000, guid: 514c101d9b8944c46921bf6227b136ce, type: 3}
 --- !u!224 &1202924518062258498 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5187954699033697600, guid: 514c101d9b8944c46921bf6227b136ce, type: 3}
   m_PrefabInstance: {fileID: 6291234242719228930}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3332688368750559775 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8723158429712623133, guid: 514c101d9b8944c46921bf6227b136ce, type: 3}
+--- !u!1 &2311011312975051760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8600934919713382386, guid: 514c101d9b8944c46921bf6227b136ce, type: 3}
   m_PrefabInstance: {fileID: 6291234242719228930}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5155304647866838308 stripped
+--- !u!114 &4746303593838968014
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1208555098490816806, guid: 514c101d9b8944c46921bf6227b136ce, type: 3}
-  m_PrefabInstance: {fileID: 6291234242719228930}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2311011312975051760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fcceec5f6ecf4400bfa94c34540181f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  upOffset: 0
+  rightOffset: 0
 --- !u!1 &5519670577366006398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2006137113235349116, guid: 514c101d9b8944c46921bf6227b136ce, type: 3}
@@ -8518,5 +8535,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146b41477efd645cd8485010078c6dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitButton: {fileID: 3332688368750559775}
-  tiaozhanButton: {fileID: 5155304647866838308}
+  exitButton: {fileID: 0}
+  tiaozhanButton: {fileID: 0}
+  LevelNameText: {fileID: 0}
+  TuiJianLevelText: {fileID: 0}
+  MonsterListContent: {fileID: 0}
+  DiaoLuoListContent: {fileID: 0}

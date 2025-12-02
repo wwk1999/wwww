@@ -20,12 +20,11 @@ public class OrangeHelmet :EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "OrangeHelmet";
         EquipAttributes.suitid = 5;
-        EquipAttributes.suitname = "None";
         EquipAttributes.equip_type_id = 3;
         //暂时写死
         EquipAttributes.Quality = 5;
-        EquipAttributes.CRIT=random.Next(4,8);
-        EquipAttributes.CRITDamage=random.Next(6,10);
-            
+        
+        EquipAttributes.Defense=random.Next(1,4);
+        EquipAttributes.HP=random.Next(10,20);            
     }
 }

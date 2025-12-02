@@ -19,12 +19,10 @@ public class TreeManCloth : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "TreeManCloth";
         EquipAttributes.suitid = 101;
-        EquipAttributes.suitname = "树人套装";
         EquipAttributes.equip_type_id = 2;
-        EquipAttributes.equip_type_name = "衣服";
         //暂时写死
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 2;
+        
         EquipAttributes.Defense=random.Next(5,8);
         EquipAttributes.HP=random.Next(25,40);
             

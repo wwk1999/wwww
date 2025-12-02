@@ -20,13 +20,11 @@ public class HuoShanRing : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "HuoShanRing";
         EquipAttributes.suitid = 102;
-        EquipAttributes.suitname = "火山套装";
         EquipAttributes.equip_type_id = 5;
-        EquipAttributes.equip_type_name = "戒指";
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 3;
-        EquipAttributes.Damage=random.Next(2,5);
-        EquipAttributes.CRIT=random.Next(3,6);
+        
+        EquipAttributes.CRIT=random.Next(4,8);
+        EquipAttributes.Damage=random.Next(4,8);
             
     }
    

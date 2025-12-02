@@ -1,4 +1,3 @@
-using Mysql;
 using UnityEngine;
 using Random = System.Random;
 
@@ -21,16 +20,12 @@ namespace Equip
             // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
             EquipAttributes.EquipName = "PrimaryCloak";
             EquipAttributes.suitid = 1;
-            EquipAttributes.suitname = "None";
             EquipAttributes.equip_type_id = 1;
-            EquipAttributes.equip_type_name = "手套";
-            //暂时写死
-            EquipAttributes.Userid = GlobalUserInfo.Userid;
             EquipAttributes.Quality = 1;
-            EquipAttributes.CRIT=random.Next(4,8);
-            EquipAttributes.CRITDamage=random.Next(6,10);
             
+            //装备属性
+            EquipAttributes.CRIT=random.Next(4,8);
+            EquipAttributes.Damage=random.Next(4,8);
         }
-       
     }
 }

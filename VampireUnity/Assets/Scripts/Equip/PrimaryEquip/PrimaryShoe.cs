@@ -21,14 +21,11 @@ namespace Equip
             // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
             EquipAttributes.EquipName = "PrimaryShoe";
             EquipAttributes.suitid = 1;
-            EquipAttributes.suitname = "None";
             EquipAttributes.equip_type_id = 6;
-            EquipAttributes.equip_type_name = "鞋子";
-            EquipAttributes.Userid = GlobalUserInfo.Userid;
             EquipAttributes.Quality = 1;
-            EquipAttributes.MoveSpeed=random.Next(3,7);
-            EquipAttributes.Defense=random.Next(2,4);
             
+            EquipAttributes.Defense=random.Next(1,4);
+            EquipAttributes.HP=random.Next(10,20);            
         }
        
     }

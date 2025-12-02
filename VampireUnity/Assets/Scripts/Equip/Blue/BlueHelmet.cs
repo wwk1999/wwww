@@ -19,11 +19,9 @@ public class BlueHelmet : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "BlueHelmet";
         EquipAttributes.suitid = 3;
-        EquipAttributes.suitname = "None";
         EquipAttributes.equip_type_id = 3;
-        EquipAttributes.equip_type_name = "头盔";
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 3;
+        
         EquipAttributes.Defense=random.Next(1,3);
         EquipAttributes.HP=random.Next(5,10);
             

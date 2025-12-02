@@ -20,13 +20,10 @@ public class HuoShanShoe : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "HuoShanShoe";
         EquipAttributes.suitid = 102;
-        EquipAttributes.suitname = "火山套装";
         EquipAttributes.equip_type_id = 6;
-        EquipAttributes.equip_type_name = "鞋子";
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 3;
-        EquipAttributes.MoveSpeed=random.Next(3,7);
-        EquipAttributes.Defense=random.Next(2,4);
-    }
+        
+        EquipAttributes.Defense=random.Next(1,4);
+        EquipAttributes.HP=random.Next(10,20);    }
    
 }

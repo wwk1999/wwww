@@ -19,11 +19,9 @@ public class TreeManRing : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "TreeManRing";
         EquipAttributes.suitid = 101;
-        EquipAttributes.suitname = "树人套装";
         EquipAttributes.equip_type_id = 5;
-        EquipAttributes.equip_type_name = "戒指";
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 2;
+        
         EquipAttributes.Damage=random.Next(6,10);
         EquipAttributes.CRIT=random.Next(7,12);
             

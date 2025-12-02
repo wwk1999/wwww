@@ -697,40 +697,6 @@ public class ServerConnect : XSingleton<ServerConnect>
         return true;
     }
     
-    //发送保存装备请求
-    public async Task<bool> SendSaveEquipRequest(EquipTable equip)
-    {
-
-        var saveEquipRequest = new GameRequest
-        {
-            type = "equip",
-            action = "saveEquip",
-            data = new EquipmentData
-                { 
-                    type = 2,
-                    quality = equip.Quality,
-                    damage = equip.Damage,
-                    crit = equip.CRIT,
-                    critdamage = equip.CRITDamage,
-                    damagespeed = equip.DamageSpeed,
-                    bloodsuck = equip.BloodSuck,
-                    hp = equip.HP,
-                    movespeed = equip.MoveSpeed,
-                    suitid = equip.suitid,
-                    suitname = equip.suitname,
-                    equip_type_id = equip.equip_type_id,
-                    equip_type_name = equip.equip_type_name,
-                    defense = equip.Defense,
-                    goodfortune = equip.GoodFortune,
-                    equipname = equip.EquipName
-                },
-            timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
-        };
-
-        await SendMessageAsync(saveEquipRequest);
-        return true;
-    }
-    
     //发送更新人物信息请求
     public async Task<bool> SendUpdatePlayerInfoRequest(int level,int experience,int gamelevel,int bloodenergy)
     {

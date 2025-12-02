@@ -196,99 +196,7 @@ namespace Mysql
 
 
         
-        //保存装备信息到mysql
-        public void BatchInsertEquipsWithTransaction(List<TableBase> equips)
-        {
-            Debug.Log("mysql保存装备");
-            List<EquipTable> equiptables = new List<EquipTable>();
-            List<SourceStoneTable> sourcestonetables = new List<SourceStoneTable>();
-            foreach (var equip in equips)
-            {
-                if (equip.TableType == TableType.EquipTable)
-                {
-                    equiptables.Add((EquipTable) equip); // 确保类型转换正确
-                }else if (equip.TableType == TableType.SourceStoneTable)
-                {
-                    sourcestonetables.Add((SourceStoneTable) equip); // 确保类型转换正确
-                }
-            }
-            // 使用 INSERT IGNORE 避免重复 equipid 导致的主键冲突
-            string sql = "INSERT IGNORE INTO equip (equipid, userid, equipname, quality, damage, crit, critdamage, damagespeed, bloodsuck, defense, hp, movespeed, goodfortune) VALUES ";
-            string sql1 = "INSERT IGNORE INTO sourcestone (equipid, userid, sourcetype, count, quality) VALUES ";
-
-            List<string> valueRows = new List<string>();
-            List<string> valueRows1 = new List<string>();
-
-            foreach (var equip in equiptables)
-            {
-                EquipTable equip1 = equip; // 确保类型转换正确
-                string value = $"({equip1.equipid}, {equip1.Userid}, '{equip1.EquipName}', {equip1.Quality}, {equip1.Damage}, {equip1.CRIT}, {equip1.CRITDamage}, {equip1.DamageSpeed}, {equip1.BloodSuck}, {equip1.Defense}, {equip1.HP}, {equip1.MoveSpeed}, {equip1.GoodFortune})";
-                valueRows.Add(value);
-            }
-            foreach (var sourcestone in sourcestonetables)
-            {
-                SourceStoneTable sourcestone1 = sourcestone; // 确保类型转换正确
-                string value = $"({sourcestone1.SourceStoneId}, {sourcestone1.Userid}, '{sourcestone1.SourceStoneType}', {sourcestone1.Count}, {sourcestone1.Quality})";
-                valueRows1.Add(value);
-            }
-
-            sql += string.Join(", ", valueRows);
-            sql1 += string.Join(", ", valueRows1);
-
-            // 只开启一次事务
-            MySqlTransaction transaction = ConnectMysql.Connection.BeginTransaction();
-            MySqlCommand command = new MySqlCommand(sql, ConnectMysql.Connection, transaction);
-            MySqlCommand command1 = new MySqlCommand(sql1, ConnectMysql.Connection, transaction);
-
-            try
-            {
-                if (valueRows.Count > 0)
-                {
-                    command.ExecuteNonQuery(); // 批量插入装备
-                }
-                if (valueRows1.Count > 0)
-                {
-                    command1.ExecuteNonQuery(); // 批量插入源石
-                }
-                transaction.Commit(); // 一次性提交
-                Debug.Log("Batch insert committed successfully.");
-            }
-            catch (MySqlException ex)
-            {
-                transaction.Rollback(); // 回滚事务
-                Debug.LogError("Error in batch insert. Transaction rolled back: " + ex.Message);
-            }
-        }
-
-
-
         
-        public void InsertEquip(EquipTable equip)
-        {
-            // 插入记录，如果 equip 已存在（基于主键或唯一约束），会忽略插入
-            string sql =
-                $"INSERT IGNORE INTO equip (equipid, userid, equipname, quality, damage, crit, critdamage, damagespeed, bloodsuck, defense, hp, movespeed, goodfortune) " +
-                $"VALUES ({equip.equipid}, {equip.Userid}, '{equip.EquipName}', {equip.Quality}, {equip.Damage}, {equip.CRIT}, {equip.CRITDamage}, {equip.DamageSpeed}, {equip.BloodSuck}, {equip.Defense}, {equip.HP}, {equip.MoveSpeed}, {equip.GoodFortune})";
-
-            MySqlCommand command = new MySqlCommand(sql, ConnectMysql.Connection);
-
-            try
-            {
-                int rowsAffected = command.ExecuteNonQuery(); // 返回影响行数
-                if (rowsAffected > 0)
-                {
-                    Debug.Log("Insert equip success"); // 插入成功
-                }
-                else
-                {
-                    Debug.Log("Equip already exists or ignored"); // equip 已存在或插入被忽略
-                }
-            }
-            catch (MySqlException ex)
-            {
-                Debug.LogError("Error inserting equip: " + ex.Message);
-            }
-        }
 
         
         // public void InsertEquip(EquipTable equip)
@@ -857,47 +765,6 @@ namespace Mysql
                     break;
             }
             return maxID;
-        }
-
-        public EquipTable GetEquipAttributeFromMysql(int equipId)
-        {
-            //根据equipId从Mysql中获取装备属性
-            string sql = $"SELECT * FROM equip WHERE equipid = {equipId}";
-            MySqlCommand command = new MySqlCommand(sql, ConnectMysql.Connection);
-            MySqlDataReader reader = command.ExecuteReader();
-            EquipTable equipTable = null;
-            try
-            {
-                if (reader.Read())
-                {
-                    equipTable = new EquipTable
-                    {
-                        equipid = reader.GetInt32("equipid"),
-                        Userid = reader.GetInt32("userid"),
-                        EquipName = reader.GetString("equipname"),
-                        Quality = reader.GetInt32("quality"),
-                        Damage = reader.GetInt32("damage"),
-                        CRIT = reader.GetInt32("crit"),
-                        CRITDamage = reader.GetInt32("critdamage"),
-                        DamageSpeed = reader.GetInt32("damagespeed"),
-                        BloodSuck = reader.GetInt32("bloodsuck"),
-                        Defense = reader.GetInt32("defense"),
-                        HP = reader.GetInt32("hp"),
-                        MoveSpeed = reader.GetInt32("movespeed"),
-                        GoodFortune = reader.GetInt32("goodfortune")
-                    };
-                }
-            }
-            catch (MySqlException ex)
-            {
-                Debug.LogError("Error getting equip attribute: " + ex.Message);
-            }
-            finally
-            {
-                reader.Close();
-            }
-
-            return equipTable;
         }
     }
 }

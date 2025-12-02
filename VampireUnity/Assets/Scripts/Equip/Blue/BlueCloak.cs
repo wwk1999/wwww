@@ -19,14 +19,12 @@ public class BlueCloak : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "BlueCloak";
         EquipAttributes.suitid = 3;
-        EquipAttributes.suitname = "None";
         EquipAttributes.equip_type_id = 1;
-        EquipAttributes.equip_type_name = "手套";
         //暂时写死
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 3;
+        
         EquipAttributes.CRIT=random.Next(4,8);
-        EquipAttributes.CRITDamage=random.Next(6,10);
+        EquipAttributes.Damage=random.Next(4,8);
     }
    
 }

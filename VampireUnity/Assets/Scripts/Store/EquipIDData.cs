@@ -25,17 +25,10 @@ public class EquipIDData : XSingleton<EquipIDData>
             Quality = equip.Quality,
             Damage = equip.Damage,
             CRIT = equip.CRIT,
-            CRITDamage = equip.CRITDamage,
-            DamageSpeed = equip.DamageSpeed,
-            BloodSuck = equip.BloodSuck,
             HP = equip.HP,
-            MoveSpeed = equip.MoveSpeed,
             suitid = equip.suitid,
-            suitname = equip.suitname,
             equip_type_id = equip.equip_type_id,
-            equip_type_name = equip.equip_type_name,
             Defense = equip.Defense,
-            GoodFortune = equip.GoodFortune,
             EquipName = equip.EquipName
         };
         equipIds.Add(data.equipid,data);

@@ -95,9 +95,6 @@ public class BagPanel : MonoBehaviour
             playerHPAttributeText.text=GlobalPlayerAttribute.TotalMaxHp.ToString();
             playerDefenseAttributeText.text=GlobalPlayerAttribute.TotalDefense.ToString();
             playerCRITAttributeText.text=GlobalPlayerAttribute.TotalCRIT.ToString();
-            playerCRITDamageAttributeText.text=GlobalPlayerAttribute.TotalCRITDamage.ToString();
-            playerMoveSpeedAttributeText.text=GlobalPlayerAttribute.TotalMoveSpeed.ToString();
-            
             detailedAttributesPanel.SetActive(true);
         });
         detailedAttributesExitButton.onClick.AddListener(() =>

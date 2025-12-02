@@ -1729,31 +1729,6 @@ public class BagController : XSingleton<BagController>
         {
             CreateAttributeItem(contentPanel, "暴击率：" + equipTable.CRIT);
         }
-
-        if (equipTable.CRITDamage != 0)
-        {
-            CreateAttributeItem(contentPanel, "暴击伤害：" + equipTable.CRITDamage);
-        }
-
-        if (equipTable.BloodSuck != 0)
-        {
-            CreateAttributeItem(contentPanel, "吸血：" + equipTable.BloodSuck);
-        }
-
-        if (equipTable.GoodFortune != 0)
-        {
-            CreateAttributeItem(contentPanel, "幸运：" + equipTable.GoodFortune);
-        }
-
-        if (equipTable.MoveSpeed != 0)
-        {
-            CreateAttributeItem(contentPanel, "移动速度：" + equipTable.MoveSpeed);
-        }
-
-        if (equipTable.DamageSpeed != 0)
-        {
-            CreateAttributeItem(contentPanel, "攻击速度：" + equipTable.DamageSpeed);
-        }
     }
     
     // 辅助方法：创建属性项

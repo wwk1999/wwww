@@ -20,11 +20,9 @@ namespace Equip
             // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
             EquipAttributes.EquipName = "PrimaryCloth";
             EquipAttributes.suitid = 1;
-            EquipAttributes.suitname = "None";
             EquipAttributes.equip_type_id = 2;
-            EquipAttributes.equip_type_name = "衣服";
-            EquipAttributes.Userid = GlobalUserInfo.Userid;
             EquipAttributes.Quality = 1;
+            
             EquipAttributes.Defense=random.Next(1,4);
             EquipAttributes.HP=random.Next(10,20);
             

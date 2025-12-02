@@ -20,14 +20,12 @@ public class GreenShoe : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "GreenShoe";
         EquipAttributes.suitid = 2;
-        EquipAttributes.suitname = "None";
         EquipAttributes.equip_type_id = 6;
-        EquipAttributes.equip_type_name = "鞋子";
         EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 2;
-        EquipAttributes.MoveSpeed=random.Next(3,7);
-        EquipAttributes.Defense=random.Next(2,4);
-            
+        
+        EquipAttributes.Defense=random.Next(1,4);
+        EquipAttributes.HP=random.Next(10,20);            
     }
     
 }

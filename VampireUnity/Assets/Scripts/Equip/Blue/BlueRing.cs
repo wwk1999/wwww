@@ -20,11 +20,9 @@ public class BlueRing : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "BlueRing";
         EquipAttributes.suitid = 3;
-        EquipAttributes.suitname = "None";
         EquipAttributes.equip_type_id = 5;
-        EquipAttributes.equip_type_name = "戒指";
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 3;
+        
         EquipAttributes.Damage=random.Next(2,5);
         EquipAttributes.CRIT=random.Next(3,6);
             

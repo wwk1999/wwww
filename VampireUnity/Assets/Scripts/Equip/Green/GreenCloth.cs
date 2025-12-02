@@ -20,11 +20,9 @@ public class GreenCloth : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "GreenCloth";
         EquipAttributes.suitid = 2;
-        EquipAttributes.suitname = "None";
         EquipAttributes.equip_type_id = 2;
-        EquipAttributes.equip_type_name = "衣服";
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 2;
+        
         EquipAttributes.Defense=random.Next(1,4);
         EquipAttributes.HP=random.Next(10,20);
             

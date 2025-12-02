@@ -20,12 +20,10 @@ public class OrangeNecklace :EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "OrangeNecklace";
         EquipAttributes.suitid = 5;
-        EquipAttributes.suitname = "None";
         EquipAttributes.equip_type_id = 4;
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.CRIT=random.Next(4,8);
-        EquipAttributes.CRITDamage=random.Next(6,10);
-            
+        EquipAttributes.Damage=random.Next(4,8);            
     }
 }
