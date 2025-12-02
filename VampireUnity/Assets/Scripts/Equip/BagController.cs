@@ -10,6 +10,9 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 
 public class SavaEquipData
 {
@@ -1540,7 +1543,28 @@ public class BagController : XSingleton<BagController>
         {
             EquipTable equipTable = (EquipTable)tablebase;
             // 加载预制体
-            GameObject attributePrefab = Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute");
+            GameObject attributePrefab = null;
+            switch (equipTable.Quality)
+            {
+                case 1:
+                    attributePrefab = Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipAttributeWhite");
+                    break;
+                case 2:
+                    attributePrefab = Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipAttributeGreen");
+                    break;
+                case 3:
+                    attributePrefab = Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipAttributeBlue");
+                    break;
+                case 4:
+                    attributePrefab = Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipAttributePurple");
+                    break;
+                case 5:
+                    attributePrefab = Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipAttributeOrange");
+                    break;
+                case 6:
+                    attributePrefab = Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipAttributeRed");
+                    break;
+            }
             if (attributePrefab == null)
             {
                 Debug.LogError("ShowEquipAttributePanel出错: 找不到EquipAttribute预制体");
@@ -1552,7 +1576,7 @@ public class BagController : XSingleton<BagController>
             GameObject equipAttribute = null;
             try
             {
-                equipAttribute = Instantiate(attributePrefab, BagController.S.transform);
+                equipAttribute = Instantiate(attributePrefab, transform);
             }
             catch (System.Exception e)
             {
@@ -1577,50 +1601,7 @@ public class BagController : XSingleton<BagController>
                  equipAttribute.GetComponent<EquipAttributePanel>().installButton.gameObject.SetActive(true);      
                  equipAttribute.GetComponent<EquipAttributePanel>().sellButton.gameObject.SetActive(true);      
              }
-             
-             
-            // 设置装备ID
-            EquipAttributePanel panel = equipAttribute.GetComponent<EquipAttributePanel>();
-            panel.BagGrid= bagGrid;// 设置BagGrid给装备属性面板
-            if (panel == null)
-            {
-                Debug.LogError("ShowEquipAttributePanel出错: 找不到EquipAttributePanel组件");
-                Destroy(equipAttribute);
-                DestroyMaskLayer();
-                return;
-            }
-            
-            
-            // 设置装备图标
-            try
-            {
-                GameObject equipAttributeEquip = equipAttribute.transform.Find("EquipAttributeEquip").gameObject;
-                GameObject equipAttributeEquipImage = equipAttributeEquip.transform.Find("EquipAttributeEquipImage").gameObject;
-                equipAttributeEquipImage.GetComponent<Image>().sprite = ResourcesConfig.GetEquipSprite(equipTable);
-                
-                // 设置装备名称
-                GameObject equipAttributeName = equipAttribute.transform.Find("EquipAttributeName").gameObject;
-                equipAttributeName.GetComponent<Text>().text = EquipName.EquipNameDic[equipTable.EquipName];
-                
-                // 显示装备属性
-                GameObject equipAttributeContent = equipAttribute.transform.Find("ScrollView").Find("Viewport").Find("Content").gameObject;
-                
-                // 清空旧的内容
-                foreach (Transform child in equipAttributeContent.transform)
-                {
-                    Destroy(child.gameObject);
-                }
-                
-                // 添加装备属性
-                DisplayEquipAttribute(equipTable, equipAttributeContent);
-            }
-            catch (System.Exception e)
-            {
-                Debug.LogError($"ShowEquipAttributePanel出错: 设置装备属性面板异常: {e.Message}\n{e.StackTrace}");
-                Destroy(equipAttribute);
-                DestroyMaskLayer();
-                return;
-            }
+             equipAttribute.GetComponent<EquipAttributePanel>().Init();
             
             Debug.Log("装备属性面板显示成功");
         }
@@ -1640,7 +1621,7 @@ public class BagController : XSingleton<BagController>
             GameObject equipAttribute = null;
             try
             {
-                equipAttribute = Instantiate(attributePrefab, BagController.S.transform);
+                equipAttribute = Instantiate(attributePrefab, transform);
                 
                 // 隐藏装备和出售按钮
                 equipAttribute.transform.Find("InstallButton").gameObject.SetActive(false);

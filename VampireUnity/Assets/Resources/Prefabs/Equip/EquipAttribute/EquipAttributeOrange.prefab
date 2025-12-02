@@ -198,6 +198,14 @@ MonoBehaviour:
   installButton: {fileID: 7022730968880539965}
   sellButton: {fileID: 5478422665978229779}
   uninstallButton: {fileID: 2791044756433394024}
+  equipName: {fileID: 8585993155001445401}
+  quality: {fileID: 8941707773820907126}
+  baseAttributeText1: {fileID: 4093722524020317178}
+  baseAttributeText2: {fileID: 5222775662960799321}
+  baseAttributeCount1: {fileID: 3366538207984640505}
+  baseAttributeCount2: {fileID: 8212440091964514951}
+  equipBg: {fileID: 8524517475975302462}
+  equipImage: {fileID: 1377409318981677086}
 --- !u!1 &291564570272307520
 GameObject:
   m_ObjectHideFlags: 0

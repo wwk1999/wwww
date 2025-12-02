@@ -198,6 +198,14 @@ MonoBehaviour:
   installButton: {fileID: 7022730968880539965}
   sellButton: {fileID: 5478422665978229779}
   uninstallButton: {fileID: 2791044756433394024}
+  equipName: {fileID: 8585993155001445401}
+  quality: {fileID: 8941707773820907126}
+  baseAttributeText1: {fileID: 4093722524020317178}
+  baseAttributeText2: {fileID: 5222775662960799321}
+  baseAttributeCount1: {fileID: 3366538207984640505}
+  baseAttributeCount2: {fileID: 8212440091964514951}
+  equipBg: {fileID: 8524517475975302462}
+  equipImage: {fileID: 1377409318981677086}
 --- !u!1 &291564570272307520
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u4E0D\u673D\u4E4B\u773C"
+  m_text: "\u4E4B\u773C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: f45930c161c12414f8c5594d50b8ca4d, type: 2}

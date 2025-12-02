@@ -1,5 +1,7 @@
 using System;
 using Mysql;
+using TMPro;
+using Tool;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,9 +15,78 @@ public class EquipAttributePanel : MonoBehaviour
     [NonSerialized]public TableBase tableBase;
     [NonSerialized]public BagGrid grid;
 
+    public TextMeshProUGUI equipName;
+    public TextMeshProUGUI quality;
+    public Text baseAttributeText1;
+    public Text baseAttributeText2;
+    public TextMeshProUGUI baseAttributeCount1;
+    public TextMeshProUGUI baseAttributeCount2;
+    public Image equipBg;
+    public Image equipImage;
+
+
 
     [NonSerialized] public GameObject BagGrid;//背包格子
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    
+    public void Init()
+    {
+        EquipTable equip=(EquipTable)tableBase;
+        if (equip == null)
+        {
+            return;
+        }
+
+        equipName.text = EquipName.EquipNameDic[equip.EquipName];
+        equipImage.sprite=ResourcesConfig.GetEquipSprite(equip);
+
+        //基础属性
+        if (equip.equip_type_id == 1 || equip.equip_type_id == 4 || equip.equip_type_id == 5)
+        {
+            baseAttributeText1.text = "生命值 :";
+            baseAttributeText2.text = "防御 :";
+            baseAttributeCount1.text = equip.HP.ToString();
+            baseAttributeCount2.text = equip.Defense.ToString();
+        }
+        else
+        {
+            baseAttributeText1.text = "攻击 :";
+            baseAttributeText2.text = "暴击 :";
+            baseAttributeCount1.text = equip.Damage.ToString();
+            baseAttributeCount2.text = equip.CRIT.ToString();
+        }
+        
+        
+        switch (equip.Quality)
+        {
+            case 1:
+                quality.text = "普通";
+                equipBg.sprite = ResourcesConfig.WhiteBg;
+                break;
+            case 2:
+                quality.text = "优秀";
+                equipBg.sprite = ResourcesConfig.GreenBg;
+                break;
+            case 3:
+                quality.text = "精良";
+                equipBg.sprite = ResourcesConfig.BlueBg;
+                break;
+            case 4:
+                quality.text = "史诗";
+                equipBg.sprite = ResourcesConfig.PurpleBg;
+                break;
+            case 5:
+                quality.text = "传说";
+                equipBg.sprite = ResourcesConfig.OrangeBg;
+                break;
+            case 6:
+                quality.text = "神话";
+                equipBg.sprite = ResourcesConfig.OrangeBg;
+                break;
+        }
+    }
+    
     
     public void UninstallE()
     {
