@@ -23,9 +23,6 @@ public class EquipBase : BagObjectBase
     [NonSerialized]public SuitType suitType = SuitType.None; // 装备套装类型
     
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
-    
-    [NonSerialized]public List<DamageEntryInfo> damageEntryInfos=new List<DamageEntryInfo>();
-    [NonSerialized]public List<DefenseEntryInfo> defenseEntryInfos=new List<DefenseEntryInfo>();
 
 
     public void InitEntry()
@@ -41,7 +38,7 @@ public class EquipBase : BagObjectBase
                float randomValue=Random.Range(EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].minValue, EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].maxValue);
                float value = Mathf.Round(randomValue*100)/100;
                damageEntryInfo.Value = value;
-               damageEntryInfos.Add(damageEntryInfo);
+               EquipAttributes.damageEntryInfos.Add(damageEntryInfo);
             }
         }
         else
@@ -54,7 +51,7 @@ public class EquipBase : BagObjectBase
                 float randomValue=Random.Range(EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].minValue, EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].maxValue);
                 float value = Mathf.Round(randomValue*100)/100;
                 DefenseEntryInfo.Value = value;
-                defenseEntryInfos.Add(DefenseEntryInfo);
+                EquipAttributes.defenseEntryInfos.Add(DefenseEntryInfo);
             }
         }
     }

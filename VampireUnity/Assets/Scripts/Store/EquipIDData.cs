@@ -29,7 +29,9 @@ public class EquipIDData : XSingleton<EquipIDData>
             suitid = equip.suitid,
             equip_type_id = equip.equip_type_id,
             Defense = equip.Defense,
-            EquipName = equip.EquipName
+            EquipName = equip.EquipName,
+            damageEntryInfos= new List<DamageEntryInfo>(equip.damageEntryInfos),
+            defenseEntryInfos= new List<DefenseEntryInfo>(equip.defenseEntryInfos)
         };
         equipIds.Add(data.equipid,data);
     }

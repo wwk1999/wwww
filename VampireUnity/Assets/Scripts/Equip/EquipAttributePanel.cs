@@ -25,11 +25,39 @@ public class EquipAttributePanel : MonoBehaviour
     public Image equipImage;
     public Animator animator;
 
+    public GameObject fuJiaAttributeContent;
 
 
     [NonSerialized] public GameObject BagGrid;//背包格子
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+
+
+    public void SetFuJiaAttribute(EquipTable equip)
+    {
+        foreach (Transform child in fuJiaAttributeContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (var item in equip.defenseEntryInfos)
+        {
+            var fuJiaAttributeItem =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/FuJiaAttributeItem"),fuJiaAttributeContent.transform);
+            fuJiaAttributeItem.transform.Find("BaseAttributeName").GetComponent<Text>().text =
+                EntryConfig.DefenseEntryNameDic[item.DefenseEntry];
+            fuJiaAttributeItem.transform.Find("BaseAttributeCount").GetComponent<TextMeshProUGUI>().text =
+                item.Value + "%";
+        }
+                
+        foreach (var item in equip.damageEntryInfos)
+        {
+            var fuJiaAttributeItem =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/FuJiaAttributeItem"),fuJiaAttributeContent.transform);
+            fuJiaAttributeItem.transform.Find("BaseAttributeName").GetComponent<Text>().text =
+                EntryConfig.DamageEntryNameDic[item.DamageEntry];
+            fuJiaAttributeItem.transform.Find("BaseAttributeCount").GetComponent<TextMeshProUGUI>().text =
+                item.Value + "%";
+        }
+    }
     
     public void Init()
     {
@@ -69,28 +97,32 @@ public class EquipAttributePanel : MonoBehaviour
             case 2:
                 quality.text = "优秀";
                 animator.Play("GreenEdge");
-
                 equipBg.sprite = ResourcesConfig.GreenBg;
+                SetFuJiaAttribute(equip);
                 break;
             case 3:
                 quality.text = "精良";
                 animator.Play("BlueEdge");
                 equipBg.sprite = ResourcesConfig.BlueBg;
+                SetFuJiaAttribute(equip);
                 break;
             case 4:
                 quality.text = "史诗";
                 animator.Play("PurpleEdge");
                 equipBg.sprite = ResourcesConfig.PurpleBg;
+                SetFuJiaAttribute(equip);
                 break;
             case 5:
                 quality.text = "传说";
                 animator.Play("OrangeEdge");
                 equipBg.sprite = ResourcesConfig.OrangeBg;
+                SetFuJiaAttribute(equip);
                 break;
             case 6:
                 quality.text = "神话";
                 animator.Play("RedEdge");
                 equipBg.sprite = ResourcesConfig.OrangeBg;
+                SetFuJiaAttribute(equip);
                 break;
         }
     }

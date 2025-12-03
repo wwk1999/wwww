@@ -207,6 +207,7 @@ MonoBehaviour:
   equipBg: {fileID: 6265482454781223758}
   equipImage: {fileID: 5316424955385650117}
   animator: {fileID: 8557372721383883970}
+  fuJiaAttributeContent: {fileID: 6444532328349616276}
 --- !u!1 &291564570272307520
 GameObject:
   m_ObjectHideFlags: 0

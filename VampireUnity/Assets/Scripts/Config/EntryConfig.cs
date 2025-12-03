@@ -53,6 +53,26 @@ public static Dictionary<DamageEntry, DamageEntryConfig> DamageEntryConfigs =
     { DamageEntry.BloodSuck,         new DamageEntryConfig { DamageEntry = DamageEntry.BloodSuck,         minValue = 2, maxValue = 4 } },
 };
 
+public static Dictionary<DefenseEntry, string> DefenseEntryNameDic = new Dictionary<DefenseEntry, string>()
+{
+    { DefenseEntry.KillReplyHpPercent, "击杀回复Hp :" },
+    { DefenseEntry.MaxHpPercent, "百分比增加Hp :" },
+    { DefenseEntry.MaxDefensePercent, "百分比增加Def :" },
+    { DefenseEntry.DamageReductionPercent, "伤害减免 :" },
+    { DefenseEntry.DamageReductionPercentForNormal, "减免普通怪伤害 :" },
+    { DefenseEntry.DamageReductionPercentForBoss, "减免Boss伤害 :" },
+    { DefenseEntry.ReplyHpPercent, "每3s回复生命值 :" },
+};
+public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionary<DamageEntry, string>()
+{
+    { DamageEntry.CRITDamage, "暴击伤害 :" },
+    { DamageEntry.DamageSpeed, "攻击速度 :" },
+    { DamageEntry.DamageAddForNormal, "对普通怪伤害 :" },
+    { DamageEntry.DamageAddForBoss, "对Boss伤害 :" },
+    { DamageEntry.Penetrate, "防御穿透 :" },
+    { DamageEntry.DamageAddPercent, "百分比增加Att :" },
+    { DamageEntry.BloodSuck, "吸血 :" },
+};
     public static List<DefenseEntry> DefenseEntryList = new List<DefenseEntry>()
     {
         DefenseEntry.KillReplyHpPercent,

@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Mysql;
 using Tool;
 
@@ -11,6 +13,9 @@ public class EquipTable:TableBase
     public int CRIT { get; set; }
     public int Defense { get; set; }
     public int HP { get; set; }
+    
+    public List<DamageEntryInfo> damageEntryInfos=new List<DamageEntryInfo>();
+    public List<DefenseEntryInfo> defenseEntryInfos=new List<DefenseEntryInfo>();
 
     public EquipTable(
         int equipid = 0,
@@ -21,7 +26,9 @@ public class EquipTable:TableBase
         int defense = 0, 
         int hp = 0, 
         int suitid = 0,
-        int equip_type_id = 0)
+        int equip_type_id = 0,
+        List<DamageEntryInfo> damageEntryInfos=null,
+        List<DefenseEntryInfo> defenseEntryInfos=null)
     {
         this.equipid = equipid;
         EquipName = equipName;
@@ -33,5 +40,7 @@ public class EquipTable:TableBase
         TableType = TableType.EquipTable;
         this.suitid = suitid;
         this.equip_type_id = equip_type_id;
+        this.damageEntryInfos = damageEntryInfos ?? new List<DamageEntryInfo>();
+        this.defenseEntryInfos = defenseEntryInfos ?? new List<DefenseEntryInfo>();
     }
 }

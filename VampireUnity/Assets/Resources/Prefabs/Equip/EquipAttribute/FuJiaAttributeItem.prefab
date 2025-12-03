@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349546816155757836}
   m_Layer: 0
-  m_Name: FuJiaAttribute
+  m_Name: FuJiaAttributeItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -31}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 175, y: 0}
+  m_SizeDelta: {x: 350, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7868023884086089171
 GameObject:
@@ -69,10 +69,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 349546816155757836}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -64, y: 0}
-  m_SizeDelta: {x: 160, y: 40}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 114.5, y: 0}
+  m_SizeDelta: {x: 209.6987, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &722980967599032268
 CanvasRenderer:
@@ -104,7 +104,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7a3012af2487c4f6f9e8faa3a056b829, type: 3}
-    m_FontSize: 32
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -115,7 +115,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u751F\u547D\u503C  \uFF1A"
+  m_Text: "\u51CF\u514D\u666E\u901A\u602A\u4F24\u5BB3 :"
 --- !u!1 &8076064098937458928
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,9 +148,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 349546816155757836}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62.49933, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -130, y: 0}
   m_SizeDelta: {x: 164.9986, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8877177599820523831
