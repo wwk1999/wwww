@@ -14,7 +14,6 @@ public class PlayerHit : MonoBehaviour
 
     public void AnimationEnd()
     {
-        GameController.S.gamePlayer.IsWuDi = false;
         gameObject.SetActive(false);
         FightBGController.S.PlayerHitQueue.Enqueue(this);
     }

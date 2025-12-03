@@ -228,14 +228,23 @@ public class Player : MonoBehaviour
     public void PlayerHurt(int damage)
     {
         if (IsWuDi)
+        {
             return;
+        }
         //打印调用这个方法的脚本name
         Debug.Log("PlayerHurt被调用，来自脚本：" + new System.Diagnostics.StackTrace().GetFrame(1).GetMethod().DeclaringType.Name);
         AudioController.S.PlayPlayerHurt();
         CameraContraller.S.CameraShake(0.1f, 0.005f);
         var playerhit = FightBGController.S.PlayerHitQueue.Dequeue();
         playerhit.gameObject.SetActive(true);
+        StartCoroutine(DelayCancelWuDi(1));
         playerSkeleton.AnimationState.SetAnimation(0, "hit", false);
+    }
+
+    IEnumerator DelayCancelWuDi(float time)
+    {
+        yield return new WaitForSeconds(time);
+        GameController.S.gamePlayer.IsWuDi = false;
     }
 
     private void Update()
