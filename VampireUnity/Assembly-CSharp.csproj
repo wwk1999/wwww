@@ -107,6 +107,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManJumpTrigger.cs" />
     <Compile Include="Assets\Scripts\Skill\FourNormalAttack.cs" />
+    <Compile Include="Assets\Scripts\Tool\MonsterSequenceTool.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenHelmet.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManBoss.cs" />

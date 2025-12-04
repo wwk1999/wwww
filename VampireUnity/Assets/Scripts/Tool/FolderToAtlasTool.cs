@@ -34,7 +34,11 @@ public class FolderToAtlasTool : EditorWindow
 
         EditorGUILayout.Space();
         atlasName = EditorGUILayout.TextField("图集名（文件名）", atlasName);
-        maxAtlasSize = EditorGUILayout.IntPopup("最大尺寸", maxAtlasSize, new[] { "1024", "2048", "4096" }, new[] { 1024, 2048, 4096 });
+        maxAtlasSize = EditorGUILayout.IntPopup(
+            "最大尺寸",
+            maxAtlasSize,
+            new[] { "1024", "2048", "4096", "8192", "16384" },
+            new[] { 1024, 2048, 4096, 8192, 16384 });
         padding = EditorGUILayout.IntSlider("间距 (Padding)", padding, 0, 16);
 
         EditorGUILayout.Space();
