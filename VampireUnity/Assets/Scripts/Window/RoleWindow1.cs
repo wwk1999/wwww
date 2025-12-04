@@ -30,6 +30,7 @@ public class RoleWindow1 : MonoBehaviour
     public Slider expSlider; // 经验条
     public Button friendButton; // 好友按钮
     public Button rankButton;
+    public Button debugLevel;
 
     public void UpdateRoleWindow()
     {
@@ -136,7 +137,11 @@ public class RoleWindow1 : MonoBehaviour
         BagController.S.IsInit = true;
         
         
-        
+        debugLevel.onClick.AddListener(() =>
+        {
+            GlobalPlayerAttribute.GameLevel = 100;
+            StoreController.S.SaveStoreData();
+        });
         
         rankButton.onClick.AddListener(() =>
         {
