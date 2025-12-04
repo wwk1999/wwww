@@ -1,0 +1,46 @@
+caocao_skill1_2.png
+	size: 520, 520
+	filter: Linear, Linear
+TX_gx_0026
+	bounds: 393, 298, 120, 118
+	offsets: 2, 2, 124, 123
+TX_show_0001
+	bounds: 2, 23, 79, 82
+	offsets: 6, 7, 95, 95
+quanquanjx056
+	bounds: 178, 18, 115, 113
+	offsets: 5, 6, 128, 128
+tx_baz01
+	bounds: 432, 78, 42, 55
+	offsets: 144, 168, 220, 230
+tx_baz02
+	bounds: 356, 135, 150, 161
+	offsets: 40, 44, 220, 230
+tx_baz03
+	bounds: 178, 133, 181, 176
+	offsets: 26, 30, 220, 230
+	rotate: 90
+tx_baz04
+	bounds: 192, 328, 199, 190
+	offsets: 14, 16, 220, 230
+tx_baz05
+	bounds: 2, 107, 174, 207
+	offsets: 37, 7, 220, 230
+tx_baz06
+	bounds: 2, 316, 188, 202
+	offsets: 32, 27, 220, 230
+zhan01
+	bounds: 336, 2, 46, 45
+zhan02
+	bounds: 386, 72, 44, 61
+zhan03
+	bounds: 83, 41, 83, 64
+zhan04
+	bounds: 336, 49, 48, 82
+zhan05
+	bounds: 476, 76, 35, 57
+zhan06
+	bounds: 295, 27, 39, 104
+zhanmohu
+	bounds: 393, 418, 100, 125
+	rotate: 90

@@ -1,0 +1,68 @@
+dingfeng_skill1_2.png
+	size: 472, 472
+	filter: Linear, Linear
+	pma: true
+bing01
+	bounds: 119, 182, 105, 145
+	offsets: 3, 0, 113, 146
+	rotate: 90
+bing02
+	bounds: 2, 289, 88, 181
+	offsets: 7, 1, 100, 187
+bing03
+	bounds: 209, 371, 99, 112
+	offsets: 7, 2, 113, 120
+	rotate: 90
+bing04
+	bounds: 266, 174, 91, 113
+	offsets: 9, 2, 113, 120
+bing05
+	bounds: 2, 76, 97, 88
+	offsets: 8, 9, 113, 106
+	rotate: 90
+bingbao0001
+	bounds: 261, 90, 82, 117
+	offsets: 51, 1, 140, 122
+	rotate: 90
+bingbao0002
+	bounds: 359, 182, 79, 115
+	offsets: 50, 3, 140, 122
+bingbao0003
+	bounds: 261, 10, 78, 109
+	offsets: 49, 10, 140, 122
+	rotate: 90
+bingbao0004
+	bounds: 209, 289, 80, 108
+	offsets: 49, 11, 140, 122
+	rotate: 90
+bingbao0005
+	bounds: 92, 363, 107, 115
+	offsets: 23, 5, 140, 122
+	rotate: 90
+bingbao0006
+	bounds: 2, 175, 115, 112
+	offsets: 16, 8, 140, 122
+bingbao0007
+	bounds: 380, 95, 79, 85
+	offsets: 17, 11, 140, 122
+bingbao0008
+	bounds: 92, 289, 72, 101
+	offsets: 7, 10, 140, 122
+	rotate: 90
+bingbao0009
+	bounds: 2, 3, 71, 97
+	offsets: 6, 15, 140, 122
+	rotate: 90
+fazhen01
+	bounds: 119, 27, 153, 79
+	offsets: 2, 0, 160, 79
+	rotate: 90
+fazhen02
+	bounds: 200, 60, 120, 59
+	offsets: 10, 5, 140, 69
+	rotate: 90
+fazhen03
+	bounds: 323, 401, 140, 69
+fazhen04
+	bounds: 319, 299, 151, 70
+	offsets: 5, 1, 160, 74

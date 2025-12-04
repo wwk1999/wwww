@@ -870,6 +870,7 @@ public class BagController : XSingleton<BagController>
                             break;
 
                     }
+                    GlobalPlayerAttribute.RefreshFuJiaAttribute();
                 }
                 catch (System.Exception e)
                 {
@@ -1274,6 +1275,7 @@ public class BagController : XSingleton<BagController>
 
     public void RefreshPlayerEquip()
     {
+        GlobalPlayerAttribute.RefreshFuJiaAttribute();
         if (PlayerEquipConfig.CloakId == 0)
         {
             IsInstallCloak = false;

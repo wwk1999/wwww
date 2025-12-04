@@ -250,7 +250,7 @@ public class EquipAttributePanel : MonoBehaviour
         }
         
         
-        // 装备按钮
+        // 穿戴装备按钮
         if (installButton != null)
         {
             // 移除旧的监听器
@@ -261,6 +261,15 @@ public class EquipAttributePanel : MonoBehaviour
                 try
                 {
                     EquipTable equip = (EquipTable)tableBase;
+                    foreach (var item in equip.damageEntryInfos)
+                    {
+                        switch (item.DamageEntry)
+                        {
+                            case EntryConfig.DamageEntry.BloodSuck:
+                                
+                                break;
+                        }
+                    }
                     PlayerData.S.SaveWearEquip(equip.equip_type_id, equip.equipid);
                     StoreController.S.SaveStoreData();
                     int equiptype = equip.equip_type_id;
@@ -314,11 +323,9 @@ public class EquipAttributePanel : MonoBehaviour
                     }
                     BagController.S.SetE();
                     BagController.S.RefreshPlayerEquip();
-                    //BagController.S.ComputeTotalAttribute();//更新人物和装备属性
-                    BagController.S.DestroyMaskLayer();
                     Destroy(gameObject);
                 }
-                catch (System.Exception e)
+                catch (Exception e)
                 {
                     Debug.LogError($"EquipAttributePanel: 装备按钮异常: {e.Message}\n{e.StackTrace}");
                     // 确保出错时仍然销毁面板和蒙层

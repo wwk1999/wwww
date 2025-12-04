@@ -434,6 +434,7 @@
     <None Include="Assets\shader\ParticleAdditiveGlow 1.shader" />
     <None Include="Assets\Arts\Spine\第四关\雪狼2\雪狼2\json\xuelang.json" />
     <None Include="Assets\External Resources\VFX_Resources\Shaders\PFX_Particles_Cutout.shader" />
+    <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.json" />
     <None Include="Assets\External Resources\VFX_Resources\Shaders\PFX_Aura.shader" />
     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
     <None Include="Assets\Arts\Shaders\LcL\Pixel.shader" />
@@ -455,6 +456,7 @@
     <None Include="Assets\Packages\System.Diagnostics.DiagnosticSource.8.0.1\useSharedDesignerContext.txt" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\link.xml" />
     <None Include="Assets\Arts\Spine\第一关\蝙蝠\json\bf.atlas.txt" />
+    <None Include="Assets\Arts\Spine\淘宝\斩\caocao_skill1_2.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -529,6 +531,7 @@
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\EdgeEffect_Additive.shader" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\UIEffect.shader" />
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
+    <None Include="Assets\Arts\Spine\淘宝\斩\caocao_skill1_2.json" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
     <None Include="Assets\shader\cgwell Add Zoff.shader" />
@@ -545,6 +548,7 @@
     <None Include="Assets\Arts\Spine\第三关\甲虫\json\jiachong.json" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
     <None Include="Assets\dilie\Material\Rock.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />

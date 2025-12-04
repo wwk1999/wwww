@@ -112,24 +112,136 @@ public class GlobalPlayerAttribute
    
    //附加词条属性
 
-   public int KillReplyHpFixed=0;
-   public int KillReplyHpPercent=0;
-   public int MaxHpPercent=0;
-   public int MaxDefensePercent=0;
-   public int DamageReductionPercent=0;
-   public int DamageReductionPercentForNormal=0;
-   public int DamageReductionPercentForBoss=0;
-   public int ReplyHpFixed=0;
-   public int ReplyHpPercent=0;
+   public static float KillReplyHpPercent=0;
+   public static float MaxHpPercent=0;
+   public static float MaxDefensePercent=0;
+   public static float DamageReductionPercent=0;
+   public static float DamageReductionPercentForNormal=0;
+   public static float DamageReductionPercentForBoss=0;
+   public static float ReplyHpPercent=0;
 
 
-   public int CRITDamage = 0;
-   public int DamageSpeed = 0; 
-   public int DamageAddForNormal = 0;
-   public int DamageAddForBoss = 0;
-   public int Penetrate = 0;
-   public int DamageAddPercent = 0;
-   public int BloodSuck = 0;
+   public static float CRITDamage = 0;
+   public static float DamageSpeed = 0; 
+   public static float DamageAddForNormal = 0;
+   public static float DamageAddForBoss = 0;
+   public static float Penetrate = 0;
+   public static float DamageAddPercent = 0;
+   public static float BloodSuck = 0;
+
+
+   public static void ResetFuJiaAttribute()
+   {
+    KillReplyHpPercent=0;
+    MaxHpPercent=0;
+    MaxDefensePercent=0;
+    DamageReductionPercent=0;
+    DamageReductionPercentForNormal=0;
+    DamageReductionPercentForBoss=0;
+    ReplyHpPercent=0;
+
+
+    CRITDamage = 0;
+    DamageSpeed = 0; 
+    DamageAddForNormal = 0;
+    DamageAddForBoss = 0;
+    Penetrate = 0;
+    DamageAddPercent = 0;
+    BloodSuck = 0;
+   }
+
+   public static void AddFuJiaAttribute(EquipTable equipTable)
+   {
+       foreach (var item in equipTable.damageEntryInfos)
+       {
+           switch (item.DamageEntry)
+           {
+               case EntryConfig.DamageEntry.BloodSuck:
+                   BloodSuck += item.Value;
+                   break;
+               case EntryConfig.DamageEntry.CRITDamage:
+                   CRITDamage += item.Value;
+                   break;
+               case EntryConfig.DamageEntry.DamageAddForBoss:
+                   DamageAddForBoss += item.Value;
+                   break;
+               case EntryConfig.DamageEntry.DamageAddForNormal:
+                   DamageAddForNormal += item.Value;
+                   break;
+               case EntryConfig.DamageEntry.DamageAddPercent:
+                   DamageAddPercent += item.Value;
+                   break;
+               case EntryConfig.DamageEntry.DamageSpeed:
+                   DamageSpeed += item.Value;
+                   break;
+               case EntryConfig.DamageEntry.Penetrate:
+                   Penetrate += item.Value;
+                   break;
+           }
+       }
+       
+       foreach (var item in equipTable.defenseEntryInfos)
+       {
+           switch (item.DefenseEntry)
+           {
+               case EntryConfig.DefenseEntry.KillReplyHpPercent:
+                   KillReplyHpPercent += item.Value;
+                   break;
+               case EntryConfig.DefenseEntry.DamageReductionPercent:
+                   DamageReductionPercent += item.Value;
+                   break;
+               case EntryConfig.DefenseEntry.DamageReductionPercentForBoss:
+                   DamageReductionPercentForBoss += item.Value;
+                   break;
+               case EntryConfig.DefenseEntry.DamageReductionPercentForNormal:
+                   DamageReductionPercentForNormal += item.Value;
+                   break;
+               case EntryConfig.DefenseEntry.MaxDefensePercent:
+                   MaxDefensePercent += item.Value;
+                   break;
+               case EntryConfig.DefenseEntry.MaxHpPercent:
+                   MaxHpPercent += item.Value;
+                   break;
+               case EntryConfig.DefenseEntry.ReplyHpPercent:
+                   ReplyHpPercent += item.Value;
+                   break;
+           }
+       }
+   }
+   public static void RefreshFuJiaAttribute()
+   {
+       ResetFuJiaAttribute();
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           AddFuJiaAttribute(cloak);
+       }
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           AddFuJiaAttribute(cloth);
+       }
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           AddFuJiaAttribute(helmet);
+       }
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           AddFuJiaAttribute(ring);
+       }
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           AddFuJiaAttribute(necklace);
+       }
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           AddFuJiaAttribute(shoe);
+       }
+   }
    
    
    public static int GetEquipMaxHp()
