@@ -190,6 +190,7 @@
     <Compile Include="Assets\Scripts\Skill\IceBall.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloth.cs" />
     <Compile Include="Assets\Scripts\UIFrameWork\BasePanel.cs" />
+    <Compile Include="Assets\Scripts\Tool\FolderToAtlasTool.cs" />
     <Compile Include="Assets\Scripts\Window\TaskWindow1.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerEquipConfig.cs" />
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Scripts\ProjectileMover.cs" />

@@ -10,14 +10,14 @@ using UnityEngine;
 /// <summary>
 /// 在 Unity 顶部菜单 Tool/生成序列帧动画
 /// 功能：
-/// 1. 选择一个包含图片的文件夹
+/// 1. 选择一张图集贴图（例如 NewAtlas.png，Multiple Sprite）
 /// 2. 输入动画名和帧率
 /// 3. 在当前场景中创建一个带 SpriteRenderer + Animator 的物体
-/// 4. 在该文件夹下生成对应的 AnimationClip 和 AnimatorController 资源
+/// 4. 在图集所在目录下生成对应的 AnimationClip 和 AnimatorController 资源
 /// </summary>
 public class SequenceFrameAnimationGenerator : EditorWindow
 {
-    private DefaultAsset folderAsset; // 选择的文件夹（Project 视图里拖拽进来）
+    private Texture2D atlasTexture; // 选择的图集贴图（Multiple Sprite）
     private string animationName = "NewSequenceAnim";
     private float frameRate = 12f;
 
@@ -33,8 +33,8 @@ public class SequenceFrameAnimationGenerator : EditorWindow
         EditorGUILayout.LabelField("序列帧动画生成器", EditorStyles.boldLabel);
         EditorGUILayout.Space();
 
-        EditorGUILayout.LabelField("1. 选择一个仅包含序列帧图片的文件夹（Project 中）");
-        folderAsset = (DefaultAsset)EditorGUILayout.ObjectField("图片文件夹", folderAsset, typeof(DefaultAsset), false);
+        EditorGUILayout.LabelField("1. 选择一张包含序列帧 Sprite 的图集贴图（Multiple Sprite）");
+        atlasTexture = (Texture2D)EditorGUILayout.ObjectField("图集 (Texture2D)", atlasTexture, typeof(Texture2D), false);
 
         EditorGUILayout.Space();
         animationName = EditorGUILayout.TextField("动画名 / 物体名", animationName);
@@ -49,9 +49,9 @@ public class SequenceFrameAnimationGenerator : EditorWindow
 
     private void Generate()
     {
-        if (folderAsset == null)
+        if (atlasTexture == null)
         {
-            EditorUtility.DisplayDialog("错误", "请先选择一个包含图片的文件夹。", "确定");
+            EditorUtility.DisplayDialog("错误", "请先选择一张图集贴图（Texture2D）。", "确定");
             return;
         }
 
@@ -67,38 +67,34 @@ public class SequenceFrameAnimationGenerator : EditorWindow
             return;
         }
 
-        string folderPath = AssetDatabase.GetAssetPath(folderAsset);
-        if (string.IsNullOrEmpty(folderPath) || !AssetDatabase.IsValidFolder(folderPath))
+        string atlasPath = AssetDatabase.GetAssetPath(atlasTexture);
+        if (string.IsNullOrEmpty(atlasPath))
         {
-            EditorUtility.DisplayDialog("错误", "所选对象不是有效的文件夹，请重新选择。", "确定");
+            EditorUtility.DisplayDialog("错误", "无法获取图集贴图的路径。", "确定");
             return;
         }
 
-        // 获取该文件夹下所有图片（Texture2D），并按名称排序
-        string[] guids = AssetDatabase.FindAssets("t:Texture2D", new[] { folderPath });
-        if (guids == null || guids.Length == 0)
+        // 图集所在的文件夹，用于保存动画和控制器
+        string folderPath = Path.GetDirectoryName(atlasPath)?.Replace("\\", "/");
+        if (string.IsNullOrEmpty(folderPath))
         {
-            EditorUtility.DisplayDialog("错误", "该文件夹下没有找到任何图片（Texture2D）。", "确定");
+            EditorUtility.DisplayDialog("错误", "无法解析图集所在的文件夹路径。", "确定");
             return;
         }
 
-        List<Sprite> sprites = new List<Sprite>();
+        // 从这张图集中获取所有子 Sprite，并按名称排序
+        var allAssets = AssetDatabase.LoadAllAssetsAtPath(atlasPath);
+        List<Sprite> sprites = allAssets.OfType<Sprite>().ToList();
 
-        // 先把所有路径找出来再排序，保证按照文件名顺序
-        var pathList = guids
-            .Select(g => AssetDatabase.GUIDToAssetPath(g))
-            .Where(p => !string.IsNullOrEmpty(p))
-            .OrderBy(p => Path.GetFileNameWithoutExtension(p))
+        if (sprites == null || sprites.Count == 0)
+        {
+            EditorUtility.DisplayDialog("错误", "该图集中没有找到任何 Sprite，请确认导入模式为 Multiple。", "确定");
+            return;
+        }
+
+        sprites = sprites
+            .OrderBy(s => s.name, System.StringComparer.Ordinal)
             .ToList();
-
-        foreach (var path in pathList)
-        {
-            var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(path);
-            if (sprite != null)
-            {
-                sprites.Add(sprite);
-            }
-        }
 
         if (sprites.Count == 0)
         {
