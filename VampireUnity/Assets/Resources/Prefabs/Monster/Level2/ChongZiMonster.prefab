@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3932742976577099569}
   - component: {fileID: 1847836340516544727}
-  m_Layer: 6
+  m_Layer: 16
   m_Name: Collider
   m_TagString: Monster
   m_Icon: {fileID: 0}
