@@ -19,9 +19,9 @@ public enum WeaponType
 {
     None,
     Primary,
-    Two,
-    Three,
-    Four,
+    LanBao,
+    Fire,
+    XuKong,
     Five,
     Six,
     Seven,

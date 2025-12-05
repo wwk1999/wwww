@@ -156,18 +156,16 @@ public class WeaponWindow : MonoBehaviour
       });
       twoInstallButton.onClick.AddListener(() =>
       {
-         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.Two;
+         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.LanBao;
         // GameController.S.gamePlayer.weaponType = WeaponType.Two;
       });
       threeInstallButton.onClick.AddListener(() =>
       {
-         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.Three;
-         // GameController.S.gamePlayer.weaponType = WeaponType.Two;
+        
       });
       fourInstallButton.onClick.AddListener(() =>
       {
-         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.Four;
-         // GameController.S.gamePlayer.weaponType = WeaponType.Two;
+        
       });
       // PenetrateButton.onClick.AddListener(() =>
       // {

@@ -113,18 +113,11 @@ public class SkillController : XSingleton<SkillController>
         switch (GlobalPlayerAttribute.CurrentWeaponType)
         {
             case WeaponType.Primary:
-                GameController.S.gamePlayer.currentGun.PrimaryShot(penetrate,division,extremeSpeed,explosion);
+                GameController.S.gamePlayer.currentGun.PrimaryShot();
                 break;
-            case WeaponType.Two:
-                GameController.S.gamePlayer.currentGun.TwoShot(penetrate,division,extremeSpeed,explosion);
+            case WeaponType.LanBao:
+                GameController.S.gamePlayer.currentGun.LanBaoShot();
                 break;
-            case WeaponType.Three:
-                GameController.S.gamePlayer.currentGun.ThreeShot(penetrate,division,extremeSpeed,explosion);
-                break;
-            case WeaponType.Four:
-                GameController.S.gamePlayer.currentGun.FourShot(penetrate,division,extremeSpeed,explosion);
-                break;
-
         }
         //GameController.S.gamePlayer.currentGun.TwoShot(penetrate,division,extremeSpeed,explosion);
         SkillController.S.NormalAttackCoolingtime+=Time.deltaTime;

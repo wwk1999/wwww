@@ -846,47 +846,4 @@ public class GameController : XSingleton<GameController>
 
         return nearestMonster;
     }
-    
-    public void ShotBulletInvoke()
-    {
-        int penetrate=0;
-        int division=0;
-        int extremeSpeed=0;
-        int explosion=0;
-        foreach (var sourceStoneTable in WeaponSourceConfig.WeaponSourceStoneList)
-        {
-            if(sourceStoneTable.SourceStoneType== (int)WeaponSourceStoneType.Penetrate)
-            {
-                penetrate++;
-            }
-            if(sourceStoneTable.SourceStoneType== (int)WeaponSourceStoneType.Division)
-            {
-                division++;
-            }
-            if(sourceStoneTable.SourceStoneType== (int)WeaponSourceStoneType.ExtremeSpeed)
-            {
-                extremeSpeed++;
-            }
-            if(sourceStoneTable.SourceStoneType== (int)WeaponSourceStoneType.Explosion)
-            {
-                explosion++;
-            }
-        }
-
-        switch (GlobalPlayerAttribute.CurrentWeaponType)
-        {
-            case WeaponType.Primary:
-                GameController.S.gamePlayer.currentGun.PrimaryShot(penetrate,division,extremeSpeed,explosion);
-                AudioController.S.PlayNormalAttack1();
-                break;
-            case WeaponType.Two:
-                AudioController.S.PlayNormalAttack2();
-                GameController.S.gamePlayer.currentGun.TwoShot(penetrate,division,extremeSpeed,explosion);
-                break;
-        }
-        //GameController.S.gamePlayer.currentGun.TwoShot(penetrate,division,extremeSpeed,explosion);
-        SkillController.S.NormalAttackCoolingtime+=Time.deltaTime;
-    }
-    
-    
 }

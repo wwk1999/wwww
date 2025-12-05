@@ -262,16 +262,6 @@ public class Entrance : MonoBehaviour
             switch ( GlobalPlayerAttribute.CurrentWeaponType)
             {
                 case WeaponType.Primary:
-                    var primaryEx= Instantiate(Resources.Load("Prefabs/Skill/PrimaryEx"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                    primaryEx.SetActive(false);
-                    FightBGController.S.PrimaryNormalAttackExQueue.Enqueue(primaryEx);
-                    break;
-                case WeaponType.Two:
-                    var twoNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/2NormalAttackPrefab"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                    twoNormalAttack.SetActive(false);
-                    GameController.S.TwoNormalAttackQueue.Enqueue(twoNormalAttack);
-                    break;
-                case WeaponType.Three:
                     var threeNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/3NormalAttack"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                     threeNormalAttack.SetActive(false);
                     GameController.S.ThreeNormalAttackQueue.Enqueue(threeNormalAttack);
@@ -281,14 +271,10 @@ public class Entrance : MonoBehaviour
                     threeNormalAttackhit.SetActive(false);
                     GameController.S.ThreeNormalAttackHitQueue.Enqueue(threeNormalAttackhit);
                     break;
-                case WeaponType.Four:
-                    var fourNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/4NormalAttack"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                    fourNormalAttack.SetActive(false);
-                    GameController.S.FourNormalAttackQueue.Enqueue(fourNormalAttack);
-                    
-                    var fourNormalAttackhit= Instantiate(Resources.Load("Prefabs/Skill/4NormalAttackHit"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                    fourNormalAttackhit.SetActive(false);
-                    GameController.S.FourNormalAttackHitQueue.Enqueue(fourNormalAttackhit);
+                case WeaponType.LanBao:
+                    var twoNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/2NormalAttackPrefab"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    twoNormalAttack.SetActive(false);
+                    GameController.S.TwoNormalAttackQueue.Enqueue(twoNormalAttack);
                     break;
             }
         }

@@ -1,0 +1,46 @@
+{
+"skeleton": { "hash": "QaXKkq0UAL0", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30011_dandao" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "tx", "parent": "root" },
+	{ "name": "zidan", "parent": "tx", "length": 180.76, "rotation": 180 }
+],
+"slots": [
+	{ "name": "effect-zidan-zidan_0", "bone": "zidan" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"effect-zidan-zidan_0": {
+				"effect/zidan/zidan_00": { "x": 90.47, "y": -1.34, "rotation": 180, "width": 300, "height": 100 },
+				"effect/zidan/zidan_02": { "x": 90.47, "y": -1.34, "rotation": 180, "width": 300, "height": 100 },
+				"effect/zidan/zidan_04": { "x": 90.47, "y": -1.34, "rotation": 180, "width": 300, "height": 100 },
+				"effect/zidan/zidan_06": { "x": 90.47, "y": -1.34, "rotation": 180, "width": 300, "height": 100 },
+				"effect/zidan/zidan_08": { "x": 90.47, "y": -1.34, "rotation": 180, "width": 300, "height": 100 },
+				"effect/zidan/zidan_10": { "x": 90.47, "y": -1.34, "rotation": 180, "width": 300, "height": 100 },
+				"effect/zidan/zidan_12": { "x": 90.47, "y": -1.34, "rotation": 180, "width": 300, "height": 100 },
+				"effect/zidan/zidan_14": { "x": 90.47, "y": -1.34, "rotation": 180, "width": 300, "height": 100 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"effect-zidan-zidan_0": {
+				"attachment": [
+					{ "name": "effect/zidan/zidan_00" },
+					{ "time": 0.033333335, "name": "effect/zidan/zidan_02" },
+					{ "time": 0.06666667, "name": "effect/zidan/zidan_04" },
+					{ "time": 0.10000001, "name": "effect/zidan/zidan_06" },
+					{ "time": 0.13333334, "name": "effect/zidan/zidan_08" },
+					{ "time": 0.16666667, "name": "effect/zidan/zidan_10" },
+					{ "time": 0.20000002, "name": "effect/zidan/zidan_12" },
+					{ "time": 0.23333335, "name": "effect/zidan/zidan_14" }
+				]
+			}
+		}
+	}
+}
+}

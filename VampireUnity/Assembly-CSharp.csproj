@@ -339,6 +339,7 @@
     <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰攻击\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.burst@1.8.21\package.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shine.shader" />
@@ -538,6 +539,7 @@
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\淘宝\斩\caocao_skill1_2.json" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰攻击\action.json" />
     <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
     <None Include="Assets\shader\cgwell Add Zoff.shader" />
     <None Include="Assets\Arts\Spine\第三关\石头BOSS\json\shitouBOSS.json" />

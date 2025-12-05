@@ -5,6 +5,7 @@ public class MainWindowController : MonoBehaviour
 {
     void Start()
     {
+        Debug.LogError(1111);
         WindowController.S.InitPanel();
         ResourcesConfig.Init();
         WindowController.S.MainWindow.SetActive(true);
@@ -14,10 +15,5 @@ public class MainWindowController : MonoBehaviour
         WeaponSourceConfig.InitWeaponSourceConfig();
         StoreController.S.LoadStoreData();
     }
-
-    // Update is called once per frame
-    public void InitPanel()
-    {
-        
-    }
+    
 }
