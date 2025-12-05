@@ -195,6 +195,7 @@
     <Compile Include="Assets\Scripts\Window\TaskWindow1.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerEquipConfig.cs" />
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Scripts\ProjectileMover.cs" />
+    <Compile Include="Assets\Scripts\Tool\AnimCallBack.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioController.cs" />
     <Compile Include="Assets\Scripts\Tool\BossWarning.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterFlyObjectBase.cs" />

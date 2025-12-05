@@ -71,16 +71,25 @@ public class XiNiuMonster : MonsterBase
         float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
         if (dis < GameController.S.gamePlayer.size + size)
         {
+            isMove = false;
             monsterAnimator.Play("attack1");
+        }
+        else
+        {
+            isMove = true;
+            monsterAnimator.Play("move");
         }
         
         // 判断是否在播放任何动画（包括过渡）
-        if(monsterAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime == 0 && !monsterAnimator.IsInTransition(0))
+        if(isMove)
         {
-            monsterAnimator.Play("move");
             Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
-
+        }
+        else
+        {
+            Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+            GetComponent<Rigidbody2D>().velocity = direction.normalized * 0; 
         }
     }
     
@@ -89,6 +98,12 @@ public class XiNiuMonster : MonsterBase
         size = 0.3f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        
+        // 确保 isMove 初始化为 true（基类已初始化，这里只是确保）
+        isMove = true;
+        
+        // OnStateExit 是 Unity 自动调用的回调方法，不需要手动注册
+        // 只要脚本挂载在有 Animator 的 GameObject 上，Unity 就会自动调用它
     }
     
     void Update()
@@ -99,7 +114,7 @@ public class XiNiuMonster : MonsterBase
         if (!IsDead)
         {
             MonsterMove1();
-            SpriteFlipX1(true);
+            SpriteFlipX1(false);
         }
     }
 }

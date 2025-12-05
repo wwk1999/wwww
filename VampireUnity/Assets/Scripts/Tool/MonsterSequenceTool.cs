@@ -291,15 +291,36 @@ public class MonsterSequenceTool : EditorWindow
             "确定");
     }
 
+    /// <summary>
+    /// 从文件名中提取动画名和帧索引
+    /// 规则：找到最后一个下划线 '_'，取它前面的部分，如果这部分包含 '-'，则取最后一个 '-' 后面的部分作为动画名
+    /// 例如：【只有在【冰糖撞果冻】购买才可以免费更新】dashiguai_guang-attack1_00 -> attack1
+    /// 例如：【只有在【冰糖撞果冻】购买才可以免费更新】dashiguai_guang-beatback_08 -> beatback
+    /// </summary>
     private static void ParseName(string fileName, out string actionName, out int index)
     {
         actionName = fileName;
         index = 0;
 
+        // 找到最后一个下划线的位置
         int underscoreIndex = fileName.LastIndexOf('_');
         if (underscoreIndex > 0 && underscoreIndex < fileName.Length - 1)
         {
-            actionName = fileName.Substring(0, underscoreIndex);
+            // 取最后一个下划线前面的部分
+            string beforeUnderscore = fileName.Substring(0, underscoreIndex);
+            
+            // 如果这部分包含 '-'，取最后一个 '-' 后面的部分作为动画名
+            int dashIndex = beforeUnderscore.LastIndexOf('-');
+            if (dashIndex >= 0 && dashIndex < beforeUnderscore.Length - 1)
+            {
+                actionName = beforeUnderscore.Substring(dashIndex + 1);
+            }
+            else
+            {
+                actionName = beforeUnderscore;
+            }
+            
+            // 取最后一个下划线后面的部分作为帧索引
             string suffix = fileName.Substring(underscoreIndex + 1);
             if (!int.TryParse(suffix, out index))
             {

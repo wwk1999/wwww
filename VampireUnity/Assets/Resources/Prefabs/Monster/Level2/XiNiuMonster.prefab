@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1815534934426376467}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.049, y: -0.196, z: 0}
+  m_LocalPosition: {x: 0.052, y: -0.133, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -189,6 +189,7 @@ MonoBehaviour:
   hpSlider: {fileID: 3559942996648514864}
   monsterSprite: {fileID: 8923782218162511005}
   monsterAnimator: {fileID: 711034052375687160}
+  isMove: 1
 --- !u!1 &8600414354211058715
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +201,7 @@ GameObject:
   - component: {fileID: 2898085074062785393}
   - component: {fileID: 711034052375687160}
   - component: {fileID: 8923782218162511005}
+  - component: {fileID: 3807699335581800562}
   m_Layer: 0
   m_Name: Anim
   m_TagString: Untagged
@@ -216,7 +218,7 @@ Transform:
   m_GameObject: {fileID: 8600414354211058715}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.102, y: -0.018, z: 0}
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.39999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -295,6 +297,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3807699335581800562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8600414354211058715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899bca899118bf242abd8f35e61bc522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterAnimator: {fileID: 711034052375687160}
+  monsterBase: {fileID: 7097201522548436854}
 --- !u!1001 &3348140554949510456
 PrefabInstance:
   m_ObjectHideFlags: 0

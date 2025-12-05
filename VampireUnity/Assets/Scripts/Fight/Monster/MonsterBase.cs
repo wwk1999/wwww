@@ -28,6 +28,7 @@ public enum State
     Skill3,
     Die
 }
+
 public abstract class MonsterBase : MonoBehaviour
 {
     [NonSerialized]public MonsterType MonsterType;//怪物类型
@@ -60,6 +61,8 @@ public abstract class MonsterBase : MonoBehaviour
     public SpriteRenderer monsterSprite;
     public Animator monsterAnimator;
 
+    public bool isMove = true;
+
     //构造方法
     public MonsterBase(MonsterType monsterType, string monsterName, int monsterLevel, int maxHp, float speed, int attack, int defense, int exp, int bloodEnergy, int evolutionEnergy)
     {
@@ -81,7 +84,10 @@ public abstract class MonsterBase : MonoBehaviour
     public void Awake()
     {
         ObserverModuleManager.S.RegisterEvent(ConstKeys.Resumemonster,Resumemonster);
-        monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
+        if (monsterSkeletonAnimation != null)
+        {
+            monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
+        }
         CurrentHp = MaxHp;
         if (MonsterType != MonsterType.Boss)
         {
@@ -94,6 +100,10 @@ public abstract class MonsterBase : MonoBehaviour
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0) == null)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
+        }
+        else
+        {
+            monsterAnimator.Play("move");
         }
     }
 
@@ -549,6 +559,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else
         {
+            isMove=false;
             monsterAnimator.Play("fail");
             StartCoroutine(DelayDestroy());
         }
@@ -602,6 +613,7 @@ public abstract class MonsterBase : MonoBehaviour
             }
             else
             {
+                isMove=false;
                 monsterAnimator.Play("beatback");
             }
             CurrentHp -= damage;
