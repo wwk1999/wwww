@@ -204,6 +204,7 @@
     <Compile Include="Assets\Scripts\Mysql\ExperienceController.cs" />
     <Compile Include="Assets\Scripts\Tool\ObserverModuleManager.cs" />
     <Compile Include="Assets\Scripts\Window\SkillWindow1.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor2.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanCloak.cs" />
     <Compile Include="Assets\Scripts\Singleton\XSingleton.cs" />
