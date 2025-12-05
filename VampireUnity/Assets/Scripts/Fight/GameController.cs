@@ -44,6 +44,8 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<DunDiMonster> DunDiMonsterQueue = new Queue<DunDiMonster>();
     [NonSerialized] public Queue<XiaoHuoMonster> XiaoHuoMonsterQueue = new Queue<XiaoHuoMonster>();
     [NonSerialized] public Queue<EliteDaZuiMonster> EliteDaZuiMonsterQueue = new Queue<EliteDaZuiMonster>();
+    [NonSerialized] public Queue<XiNiuMonster> XiNiuMonsterQueue = new Queue<XiNiuMonster>();
+
    //[NonSerialized]public Queue<XiaoHuoAttackTrigger> XiaoHuoAttackTriggerQueue = new Queue<XiaoHuoAttackTrigger>();
    //[NonSerialized]public Queue<DunDiAttackTrigger> DunDiAttackTriggerQueue = new Queue<DunDiAttackTrigger>();
     [NonSerialized]public Queue<DaZuiSkillTriggerLeft> DaZuiSkillTriggerQueueLeft = new Queue<DaZuiSkillTriggerLeft>();
@@ -687,14 +689,21 @@ public class GameController : XSingleton<GameController>
                 }
                 else
                 {
-                    monsterBase = DunDiMonsterQueue.Dequeue();
+                    monsterBase = XiNiuMonsterQueue.Dequeue();
                 }
 
                 monsterBase.gameObject.SetActive(true);
                 monsterBase.transform.position = monsterRandomPoint.position;
                 monsterBase.CurrentHp = monsterBase.MaxHp;
                 monsterBase.transform.SetParent(MonsterBirthPoints2[monsterRandomIndex]);
-                monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
+                if (monsterBase.monsterSkeletonAnimation != null)
+                {
+                    monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
+                }
+                else
+                {
+                    monsterBase.monsterAnimator.Play("move");
+                }
                 TotalMonsterCount++;
                 NormalMonsterCount++;
             }

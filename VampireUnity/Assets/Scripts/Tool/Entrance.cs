@@ -345,6 +345,12 @@ public class Entrance : MonoBehaviour
                         GameController.S.transform);
                 chongziMonster.gameObject.SetActive(false);
                 GameController.S.ChongZiMonsterQueue.Enqueue(chongziMonster.GetComponent<ChongZiMonster>());
+                
+                var XiNiuMonster =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level2/XiNiuMonster").GetComponent<XiNiuMonster>(),
+                        GameController.S.transform);
+                XiNiuMonster.gameObject.SetActive(false);
+                GameController.S.XiNiuMonsterQueue.Enqueue(XiNiuMonster.GetComponent<XiNiuMonster>());
 
                 var xiaohuoMonster =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level2/XiaoHuoMonster").GetComponent<XiaoHuoMonster>(),

@@ -310,6 +310,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\JiaChongMonster.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManShoe.cs" />
     <Compile Include="Assets\Scripts\Config\LevelInfoItem.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第二关\XiNiuMonster.cs" />
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Demo scenes\DemoShooting.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeRing.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloth.cs" />

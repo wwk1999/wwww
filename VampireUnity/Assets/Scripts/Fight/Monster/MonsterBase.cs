@@ -56,6 +56,9 @@ public abstract class MonsterBase : MonoBehaviour
     //经验相关
     [NonSerialized]public Text playerLevelText;
 
+    
+    public SpriteRenderer monsterSprite;
+    public Animator monsterAnimator;
 
     //构造方法
     public MonsterBase(MonsterType monsterType, string monsterName, int monsterLevel, int maxHp, float speed, int attack, int defense, int exp, int bloodEnergy, int evolutionEnergy)
@@ -307,6 +310,11 @@ public abstract class MonsterBase : MonoBehaviour
                 gameObject.SetActive(false);
                 GameController.S.EliteDaZuiMonsterQueue.Enqueue(GetComponent<EliteDaZuiMonster>());
             }
+            if (GetComponent<XiNiuMonster>())
+            {
+                gameObject.SetActive(false);
+                GameController.S.XiNiuMonsterQueue.Enqueue(GetComponent<XiNiuMonster>());
+            }
             
             //第三关怪物死亡
             if (GetComponent<WenZiMonster>())
@@ -403,6 +411,39 @@ public abstract class MonsterBase : MonoBehaviour
         }
         
     }
+    
+    public void SpriteFlipX1(bool isRight)
+    {
+        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
+        if(dis<0.2f)
+        {
+            //如果距离小于0.2f，则不翻转
+            return;
+        }
+        //翻转精灵
+        if (isRight)
+        {
+            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            {
+                monsterSprite.flipX = false;
+            }
+            else
+            {
+                monsterSprite.flipX = true;
+            }
+        }else
+        {
+            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            {
+                monsterSprite.flipX = true;
+            }
+            else
+            {
+                monsterSprite.flipX = false;
+            }
+        }
+        
+    }
 
     /// <summary>
     /// 获得经验
@@ -494,16 +535,24 @@ public abstract class MonsterBase : MonoBehaviour
         
         if (monsterSkeletonAnimation.timeScale == 0)
             monsterSkeletonAnimation.timeScale = 1;
-        if (GetComponent<TreeManBoss>())
+        if (monsterSkeletonAnimation != null)
         {
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die_02", false);
+            if (GetComponent<TreeManBoss>())
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die_02", false);
+            }
+            else
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die", false);
+                StartCoroutine(DelayDestroy());
+            }
         }
         else
         {
-             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die", false);
-             StartCoroutine(DelayDestroy());
+            monsterAnimator.Play("fail");
+            StartCoroutine(DelayDestroy());
         }
-            
+
         // 从所有探测器列表中移除自己
         // 立即从所有探测器列表中移除自己
         if (GameController.S != null)
@@ -547,7 +596,14 @@ public abstract class MonsterBase : MonoBehaviour
             // monsterAnimator.SetBool("isHurt", true);
             //重新播放Hurt动画
             //monsterAnimator.Play("SnotMonsterHit");
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "hit", false);
+            if (monsterSkeletonAnimation != null)
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "hit", false);
+            }
+            else
+            {
+                monsterAnimator.Play("beatback");
+            }
             CurrentHp -= damage;
             //设置血条
             hpSlider.value = (float)CurrentHp / MaxHp;
