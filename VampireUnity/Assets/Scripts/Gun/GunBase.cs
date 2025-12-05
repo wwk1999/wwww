@@ -96,7 +96,7 @@ public class GunBase : MonoBehaviour
         bullet.GetComponent<XuKong>().MoveDirection = direction;
         bullet.GetComponent<XuKong>().MoveSpeed = 7f;
         bullet.gameObject.SetActive(true);
-        StartCoroutine(DelayHide(bullet));
+        GameController.S.StartCoroutine(DelayHide(bullet));
     }
     
     IEnumerator DelayHide(GameObject obj)
