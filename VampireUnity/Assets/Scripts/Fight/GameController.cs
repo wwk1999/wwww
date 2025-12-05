@@ -67,6 +67,11 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>ThreeNormalAttackHitQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>FourNormalAttackQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>FourNormalAttackHitQueue = new Queue<GameObject>();
+    
+    
+    [NonReorderable]public Queue<GameObject>FirePengQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>FireQueue = new Queue<GameObject>();
+
 
 
     //血能对象池队列

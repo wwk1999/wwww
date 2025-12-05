@@ -276,6 +276,16 @@ public class Entrance : MonoBehaviour
                     twoNormalAttack.SetActive(false);
                     GameController.S.TwoNormalAttackQueue.Enqueue(twoNormalAttack);
                     break;
+                
+                case WeaponType.Fire:
+                    var FireAttack= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/Fire"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    FireAttack.SetActive(false);
+                    GameController.S.FireQueue.Enqueue(FireAttack);
+                    
+                    var FirePengAttack= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/FirePeng"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    FirePengAttack.SetActive(false);
+                    GameController.S.FirePengQueue.Enqueue(FirePengAttack);
+                    break;
             }
         }
         

@@ -92,6 +92,7 @@
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Scripts\AutoDestroyPS.cs" />
     <Compile Include="Assets\Scripts\Window\FightBg.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DunDiMonster.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Tool\ConstKeys.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\Server\ServerConnect.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Assets\Scripts\Equip\BagPanel.cs" />
     <Compile Include="Assets\Scripts\Gloabl\SourceStoneText.cs" />
     <Compile Include="Assets\Scripts\Skill\TreeManFire.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FirePeng.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BeeBullet.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Demo\Scripts\ARPGFXLoopScript.cs" />
     <Compile Include="Assets\Scripts\Mysql\SourceStoneTable.cs" />
@@ -399,6 +401,7 @@
     <None Include="Assets\Arts\Spine\主角\json\zj.atlas.txt" />
     <None Include="Assets\Arts\Shaders\EdgeAlphaFade.shader" />
     <None Include="Assets\Arts\Spine\第二关\小火怪\json\xiaohuoguai.atlas.txt" />
+    <None Include="Assets\Arts\Spine\普通攻击\火焰peng\action.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\package.json" />
     <None Include="Assets\Arts\Spine\第二关\虫子\json\congzi.json" />
     <None Include="Assets\Arts\Spine\第三关\青蛙\json\qingwa.atlas.txt" />
@@ -462,6 +465,7 @@
     <None Include="Assets\Packages\System.Diagnostics.DiagnosticSource.8.0.1\useSharedDesignerContext.txt" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\link.xml" />
     <None Include="Assets\Arts\Spine\第一关\蝙蝠\json\bf.atlas.txt" />
+    <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.json" />
     <None Include="Assets\Arts\Spine\淘宝\斩\caocao_skill1_2.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
@@ -474,6 +478,7 @@
     <None Include="Assets\Arts\Spine\第四关\雪人\雪人\json\xueren.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\虫子\json\congzi.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\雪蟑螂\images\xuezhanglang.json" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\json\wenzi.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\雪人\雪人\images\xueren.json" />
@@ -526,6 +531,7 @@
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
     <None Include="Assets\Arts\Shaders\EdgeLight.shader" />
     <None Include="Assets\Arts\Shaders\Transparent.shader" />
+    <None Include="Assets\Arts\Spine\普通攻击\火焰peng\action.atlas.txt" />
     <None Include="Assets\External Resources\VFX_Resources\Shaders\PFX_Particles.shader" />
     <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
     <None Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Shaders\Add_CenterGlow.shader" />

@@ -29,7 +29,7 @@ public class ThreeNormalAttack : MonoBehaviour
         {
             var hit = GameController.S.ThreeNormalAttackHitQueue.Dequeue();
             hit.SetActive(true);
-            hit.transform.position = other.transform.position;
+            hit.transform.position = transform.position;
             hit.GetComponent<ParticleSystem>().Play();
             other.transform.parent.GetComponent<MonsterBase>().Hurt(20);
             GameController.S.StartCoroutine(WaitAndDestroy(hit)); // 在GameController上启动

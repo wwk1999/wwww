@@ -56,7 +56,7 @@ public class GunBase : MonoBehaviour
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.gameObject.SetActive(true);
         bullet.GetComponent<FourNormalAttack>().MoveDirection = direction;
-        bullet.GetComponent<FourNormalAttack>().MoveSpeed = 10f;
+        bullet.GetComponent<FourNormalAttack>().MoveSpeed = 7f;
     }
 
 
@@ -74,7 +74,17 @@ public class GunBase : MonoBehaviour
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.gameObject.SetActive(true);
         bullet.GetComponent<ThreeNormalAttack>().MoveDirection = direction;
-        bullet.GetComponent<ThreeNormalAttack>().MoveSpeed = 12f;
+        bullet.GetComponent<ThreeNormalAttack>().MoveSpeed = 7f;
+    }
+    
+    public void FireShot()
+    {
+        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        GameObject bullet = GameController.S.FireQueue.Dequeue();
+        bullet.transform.position = GameController.S.gamePlayer.transform.position;
+        bullet.GetComponent<FireNormalAttack>().MoveDirection = direction;
+        bullet.GetComponent<FireNormalAttack>().MoveSpeed = 7f;
+        bullet.gameObject.SetActive(true);
     }
     
 }

@@ -161,7 +161,7 @@ public class WeaponWindow : MonoBehaviour
       });
       threeInstallButton.onClick.AddListener(() =>
       {
-        
+         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.Fire;
       });
       fourInstallButton.onClick.AddListener(() =>
       {
