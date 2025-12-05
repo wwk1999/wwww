@@ -1,0 +1,1258 @@
+fileFormatVersion: 2
+guid: b375a074219bfd64b8c1e4bb8d9b559c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeiDongNext_000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc01a08b907146b0800000000000000
+      internalID: -5313842272140194574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11b642470a316f40800000000000000
+      internalID: 5719916804588351774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_002
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad0fe10494d8f030800000000000000
+      internalID: 3528804040197475757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_003
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3147
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c96d50aa84745e10800000000000000
+      internalID: 2185499857926318532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_004
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4196
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99663abff9efbb180800000000000000
+      internalID: -9098398659096910183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_005
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5245
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5e286864a9b06c0800000000000000
+      internalID: -4176074601760889361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_006
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6294
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5cdfef3c716e8c0800000000000000
+      internalID: -3970459890916407829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_007
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f701d06f4877eb0800000000000000
+      internalID: -4722159491958669470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_008
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7618fbe4e400cfd90800000000000000
+      internalID: -7062769779295157913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_009
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb53370f87438580800000000000000
+      internalID: -8826132165089338426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_010
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5cdf71be3bda2d00800000000000000
+      internalID: 948811733827312731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_011
+      rect:
+        serializedVersion: 2
+        x: 3415
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa6a88f426ac5d1d0800000000000000
+      internalID: -3326530226153281873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_012
+      rect:
+        serializedVersion: 2
+        x: 4098
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31c23e6f065a83e90800000000000000
+      internalID: -7045699781143614445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_013
+      rect:
+        serializedVersion: 2
+        x: 4781
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8e6650763598b50800000000000000
+      internalID: 6595894831198169259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_014
+      rect:
+        serializedVersion: 2
+        x: 5464
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f70559d6a73c7510800000000000000
+      internalID: 1548173561658935283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_015
+      rect:
+        serializedVersion: 2
+        x: 6147
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc690a1124b141f0800000000000000
+      internalID: -1062369982818980614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_016
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 0
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c72a6357d2cd6e50800000000000000
+      internalID: 6804308842099910593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_017
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8273cea5f7ca788a0800000000000000
+      internalID: -6302879490495465688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_018
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b465812a594ff4b0800000000000000
+      internalID: -5404520376363031370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_019
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 3147
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502e2e7f47d034140800000000000000
+      internalID: 4702617231931138565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_020
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 4196
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8cf42014bfe9c00800000000000000
+      internalID: 909440431405648043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_021
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 5245
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4157304bb71207ce0800000000000000
+      internalID: -1409589868182145772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_022
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 6294
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fa1692e2556b4d0800000000000000
+      internalID: -3119212035156365440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_023
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fe362263888d5a0800000000000000
+      internalID: -6496292696395354284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_024
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f73d7fb20623410800000000000000
+      internalID: 1455331371551784754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_025
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 3147
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20777a746b1172190800000000000000
+      internalID: -7987395939534407934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_026
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 4196
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bdbee467e5e859b0800000000000000
+      internalID: -5091066596748771915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_027
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 5245
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff9f684dad75b190800000000000000
+      internalID: -7947307784227282951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_028
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 6294
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1125ab4ae65439bf0800000000000000
+      internalID: -318834807100780015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_029
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae28f186c7bcc7c30800000000000000
+      internalID: 4358582274571076330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_030
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491dd87b6c84afb60800000000000000
+      internalID: 7780611324556202388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_031
+      rect:
+        serializedVersion: 2
+        x: 3415
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d2d9c4e285331a0800000000000000
+      internalID: -6831019253913801399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_032
+      rect:
+        serializedVersion: 2
+        x: 4098
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920e96015f0872490800000000000000
+      internalID: -7771100841973784535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_033
+      rect:
+        serializedVersion: 2
+        x: 4781
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2466b7f603286c7b0800000000000000
+      internalID: -5204329174839630270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_034
+      rect:
+        serializedVersion: 2
+        x: 5464
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c3e451db62838a0800000000000000
+      internalID: -6325263083093738491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_035
+      rect:
+        serializedVersion: 2
+        x: 6147
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8ea26b105470480800000000000000
+      internalID: -8933095462212540190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_036
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 1049
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b3bc30c29147b80800000000000000
+      internalID: -8398059728306226381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_037
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac47fe80edd57c730800000000000000
+      internalID: 4019284400665490634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_038
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 3147
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a01c971a0a8bc660800000000000000
+      internalID: 7407165788091322533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_039
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 4196
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1552f0f19b0b1ab30800000000000000
+      internalID: 4296909828624688465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_040
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 5245
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8247c89237c1050800000000000000
+      internalID: 5772615444669409515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_041
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 6294
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15092911d56f9c5d0800000000000000
+      internalID: -3041629193724850095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_042
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89af56bcdee142f0800000000000000
+      internalID: -990247811324860021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_043
+      rect:
+        serializedVersion: 2
+        x: 3415
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476e9197e47620bd0800000000000000
+      internalID: -2665454442713061772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_044
+      rect:
+        serializedVersion: 2
+        x: 4098
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77b8d45bf903e160800000000000000
+      internalID: 7053492416457258876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_045
+      rect:
+        serializedVersion: 2
+        x: 4781
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 639b5157a50ca9270800000000000000
+      internalID: 8258124361481173302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_046
+      rect:
+        serializedVersion: 2
+        x: 5464
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3b5a266eec43da0800000000000000
+      internalID: -5965916117466238027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_047
+      rect:
+        serializedVersion: 2
+        x: 6147
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99eacb7ee39150040800000000000000
+      internalID: 4613121151277510297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_048
+      rect:
+        serializedVersion: 2
+        x: 6830
+        y: 2098
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce5bf00684a63ad0800000000000000
+      internalID: -2722808029249839418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_049
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 3147
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c6f486bc19086f0800000000000000
+      internalID: -684386840545891326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_050
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 4196
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53153b878f43a39a0800000000000000
+      internalID: -6252626890868960971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeiDongNext_051
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 5245
+        width: 683
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a45eae0525431e00800000000000000
+      internalID: 1014230366550906020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HeiDongNext_000: -5313842272140194574
+      HeiDongNext_001: 5719916804588351774
+      HeiDongNext_002: 3528804040197475757
+      HeiDongNext_003: 2185499857926318532
+      HeiDongNext_004: -9098398659096910183
+      HeiDongNext_005: -4176074601760889361
+      HeiDongNext_006: -3970459890916407829
+      HeiDongNext_007: -4722159491958669470
+      HeiDongNext_008: -7062769779295157913
+      HeiDongNext_009: -8826132165089338426
+      HeiDongNext_010: 948811733827312731
+      HeiDongNext_011: -3326530226153281873
+      HeiDongNext_012: -7045699781143614445
+      HeiDongNext_013: 6595894831198169259
+      HeiDongNext_014: 1548173561658935283
+      HeiDongNext_015: -1062369982818980614
+      HeiDongNext_016: 6804308842099910593
+      HeiDongNext_017: -6302879490495465688
+      HeiDongNext_018: -5404520376363031370
+      HeiDongNext_019: 4702617231931138565
+      HeiDongNext_020: 909440431405648043
+      HeiDongNext_021: -1409589868182145772
+      HeiDongNext_022: -3119212035156365440
+      HeiDongNext_023: -6496292696395354284
+      HeiDongNext_024: 1455331371551784754
+      HeiDongNext_025: -7987395939534407934
+      HeiDongNext_026: -5091066596748771915
+      HeiDongNext_027: -7947307784227282951
+      HeiDongNext_028: -318834807100780015
+      HeiDongNext_029: 4358582274571076330
+      HeiDongNext_030: 7780611324556202388
+      HeiDongNext_031: -6831019253913801399
+      HeiDongNext_032: -7771100841973784535
+      HeiDongNext_033: -5204329174839630270
+      HeiDongNext_034: -6325263083093738491
+      HeiDongNext_035: -8933095462212540190
+      HeiDongNext_036: -8398059728306226381
+      HeiDongNext_037: 4019284400665490634
+      HeiDongNext_038: 7407165788091322533
+      HeiDongNext_039: 4296909828624688465
+      HeiDongNext_040: 5772615444669409515
+      HeiDongNext_041: -3041629193724850095
+      HeiDongNext_042: -990247811324860021
+      HeiDongNext_043: -2665454442713061772
+      HeiDongNext_044: 7053492416457258876
+      HeiDongNext_045: 8258124361481173302
+      HeiDongNext_046: -5965916117466238027
+      HeiDongNext_047: 4613121151277510297
+      HeiDongNext_048: -2722808029249839418
+      HeiDongNext_049: -684386840545891326
+      HeiDongNext_050: -6252626890868960971
+      HeiDongNext_051: 1014230366550906020
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

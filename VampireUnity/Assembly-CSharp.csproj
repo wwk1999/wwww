@@ -426,6 +426,7 @@
     <None Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0\package.json" />
     <None Include="Assets\Arts\Shaders\Shield.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\ValidationExceptions.json" />
+    <None Include="Assets\Arts\Spine\怪物\食人花\dumoshirenhua.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.shadergraph@14.0.12\package.json" />
     <None Include="Assets\Arts\Shaders\LcL\Outline.shader" />
     <None Include="Assets\External Resources\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_DistortionEffect.shader" />
@@ -490,6 +491,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\怪物\食人花\dumoshirenhua.json" />
     <None Include="Assets\Arts\Spine\第一关\粘液怪\json\nyg.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\大嘴怪\json\dazuiguai.json" />
     <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />

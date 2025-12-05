@@ -1,0 +1,168 @@
+dumoshirenhua.png
+	size: 2048, 2048
+	filter: Linear, Linear
+1
+	bounds: 2, 1117, 1536, 929
+	offsets: 27, 7, 1563, 936
+16
+	bounds: 1540, 1423, 623, 398
+	rotate: 90
+17
+	bounds: 1540, 1179, 242, 391
+	rotate: 90
+2
+	bounds: 1407, 115, 1000, 588
+	offsets: 52, 0, 1278, 592
+	rotate: 90
+3
+	bounds: 2, 65, 1403, 1050
+Effects/Vertigo/Vertigo3
+	bounds: 1407, 2, 280, 111
+	offsets: 58, 15, 359, 142
+Effects/chentu_gai/chentu_00
+	bounds: 2, 2, 61, 64
+	offsets: 0, 1, 62, 65
+	rotate: 90
+Effects/chentu_gai/chentu_01
+	bounds: 1940, 1426, 73, 134
+	offsets: 1, 1, 75, 136
+Effects/chentu_gai/chentu_10
+	bounds: 1940, 1562, 173, 75
+	offsets: 3, 1, 177, 77
+	rotate: 90
+Effects/qi_gai/qi_01
+	bounds: 1899, 6, 107, 85
+	offsets: 7, 10, 119, 101
+	rotate: 90
+Effects/qi_gai/qi_04
+	bounds: 1689, 2, 208, 111
+	offsets: 10, 7, 225, 125
+Effects/qi_gai/qi_12
+	bounds: 1933, 1190, 231, 113
+	offsets: 10, 14, 258, 141
+	rotate: 90
+chentu1
+	bounds: 1940, 1737, 309, 106
+	rotate: 90
+
+dumoshirenhua_2.png
+	size: 2020, 2020
+	filter: Linear, Linear
+10
+	bounds: 1677, 288, 625, 286
+	offsets: 0, 0, 660, 286
+	rotate: 90
+11
+	bounds: 1195, 416, 480, 497
+18
+	bounds: 2, 205, 1237, 163
+	offsets: 0, 0, 1238, 163
+4
+	bounds: 2, 981, 1281, 1037
+5
+	bounds: 2, 370, 1191, 609
+8
+	bounds: 1285, 915, 657, 1103
+9
+	bounds: 1241, 19, 402, 395
+Effects/Vertigo/Vertigo1
+	bounds: 1887, 3, 283, 119
+	offsets: 43, 16, 359, 142
+	rotate: 90
+Effects/Vertigo/Vertigo4
+	bounds: 970, 70, 268, 133
+	offsets: 58, 3, 359, 142
+Effects/chentu_gai/chentu_04
+	bounds: 703, 61, 142, 265
+	offsets: 1, 1, 144, 268
+	rotate: 90
+Effects/chentu_gai/chentu_09
+	bounds: 1944, 1845, 173, 74
+	offsets: 3, 2, 177, 77
+	rotate: 90
+Effects/yao_gai/yao_05
+	bounds: 1645, 42, 240, 244
+	offsets: 1, 3, 241, 247
+chentu2
+	bounds: 352, 62, 349, 141
+chentu3
+	bounds: 2, 15, 348, 188
+	offsets: 0, 3, 373, 193
+
+dumoshirenhua_3.png
+	size: 1272, 1272
+	filter: Linear, Linear
+15
+	bounds: 2, 630, 653, 638
+19
+	bounds: 657, 773, 365, 495
+	offsets: 0, 2, 480, 497
+6
+	bounds: 2, 43, 355, 585
+7
+	bounds: 1024, 787, 167, 238
+	offsets: 2, 0, 170, 238
+Effects/Vertigo/Vertigo2
+	bounds: 359, 37, 268, 114
+	offsets: 58, 15, 359, 142
+Effects/chentu_gai/chentu_03
+	bounds: 595, 338, 130, 247
+	offsets: 1, 2, 132, 250
+	rotate: 90
+Effects/chentu_gai/chentu_05
+	bounds: 657, 621, 150, 248
+	offsets: 1, 2, 153, 251
+	rotate: 90
+Effects/chentu_gai/chentu_06
+	bounds: 742, 131, 157, 205
+	offsets: 1, 1, 160, 207
+Effects/chentu_gai/chentu_07
+	bounds: 907, 604, 174, 167
+	offsets: 2, 1, 178, 169
+Effects/chentu_gai/chentu_08
+	bounds: 1153, 212, 177, 115
+	offsets: 2, 1, 179, 117
+	rotate: 90
+Effects/qi_gai/qi_02
+	bounds: 1040, 164, 202, 111
+	offsets: 10, 8, 218, 126
+	rotate: 90
+Effects/qi_gai/qi_06
+	bounds: 901, 54, 212, 108
+	offsets: 10, 9, 230, 124
+Effects/qi_gai/qi_08
+	bounds: 1090, 391, 212, 110
+	offsets: 13, 5, 245, 121
+	rotate: 90
+Effects/qi_gai/qi_10
+	bounds: 839, 484, 249, 118
+	offsets: 8, 6, 258, 139
+Effects/qi_gai/qi_11
+	bounds: 844, 368, 244, 114
+	offsets: 10, 13, 258, 142
+Effects/ya1_g
+	bounds: 901, 164, 202, 137
+	offsets: 1, 6, 204, 148
+	rotate: 90
+Effects/ya2_g
+	bounds: 592, 153, 183, 148
+	offsets: 1, 6, 185, 160
+	rotate: 90
+Effects/yao_gai/yao_04
+	bounds: 359, 383, 234, 245
+	offsets: 3, 0, 238, 246
+Effects/yao_gai/yao_06
+	bounds: 1024, 1027, 237, 241
+	offsets: 0, 2, 237, 243
+Effects/yao_gai/yao_07
+	bounds: 359, 153, 231, 228
+	offsets: 0, 0, 233, 232
+Effects/yao_gai/yao_08
+	bounds: 1083, 605, 156, 180
+	offsets: 0, 1, 163, 185
+Effects/yao_gai/yao_09
+	bounds: 629, 6, 143, 123
+	offsets: 0, 12, 145, 176
+chentu4
+	bounds: 595, 470, 242, 149
+	offsets: 0, 1, 242, 150
