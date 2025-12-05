@@ -23,7 +23,7 @@ public enum WeaponType
     Fire,
     XuKong,
     LvQuan,
-    Six,
+    HeiDong,
     Seven,
     Eight,
     Nine

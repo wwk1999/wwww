@@ -469,8 +469,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2830651839331621353}
   m_HandleRect: {fileID: 3631053396874823705}
   m_Direction: 2
-  m_Value: 1.0000005
-  m_Size: 0.7486866
+  m_Value: 1
+  m_Size: 0.43027964
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -739,10 +739,10 @@ RectTransform:
   - {fileID: 5402563352726593026}
   m_Father: {fileID: 2860413692601268822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000091552734}
-  m_SizeDelta: {x: 0, y: 1000}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8677618390213569607
 MonoBehaviour:
@@ -756,8 +756,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 0
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!114 &6587895574448002237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3218,6 +3218,7 @@ MonoBehaviour:
   threeInstallButton: {fileID: 1737955662723508875}
   fourInstallButton: {fileID: 8770885268457079529}
   lvQuanInstallButton: {fileID: 3707690842443450988}
+  HeiDongInstallButton: {fileID: 499011510706154418}
   exitButton: {fileID: 5871677142324490474}
   sourceStone1Button: {fileID: 5119121384912557577}
   sourceStone2Button: {fileID: 174234282869330076}
@@ -4379,6 +4380,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+--- !u!114 &499011510706154418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 720773166528100426, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+  m_PrefabInstance: {fileID: 931237091641316344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8269913178929331774 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9090736897358409158, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}

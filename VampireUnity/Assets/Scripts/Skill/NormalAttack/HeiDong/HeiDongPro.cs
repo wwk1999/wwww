@@ -1,32 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Spine.Unity;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class XuKong : MonoBehaviour
+public class HeiDongPro : MonoBehaviour
 {
     public Rigidbody2D rg;
     [NonSerialized]public float MoveSpeed;
     [NonSerialized]public Vector2 MoveDirection;
     public Animator animator;
-    public GameObject bullet;
     private void OnEnable()
     {
-        animator.Play("XuKong");
-        float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
-        bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        animator.Play("HeiDong");
         rg.velocity = MoveDirection * MoveSpeed;
-        StartCoroutine(DelayHide(gameObject));
-        //粒子朝向MoveDirection
+        StartCoroutine(DelayBaoZha());
     }
-    
-    IEnumerator DelayHide(GameObject obj)
+
+    IEnumerator DelayBaoZha()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
-        GameController.S.XuKongQueue.Enqueue(obj);
+        GameController.S.HeiDongQueue.Enqueue(gameObject);
+        var heidongnext = GameController.S.HeiDongNextQueue.Dequeue();
+        heidongnext.transform.position = transform.position;
+        heidongnext.gameObject.SetActive(true);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -43,11 +40,10 @@ public class XuKong : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.XuKongPengQueue.Dequeue();
-            hit.SetActive(true);
+            var hit = GameController.S.HeiDongPengQueue.Dequeue();
             hit.transform.position = closestPointOnOther;
             other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage);
-           // gameObject.SetActive(false);
+            hit.SetActive(true);
         }
     }
 }

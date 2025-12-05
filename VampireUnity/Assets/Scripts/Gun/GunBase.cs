@@ -47,7 +47,6 @@ public class GunBase : MonoBehaviour
             attack.MoveDirection = dir;
             attack.MoveSpeed = 2f;
             bullet.SetActive(true);
-            StartCoroutine(DelayHide(bullet));
         }
     }
     
@@ -58,9 +57,19 @@ public class GunBase : MonoBehaviour
         Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
         GameObject bullet = GameController.S.FourNormalAttackQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
-        bullet.gameObject.SetActive(true);
         bullet.GetComponent<FourNormalAttack>().MoveDirection = direction;
         bullet.GetComponent<FourNormalAttack>().MoveSpeed = 7f;
+        bullet.gameObject.SetActive(true);
+    }
+    
+    public void HeiDongShot()
+    {
+        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        GameObject bullet = GameController.S.HeiDongQueue.Dequeue();
+        bullet.transform.position = GameController.S.gamePlayer.transform.position;
+        bullet.GetComponent<HeiDongPro>().MoveDirection = direction;
+        bullet.GetComponent<HeiDongPro>().MoveSpeed = 2f;
+        bullet.gameObject.SetActive(true);
     }
 
 
@@ -99,14 +108,6 @@ public class GunBase : MonoBehaviour
         bullet.GetComponent<XuKong>().MoveDirection = direction;
         bullet.GetComponent<XuKong>().MoveSpeed = 7f;
         bullet.gameObject.SetActive(true);
-        GameController.S.StartCoroutine(DelayHide(bullet));
-    }
-    
-    IEnumerator DelayHide(GameObject obj)
-    {
-        yield return new WaitForSeconds(10f);
-        gameObject.SetActive(false);
-        GameController.S.XuKongQueue.Enqueue(obj);
     }
     
 }

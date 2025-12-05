@@ -165,6 +165,7 @@
     <Compile Include="Assets\Scripts\UIFrameWork\PanelManager.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\XuKong\XuKongPeng.cs" />
     <Compile Include="Assets\Scripts\Skill\IceExplosion.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\MonsterEquip.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleShoe.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\DestroyObject.cs" />
@@ -182,6 +183,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeShoe.cs" />
     <Compile Include="Assets\Scripts\Tool\ClickFx.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongNext.cs" />
     <Compile Include="Assets\Scripts\Skill\FireTrigger.cs" />
     <Compile Include="Assets\Scripts\Tool\CircleAttack.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
@@ -202,6 +204,7 @@
     <Compile Include="Assets\Scripts\Tool\AnimCallBack.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioController.cs" />
     <Compile Include="Assets\Scripts\Tool\BossWarning.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongBaoZha.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterFlyObjectBase.cs" />
     <Compile Include="Assets\Scripts\Mysql\ExperienceController.cs" />
     <Compile Include="Assets\Scripts\Tool\ObserverModuleManager.cs" />
@@ -247,6 +250,7 @@
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloak.cs" />
     <Compile Include="Assets\Scripts\Config\MonsterBookConfig.cs" />
     <Compile Include="Assets\Scripts\Store\StoreDefine.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongPro.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXLightFade.cs" />
     <Compile Include="Assets\Scripts\Tool\ToastInfo.cs" />
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Scripts\ParticleCollisionInstance.cs" />

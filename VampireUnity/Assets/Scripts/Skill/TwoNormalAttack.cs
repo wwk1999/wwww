@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class TwoNormalAttack : MonoBehaviour
@@ -14,6 +15,14 @@ public class TwoNormalAttack : MonoBehaviour
     private void OnEnable()
     {
         rg.velocity = MoveDirection * MoveSpeed;
+        StartCoroutine(DelayHide(rg.gameObject));
+    }
+    
+    IEnumerator DelayHide(GameObject obj)
+    {
+        yield return new WaitForSeconds(10f);
+        gameObject.SetActive(false);
+        GameController.S.XuKongQueue.Enqueue(obj);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
