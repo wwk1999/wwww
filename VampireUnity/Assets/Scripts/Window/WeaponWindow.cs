@@ -165,7 +165,7 @@ public class WeaponWindow : MonoBehaviour
       });
       fourInstallButton.onClick.AddListener(() =>
       {
-        
+         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.XuKong;
       });
       // PenetrateButton.onClick.AddListener(() =>
       // {

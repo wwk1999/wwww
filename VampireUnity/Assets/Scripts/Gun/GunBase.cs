@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GunBase : MonoBehaviour
@@ -85,6 +86,24 @@ public class GunBase : MonoBehaviour
         bullet.GetComponent<FireNormalAttack>().MoveDirection = direction;
         bullet.GetComponent<FireNormalAttack>().MoveSpeed = 7f;
         bullet.gameObject.SetActive(true);
+    }
+    
+    public void XuKongShot()
+    {
+        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        GameObject bullet = GameController.S.XuKongQueue.Dequeue();
+        bullet.transform.position = GameController.S.gamePlayer.transform.position;
+        bullet.GetComponent<XuKong>().MoveDirection = direction;
+        bullet.GetComponent<XuKong>().MoveSpeed = 7f;
+        bullet.gameObject.SetActive(true);
+        StartCoroutine(DelayHide(bullet));
+    }
+    
+    IEnumerator DelayHide(GameObject obj)
+    {
+        yield return new WaitForSeconds(10f);
+        gameObject.SetActive(false);
+        GameController.S.XuKongQueue.Enqueue(obj);
     }
     
 }

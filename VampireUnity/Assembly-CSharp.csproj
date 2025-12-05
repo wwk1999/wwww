@@ -85,6 +85,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenNecklace.cs" />
     <Compile Include="Assets\Scripts\Fight\FightBGController.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\XuKong\XuKong.cs" />
     <Compile Include="Assets\Scripts\Window\GameLevelWindow1.cs" />
     <Compile Include="Assets\Scripts\Skill\ThreeNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Window\LoginWindow1.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\XiaoHuoMonster.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor3.cs" />
     <Compile Include="Assets\Scripts\UIFrameWork\PanelManager.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\XuKong\XuKongPeng.cs" />
     <Compile Include="Assets\Scripts\Skill\IceExplosion.cs" />
     <Compile Include="Assets\Scripts\Equip\MonsterEquip.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleShoe.cs" />
@@ -402,7 +404,7 @@
     <None Include="Assets\Arts\Spine\主角\json\zj.atlas.txt" />
     <None Include="Assets\Arts\Shaders\EdgeAlphaFade.shader" />
     <None Include="Assets\Arts\Spine\第二关\小火怪\json\xiaohuoguai.atlas.txt" />
-    <None Include="Assets\Arts\Spine\普通攻击\火焰peng\action.json" />
+    <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰peng\action.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\package.json" />
     <None Include="Assets\Arts\Spine\第二关\虫子\json\congzi.json" />
     <None Include="Assets\Arts\Spine\第三关\青蛙\json\qingwa.atlas.txt" />
@@ -532,7 +534,7 @@
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
     <None Include="Assets\Arts\Shaders\EdgeLight.shader" />
     <None Include="Assets\Arts\Shaders\Transparent.shader" />
-    <None Include="Assets\Arts\Spine\普通攻击\火焰peng\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰peng\action.atlas.txt" />
     <None Include="Assets\External Resources\VFX_Resources\Shaders\PFX_Particles.shader" />
     <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
     <None Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Shaders\Add_CenterGlow.shader" />
@@ -540,6 +542,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Multiplicative\EdgeEffect_Multiplicative.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
+    <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\EdgeEffect_Additive.shader" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\UIEffect.shader" />
@@ -561,6 +564,7 @@
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\EdgeEffect_Electric_Additive.shader" />
     <None Include="Assets\Arts\Spine\第三关\甲虫\json\jiachong.json" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+    <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.atlas.txt" />
     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
     <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />

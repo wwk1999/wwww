@@ -71,6 +71,9 @@ public class GameController : XSingleton<GameController>
     
     [NonReorderable]public Queue<GameObject>FirePengQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>FireQueue = new Queue<GameObject>();
+    
+    [NonReorderable]public Queue<GameObject>XuKongPengQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XuKongQueue = new Queue<GameObject>();
 
 
 

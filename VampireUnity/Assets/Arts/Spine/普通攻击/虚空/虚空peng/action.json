@@ -1,0 +1,106 @@
+{
+"skeleton": { "hash": "t8pOTnRp++0", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30081_jineng" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "effect", "parent": "root" },
+	{ "name": "atk_mz_01", "parent": "effect" },
+	{ "name": "atk_mz_shanguang", "parent": "effect" }
+],
+"slots": [
+	{ "name": "atk_mz_01", "bone": "atk_mz_01" },
+	{ "name": "atk_mz_1", "bone": "atk_mz_01", "color": "ffffff32", "blend": "additive" },
+	{ "name": "atk_mz_shanguang", "bone": "atk_mz_shanguang", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"atk_mz_1": {
+				"atk_mz_01": { "path": "effect/atk_mz_01", "x": -16.06, "y": -21.89, "width": 194, "height": 205 },
+				"atk_mz_02": { "path": "effect/atk_mz_02", "x": 0.44, "y": 0.11, "width": 195, "height": 193 },
+				"atk_mz_03": { "path": "effect/atk_mz_03", "x": -0.06, "y": 0.11, "width": 234, "height": 233 },
+				"atk_mz_05": { "path": "effect/atk_mz_05", "x": -0.06, "y": -0.39, "width": 238, "height": 238 },
+				"atk_mz_07": { "path": "effect/atk_mz_07", "x": -0.06, "y": -0.39, "width": 244, "height": 244 },
+				"atk_mz_09": { "path": "effect/atk_mz_09", "x": -0.06, "y": -0.39, "width": 250, "height": 250 },
+				"atk_mz_11": { "path": "effect/atk_mz_11", "x": -0.06, "y": -0.39, "width": 254, "height": 254 },
+				"atk_mz_13": { "path": "effect/atk_mz_13", "x": -0.06, "y": -0.89, "width": 190, "height": 189 },
+				"atk_mz_15": { "path": "effect/atk_mz_15", "x": -2.56, "y": -0.39, "width": 151, "height": 128 },
+				"atk_mz_17": { "path": "effect/atk_mz_17", "x": -3.06, "y": -2.39, "width": 150, "height": 124 },
+				"atk_mz_19": { "path": "effect/atk_mz_19", "x": -10.56, "y": -2.39, "width": 129, "height": 118 }
+			},
+			"atk_mz_01": {
+				"atk_mz_01": { "path": "effect/atk_mz_01", "x": -16.06, "y": -21.89, "width": 194, "height": 205 },
+				"atk_mz_02": { "path": "effect/atk_mz_02", "x": 0.44, "y": 0.11, "width": 195, "height": 193 },
+				"atk_mz_03": { "path": "effect/atk_mz_03", "x": -0.06, "y": 0.11, "width": 234, "height": 233 },
+				"atk_mz_05": { "path": "effect/atk_mz_05", "x": -0.06, "y": -0.39, "width": 238, "height": 238 },
+				"atk_mz_07": { "path": "effect/atk_mz_07", "x": -0.06, "y": -0.39, "width": 244, "height": 244 },
+				"atk_mz_09": { "path": "effect/atk_mz_09", "x": -0.06, "y": -0.39, "width": 250, "height": 250 },
+				"atk_mz_11": { "path": "effect/atk_mz_11", "x": -0.06, "y": -0.39, "width": 254, "height": 254 },
+				"atk_mz_13": { "path": "effect/atk_mz_13", "x": -0.06, "y": -0.89, "width": 190, "height": 189 },
+				"atk_mz_15": { "path": "effect/atk_mz_15", "x": -2.56, "y": -0.39, "width": 151, "height": 128 },
+				"atk_mz_17": { "path": "effect/atk_mz_17", "x": -3.06, "y": -2.39, "width": 150, "height": 124 },
+				"atk_mz_19": { "path": "effect/atk_mz_19", "x": -10.56, "y": -2.39, "width": 129, "height": 118 }
+			},
+			"atk_mz_shanguang": {
+				"atk_mz_shanguang": { "path": "effect/atk_mz_shanguang", "y": -0.01, "width": 336, "height": 334 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"atk_mz_1": {
+				"attachment": [
+					{ "time": 0.033333335, "name": "atk_mz_01" },
+					{ "time": 0.06666667, "name": "atk_mz_02" },
+					{ "time": 0.10000001, "name": "atk_mz_03" },
+					{ "time": 0.16666667, "name": "atk_mz_05" },
+					{ "time": 0.23333335, "name": "atk_mz_07" },
+					{ "time": 0.3, "name": "atk_mz_09" },
+					{ "time": 0.36666667, "name": "atk_mz_11" },
+					{ "time": 0.43333337, "name": "atk_mz_13" },
+					{ "time": 0.5, "name": "atk_mz_15" },
+					{ "time": 0.5666667, "name": "atk_mz_17" },
+					{ "time": 0.6333334, "name": "atk_mz_19" },
+					{ "time": 0.70000005 }
+				]
+			},
+			"atk_mz_01": {
+				"attachment": [
+					{ "time": 0.033333335, "name": "atk_mz_01" },
+					{ "time": 0.06666667, "name": "atk_mz_02" },
+					{ "time": 0.10000001, "name": "atk_mz_03" },
+					{ "time": 0.16666667, "name": "atk_mz_05" },
+					{ "time": 0.23333335, "name": "atk_mz_07" },
+					{ "time": 0.3, "name": "atk_mz_09" },
+					{ "time": 0.36666667, "name": "atk_mz_11" },
+					{ "time": 0.43333337, "name": "atk_mz_13" },
+					{ "time": 0.5, "name": "atk_mz_15" },
+					{ "time": 0.5666667, "name": "atk_mz_17" },
+					{ "time": 0.6333334, "name": "atk_mz_19" },
+					{ "time": 0.70000005 }
+				]
+			},
+			"atk_mz_shanguang": {
+				"rgba": [
+					{ "color": "ffffffff" },
+					{ "time": 0.13333334, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "atk_mz_shanguang" },
+					{ "time": 0.13333334 }
+				]
+			}
+		},
+		"bones": {
+			"atk_mz_shanguang": {
+				"scale": [
+					{ "x": 0.505, "y": 0.505 },
+					{ "time": 0.13333334, "x": 0.886, "y": 0.886 }
+				]
+			}
+		}
+	}
+}
+}

@@ -19,11 +19,6 @@ public class FireNormalAttack : MonoBehaviour
         rg.velocity = MoveDirection * MoveSpeed;
         //粒子朝向MoveDirection
     }
-    private void Update()
-    {
-       
-        //粒子朝向MoveDirection
-    }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -44,6 +39,7 @@ public class FireNormalAttack : MonoBehaviour
             hit.transform.position = closestPointOnOther;
             other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage);
             gameObject.SetActive(false);
+            GameController.S.FireQueue.Enqueue(gameObject);
         }
     }
 }

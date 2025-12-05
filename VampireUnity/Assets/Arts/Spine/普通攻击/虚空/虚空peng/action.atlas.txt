@@ -1,0 +1,44 @@
+action.png
+	size: 738, 738
+	filter: Linear, Linear
+	pma: true
+effect/atk_mz_01
+	bounds: 195, 37, 158, 158
+	offsets: 34, 46, 194, 205
+effect/atk_mz_02
+	bounds: 2, 4, 191, 191
+	offsets: 2, 1, 195, 193
+effect/atk_mz_03
+	bounds: 489, 268, 230, 230
+	offsets: 2, 1, 234, 233
+effect/atk_mz_05
+	bounds: 297, 500, 236, 236
+	offsets: 1, 1, 238, 238
+effect/atk_mz_07
+	bounds: 247, 200, 240, 240
+	offsets: 2, 2, 244, 244
+effect/atk_mz_09
+	bounds: 2, 197, 243, 243
+	offsets: 3, 3, 250, 250
+effect/atk_mz_11
+	bounds: 535, 536, 200, 201
+	offsets: 27, 26, 254, 254
+	rotate: 90
+effect/atk_mz_13
+	bounds: 355, 48, 150, 127
+	offsets: 18, 32, 190, 189
+	rotate: 90
+effect/atk_mz_15
+	bounds: 484, 50, 148, 125
+	offsets: 1, 2, 151, 128
+	rotate: 90
+effect/atk_mz_17
+	bounds: 611, 120, 146, 121
+	offsets: 2, 2, 150, 124
+	rotate: 90
+effect/atk_mz_19
+	bounds: 611, 2, 125, 116
+	offsets: 2, 1, 129, 118
+effect/atk_mz_shanguang
+	bounds: 2, 442, 293, 294
+	offsets: 20, 20, 336, 334

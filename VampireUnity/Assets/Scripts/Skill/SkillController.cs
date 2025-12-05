@@ -97,6 +97,9 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.Fire:
                 GameController.S.gamePlayer.currentGun.FireShot();
                 break;
+            case WeaponType.XuKong:
+                GameController.S.gamePlayer.currentGun.XuKongShot();
+                break;
         }
         NormalAttackCoolingtime+=Time.deltaTime;
     }
