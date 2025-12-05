@@ -69,15 +69,18 @@ public class XiNiuMonster : MonsterBase
     public void MonsterMove1()
     {
         float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
-        if (dis < GameController.S.gamePlayer.size + size)
+        if (!isHit)
         {
-            isMove = false;
-            monsterAnimator.Play("attack1");
-        }
-        else
-        {
-            isMove = true;
-            monsterAnimator.Play("move");
+            if (dis < GameController.S.gamePlayer.size + size)
+            {
+                isMove = false;
+                monsterAnimator.Play("attack1");
+            }
+            else
+            {
+                isMove = true;
+                monsterAnimator.Play("move");
+            }
         }
         
         // 判断是否在播放任何动画（包括过渡）

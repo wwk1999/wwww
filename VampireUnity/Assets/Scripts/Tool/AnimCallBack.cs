@@ -140,8 +140,7 @@ public class AnimCallBack : MonoBehaviour
     {
         if (monsterBase != null)
         {
-            monsterAnimator.Play("move");
-            monsterBase.isMove = true;
+           monsterBase.isHit=false;
             Debug.Log("AnimCallBack: beatback 动画结束，恢复移动");
         }
     }

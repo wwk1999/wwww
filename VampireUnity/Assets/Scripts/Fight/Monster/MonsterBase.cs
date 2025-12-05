@@ -62,6 +62,7 @@ public abstract class MonsterBase : MonoBehaviour
     public Animator monsterAnimator;
 
     public bool isMove = true;
+    public bool isHit = false;
 
     //构造方法
     public MonsterBase(MonsterType monsterType, string monsterName, int monsterLevel, int maxHp, float speed, int attack, int defense, int exp, int bloodEnergy, int evolutionEnergy)
@@ -542,9 +543,15 @@ public abstract class MonsterBase : MonoBehaviour
                 }
                 break;
         }
-        
-        if (monsterSkeletonAnimation.timeScale == 0)
-            monsterSkeletonAnimation.timeScale = 1;
+
+        if (monsterSkeletonAnimation != null)
+        {
+             if (monsterSkeletonAnimation.timeScale == 0)
+             {
+                 monsterSkeletonAnimation.timeScale = 1;
+            }
+        }
+       
         if (monsterSkeletonAnimation != null)
         {
             if (GetComponent<TreeManBoss>())
@@ -613,7 +620,7 @@ public abstract class MonsterBase : MonoBehaviour
             }
             else
             {
-                isMove=false;
+                isHit = true;
                 monsterAnimator.Play("beatback");
             }
             CurrentHp -= damage;
