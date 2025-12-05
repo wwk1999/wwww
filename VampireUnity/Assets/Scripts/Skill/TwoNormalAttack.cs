@@ -11,6 +11,11 @@ public class TwoNormalAttack : MonoBehaviour
     [NonSerialized] public float HitTime = 0.5f;
     [NonSerialized] public float CurrentTime = 0f;
 
+    private void OnEnable()
+    {
+        rg.velocity = MoveDirection * MoveSpeed;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
@@ -32,11 +37,4 @@ public class TwoNormalAttack : MonoBehaviour
         }
         
     }
-
-    private void Update()
-    {
-        rg.velocity = MoveDirection * MoveSpeed;
-    }
-
-   
 }

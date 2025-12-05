@@ -22,7 +22,7 @@ public enum WeaponType
     LanBao,
     Fire,
     XuKong,
-    Five,
+    LvQuan,
     Six,
     Seven,
     Eight,

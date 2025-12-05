@@ -25,7 +25,7 @@ public class GunBase : MonoBehaviour
     /// <param name="division"></param>
     /// <param name="extremeSpeed"></param>
     /// <param name="duration"></param>
-    public void TwoShot(int scale, int division, int extremeSpeed, int duration)
+    public void LvQuanShot()
     {
         // 原始方向
         Vector2 baseDir = (GameController.S.nearMonsterPosition -GameController.S.gamePlayer.transform.position).normalized;
@@ -40,15 +40,18 @@ public class GunBase : MonoBehaviour
         // 连发两颗
         foreach (Vector2 dir in dirs)
         {
-            GameObject bullet = GameController.S.TwoNormalAttackQueue.Dequeue();
+            GameObject bullet = GameController.S.LvQuanQueue.Dequeue();
             bullet.transform.position = GameController.S.gamePlayer.transform.position;
-            bullet.SetActive(true);
 
             var attack = bullet.GetComponent<TwoNormalAttack>();
             attack.MoveDirection = dir;
             attack.MoveSpeed = 2f;
+            bullet.SetActive(true);
+            StartCoroutine(DelayHide(bullet));
         }
     }
+    
+    
     
     public void LanBaoShot()
     {

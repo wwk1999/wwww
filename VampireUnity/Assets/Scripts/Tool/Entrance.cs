@@ -274,7 +274,7 @@ public class Entrance : MonoBehaviour
                 case WeaponType.LanBao:
                     var twoNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/2NormalAttackPrefab"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                     twoNormalAttack.SetActive(false);
-                    GameController.S.TwoNormalAttackQueue.Enqueue(twoNormalAttack);
+                    GameController.S.LvQuanQueue.Enqueue(twoNormalAttack);
                     break;
                 
                 case WeaponType.Fire:
@@ -296,6 +296,13 @@ public class Entrance : MonoBehaviour
                     XuKongPengAttack.SetActive(false);
                     GameController.S.XuKongPengQueue.Enqueue(XuKongPengAttack);
                     break;
+                
+                case WeaponType.LvQuan:
+                    var lvNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/2NormalAttackPrefab"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    lvNormalAttack.SetActive(false);
+                    GameController.S.LvQuanQueue.Enqueue(lvNormalAttack);
+                    break;
+                    
             }
         }
         

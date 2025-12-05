@@ -16,7 +16,8 @@ public class WeaponWindow : MonoBehaviour
    public Button primaryInstallButton; // 初始武器安装按钮
    public Button twoInstallButton; // 第二个武器安装按钮
    public Button threeInstallButton; // 第三个武器安装按钮
-   public Button fourInstallButton; // 第三个武器安装按钮
+   public Button fourInstallButton; // 第四个武器安装按钮
+   public Button lvQuanInstallButton; // 绿圈武器安装按钮
    public Button exitButton; // 退出按钮
    public Button sourceStone1Button; // 源石孔1按钮
    public Button sourceStone2Button; // 源石孔2按钮
@@ -166,6 +167,11 @@ public class WeaponWindow : MonoBehaviour
       fourInstallButton.onClick.AddListener(() =>
       {
          GlobalPlayerAttribute.CurrentWeaponType= WeaponType.XuKong;
+      });
+      
+      lvQuanInstallButton.onClick.AddListener(() =>
+      {
+         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.LvQuan;
       });
       // PenetrateButton.onClick.AddListener(() =>
       // {
