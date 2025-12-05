@@ -24,7 +24,7 @@ public enum WeaponType
     XuKong,
     LvQuan,
     HeiDong,
-    Seven,
+    Du,
     Eight,
     Nine
 }

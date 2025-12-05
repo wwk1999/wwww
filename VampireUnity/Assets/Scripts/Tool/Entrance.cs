@@ -291,6 +291,16 @@ public class Entrance : MonoBehaviour
                     GameController.S.HeiDongPengQueue.Enqueue(HeiDongPeng);
                     break;
                 
+                case WeaponType.Du:
+                    var Du= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/Du"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    Du.SetActive(false);
+                    GameController.S.DuQueue.Enqueue(Du);
+                    
+                    var DuPeng= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/DuPeng"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    DuPeng.SetActive(false);
+                    GameController.S.DuPengQueue.Enqueue(DuPeng);
+                    break;
+                
                 case WeaponType.Fire:
                     var FireAttack= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/Fire"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                     FireAttack.SetActive(false);

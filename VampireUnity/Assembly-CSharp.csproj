@@ -222,6 +222,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\WenZiMonster.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkill2.cs" />
     <Compile Include="Assets\Scripts\WeaponSourceStone\SourceStoneItem.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\DuPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueNecklace.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ForEffects\ObjectMove.cs" />
     <Compile Include="Assets\Scripts\WeaponSourceStone\SourceStoneKong.cs" />
@@ -257,6 +258,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiSkillTriggerRight.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
     <Compile Include="Assets\Scripts\Singleton\NeedDestroyAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\Du.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipAttribute.cs" />

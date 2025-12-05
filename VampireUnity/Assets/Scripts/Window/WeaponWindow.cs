@@ -19,6 +19,10 @@ public class WeaponWindow : MonoBehaviour
    public Button fourInstallButton; // 第四个武器安装按钮
    public Button lvQuanInstallButton; // 绿圈武器安装按钮
    public Button HeiDongInstallButton; // 绿圈武器安装按钮
+   public Button DuInstallButton;
+   
+   
+   
    public Button exitButton; // 退出按钮
    public Button sourceStone1Button; // 源石孔1按钮
    public Button sourceStone2Button; // 源石孔2按钮
@@ -178,6 +182,11 @@ public class WeaponWindow : MonoBehaviour
       HeiDongInstallButton.onClick.AddListener(() =>
       {
          GlobalPlayerAttribute.CurrentWeaponType= WeaponType.HeiDong;
+      });
+      
+      DuInstallButton.onClick.AddListener(() =>
+      {
+         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.Du;
       });
       // PenetrateButton.onClick.AddListener(() =>
       // {

@@ -71,6 +71,16 @@ public class GunBase : MonoBehaviour
         bullet.GetComponent<HeiDongPro>().MoveSpeed = 2f;
         bullet.gameObject.SetActive(true);
     }
+    
+    public void DuShot()
+    {
+        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        GameObject bullet = GameController.S.DuQueue.Dequeue();
+        bullet.transform.position = GameController.S.gamePlayer.transform.position;
+        bullet.GetComponent<Du>().MoveDirection = direction;
+        bullet.GetComponent<Du>().MoveSpeed = 7f;
+        bullet.gameObject.SetActive(true);
+    }
 
 
     /// <summary>

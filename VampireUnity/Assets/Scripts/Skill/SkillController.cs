@@ -106,6 +106,9 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.HeiDong:
                 GameController.S.gamePlayer.currentGun.HeiDongShot();
                 break;
+            case WeaponType.Du:
+                GameController.S.gamePlayer.currentGun.DuShot();
+                break;
         }
         NormalAttackCoolingtime+=Time.deltaTime;
     }

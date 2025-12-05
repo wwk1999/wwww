@@ -1,16 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Spine.Unity;
 using UnityEngine;
 
-public class FirePeng : MonoBehaviour
+public class DuPeng : MonoBehaviour
 {
     public Animator animator;
 
     private void OnEnable()
     {
-        animator.Play("FirePengAnim");
+        animator.Play("DuPeng");
         StartCoroutine(DelayHide());
     }
 
@@ -18,6 +16,6 @@ public class FirePeng : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
-        GameController.S.FirePengQueue.Enqueue(gameObject);
+        GameController.S.DuPengQueue.Enqueue(gameObject);
     }
 }
