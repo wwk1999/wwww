@@ -1,0 +1,316 @@
+Enemy_Boss_stormwolf.png
+	size: 1652, 1652
+	filter: Linear, Linear
+beimao_bei
+	bounds: 849, 1255, 193, 196
+beimao_pigu
+	bounds: 1482, 453, 83, 72
+	rotate: 90
+beimao_yao
+	bounds: 1381, 165, 61, 94
+erduo_l
+	bounds: 1308, 158, 101, 71
+	rotate: 90
+erduo_r
+	bounds: 1148, 8, 99, 47
+etou
+	bounds: 1207, 410, 163, 110
+fdz/222
+	bounds: 324, 822, 237, 141
+	offsets: 0, 0, 241, 143
+	rotate: 90
+fengwenlang-jineng2/fengwenlang-jineng2_00000
+	bounds: 1044, 1243, 210, 184
+	offsets: 1, 10, 214, 214
+	rotate: 90
+fengwenlang-jineng2/fengwenlang-jineng2_00001
+	bounds: 830, 879, 200, 192
+	offsets: 11, 10, 214, 214
+fengwenlang-jineng2/fengwenlang-jineng2_00002
+	bounds: 1032, 850, 198, 194
+	offsets: 15, 10, 214, 214
+	rotate: 90
+fengwenlang-jineng2/fengwenlang-jineng2_00003
+	bounds: 1009, 462, 193, 196
+	offsets: 19, 10, 214, 214
+	rotate: 90
+fengwenlang-jineng2/fengwenlang-jineng2_00004
+	bounds: 809, 686, 191, 198
+	offsets: 20, 10, 214, 214
+	rotate: 90
+fengwenlang-jineng2/fengwenlang-jineng2_00005
+	bounds: 1009, 657, 191, 198
+	offsets: 20, 10, 214, 214
+	rotate: 90
+fengwenlang-jineng2/fengwenlang-jineng2_00006
+	bounds: 809, 490, 194, 198
+	offsets: 19, 9, 214, 214
+	rotate: 90
+fengwenlang-jineng2/fengwenlang-jineng2_00007
+	bounds: 597, 212, 196, 194
+	offsets: 17, 10, 214, 214
+	rotate: 90
+fubu
+	bounds: 467, 848, 139, 93
+houdatui_l
+	bounds: 1335, 304, 82, 104
+houdatui_r
+	bounds: 1308, 97, 59, 81
+	rotate: 90
+houjiao_l
+	bounds: 1249, 33, 43, 22
+	offsets: 2, 0, 45, 22
+houjiao_r
+	bounds: 467, 822, 40, 24
+houjiaohuai_l
+	bounds: 601, 2, 28, 17
+houxiaotui_l
+	bounds: 1444, 170, 47, 68
+	offsets: 0, 0, 47, 71
+	rotate: 90
+houxiaotui_r
+	bounds: 1555, 315, 50, 51
+	rotate: 90
+huan_00000
+	bounds: 2, 1270, 380, 380
+jian_l
+	bounds: 1556, 449, 90, 80
+jiaohuai_r
+	bounds: 195, 534, 22, 15
+	rotate: 90
+jing
+	bounds: 2, 276, 208, 240
+ks/ks_00000
+	bounds: 1391, 97, 75, 66
+	offsets: 58, 53, 204, 168
+ks/ks_00002
+	bounds: 1419, 300, 83, 75
+	offsets: 54, 48, 204, 168
+ks/ks_00004
+	bounds: 1388, 454, 92, 82
+	offsets: 51, 44, 204, 168
+ks/ks_00006
+	bounds: 226, 2, 115, 112
+	offsets: 37, 29, 204, 168
+ks/ks_00008
+	bounds: 1172, 130, 134, 129
+	offsets: 29, 19, 204, 168
+ks/ks_00010
+	bounds: 1184, 261, 149, 147
+	offsets: 20, 9, 204, 168
+ks/ks_00012
+	bounds: 467, 943, 148, 116
+	offsets: 22, 19, 204, 168
+liangdian/liangdian_00000
+	bounds: 793, 202, 190, 170
+	offsets: 0, 3, 203, 190
+liangdian/liangdian_00001
+	bounds: 601, 21, 188, 189
+	offsets: 1, 0, 203, 190
+liangdian/liangdian_00002
+	bounds: 608, 757, 199, 181
+	offsets: 4, 7, 203, 190
+liangdian/liangdian_00003
+	bounds: 1229, 883, 193, 186
+	offsets: 7, 0, 203, 190
+	rotate: 90
+liangdian/liangdian_00004
+	bounds: 1417, 659, 200, 180
+	offsets: 2, 1, 203, 190
+liangdian/liangdian_00005
+	bounds: 791, 14, 189, 186
+	offsets: 4, 0, 203, 190
+liangdian/liangdian_00006
+	bounds: 993, 272, 189, 188
+	offsets: 7, 2, 203, 190
+liangdian/liangdian_00007
+	bounds: 1230, 1078, 185, 185
+	offsets: 9, 2, 203, 190
+liangdian/liangdian_00008
+	bounds: 1044, 1050, 191, 183
+	offsets: 9, 0, 203, 190
+	rotate: 90
+liangdian/liangdian_00009
+	bounds: 1230, 1265, 189, 185
+	offsets: 7, 1, 203, 190
+	rotate: 90
+liangdian/liangdian_00010
+	bounds: 1209, 522, 177, 176
+	offsets: 18, 0, 203, 190
+liuhai_d
+	bounds: 694, 419, 102, 182
+liuhai_u
+	bounds: 1299, 8, 88, 87
+qiandatui_l
+	bounds: 1444, 219, 67, 79
+	offsets: 1, 0, 68, 79
+qianjiao_l
+	bounds: 343, 62, 52, 30
+	rotate: 90
+qianjiaohuai_l
+	bounds: 324, 798, 23, 22
+qiantui_l
+	bounds: 80, 5, 43, 56
+	rotate: 90
+sbb/sbbbb_00000
+	bounds: 1228, 700, 187, 181
+	offsets: 18, 26, 228, 228
+sbb/sbbbb_00001
+	bounds: 2, 1040, 228, 228
+sbb/sbbbb_00002
+	bounds: 1417, 1430, 221, 220
+	offsets: 7, 4, 228, 228
+sbb/sbbbb_00003
+	bounds: 2, 50, 222, 224
+	offsets: 6, 2, 228, 228
+sbb/sbbbb_00004
+	bounds: 833, 1073, 180, 209
+	offsets: 23, 11, 228, 228
+	rotate: 90
+sbb/sbbbb_00005
+	bounds: 617, 940, 181, 211
+	offsets: 22, 10, 228, 228
+	rotate: 90
+sbb/sbbbb_00006
+	bounds: 617, 1123, 146, 214
+	offsets: 38, 8, 228, 228
+	rotate: 90
+sbb/sbbbb_00007
+	bounds: 1148, 57, 71, 149
+	offsets: 112, 46, 228, 228
+	rotate: 90
+shange
+	bounds: 702, 603, 152, 105
+	rotate: 90
+sxifenga/sxifenga_00000
+	bounds: 2, 779, 259, 194
+	offsets: 5, 2, 266, 196
+	rotate: 90
+sxifenga/sxifenga_00001
+	bounds: 384, 1455, 261, 195
+	offsets: 4, 1, 266, 196
+sxifenga/sxifenga_00002
+	bounds: 905, 1455, 254, 195
+	offsets: 12, 1, 266, 196
+sxifenga/sxifenga_00003
+	bounds: 2, 518, 259, 191
+	offsets: 7, 5, 266, 196
+	rotate: 90
+sxifenga/sxifenga_00004
+	bounds: 1161, 1456, 254, 194
+	offsets: 10, 2, 266, 196
+tunbu
+	bounds: 511, 757, 89, 95
+	offsets: 0, 0, 89, 97
+	rotate: 90
+tx/zz_00000
+	bounds: 798, 374, 114, 193
+	offsets: 0, 36, 256, 256
+	rotate: 90
+tx/zz_00001
+	bounds: 647, 1453, 256, 197
+	offsets: 0, 58, 256, 256
+tx/zz_00002
+	bounds: 198, 796, 124, 242
+	offsets: 132, 0, 256, 256
+tx/zz_00003
+	bounds: 985, 140, 130, 185
+	offsets: 126, 0, 256, 256
+	rotate: 90
+tx/zz_00004
+	bounds: 982, 7, 131, 164
+	offsets: 125, 0, 256, 256
+	rotate: 90
+wefiba
+	bounds: 511, 608, 147, 189
+	rotate: 90
+xf/sxifenga_00000
+	bounds: 195, 558, 219, 154
+	offsets: 0, 5, 219, 162
+	rotate: 90
+xf/sxifenga_00001
+	bounds: 212, 337, 219, 157
+	offsets: 0, 3, 219, 162
+	rotate: 90
+xf/sxifenga_00002
+	bounds: 226, 116, 219, 155
+	offsets: 0, 7, 219, 162
+	rotate: 90
+xf/sxifenga_00003
+	bounds: 383, 2, 216, 162
+	offsets: 0, 0, 219, 162
+xf/sxifenga_00004
+	bounds: 351, 601, 219, 158
+	offsets: 0, 1, 219, 162
+	rotate: 90
+xiae
+	bounds: 576, 410, 196, 116
+	rotate: 90
+xiongmao_d
+	bounds: 1557, 531, 126, 93
+	rotate: 90
+xiongmao_hei
+	bounds: 1548, 24, 63, 58
+	offsets: 0, 1, 63, 59
+	rotate: 90
+xiongmao_m
+	bounds: 1388, 538, 167, 119
+xuli_00/xuli_00_00000
+	bounds: 232, 1061, 218, 207
+	offsets: 20, 29, 250, 250
+xuli_00/xuli_00_00001
+	bounds: 384, 1270, 231, 183
+	offsets: 6, 46, 250, 250
+xuli_00/xuli_00_00002
+	bounds: 1417, 841, 212, 209
+	offsets: 28, 16, 250, 250
+xuli_00/xuli_00_00003
+	bounds: 1417, 1240, 188, 222
+	offsets: 44, 17, 250, 250
+	rotate: 90
+xuli_00/xuli_00_00004
+	bounds: 371, 381, 218, 203
+	offsets: 13, 15, 250, 250
+	rotate: 90
+xuli_00/xuli_00_00005
+	bounds: 617, 1271, 230, 180
+	offsets: 14, 22, 250, 250
+xuli_00/xuli_00_00006
+	bounds: 383, 166, 213, 212
+	offsets: 11, 22, 250, 250
+	rotate: 90
+xuli_00/xuli_00_00007
+	bounds: 1417, 1052, 186, 224
+	offsets: 20, 9, 250, 250
+	rotate: 90
+ya
+	bounds: 351, 571, 28, 18
+	rotate: 90
+yanjian
+	bounds: 1619, 737, 51, 28
+	rotate: 90
+yps/tu1
+	bounds: 1335, 261, 64, 41
+yps/tu2
+	bounds: 1419, 377, 75, 60
+	rotate: 90
+yps/tu3
+	bounds: 1389, 11, 84, 76
+	rotate: 90
+yps/tu4
+	bounds: 1555, 367, 83, 80
+yps/tu5
+	bounds: 1468, 89, 79, 79
+yps/tu6
+	bounds: 1481, 377, 74, 72
+	rotate: 90
+yps/tu7
+	bounds: 1468, 16, 78, 71
+yps/tu8
+	bounds: 1513, 219, 79, 69
+	rotate: 90
+zhou_l_d
+	bounds: 2, 9, 39, 76
+	rotate: 90
+zhou_l_u
+	bounds: 1619, 790, 31, 49

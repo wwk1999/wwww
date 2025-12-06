@@ -46,9 +46,9 @@ public class CameraContraller : XSingleton<CameraContraller>
         if (LevelInfoConfig.CurrentGameLevel == 12)
         {
             ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
-            StoneBoss stoneboss = Instantiate(Resources.Load<StoneBoss>("Prefabs/Monster/Level3/StoneBOSS"));
-            stoneboss.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-            stoneboss.transform.Find("SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"walk",true);
+            ZhaoZeBoss ZhaoZeboss = Instantiate(Resources.Load<ZhaoZeBoss>("Prefabs/Monster/Level3/ZhaoZeBOSS"));
+            ZhaoZeboss.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+            ZhaoZeboss.transform.Find("SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"move",true);
         }
        
     }

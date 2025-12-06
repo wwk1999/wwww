@@ -1,0 +1,216 @@
+Enemy_Boss_cactus.png
+	size: 1452, 1452
+	filter: Linear, Linear
+beibu
+	bounds: 2, 891, 454, 253
+beida
+	bounds: 763, 9, 59, 48
+beiqi_l
+	bounds: 2, 303, 287, 267
+beiqi_r
+	bounds: 328, 635, 254, 140
+	rotate: 90
+fubu
+	bounds: 2, 1146, 505, 304
+houjiao_l
+	bounds: 1020, 427, 207, 87
+	offsets: 1, 1, 213, 88
+	rotate: 90
+houjiao_r
+	bounds: 1246, 357, 203, 86
+	offsets: 1, 0, 205, 86
+qianjiao_r
+	bounds: 1246, 357, 203, 86
+	offsets: 1, 0, 205, 86
+houtui_l1
+	bounds: 1109, 359, 135, 130
+	offsets: 1, 2, 137, 133
+houtui_r
+	bounds: 1050, 842, 182, 214
+	rotate: 90
+qiantui_r
+	bounds: 1050, 842, 182, 214
+	rotate: 90
+houtui_r2
+	bounds: 891, 833, 157, 206
+	offsets: 2, 0, 188, 207
+jian_l
+	bounds: 891, 1041, 153, 160
+	rotate: 90
+jiao_l
+	bounds: 1053, 1159, 134, 248
+	offsets: 0, 1, 136, 250
+	rotate: 90
+jiao_r
+	bounds: 799, 412, 81, 209
+	offsets: 2, 0, 83, 210
+	rotate: 90
+qianjiao_l
+	bounds: 800, 665, 239, 89
+	offsets: 0, 7, 240, 96
+	rotate: 90
+qiantui_l1
+	bounds: 638, 4, 123, 111
+qiantui_l2
+	bounds: 2, 80, 183, 221
+	offsets: 0, 1, 184, 223
+texiao/Vertigo/Vertigo_1_10
+	bounds: 470, 2, 168, 70
+	offsets: 16, 15, 194, 95
+	rotate: 90
+texiao/Vertigo/Vertigo_1_11
+	bounds: 939, 76, 159, 67
+	offsets: 25, 14, 194, 95
+texiao/Vertigo/Vertigo_1_12
+	bounds: 763, 59, 166, 66
+	offsets: 25, 14, 194, 95
+texiao/Vertigo/Vertigo_1_13
+	bounds: 309, 2, 159, 79
+	offsets: 25, 7, 194, 95
+texiao/atk/px (1)
+	bounds: 1100, 211, 146, 74
+	offsets: 24, 43, 233, 121
+	rotate: 90
+texiao/atk/px (3)
+	bounds: 187, 71, 230, 120
+	offsets: 0, 0, 233, 121
+	rotate: 90
+texiao/atk/px (5)
+	bounds: 616, 906, 232, 121
+	offsets: 0, 0, 233, 121
+texiao/atk/px (7)
+	bounds: 448, 376, 202, 93
+	offsets: 13, 25, 233, 121
+	rotate: 90
+texiao/atk/px (9)
+	bounds: 465, 172, 202, 94
+	offsets: 12, 25, 233, 121
+	rotate: 90
+texiao/atk/wu (3)
+	bounds: 1294, 180, 100, 82
+	offsets: 4, 3, 107, 87
+texiao/atk/wu (4)
+	bounds: 1177, 72, 106, 86
+	offsets: 2, 3, 111, 92
+texiao/atk/wu (5)
+	bounds: 1294, 264, 110, 91
+	offsets: 4, 2, 115, 95
+texiao/atk/wu (6)
+	bounds: 542, 2, 113, 94
+	offsets: 3, 2, 118, 98
+	rotate: 90
+texiao/atk/wu (7)
+	bounds: 932, 317, 115, 93
+	offsets: 4, 3, 122, 100
+texiao/atk/wu (8)
+	bounds: 1176, 260, 116, 95
+	offsets: 4, 3, 124, 101
+texiao/chentu/chentu1
+	bounds: 328, 580, 155, 53
+texiao/chentu/chentu2
+	bounds: 2, 7, 175, 71
+texiao/chentu/chentu3
+	bounds: 755, 316, 175, 94
+	offsets: 0, 2, 187, 97
+texiao/chentu/chentu4
+	bounds: 1100, 88, 121, 75
+	rotate: 90
+texiao/hhhhh (1)
+	bounds: 891, 636, 186, 195
+	offsets: 4, 8, 205, 207
+texiao/hhhhh (11)
+	bounds: 1263, 638, 187, 188
+	offsets: 16, 13, 205, 207
+texiao/hhhhh (13)
+	bounds: 1256, 445, 191, 192
+	offsets: 8, 11, 205, 207
+	rotate: 90
+texiao/hhhhh (15)
+	bounds: 561, 293, 192, 191
+	offsets: 3, 11, 205, 207
+texiao/hhhhh (3)
+	bounds: 1266, 828, 184, 196
+	offsets: 3, 8, 205, 207
+texiao/hhhhh (5)
+	bounds: 626, 486, 188, 171
+	offsets: 1, 3, 205, 207
+	rotate: 90
+texiao/hhhhh (7)
+	bounds: 1079, 648, 192, 182
+	offsets: 4, 3, 205, 207
+	rotate: 90
+texiao/hhhhh (9)
+	bounds: 759, 127, 178, 187
+	offsets: 20, 8, 205, 207
+texiao/huo (1)
+	bounds: 1053, 1026, 219, 131
+	offsets: 7, 5, 250, 163
+texiao/huo (2)
+	bounds: 309, 83, 241, 154
+	offsets: 0, 3, 250, 163
+	rotate: 90
+texiao/huo (3)
+	bounds: 616, 1029, 243, 157
+	offsets: 1, 1, 250, 163
+texiao/huo (4)
+	bounds: 291, 326, 244, 155
+	offsets: 2, 3, 250, 163
+	rotate: 90
+texiao/huo (5)
+	bounds: 458, 898, 246, 156
+	offsets: 2, 3, 250, 163
+	rotate: 90
+texiao/huo (6)
+	bounds: 470, 650, 246, 154
+	offsets: 4, 5, 250, 163
+	rotate: 90
+texiao/huo (7)
+	bounds: 1053, 1295, 248, 155
+	offsets: 2, 4, 250, 163
+texiao/huo (8)
+	bounds: 1303, 1068, 246, 146
+	offsets: 3, 6, 250, 163
+	rotate: 90
+texiao/jineng/ccc
+	bounds: 485, 580, 68, 25
+	offsets: 4, 4, 144, 34
+	rotate: 90
+texiao/jineng/d
+	bounds: 939, 145, 170, 159
+	offsets: 21, 9, 214, 182
+	rotate: 90
+texiao/jineng/d1
+	bounds: 755, 442, 42, 42
+	offsets: 2, 2, 47, 47
+texiao/jineng/d9
+	bounds: 1406, 312, 43, 43
+	offsets: 2, 2, 47, 47
+texiao/yan_h
+	bounds: 509, 1156, 60, 30
+	offsets: 8, 35, 162, 159
+tou
+	bounds: 2, 572, 324, 317
+tou_u
+	bounds: 509, 1188, 355, 262
+	offsets: 0, 1, 355, 263
+weiba
+	bounds: 866, 1196, 185, 254
+weichui
+	bounds: 1109, 491, 155, 145
+	offsets: 0, 1, 156, 146
+	rotate: 90
+xiaba
+	bounds: 799, 495, 219, 139
+	offsets: 1, 1, 221, 140
+xiaba_d
+	bounds: 561, 117, 196, 174
+xiaba_u
+	bounds: 626, 676, 228, 172
+	rotate: 90
+xuanyun
+	bounds: 1177, 160, 104, 98
+yanbai
+	bounds: 1285, 93, 70, 85
+yanpi
+	bounds: 1303, 1316, 147, 134
+	offsets: 0, 3, 147, 137

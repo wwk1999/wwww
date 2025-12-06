@@ -1,0 +1,241 @@
+Enemy_Mouse_Booster.png
+	size: 1668, 1668
+	filter: Linear, Linear
+arm01
+	bounds: 1279, 695, 96, 160
+	rotate: 90
+arm02
+	bounds: 1134, 49, 117, 129
+	offsets: 0, 0, 117, 133
+	rotate: 90
+arm02di
+	bounds: 1641, 1298, 92, 16
+	offsets: 0, 9, 92, 27
+	rotate: 90
+arm03
+	bounds: 2, 13, 92, 14
+arm03di
+	bounds: 1265, 44, 116, 129
+arm04
+	bounds: 1383, 262, 83, 116
+bei
+	bounds: 1398, 531, 68, 162
+biyan
+	bounds: 1055, 269, 42, 50
+bizi
+	bounds: 1612, 309, 54, 38
+	offsets: 0, 2, 54, 40
+body
+	bounds: 1279, 793, 134, 166
+	offsets: 9, 0, 143, 166
+daizi
+	bounds: 795, 196, 79, 21
+	rotate: 90
+dao01
+	bounds: 280, 883, 18, 76
+	rotate: 90
+dao02
+	bounds: 824, 2, 34, 86
+	offsets: 2, 0, 36, 86
+	rotate: 90
+dao03
+	bounds: 1112, 10, 37, 86
+	offsets: 0, 0, 43, 86
+	rotate: 90
+didi
+	bounds: 428, 1342, 104, 63
+duoduo02
+	bounds: 547, 2, 44, 64
+	offsets: 0, 0, 57, 64
+e
+	bounds: 1379, 179, 57, 81
+	offsets: 13, 0, 72, 81
+edi
+	bounds: 545, 159, 48, 31
+effects/Vertigo/Vertigo1
+	bounds: 1601, 973, 141, 59
+	offsets: 22, 8, 180, 71
+	rotate: 90
+effects/Vertigo/Vertigo2
+	bounds: 411, 10, 134, 56
+	offsets: 29, 8, 180, 71
+effects/Vertigo/Vertigo3
+	bounds: 269, 11, 140, 55
+	offsets: 29, 8, 180, 71
+effects/Vertigo/Vertigo4
+	bounds: 1468, 237, 134, 67
+	offsets: 29, 1, 180, 71
+effects/bo/bo_0001
+	bounds: 2, 883, 435, 276
+	offsets: 0, 0, 455, 289
+	rotate: 90
+effects/bo/bo_0002
+	bounds: 428, 1407, 435, 259
+	offsets: 0, 0, 455, 289
+effects/bo/bo_0003
+	bounds: 2, 449, 432, 261
+	offsets: 2, 0, 455, 289
+	rotate: 90
+effects/bo/bo_0004
+	bounds: 539, 998, 407, 261
+	offsets: 28, 0, 455, 289
+	rotate: 90
+effects/bo/bo_0005
+	bounds: 280, 903, 415, 257
+	offsets: 19, 0, 455, 289
+	rotate: 90
+effects/bo/bo_0006
+	bounds: 2, 29, 418, 265
+	offsets: 16, 2, 455, 289
+	rotate: 90
+effects/bo/bo_0007
+	bounds: 865, 1408, 425, 258
+	offsets: 10, 12, 455, 289
+effects/cj/cj_0001
+	bounds: 817, 680, 358, 274
+	offsets: 20, 0, 387, 274
+	rotate: 90
+effects/cj/cj_0003
+	bounds: 1292, 1392, 366, 274
+	offsets: 12, 0, 387, 274
+effects/cj/cj_0005
+	bounds: 545, 277, 358, 274
+	offsets: 20, 0, 387, 274
+	rotate: 90
+effects/cj/cj_0007
+	bounds: 269, 156, 361, 274
+	offsets: 16, 0, 387, 274
+	rotate: 90
+effects/cj/cj_0009
+	bounds: 1277, 1116, 362, 274
+	offsets: 16, 0, 387, 274
+effects/cj/cj_0011
+	bounds: 541, 637, 359, 274
+	offsets: 20, 0, 387, 274
+	rotate: 90
+effects/cj/cj_0013
+	bounds: 802, 1040, 365, 274
+	offsets: 12, 0, 387, 274
+	rotate: 90
+effects/cj/cj_0015
+	bounds: 821, 321, 357, 274
+	offsets: 20, 0, 387, 274
+	rotate: 90
+effects/cj/cj_0017
+	bounds: 265, 519, 362, 274
+	offsets: 16, 0, 387, 274
+	rotate: 90
+effects/cjb
+	bounds: 269, 68, 338, 86
+	offsets: 14, 10, 365, 105
+effects/dilie
+	bounds: 821, 263, 232, 56
+effects/dimian_0001
+	bounds: 1554, 817, 146, 74
+	offsets: 67, 47, 277, 305
+	rotate: 90
+effects/dimian_0004
+	bounds: 1266, 961, 170, 153
+	offsets: 56, 53, 277, 305
+effects/dimian_0007
+	bounds: 609, 3, 187, 213
+	offsets: 44, 56, 277, 305
+	rotate: 90
+effects/dimian_0010
+	bounds: 1093, 719, 184, 224
+	offsets: 51, 55, 277, 305
+effects/dimian_0013
+	bounds: 1078, 1142, 197, 264
+	offsets: 49, 16, 277, 305
+effects/dimian_0016
+	bounds: 824, 38, 195, 223
+	offsets: 48, 17, 277, 305
+effects/dimian_0019
+	bounds: 1093, 945, 171, 195
+	offsets: 68, 19, 277, 305
+effects/dimian_0022
+	bounds: 1097, 343, 177, 157
+	offsets: 60, 19, 277, 305
+	rotate: 90
+effects/dimian_0025
+	bounds: 1415, 806, 153, 137
+	offsets: 82, 20, 277, 305
+	rotate: 90
+effects/dimian_0028
+	bounds: 1468, 419, 147, 132
+	offsets: 85, 21, 277, 305
+effects/dimian_0031
+	bounds: 1468, 306, 142, 111
+	offsets: 89, 22, 277, 305
+effects/guangqiu
+	bounds: 1097, 522, 195, 170
+	offsets: 17, 1, 230, 172
+	rotate: 90
+effects/quan1
+	bounds: 1468, 553, 147, 149
+	offsets: 0, 0, 149, 151
+effects/x
+	bounds: 2, 1320, 424, 346
+	offsets: 14, 2, 451, 349
+effects/yw/yw_0
+	bounds: 1442, 30, 107, 89
+	offsets: 71, 21, 178, 128
+effects/yw/yw_1
+	bounds: 1021, 84, 177, 111
+	offsets: 0, 7, 178, 128
+	rotate: 90
+effects/yw/yw_2
+	bounds: 1134, 168, 173, 121
+	offsets: 1, 5, 178, 128
+	rotate: 90
+effects/yw/yw_3
+	bounds: 1256, 346, 173, 124
+	offsets: 1, 2, 178, 128
+	rotate: 90
+effects/yw/yw_4
+	bounds: 1257, 175, 169, 120
+	offsets: 2, 4, 178, 128
+	rotate: 90
+erduo01
+	bounds: 1540, 732, 58, 72
+erhuan01
+	bounds: 1540, 704, 26, 21
+	rotate: 90
+erhuan02
+	bounds: 802, 1020, 13, 18
+head
+	bounds: 1438, 965, 161, 149
+	offsets: 0, 0, 161, 155
+leg01
+	bounds: 1021, 2, 45, 89
+	offsets: 3, 0, 48, 89
+	rotate: 90
+leg02
+	bounds: 1555, 147, 46, 88
+	offsets: 0, 0, 48, 88
+lingjin
+	bounds: 1442, 121, 111, 114
+	offsets: 0, 9, 126, 140
+qunzi
+	bounds: 1382, 380, 139, 84
+	rotate: 90
+weiba01
+	bounds: 545, 192, 248, 83
+	offsets: 4, 0, 252, 83
+weijin01
+	bounds: 1383, 47, 130, 57
+	offsets: 0, 1, 137, 58
+	rotate: 90
+weijin02
+	bounds: 1612, 349, 68, 54
+	rotate: 90
+yaodai001
+	bounds: 1021, 49, 108, 33
+	offsets: 0, 18, 108, 51
+yifu01
+	bounds: 1269, 521, 127, 172
+yifu01A
+	bounds: 1441, 704, 97, 100
+yifudi01
+	bounds: 1600, 743, 72, 60
+	rotate: 90

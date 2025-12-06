@@ -1,0 +1,371 @@
+Enemy_Boss_crocodile.png
+	size: 1524, 1524
+	filter: Linear, Linear
+1
+	bounds: 682, 421, 113, 54
+	offsets: 0, 5, 113, 59
+2
+	bounds: 454, 411, 84, 56
+4
+	bounds: 908, 399, 66, 65
+shenti
+	bounds: 2, 1331, 450, 191
+texiao/Vertigo/Vertigo1
+	bounds: 1279, 21, 141, 59
+	offsets: 22, 8, 180, 71
+	rotate: 90
+texiao/Vertigo/Vertigo2
+	bounds: 1340, 31, 134, 56
+	offsets: 29, 8, 180, 71
+	rotate: 90
+texiao/Vertigo/Vertigo3
+	bounds: 1329, 167, 140, 55
+	offsets: 29, 8, 180, 71
+	rotate: 90
+texiao/Vertigo/Vertigo4
+	bounds: 1059, 2, 134, 66
+	offsets: 29, 2, 180, 71
+	rotate: 90
+texiao/atk/px (1)
+	bounds: 1127, 16, 146, 74
+	offsets: 24, 43, 233, 121
+	rotate: 90
+texiao/atk/px (3)
+	bounds: 552, 793, 230, 120
+	offsets: 0, 0, 233, 121
+	rotate: 90
+texiao/atk/px (5)
+	bounds: 274, 551, 233, 121
+	rotate: 90
+texiao/atk/px (7)
+	bounds: 1217, 447, 202, 93
+	offsets: 13, 25, 233, 121
+	rotate: 90
+texiao/atk/px (9)
+	bounds: 514, 2, 202, 94
+	offsets: 12, 25, 233, 121
+texiao/chengtu/chentu1
+	bounds: 217, 770, 40, 14
+texiao/chengtu/chentu2
+	bounds: 768, 85, 45, 18
+	rotate: 90
+texiao/chengtu/chentu3
+	bounds: 1498, 857, 45, 24
+	offsets: 2, 0, 47, 25
+	rotate: 90
+texiao/chengtu/chentu4
+	bounds: 649, 412, 31, 19
+texiao/jineng1/d1
+	bounds: 1467, 1266, 256, 55
+	offsets: 4, 2, 268, 129
+	rotate: 90
+texiao/jineng1/d10
+	bounds: 2, 4, 255, 103
+	offsets: 4, 2, 268, 129
+texiao/jineng1/d11
+	bounds: 845, 541, 251, 95
+	offsets: 6, 2, 268, 129
+	rotate: 90
+texiao/jineng1/d2
+	bounds: 1083, 908, 256, 88
+	offsets: 4, 2, 268, 129
+texiao/jineng1/d3
+	bounds: 454, 528, 256, 102
+	offsets: 4, 2, 268, 129
+	rotate: 90
+texiao/jineng1/d4
+	bounds: 407, 1208, 256, 109
+	offsets: 4, 2, 268, 129
+texiao/jineng1/d5
+	bounds: 1088, 1112, 256, 110
+	offsets: 4, 2, 268, 129
+texiao/jineng1/d6
+	bounds: 282, 293, 256, 119
+	offsets: 4, 2, 268, 129
+	rotate: 90
+texiao/jineng1/d7
+	bounds: 558, 535, 256, 122
+	offsets: 4, 2, 268, 129
+	rotate: 90
+texiao/jineng1/d8
+	bounds: 1083, 998, 256, 112
+	offsets: 4, 2, 268, 129
+texiao/jineng1/d9
+	bounds: 1080, 799, 256, 107
+	offsets: 4, 2, 268, 129
+texiao/jineng1/ks0019
+	bounds: 2, 1214, 403, 115
+	offsets: 2, 0, 406, 115
+texiao/jineng1/mofaqiu0
+	bounds: 1312, 359, 154, 155
+	offsets: 5, 4, 164, 162
+	rotate: 90
+texiao/jineng1/shuidan (1)
+	bounds: 718, 2, 48, 128
+	offsets: 35, 11, 126, 277
+texiao/jineng1/shuidan (10)
+	bounds: 1203, 22, 74, 140
+	offsets: 22, 122, 126, 277
+texiao/jineng1/shuidan (2)
+	bounds: 456, 120, 64, 207
+	offsets: 25, 3, 126, 277
+texiao/jineng1/shuidan (4)
+	bounds: 709, 132, 77, 195
+	offsets: 25, 73, 126, 277
+texiao/jineng1/shuidan (6)
+	bounds: 613, 1026, 79, 180
+	offsets: 24, 88, 126, 277
+texiao/jineng1/shuidan (7)
+	bounds: 373, 117, 81, 174
+	offsets: 22, 93, 126, 277
+texiao/jineng1/xsh0001
+	bounds: 682, 376, 43, 50
+	offsets: 17, 5, 100, 150
+	rotate: 90
+texiao/jineng1/xsh0003
+	bounds: 797, 410, 54, 109
+	offsets: 23, 3, 100, 150
+	rotate: 90
+texiao/jineng1/xsh0005
+	bounds: 1312, 309, 48, 132
+	offsets: 30, 3, 100, 150
+	rotate: 90
+texiao/jineng1/xsh0007
+	bounds: 709, 477, 55, 134
+	offsets: 27, 7, 100, 150
+	rotate: 90
+texiao/jineng1/xsh0009
+	bounds: 1386, 174, 59, 133
+	offsets: 27, 12, 100, 150
+texiao/jineng1/xsh0011
+	bounds: 557, 433, 63, 123
+	offsets: 25, 21, 100, 150
+	rotate: 90
+texiao/jineng1/xsh0013
+	bounds: 448, 2, 64, 113
+	offsets: 25, 29, 100, 150
+texiao/jineng1/xsh0015
+	bounds: 1441, 41, 73, 106
+	offsets: 20, 31, 100, 150
+texiao/jineng1/xsh0017
+	bounds: 1447, 228, 75, 99
+	offsets: 18, 34, 100, 150
+texiao/jineng1/xsh0019
+	bounds: 845, 466, 73, 89
+	offsets: 17, 27, 100, 150
+	rotate: 90
+texiao/jineng1/xsh0021
+	bounds: 1447, 149, 75, 77
+	offsets: 10, 4, 100, 150
+texiao/jineng1/xsh0023
+	bounds: 1088, 1239, 73, 30
+	offsets: 12, 4, 100, 150
+texiao/jineng1/xsh0025
+	bounds: 925, 2, 10, 9
+	offsets: 70, 4, 100, 150
+texiao/jineng1/xuli (1)
+	bounds: 522, 98, 229, 57
+	offsets: 19, 28, 275, 100
+	rotate: 90
+texiao/jineng1/xuli (10)
+	bounds: 540, 402, 107, 29
+	offsets: 142, 27, 275, 100
+texiao/jineng1/xuli (11)
+	bounds: 403, 1001, 56, 22
+	offsets: 193, 27, 275, 100
+texiao/jineng1/xuli (2)
+	bounds: 397, 551, 233, 55
+	offsets: 16, 27, 275, 100
+	rotate: 90
+texiao/jineng1/xuli (3)
+	bounds: 215, 550, 218, 57
+	offsets: 31, 27, 275, 100
+	rotate: 90
+texiao/jineng1/xuli (4)
+	bounds: 657, 127, 200, 50
+	offsets: 48, 27, 275, 100
+	rotate: 90
+texiao/jineng1/xuli (5)
+	bounds: 1055, 138, 189, 48
+	offsets: 60, 27, 275, 100
+	rotate: 90
+texiao/jineng1/xuli (6)
+	bounds: 1470, 522, 191, 52
+	offsets: 59, 26, 275, 100
+	rotate: 90
+texiao/jineng1/xuli (7)
+	bounds: 1470, 329, 191, 52
+	offsets: 59, 27, 275, 100
+	rotate: 90
+texiao/jineng1/xuli (8)
+	bounds: 682, 534, 159, 46
+	offsets: 91, 27, 275, 100
+texiao/jineng1/xuli (9)
+	bounds: 1398, 43, 129, 41
+	offsets: 119, 28, 275, 100
+	rotate: 90
+texiao/jineng2/d11
+	bounds: 885, 1421, 293, 101
+	offsets: 8, 0, 312, 102
+texiao/jineng2/sl0002
+	bounds: 1203, 308, 137, 107
+	offsets: 4, 2, 240, 175
+	rotate: 90
+texiao/jineng2/sl0004
+	bounds: 207, 109, 152, 164
+	offsets: 0, 1, 240, 175
+	rotate: 90
+texiao/jineng2/sl0006
+	bounds: 694, 954, 160, 170
+	offsets: 5, 1, 240, 175
+	rotate: 90
+texiao/jineng2/sl0010
+	bounds: 1346, 1052, 176, 170
+	offsets: 15, 0, 240, 175
+texiao/jineng2/sl0014
+	bounds: 682, 582, 210, 161
+	offsets: 16, 1, 240, 175
+	rotate: 90
+texiao/jineng2/sl0016
+	bounds: 866, 957, 215, 155
+	offsets: 15, 1, 240, 175
+texiao/jineng2/sl0020
+	bounds: 869, 1114, 217, 155
+	offsets: 17, 1, 240, 175
+texiao/jineng2/sl0024
+	bounds: 400, 786, 212, 150
+	offsets: 22, 1, 240, 175
+	rotate: 90
+texiao/jineng2/sl0026
+	bounds: 1341, 904, 164, 146
+	offsets: 71, 2, 240, 175
+texiao/jineng2/sl0028
+	bounds: 1187, 164, 140, 142
+	offsets: 96, 2, 240, 175
+texiao/jineng2/sl0030
+	bounds: 788, 2, 130, 135
+	offsets: 105, 2, 240, 175
+	rotate: 90
+texiao/jineng2/sl0032
+	bounds: 558, 498, 114, 35
+	offsets: 116, 2, 240, 175
+texiao/jineng2/sl0034
+	bounds: 454, 497, 101, 29
+	offsets: 130, 1, 240, 175
+texiao/jineng2/sl0035
+	bounds: 665, 1227, 90, 27
+	offsets: 141, 1, 240, 175
+	rotate: 90
+texiao/jineng2/sl0037
+	bounds: 454, 469, 92, 26
+	offsets: 141, 1, 240, 175
+texiao/jineng2/st_d0001
+	bounds: 885, 1346, 285, 73
+	offsets: 7, 14, 300, 100
+texiao/jineng2/st_d0003
+	bounds: 1180, 1449, 285, 73
+	offsets: 7, 14, 300, 100
+texiao/jineng2/st_d0005
+	bounds: 1180, 1374, 285, 73
+	offsets: 7, 14, 300, 100
+texiao/jineng2/st_d0007
+	bounds: 1172, 1299, 285, 73
+	offsets: 7, 14, 300, 100
+texiao/jineng2/st_d0009
+	bounds: 885, 1271, 285, 73
+	offsets: 7, 14, 300, 100
+texiao/jineng2/st_d0011
+	bounds: 1172, 1224, 285, 73
+	offsets: 7, 14, 300, 100
+texiao/jineng2/st_d0013
+	bounds: 207, 263, 285, 73
+	offsets: 7, 14, 300, 100
+	rotate: 90
+texiao/jineng2/st_d0015
+	bounds: 942, 520, 285, 73
+	offsets: 7, 14, 300, 100
+	rotate: 90
+texiao/jineng2/st_d0017
+	bounds: 1017, 725, 285, 72
+	offsets: 7, 15, 300, 100
+texiao/jineng2/st_d0019
+	bounds: 1017, 651, 283, 72
+	offsets: 8, 15, 300, 100
+texiao/jineng2/z1
+	bounds: 1338, 715, 187, 158
+	offsets: 11, 15, 224, 206
+	rotate: 90
+texiao/jineng2/z2
+	bounds: 217, 786, 212, 181
+	offsets: 5, 23, 224, 206
+	rotate: 90
+texiao/jineng2/z3
+	bounds: 403, 1025, 208, 181
+	offsets: 10, 23, 224, 206
+texiao/jineng2/z4
+	bounds: 694, 1116, 214, 173
+	offsets: 4, 20, 224, 206
+	rotate: 90
+texiao/jineng2/z5
+	bounds: 1017, 505, 198, 144
+	offsets: 2, 20, 224, 206
+texiao/jineng2/z6
+	bounds: 870, 807, 208, 148
+	offsets: 1, 20, 224, 206
+texiao/jineng2/z7
+	bounds: 1312, 515, 198, 156
+	offsets: 11, 15, 224, 206
+	rotate: 90
+texiao/jineng2/z8
+	bounds: 674, 794, 194, 158
+	offsets: 11, 15, 224, 206
+texiao/shuizhu0002
+	bounds: 925, 13, 132, 120
+	offsets: 52, 14, 250, 250
+texiao/shuizhu0004
+	bounds: 217, 1000, 184, 212
+	offsets: 31, 14, 250, 250
+texiao/shuizhu0006
+	bounds: 2, 109, 203, 216
+	offsets: 24, 14, 250, 250
+texiao/shuizhu0008
+	bounds: 2, 327, 203, 221
+	offsets: 25, 14, 250, 250
+texiao/shuizhu0010
+	bounds: 454, 1319, 203, 214
+	offsets: 25, 14, 250, 250
+	rotate: 90
+texiao/shuizhu0012
+	bounds: 2, 550, 211, 218
+	offsets: 19, 13, 250, 250
+texiao/shuizhu0014
+	bounds: 2, 990, 213, 222
+	offsets: 18, 12, 250, 250
+texiao/shuizhu0016
+	bounds: 2, 770, 218, 213
+	offsets: 14, 13, 250, 250
+	rotate: 90
+texiao/shuizhu0018
+	bounds: 670, 1332, 213, 190
+	offsets: 10, 14, 250, 250
+texiao/shuizhu0020
+	bounds: 912, 135, 192, 141
+	offsets: 26, 15, 250, 250
+	rotate: 90
+texiao/shuizhu0022
+	bounds: 788, 134, 193, 122
+	offsets: 30, 14, 250, 250
+	rotate: 90
+tou
+	bounds: 259, 4, 187, 103
+weiba
+	bounds: 581, 107, 250, 74
+	rotate: 90
+xiae
+	bounds: 1105, 164, 163, 80
+	rotate: 90
+yanjing
+	bounds: 461, 1000, 25, 23
+yanpi
+	bounds: 488, 1000, 23, 23
+	offsets: 1, 0, 25, 23

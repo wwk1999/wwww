@@ -1,0 +1,363 @@
+Enemy_Boss_passfuck.png
+	size: 1732, 1732
+	filter: Linear, Linear
+1 ( )/1 ( )_00000
+	bounds: 646, 790, 198, 84
+	offsets: 4, 1, 302, 129
+	rotate: 90
+1 ( )/1 ( )_00001
+	bounds: 660, 548, 240, 98
+	offsets: 2, 0, 302, 129
+	rotate: 90
+1 ( )/1 ( )_00002
+	bounds: 301, 181, 293, 129
+	offsets: 5, 0, 302, 129
+	rotate: 90
+Vertigo/Vertigo1
+	bounds: 1390, 222, 142, 59
+	offsets: 1, 8, 149, 69
+Vertigo/Vertigo2
+	bounds: 1457, 1038, 134, 56
+	offsets: 9, 8, 149, 69
+	rotate: 90
+Vertigo/Vertigo3
+	bounds: 554, 68, 139, 56
+	offsets: 9, 7, 149, 69
+Vertigo/Vertigo4
+	bounds: 1256, 773, 133, 67
+	offsets: 9, 1, 149, 69
+biyan
+	bounds: 1677, 760, 56, 53
+	rotate: 90
+body
+	bounds: 2, 1242, 695, 488
+	offsets: 0, 0, 701, 488
+cj/cj_00000
+	bounds: 2, 725, 257, 241
+	offsets: 4, 5, 280, 256
+	rotate: 90
+cj/cj_00002
+	bounds: 2, 476, 237, 247
+	offsets: 4, 0, 280, 256
+cj/cj_00004
+	bounds: 260, 994, 247, 246
+	offsets: 4, 1, 280, 256
+cj/cj_00006
+	bounds: 699, 1267, 250, 242
+	offsets: 4, 5, 280, 256
+gq
+	bounds: 2, 984, 256, 256
+huxu01
+	bounds: 664, 277, 17, 43
+huxu02
+	bounds: 912, 808, 14, 73
+	rotate: 90
+huxu03
+	bounds: 1369, 591, 37, 180
+huxu04
+	bounds: 400, 11, 46, 168
+jp/jpp_00000
+	bounds: 1557, 1298, 131, 124
+	offsets: 21, 9, 174, 142
+jp/jpp_00001
+	bounds: 1222, 404, 163, 118
+	offsets: 4, 5, 174, 142
+jp/jpp_00002
+	bounds: 1408, 569, 134, 116
+	offsets: 22, 8, 174, 142
+jp/jpp_00003
+	bounds: 883, 126, 133, 127
+	offsets: 26, 1, 174, 142
+jp/jpp_00004
+	bounds: 1622, 1602, 128, 108
+	offsets: 30, 14, 174, 142
+	rotate: 90
+jp/jpp_00005
+	bounds: 1534, 168, 144, 117
+	offsets: 7, 16, 174, 142
+leg
+	bounds: 1408, 687, 117, 166
+	offsets: 20, 25, 137, 191
+mamam/mabi_00000
+	bounds: 1131, 761, 238, 123
+	offsets: 9, 4, 261, 131
+	rotate: 90
+mamam/mabi_00002
+	bounds: 1256, 524, 235, 111
+	offsets: 6, 13, 261, 131
+	rotate: 90
+mamam/mabi_00004
+	bounds: 1024, 597, 225, 105
+	offsets: 6, 16, 261, 131
+	rotate: 90
+mamam/mabi_00006
+	bounds: 241, 476, 247, 123
+	offsets: 6, 4, 261, 131
+	rotate: 90
+mamam/mabi_00008
+	bounds: 550, 271, 235, 112
+	offsets: 9, 13, 261, 131
+	rotate: 90
+mamam/mabi_00010
+	bounds: 898, 558, 242, 124
+	offsets: 12, 3, 261, 131
+	rotate: 90
+mamam/mabi_00012
+	bounds: 1131, 532, 227, 123
+	offsets: 22, 4, 261, 131
+	rotate: 90
+mamam/mabi_00014
+	bounds: 664, 322, 224, 121
+	offsets: 7, 3, 261, 131
+	rotate: 90
+mamam/mabi_00016
+	bounds: 787, 255, 221, 123
+	offsets: 7, 3, 261, 131
+mamam/mabi_00018
+	bounds: 366, 482, 248, 112
+	offsets: 7, 9, 261, 131
+	rotate: 90
+mamam/mabi_00020
+	bounds: 432, 232, 248, 116
+	offsets: 6, 12, 261, 131
+	rotate: 90
+mamam/mabi_00022
+	bounds: 1309, 1298, 246, 124
+	offsets: 7, 3, 261, 131
+mofaqiu/mofaqiu0
+	bounds: 554, 126, 143, 127
+	offsets: 3, 12, 155, 144
+	rotate: 90
+mofaqiu/mofaqiu1
+	bounds: 1544, 569, 144, 131
+	offsets: 2, 9, 155, 144
+	rotate: 90
+mofaqiu/mofaqiu2
+	bounds: 1597, 1151, 145, 133
+	offsets: 2, 8, 155, 144
+	rotate: 90
+mofaqiu/mofaqiu3
+	bounds: 1387, 429, 146, 138
+	offsets: 1, 4, 155, 144
+mofaqiu/mofaqiu4
+	bounds: 1390, 283, 144, 137
+	offsets: 2, 6, 155, 144
+	rotate: 90
+penhuohuo/penhh_00000
+	bounds: 993, 1423, 314, 149
+	offsets: 2, 0, 320, 156
+penhuohuo/penhh_00001
+	bounds: 152, 156, 318, 147
+	offsets: 2, 2, 320, 156
+	rotate: 90
+penhuohuo/penhh_00002
+	bounds: 951, 1274, 318, 147
+	offsets: 2, 6, 320, 156
+penhuohuo/penhh_00003
+	bounds: 2, 155, 319, 148
+	offsets: 1, 8, 320, 156
+	rotate: 90
+penhuohuo/penhh_00004
+	bounds: 1309, 1424, 309, 150
+	offsets: 2, 6, 320, 156
+penhuohuo/penhh_00005
+	bounds: 951, 1116, 308, 156
+	offsets: 2, 0, 320, 156
+penhuohuo/penhh_00006
+	bounds: 993, 1574, 312, 156
+	offsets: 1, 0, 320, 156
+penhuohuo/penhh_00007
+	bounds: 1307, 1576, 313, 154
+	offsets: 2, 0, 320, 156
+penqi/penqi_00000
+	bounds: 1364, 50, 116, 60
+	offsets: 3, 39, 206, 156
+penqi/penqi_00001
+	bounds: 1535, 427, 143, 140
+	offsets: 21, 5, 206, 156
+penqi/penqi_00002
+	bounds: 2, 5, 194, 148
+	offsets: 12, 1, 206, 156
+penqi/penqi_00003
+	bounds: 1010, 256, 189, 148
+	offsets: 15, 0, 206, 156
+penqi/penqi_00004
+	bounds: 253, 5, 149, 145
+	offsets: 47, 0, 206, 156
+	rotate: 90
+penqi/penqi_00005
+	bounds: 745, 127, 136, 126
+	offsets: 62, 1, 206, 156
+penqi/penqi_00006
+	bounds: 1480, 1176, 115, 120
+	offsets: 83, 6, 206, 156
+penqi/penqi_00007
+	bounds: 607, 4, 80, 62
+	offsets: 119, 32, 206, 156
+sdsa/sd0005
+	bounds: 1384, 855, 181, 118
+	offsets: 49, 52, 310, 178
+	rotate: 90
+sdsa/sd0007
+	bounds: 1261, 1038, 194, 134
+	offsets: 48, 29, 310, 178
+sdsa/sd0009
+	bounds: 1271, 1174, 207, 122
+	offsets: 50, 36, 310, 178
+sdsa/sd0011
+	bounds: 1000, 406, 220, 124
+	offsets: 51, 31, 310, 178
+sf/sf_00000
+	bounds: 1371, 167, 53, 161
+	offsets: 10, 1, 78, 178
+	rotate: 90
+sf/sf_00001
+	bounds: 1201, 125, 54, 163
+	offsets: 11, 2, 78, 178
+	rotate: 90
+sf/sf_00002
+	bounds: 198, 2, 53, 152
+	offsets: 12, 1, 78, 178
+sf/sf_00003
+	bounds: 1366, 112, 53, 155
+	offsets: 13, 1, 78, 178
+	rotate: 90
+sf/sf_00004
+	bounds: 480, 508, 55, 170
+	offsets: 11, 1, 78, 178
+	rotate: 90
+sf/sf_00005
+	bounds: 1201, 67, 56, 161
+	offsets: 11, 1, 78, 178
+	rotate: 90
+sf/sf_00006
+	bounds: 1144, 86, 55, 168
+	offsets: 11, 3, 78, 178
+sf/sf_00007
+	bounds: 1201, 181, 54, 168
+	offsets: 10, 1, 78, 178
+	rotate: 90
+shuijing/jj_00000
+	bounds: 1697, 1488, 33, 41
+shuijing/jj_00001
+	bounds: 1271, 1299, 32, 41
+	offsets: 1, 0, 33, 41
+shuijing/jj_00002
+	bounds: 1697, 1445, 33, 41
+shuijing/jj_00003
+	bounds: 1271, 1342, 33, 36
+	offsets: 0, 0, 33, 41
+	rotate: 90
+shuijing01
+	bounds: 1482, 28, 65, 82
+shuijing02
+	bounds: 1622, 1531, 69, 101
+	rotate: 90
+shuijing03
+	bounds: 1620, 1428, 75, 101
+shuijing04
+	bounds: 1669, 885, 66, 51
+	rotate: 90
+shuijing05
+	bounds: 987, 804, 35, 18
+shuijing06
+	bounds: 1669, 953, 67, 53
+	rotate: 90
+weiba
+	bounds: 1256, 842, 126, 194
+	offsets: 0, 0, 126, 200
+weiba01
+	bounds: 683, 155, 60, 165
+weiba02
+	bounds: 448, 72, 104, 158
+xiaba
+	bounds: 940, 1001, 308, 113
+xuanwo/xuanwo_00002
+	bounds: 245, 732, 250, 183
+	offsets: 6, 60, 256, 256
+	rotate: 90
+xuanwo/xuanwo_00004
+	bounds: 509, 990, 250, 215
+	offsets: 4, 25, 256, 256
+	rotate: 90
+xuanwo/xuanwo_00006
+	bounds: 726, 1023, 242, 212
+	offsets: 6, 20, 256, 256
+	rotate: 90
+xuanwo/xuanwo_00008
+	bounds: 430, 790, 214, 198
+	offsets: 16, 17, 256, 256
+xuanwo/xuanwo_00010
+	bounds: 732, 802, 219, 178
+	offsets: 20, 20, 256, 256
+	rotate: 90
+xuanwo/xuanwo_00012
+	bounds: 480, 565, 223, 178
+	offsets: 1, 28, 256, 256
+	rotate: 90
+xuanwo/xuanwo_00014
+	bounds: 912, 824, 217, 175
+	offsets: 3, 32, 256, 256
+xuanwo/xuanwo_00016
+	bounds: 787, 380, 211, 176
+	offsets: 7, 33, 256, 256
+xuanwo/xuanwo_00018
+	bounds: 1201, 237, 187, 165
+	offsets: 23, 40, 256, 256
+xuanwo/xuanwo_00020
+	bounds: 1504, 866, 163, 154
+	offsets: 33, 43, 256, 256
+xuanwo/xuanwo_00022
+	bounds: 1527, 715, 143, 149
+	offsets: 32, 46, 256, 256
+xuanwo/xuanwo_00024
+	bounds: 1529, 287, 142, 138
+	offsets: 35, 54, 256, 256
+xuanwo/xuanwo_00028
+	bounds: 1018, 135, 124, 119
+	offsets: 44, 61, 256, 256
+xuanwo/xuanwo_00032
+	bounds: 1549, 89, 87, 77
+	offsets: 54, 79, 256, 256
+xuanwo/xuanwo_00036
+	bounds: 951, 1432, 77, 39
+	offsets: 59, 85, 256, 256
+	rotate: 90
+zhuazi01
+	bounds: 1680, 818, 50, 65
+zhuazi02
+	bounds: 1549, 29, 58, 66
+	rotate: 90
+zhuazi03
+	bounds: 551, 2, 64, 54
+	rotate: 90
+zhuazi04
+	bounds: 1638, 97, 69, 44
+	rotate: 90
+zhuazi05
+	bounds: 760, 562, 136, 238
+zhuazi06
+	bounds: 1271, 1377, 44, 36
+	rotate: 90
+zhuazi07
+	bounds: 430, 741, 47, 47
+zhuazi08
+	bounds: 1688, 1108, 42, 41
+zhuazi09
+	bounds: 1672, 719, 45, 39
+zhuazi10
+	bounds: 1515, 1022, 127, 171
+	offsets: 0, 28, 127, 199
+	rotate: 90
+zhuazi11
+	bounds: 745, 265, 55, 32
+	rotate: 90
+zhuazi12
+	bounds: 1024, 540, 83, 55
+zhuazi122
+	bounds: 1688, 1039, 67, 37
+	rotate: 90
+zuijiao
+	bounds: 448, 25, 101, 45
+zuinei
+	bounds: 699, 1511, 292, 219

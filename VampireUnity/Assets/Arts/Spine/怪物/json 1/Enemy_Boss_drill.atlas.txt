@@ -1,0 +1,328 @@
+Enemy_Boss_drill.png
+	size: 1832, 1832
+	filter: Linear, Linear
+15
+	bounds: 1722, 1281, 96, 104
+	rotate: 90
+16
+	bounds: 1724, 1379, 81, 106
+	rotate: 90
+17
+	bounds: 1690, 220, 92, 149
+18
+	bounds: 1102, 1070, 130, 167
+19
+	bounds: 1724, 17, 91, 56
+20
+	bounds: 1654, 712, 111, 58
+	rotate: 90
+26
+	bounds: 1504, 1267, 62, 69
+27
+	bounds: 885, 1239, 213, 167
+	rotate: 90
+30
+	bounds: 1229, 125, 49, 41
+	rotate: 90
+31
+	bounds: 1722, 528, 49, 39
+body
+	bounds: 2, 1527, 305, 303
+body01
+	bounds: 1651, 1589, 177, 58
+chentu1
+	bounds: 215, 820, 309, 106
+chentu2
+	bounds: 309, 1481, 349, 141
+chentu3
+	bounds: 2, 502, 348, 188
+	offsets: 0, 3, 373, 193
+	rotate: 90
+chentu4
+	bounds: 858, 1088, 242, 149
+	offsets: 0, 1, 242, 150
+effect/atk/atk_0
+	bounds: 830, 932, 235, 154
+	offsets: 0, 1, 235, 155
+effect/atk/atk_1
+	bounds: 1432, 495, 234, 148
+	offsets: 1, 3, 235, 155
+effect/atk/atk_2
+	bounds: 1230, 350, 232, 149
+	offsets: 2, 3, 235, 155
+	rotate: 90
+effect/atk/atk_3
+	bounds: 1076, 125, 233, 151
+	offsets: 1, 0, 235, 155
+	rotate: 90
+effect/atk/atk_4
+	bounds: 1234, 1078, 231, 155
+	offsets: 3, 0, 235, 155
+effect/idle/guangqiu2
+	bounds: 1723, 779, 84, 80
+	offsets: 15, 4, 115, 86
+effect/idle/zhu
+	bounds: 1723, 861, 84, 113
+	offsets: 2, 0, 87, 114
+effect/idle/zuan_0
+	bounds: 1601, 1079, 101, 125
+	offsets: 0, 0, 112, 153
+effect/idle/zuan_12
+	bounds: 1620, 952, 101, 125
+	offsets: 0, 0, 112, 153
+effect/idle/zuan_15
+	bounds: 1620, 825, 101, 125
+	offsets: 0, 0, 112, 153
+effect/idle/zuan_18
+	bounds: 1622, 1334, 98, 126
+	offsets: 0, 0, 112, 153
+effect/idle/zuan_21
+	bounds: 1510, 1139, 89, 126
+	offsets: 0, 0, 112, 153
+effect/idle/zuan_3
+	bounds: 1601, 1206, 101, 126
+	offsets: 0, 0, 112, 153
+effect/idle/zuan_6
+	bounds: 1704, 1184, 95, 126
+	offsets: 0, 0, 112, 153
+	rotate: 90
+effect/idle/zuan_9
+	bounds: 1704, 1093, 89, 126
+	offsets: 0, 0, 112, 153
+	rotate: 90
+effect/idle/zuan_di
+	bounds: 1529, 29, 112, 153
+effect/jn1/jn1_zuan_0
+	bounds: 1467, 1105, 41, 152
+	offsets: 280, 1, 325, 172
+effect/jn1/jn1_zuan_1
+	bounds: 1439, 4, 88, 172
+	offsets: 234, 0, 325, 172
+effect/jn1/jn1_zuan_10
+	bounds: 544, 7, 293, 172
+	offsets: 29, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_11
+	bounds: 526, 758, 317, 172
+	offsets: 5, 0, 325, 172
+effect/jn1/jn1_zuan_12
+	bounds: 660, 1454, 318, 172
+	offsets: 4, 0, 325, 172
+effect/jn1/jn1_zuan_13
+	bounds: 218, 1136, 318, 172
+	offsets: 4, 0, 325, 172
+effect/jn1/jn1_zuan_14
+	bounds: 194, 296, 318, 172
+	offsets: 4, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_15
+	bounds: 368, 296, 318, 172
+	offsets: 4, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_16
+	bounds: 565, 1280, 318, 172
+	offsets: 4, 0, 325, 172
+effect/jn1/jn1_zuan_17
+	bounds: 538, 1106, 318, 172
+	offsets: 4, 0, 325, 172
+effect/jn1/jn1_zuan_18
+	bounds: 510, 932, 318, 172
+	offsets: 4, 0, 325, 172
+effect/jn1/jn1_zuan_19
+	bounds: 542, 302, 316, 172
+	offsets: 5, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_2
+	bounds: 1431, 369, 124, 172
+	offsets: 198, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_20
+	bounds: 716, 303, 315, 172
+	offsets: 5, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_21
+	bounds: 890, 307, 311, 172
+	offsets: 7, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_22
+	bounds: 1073, 765, 303, 161
+	offsets: 13, 11, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_3
+	bounds: 1291, 2, 146, 172
+	offsets: 176, 0, 325, 172
+effect/jn1/jn1_zuan_4
+	bounds: 1229, 176, 171, 172
+	offsets: 151, 0, 325, 172
+effect/jn1/jn1_zuan_5
+	bounds: 1236, 655, 199, 172
+	offsets: 123, 0, 325, 172
+effect/jn1/jn1_zuan_6
+	bounds: 845, 758, 226, 172
+	offsets: 96, 0, 325, 172
+effect/jn1/jn1_zuan_7
+	bounds: 1271, 1235, 244, 172
+	offsets: 78, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_8
+	bounds: 718, 32, 269, 172
+	offsets: 53, 0, 325, 172
+	rotate: 90
+effect/jn1/jn1_zuan_9
+	bounds: 370, 16, 278, 172
+	offsets: 44, 0, 325, 172
+	rotate: 90
+effect/jn1/ring_0
+	bounds: 1724, 75, 143, 79
+	offsets: 104, 0, 250, 80
+	rotate: 90
+effect/jn1/ring_1
+	bounds: 1617, 185, 184, 71
+	offsets: 62, 0, 250, 80
+	rotate: 90
+effect/jn1/ring_2
+	bounds: 1445, 1259, 220, 57
+	offsets: 27, 0, 250, 80
+	rotate: 90
+effect/jn1/ring_3
+	bounds: 1228, 1243, 236, 41
+	offsets: 8, 0, 250, 80
+	rotate: 90
+effect/jn1/ring_4
+	bounds: 1381, 354, 228, 48
+	offsets: 2, 0, 250, 80
+	rotate: 90
+effect/jn1/ring_5
+	bounds: 1236, 584, 194, 69
+	offsets: 2, 0, 250, 80
+effect/jn1/ring_6
+	bounds: 1643, 33, 150, 79
+	offsets: 1, 0, 250, 80
+	rotate: 90
+effect/jn2/huozhu_0
+	bounds: 1076, 10, 213, 113
+	offsets: 132, 39, 345, 230
+effect/jn2/huozhu_1
+	bounds: 489, 620, 279, 136
+	offsets: 66, 34, 345, 230
+effect/jn2/huozhu_10
+	bounds: 2, 1188, 337, 214
+	offsets: 8, 0, 345, 230
+	rotate: 90
+effect/jn2/huozhu_11
+	bounds: 656, 1628, 336, 202
+	offsets: 9, 17, 345, 230
+effect/jn2/huozhu_12
+	bounds: 994, 1624, 327, 206
+	offsets: 18, 18, 345, 230
+effect/jn2/huozhu_13
+	bounds: 192, 616, 295, 202
+	offsets: 50, 23, 345, 230
+effect/jn2/huozhu_14
+	bounds: 215, 928, 293, 206
+	offsets: 52, 24, 345, 230
+effect/jn2/huozhu_15
+	bounds: 1236, 829, 247, 199
+	offsets: 98, 26, 345, 230
+	rotate: 90
+effect/jn2/huozhu_16
+	bounds: 1054, 1239, 240, 172
+	offsets: 102, 31, 345, 230
+	rotate: 90
+effect/jn2/huozhu_17
+	bounds: 1076, 593, 158, 170
+	offsets: 99, 37, 345, 230
+effect/jn2/huozhu_18
+	bounds: 1723, 976, 95, 115
+	offsets: 107, 82, 345, 230
+effect/jn2/huozhu_19
+	bounds: 1734, 631, 84, 91
+	offsets: 107, 107, 345, 230
+effect/jn2/huozhu_2
+	bounds: 892, 2, 303, 182
+	offsets: 42, 7, 345, 230
+	rotate: 90
+effect/jn2/huozhu_3
+	bounds: 2, 170, 330, 190
+	offsets: 15, 2, 345, 230
+	rotate: 90
+effect/jn2/huozhu_4
+	bounds: 218, 1310, 345, 169
+	offsets: 0, 20, 345, 230
+effect/jn2/huozhu_5
+	bounds: 309, 1624, 345, 206
+	offsets: 0, 0, 345, 230
+effect/jn2/huozhu_6
+	bounds: 2, 852, 334, 211
+	offsets: 11, 8, 345, 230
+	rotate: 90
+effect/jn2/huozhu_7
+	bounds: 1323, 1624, 326, 206
+	offsets: 19, 13, 345, 230
+effect/jn2/huozhu_8
+	bounds: 1437, 821, 255, 181
+	offsets: 90, 22, 345, 230
+	rotate: 90
+effect/jn2/huozhu_9
+	bounds: 194, 2, 292, 174
+	offsets: 53, 23, 345, 230
+	rotate: 90
+effect/vertigo/Vertigo1
+	bounds: 1504, 1338, 141, 59
+	offsets: 22, 8, 180, 71
+	rotate: 90
+effect/vertigo/Vertigo2
+	bounds: 1696, 1462, 134, 56
+	offsets: 29, 8, 180, 71
+effect/vertigo/Vertigo3
+	bounds: 1565, 1339, 140, 55
+	offsets: 29, 8, 180, 71
+	rotate: 90
+effect/vertigo/Vertigo4
+	bounds: 1696, 1520, 134, 67
+	offsets: 29, 1, 180, 71
+guanzi01
+	bounds: 1722, 569, 52, 60
+guanzi02
+	bounds: 1776, 561, 42, 68
+	offsets: 0, 3, 42, 71
+guanzi03
+	bounds: 1510, 1078, 54, 59
+	offsets: 0, 0, 56, 68
+head
+	bounds: 1651, 1649, 179, 181
+larm
+	bounds: 1654, 645, 65, 78
+	rotate: 90
+lhand01
+	bounds: 971, 623, 67, 93
+	rotate: 90
+lhand02
+	bounds: 1402, 178, 101, 174
+lhand03
+	bounds: 1505, 184, 110, 183
+lhand_2
+	bounds: 770, 620, 136, 199
+	rotate: 90
+rarm
+	bounds: 971, 692, 64, 103
+	rotate: 90
+rhand01
+	bounds: 1437, 645, 174, 215
+	rotate: 90
+rhand02
+	bounds: 1605, 371, 89, 122
+rhand03
+	bounds: 1064, 360, 164, 231
+rhand04
+	bounds: 2, 6, 162, 183
+	rotate: 90
+rhand05
+	bounds: 218, 1484, 41, 89
+	rotate: 90
+rhand06
+	bounds: 1714, 724, 53, 86
+	offsets: 12, 0, 65, 86
+	rotate: 90
+rhand07
+	bounds: 1668, 529, 52, 114

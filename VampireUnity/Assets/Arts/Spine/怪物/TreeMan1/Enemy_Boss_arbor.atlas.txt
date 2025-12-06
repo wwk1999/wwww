@@ -1,0 +1,273 @@
+Enemy_Boss_arbor.png
+	size: 1468, 1468
+	filter: Linear, Linear
+chentu1
+	bounds: 264, 212, 309, 106
+	rotate: 90
+chentu2
+	bounds: 1027, 1110, 349, 141
+chentu3
+	bounds: 390, 923, 348, 188
+	offsets: 0, 3, 373, 193
+chentu4
+	bounds: 734, 676, 242, 150
+datuiL
+	bounds: 1142, 316, 109, 102
+datuiR
+	bounds: 1038, 307, 102, 125
+	offsets: 0, 0, 102, 127
+effects/Vertigo/Vertigo1
+	bounds: 1254, 437, 141, 59
+	offsets: 22, 8, 180, 71
+effects/Vertigo/Vertigo2
+	bounds: 880, 102, 134, 56
+	offsets: 29, 8, 180, 71
+effects/Vertigo/Vertigo3
+	bounds: 1254, 380, 140, 55
+	offsets: 29, 8, 180, 71
+effects/Vertigo/Vertigo4
+	bounds: 904, 540, 134, 66
+	offsets: 29, 2, 180, 71
+	rotate: 90
+effects/atk/atk_0001
+	bounds: 1345, 97, 85, 46
+	offsets: 2, 3, 115, 125
+effects/atk/atk_0002
+	bounds: 894, 444, 94, 66
+	offsets: 2, 4, 115, 125
+	rotate: 90
+effects/atk/atk_0003
+	bounds: 1048, 200, 100, 105
+	offsets: 7, 6, 115, 125
+effects/atk/atk_0004
+	bounds: 901, 12, 88, 110
+	offsets: 20, 9, 115, 125
+	rotate: 90
+effects/atk/atk_0005
+	bounds: 1150, 208, 89, 106
+	offsets: 19, 17, 115, 125
+effects/atk/atk_0006
+	bounds: 1048, 109, 89, 102
+	offsets: 18, 23, 115, 125
+	rotate: 90
+effects/atk/atk_0007
+	bounds: 727, 2, 86, 92
+	offsets: 17, 31, 115, 125
+effects/dilie
+	bounds: 994, 788, 232, 56
+effects/guangqiu
+	bounds: 815, 2, 92, 84
+	offsets: 11, 1, 115, 86
+	rotate: 90
+effects/hongguangqiu
+	bounds: 264, 126, 105, 84
+	offsets: 1, 1, 115, 86
+effects/hongqiu
+	bounds: 1341, 145, 80, 80
+	offsets: 9, 9, 100, 100
+effects/huaban_4
+	bounds: 1235, 60, 52, 48
+effects/jiahao
+	bounds: 1152, 110, 96, 96
+	offsets: 6, 6, 106, 104
+effects/jn1/0
+	bounds: 1013, 21, 79, 22
+	offsets: 19, 9, 181, 45
+	rotate: 90
+effects/jn1/1
+	bounds: 266, 7, 117, 96
+	offsets: 0, 1, 138, 97
+	rotate: 90
+effects/jn1/2
+	bounds: 717, 266, 153, 127
+	offsets: 17, 1, 186, 130
+effects/jn1/3
+	bounds: 717, 266, 153, 127
+	offsets: 17, 1, 186, 130
+effects/jn1/4
+	bounds: 376, 681, 256, 240
+	offsets: 37, 10, 315, 283
+effects/jn2/jia_01
+	bounds: 853, 396, 59, 12
+	offsets: 1, 1, 61, 13
+	rotate: 90
+effects/jn2/jia_03
+	bounds: 1250, 110, 93, 29
+	offsets: 1, 1, 96, 30
+effects/jn2/jia_05
+	bounds: 1140, 449, 134, 46
+	offsets: 2, 0, 137, 47
+	rotate: 90
+effects/jn2/jia_07
+	bounds: 544, 52, 181, 41
+	offsets: 1, 1, 183, 43
+effects/jn2/jia_09
+	bounds: 544, 8, 135, 42
+	offsets: 1, 0, 137, 42
+effects/jn2/jia_11
+	bounds: 1431, 1022, 91, 35
+	offsets: 1, 1, 93, 36
+	rotate: 90
+effects/jn2/jia_13
+	bounds: 1254, 515, 56, 19
+	offsets: 1, 1, 58, 20
+	rotate: 90
+effects/lvguangqiu
+	bounds: 1250, 141, 89, 84
+	offsets: 12, 1, 115, 86
+effects/piaodai_wl_d
+	bounds: 1016, 128, 31, 30
+	rotate: 90
+effects/shitou/shitou_0002
+	bounds: 1228, 804, 40, 32
+	offsets: 97, 8, 220, 97
+	rotate: 90
+effects/shitou/shitou_0004
+	bounds: 1037, 23, 78, 28
+	offsets: 79, 17, 220, 97
+effects/shitou/shitou_0006
+	bounds: 1241, 227, 120, 42
+	offsets: 60, 22, 220, 97
+effects/shitou/shitou_0008
+	bounds: 1188, 420, 151, 64
+	offsets: 41, 17, 220, 97
+	rotate: 90
+effects/shitou/shitou_0010
+	bounds: 364, 12, 178, 83
+	offsets: 21, 13, 220, 97
+effects/shitou/shitou_0012
+	bounds: 1190, 573, 213, 83
+	offsets: 2, 9, 220, 97
+	rotate: 90
+effects/y/y_0001
+	bounds: 590, 441, 89, 62
+	offsets: 153, 8, 267, 190
+	rotate: 90
+effects/y/y_0002
+	bounds: 1378, 1115, 136, 88
+	offsets: 107, 7, 267, 190
+	rotate: 90
+effects/y/y_0003
+	bounds: 553, 266, 162, 127
+	offsets: 70, 7, 267, 190
+effects/y/y_0004
+	bounds: 1262, 828, 167, 149
+	offsets: 56, 8, 267, 190
+effects/y/y_0005
+	bounds: 372, 97, 180, 163
+	offsets: 31, 7, 267, 190
+effects/y/y_0006
+	bounds: 372, 262, 179, 172
+	offsets: 25, 8, 267, 190
+effects/y/y_0007
+	bounds: 554, 95, 169, 169
+	offsets: 16, 13, 267, 190
+effects/y/y_0008
+	bounds: 872, 274, 164, 158
+	offsets: 13, 23, 267, 190
+effects/y/y_0009
+	bounds: 725, 96, 168, 153
+	offsets: 7, 24, 267, 190
+	rotate: 90
+effects/y/y_0010
+	bounds: 972, 434, 166, 149
+	offsets: 5, 26, 267, 190
+effects/y/y_0011
+	bounds: 1253, 271, 129, 49
+	offsets: 20, 94, 267, 190
+effects/y/yy_0001
+	bounds: 1253, 322, 130, 56
+	offsets: 59, 38, 275, 155
+effects/y/yy_0004
+	bounds: 654, 557, 248, 117
+	offsets: 2, 24, 275, 155
+effects/y/yy_0007
+	bounds: 994, 846, 266, 128
+	offsets: 2, 13, 275, 155
+effects/y/yy_0010
+	bounds: 994, 976, 263, 132
+	offsets: 5, 13, 275, 155
+effects/y/yy_0013
+	bounds: 2, 7, 262, 114
+	offsets: 5, 13, 275, 155
+effects/y/yy_0016
+	bounds: 740, 828, 252, 117
+	offsets: 14, 13, 275, 155
+effects/y/yy_0019
+	bounds: 634, 681, 240, 98
+	offsets: 16, 22, 275, 155
+	rotate: 90
+effects/y/yy_0022
+	bounds: 654, 457, 238, 98
+	offsets: 18, 21, 275, 155
+effects/y/yy_0025
+	bounds: 376, 436, 212, 94
+	offsets: 31, 22, 275, 155
+effects/y/yy_0028
+	bounds: 654, 395, 197, 60
+	offsets: 39, 36, 275, 155
+effects/y/yy_0031
+	bounds: 1427, 1319, 147, 17
+	offsets: 52, 70, 275, 155
+	rotate: 90
+geboL
+	bounds: 376, 532, 147, 276
+	rotate: 90
+geboR
+	bounds: 1027, 1253, 213, 398
+	rotate: 90
+hongtou
+	bounds: 2, 523, 372, 440
+lvtou
+	bounds: 2, 965, 386, 501
+	offsets: 0, 1, 386, 502
+mei1
+	bounds: 1037, 53, 73, 54
+	offsets: 1, 1, 74, 63
+mei2
+	bounds: 880, 160, 111, 112
+mei3
+	bounds: 1112, 53, 56, 54
+	offsets: 0, 0, 58, 54
+mei4
+	bounds: 993, 161, 111, 53
+	rotate: 90
+shenti
+	bounds: 2, 123, 260, 398
+shouL
+	bounds: 390, 1113, 318, 353
+shouR
+	bounds: 710, 1131, 315, 335
+tuiL
+	bounds: 1275, 646, 180, 191
+	rotate: 90
+tuiR
+	bounds: 1275, 498, 146, 182
+	offsets: 0, 0, 146, 232
+	rotate: 90
+xiaba1
+	bounds: 1289, 51, 57, 41
+	rotate: 90
+xiaba2
+	bounds: 978, 585, 201, 210
+	rotate: 90
+xiaba3
+	bounds: 553, 395, 39, 53
+	rotate: 90
+xiaba4
+	bounds: 740, 947, 182, 252
+	offsets: 0, 2, 184, 254
+	rotate: 90
+xinzang
+	bounds: 1259, 979, 129, 167
+	offsets: 10, 0, 150, 174
+	rotate: 90
+yanpi3
+	bounds: 681, 14, 36, 44
+	rotate: 90
+yanpi4
+	bounds: 1397, 438, 62, 58
+yanpiL
+	bounds: 1428, 980, 37, 40
+yanpiR
+	bounds: 1170, 56, 63, 52
