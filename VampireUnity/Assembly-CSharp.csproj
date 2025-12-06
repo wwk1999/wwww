@@ -303,6 +303,7 @@
     <Compile Include="Assets\Scripts\Window\RoleWindow1.cs" />
     <Compile Include="Assets\Scripts\Window\WeaponWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor4.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLeiPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManRing.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ForEffects\ShieldActivate.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloak.cs" />
@@ -335,6 +336,7 @@
     <Compile Include="Assets\Scripts\Mysql\UserTable.cs" />
     <Compile Include="Assets\Scripts\Store\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Skill\IceArrow.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />
     <Compile Include="Assets\Scripts\Config\WeaponSourceConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\BagObjectBase.cs" />

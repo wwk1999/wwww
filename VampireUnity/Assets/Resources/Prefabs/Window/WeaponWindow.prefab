@@ -3220,6 +3220,7 @@ MonoBehaviour:
   lvQuanInstallButton: {fileID: 3707690842443450988}
   HeiDongInstallButton: {fileID: 499011510706154418}
   DuInstallButton: {fileID: 7271886563116662366}
+  LuoLeiInstallButton: {fileID: 4526602328015375246}
   exitButton: {fileID: 5871677142324490474}
   sourceStone1Button: {fileID: 5119121384912557577}
   sourceStone2Button: {fileID: 174234282869330076}
@@ -4638,6 +4639,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+--- !u!114 &4526602328015375246 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 720773166528100426, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+  m_PrefabInstance: {fileID: 3805836035650909124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5402563352726593026 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9090736897358409158, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}

@@ -20,6 +20,8 @@ public class WeaponWindow : MonoBehaviour
    public Button lvQuanInstallButton; // 绿圈武器安装按钮
    public Button HeiDongInstallButton; // 绿圈武器安装按钮
    public Button DuInstallButton;
+   public Button LuoLeiInstallButton;
+
    
    
    
@@ -187,6 +189,11 @@ public class WeaponWindow : MonoBehaviour
       DuInstallButton.onClick.AddListener(() =>
       {
          GlobalPlayerAttribute.CurrentWeaponType= WeaponType.Du;
+      });
+      
+      LuoLeiInstallButton.onClick.AddListener(() =>
+      {
+         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.LuoLei;
       });
       // PenetrateButton.onClick.AddListener(() =>
       // {

@@ -25,7 +25,7 @@ public enum WeaponType
     LvQuan,
     HeiDong,
     Du,
-    Eight,
+    LuoLei,
     Nine
 }
 public class Player : MonoBehaviour

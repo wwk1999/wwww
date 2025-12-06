@@ -81,6 +81,14 @@ public class GunBase : MonoBehaviour
         bullet.GetComponent<Du>().MoveSpeed = 7f;
         bullet.gameObject.SetActive(true);
     }
+    
+    public void LuoLeiShot()
+    {
+        GameObject bullet = GameController.S.LuoLeiQueue.Dequeue();
+        bullet.transform.position = GameController.S.gamePlayer.transform.position;
+        bullet.GetComponent<LuoLei>().position = GameController.S.nearMonsterPosition;
+        bullet.gameObject.SetActive(true);
+    }
 
 
     /// <summary>
