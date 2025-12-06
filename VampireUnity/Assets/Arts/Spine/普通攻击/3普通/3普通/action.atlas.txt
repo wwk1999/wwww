@@ -1,0 +1,28 @@
+action.png
+	size: 312, 312
+	filter: Linear, Linear
+	pma: true
+effect/attack/zidan_00000
+	bounds: 2, 2, 173, 66
+	offsets: 9, 3, 183, 73
+	rotate: 90
+effect/attack/zidan_00001
+	bounds: 181, 137, 173, 67
+	offsets: 9, 3, 183, 73
+	rotate: 90
+effect/attack/zidan_00002
+	bounds: 2, 244, 177, 66
+	offsets: 6, 4, 183, 73
+effect/attack/zidan_00003
+	bounds: 2, 177, 177, 65
+	offsets: 6, 5, 183, 73
+effect/attack/zidan_00004
+	bounds: 136, 71, 167, 64
+	offsets: 15, 5, 183, 73
+effect/attack/zidan_00005
+	bounds: 136, 5, 167, 64
+	offsets: 15, 4, 183, 73
+effect/attack/zidan_00006
+	bounds: 70, 7, 168, 64
+	offsets: 14, 3, 183, 73
+	rotate: 90

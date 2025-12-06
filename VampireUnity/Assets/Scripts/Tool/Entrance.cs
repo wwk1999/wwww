@@ -311,6 +311,16 @@ public class Entrance : MonoBehaviour
                     GameController.S.LuoLeiPengQueue.Enqueue(LuoLeiPeng);
                     break;
                 
+                case WeaponType.PuTong3:
+                    var PuTong3= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTong3"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    PuTong3.SetActive(false);
+                    GameController.S.PuTong3Queue.Enqueue(PuTong3);
+                    
+                    var PuTong3Peng= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTongPeng3"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    PuTong3Peng.SetActive(false);
+                    GameController.S.PuTong3PengQueue.Enqueue(PuTong3Peng);
+                    break;
+                
                 case WeaponType.Fire:
                     var FireAttack= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/Fire"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                     FireAttack.SetActive(false);

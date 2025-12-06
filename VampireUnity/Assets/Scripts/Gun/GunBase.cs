@@ -82,6 +82,33 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
     
+    public void PuTong3Shot()
+    {
+        // 原始方向
+        Vector2 baseDir = (GameController.S.nearMonsterPosition -GameController.S.gamePlayer.transform.position).normalized;
+
+        // 两个偏移角度：+10° 和 -10°
+        Vector2[] dirs =
+        {
+            Quaternion.AngleAxis( 5f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis(-5f, Vector3.forward) * baseDir
+        };
+
+        // 连发两颗
+        foreach (Vector2 dir in dirs)
+        {
+            GameObject bullet = GameController.S.PuTong3Queue.Dequeue();
+            bullet.transform.position = GameController.S.gamePlayer.transform.position;
+
+            var attack = bullet.GetComponent<PuTong3>();
+            attack.MoveDirection = dir;
+            attack.MoveSpeed = 7f;
+            bullet.SetActive(true);
+        }
+        
+    }
+    
     public void LuoLeiShot()
     {
         GameObject bullet = GameController.S.LuoLeiQueue.Dequeue();

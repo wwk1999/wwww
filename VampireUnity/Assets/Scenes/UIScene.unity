@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClickFx
       objectReference: {fileID: 0}
+    - target: {fileID: 1559543001641693420, guid: 4893688b01b264ce4a236c03ff8d4987, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3035070680520061281, guid: 4893688b01b264ce4a236c03ff8d4987, type: 3}
       propertyPath: m_LocalScale.x
       value: 4

@@ -21,6 +21,7 @@ public class WeaponWindow : MonoBehaviour
    public Button HeiDongInstallButton; // 绿圈武器安装按钮
    public Button DuInstallButton;
    public Button LuoLeiInstallButton;
+   public Button PuTong3InstallButton;
 
    
    
@@ -194,6 +195,10 @@ public class WeaponWindow : MonoBehaviour
       LuoLeiInstallButton.onClick.AddListener(() =>
       {
          GlobalPlayerAttribute.CurrentWeaponType= WeaponType.LuoLei;
+      });
+      PuTong3InstallButton.onClick.AddListener(() =>
+      {
+         GlobalPlayerAttribute.CurrentWeaponType= WeaponType.PuTong3;
       });
       // PenetrateButton.onClick.AddListener(() =>
       // {

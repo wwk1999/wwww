@@ -112,6 +112,9 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.LuoLei:
                 GameController.S.gamePlayer.currentGun.LuoLeiShot();
                 break;
+            case WeaponType.PuTong3:
+                GameController.S.gamePlayer.currentGun.PuTong3Shot();
+                break;
         }
         NormalAttackCoolingtime+=Time.deltaTime;
     }

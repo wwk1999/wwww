@@ -26,7 +26,7 @@ public enum WeaponType
     HeiDong,
     Du,
     LuoLei,
-    Nine
+    PuTong3
 }
 public class Player : MonoBehaviour
 {

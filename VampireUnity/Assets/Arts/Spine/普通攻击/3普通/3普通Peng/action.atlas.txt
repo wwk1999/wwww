@@ -1,0 +1,60 @@
+action.png
+	size: 965, 965
+	filter: Linear, Linear
+	pma: true
+effect/attack/baodian_00000
+	bounds: 763, 171, 191, 191
+	offsets: 91, 87, 376, 366
+effect/attack/baodian_00001
+	bounds: 2, 640, 334, 323
+	offsets: 17, 21, 376, 366
+effect/attack/baodian_00002
+	bounds: 338, 660, 308, 303
+	offsets: 33, 33, 376, 366
+effect/attack/baodian_00003
+	bounds: 648, 660, 305, 303
+	offsets: 33, 32, 376, 366
+effect/attack/baodian_00004
+	bounds: 648, 364, 304, 294
+	offsets: 33, 36, 376, 366
+effect/attack/baodian_00005
+	bounds: 338, 381, 301, 277
+	offsets: 35, 44, 376, 366
+effect/attack/baodian_00006
+	bounds: 338, 381, 301, 277
+	offsets: 35, 44, 376, 366
+effect/attack/baodian_00007
+	bounds: 2, 385, 275, 253
+	offsets: 47, 55, 376, 366
+effect/attack/baodian_00008
+	bounds: 2, 149, 264, 234
+	offsets: 52, 64, 376, 366
+effect/attack/baodian_00009
+	bounds: 268, 152, 210, 220
+	offsets: 82, 68, 376, 366
+	rotate: 90
+effect/attack/baodian_00010
+	bounds: 490, 16, 203, 204
+	offsets: 87, 70, 376, 366
+effect/attack/baodian_00011
+	bounds: 695, 2, 162, 167
+	offsets: 109, 103, 376, 366
+effect/attack/baodian_00012
+	bounds: 490, 222, 157, 151
+	offsets: 114, 119, 376, 366
+	rotate: 90
+effect/attack/baodian_00013
+	bounds: 129, 16, 155, 131
+	offsets: 115, 115, 376, 366
+effect/attack/baodian_00014
+	bounds: 2, 15, 132, 125
+	offsets: 117, 119, 376, 366
+	rotate: 90
+effect/attack/baodian_00015
+	bounds: 643, 234, 128, 118
+	offsets: 122, 119, 376, 366
+	rotate: 90
+effect/attack/baodian_00016
+	bounds: 286, 22, 128, 118
+	offsets: 122, 119, 376, 366
+	rotate: 90
