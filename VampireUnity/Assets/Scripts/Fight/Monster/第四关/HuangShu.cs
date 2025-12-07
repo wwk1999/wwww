@@ -82,6 +82,7 @@ public class HuangShu : MonsterBase
     private void Start()
     {
         base.Start();
+        isBeatback = false;
         size = 0.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();

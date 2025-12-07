@@ -62,11 +62,13 @@ public abstract class MonsterBase : MonoBehaviour
     public SpriteRenderer monsterSprite;
     public Animator monsterAnimator;
 
-    public bool isMove = true;
-    public bool isHit = false;
-    public bool isAttack = false;
-    public bool isSkill1 = false;
-    public bool isSkill2 = false;
+    [NonSerialized]public bool isMove = true;
+    [NonSerialized]public bool isHit = false;
+    [NonSerialized] public bool isAttack = false;
+    [NonSerialized]public bool isSkill1 = false;
+    [NonSerialized]public bool isSkill2 = false;
+
+    [NonSerialized]public bool isBeatback = true;
 
 
     //构造方法
@@ -624,6 +626,7 @@ public abstract class MonsterBase : MonoBehaviour
                 }
                 else
                 {
+                    
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, "beatback", false);
                 }
             }
@@ -653,8 +656,16 @@ public abstract class MonsterBase : MonoBehaviour
                 }
                 else
                 {
-                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, "beatback", false);
-                }                CurrentHp -= damage;
+                    if (isBeatback)
+                    {
+                        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "beatback", false);
+                    }
+                    else
+                    {
+                        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "injured", false);
+                    }
+                }                
+                CurrentHp -= damage;
                 hpSlider.value = (float)CurrentHp / MaxHp;
                 if (CurrentHp <= 0 && !IsDead)
                 {

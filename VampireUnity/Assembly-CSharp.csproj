@@ -367,7 +367,7 @@
     <None Include="Assets\Arts\Shaders\LcL\Shine.shader" />
     <None Include="Assets\Spine\version.txt" />
     <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
-    <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_stormwolf.json" />
+    <None Include="Assets\Arts\Spine\怪物\GreenWolf\Enemy_Boss_stormwolf.json" />
     <None Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Demo scenes\Readme.txt" />
     <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -418,7 +418,7 @@
     <None Include="Assets\Arts\Shaders\Gleam.shader" />
     <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
-    <None Include="Assets\Arts\Spine\怪物\json 1\Enemy_Boss_drill.json" />
+    <None Include="Assets\Arts\Spine\怪物\Zuan\Enemy_Boss_drill.json" />
     <None Include="Library\PackageCache\com.unity.burst@1.8.21\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通\action.json" />
     <None Include="Assets\Arts\Shaders\LightDissolve.shader" />
@@ -498,7 +498,7 @@
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\怪物\ZhaoZeBoss\Enemy_Boss_crocodile.json" />
     <None Include="Assets\Packages\System.Diagnostics.DiagnosticSource.8.0.1\useSharedDesignerContext.txt" />
-    <None Include="Assets\Arts\Spine\怪物\json 1\Enemy_Boss_drill.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\Zuan\Enemy_Boss_drill.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\link.xml" />
     <None Include="Assets\Arts\Spine\第一关\蝙蝠\json\bf.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.json" />
@@ -511,7 +511,7 @@
     <None Include="Assets\Arts\Spine\第一关\蝙蝠\json\bf.json" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\package.json" />
     <None Include="Assets\Spine\package.json" />
-    <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_stormwolf.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\GreenWolf\Enemy_Boss_stormwolf.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\雪人\雪人\json\xueren.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 2\Enemy_Boss_passfuck.json" />
     <None Include="Assets\Arts\Spine\第二关\虫子\json\congzi.atlas.txt" />

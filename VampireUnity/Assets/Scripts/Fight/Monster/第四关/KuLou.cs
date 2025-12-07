@@ -82,6 +82,7 @@ public class KuLou : MonsterBase
     {
         base.Start();
         size = 0.5f;
+        isBeatback = false;
         AddMonsterEquip();
         AddMonsterSourceStone();
 
