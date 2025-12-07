@@ -46,8 +46,7 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<EliteDaZuiMonster> EliteDaZuiMonsterQueue = new Queue<EliteDaZuiMonster>();
     [NonSerialized] public Queue<XiNiuMonster> XiNiuMonsterQueue = new Queue<XiNiuMonster>();
 
-   //[NonSerialized]public Queue<XiaoHuoAttackTrigger> XiaoHuoAttackTriggerQueue = new Queue<XiaoHuoAttackTrigger>();
-   //[NonSerialized]public Queue<DunDiAttackTrigger> DunDiAttackTriggerQueue = new Queue<DunDiAttackTrigger>();
+  
     [NonSerialized]public Queue<DaZuiSkillTriggerLeft> DaZuiSkillTriggerQueueLeft = new Queue<DaZuiSkillTriggerLeft>();
     [NonSerialized]public Queue<DaZuiSkillTriggerRight> DaZuiSkillTriggerQueueRight = new Queue<DaZuiSkillTriggerRight>();
     
@@ -59,6 +58,11 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<ShiRenHuaMonster> ShiRenHuaMonsterQueue = new Queue<ShiRenHuaMonster>();
 
 
+    //第四关怪
+    [NonSerialized] public Queue<Huangzhu> HuangZhuQueue = new Queue<Huangzhu>();
+    [NonSerialized] public Queue<HuangShu> HuangShuQueue = new Queue<HuangShu>();
+    [NonSerialized] public Queue<KuLou> KuLouQueue = new Queue<KuLou>();
+    
     
     
     //子弹队列
@@ -654,18 +658,6 @@ public class GameController : XSingleton<GameController>
     {
         if (GameOver)
             return;
-        //Debug.Log("怪物数量："+NormalMonsterCount);
-        //从子物体里随机选择一个
-
-        //获取随机选择的子物体    
-        //生成怪物
-        GameObject monster;
-        // if(DieNormalMonsterCount%10==0&&EliteMonsterCount<5)
-        // {
-        //     EliteBeeMonster eliteBeeMonster = EliteBeeMonsterQueue.Dequeue();
-        //     eliteBeeMonster.gameObject.SetActive(true);
-        //     eliteBeeMonster.transform.position = monsterRandomPoint.position;
-        // }
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3|| LevelInfoConfig.CurrentGameLevel == 4)
         {
             int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints1.Length);
@@ -771,6 +763,40 @@ public class GameController : XSingleton<GameController>
                 monsterBase.CurrentHp = monsterBase.MaxHp;
                 monsterBase.transform.SetParent(MonsterBirthPoints3[monsterRandomIndex]);
                 monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
+                TotalMonsterCount++;
+                NormalMonsterCount++;
+            }
+            else
+            {
+                return;
+            }
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15|| LevelInfoConfig.CurrentGameLevel == 16)
+        {
+            int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
+            Transform monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
+            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
+            {
+                MonsterBase monsterBase;
+                if (NormalMonsterCount % 3 == 0)
+                {
+                    monsterBase = HuangShuQueue.Dequeue();
+                }
+                else if (NormalMonsterCount % 3 == 1)
+                {
+                    monsterBase = HuangZhuQueue.Dequeue();
+                }
+                else
+                {
+                    monsterBase =KuLouQueue.Dequeue();
+                }
+
+                monsterBase.gameObject.SetActive(true);
+                monsterBase.transform.position = monsterRandomPoint.position;
+                monsterBase.CurrentHp = monsterBase.MaxHp;
+                monsterBase.transform.SetParent(MonsterBirthPoints3[monsterRandomIndex]);
+                monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
                 TotalMonsterCount++;
                 NormalMonsterCount++;
             }

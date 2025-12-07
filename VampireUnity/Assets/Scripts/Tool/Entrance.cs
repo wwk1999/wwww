@@ -465,6 +465,31 @@ public class Entrance : MonoBehaviour
             }
         }
         
+        if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 ||
+            LevelInfoConfig.CurrentGameLevel == 15|| LevelInfoConfig.CurrentGameLevel == 16)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                var huangshu =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangShuMonster").GetComponent<HuangShu>(),
+                        GameController.S.transform);
+                huangshu.gameObject.SetActive(false);
+                GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
+
+                var Huangzhu =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangZhuMonster").GetComponent<Huangzhu>(),
+                        GameController.S.transform);
+                Huangzhu.gameObject.SetActive(false);
+                GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
+                
+                var KuLou =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/KuLouMonster").GetComponent<KuLou>(),
+                        GameController.S.transform);
+                KuLou.gameObject.SetActive(false);
+                GameController.S.KuLouQueue.Enqueue(KuLou.GetComponent<KuLou>());
+            }
+        }
+        
 
         
 
@@ -585,6 +610,14 @@ public class Entrance : MonoBehaviour
             case 10:
             case 11:
             case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+            case 20:
                 GameController.S.PlayerBirthPoints=GameController.S.PlayerBirthPoint2.GetComponentsInChildren<Transform>();
                 break;
         }

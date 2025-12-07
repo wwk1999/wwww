@@ -103,6 +103,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ChangeSizeColor.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\HuangShu.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanBoss.cs" />
     <Compile Include="Assets\Scripts\Config\ResourcesConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleHelmet.cs" />
@@ -264,6 +265,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\Du.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\Huangzhu.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipAttribute.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonsterWarning.cs" />
     <Compile Include="Assets\Scripts\Tool\UnityMainThreadDispatcher.cs" />
@@ -296,6 +298,7 @@
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryHelmet.cs" />
     <Compile Include="Assets\Scripts\Skill\TwoNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Window\MainWindow1.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\KuLou.cs" />
     <Compile Include="Assets\Scripts\Config\EntryConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\StoneBoss.cs" />
     <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Base\Joystick.cs" />
