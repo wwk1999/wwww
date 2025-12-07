@@ -42,20 +42,19 @@ public class ObserverModuleManager : XSingleton<ObserverModuleManager>
             return;
         }
 
-        var arr = _observerDic[key].ToArray();
-        
-        for (int i = 0; i < arr.Length; i++)
+        // 直接遍历 List，不创建数组
+        var observers = _observerDic[key];
+        for (int i = 0; i < observers.Count; i++)
         {
             try
             {
-                arr[i](args);
+                observers[i](args);
             }
             catch (System.Exception ex)
             {
                 Debug.LogError($"异常堆栈: {ex.StackTrace}");
             }
         }
-        
     }
 
     public void ClearAllEvent()

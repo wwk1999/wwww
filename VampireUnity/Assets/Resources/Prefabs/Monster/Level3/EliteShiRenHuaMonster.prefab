@@ -230,6 +230,10 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 8578699426357643765}
   hpSlider: {fileID: 378135802241851159}
+  monsterSprite: {fileID: 0}
+  monsterAnimator: {fileID: 0}
+  collider2D: {fileID: 8295906170252721627}
+  rigidbody2D: {fileID: 4672405558377966079}
 --- !u!1 &5287635877627679688
 GameObject:
   m_ObjectHideFlags: 0

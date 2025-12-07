@@ -50,8 +50,8 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI denfenseText;
 
 
-
-
+    public GameObject LevelUp;
+    public ParticleSystem LevelUpParticle;
     private void Awake()
     {
         currentGun = Instantiate(Resources.Load<GameObject>("Prefabs/Gun/Pistol").GetComponent<GunBase>(),transform);

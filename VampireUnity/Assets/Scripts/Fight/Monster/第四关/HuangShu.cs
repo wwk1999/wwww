@@ -16,29 +16,25 @@ public class HuangShu : MonsterBase
     public override void AddMonsterSourceStone()
     {
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Penetrate, 2));
+            WeaponSourceStoneType.Penetrate, 0));
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Division, 2));
+            WeaponSourceStoneType.Division, 0));
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.ExtremeSpeed, 2));
+            WeaponSourceStoneType.ExtremeSpeed, 0));
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Explosion, 2));
+            WeaponSourceStoneType.Explosion, 0));
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Scale, 2));
+            WeaponSourceStoneType.Scale, 0));
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Duration, 2));
+            WeaponSourceStoneType.Duration, 0));
     }
 
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Blue, 10));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 1));
     }
-
     public override void Hurt(int damage)
     {
         base.Hurt(damage);
@@ -57,24 +53,19 @@ public class HuangShu : MonsterBase
     {
 
         //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 15);
-        StartCoroutine(RandomDelayDie(randomDelay));
+        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
+        Invoke(nameof(RandomDelayDie),randomDelay);
     }
 
-    private IEnumerator RandomDelayDie(int delay)
+    private void  RandomDelayDie()
     {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
-
         AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
-        CreateBloodEnergy();
+        //CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
+        //CreateWeaponSourceStone();
 
         // gameObject.SetActive(false);
         // GameController.S.SnotMonsterQueue.Enqueue(this);

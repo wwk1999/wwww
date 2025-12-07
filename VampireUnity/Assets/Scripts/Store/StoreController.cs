@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -8,8 +9,20 @@ using UnityEngine;
 public class StoreController : XSingleton<StoreController>
 {
     public StoreDefine.StoreData StoreData;
+    private float currentTime = 0;
+    private float saveTime = 10;
 
     private string SavePath => Path.Combine(Application.persistentDataPath, "store.json");
+
+    private void Update()
+    {
+        currentTime += Time.deltaTime;
+        if (currentTime > saveTime)
+        {
+            SaveStoreData();
+            currentTime = 0;
+        }
+    }
 
     public void SaveStoreData(StoreDefine.StoreData data = null)
     {

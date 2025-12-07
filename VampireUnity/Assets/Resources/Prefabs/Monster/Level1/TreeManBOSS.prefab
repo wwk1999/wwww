@@ -79,6 +79,10 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 8786861427826276177}
   hpSlider: {fileID: 1262446244510452240}
+  monsterSprite: {fileID: 0}
+  monsterAnimator: {fileID: 0}
+  collider2D: {fileID: 8226410618161472946}
+  rigidbody2D: {fileID: 309112739602808913}
   treeManJumpTrigger: {fileID: 7446876603436987670}
 --- !u!1 &5341893707203114780
 GameObject:

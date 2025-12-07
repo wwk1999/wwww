@@ -331,6 +331,10 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 4973450265860618127}
   hpSlider: {fileID: 3988484648034458557}
+  monsterSprite: {fileID: 0}
+  monsterAnimator: {fileID: 0}
+  collider2D: {fileID: 7609074155766154951}
+  rigidbody2D: {fileID: 2311549192726080326}
   beeBullet: {fileID: 6228044448088042782}
 --- !u!50 &2311549192726080326
 Rigidbody2D:

@@ -334,6 +334,10 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 3151408679630761517}
   hpSlider: {fileID: 8485583280615332863}
+  monsterSprite: {fileID: 0}
+  monsterAnimator: {fileID: 0}
+  collider2D: {fileID: 115622618326124097}
+  rigidbody2D: {fileID: 8722305754461837238}
   spiderWeb: {fileID: 5953157545990535102, guid: cb2e1b79a7f5b4e82bd4f99a3087e973, type: 3}
 --- !u!1001 &7697584536474192887
 PrefabInstance:

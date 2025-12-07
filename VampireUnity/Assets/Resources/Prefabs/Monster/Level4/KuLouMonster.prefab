@@ -188,6 +188,8 @@ MonoBehaviour:
   hpSlider: {fileID: 6911618391976944444}
   monsterSprite: {fileID: 0}
   monsterAnimator: {fileID: 0}
+  collider2D: {fileID: 7226688987495888270}
+  rigidbody2D: {fileID: 8301604848921028870}
   parent: {fileID: 2841662584798970331}
   attackTrans: {fileID: 8546977567222419556}
 --- !u!1 &8132225738410745545

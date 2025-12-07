@@ -70,6 +70,10 @@ public abstract class MonsterBase : MonoBehaviour
 
     [NonSerialized]public bool isBeatback = true;
 
+    public Collider2D collider2D;
+    public Rigidbody2D rigidbody2D;
+
+    private SkeletonData skeletonData = null;
 
 
     //构造方法
@@ -92,8 +96,9 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void Awake()
     {
+        skeletonData = monsterSkeletonAnimation.SkeletonDataAsset.GetSkeletonData(false);
         ObserverModuleManager.S.RegisterEvent(ConstKeys.Resumemonster,Resumemonster);
-        Spine.Animation walkAnimation = monsterSkeletonAnimation.SkeletonDataAsset.GetSkeletonData(false).FindAnimation("walk");
+        Spine.Animation walkAnimation = skeletonData.FindAnimation("walk");
         if (walkAnimation != null)
         {
             monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
@@ -114,7 +119,7 @@ public abstract class MonsterBase : MonoBehaviour
     {
         if (monsterSkeletonAnimation != null)
         {
-            Spine.Animation walkAnimation = monsterSkeletonAnimation.SkeletonDataAsset.GetSkeletonData(false).FindAnimation("walk");
+            Spine.Animation walkAnimation = skeletonData.FindAnimation("walk");
             if (walkAnimation != null)
             {
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
@@ -474,8 +479,8 @@ public abstract class MonsterBase : MonoBehaviour
             //升级
             ObserverModuleManager.S.SendEvent(ConstKeys.LevelUpAnim);
             playerLevelText = GameController.S.gamePlayer.levelText;
-            GameController.S.gamePlayer.transform.Find("LevelUp").gameObject.SetActive(true);
-            GameController.S.gamePlayer.transform.Find("LevelUp").GetComponent<ParticleSystem>().Play();
+            GameController.S.gamePlayer.LevelUp.SetActive(true);
+            GameController.S.gamePlayer.LevelUpParticle.Play();
             GlobalPlayerAttribute.Level++;
             playerLevelText.text =  GlobalPlayerAttribute.Level.ToString();
             GlobalPlayerAttribute.Exp=GlobalPlayerAttribute.Exp-GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level-1];
@@ -483,7 +488,6 @@ public abstract class MonsterBase : MonoBehaviour
         }
         GameController.S.gamePlayer.exSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
         GameController.S.gamePlayer.exSlider.value=GlobalPlayerAttribute.Exp ;
-        StoreController.S.SaveStoreData();
     }
 
     // /// <summary>
@@ -561,7 +565,7 @@ public abstract class MonsterBase : MonoBehaviour
        
         if (monsterSkeletonAnimation != null)
         {
-            Spine.Animation walkAnimation = monsterSkeletonAnimation.SkeletonDataAsset.GetSkeletonData(false).FindAnimation("fail");
+            Spine.Animation walkAnimation = skeletonData.FindAnimation("fail");
             if (walkAnimation != null)
             {
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, "fail", true);
@@ -569,7 +573,7 @@ public abstract class MonsterBase : MonoBehaviour
             }
             else
             {
-                if (GetComponent<TreeManBoss>())
+                if (this is TreeManBoss)
                 {
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die_02", false);
                 }
@@ -597,12 +601,12 @@ public abstract class MonsterBase : MonoBehaviour
             GameController.S.monsterDetetor4.Remove(this);
         }
         // 禁用碰撞器，防止继续触发碰撞
-        if(GetComponent<Collider2D>() != null)
-            GetComponent<Collider2D>().enabled = false;
+        if(collider2D != null)
+            collider2D.enabled = false;
         
         // 禁用移动
-        if(GetComponent<Rigidbody2D>() != null)
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        if(rigidbody2D != null)
+            rigidbody2D.velocity = Vector2.zero;
     }
 
     public abstract void Die();
@@ -632,7 +636,7 @@ public abstract class MonsterBase : MonoBehaviour
             //monsterAnimator.Play("SnotMonsterHit");
             if (monsterSkeletonAnimation != null)
             { 
-                Spine.Animation walkAnimation = monsterSkeletonAnimation.SkeletonDataAsset.GetSkeletonData(false).FindAnimation("hit");
+                Spine.Animation walkAnimation = skeletonData.FindAnimation("hit");
                 if (walkAnimation != null)
                 {
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, "hit", false);
@@ -662,7 +666,7 @@ public abstract class MonsterBase : MonoBehaviour
             if(MonsterState== State.Die) return;
             if (MonsterState == State.Move)
             {
-                Spine.Animation walkAnimation = monsterSkeletonAnimation.SkeletonDataAsset.GetSkeletonData(false).FindAnimation("hit");
+                Spine.Animation walkAnimation = skeletonData.FindAnimation("hit");
                 if (walkAnimation != null)
                 {
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, "hit", false);

@@ -2328,6 +2328,8 @@ MonoBehaviour:
   attackText: {fileID: 6652492437014025834}
   hpText: {fileID: 1650684257985899066}
   denfenseText: {fileID: 3953363613379931257}
+  LevelUp: {fileID: 2230504658229308138}
+  LevelUpParticle: {fileID: 1314517442911113402}
 --- !u!50 &2162024196908307096
 Rigidbody2D:
   serializedVersion: 4
@@ -2560,6 +2562,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1786359088594552994, guid: 6e72ea3a701554016ab7792d96adb981, type: 3}
+      propertyPath: equipRb
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2999372642859287138, guid: 6e72ea3a701554016ab7792d96adb981, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -11
@@ -2780,6 +2786,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 946524973c9de40acb89ed9b54bf597a, type: 3}
+--- !u!198 &1314517442911113402 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4348513328454635724, guid: 946524973c9de40acb89ed9b54bf597a, type: 3}
+  m_PrefabInstance: {fileID: 3343675828743602294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2230504658229308138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3500219780287048348, guid: 946524973c9de40acb89ed9b54bf597a, type: 3}
+  m_PrefabInstance: {fileID: 3343675828743602294}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6063363217735375671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8809739936406952769, guid: 946524973c9de40acb89ed9b54bf597a, type: 3}
@@ -2796,6 +2812,10 @@ PrefabInstance:
     - target: {fileID: 396332856204866652, guid: 6e72ea3a701554016ab7792d96adb981, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786359088594552994, guid: 6e72ea3a701554016ab7792d96adb981, type: 3}
+      propertyPath: equipRb
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2999372642859287138, guid: 6e72ea3a701554016ab7792d96adb981, type: 3}
       propertyPath: m_SizeDelta.y
