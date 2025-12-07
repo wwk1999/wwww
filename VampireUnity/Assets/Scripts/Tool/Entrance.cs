@@ -229,7 +229,7 @@ public class Entrance : MonoBehaviour
         {
             GameObject monsterHurtText = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/MonsterHurtText"));
             monsterHurtText.gameObject.SetActive(false);
-            GameController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText);
+            GameController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
         }
         
         for (int i = 0; i < 10; i++)

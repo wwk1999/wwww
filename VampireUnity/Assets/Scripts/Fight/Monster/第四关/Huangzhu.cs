@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
+using Spine;
 using UnityEngine;
 
 public class Huangzhu : MonsterBase
@@ -56,7 +57,7 @@ public class Huangzhu : MonsterBase
     {
 
         //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
+        int randomDelay = UnityEngine.Random.Range(0, 15);
         StartCoroutine(RandomDelayDie(randomDelay));
     }
 
@@ -86,7 +87,23 @@ public class Huangzhu : MonsterBase
         isBeatback = false;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
+    }
+    private void OnDestroy()
+    {
+        monsterSkeletonAnimation.AnimationState.Event -= OnSpineEvent;
+    }
+    
+    public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.4f)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack);
+            }
+        }
     }
     
     public void MonsterMove1()
@@ -144,7 +161,7 @@ public class Huangzhu : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.4f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.4f)
         {
             isAttack=true;
         }

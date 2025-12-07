@@ -71,19 +71,20 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized]public bool isBeatback = true;
 
 
+
     //构造方法
     public MonsterBase(MonsterType monsterType, string monsterName, int monsterLevel, int maxHp, float speed, int attack, int defense, int exp, int bloodEnergy, int evolutionEnergy)
     {
-        this.MonsterType = monsterType;
-        this.MonsterName = monsterName;
-        this.MonsterLevel = monsterLevel;
-        this.MaxHp = maxHp;
-        this.Speed = speed;
-        this.Attack = attack;
-        this.Defense = defense;
-        this.Exp = exp;
-        this.BloodEnergy = bloodEnergy;
-        this.EvolutionEnergy = evolutionEnergy;
+        MonsterType = monsterType;
+        MonsterName = monsterName;
+        MonsterLevel = monsterLevel;
+        MaxHp = maxHp;
+        Speed = speed;
+        Attack = attack;
+        Defense = defense;
+        Exp = exp;
+        BloodEnergy = bloodEnergy;
+        EvolutionEnergy = evolutionEnergy;
     }
 
     public abstract void AddMonsterEquip();
@@ -100,7 +101,6 @@ public abstract class MonsterBase : MonoBehaviour
         else
         {
             monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete1;
-
         }
         
         CurrentHp = MaxHp;
@@ -144,71 +144,71 @@ public abstract class MonsterBase : MonoBehaviour
                 return;
             if(transform.position.y > GameController.S.gamePlayer.transform.position.y+4)
                 return;
-            GameController.S.monsterDetetor4.Add(GetComponent<MonsterBase>());
+            GameController.S.monsterDetetor4.Add(this);
         }
 
         if (dis > 5f)
         {
-            GameController.S.monsterDetetor4.Remove(GetComponent<MonsterBase>());
+            GameController.S.monsterDetetor4.Remove(this);
         }
 
         if (dis < 4f)
         {
-            GameController.S.monsterDetetor3.Add(GetComponent<MonsterBase>());
+            GameController.S.monsterDetetor3.Add(this);
             //如果_monsterDetetor3中存在monster，则移除
-            if (GameController.S.monsterDetetor4.Contains(GetComponent<MonsterBase>()))
+            if (GameController.S.monsterDetetor4.Contains(this))
             {
-                GameController.S.monsterDetetor4.Remove(GetComponent<MonsterBase>());
+                GameController.S.monsterDetetor4.Remove(this);
             }
         }
 
         if (dis > 4f&&dis<5f)
         {
-            GameController.S.monsterDetetor3.Remove(GetComponent<MonsterBase>());
+            GameController.S.monsterDetetor3.Remove(this);
             //如果_monsterDetetor4中不存在monster，则添加
-            if (!GameController.S.monsterDetetor4.Contains(GetComponent<MonsterBase>()))
+            if (!GameController.S.monsterDetetor4.Contains(this))
             {
-                GameController.S.monsterDetetor4.Add(GetComponent<MonsterBase>());
+                GameController.S.monsterDetetor4.Add(this);
             }
         }
 
         if (dis < 3f)
         {
-            GameController.S.monsterDetetor2.Add(GetComponent<MonsterBase>());
+            GameController.S.monsterDetetor2.Add(this);
             //如果_monsterDetetor3中存在monster，则移除
-            if (GameController.S.monsterDetetor3.Contains(GetComponent<MonsterBase>()))
+            if (GameController.S.monsterDetetor3.Contains(this))
             {
-                GameController.S.monsterDetetor3.Remove(GetComponent<MonsterBase>());
+                GameController.S.monsterDetetor3.Remove(this);
             }
         }
 
         if (dis > 3f && dis < 4f)
         {
-            GameController.S.monsterDetetor2.Remove(GetComponent<MonsterBase>());
+            GameController.S.monsterDetetor2.Remove(this);
             //如果_monsterDetetor3中不存在monster，则添加
-            if (!GameController.S.monsterDetetor3.Contains(GetComponent<MonsterBase>()))
+            if (!GameController.S.monsterDetetor3.Contains(this))
             {
-                GameController.S.monsterDetetor3.Add(GetComponent<MonsterBase>());
+                GameController.S.monsterDetetor3.Add(this);
             }
         }
         
         if (dis <2f)
         {
-            GameController.S.monsterDetetor1.Add(GetComponent<MonsterBase>());
+            GameController.S.monsterDetetor1.Add(this);
             //如果_monsterDetetor2中存在monster，则移除
-            if (GameController.S.monsterDetetor2.Contains(GetComponent<MonsterBase>()))
+            if (GameController.S.monsterDetetor2.Contains(this))
             {
-                GameController.S.monsterDetetor2.Remove(GetComponent<MonsterBase>());
+                GameController.S.monsterDetetor2.Remove(this);
             }
         }
 
         if (dis > 2f && dis < 3f)
         {
-            GameController.S.monsterDetetor1.Remove(GetComponent<MonsterBase>());
+            GameController.S.monsterDetetor1.Remove(this);
             //如果_monsterDetetor2中不存在monster，则添加
-            if (!GameController.S.monsterDetetor2.Contains(GetComponent<MonsterBase>()))
+            if (!GameController.S.monsterDetetor2.Contains(this))
             {
-                GameController.S.monsterDetetor2.Add(GetComponent<MonsterBase>());
+                GameController.S.monsterDetetor2.Add(this);
             }
         }
     }
@@ -274,79 +274,91 @@ public abstract class MonsterBase : MonoBehaviour
         }
     }
     
-    IEnumerator DelayDestroy()
+    void DelayDestroy()
     {
-        yield return new WaitForSeconds(1f);
          //第一关怪物死亡
-            if (GetComponent<SnotMonster>())
+           if (this is SnotMonster snotMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.SnotMonsterQueue.Enqueue(GetComponent<SnotMonster>());
+                GameController.S.SnotMonsterQueue.Enqueue(snotMonster);
             }
-            if (GetComponent<BatMonster>())
+            else if (this is BatMonster batMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.BatMonsterQueue.Enqueue(GetComponent<BatMonster>());
+                GameController.S.BatMonsterQueue.Enqueue(batMonster);
             }
-            if (GetComponent<SpiderMonster>())
+            else if (this is SpiderMonster spiderMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.SpiderMonsterQueue.Enqueue(GetComponent<SpiderMonster>());
+                GameController.S.SpiderMonsterQueue.Enqueue(spiderMonster);
             }
-            if (GetComponent<EliteBeeMonster>())
+            else if (this is EliteBeeMonster eliteBeeMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.EliteBeeMonsterQueue.Enqueue(GetComponent<EliteBeeMonster>());
+                GameController.S.EliteBeeMonsterQueue.Enqueue(eliteBeeMonster);
             }
-            
-            
-            //第二关怪物死亡
-            if (GetComponent<ChongZiMonster>())
+            // 第二关怪物死亡
+            else if (this is ChongZiMonster chongZiMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.ChongZiMonsterQueue.Enqueue(GetComponent<ChongZiMonster>());
+                GameController.S.ChongZiMonsterQueue.Enqueue(chongZiMonster);
             }
-            if (GetComponent<XiaoHuoMonster>())
+            else if (this is XiaoHuoMonster xiaoHuoMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.XiaoHuoMonsterQueue.Enqueue(GetComponent<XiaoHuoMonster>());
+                GameController.S.XiaoHuoMonsterQueue.Enqueue(xiaoHuoMonster);
             }
-            if (GetComponent<DunDiMonster>())
+            else if (this is DunDiMonster dunDiMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.DunDiMonsterQueue.Enqueue(GetComponent<DunDiMonster>());
+                GameController.S.DunDiMonsterQueue.Enqueue(dunDiMonster);
             }
-            if (GetComponent<EliteDaZuiMonster>())
+            else if (this is EliteDaZuiMonster eliteDaZuiMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.EliteDaZuiMonsterQueue.Enqueue(GetComponent<EliteDaZuiMonster>());
+                GameController.S.EliteDaZuiMonsterQueue.Enqueue(eliteDaZuiMonster);
             }
-            if (GetComponent<XiNiuMonster>())
+            else if (this is XiNiuMonster xiNiuMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.XiNiuMonsterQueue.Enqueue(GetComponent<XiNiuMonster>());
+                GameController.S.XiNiuMonsterQueue.Enqueue(xiNiuMonster);
             }
-            
-            //第三关怪物死亡
-            if (GetComponent<WenZiMonster>())
+            // 第三关怪物死亡
+            else if (this is WenZiMonster wenZiMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.WenZiMonsterQueue.Enqueue(GetComponent<WenZiMonster>());
+                GameController.S.WenZiMonsterQueue.Enqueue(wenZiMonster);
             }
-            if (GetComponent<QingWaMonster>())
+            else if (this is QingWaMonster qingWaMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.QingWaMonsterQueue.Enqueue(GetComponent<QingWaMonster>());
+                GameController.S.QingWaMonsterQueue.Enqueue(qingWaMonster);
             }
-            if (GetComponent<JiaChongMonster>())
+            else if (this is JiaChongMonster jiaChongMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.JiaChongMonsterQueue.Enqueue(GetComponent<JiaChongMonster>());
+                GameController.S.JiaChongMonsterQueue.Enqueue(jiaChongMonster);
             }
-            if (GetComponent<ShiRenHuaMonster>())
+            else if (this is ShiRenHuaMonster shiRenHuaMonster)
             {
                 gameObject.SetActive(false);
-                GameController.S.ShiRenHuaMonsterQueue.Enqueue(GetComponent<ShiRenHuaMonster>());
+                GameController.S.ShiRenHuaMonsterQueue.Enqueue(shiRenHuaMonster);
+            }
+            // 第四关怪物死亡
+            else if (this is KuLou kuLou)
+            {
+                gameObject.SetActive(false);
+                GameController.S.KuLouQueue.Enqueue(kuLou);
+            }
+            else if (this is Huangzhu huangzhu)
+            {
+                gameObject.SetActive(false);
+                GameController.S.HuangZhuQueue.Enqueue(huangzhu);
+            }
+            else if (this is HuangShu huangShu)
+            {
+                gameObject.SetActive(false);
+                GameController.S.HuangShuQueue.Enqueue(huangShu);
             }
     }
 
@@ -553,6 +565,7 @@ public abstract class MonsterBase : MonoBehaviour
             if (walkAnimation != null)
             {
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, "fail", true);
+                Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
             }
             else
             {
@@ -563,7 +576,7 @@ public abstract class MonsterBase : MonoBehaviour
                 else
                 {
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die", false);
-                    StartCoroutine(DelayDestroy());
+                    Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
                 }
             }
         }
@@ -571,7 +584,7 @@ public abstract class MonsterBase : MonoBehaviour
         {
             isMove=false;
             monsterAnimator.Play("fail");
-            StartCoroutine(DelayDestroy());
+            Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
         }
 
         // 从所有探测器列表中移除自己
@@ -603,11 +616,11 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 hpSlider.gameObject.SetActive(true);
             }
-            GameObject monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
+            MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
             monsterHpGameObject.gameObject.SetActive(true);
             monsterHpGameObject.transform.position = transform.position;
             //在monsterHpGameObject子类中查找Canvas的紫累HPText
-            Text monsterHpText = monsterHpGameObject.transform.Find("Canvas/HPText").GetComponent<Text>();
+            Text monsterHpText = monsterHpGameObject.text;
             //设置monsterHpText的text为-damage
             monsterHpText.text = "-" + damage.ToString();
             //设置monsterHpGameObject的position为怪物位置

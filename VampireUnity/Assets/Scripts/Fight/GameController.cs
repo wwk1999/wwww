@@ -108,7 +108,7 @@ public class GameController : XSingleton<GameController>
     //血能对象池队列
     [NonReorderable]public Queue<GameObject>BloodEnergyQueue = new Queue<GameObject>();
     //怪物伤害文本对象池队列
-    [NonReorderable]public Queue<GameObject>MonsterHurtTextQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<MonsterHurtText>MonsterHurtTextQueue = new Queue<MonsterHurtText>();
 
     //装备对象池
     [NonReorderable]public Queue<GameObject>PrimaryCloakQueue = new Queue<GameObject>();
