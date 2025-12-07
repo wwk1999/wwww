@@ -85,34 +85,28 @@ public class ZhaoZeBoss : MonsterBase
         size = 1.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+
     }
     
     public void MonsterMove1()
     {
-        float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
-        if (dis < GameController.S.gamePlayer.size + size&&transform.position.y-GameController.S.gamePlayer.transform.position.y>-1&&transform.position.y-GameController.S.gamePlayer.transform.position.y<1)
-        {
-            if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "attack1")
-            {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "attack1", true);
-            }
-            return;
-        }
-        //朝着主角以speed的速度前进
         Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-        //刚体移动
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0) == null)
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move")
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
         }
-        else if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "Exit" && !IsSkill)
+        else
         {
-            GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
+            GetComponent<Rigidbody2D>().velocity = direction.normalized * 0; 
         }
     }
     
     public void SpriteFlipX1(bool isRight)
     {
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "move")
+        {
+            return;
+        }
         float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
         if(dis<0.2f)
         {

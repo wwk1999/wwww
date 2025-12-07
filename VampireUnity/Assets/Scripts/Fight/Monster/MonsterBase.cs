@@ -29,6 +29,7 @@ public enum State
     Die
 }
 
+
 public abstract class MonsterBase : MonoBehaviour
 {
     [NonSerialized]public MonsterType MonsterType;//怪物类型
@@ -63,6 +64,10 @@ public abstract class MonsterBase : MonoBehaviour
 
     public bool isMove = true;
     public bool isHit = false;
+    public bool isAttack = false;
+    public bool isSkill1 = false;
+    public bool isSkill2 = false;
+
 
     //构造方法
     public MonsterBase(MonsterType monsterType, string monsterName, int monsterLevel, int maxHp, float speed, int attack, int defense, int exp, int bloodEnergy, int evolutionEnergy)
@@ -85,10 +90,17 @@ public abstract class MonsterBase : MonoBehaviour
     public void Awake()
     {
         ObserverModuleManager.S.RegisterEvent(ConstKeys.Resumemonster,Resumemonster);
-        if (monsterSkeletonAnimation != null)
+        Spine.Animation walkAnimation = monsterSkeletonAnimation.SkeletonDataAsset.GetSkeletonData(false).FindAnimation("walk");
+        if (walkAnimation != null)
         {
             monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
         }
+        else
+        {
+            monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete1;
+
+        }
+        
         CurrentHp = MaxHp;
         if (MonsterType != MonsterType.Boss)
         {
@@ -107,7 +119,7 @@ public abstract class MonsterBase : MonoBehaviour
             }
             else
             {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
             }
         }
         else
@@ -230,6 +242,33 @@ public abstract class MonsterBase : MonoBehaviour
             MonsterState= State.Move;
             FightBGController.S.TreeManBoss.IsSkill = false;
             CameraContraller.CameraStatus= CameraStatus.MoveToPlayer;
+        }
+    }
+    
+    public void OnAnimationComplete1(TrackEntry trackEntry)
+    {
+        if (trackEntry.Animation.Name == "fail")
+        {
+            Destroy(gameObject);
+            return;
+        }
+        if (isSkill2)
+        {
+            isSkill2 = false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+        }
+        else if (isSkill1)
+        {
+            isSkill1 = false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+        }
+        else if(isAttack)
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "attack1", false);
+        }
+        else
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
         }
     }
     

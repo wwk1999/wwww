@@ -109,6 +109,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManJumpTrigger.cs" />
     <Compile Include="Assets\Scripts\Skill\FourNormalAttack.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossAttack.cs" />
     <Compile Include="Assets\Scripts\Tool\MonsterSequenceTool.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenHelmet.cs" />
@@ -196,6 +197,7 @@
     <Compile Include="Assets\Scripts\Window\SceneLoading1.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBall.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloth.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill1.cs" />
     <Compile Include="Assets\Scripts\UIFrameWork\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Tool\FolderToAtlasTool.cs" />
     <Compile Include="Assets\Scripts\Window\TaskWindow1.cs" />
@@ -299,6 +301,7 @@
     <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scripts\Tool\SequenceFrameAnimationGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill2.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkilll1.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalPlayerAttribute.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
