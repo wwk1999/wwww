@@ -1,0 +1,275 @@
+Enemy_Skeleton_berserker.png
+	size: 2048, 2048
+	filter: Linear, Linear
+H1
+	bounds: 1224, 90, 685, 639
+H11
+	bounds: 1224, 731, 680, 679
+	offsets: 0, 0, 680, 684
+H22
+	bounds: 1307, 1412, 634, 706
+	rotate: 90
+H3
+	bounds: 610, 212, 612, 743
+H33
+	bounds: 2, 180, 606, 753
+	offsets: 3, 0, 609, 753
+H4
+	bounds: 603, 957, 607, 792
+	offsets: 0, 245, 607, 1053
+H42
+	bounds: 2, 935, 599, 814
+	offsets: 0, 3, 599, 823
+Vertigo/Vertigo1
+	bounds: 1906, 816, 283, 119
+	offsets: 43, 16, 359, 142
+	rotate: 90
+Vertigo/Vertigo2
+	bounds: 1911, 264, 268, 113
+	offsets: 58, 16, 359, 142
+	rotate: 90
+Vertigo/Vertigo3
+	bounds: 1911, 534, 280, 111
+	offsets: 58, 15, 359, 142
+	rotate: 90
+attack1/chongji_3
+	bounds: 1911, 76, 186, 119
+	rotate: 90
+attack1/chongji_4
+	bounds: 1909, 9, 114, 65
+attack1/chongji_5
+	bounds: 1659, 33, 125, 55
+	offsets: 1, 1, 126, 56
+chentu1
+	bounds: 1906, 1101, 309, 106
+	rotate: 90
+chentu2
+	bounds: 246, 37, 349, 141
+chentu3
+	bounds: 610, 22, 348, 188
+	offsets: 0, 3, 373, 193
+huo22
+	bounds: 960, 3, 207, 261
+	offsets: 1, 0, 208, 261
+	rotate: 90
+jineng1/fire_00
+	bounds: 1212, 1441, 73, 52
+	offsets: 41, 29, 156, 215
+jineng1/fire_01
+	bounds: 1786, 5, 83, 121
+	offsets: 36, 19, 156, 215
+	rotate: 90
+jineng1/fire_07
+	bounds: 1223, 20, 68, 162
+	offsets: 41, 51, 156, 215
+	rotate: 90
+jineng1/fire_08
+	bounds: 1387, 16, 72, 130
+	offsets: 39, 59, 156, 215
+	rotate: 90
+shouhou3
+	bounds: 2, 2, 242, 176
+tiu3
+	bounds: 1212, 1623, 93, 126
+tiu5
+	bounds: 1212, 1495, 93, 126
+wuqi
+	bounds: 2, 1751, 1303, 295
+zouludatui_l
+	bounds: 1519, 32, 56, 138
+	rotate: 90
+
+Enemy_Skeleton_berserker_2.png
+	size: 1660, 1660
+	filter: Linear, Linear
+H2
+	bounds: 2, 984, 643, 674
+	offsets: 0, 0, 643, 678
+Vertigo/Vertigo4
+	bounds: 896, 787, 268, 134
+	offsets: 58, 2, 359, 142
+	rotate: 90
+attack1/chongji_1
+	bounds: 1452, 571, 146, 137
+attack1/chongji_2
+	bounds: 1384, 868, 168, 132
+	offsets: 0, 1, 168, 133
+attack1/fire_00
+	bounds: 898, 419, 191, 164
+	offsets: 0, 2, 191, 167
+attack1/fire_01
+	bounds: 526, 437, 243, 184
+	offsets: 2, 0, 246, 185
+	rotate: 90
+attack1/fire_02
+	bounds: 244, 12, 201, 155
+	offsets: 0, 0, 202, 156
+attack1/fire_03
+	bounds: 1389, 1002, 172, 156
+	offsets: 0, 1, 173, 158
+attack1/fire_04
+	bounds: 1091, 296, 147, 143
+	offsets: 1, 1, 149, 144
+	rotate: 90
+attack1/fire_05
+	bounds: 1518, 160, 127, 140
+	offsets: 0, 0, 127, 141
+	rotate: 90
+attack1/fire_06
+	bounds: 1075, 43, 106, 128
+	offsets: 1, 0, 108, 129
+	rotate: 90
+biaoqin1
+	bounds: 964, 1238, 300, 183
+biaoqin2
+	bounds: 526, 682, 300, 183
+	rotate: 90
+biaoqin3
+	bounds: 1298, 1451, 327, 207
+biaoqin4
+	bounds: 711, 689, 300, 183
+	rotate: 90
+bihuan
+	bounds: 897, 246, 169, 171
+bihuan1
+	bounds: 911, 69, 175, 162
+	offsets: 1, 0, 176, 162
+	rotate: 90
+chentu4
+	bounds: 1032, 813, 242, 149
+	offsets: 0, 1, 242, 150
+	rotate: 90
+daijitui_r
+	bounds: 1545, 425, 144, 107
+	rotate: 90
+huo2
+	bounds: 712, 468, 184, 219
+	offsets: 0, 1, 184, 220
+huo21
+	bounds: 1391, 418, 151, 152
+	rotate: 90
+huo23
+	bounds: 718, 194, 177, 272
+huo24
+	bounds: 718, 2, 190, 191
+	rotate: 90
+jiao
+	bounds: 647, 1264, 315, 394
+	offsets: 0, 0, 325, 410
+jineng1/01
+	bounds: 447, 18, 186, 147
+	offsets: 5, 3, 200, 150
+jineng1/fire_02
+	bounds: 1291, 920, 91, 147
+	offsets: 32, 14, 156, 215
+jineng1/fire_03
+	bounds: 1193, 668, 100, 182
+	offsets: 28, 12, 156, 215
+jineng1/fire_04
+	bounds: 1141, 1057, 108, 179
+	offsets: 24, 31, 156, 215
+jineng1/fire_05
+	bounds: 1452, 710, 117, 156
+	offsets: 20, 30, 156, 215
+jineng1/fire_06
+	bounds: 1389, 1160, 125, 177
+	offsets: 16, 29, 156, 215
+	rotate: 90
+jineng1/flare
+	bounds: 1295, 711, 155, 155
+	offsets: 19, 25, 200, 200
+jineng1/par_08
+	bounds: 1291, 875, 52, 43
+	offsets: 71, 79, 200, 200
+jineng1/par_12
+	bounds: 1568, 1208, 88, 97
+	offsets: 65, 55, 200, 200
+jineng1/par_16
+	bounds: 1295, 579, 130, 155
+	offsets: 43, 21, 200, 200
+	rotate: 90
+jineng1/par_20
+	bounds: 1236, 431, 146, 153
+	offsets: 14, 12, 200, 200
+	rotate: 90
+jineng1/par_24
+	bounds: 1389, 1287, 173, 162
+	offsets: 18, 17, 200, 200
+jineng1/par_28
+	bounds: 1370, 2, 144, 130
+	offsets: 24, 38, 200, 200
+	rotate: 90
+jineng1/par_32
+	bounds: 1251, 1069, 167, 136
+	offsets: 7, 27, 200, 200
+	rotate: 90
+jineng1/par_36
+	bounds: 1075, 151, 146, 143
+	offsets: 27, 25, 200, 200
+jineng1/par_40
+	bounds: 1091, 445, 181, 143
+	offsets: 19, 6, 200, 200
+	rotate: 90
+jineng1/par_44
+	bounds: 1223, 147, 144, 145
+	offsets: 43, 32, 200, 200
+	rotate: 90
+jineng1/par_48
+	bounds: 1236, 293, 136, 147
+	offsets: 19, 37, 200, 200
+	rotate: 90
+niujiao
+	bounds: 2, 174, 322, 302
+qun
+	bounds: 964, 1423, 332, 235
+	offsets: 0, 31, 334, 266
+sheng1
+	bounds: 514, 167, 202, 268
+sheng2
+	bounds: 647, 991, 223, 271
+shou1
+	bounds: 1089, 628, 102, 183
+	offsets: 2, 0, 104, 183
+shou2
+	bounds: 1564, 1307, 92, 142
+shou3
+	bounds: 1554, 886, 91, 114
+shou4
+	bounds: 1266, 1241, 121, 180
+shouhou1
+	bounds: 1183, 852, 203, 106
+	offsets: 0, 1, 203, 109
+	rotate: 90
+shouhou11
+	bounds: 898, 585, 200, 189
+	offsets: 0, 3, 200, 192
+	rotate: 90
+shouhou2
+	bounds: 872, 1057, 267, 179
+	offsets: 0, 0, 267, 186
+shouhou4
+	bounds: 2, 4, 240, 168
+	offsets: 2, 0, 242, 169
+siwan
+	bounds: 326, 169, 307, 186
+	rotate: 90
+tiu4
+	bounds: 1518, 34, 124, 140
+	rotate: 90
+tou
+	bounds: 2, 478, 522, 504
+	offsets: 0, 0, 524, 504
+xiaotui_l
+	bounds: 1370, 148, 146, 139
+xiaotui_r
+	bounds: 1543, 291, 107, 125
+xuanyunyan
+	bounds: 635, 106, 63, 59
+xuanyunyan1
+	bounds: 911, 24, 45, 43
+yaodai
+	bounds: 1385, 289, 156, 127
+	offsets: 0, 0, 157, 129
+zoulutui_l
+	bounds: 1205, 24, 121, 158
+	rotate: 90

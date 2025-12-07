@@ -1,0 +1,174 @@
+Enemy_Mouse_patrol.png
+	size: 1368, 1368
+	filter: Linear, Linear
+babo2
+	bounds: 552, 313, 113, 171
+	rotate: 90
+chentu1
+	bounds: 331, 298, 309, 106
+	rotate: 90
+chentu2
+	bounds: 384, 636, 349, 141
+	rotate: 90
+chentu3
+	bounds: 2, 96, 348, 188
+	offsets: 0, 3, 373, 193
+chentu4
+	bounds: 706, 435, 242, 149
+	offsets: 0, 1, 242, 150
+	rotate: 90
+dao
+	bounds: 653, 59, 188, 69
+deng
+	bounds: 777, 1000, 61, 76
+	offsets: 0, 0, 62, 76
+	rotate: 90
+erduo1
+	bounds: 987, 44, 77, 70
+	offsets: 2, 0, 79, 71
+	rotate: 90
+erduo2
+	bounds: 1149, 26, 58, 78
+	rotate: 90
+jiao
+	bounds: 384, 613, 45, 21
+kulian
+	bounds: 1181, 86, 104, 80
+kulian2
+	bounds: 1181, 168, 136, 100
+lian
+	bounds: 725, 308, 155, 125
+pifeng1
+	bounds: 1059, 41, 88, 88
+pifeng22
+	bounds: 1039, 839, 244, 172
+	offsets: 0, 0, 244, 177
+pifeng3
+	bounds: 552, 428, 254, 152
+	rotate: 90
+shen
+	bounds: 1006, 455, 132, 208
+	rotate: 90
+shou1
+	bounds: 439, 313, 44, 39
+shoubi1
+	bounds: 613, 160, 106, 151
+texiao/Vertigo/Vertigo1
+	bounds: 1052, 1013, 283, 119
+	offsets: 43, 16, 359, 142
+texiao/Vertigo/Vertigo2
+	bounds: 1039, 724, 268, 113
+	offsets: 58, 16, 359, 142
+texiao/Vertigo/Vertigo3
+	bounds: 439, 354, 280, 111
+	offsets: 58, 15, 359, 142
+	rotate: 90
+texiao/Vertigo/Vertigo4
+	bounds: 1039, 589, 268, 133
+	offsets: 58, 3, 359, 142
+texiao/d1
+	bounds: 1052, 1134, 280, 232
+	offsets: 46, 86, 340, 322
+texiao/d2
+	bounds: 777, 1063, 273, 303
+	offsets: 63, 13, 340, 322
+texiao/d3
+	bounds: 527, 684, 178, 311
+	offsets: 157, 5, 340, 322
+texiao/d4
+	bounds: 879, 782, 158, 279
+	offsets: 176, 4, 340, 322
+texiao/daog
+	bounds: 2, 5, 206, 89
+	offsets: 9, 16, 226, 117
+texiao/daog1
+	bounds: 2, 987, 435, 379
+	offsets: 2, 2, 438, 382
+texiao/daog2
+	bounds: 2, 609, 380, 376
+	offsets: 8, 1, 389, 378
+texiao/daog3
+	bounds: 439, 997, 336, 369
+	offsets: 27, 3, 364, 373
+texiao/daog4
+	bounds: 707, 679, 170, 316
+	offsets: 37, 0, 208, 317
+texiao/fasang
+	bounds: 2, 286, 327, 321
+	offsets: 1, 2, 329, 336
+texiao/sd (1)
+	bounds: 857, 443, 147, 196
+	offsets: 37, 69, 200, 300
+texiao/sd (2)
+	bounds: 882, 268, 147, 173
+	offsets: 35, 81, 200, 300
+texiao/sd (3)
+	bounds: 869, 123, 143, 175
+	offsets: 36, 56, 200, 300
+	rotate: 90
+texiao/sd (4)
+	bounds: 721, 130, 146, 176
+	offsets: 31, 30, 200, 300
+texiao/sd (5)
+	bounds: 1201, 270, 147, 150
+	offsets: 21, 10, 200, 300
+	rotate: 90
+texiao/sd (6)
+	bounds: 843, 47, 142, 74
+	offsets: 24, 9, 200, 300
+texiao/sd (7)
+	bounds: 1285, 867, 144, 55
+	offsets: 25, 10, 200, 300
+	rotate: 90
+texiao/sd (8)
+	bounds: 653, 15, 139, 42
+	offsets: 31, 10, 200, 300
+texiao/sd (9)
+	bounds: 527, 668, 18, 14
+	offsets: 141, 10, 200, 300
+texiao/xuli (1)
+	bounds: 1031, 283, 168, 170
+	offsets: 9, 3, 190, 187
+texiao/xuli (2)
+	bounds: 879, 641, 139, 158
+	offsets: 19, 23, 190, 187
+	rotate: 90
+texiao/xuli (3)
+	bounds: 464, 132, 147, 179
+	offsets: 9, 7, 190, 187
+texiao/xuli (4)
+	bounds: 1046, 131, 133, 150
+	offsets: 25, 23, 190, 187
+texiao/xuli (5)
+	bounds: 464, 2, 187, 128
+	offsets: 0, 27, 190, 187
+texiao/xuli (6)
+	bounds: 1216, 419, 168, 150
+	offsets: 15, 0, 190, 187
+	rotate: 90
+tui1
+	bounds: 210, 12, 82, 123
+	rotate: 90
+tui2
+	bounds: 335, 5, 61, 116
+	rotate: 90
+weiba
+	bounds: 352, 68, 228, 110
+	rotate: 90
+yan
+	bounds: 1334, 1322, 44, 29
+	rotate: 90
+yan2
+	bounds: 857, 654, 23, 20
+	rotate: 90
+yan3
+	bounds: 855, 1037, 24, 22
+	rotate: 90
+yan5
+	bounds: 1006, 595, 44, 29
+	rotate: 90
+yaodai
+	bounds: 1319, 159, 109, 47
+	rotate: 90
+zui
+	bounds: 1287, 70, 74, 87

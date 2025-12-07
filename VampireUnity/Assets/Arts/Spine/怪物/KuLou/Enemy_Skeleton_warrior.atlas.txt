@@ -1,0 +1,140 @@
+Enemy_Skeleton_warrior.png
+	size: 1740, 1740
+	filter: Linear, Linear
+Vertigo/Vertigo_1_10
+	bounds: 512, 1455, 674, 283
+	offsets: 63, 58, 776, 378
+Vertigo/Vertigo_1_11
+	bounds: 511, 917, 638, 269
+	offsets: 99, 57, 776, 378
+Vertigo/Vertigo_1_12
+	bounds: 512, 1188, 665, 265
+	offsets: 99, 55, 776, 378
+Vertigo/Vertigo_1_13
+	bounds: 2, 13, 638, 318
+	offsets: 99, 26, 776, 378
+	rotate: 90
+Yeye
+	bounds: 832, 395, 271, 188
+	rotate: 90
+bihuan
+	bounds: 1485, 1029, 146, 164
+	offsets: 0, 4, 153, 168
+biyang
+	bounds: 1179, 1194, 271, 187
+	offsets: 0, 0, 271, 188
+body
+	bounds: 986, 80, 240, 185
+	rotate: 90
+body2
+	bounds: 1173, 226, 204, 200
+	offsets: 0, 0, 210, 204
+	rotate: 90
+chentu1
+	bounds: 1188, 1383, 309, 106
+chentu2
+	bounds: 1022, 322, 349, 141
+	rotate: 90
+chentu3
+	bounds: 322, 303, 348, 188
+	offsets: 0, 3, 373, 193
+	rotate: 90
+chentu4
+	bounds: 1000, 673, 242, 149
+	offsets: 0, 1, 242, 150
+	rotate: 90
+danshou
+	bounds: 1633, 1062, 100, 131
+	offsets: 367, 99, 487, 257
+datui1
+	bounds: 1485, 888, 139, 153
+	offsets: 6, 2, 146, 158
+	rotate: 90
+datui2
+	bounds: 1542, 607, 101, 119
+	offsets: 2, 1, 106, 122
+dun
+	bounds: 322, 19, 225, 282
+	offsets: 5, 0, 230, 286
+fubu
+	bounds: 1495, 86, 148, 173
+gua
+	bounds: 549, 28, 344, 246
+	rotate: 90
+gua1
+	bounds: 1521, 309, 107, 146
+	offsets: 0, 0, 191, 146
+jian
+	bounds: 1340, 936, 143, 256
+	offsets: 0, 0, 146, 256
+jian1
+	bounds: 512, 374, 318, 292
+	offsets: 0, 0, 326, 300
+shou-L
+	bounds: 797, 5, 94, 172
+	offsets: 0, 0, 94, 174
+	rotate: 90
+shou1
+	bounds: 1375, 261, 194, 144
+	offsets: 0, 0, 194, 149
+	rotate: 90
+siwang
+	bounds: 797, 101, 271, 187
+	offsets: 0, 1, 271, 188
+	rotate: 90
+siwang1
+	bounds: 1340, 689, 245, 135
+	rotate: 90
+tou
+	bounds: 2, 1195, 508, 543
+tou 1
+	bounds: 2, 653, 507, 540
+	offsets: 1, 3, 508, 543
+tui-L
+	bounds: 1477, 728, 120, 158
+tui-R
+	bounds: 1599, 735, 111, 151
+tx/sd_00001
+	bounds: 1173, 26, 200, 198
+	offsets: 19, 8, 235, 210
+tx/sd_00002
+	bounds: 1542, 1306, 183, 196
+	offsets: 36, 5, 235, 210
+	rotate: 90
+tx/sd_00003
+	bounds: 1537, 1195, 109, 170
+	offsets: 110, 3, 235, 210
+	rotate: 90
+tx/sd_00004
+	bounds: 1452, 1235, 83, 146
+	offsets: 135, 3, 235, 210
+tx/tdd_00002
+	bounds: 1165, 432, 242, 187
+	offsets: 13, 0, 255, 190
+	rotate: 90
+tx/tdd_00003
+	bounds: 1151, 676, 237, 187
+	offsets: 18, 0, 255, 190
+	rotate: 90
+tx/tdd_00004
+	bounds: 1354, 457, 230, 186
+	offsets: 23, 0, 255, 190
+	rotate: 90
+wuqi
+	bounds: 1188, 1491, 487, 247
+	offsets: 0, 0, 487, 257
+wuqi1
+	bounds: 511, 668, 487, 247
+	offsets: 0, 0, 487, 257
+xuanyun
+	bounds: 1640, 973, 89, 87
+xuanyun-K
+	bounds: 1151, 915, 271, 187
+	offsets: 0, 1, 271, 188
+	rotate: 90
+xuanyun1
+	bounds: 1640, 902, 70, 69
+yaodai
+	bounds: 1375, 42, 217, 118
+	offsets: 0, 0, 217, 122
+	rotate: 90
