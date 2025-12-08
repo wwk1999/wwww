@@ -1,0 +1,281 @@
+Enemy_Panther_warrior.png
+	size: 1715, 1715
+	filter: Linear, Linear
+	pma: true
+001
+	bounds: 718, 607, 19, 47
+	rotate: 90
+002
+	bounds: 409, 561, 41, 46
+	rotate: 90
+01
+	bounds: 837, 1284, 64, 35
+	offsets: 7, 0, 72, 40
+arm01
+	bounds: 823, 607, 173, 264
+	rotate: 90
+arm01di
+	bounds: 461, 256, 18, 56
+biyan
+	bounds: 767, 607, 19, 27
+	rotate: 90
+body
+	bounds: 2, 955, 451, 361
+	offsets: 0, 41, 543, 402
+body02
+	bounds: 1553, 396, 188, 158
+	offsets: 0, 0, 188, 165
+	rotate: 90
+chentu1
+	bounds: 455, 1007, 309, 106
+	rotate: 90
+chentu2
+	bounds: 311, 604, 349, 141
+	rotate: 90
+chentu3
+	bounds: 1311, 1525, 348, 188
+	offsets: 0, 3, 373, 193
+chentu4
+	bounds: 1551, 1281, 242, 149
+	offsets: 0, 1, 242, 150
+	rotate: 90
+dao
+	bounds: 959, 1280, 327, 206
+effects/Vertigo/Vertigo1
+	bounds: 782, 112, 142, 59
+	offsets: 22, 8, 180, 71
+effects/Vertigo/Vertigo2
+	bounds: 1578, 121, 135, 56
+	offsets: 29, 8, 180, 71
+effects/Vertigo/Vertigo3
+	bounds: 926, 86, 140, 55
+	offsets: 29, 8, 180, 71
+effects/Vertigo/Vertigo4
+	bounds: 1578, 53, 134, 66
+	offsets: 29, 2, 180, 71
+effects/b_0001
+	bounds: 1315, 81, 220, 72
+	offsets: 0, 15, 257, 122
+	rotate: 90
+effects/b_0002
+	bounds: 461, 49, 220, 73
+	offsets: 0, 15, 257, 122
+effects/b_0003
+	bounds: 1601, 803, 234, 88
+	offsets: 0, 15, 257, 122
+	rotate: 90
+effects/b_0004
+	bounds: 1590, 1039, 240, 97
+	offsets: 0, 15, 257, 122
+	rotate: 90
+effects/b_0005
+	bounds: 718, 628, 236, 103
+	offsets: 19, 15, 257, 122
+	rotate: 90
+effects/ccc
+	bounds: 1389, 94, 187, 212
+	offsets: 14, 0, 213, 212
+effects/d_0001
+	bounds: 1106, 1022, 256, 239
+	offsets: 29, 29, 316, 285
+	rotate: 90
+effects/d_0002
+	bounds: 837, 1035, 267, 243
+	offsets: 18, 27, 316, 285
+effects/d_0003
+	bounds: 563, 1069, 272, 250
+	offsets: 14, 24, 316, 285
+effects/d_0004
+	bounds: 837, 782, 266, 251
+	offsets: 18, 24, 316, 285
+effects/d_0005
+	bounds: 1105, 771, 251, 249
+	offsets: 34, 25, 316, 285
+effects/d_0006
+	bounds: 1347, 1031, 247, 241
+	offsets: 37, 27, 316, 285
+	rotate: 90
+effects/d_0007
+	bounds: 221, 33, 250, 238
+	offsets: 34, 31, 316, 285
+	rotate: 90
+effects/d_0008
+	bounds: 1089, 541, 257, 228
+	offsets: 28, 32, 316, 285
+effects/ground_0
+	bounds: 515, 866, 34, 11
+	offsets: 2, 1, 65, 13
+effects/ground_1
+	bounds: 1702, 1480, 48, 11
+	offsets: 2, 1, 65, 13
+	rotate: 90
+effects/ground_2
+	bounds: 454, 866, 59, 11
+	offsets: 2, 2, 65, 13
+effects/ground_3
+	bounds: 823, 807, 57, 10
+	offsets: 1, 2, 65, 13
+	rotate: 90
+effects/ground_4
+	bounds: 1288, 1440, 46, 10
+	offsets: 1, 2, 65, 13
+	rotate: 90
+effects/ground_5
+	bounds: 1702, 1447, 31, 11
+	offsets: 1, 1, 65, 13
+	rotate: 90
+effects/idle/Electric_0
+	bounds: 518, 4, 43, 77
+	offsets: 12, 75, 77, 160
+	rotate: 90
+effects/idle/Electric_1
+	bounds: 942, 203, 62, 126
+	offsets: 14, 29, 77, 160
+	rotate: 90
+effects/idle/Electric_2
+	bounds: 723, 296, 67, 151
+	offsets: 9, 6, 77, 160
+	rotate: 90
+effects/idle/Electric_3
+	bounds: 1389, 45, 47, 155
+	offsets: 22, 1, 77, 160
+	rotate: 90
+effects/idle/Electric_4
+	bounds: 720, 147, 60, 147
+	offsets: 9, 7, 77, 160
+effects/idle/Electric_5
+	bounds: 1661, 1565, 52, 148
+	offsets: 25, 6, 77, 160
+effects/idle/Electric_6
+	bounds: 942, 143, 58, 122
+	offsets: 19, 11, 77, 160
+	rotate: 90
+effects/idle/Electric_7
+	bounds: 296, 285, 27, 82
+	offsets: 28, 11, 77, 160
+	rotate: 90
+effects/jn3/Electric_0
+	bounds: 1358, 787, 241, 242
+	offsets: 5, 3, 250, 250
+effects/jn3/Electric_1
+	bounds: 723, 365, 240, 240
+	offsets: 5, 4, 250, 250
+effects/jn3/Electric_2
+	bounds: 481, 362, 241, 240
+	offsets: 4, 4, 250, 250
+	rotate: 90
+effects/jn3/Electric_3
+	bounds: 1311, 1280, 238, 243
+	offsets: 6, 3, 250, 250
+effects/jn3/Electric_4
+	bounds: 1081, 303, 236, 240
+	offsets: 6, 6, 250, 250
+	rotate: 90
+effects/jn3/Electric_5
+	bounds: 481, 124, 236, 237
+	offsets: 7, 8, 250, 250
+	rotate: 90
+effects/jn3/Electric_6
+	bounds: 1081, 69, 232, 232
+	offsets: 11, 8, 250, 250
+effects/jn3/Electric_7
+	bounds: 1323, 308, 231, 228
+	offsets: 10, 14, 250, 250
+	rotate: 90
+effects/line_s
+	bounds: 1517, 586, 196, 199
+	offsets: 0, 0, 213, 199
+effects/wq
+	bounds: 959, 1488, 350, 225
+	offsets: 6, 9, 362, 250
+effects/xxdd (1)
+	bounds: 2, 1318, 541, 395
+	offsets: 11, 2, 552, 431
+effects/xxdd (2)
+	bounds: 545, 1321, 392, 412
+	offsets: 11, 0, 403, 412
+	rotate: 90
+effects/xxdd (3)
+	bounds: 2, 560, 307, 393
+	offsets: 5, 0, 312, 393
+effects/xxdd (4)
+	bounds: 2, 285, 292, 273
+	offsets: 4, 4, 296, 277
+effects/xxdd (5)
+	bounds: 1348, 541, 228, 167
+	offsets: 58, 110, 296, 277
+	rotate: 90
+effects/zhua_0001
+	bounds: 296, 314, 183, 244
+	offsets: 42, 38, 302, 282
+effects/zhua_0002
+	bounds: 563, 866, 201, 272
+	offsets: 17, 10, 302, 282
+	rotate: 90
+effects/zhua_0003
+	bounds: 454, 605, 259, 262
+	offsets: 11, 3, 302, 282
+	rotate: 90
+effects/zhua_0004
+	bounds: 2, 2, 281, 217
+	offsets: 14, 5, 302, 282
+	rotate: 90
+erduo01
+	bounds: 825, 2, 53, 50
+	offsets: 1, 9, 57, 59
+erduo02
+	bounds: 461, 2, 55, 45
+	offsets: 5, 0, 60, 47
+foot
+	bounds: 311, 562, 96, 40
+	offsets: 0, 0, 112, 43
+foot02
+	bounds: 683, 42, 80, 48
+	rotate: 90
+jianjia
+	bounds: 1578, 179, 107, 127
+	offsets: 6, 0, 113, 127
+leg01
+	bounds: 965, 267, 114, 146
+leg02
+	bounds: 782, 173, 85, 121
+pi
+	bounds: 876, 271, 92, 81
+	rotate: 90
+qunzi
+	bounds: 1553, 308, 135, 86
+	offsets: 28, 19, 163, 105
+qunzi02
+	bounds: 455, 879, 126, 106
+	rotate: 90
+shoujia01
+	bounds: 911, 36, 48, 101
+	rotate: 90
+weiba
+	bounds: 965, 415, 190, 114
+	rotate: 90
+xiaba
+	bounds: 869, 179, 90, 71
+	rotate: 90
+xianglian
+	bounds: 1661, 1530, 33, 49
+	offsets: 0, 0, 34, 49
+	rotate: 90
+xianglian01
+	bounds: 733, 54, 56, 111
+	rotate: 90
+xianglian02
+	bounds: 733, 2, 90, 50
+	offsets: 0, 0, 91, 50
+xianglianA
+	bounds: 880, 2, 32, 61
+	offsets: 5, 0, 37, 61
+	rotate: 90
+xianglianB
+	bounds: 846, 62, 48, 63
+	rotate: 90
+xianglianC
+	bounds: 1014, 30, 57, 54
+xianglianD
+	bounds: 597, 11, 36, 57
+	rotate: 90

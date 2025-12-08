@@ -65,7 +65,9 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<KuLou> KuLouQueue = new Queue<KuLou>();
     [NonSerialized] public Queue<ShaMoElite> ShaMoEliteQueue = new Queue<ShaMoElite>();
 
-    
+    //第四关怪
+    [NonSerialized] public Queue<XueQiE> XueQiEQueue = new Queue<XueQiE>();
+    [NonSerialized] public Queue<YingShu> YingShuQueue = new Queue<YingShu>();
     
     
     
@@ -589,11 +591,8 @@ public class GameController : XSingleton<GameController>
 
     public void CreatePlayer()
     {
-        int playerRandomIndex = UnityEngine.Random.Range(1, PlayerBirthPoints.Length);
-        //获取随机选择的子物体    
-        Transform playerRandomPoint = PlayerBirthPoints[playerRandomIndex];
-        gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player"), transform).GetComponent<Player>();
-        gamePlayer.transform.position = playerRandomPoint.position;
+        gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player")).GetComponent<Player>();
+        gamePlayer.transform.position = Vector2.zero;
     }
 
     public void CreateEliteMonster()
@@ -621,6 +620,8 @@ public class GameController : XSingleton<GameController>
                 break;
             case 15:
             case 16:
+            case 19:
+            case 20:
                 monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
                 monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
                 break;
@@ -678,12 +679,23 @@ public class GameController : XSingleton<GameController>
         
         if (LevelInfoConfig.CurrentGameLevel == 15 || LevelInfoConfig.CurrentGameLevel == 16 )
         {
-            Debug.LogError(111);
             ShaMoElite shamoElite = ShaMoEliteQueue.Dequeue();
             shamoElite.gameObject.SetActive(true);
             shamoElite.CurrentHp = shamoElite.MaxHp;
             shamoElite.transform.position = monsterRandomPoint.position;
             shamoElite.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
+
+            TotalMonsterCount++;
+            EliteMonsterCount++;
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 19 || LevelInfoConfig.CurrentGameLevel == 20 )
+        {
+            YingShu YingShu = YingShuQueue.Dequeue();
+            YingShu.gameObject.SetActive(true);
+            YingShu.CurrentHp = YingShu.MaxHp;
+            YingShu.transform.position = monsterRandomPoint.position;
+            YingShu.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
 
             TotalMonsterCount++;
             EliteMonsterCount++;
@@ -827,6 +839,41 @@ public class GameController : XSingleton<GameController>
                 else
                 {
                     monsterBase =KuLouQueue.Dequeue();
+                }
+
+                monsterBase.gameObject.SetActive(true);
+                monsterBase.transform.position = monsterRandomPoint.position;
+                monsterBase.CurrentHp = monsterBase.MaxHp;
+                monsterBase.transform.SetParent(MonsterBirthPoints3[monsterRandomIndex]);
+                monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
+                TotalMonsterCount++;
+                NormalMonsterCount++;
+            }
+            else
+            {
+                return;
+            }
+        }
+        
+        
+        if (LevelInfoConfig.CurrentGameLevel == 17 || LevelInfoConfig.CurrentGameLevel == 18 || LevelInfoConfig.CurrentGameLevel == 19|| LevelInfoConfig.CurrentGameLevel == 20)
+        {
+            int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
+            Transform monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
+            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
+            {
+                MonsterBase monsterBase;
+                if (NormalMonsterCount % 3 == 0)
+                {
+                    monsterBase = XueQiEQueue.Dequeue();
+                }
+                else if (NormalMonsterCount % 3 == 1)
+                {
+                    monsterBase = XueQiEQueue.Dequeue();
+                }
+                else
+                {
+                    monsterBase =XueQiEQueue.Dequeue();
                 }
 
                 monsterBase.gameObject.SetActive(true);

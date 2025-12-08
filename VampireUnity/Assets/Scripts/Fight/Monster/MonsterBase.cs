@@ -638,7 +638,7 @@ public abstract class MonsterBase : MonoBehaviour
     public int GetFinalDamage(int baseDamage,bool isCrit)
     {
         float finalDamage = baseDamage;
-        var random = Random.Range(0.96f, 1.04f);
+        var random = Random.Range(0.92f, 1.08f);
         finalDamage *= random;
         var monsterDenfense = Defense * (1 - GlobalPlayerAttribute.Penetrate);
         finalDamage-=monsterDenfense;

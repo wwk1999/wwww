@@ -1,0 +1,289 @@
+Enemy_Boss_serpent.png
+	size: 1873, 1873
+	filter: Linear, Linear
+	pma: true
+Effects/Vertigo/Vertigo1
+	bounds: 1514, 63, 141, 59
+	offsets: 1, 8, 149, 69
+Effects/Vertigo/Vertigo2
+	bounds: 1514, 5, 134, 56
+	offsets: 9, 8, 149, 69
+Effects/Vertigo/Vertigo3
+	bounds: 883, 575, 139, 56
+	offsets: 9, 7, 149, 69
+Effects/Vertigo/Vertigo4
+	bounds: 1341, 853, 133, 67
+	offsets: 9, 1, 149, 69
+Effects/bb0055
+	bounds: 354, 7, 287, 220
+	offsets: 0, 1, 288, 221
+Effects/bb0057
+	bounds: 643, 3, 290, 235
+	offsets: 0, 1, 291, 238
+Effects/bb0059
+	bounds: 935, 4, 294, 260
+	offsets: 0, 1, 294, 262
+Effects/bb0061
+	bounds: 962, 1051, 299, 293
+	offsets: 0, 3, 299, 305
+	rotate: 90
+Effects/bb0063
+	bounds: 910, 696, 303, 302
+	offsets: 0, 0, 303, 308
+	rotate: 90
+Effects/bb0065
+	bounds: 838, 266, 306, 294
+	offsets: 0, 0, 306, 301
+	rotate: 90
+Effects/bb0067
+	bounds: 849, 1553, 318, 265
+	offsets: 0, 13, 318, 288
+	rotate: 90
+Effects/bb0069
+	bounds: 654, 633, 317, 254
+	offsets: 0, 5, 322, 273
+	rotate: 90
+Effects/bb0071
+	bounds: 695, 1329, 206, 168
+	offsets: 12, 0, 218, 168
+	rotate: 90
+Effects/bb0073
+	bounds: 1214, 696, 145, 182
+	offsets: 0, 0, 145, 183
+	rotate: 90
+Effects/dan_lan
+	bounds: 1807, 175, 142, 62
+	offsets: 8, 0, 150, 62
+	rotate: 90
+Effects/diguang
+	bounds: 270, 923, 116, 26
+	offsets: 0, 0, 116, 27
+Effects/fuangqiu
+	bounds: 1699, 758, 172, 175
+	offsets: 6, 4, 182, 181
+Effects/guanghuanglan
+	bounds: 865, 1346, 205, 84
+	offsets: 0, 2, 205, 88
+	rotate: 90
+Effects/guangqiu
+	bounds: 284, 1323, 211, 210
+	offsets: 6, 6, 222, 221
+	rotate: 90
+Effects/huichen1
+	bounds: 2, 920, 388, 230
+	offsets: 9, 9, 408, 252
+	rotate: 90
+Effects/lightning/lightning1
+	bounds: 1362, 533, 147, 161
+	offsets: 2, 3, 151, 168
+Effects/lightning/lightning2
+	bounds: 1704, 1101, 73, 167
+	offsets: 3, 4, 79, 177
+	rotate: 90
+Effects/lightning/lightning3
+	bounds: 1514, 1030, 177, 188
+	offsets: 2, 5, 182, 196
+	rotate: 90
+Effects/lightning/lightning4
+	bounds: 1533, 1699, 242, 172
+	offsets: 8, 3, 253, 178
+Effects/mofaqiu/mofaqiu0
+	bounds: 1362, 273, 142, 127
+	offsets: 4, 12, 155, 144
+Effects/mofaqiu/mofaqiu2
+	bounds: 1514, 267, 145, 133
+	offsets: 2, 8, 155, 144
+Effects/mofaqiu/mofaqiu4
+	bounds: 1661, 180, 144, 137
+	offsets: 2, 6, 155, 144
+Effects/pao111
+	bounds: 610, 574, 40, 40
+Effects/paopao/paopao1
+	bounds: 822, 574, 59, 57
+Effects/paopao/paopao2
+	bounds: 1257, 1006, 108, 82
+	rotate: 90
+Effects/paopao/paopao3
+	bounds: 1514, 860, 183, 168
+Effects/paopao/paopao4
+	bounds: 1228, 1391, 249, 191
+Effects/paopao/paopao5
+	bounds: 1116, 1584, 287, 173
+	rotate: 90
+Effects/pen/pen0
+	bounds: 2, 559, 359, 266
+	offsets: 11, 10, 371, 295
+	rotate: 90
+Effects/pen/pen1
+	bounds: 601, 1537, 334, 246
+	offsets: 25, 40, 371, 295
+	rotate: 90
+Effects/pen/pen2
+	bounds: 1134, 273, 300, 226
+	offsets: 14, 38, 371, 295
+	rotate: 90
+Effects/pen/pen3
+	bounds: 1231, 21, 281, 250
+	offsets: 5, 36, 371, 295
+Effects/penshui1
+	bounds: 2, 4, 350, 199
+	offsets: 8, 16, 362, 219
+Effects/penshui2
+	bounds: 234, 951, 357, 203
+	offsets: 2, 11, 362, 219
+	rotate: 90
+Effects/penshui3
+	bounds: 2, 205, 352, 201
+	offsets: 6, 11, 362, 219
+	rotate: 90
+Effects/penshui4
+	bounds: 439, 986, 335, 197
+	offsets: 24, 11, 362, 219
+	rotate: 90
+Effects/penshui5
+	bounds: 537, 240, 331, 191
+	offsets: 27, 11, 362, 219
+	rotate: 90
+Effects/penshui6
+	bounds: 460, 616, 334, 192
+	offsets: 25, 14, 362, 219
+	rotate: 90
+Effects/penshui7
+	bounds: 348, 229, 342, 187
+	offsets: 17, 21, 362, 219
+	rotate: 90
+Effects/shine
+	bounds: 638, 1001, 325, 322
+	offsets: 1, 2, 328, 326
+	rotate: 90
+Effects/shuibd1
+	bounds: 1757, 1322, 122, 114
+	offsets: 0, 1, 123, 115
+	rotate: 90
+Effects/shuibd2
+	bounds: 1704, 935, 164, 164
+	offsets: 0, 1, 165, 165
+Effects/shuibd3
+	bounds: 1514, 550, 170, 170
+	offsets: 1, 0, 172, 170
+Effects/shuibd4
+	bounds: 1341, 922, 171, 169
+	offsets: 0, 0, 172, 169
+Effects/shuibd5
+	bounds: 1686, 456, 168, 168
+Effects/shuibd6
+	bounds: 1675, 319, 155, 135
+	offsets: 1, 0, 156, 135
+Effects/shuibd7
+	bounds: 1024, 575, 119, 110
+	rotate: 90
+Effects/shuizhu1
+	bounds: 1747, 1176, 144, 122
+	rotate: 90
+Effects/shuizhu2
+	bounds: 1214, 843, 161, 125
+	rotate: 90
+Effects/shuizhu3
+	bounds: 1699, 626, 172, 130
+Effects/shuizhu4
+	bounds: 1514, 722, 183, 136
+Effects/shuizhu5
+	bounds: 1090, 1358, 193, 136
+	rotate: 90
+Effects/shuizhu6
+	bounds: 951, 1352, 199, 137
+	rotate: 90
+Effects/shuizhu7
+	bounds: 1257, 1116, 127, 95
+	rotate: 90
+Effects/shuizhu8
+	bounds: 654, 574, 57, 89
+	rotate: 90
+Effects/shuizhu9
+	bounds: 388, 927, 22, 64
+	rotate: 90
+Effects/szzbz0003
+	bounds: 1514, 402, 159, 146
+	offsets: 0, 0, 159, 148
+Effects/szzbz0004
+	bounds: 1362, 1093, 149, 147
+	offsets: 10, 0, 159, 148
+Effects/szzbz0005
+	bounds: 1514, 124, 141, 143
+	offsets: 10, 5, 159, 148
+	rotate: 90
+Effects/szzbz0006
+	bounds: 1659, 39, 141, 139
+	offsets: 9, 5, 159, 148
+Effects/szzbz0007
+	bounds: 1362, 402, 129, 140
+	offsets: 19, 3, 159, 148
+	rotate: 90
+biyan
+	bounds: 284, 1536, 315, 335
+body
+	bounds: 2, 1310, 280, 561
+body2
+	bounds: 496, 1328, 197, 206
+	offsets: 52, 0, 249, 218
+chentu1
+	bounds: 730, 263, 309, 106
+	rotate: 90
+chentu2
+	bounds: 205, 208, 349, 141
+	rotate: 90
+chentu3
+	bounds: 270, 573, 348, 188
+	offsets: 0, 3, 373, 193
+	rotate: 90
+chentu4
+	bounds: 1533, 1548, 242, 149
+	offsets: 0, 1, 242, 150
+head
+	bounds: 1291, 1600, 271, 240
+	rotate: 90
+hou_foot
+	bounds: 460, 573, 41, 148
+	rotate: 90
+hou_leg
+	bounds: 910, 638, 53, 56
+	offsets: 0, 36, 101, 144
+hou_leg22
+	bounds: 1257, 1245, 101, 144
+hurthead
+	bounds: 270, 561, 10, 10
+	offsets: 0, 325, 315, 335
+qian_foot
+	bounds: 638, 952, 47, 168
+	rotate: 90
+qian_foot01
+	bounds: 1777, 1633, 81, 86
+	rotate: 90
+qian_foot02
+	bounds: 1777, 1716, 92, 155
+qian_foot03
+	bounds: 1777, 1446, 85, 185
+qian_leg
+	bounds: 745, 574, 57, 75
+	rotate: 90
+qian_leg02
+	bounds: 1136, 579, 110, 115
+shange
+	bounds: 1514, 1374, 172, 241
+	rotate: 90
+weiba
+	bounds: 1514, 1209, 231, 163
+	offsets: 0, 0, 239, 184
+weiba01
+	bounds: 488, 954, 42, 30
+	offsets: 1, 2, 44, 33
+weiba02
+	bounds: 439, 952, 32, 47
+	offsets: 3, 0, 39, 47
+	rotate: 90
+weiba03
+	bounds: 234, 920, 29, 34
+	offsets: 4, 2, 33, 41
+	rotate: 90
+xiaba
+	bounds: 1362, 1242, 150, 147

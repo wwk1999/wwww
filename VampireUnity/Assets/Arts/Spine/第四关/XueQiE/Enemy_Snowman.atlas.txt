@@ -1,0 +1,102 @@
+Enemy_Snowman.png
+	size: 1333, 1333
+	filter: Linear, Linear
+	pma: true
+Vertigo/Vertigo1
+	bounds: 771, 220, 283, 119
+	offsets: 43, 16, 359, 142
+Vertigo/Vertigo2
+	bounds: 1071, 190, 268, 114
+	offsets: 58, 15, 359, 142
+	rotate: 90
+Vertigo/Vertigo3
+	bounds: 1187, 178, 280, 111
+	offsets: 58, 15, 359, 142
+	rotate: 90
+Vertigo/Vertigo4
+	bounds: 769, 625, 268, 133
+	offsets: 58, 3, 359, 142
+attack1/1_00
+	bounds: 1039, 636, 193, 177
+	offsets: 2, 11, 195, 196
+attack1/1_01
+	bounds: 847, 760, 332, 187
+	offsets: 0, 7, 333, 200
+	rotate: 90
+attack1/2_00
+	bounds: 192, 532, 422, 231
+	offsets: 1, 2, 423, 234
+	rotate: 90
+attack1/2_01
+	bounds: 484, 1094, 430, 237
+	offsets: 1, 1, 433, 248
+attack1/2_02
+	bounds: 916, 1111, 415, 220
+	offsets: 1, 0, 448, 259
+attack1/2_03
+	bounds: 224, 51, 149, 130
+	offsets: 1, 1, 151, 132
+attack1/3_00
+	bounds: 776, 449, 287, 174
+	offsets: 3, 0, 292, 179
+attack1/3_01
+	bounds: 421, 257, 337, 200
+	offsets: 4, 1, 344, 205
+attack1/3_02
+	bounds: 425, 602, 342, 200
+	offsets: 4, 1, 350, 205
+attack1/3_03
+	bounds: 224, 183, 347, 195
+	offsets: 4, 1, 355, 199
+	rotate: 90
+biyan
+	bounds: 425, 862, 92, 41
+	offsets: 52, 63, 200, 168
+	rotate: 90
+biziyinying
+	bounds: 1015, 68, 84, 120
+body
+	bounds: 2, 956, 480, 375
+	offsets: 1, 3, 481, 421
+chentu1
+	bounds: 760, 341, 309, 106
+chentu2
+	bounds: 425, 459, 349, 141
+chentu3
+	bounds: 421, 67, 348, 188
+	offsets: 0, 3, 373, 193
+chentu4
+	bounds: 771, 68, 242, 150
+cry
+	bounds: 1234, 575, 238, 78
+	offsets: 2, 131, 300, 300
+	rotate: 90
+dunpai
+	bounds: 1036, 815, 219, 294
+	offsets: 1, 4, 225, 300
+eye
+	bounds: 1065, 460, 156, 174
+	offsets: 55, 25, 243, 225
+head
+	bounds: 484, 804, 361, 288
+	offsets: 23, 1, 385, 289
+huizhang
+	bounds: 2, 2, 59, 107
+	rotate: 90
+maozi
+	bounds: 2, 63, 364, 220
+	offsets: 3, 19, 367, 239
+	rotate: 90
+noes
+	bounds: 1257, 934, 175, 70
+	offsets: 1, 0, 176, 70
+	rotate: 90
+shoushang
+	bounds: 1101, 125, 84, 63
+	offsets: 52, 84, 203, 206
+wuqi
+	bounds: 2, 429, 525, 188
+	rotate: 90
+xuanyun
+	bounds: 1257, 861, 70, 71
+	offsets: 62, 72, 196, 206

@@ -1,0 +1,142 @@
+guyalang02.png
+	size: 2038, 2038
+	filter: Linear, Linear
+	pma: true
+body
+	bounds: 2, 1089, 1108, 947
+	offsets: 460, 161, 1740, 1108
+chentu2
+	bounds: 955, 30, 349, 141
+chentu3
+	bounds: 1829, 272, 348, 188
+	offsets: 0, 3, 373, 193
+	rotate: 90
+effects/Vertigo/Vertigo_1_13
+	bounds: 1884, 2, 268, 134
+	offsets: 58, 2, 359, 142
+	rotate: 90
+effects/c_0002
+	bounds: 1306, 2, 318, 169
+	offsets: 415, 270, 1026, 718
+head
+	bounds: 1112, 1057, 911, 979
+	offsets: 0, 309, 911, 1288
+head2
+	bounds: 955, 173, 872, 882
+	offsets: 0, 3, 880, 913
+neck
+	bounds: 2, 76, 951, 1011
+	offsets: 238, 0, 1213, 1172
+neck1
+	bounds: 1829, 622, 433, 159
+	rotate: 90
+neck2
+	bounds: 1626, 2, 169, 256
+	offsets: 204, 710, 1213, 1172
+	rotate: 90
+
+guyalang02_2.png
+	size: 2047, 2047
+	filter: Linear, Linear
+	pma: true
+chentu1
+	bounds: 1709, 1041, 309, 106
+di
+	bounds: 569, 2, 726, 429
+	offsets: 13, 338, 911, 1288
+	rotate: 90
+effects/Vertigo/Vertigo_1_10
+	bounds: 1908, 1762, 283, 119
+	offsets: 43, 16, 359, 142
+	rotate: 90
+effects/Vertigo/Vertigo_1_11
+	bounds: 1926, 1258, 268, 113
+	offsets: 58, 16, 359, 142
+	rotate: 90
+effects/Vertigo/Vertigo_1_12
+	bounds: 1924, 759, 280, 111
+	offsets: 58, 15, 359, 142
+	rotate: 90
+effects/c_0001
+	bounds: 1924, 565, 192, 87
+	offsets: 508, 300, 1026, 718
+	rotate: 90
+effects/c_0003
+	bounds: 1668, 19, 472, 272
+	offsets: 316, 236, 1026, 718
+	rotate: 90
+effects/c_0004
+	bounds: 1000, 30, 666, 399
+	offsets: 191, 194, 1026, 718
+effects/c_0005
+	bounds: 996, 1497, 910, 548
+	offsets: 44, 146, 1026, 718
+effects/c_0006
+	bounds: 2, 730, 986, 615
+	offsets: 22, 79, 1026, 718
+effects/c_0007
+	bounds: 2, 1347, 992, 698
+	offsets: 20, 0, 1026, 718
+erduo01
+	bounds: 1908, 1528, 110, 232
+erduo02
+	bounds: 1709, 1149, 215, 346
+	offsets: 571, 632, 911, 978
+houtui01
+	bounds: 996, 1041, 454, 711
+	rotate: 90
+houtui02
+	bounds: 1556, 493, 366, 546
+qiantui01
+	bounds: 1000, 431, 554, 608
+	offsets: 0, 1, 554, 609
+weiba
+	bounds: 2, 49, 565, 679
+	offsets: 0, 0, 566, 679
+xuanyunyan
+	bounds: 1926, 1159, 104, 97
+
+guyalang02_3.png
+	size: 1289, 1289
+	filter: Linear, Linear
+	pma: true
+biyan
+	bounds: 539, 963, 662, 324
+	offsets: 1, 0, 666, 324
+chentu4
+	bounds: 999, 171, 242, 149
+	offsets: 0, 1, 242, 150
+effects/zhua_0001
+	bounds: 999, 322, 181, 242
+	offsets: 43, 39, 302, 282
+	rotate: 90
+effects/zhua_0002
+	bounds: 1080, 690, 200, 271
+	offsets: 17, 10, 302, 282
+effects/zhua_0003
+	bounds: 539, 701, 258, 260
+	offsets: 12, 4, 302, 282
+effects/zhua_0004
+	bounds: 799, 745, 279, 216
+	offsets: 15, 6, 302, 282
+hurt
+	bounds: 673, 37, 662, 324
+	offsets: 1, 0, 666, 324
+	rotate: 90
+neck3
+	bounds: 999, 505, 183, 288
+	rotate: 90
+qiantui 02
+	bounds: 2, 695, 535, 592
+xiaba2
+	bounds: 2, 19, 674, 341
+	offsets: 0, 0, 676, 401
+	rotate: 90
+xuanyundi
+	bounds: 345, 31, 662, 326
+	offsets: 1, 16, 671, 345
+	rotate: 90
+ya
+	bounds: 999, 32, 137, 206
+	offsets: 485, 511, 911, 1288
+	rotate: 90

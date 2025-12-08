@@ -1,0 +1,126 @@
+BOSSlong_shui.png
+	size: 2048, 2048
+	filter: Linear, Linear
+	pma: true
+Effects/1lie/1lie_01
+	bounds: 1263, 32, 350, 100
+	offsets: 70, 24, 494, 154
+	rotate: 90
+Effects/1lie/1lie_02
+	bounds: 1890, 1588, 458, 128
+	offsets: 17, 11, 494, 154
+	rotate: 90
+Effects/1lie/1lie_03
+	bounds: 1308, 1461, 452, 126
+	offsets: 21, 12, 494, 154
+Effects/1lie/1lie_04
+	bounds: 1365, 3, 419, 132
+	offsets: 41, 8, 494, 154
+	rotate: 90
+Effects/1lie/1lie_05
+	bounds: 1499, 32, 390, 112
+	offsets: 59, 18, 494, 154
+	rotate: 90
+Effects/1lie/1lie_06
+	bounds: 485, 15, 251, 69
+	offsets: 129, 40, 494, 154
+Effects/Vertigo/Vertigo1
+	bounds: 1721, 189, 283, 120
+	offsets: 43, 15, 359, 142
+	rotate: 90
+Effects/Vertigo/Vertigo3
+	bounds: 1843, 240, 280, 112
+	offsets: 58, 14, 359, 142
+	rotate: 90
+Effects/Vertigo/Vertigo4
+	bounds: 1613, 27, 268, 134
+	offsets: 58, 2, 359, 142
+arm
+	bounds: 2, 525, 467, 654
+	offsets: 32, 30, 499, 684
+biyan
+	bounds: 1833, 522, 146, 128
+	offsets: 0, 3, 147, 135
+body
+	bounds: 2, 1181, 786, 865
+	offsets: 0, 0, 786, 867
+chentu1
+	bounds: 1613, 163, 309, 106
+	rotate: 90
+chentu2
+	bounds: 1894, 652, 349, 141
+	rotate: 90
+chentu3
+	bounds: 1854, 1003, 348, 188
+	offsets: 0, 3, 373, 193
+	rotate: 90
+head
+	bounds: 485, 86, 415, 518
+	offsets: 0, 4, 415, 522
+head02
+	bounds: 1308, 1589, 457, 580
+	rotate: 90
+jianjia
+	bounds: 790, 1500, 516, 546
+	offsets: 13, 0, 529, 546
+l_foot
+	bounds: 1762, 1353, 284, 233
+l_hand
+	bounds: 901, 746, 412, 444
+	offsets: 0, 0, 462, 444
+l_hand2
+	bounds: 2, 42, 481, 481
+	offsets: 77, 63, 600, 600
+l_leg
+	bounds: 1315, 705, 301, 270
+	offsets: 0, 0, 305, 270
+movefoot
+	bounds: 1618, 698, 274, 283
+	offsets: 36, 0, 354, 338
+moveleg
+	bounds: 1315, 977, 286, 302
+	offsets: 21, 9, 354, 326
+neiku
+	bounds: 1111, 1230, 268, 160
+	rotate: 90
+r_foot
+	bounds: 1302, 424, 286, 279
+r_hand
+	bounds: 902, 384, 398, 360
+	offsets: 14, 11, 412, 371
+r_leg
+	bounds: 1603, 983, 296, 249
+	offsets: 1, 0, 298, 250
+	rotate: 90
+shangbi
+	bounds: 902, 45, 337, 359
+	rotate: 90
+tail
+	bounds: 471, 606, 573, 428
+	offsets: 68, 0, 641, 428
+	rotate: 90
+xiae
+	bounds: 790, 1192, 306, 319
+	offsets: 3, 7, 363, 329
+	rotate: 90
+xuanyun02
+	bounds: 1883, 109, 129, 113
+	rotate: 90
+yaodai
+	bounds: 1315, 1281, 442, 178
+zhuangshi
+	bounds: 1590, 474, 241, 222
+
+BOSSlong_shui_2.png
+	size: 362, 362
+	filter: Linear, Linear
+	pma: true
+Effects/Vertigo/Vertigo2
+	bounds: 246, 92, 268, 114
+	offsets: 58, 15, 359, 142
+	rotate: 90
+chentu4
+	bounds: 2, 211, 242, 149
+	offsets: 0, 1, 242, 150
+shanguang
+	bounds: 2, 30, 178, 179

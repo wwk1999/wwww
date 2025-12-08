@@ -491,6 +491,18 @@ public class Entrance : MonoBehaviour
         }
         
 
+        if (LevelInfoConfig.CurrentGameLevel == 17 || LevelInfoConfig.CurrentGameLevel == 18 ||
+            LevelInfoConfig.CurrentGameLevel == 19|| LevelInfoConfig.CurrentGameLevel == 20)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                var XueQiE =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level5/XueQiE").GetComponent<XueQiE>(), GameController.S.transform);
+                XueQiE.gameObject.SetActive(false);
+                GameController.S.XueQiEQueue.Enqueue(XueQiE.GetComponent<XueQiE>());
+            }
+        }
+        
         
 
         //精英怪队列
@@ -555,6 +567,20 @@ public class Entrance : MonoBehaviour
                 shamoElite.gameObject.SetActive(false);
                 GameController.S.ShaMoEliteQueue.Enqueue(shamoElite
                     .GetComponent<ShaMoElite>());
+            }
+
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 19 || LevelInfoConfig.CurrentGameLevel == 20)
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                var YingShu =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/Level5/YingShu")
+                            .GetComponent<YingShu>(), GameController.S.transform);
+                YingShu.gameObject.SetActive(false);
+                GameController.S.YingShuQueue.Enqueue(YingShu.GetComponent<YingShu>());
             }
 
         }

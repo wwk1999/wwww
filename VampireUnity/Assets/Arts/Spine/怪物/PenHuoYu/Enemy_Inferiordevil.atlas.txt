@@ -1,0 +1,181 @@
+Enemy_Inferiordevil.png
+	size: 1715, 1715
+	filter: Linear, Linear
+	pma: true
+Vertigo/Vertigo1
+	bounds: 1026, 829, 283, 119
+	offsets: 43, 16, 359, 142
+Vertigo/Vertigo2
+	bounds: 1311, 815, 268, 113
+	offsets: 58, 16, 359, 142
+Vertigo/Vertigo3
+	bounds: 998, 716, 280, 111
+	offsets: 58, 15, 359, 142
+Vertigo/Vertigo4
+	bounds: 942, 581, 268, 133
+	offsets: 58, 3, 359, 142
+beida
+	bounds: 1250, 1410, 83, 62
+	offsets: 0, 0, 83, 63
+beiqi
+	bounds: 2, 36, 267, 57
+bozi
+	bounds: 1130, 83, 108, 130
+	offsets: 3, 0, 111, 130
+cehuashayebudong
+	bounds: 2, 678, 618, 447
+danke
+	bounds: 1531, 696, 117, 117
+datui_l
+	bounds: 617, 382, 227, 204
+datui_r
+	bounds: 846, 392, 195, 187
+dudou
+	bounds: 1212, 574, 238, 120
+erduo_r
+	bounds: 1397, 401, 163, 171
+erhuan_l_d
+	bounds: 1428, 45, 69, 108
+	rotate: 90
+erhuan_l_u
+	bounds: 493, 230, 73, 115
+	rotate: 90
+erhuan_r_d
+	bounds: 1428, 116, 106, 109
+erhuan_r_u
+	bounds: 1650, 1135, 60, 107
+jiandai_l
+	bounds: 622, 861, 174, 402
+	rotate: 90
+jiandai_r
+	bounds: 622, 721, 138, 374
+	rotate: 90
+jiao_l
+	bounds: 484, 82, 146, 131
+	rotate: 90
+jiao_r
+	bounds: 846, 88, 149, 131
+koushui
+	bounds: 1026, 984, 30, 51
+kudang
+	bounds: 1452, 575, 161, 119
+lian
+	bounds: 628, 1387, 620, 326
+lingzi_d
+	bounds: 1599, 1498, 215, 101
+	offsets: 2, 1, 217, 102
+	rotate: 90
+lingzi_u
+	bounds: 1280, 696, 249, 117
+	offsets: 0, 0, 249, 118
+muzhi_l
+	bounds: 951, 2, 102, 79
+muzhi_r
+	bounds: 1536, 136, 107, 96
+	offsets: 1, 0, 108, 96
+ps/s_00000
+	bounds: 271, 46, 209, 47
+	offsets: 286, 41, 512, 156
+ps/s_00002
+	bounds: 2, 531, 487, 145
+	offsets: 11, 3, 512, 156
+ps/s_00003
+	bounds: 2, 95, 480, 142
+	offsets: 15, 5, 512, 156
+ps/s_00004
+	bounds: 2, 383, 486, 146
+	offsets: 9, 4, 512, 156
+ps/s_00005
+	bounds: 2, 239, 489, 142
+	offsets: 6, 8, 512, 156
+ps/s_00007
+	bounds: 628, 1037, 479, 142
+	offsets: 16, 5, 512, 156
+ps/s_00009
+	bounds: 622, 588, 318, 131
+	offsets: 6, 17, 512, 156
+ps/s_00010
+	bounds: 1608, 1244, 252, 97
+	offsets: 26, 31, 512, 156
+	rotate: 90
+qugan
+	bounds: 1109, 950, 229, 242
+	rotate: 90
+shetou
+	bounds: 617, 2, 101, 124
+shou_r
+	bounds: 1351, 1184, 288, 255
+	rotate: 90
+shoubi_l
+	bounds: 1250, 1474, 239, 347
+	rotate: 90
+sn_zxb_texiao_026
+	bounds: 1353, 930, 252, 253
+	offsets: 3, 1, 256, 256
+	rotate: 90
+sy/s0001
+	bounds: 1043, 402, 177, 165
+	offsets: 0, 4, 200, 200
+	rotate: 90
+sy/s0002
+	bounds: 1024, 215, 166, 175
+	offsets: 12, 7, 200, 200
+sy/s0003
+	bounds: 1210, 404, 168, 185
+	offsets: 13, 6, 200, 200
+	rotate: 90
+sy/s0004
+	bounds: 846, 221, 176, 169
+	offsets: 9, 7, 200, 200
+sy/s0005
+	bounds: 1562, 401, 150, 172
+	offsets: 31, 9, 200, 200
+sy/s0006
+	bounds: 1192, 225, 162, 175
+	offsets: 15, 5, 200, 200
+sy/s0007
+	bounds: 1529, 234, 175, 165
+	offsets: 2, 5, 200, 200
+sy/s0008
+	bounds: 1356, 227, 171, 172
+	offsets: 0, 4, 200, 200
+tiedudou
+	bounds: 617, 270, 202, 110
+toukui
+	bounds: 2, 1127, 624, 586
+xiaotui_l
+	bounds: 617, 128, 155, 140
+xiaotui_r
+	bounds: 997, 101, 131, 112
+	offsets: 0, 0, 131, 116
+xiongqi
+	bounds: 774, 120, 148, 70
+	rotate: 90
+xuanyun
+	bounds: 1645, 163, 68, 69
+yanjing
+	bounds: 867, 2, 84, 82
+	rotate: 90
+yushange
+	bounds: 491, 477, 199, 124
+	rotate: 90
+yushange_d
+	bounds: 1240, 85, 138, 96
+	rotate: 90
+yuti
+	bounds: 628, 1181, 721, 204
+yuxiae
+	bounds: 493, 305, 170, 122
+	rotate: 90
+yuyan_1
+	bounds: 271, 2, 59, 42
+yuyan_2
+	bounds: 997, 83, 22, 16
+zui_1
+	bounds: 1338, 77, 146, 88
+	rotate: 90
+zui_2
+	bounds: 1608, 1018, 224, 40
+	rotate: 90
+zui_3
+	bounds: 720, 2, 145, 79

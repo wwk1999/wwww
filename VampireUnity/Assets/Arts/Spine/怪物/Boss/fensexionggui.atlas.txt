@@ -1,0 +1,265 @@
+fensexionggui.png
+	size: 2048, 2048
+	filter: Linear, Linear
+	pma: true
+3d/1d_00000
+	bounds: 369, 658, 182, 203
+	offsets: 0, 53, 256, 256
+3d/1d_00001
+	bounds: 1716, 344, 247, 226
+	offsets: 9, 30, 256, 256
+	rotate: 90
+3d/1d_00002
+	bounds: 1711, 104, 239, 238
+	offsets: 17, 18, 256, 256
+3d/1d_00003
+	bounds: 1227, 48, 213, 222
+	offsets: 39, 29, 256, 256
+	rotate: 90
+Vertigo/Vertigo_1_10
+	bounds: 1062, 1326, 503, 211
+	offsets: 76, 28, 637, 252
+Vertigo/Vertigo_1_11
+	bounds: 982, 683, 476, 201
+	offsets: 103, 27, 637, 252
+Vertigo/Vertigo_1_12
+	bounds: 923, 1126, 496, 198
+	offsets: 103, 26, 637, 252
+Vertigo/Vertigo_1_13
+	bounds: 982, 886, 476, 238
+	offsets: 103, 4, 637, 252
+atk/d1_00001
+	bounds: 1944, 548, 102, 102
+	offsets: 7, 0, 127, 105
+atk/d1_00002
+	bounds: 1952, 118, 64, 92
+	offsets: 5, 0, 127, 105
+baoji/baoji_00000
+	bounds: 1451, 55, 228, 50
+	offsets: 4, 0, 232, 50
+bd/bd_00001
+	bounds: 1935, 18, 78, 84
+	offsets: 12, 6, 95, 95
+bd/bd_00002
+	bounds: 1952, 305, 75, 92
+	offsets: 8, 1, 95, 95
+bd/bd_00003
+	bounds: 1952, 212, 70, 91
+	offsets: 7, 1, 95, 95
+cj/cj_00001
+	bounds: 1567, 1247, 272, 256
+	offsets: 7, 0, 280, 256
+cj/cj_00003
+	bounds: 1458, 350, 241, 256
+	offsets: 7, 0, 280, 256
+	rotate: 90
+cj/cj_00005
+	bounds: 982, 425, 243, 256
+	offsets: 8, 0, 280, 256
+cj/cj_00007
+	bounds: 633, 80, 262, 255
+	offsets: 7, 0, 280, 256
+	rotate: 90
+dian1/juqi_00000
+	bounds: 614, 344, 268, 267
+	offsets: 1, 1, 270, 268
+	rotate: 90
+dx/bdd_00000
+	bounds: 1458, 107, 241, 251
+	offsets: 9, 0, 256, 256
+	rotate: 90
+dx/bdd_00001
+	bounds: 982, 168, 243, 255
+	offsets: 13, 0, 256, 256
+dx/bdd_00002
+	bounds: 1598, 1505, 235, 256
+	offsets: 21, 0, 256, 256
+huan/huan_00000
+	bounds: 1835, 1506, 190, 190
+image/chentu1
+	bounds: 1894, 947, 309, 106
+	rotate: 90
+image/chentu2
+	bounds: 1751, 896, 349, 141
+	rotate: 90
+image/chentu3
+	bounds: 1837, 1698, 348, 188
+	offsets: 0, 3, 373, 193
+	rotate: 90
+image/chentu4
+	bounds: 1880, 652, 242, 149
+	offsets: 0, 1, 242, 150
+	rotate: 90
+image/chuzi
+	bounds: 1062, 1763, 773, 283
+	offsets: 3, 2, 797, 288
+image/chuzi_bing
+	bounds: 345, 152, 490, 55
+	rotate: 90
+image/chuzi_tou
+	bounds: 1460, 593, 347, 285
+image/death
+	bounds: 1157, 82, 84, 68
+	offsets: 6, 14, 92, 91
+	rotate: 90
+image/hongying
+	bounds: 553, 614, 280, 219
+	offsets: 0, 0, 280, 224
+image/hurt
+	bounds: 345, 109, 50, 41
+	offsets: 14, 29, 92, 91
+image/lianchui
+	bounds: 1062, 1539, 534, 222
+image/lianchui3
+	bounds: 369, 863, 518, 183
+	offsets: 1, 4, 522, 189
+	rotate: 90
+image/lianchui_bing
+	bounds: 1809, 600, 294, 69
+	offsets: 1, 2, 300, 72
+	rotate: 90
+image/lianchui_g
+	bounds: 402, 199, 392, 210
+	offsets: 0, 12, 534, 222
+	rotate: 90
+image/lianchui_lian
+	bounds: 883, 368, 97, 277
+image/lianchui_shen
+	bounds: 633, 18, 242, 60
+	offsets: 13, 4, 259, 66
+image/lianchui_yun
+	bounds: 2, 41, 601, 341
+	rotate: 90
+image/pijian
+	bounds: 2, 644, 737, 365
+	rotate: 90
+image/qugan
+	bounds: 516, 1495, 544, 551
+image/shanguang
+	bounds: 877, 2, 74, 74
+	offsets: 5, 11, 92, 91
+image/tou
+	bounds: 2, 1383, 512, 663
+	offsets: 0, 0, 515, 666
+image/xuanyun
+	bounds: 1157, 6, 74, 68
+	offsets: 6, 14, 92, 91
+	rotate: 90
+image/xuanzhuan
+	bounds: 1880, 593, 57, 53
+	offsets: 10, 18, 92, 91
+	rotate: 90
+image/yaofeng
+	bounds: 554, 835, 426, 273
+image/youbi
+	bounds: 1460, 880, 289, 365
+	offsets: 3, 1, 295, 366
+image/youjiao
+	bounds: 1944, 399, 147, 92
+	offsets: 1, 3, 149, 106
+	rotate: 90
+image/youshou2
+	bounds: 402, 2, 195, 229
+	offsets: 0, 4, 200, 233
+	rotate: 90
+image/youshouzhi
+	bounds: 835, 647, 186, 145
+	offsets: 1, 1, 187, 146
+	rotate: 90
+image/youwan
+	bounds: 1227, 263, 229, 170
+	offsets: 3, 0, 235, 172
+image/zuobi
+	bounds: 554, 1110, 367, 383
+	offsets: 4, 5, 373, 388
+image/zuokua
+	bounds: 923, 1341, 137, 152
+	offsets: 0, 3, 138, 156
+image/zuoshou2
+	bounds: 1841, 1258, 202, 246
+	offsets: 4, 3, 212, 249
+image/zuowan
+	bounds: 1227, 435, 246, 229
+	offsets: 3, 0, 252, 231
+	rotate: 90
+lianchui/lianchui_q_00000
+	bounds: 1829, 13, 89, 104
+	offsets: 0, 0, 89, 111
+	rotate: 90
+qizizha/qizizha_00004
+	bounds: 972, 23, 143, 183
+	offsets: 57, 68, 256, 256
+	rotate: 90
+qizizha/qizizha_00006
+	bounds: 890, 225, 141, 86
+	offsets: 93, 9, 256, 256
+	rotate: 90
+qizizha/qizizha_00007
+	bounds: 890, 78, 145, 80
+	offsets: 94, 15, 256, 256
+	rotate: 90
+qizizha/qizizha_00008
+	bounds: 1681, 37, 146, 65
+	offsets: 96, 21, 256, 256
+qizizha/qizizha_00009
+	bounds: 1421, 1266, 136, 58
+	offsets: 112, 17, 256, 256
+
+fensexionggui_2.png
+	size: 673, 673
+	filter: Linear, Linear
+	pma: true
+atk/d1_00000
+	bounds: 545, 421, 126, 105
+	offsets: 1, 0, 127, 105
+bd/bd_00000
+	bounds: 533, 233, 70, 73
+	offsets: 25, 11, 95, 95
+	rotate: 90
+chuzi_tou_00000
+	bounds: 371, 528, 174, 143
+dx/bdd_00003
+	bounds: 2, 326, 178, 175
+	offsets: 51, 23, 256, 256
+image/lianchui_q
+	bounds: 199, 503, 170, 168
+	offsets: 5, 2, 178, 222
+image/youkua
+	bounds: 547, 539, 120, 132
+	offsets: 1, 3, 121, 136
+image/yousou
+	bounds: 182, 336, 171, 165
+	offsets: 16, 3, 189, 171
+image/youtui
+	bounds: 349, 76, 159, 154
+	offsets: 3, 2, 164, 158
+image/zuojiao
+	bounds: 2, 13, 170, 144
+	offsets: 2, 2, 174, 147
+image/zuojiao2
+	bounds: 371, 384, 172, 142
+	offsets: 0, 1, 178, 148
+image/zuoshou
+	bounds: 2, 503, 195, 168
+	offsets: 2, 2, 203, 170
+image/zuotui
+	bounds: 2, 159, 172, 165
+	offsets: 1, 2, 175, 171
+qizizha/qizizha_00000
+	bounds: 545, 305, 114, 125
+	offsets: 22, 48, 256, 256
+	rotate: 90
+qizizha/qizizha_00001
+	bounds: 510, 85, 145, 144
+	offsets: 38, 60, 256, 256
+	rotate: 90
+qizizha/qizizha_00002
+	bounds: 371, 232, 160, 150
+	offsets: 46, 74, 256, 256
+qizizha/qizizha_00003
+	bounds: 176, 59, 162, 146
+	offsets: 50, 89, 256, 256
+qizizha/qizizha_00005
+	bounds: 182, 207, 127, 165
+	offsets: 81, 32, 256, 256
+	rotate: 90

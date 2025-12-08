@@ -79,7 +79,6 @@ public class HuangShu : MonsterBase
         AddMonsterEquip();
         AddMonsterSourceStone();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
-
     }
     
     private void OnDestroy()
