@@ -106,9 +106,9 @@ public class GlobalPlayerAttribute
    
    //基础属性
    public static int TotalMaxHp => Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp)*MaxHpPercent);
-   public static int TotalDamage=> Mathf.RoundToInt((PlayerDamage + EquipDamage)*MaxDefensePercent);
+   public static int TotalDamage=> Mathf.RoundToInt((PlayerDamage + EquipDamage)*DamageAddPercent);
    public static int TotalCRIT => PlayerCRIT + EquipCRIT;
-   public static int TotalDefense => PlayerDefense + EquipDefense;
+   public static int TotalDefense => Mathf.RoundToInt((PlayerDefense + EquipDefense)*MaxDefensePercent);
    
    //附加词条属性
 

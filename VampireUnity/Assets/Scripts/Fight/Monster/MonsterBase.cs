@@ -614,32 +614,64 @@ public abstract class MonsterBase : MonoBehaviour
     }
 
     public abstract void Die();
-  
-    public virtual void Hurt(int damage,bool isCrit)
+
+    public void ShowHurtText(int damage,bool isCrit)
+    {
+        MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
+        monsterHpGameObject.isCrit=isCrit;
+        if (isCrit)
+        {
+            monsterHpGameObject.critText.text = "-" + damage;
+        }
+        else
+        {
+            monsterHpGameObject.normalText.text = "-" + damage;
+        }
+        monsterHpGameObject.transform.position = transform.position;
+        float offsetX=Random.Range(-0.3f,0.3f);
+        float offsetY=Random.Range(-0.2f,0.2f);
+        monsterHpGameObject.transform.position = new Vector3(transform.position.x + 0.1f+offsetX,
+            transform.position.y + 0.5f+offsetY, transform.position.z);
+        monsterHpGameObject.gameObject.SetActive(true);
+    }
+
+    public int GetFinalDamage(int baseDamage,bool isCrit)
+    {
+        float finalDamage = baseDamage;
+        var random = Random.Range(0.96f, 1.04f);
+        finalDamage *= random;
+        var monsterDenfense = Defense * (1 - GlobalPlayerAttribute.Penetrate);
+        finalDamage-=monsterDenfense;
+        if (isCrit)
+        {
+            finalDamage *= (2+GlobalPlayerAttribute.CRITDamage);
+        }
+
+        if (MonsterType == MonsterType.Boss)
+        {
+            finalDamage *= (1 + GlobalPlayerAttribute.DamageAddForBoss);
+        }
+        else
+        {
+            finalDamage *= (1 + GlobalPlayerAttribute.DamageAddForNormal);
+        }
+
+        return Mathf.RoundToInt(finalDamage);
+    }
+    public virtual void Hurt(int baseDamage,bool isCrit)
     {
         if (IsDead) return;
+        if(MonsterState== State.Die) return;
+        var finalDamage = GetFinalDamage(baseDamage,isCrit);
+        GlobalPlayerAttribute.CurrentHp += Mathf.RoundToInt(GlobalPlayerAttribute.BloodSuck * finalDamage);
+        ShowHurtText(finalDamage, isCrit);
         if (MonsterType != MonsterType.Boss)
         {
             if (hpSlider.gameObject.activeSelf == false)
             {
                 hpSlider.gameObject.SetActive(true);
             }
-            MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
-            monsterHpGameObject.isCrit=isCrit;
-            if (isCrit)
-            {
-                monsterHpGameObject.critText.text = "-" + damage;
-            }
-            else
-            {
-                monsterHpGameObject.normalText.text = "-" + damage;
-            }
-            monsterHpGameObject.transform.position = transform.position;
-            float offsetX=Random.Range(-0.3f,0.3f);
-            float offsetY=Random.Range(-0.2f,0.2f);
-            monsterHpGameObject.transform.position = new Vector3(transform.position.x + 0.1f+offsetX,
-                transform.position.y + 0.5f+offsetY, transform.position.z);
-            monsterHpGameObject.gameObject.SetActive(true);
+
             if (monsterSkeletonAnimation != null)
             { 
                 Spine.Animation walkAnimation = skeletonData.FindAnimation("hit");
@@ -649,7 +681,6 @@ public abstract class MonsterBase : MonoBehaviour
                 }
                 else
                 {
-                    
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, "beatback", false);
                 }
             }
@@ -658,7 +689,7 @@ public abstract class MonsterBase : MonoBehaviour
                 isHit = true;
                 monsterAnimator.Play("beatback");
             }
-            CurrentHp -= damage;
+            CurrentHp -= finalDamage;
             //设置血条
             hpSlider.value = (float)CurrentHp / MaxHp;
             if (CurrentHp <= 0 && !IsDead)
@@ -688,7 +719,7 @@ public abstract class MonsterBase : MonoBehaviour
                         monsterSkeletonAnimation.AnimationState.SetAnimation(0, "injured", false);
                     }
                 }                
-                CurrentHp -= damage;
+                CurrentHp -= finalDamage;
                 hpSlider.value = (float)CurrentHp / MaxHp;
                 if (CurrentHp <= 0 && !IsDead)
                 {
@@ -697,7 +728,7 @@ public abstract class MonsterBase : MonoBehaviour
                 }
             }else if (MonsterState == State.Skill1 || MonsterState == State.Skill2 || MonsterState == State.Skill3)
             {
-                CurrentHp -= damage;
+                CurrentHp -= finalDamage;
                 hpSlider.value = (float)CurrentHp / MaxHp;
                 if (CurrentHp <= 0 && !IsDead)
                 {
