@@ -10,7 +10,7 @@ public class HuoShanSkillTrigger : MonoBehaviour
         float distance = Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
         if (distance < 1f)
         {
-            GameController.S.gamePlayer.PlayerHurt(10);
+            GameController.S.gamePlayer.PlayerHurt(10,true);
             Destroy(gameObject);
         }
     }

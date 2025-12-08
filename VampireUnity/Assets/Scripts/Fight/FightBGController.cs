@@ -50,15 +50,35 @@ public class FightBGController : XSingleton<FightBGController>
 
 
     private float RefreshEx = 0.5f;
-    private float currentTime = 0;
+    private float currentExTime = 0;
+    private float RefreshHp = 0.1f;
+    private float currentHpTime = 0;
+
+    private float ReplyHpTime = 10f;
+    private float currentReplyHpTime = 0;
     
 
     private void Update()
     {
-        currentTime += Time.deltaTime;
-        if (currentTime > RefreshEx)
+        currentHpTime+=Time.deltaTime;
+        currentExTime += Time.deltaTime;
+        currentReplyHpTime+=Time.deltaTime;
+        if (currentReplyHpTime > ReplyHpTime)
         {
-            currentTime = 0;
+            float replyHp = GlobalPlayerAttribute.TotalMaxHp * GlobalPlayerAttribute.ReplyHpPercent;
+            GlobalPlayerAttribute.CurrentHp += Mathf.RoundToInt(replyHp);
+            GlobalPlayerAttribute.CurrentHp=Math.Min(GlobalPlayerAttribute.TotalMaxHp,GlobalPlayerAttribute.CurrentHp);
+        }
+        
+        if (currentHpTime > RefreshHp)
+        {
+            currentHpTime = 0;
+            SetHp();
+        }
+        
+        if (currentExTime > RefreshEx)
+        {
+            currentExTime = 0;
             if(GlobalPlayerAttribute.Exp>GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level])
             {
                 //升级

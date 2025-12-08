@@ -135,12 +135,17 @@ public abstract class MonsterBase : MonoBehaviour
         }
     }
 
+    private float hurtTime = 0.75f;
+    private float currentHurtTime = 0;
+
     public void Update()
     {
+        currentHurtTime += Time.deltaTime;
         float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
-        if (dis < GameController.S.gamePlayer.size + size)
+        if (dis < GameController.S.gamePlayer.size + size&&currentHurtTime>hurtTime)
         {
-            GameController.S.gamePlayer.PlayerHurt(Attack);
+            currentHurtTime = 0;
+            GameController.S.gamePlayer.PlayerHurt(Attack,MonsterType==MonsterType.Boss);
         }
 
         if (dis < 5f)
@@ -517,7 +522,9 @@ public abstract class MonsterBase : MonoBehaviour
     {
         
         //附加属性
-        int replyHp = Mathf.RoundToInt(GlobalPlayerAttribute.TotalMaxHp * GlobalPlayerAttribute.KillReplyHpPercent);        
+        int replyHp = Mathf.RoundToInt(GlobalPlayerAttribute.TotalMaxHp * GlobalPlayerAttribute.KillReplyHpPercent);  
+        GlobalPlayerAttribute.CurrentHp+= replyHp;
+        GlobalPlayerAttribute.CurrentHp=Math.Min(GlobalPlayerAttribute.CurrentHp,GlobalPlayerAttribute.TotalMaxHp);
         
         
         //怪物数量排行榜

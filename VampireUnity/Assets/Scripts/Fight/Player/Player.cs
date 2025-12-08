@@ -225,10 +225,19 @@ public class Player : MonoBehaviour
     /// 主角受伤
     /// </summary>
     /// <param name="damage"></param>
-    public void PlayerHurt(int damage)
+    public void PlayerHurt(int damage,bool isBoss)
     {
-        GlobalPlayerAttribute.CurrentHp -= damage;
-        FightBGController.S.SetHp();
+        float realDamage = 0;
+        if (isBoss)
+        {
+            realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForBoss);
+        }
+        else
+        {
+            realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForNormal);
+        }
+        realDamage *= (1 - GlobalPlayerAttribute.DamageReductionPercent);
+        GlobalPlayerAttribute.CurrentHp -= Mathf.RoundToInt(realDamage);
         if (IsWuDi)
         {
             return;

@@ -13,7 +13,7 @@ public class HuoShanSkill3 : MonoBehaviour
       float distance = Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
       if(distance<7f)
       {
-         GameController.S.gamePlayer.PlayerHurt(10);
+         GameController.S.gamePlayer.PlayerHurt(10,true);
       }
       StartCoroutine(WaitAndDestroy());
    }

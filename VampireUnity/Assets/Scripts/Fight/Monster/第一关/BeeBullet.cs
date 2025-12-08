@@ -15,7 +15,7 @@ public class BeeBullet : MonoBehaviour
         {
             ParticleSystem beebullethit=Instantiate(beeBulletHit.gameObject, GameController.S.gamePlayer.transform.position, Quaternion.identity).transform.Find("Hit 1").GetComponent<ParticleSystem>();
             beebullethit.Play();
-            GameController.S.gamePlayer.PlayerHurt(0);
+            GameController.S.gamePlayer.PlayerHurt(0,false);
         }
 
         if (other.CompareTag("BG"))

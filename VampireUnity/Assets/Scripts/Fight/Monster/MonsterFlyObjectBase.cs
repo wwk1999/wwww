@@ -40,7 +40,7 @@ public class MonsterFlyObjectBase : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameController.S.gamePlayer.PlayerHurt(_damage);
+            GameController.S.gamePlayer.PlayerHurt(_damage,false);
         }
     }
 }

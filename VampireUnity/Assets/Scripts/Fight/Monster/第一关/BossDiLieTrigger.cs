@@ -6,7 +6,7 @@ public class BossDiLieTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") )
         {
-            GameController.S.gamePlayer.PlayerHurt(FightBGController.S.TreeManBoss.Attack);
+            GameController.S.gamePlayer.PlayerHurt(FightBGController.S.TreeManBoss.Attack,true);
         }
     }
 }

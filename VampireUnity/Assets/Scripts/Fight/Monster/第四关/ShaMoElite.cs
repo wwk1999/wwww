@@ -92,7 +92,7 @@ public class ShaMoElite : MonsterBase
         {
             if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.8f)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack);
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
     }
@@ -186,7 +186,7 @@ public class ShaMoElite : MonsterBase
     {
         if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans1.position) < 0.6f)
         {
-            GameController.S.gamePlayer.PlayerHurt(Attack);
+            GameController.S.gamePlayer.PlayerHurt(Attack,false);
         }
     }
     
@@ -194,7 +194,7 @@ public class ShaMoElite : MonsterBase
     {
         if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans2.position) < 0.6f)
         {
-            GameController.S.gamePlayer.PlayerHurt(Attack);
+            GameController.S.gamePlayer.PlayerHurt(Attack,false);
         }
     }
     
@@ -202,7 +202,7 @@ public class ShaMoElite : MonsterBase
     {
         if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans3.position) < 0.6f)
         {
-            GameController.S.gamePlayer.PlayerHurt(Attack);
+            GameController.S.gamePlayer.PlayerHurt(Attack,false);
         }
     }
 }

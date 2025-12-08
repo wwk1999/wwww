@@ -88,7 +88,7 @@ public class Huangzhu : MonsterBase
         {
             if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.4f)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack);
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
     }

@@ -34,7 +34,7 @@ public class HuoShanSkill2 : MonoBehaviour
         float distance = Vector2.Distance(pos, GameController.S.gamePlayer.transform.position);
         if (distance < 0.4f)
         {
-            GameController.S.gamePlayer.PlayerHurt(10);
+            GameController.S.gamePlayer.PlayerHurt(10,true);
         }
     }
 }

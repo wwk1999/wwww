@@ -16,7 +16,7 @@ public class FireTrigger : MonoBehaviour
         if (other.CompareTag("Player") && _damegeCurrentTime >= _damegeTime)
         {
             _damegeCurrentTime = 0;
-            GameController.S.gamePlayer.PlayerHurt(FightBGController.S.TreeManBoss.Attack);
+            GameController.S.gamePlayer.PlayerHurt(FightBGController.S.TreeManBoss.Attack,true);
         }
     }
 }

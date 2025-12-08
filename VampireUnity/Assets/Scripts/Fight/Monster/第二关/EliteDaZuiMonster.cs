@@ -138,11 +138,11 @@ public class EliteDaZuiMonster : MonsterBase
 
         if (Fire.gameObject.activeSelf && IsTriggerLeft&&!Dir)
         {
-            GameController.S.gamePlayer.PlayerHurt(10);
+            GameController.S.gamePlayer.PlayerHurt(10,false);
         }
         if (Fire.gameObject.activeSelf && IsTriggerRight&&Dir)
         {
-            GameController.S.gamePlayer.PlayerHurt(10);
+            GameController.S.gamePlayer.PlayerHurt(10,false);
         }
     }
 }
