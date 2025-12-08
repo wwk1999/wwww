@@ -9,21 +9,26 @@ using UnityEngine.UI;
 
 public class FightBGController : XSingleton<FightBGController>
 {
-    public Joystick joystick;//虚拟移动杆
-    public Button normalAttackButton;//普通攻击按钮
-    public Button FightStopButton;//战斗暂停按钮
-    public Button dashButton;
-    public Button rageButton;
-    public Button shieldButton;
-    public Button iceArrowButton;
-    public Button iceExButton;
-    public Button iceBallButton;
+    [NonSerialized]public Joystick joystick;//虚拟移动杆
+    [NonSerialized]public Button normalAttackButton;//普通攻击按钮
+    [NonSerialized]public Button FightStopButton;//战斗暂停按钮
+    [NonSerialized]public Button dashButton;
+    [NonSerialized]public Button rageButton;
+    [NonSerialized]public Button shieldButton;
+    [NonSerialized]public Button iceArrowButton;
+    [NonSerialized]public Button iceExButton;
+    [NonSerialized]public Button iceBallButton;
     [NonSerialized] public Image IceExYellowCd;
     [NonSerialized] public Image IceBallYellowCd;
     [NonSerialized] public Image IceArrowYellowCd;
+    [NonSerialized]public Slider playerHpSlider;
+    [NonSerialized]public Slider playerExSlider;
+    [NonSerialized]public Text playerLevelText;
+
+
     
     
-    [NonSerialized]public Button SaveButton;
+    
     [NonSerialized]public Button WeaponButton;
     [NonSerialized]public GameObject CircleAttack;
     [NonSerialized]public TreeManBoss TreeManBoss;
@@ -42,8 +47,49 @@ public class FightBGController : XSingleton<FightBGController>
 
     [NonSerialized] public bool HaveCircleAttack = false;
     [NonSerialized] public Slider BossEnergySlider;
+
+
+    private float RefreshEx = 0.5f;
+    private float currentTime = 0;
     
-    
+
+    private void Update()
+    {
+        currentTime += Time.deltaTime;
+        if (currentTime > RefreshEx)
+        {
+            currentTime = 0;
+            if(GlobalPlayerAttribute.Exp>GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level])
+            {
+                //升级
+                ObserverModuleManager.S.SendEvent(ConstKeys.LevelUpAnim);
+                GameController.S.gamePlayer.LevelUp.SetActive(true);
+                GameController.S.gamePlayer.LevelUpParticle.Play();
+                GlobalPlayerAttribute.Level++;
+                playerLevelText.text =  GlobalPlayerAttribute.Level.ToString();
+                GlobalPlayerAttribute.Exp=GlobalPlayerAttribute.Exp-GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level-1];
+                // PlayerInfoController.S.UpdatePlayerInfo( GlobalPlayerAttribute.Level, GlobalPlayerAttribute.Exp, GlobalPlayerAttribute.GameLevel, GlobalPlayerAttribute.BloodEnergy);
+            }
+            playerExSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
+            playerExSlider.value=GlobalPlayerAttribute.Exp ;
+        }
+    }
+
+    public void SetHp()
+    {
+        if (GlobalPlayerAttribute.CurrentHp < 0)
+        {
+            return;
+        }
+
+        if (GlobalPlayerAttribute.CurrentHp > GlobalPlayerAttribute.TotalMaxHp)
+        {
+            GlobalPlayerAttribute.CurrentHp=GlobalPlayerAttribute.TotalMaxHp;
+        }
+        playerHpSlider.maxValue = GlobalPlayerAttribute.TotalMaxHp;
+        playerHpSlider.value = GlobalPlayerAttribute.CurrentHp;
+    }
+
     /// <summary>
     /// 计算物体在指定时间下的落地点位置
     /// </summary>

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class FightBg : MonoBehaviour
 {
-    public Button saveButton;
     public Button weaponButton;
     public Joystick joystick;
     public Button normalAttackButton;
@@ -24,6 +23,11 @@ public class FightBg : MonoBehaviour
     public Image iceArrowYellowCd;
     public Slider bossEnergySlider;
     public Text fightTimeText;
+    public Slider playerHpSlider;
+    public Slider playerExSlider;
+    public Text playerLevelText;
+    
+    
     
     public UIParticle iceArrowUIFX;
     public UIParticle iceBallUIFX;

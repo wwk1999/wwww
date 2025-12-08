@@ -479,20 +479,6 @@ public abstract class MonsterBase : MonoBehaviour
     public void GetEx()
     {
         GlobalPlayerAttribute.Exp+= Exp;
-        if(GlobalPlayerAttribute.Exp>GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level])
-        {
-            //升级
-            ObserverModuleManager.S.SendEvent(ConstKeys.LevelUpAnim);
-            playerLevelText = GameController.S.gamePlayer.levelText;
-            GameController.S.gamePlayer.LevelUp.SetActive(true);
-            GameController.S.gamePlayer.LevelUpParticle.Play();
-            GlobalPlayerAttribute.Level++;
-            playerLevelText.text =  GlobalPlayerAttribute.Level.ToString();
-            GlobalPlayerAttribute.Exp=GlobalPlayerAttribute.Exp-GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level-1];
-           // PlayerInfoController.S.UpdatePlayerInfo( GlobalPlayerAttribute.Level, GlobalPlayerAttribute.Exp, GlobalPlayerAttribute.GameLevel, GlobalPlayerAttribute.BloodEnergy);
-        }
-        GameController.S.gamePlayer.exSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
-        GameController.S.gamePlayer.exSlider.value=GlobalPlayerAttribute.Exp ;
     }
 
     // /// <summary>

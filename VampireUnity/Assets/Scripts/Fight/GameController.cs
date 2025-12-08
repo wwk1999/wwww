@@ -400,7 +400,6 @@ public class GameController : XSingleton<GameController>
         
         
         //赋值
-        FightBGController.S.SaveButton = fightBG.GetComponent<FightBg>().saveButton;
         FightBGController.S.WeaponButton= fightBG.GetComponent<FightBg>().weaponButton;
         FightBGController.S.joystick=fightBG.GetComponent<FightBg>().joystick;
         FightBGController.S.normalAttackButton=fightBG.GetComponent<FightBg>().normalAttackButton;
@@ -415,6 +414,12 @@ public class GameController : XSingleton<GameController>
         FightBGController.S.IceBallYellowCd=fightBG.GetComponent<FightBg>().iceBallYellowCd;
         FightBGController.S.IceArrowYellowCd=fightBG.GetComponent<FightBg>().iceArrowYellowCd;
         FightBGController.S.BossEnergySlider=fightBG.GetComponent<FightBg>().bossEnergySlider;
+
+
+        FightBGController.S.playerHpSlider=fightBG.GetComponent<FightBg>().playerHpSlider;
+        FightBGController.S.playerExSlider=fightBG.GetComponent<FightBg>().playerExSlider;
+        FightBGController.S.playerLevelText=fightBG.GetComponent<FightBg>().playerLevelText;
+        
         fightTimeText = fightBG.GetComponent<FightBg>().fightTimeText;
 
         

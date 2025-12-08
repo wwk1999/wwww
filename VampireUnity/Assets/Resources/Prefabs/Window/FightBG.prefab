@@ -2594,7 +2594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29db539b9010d445183fa875210f3d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveButton: {fileID: 0}
   weaponButton: {fileID: 7151041056208853359}
   joystick: {fileID: 7686574324765050869}
   normalAttackButton: {fileID: 9129363618159768085}
@@ -2610,6 +2609,9 @@ MonoBehaviour:
   iceArrowYellowCd: {fileID: 6637046261377841659}
   bossEnergySlider: {fileID: 6052994995205057377}
   fightTimeText: {fileID: 4226642767114390220}
+  playerHpSlider: {fileID: 2127963210974705260}
+  playerExSlider: {fileID: 8140007577074999487}
+  playerLevelText: {fileID: 1319846235788720275}
   iceArrowUIFX: {fileID: 3514784399317395316}
   iceBallUIFX: {fileID: 1012867562134527119}
   iceExUIFX: {fileID: 2296651719395253261}

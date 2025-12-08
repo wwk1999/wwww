@@ -228,6 +228,7 @@ public class Player : MonoBehaviour
     public void PlayerHurt(int damage)
     {
         GlobalPlayerAttribute.CurrentHp -= damage;
+        FightBGController.S.SetHp();
         if (IsWuDi)
         {
             return;
