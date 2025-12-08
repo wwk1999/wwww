@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
 
 public class GameController : XSingleton<GameController>
 {
@@ -523,6 +524,16 @@ public class GameController : XSingleton<GameController>
             //GameController.S.HaveBoss = true;
             ObserverModuleManager.S.SendEvent(ConstKeys.BossWarning);
         }
+    }
+
+    public bool GetIsCrit()
+    {
+        var random=Random.Range(0,10000);
+        if(GlobalPlayerAttribute.TotalCRIT>=random)
+        {
+            return true;
+        }
+        return false;
     }
 
     public void ResumePlayerCamera(object[] args)

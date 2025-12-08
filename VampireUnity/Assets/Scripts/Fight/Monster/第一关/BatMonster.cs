@@ -89,9 +89,9 @@ public class BatMonster : MonsterBase
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Duration,20));
     }
     
-    public override void Hurt(int damage)
+    public override void Hurt(int damage,bool isCrit)
     {
-        base.Hurt(damage);
+        base.Hurt(damage,isCrit);
         if (!IsDead)
         {
             AudioController.S.PlayBatHit();

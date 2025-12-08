@@ -46,8 +46,9 @@ public class XuKong : MonoBehaviour
             var hit = GameController.S.XuKongPengQueue.Dequeue();
             hit.SetActive(true);
             hit.transform.position = closestPointOnOther;
-            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage);
-           // gameObject.SetActive(false);
+            bool isCrit = GameController.S.GetIsCrit();
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
+            // gameObject.SetActive(false);
         }
     }
 }

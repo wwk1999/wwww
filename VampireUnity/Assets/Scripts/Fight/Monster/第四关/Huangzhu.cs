@@ -36,12 +36,12 @@ public class Huangzhu : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 1));
     }
 
-    public override void Hurt(int damage)
+    public override void Hurt(int damage,bool isCrit)
     {
-        base.Hurt(damage);
+        base.Hurt(damage,isCrit);
         if (!IsDead)
         {
-            AudioController.S.PlaySnotHit();
+            AudioController.S.PlayBatHit();
         }
     }
     

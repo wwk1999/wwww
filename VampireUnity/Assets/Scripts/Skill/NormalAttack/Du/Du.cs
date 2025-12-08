@@ -34,7 +34,8 @@ public class Du : MonoBehaviour
         {
             var hit = GameController.S.DuPengQueue.Dequeue();
             hit.transform.position = closestPointOnOther;
-            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage);
+            bool isCrit = GameController.S.GetIsCrit();
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
             hit.SetActive(true);
             gameObject.SetActive(false);
             GameController.S.DuQueue.Enqueue(hit);

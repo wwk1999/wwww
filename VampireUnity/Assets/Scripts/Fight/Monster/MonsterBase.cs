@@ -7,6 +7,7 @@ using Spine;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 //怪物类型枚举
 public enum MonsterType
@@ -614,7 +615,7 @@ public abstract class MonsterBase : MonoBehaviour
 
     public abstract void Die();
   
-    public virtual void Hurt(int damage)
+    public virtual void Hurt(int damage,bool isCrit)
     {
         if (IsDead) return;
         if (MonsterType != MonsterType.Boss)
@@ -624,19 +625,21 @@ public abstract class MonsterBase : MonoBehaviour
                 hpSlider.gameObject.SetActive(true);
             }
             MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
-            monsterHpGameObject.gameObject.SetActive(true);
+            monsterHpGameObject.isCrit=isCrit;
+            if (isCrit)
+            {
+                monsterHpGameObject.critText.text = "-" + damage;
+            }
+            else
+            {
+                monsterHpGameObject.normalText.text = "-" + damage;
+            }
             monsterHpGameObject.transform.position = transform.position;
-            //在monsterHpGameObject子类中查找Canvas的紫累HPText
-            Text monsterHpText = monsterHpGameObject.text;
-            //设置monsterHpText的text为-damage
-            monsterHpText.text = "-" + damage.ToString();
-            //设置monsterHpGameObject的position为怪物位置
-            monsterHpGameObject.transform.position = new Vector3(transform.position.x + 0.1f,
-                transform.position.y + 0.2f, transform.position.z);
-            //设置monsterAnimator的ishuru为true
-            // monsterAnimator.SetBool("isHurt", true);
-            //重新播放Hurt动画
-            //monsterAnimator.Play("SnotMonsterHit");
+            float offsetX=Random.Range(-0.3f,0.3f);
+            float offsetY=Random.Range(-0.2f,0.2f);
+            monsterHpGameObject.transform.position = new Vector3(transform.position.x + 0.1f+offsetX,
+                transform.position.y + 0.5f+offsetY, transform.position.z);
+            monsterHpGameObject.gameObject.SetActive(true);
             if (monsterSkeletonAnimation != null)
             { 
                 Spine.Animation walkAnimation = skeletonData.FindAnimation("hit");

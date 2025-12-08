@@ -27,12 +27,12 @@ public class ChongZiMonster : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Green, 10));
     }
     
-    public override void Hurt(int damage)
+    public override void Hurt(int damage,bool isCrit)
     {
-        base.Hurt(damage);
+        base.Hurt(damage,isCrit);
         if (!IsDead)
         {
-            AudioController.S.PlaySnotHit();
+            AudioController.S.PlayBatHit();
         }
     }
     

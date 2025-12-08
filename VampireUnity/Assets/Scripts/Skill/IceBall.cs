@@ -15,7 +15,7 @@ public class IceBall : MonoBehaviour
             MonsterBase monster = other.transform.parent.GetComponent<MonsterBase>();
             if (monster != null && !monster.IsDead)
             {
-                monster.Hurt(GlobalPlayerAttribute.TotalDamage);
+                monster.Hurt(GlobalPlayerAttribute.TotalDamage,GameController.S.GetIsCrit());
             }
         }
     }

@@ -19,7 +19,8 @@ public class NormalAttack : MonoBehaviour
         if (other.gameObject.CompareTag("Monster")||other.gameObject.CompareTag("Boss"))
         {
             trail.gameObject.SetActive(false);
-            other.transform.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage);
+            bool isCrit = GameController.S.GetIsCrit();
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
             ParticleSystem ps = GetComponent<ParticleSystem>();
             //获得粒子碰撞位置
             var collisionEvents = new System.Collections.Generic.List<ParticleCollisionEvent>();

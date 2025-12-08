@@ -37,7 +37,8 @@ public class FireNormalAttack : MonoBehaviour
             var hit = GameController.S.FirePengQueue.Dequeue();
             hit.SetActive(true);
             hit.transform.position = closestPointOnOther;
-            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage);
+            bool isCrit = GameController.S.GetIsCrit();
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
             gameObject.SetActive(false);
             GameController.S.FireQueue.Enqueue(gameObject);
         }

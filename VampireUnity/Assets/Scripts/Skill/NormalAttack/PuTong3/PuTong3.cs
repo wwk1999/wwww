@@ -37,7 +37,8 @@ public class PuTong3 : MonoBehaviour
             var hit = GameController.S.PuTong3PengQueue.Dequeue();
             hit.SetActive(true);
             hit.transform.position = closestPointOnOther;
-            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage);
+            bool isCrit = GameController.S.GetIsCrit();
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
             gameObject.SetActive(false);
             GameController.S.PuTong3Queue.Enqueue(gameObject);
         }

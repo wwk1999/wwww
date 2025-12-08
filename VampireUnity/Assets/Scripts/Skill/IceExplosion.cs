@@ -6,7 +6,9 @@ public class IceExplosion : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Monster"))
         {
-            other.transform.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage);
+            bool isCrit = GameController.S.GetIsCrit();
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
+            
         }
     }
 }

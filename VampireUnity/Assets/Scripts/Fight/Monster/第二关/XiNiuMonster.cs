@@ -47,12 +47,12 @@ public class XiNiuMonster : MonsterBase
         Invoke(nameof(RandomDelayDie),randomDelay);
     }
     
-    public override void Hurt(int damage)
+    public override void Hurt(int damage,bool isCrit)
     {
-        base.Hurt(damage);
+        base.Hurt(damage,isCrit);
         if (!IsDead)
         {
-            AudioController.S.PlaySnotHit();
+            AudioController.S.PlayBatHit();
         }
     }
     
