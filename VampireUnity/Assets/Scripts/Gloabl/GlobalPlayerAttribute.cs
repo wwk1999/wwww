@@ -5,7 +5,7 @@ public class GlobalPlayerAttribute
 {
    public static WeaponType CurrentWeaponType= WeaponType.Primary; //当前武器类型
    public static bool IsGame = false;
-   public static int CurrentHp=100;
+   public static int CurrentHp=0;
 
    public static int BloodEnergy
    {

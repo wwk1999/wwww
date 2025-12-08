@@ -17,35 +17,20 @@ public class SpiderMonster : MonsterBase
         AddMonsterSourceStone();
     }
 
-    private IEnumerator RandomDelayDie(int delay)
+    private void RandomDelayDie()
     {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
-        AudioController.S.PlaySpiderDie();
-        // gameObject.SetActive(false);
-        // GameController.S.SpiderMonsterQueue.Enqueue(this);
+        AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
-        CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
     }
 
     public override void Die()
     {
         //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
-        GameController.S.StartCoroutine(RandomDelayDie(randomDelay));
-        // gameObject.SetActive(false);
-        // GameController.S.SpiderMonsterQueue.Enqueue(this);
-        // GeneralDie();
-        // GetEx();
-        // ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy);
-        // CreateBloodEnergy();
-        // CreateEquip();
+        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
+        Invoke(nameof(RandomDelayDie),randomDelay);
     }
     
     

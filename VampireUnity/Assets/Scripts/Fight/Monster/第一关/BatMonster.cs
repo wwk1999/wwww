@@ -57,36 +57,20 @@ public class BatMonster : MonsterBase
         // Invoke("AttackEnd",1f);
     }
 
-    private IEnumerator RandomDelayDie(int delay)
+    private void RandomDelayDie()
     {
-        // for (int i = 0; i < delay; i++)
-        // {
-        //     yield return null;
-        // }
-        // gameObject.SetActive(false);
-        // GameController.S.BatMonsterQueue.Enqueue(this);
-        AudioController.S.PlayBatDie();
+        AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
-        CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
-        yield return null;
     }
 
     public override void Die()
     {
         //生成随机数
-         int randomDelay = UnityEngine.Random.Range(0, 10);
-         GameController.S.StartCoroutine(RandomDelayDie(randomDelay));
-         // gameObject.SetActive(false);
-         // GameController.S.BatMonsterQueue.Enqueue(this);
-         // GeneralDie();
-         // GetEx();
-         // ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy);
-         // CreateBloodEnergy();
-         // CreateEquip();
+        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
+        Invoke(nameof(RandomDelayDie),randomDelay);
     }
 
     public override void AddMonsterEquip()

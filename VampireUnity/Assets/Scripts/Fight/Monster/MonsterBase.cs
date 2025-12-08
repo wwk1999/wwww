@@ -268,6 +268,11 @@ public abstract class MonsterBase : MonoBehaviour
         {
             isSkill1 = false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+            if (this is ShaMoElite)
+            {
+                ShaMoElite shaMoElite=this as ShaMoElite;
+                shaMoElite.CheckSkill();
+            }
         }
         else if(isAttack)
         {
@@ -524,6 +529,11 @@ public abstract class MonsterBase : MonoBehaviour
     /// </summary>
     public void GeneralDie()
     {
+        
+        //附加属性
+        int replyHp = Mathf.RoundToInt(GlobalPlayerAttribute.TotalMaxHp * GlobalPlayerAttribute.KillReplyHpPercent);        
+        
+        
         //怪物数量排行榜
         switch (MonsterType)
         {

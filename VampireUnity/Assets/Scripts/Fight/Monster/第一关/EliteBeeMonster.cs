@@ -42,36 +42,20 @@ public class EliteBeeMonster : MonsterBase
         AddMonsterSourceStone();
     }
 
-    private IEnumerator RandomDelayDie(int delay)
+    private void RandomDelayDie()
     {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
-
-        AudioController.S.PlayEliteBeeDie();
-        // gameObject.SetActive(false);
-        // GameController.S.EliteBeeMonsterQueue.Enqueue(this);
+        AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,2);
-        CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
     }
 
     public override void Die()
     {
         //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
-        GameController.S.StartCoroutine(RandomDelayDie(randomDelay));
-        // gameObject.SetActive(false);
-        // GameController.S.EliteBeeMonsterQueue.Enqueue(this);
-        // GeneralDie();
-        // GetEx();
-        // ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy);
-        // CreateBloodEnergy();
-        // CreateEquip();
+        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
+        Invoke(nameof(RandomDelayDie),randomDelay);
     }
     
     

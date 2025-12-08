@@ -196,6 +196,7 @@
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXRotation.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipAttributePanel.cs" />
     <Compile Include="Assets\Scripts\Window\SceneLoading1.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaMoElite.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBall.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloth.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill1.cs" />

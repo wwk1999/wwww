@@ -11,7 +11,7 @@ public class Entrance : MonoBehaviour
     { 
         
             Application.targetFrameRate = 30;
-            
+            GlobalPlayerAttribute.CurrentHp = GlobalPlayerAttribute.TotalMaxHp;
             LevelInfoConfig.IsOneGame = false;
             
             AudioController.S.BGAudioSource.clip = Resources.Load<AudioClip>("Audio/BG/Level1BG");
@@ -540,6 +540,21 @@ public class Entrance : MonoBehaviour
                 shirenhuaMonster.gameObject.SetActive(false);
                 GameController.S.ShiRenHuaMonsterQueue.Enqueue(shirenhuaMonster
                     .GetComponent<ShiRenHuaMonster>());
+            }
+
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 15 || LevelInfoConfig.CurrentGameLevel == 16)
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                var shamoElite =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaMoElite")
+                            .GetComponent<ShaMoElite>(), GameController.S.transform);
+                shamoElite.gameObject.SetActive(false);
+                GameController.S.ShaMoEliteQueue.Enqueue(shamoElite
+                    .GetComponent<ShaMoElite>());
             }
 
         }

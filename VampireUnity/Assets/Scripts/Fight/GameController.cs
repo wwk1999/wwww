@@ -62,6 +62,9 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<Huangzhu> HuangZhuQueue = new Queue<Huangzhu>();
     [NonSerialized] public Queue<HuangShu> HuangShuQueue = new Queue<HuangShu>();
     [NonSerialized] public Queue<KuLou> KuLouQueue = new Queue<KuLou>();
+    [NonSerialized] public Queue<ShaMoElite> ShaMoEliteQueue = new Queue<ShaMoElite>();
+
+    
     
     
     
@@ -600,6 +603,11 @@ public class GameController : XSingleton<GameController>
                 monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
                 monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
                 break;
+            case 15:
+            case 16:
+                monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
+                monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
+                break;
         }
         // //从子物体里随机选择一个
         // int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints1.Length);
@@ -647,6 +655,19 @@ public class GameController : XSingleton<GameController>
             shirenhuaMonster.CurrentHp = shirenhuaMonster.MaxHp;
             shirenhuaMonster.transform.position = monsterRandomPoint.position;
             shirenhuaMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
+
+            TotalMonsterCount++;
+            EliteMonsterCount++;
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 15 || LevelInfoConfig.CurrentGameLevel == 16 )
+        {
+            Debug.LogError(111);
+            ShaMoElite shamoElite = ShaMoEliteQueue.Dequeue();
+            shamoElite.gameObject.SetActive(true);
+            shamoElite.CurrentHp = shamoElite.MaxHp;
+            shamoElite.transform.position = monsterRandomPoint.position;
+            shamoElite.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
 
             TotalMonsterCount++;
             EliteMonsterCount++;

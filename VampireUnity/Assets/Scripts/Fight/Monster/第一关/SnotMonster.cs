@@ -21,31 +21,20 @@ public class SnotMonster : MonsterBase
         AddMonsterSourceStone();
     }
 
-    private IEnumerator RandomDelayDie(int delay)
+    private void RandomDelayDie()
     {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
         AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
-        CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
-        
-        // gameObject.SetActive(false);
-        // GameController.S.SnotMonsterQueue.Enqueue(this);
     }
 
     public override void Die()
     {
-        
         //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
-        GameController.S.StartCoroutine(RandomDelayDie(randomDelay));
-        
+        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
+        Invoke(nameof(RandomDelayDie),randomDelay);
     }
 
     // Update is called once per frame

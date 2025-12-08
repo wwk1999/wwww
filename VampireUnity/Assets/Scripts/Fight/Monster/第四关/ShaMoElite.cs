@@ -4,15 +4,20 @@ using Equip;
 using Spine;
 using UnityEngine;
 
-public class Huangzhu : MonsterBase
+public class ShaMoElite : MonsterBase
 {
-    public Huangzhu() : base(MonsterType.Normal, "Huangzhu", 1, 100, 0.3f, 10, 5, 10, 10, 0)
+    public ShaMoElite() : base(MonsterType.Normal, "ShaMoElite", 1, 100, 0.3f, 10, 5, 10, 10, 0)
     {
     }
-    
     public GameObject parent;
+    public Transform skillTrans1;
+    public Transform skillTrans2;
+    public Transform skillTrans3;
     public Transform attackTrans;
 
+    private float SkillTime = 5;
+    private float CurrentSkillTime = 0;
+    
     public override void AddMonsterSourceStone()
     {
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
@@ -63,21 +68,20 @@ public class Huangzhu : MonsterBase
         AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
-        ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
+        ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 2);
         CreateEquip();
     }
     
     private void Start()
     {
         base.Start();
-        size = 0.5f;
+        size = 1f;
         isBeatback = false;
         AddMonsterEquip();
         AddMonsterSourceStone();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
-    }
-    private void OnDestroy()
+    } private void OnDestroy()
     {
         monsterSkeletonAnimation.AnimationState.Event -= OnSpineEvent;
     }
@@ -86,14 +90,15 @@ public class Huangzhu : MonsterBase
     {
         if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.4f)
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.8f)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack);
             }
         }
     }
     
-    public void MonsterMove1()
+    
+     public void MonsterMove1()
     {
         Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move")
@@ -148,7 +153,13 @@ public class Huangzhu : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.4f)
+        CurrentSkillTime += Time.deltaTime;
+        if (CurrentSkillTime >= SkillTime&&(Vector2.Distance(GameController.S.gamePlayer.transform.position,skillTrans1.position)<0.6f||Vector2.Distance(GameController.S.gamePlayer.transform.position,skillTrans2.position)<0.6f||Vector2.Distance(GameController.S.gamePlayer.transform.position,skillTrans3.position)<0.6f))
+        {
+            CurrentSkillTime = 0;
+            isSkill1=true;
+        }
+        else if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.8f)
         {
             isAttack=true;
         }
@@ -161,6 +172,37 @@ public class Huangzhu : MonsterBase
         {
             MonsterMove1();
             SpriteFlipX1(false);
+        }
+    }
+
+    public void CheckSkill()
+    {
+        Invoke(nameof(CheckSkill1),1.1f);
+        Invoke(nameof(CheckSkill2),1.3f);
+        Invoke(nameof(CheckSkill3),1.5f);
+    }
+
+    public void CheckSkill1()
+    {
+        if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans1.position) < 0.6f)
+        {
+            GameController.S.gamePlayer.PlayerHurt(Attack);
+        }
+    }
+    
+    public void CheckSkill2()
+    {
+        if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans2.position) < 0.6f)
+        {
+            GameController.S.gamePlayer.PlayerHurt(Attack);
+        }
+    }
+    
+    public void CheckSkill3()
+    {
+        if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans3.position) < 0.6f)
+        {
+            GameController.S.gamePlayer.PlayerHurt(Attack);
         }
     }
 }

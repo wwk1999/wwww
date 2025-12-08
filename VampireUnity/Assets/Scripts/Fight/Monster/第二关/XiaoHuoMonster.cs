@@ -44,30 +44,20 @@ public class XiaoHuoMonster : MonsterBase
         // Implement the skill logic here
     }
     
-    public override void Die()
+    private void RandomDelayDie()
     {
-        
-        //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
-        GameController.S.StartCoroutine(RandomDelayDie(randomDelay));
-    }
-    
-    private IEnumerator RandomDelayDie(int delay)
-    {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
         AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
-        CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
-        
-        // gameObject.SetActive(false);
-        // GameController.S.SnotMonsterQueue.Enqueue(this);
+    }
+
+    public override void Die()
+    {
+        //生成随机数
+        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
+        Invoke(nameof(RandomDelayDie),randomDelay);
     }
     
     private void Start()
