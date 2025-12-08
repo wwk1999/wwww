@@ -533,7 +533,7 @@ public class GameController : XSingleton<GameController>
         {
             return true;
         }
-        return false;
+        return true;
     }
 
     public void ResumePlayerCamera(object[] args)
