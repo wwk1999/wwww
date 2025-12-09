@@ -45,6 +45,7 @@ public class EquipIDData : XSingleton<EquipIDData>
             Quality =  prop.Quality,
             Desc =  prop.Desc,
             Count =  prop.Count,
+            EquipName =  prop.EquipName,
         };
         var propItem = new PropItem()
         {

@@ -60,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Fight\UI\FightExitPanel.cs" />
-    <Compile Include="Assets\Scripts\Mysql\PropTable.cs" />
     <Compile Include="Assets\Scripts\Mysql\TableBase.cs" />
     <Compile Include="Assets\Scripts\Gun\GunBase.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueHelmet.cs" />
@@ -254,6 +253,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ScaleFactorApplyToMaterial.cs" />
+    <Compile Include="Assets\Scripts\Prop\PropBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\Scripts\Equip\BagGrid.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
@@ -271,6 +271,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XianRenZhang.cs" />
     <Compile Include="Assets\Scripts\Singleton\NeedDestroyAttribute.cs" />
+    <Compile Include="Assets\Scripts\Mysql\PropTable.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\Du.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />

@@ -26,9 +26,8 @@ public class ToastInfo : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void SetToast(TableBase tableBase)
+    public void SetEquipToast(EquipTable equipTable)
     {
-        EquipTable equipTable= tableBase as EquipTable;
         if (equipTable != null)
         {
             switch (equipTable.Quality)
@@ -50,6 +49,32 @@ public class ToastInfo : MonoBehaviour
                     break;
             }
             equipNameText.text = EquipName.EquipNameDic[equipTable.EquipName];
+        }
+    }
+    
+    public void SetPropToast(PropTable propTable)
+    {
+        if (propTable != null)
+        {
+            switch (propTable.Quality)
+            {
+                case 1:
+                    equipNameText.color = Color.white;
+                    break;
+                case 2:
+                    equipNameText.color = Color.green;
+                    break;
+                case 3:
+                    equipNameText.color = Color.blue;
+                    break;
+                case 4:
+                    equipNameText.color = new Color32(241, 20, 231, 255);
+                    break;
+                case 5:
+                    equipNameText.color = new Color(255,140,0,255);
+                    break;
+            }
+            equipNameText.text = EquipName.EquipNameDic[propTable.EquipName];
         }
     }
 }

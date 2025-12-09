@@ -53,6 +53,15 @@ public class FightBg : MonoBehaviour
     {
         var toast = Instantiate(Resources.Load("Prefabs/Tool/ToastInfo"), toastContent.transform);
         EquipTable equipTable = obj[0] as EquipTable;
-        toast.GetComponent<ToastInfo>().SetToast(equipTable);
+        PropTable propTable = obj[0] as PropTable;
+        if (equipTable != null)
+        {
+            toast.GetComponent<ToastInfo>().SetEquipToast(equipTable);
+        }
+        if (propTable != null)
+        {
+            toast.GetComponent<ToastInfo>().SetPropToast(propTable);
+
+        }
     }
 }

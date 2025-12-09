@@ -17,7 +17,7 @@ public class EquipBase : BagObjectBase
     [NonSerialized]public Rigidbody2D equipRb;
    [NonSerialized]public string equipName;//装备名字
    [NonSerialized]public EquipTable EquipAttributes; // 装备属性
-    [NonSerialized]public float speed = 5f; // 装备跟随的速度
+    [NonSerialized]public float speed = 10f; // 装备跟随的速度
     [NonSerialized]public bool isPickUp = false; // 是否被拾取
     [NonSerialized]public SpriteRenderer SpriteRenderer;
     [NonSerialized]public SuitType suitType = SuitType.None; // 装备套装类型

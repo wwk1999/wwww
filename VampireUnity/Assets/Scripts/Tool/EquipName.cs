@@ -56,6 +56,20 @@ namespace Tool
             {"OrangeNecklace", "炽炎项链"},
             {"OrangeRing", "炽炎戒指"},
             {"OrangeShoe", "炽炎鞋子"},
+            
+            {"WhiteJingCui", "白色精粹"},
+            {"GreenJingCui", "绿色精粹"},
+            {"BlueJingCui", "蓝色精粹"},
+            {"PurpleJingCui", "紫色精粹"},
+            {"OrangeJingCui", "橙色精粹"},
+            {"RedJingCui", "红色精粹"},
+            
+            {"WhiteWeaponFragment", "白色武器碎片"},
+            {"GreenWeaponFragment", "绿色武器碎片"},
+            {"BlueWeaponFragment", "蓝色武器碎片"},
+            {"PurpleWeaponFragment", "紫色武器碎片"},
+            {"OrangeWeaponFragment", "橙色武器碎片"},
+            {"RedWeaponFragment", "红色武器碎片"},
         };
     }
 }

@@ -23,11 +23,13 @@ public class PropTable:TableBase
                 PropConfig.PropType propType=PropConfig.PropType.None,
                 int count = 0,
                 string desc = null,
-                int quality = 1)
+                int quality = 1,
+                string equipName=null)
         {
                this.PropType = propType;
                this.Count = count;
                this.Desc = desc;
                this.Quality = quality;
+               this.EquipName = equipName;
         }
 }
