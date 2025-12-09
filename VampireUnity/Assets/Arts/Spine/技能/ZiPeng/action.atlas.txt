@@ -1,0 +1,37 @@
+action.png
+	size: 742, 742
+	filter: Linear, Linear
+	pma: true
+effect/skl1_mz_00
+	bounds: 2, 8, 203, 221
+	offsets: 5, 12, 212, 238
+effect/skl1_mz_01
+	bounds: 526, 478, 262, 193
+	offsets: 4, 1, 270, 199
+	rotate: 90
+effect/skl1_mz_02
+	bounds: 242, 227, 268, 230
+	offsets: 4, 1, 276, 233
+	rotate: 90
+effect/skl1_mz_03
+	bounds: 474, 244, 266, 232
+	offsets: 6, 2, 278, 236
+effect/skl1_mz_04
+	bounds: 474, 7, 264, 235
+	offsets: 8, 2, 280, 238
+effect/skl1_mz_05
+	bounds: 2, 231, 264, 238
+	offsets: 8, 2, 280, 242
+	rotate: 90
+effect/skl1_mz_06
+	bounds: 264, 500, 260, 240
+	offsets: 3, 2, 266, 244
+effect/skl1_mz_08
+	bounds: 2, 497, 260, 243
+	offsets: 4, 3, 268, 250
+effect/skl1_mz_10
+	bounds: 207, 24, 200, 201
+	offsets: 27, 26, 254, 254
+effect/skl1_mz_12
+	bounds: 409, 189, 24, 36
+	offsets: 84, 91, 190, 189

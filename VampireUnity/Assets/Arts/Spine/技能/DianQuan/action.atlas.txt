@@ -1,0 +1,128 @@
+action.png
+	size: 1040, 1040
+	filter: Linear, Linear
+	pma: true
+eff/e1_1_001
+	bounds: 623, 159, 100, 175
+	offsets: 73, 67, 256, 256
+eff/e1_1_002
+	bounds: 949, 20, 82, 140
+	offsets: 90, 107, 256, 256
+eff/e1_1_003
+	bounds: 467, 107, 154, 227
+	offsets: 43, 29, 256, 256
+eff/e1_1_004
+	bounds: 255, 791, 245, 247
+	offsets: 8, 9, 256, 256
+eff/e1_1_005
+	bounds: 2, 313, 241, 237
+	offsets: 0, 9, 256, 256
+	rotate: 90
+eff/e1_1_006
+	bounds: 487, 336, 245, 213
+	offsets: 0, 4, 256, 256
+eff/e1_1_007
+	bounds: 2, 799, 251, 239
+	offsets: 0, 7, 256, 256
+eff/e1_1_008
+	bounds: 2, 556, 241, 239
+	offsets: 0, 7, 256, 256
+	rotate: 90
+eff/e1_1_009
+	bounds: 745, 809, 229, 236
+	offsets: 6, 9, 256, 256
+	rotate: 90
+eff/e1_1_010
+	bounds: 241, 311, 224, 238
+	offsets: 10, 10, 256, 256
+eff/e1_1_011
+	bounds: 243, 551, 242, 238
+	offsets: 12, 8, 256, 256
+eff/e1_1_012
+	bounds: 502, 805, 241, 233
+	offsets: 4, 13, 256, 256
+eff/e1_1_013
+	bounds: 725, 570, 233, 234
+	offsets: 0, 12, 256, 256
+	rotate: 90
+eff/e1_1_014
+	bounds: 2, 73, 219, 238
+	offsets: 10, 10, 256, 256
+eff/e1_1_015
+	bounds: 487, 551, 236, 238
+	offsets: 4, 8, 256, 256
+eff/e1_1_016
+	bounds: 734, 339, 218, 229
+	offsets: 12, 17, 256, 256
+eff/e1_1_017
+	bounds: 734, 121, 213, 216
+	offsets: 18, 15, 256, 256
+eff/e1_1_018
+	bounds: 223, 101, 208, 125
+	offsets: 11, 16, 256, 256
+	rotate: 90
+eff/e1_1_019
+	bounds: 350, 120, 189, 111
+	offsets: 26, 31, 256, 256
+	rotate: 90
+eff/e1_1_020
+	bounds: 623, 12, 176, 107
+	offsets: 34, 27, 256, 256
+eff/e1_2_003
+	bounds: 949, 162, 175, 81
+	offsets: 29, 56, 256, 256
+	rotate: 90
+eff/e1_2_004
+	bounds: 954, 390, 178, 79
+	offsets: 28, 61, 256, 256
+	rotate: 90
+eff/e1_2_005
+	bounds: 350, 10, 150, 95
+	offsets: 51, 54, 256, 256
+eff/e1_2_006
+	bounds: 502, 13, 100, 92
+	offsets: 46, 54, 256, 256
+eff/e1_2_007
+	bounds: 2, 8, 76, 63
+	offsets: 50, 55, 256, 256
+eff/e1_2_008
+	bounds: 961, 610, 96, 64
+	offsets: 73, 80, 256, 256
+	rotate: 90
+eff/e1_2_009
+	bounds: 983, 983, 54, 55
+	offsets: 124, 95, 256, 256
+eff/e1_2_010
+	bounds: 961, 708, 99, 68
+	offsets: 76, 84, 256, 256
+	rotate: 90
+eff/e1_2_011
+	bounds: 801, 57, 91, 62
+	offsets: 79, 86, 256, 256
+eff/e1_2_012
+	bounds: 983, 902, 79, 53
+	offsets: 80, 87, 256, 256
+	rotate: 90
+eff/e1_2_013
+	bounds: 983, 824, 27, 42
+	offsets: 119, 90, 256, 256
+	rotate: 90
+eff/e1_2_014
+	bounds: 961, 570, 44, 38
+	offsets: 48, 85, 256, 256
+eff/e1_2_015
+	bounds: 223, 50, 99, 49
+	offsets: 40, 81, 256, 256
+eff/e1_2_016
+	bounds: 954, 341, 50, 47
+	offsets: 40, 78, 256, 256
+eff/e1_2_017
+	bounds: 983, 853, 47, 39
+	offsets: 44, 84, 256, 256
+	rotate: 90
+eff/e1_2_018
+	bounds: 1006, 343, 32, 45
+	offsets: 58, 81, 256, 256
+eff/e1_2_019
+	bounds: 1007, 573, 26, 35
+	offsets: 65, 87, 256, 256

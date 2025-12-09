@@ -26,9 +26,7 @@ public class EquipAttributePanel : MonoBehaviour
     public Animator animator;
 
     public GameObject fuJiaAttributeContent;
-
-
-    [NonSerialized] public GameObject BagGrid;//背包格子
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
 
@@ -258,8 +256,7 @@ public class EquipAttributePanel : MonoBehaviour
             
             installButton.onClick.AddListener(() =>
             {
-                try
-                {
+                
                     EquipTable equip = (EquipTable)tableBase;
                     foreach (var item in equip.damageEntryInfos)
                     {
@@ -324,23 +321,13 @@ public class EquipAttributePanel : MonoBehaviour
                     BagController.S.SetE();
                     BagController.S.RefreshPlayerEquip();
                     Destroy(gameObject);
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError($"EquipAttributePanel: 装备按钮异常: {e.Message}\n{e.StackTrace}");
-                    // 确保出错时仍然销毁面板和蒙层
-                    BagController.S.DestroyMaskLayer();
-                    Destroy(gameObject);
-                }
             });
         }
         sellButton.onClick.AddListener(() =>
         {
-            
-            
-            BagGrid.transform.Find("EquipGridBG").GetComponent<Image>().color =new Color(1, 1, 1, 0);
-            BagGrid.transform.Find("BagGridImage").GetComponent<Image>().color = new Color(1, 1, 1, 0);
-            BagGrid.transform.Find("Count").GetComponent<Text>().text = null;
+            grid.transform.Find("parent/EquipGridBG").GetComponent<Image>().color =new Color(1, 1, 1, 0);
+            grid.transform.Find("parent/BagGridImage").GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            grid.transform.Find("parent/Count").GetComponent<Text>().text = null;
             EquipTable equip = (EquipTable)tableBase;
             BagController.S.EquipIdList.Remove(equip.equipid);
             switch (equip.Quality)

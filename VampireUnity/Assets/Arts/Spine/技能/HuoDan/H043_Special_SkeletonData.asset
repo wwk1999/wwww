@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: H043_Special_SkeletonData
+  m_EditorClassIdentifier: 
+  atlasAssets:
+  - {fileID: 11400000, guid: c0d02f0087160c249be802551f480508, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: db8a7abdb300c36468e5bff7c165d584, type: 3}
+  isUpgradingBlendModeMaterials: 0
+  blendModeMaterials:
+    requiresBlendModeMaterials: 1
+    applyAdditiveMaterial: 1
+    additiveMaterials:
+    - pageName: H043_Special_2.png
+      material: {fileID: 2100000, guid: 3c49f561f13b5ea408931757caf17de8, type: 2}
+    - pageName: H043_Special.png
+      material: {fileID: 2100000, guid: ca296f3e22a7d60419896a1101881e94, type: 2}
+    - pageName: H043_Special_3.png
+      material: {fileID: 2100000, guid: d3c887f5dd1abac4dab3921ad4155964, type: 2}
+    multiplyMaterials: []
+    screenMaterials: []
+  skeletonDataModifiers: []
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0.2
+  controller: {fileID: 0}

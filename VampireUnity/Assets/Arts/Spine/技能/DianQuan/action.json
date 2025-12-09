@@ -1,0 +1,130 @@
+{
+"skeleton": { "hash": "S+qJ3av6MPo", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30031_jineng1" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "eff/e1_1_001", "parent": "root" },
+	{ "name": "eff/e1_2_003", "parent": "eff/e1_1_001" }
+],
+"slots": [
+	{ "name": "bbg", "bone": "root" },
+	{ "name": "eff-e1_1_001", "bone": "eff/e1_1_001", "blend": "additive" },
+	{ "name": "eff-e1_2_003", "bone": "eff/e1_2_003" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"eff-e1_1_001": {
+				"eff/e1_1_001": { "width": 256, "height": 256 },
+				"eff/e1_1_002": { "width": 256, "height": 256 },
+				"eff/e1_1_003": { "width": 256, "height": 256 },
+				"eff/e1_1_004": { "width": 256, "height": 256 },
+				"eff/e1_1_005": { "width": 256, "height": 256 },
+				"eff/e1_1_006": { "width": 256, "height": 256 },
+				"eff/e1_1_007": { "width": 256, "height": 256 },
+				"eff/e1_1_008": { "width": 256, "height": 256 },
+				"eff/e1_1_009": { "width": 256, "height": 256 },
+				"eff/e1_1_010": { "width": 256, "height": 256 },
+				"eff/e1_1_011": { "width": 256, "height": 256 },
+				"eff/e1_1_012": { "width": 256, "height": 256 },
+				"eff/e1_1_013": { "width": 256, "height": 256 },
+				"eff/e1_1_014": { "width": 256, "height": 256 },
+				"eff/e1_1_015": { "width": 256, "height": 256 },
+				"eff/e1_1_016": { "width": 256, "height": 256 },
+				"eff/e1_1_017": { "width": 256, "height": 256 },
+				"eff/e1_1_018": { "width": 256, "height": 256 },
+				"eff/e1_1_019": { "width": 256, "height": 256 },
+				"eff/e1_1_020": { "width": 256, "height": 256 }
+			},
+			"eff-e1_2_003": {
+				"eff/e1_2_003": { "width": 256, "height": 256 },
+				"eff/e1_2_004": { "width": 256, "height": 256 },
+				"eff/e1_2_005": { "width": 256, "height": 256 },
+				"eff/e1_2_006": { "width": 256, "height": 256 },
+				"eff/e1_2_007": { "width": 256, "height": 256 },
+				"eff/e1_2_008": { "width": 256, "height": 256 },
+				"eff/e1_2_009": { "width": 256, "height": 256 },
+				"eff/e1_2_010": { "width": 256, "height": 256 },
+				"eff/e1_2_011": { "width": 256, "height": 256 },
+				"eff/e1_2_012": { "width": 256, "height": 256 },
+				"eff/e1_2_013": { "width": 256, "height": 256 },
+				"eff/e1_2_014": { "width": 256, "height": 256 },
+				"eff/e1_2_015": { "width": 256, "height": 256 },
+				"eff/e1_2_016": { "width": 256, "height": 256 },
+				"eff/e1_2_017": { "width": 256, "height": 256 },
+				"eff/e1_2_018": { "width": 256, "height": 256 },
+				"eff/e1_2_019": { "width": 256, "height": 256 }
+			}
+		}
+	}
+],
+"events": {
+	"hit": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"eff-e1_1_001": {
+				"attachment": [
+					{ "name": "eff/e1_1_001" },
+					{ "time": 0.06666667, "name": "eff/e1_1_002" },
+					{ "time": 0.13333334, "name": "eff/e1_1_003" },
+					{ "time": 0.20000002, "name": "eff/e1_1_004" },
+					{ "time": 0.26666668, "name": "eff/e1_1_005" },
+					{ "time": 0.33333334, "name": "eff/e1_1_006" },
+					{ "time": 0.40000004, "name": "eff/e1_1_007" },
+					{ "time": 0.4666667, "name": "eff/e1_1_008" },
+					{ "time": 0.53333336, "name": "eff/e1_1_009" },
+					{ "time": 0.6, "name": "eff/e1_1_010" },
+					{ "time": 0.6666667, "name": "eff/e1_1_011" },
+					{ "time": 0.73333335, "name": "eff/e1_1_012" },
+					{ "time": 0.8000001, "name": "eff/e1_1_013" },
+					{ "time": 0.86666673, "name": "eff/e1_1_014" },
+					{ "time": 0.9333334, "name": "eff/e1_1_015" },
+					{ "time": 1, "name": "eff/e1_1_016" },
+					{ "time": 1.0666667, "name": "eff/e1_1_017" },
+					{ "time": 1.1333334, "name": "eff/e1_1_018" },
+					{ "time": 1.2, "name": "eff/e1_1_019" },
+					{ "time": 1.2666668, "name": "eff/e1_1_020" },
+					{ "time": 1.3333334 }
+				]
+			},
+			"eff-e1_2_003": {
+				"attachment": [
+					{ "time": 0.20000002, "name": "eff/e1_2_003" },
+					{ "time": 0.26666668, "name": "eff/e1_2_004" },
+					{ "time": 0.33333334, "name": "eff/e1_2_005" },
+					{ "time": 0.40000004, "name": "eff/e1_2_006" },
+					{ "time": 0.4666667, "name": "eff/e1_2_007" },
+					{ "time": 0.53333336, "name": "eff/e1_2_008" },
+					{ "time": 0.6, "name": "eff/e1_2_009" },
+					{ "time": 0.6666667, "name": "eff/e1_2_010" },
+					{ "time": 0.73333335, "name": "eff/e1_2_011" },
+					{ "time": 0.8000001, "name": "eff/e1_2_012" },
+					{ "time": 0.86666673, "name": "eff/e1_2_013" },
+					{ "time": 0.9333334, "name": "eff/e1_2_014" },
+					{ "time": 1, "name": "eff/e1_2_015" },
+					{ "time": 1.0666667, "name": "eff/e1_2_016" },
+					{ "time": 1.1333334, "name": "eff/e1_2_017" },
+					{ "time": 1.2, "name": "eff/e1_2_018" },
+					{ "time": 1.2666668, "name": "eff/e1_2_019" },
+					{ "time": 1.3333334 }
+				]
+			}
+		},
+		"bones": {
+			"eff/e1_1_001": {
+				"translate": [
+					{ "x": 9, "y": 73 }
+				],
+				"scale": [
+					{ "x": 2, "y": 2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.13333334, "name": "hit" }
+		]
+	}
+}
+}

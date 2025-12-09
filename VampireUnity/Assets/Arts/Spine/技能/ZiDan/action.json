@@ -1,0 +1,153 @@
+{
+"skeleton": { "hash": "oTRhPXFn3b4", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30041_dandao" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "trails_1", "parent": "root" }
+],
+"slots": [
+	{ "name": "eff-trails_1-1_00000", "bone": "trails_1" },
+	{ "name": "eff-glow26", "bone": "trails_1", "color": "8000ffff", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"eff-glow26": {
+				"eff/glow": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 87.38, -75.32, -244.02, -75.32, -244.02, 75.32, 87.38, 75.32 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 50,
+					"height": 50
+				}
+			},
+			"eff-trails_1-1_00000": {
+				"eff/trails_1/1_00000": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.67, -60, -295.33, -60, -295.33, 60, 54.67, 60 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 105,
+					"height": 36
+				},
+				"eff/trails_1/1_00002": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.67, -60, -295.33, -60, -295.33, 60, 54.67, 60 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 105,
+					"height": 36
+				},
+				"eff/trails_1/1_00004": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.67, -60, -295.33, -60, -295.33, 60, 54.67, 60 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 105,
+					"height": 36
+				},
+				"eff/trails_1/1_00006": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.67, -60, -295.33, -60, -295.33, 60, 54.67, 60 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 105,
+					"height": 36
+				},
+				"eff/trails_1/1_00008": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.67, -60, -295.33, -60, -295.33, 60, 54.67, 60 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 105,
+					"height": 36
+				},
+				"eff/trails_1/1_00010": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.67, -60, -295.33, -60, -295.33, 60, 54.67, 60 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 105,
+					"height": 36
+				},
+				"eff/trails_1/1_00012": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.67, -60, -295.33, -60, -295.33, 60, 54.67, 60 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 105,
+					"height": 36
+				},
+				"eff/trails_1/1_00014": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.67, -60, -295.33, -60, -295.33, 60, 54.67, 60 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 105,
+					"height": 36
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"eff-glow26": {
+				"rgba": [
+					{ "color": "7f00ffa7" }
+				],
+				"attachment": [
+					{ "name": "eff/glow" }
+				]
+			},
+			"eff-trails_1-1_00000": {
+				"attachment": [
+					{ "name": "eff/trails_1/1_00000" },
+					{ "time": 0.06666667, "name": "eff/trails_1/1_00002" },
+					{ "time": 0.13333334, "name": "eff/trails_1/1_00004" },
+					{ "time": 0.20000002, "name": "eff/trails_1/1_00006" },
+					{ "time": 0.26666668, "name": "eff/trails_1/1_00008" },
+					{ "time": 0.33333334, "name": "eff/trails_1/1_00010" },
+					{ "time": 0.40000004, "name": "eff/trails_1/1_00012" },
+					{ "time": 0.4666667, "name": "eff/trails_1/1_00014" },
+					{ "time": 0.5, "name": "eff/trails_1/1_00000" },
+					{ "time": 0.5666667, "name": "eff/trails_1/1_00002" },
+					{ "time": 0.6333334, "name": "eff/trails_1/1_00004" },
+					{ "time": 0.70000005, "name": "eff/trails_1/1_00006" },
+					{ "time": 0.7666667, "name": "eff/trails_1/1_00008" },
+					{ "time": 0.8333334, "name": "eff/trails_1/1_00010" },
+					{ "time": 0.90000004, "name": "eff/trails_1/1_00012" },
+					{ "time": 0.9666667, "name": "eff/trails_1/1_00014" }
+				]
+			}
+		},
+		"bones": {
+			"trails_1": {
+				"scale": [
+					{ "x": 0.654, "y": 0.602 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,60 @@
+{
+"skeleton": { "hash": "lcayTDIpDAA", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30031_jineng1s" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "eff/h1_000", "parent": "root" }
+],
+"slots": [
+	{ "name": "bbg", "bone": "root" },
+	{ "name": "eff-h1_000", "bone": "eff/h1_000", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"eff-h1_000": {
+				"eff/h1_000": { "width": 200, "height": 200 },
+				"eff/h1_001": { "width": 200, "height": 200 },
+				"eff/h1_002": { "width": 200, "height": 200 },
+				"eff/h1_003": { "width": 200, "height": 200 },
+				"eff/h1_004": { "width": 200, "height": 200 },
+				"eff/h1_005": { "width": 200, "height": 200 },
+				"eff/h1_006": { "width": 200, "height": 200 },
+				"eff/h1_007": { "width": 200, "height": 200 },
+				"eff/h1_008": { "width": 200, "height": 200 },
+				"eff/h1_009": { "width": 200, "height": 200 },
+				"eff/h1_010": { "width": 200, "height": 200 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"eff-h1_000": {
+				"attachment": [
+					{ "name": "eff/h1_000" },
+					{ "time": 0.06666667, "name": "eff/h1_001" },
+					{ "time": 0.13333334, "name": "eff/h1_002" },
+					{ "time": 0.20000002, "name": "eff/h1_003" },
+					{ "time": 0.26666668, "name": "eff/h1_004" },
+					{ "time": 0.3, "name": "eff/h1_005" },
+					{ "time": 0.36666667, "name": "eff/h1_006" },
+					{ "time": 0.43333337, "name": "eff/h1_007" },
+					{ "time": 0.5, "name": "eff/h1_008" },
+					{ "time": 0.5666667, "name": "eff/h1_009" },
+					{ "time": 0.6333334, "name": "eff/h1_010" },
+					{ "time": 0.70000005 }
+				]
+			}
+		},
+		"bones": {
+			"eff/h1_000": {
+				"translate": [
+					{ "y": 42 }
+				]
+			}
+		}
+	}
+}
+}

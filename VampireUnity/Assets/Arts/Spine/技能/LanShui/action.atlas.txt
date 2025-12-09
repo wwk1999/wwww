@@ -1,0 +1,37 @@
+action.png
+	size: 1840, 1840
+	filter: Linear, Linear
+	pma: true
+eff/skill2/baodian/baodian_105
+	bounds: 2, 1411, 488, 427
+eff/skill2/baodian/baodian_107
+	bounds: 492, 1350, 488, 427
+	rotate: 90
+eff/skill2/baodian/baodian_109
+	bounds: 2, 921, 488, 427
+	rotate: 90
+eff/skill2/baodian/baodian_111
+	bounds: 431, 921, 488, 427
+eff/skill2/baodian/baodian_113
+	bounds: 921, 860, 488, 427
+	rotate: 90
+eff/skill2/baodian/baodian_115
+	bounds: 921, 1411, 488, 427
+eff/skill2/baodian/baodian_117
+	bounds: 2, 431, 488, 427
+	rotate: 90
+eff/skill2/baodian/baodian_119
+	bounds: 431, 431, 488, 427
+	rotate: 90
+eff/skill2/baodian/baodian_121
+	bounds: 860, 431, 488, 427
+eff/skill2/baodian/baodian_123
+	bounds: 1350, 370, 488, 427
+	rotate: 90
+eff/skill2/baodian/baodian_125
+	bounds: 1350, 921, 488, 427
+	rotate: 90
+eff/skill2/baodian/baodian_127
+	bounds: 2, 2, 488, 427
+eff/skill2/baodian/baodian_129
+	bounds: 492, 2, 488, 427

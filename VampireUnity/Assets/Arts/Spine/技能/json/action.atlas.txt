@@ -1,0 +1,45 @@
+action.png
+	size: 487, 487
+	filter: Linear, Linear
+	pma: true
+tx/baoci_2_01
+	bounds: 2, 113, 108, 178
+	offsets: 7, 8, 128, 256
+tx/baoci_2_02
+	bounds: 2, 293, 119, 192
+	offsets: 4, 32, 128, 256
+tx/baoci_2_03
+	bounds: 123, 306, 122, 179
+	offsets: 5, 59, 128, 256
+tx/baoci_2_04
+	bounds: 247, 329, 122, 156
+	offsets: 6, 91, 128, 256
+tx/baoci_2_05
+	bounds: 112, 154, 122, 137
+	offsets: 6, 115, 128, 256
+tx/baoci_2_06
+	bounds: 371, 365, 120, 108
+	offsets: 5, 147, 128, 256
+	rotate: 90
+tx/baoci_2_07
+	bounds: 376, 253, 110, 87
+	offsets: 7, 165, 128, 256
+	rotate: 90
+tx/glow
+	bounds: 242, 78, 120, 120
+	offsets: 4, 4, 128, 128
+tx/gq
+	bounds: 247, 200, 127, 127
+	offsets: 1, 0, 128, 128
+tx/lizi1
+	bounds: 376, 197, 55, 54
+	offsets: 1, 0, 59, 54
+tx/sanguang
+	bounds: 112, 24, 128, 128
+tx/xg
+	bounds: 2, 5, 108, 106
+	offsets: 10, 11, 128, 128
+tx/xx
+	bounds: 242, 2, 74, 106
+	offsets: 2, 2, 78, 111
+	rotate: 90

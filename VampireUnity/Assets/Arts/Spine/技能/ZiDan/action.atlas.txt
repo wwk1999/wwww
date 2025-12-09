@@ -1,0 +1,22 @@
+action.png
+	size: 216, 216
+	filter: Linear, Linear
+	pma: true
+eff/glow
+	bounds: 109, 50, 50, 50
+eff/trails_1/1_00000
+	bounds: 2, 178, 105, 36
+eff/trails_1/1_00002
+	bounds: 2, 140, 105, 36
+eff/trails_1/1_00004
+	bounds: 109, 178, 105, 36
+eff/trails_1/1_00006
+	bounds: 2, 102, 105, 36
+eff/trails_1/1_00008
+	bounds: 109, 140, 105, 36
+eff/trails_1/1_00010
+	bounds: 2, 64, 105, 36
+eff/trails_1/1_00012
+	bounds: 109, 102, 105, 36
+eff/trails_1/1_00014
+	bounds: 2, 26, 105, 36
