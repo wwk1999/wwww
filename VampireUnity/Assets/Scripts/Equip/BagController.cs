@@ -669,8 +669,8 @@ public class BagController : XSingleton<BagController>
             }
         }
         // 计算显示的装备范围
-        int startIndex = (PageNum - 1) * 20;
-        int endIndex = Mathf.Min(PageNum * 20, EquipIdList.Count);
+        int startIndex = (PageNum - 1) * 35;
+        int endIndex = Mathf.Min(PageNum * 35, EquipIdList.Count);
 
         List<EquipTable> list = EquipIdList.Values.ToList();
         if (bag.GetComponent<BagPanel>().currentBagType == 1) //如果是显示装备
