@@ -21,7 +21,6 @@ public class GreenShoe : EquipBase
         EquipAttributes.EquipName = "GreenShoe";
         EquipAttributes.suitid = 2;
         EquipAttributes.equip_type_id = 6;
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 2;
         
         EquipAttributes.Defense=random.Next(1,4);

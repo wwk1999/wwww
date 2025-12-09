@@ -8,7 +8,6 @@ public class ExtremeSpeed : FightWeaponSourceStoneBase
     {
         SourceStoneTable.SourceStoneName ="初级极速源石";
         SourceStoneTable.Count = 1;
-        SourceStoneTable.Userid = GlobalUserInfo.Userid;
         SourceStoneTable.Quality= (int)WeaponSourceStoneQuality.White;
         SourceStoneTable.SourceStoneType = (int)WeaponSourceStoneType.ExtremeSpeed;
         SourceStoneTable.SourceStoneId = 13; // 假设极速源石的ID为13
@@ -24,7 +23,7 @@ public class ExtremeSpeed : FightWeaponSourceStoneBase
             foreach (var sourceStoneTable in BagController.S.SourceStoneTable)
             {
                 if(sourceStoneTable.SourceStoneType==(int)WeaponSourceStoneType.ExtremeSpeed&&
-                   sourceStoneTable.Userid==GlobalUserInfo.Userid&&sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
+                   sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
                 {
                     sourceStoneTable.Count++;
                     //如果被拾取，销毁装备

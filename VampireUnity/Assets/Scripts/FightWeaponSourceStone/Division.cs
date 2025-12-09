@@ -9,7 +9,6 @@ public class Division : FightWeaponSourceStoneBase
     {
         SourceStoneTable.SourceStoneName ="初级分裂源石";
         SourceStoneTable.Count = 1;
-        SourceStoneTable.Userid = GlobalUserInfo.Userid;
         SourceStoneTable.Quality= (int)WeaponSourceStoneQuality.White;
         SourceStoneTable.SourceStoneType = (int)WeaponSourceStoneType.Division;
         SourceStoneTable.SourceStoneId = 7; // 假设分裂源石的ID为7
@@ -24,8 +23,7 @@ public class Division : FightWeaponSourceStoneBase
         {
             foreach (var sourceStoneTable in BagController.S.SourceStoneTable)
             {
-                if(sourceStoneTable.SourceStoneType==(int)WeaponSourceStoneType.Division&&
-                   sourceStoneTable.Userid==GlobalUserInfo.Userid&&sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
+                if(sourceStoneTable.SourceStoneType==(int)WeaponSourceStoneType.Division&&sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
                 {
                     sourceStoneTable.Count++;
                     //如果被拾取，销毁装备

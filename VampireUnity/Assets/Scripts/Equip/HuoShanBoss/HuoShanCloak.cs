@@ -22,7 +22,6 @@ public class HuoShanCloak : EquipBase
         EquipAttributes.suitid = 102;
         EquipAttributes.equip_type_id = 1;
         //暂时写死
-        EquipAttributes.Userid = GlobalUserInfo.Userid;
         EquipAttributes.Quality = 3;
         EquipAttributes.CRIT=random.Next(4,8);
 

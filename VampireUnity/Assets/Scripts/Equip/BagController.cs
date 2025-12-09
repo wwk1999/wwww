@@ -46,6 +46,12 @@ public class BagController : XSingleton<BagController>
         get => EquipIDData.S.equipIds;
         set => EquipIDData.S.equipIds = value;
     }
+
+    public Dictionary<PropItem, PropTable> PropList
+    {
+        get => EquipIDData.S.propTables;
+        set => EquipIDData.S.propTables = value;
+    }
     
     [NonSerialized] public List<EquipTable> WhiteEquipidTable = new List<EquipTable>(); //背包里所有的白色装备
     [NonSerialized] public List<EquipTable> GreenEquipidTable = new List<EquipTable>(); //背包里所有的绿色装备

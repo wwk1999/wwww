@@ -9,7 +9,6 @@ public class Penetrate : FightWeaponSourceStoneBase
     {
         SourceStoneTable.Count = 1;
         SourceStoneTable.SourceStoneName ="初级穿透源石";
-        SourceStoneTable.Userid = GlobalUserInfo.Userid;
         SourceStoneTable.Quality= (int)WeaponSourceStoneQuality.White;
         SourceStoneTable.SourceStoneType = (int)WeaponSourceStoneType.Penetrate;
         SourceStoneTable.SourceStoneId = 1; // 假设穿透源石的ID为1
@@ -24,7 +23,7 @@ public class Penetrate : FightWeaponSourceStoneBase
             foreach (var sourceStoneTable in BagController.S.SourceStoneTable)
             {
                 if(sourceStoneTable.SourceStoneType==(int)WeaponSourceStoneType.Penetrate&&
-                   sourceStoneTable.Userid==GlobalUserInfo.Userid&&sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
+                   sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
                 {
                     sourceStoneTable.Count++;
                     //如果被拾取，销毁装备

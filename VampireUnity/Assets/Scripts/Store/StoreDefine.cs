@@ -15,6 +15,7 @@ public class StoreDefine : XSingleton<StoreDefine>
     public class EquipData
     {
         public Dictionary<int,EquipTable> equipIds = new Dictionary<int, EquipTable>();
+        public Dictionary<PropItem,PropTable> propTables = new Dictionary<PropItem,PropTable>();
         public int nextEquipId;
 
         public void CopyFromRuntime(EquipIDData runtime)
@@ -27,6 +28,11 @@ public class StoreDefine : XSingleton<StoreDefine>
             {
                 equipIds.Add(pair.Key,pair.Value);
             }
+            propTables.Clear();
+            foreach (var pair in runtime.propTables)
+            {
+                propTables.Add(pair.Key, pair.Value);
+            }
         }
 
         public void ApplyToRuntime(EquipIDData runtime)
@@ -38,6 +44,11 @@ public class StoreDefine : XSingleton<StoreDefine>
             foreach (var pair in equipIds)
             {
                 runtime.equipIds.Add(pair.Key,pair.Value);
+            }
+            runtime.propTables.Clear();
+            foreach (var pair in propTables)
+            {
+                runtime.propTables.Add(pair.Key, pair.Value);
             }
         }
     }

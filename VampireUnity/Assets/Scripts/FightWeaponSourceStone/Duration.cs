@@ -9,7 +9,6 @@ public class Duration : FightWeaponSourceStoneBase
     {
         SourceStoneTable.SourceStoneName ="初级延时源石";
         SourceStoneTable.Count = 1;
-        SourceStoneTable.Userid = GlobalUserInfo.Userid;
         SourceStoneTable.Quality= (int)WeaponSourceStoneQuality.White;
         SourceStoneTable.SourceStoneType = (int)WeaponSourceStoneType.Duration;
         SourceStoneTable.SourceStoneId = 31; // 假设延时源石的ID为31
@@ -24,8 +23,7 @@ public class Duration : FightWeaponSourceStoneBase
         {
             foreach (var sourceStoneTable in BagController.S.SourceStoneTable)
             {
-                if(sourceStoneTable.SourceStoneType==(int)WeaponSourceStoneType.Duration&&
-                   sourceStoneTable.Userid==GlobalUserInfo.Userid&&sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
+                if(sourceStoneTable.SourceStoneType==(int)WeaponSourceStoneType.Duration&& sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
                 {
                     sourceStoneTable.Count++;
                     //如果被拾取，销毁装备

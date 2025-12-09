@@ -8,7 +8,6 @@ public class Scale : FightWeaponSourceStoneBase
     {
         SourceStoneTable.SourceStoneName ="初级大小源石";
         SourceStoneTable.Count = 1;
-        SourceStoneTable.Userid = GlobalUserInfo.Userid;
         SourceStoneTable.Quality= (int)WeaponSourceStoneQuality.White;
         SourceStoneTable.SourceStoneType = (int)WeaponSourceStoneType.Scale;
         SourceStoneTable.SourceStoneId = 25; // 假设大小源石的ID为25
@@ -24,7 +23,7 @@ public class Scale : FightWeaponSourceStoneBase
             foreach (var sourceStoneTable in BagController.S.SourceStoneTable)
             {
                 if(sourceStoneTable.SourceStoneType==(int)WeaponSourceStoneType.Scale&&
-                   sourceStoneTable.Userid==GlobalUserInfo.Userid&&sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
+                   sourceStoneTable.Quality==(int)WeaponSourceStoneQuality.White)
                 {
                     sourceStoneTable.Count++;
                     //如果被拾取，销毁装备
