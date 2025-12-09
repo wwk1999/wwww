@@ -64,6 +64,12 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<HuangShu> HuangShuQueue = new Queue<HuangShu>();
     [NonSerialized] public Queue<KuLou> KuLouQueue = new Queue<KuLou>();
     [NonSerialized] public Queue<ShaMoElite> ShaMoEliteQueue = new Queue<ShaMoElite>();
+    
+    [NonSerialized] public Queue<ShaChong> ShaChongQueue = new Queue<ShaChong>();
+    [NonSerialized] public Queue<ShaNiao> ShaNiaoQueue = new Queue<ShaNiao>();
+    [NonSerialized] public Queue<ShaXiYi> ShaXiYiQueue = new Queue<ShaXiYi>();
+    [NonSerialized] public Queue<XianRenZhang> XianRenZhangQueue = new Queue<XianRenZhang>();
+   
 
     //第四关怪
     [NonSerialized] public Queue<XueQiE> XueQiEQueue = new Queue<XueQiE>();
@@ -659,7 +665,7 @@ public class GameController : XSingleton<GameController>
         
         if (LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 12 )
         {
-            ShaMoElite shamoElite = ShaMoEliteQueue.Dequeue();
+            ShaXiYi shamoElite = ShaXiYiQueue.Dequeue();
             shamoElite.gameObject.SetActive(true);
             shamoElite.CurrentHp = shamoElite.MaxHp;
             shamoElite.transform.position = monsterRandomPoint;
@@ -796,15 +802,15 @@ public class GameController : XSingleton<GameController>
                 MonsterBase monsterBase;
                 if (NormalMonsterCount % 3 == 0)
                 {
-                    monsterBase = HuangShuQueue.Dequeue();
+                    monsterBase = ShaChongQueue.Dequeue();
                 }
                 else if (NormalMonsterCount % 3 == 1)
                 {
-                    monsterBase = HuangZhuQueue.Dequeue();
+                    monsterBase = ShaNiaoQueue.Dequeue();
                 }
                 else
                 {
-                    monsterBase =KuLouQueue.Dequeue();
+                    monsterBase =XianRenZhangQueue.Dequeue();
                 }
 
                 monsterBase.gameObject.SetActive(true);

@@ -482,11 +482,21 @@ public class Entrance : MonoBehaviour
                 Huangzhu.gameObject.SetActive(false);
                 GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
                 
-                var KuLou =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/KuLouMonster").GetComponent<KuLou>(),
-                        GameController.S.transform);
+                var KuLou = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/KuLouMonster").GetComponent<KuLou>(), GameController.S.transform);
                 KuLou.gameObject.SetActive(false);
                 GameController.S.KuLouQueue.Enqueue(KuLou.GetComponent<KuLou>());
+                
+                var ShaChong = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaChong").GetComponent<ShaChong>(), GameController.S.transform);
+                ShaChong.gameObject.SetActive(false);
+                GameController.S.ShaChongQueue.Enqueue(ShaChong.GetComponent<ShaChong>());
+                
+                var ShaNiao = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaNiao").GetComponent<ShaNiao>(), GameController.S.transform);
+                ShaNiao.gameObject.SetActive(false);
+                GameController.S.ShaNiaoQueue.Enqueue(ShaNiao.GetComponent<ShaNiao>());
+                
+                var XianRenZhang = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/XianRenZhang").GetComponent<XianRenZhang>(), GameController.S.transform);
+                XianRenZhang.gameObject.SetActive(false);
+                GameController.S.XianRenZhangQueue.Enqueue(XianRenZhang.GetComponent<XianRenZhang>());
             }
         }
         
@@ -561,12 +571,14 @@ public class Entrance : MonoBehaviour
             for (int i = 0; i < 15; i++)
             {
                 var shamoElite =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaMoElite")
-                            .GetComponent<ShaMoElite>(), GameController.S.transform);
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaMoElite").GetComponent<ShaMoElite>(), GameController.S.transform);
                 shamoElite.gameObject.SetActive(false);
-                GameController.S.ShaMoEliteQueue.Enqueue(shamoElite
-                    .GetComponent<ShaMoElite>());
+                GameController.S.ShaMoEliteQueue.Enqueue(shamoElite.GetComponent<ShaMoElite>());
+                
+                var ShaXiYi =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaXiYi").GetComponent<ShaXiYi>(), GameController.S.transform);
+                ShaXiYi.gameObject.SetActive(false);
+                GameController.S.ShaXiYiQueue.Enqueue(ShaXiYi.GetComponent<ShaXiYi>());
             }
 
         }

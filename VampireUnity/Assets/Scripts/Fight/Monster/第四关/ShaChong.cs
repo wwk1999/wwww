@@ -12,6 +12,7 @@ public class ShaChong : MonsterBase
     
      public GameObject parent;
     public Transform attackTrans;
+    private float attackRange = 0.45f;
 
     public override void AddMonsterSourceStone()
     {
@@ -89,9 +90,9 @@ public class ShaChong : MonsterBase
 
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
+        if (e.Data.Name == "attack_attack1"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.35f)
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
@@ -118,7 +119,7 @@ public class ShaChong : MonsterBase
             return;
         }
         float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
-        if(dis<0.2f)
+        if(dis<0.05f)
         {
             //如果距离小于0.2f，则不翻转
             return;
@@ -153,7 +154,7 @@ public class ShaChong : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.35f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)
         {
             isAttack=true;
         }
@@ -165,7 +166,7 @@ public class ShaChong : MonsterBase
         if (!IsDead)
         {
             MonsterMove1();
-            SpriteFlipX1(false);
+            SpriteFlipX1(true);
         }
     }
 }
