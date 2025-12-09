@@ -15,7 +15,7 @@ public class StoreDefine : XSingleton<StoreDefine>
     public class EquipData
     {
         public Dictionary<int,EquipTable> equipIds = new Dictionary<int, EquipTable>();
-        public Dictionary<PropItem,PropTable> propTables = new Dictionary<PropItem,PropTable>();
+        public Dictionary<int,PropTable> propTables = new Dictionary<int,PropTable>();
         public int nextEquipId;
 
         public void CopyFromRuntime(EquipIDData runtime)

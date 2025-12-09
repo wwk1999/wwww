@@ -5,7 +5,7 @@ using UnityEngine;
 public class EquipIDData : XSingleton<EquipIDData>
 {
     public Dictionary<int,EquipTable> equipIds = new Dictionary<int, EquipTable>();
-    public Dictionary<PropItem,PropTable> propTables = new Dictionary<PropItem,PropTable>();
+    public Dictionary<int,PropTable> propTables = new Dictionary<int,PropTable>();
     public int nextEquipId = 1;
 
     protected override void Awake()
@@ -47,18 +47,35 @@ public class EquipIDData : XSingleton<EquipIDData>
             Count =  prop.Count,
             EquipName =  prop.EquipName,
         };
-        var propItem = new PropItem()
+        int value = 0;
+        switch (prop.Quality)
         {
-            PropType = prop.PropType,
-            Quality = prop.Quality,
-        };
-        if (propTables.ContainsKey(propItem))
+            case 1:
+                value = 101;
+                break;
+            case 2:
+                value = 102;
+                break;
+            case 3:
+                value = 103;
+                break;
+            case 4:
+                value = 104;
+                break;
+            case 5:
+                value = 105;
+                break;
+            case 6:
+                value = 106;
+                break;
+        }
+        if (propTables.ContainsKey(value))
         {
-            propTables[propItem].Count+=prop.Count;
+            propTables[value].Count+=prop.Count;
         }
         else
         {
-            propTables.Add(propItem,data);
+            propTables.Add(value,data);
         }
     }
 }
