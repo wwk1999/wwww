@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Tool\ConstKeys.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\Prop\GreenWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Server\ServerConnect.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\ChongZiMonster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryNecklace.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipBase.cs" />
+    <Compile Include="Assets\Scripts\Prop\BlueWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanCloth.cs" />
     <Compile Include="Assets\Scripts\Window\MonsterBook.cs" />
     <Compile Include="Assets\Scripts\Equip\BagPanel.cs" />
@@ -155,6 +157,7 @@
     <Compile Include="Assets\External Resources\ARPG Effects\Demo\Scripts\ARPGFXLoopScript.cs" />
     <Compile Include="Assets\Scripts\Mysql\SourceStoneTable.cs" />
     <Compile Include="Assets\Scripts\Gloabl\PrimaryWeapon.cs" />
+    <Compile Include="Assets\Scripts\Prop\WhiteWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Skill\PrimaryExTrigger.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeCloth.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleCloth.cs" />
@@ -201,6 +204,7 @@
     <Compile Include="Assets\Scripts\Window\SceneLoading1.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaMoElite.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBall.cs" />
+    <Compile Include="Assets\Scripts\Prop\RedWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloth.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill1.cs" />
     <Compile Include="Assets\Scripts\UIFrameWork\BasePanel.cs" />
@@ -250,6 +254,7 @@
     <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SnotMonster.cs" />
     <Compile Include="Assets\Scripts\Singleton\SingletonNameAttribute.cs" />
+    <Compile Include="Assets\Scripts\Prop\OrangeWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ScaleFactorApplyToMaterial.cs" />
@@ -357,6 +362,7 @@
     <Compile Include="Assets\Scripts\Store\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Skill\IceArrow.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
+    <Compile Include="Assets\Scripts\Prop\PurpleWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />
     <Compile Include="Assets\Scripts\Config\WeaponSourceConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\BagObjectBase.cs" />

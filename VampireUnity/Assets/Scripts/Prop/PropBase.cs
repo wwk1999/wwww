@@ -5,17 +5,15 @@ using UnityEngine;
 
 public class PropBase : MonoBehaviour
 {
-    [NonSerialized]public Rigidbody2D equipRb;
+    public Rigidbody2D equipRb;
     [NonSerialized]public float speed = 10f; // 装备跟随的速度
     [NonSerialized]public bool isPickUp = false; // 是否被拾取
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
     [NonSerialized]public PropTable propTables;
-    
+
     void OnEnable()
     {
-        equipRb=GetComponent<Rigidbody2D>();
         equipRb.velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), UnityEngine.Random.Range(3f, 5f));
-
         StartCoroutine(StopVelocityAfterDelay(equipRb, 0.75f));
     }
     
