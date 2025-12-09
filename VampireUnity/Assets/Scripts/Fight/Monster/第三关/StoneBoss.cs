@@ -72,16 +72,23 @@ public class StoneBoss : MonsterBase
         CreateBloodEnergy();
         CreateEquip();
         CreateWeaponSourceStone();
+        CreateProp();
 
         // gameObject.SetActive(false);
         // GameController.S.SnotMonsterQueue.Enqueue(this);
     }
 
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+    }
     private void Start()
     {
         size = 1.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+
     }
 
 

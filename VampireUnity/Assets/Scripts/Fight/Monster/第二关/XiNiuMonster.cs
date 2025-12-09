@@ -38,6 +38,12 @@ public class XiNiuMonster : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
         CreateEquip();
+        CreateProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
     public override void Die()
@@ -91,6 +97,8 @@ public class XiNiuMonster : MonsterBase
         size = 0.3f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+
         
         // 确保 isMove 初始化为 true（基类已初始化，这里只是确保）
         isMove = true;

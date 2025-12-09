@@ -55,6 +55,11 @@ public class XueQiE : MonsterBase
         float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
         Invoke(nameof(RandomDelayDie),randomDelay);
     }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+    }
 
     private void  RandomDelayDie()
     {
@@ -63,6 +68,7 @@ public class XueQiE : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
         CreateEquip();
+        CreateProp();
     }
     
     private void Start()
@@ -72,6 +78,8 @@ public class XueQiE : MonsterBase
         size = 0.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
     }
     

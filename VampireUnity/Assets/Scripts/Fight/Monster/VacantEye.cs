@@ -18,6 +18,12 @@ public class VacantEye : MonsterBase
          ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy);
          CreateBloodEnergy();
          CreateEquip();
+         CreateProp();
+     }
+     
+     public override void AddMonsterProp()
+     {
+         MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
      }
      public override void Skill()
      {

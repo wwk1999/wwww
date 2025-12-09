@@ -40,6 +40,11 @@ public class EliteBeeMonster : MonsterBase
         size = 0.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+    }
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
     private void RandomDelayDie()
@@ -49,6 +54,7 @@ public class EliteBeeMonster : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,2);
         CreateEquip();
+        CreateProp();
     }
 
     public override void Die()

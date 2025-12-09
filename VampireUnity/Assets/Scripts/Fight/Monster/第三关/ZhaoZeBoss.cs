@@ -74,6 +74,7 @@ public class ZhaoZeBoss : MonsterBase
         CreateBloodEnergy();
         CreateEquip();
         CreateWeaponSourceStone();
+        CreateProp();
 
         // gameObject.SetActive(false);
         // GameController.S.SnotMonsterQueue.Enqueue(this);
@@ -85,7 +86,12 @@ public class ZhaoZeBoss : MonsterBase
         size = 1.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
-
+        AddMonsterProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
     
     public void MonsterMove1()

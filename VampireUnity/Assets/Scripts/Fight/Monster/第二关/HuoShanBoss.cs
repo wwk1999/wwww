@@ -19,6 +19,15 @@ public class HuoShanBoss : MonsterBase
     [NonSerialized]public float Skill3CurrentTime = 0f;
     [NonSerialized]public State CurrentState = State.Move;
     public HuoShanTrigger huoShanTrigger;
+
+
+    public void Start()
+    {
+        size = 1f;
+        AddMonsterEquip();
+        AddMonsterSourceStone();
+        AddMonsterProp();
+    }
     
     public  void Awake()
     {
@@ -114,6 +123,12 @@ public class HuoShanBoss : MonsterBase
         CreateBloodEnergy();
         CreateEquip();
         CreateWeaponSourceStone();
+        CreateProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
     void Update()

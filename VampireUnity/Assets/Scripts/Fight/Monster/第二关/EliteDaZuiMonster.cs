@@ -54,6 +54,12 @@ public class EliteDaZuiMonster : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,2);
         CreateEquip();
+        CreateProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
     public override void Die()
@@ -68,6 +74,8 @@ public class EliteDaZuiMonster : MonsterBase
         size = 0.55f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+
     }
     
     public void AttackBeginLeft()

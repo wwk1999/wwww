@@ -15,6 +15,12 @@ public class SpiderMonster : MonsterBase
         size = 0.15f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
     private void RandomDelayDie()
@@ -24,6 +30,7 @@ public class SpiderMonster : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
         CreateEquip();
+        CreateProp();
     }
 
     public override void Die()

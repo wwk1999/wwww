@@ -70,6 +70,12 @@ public class ShaMoElite : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 2);
         CreateEquip();
+        CreateProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
     
     private void Start()
@@ -79,6 +85,8 @@ public class ShaMoElite : MonsterBase
         isBeatback = false;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
     } private void OnDestroy()

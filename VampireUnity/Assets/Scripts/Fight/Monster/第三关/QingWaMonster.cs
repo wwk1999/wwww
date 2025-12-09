@@ -48,6 +48,12 @@ public class QingWaMonster : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
         CreateEquip();
+        CreateProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
     public override void Die()
@@ -62,6 +68,8 @@ public class QingWaMonster : MonsterBase
         size = 0.2f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+
     }
     
     

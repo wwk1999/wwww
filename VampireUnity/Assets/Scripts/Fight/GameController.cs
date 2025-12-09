@@ -108,20 +108,23 @@ public class GameController : XSingleton<GameController>
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     //血能对象池队列
     [NonReorderable]public Queue<GameObject>BloodEnergyQueue = new Queue<GameObject>();
     //怪物伤害文本对象池队列
     [NonReorderable]public Queue<MonsterHurtText>MonsterHurtTextQueue = new Queue<MonsterHurtText>();
 
+    
+    
+    //武器对象池
+    [NonReorderable]public Queue<GameObject>WhiteWeaponFragmengQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>GreenWeaponFragmengQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>BlueWeaponFragmengQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PurpleWeaponFragmengQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>OrangeWeaponFragmengQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>RedWeaponFragmengQueue = new Queue<GameObject>();
+    
+    
+    
     //装备对象池
     [NonReorderable]public Queue<GameObject>PrimaryCloakQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>PrimaryClothQueue = new Queue<GameObject>();
@@ -228,6 +231,32 @@ public class GameController : XSingleton<GameController>
         ObserverModuleManager.S.RegisterEvent(ConstKeys.BossEnergy,BossEnergy);
         ObserverModuleManager.S.RegisterEvent(ConstKeys.BossWarning, ShowBossWarning);
         ObserverModuleManager.S.RegisterEvent(ConstKeys.ResumePlayerCamera, ResumePlayerCamera);
+    }
+
+    public GameObject GetProp(PropItem prop)
+    {
+        switch (prop.PropType)
+        {
+            case PropConfig.PropType.WeaponFragment:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        return WhiteWeaponFragmengQueue.Dequeue();
+                    case 2:
+                        return GreenWeaponFragmengQueue.Dequeue();
+                    case 3:
+                        return BlueWeaponFragmengQueue.Dequeue();
+                    case 4:
+                        return PurpleWeaponFragmengQueue.Dequeue();
+                    case 5:
+                        return OrangeWeaponFragmengQueue.Dequeue();
+                    case 6:
+                        return RedWeaponFragmengQueue.Dequeue();
+                }
+                break;
+        }
+
+        return null;
     }
     
     

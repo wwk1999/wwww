@@ -31,6 +31,14 @@ public class TreeManBoss : MonsterBase
        ObserverModuleManager.S.RegisterEvent(ConstKeys.TreeManFireSkill1,TreeManFireSkill1);
        ObserverModuleManager.S.RegisterEvent(ConstKeys.TreeManDashSkill1,TreeManDashSkill1);
     }
+
+    public void Start()
+    {
+        size = 1f;
+        AddMonsterEquip();
+        AddMonsterSourceStone();
+        AddMonsterProp();
+    }
     
     private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
@@ -136,6 +144,12 @@ public class TreeManBoss : MonsterBase
         CreateWeaponSourceStone();
         TreeManBossDie();
         FightBGController.S.PlaySuccessAnim();
+        CreateProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
     public void TreeManBossDie()
@@ -168,10 +182,9 @@ public class TreeManBoss : MonsterBase
             FightBGController.S.CircleAttack.GetComponent<CircleAttack>().circleAttackState = CircleAttackState.TreeManSkill1;
             FightBGController.S.CircleAttack.transform.position=GameController.S.gamePlayer.transform.position;
         }
-        // monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_01", false);
-        // Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-        // GetComponent<Rigidbody2D>().linearVelocity = direction.normalized * 3f; 
     }
+    
+    
 
     public void Skill1End(Vector3 pos)
     {
@@ -261,6 +274,7 @@ public class TreeManBoss : MonsterBase
         }
 
     }
+    
 
     public override void Skill() { }
     public override void AddMonsterEquip()

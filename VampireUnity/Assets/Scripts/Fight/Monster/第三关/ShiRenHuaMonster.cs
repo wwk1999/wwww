@@ -56,6 +56,7 @@ public class ShiRenHuaMonster : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,2);
         CreateEquip();
+        CreateProp();
     }
 
     public override void Die()
@@ -64,12 +65,19 @@ public class ShiRenHuaMonster : MonsterBase
         float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
         Invoke(nameof(RandomDelayDie),randomDelay);
     }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+    }
 
     private void Start()
     {
         size = 0.6f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
+
     }
 
 

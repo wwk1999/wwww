@@ -65,12 +65,13 @@ public class XianRenZhang : MonsterBase
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
-        //CreateBloodEnergy();
         CreateEquip();
-        //CreateWeaponSourceStone();
-
-        // gameObject.SetActive(false);
-        // GameController.S.SnotMonsterQueue.Enqueue(this);
+        CreateProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
     
     private void Start()
@@ -80,6 +81,7 @@ public class XianRenZhang : MonsterBase
         isBeatback = false;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
     }
 

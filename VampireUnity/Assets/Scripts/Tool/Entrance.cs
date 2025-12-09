@@ -29,6 +29,35 @@ public class Entrance : MonoBehaviour
         //装备对象池
         for (int i = 0; i < 10; i++)
         {
+            GameObject whiteWeaponFragmeng = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/WhiteWeaponFragmeng"));
+            whiteWeaponFragmeng.gameObject.SetActive(false);
+            GameController.S.WhiteWeaponFragmengQueue.Enqueue(whiteWeaponFragmeng);
+            
+            GameObject GreenWeaponFragmeng = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/GreenWeaponFragmeng"));
+            GreenWeaponFragmeng.gameObject.SetActive(false);
+            GameController.S.GreenWeaponFragmengQueue.Enqueue(GreenWeaponFragmeng);
+            
+            GameObject BlueWeaponFragmeng = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BlueWeaponFragmeng"));
+            BlueWeaponFragmeng.gameObject.SetActive(false);
+            GameController.S.BlueWeaponFragmengQueue.Enqueue(BlueWeaponFragmeng);
+            
+            GameObject PurpleWeaponFragmeng = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/PurpleWeaponFragmeng"));
+            PurpleWeaponFragmeng.gameObject.SetActive(false);
+            GameController.S.PurpleWeaponFragmengQueue.Enqueue(PurpleWeaponFragmeng);
+            
+            GameObject OrangeWeaponFragmeng = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/OrangeWeaponFragmeng"));
+            OrangeWeaponFragmeng.gameObject.SetActive(false);
+            GameController.S.OrangeWeaponFragmengQueue.Enqueue(OrangeWeaponFragmeng);
+            
+            GameObject RedWeaponFragmeng = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/RedWeaponFragmeng"));
+            RedWeaponFragmeng.gameObject.SetActive(false);
+            GameController.S.RedWeaponFragmengQueue.Enqueue(RedWeaponFragmeng);
+            
+            
+            
+            
+            
+            
             GameObject primaryCloakFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryCloakFight"));
             primaryCloakFight.gameObject.SetActive(false);
             GameController.S.PrimaryCloakQueue.Enqueue(primaryCloakFight);

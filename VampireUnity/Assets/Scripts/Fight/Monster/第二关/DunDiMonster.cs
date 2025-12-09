@@ -52,6 +52,12 @@ public class DunDiMonster : MonsterBase
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
         CreateEquip();
+        CreateProp();
+    }
+    
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
     public override void Die()
@@ -66,6 +72,7 @@ public class DunDiMonster : MonsterBase
         size = 0.3f;
         AddMonsterEquip();
         AddMonsterSourceStone();
+        AddMonsterProp();
     }
 
 

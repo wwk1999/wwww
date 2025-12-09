@@ -30,6 +30,17 @@ public enum State
     Die
 }
 
+public class MonsterProp
+{
+    public PropItem PropItem;
+    public int Probability;
+    
+    public MonsterProp(PropItem propItem, int probability)
+    {
+        PropItem = propItem;
+        Probability = probability;
+    }
+}
 
 public abstract class MonsterBase : MonoBehaviour
 {
@@ -55,6 +66,8 @@ public abstract class MonsterBase : MonoBehaviour
     public Slider hpSlider;
     [NonSerialized]public List<MonsterEquip> MonsterEquipList=new List<MonsterEquip>() ;//怪物装备列表
     [NonSerialized]public List<MonsterWeaponSource> MonsterWeaponSourceStoneList=new List<MonsterWeaponSource>() ;//怪物源石列表
+    [NonSerialized]public List<MonsterProp> MonsterPropList=new List<MonsterProp>() ;//怪物源石列表
+
 
     //经验相关
     [NonSerialized]public Text playerLevelText;
@@ -94,6 +107,8 @@ public abstract class MonsterBase : MonoBehaviour
 
     public abstract void AddMonsterEquip();
     public abstract void AddMonsterSourceStone();
+    
+    public abstract void AddMonsterProp();
     
     public void Awake()
     {
@@ -755,6 +770,22 @@ public abstract class MonsterBase : MonoBehaviour
                 equip.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
                 equip.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            }
+        }
+    }
+
+    public void CreateProp()
+    {
+        foreach (MonsterProp prop in MonsterPropList)
+        {
+            int random = UnityEngine.Random.Range(0, 100);
+            if (random <= prop.Probability)
+            {
+                //生成装备
+                GameObject propObj = GameController.S.GetProp(prop.PropItem);
+                propObj.gameObject.SetActive(true);
+                //设置装备位置为怪物位置
+                propObj.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
         }
     }
