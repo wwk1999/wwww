@@ -1,0 +1,14 @@
+shamoniao.png
+size:368,239
+filter:Linear,Linear
+pma:true
+houchibang_3
+bounds:244,58,46,107
+offsets:1,2,48,109
+rotate:90
+qianchibang_1
+bounds:244,106,122,131
+offsets:0,2,123,134
+shenti_2
+bounds:2,2,240,235
+offsets:2,1,243,237
