@@ -180,6 +180,7 @@
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Scale.cs" />
     <Compile Include="Assets\Scripts\Tool\SqrtAttack.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenShoe.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaNiao.cs" />
     <Compile Include="Assets\Scripts\Equip\MonsterWeaponSource.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXLightFlicker.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
@@ -188,6 +189,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongNext.cs" />
     <Compile Include="Assets\Scripts\Skill\FireTrigger.cs" />
     <Compile Include="Assets\Scripts\Tool\CircleAttack.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaXiYi.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXPortalScript.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\EliteBeeMonster.cs" />
@@ -205,6 +207,7 @@
     <Compile Include="Assets\Scripts\Window\TaskWindow1.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerEquipConfig.cs" />
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Scripts\ProjectileMover.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaChong.cs" />
     <Compile Include="Assets\Scripts\Tool\AnimCallBack.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioController.cs" />
     <Compile Include="Assets\Scripts\Tool\BossWarning.cs" />
@@ -264,6 +267,7 @@
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Scripts\ParticleCollisionInstance.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiSkillTriggerRight.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\XianRenZhang.cs" />
     <Compile Include="Assets\Scripts\Singleton\NeedDestroyAttribute.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\Du.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
