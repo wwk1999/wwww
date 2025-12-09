@@ -591,52 +591,33 @@ public class GameController : XSingleton<GameController>
 
     public void CreatePlayer()
     {
-        gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player")).GetComponent<Player>();
+        gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player"),transform).GetComponent<Player>();
         gamePlayer.transform.position = Vector2.zero;
     }
 
+    // 获取距离玩家10单位的圆周上随机一点
+    Vector2 GetRandomPointOnCircle(float radius = 10f)
+    {
+        // 获取单位圆内的随机点，然后归一化到圆周上
+        Vector2 randomDirection = Random.insideUnitCircle.normalized;
+    
+        // 乘以半径并加上玩家位置
+        return (Vector2)GameController.S.gamePlayer.transform.position + randomDirection * radius;
+    }
+    
     public void CreateEliteMonster()
     {
         if (GameOver)
             return;
         int monsterRandomIndex=0;
-        Transform monsterRandomPoint= null;
-        switch (LevelInfoConfig.CurrentGameLevel)
-        {
-            case 3:
-            case 4:
-                monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints1.Length);
-                monsterRandomPoint = MonsterBirthPoints1[monsterRandomIndex];
-                break;
-            case 7:
-            case 8:
-                monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints2.Length);
-                monsterRandomPoint = MonsterBirthPoints2[monsterRandomIndex];
-                break;
-            case 11:
-            case 12:
-                monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
-                monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
-                break;
-            case 15:
-            case 16:
-            case 19:
-            case 20:
-                monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
-                monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
-                break;
-        }
-        // //从子物体里随机选择一个
-        // int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints1.Length);
-        // //获取随机选择的子物体    
-        // Transform monsterRandomPoint = MonsterBirthPoints1[monsterRandomIndex];
+        Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
         
         if ( LevelInfoConfig.CurrentGameLevel == 3|| LevelInfoConfig.CurrentGameLevel ==4)
         {
             EliteBeeMonster eliteBeeMonster = EliteBeeMonsterQueue.Dequeue();
             eliteBeeMonster.gameObject.SetActive(true);
             eliteBeeMonster.CurrentHp = eliteBeeMonster.MaxHp;
-            eliteBeeMonster.transform.position = monsterRandomPoint.position;
+            eliteBeeMonster.transform.position = monsterRandomPoint;
             eliteBeeMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
 
             TotalMonsterCount++;
@@ -650,7 +631,7 @@ public class GameController : XSingleton<GameController>
             EliteDaZuiMonster eliteDaZuiMonster = EliteDaZuiMonsterQueue.Dequeue();
             eliteDaZuiMonster.gameObject.SetActive(true);
             eliteDaZuiMonster.CurrentHp = eliteDaZuiMonster.MaxHp;
-            eliteDaZuiMonster.transform.position = monsterRandomPoint.position;
+            eliteDaZuiMonster.transform.position = monsterRandomPoint;
             eliteDaZuiMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
 
             TotalMonsterCount++;
@@ -670,7 +651,7 @@ public class GameController : XSingleton<GameController>
             ShiRenHuaMonster shirenhuaMonster = ShiRenHuaMonsterQueue.Dequeue();
             shirenhuaMonster.gameObject.SetActive(true);
             shirenhuaMonster.CurrentHp = shirenhuaMonster.MaxHp;
-            shirenhuaMonster.transform.position = monsterRandomPoint.position;
+            shirenhuaMonster.transform.position = monsterRandomPoint;
             shirenhuaMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
 
             TotalMonsterCount++;
@@ -682,7 +663,7 @@ public class GameController : XSingleton<GameController>
             ShaMoElite shamoElite = ShaMoEliteQueue.Dequeue();
             shamoElite.gameObject.SetActive(true);
             shamoElite.CurrentHp = shamoElite.MaxHp;
-            shamoElite.transform.position = monsterRandomPoint.position;
+            shamoElite.transform.position = monsterRandomPoint;
             shamoElite.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
 
             TotalMonsterCount++;
@@ -694,7 +675,7 @@ public class GameController : XSingleton<GameController>
             YingShu YingShu = YingShuQueue.Dequeue();
             YingShu.gameObject.SetActive(true);
             YingShu.CurrentHp = YingShu.MaxHp;
-            YingShu.transform.position = monsterRandomPoint.position;
+            YingShu.transform.position = monsterRandomPoint;
             YingShu.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
 
             TotalMonsterCount++;
@@ -710,7 +691,7 @@ public class GameController : XSingleton<GameController>
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3|| LevelInfoConfig.CurrentGameLevel == 4)
         {
             int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints1.Length);
-            Transform monsterRandomPoint = MonsterBirthPoints1[monsterRandomIndex];
+            Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
                 MonsterBase monsterBase;
@@ -731,7 +712,7 @@ public class GameController : XSingleton<GameController>
                 }
 
                 monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint.position;
+                monsterBase.transform.position = monsterRandomPoint;
                 monsterBase.CurrentHp = monsterBase.MaxHp;
                 monsterBase.transform.SetParent(MonsterBirthPoints1[monsterRandomIndex]);
                 monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
@@ -748,7 +729,7 @@ public class GameController : XSingleton<GameController>
         if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6|| LevelInfoConfig.CurrentGameLevel == 8)
         {
             int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints2.Length);
-            Transform monsterRandomPoint = MonsterBirthPoints2[monsterRandomIndex];
+            Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
                 MonsterBase monsterBase;
@@ -766,7 +747,7 @@ public class GameController : XSingleton<GameController>
                 }
 
                 monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint.position;
+                monsterBase.transform.position = monsterRandomPoint;
                 monsterBase.CurrentHp = monsterBase.MaxHp;
                 monsterBase.transform.SetParent(MonsterBirthPoints2[monsterRandomIndex]);
                 if (monsterBase.monsterSkeletonAnimation != null)
@@ -790,7 +771,7 @@ public class GameController : XSingleton<GameController>
         if (LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 10 || LevelInfoConfig.CurrentGameLevel == 9|| LevelInfoConfig.CurrentGameLevel == 12)
         {
             int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
-            Transform monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
+            Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
                 MonsterBase monsterBase;
@@ -808,7 +789,7 @@ public class GameController : XSingleton<GameController>
                 }
 
                 monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint.position;
+                monsterBase.transform.position = monsterRandomPoint;
                 monsterBase.CurrentHp = monsterBase.MaxHp;
                 monsterBase.transform.SetParent(MonsterBirthPoints3[monsterRandomIndex]);
                 monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
@@ -824,7 +805,7 @@ public class GameController : XSingleton<GameController>
         if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15|| LevelInfoConfig.CurrentGameLevel == 16)
         {
             int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
-            Transform monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
+            Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
                 MonsterBase monsterBase;
@@ -842,7 +823,7 @@ public class GameController : XSingleton<GameController>
                 }
 
                 monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint.position;
+                monsterBase.transform.position = monsterRandomPoint;
                 monsterBase.CurrentHp = monsterBase.MaxHp;
                 monsterBase.transform.SetParent(MonsterBirthPoints3[monsterRandomIndex]);
                 monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
@@ -859,7 +840,7 @@ public class GameController : XSingleton<GameController>
         if (LevelInfoConfig.CurrentGameLevel == 17 || LevelInfoConfig.CurrentGameLevel == 18 || LevelInfoConfig.CurrentGameLevel == 19|| LevelInfoConfig.CurrentGameLevel == 20)
         {
             int monsterRandomIndex = UnityEngine.Random.Range(1, MonsterBirthPoints3.Length);
-            Transform monsterRandomPoint = MonsterBirthPoints3[monsterRandomIndex];
+            Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
                 MonsterBase monsterBase;
@@ -877,7 +858,7 @@ public class GameController : XSingleton<GameController>
                 }
 
                 monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint.position;
+                monsterBase.transform.position = monsterRandomPoint;
                 monsterBase.CurrentHp = monsterBase.MaxHp;
                 monsterBase.transform.SetParent(MonsterBirthPoints3[monsterRandomIndex]);
                 monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
