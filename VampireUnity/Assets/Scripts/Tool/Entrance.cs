@@ -360,7 +360,7 @@ public class Entrance : MonoBehaviour
 
         
         //初始化怪物队列
-        if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3|| LevelInfoConfig.CurrentGameLevel == 4)
+        if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3)
         {
             for (int i = 0; i < 100; i++)
             {
@@ -393,7 +393,7 @@ public class Entrance : MonoBehaviour
             }
         }
         
-        if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6|| LevelInfoConfig.CurrentGameLevel == 8)
+        if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6)
         {
             for (int i = 0; i < 100; i++)
             {
@@ -439,8 +439,8 @@ public class Entrance : MonoBehaviour
         }
 
 
-        if (LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 10 ||
-            LevelInfoConfig.CurrentGameLevel == 9|| LevelInfoConfig.CurrentGameLevel == 12)
+        if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 8 ||
+            LevelInfoConfig.CurrentGameLevel == 9)
         {
             for (int i = 0; i < 100; i++)
             {
@@ -465,8 +465,8 @@ public class Entrance : MonoBehaviour
             }
         }
         
-        if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 ||
-            LevelInfoConfig.CurrentGameLevel == 15|| LevelInfoConfig.CurrentGameLevel == 16)
+        if (LevelInfoConfig.CurrentGameLevel == 10 || LevelInfoConfig.CurrentGameLevel == 11 ||
+            LevelInfoConfig.CurrentGameLevel == 12)
         {
             for (int i = 0; i < 100; i++)
             {
@@ -491,8 +491,8 @@ public class Entrance : MonoBehaviour
         }
         
 
-        if (LevelInfoConfig.CurrentGameLevel == 17 || LevelInfoConfig.CurrentGameLevel == 18 ||
-            LevelInfoConfig.CurrentGameLevel == 19|| LevelInfoConfig.CurrentGameLevel == 20)
+        if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 ||
+            LevelInfoConfig.CurrentGameLevel == 15)
         {
             for (int i = 0; i < 100; i++)
             {
@@ -506,7 +506,7 @@ public class Entrance : MonoBehaviour
         
 
         //精英怪队列
-        if (LevelInfoConfig.CurrentGameLevel == 3|| LevelInfoConfig.CurrentGameLevel == 4)
+        if (LevelInfoConfig.CurrentGameLevel == 2|| LevelInfoConfig.CurrentGameLevel == 3)
         {
             for (int i = 0; i < 15; i++)
             {
@@ -528,7 +528,7 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 8)
+        if (LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6)
         {
             for (int i = 0; i < 15; i++)
             {
@@ -541,7 +541,7 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 12)
+        if (LevelInfoConfig.CurrentGameLevel == 8 || LevelInfoConfig.CurrentGameLevel == 9)
         {
             for (int i = 0; i < 15; i++)
             {
@@ -556,7 +556,7 @@ public class Entrance : MonoBehaviour
 
         }
         
-        if (LevelInfoConfig.CurrentGameLevel == 15 || LevelInfoConfig.CurrentGameLevel == 16)
+        if (LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 12)
         {
             for (int i = 0; i < 15; i++)
             {
@@ -571,7 +571,7 @@ public class Entrance : MonoBehaviour
 
         }
         
-        if (LevelInfoConfig.CurrentGameLevel == 19 || LevelInfoConfig.CurrentGameLevel == 20)
+        if (LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15)
         {
             for (int i = 0; i < 15; i++)
             {
@@ -588,81 +588,13 @@ public class Entrance : MonoBehaviour
         
         
         
-        
-
-        GameController.S.MonsterBirthPoint1 = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/MonsterBirthPoint1"), GameController.S.transform);
-        GameController.S.MonsterBirthPoint2 = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/MonsterBirthPoint2"), GameController.S.transform);
-        GameController.S.MonsterBirthPoint3 = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/MonsterBirthPoint3"), GameController.S.transform);
 
 
-        GameController.S.PlayerBirthPoint1= Instantiate(Resources.Load<GameObject>("Prefabs/Tool/PlayerBirthPoint").transform.Find("Level1").gameObject, GameController.S.transform);
-        GameController.S.PlayerBirthPoint2= Instantiate(Resources.Load<GameObject>("Prefabs/Tool/PlayerBirthPoint").transform.Find("Level2").gameObject, GameController.S.transform);
         GameController.S.fightBG=Instantiate(Resources.Load<GameObject>("Prefabs/Window/FightBG"), GameController.S.transform);
         GameController.S.fightBG.transform.position = new Vector3(0, 0, 0.1f);
-        GameController.S.MonsterBirthPoint1.transform.position = new Vector3(0, 0, 0f);
-        GameController.S.PlayerBirthPoint1.transform.position = new Vector3(0, 0, 0f);
-        GameController.S.PlayerBirthPoint2.transform.position = new Vector3(0, 0, 0f);
-        // GameController.S.snotMonster = Resources.Load<GameObject>("Prefabs/Monster/SnotMonster").GetComponent<SnotMonster>();
-        // GameController.S.batMonster = Resources.Load<GameObject>("Prefabs/Monster/BatMonster").GetComponent<BatMonster>();
-        // GameController.S.spiderMonster = Resources.Load<GameObject>("Prefabs/Monster/SpiderMonster").GetComponent<SpiderMonster>();
-        // GameController.S.elitebeeMonster = Resources.Load<GameObject>("Prefabs/Monster/EliteBeeMonster").GetComponent<EliteBeeMonster>();
         GameController.S.monsterHpSliderPrefabs=Resources.Load<GameObject>("Prefabs/Tool/MonsterHPBloodBar");
         
         
-        
-    // //赋值
-    //     FightBGController.S.SaveButton = GameController.S.fightBG.GetComponent<FightBg>().saveButton;
-    //     FightBGController.S.WeaponButton= GameController.S.transform.Find("FightBG(Clone)/Canvas/Weapon").GetComponent<Button>();
-    //     FightBGController.S.joystick=GameController.S.transform.Find("FightBG(Clone)/Canvas/Fixed Joystick").GetComponent<Joystick>();
-    //     FightBGController.S.normalAttackButton=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/NormalAttack").GetComponent<Button>();
-    //     FightBGController.S.FightStopButton=GameController.S.transform.Find("FightBG(Clone)/Canvas/Stop/StopButton").GetComponent<Button>();
-    //     FightBGController.S.dashButton=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/Dash").GetComponent<Button>();
-    //     FightBGController.S.rageButton=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/Rage").GetComponent<Button>();
-    //     FightBGController.S.shieldButton=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/Shield").GetComponent<Button>();
-    //     FightBGController.S.iceArrowButton=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/IceArrow").GetComponent<Button>();
-    //     FightBGController.S.iceExButton=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/IceEx").GetComponent<Button>();
-    //     FightBGController.S.iceBallButton=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/IceBall").GetComponent<Button>();
-    //     FightBGController.S.IceExYellowCd=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/IceExYellowCd").GetComponent<Image>();
-    //     FightBGController.S.IceBallYellowCd=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/IceBallYellowCd").GetComponent<Image>();
-    //     FightBGController.S.IceArrowYellowCd=GameController.S.transform.Find("FightBG(Clone)/Canvas/Skill/IceArrowYellowCd").GetComponent<Image>();
-    //     FightBGController.S.BossEnergySlider=GameController.S.transform.Find("FightBG(Clone)/Canvas/BossEnergySlider").GetComponent<Slider>();
-
-
-        
-        GameController.S.MonsterBirthPoints1=GameController.S.MonsterBirthPoint1.GetComponentsInChildren<Transform>();
-        GameController.S.MonsterBirthPoints2=GameController.S.MonsterBirthPoint2.GetComponentsInChildren<Transform>();
-        GameController.S.MonsterBirthPoints3=GameController.S.MonsterBirthPoint3.GetComponentsInChildren<Transform>();
-
-
-        //根据关卡设置玩家出生点
-        switch (LevelInfoConfig.CurrentGameLevel)
-        {
-            case 1:
-            case 2:
-            case 3:
-                GameController.S.PlayerBirthPoints=GameController.S.PlayerBirthPoint1.GetComponentsInChildren<Transform>();
-                break;
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 10:
-            case 11:
-            case 12:
-            case 13:
-            case 14:
-            case 15:
-            case 16:
-            case 17:
-            case 18:
-            case 19:
-            case 20:
-                GameController.S.PlayerBirthPoints=GameController.S.PlayerBirthPoint2.GetComponentsInChildren<Transform>();
-                break;
-        }
-        //GameController.S.PlayerBirthPoints=GameController.S.PlayerBirthPoint1.GetComponentsInChildren<Transform>();
         
         
         
