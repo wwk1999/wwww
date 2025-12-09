@@ -873,7 +873,7 @@ public class BagController : XSingleton<BagController>
         {
             Debug.Log("调用ShowEquip方法显示装备");
             ShowEquip();
-            InitPlayerEquip();
+            RefreshPlayerEquip();
             SetE();
         }
         catch (System.Exception e)
@@ -911,252 +911,6 @@ public class BagController : XSingleton<BagController>
             PlayerHelmetGrid.E.gameObject.SetActive(true);
         }
     }
-
-    
-    public void InitPlayerEquip()
-    {
-        // 初始化玩家装备
-        
-        Debug.Log("初始化玩家装备显示");
-        playerCloth.transform.Find("parent/Image").gameObject.SetActive(false);
-        playerCloth.transform.Find("parent/ImageBG").gameObject.SetActive(false);
-        playerCloak.transform.Find("parent/Image").gameObject.SetActive(false);
-        playerCloak.transform.Find("parent/ImageBG").gameObject.SetActive(false);
-        playerRing.transform.Find("parent/Image").gameObject.SetActive(false);
-        playerRing.transform.Find("parent/ImageBG").gameObject.SetActive(false);
-        playerNecklace.transform.Find("parent/Image").gameObject.SetActive(false);
-        playerNecklace.transform.Find("parent/ImageBG").gameObject.SetActive(false);
-        playerShoe.transform.Find("parent/Image").gameObject.SetActive(false);
-        playerShoe.transform.Find("parent/ImageBG").gameObject.SetActive(false);
-        playerHelmet.transform.Find("parent/Image").gameObject.SetActive(false);
-        playerHelmet.transform.Find("parent/ImageBG").gameObject.SetActive(false);
-
-        IsInstallCloth = false;
-        IsInstallCloak = false;
-        IsInstallRing = false;
-        IsInstallNecklace = false;
-        IsInstallShoe = false;
-        IsInstallHelmet = false;
-        
-        
-        if (PlayerEquipConfig.RingId != 0)
-        {
-            IsInstallRing = true;
-            playerRing.transform.Find("parent/Image").gameObject.SetActive(true);
-            playerRing.transform.Find("parent/ImageBG").gameObject.SetActive(true);
-            EquipTable ringEquip = EquipIdList[PlayerEquipConfig.RingId];
-            
-            playerRing.GetComponent<BagGrid>().tableBase = ringEquip;
-            playerRing.GetComponent<BagGrid>().EquipType= EquipType.Equip;
-
-            playerRing.transform.Find("parent/Image").GetComponent<Button>().image.sprite = ResourcesConfig.GetEquipSprite(ringEquip);
-            switch (ringEquip.Quality)
-            {
-                case 1:
-                    playerRing.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = whiteBg;
-                    playerRing.transform.Find("parent/Image").GetComponent<Image>().material = whiteMaterial;
-                    break;
-                case 2:
-                    playerRing.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = greenBg;
-                    playerRing.transform.Find("parent/Image").GetComponent<Image>().material = greenMaterial;
-                    break;
-                case 3:
-                    playerRing.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = blueBg;
-                    playerRing.transform.Find("parent/Image").GetComponent<Image>().material = blueMaterial;
-
-                    break;
-                case 4:
-                    playerRing.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = purpleBg;
-                    playerRing.transform.Find("parent/Image").GetComponent<Image>().material = purpleMaterial;
-                    break;
-                case 5:
-                    playerRing.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = orangeBg;
-                    playerRing.transform.Find("parent/Image").GetComponent<Image>().material = orangeMaterial;
-                    break;
-            }
-        }
-        
-        
-        if (PlayerEquipConfig.HelmetId != 0)
-        {
-            IsInstallHelmet = true;
-            playerHelmet.transform.Find("parent/Image").gameObject.SetActive(true);
-            playerHelmet.transform.Find("parent/ImageBG").gameObject.SetActive(true);
-            EquipTable HelmetEquip = EquipIdList[PlayerEquipConfig.HelmetId];
-            playerHelmet.GetComponent<BagGrid>().tableBase = HelmetEquip;
-            playerHelmet.GetComponent<BagGrid>().EquipType= EquipType.Equip;
-            playerHelmet.transform.Find("parent/Image").GetComponent<Button>().image.sprite = ResourcesConfig.GetEquipSprite(HelmetEquip);
-            switch (HelmetEquip.Quality)
-            {
-                case 1:
-                    playerHelmet.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = whiteBg;
-                    playerHelmet.transform.Find("parent/Image").GetComponent<Image>().material = whiteMaterial;
-                    break;
-                case 2:
-                    playerHelmet.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = greenBg;
-                    playerHelmet.transform.Find("parent/Image").GetComponent<Image>().material = greenMaterial;
-                    break;
-                case 3:
-                    playerHelmet.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = blueBg;
-                    playerHelmet.transform.Find("parent/Image").GetComponent<Image>().material = blueMaterial;
-
-                    break;
-                case 4:
-                    playerHelmet.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = purpleBg;
-                    playerHelmet.transform.Find("parent/Image").GetComponent<Image>().material = purpleMaterial;
-                    break;
-                case 5:
-                    playerHelmet.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = orangeBg;
-                    playerHelmet.transform.Find("parent/Image").GetComponent<Image>().material = orangeMaterial;
-                    break;
-            }
-        }
-        
-        if (PlayerEquipConfig.NecklaceId !=0)
-        {
-            IsInstallNecklace = true;
-            playerNecklace.transform.Find("parent/Image").gameObject.SetActive(true);
-            playerNecklace.transform.Find("parent/ImageBG").gameObject.SetActive(true);
-            EquipTable NecklaceEquip = EquipIdList[PlayerEquipConfig.NecklaceId];
-            
-            playerNecklace.GetComponent<BagGrid>().tableBase = NecklaceEquip;
-            playerNecklace.GetComponent<BagGrid>().EquipType= EquipType.Equip;
-            playerNecklace.transform.Find("parent/Image").GetComponent<Button>().image.sprite = ResourcesConfig.GetEquipSprite(NecklaceEquip);
-            switch (NecklaceEquip.Quality)
-            {
-                case 1:
-                    playerNecklace.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = whiteBg;
-                    playerNecklace.transform.Find("parent/Image").GetComponent<Image>().material = whiteMaterial;
-                    break;
-                case 2:
-                    playerNecklace.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = greenBg;
-                    playerNecklace.transform.Find("parent/Image").GetComponent<Image>().material = greenMaterial;
-                    break;
-                case 3:
-                    playerNecklace.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = blueBg;
-                    playerNecklace.transform.Find("parent/Image").GetComponent<Image>().material = blueMaterial;
-
-                    break;
-                case 4:
-                    playerNecklace.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = purpleBg;
-                    playerNecklace.transform.Find("parent/Image").GetComponent<Image>().material = purpleMaterial;
-                    break;
-                case 5:
-                    playerNecklace.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = orangeBg;
-                    playerNecklace.transform.Find("parent/Image").GetComponent<Image>().material = orangeMaterial;
-                    break;
-            }
-        }
-        
-        if (PlayerEquipConfig.ShoeId != 0)
-        {
-            IsInstallShoe = true;
-            playerShoe.transform.Find("parent/Image").gameObject.SetActive(true);
-            playerShoe.transform.Find("parent/ImageBG").gameObject.SetActive(true);
-            EquipTable ShoeEquip = EquipIdList[PlayerEquipConfig.ShoeId];
-            
-            playerShoe.GetComponent<BagGrid>().tableBase = ShoeEquip;
-            playerShoe.GetComponent<BagGrid>().EquipType= EquipType.Equip;
-            playerShoe.transform.Find("parent/Image").GetComponent<Button>().image.sprite = ResourcesConfig.GetEquipSprite(ShoeEquip);
-            switch (ShoeEquip.Quality)
-            {
-                case 1:
-                    playerShoe.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = whiteBg;
-                    playerShoe.transform.Find("parent/Image").GetComponent<Image>().material = whiteMaterial;
-                    break;
-                case 2:
-                    playerShoe.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = greenBg;
-                    playerShoe.transform.Find("parent/Image").GetComponent<Image>().material = greenMaterial;
-                    break;
-                case 3:
-                    playerShoe.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = blueBg;
-                    playerShoe.transform.Find("parent/Image").GetComponent<Image>().material = blueMaterial;
-
-                    break;
-                case 4:
-                    playerShoe.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = purpleBg;
-                    playerShoe.transform.Find("parent/Image").GetComponent<Image>().material = purpleMaterial;
-                    break;
-                case 5:
-                    playerShoe.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = orangeBg;
-                    playerShoe.transform.Find("parent/Image").GetComponent<Image>().material = orangeMaterial;
-                    break;
-            }
-        }
-        
-        if (PlayerEquipConfig.CloakId != 0)
-        {
-            IsInstallCloak = true;
-            playerCloak.transform.Find("parent/Image").gameObject.SetActive(true);
-            playerCloak.transform.Find("parent/ImageBG").gameObject.SetActive(true);
-            EquipTable CloakEquip = EquipIdList[PlayerEquipConfig.CloakId];
-           
-            playerCloak.GetComponent<BagGrid>().tableBase = CloakEquip;
-            playerCloak.GetComponent<BagGrid>().EquipType= EquipType.Equip;
-            playerCloak.transform.Find("parent/Image").GetComponent<Button>().image.sprite = ResourcesConfig.GetEquipSprite(CloakEquip);
-            switch (CloakEquip.Quality)
-            {
-                case 1:
-                    playerCloak.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = whiteBg;
-                    playerCloak.transform.Find("parent/Image").GetComponent<Image>().material = whiteMaterial;
-                    break;
-                case 2:
-                    playerCloak.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = greenBg;
-                    playerCloak.transform.Find("parent/Image").GetComponent<Image>().material = greenMaterial;
-                    break;
-                case 3:
-                    playerCloak.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = blueBg;
-                    playerCloak.transform.Find("parent/Image").GetComponent<Image>().material = blueMaterial;
-
-                    break;
-                case 4:
-                    playerCloak.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = purpleBg;
-                    playerCloak.transform.Find("parent/Image").GetComponent<Image>().material = purpleMaterial;
-                    break;
-                case 5:
-                    playerCloak.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = orangeBg;
-                    playerCloak.transform.Find("parent/Image").GetComponent<Image>().material = orangeMaterial;
-                    break;
-            }
-        }
-        
-        if (PlayerEquipConfig.ClothId != 0)
-        {
-            IsInstallCloth = true;
-            playerCloth.transform.Find("parent/Image").gameObject.SetActive(true);
-            playerCloth.transform.Find("parent/ImageBG").gameObject.SetActive(true);
-            EquipTable ClothEquip = EquipIdList[PlayerEquipConfig.ClothId];
-           
-            playerCloth.GetComponent<BagGrid>().tableBase = ClothEquip;
-            playerCloth.GetComponent<BagGrid>().EquipType= EquipType.Equip;
-            playerCloth.transform.Find("parent/Image").GetComponent<Button>().image.sprite = ResourcesConfig.GetEquipSprite(ClothEquip);
-            switch (ClothEquip.Quality)
-            {
-                case 1:
-                    playerCloth.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = whiteBg;
-                    playerCloth.transform.Find("parent/Image").GetComponent<Image>().material = whiteMaterial;
-                    break;
-                case 2:
-                    playerCloth.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = greenBg;
-                    playerCloth.transform.Find("parent/Image").GetComponent<Image>().material = greenMaterial;
-                    break;
-                case 3:
-                    playerCloth.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = blueBg;
-                    playerCloth.transform.Find("parent/Image").GetComponent<Image>().material = blueMaterial;
-
-                    break;
-                case 4:
-                    playerCloth.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = purpleBg;
-                    playerCloth.transform.Find("parent/Image").GetComponent<Image>().material = purpleMaterial;
-                    break;
-                case 5:
-                    playerCloth.transform.Find("parent/ImageBG").GetComponent<Image>().sprite = orangeBg;
-                    playerCloth.transform.Find("parent/Image").GetComponent<Image>().material = orangeMaterial;
-                    break;
-            }
-        }
-    }
-    
     
     
     /// <summary>
@@ -1169,7 +923,30 @@ public class BagController : XSingleton<BagController>
         bag.gameObject.SetActive(false);
     }
 
-    
+    public void PlayEdge(Animator animator,int quality)
+    {
+        switch (quality)
+        {
+            case 1:
+                animator.Play("WhiteEdge");
+                break;
+            case 2:
+                animator.Play("GreenEdge");
+                break;
+            case 3:
+                animator.Play("BlueEdge");
+                break;
+            case 4:
+                animator.Play("PurpleEdge");
+                break;
+            case 5:
+                animator.Play("OrangeEdge");
+                break;
+            case 6:
+                animator.Play("RedEdge");
+                break;
+        }
+    }
 
     public void RefreshPlayerEquip()
     {
@@ -1179,6 +956,7 @@ public class BagController : XSingleton<BagController>
             IsInstallCloak = false;
             playerCloak.transform.Find("parent/Image").gameObject.SetActive(false);
             playerCloak.transform.Find("parent/ImageBG").gameObject.SetActive(false);
+            playerCloak.transform.Find("parent/Edge").gameObject.SetActive(false);
         }
         else
         {
@@ -1187,6 +965,10 @@ public class BagController : XSingleton<BagController>
             playerCloak.transform.Find("parent/ImageBG").gameObject.SetActive(true);
             playerCloak.transform.Find("parent/Image").GetComponent<Button>().image.sprite =
                 ResourcesConfig.GetEquipSprite(EquipIdList[PlayerEquipConfig.CloakId]);
+            
+            playerCloak.transform.Find("parent/Edge").gameObject.SetActive(true);
+            var animator = playerCloak.transform.Find("parent/Edge").GetComponent<Animator>();
+            PlayEdge(animator, EquipIdList[PlayerEquipConfig.CloakId].Quality);
             switch (EquipIdList[PlayerEquipConfig.CloakId].Quality)
             {
                 case 1:
@@ -1220,6 +1002,8 @@ public class BagController : XSingleton<BagController>
             IsInstallCloth = false;
             playerCloth.transform.Find("parent/Image").gameObject.SetActive(false);
             playerCloth.transform.Find("parent/ImageBG").gameObject.SetActive(false);
+            playerCloth.transform.Find("parent/Edge").gameObject.SetActive(false);
+
         }
         else
         {
@@ -1228,6 +1012,9 @@ public class BagController : XSingleton<BagController>
             playerCloth.transform.Find("parent/ImageBG").gameObject.SetActive(true);
             playerCloth.transform.Find("parent/Image").GetComponent<Button>().image.sprite =
                 ResourcesConfig.GetEquipSprite(EquipIdList[PlayerEquipConfig.ClothId]);
+            playerCloth.transform.Find("parent/Edge").gameObject.SetActive(true);
+            var animator = playerCloth.transform.Find("parent/Edge").GetComponent<Animator>();
+            PlayEdge(animator, EquipIdList[PlayerEquipConfig.ClothId].Quality);
             switch (EquipIdList[PlayerEquipConfig.ClothId].Quality)
             {
                 case 1:
@@ -1260,6 +1047,8 @@ public class BagController : XSingleton<BagController>
             IsInstallShoe = false;
             playerShoe.transform.Find("parent/Image").gameObject.SetActive(false);
             playerShoe.transform.Find("parent/ImageBG").gameObject.SetActive(false);
+            playerShoe.transform.Find("parent/Edge").gameObject.SetActive(false);
+
         }
         else
         {
@@ -1268,6 +1057,9 @@ public class BagController : XSingleton<BagController>
             playerShoe.transform.Find("parent/ImageBG").gameObject.SetActive(true);
             playerShoe.transform.Find("parent/Image").GetComponent<Button>().image.sprite =
                 ResourcesConfig.GetEquipSprite(EquipIdList[PlayerEquipConfig.ShoeId]);
+            playerShoe.transform.Find("parent/Edge").gameObject.SetActive(true);
+            var animator = playerShoe.transform.Find("parent/Edge").GetComponent<Animator>();
+            PlayEdge(animator, EquipIdList[PlayerEquipConfig.ShoeId].Quality);
             switch (EquipIdList[PlayerEquipConfig.ShoeId].Quality)
             {
                 case 1:
@@ -1300,6 +1092,8 @@ public class BagController : XSingleton<BagController>
             IsInstallHelmet = false;
             playerHelmet.transform.Find("parent/Image").gameObject.SetActive(false);
             playerHelmet.transform.Find("parent/ImageBG").gameObject.SetActive(false);
+            playerHelmet.transform.Find("parent/Edge").gameObject.SetActive(false);
+
         }
         else
         {
@@ -1308,6 +1102,9 @@ public class BagController : XSingleton<BagController>
             playerHelmet.transform.Find("parent/ImageBG").gameObject.SetActive(true);
             playerHelmet.transform.Find("parent/Image").GetComponent<Button>().image.sprite =
                 ResourcesConfig.GetEquipSprite(EquipIdList[PlayerEquipConfig.HelmetId]);
+            playerHelmet.transform.Find("parent/Edge").gameObject.SetActive(true);
+            var animator = playerHelmet.transform.Find("parent/Edge").GetComponent<Animator>();
+            PlayEdge(animator, EquipIdList[PlayerEquipConfig.HelmetId].Quality);
             switch (EquipIdList[PlayerEquipConfig.HelmetId].Quality)
             {
                 case 1:
@@ -1340,6 +1137,7 @@ public class BagController : XSingleton<BagController>
             IsInstallNecklace = false;
             playerNecklace.transform.Find("parent/Image").gameObject.SetActive(false);
             playerNecklace.transform.Find("parent/ImageBG").gameObject.SetActive(false);
+            playerNecklace.transform.Find("parent/Edge").gameObject.SetActive(false);
         }
         else
         {
@@ -1348,6 +1146,9 @@ public class BagController : XSingleton<BagController>
             playerNecklace.transform.Find("parent/ImageBG").gameObject.SetActive(true);
             playerNecklace.transform.Find("parent/Image").GetComponent<Button>().image.sprite =
                 ResourcesConfig.GetEquipSprite(EquipIdList[PlayerEquipConfig.NecklaceId]);
+            playerNecklace.transform.Find("parent/Edge").gameObject.SetActive(true);
+            var animator = playerNecklace.transform.Find("parent/Edge").GetComponent<Animator>();
+            PlayEdge(animator, EquipIdList[PlayerEquipConfig.NecklaceId].Quality);
             switch (EquipIdList[PlayerEquipConfig.NecklaceId].Quality)
             {
                 case 1:
@@ -1374,12 +1175,12 @@ public class BagController : XSingleton<BagController>
             }
         }
         
-        
         if (PlayerEquipConfig.RingId == 0)
         {
             IsInstallRing = false;
             playerRing.transform.Find("parent/Image").gameObject.SetActive(false);
             playerRing.transform.Find("parent/ImageBG").gameObject.SetActive(false);
+            playerRing.transform.Find("parent/Edge").gameObject.SetActive(false);
         }
         else
         {
@@ -1388,6 +1189,9 @@ public class BagController : XSingleton<BagController>
             playerRing.transform.Find("parent/ImageBG").gameObject.SetActive(true);
             playerRing.transform.Find("parent/Image").GetComponent<Button>().image.sprite =
                 ResourcesConfig.GetEquipSprite(EquipIdList[PlayerEquipConfig.RingId]);
+            playerRing.transform.Find("parent/Edge").gameObject.SetActive(true);
+            var animator = playerRing.transform.Find("parent/Edge").GetComponent<Animator>();
+            PlayEdge(animator, EquipIdList[PlayerEquipConfig.RingId].Quality);
             switch (EquipIdList[PlayerEquipConfig.RingId].Quality)
             {
                 case 1:
