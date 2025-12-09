@@ -84,7 +84,32 @@ public class PropBase : MonoBehaviour
 
     public void EnEquipQueue(PropTable propTable)
     {
-        
+        switch (propTable.PropType)
+        {
+            case PropConfig.PropType.WeaponFragment:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        GameController.S.WhiteWeaponFragmengQueue.Enqueue(gameObject);
+                        break;
+                    case 2:
+                        GameController.S.GreenWeaponFragmengQueue.Enqueue(gameObject);
+                        break;
+                    case 3:
+                        GameController.S.BlueWeaponFragmengQueue.Enqueue(gameObject);
+                        break;
+                    case 4:
+                        GameController.S.PurpleWeaponFragmengQueue.Enqueue(gameObject);
+                        break;
+                    case 5:
+                        GameController.S.OrangeWeaponFragmengQueue.Enqueue(gameObject);
+                        break;
+                    case 6:
+                        GameController.S.RedWeaponFragmengQueue.Enqueue(gameObject);
+                        break;
+                }
+                break;
+        }
     }
 
 }

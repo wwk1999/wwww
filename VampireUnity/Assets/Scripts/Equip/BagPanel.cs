@@ -83,8 +83,7 @@ public class BagPanel : MonoBehaviour
         propbutton.onClick.AddListener(() =>
         {
             BagController.S.PageNum = 1;
-            currentBagType = 3;
-            BagController.S.ShowEquip();
+            BagController.S.ShowProp();
         });
         
         

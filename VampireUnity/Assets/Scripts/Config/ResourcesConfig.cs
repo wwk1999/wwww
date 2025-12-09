@@ -142,11 +142,43 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite TwoWeapon;
     public static Sprite ThreeWeapon;
     public static Sprite FourWeapon;
+    
+    //道具
+    public static Sprite WhiteWeaponFragment;
+    public static Sprite GreenWeaponFragment;
+    public static Sprite BlueWeaponFragment;
+    public static Sprite PurpleWeaponFragment;
+    public static Sprite OrangeWeaponFragment;
+    public static Sprite RedWeaponFragment;
+
+    public static Sprite WhiteJingCui;
+    public static Sprite GreenJingCui;
+    public static Sprite BlueJingCui;
+    public static Sprite PurpleJingCui;
+    public static Sprite OrangeJingCui;
+    public static Sprite RedJingCui;
 
 
 
     public static void Init()
     {
+        //道具
+        WhiteWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/WhiteWeaponFragment");
+        GreenWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/GreenWeaponFragment");
+        BlueWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/BlueWeaponFragment");
+        PurpleWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/PurpleWeaponFragment");
+        OrangeWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/OrangeWeaponFragment");
+        RedWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/RedWeaponFragment");
+        
+        WhiteJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/WhiteJingCui");
+        GreenJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/GreenJingCui");
+        BlueJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/BlueJingCui");
+        PurpleJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/PurpleJingCui");
+        OrangeJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/OrangeJingCui");
+        RedJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/RedJingCui");
+
+        
+        
         //武器
         OneWeapon = Resources.Load<Sprite>("Sprite/Weapon/OneWeapon");
         TwoWeapon = Resources.Load<Sprite>("Sprite/Weapon/TwoWeapon");

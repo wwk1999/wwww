@@ -618,31 +618,129 @@ public class BagController : XSingleton<BagController>
         }
     }
 
+    public void ShowProp()
+    {
+        Transform bagPanelContent = bag.GetComponent<BagPanel>().content.transform;
+        GameObject equipContent = bagPanelContent.gameObject;
+        // 清空装备内容面板
+        foreach (Transform child in equipContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (var prop in PropList)
+        {
+            var propGrid=Instantiate(Resources.Load("Prefabs/Prop/PropGrid")) as GameObject;
+            propGrid.transform.Find("parent/Count").gameObject.SetActive(prop.Value.Count>1);
+            propGrid.transform.Find("parent/Count").GetComponent<Text>().text = prop.Value.Count.ToString();
+            switch (prop.Value.Quality)
+            {
+                case 1:
+                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<SpriteRenderer>().sprite =
+                        ResourcesConfig.WhiteBg;
+                    break;
+                case 2:
+                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
+                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<SpriteRenderer>().sprite =
+                        ResourcesConfig.GreenBg;
+                    break;
+                case 3:
+                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
+                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<SpriteRenderer>().sprite =
+                        ResourcesConfig.BlueBg;
+                    break;
+                case 4:
+                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<SpriteRenderer>().sprite =
+                        ResourcesConfig.PurpleBg;
+                    break;
+                case 5:
+                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<SpriteRenderer>().sprite =
+                        ResourcesConfig.OrangeBg;
+                    break;
+                case 6:
+                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
+                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<SpriteRenderer>().sprite =
+                        ResourcesConfig.OrangeBg;
+                    break;
+            }
+
+            switch (prop.Value.PropType)
+            {
+                case PropConfig.PropType.WeaponFragment:
+                    switch (prop.Value.Quality)
+                    {
+                        case 1:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.WhiteWeaponFragment;
+                            break;
+                        case 2:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.GreenWeaponFragment;
+                            break;
+                        case 3:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.BlueWeaponFragment;
+                            break;
+                        case 4:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.PurpleWeaponFragment;
+                            break;
+                        case 5:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.OrangeWeaponFragment;
+                            break;
+                        case 6:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.RedWeaponFragment;
+                            break;
+                    }
+                    break;
+                case PropConfig.PropType.JingCui:
+                    switch (prop.Value.Quality)
+                    {
+                        case 1:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.WhiteJingCui;
+                            break;
+                        case 2:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.GreenJingCui;
+                            break;
+                        case 3:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.BlueJingCui;
+                            break;
+                        case 4:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.PurpleJingCui;
+                            break;
+                        case 5:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.OrangeJingCui;
+                            break;
+                        case 6:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<SpriteRenderer>().sprite =
+                                ResourcesConfig.RedJingCui;
+                            break;
+                    }
+                    break;
+            }
+        }
+        
+        
+    }
+
 
     /// <summary>
     /// 显示背包的装备，源石和道具
     /// </summary>
     public void ShowEquip()
     {
-        Debug.Log("开始执行ShowEquip方法");
-        // 检查bag是否为空
-        if (bag == null)
-        {
-            Debug.LogError("ShowEquip出错: bag对象为null");
-            return;
-        }
-        
-
         // 查找装备内容面板
         Transform bagPanelContent = bag.GetComponent<BagPanel>().content.transform;
-
-        if (bagPanelContent == null)
-        {
-            Debug.LogError("ShowEquip出错: 找不到装备内容面板路径 Bag/Mask/BagBg/BagBG (1)/EquipPanel/BagScrollView/Viewport/EquipContent");
-            return;
-        }
-
-        
         GameObject equipContent = bagPanelContent.gameObject;
         
         // 清空装备内容面板
@@ -651,29 +749,6 @@ public class BagController : XSingleton<BagController>
             Destroy(child.gameObject);
         }
         
-        // 检查装备列表是否为空
-        if (EquipIdList == null)
-        {
-            Debug.LogError("ShowEquip出错: EquipIdList为null");
-            return;
-        }
-
-        
-        
-        // 检查背包格子预制体是否为空
-        if (bagGrid == null)
-        {
-            Debug.LogError("ShowEquip出错: bagGrid预制体为null");
-            return;
-        }
-
-        if (equipContent != null)
-        {
-            foreach (Transform item in equipContent.transform)
-            {
-                Destroy(item.gameObject);
-            }
-        }
         // 计算显示的装备范围
         int startIndex = (PageNum - 1) * 35;
         int endIndex = Mathf.Min(PageNum * 35, EquipIdList.Count);
