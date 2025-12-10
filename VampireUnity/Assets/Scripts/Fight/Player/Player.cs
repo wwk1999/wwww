@@ -89,6 +89,7 @@ public class Player : MonoBehaviour
 
     public void OnAnimationComplete(Spine.TrackEntry trackEntry)
     {
+        playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
         if (trackEntry.Animation.Name == "attack")
         {
             isAttack = false;
@@ -125,7 +126,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
-                    if (playerState != PlayerState.Walk)
+                    if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name=="idle")
                     {
                         playerSkeleton.AnimationState.SetAnimation(0, "walk", true);
                     }
@@ -178,22 +179,6 @@ public class Player : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = joydir * GlobalPlayerAttribute.PlayerMoveSpeed;
         }
-        
-        
-        // //刚体移动角色
-        // Vector3 direction = new Vector3(horizontal, vertical, 0);
-        // //刚体移动
-        // GetComponent<Rigidbody2D>().linearVelocity = direction.normalized * GlobalPlayerAttribute.PlayerMoveSpeed;
-        
-        // //限制角色在屏幕内
-        // if (transform.position.x < -16f)
-        //     transform.position = new Vector3(-16f, transform.position.y, transform.position.z);
-        // if (transform.position.x > 16f)
-        //     transform.position = new Vector3(16f, transform.position.y, transform.position.z);
-        // if (transform.position.y < -8.5f)
-        //     transform.position = new Vector3(transform.position.x, -8.5f, transform.position.z);
-        // if (transform.position.y > 8.5f)
-        //     transform.position = new Vector3(transform.position.x, 8.5f, transform.position.z);
             
     }
     

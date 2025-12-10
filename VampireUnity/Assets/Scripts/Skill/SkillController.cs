@@ -127,7 +127,7 @@ public class SkillController : XSingleton<SkillController>
            IceBallGameObject.transform.Rotate(0, 0, IceBallSpeed);
         }
         //mac点击冰球技能
-        if (Input.GetKeyDown(KeyCode.O)&&IceBallCoolingtime >= IceBalltime)
+        if (Input.GetKeyDown(KeyCode.Alpha2)&&IceBallCoolingtime >= IceBalltime)
         {
             Debug.Log("mac点击了冰球技能");
             AudioController.S.PlayIceBall();
@@ -151,27 +151,29 @@ public class SkillController : XSingleton<SkillController>
         FightBGController.S.iceBallButton.GetComponent<Button>().image.fillAmount= IceBallCoolingtime / IceBalltime;
 
 
-
-        
-       
-        //按空格键射击
-        if (Input.GetKey(KeyCode.Space))
+        //长按左键
+        if (Input.GetMouseButton(0))
         {
-            if (GameController.S.gamePlayer.playerState != PlayerState.Attack)
+            var name = GameController.S.gamePlayer.playerSkeleton.AnimationState.GetCurrent(0).Animation.Name;
+            if (name == "walk" || name == "idle")
             {
-                GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
+                if (GameController.S.gamePlayer.playerState != PlayerState.Attack)
+                {
+                    GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
+                }
+
+                GameController.S.gamePlayer.isAttack = true;
+                GameController.S.gamePlayer.playerState = PlayerState.Attack;
             }
-            GameController.S.gamePlayer.isAttack = true;
-            GameController.S.gamePlayer.playerState= PlayerState.Attack;
         }
-        //如果按下了h
-        if (Input.GetKeyDown(KeyCode.H))
+        
+        if (Input.GetMouseButtonDown(1))
         {
             IsDash = true;
         }
         
         //按下f电圈技能
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
            var dianquan= GameController.S.DianQuanQueue.Dequeue();
            dianquan.gameObject.SetActive(true);
@@ -197,7 +199,7 @@ public class SkillController : XSingleton<SkillController>
            IceArrow.transform.Find("Trail").gameObject.SetActive(true);
         }
         //mac点击冰爆技能
-        if (Input.GetKeyDown(KeyCode.I)&&IceExplosionCoolingtime >= IceExplosiontime)
+        if (Input.GetKeyDown(KeyCode.Alpha3)&&IceExplosionCoolingtime >= IceExplosiontime)
         {
             AudioController.S.PlayIceEx();
             Debug.Log("mac点击了冰爆技能!");

@@ -27,8 +27,12 @@ public class GunBase : MonoBehaviour
     /// <param name="duration"></param>
     public void LvQuanShot()
     {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         // 原始方向
-        Vector2 baseDir = (GameController.S.nearMonsterPosition -GameController.S.gamePlayer.transform.position).normalized;
+        Vector2 baseDir = (worldPos-GameController.S.gamePlayer.transform.position).normalized;
 
         // 两个偏移角度：+10° 和 -10°
         Vector2[] dirs =
@@ -54,7 +58,11 @@ public class GunBase : MonoBehaviour
     
     public void LanBaoShot()
     {
-        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- GameController.S.gamePlayer.transform.position).normalized;
         GameObject bullet = GameController.S.FourNormalAttackQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.GetComponent<FourNormalAttack>().MoveDirection = direction;
@@ -64,7 +72,11 @@ public class GunBase : MonoBehaviour
     
     public void HeiDongShot()
     {
-        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- GameController.S.gamePlayer.transform.position).normalized;
         GameObject bullet = GameController.S.HeiDongQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.GetComponent<HeiDongPro>().MoveDirection = direction;
@@ -74,7 +86,11 @@ public class GunBase : MonoBehaviour
     
     public void DuShot()
     {
-        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- GameController.S.gamePlayer.transform.position).normalized;
         GameObject bullet = GameController.S.DuQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.GetComponent<Du>().MoveDirection = direction;
@@ -84,8 +100,12 @@ public class GunBase : MonoBehaviour
     
     public void PuTong3Shot()
     {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         // 原始方向
-        Vector2 baseDir = (GameController.S.nearMonsterPosition -GameController.S.gamePlayer.transform.position).normalized;
+        Vector2 baseDir = (worldPos -GameController.S.gamePlayer.transform.position).normalized;
 
         // 两个偏移角度：+10° 和 -10°
         Vector2[] dirs =
@@ -111,9 +131,13 @@ public class GunBase : MonoBehaviour
     
     public void LuoLeiShot()
     {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         GameObject bullet = GameController.S.LuoLeiQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
-        bullet.GetComponent<LuoLei>().position = GameController.S.nearMonsterPosition;
+        bullet.GetComponent<LuoLei>().position = worldPos;
         bullet.gameObject.SetActive(true);
     }
 
@@ -127,7 +151,11 @@ public class GunBase : MonoBehaviour
     /// <param name="explosion"></param>
     public void PrimaryShot()
     {
-        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- GameController.S.gamePlayer.transform.position).normalized;
         GameObject bullet = GameController.S.ThreeNormalAttackQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.gameObject.SetActive(true);
@@ -137,17 +165,25 @@ public class GunBase : MonoBehaviour
     
     public void FireShot()
     {
-        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- GameController.S.gamePlayer.transform.position).normalized;
         GameObject bullet = GameController.S.FireQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.GetComponent<FireNormalAttack>().MoveDirection = direction;
-        bullet.GetComponent<FireNormalAttack>().MoveSpeed = 7f;
+        bullet.GetComponent<FireNormalAttack>().MoveSpeed =7f;
         bullet.gameObject.SetActive(true);
     }
     
     public void XuKongShot()
     {
-        Vector2 direction = (GameController.S.nearMonsterPosition- GameController.S.gamePlayer.transform.position).normalized;
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- GameController.S.gamePlayer.transform.position).normalized;
         GameObject bullet = GameController.S.XuKongQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.GetComponent<XuKong>().MoveDirection = direction;

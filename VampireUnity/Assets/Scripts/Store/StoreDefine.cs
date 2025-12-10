@@ -9,6 +9,7 @@ public class StoreDefine : XSingleton<StoreDefine>
     {
         public EquipData Equip = new EquipData();
         public PlayData Player = new PlayData();
+        public SkillData1 Skill = new SkillData1();
     }
 
     [System.Serializable]
@@ -95,6 +96,34 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.ringid = ringid;
             runtime.shoeid = shoeid;
             runtime.necklaceid = necklaceid;
+        }
+    }
+    
+    [System.Serializable]
+    public class SkillData1
+    {
+        public SkillType LMB = SkillType.None;
+        public SkillType RMB = SkillType.None;
+        public SkillType Alpha1 = SkillType.None;
+        public SkillType Alpha2 = SkillType.None;
+        public SkillType Alpha3 = SkillType.None;
+
+        public void CopyFromRuntime(SkillData runtime)
+        {
+            LMB=runtime.LMB;
+            RMB=runtime.RMB;
+            Alpha1=runtime.Alpha1;
+            Alpha2=runtime.Alpha2;
+            Alpha3=runtime.Alpha3;
+        }
+
+        public void ApplyToRuntime(SkillData runtime)
+        {
+            runtime.LMB=LMB;
+            runtime.RMB=RMB;
+            runtime.Alpha1=Alpha1;
+            runtime.Alpha2=Alpha2;
+            runtime.Alpha3=Alpha3;
         }
     }
 }

@@ -5817,7 +5817,6 @@ MonoBehaviour:
   sortButton: {fileID: 0}
   content: {fileID: 1163100379731522490}
   equipButton: {fileID: 7851578283435907120}
-  sourcestonebutton: {fileID: 1572274743937985656}
   propbutton: {fileID: 1222469522057646385}
 --- !u!1 &7020881928682304821
 GameObject:

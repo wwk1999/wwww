@@ -179,6 +179,7 @@
     <Compile Include="Assets\Scripts\Equip\BagSell.cs" />
     <Compile Include="Assets\Scripts\Store\StoreController.cs" />
     <Compile Include="Assets\Scripts\Tool\ButtonInteractionHandler.cs" />
+    <Compile Include="Assets\Scripts\Store\SkillData.cs" />
     <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Scale.cs" />
     <Compile Include="Assets\Scripts\Tool\SqrtAttack.cs" />
@@ -197,6 +198,7 @@
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXPortalScript.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\EliteBeeMonster.cs" />
     <Compile Include="Assets\Scripts\Config\PropConfig.cs" />
+    <Compile Include="Assets\Scripts\Tool\MouseRightListen.cs" />
     <Compile Include="Assets\Scripts\Equip\FightEquipAttribute.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeHelmet.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXRotation.cs" />
