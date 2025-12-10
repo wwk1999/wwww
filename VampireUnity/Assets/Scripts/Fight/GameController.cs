@@ -12,6 +12,10 @@ using Random = UnityEngine.Random;
 
 public class GameController : XSingleton<GameController>
 {
+    //碰撞字典
+    [NonSerialized] public Dictionary<Collider2D, MonsterBase> MonsterColliderDic = new Dictionary<Collider2D, MonsterBase>();
+
+    
     //怪物数量排行榜相关
     [NonSerialized] public int NormalCount = 0;
     [NonSerialized] public int EliteCount = 0;

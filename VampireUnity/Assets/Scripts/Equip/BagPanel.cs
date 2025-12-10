@@ -56,10 +56,14 @@ public class BagPanel : MonoBehaviour
     
     
     public Button equipButton; // 装备按钮
-    public Button sourcestonebutton; // 源石按钮
     public Button propbutton; // 道具按钮
     [NonSerialized] public int currentBagType = 1;//1是装备，2是源石，3是道具
 
+
+    private void OnEnable()
+    {
+        currentBagType = 1;
+    }
 
     private void Awake()
     {
@@ -72,17 +76,10 @@ public class BagPanel : MonoBehaviour
             BagController.S.ShowEquip();
         });
         
-        sourcestonebutton.onClick.AddListener(() =>
-        {
-            BagController.S.PageNum = 1;
-            currentBagType = 2;
-            BagController.S.ShowEquip();
-
-        });
-        
         propbutton.onClick.AddListener(() =>
         {
             BagController.S.PageNum = 1;
+            currentBagType = 2;
             BagController.S.ShowProp();
         });
         
@@ -105,12 +102,20 @@ public class BagPanel : MonoBehaviour
       //  pageText = transform.Find("Mask/BagBg/BagBG (1)/EquipPanel/PageNumText").GetComponent<Text>();
         leftPageButton.onClick.AddListener(() =>
         {
+            if (currentBagType == 2||BagController.S.PageNum==1)
+            {
+                return;
+            }
             BagController.S.PageNum= Mathf.Max(1, BagController.S.PageNum - 1);
             BagController.S.ShowEquip();
             pageText.text = BagController.S.PageNum.ToString();
         });
         rightPageButton.onClick.AddListener(() =>
         {
+            if (currentBagType == 2||BagController.S.PageNum==5)
+            {
+                return;
+            }
             BagController.S.PageNum= Mathf.Min(5, BagController.S.PageNum + 1);
             BagController.S.ShowEquip();
             pageText.text = BagController.S.PageNum.ToString();

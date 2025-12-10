@@ -333,19 +333,70 @@ public class EquipAttributePanel : MonoBehaviour
             switch (equip.Quality)
             {
                 case 1:
+                    if (BagController.S.PropList.ContainsKey(201))
+                    {
+                        BagController.S.PropList[201].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(201,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 1,Desc = "",EquipName = "WhiteJingCui",Quality = 1});
+                    }
                     BagController.S.WhiteEquipidTable.Remove(equip);
                     break;
                 case 2:
+                    if (BagController.S.PropList.ContainsKey(202))
+                    {
+                        BagController.S.PropList[202].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(202,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 1,Desc = "",EquipName = "GreenJingCui",Quality = 2});
+                    }                    
                     BagController.S.GreenEquipidTable.Remove(equip);
                     break;
                 case 3:
+                    if (BagController.S.PropList.ContainsKey(203))
+                    {
+                        BagController.S.PropList[203].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(203,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 1,Desc = "",EquipName = "BlueJingCui",Quality = 3});
+                    }                   
                     BagController.S.BlueEquipidTable.Remove(equip);
                     break;
                 case 4:
+                    if (BagController.S.PropList.ContainsKey(204))
+                    {
+                        BagController.S.PropList[204].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(204,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 1,Desc = "",EquipName = "PurpleJingCui",Quality = 4});
+                    }                    
                     BagController.S.PurpleEquipidTable.Remove(equip);
                     break;
                 case 5:
+                    if (BagController.S.PropList.ContainsKey(205))
+                    {
+                        BagController.S.PropList[205].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(205,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 1,Desc = "",EquipName = "OrangeJingCui",Quality = 5});
+                    }                   
                     BagController.S.OrangeEquipidTable.Remove(equip);
+                    break;
+                case 6:
+                    if (BagController.S.PropList.ContainsKey(206))
+                    {
+                        BagController.S.PropList[206].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(206,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 1,Desc = "",EquipName = "RedJingCui",Quality = 6});
+                    }                    
+                    BagController.S.RedEquipidTable.Remove(equip);
                     break;
             }
             BagController.S.EquipIdList.Remove(equip.equipid);

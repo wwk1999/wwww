@@ -58,6 +58,8 @@ public class BagController : XSingleton<BagController>
     [NonSerialized] public List<EquipTable> BlueEquipidTable = new List<EquipTable>(); //背包里所有的蓝色色装备
     [NonSerialized] public List<EquipTable> PurpleEquipidTable = new List<EquipTable>(); //背包里所有的紫色色装备
     [NonSerialized] public List<EquipTable> OrangeEquipidTable = new List<EquipTable>(); //背包里所有的橙色装备
+    [NonSerialized] public List<EquipTable> RedEquipidTable = new List<EquipTable>(); //背包里所有的红色装备
+
     
     //源石相关
     [NonSerialized]public List<SourceStoneTable>SourceStoneTable = new List<SourceStoneTable>();//源石列表

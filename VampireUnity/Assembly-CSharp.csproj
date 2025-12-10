@@ -266,8 +266,8 @@
     <Compile Include="Assets\External Resources\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloak.cs" />
     <Compile Include="Assets\Scripts\Config\MonsterBookConfig.cs" />
-    <Compile Include="Assets\Scripts\Store\StoreDefine.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\YingShu.cs" />
+    <Compile Include="Assets\Scripts\Store\StoreDefine.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongPro.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Scripts\ARPGFXLightFade.cs" />
     <Compile Include="Assets\Scripts\Tool\ToastInfo.cs" />

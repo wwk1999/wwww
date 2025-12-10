@@ -61,6 +61,7 @@ public class StoreController : XSingleton<StoreController>
         BagController.S.BlueEquipidTable.Clear();
         BagController.S.PurpleEquipidTable.Clear();
         BagController.S.OrangeEquipidTable.Clear();
+        BagController.S.RedEquipidTable.Clear();
 
         foreach (var equip in BagController.S.EquipIdList)
         {
@@ -83,6 +84,9 @@ public class StoreController : XSingleton<StoreController>
             else if (equip.Value.Quality == 5) // 金色装备
             {
                 BagController.S.OrangeEquipidTable.Add(equip.Value);
+            }else if (equip.Value.Quality == 6) // 红色装备
+            {
+                BagController.S.RedEquipidTable.Add(equip.Value);
             }
         }
 
