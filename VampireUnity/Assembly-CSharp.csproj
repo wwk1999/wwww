@@ -264,6 +264,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\PuTong3\PuTong3.cs" />
     <Compile Include="Assets\External Resources\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\Scripts\Skill\DianQuan\DianQuan.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloak.cs" />
     <Compile Include="Assets\Scripts\Config\MonsterBookConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\YingShu.cs" />
@@ -353,6 +354,7 @@
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloth.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanRing.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\VariousMouseOrbit.cs" />
+    <Compile Include="Assets\Scripts\Skill\DianQuan\DianPeng.cs" />
     <Compile Include="Assets\Scripts\Tool\ScrollLimit.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeCloak.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBoss.cs" />

@@ -10,12 +10,6 @@ public class HeiDongBaoZha : MonoBehaviour
     /// </summary>
     public void CheckCollisionWithMonsters()
     {
-        if (attackCollider == null)
-        {
-            Debug.LogWarning("攻击碰撞体未设置！");
-            return;
-        }
-    
         // 检测所有重叠的碰撞体
         List<Collider2D> results = new List<Collider2D>();
         ContactFilter2D filter = new ContactFilter2D();

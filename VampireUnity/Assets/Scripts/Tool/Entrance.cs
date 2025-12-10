@@ -260,6 +260,10 @@ public class Entrance : MonoBehaviour
             GameObject monsterHurtText = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/MonsterHurtText"));
             monsterHurtText.gameObject.SetActive(false);
             GameController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
+            
+            GameObject dianQuanPeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/DianQuan/DianPeng"));
+            dianQuanPeng.gameObject.SetActive(false);
+            GameController.S.DianQuanPengQueue.Enqueue(dianQuanPeng);        
         }
         
         for (int i = 0; i < 10; i++)
@@ -281,6 +285,15 @@ public class Entrance : MonoBehaviour
             batskillparticle.gameObject.SetActive(false);
             FightBGController.S.BatSkillParticleQueue.Enqueue(batskillparticle.GetComponent<ParticleSystem>());
             
+        }
+        
+        
+        //初始化技能队列
+        for (int i = 0; i < 100; i++)
+        {
+            var dianqian= Instantiate(Resources.Load("Prefabs/Skill/DianQuan/DianQuan"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+            dianqian.SetActive(false);
+            GameController.S.DianQuanQueue.Enqueue(dianqian);
         }
 
         for (int i = 0; i < 100; i++)

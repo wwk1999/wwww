@@ -169,6 +169,14 @@ public class SkillController : XSingleton<SkillController>
         {
             IsDash = true;
         }
+        
+        //按下f电圈技能
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+           var dianquan= GameController.S.DianQuanQueue.Dequeue();
+           dianquan.gameObject.SetActive(true);
+           dianquan.transform.position = GameController.S.nearMonsterPosition;
+        }
         if (Input.GetKeyDown(KeyCode.J))
         {
             GameController.S.gamePlayer.transform.Find("Shield").gameObject.SetActive(true);
