@@ -27,16 +27,46 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public float IceArrowtime = 3f;
     [NonSerialized]public float IceExplosiontime = 10f;
     [NonSerialized]public float IceBalltime = 10f;
+    [NonSerialized]public float Dashtime = 10f;
+    [NonSerialized]public float DianQuantime = 10f;
     
     [NonSerialized]public float NormalAttackCoolingtime = 1f;
     [NonSerialized]public float IceArrowCoolingtime = 3f;
     [NonSerialized]public float IceExplosionCoolingtime = 10f;
     [NonSerialized]public float IceBallCoolingtime = 10f;
+    [NonSerialized]public float DashCoolingtime = 10f;
+    [NonSerialized]public float DianQuanCoolingtime = 10f;
     
     //技能点击特效
     [NonSerialized]public UIParticle IceArrowUIFX;
     [NonSerialized]public UIParticle IceBallUIFX;
     [NonSerialized]public UIParticle IceExUIFX;
+    
+    public SkillType LMB
+    {
+        get => SkillData.S.LMB;
+        set => SkillData.S.LMB = value;
+    }
+    public SkillType RMB
+    {
+        get => SkillData.S.RMB;
+        set => SkillData.S.RMB = value;
+    }
+    public SkillType Alpha1
+    {
+        get => SkillData.S.Alpha1;
+        set => SkillData.S.Alpha1 = value;
+    }
+    public SkillType Alpha2
+    {
+        get => SkillData.S.Alpha2;
+        set => SkillData.S.Alpha2 = value;
+    }
+    public SkillType Alpha3
+    {
+        get => SkillData.S.Alpha3;
+        set => SkillData.S.Alpha3 = value;
+    }
 
 
 
@@ -118,7 +148,69 @@ public class SkillController : XSingleton<SkillController>
         }
         NormalAttackCoolingtime+=Time.deltaTime;
     }
-    // Update is called once per frame
+
+    public void ExcuteSkill(SkillType skillType)
+    {
+        switch (skillType)
+        {
+            case SkillType.Dash:
+                if (DashCoolingtime >= Dashtime)
+                {
+                    DashCoolingtime = 0;
+                    IsDash = true;
+                }
+                break;
+            case SkillType.Normal:
+                var name = GameController.S.gamePlayer.playerSkeleton.AnimationState.GetCurrent(0).Animation.Name;
+                if (name == "walk" || name == "idle")
+                {
+                    if (GameController.S.gamePlayer.playerState != PlayerState.Attack)
+                    {
+                        GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
+                    }
+
+                    GameController.S.gamePlayer.isAttack = true;
+                    GameController.S.gamePlayer.playerState = PlayerState.Attack;
+                }
+                break;
+            case SkillType.Skill1:
+                if (DianQuanCoolingtime>=DianQuantime)
+                {
+                    IceArrowUIFX.Play();
+                    IceArrowCoolingtime = 0;
+                    DianQuanCoolingtime = 0;
+                    var dianquan= GameController.S.DianQuanQueue.Dequeue();
+                    dianquan.gameObject.SetActive(true);
+                    dianquan.transform.position = GameController.S.nearMonsterPosition;
+                }
+                break;
+            case SkillType.Skill2:
+                if (IceBallCoolingtime >= IceBalltime)
+                {
+                    Debug.Log("mac点击了冰球技能");
+                    AudioController.S.PlayIceBall();
+                    IceBallUIFX.Play();
+           
+                    IceBallCoolingtime=0;
+                    StartIceBallSkill(3,3,3);
+                }
+                break;
+            case SkillType.Skill3:
+                if (IceExplosionCoolingtime >= IceExplosiontime)
+                {
+                    AudioController.S.PlayIceEx();
+                    Debug.Log("mac点击了冰爆技能!");
+                    IceExUIFX.Play();
+         
+                    IceExplosionCoolingtime=0;
+                    IceExplosion1.Play();
+                    IceExplosion2.Play();
+                    IceExplosion3.Play();
+                    IceExTrigger.gameObject.SetActive(true);
+                }
+                break;
+        }
+    }
     void Update()
     {
         //GameController.S.gamePlayer.iceBall.transform.rotation.z每帧+2
@@ -126,21 +218,14 @@ public class SkillController : XSingleton<SkillController>
         {
            IceBallGameObject.transform.Rotate(0, 0, IceBallSpeed);
         }
-        //mac点击冰球技能
-        if (Input.GetKeyDown(KeyCode.Alpha2)&&IceBallCoolingtime >= IceBalltime)
-        {
-            Debug.Log("mac点击了冰球技能");
-            AudioController.S.PlayIceBall();
-            IceBallUIFX.Play();
-           
-            IceBallCoolingtime=0;
-            StartIceBallSkill(3,3,3);
-        }
+        
         //技能冷却时间
         NormalAttackCoolingtime+= Time.deltaTime;
         IceArrowCoolingtime+= Time.deltaTime;
         IceExplosionCoolingtime+=Time.deltaTime;
         IceBallCoolingtime+= Time.deltaTime;
+        Dashtime+=Time.deltaTime;
+        DianQuanCoolingtime+= Time.deltaTime;
         
         //技能CD
         FightBGController.S.IceExYellowCd.GetComponent<Image>().fillAmount= IceExplosionCoolingtime / IceExplosiontime;
@@ -154,31 +239,29 @@ public class SkillController : XSingleton<SkillController>
         //长按左键
         if (Input.GetMouseButton(0))
         {
-            var name = GameController.S.gamePlayer.playerSkeleton.AnimationState.GetCurrent(0).Animation.Name;
-            if (name == "walk" || name == "idle")
-            {
-                if (GameController.S.gamePlayer.playerState != PlayerState.Attack)
-                {
-                    GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
-                }
+            ExcuteSkill(LMB);
+        }
+        
+        if (Input.GetMouseButton(1))
+        {
+            ExcuteSkill(RMB);
+        }
 
-                GameController.S.gamePlayer.isAttack = true;
-                GameController.S.gamePlayer.playerState = PlayerState.Attack;
-            }
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            ExcuteSkill(Alpha1);
         }
         
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKey(KeyCode.Alpha2))
         {
-            IsDash = true;
+            ExcuteSkill(Alpha2);
         }
         
-        //按下f电圈技能
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKey(KeyCode.Alpha3))
         {
-           var dianquan= GameController.S.DianQuanQueue.Dequeue();
-           dianquan.gameObject.SetActive(true);
-           dianquan.transform.position = GameController.S.nearMonsterPosition;
+            ExcuteSkill(Alpha3);
         }
+        
         if (Input.GetKeyDown(KeyCode.J))
         {
             GameController.S.gamePlayer.transform.Find("Shield").gameObject.SetActive(true);
@@ -198,19 +281,7 @@ public class SkillController : XSingleton<SkillController>
            IceArrow.Play();
            IceArrow.transform.Find("Trail").gameObject.SetActive(true);
         }
-        //mac点击冰爆技能
-        if (Input.GetKeyDown(KeyCode.Alpha3)&&IceExplosionCoolingtime >= IceExplosiontime)
-        {
-            AudioController.S.PlayIceEx();
-            Debug.Log("mac点击了冰爆技能!");
-            IceExUIFX.Play();
-         
-            IceExplosionCoolingtime=0;
-            IceExplosion1.Play();
-            IceExplosion2.Play();
-            IceExplosion3.Play();
-            IceExTrigger.gameObject.SetActive(true);
-        }
+        
         if (IsDash )
         {
             GlobalPlayerAttribute.PlayerMoveSpeed = 20;
@@ -226,10 +297,6 @@ public class SkillController : XSingleton<SkillController>
                 GlobalPlayerAttribute.PlayerMoveSpeed = 3;
             }
         }
-        // else
-        // {
-        //     GlobalPlayerAttribute.PlayerMoveSpeed = 3;
-        // }
     }
 
     public void StartIceBallSkill(int num, int scale, int speed)

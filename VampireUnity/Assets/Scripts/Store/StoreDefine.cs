@@ -102,11 +102,11 @@ public class StoreDefine : XSingleton<StoreDefine>
     [System.Serializable]
     public class SkillData1
     {
-        public SkillType LMB = SkillType.None;
-        public SkillType RMB = SkillType.None;
-        public SkillType Alpha1 = SkillType.None;
-        public SkillType Alpha2 = SkillType.None;
-        public SkillType Alpha3 = SkillType.None;
+        public SkillType LMB = SkillType.Normal;
+        public SkillType RMB = SkillType.Dash;
+        public SkillType Alpha1 = SkillType.Skill1;
+        public SkillType Alpha2 = SkillType.Skill2;
+        public SkillType Alpha3 = SkillType.Skill3;
 
         public void CopyFromRuntime(SkillData runtime)
         {
