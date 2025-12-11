@@ -251,6 +251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3712383358920460591}
+  - component: {fileID: 6960572033491146634}
   m_Layer: 0
   m_Name: SkillSwitch
   m_TagString: Untagged
@@ -278,6 +279,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6960572033491146634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816595695748521738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95921f073d7eda041aed0005db421b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseRightListens: []
+  LMB: {fileID: 8764842722433765610}
+  RMB: {fileID: 7839762742257508934}
+  Alpha1: {fileID: 974395340102662805}
+  Alpha2: {fileID: 8613824213898907678}
+  Alpha3: {fileID: 2461485513358991987}
+  Auto: {fileID: 1964192814419068392}
 --- !u!1 &1397781672971579446
 GameObject:
   m_ObjectHideFlags: 0

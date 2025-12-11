@@ -11,6 +11,16 @@ public enum SkillType
     Normal,
     Dash
 }
+
+public enum KeyCodeType
+{
+    None,
+    LMB,
+    RMB,
+    Alpha1,
+    Alpha2,
+    Alpha3,
+}
 public class SkillData : XSingleton<SkillData>
 {
     public SkillType LMB = SkillType.Normal;

@@ -176,18 +176,21 @@ public class SkillController : XSingleton<SkillController>
             case SkillType.Skill1:
                 if (DianQuanCoolingtime>=DianQuantime)
                 {
+                    Vector3 mouseScreen = Input.mousePosition;
+                    float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+                    mouseScreen.z = depth; 
+                    Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
                     IceArrowUIFX.Play();
                     IceArrowCoolingtime = 0;
                     DianQuanCoolingtime = 0;
                     var dianquan= GameController.S.DianQuanQueue.Dequeue();
                     dianquan.gameObject.SetActive(true);
-                    dianquan.transform.position = GameController.S.nearMonsterPosition;
+                    dianquan.transform.position = worldPos;
                 }
                 break;
             case SkillType.Skill2:
                 if (IceBallCoolingtime >= IceBalltime)
                 {
-                    Debug.Log("mac点击了冰球技能");
                     AudioController.S.PlayIceBall();
                     IceBallUIFX.Play();
            

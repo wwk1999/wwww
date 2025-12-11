@@ -106,6 +106,7 @@
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ChangeSizeColor.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\HuangShu.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanBoss.cs" />
+    <Compile Include="Assets\Scripts\Window\SkillSwitch.cs" />
     <Compile Include="Assets\Scripts\Config\ResourcesConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleHelmet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
@@ -363,6 +364,7 @@
     <Compile Include="Assets\Scripts\Server\RankServer.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\VariousEffectsScene.cs" />
     <Compile Include="Assets\Scripts\Mysql\UserTable.cs" />
+    <Compile Include="Assets\Scripts\Window\MaskMouseRight.cs" />
     <Compile Include="Assets\Scripts\Store\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Skill\IceArrow.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
