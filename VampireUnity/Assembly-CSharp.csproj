@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEye.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueRing.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Demo\Scripts\ARPGSceneSelect.cs" />
+    <Compile Include="Assets\Scripts\Store\SkillJiaDian.cs" />
     <Compile Include="Assets\Scripts\Tool\ScrollIndexCallback2.cs" />
     <Compile Include="Assets\Scripts\Tool\MonsterHurtText.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Demo\Scripts\ARPGFXCycler.cs" />

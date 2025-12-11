@@ -21,6 +21,7 @@ public enum KeyCodeType
     Alpha2,
     Alpha3,
 }
+
 public class SkillData : XSingleton<SkillData>
 {
     public SkillType LMB = SkillType.Normal;
@@ -29,6 +30,7 @@ public class SkillData : XSingleton<SkillData>
     public SkillType Alpha2 = SkillType.Skill2;
     public SkillType Alpha3 = SkillType.Skill3;
     
+    public SkillJiaDian JiaDian=new SkillJiaDian();
     protected override void Awake()
     {
         base.Awake();

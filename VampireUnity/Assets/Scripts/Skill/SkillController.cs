@@ -233,8 +233,8 @@ public class SkillController : XSingleton<SkillController>
         //技能CD
         FightBGController.S.IceExYellowCd.GetComponent<Image>().fillAmount= IceExplosionCoolingtime / IceExplosiontime;
         FightBGController.S.iceExButton.GetComponent<Button>().image.fillAmount= IceExplosionCoolingtime / IceExplosiontime;
-        FightBGController.S.IceArrowYellowCd.GetComponent<Image>().fillAmount= IceArrowCoolingtime / IceArrowtime;
-        FightBGController.S.iceArrowButton.GetComponent<Button>().image.fillAmount= IceArrowCoolingtime / IceArrowtime;
+        FightBGController.S.IceArrowYellowCd.GetComponent<Image>().fillAmount= DianQuanCoolingtime / DianQuantime;
+        FightBGController.S.iceArrowButton.GetComponent<Button>().image.fillAmount= DianQuanCoolingtime / DianQuantime;
         FightBGController.S.IceBallYellowCd.GetComponent<Image>().fillAmount= IceBallCoolingtime / IceBalltime;
         FightBGController.S.iceBallButton.GetComponent<Button>().image.fillAmount= IceBallCoolingtime / IceBalltime;
 

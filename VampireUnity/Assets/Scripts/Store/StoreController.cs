@@ -32,6 +32,8 @@ public class StoreController : XSingleton<StoreController>
         StoreData.Player.CopyFromRuntime(PlayerData.S);
         StoreData.Equip.CopyFromRuntime(EquipIDData.S);
         StoreData.Skill.CopyFromRuntime(SkillData.S);
+        StoreData.SkillJiaDian1.CopyFromRuntime(SkillJiaDian.S);
+
 
         var json = JsonConvert.SerializeObject(StoreData, Newtonsoft.Json.Formatting.None);
         File.WriteAllText(SavePath, json);
@@ -47,6 +49,8 @@ public class StoreController : XSingleton<StoreController>
             StoreData.Player.CopyFromRuntime(PlayerData.S);
             StoreData.Equip.CopyFromRuntime(EquipIDData.S);
             StoreData.Skill.CopyFromRuntime(SkillData.S);
+            StoreData.SkillJiaDian1.CopyFromRuntime(SkillJiaDian.S);
+
             SaveStoreData(StoreData);
             Debug.Log("首次创建存档");
             return;
@@ -57,6 +61,8 @@ public class StoreController : XSingleton<StoreController>
         StoreData.Player.ApplyToRuntime(PlayerData.S);
         StoreData.Equip.ApplyToRuntime(EquipIDData.S);
         StoreData.Skill.ApplyToRuntime(SkillData.S);
+        StoreData.SkillJiaDian1.ApplyToRuntime(SkillJiaDian.S);
+
 
         
         BagController.S.WhiteEquipidTable.Clear();
