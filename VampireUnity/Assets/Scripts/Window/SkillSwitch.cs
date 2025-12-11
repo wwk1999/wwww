@@ -17,8 +17,65 @@ public class SkillSwitch : MonoBehaviour
     
     [NonSerialized]public MouseRightListen ClickMouseRightListen;
 
-    
-   
+
+    public void SetKeyCodeText()
+    {
+        foreach (MouseRightListen listen in mouseRightListens)
+        {
+            switch (listen.keyCode)
+            {
+                case KeyCodeType.LMB:
+                    listen.keyCodeText.text = "LMB";
+                    break;
+                case KeyCodeType.RMB:
+                    listen.keyCodeText.text = "RMB";
+                    break;
+                case KeyCodeType.Alpha1:
+                    listen.keyCodeText.text = "[1]";
+                    break;
+                case KeyCodeType.Alpha2:
+                    listen.keyCodeText.text = "[2]";
+                    break;
+                case KeyCodeType.Alpha3:
+                    listen.keyCodeText.text = "[3]";
+                    break;
+                case KeyCodeType.None:
+                    listen.keyCodeText.text = "";
+                    break;
+            }
+        }
+    }
+
+    public void SaveSkillKeyCode()
+    {
+        SkillData.S.LMB = SkillType.None;
+        SkillData.S.RMB = SkillType.None;
+        SkillData.S.Alpha1 = SkillType.None;
+        SkillData.S.Alpha2 = SkillType.None;
+        SkillData.S.Alpha3 = SkillType.None;
+
+        foreach (MouseRightListen listen in mouseRightListens)
+        {
+            switch (listen.keyCode)
+            {
+                case  KeyCodeType.LMB:
+                    SkillData.S.LMB = listen.buttonType;
+                    break;
+                case  KeyCodeType.RMB:
+                    SkillData.S.RMB = listen.buttonType;
+                    break;
+                case  KeyCodeType.Alpha1:
+                    SkillData.S.Alpha1 = listen.buttonType;
+                    break;
+                case  KeyCodeType.Alpha2:
+                    SkillData.S.Alpha2 = listen.buttonType;
+                    break;
+                case  KeyCodeType.Alpha3:
+                    SkillData.S.Alpha3 = listen.buttonType;
+                    break;
+            }
+        }
+    }
     
     public void ResetKeyCode(KeyCodeType keyCodeType)
     {
@@ -30,7 +87,6 @@ public class SkillSwitch : MonoBehaviour
                     if (listen.keyCode == KeyCodeType.LMB)
                     {
                         listen.keyCode=KeyCodeType.None;
-                        listen.keyCodeText.text = "";
                     }
                 }
                 break;
@@ -40,7 +96,6 @@ public class SkillSwitch : MonoBehaviour
                     if (listen.keyCode == KeyCodeType.RMB)
                     {
                         listen.keyCode=KeyCodeType.None;
-                        listen.keyCodeText.text = "";
                     }
                 }
                 break;
@@ -50,7 +105,6 @@ public class SkillSwitch : MonoBehaviour
                     if (listen.keyCode == KeyCodeType.Alpha1)
                     {
                         listen.keyCode=KeyCodeType.None;
-                        listen.keyCodeText.text = "";
                     }
                 }
                 break;
@@ -60,7 +114,6 @@ public class SkillSwitch : MonoBehaviour
                     if (listen.keyCode == KeyCodeType.Alpha2)
                     {
                         listen.keyCode=KeyCodeType.None;
-                        listen.keyCodeText.text = "";
                     }
                 }
                 break;
@@ -70,7 +123,6 @@ public class SkillSwitch : MonoBehaviour
                     if (listen.keyCode == KeyCodeType.Alpha3)
                     {
                         listen.keyCode=KeyCodeType.None;
-                        listen.keyCodeText.text = "";
                     }
                 }
                 break;
@@ -80,41 +132,51 @@ public class SkillSwitch : MonoBehaviour
     {
         LMB.onClick.AddListener(() =>
         {
-            ClickMouseRightListen.keyCodeText.text = "[LMB]";
             ResetKeyCode(KeyCodeType.LMB);
             ClickMouseRightListen.keyCode=KeyCodeType.LMB;
+            SetKeyCodeText();
+            SaveSkillKeyCode();
+            StoreController.S.SaveStoreData();
             gameObject.SetActive(false);
             mask.SetActive(false);
         });
         RMB.onClick.AddListener(() =>
         {
-            ClickMouseRightListen.keyCodeText.text = "[RMB]";
             ResetKeyCode(KeyCodeType.RMB);
             ClickMouseRightListen.keyCode=KeyCodeType.RMB;
+            SetKeyCodeText();
+            SaveSkillKeyCode();
+            StoreController.S.SaveStoreData();
             gameObject.SetActive(false);
             mask.SetActive(false);
         });
         Alpha1.onClick.AddListener(() =>
         {
-            ClickMouseRightListen.keyCodeText.text = "[1]";
             ResetKeyCode(KeyCodeType.Alpha1);
             ClickMouseRightListen.keyCode=KeyCodeType.Alpha1;
+            SetKeyCodeText();
+            SaveSkillKeyCode();
+            StoreController.S.SaveStoreData();
             gameObject.SetActive(false);
             mask.SetActive(false);
         });
         Alpha2.onClick.AddListener(() =>
         {
-            ClickMouseRightListen.keyCodeText.text = "[2]";
             ResetKeyCode(KeyCodeType.Alpha2);
             ClickMouseRightListen.keyCode=KeyCodeType.Alpha2;
+            SetKeyCodeText();
+            SaveSkillKeyCode();
+            StoreController.S.SaveStoreData();
             gameObject.SetActive(false);
             mask.SetActive(false);
         });
         Alpha3.onClick.AddListener(() =>
         {
-            ClickMouseRightListen.keyCodeText.text = "[3]";
             ResetKeyCode(KeyCodeType.Alpha3);
             ClickMouseRightListen.keyCode=KeyCodeType.Alpha3;
+            SetKeyCodeText();
+            SaveSkillKeyCode();
+            StoreController.S.SaveStoreData();
             gameObject.SetActive(false);
             mask.SetActive(false);
         });
