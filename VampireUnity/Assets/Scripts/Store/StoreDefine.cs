@@ -134,33 +134,39 @@ public class StoreDefine : XSingleton<StoreDefine>
     {
         public int CurrentSkillCount = 0;
         
-        public float NormalAttack=0;
-        public float NormalSpeed=0;
+        public int NormalAttack=0;
+        public int NormalSpeed=0;
     
-        public float Crit=0;
-        public float CritDamage=0;
+        public int Crit=0;
+        public int CritDamage=0;
     
-        public float MoveSpeed=0;
-        public float MoveAddAttack=0;
-        public float MoveAddDefense=0;
+        public int MoveSpeed=0;
+        public int MoveAddAttack=0;
+        public int MoveAddDefense=0;
     
-        public float Dash=0;
-        public float DashCd=0;
+        public int Dash=0;
+        public int DashCd=0;
     
-        public float Skill1Damage=0;
-        public float Skill1Cd=0;
-        public float Skill1Range=0;
-        public float Skill1YiDian=0;
+        public int Skill1Damage=0;
+        public int Skill1Cd=0;
+        public int Skill1Range=0;
+        public int Skill1YiDian=0;
     
-        public float Skill2Damage=0;
-        public float Skill2Cd=0;
-        public float Skill2Time=0;
-        public float Skill2AddDefense=0;
+        public int Skill2Damage=0;
+        public int Skill2Cd=0;
+        public int Skill2Time=0;
+        public int Skill2AddDefense=0;
     
-        public float Skill3Damage=0;
-        public float Skill3Cd=0;
-        public float Skill3Range=0;
-        public float Skill3JianSu=0;
+        public int Skill3Damage=0;
+        public int Skill3Cd=0;
+        public int Skill3Range=0;
+        public int Skill3JianSu=0;
+        
+        public int MonsterAttack;
+        public int MonsterCrit;
+        public int MonsterHp;
+        public int MonsterDefense;
+
         
         public void CopyFromRuntime(SkillJiaDian runtime)
         {
@@ -186,6 +192,12 @@ public class StoreDefine : XSingleton<StoreDefine>
             Skill3Cd=runtime.Skill3Cd;
             Skill3Range=runtime.Skill3Range;
             Skill3JianSu=runtime.Skill3JianSu;
+
+            MonsterAttack = runtime.MonsterAttack;
+            MonsterCrit = runtime.MonsterCrit;
+            MonsterDefense = runtime.MonsterDefense;
+            MonsterHp = runtime.MonsterHp;
+
         }
 
         public void ApplyToRuntime(SkillJiaDian runtime)
@@ -193,25 +205,30 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.CurrentSkillCount = CurrentSkillCount;
             runtime.NormalAttack=NormalAttack;
             runtime.NormalSpeed=NormalSpeed;
-            Crit=runtime.Crit;
-            CritDamage=runtime.CritDamage; 
-            MoveSpeed=runtime.MoveSpeed;
-            MoveAddAttack = runtime.MoveAddAttack;
-            MoveAddDefense=runtime.MoveAddDefense;
-            DashCd=runtime.DashCd;
-            Dash=runtime.Dash;
-            Skill1Damage=runtime.Skill1Damage;
-            Skill1Cd=runtime.Skill1Cd;
-            Skill1Range=runtime.Skill1Range;
-            Skill1YiDian=runtime.Skill1YiDian;
-            Skill2Damage=runtime.Skill2Damage;
-            Skill2Cd=runtime.Skill2Cd;
-            Skill2Time=runtime.Skill2Time;
-            Skill2AddDefense=runtime.Skill2AddDefense;
-            Skill3Damage=runtime.Skill3Damage;
-            Skill3Cd=runtime.Skill3Cd;
-            Skill3Range=runtime.Skill3Range;
-            Skill3JianSu=runtime.Skill3JianSu;
+            runtime.Crit=Crit;
+            runtime.CritDamage=CritDamage; 
+            runtime.MoveSpeed=MoveSpeed;
+            runtime.MoveAddAttack=MoveAddAttack;
+            runtime.MoveAddDefense=MoveAddDefense;
+            runtime.DashCd=DashCd;
+            runtime.Dash=Dash;
+            runtime.Skill1Damage=Skill1Damage;
+            runtime.Skill1Cd=Skill1Cd;
+            runtime.Skill1Range=Skill1Range;
+            runtime.Skill1YiDian=Skill1YiDian;
+            runtime.Skill2Damage=Skill2Damage;
+            runtime.Skill2Cd=Skill2Cd;
+            runtime.Skill2Time=Skill2Time;
+            runtime.Skill2AddDefense=Skill2AddDefense;
+            runtime.Skill3Damage=Skill3Damage;
+            runtime.Skill3Cd=Skill3Cd;
+            runtime.Skill3Range=Skill3Range;
+            runtime.Skill3JianSu=Skill3JianSu;
+
+            runtime.MonsterAttack = MonsterAttack;
+            runtime.MonsterCrit = MonsterCrit;
+            runtime.MonsterDefense = MonsterDefense;
+            runtime.MonsterHp = MonsterHp;
         }
 
     }
