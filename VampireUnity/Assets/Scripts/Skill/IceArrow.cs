@@ -10,7 +10,7 @@ public class IceArrow : MonoBehaviour
         {
             trail.gameObject.SetActive(false);
             bool isCrit = GameController.S.GetIsCrit();
-            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit,DamageFrom.Skill1);
             
         }
     }

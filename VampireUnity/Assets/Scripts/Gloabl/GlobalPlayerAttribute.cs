@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class GlobalPlayerAttribute 
 {
    public static WeaponType CurrentWeaponType= WeaponType.Primary; //当前武器类型
    public static bool IsGame = false;
-   public static int CurrentHp=0;
+   public static float CurrentHp=0;
+   public static bool isMove = false;
 
    public static int BloodEnergy
    {
@@ -74,7 +76,15 @@ public class GlobalPlayerAttribute
    {
        get => PlayerInfoConfig.GetPlayerAttack();
    }
-   public static int PlayerMoveSpeed=3;
+   
+   private static float _baseMoveSpeed = 3f;
+
+   public static float PlayerMoveSpeed
+   {
+       get => _baseMoveSpeed * (1 + MoveSpeedNum / 100f);
+       set => _baseMoveSpeed = value ; 
+   }
+
    public static int PlayerCRIT=0;
    public static int PlayerDefense
    {
@@ -105,10 +115,33 @@ public class GlobalPlayerAttribute
    //总属性
    
    //基础属性
-   public static int TotalMaxHp => Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp)*MaxHpPercent);
-   public static int TotalDamage=> Mathf.RoundToInt((PlayerDamage + EquipDamage)*DamageAddPercent);
-   public static int TotalCRIT => PlayerCRIT + EquipCRIT;
-   public static int TotalDefense => Mathf.RoundToInt((PlayerDefense + EquipDefense)*MaxDefensePercent);
+   public static float TotalMaxHp => Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp)*MaxHpPercent);
+
+   public static float TotalDamage => GetTotalDamage();
+   
+   public static float TotalCRIT => (PlayerCRIT + EquipCRIT)*(1+CritNum/100.0f);
+   public static float TotalDefense => GetTotalDefense();
+
+
+   public static float GetTotalDamage()
+   {
+       float damage=Mathf.RoundToInt((PlayerDamage + EquipDamage)*DamageAddPercent);
+       if (isMove)
+       {
+           damage *= (1 + MoveAddAttackNum/100.0f);
+       }
+       return damage;
+   }
+   
+   public static float GetTotalDefense()
+   {
+       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense)*MaxDefensePercent);
+       if (isMove)
+       {
+           defense *= (1 + MoveAddDefenseNum/100.0f);
+       }
+       return defense;
+   }
    
    //附加词条属性
 
@@ -128,6 +161,44 @@ public class GlobalPlayerAttribute
    public static float Penetrate = 0;
    public static float DamageAddPercent = 0;
    public static float BloodSuck = 0;
+
+
+
+   
+   //技能面板
+
+   public static int NormalAttackNum => SkillJiaDian.S.NormalAttack * 5;
+   public static int AttackSpeedNum=> SkillJiaDian.S.AttackSpeed * 5;
+    
+   public static int CritNum=> SkillJiaDian.S.Crit * 5;
+   public static int CritDamageNum=> SkillJiaDian.S.CritDamage * 5;
+    
+   public static int MoveSpeedNum=> SkillJiaDian.S.MoveSpeed * 5;
+   public static int MoveAddAttackNum=> SkillJiaDian.S.MoveAddAttack * 5;
+   public static int MoveAddDefenseNum=> SkillJiaDian.S.MoveAddDefense * 5;
+    
+   public static int DashNum=> SkillJiaDian.S.Dash * 5;
+   public static int DashCdNum=> SkillJiaDian.S.DashCd * 5;
+    
+   public static int Skill1DamageNum=> SkillJiaDian.S.Skill1Damage * 5;
+   public static int Skill1CdNum=> SkillJiaDian.S.Skill1Cd * 5;
+   public static int Skill1RangeNum=> SkillJiaDian.S.Skill1Range * 5;
+   public static int Skill1YiDianNum=> SkillJiaDian.S.Skill1YiDian * 5;
+    
+   public static int Skill2DamageNum=> SkillJiaDian.S.Skill2Damage * 5;
+   public static int Skill2CdNum=> SkillJiaDian.S.Skill2Cd * 5;
+   public static int Skill2TimeNum=> SkillJiaDian.S.Skill2Time * 5;
+   public static int Skill2AddDefenseNum=> SkillJiaDian.S.Skill2AddDefense * 5;
+    
+   public static int Skill3DamageNum=> SkillJiaDian.S.Skill3Damage * 5;
+   public static int Skill3CdNum=> SkillJiaDian.S.Skill3Cd * 5;
+   public static int Skill3RangeNum=> SkillJiaDian.S.Skill3Range * 5;
+   public static int Skill3JianSuNum=> SkillJiaDian.S.Skill3JianSu * 5;
+
+   public static int MonsterAttackNum=> SkillJiaDian.S.MonsterAttack * 5;
+   public static int MonsterCritNum=> SkillJiaDian.S.MonsterCrit * 5;
+   public static int MonsterHpNum=> SkillJiaDian.S.MonsterHp * 5;
+   public static int MonsterDefenseNum=> SkillJiaDian.S.MonsterDefense * 5;
 
 
    public static void ResetFuJiaAttribute()

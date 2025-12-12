@@ -24,11 +24,11 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public int IceBallSpeed = 5;
     [NonSerialized]public GameObject IceBallGameObject;
     //技能冷却时间
-    [NonSerialized]public float IceArrowtime = 3f;
-    [NonSerialized]public float IceExplosiontime = 10f;
-    [NonSerialized]public float IceBalltime = 10f;
-    [NonSerialized]public float Dashtime = 10f;
-    [NonSerialized]public float DianQuantime = 10f;
+    public float IceArrowtime => (3f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
+    public float IceExplosiontime => (10f*(1-GlobalPlayerAttribute.Skill3CdNum/100.0f));
+    public float IceBalltime => (10f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
+    public float Dashtime => (10f*(1-GlobalPlayerAttribute.DashCdNum/100.0f));
+    public float DianQuantime => (10f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
     
     [NonSerialized]public float NormalAttackCoolingtime = 1f;
     [NonSerialized]public float IceArrowCoolingtime = 3f;
@@ -227,7 +227,7 @@ public class SkillController : XSingleton<SkillController>
         IceArrowCoolingtime+= Time.deltaTime;
         IceExplosionCoolingtime+=Time.deltaTime;
         IceBallCoolingtime+= Time.deltaTime;
-        Dashtime+=Time.deltaTime;
+        DashCoolingtime+=Time.deltaTime;
         DianQuanCoolingtime+= Time.deltaTime;
         
         //技能CD

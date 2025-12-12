@@ -30,6 +30,15 @@ public enum State
     Die
 }
 
+public enum DamageFrom
+{
+    None,
+    Normal,
+    Skill1,
+    Skill2,
+    Skill3
+}
+
 public class MonsterProp
 {
     public PropItem PropItem;
@@ -650,7 +659,7 @@ public abstract class MonsterBase : MonoBehaviour
         monsterHpGameObject.gameObject.SetActive(true);
     }
 
-    public int GetFinalDamage(int baseDamage,bool isCrit)
+    public int GetFinalDamage(float baseDamage,bool isCrit,DamageFrom damageFrom)
     {
         float finalDamage = baseDamage;
         var random = Random.Range(0.92f, 1.08f);
@@ -659,7 +668,7 @@ public abstract class MonsterBase : MonoBehaviour
         finalDamage-=monsterDenfense;
         if (isCrit)
         {
-            finalDamage *= (2+GlobalPlayerAttribute.CRITDamage);
+            finalDamage *= (2+GlobalPlayerAttribute.CRITDamage+GlobalPlayerAttribute.CritDamageNum/100.0f);
         }
 
         if (MonsterType == MonsterType.Boss)
@@ -671,13 +680,29 @@ public abstract class MonsterBase : MonoBehaviour
             finalDamage *= (1 + GlobalPlayerAttribute.DamageAddForNormal);
         }
 
+        switch (damageFrom)
+        {
+            case DamageFrom.Normal:
+                finalDamage*=(1+GlobalPlayerAttribute.NormalAttackNum/100.0f);
+                break;
+            case DamageFrom.Skill1:
+                finalDamage*=(1+GlobalPlayerAttribute.Skill1DamageNum/100.0f);
+                break;
+            case DamageFrom.Skill2:
+                finalDamage*=(1+GlobalPlayerAttribute.Skill2DamageNum/100.0f);
+                break;
+            case DamageFrom.Skill3:
+                finalDamage*=(1+GlobalPlayerAttribute.Skill3DamageNum/100.0f);
+                break;
+        }
+
         return Mathf.RoundToInt(finalDamage);
     }
-    public virtual void Hurt(int baseDamage,bool isCrit)
+    public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom)
     {
         if (IsDead) return;
         if(MonsterState== State.Die) return;
-        var finalDamage = GetFinalDamage(baseDamage,isCrit);
+        var finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
         GlobalPlayerAttribute.CurrentHp += Mathf.RoundToInt(GlobalPlayerAttribute.BloodSuck * finalDamage);
         ShowHurtText(finalDamage, isCrit);
         if (MonsterType != MonsterType.Boss)

@@ -27,9 +27,9 @@ public class JiaChongMonster : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Blue, 10));
     }
     
-    public override void Hurt(int damage,bool isCrit)
+   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
-        base.Hurt(damage,isCrit);
+        base.Hurt(damage,isCrit,damageFrom);
         if (!IsDead)
         {
             AudioController.S.PlayBatHit();

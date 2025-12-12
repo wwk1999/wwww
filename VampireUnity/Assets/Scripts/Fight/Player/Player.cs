@@ -73,14 +73,14 @@ public class Player : MonoBehaviour
         levelUpAnim.Play("LevelUpTextAnim");
     }
     
-    public void TempChangePlayerMoveSpeed(int speed,float time)
+    public void TempChangePlayerMoveSpeed(float speed,float time)
     {
-        int t = GlobalPlayerAttribute.PlayerMoveSpeed;
+        float t = GlobalPlayerAttribute.PlayerMoveSpeed;
         GlobalPlayerAttribute.PlayerMoveSpeed = speed;
         StartCoroutine(ResumeSpeed(time,t));
     }
     //携程等待1s
-    private IEnumerator ResumeSpeed(float seconds,int speed)
+    private IEnumerator ResumeSpeed(float seconds,float speed)
     {
         yield return new WaitForSeconds(seconds);
         GlobalPlayerAttribute.PlayerMoveSpeed = speed;
@@ -154,6 +154,14 @@ public class Player : MonoBehaviour
         //获得输入
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+        if (horizontal == 0 && vertical == 0)
+        {
+            GlobalPlayerAttribute.isMove = false;
+        }
+        else
+        {
+            GlobalPlayerAttribute.isMove = true;
+        }
         Vector2 joydir = FightBGController.S.joystick.input.normalized;
         if (joydir.x > 0)
         {

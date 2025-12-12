@@ -30,7 +30,7 @@ public class FourNormalAttack : MonoBehaviour
             hit.transform.position = other.transform.position;
             hit.GetComponent<ParticleSystem>().Play();
             bool isCrit = GameController.S.GetIsCrit();
-            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit,DamageFrom.Normal);
             GameController.S.StartCoroutine(WaitAndDestroy(hit)); // 在GameController上启动
             gameObject.SetActive(false);
         }

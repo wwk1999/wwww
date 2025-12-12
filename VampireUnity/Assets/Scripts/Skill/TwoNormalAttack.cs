@@ -30,7 +30,7 @@ public class TwoNormalAttack : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(GlobalPlayerAttribute.TotalDamage,isCrit,DamageFrom.Normal);
             
         }
     }
@@ -44,7 +44,7 @@ public class TwoNormalAttack : MonoBehaviour
             {
                 CurrentTime = 0;
                 bool isCrit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
+                GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage,isCrit,DamageFrom.Normal);
                 
             }
         }

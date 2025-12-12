@@ -61,9 +61,9 @@ public class SnotMonster : MonsterBase
         // Implement the skill logic here
     }
     
-    public override void Hurt(int damage,bool isCrit)
+   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
-        base.Hurt(damage,isCrit);
+        base.Hurt(damage,isCrit,damageFrom);
         if (!IsDead)
         {
             AudioController.S.PlayBatHit();

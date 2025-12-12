@@ -31,7 +31,7 @@ public class ThreeNormalAttack : MonoBehaviour
             hit.SetActive(true);
             hit.transform.position = transform.position;
             hit.GetComponent<ParticleSystem>().Play();
-            GameController.S.MonsterColliderDic[other].Hurt(20,GameController.S.GetIsCrit());
+            GameController.S.MonsterColliderDic[other].Hurt(20,GameController.S.GetIsCrit(),DamageFrom.Normal);
             GameController.S.StartCoroutine(WaitAndDestroy(hit)); // 在GameController上启动
             gameObject.SetActive(false);
         }

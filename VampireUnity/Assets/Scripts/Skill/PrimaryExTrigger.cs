@@ -10,7 +10,7 @@ public class PrimaryExTrigger : MonoBehaviour
             var monster = other.GetComponent<MonsterBase>();
             if (monster != null)
             {
-                monster.Hurt(GlobalPlayerAttribute.TotalDamage,GameController.S.GetIsCrit());
+                monster.Hurt(GlobalPlayerAttribute.TotalDamage,GameController.S.GetIsCrit(),DamageFrom.Normal);
             }
         }
     }

@@ -26,7 +26,7 @@ public class HeiDongBaoZha : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GlobalPlayerAttribute.TotalDamage,GameController.S.GetIsCrit());
+                monster.Hurt(GlobalPlayerAttribute.TotalDamage,GameController.S.GetIsCrit(),DamageFrom.Normal);
                 var hit = GameController.S.HeiDongPengQueue.Dequeue();
                 hit.transform.position = monster.transform.position;
                 hit.SetActive(true);

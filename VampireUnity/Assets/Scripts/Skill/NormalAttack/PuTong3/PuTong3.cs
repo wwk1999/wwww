@@ -30,7 +30,7 @@ public class PuTong3 : MonoBehaviour
             hit.SetActive(true);
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage,isCrit);
+            GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage,isCrit,DamageFrom.Normal);
             gameObject.SetActive(false);
             GameController.S.PuTong3Queue.Enqueue(gameObject);
         }
