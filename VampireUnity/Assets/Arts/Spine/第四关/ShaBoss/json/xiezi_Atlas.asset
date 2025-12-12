@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: xiezi_Atlas
+  m_EditorClassIdentifier: 
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 666566b52acae1947ab1000e86e31a3c, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 2d86438542d993e41b2be3b1efcdd000, type: 2}
+  - {fileID: 2100000, guid: d41209c5d6c580341b709c7d4d9ba91a, type: 2}
+  - {fileID: 2100000, guid: 55d285d8a61b5ed4ea05afaa9c6d0abb, type: 2}
+  - {fileID: 2100000, guid: ccedadfc975434147aa347b2b9b45651, type: 2}
+  - {fileID: 2100000, guid: aef895b16b0fe5044a37be566187b0e5, type: 2}

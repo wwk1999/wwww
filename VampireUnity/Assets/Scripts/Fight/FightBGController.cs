@@ -82,6 +82,7 @@ public class FightBGController : XSingleton<FightBGController>
             if(GlobalPlayerAttribute.Exp>GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level])
             {
                 //升级
+                SkillJiaDian.S.CurrentSkillCount++;
                 ObserverModuleManager.S.SendEvent(ConstKeys.LevelUpAnim);
                 GameController.S.gamePlayer.LevelUp.SetActive(true);
                 GameController.S.gamePlayer.LevelUpParticle.Play();

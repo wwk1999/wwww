@@ -1,0 +1,287 @@
+xiezi.png
+	size: 2042, 2038
+	filter: Linear, Linear
+	pma: true
+houqianjiao_6
+	bounds: 230, 1961, 75, 97
+	offsets: 3, 1, 80, 98
+	rotate: 90
+houqianzi_5
+	bounds: 1886, 1875, 149, 161
+	offsets: 1, 2, 152, 164
+houtui_3
+	bounds: 329, 1954, 82, 115
+	offsets: 1, 2, 84, 118
+	rotate: 90
+mofa_7
+	bounds: 248, 1638, 182, 199
+	offsets: 547, 258, 1280, 720
+	rotate: 90
+mofa_8
+	bounds: 811, 95, 303, 337
+	offsets: 494, 202, 1280, 720
+	rotate: 90
+qiantui_2
+	bounds: 446, 1953, 83, 106
+	offsets: 2, 2, 90, 109
+	rotate: 90
+qianzi_1
+	bounds: 339, 1822, 129, 163
+	offsets: 1, 0, 131, 163
+	rotate: 90
+tou
+	bounds: 912, 1793, 151, 162
+	offsets: 9, 6, 161, 168
+	rotate: 90
+wadong_1
+	bounds: 102, 1989, 126, 47
+	offsets: 799, 323, 1744, 1188
+wadong_10
+	bounds: 2, 1447, 204, 243
+	offsets: 1196, 333, 1744, 1188
+	rotate: 90
+wadong_11
+	bounds: 1592, 1241, 259, 315
+	offsets: 1164, 330, 1744, 1188
+	rotate: 90
+wadong_13
+	bounds: 1076, 1778, 665, 140
+	offsets: 694, 324, 1744, 1188
+wadong_2
+	bounds: 1699, 1502, 241, 201
+	offsets: 612, 331, 1744, 1188
+wadong_20
+	bounds: 2, 1867, 161, 120
+	offsets: 704, 333, 1744, 1188
+wadong_21
+	bounds: 710, 1796, 200, 148
+	offsets: 618, 355, 1744, 1188
+wadong_22
+	bounds: 165, 1830, 122, 172
+	offsets: 594, 365, 1744, 1188
+	rotate: 90
+wadong_23
+	bounds: 1743, 1705, 173, 168
+	offsets: 548, 397, 1744, 1188
+wadong_24
+	bounds: 504, 1806, 204, 138
+	offsets: 528, 436, 1744, 1188
+wadong_25
+	bounds: 2, 695, 630, 253
+	offsets: 515, 326, 1744, 1188
+wadong_26
+	bounds: 634, 649, 608, 258
+	offsets: 501, 340, 1744, 1188
+wadong_27
+	bounds: 2, 1653, 244, 175
+	offsets: 569, 354, 1744, 1188
+wadong_28
+	bounds: 919, 1580, 307, 196
+	offsets: 515, 353, 1744, 1188
+wadong_29
+	bounds: 2, 950, 635, 237
+	offsets: 500, 336, 1744, 1188
+wadong_3
+	bounds: 1299, 1081, 268, 263
+	offsets: 527, 326, 1744, 1188
+wadong_30
+	bounds: 639, 909, 637, 241
+	offsets: 500, 335, 1744, 1188
+wadong_31
+	bounds: 1157, 270, 675, 261
+	offsets: 478, 330, 1744, 1188
+wadong_33
+	bounds: 1244, 533, 759, 255
+	offsets: 438, 366, 1744, 1188
+wadong_34
+	bounds: 2, 133, 807, 265
+	offsets: 413, 367, 1744, 1188
+wadong_35
+	bounds: 315, 400, 840, 247
+	offsets: 409, 387, 1744, 1188
+wadong_4
+	bounds: 2, 432, 261, 311
+	offsets: 479, 323, 1744, 1188
+	rotate: 90
+wadong_8
+	bounds: 1326, 1346, 264, 232
+	offsets: 1093, 329, 1744, 1188
+wadong_9
+	bounds: 1101, 1373, 223, 205
+	offsets: 1137, 330, 1744, 1188
+wadongshadong_1
+	bounds: 247, 1408, 852, 170
+	offsets: 1, 23, 855, 194
+wadongshadong_2
+	bounds: 554, 1946, 713, 90
+	offsets: 2, 1, 717, 92
+waishaquan_7
+	bounds: 1269, 1920, 615, 116
+	offsets: 1, 2, 617, 119
+watu_1
+	bounds: 449, 1612, 468, 179
+	offsets: 198, 204, 880, 800
+watu_11
+	bounds: 1278, 790, 682, 219
+	offsets: 60, 200, 880, 800
+watu_2
+	bounds: 1228, 1580, 469, 196
+	offsets: 197, 203, 880, 800
+watu_3
+	bounds: 1569, 1011, 471, 228
+	offsets: 195, 201, 880, 800
+watuqian_10
+	bounds: 2, 1189, 681, 217
+	offsets: 83, 200, 880, 800
+watuqian_11
+	bounds: 685, 1152, 612, 219
+	offsets: 130, 200, 880, 800
+watuqian_7
+	bounds: 1150, 2, 688, 266
+	offsets: 80, 206, 880, 800
+ya
+	bounds: 48, 1994, 52, 42
+	offsets: 1, 1, 54, 45
+ya2
+	bounds: 2, 2008, 28, 44
+	offsets: 0, 1, 29, 45
+	rotate: 90
+
+xiezi_2.png
+	size: 2042, 1847
+	filter: Linear, Linear
+	pma: true
+mofa_13
+	bounds: 1103, 1132, 935, 713
+	offsets: 170, 0, 1280, 720
+mofa_14
+	bounds: 2, 407, 1068, 716
+	offsets: 103, 0, 1280, 720
+mofa_15
+	bounds: 2, 1125, 1099, 720
+	offsets: 58, 0, 1280, 720
+wadong_15
+	bounds: 1103, 810, 896, 320
+	offsets: 527, 325, 1744, 1188
+wadong_18
+	bounds: 1072, 39, 890, 387
+	offsets: 416, 340, 1744, 1188
+wadong_19
+	bounds: 1072, 428, 968, 380
+	offsets: 370, 334, 1744, 1188
+wadong_7
+	bounds: 2, 2, 948, 403
+	offsets: 379, 327, 1744, 1188
+
+xiezi_3.png
+	size: 1973, 2048
+	filter: Linear, Linear
+	pma: true
+mofa_12
+	bounds: 783, 1332, 793, 714
+	offsets: 245, 6, 1280, 720
+mofa_5
+	bounds: 2, 547, 772, 747
+	offsets: 4, 32, 800, 800
+mofa_6
+	bounds: 2, 1296, 779, 750
+	offsets: 2, 27, 800, 800
+wadong_16
+	bounds: 1570, 2, 624, 333
+	offsets: 476, 324, 1744, 1188
+	rotate: 90
+wadong_32
+	bounds: 749, 49, 704, 268
+	offsets: 462, 337, 1744, 1188
+wadong_6
+	bounds: 1578, 1233, 813, 393
+	offsets: 429, 325, 1744, 1188
+	rotate: 90
+watu_6
+	bounds: 1577, 628, 603, 385
+	offsets: 139, 205, 880, 800
+	rotate: 90
+watu_7
+	bounds: 2, 107, 745, 438
+	offsets: 23, 205, 880, 800
+watu_8
+	bounds: 783, 674, 792, 656
+	offsets: 37, 0, 880, 800
+watuqian_8
+	bounds: 776, 319, 792, 353
+	offsets: 37, 203, 880, 800
+
+xiezi_4.png
+	size: 2023, 1828
+	filter: Linear, Linear
+	pma: true
+mofa_1
+	bounds: 1432, 1164, 341, 341
+	offsets: 235, 239, 800, 800
+mofa_3
+	bounds: 846, 478, 392, 354
+	offsets: 198, 220, 800, 800
+mofa_9
+	bounds: 1421, 2, 435, 461
+	offsets: 429, 131, 1280, 720
+	rotate: 90
+shenti_4
+	bounds: 1154, 1516, 310, 398
+	offsets: 1, 0, 311, 398
+	rotate: 90
+wadong_12
+	bounds: 2, 852, 674, 333
+	offsets: 749, 315, 1744, 1188
+wadong_14
+	bounds: 2, 499, 842, 333
+	offsets: 595, 324, 1744, 1188
+wadong_17
+	bounds: 2, 126, 812, 371
+	offsets: 427, 328, 1744, 1188
+wadong_5
+	bounds: 678, 834, 721, 349
+	offsets: 466, 325, 1744, 1188
+watu_10
+	bounds: 471, 1518, 681, 308
+	offsets: 83, 200, 880, 800
+watu_4
+	bounds: 1554, 1507, 467, 319
+	offsets: 200, 204, 880, 800
+watu_5
+	bounds: 1240, 439, 486, 372
+	offsets: 181, 203, 880, 800
+watu_9
+	bounds: 2, 1187, 713, 329
+	offsets: 67, 196, 880, 800
+watuqian_4
+	bounds: 2, 1525, 467, 301
+	offsets: 200, 204, 880, 800
+watuqian_5
+	bounds: 1401, 813, 486, 349
+	offsets: 181, 203, 880, 800
+watuqian_6
+	bounds: 816, 52, 603, 385
+	offsets: 139, 205, 880, 800
+watuqian_9
+	bounds: 717, 1185, 713, 329
+	offsets: 67, 196, 880, 800
+
+xiezi_5.png
+	size: 1292, 1212
+	filter: Linear, Linear
+	pma: true
+mofa_10
+	bounds: 708, 2, 560, 582
+	offsets: 366, 77, 1280, 720
+	rotate: 90
+mofa_11
+	bounds: 2, 498, 712, 704
+	offsets: 280, 16, 1280, 720
+	rotate: 90
+mofa_2
+	bounds: 2, 16, 480, 480
+	offsets: 164, 168, 800, 800
+mofa_4
+	bounds: 708, 564, 646, 574
+	offsets: 91, 94, 800, 800
+	rotate: 90

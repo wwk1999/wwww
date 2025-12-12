@@ -68,7 +68,6 @@
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEye.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueRing.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Demo\Scripts\ARPGSceneSelect.cs" />
-    <Compile Include="Assets\Scripts\Store\SkillJiaDian.cs" />
     <Compile Include="Assets\Scripts\Tool\ScrollIndexCallback2.cs" />
     <Compile Include="Assets\Scripts\Tool\MonsterHurtText.cs" />
     <Compile Include="Assets\External Resources\ARPG Effects\Demo\Scripts\ARPGFXCycler.cs" />
@@ -117,6 +116,7 @@
     <Compile Include="Assets\Scripts\Tool\MonsterSequenceTool.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenHelmet.cs" />
+    <Compile Include="Assets\Scripts\Store\SkillJiaDian.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManBoss.cs" />
     <Compile Include="Assets\Scripts\Window\WeaponWindowRole1.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Duration.cs" />
@@ -328,6 +328,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkilll1.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalPlayerAttribute.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Scripts\Tool\UIToast.cs" />
     <Compile Include="Assets\Scripts\Window\RoleWindow1.cs" />
     <Compile Include="Assets\Scripts\Window\WeaponWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor4.cs" />
@@ -441,6 +442,7 @@
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Arts\Spine\怪物\Boss1\Enemy_Panther_warrior.json" />
     <None Include="Assets\Arts\Spine\技能\ZiPeng\action.json" />
+    <None Include="Assets\Arts\Spine\第四关\ShaBoss\images\xiezi.json" />
     <None Include="Assets\Arts\Shaders\EquipOutline.shader" />
     <None Include="Library\PackageCache\com.unity.timeline@1.8.7\package.json" />
     <None Include="Assets\Arts\Shaders\Outline.shader" />
@@ -485,6 +487,7 @@
     <None Include="Assets\Packages\MySqlConnector.2.4.0\lib\netstandard2.1\MySqlConnector.xml" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\Fail\bui_10.json" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
+    <None Include="Assets\Arts\Spine\第四关\ShaBoss\json\xiezi.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.12\package.json" />
     <None Include="Assets\External Resources\ARPG Effects\Readme.txt" />
@@ -502,6 +505,7 @@
     <None Include="Assets\Arts\Spine\第五关\XueZhangLang\xuezhanglang.atlas.txt" />
     <None Include="Assets\External Resources\Hovl Studio\Toon Projectiles 2\Shaders\Distortion.shader" />
     <None Include="Assets\External Resources\Hovl Studio\Toon Projectiles 2\Shaders\Blend_TwoSides.shader" />
+    <None Include="Assets\Arts\Spine\第四关\ShaBoss\json\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\DianQuan\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\package.json" />
     <None Include="Assets\Arts\Spine\技能\json\action.json" />
@@ -633,7 +637,6 @@
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Electric_Additive.shader" />
     <None Include="Assets\External Resources\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_IntegratedEffect.shader" />
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\useSharedDesignerContext.txt" />
-    <None Include="Assets\Arts\Spine\第四关\ShaBoss\xiezi.json" />
     <None Include="Assets\Arts\Spine\第二关\小火怪\json\xiaohuoguai.json" />
     <None Include="Assets\Arts\Shaders\Rage.shader" />
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
@@ -648,7 +651,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Multiplicative\EdgeEffect_Multiplicative.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
-    <None Include="Assets\Arts\Spine\第四关\ShaBoss\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\EdgeEffect_Additive.shader" />

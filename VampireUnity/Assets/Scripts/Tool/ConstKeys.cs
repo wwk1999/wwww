@@ -24,6 +24,7 @@ public class ConstKeys
     public const string LevelUpAnim = "LevelUpAnim";
     
     public const string ShowToast = "ShowToast";
+    public const string ShowUIToast = "ShowUIToast";
 
 
     #endregion

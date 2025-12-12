@@ -132,6 +132,8 @@ public class StoreDefine : XSingleton<StoreDefine>
     [System.Serializable]
     public class SkillJiaDian1
     {
+        public int CurrentSkillCount = 0;
+        
         public float NormalAttack=0;
         public float NormalSpeed=0;
     
@@ -142,8 +144,8 @@ public class StoreDefine : XSingleton<StoreDefine>
         public float MoveAddAttack=0;
         public float MoveAddDefense=0;
     
+        public float Dash=0;
         public float DashCd=0;
-        public float DashAddDefense=0;
     
         public float Skill1Damage=0;
         public float Skill1Cd=0;
@@ -162,6 +164,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         
         public void CopyFromRuntime(SkillJiaDian runtime)
         {
+            CurrentSkillCount=runtime.CurrentSkillCount;
             NormalAttack=runtime.NormalAttack;
             NormalSpeed=runtime.NormalSpeed;
             Crit=runtime.Crit;
@@ -170,7 +173,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             MoveAddAttack = runtime.MoveAddAttack;
             MoveAddDefense=runtime.MoveAddDefense;
             DashCd=runtime.DashCd;
-            DashAddDefense=runtime.DashAddDefense;
+            Dash=runtime.Dash;
             Skill1Damage=runtime.Skill1Damage;
             Skill1Cd=runtime.Skill1Cd;
             Skill1Range=runtime.Skill1Range;
@@ -187,6 +190,7 @@ public class StoreDefine : XSingleton<StoreDefine>
 
         public void ApplyToRuntime(SkillJiaDian runtime)
         {
+            runtime.CurrentSkillCount = CurrentSkillCount;
             runtime.NormalAttack=NormalAttack;
             runtime.NormalSpeed=NormalSpeed;
             Crit=runtime.Crit;
@@ -195,7 +199,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             MoveAddAttack = runtime.MoveAddAttack;
             MoveAddDefense=runtime.MoveAddDefense;
             DashCd=runtime.DashCd;
-            DashAddDefense=runtime.DashAddDefense;
+            Dash=runtime.Dash;
             Skill1Damage=runtime.Skill1Damage;
             Skill1Cd=runtime.Skill1Cd;
             Skill1Range=runtime.Skill1Range;

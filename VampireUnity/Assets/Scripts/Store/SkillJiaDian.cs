@@ -1,5 +1,7 @@
 public class SkillJiaDian : XSingleton<SkillJiaDian>
 {
+    public int CurrentSkillCount = 0;
+    
     public float NormalAttack=0;
     public float NormalSpeed=0;
     
@@ -10,8 +12,8 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public float MoveAddAttack=0;
     public float MoveAddDefense=0;
     
+    public float Dash=0;
     public float DashCd=0;
-    public float DashAddDefense=0;
     
     public float Skill1Damage=0;
     public float Skill1Cd=0;
