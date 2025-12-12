@@ -3,7 +3,7 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public int CurrentSkillCount = 0;
     
     public int NormalAttack=0;
-    public int NormalSpeed=0;
+    public int AttackSpeed=0;
     
     public int Crit=0;
     public int CritDamage=0;

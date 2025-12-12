@@ -135,7 +135,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int CurrentSkillCount = 0;
         
         public int NormalAttack=0;
-        public int NormalSpeed=0;
+        public int AttackSpeed=0;
     
         public int Crit=0;
         public int CritDamage=0;
@@ -172,7 +172,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         {
             CurrentSkillCount=runtime.CurrentSkillCount;
             NormalAttack=runtime.NormalAttack;
-            NormalSpeed=runtime.NormalSpeed;
+            AttackSpeed=runtime.AttackSpeed;
             Crit=runtime.Crit;
             CritDamage=runtime.CritDamage;
             MoveSpeed=runtime.MoveSpeed;
@@ -204,7 +204,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         {
             runtime.CurrentSkillCount = CurrentSkillCount;
             runtime.NormalAttack=NormalAttack;
-            runtime.NormalSpeed=NormalSpeed;
+            runtime.AttackSpeed=AttackSpeed;
             runtime.Crit=Crit;
             runtime.CritDamage=CritDamage; 
             runtime.MoveSpeed=MoveSpeed;

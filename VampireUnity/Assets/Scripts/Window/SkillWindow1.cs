@@ -90,8 +90,8 @@ public class SkillWindow1 : MonoBehaviour
     normalAttackLevel.text = SkillJiaDian.S.NormalAttack.ToString();
     
     // Attack Speed
-    attackSpeedLevel.gameObject.SetActive(SkillJiaDian.S.NormalSpeed > 0);
-    attackSpeedLevel.text = SkillJiaDian.S.NormalSpeed.ToString();
+    attackSpeedLevel.gameObject.SetActive(SkillJiaDian.S.AttackSpeed > 0);
+    attackSpeedLevel.text = SkillJiaDian.S.AttackSpeed.ToString();
     
     // Dash
     dashLevel.gameObject.SetActive(SkillJiaDian.S.Dash > 0);
@@ -234,10 +234,346 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.NormalAttack++;
             StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        attackSpeed.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.AttackSpeed++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        dash.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Dash++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        dashCd.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DashCd++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        crit.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Crit++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        critDamage.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.CritDamage++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        moveSpeed.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.MoveSpeed++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        moveAddDefense.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.MoveAddDefense++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        moveAddAttack.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.MoveAddAttack++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill1.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill1Damage++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill2.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill2Damage++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill3.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill3Damage++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill1Cd.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill1Cd++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill2Cd.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill2Cd++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill3Cd.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill3Cd++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill1Range.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill1Range++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill1YiDian.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill1YiDian++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill2Time.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill2Time++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill2AddDefense.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill2AddDefense++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill3Range.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill3Range++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        skill3JianSu.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.Skill3JianSu++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        attack.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.MonsterAttack++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        hp.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.MonsterHp++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        defense.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.MonsterDefense++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        critMonster.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.MonsterCrit++;
+            StoreController.S.SaveStoreData();
+            SetShowLevel();
             SetButtonDisable();
         });
     }

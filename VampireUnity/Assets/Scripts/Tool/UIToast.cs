@@ -22,6 +22,6 @@ public class UIToast : MonoBehaviour
    {
       string content=args[0].ToString();
       text.text = content;
-      animator.Play("UIToast");
+      animator.Play("UIToast",0,0);
    }
 }
