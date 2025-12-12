@@ -12,11 +12,13 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public int ShadowCount = 5;
     [NonSerialized]public int CurrentDashCount = 0;
     //技能相关
+    [NonSerialized]public float IceBallTime = 5*(1+GlobalPlayerAttribute.Skill2TimeNum/100.0f);
     [NonSerialized]public ParticleSystem IceArrow;
     [NonSerialized]public ParticleSystem NormalAttack;
     [NonSerialized]public GameObject NormalAttack2;
     [NonSerialized]public GameObject NormalAttack3;
     [NonSerialized]public GameObject NormalAttack4;
+    [NonSerialized]public GameObject IceExplosion;
     [NonSerialized]public ParticleSystem IceExplosion1;
     [NonSerialized]public ParticleSystem IceExplosion2;
     [NonSerialized]public ParticleSystem IceExplosion3;
@@ -103,7 +105,7 @@ public class SkillController : XSingleton<SkillController>
 
         NormalAttack.Stop();
         
-        
+        IceExplosion= GameController.S.transform.Find("Player(Clone)/IceExplosion").gameObject;
         IceExplosion1= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion1/IceExplosionP1").GetComponent<ParticleSystem>();
         IceExplosion2= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion2/IceExplosionP2").GetComponent<ParticleSystem>();
         IceExplosion3= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion2/IceExplosionP3").GetComponent<ParticleSystem>();
@@ -185,6 +187,7 @@ public class SkillController : XSingleton<SkillController>
                     DianQuanCoolingtime = 0;
                     var dianquan= GameController.S.DianQuanQueue.Dequeue();
                     dianquan.gameObject.SetActive(true);
+                    dianquan.transform.localScale=new Vector3(dianquan.transform.localScale.x*(1+GlobalPlayerAttribute.Skill1RangeNum/100.0f),dianquan.transform.localScale.y*(1+GlobalPlayerAttribute.Skill1RangeNum/100.0f),1);
                     dianquan.transform.position = worldPos;
                 }
                 break;
@@ -193,9 +196,8 @@ public class SkillController : XSingleton<SkillController>
                 {
                     AudioController.S.PlayIceBall();
                     IceBallUIFX.Play();
-           
                     IceBallCoolingtime=0;
-                    StartIceBallSkill(3,3,3);
+                    StartIceBallSkill(1);
                 }
                 break;
             case SkillType.Skill3:
@@ -204,19 +206,20 @@ public class SkillController : XSingleton<SkillController>
                     AudioController.S.PlayIceEx();
                     Debug.Log("mac点击了冰爆技能!");
                     IceExUIFX.Play();
-         
                     IceExplosionCoolingtime=0;
                     IceExplosion1.Play();
                     IceExplosion2.Play();
                     IceExplosion3.Play();
                     IceExTrigger.gameObject.SetActive(true);
+                    IceExplosion.transform.localScale=new Vector3( IceExplosion.transform.localScale.x*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f),IceExplosion.transform.localScale.y*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f),IceExplosion.transform.localScale.z*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f));
+                    IceExTrigger.transform.localScale=new Vector3( IceExTrigger.transform.localScale.x*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f),IceExTrigger.transform.localScale.y*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f),IceExTrigger.transform.localScale.z*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f));
+                    
                 }
                 break;
         }
     }
     void Update()
     {
-        //GameController.S.gamePlayer.iceBall.transform.rotation.z每帧+2
         if (IceBallGameObject != null)
         {
            IceBallGameObject.transform.Rotate(0, 0, IceBallSpeed);
@@ -302,7 +305,7 @@ public class SkillController : XSingleton<SkillController>
         }
     }
 
-    public void StartIceBallSkill(int num, int scale, int speed)
+    public void StartIceBallSkill(int num)
     {
         switch (num)
         {
@@ -320,30 +323,6 @@ public class SkillController : XSingleton<SkillController>
                 break;
         }
         IceBallGameObject.transform.localScale = new Vector3(10, 10, 10);
-        switch (scale)
-        {
-            case 1:
-                IceBallGameObject.transform.localScale = new Vector3(10, 10, 10);
-                break;
-            case 2:
-                IceBallGameObject.transform.localScale = new Vector3(13, 13, 13);
-                break;
-            case 3:
-                IceBallGameObject.transform.localScale = new Vector3(16, 16, 16);
-                break;
-        }
-
-        switch (speed)
-        {
-            case 1:
-                IceBallSpeed =5;
-                break;
-            case 2:
-                IceBallSpeed =8;                
-                break;
-            case 3:
-                IceBallSpeed =11;                
-                break;
-        }
+        
     }
 }

@@ -53,6 +53,11 @@ public class MonsterProp
 
 public abstract class MonsterBase : MonoBehaviour
 {
+    [NonSerialized] public float YiDianTime = 0;
+    [NonSerialized] public float JianSuTime = 0;
+
+    
+    
     [NonSerialized]public MonsterType MonsterType;//怪物类型
     [NonSerialized]public string MonsterName;//怪物名称
     [NonSerialized]public int MonsterLevel;//怪物等级
@@ -165,6 +170,16 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Update()
     {
+        if (YiDianTime > 0)
+        {
+            YiDianTime -= Time.deltaTime;
+        }
+        
+        if (JianSuTime > 0)
+        {
+            JianSuTime -= Time.deltaTime;
+            Speed *= (1 - GlobalPlayerAttribute.Skill3JianSuNum / 100.0f);
+        }
         currentHurtTime += Time.deltaTime;
         float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
         if (dis < GameController.S.gamePlayer.size + size&&currentHurtTime>hurtTime)
@@ -695,6 +710,10 @@ public abstract class MonsterBase : MonoBehaviour
                 finalDamage*=(1+GlobalPlayerAttribute.Skill3DamageNum/100.0f);
                 break;
         }
+        if (damageFrom == DamageFrom.Skill1)
+        {
+            finalDamage*=(1+GlobalPlayerAttribute.Skill1YiDianNum/100.0f);
+        }
 
         return Mathf.RoundToInt(finalDamage);
     }
@@ -702,6 +721,14 @@ public abstract class MonsterBase : MonoBehaviour
     {
         if (IsDead) return;
         if(MonsterState== State.Die) return;
+        if (damageFrom == DamageFrom.Skill1&&GlobalPlayerAttribute.Skill1YiDianNum>0)
+        {
+            YiDianTime = 3;
+        }
+        if (damageFrom == DamageFrom.Skill3&&GlobalPlayerAttribute.Skill3JianSuNum>0)
+        {
+            JianSuTime = 3;
+        }
         var finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
         GlobalPlayerAttribute.CurrentHp += Mathf.RoundToInt(GlobalPlayerAttribute.BloodSuck * finalDamage);
         ShowHurtText(finalDamage, isCrit);

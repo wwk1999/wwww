@@ -5,7 +5,8 @@ public class IceBall : MonoBehaviour
 {
     private void Start()
     {
-        Invoke("DestroyBall",5f);    
+        GlobalPlayerAttribute.isIceBall=true;
+        Invoke("DestroyBall",SkillController.S.IceBallTime);    
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +23,7 @@ public class IceBall : MonoBehaviour
 
     public void DestroyBall()
     {
+        GlobalPlayerAttribute.isIceBall=false;
         Destroy(gameObject);
     }
     

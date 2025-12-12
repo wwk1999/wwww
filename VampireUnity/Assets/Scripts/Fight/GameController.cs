@@ -544,7 +544,7 @@ public class GameController : XSingleton<GameController>
                 AudioController.S.PlayIceBall();
                 SkillController.S.IceBallUIFX.Play();
                 SkillController.S.IceBallCoolingtime=0;
-                SkillController.S.StartIceBallSkill(3,3,3);
+                SkillController.S.StartIceBallSkill(1);
             }
         });
     }

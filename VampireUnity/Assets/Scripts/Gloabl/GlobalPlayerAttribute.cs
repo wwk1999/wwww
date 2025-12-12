@@ -8,6 +8,7 @@ public class GlobalPlayerAttribute
    public static bool IsGame = false;
    public static float CurrentHp=0;
    public static bool isMove = false;
+   public static bool isIceBall = false;
 
    public static int BloodEnergy
    {
@@ -136,10 +137,18 @@ public class GlobalPlayerAttribute
    public static float GetTotalDefense()
    {
        float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense)*MaxDefensePercent);
+       float value = 0;
        if (isMove)
        {
-           defense *= (1 + MoveAddDefenseNum/100.0f);
+           value += MoveAddDefenseNum/100.0f;
        }
+
+       if (isIceBall)
+       {
+           value += Skill2AddDefenseNum / 100.0f;
+       }
+
+       defense *= (1 + value);
        return defense;
    }
    
