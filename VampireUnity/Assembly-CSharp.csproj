@@ -438,11 +438,11 @@
     <None Include="Assets\Arts\Shaders\VacantEyeBullet.shader" />
     <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\第一关\蜜蜂\json\mf.json" />
+    <None Include="Assets\Arts\Spine\第四关\mofaqiu\skeleton.json" />
     <None Include="Assets\Arts\Shaders\LcL\TikTok.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Arts\Spine\怪物\Boss1\Enemy_Panther_warrior.json" />
     <None Include="Assets\Arts\Spine\技能\ZiPeng\action.json" />
-    <None Include="Assets\Arts\Spine\第四关\ShaBoss\images\xiezi.json" />
     <None Include="Assets\Arts\Shaders\EquipOutline.shader" />
     <None Include="Library\PackageCache\com.unity.timeline@1.8.7\package.json" />
     <None Include="Assets\Arts\Shaders\Outline.shader" />
@@ -509,6 +509,7 @@
     <None Include="Assets\Arts\Spine\技能\DianQuan\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\package.json" />
     <None Include="Assets\Arts\Spine\技能\json\action.json" />
+    <None Include="Assets\Arts\Spine\第四关\mofaqiu\skeleton.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
     <None Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Shaders\Electricity.shader" />
     <None Include="Library\PackageCache\com.unity.modules.video@1.0.0\package.json" />

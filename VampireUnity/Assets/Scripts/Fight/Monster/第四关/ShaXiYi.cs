@@ -11,7 +11,11 @@ public class ShaXiYi : MonsterBase
     }
     public GameObject parent;
     public Transform attackTrans;
-    private float attackRange = 0.55f;
+    private float attackRange = 0.7f;
+    
+    private float skill1Time = 30f;
+    private float currentSkill1Time = 0f;
+    public float hideTime = 0; 
 
     
      public override void AddMonsterSourceStone()
@@ -156,6 +160,30 @@ public class ShaXiYi : MonsterBase
     void Update()
     {
         if (IsDead) return;
+        hideTime-=Time.deltaTime;
+        currentSkill1Time+=Time.deltaTime;
+        if (hideTime > 0)
+        {
+            var skeleton = monsterSkeletonAnimation.Skeleton;
+            skeleton.SetSkin("skin_yinshen_hou");   // 确认名字无误
+            skeleton.SetSlotsToSetupPose();         // 或 skeleton.SetToSetupPose();
+            monsterSkeletonAnimation.AnimationState.Apply(skeleton); // 重新应用当前动画
+            collider2D.tag = "Bullet";
+        }
+        else
+        {
+            var skeleton = monsterSkeletonAnimation.Skeleton;
+            skeleton.SetSkin("skin_yinshen_qian");
+            skeleton.SetSlotsToSetupPose();
+            monsterSkeletonAnimation.AnimationState.Apply(skeleton);
+            collider2D.tag = "Monster";
+        }
+
+        if (currentSkill1Time > skill1Time)
+        {
+            currentSkill1Time = 0;
+            isSkill1=true;
+        }
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)
         {

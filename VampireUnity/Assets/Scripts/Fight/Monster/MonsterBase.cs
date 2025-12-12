@@ -282,7 +282,7 @@ public abstract class MonsterBase : MonoBehaviour
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
         }
         //如果动画播放完毕
-        if (trackEntry.Animation.Name == "hit"||trackEntry.Animation.Name == "attack"||trackEntry.Animation.Name == "skill"||trackEntry.Animation.Name == "skill_01"||trackEntry.Animation.Name == "skill_02"||trackEntry.Animation.Name == "skill_03")
+        if (trackEntry.Animation.Name == "hit"||trackEntry.Animation.Name == "attack"||trackEntry.Animation.Name == "skill"||trackEntry.Animation.Name == "skill_01"||trackEntry.Animation.Name == "skill_02"||trackEntry.Animation.Name == "skill_03"||trackEntry.Animation.Name == "injured")
         {
             //monsterAnimator.SetBool("isHurt", false);
             MonsterState = State.Move;
@@ -297,12 +297,24 @@ public abstract class MonsterBase : MonoBehaviour
         }
     }
     
+    
     public void OnAnimationComplete1(TrackEntry trackEntry)
     {
         if (trackEntry.Animation.Name == "fail")
         {
             Destroy(gameObject);
             return;
+        }
+        if (trackEntry.Animation.Name == "stealth")//沙漠蜥蜴
+        {
+            isSkill1 = false;
+            ShaXiYi shaMoElite=this as ShaXiYi;
+            shaMoElite.hideTime = 10;
+            Debug.LogError("隐身结束");
+        }
+        if (trackEntry.Animation.Name == "skill1")//沙漠蜥蜴
+        {
+            isSkill1 = false;
         }
         if (isSkill2)
         {
@@ -311,12 +323,19 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else if (isSkill1)
         {
-            isSkill1 = false;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+            if (skeletonData.FindAnimation("skill1") != null)
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+            }
             if (this is ShaMoElite)
             {
                 ShaMoElite shaMoElite=this as ShaMoElite;
                 shaMoElite.CheckSkill();
+            }
+            if (this is ShaXiYi)
+            {
+                Debug.LogError("开始隐身");
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "stealth", false);
             }
         }
         else if(isAttack)
@@ -410,11 +429,23 @@ public abstract class MonsterBase : MonoBehaviour
                 gameObject.SetActive(false);
                 GameController.S.HuangZhuQueue.Enqueue(huangzhu);
             }
-            else if (this is HuangShu huangShu)
+            else if (this is ShaChong shaChong)
             {
                 gameObject.SetActive(false);
-                GameController.S.HuangShuQueue.Enqueue(huangShu);
-            }
+                GameController.S.ShaChongQueue.Enqueue(shaChong);
+            } else if (this is ShaNiao shaniao)
+            {
+                gameObject.SetActive(false);
+                GameController.S.ShaNiaoQueue.Enqueue(shaniao);
+            } else if (this is XianRenZhang xianrenzhang)
+            {
+                gameObject.SetActive(false);
+                GameController.S.XianRenZhangQueue.Enqueue(xianrenzhang);
+            }  else if (this is ShaXiYi shaxiyi)
+            {
+                gameObject.SetActive(false);
+                GameController.S.ShaXiYiQueue.Enqueue(shaxiyi);
+            } 
     }
 
     public void MonsterMove()
@@ -611,7 +642,7 @@ public abstract class MonsterBase : MonoBehaviour
             Spine.Animation walkAnimation = skeletonData.FindAnimation("fail");
             if (walkAnimation != null)
             {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "fail", true);
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "fail", false);
                 Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
             }
             else
@@ -748,7 +779,7 @@ public abstract class MonsterBase : MonoBehaviour
                 }
                 else
                 {
-                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, "beatback", false);
+                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, "injured", false);
                 }
             }
             else
