@@ -296,6 +296,13 @@ public abstract class MonsterBase : MonoBehaviour
             CameraContraller.CameraStatus= CameraStatus.MoveToPlayer;
         }
     }
+
+    IEnumerator DelayXieZi()
+    {
+        yield return new WaitForSeconds(2f);
+        transform.position=GameController.S.gamePlayer.transform.position;
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
+    }
     
     
     public void OnAnimationComplete1(TrackEntry trackEntry)
@@ -310,7 +317,6 @@ public abstract class MonsterBase : MonoBehaviour
             isSkill1 = false;
             ShaXiYi shaMoElite=this as ShaXiYi;
             shaMoElite.hideTime = 10;
-            Debug.LogError("隐身结束");
         }
         if (trackEntry.Animation.Name == "skill1")//沙漠蜥蜴
         {
@@ -319,7 +325,16 @@ public abstract class MonsterBase : MonoBehaviour
         if (isSkill2)
         {
             isSkill2 = false;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+            if (this is ZhaoZeBoss)
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+            }
+
+            if (this is XieZi)
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+                StartCoroutine(DelayXieZi());
+            }
         }
         else if (isSkill1)
         {
@@ -334,7 +349,6 @@ public abstract class MonsterBase : MonoBehaviour
             }
             if (this is ShaXiYi)
             {
-                Debug.LogError("开始隐身");
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, "stealth", false);
             }
         }

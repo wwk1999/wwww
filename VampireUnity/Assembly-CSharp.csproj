@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scripts\Skill\FourNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossAttack.cs" />
     <Compile Include="Assets\Scripts\Tool\MonsterSequenceTool.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZi.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenHelmet.cs" />
     <Compile Include="Assets\Scripts\Store\SkillJiaDian.cs" />
@@ -356,6 +357,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\XiNiuMonster.cs" />
     <Compile Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Demo scenes\DemoShooting.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeRing.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZiSkill1.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloth.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanRing.cs" />
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\VariousMouseOrbit.cs" />

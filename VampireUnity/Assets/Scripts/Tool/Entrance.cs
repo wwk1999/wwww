@@ -704,6 +704,17 @@ public class Entrance : MonoBehaviour
         }
         
         
+        //Boss技能队列
+        if (LevelInfoConfig.CurrentGameLevel == 12)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                var xieziskill1= Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/XieZiSkill1").GetComponent<XieZiSkill1>(), GameController.S.transform);
+                xieziskill1.gameObject.SetActive(false);
+                GameController.S.XieZiSkill1Queue.Enqueue(xieziskill1);
+            }
+        }
+        
         
         
 

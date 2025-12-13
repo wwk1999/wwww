@@ -26,11 +26,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     public Button level13Button;
     public Button level14Button;
     public Button level15Button;
-    public Button level16Button;
-    public Button level17Button;
-    public Button level18Button;
-    public Button level19Button;
-    public Button level20Button;
     
     
     public GameObject levelInfo;
@@ -50,11 +45,7 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     public GameObject level13TanHao;
     public GameObject level14TanHao;
     public GameObject level15TanHao;
-    public GameObject level16TanHao;
-    public GameObject level17TanHao;
-    public GameObject level18TanHao;
-    public GameObject level19TanHao;
-    public GameObject level20TanHao;
+   
     
     
     public Animation level1Content;
@@ -72,11 +63,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     public Animation level13Content;
     public Animation level14Content;
     public Animation level15Content;
-    public Animation level16Content;
-    public Animation level17Content;
-    public Animation level18Content;
-    public Animation level19Content;
-    public Animation level20Content;
 
     
     public RectTransform rectTransform; // 当前UI的RectTransform
@@ -116,7 +102,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
         level13TanHao.SetActive(LevelInfoConfig.MaxGameLevel==13);
         level14TanHao.SetActive(LevelInfoConfig.MaxGameLevel==14);
         level15TanHao.SetActive(LevelInfoConfig.MaxGameLevel==15);
-        level16TanHao.SetActive(LevelInfoConfig.MaxGameLevel==16);
         //level17TanHao.SetActive(LevelInfoConfig.MaxGameLevel==17);
         //level18TanHao.SetActive(LevelInfoConfig.MaxGameLevel==18);
         //level19TanHao.SetActive(LevelInfoConfig.MaxGameLevel==19);
@@ -140,7 +125,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
         level13Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=13);
         level14Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=14);
         level15Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=15);
-        level16Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=16);
         //level17Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=17);
         //level18Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=18);
         //level19Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=19);
@@ -196,21 +180,7 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
             case 15:
                 level15Content.Play("GameLevel");
                 break;
-            case 16:
-                level16Content.Play("GameLevel");
-                break;
-            case 17:
-                level17Content.Play("GameLevel");
-                break;
-            case 18:
-                level18Content.Play("GameLevel");
-                break;
-            case 19:
-                level19Content.Play("GameLevel");
-                break;
-            case 20:
-                level20Content.Play("GameLevel");
-                break;
+           
         }
     }
     
@@ -619,51 +589,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevel = 15;
            HideLevelInfo();
            levelInfo.SetActive(true);
-        });
-        level16Button.onClick.AddListener(() =>
-        {
-           Debug.Log("点击关卡16");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
-           WindowController.S.Message.SetActive(false);
-           LevelInfoConfig.CurrentGameLevel = 16;
-           HideLevelInfo();
-           levelInfo.SetActive(true);
-        });
-        level17Button.onClick.AddListener(() =>
-        {
-           Debug.Log("点击关卡17");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Normal;
-           WindowController.S.Message.SetActive(false);
-           LevelInfoConfig.CurrentGameLevel = 17;
-           HideLevelInfo();
-           levelInfo.SetActive(true);
-        });
-        level18Button.onClick.AddListener(() =>
-        {
-           Debug.Log("点击关卡18");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Normal;
-           WindowController.S.Message.SetActive(false);
-           LevelInfoConfig.CurrentGameLevel = 18;
-           HideLevelInfo();
-           levelInfo.SetActive(true);
-        });
-        level19Button.onClick.AddListener(() =>
-        {
-           Debug.Log("点击关卡19");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Elite;
-           WindowController.S.Message.SetActive(false);
-           LevelInfoConfig.CurrentGameLevel = 19;
-           HideLevelInfo();
-           levelInfo.SetActive(true);
-        });
-        level20Button.onClick.AddListener(() =>
-        {
-            Debug.Log("点击关卡20");
-            LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
-            WindowController.S.Message.SetActive(false);
-            LevelInfoConfig.CurrentGameLevel = 20;
-            HideLevelInfo();
-            levelInfo.SetActive(true);
         });
         
     }

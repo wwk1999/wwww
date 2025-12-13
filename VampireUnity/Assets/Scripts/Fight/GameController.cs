@@ -73,11 +73,13 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<ShaNiao> ShaNiaoQueue = new Queue<ShaNiao>();
     [NonSerialized] public Queue<ShaXiYi> ShaXiYiQueue = new Queue<ShaXiYi>();
     [NonSerialized] public Queue<XianRenZhang> XianRenZhangQueue = new Queue<XianRenZhang>();
-   
+    [NonSerialized] public Queue<XieZiSkill1> XieZiSkill1Queue = new Queue<XieZiSkill1>();
 
-    //第四关怪
+
+    //第五关怪
     [NonSerialized] public Queue<XueQiE> XueQiEQueue = new Queue<XueQiE>();
     [NonSerialized] public Queue<YingShu> YingShuQueue = new Queue<YingShu>();
+
     
     
     

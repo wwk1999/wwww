@@ -50,6 +50,14 @@ public class CameraContraller : XSingleton<CameraContraller>
             ZhaoZeboss.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
             ZhaoZeboss.transform.Find("SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"move",true);
         }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 12)
+        {
+            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
+            XieZi xieZiboss = Instantiate(Resources.Load<XieZi>("Prefabs/Monster/Level4/XieZi"));
+            xieZiboss.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+            xieZiboss.monsterSkeletonAnimation.AnimationState.SetAnimation(0,"move",false);
+        }
        
     }
 
@@ -111,14 +119,14 @@ public class CameraContraller : XSingleton<CameraContraller>
         }
 
 
-        if (transform.position.x < -17.68f)
-            transform.position = new Vector3(-17.68f, transform.position.y, transform.position.z);
-        if (transform.position.x > 17.35f)
-            transform.position = new Vector3(17.35f, transform.position.y, transform.position.z);
-        if (transform.position.y < -9.31f)
-            transform.position = new Vector3(transform.position.x, -9.31f, transform.position.z);
-        if (transform.position.y > 10.43f)
-            transform.position = new Vector3(transform.position.x, 10.43f, transform.position.z);
+        if (transform.position.x < -19f)
+            transform.position = new Vector3(-19f, transform.position.y, transform.position.z);
+        if (transform.position.x > 19f)
+            transform.position = new Vector3(19f, transform.position.y, transform.position.z);
+        if (transform.position.y < -10f)
+            transform.position = new Vector3(transform.position.x, -10f, transform.position.z);
+        if (transform.position.y > 11f)
+            transform.position = new Vector3(transform.position.x, 11f, transform.position.z);
     }
     
     //摄像机抖动方法

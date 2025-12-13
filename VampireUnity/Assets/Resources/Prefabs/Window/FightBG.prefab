@@ -2711,9 +2711,9 @@ GameObject:
   - component: {fileID: 8817009878550732392}
   - component: {fileID: 1579088275504563956}
   - component: {fileID: 29756131392333031}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderBottom
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6518,9 +6518,9 @@ GameObject:
   - component: {fileID: 2924195176045148164}
   - component: {fileID: 7025378826777194913}
   - component: {fileID: 2927407427379868739}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderUp
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9024,9 +9024,9 @@ GameObject:
   - component: {fileID: 5580941910794841048}
   - component: {fileID: 6467391542326977770}
   - component: {fileID: 6453336925993198012}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderBottom
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12222,9 +12222,9 @@ GameObject:
   - component: {fileID: 168744897803290342}
   - component: {fileID: 2011193562549841045}
   - component: {fileID: 1116895805503156728}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderRight
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15968,9 +15968,9 @@ GameObject:
   - component: {fileID: 689905732740037983}
   - component: {fileID: 2084245848875870859}
   - component: {fileID: 626012564179938449}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderBottom
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28519,9 +28519,9 @@ GameObject:
   - component: {fileID: 4471696115913302194}
   - component: {fileID: 74649822489729672}
   - component: {fileID: 2281714181693665445}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderUp
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46729,9 +46729,9 @@ GameObject:
   - component: {fileID: 5954299970595795583}
   - component: {fileID: 3301242895573179192}
   - component: {fileID: 2027951852551161557}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderBottom
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50884,9 +50884,9 @@ GameObject:
   - component: {fileID: 7262472920937263592}
   - component: {fileID: 6855780726593738882}
   - component: {fileID: 755709622259476277}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderLeft
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52464,9 +52464,9 @@ GameObject:
   - component: {fileID: 5289170595576885914}
   - component: {fileID: 487634701368052846}
   - component: {fileID: 8316684114122805300}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderUp
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56060,7 +56060,7 @@ GameObject:
   - component: {fileID: 6657429441469876522}
   m_Layer: 17
   m_Name: FightEdgeBg
-  m_TagString: BG
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60620,9 +60620,9 @@ GameObject:
   - component: {fileID: 8865923277551892613}
   - component: {fileID: 913867095128083094}
   - component: {fileID: 3546538711610543996}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: ColliderUp
-  m_TagString: Untagged
+  m_TagString: BgEdge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
