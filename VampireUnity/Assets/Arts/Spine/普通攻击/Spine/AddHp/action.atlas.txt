@@ -1,0 +1,80 @@
+action.png
+	size: 896, 896
+	filter: Linear, Linear
+	pma: true
+j2_hit_000
+	bounds: 596, 36, 149, 106
+	offsets: 55, 16, 256, 256
+j2_hit_001
+	bounds: 435, 292, 183, 157
+	offsets: 27, 16, 256, 256
+	rotate: 90
+j2_hit_002
+	bounds: 667, 323, 185, 188
+	offsets: 22, 17, 256, 256
+	rotate: 90
+j2_hit_003
+	bounds: 214, 92, 197, 212
+	offsets: 22, 17, 256, 256
+	rotate: 90
+j2_hit_004
+	bounds: 222, 477, 205, 225
+	offsets: 27, 10, 256, 256
+	rotate: 90
+j2_hit_005
+	bounds: 2, 673, 218, 221
+	offsets: 22, 10, 256, 256
+j2_hit_006
+	bounds: 2, 447, 215, 224
+	offsets: 20, 8, 256, 256
+j2_hit_007
+	bounds: 449, 685, 209, 223
+	offsets: 18, 8, 256, 256
+	rotate: 90
+j2_hit_008
+	bounds: 222, 684, 210, 225
+	offsets: 17, 8, 256, 256
+	rotate: 90
+j2_hit_009
+	bounds: 2, 221, 210, 224
+	offsets: 18, 10, 256, 256
+j2_hit_010
+	bounds: 449, 480, 203, 216
+	offsets: 31, 19, 256, 256
+	rotate: 90
+j2_hit_011
+	bounds: 674, 689, 205, 216
+	offsets: 36, 19, 256, 256
+	rotate: 90
+j2_hit_012
+	bounds: 2, 4, 207, 215
+	offsets: 43, 19, 256, 256
+j2_hit_013
+	bounds: 219, 291, 184, 214
+	offsets: 60, 18, 256, 256
+	rotate: 90
+j2_hit_014
+	bounds: 674, 510, 177, 210
+	offsets: 58, 18, 256, 256
+	rotate: 90
+j2_hit_015
+	bounds: 428, 109, 166, 180
+	offsets: 58, 18, 256, 256
+j2_hit_016
+	bounds: 596, 144, 145, 177
+	offsets: 59, 20, 256, 256
+j2_hit_017
+	bounds: 743, 148, 137, 173
+	offsets: 65, 23, 256, 256
+j2_hit_018
+	bounds: 747, 39, 107, 124
+	offsets: 82, 69, 256, 256
+	rotate: 90
+j2_hit_019
+	bounds: 428, 11, 96, 101
+	offsets: 89, 93, 256, 256
+	rotate: 90
+j2_hit_020
+	bounds: 211, 2, 88, 90
+	offsets: 95, 100, 256, 256
+	rotate: 90

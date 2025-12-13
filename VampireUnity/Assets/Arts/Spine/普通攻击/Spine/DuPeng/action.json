@@ -1,0 +1,70 @@
+{
+"skeleton": {
+	"hash": "lXhiegQMoNE",
+	"spine": "4.3.39-beta",
+	"x": -242.58,
+	"y": -242.58,
+	"width": 485.16,
+	"height": 485.16,
+	"images": "./0/",
+	"audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30045_jineng1"
+},
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "bonus", "parent": "root", "scaleX": 0.8086, "scaleY": 0.8086 }
+],
+"slots": [
+	{ "name": "h2_0000", "bone": "bonus", "attachment": "h2_0000" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"h2_0000": {
+				"h2_0000": { "width": 300, "height": 300 },
+				"h2_0001": { "width": 300, "height": 300 },
+				"h2_0002": { "width": 300, "height": 300 },
+				"h2_0003": { "width": 300, "height": 300 },
+				"h2_0004": { "width": 300, "height": 300 },
+				"h2_0005": { "width": 300, "height": 300 },
+				"h2_0006": { "width": 300, "height": 300 },
+				"h2_0007": { "width": 300, "height": 300 },
+				"h2_0008": { "width": 300, "height": 300 },
+				"h2_0009": { "width": 300, "height": 300 },
+				"h2_0010": { "width": 300, "height": 300 },
+				"h2_0011": { "width": 300, "height": 300 },
+				"h2_0012": { "width": 300, "height": 300 },
+				"h2_0013": { "width": 300, "height": 300 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"h2_0000": {
+				"rgba": [
+					{ "time": 0.43333337, "color": "ffffffff" },
+					{ "time": 0.6, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.033333335, "name": "h2_0001" },
+					{ "time": 0.06666667, "name": "h2_0002" },
+					{ "time": 0.10000001, "name": "h2_0003" },
+					{ "time": 0.13333334, "name": "h2_0004" },
+					{ "time": 0.16666667, "name": "h2_0005" },
+					{ "time": 0.20000002, "name": "h2_0006" },
+					{ "time": 0.23333335, "name": "h2_0007" },
+					{ "time": 0.26666668, "name": "h2_0008" },
+					{ "time": 0.3, "name": "h2_0009" },
+					{ "time": 0.33333334, "name": "h2_0010" },
+					{ "time": 0.36666667, "name": "h2_0011" },
+					{ "time": 0.40000004, "name": "h2_0012" },
+					{ "time": 0.43333337, "name": "h2_0013" },
+					{ "time": 0.6666667, "name": "h2_0013" }
+				]
+			}
+		}
+	}
+}
+}

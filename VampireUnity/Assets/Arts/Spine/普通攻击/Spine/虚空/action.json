@@ -1,0 +1,37 @@
+{
+"skeleton": { "hash": "nbrB5naobmA", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30081_dandao" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "effect", "parent": "root" },
+	{ "name": "atk_dd_00", "parent": "effect" }
+],
+"slots": [
+	{ "name": "atk_dd_00", "bone": "atk_dd_00" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"atk_dd_00": {
+				"atk_dd_00": { "path": "effect/atk_dd_00", "x": -34.6, "y": -1.12, "width": 180, "height": 113 },
+				"atk_dd_02": { "path": "effect/atk_dd_02", "x": -34.89, "y": -0.62, "width": 178, "height": 114 },
+				"atk_dd_04": { "path": "effect/atk_dd_04", "x": -35.9, "y": -0.62, "width": 180, "height": 114 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"atk_dd_00": {
+				"attachment": [
+					{ "name": "atk_dd_00" },
+					{ "time": 0.06666667, "name": "atk_dd_02" },
+					{ "time": 0.13333334, "name": "atk_dd_04" },
+					{ "time": 0.20000002, "name": "atk_dd_00" }
+				]
+			}
+		}
+	}
+}
+}

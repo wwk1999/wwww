@@ -1,0 +1,82 @@
+{
+"skeleton": { "hash": "6J5eVLWPKwI", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30005_jineng2" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "j2_hit", "parent": "root" }
+],
+"slots": [
+	{ "name": "j2_hit_000", "bone": "j2_hit" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"j2_hit_000": {
+				"j2_hit_000": { "width": 256, "height": 256 },
+				"j2_hit_001": { "width": 256, "height": 256 },
+				"j2_hit_002": { "width": 256, "height": 256 },
+				"j2_hit_003": { "width": 256, "height": 256 },
+				"j2_hit_004": { "width": 256, "height": 256 },
+				"j2_hit_005": { "width": 256, "height": 256 },
+				"j2_hit_006": { "width": 256, "height": 256 },
+				"j2_hit_007": { "width": 256, "height": 256 },
+				"j2_hit_008": { "width": 256, "height": 256 },
+				"j2_hit_009": { "width": 256, "height": 256 },
+				"j2_hit_010": { "width": 256, "height": 256 },
+				"j2_hit_011": { "width": 256, "height": 256 },
+				"j2_hit_012": { "width": 256, "height": 256 },
+				"j2_hit_013": { "width": 256, "height": 256 },
+				"j2_hit_014": { "width": 256, "height": 256 },
+				"j2_hit_015": { "width": 256, "height": 256 },
+				"j2_hit_016": { "width": 256, "height": 256 },
+				"j2_hit_017": { "width": 256, "height": 256 },
+				"j2_hit_018": { "width": 256, "height": 256 },
+				"j2_hit_019": { "width": 256, "height": 256 },
+				"j2_hit_020": { "width": 256, "height": 256 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"j2_hit_000": {
+				"attachment": [
+					{ "name": "j2_hit_000" },
+					{ "time": 0.06666667, "name": "j2_hit_001" },
+					{ "time": 0.13333334, "name": "j2_hit_002" },
+					{ "time": 0.20000002, "name": "j2_hit_003" },
+					{ "time": 0.26666668, "name": "j2_hit_004" },
+					{ "time": 0.33333334, "name": "j2_hit_005" },
+					{ "time": 0.40000004, "name": "j2_hit_006" },
+					{ "time": 0.4666667, "name": "j2_hit_007" },
+					{ "time": 0.53333336, "name": "j2_hit_008" },
+					{ "time": 0.6, "name": "j2_hit_009" },
+					{ "time": 0.6666667, "name": "j2_hit_010" },
+					{ "time": 0.73333335, "name": "j2_hit_011" },
+					{ "time": 0.8000001, "name": "j2_hit_012" },
+					{ "time": 0.86666673, "name": "j2_hit_013" },
+					{ "time": 0.9333334, "name": "j2_hit_014" },
+					{ "time": 1, "name": "j2_hit_015" },
+					{ "time": 1.0666667, "name": "j2_hit_016" },
+					{ "time": 1.1333334, "name": "j2_hit_017" },
+					{ "time": 1.2, "name": "j2_hit_018" },
+					{ "time": 1.2666668, "name": "j2_hit_019" },
+					{ "time": 1.3333334, "name": "j2_hit_020" },
+					{ "time": 1.4000001 }
+				]
+			}
+		},
+		"bones": {
+			"j2_hit": {
+				"translate": [
+					{ "y": 49 }
+				],
+				"scale": [
+					{ "x": 1.16, "y": 1.16 }
+				]
+			}
+		}
+	}
+}
+}

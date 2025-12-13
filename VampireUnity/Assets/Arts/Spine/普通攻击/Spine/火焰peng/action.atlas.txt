@@ -1,0 +1,35 @@
+action.png
+	size: 1053, 1053
+	filter: Linear, Linear
+	pma: true
+effect/attack/jineng11/1_00000
+	bounds: 331, 2, 268, 204
+	offsets: 74, 117, 472, 418
+effect/attack/jineng11/1_00001
+	bounds: 678, 426, 300, 218
+	offsets: 71, 103, 472, 418
+	rotate: 90
+effect/attack/jineng11/1_00002
+	bounds: 364, 208, 301, 219
+	offsets: 71, 102, 472, 418
+effect/attack/jineng11/1_00003
+	bounds: 667, 141, 297, 283
+	offsets: 74, 88, 472, 418
+effect/attack/jineng11/1_00004
+	bounds: 717, 760, 306, 291
+	offsets: 74, 80, 472, 418
+effect/attack/jineng11/1_00005
+	bounds: 364, 429, 312, 297
+	offsets: 74, 74, 472, 418
+effect/attack/jineng11/1_00006
+	bounds: 2, 77, 327, 308
+	offsets: 71, 69, 472, 418
+effect/attack/jineng11/1_00008
+	bounds: 364, 728, 351, 323
+	offsets: 61, 60, 472, 418
+effect/attack/jineng11/1_00010
+	bounds: 2, 720, 360, 331
+	offsets: 58, 57, 472, 418
+effect/attack/jineng11/1_00012
+	bounds: 2, 387, 360, 331
+	offsets: 58, 57, 472, 418

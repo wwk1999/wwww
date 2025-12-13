@@ -166,6 +166,7 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
         LvQuanAddScale,//增加绿圈武器50%大小
         XuKongAdd2Dan,//虚空武器增加2个魔法弹
         PuTong3ChuanTou,//普通3可以穿透敌人
+        FireBaoZha,//火焰弹爆炸范围增大50%
         //skill1
         Skill1ReplaceNormalAttack,//skill1代替普通攻击，技能伤害增加100%，不能普通攻击
         Skill1YiDianDouble,//易电状态伤害增加翻倍

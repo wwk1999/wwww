@@ -1,0 +1,83 @@
+{
+"skeleton": {
+	"hash": "l8BoERyOIUg",
+	"spine": "4.3.39-beta",
+	"x": -256,
+	"y": -256,
+	"width": 512,
+	"height": 512,
+	"images": "./0/",
+	"audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30031_jineng2"
+},
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "eff/h1_000", "parent": "root" }
+],
+"slots": [
+	{ "name": "bbg", "bone": "root" },
+	{ "name": "eff-h1_000", "bone": "eff/h1_000", "attachment": "eff/e2_003" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"eff-h1_000": {
+				"eff/e2_000": { "width": 256, "height": 256 },
+				"eff/e2_001": { "width": 256, "height": 256 },
+				"eff/e2_002": { "width": 256, "height": 256 },
+				"eff/e2_003": { "width": 256, "height": 256 },
+				"eff/e2_004": { "width": 256, "height": 256 },
+				"eff/e2_005": { "width": 256, "height": 256 },
+				"eff/e2_006": { "width": 256, "height": 256 },
+				"eff/e2_007": { "width": 256, "height": 256 },
+				"eff/e2_008": { "width": 256, "height": 256 },
+				"eff/e2_009": { "width": 256, "height": 256 },
+				"eff/e2_010": { "width": 256, "height": 256 },
+				"eff/e2_011": { "width": 256, "height": 256 },
+				"eff/e2_012": { "width": 256, "height": 256 },
+				"eff/e2_013": { "width": 256, "height": 256 },
+				"eff/e2_014": { "width": 256, "height": 256 }
+			}
+		}
+	}
+],
+"events": {
+	"hit": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"eff-h1_000": {
+				"attachment": [
+					{ "name": "eff/e2_000" },
+					{ "time": 0.06666667, "name": "eff/e2_001" },
+					{ "time": 0.13333334, "name": "eff/e2_002" },
+					{ "time": 0.20000002, "name": "eff/e2_003" },
+					{ "time": 0.26666668, "name": "eff/e2_004" },
+					{ "time": 0.33333334, "name": "eff/e2_005" },
+					{ "time": 0.40000004, "name": "eff/e2_006" },
+					{ "time": 0.4666667, "name": "eff/e2_007" },
+					{ "time": 0.53333336, "name": "eff/e2_008" },
+					{ "time": 0.6, "name": "eff/e2_009" },
+					{ "time": 0.6666667, "name": "eff/e2_010" },
+					{ "time": 0.73333335, "name": "eff/e2_011" },
+					{ "time": 0.8000001, "name": "eff/e2_012" },
+					{ "time": 0.86666673, "name": "eff/e2_013" },
+					{ "time": 0.9333334, "name": "eff/e2_014" },
+					{ "time": 1 }
+				]
+			}
+		},
+		"bones": {
+			"eff/h1_000": {
+				"scale": [
+					{ "x": 1.7, "y": 1.7 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.20000002, "name": "hit" }
+		]
+	}
+}
+}

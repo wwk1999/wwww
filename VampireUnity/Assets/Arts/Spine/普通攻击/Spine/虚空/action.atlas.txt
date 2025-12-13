@@ -1,0 +1,14 @@
+action.png
+	size: 272, 272
+	filter: Linear, Linear
+	pma: true
+effect/atk_dd_00
+	bounds: 173, 100, 170, 97
+	offsets: 2, 8, 180, 113
+	rotate: 90
+effect/atk_dd_02
+	bounds: 2, 170, 169, 100
+	offsets: 1, 7, 178, 114
+effect/atk_dd_04
+	bounds: 2, 68, 169, 100
+	offsets: 3, 7, 180, 114

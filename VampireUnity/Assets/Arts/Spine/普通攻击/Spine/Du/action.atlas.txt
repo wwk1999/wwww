@@ -1,0 +1,49 @@
+action.png
+	size: 646, 646
+	filter: Linear, Linear
+	pma: true
+dd_0000
+	bounds: 211, 2, 218, 107
+	offsets: 9, 9, 240, 120
+dd_0001
+	bounds: 230, 536, 225, 108
+	offsets: 9, 8, 240, 120
+dd_0002
+	bounds: 230, 430, 227, 104
+	offsets: 9, 6, 240, 120
+dd_0003
+	bounds: 228, 324, 226, 104
+	offsets: 9, 8, 240, 120
+dd_0004
+	bounds: 2, 299, 228, 109
+	offsets: 9, 8, 240, 120
+	rotate: 90
+dd_0005
+	bounds: 2, 529, 226, 115
+	offsets: 9, 4, 240, 120
+dd_0006
+	bounds: 113, 307, 220, 113
+	offsets: 9, 4, 240, 120
+	rotate: 90
+dd_0007
+	bounds: 459, 426, 218, 104
+	offsets: 9, 6, 240, 120
+	rotate: 90
+dd_0008
+	bounds: 112, 73, 224, 97
+	offsets: 9, 13, 240, 120
+	rotate: 90
+dd_0009
+	bounds: 228, 221, 228, 101
+	offsets: 9, 13, 240, 120
+dd_0010
+	bounds: 458, 200, 224, 101
+	offsets: 9, 13, 240, 120
+	rotate: 90
+dd_0011
+	bounds: 2, 73, 224, 108
+	offsets: 9, 11, 240, 120
+	rotate: 90
+dd_0012
+	bounds: 211, 111, 218, 108
+	offsets: 9, 9, 240, 120

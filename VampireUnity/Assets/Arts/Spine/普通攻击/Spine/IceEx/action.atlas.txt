@@ -1,0 +1,52 @@
+action.png
+	size: 754, 754
+	filter: Linear, Linear
+	pma: true
+eff/e2_000
+	bounds: 650, 40, 102, 75
+	offsets: 77, 92, 256, 256
+eff/e2_001
+	bounds: 509, 13, 139, 102
+	offsets: 59, 76, 256, 256
+eff/e2_002
+	bounds: 509, 117, 191, 137
+	offsets: 33, 51, 256, 256
+eff/e2_003
+	bounds: 2, 408, 241, 171
+	offsets: 8, 33, 256, 256
+eff/e2_004
+	bounds: 2, 581, 244, 171
+	offsets: 6, 32, 256, 256
+eff/e2_005
+	bounds: 248, 581, 238, 171
+	offsets: 7, 32, 256, 256
+eff/e2_006
+	bounds: 2, 238, 236, 168
+	offsets: 9, 34, 256, 256
+eff/e2_007
+	bounds: 245, 412, 235, 167
+	offsets: 9, 33, 256, 256
+eff/e2_008
+	bounds: 2, 2, 234, 170
+	offsets: 10, 32, 256, 256
+	rotate: 90
+eff/e2_009
+	bounds: 488, 585, 230, 167
+	offsets: 13, 33, 256, 256
+eff/e2_010
+	bounds: 488, 416, 225, 167
+	offsets: 15, 34, 256, 256
+eff/e2_011
+	bounds: 174, 8, 228, 166
+	offsets: 13, 34, 256, 256
+	rotate: 90
+eff/e2_012
+	bounds: 245, 244, 220, 166
+	offsets: 18, 34, 256, 256
+eff/e2_013
+	bounds: 342, 27, 215, 165
+	offsets: 22, 34, 256, 256
+	rotate: 90
+eff/e2_014
+	bounds: 488, 256, 215, 158
+	offsets: 21, 37, 256, 256

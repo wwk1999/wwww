@@ -1,0 +1,70 @@
+{
+"skeleton": {
+	"hash": "QKg0Xmci9tQ",
+	"spine": "4.3.39-beta",
+	"x": -120,
+	"y": -60,
+	"width": 240,
+	"height": 120,
+	"images": "./0/",
+	"audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30045_dandao"
+},
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "bonus", "parent": "root", "scaleX": 0.5, "scaleY": 0.5 }
+],
+"slots": [
+	{ "name": "dd_0000", "bone": "bonus", "attachment": "dd_0000" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"dd_0000": {
+				"dd_0000": { "width": 240, "height": 120 },
+				"dd_0001": { "width": 240, "height": 120 },
+				"dd_0002": { "width": 240, "height": 120 },
+				"dd_0003": { "width": 240, "height": 120 },
+				"dd_0004": { "width": 240, "height": 120 },
+				"dd_0005": { "width": 240, "height": 120 },
+				"dd_0006": { "width": 240, "height": 120 },
+				"dd_0007": { "width": 240, "height": 120 },
+				"dd_0008": { "width": 240, "height": 120 },
+				"dd_0009": { "width": 240, "height": 120 },
+				"dd_0010": { "width": 240, "height": 120 },
+				"dd_0011": { "width": 240, "height": 120 },
+				"dd_0012": { "width": 240, "height": 120 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"dd_0000": {
+				"attachment": [
+					{ "time": 0.033333335, "name": "dd_0001" },
+					{ "time": 0.06666667, "name": "dd_0002" },
+					{ "time": 0.10000001, "name": "dd_0003" },
+					{ "time": 0.13333334, "name": "dd_0004" },
+					{ "time": 0.16666667, "name": "dd_0005" },
+					{ "time": 0.20000002, "name": "dd_0006" },
+					{ "time": 0.23333335, "name": "dd_0007" },
+					{ "time": 0.26666668, "name": "dd_0008" },
+					{ "time": 0.3, "name": "dd_0009" },
+					{ "time": 0.33333334, "name": "dd_0010" },
+					{ "time": 0.36666667, "name": "dd_0011" },
+					{ "time": 0.40000004, "name": "dd_0012" }
+				]
+			}
+		},
+		"bones": {
+			"bonus": {
+				"translate": [
+					{ "x": -43 }
+				]
+			}
+		}
+	}
+}
+}

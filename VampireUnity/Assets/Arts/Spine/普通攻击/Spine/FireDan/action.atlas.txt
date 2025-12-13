@@ -1,0 +1,29 @@
+action.png
+	size: 321, 321
+	filter: Linear, Linear
+	pma: true
+effect/zidan/zidan_00
+	bounds: 2, 185, 217, 43
+	offsets: 39, 27, 300, 100
+effect/zidan/zidan_02
+	bounds: 2, 2, 207, 41
+	offsets: 49, 28, 300, 100
+effect/zidan/zidan_04
+	bounds: 2, 138, 214, 45
+	offsets: 43, 25, 300, 100
+effect/zidan/zidan_06
+	bounds: 2, 91, 214, 45
+	offsets: 45, 26, 300, 100
+effect/zidan/zidan_08
+	bounds: 2, 45, 211, 44
+	offsets: 47, 26, 300, 100
+effect/zidan/zidan_10
+	bounds: 2, 230, 221, 43
+	offsets: 36, 26, 300, 100
+effect/zidan/zidan_12
+	bounds: 226, 106, 213, 42
+	offsets: 43, 28, 300, 100
+	rotate: 90
+effect/zidan/zidan_14
+	bounds: 2, 275, 222, 44
+	offsets: 36, 27, 300, 100
