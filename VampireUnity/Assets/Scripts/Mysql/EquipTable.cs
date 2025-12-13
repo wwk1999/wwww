@@ -17,6 +17,9 @@ public class EquipTable:TableBase
     public List<DamageEntryInfo> damageEntryInfos=new List<DamageEntryInfo>();
     public List<DefenseEntryInfo> defenseEntryInfos=new List<DefenseEntryInfo>();
 
+    public EntryConfig.OrangeEntry OrangeEntry1 = EntryConfig.OrangeEntry.None;
+    public EntryConfig.OrangeEntry OrangeEntry2 = EntryConfig.OrangeEntry.None;
+
     public EquipTable(
         int equipid = 0,
         string equipName = null,
@@ -28,7 +31,10 @@ public class EquipTable:TableBase
         int suitid = 0,
         int equip_type_id = 0,
         List<DamageEntryInfo> damageEntryInfos=null,
-        List<DefenseEntryInfo> defenseEntryInfos=null)
+        List<DefenseEntryInfo> defenseEntryInfos=null,
+        EntryConfig.OrangeEntry OrangeEntry1= EntryConfig.OrangeEntry.None,
+        EntryConfig.OrangeEntry OrangeEntry2 = EntryConfig.OrangeEntry.None
+        )
     {
         this.equipid = equipid;
         EquipName = equipName;
@@ -42,5 +48,7 @@ public class EquipTable:TableBase
         this.equip_type_id = equip_type_id;
         this.damageEntryInfos = damageEntryInfos ?? new List<DamageEntryInfo>();
         this.defenseEntryInfos = defenseEntryInfos ?? new List<DefenseEntryInfo>();
+        this.OrangeEntry1 = OrangeEntry1;
+        this.OrangeEntry2 = OrangeEntry2;
     }
 }
