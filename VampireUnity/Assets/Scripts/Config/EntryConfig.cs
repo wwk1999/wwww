@@ -137,22 +137,59 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
 
         //技能
     }
-    
-    public enum OrangeEntryOrange
+
+    public enum OrangeEntry
     {
         None,
-        FinalDamageReductionFixed,
-        FinalDamageReductionPercent,
-        StartWithShield,
-        AllReplyAddPercent,
-        AddHpForTime,
-        AddDefenseForTime,
-        ReplyDeath,
-        DelayDamage,
-        HpReductionReplyAdd50,
-        HpReductionAddDefense,
-        AllAttributeAdd
-        
-        //技能
+        //防御词条
+        FinalDamageReductionFixed,//最终伤害减少300
+        FinalDamageReductionPercent,//最终伤害减少10%
+        AllReplyAddPercent,//所有的治疗效果增加20%
+        AddHpForTime,//战斗时每5s增加3%最大生命值，上限100%
+        AddDefenseForTime,//战斗时每5s增加3%防御，上限100%
+        ReplyDeath,//免疫死亡，cd60s
+        DelayDamage,//将收到的伤害的30%存储起来在3s内缓慢施加
+        HpReductionReplyAdd50,//血量减少到50%增加30%回复效果
+        HpReductionAddDefense,//血量减少到50%增加20%防御
+        //攻击词条
+        FinalDamageAddPercent,//最终伤害增加15%
+        KillNormal,//5%概率秒杀小怪
+        AddAttackForTime,//战斗中每5s增加3%攻击，上限100%
+        NormalAddDamage,//每穿戴一件传说以下品质装备增加最终伤害30%
+        RecudeHpAddAttack,//减少50%hp增加30%attack
+        //普通攻击
+        FanPuGuiZhen,//装备白色武器最终伤害增加200%，绿色武器最终伤害增加150%，蓝色100%，紫色50%
+        NoSkill,//普通攻击伤害增加100%，但是不能使用技能（技能伤害）
+        BuWangChuXin,//最初武器改为连射发射模式，一次发射的弹道数量*2
+        HeiDongAddSpeed,//黑洞武器的攻击速度增加100%
+        DuAddDuQuan,//毒武器击中敌人在原地留下毒圈
+        LvQuanAddScale,//增加绿圈武器50%大小
+        XuKongAdd2Dan,//虚空武器增加2个魔法弹
+        PuTong3ChuanTou,//普通3可以穿透敌人
+        //skill1
+        Skill1ReplaceNormalAttack,//skill1代替普通攻击，技能伤害增加100%，不能普通攻击
+        Skill1YiDianDouble,//易电状态伤害增加翻倍
+        Skill1AddRange,//skill1范围增加20%
+        //skill2
+        Skill2AddDan,//Skill2增加一个魔法弹
+        Skill2RotateAdd,//Skill2转速增加30%
+        Skill2AddRange,//增加Skill2范围30%
+        //Skill3
+        Skill3Bian3,//skill3变为发射3波，每一波伤害减少50%
+        Skill3AddRange,//Skill3增加范围30%
+        //Dash
+        DashCd,//Dash基础Cd减少30%
+        DashRange,//Dash距离增加30%
+        //特殊词条
+        MoveSpeedAdd,//移动速度增加50%
+        ExAdd,//经验获取增加20%
+        ClothFortureAdd,//掉落率增加30%
+        ShoeFortureAdd,//掉落率增加30%
+        CloakFortureAdd,//掉落率增加30%
+        NecklaceFortureAdd,//掉落率增加30%
+        RingFortureAdd,//掉落率增加30%
+        HelmetFortureAdd,//掉落率增加30%
     }
+    
+    
 }
