@@ -607,9 +607,8 @@ public abstract class MonsterBase : MonoBehaviour
     {
         
         //附加属性
-        int replyHp = Mathf.RoundToInt(GlobalPlayerAttribute.TotalMaxHp * GlobalPlayerAttribute.KillReplyHpPercent);  
-        GlobalPlayerAttribute.CurrentHp+= replyHp;
-        GlobalPlayerAttribute.CurrentHp=Math.Min(GlobalPlayerAttribute.CurrentHp,GlobalPlayerAttribute.TotalMaxHp);
+        int replyHp = Mathf.RoundToInt(GlobalPlayerAttribute.TotalMaxHp * GlobalPlayerAttribute.KillReplyHpPercent);
+        GlobalPlayerAttribute.ReplyHp(replyHp);
         
         
         //怪物数量排行榜
@@ -775,7 +774,7 @@ public abstract class MonsterBase : MonoBehaviour
             JianSuTime = 3;
         }
         var finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
-        GlobalPlayerAttribute.CurrentHp += Mathf.RoundToInt(GlobalPlayerAttribute.BloodSuck * finalDamage);
+        GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck * finalDamage);
         ShowHurtText(finalDamage, isCrit);
         if (MonsterType != MonsterType.Boss)
         {

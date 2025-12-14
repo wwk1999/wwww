@@ -66,8 +66,7 @@ public class FightBGController : XSingleton<FightBGController>
         if (currentReplyHpTime > ReplyHpTime)
         {
             float replyHp = GlobalPlayerAttribute.TotalMaxHp * GlobalPlayerAttribute.ReplyHpPercent;
-            GlobalPlayerAttribute.CurrentHp += Mathf.RoundToInt(replyHp);
-            GlobalPlayerAttribute.CurrentHp=Math.Min(GlobalPlayerAttribute.TotalMaxHp,GlobalPlayerAttribute.CurrentHp);
+            GlobalPlayerAttribute.ReplyHp(replyHp);
         }
         
         if (currentHpTime > RefreshHp)
@@ -98,6 +97,7 @@ public class FightBGController : XSingleton<FightBGController>
 
     public void SetHp()
     {
+        
         if (GlobalPlayerAttribute.CurrentHp < 0)
         {
             return;

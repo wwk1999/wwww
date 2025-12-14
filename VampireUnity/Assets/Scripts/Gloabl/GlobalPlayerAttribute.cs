@@ -1,7 +1,15 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+public enum ExitType
+{
+    None,
+    FirstGame,
+    Exit,
+    Again
+}
 public class GlobalPlayerAttribute 
 {
    public static WeaponType CurrentWeaponType= WeaponType.Primary; //当前武器类型
@@ -9,7 +17,70 @@ public class GlobalPlayerAttribute
    public static float CurrentHp=0;
    public static bool isMove = false;
    public static bool isIceBall = false;
+   public static ExitType CurrentExitType = ExitType.FirstGame;
 
+   public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
+
+   public static void ReplyHp(float value)
+   {
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AllReplyAddPercent))
+       {
+           value *= 1.2f;
+       }
+       CurrentHp+= value;
+       CurrentHp=Math.Min(CurrentHp,TotalMaxHp);
+   }
+   
+   
+   public static void RefreshOrangeEntry()
+   {
+       PlayerOrangeEntry.Clear();
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.CloakId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+           {
+               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.CloakId].OrangeEntry1);
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.ClothId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+           {
+               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.ClothId].OrangeEntry1);
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.RingId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+           {
+               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.RingId].OrangeEntry1);
+           }
+       }
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+           {
+               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].OrangeEntry1);
+           }
+       }
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+           {
+               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].OrangeEntry1);
+           }
+       }
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+           {
+               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].OrangeEntry1);
+           }
+       }
+   }
+   
    public static int BloodEnergy
    {
        get => PlayerData.S.bloodEnergy;
@@ -116,7 +187,7 @@ public class GlobalPlayerAttribute
    //总属性
    
    //基础属性
-   public static float TotalMaxHp => Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp)*MaxHpPercent);
+   public static float TotalMaxHp => Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp)*(1.0f+MaxHpPercent));
 
    public static float TotalDamage => GetTotalDamage();
    

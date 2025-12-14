@@ -16,9 +16,8 @@ public class ReturnButton : MonoBehaviour
         returnbutton.onClick.AddListener(() =>
         {
             Debug.Log("返回按钮退出游戏");
-            GlobalPlayerAttribute.IsGame = false;
+            GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
             PlayerInfoController.S.UpdatePlayerInfo( GlobalPlayerAttribute.Level, GlobalPlayerAttribute.Exp, GlobalPlayerAttribute.GameLevel, GlobalPlayerAttribute.BloodEnergy);
-            //EquipController.S.BatchInsertEquipsWithTransaction(BagController.S.EquipIdList);
             SceneManager.LoadScene("UIScene");
         });
     }

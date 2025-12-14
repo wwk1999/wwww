@@ -10,7 +10,6 @@ public class Entrance : MonoBehaviour
     private void Awake()
     { 
             GameController.S.MonsterColliderDic.Clear();
-        
             Application.targetFrameRate = 30;
             GlobalPlayerAttribute.CurrentHp = GlobalPlayerAttribute.TotalMaxHp;
             LevelInfoConfig.IsOneGame = false;

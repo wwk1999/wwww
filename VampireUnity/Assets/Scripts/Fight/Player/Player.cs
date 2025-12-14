@@ -213,6 +213,21 @@ public class Player : MonoBehaviour
         }
         currentGun.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
+    
+
+    public float GetPlayerHurtDamageByOrangeEntry(float damage)
+    {
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FinalDamageReductionPercent))
+        {
+            damage *= 0.9f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FinalDamageReductionFixed))
+        {
+            damage -= 300;
+        }
+
+        return damage;
+    }
 
     /// <summary>
     /// 主角受伤
@@ -220,6 +235,10 @@ public class Player : MonoBehaviour
     /// <param name="damage"></param>
     public void PlayerHurt(int damage,bool isBoss)
     {
+        if (GlobalPlayerAttribute.CurrentHp <= 0)
+        {
+            return;
+        }
         float realDamage = 0;
         if (isBoss)
         {
@@ -230,7 +249,16 @@ public class Player : MonoBehaviour
             realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForNormal);
         }
         realDamage *= (1 - GlobalPlayerAttribute.DamageReductionPercent);
+        
+        
+        realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
+        
         GlobalPlayerAttribute.CurrentHp -= Mathf.RoundToInt(realDamage);
+        if (GlobalPlayerAttribute.CurrentHp <= 0)
+        {
+            PlayerDie();
+            return;
+        }
         if (IsWuDi)
         {
             return;
@@ -242,6 +270,19 @@ public class Player : MonoBehaviour
         playerhit.gameObject.SetActive(true);
         StartCoroutine(DelayCancelWuDi(0.2f));
         playerSkeleton.AnimationState.SetAnimation(0, "hit", false);
+    }
+
+    public void PlayerDie()
+    {
+        playerSkeleton.AnimationState.SetAnimation(0, "die", false);
+        StartCoroutine(DelayShowPanel());
+    }
+
+    IEnumerator DelayShowPanel()
+    {
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 0;
+        Instantiate(Resources.Load("Prefabs/Window/FailPanel") as GameObject);
     }
 
     IEnumerator DelayCancelWuDi(float time)

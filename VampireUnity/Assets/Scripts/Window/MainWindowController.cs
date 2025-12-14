@@ -5,10 +5,21 @@ public class MainWindowController : MonoBehaviour
 {
     void Start()
     {
-        Debug.LogError(1111);
         WindowController.S.InitPanel();
         ResourcesConfig.Init();
-        WindowController.S.MainWindow.SetActive(true);
+        switch (GlobalPlayerAttribute.CurrentExitType)
+        {
+            case  ExitType.FirstGame:
+                WindowController.S.MainWindow.SetActive(true);
+                break;
+            case ExitType.Exit:
+                WindowController.S.RoleWindow.SetActive(true);
+                break;
+            case ExitType.Again:
+                WindowController.S.SceneLoadingWindow.SetActive(true);
+                break;
+        }
+       
         LevelInfoConfig.init();
         AudioController.S.BGAudioSource.Play(); 
         LevelInfoConfig.InitGameLevel();

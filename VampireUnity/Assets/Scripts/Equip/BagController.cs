@@ -1300,6 +1300,8 @@ public class BagController : XSingleton<BagController>
                     break;
             }
         }
+
+        GlobalPlayerAttribute.RefreshOrangeEntry();
     }
     
     

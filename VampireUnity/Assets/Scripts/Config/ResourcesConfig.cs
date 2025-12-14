@@ -255,12 +255,12 @@ public class ResourcesConfig : MonoBehaviour
         PurpleNecklace = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleNecklace");
         
         //橙色套装
-        OrangeCloth= Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeCloth");
-        OrangeCloak = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeCloak");
-        OrangeShoe = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeShoe");
-        OrangeHelmet = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeHelmet");
-        OrangeRing = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeRing");
-        OrangeNecklace = Resources.Load<Sprite>("Sprite/Equip/Orange/OrangeNecklace");
+        OrangeCloth= Resources.Load<Sprite>("Sprite/Equip/Orange/Cloth/OrangeCloth");
+        OrangeCloak = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloak/OrangeCloak");
+        OrangeShoe = Resources.Load<Sprite>("Sprite/Equip/Orange/Shoe/OrangeShoe");
+        OrangeHelmet = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/OrangeHelmet");
+        OrangeRing = Resources.Load<Sprite>("Sprite/Equip/Orange/Ring/OrangeRing");
+        OrangeNecklace = Resources.Load<Sprite>("Sprite/Equip/Orange/Necklace/OrangeNecklace");
         
         //武器源石
         WhiteDivision = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteDivision");
