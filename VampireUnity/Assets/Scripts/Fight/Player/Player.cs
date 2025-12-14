@@ -43,6 +43,25 @@ public class Player : MonoBehaviour
     public Text levelText;
     public float size = 0.28f;
     [NonSerialized] public bool IsWuDi = false;//红闪的时候无敌
+    
+    // 延迟伤害相关变量
+    [NonSerialized] private Queue<DelayedDamageInfo> delayedDamageQueue = new Queue<DelayedDamageInfo>();
+    [NonSerialized] private Coroutine delayedDamageCoroutine = null;
+    
+    // 延迟伤害信息结构
+    private struct DelayedDamageInfo
+    {
+        public float damage;      // 伤害值
+        public float remainingTime; // 剩余时间
+        public float totalTime;    // 总时间（3秒）
+        
+        public DelayedDamageInfo(float dmg, float time)
+        {
+            damage = dmg;
+            remainingTime = time;
+            totalTime = time;
+        }
+    }
 
     public Animation levelUpAnim;
     public TextMeshProUGUI attackText;
@@ -230,6 +249,60 @@ public class Player : MonoBehaviour
     }
 
     /// <summary>
+    /// 统一的死亡检查方法
+    /// </summary>
+    private void CheckDeath()
+    {
+        if (GameController.S.GameCurrentHp <= 0)
+        {
+            // 停止延迟伤害协程（如果还在运行）
+            if (delayedDamageCoroutine != null)
+            {
+                StopCoroutine(delayedDamageCoroutine);
+                delayedDamageCoroutine = null;
+                delayedDamageQueue.Clear(); // 清空延迟伤害队列
+            }
+            
+            // 检查复活
+            if (GameController.S.isFuHuo &&
+                GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.ReplyDeath))
+            {
+                Debug.LogError("触发复活");
+                GameController.S.GameCurrentHp = GameController.S.GameMaxHp * 0.3f;
+            }
+            else
+            {
+                PlayerDie();
+            }
+        }
+    }
+
+    public void DelayDamage(float realDamage)
+    {
+        // 有DelayDamage词条：70%立即生效，30%延迟生效
+        float immediateDamage = realDamage * 0.7f; // 70%立即生效
+        float delayedDamage = realDamage * 0.3f;   // 30%延迟生效
+            
+        // 立即施加70%的伤害
+        GameController.S.GameCurrentHp -= Mathf.RoundToInt(immediateDamage);
+            
+        // 统一死亡检查（立即伤害后）
+        CheckDeath();
+        
+        // 将30%的伤害加入延迟伤害队列
+        if (delayedDamage > 0)
+        {
+            delayedDamageQueue.Enqueue(new DelayedDamageInfo(delayedDamage, 3f));
+                
+            // 如果协程没有运行，启动它
+            if (delayedDamageCoroutine == null)
+            {
+                delayedDamageCoroutine = StartCoroutine(ApplyDelayedDamage());
+            }
+        }
+    }
+
+    /// <summary>
     /// 主角受伤
     /// </summary>
     /// <param name="damage"></param>
@@ -255,18 +328,25 @@ public class Player : MonoBehaviour
         
         realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
         
-        GameController.S.GameCurrentHp -= Mathf.RoundToInt(realDamage);
-        if (GameController.S.GameCurrentHp <= 0)
+        // 检查是否有DelayDamage词条
+        bool hasDelayDamage = GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DelayDamage);
+        hasDelayDamage = true;
+        
+        if (hasDelayDamage)
         {
-            if (GameController.S.isFuHuo &&
-                GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.ReplyDeath))
+            DelayDamage(realDamage);
+        }
+        else
+        {
+            // 没有DelayDamage词条：100%立即生效（原逻辑）
+            GameController.S.GameCurrentHp -= Mathf.RoundToInt(realDamage);
+            
+            // 统一死亡检查
+            CheckDeath();
+            
+            // 如果已经死亡，不再处理后续逻辑
+            if (GameController.S.GameCurrentHp <= 0)
             {
-                Debug.LogError("触发复活");
-                GameController.S.GameCurrentHp = GameController.S.GameMaxHp * 0.3f;
-            }
-            else
-            {
-                PlayerDie();
                 return;
             }
         }
@@ -300,6 +380,75 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         GameController.S.gamePlayer.IsWuDi = false;
+    }
+
+    /// <summary>
+    /// 持续处理延迟伤害队列
+    /// </summary>
+    private IEnumerator ApplyDelayedDamage()
+    {
+        float updateInterval = 1f; // 每0.1秒更新一次
+        
+        while (delayedDamageQueue.Count > 0)
+        {
+            // 如果玩家已死亡，停止施加延迟伤害
+            if (GameController.S.GameCurrentHp <= 0)
+            {
+                break;
+            }
+            
+            float totalDamageThisFrame = 0f;
+            int count = delayedDamageQueue.Count;
+            
+            // 遍历队列中的所有延迟伤害，计算本次应该施加的伤害
+            for (int i = 0; i < count; i++)
+            {
+                DelayedDamageInfo info = delayedDamageQueue.Dequeue();
+                
+                // 计算本次应该施加的伤害（按剩余时间比例）
+                float damageThisFrame = (info.damage / info.totalTime) * updateInterval;
+                totalDamageThisFrame += damageThisFrame;
+                
+                // 更新剩余时间和剩余伤害
+                info.remainingTime -= updateInterval;
+                info.damage -= damageThisFrame;
+                
+                // 如果还有剩余时间，重新加入队列
+                if (info.remainingTime > 0.01f && info.damage > 0.01f)
+                {
+                    delayedDamageQueue.Enqueue(info);
+                }
+                else
+                {
+                    // 如果时间快到了，施加剩余的伤害（避免浮点数误差）
+                    if (info.damage > 0.01f)
+                    {
+                        totalDamageThisFrame += info.damage;
+                    }
+                }
+            }
+            
+            // 施加本次计算的总伤害
+            if (totalDamageThisFrame > 0)
+            {
+                int finalDamage = Mathf.RoundToInt(totalDamageThisFrame);
+                GameController.S.GameCurrentHp -= finalDamage;
+                
+                // 统一死亡检查（延迟伤害后）
+                CheckDeath();
+                
+                // 如果死亡，退出协程
+                if (GameController.S.GameCurrentHp <= 0)
+                {
+                    break;
+                }
+            }
+            
+            yield return new WaitForSeconds(updateInterval);
+        }
+        
+        // 协程结束，重置引用
+        delayedDamageCoroutine = null;
     }
 
     private void Update()

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Mysql;
 using Spine.Unity;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,7 +26,8 @@ public class FightBGController : XSingleton<FightBGController>
     [NonSerialized]public Slider playerExSlider;
     [NonSerialized]public Text playerLevelText;
 
-
+    [NonSerialized]public TextMeshProUGUI GameMaxHp;
+    [NonSerialized]public TextMeshProUGUI GameCurrentHp;
     
     
     
@@ -107,6 +109,9 @@ public class FightBGController : XSingleton<FightBGController>
         {
             GameController.S.GameCurrentHp=GameController.S.GameMaxHp;
         }
+
+        GameMaxHp.text = GameController.S.GameMaxHp.ToString();
+        GameCurrentHp.text = GameController.S.GameCurrentHp.ToString();
         playerHpSlider.maxValue = GameController.S.GameMaxHp;
         playerHpSlider.value = GameController.S.GameCurrentHp;
     }

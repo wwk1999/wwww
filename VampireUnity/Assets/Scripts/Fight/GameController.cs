@@ -479,6 +479,8 @@ public class GameController : XSingleton<GameController>
         FightBGController.S.playerHpSlider=fightBG.GetComponent<FightBg>().playerHpSlider;
         FightBGController.S.playerExSlider=fightBG.GetComponent<FightBg>().playerExSlider;
         FightBGController.S.playerLevelText=fightBG.GetComponent<FightBg>().playerLevelText;
+        FightBGController.S.GameMaxHp=fightBG.GetComponent<FightBg>().GameMaxHp;
+        FightBGController.S.GameCurrentHp=fightBG.GetComponent<FightBg>().GameCurrentHp;
         
         fightTimeText = fightBG.GetComponent<FightBg>().fightTimeText;
 

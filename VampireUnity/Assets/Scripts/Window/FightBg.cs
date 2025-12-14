@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Coffee.UIExtensions;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +27,9 @@ public class FightBg : MonoBehaviour
     public Slider playerHpSlider;
     public Slider playerExSlider;
     public Text playerLevelText;
+
+    public TextMeshProUGUI GameMaxHp;
+    public TextMeshProUGUI GameCurrentHp;
     
     
     
