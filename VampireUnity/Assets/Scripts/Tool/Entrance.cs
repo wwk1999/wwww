@@ -23,6 +23,9 @@ public class Entrance : MonoBehaviour
             GameController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
             GameController.S.GameCrit = GlobalPlayerAttribute.TotalCRIT;
             GameController.S.isFuHuo = true;
+            GameController.S.TotalAddHp = 0;
+            GameController.S.TotalAddDefense = 0;
+            GameController.S.TotalAddAttack = 0;
 
             
             

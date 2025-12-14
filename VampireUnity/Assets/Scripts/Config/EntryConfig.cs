@@ -146,15 +146,15 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
         FinalDamageReductionPercent,//最终伤害减少10%            helmet     1111
         AllReplyAddPercent,//所有的治疗效果增加20%                cloth      1111
         AddHpForTime,//战斗时每5s增加3%最大生命值，上限100%         Hlemet     1111
-        AddDefenseForTime,//战斗时每5s增加3%防御，上限100%         Cloth      1111
+        AddDefenseForTime,//战斗时每5s增加2%防御，上限60%         Cloth      1111
         ReplyDeath,//免疫一次死亡                            Cloth          1111
         DelayDamage,//将收到的伤害的30%存储起来在3s内缓慢施加         helmet     1111
         HpReductionReplyAdd50,//血量减少到50%增加30%回复效果        cloth     1111
         HpReductionAddDefense,//血量减少到50%增加15%免伤           helmet    1111
         //攻击词条
-        FinalDamageAddPercent,//最终伤害增加15%                   necklace
-        KillNormal,//5%概率秒杀小怪                               ring
-        AddAttackForTime,//战斗中每5s增加3%攻击，上限100%           ring
+        FinalDamageAddPercent,//最终伤害增加15%                   necklace    1111
+        KillNormal,//5%概率秒杀小怪                               ring        1111
+        AddAttackForTime,//战斗中每5s增加3%攻击，上限100%           ring        1111
         NormalAddDamage,//每穿戴一件传说以下品质装备增加最终伤害30%    necklace
         RecudeHpAddAttack,//减少50%hp增加30%attack               necklace
         JianSuAddAttack,//对被减速的敌人增加15%伤害                 Shoe

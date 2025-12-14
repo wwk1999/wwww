@@ -20,6 +20,10 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public float OrangeEntryTime = 5f;
     [NonSerialized] public float CurrentOrangeEntryTime = 0f;
     [NonSerialized] public bool isFuHuo = true;
+    
+    [NonSerialized] public  float TotalAddHp = 0;
+    [NonSerialized] public  float TotalAddDefense = 0;
+    [NonSerialized] public  float TotalAddAttack = 0;
 
     
     //碰撞字典
@@ -936,13 +940,49 @@ public class GameController : XSingleton<GameController>
         if (CurrentOrangeEntryTime > OrangeEntryTime)
         {
             CurrentOrangeEntryTime = 0;
-            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddHpForTime))
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddHpForTime)&&TotalAddHp<GlobalPlayerAttribute.TotalMaxHp)
             {
-                GameMaxHp += 0.03f * GlobalPlayerAttribute.TotalMaxHp;
+                TotalAddHp+=0.03f * GlobalPlayerAttribute.TotalMaxHp;
+                if (TotalAddHp < GlobalPlayerAttribute.TotalMaxHp)
+                {
+                    GameMaxHp += 0.03f * GlobalPlayerAttribute.TotalMaxHp;
+                    GameCurrentHp+= 0.03f * GlobalPlayerAttribute.TotalMaxHp;
+                }
+                else
+                {
+                    GameMaxHp += (GlobalPlayerAttribute.TotalMaxHp -
+                                  (TotalAddHp - 0.03f * GlobalPlayerAttribute.TotalMaxHp));
+                    GameCurrentHp += (GlobalPlayerAttribute.TotalMaxHp -
+                                      (TotalAddHp - 0.03f * GlobalPlayerAttribute.TotalMaxHp));
+                }
             }
-            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddDefenseForTime))
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddDefenseForTime)&&TotalAddDefense<GlobalPlayerAttribute.TotalDefense*0.6f)
             {
-                GameDefense += 0.03f * GlobalPlayerAttribute.TotalDefense;
+                TotalAddDefense+=0.02f * GlobalPlayerAttribute.TotalDefense;
+                if (TotalAddDefense < GlobalPlayerAttribute.TotalDefense * 0.6f)
+                {
+                    GameDefense += 0.02f * GlobalPlayerAttribute.TotalDefense;
+                }
+                else
+                {
+                    GameDefense += (GlobalPlayerAttribute.TotalDefense -
+                                    (TotalAddHp - 0.02f * GlobalPlayerAttribute.TotalDefense));
+                }
+            }
+            
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAttackForTime)&&TotalAddAttack<GlobalPlayerAttribute.TotalDamage)
+            {
+                TotalAddAttack+=0.03f * GlobalPlayerAttribute.TotalDamage;
+                if (TotalAddAttack < GlobalPlayerAttribute.TotalDamage)
+                {
+                    GameAttack += 0.03f * GlobalPlayerAttribute.TotalDamage;
+                }
+                else
+                {
+                    GameAttack += (GlobalPlayerAttribute.TotalDamage -
+                                  (TotalAddAttack - 0.03f * GlobalPlayerAttribute.TotalDamage));
+                  
+                }
             }
         }
         //更新战斗时间,以秒为单位

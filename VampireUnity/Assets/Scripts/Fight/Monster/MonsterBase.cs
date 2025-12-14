@@ -61,8 +61,8 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized]public MonsterType MonsterType;//怪物类型
     [NonSerialized]public string MonsterName;//怪物名称
     [NonSerialized]public int MonsterLevel;//怪物等级
-    [NonSerialized]public int CurrentHp;//当前血量
-    [NonSerialized]public  int MaxHp;//最大血量
+    [NonSerialized]public float CurrentHp;//当前血量
+    [NonSerialized]public  float MaxHp;//最大血量
     [NonSerialized]public float Speed;//速度
     [NonSerialized]public int Attack;//攻击力
     [NonSerialized]public int Defense;//防御力
@@ -698,7 +698,7 @@ public abstract class MonsterBase : MonoBehaviour
 
     public abstract void Die();
 
-    public void ShowHurtText(int damage,bool isCrit)
+    public void ShowHurtText(float damage,bool isCrit)
     {
         MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
         monsterHpGameObject.isCrit=isCrit;
@@ -761,6 +761,17 @@ public abstract class MonsterBase : MonoBehaviour
 
         return Mathf.RoundToInt(finalDamage);
     }
+
+    public float OrangeEntryDamage(float damage)
+    {
+        float finalDamage = damage;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FinalDamageAddPercent))
+        {
+            finalDamage *= 1.15f;
+        }
+
+        return finalDamage;
+    }
     public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom)
     {
         if (IsDead) return;
@@ -773,9 +784,17 @@ public abstract class MonsterBase : MonoBehaviour
         {
             JianSuTime = 3;
         }
-        var finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
+        float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
+        finalDamage = OrangeEntryDamage(finalDamage);
         GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck * finalDamage);
         ShowHurtText(finalDamage, isCrit);
+        var random=Random.Range(0, 100);
+        if (random < 5 && GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.KillNormal)&&MonsterType==MonsterType.Normal)
+        {
+            finalDamage = 999999;
+        }
+        
+        
         if (MonsterType != MonsterType.Boss)
         {
             if (hpSlider.gameObject.activeSelf == false)
