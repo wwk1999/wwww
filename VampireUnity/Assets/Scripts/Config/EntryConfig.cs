@@ -157,16 +157,17 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
         AddAttackForTime,//战斗中每5s增加3%攻击，上限100%           ring
         NormalAddDamage,//每穿戴一件传说以下品质装备增加最终伤害30%    necklace
         RecudeHpAddAttack,//减少50%hp增加30%attack               necklace
+        JianSuAddAttack,//对被减速的敌人增加15%伤害                 Shoe
         //普通攻击
         FanPuGuiZhen,//装备白色武器最终伤害增加200%，绿色武器最终伤害增加150%，蓝色100%，紫色50%    ring
         NoSkill,//普通攻击伤害增加100%，但是不能使用技能（技能伤害）          necklace
-        BuWangChuXin,//最初武器改为连射发射模式，一次发射的弹道数量*2
-        HeiDongAddSpeed,//黑洞武器的攻击速度增加100%
-        DuAddDuQuan,//毒武器击中敌人在原地留下毒圈
-        LvQuanAddScale,//增加绿圈武器50%大小
-        XuKongAdd2Dan,//虚空武器增加2个魔法弹
-        PuTong3ChuanTou,//普通3可以穿透敌人
-        FireBaoZha,//火焰弹爆炸范围增大50%
+        BuWangChuXin,//最初武器改为连射发射模式，一次发射的弹道数量*2         cloak
+        HeiDongAddSpeed,//黑洞武器的攻击速度增加100%                      cloak
+        DuAddDuQuan,//毒武器击中敌人在原地留下毒圈                         cloak
+        LvQuanAddScale,//增加绿圈武器50%大小                            cloak
+        XuKongAdd2Dan,//虚空武器增加2个魔法弹                            cloak
+        PuTong3ChuanTou,//普通3可以穿透敌人                             cloak
+        FireBaoZha,//火焰弹爆炸范围增大50%                              cloak
         //skill1
         Skill1ReplaceNormalAttack,//skill1代替普通攻击，技能伤害增加100%，不能普通攻击       necklace
         Skill1YiDianDouble,//易电状态伤害增加翻倍                                 ring
@@ -184,12 +185,12 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
         //特殊词条
         MoveSpeedAdd,//移动速度增加50%              shoe
         ExAdd,//经验获取增加20%                     shoe
-        ClothFortureAdd,//掉落率增加30%
+        ClothFortureAdd,//掉落率增加30%             cloth
         ShoeFortureAdd,//掉落率增加30%              shoe
-        CloakFortureAdd,//掉落率增加30%
-        NecklaceFortureAdd,//掉落率增加30%
-        RingFortureAdd,//掉落率增加30%
-        HelmetFortureAdd,//掉落率增加30%
+        CloakFortureAdd,//掉落率增加30%             cloak
+        NecklaceFortureAdd,//掉落率增加30%          necklace
+        RingFortureAdd,//掉落率增加30%              ring
+        HelmetFortureAdd,//掉落率增加30%            helmet
     }
     
     

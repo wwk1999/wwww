@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Window\MainWindowController.cs" />
     <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryRing.cs" />
+    <Compile Include="Assets\Scripts\Equip\Orange\Shoe\JianSuAddAttack.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\ExtremeSpeed.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkillTrigger.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\HpReductionReplyAdd50.cs" />
