@@ -12,6 +12,16 @@ using Random = UnityEngine.Random;
 
 public class GameController : XSingleton<GameController>
 {
+    [NonSerialized] public float GameMaxHp = 0;
+    [NonSerialized] public float GameCurrentHp = 0;
+    [NonSerialized] public float GameDefense = 0;
+    [NonSerialized] public float GameAttack = 0;
+    [NonSerialized] public float GameCrit = 0;
+    [NonSerialized] public float OrangeEntryTime = 5f;
+    [NonSerialized] public float CurrentOrangeEntryTime = 0f;
+    [NonSerialized] public bool isFuHuo = true;
+
+    
     //碰撞字典
     [NonSerialized] public Dictionary<Collider2D, MonsterBase> MonsterColliderDic = new Dictionary<Collider2D, MonsterBase>();
 
@@ -919,6 +929,20 @@ public class GameController : XSingleton<GameController>
     {
         if (GlobalPlayerAttribute.IsGame == false)
             return;
+        
+        CurrentOrangeEntryTime+=Time.deltaTime;
+        if (CurrentOrangeEntryTime > OrangeEntryTime)
+        {
+            CurrentOrangeEntryTime = 0;
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddHpForTime))
+            {
+                GameMaxHp += 0.03f * GlobalPlayerAttribute.TotalMaxHp;
+            }
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddDefenseForTime))
+            {
+                GameDefense += 0.03f * GlobalPlayerAttribute.TotalDefense;
+            }
+        }
         //更新战斗时间,以秒为单位
         fightTime += Time.deltaTime;
         var minute=(int)fightTime/60;

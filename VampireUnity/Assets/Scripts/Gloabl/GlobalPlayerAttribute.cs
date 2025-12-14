@@ -194,7 +194,6 @@ public class GlobalPlayerAttribute
    public static float TotalCRIT => (PlayerCRIT + EquipCRIT)*(1+CritNum/100.0f);
    public static float TotalDefense => GetTotalDefense();
 
-
    public static float GetTotalDamage()
    {
        float damage=Mathf.RoundToInt((PlayerDamage + EquipDamage)*DamageAddPercent);

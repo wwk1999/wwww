@@ -233,12 +233,14 @@ public class Player : MonoBehaviour
     /// 主角受伤
     /// </summary>
     /// <param name="damage"></param>
-    public void PlayerHurt(int damage,bool isBoss)
+    public void PlayerHurt(float damage,bool isBoss)
     {
         if (GlobalPlayerAttribute.CurrentHp <= 0)
         {
             return;
         }
+
+        damage -= GameController.S.GameDefense;
         float realDamage = 0;
         if (isBoss)
         {
@@ -253,11 +255,20 @@ public class Player : MonoBehaviour
         
         realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
         
-        GlobalPlayerAttribute.CurrentHp -= Mathf.RoundToInt(realDamage);
-        if (GlobalPlayerAttribute.CurrentHp <= 0)
+        GameController.S.GameCurrentHp -= Mathf.RoundToInt(realDamage);
+        if (GameController.S.GameCurrentHp <= 0)
         {
-            PlayerDie();
-            return;
+            if (GameController.S.isFuHuo &&
+                GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.ReplyDeath))
+            {
+                Debug.LogError("触发复活");
+                GameController.S.GameCurrentHp = GameController.S.GameMaxHp * 0.3f;
+            }
+            else
+            {
+                PlayerDie();
+                return;
+            }
         }
         if (IsWuDi)
         {

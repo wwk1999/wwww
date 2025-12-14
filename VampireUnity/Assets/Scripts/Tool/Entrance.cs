@@ -16,6 +16,14 @@ public class Entrance : MonoBehaviour
             
             AudioController.S.BGAudioSource.clip = Resources.Load<AudioClip>("Audio/BG/Level1BG");
             AudioController.S.BGAudioSource.Play();
+
+            GameController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp;
+            GameController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp;
+            GameController.S.GameDefense = GlobalPlayerAttribute.TotalDefense;
+            GameController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
+            GameController.S.GameCrit = GlobalPlayerAttribute.TotalCRIT;
+            GameController.S.isFuHuo = true;
+
             
             
             //初始化最大boss能量值

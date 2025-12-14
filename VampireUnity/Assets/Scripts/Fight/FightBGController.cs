@@ -65,7 +65,7 @@ public class FightBGController : XSingleton<FightBGController>
         currentReplyHpTime+=Time.deltaTime;
         if (currentReplyHpTime > ReplyHpTime)
         {
-            float replyHp = GlobalPlayerAttribute.TotalMaxHp * GlobalPlayerAttribute.ReplyHpPercent;
+            float replyHp = GameController.S.GameMaxHp * GlobalPlayerAttribute.ReplyHpPercent;
             GlobalPlayerAttribute.ReplyHp(replyHp);
         }
         
@@ -98,17 +98,17 @@ public class FightBGController : XSingleton<FightBGController>
     public void SetHp()
     {
         
-        if (GlobalPlayerAttribute.CurrentHp < 0)
+        if (GameController.S.GameCurrentHp < 0)
         {
             return;
         }
 
-        if (GlobalPlayerAttribute.CurrentHp > GlobalPlayerAttribute.TotalMaxHp)
+        if (GameController.S.GameCurrentHp > GameController.S.GameMaxHp)
         {
-            GlobalPlayerAttribute.CurrentHp=GlobalPlayerAttribute.TotalMaxHp;
+            GameController.S.GameCurrentHp=GameController.S.GameMaxHp;
         }
-        playerHpSlider.maxValue = GlobalPlayerAttribute.TotalMaxHp;
-        playerHpSlider.value = GlobalPlayerAttribute.CurrentHp;
+        playerHpSlider.maxValue = GameController.S.GameMaxHp;
+        playerHpSlider.value = GameController.S.GameCurrentHp;
     }
 
     /// <summary>
