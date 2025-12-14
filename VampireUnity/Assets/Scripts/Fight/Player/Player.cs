@@ -176,6 +176,7 @@ public class Player : MonoBehaviour
         if (horizontal == 0 && vertical == 0)
         {
             GlobalPlayerAttribute.isMove = false;
+            GameController.S.GameAttack *= (1 + GlobalPlayerAttribute.MoveAddAttackNum);
         }
         else
         {

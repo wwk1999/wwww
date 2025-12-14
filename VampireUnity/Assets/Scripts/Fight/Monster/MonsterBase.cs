@@ -762,15 +762,72 @@ public abstract class MonsterBase : MonoBehaviour
         return Mathf.RoundToInt(finalDamage);
     }
 
-    public float OrangeEntryDamage(float damage)
+    public float NormalAddDamage(float finalDamage)
     {
-        float finalDamage = damage;
-        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FinalDamageAddPercent))
+        if (PlayerEquipConfig.CloakId != 0)
         {
-            finalDamage *= 1.15f;
+            if (BagController.S.EquipIdList[PlayerEquipConfig.CloakId].Quality < 5)
+            {
+                finalDamage += 0.3f;
+            }
+        }
+            
+        if (PlayerEquipConfig.ClothId != 0)
+        {
+            if (BagController.S.EquipIdList[PlayerEquipConfig.ClothId].Quality < 5)
+            {
+                finalDamage += 0.3f;
+            }
+        }
+            
+        if (PlayerEquipConfig.NecklaceId != 0)
+        {
+            if (BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].Quality < 5)
+            {
+                finalDamage += 0.3f;
+            }
+        }
+            
+        if (PlayerEquipConfig.RingId != 0)
+        {
+            if (BagController.S.EquipIdList[PlayerEquipConfig.RingId].Quality < 5)
+            {
+                finalDamage += 0.3f;
+            }
+        }
+            
+        if (PlayerEquipConfig.ShoeId != 0)
+        {
+            if (BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].Quality < 5)
+            {
+                finalDamage += 0.3f;
+            }
+        }
+            
+        if (PlayerEquipConfig.HelmetId != 0)
+        {
+            if (BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].Quality < 5)
+            {
+                finalDamage += 0.3f;
+            }
         }
 
         return finalDamage;
+    }
+
+    public float OrangeEntryDamage(float damage)
+    {
+        float finalDamage = 0;//最终伤害
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FinalDamageAddPercent))
+        {
+            finalDamage += 0.15f;
+        }
+
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NormalAddDamage))
+        {
+            finalDamage=NormalAddDamage(finalDamage);
+        }
+        return damage*(1+finalDamage);
     }
     public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom)
     {

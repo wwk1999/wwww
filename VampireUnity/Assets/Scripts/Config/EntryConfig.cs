@@ -155,7 +155,7 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
         FinalDamageAddPercent,//最终伤害增加15%                   necklace    1111
         KillNormal,//5%概率秒杀小怪                               ring        1111
         AddAttackForTime,//战斗中每5s增加3%攻击，上限100%           ring        1111
-        NormalAddDamage,//每穿戴一件传说以下品质装备增加最终伤害30%    necklace
+        NormalAddDamage,//每穿戴一件传说以下品质装备增加最终伤害30%    necklace    1111
         RecudeHpAddAttack,//减少50%hp增加30%attack               necklace
         JianSuAddAttack,//对被减速的敌人增加15%伤害                 Shoe
         //普通攻击
