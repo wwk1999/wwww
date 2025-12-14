@@ -27,6 +27,13 @@ public class GlobalPlayerAttribute
        {
            value *= 1.2f;
        }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HpReductionReplyAdd50))
+       {
+           if (GameController.S.GameCurrentHp <= GameController.S.GameMaxHp / 0.5f)
+           {
+               value *= 1.3f;
+           }
+       }
        CurrentHp+= value;
        CurrentHp=Math.Min(CurrentHp,TotalMaxHp);
    }

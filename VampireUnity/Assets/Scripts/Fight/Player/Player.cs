@@ -323,14 +323,19 @@ public class Player : MonoBehaviour
         {
             realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForNormal);
         }
-        realDamage *= (1 - GlobalPlayerAttribute.DamageReductionPercent);
+
+        float mianshangValue = GlobalPlayerAttribute.DamageReductionPercent;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HpReductionAddDefense))
+        {
+            mianshangValue += 0.15f;
+        }
+        realDamage *= (1 - mianshangValue);//免伤
         
         
         realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
         
         // 检查是否有DelayDamage词条
         bool hasDelayDamage = GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DelayDamage);
-        hasDelayDamage = true;
         
         if (hasDelayDamage)
         {

@@ -148,9 +148,9 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
         AddHpForTime,//战斗时每5s增加3%最大生命值，上限100%         Hlemet     1111
         AddDefenseForTime,//战斗时每5s增加3%防御，上限100%         Cloth      1111
         ReplyDeath,//免疫一次死亡                            Cloth          1111
-        DelayDamage,//将收到的伤害的30%存储起来在3s内缓慢施加         helmet
-        HpReductionReplyAdd50,//血量减少到50%增加30%回复效果        cloth
-        HpReductionAddDefense,//血量减少到50%增加20%防御           helmet
+        DelayDamage,//将收到的伤害的30%存储起来在3s内缓慢施加         helmet     1111
+        HpReductionReplyAdd50,//血量减少到50%增加30%回复效果        cloth     1111
+        HpReductionAddDefense,//血量减少到50%增加15%免伤           helmet    1111
         //攻击词条
         FinalDamageAddPercent,//最终伤害增加15%                   necklace
         KillNormal,//5%概率秒杀小怪                               ring
