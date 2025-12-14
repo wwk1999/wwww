@@ -23,7 +23,7 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public ParticleSystem IceExplosion2;
     [NonSerialized]public ParticleSystem IceExplosion3;
     [NonSerialized]public GameObject IceExTrigger;
-    [NonSerialized]public int IceBallSpeed = 5;
+    [NonSerialized]public float IceBallSpeed = 5f;
     [NonSerialized]public GameObject IceBallGameObject;
     //技能冷却时间
     public float IceArrowtime => (3f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
@@ -36,7 +36,15 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public float IceArrowCoolingtime = 3f;
     [NonSerialized]public float IceExplosionCoolingtime = 10f;
     [NonSerialized]public float IceBallCoolingtime = 10f;
-    [NonSerialized]public float DashCoolingtime = 10f;
+    public float DashCoolingtime
+    {
+        get
+        {
+            return GetDashCd();
+        }
+        set => DashCoolingtime = value;
+    }
+
     [NonSerialized]public float DianQuanCoolingtime = 10f;
     
     //技能点击特效
@@ -71,6 +79,17 @@ public class SkillController : XSingleton<SkillController>
     }
 
 
+    public float GetDashCd()
+    {
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DashCd))
+        {
+            return 7f;
+        }
+        else
+        {
+            return 10f;
+        }
+    }
 
 
     void Start()
@@ -109,7 +128,7 @@ public class SkillController : XSingleton<SkillController>
         IceExplosion1= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion1/IceExplosionP1").GetComponent<ParticleSystem>();
         IceExplosion2= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion2/IceExplosionP2").GetComponent<ParticleSystem>();
         IceExplosion3= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion2/IceExplosionP3").GetComponent<ParticleSystem>();
-        IceExTrigger = GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExTrigger").gameObject;
+        IceExTrigger = GameController.S.transform.Find("Player(Clone)/IceExplosion/parent/IceExTrigger").gameObject;
         IceExTrigger.SetActive(false);
         IceExplosion1.Stop();
         IceExplosion2.Stop();
@@ -163,6 +182,10 @@ public class SkillController : XSingleton<SkillController>
                 }
                 break;
             case SkillType.Normal:
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
+                {
+                    return;
+                }
                 var name = GameController.S.gamePlayer.playerSkeleton.AnimationState.GetCurrent(0).Animation.Name;
                 if (name == "walk" || name == "idle")
                 {
@@ -197,7 +220,14 @@ public class SkillController : XSingleton<SkillController>
                     AudioController.S.PlayIceBall();
                     IceBallUIFX.Play();
                     IceBallCoolingtime=0;
-                    StartIceBallSkill(1);
+                    if(GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill2AddDan))
+                    {
+                        StartIceBallSkill(3);
+                    }
+                    else
+                    {
+                        StartIceBallSkill(2);
+                    }
                 }
                 break;
             case SkillType.Skill3:
@@ -207,6 +237,13 @@ public class SkillController : XSingleton<SkillController>
                     Debug.Log("mac点击了冰爆技能!");
                     IceExUIFX.Play();
                     IceExplosionCoolingtime=0;
+                    if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill3AddRange))
+                    {
+                        IceExplosion1.transform.localScale=new Vector3(1.3f,1.3f,1.3f);
+                        IceExplosion2.transform.localScale=new Vector3(1.3f,1.3f,1.3f);
+                        IceExplosion3.transform.localScale=new Vector3(1.3f,1.3f,1.3f);
+                        IceExTrigger.transform.parent.localScale=new Vector3(1.3f,1.3f,1.3f);
+                    }
                     IceExplosion1.Play();
                     IceExplosion2.Play();
                     IceExplosion3.Play();
@@ -222,7 +259,12 @@ public class SkillController : XSingleton<SkillController>
     {
         if (IceBallGameObject != null)
         {
-           IceBallGameObject.transform.Rotate(0, 0, IceBallSpeed);
+            var iceBallSpeed = IceBallSpeed;
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill2RotateAdd))
+            {
+                iceBallSpeed *= 1.3f;
+            }
+           IceBallGameObject.transform.Rotate(0, 0, iceBallSpeed);
         }
         
         //技能冷却时间
@@ -290,7 +332,12 @@ public class SkillController : XSingleton<SkillController>
         
         if (IsDash )
         {
-            GlobalPlayerAttribute.PlayerMoveSpeed = 20;
+            float dashSpeed = 20;
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DashRange))
+            {
+                dashSpeed *=1.3f;
+            }
+            GlobalPlayerAttribute.PlayerMoveSpeed = dashSpeed;
             GameObject playerShadow = Instantiate(Resources.Load("Prefabs/Skill/DashShadowObject"),GameController.S.transform).GameObject().transform.Find("DashShadow").gameObject;
             playerShadow.gameObject.SetActive(true);
             playerShadow.transform.localPosition = new Vector3(GameController.S.gamePlayer.transform.Find("IceMage").position.x-0.15f, GameController.S.gamePlayer.transform.Find("IceMage").position.y+0.62f,GameController.S.gamePlayer.transform.Find("IceMage").position.z);
@@ -322,7 +369,7 @@ public class SkillController : XSingleton<SkillController>
                 IceBallGameObject = Instantiate(Resources.Load("Prefabs/Skill/IceBall").GameObject(), GameController.S.gamePlayer.transform);
                 break;
         }
-        IceBallGameObject.transform.localScale = new Vector3(10, 10, 10);
+        IceBallGameObject.transform.localScale = new Vector3(15, 15, 15);
         
     }
 }

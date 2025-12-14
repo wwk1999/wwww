@@ -15,7 +15,6 @@ public class GlobalPlayerAttribute
    public static WeaponType CurrentWeaponType= WeaponType.Primary; //当前武器类型
    public static bool IsGame = false;
    public static float CurrentHp=0;
-   public static bool isMove = false;
    public static bool isIceBall = false;
    public static ExitType CurrentExitType = ExitType.FirstGame;
 
@@ -146,6 +145,8 @@ public class GlobalPlayerAttribute
    }
    
    //人物属性,默认属性
+
+   public static float Forture => GetForture();
    public static int PlayerMaxHp
    {
        get => PlayerInfoConfig.GetPlayerMaxHp();
@@ -160,7 +161,7 @@ public class GlobalPlayerAttribute
 
    public static float PlayerMoveSpeed
    {
-       get => _baseMoveSpeed * (1 + MoveSpeedNum / 100f);
+       get => GetPlayerSpeed();
        set => _baseMoveSpeed = value ; 
    }
 
@@ -201,6 +202,45 @@ public class GlobalPlayerAttribute
    public static float TotalCRIT => (PlayerCRIT + EquipCRIT)*(1+CritNum/100.0f);
    public static float TotalDefense => GetTotalDefense();
 
+   public static float GetForture()
+   {
+       float forture = 0;
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.CloakFortureAdd))
+       {
+           forture += 0.3f;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.ClothFortureAdd))
+       {
+           forture += 0.3f;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.ShoeFortureAdd))
+       {
+           forture += 0.3f;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NecklaceFortureAdd))
+       {
+           forture += 0.3f;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RingFortureAdd))
+       {
+           forture += 0.3f;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HelmetFortureAdd))
+       {
+           forture += 0.3f;
+       }
+       return forture;
+   }
+   
+   public static float GetPlayerSpeed()
+   {
+       float speed=_baseMoveSpeed * (1 + MoveSpeedNum / 100f);
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
+       {
+           speed*=1.25f;
+       }
+       return speed;
+   }
 
    public static float GetTotalMaxHp()
    {

@@ -38,6 +38,10 @@ public class DianQuan : MonoBehaviour
 
     private void OnEnable()
     {
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1AddRange))
+        {
+            transform.localScale = new Vector3(transform.localScale.x*1.2f,transform.localScale.y*1.2f,transform.localScale.z*1.2f);
+        }
         isAttacking = false;
         skeletonAnimation.AnimationState.SetAnimation(0,"action",false);
     }

@@ -568,7 +568,14 @@ public abstract class MonsterBase : MonoBehaviour
     /// </summary>
     public void GetEx()
     {
-        GlobalPlayerAttribute.Exp+= Exp;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.ExAdd))
+        {
+            GlobalPlayerAttribute.Exp+= (int)(Exp*1.2f);
+        }
+        else
+        {
+            GlobalPlayerAttribute.Exp+= Exp;
+        }
     }
 
     // /// <summary>
@@ -754,9 +761,16 @@ public abstract class MonsterBase : MonoBehaviour
                 finalDamage*=(1+GlobalPlayerAttribute.Skill3DamageNum/100.0f);
                 break;
         }
-        if (damageFrom == DamageFrom.Skill1)
+        if (damageFrom == DamageFrom.Skill1&&YiDianTime>0)
         {
-            finalDamage*=(1+GlobalPlayerAttribute.Skill1YiDianNum/100.0f);
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1YiDianDouble))
+            {
+                finalDamage*=(1+GlobalPlayerAttribute.Skill1YiDianNum/50.0f);
+            }
+            else
+            {
+                finalDamage*=(1+GlobalPlayerAttribute.Skill1YiDianNum/100.0f);
+            }
         }
 
         return Mathf.RoundToInt(finalDamage);
@@ -826,6 +840,10 @@ public abstract class MonsterBase : MonoBehaviour
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NormalAddDamage))
         {
             finalDamage=NormalAddDamage(finalDamage);
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
+        {
+            finalDamage+=1f;
         }
         return damage*(1+finalDamage);
     }
@@ -934,8 +952,8 @@ public abstract class MonsterBase : MonoBehaviour
         //根据MonsterEquip的概率随机生成装备
         foreach (MonsterEquip monsterEquip in MonsterEquipList)
         {
-            int random = UnityEngine.Random.Range(0, 100);
-            if (random <= monsterEquip.Probability)
+            float random = UnityEngine.Random.Range(0, 100f);
+            if (random <= monsterEquip.Probability*(1+GlobalPlayerAttribute.Forture))
             {
                 //生成装备
                 GameObject equip = GameController.S.GetEquip(monsterEquip);
@@ -950,8 +968,8 @@ public abstract class MonsterBase : MonoBehaviour
     {
         foreach (MonsterProp prop in MonsterPropList)
         {
-            int random = UnityEngine.Random.Range(0, 100);
-            if (random <= prop.Probability)
+            float random = UnityEngine.Random.Range(0, 100f);
+            if (random <= prop.Probability*(1+GlobalPlayerAttribute.Forture))
             {
                 //生成装备
                 GameObject propObj = GameController.S.GetProp(prop.PropItem);

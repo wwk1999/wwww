@@ -364,6 +364,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NoSkill.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkilll1.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalPlayerAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skill\IceBallItem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Tool\UIToast.cs" />
     <Compile Include="Assets\Scripts\Window\RoleWindow1.cs" />

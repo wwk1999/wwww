@@ -44,6 +44,9 @@ public class Player : MonoBehaviour
     public float size = 0.28f;
     [NonSerialized] public bool IsWuDi = false;//红闪的时候无敌
     
+    // 移动攻击力加成标志位
+    [NonSerialized] private bool isMoveBonusApplied = false;
+    
     // 延迟伤害相关变量
     [NonSerialized] private Queue<DelayedDamageInfo> delayedDamageQueue = new Queue<DelayedDamageInfo>();
     [NonSerialized] private Coroutine delayedDamageCoroutine = null;
@@ -173,24 +176,45 @@ public class Player : MonoBehaviour
         //获得输入
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        if (horizontal == 0 && vertical == 0)
-        {
-            GlobalPlayerAttribute.isMove = false;
-            GameController.S.GameAttack *= (1 + GlobalPlayerAttribute.MoveAddAttackNum);
-        }
-        else
-        {
-            GlobalPlayerAttribute.isMove = true;
-        }
         Vector2 joydir = FightBGController.S.joystick.input.normalized;
+        
+        // 判断是否在移动（考虑键盘和摇杆输入）
+        bool isMoving = !(horizontal == 0 && vertical == 0) || joydir != Vector2.zero;
+        
+        // 处理移动状态变化时的攻击力加成
+        if (isMoving && !isMoveBonusApplied)
+        {
+            // 从静止变为移动：应用加成
+            if (GlobalPlayerAttribute.MoveAddAttackNum > 0)
+            {
+                GameController.S.GameAttack *= (1 + GlobalPlayerAttribute.MoveAddAttackNum / 100f);
+                GameController.S.GameDefense *= (1 + GlobalPlayerAttribute.MoveAddDefenseNum / 100f);
+                isMoveBonusApplied = true;
+            }
+        }
+        else if (!isMoving && isMoveBonusApplied)
+        {
+            // 从移动变为静止：移除加成
+            if (GlobalPlayerAttribute.MoveAddAttackNum > 0)
+            {
+                GameController.S.GameAttack /= (1 + GlobalPlayerAttribute.MoveAddAttackNum / 100f);
+                GameController.S.GameDefense /= (1 + GlobalPlayerAttribute.MoveAddDefenseNum / 100f);
+                isMoveBonusApplied = false;
+            }
+        }
+        
+        // 处理角色翻转
         if (joydir.x > 0)
         {
            // spriteRenderer.flipX = false;
            playerSkeleton.Skeleton.FlipX = false;
-        } else if (joydir.x < 0)
+        } 
+        else if (joydir.x < 0)
         {
             playerSkeleton.Skeleton.FlipX = true;
         }
+        
+        // 设置PC和安卓的移动
         if (joydir == Vector2.zero)//设置pc和安卓的移动
         {
             if(horizontal>0)
@@ -324,13 +348,7 @@ public class Player : MonoBehaviour
         {
             realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForNormal);
         }
-
-        float mianshangValue = GlobalPlayerAttribute.DamageReductionPercent;
-        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HpReductionAddDefense))
-        {
-            mianshangValue += 0.15f;
-        }
-        realDamage *= (1 - mianshangValue);//免伤
+        realDamage *= (1 - GlobalPlayerAttribute.DamageReductionPercent);
         
         
         realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
@@ -393,7 +411,7 @@ public class Player : MonoBehaviour
     /// </summary>
     private IEnumerator ApplyDelayedDamage()
     {
-        float updateInterval = 1f; // 每0.1秒更新一次
+        float updateInterval = 0.1f; // 每0.1秒更新一次
         
         while (delayedDamageQueue.Count > 0)
         {
@@ -412,7 +430,8 @@ public class Player : MonoBehaviour
                 DelayedDamageInfo info = delayedDamageQueue.Dequeue();
                 
                 // 计算本次应该施加的伤害（按剩余时间比例）
-                float damageThisFrame = (info.damage / info.totalTime) * updateInterval;
+                // 使用 remainingTime 而不是 totalTime，确保所有伤害都能被结算完
+                float damageThisFrame = (info.damage / info.remainingTime) * updateInterval;
                 totalDamageThisFrame += damageThisFrame;
                 
                 // 更新剩余时间和剩余伤害
@@ -466,3 +485,4 @@ public class Player : MonoBehaviour
         SetGunRotate(GameController.S.nearMonsterPosition);
     }
 }
+
