@@ -289,8 +289,11 @@ public abstract class MonsterBase : MonoBehaviour
         if (trackEntry.Animation.Name == MonsterSpineName.Skill1Name)//沙漠蜥蜴
         {
             isSkill1 = false;
-            ShaXiYi shaMoElite=this as ShaXiYi;
-            shaMoElite.hideTime = 10;
+            if (this is ShaXiYi)
+            {
+                ShaXiYi shaMoElite=this as ShaXiYi;
+                shaMoElite.hideTime = 10;
+            }
         }
        
         if (isSkill2)
@@ -314,6 +317,11 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 ShaMoElite shaMoElite=this as ShaMoElite;
                 shaMoElite.CheckSkill();
+            }
+
+            if (this is EliteBeeMonster)
+            {
+                Skill();
             }
         }
         else if(isAttack)

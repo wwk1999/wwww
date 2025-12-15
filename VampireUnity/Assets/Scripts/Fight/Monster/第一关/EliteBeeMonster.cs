@@ -101,8 +101,7 @@ public class EliteBeeMonster : MonsterBase
         if(SkillColingTime>=SkillTime&&IsTrigger&& !IsDead)
         {
             SkillColingTime = 0;
-            //这这里设置为skill状态，然后在base里的complete回调里执行skill方法
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill", false);
+            isSkill1 = true;
         }
         if (!IsDead)
         {
