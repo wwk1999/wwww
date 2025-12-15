@@ -21,45 +21,7 @@ public class CameraContraller : XSingleton<CameraContraller>
     {
         ObserverModuleManager.S.RegisterEvent(ConstKeys.CameraMoveToBoss, OnCameraMoveBegin);
     }
-
-    //创建boss
-    public void CreateBoss()
-    {
-        GameController.S.HaveBoss = true;
-        if (LevelInfoConfig.CurrentGameLevel == 3)
-        {
-             FightBGController.S.TreeManBoss.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-             FightBGController.S.TreeManBoss.gameObject.SetActive(true);
-             //GameObject treeManBoss=Instantiate(Resources.Load("Prefabs/Monster/TreeManBOSS"), new Vector3(transform.position.x,transform.position.y,-0.1f), Quaternion.identity).GameObject();
-             SkeletonAnimation sk=FightBGController.S.TreeManBoss.transform.Find("TreeManSkeleton").GetComponent<SkeletonAnimation>();
-             FightBGController.S.TreeManBoss.IsSkill = true;
-             sk.AnimationState.SetAnimation(0,"Exit",false);
-             FightBGController.S.TreeManBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        }
-        if (LevelInfoConfig.CurrentGameLevel == 6)
-        {
-            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
-            HuoShanBoss huoShanBoss = Instantiate(Resources.Load<HuoShanBoss>("Prefabs/Monster/Level2/HuoShanBOSS"));
-            huoShanBoss.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-            huoShanBoss.transform.Find("SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"walk",true);
-        }
-        if (LevelInfoConfig.CurrentGameLevel == 9)
-        {
-            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
-            ZhaoZeBoss ZhaoZeboss = Instantiate(Resources.Load<ZhaoZeBoss>("Prefabs/Monster/Level3/ZhaoZeBOSS"));
-            ZhaoZeboss.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-            ZhaoZeboss.transform.Find("SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"move",true);
-        }
-        
-        if (LevelInfoConfig.CurrentGameLevel == 12)
-        {
-            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
-            XieZi xieZiboss = Instantiate(Resources.Load<XieZi>("Prefabs/Monster/Level4/XieZi"));
-            xieZiboss.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-            xieZiboss.monsterSkeletonAnimation.AnimationState.SetAnimation(0,"move",false);
-        }
-       
-    }
+    
 
     public void CameraMovePlayer()
     {
@@ -108,7 +70,6 @@ public class CameraContraller : XSingleton<CameraContraller>
                 if (transform.transform.position == new Vector3(-5.5f, 10, -10) && !GameController.S.HaveBoss)
                 {
                     // FollowPlayer = true;
-                    CreateBoss();
                     ObserverModuleManager.S.UnRegisterEvent(ConstKeys.CameraMoveToBoss, OnCameraMoveBegin);
                 }
             }

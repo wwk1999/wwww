@@ -37,7 +37,21 @@ public class FightBg : MonoBehaviour
     public UIParticle iceBallUIFX;
     public UIParticle iceExUIFX;
 
+    public Button jiHuoButton;
     public GameObject toastContent;
+
+
+    private void Update()
+    {
+        if (FightBGController.S.IsBossJiHuo)
+        {
+            jiHuoButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            jiHuoButton.gameObject.SetActive(false);
+        }
+    }
 
     private void Start()
     {
@@ -46,8 +60,14 @@ public class FightBg : MonoBehaviour
         SkillController.S.IceArrowUIFX = iceArrowUIFX;
         SkillController.S.IceBallUIFX = iceBallUIFX;
         SkillController.S.IceExUIFX = iceExUIFX;
+        jiHuoButton.onClick.AddListener(() =>
+        {
+            GameObject boosQuan=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/BossQuan"));
+            boosQuan.transform.position = new Vector3(0, 0, 0);
+            GameController.S.CreateBoss();
+        });
     }
-
+    
     private void OnDestroy()
     {
         ObserverModuleManager.S.UnRegisterEvent(ConstKeys.ShowToast, ShowTaost);

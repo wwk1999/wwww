@@ -405,8 +405,6 @@ public class Entrance : MonoBehaviour
         
         FightBGController.S.DiLie=Instantiate(Resources.Load("Prefabs/Skill/BossGroundFissure"), new Vector3(0,0,0), Quaternion.identity) as GameObject;
         FightBGController.S.DiLie.SetActive(false);
-        FightBGController.S.TreeManBoss=Instantiate(Resources.Load("Prefabs/Monster/Level1/TreeManBOSS"), new Vector3(0,0,0), Quaternion.identity).GetComponent<TreeManBoss>();
-        FightBGController.S.TreeManBoss.gameObject.SetActive(false);
         
         FightBGController.S.CircleAttack = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/CircleAttack")).gameObject;
         FightBGController.S.CircleAttack.SetActive(false);

@@ -25,6 +25,11 @@ public class ConstKeys
     
     public const string ShowToast = "ShowToast";
     public const string ShowUIToast = "ShowUIToast";
+    
+    public const string ShowJiHuoBoss = "ShowJiHuoBoss";
+    public const string HideJiHuoBoss = "HideJiHuoBoss";
+
+
 
 
     #endregion

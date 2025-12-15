@@ -30,7 +30,6 @@ public class CircleAttack : MonoBehaviour
              FightBGController.S.HaveCircleAttack = false;
              gameObject.SetActive(false);
              circleAttackState = CircleAttackState.None;
-             FightBGController.S.TreeManBoss.CircleAttackEnd = true;
         }
         if (circleAttackState==CircleAttackState.TreeManSkill2)
         {

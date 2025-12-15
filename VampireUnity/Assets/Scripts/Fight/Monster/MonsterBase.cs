@@ -60,6 +60,7 @@ public class MonsterSpineName
     public string Skill1Name;
     public string Skill2Name;
     public string Skill3Name;
+    public string AppearName;
 }
 public abstract class MonsterBase : MonoBehaviour
 {
@@ -137,7 +138,6 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void Awake()
     {
-        ObserverModuleManager.S.RegisterEvent(ConstKeys.Resumemonster,Resumemonster);
         CurrentHp = MaxHp;
         if (MonsterType != MonsterType.Boss)
         {
@@ -285,6 +285,11 @@ public abstract class MonsterBase : MonoBehaviour
         {
             Destroy(gameObject);
             return;
+        }
+
+        if (trackEntry.Animation.Name == MonsterSpineName.AppearName)
+        {
+            IsSkill=false;
         }
         if (trackEntry.Animation.Name == MonsterSpineName.Skill1Name)//沙漠蜥蜴
         {

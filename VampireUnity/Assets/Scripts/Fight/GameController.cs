@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Equip;
 using Mysql;
+using Spine.Unity;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -241,6 +242,7 @@ public class GameController : XSingleton<GameController>
     [NonSerialized]public int BossEnergyNum=0;
     [NonSerialized]public int MaxBossEnergyNum;//Boss能量
     [NonSerialized]public bool HaveBoss=false;
+    [NonSerialized]public bool BossJiHuo=false;
     [NonSerialized]public bool HaveBossWarning=false;
     [NonSerialized]public MonsterBase CurrentBoss;
     [NonSerialized]public bool GameOver=false;
@@ -424,7 +426,6 @@ public class GameController : XSingleton<GameController>
         var _ = SkillController.S;//激活SkillController
         
         
-        //DontDestroyOnLoad(gameObject);
         
         
         //实例化UI
@@ -582,9 +583,55 @@ public class GameController : XSingleton<GameController>
         //召唤BOSS
         if (BossEnergyNum > 1 && HaveBossWarning == false&&LevelInfoConfig.CurrentGameLevelType==LevelType.Boss)
         {
-            Debug.LogError(111);
-            ObserverModuleManager.S.SendEvent(ConstKeys.BossWarning);
+            HaveBossWarning=true;
+            BossJiHuo = true;
+            Instantiate(Resources.Load("Prefabs/Tool/Warning"));
         }
+    }
+    
+     //创建boss
+    public void CreateBoss()
+    {
+        GameController.S.HaveBoss = true;
+        if (LevelInfoConfig.CurrentGameLevel == 3)
+        {
+            TreeManBoss treeManBoss=Instantiate(Resources.Load<TreeManBoss>("Prefabs/Monster/Level1/TreeManBOSS"));
+              treeManBoss.transform.position = new Vector3(0 ,0, 0f);
+              treeManBoss.gameObject.SetActive(true);
+             SkeletonAnimation sk=treeManBoss.transform.Find("parent/TreeManSkeleton").GetComponent<SkeletonAnimation>();
+             treeManBoss.IsSkill = true;
+             sk.AnimationState.SetAnimation(0,"Exit",false);
+             treeManBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+             MonsterColliderDic.Add(treeManBoss.collider2D,treeManBoss);
+        }
+        if (LevelInfoConfig.CurrentGameLevel == 6)
+        {
+            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
+            HuoShanBoss huoShanBoss = Instantiate(Resources.Load<HuoShanBoss>("Prefabs/Monster/Level2/HuoShanBOSS"));
+            huoShanBoss.transform.position = new Vector3(0, 0, 0f);
+            huoShanBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"walk",true);
+            MonsterColliderDic.Add(huoShanBoss.collider2D,huoShanBoss);
+
+        }
+        if (LevelInfoConfig.CurrentGameLevel == 9)
+        {
+            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
+            ZhaoZeBoss ZhaoZeboss = Instantiate(Resources.Load<ZhaoZeBoss>("Prefabs/Monster/Level3/ZhaoZeBOSS"));
+            ZhaoZeboss.transform.position = new Vector3(0, 0, 0f);
+            MonsterColliderDic.Add(ZhaoZeboss.collider2D,ZhaoZeboss);
+
+            ZhaoZeboss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"move",true);
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 12)
+        {
+            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
+            XieZi xieZiboss = Instantiate(Resources.Load<XieZi>("Prefabs/Monster/Level4/XieZi"));
+            xieZiboss.transform.position = new Vector3(0, 0, 0f);
+            xieZiboss.monsterSkeletonAnimation.AnimationState.SetAnimation(0,"move",false);           
+            MonsterColliderDic.Add(xieZiboss.collider2D,xieZiboss);
+        }
+       
     }
 
     public bool GetIsCrit()
@@ -928,15 +975,9 @@ public class GameController : XSingleton<GameController>
         FreezeAllMonster();
     }
 
-    private void Update()
+    public void RefreshOrangeEntry()
     {
-        if (GlobalPlayerAttribute.IsGame == false)
-            return;
-        
-        CurrentOrangeEntryTime+=Time.deltaTime;
-        if (CurrentOrangeEntryTime > OrangeEntryTime)
-        {
-            CurrentOrangeEntryTime = 0;
+         CurrentOrangeEntryTime = 0;
             if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddHpForTime)&&TotalAddHp<GlobalPlayerAttribute.TotalMaxHp)
             {
                 TotalAddHp+=0.03f * GlobalPlayerAttribute.TotalMaxHp;
@@ -981,6 +1022,27 @@ public class GameController : XSingleton<GameController>
                   
                 }
             }
+    }
+
+    private void Update()
+    {
+        if (GlobalPlayerAttribute.IsGame == false)
+            return;
+        
+        CurrentOrangeEntryTime+=Time.deltaTime;
+        if (CurrentOrangeEntryTime > OrangeEntryTime)
+        {
+            RefreshOrangeEntry();
+        }
+
+        if (BossJiHuo && Vector2.Distance(gamePlayer.transform.position, Vector2.zero) < 2)
+        {
+            FightBGController.S.IsBossJiHuo = true;
+
+        }
+        else
+        {
+            FightBGController.S.IsBossJiHuo = false;
         }
         //更新战斗时间,以秒为单位
         fightTime += Time.deltaTime;

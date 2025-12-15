@@ -23,7 +23,6 @@ public class TreeManBoss : MonsterBase
 
     public  void Awake()
     {
-        base.Awake();
         size = 1.5f;
         // 获取 SkeletonAnimation
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
@@ -35,11 +34,14 @@ public class TreeManBoss : MonsterBase
        MonsterSpineName.HitName = "hit";
        MonsterSpineName.MoveName = "walk";
        MonsterSpineName.DieName = "die_02";
+       MonsterSpineName.AppearName = "Exit";
+       MonsterSpineName.Skill1Name = "skill_01";
+       MonsterSpineName.Skill2Name = "skill_02";
+       MonsterSpineName.Skill3Name = "skill_03";
     }
 
     public void Start()
     {
-        base.Start();
         size = 1f;
         AddMonsterEquip();
         AddMonsterSourceStone();
@@ -183,7 +185,7 @@ public class TreeManBoss : MonsterBase
         //播放CircleAttack动画
         if (!FightBGController.S.HaveCircleAttack)
         {
-            FightBGController.S.TreeManBoss.Skill1End(GameController.S.gamePlayer.transform.position);
+            Skill1End(GameController.S.gamePlayer.transform.position);
             FightBGController.S.CircleAttack.SetActive(true);
             FightBGController.S.CircleAttack.GetComponent<CircleAttack>().circleAttackState = CircleAttackState.TreeManSkill1;
             FightBGController.S.CircleAttack.transform.position=GameController.S.gamePlayer.transform.position;
@@ -232,53 +234,7 @@ public class TreeManBoss : MonsterBase
     private void Update()
     {
         if (IsDead) return;
-        base.Update();
-        
-        
-        //Debug.Log("BOSS状态："+MonsterState);
-        switch (MonsterState)
-        {
-            case State.Move:
-                if (!IsDead)
-                {
-                    MonsterMove();
-                    SpriteFlipX(true);
-                }
-                break;
-            case State.Skill1:
-                if(!FightBGController.S.HaveCircleAttack&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "skill_01")
-                    Skill1Pre();
-                break;
-            case State.Skill2:
-                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                break;
-        }
-        GroundFissureSkillCurrentTime+=Time.deltaTime;
-        FireSkillCurrentTime+= Time.deltaTime;
-        DashSkillCurrentTime+= Time.deltaTime;
-
-        if (FireSkillCurrentTime >= FireSkillTime && treeManJumpTrigger.isTrigger && MonsterState == State.Move)
-        {
-            MonsterState = State.Skill2;
-            if (FireSkillCurrentTime >= FireSkillTime)
-                ObserverModuleManager.S.SendEvent(ConstKeys.TreeManFireSkill1);
-            FireSkillCurrentTime = 0;
-        }
-
-        if (GroundFissureSkillCurrentTime >= GroundFissureSkillTime && treeManJumpTrigger.isTrigger&&MonsterState==State.Move)
-        {
-            GroundFissureSkillCurrentTime = 0;
-            MonsterState= State.Skill1;
-        }
-        
-
-        if (DashSkillCurrentTime >= DashSkillTime && treeManJumpTrigger.isTrigger && MonsterState == State.Move)
-        {
-            MonsterState= State.Skill3;
-            ObserverModuleManager.S.SendEvent(ConstKeys.TreeManDashSkill1);
-            DashSkillCurrentTime = 0;
-        }
-
+       // base.Update();
     }
     
 

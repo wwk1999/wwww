@@ -33,7 +33,6 @@ public class FightBGController : XSingleton<FightBGController>
     
     [NonSerialized]public Button WeaponButton;
     [NonSerialized]public GameObject CircleAttack;
-    [NonSerialized]public TreeManBoss TreeManBoss;
     [NonSerialized] public GameObject DiLie;
     [NonSerialized]public Queue<TreeManFire> TreeManFireQueue = new Queue<TreeManFire>();
     [NonSerialized]public Queue<CircleAttack> CircleAttackQueue = new Queue<CircleAttack>();
@@ -49,6 +48,7 @@ public class FightBGController : XSingleton<FightBGController>
 
     [NonSerialized] public bool HaveCircleAttack = false;
     [NonSerialized] public Slider BossEnergySlider;
+    [NonSerialized] public bool IsBossJiHuo = false;
 
 
     private float RefreshEx = 0.5f;
