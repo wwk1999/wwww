@@ -582,7 +582,7 @@ public class GameController : XSingleton<GameController>
         //召唤BOSS
         if (BossEnergyNum > 1 && HaveBossWarning == false&&LevelInfoConfig.CurrentGameLevelType==LevelType.Boss)
         {
-            //GameController.S.HaveBoss = true;
+            Debug.LogError(111);
             ObserverModuleManager.S.SendEvent(ConstKeys.BossWarning);
         }
     }

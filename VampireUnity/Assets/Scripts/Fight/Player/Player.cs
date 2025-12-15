@@ -123,6 +123,10 @@ public class Player : MonoBehaviour
         {
             playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
         }
+        else
+        {
+            playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
+        }
        
     }
     /// <summary>
@@ -135,10 +139,18 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         if (horizontal == 0 && vertical == 0)
         {
+            if (MoveJian)
+            {
+                playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
+            }
             MoveJian = false;
         }
         else
         {
+            if (MoveJian == false && MouseDown == false)
+            {
+                playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
+            }
             MoveJian = true;
         }
 
@@ -149,11 +161,6 @@ public class Player : MonoBehaviour
         else
         {
             MouseDown = false;
-        }
-
-        if (MoveJian == false && MouseDown == false)
-        {
-            playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
         }
     }
     
