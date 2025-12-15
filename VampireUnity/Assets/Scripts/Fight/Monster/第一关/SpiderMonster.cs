@@ -8,12 +8,13 @@ public class SpiderMonster : MonsterBase
     [NonSerialized]public float attackTime = 60f;
     [NonSerialized]public float currentTime = 0f;
     public SpiderWeb spiderWeb;
-    
+    public Transform attackTrans;
+
     public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0) { }
     void Start()
     {
         base.Start();
-        size = 0.15f;
+        size = 0.3f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
@@ -67,6 +68,14 @@ public class SpiderMonster : MonsterBase
     {
         if(IsDead) return;
         base.Update();
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        {
+            isAttack=true;
+        }
+        else
+        {
+            isAttack=false;
+        }
         currentTime+= Time.deltaTime;
         if(currentTime>= attackTime)
         {

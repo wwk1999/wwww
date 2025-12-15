@@ -24,8 +24,8 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public  float TotalAddHp = 0;
     [NonSerialized] public  float TotalAddDefense = 0;
     [NonSerialized] public  float TotalAddAttack = 0;
-
     
+
     //碰撞字典
     [NonSerialized] public Dictionary<Collider2D, MonsterBase> MonsterColliderDic = new Dictionary<Collider2D, MonsterBase>();
 
@@ -506,10 +506,6 @@ public class GameController : XSingleton<GameController>
         //普通攻击按钮
         FightBGController.S.normalAttackButton.onClick.AddListener(() =>
         {
-                if (gamePlayer.playerState != PlayerState.Attack)
-                {
-                    gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
-                }
                 gamePlayer.isAttack = true;
                 gamePlayer.playerState= PlayerState.Attack;
         });
@@ -655,6 +651,7 @@ public class GameController : XSingleton<GameController>
     public void CreatePlayer()
     {
         gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player"),transform).GetComponent<Player>();
+        gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
         gamePlayer.transform.position = Vector2.zero;
     }
 

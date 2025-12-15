@@ -14,10 +14,12 @@ public class SnotMonster : MonsterBase
     {
     }
 
+    public Transform attackTrans;
+
     private void Start()
     {
         base.Start();
-        size = 0.15f;
+        size = 0.3f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
@@ -58,6 +60,14 @@ public class SnotMonster : MonsterBase
     {
         if (IsDead) return;
        base.Update();
+       if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+       {
+           isAttack=true;
+       }
+       else
+       {
+           isAttack=false;
+       }
         
         if (!IsDead)
         {

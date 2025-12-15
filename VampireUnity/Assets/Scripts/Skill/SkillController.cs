@@ -182,11 +182,6 @@ public class SkillController : XSingleton<SkillController>
                 var name = GameController.S.gamePlayer.playerSkeleton.AnimationState.GetCurrent(0).Animation.Name;
                 if (name == "walk" || name == "idle")
                 {
-                    if (GameController.S.gamePlayer.playerState != PlayerState.Attack)
-                    {
-                        GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
-                    }
-
                     GameController.S.gamePlayer.isAttack = true;
                     GameController.S.gamePlayer.playerState = PlayerState.Attack;
                 }

@@ -51,6 +51,9 @@ public class Player : MonoBehaviour
     [NonSerialized] private Queue<DelayedDamageInfo> delayedDamageQueue = new Queue<DelayedDamageInfo>();
     [NonSerialized] private Coroutine delayedDamageCoroutine = null;
     
+    [NonSerialized] public bool MoveJian = false;
+    [NonSerialized] public bool MouseDown = false;
+    
     // 延迟伤害信息结构
     private struct DelayedDamageInfo
     {
@@ -111,60 +114,46 @@ public class Player : MonoBehaviour
 
     public void OnAnimationComplete(Spine.TrackEntry trackEntry)
     {
-        playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
-        if (trackEntry.Animation.Name == "attack")
+        if (MouseDown)
         {
-            isAttack = false;
             SkillController.S.ShotBulletInvoke();
-            GameController.S.gamePlayer.playerState= PlayerState.None;
+            playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
         }
-        if (trackEntry.Animation.Name == "hit")
+        else if(MoveJian)
         {
-            GameController.S.gamePlayer.playerState= PlayerState.None;
+            playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
         }
+       
     }
     /// <summary>
     /// 主角动画
     /// </summary>
-    public void PlayerMoveAnimation()
+    public void SetBianLiang()
     {
         //获得输入
-        Vector2 joydir = FightBGController.S.joystick.input.normalized;
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        if (!isAttack)
+        if (horizontal == 0 && vertical == 0)
         {
-            if (joydir == Vector2.zero)
-            {
-                if (horizontal == 0 && vertical == 0)
-                {
-                    if (playerState != PlayerState.Idle)
-                    {
-                        playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
-                    }
+            MoveJian = false;
+        }
+        else
+        {
+            MoveJian = true;
+        }
 
-                    //player播放idle动画，player是spine动画
-                    playerState = PlayerState.Idle;
-                }
-                else
-                {
-                    if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name=="idle")
-                    {
-                        playerSkeleton.AnimationState.SetAnimation(0, "walk", true);
-                    }
+        if (Input.GetMouseButton(0))
+        {
+            MouseDown = true;
+        }
+        else
+        {
+            MouseDown = false;
+        }
 
-                    playerState = PlayerState.Walk;
-                }
-            }
-            else
-            {
-                if (playerState != PlayerState.Walk)
-                {
-                    playerSkeleton.AnimationState.SetAnimation(0, "walk", true);
-                }
-
-                playerState = PlayerState.Walk;
-            }
+        if (MoveJian == false && MouseDown == false)
+        {
+            playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
         }
     }
     
@@ -203,35 +192,28 @@ public class Player : MonoBehaviour
             }
         }
         
-        // 处理角色翻转
-        if (joydir.x > 0)
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        
+        if(worldPos.x>transform.position.x)
         {
-           // spriteRenderer.flipX = false;
-           playerSkeleton.Skeleton.FlipX = false;
-        } 
-        else if (joydir.x < 0)
-        {
+            playerSkeleton.Skeleton.FlipX = false;
+        }
+        else if(worldPos.x<transform.position.x)
+        { 
             playerSkeleton.Skeleton.FlipX = true;
         }
-        
-        // 设置PC和安卓的移动
-        if (joydir == Vector2.zero)//设置pc和安卓的移动
+
+        if (!MouseDown)
         {
-            if(horizontal>0)
-            {
-                playerSkeleton.Skeleton.FlipX = false;
-            }
-            else if(horizontal<0)
-            {
-                playerSkeleton.Skeleton.FlipX = true;
-            }
             GetComponent<Rigidbody2D>().velocity = new Vector2(horizontal, vertical).normalized * GlobalPlayerAttribute.PlayerMoveSpeed;
         }
         else
         {
-            GetComponent<Rigidbody2D>().velocity = joydir * GlobalPlayerAttribute.PlayerMoveSpeed;
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
-            
     }
     
     
@@ -384,7 +366,11 @@ public class Player : MonoBehaviour
         var playerhit = FightBGController.S.PlayerHitQueue.Dequeue();
         playerhit.gameObject.SetActive(true);
         StartCoroutine(DelayCancelWuDi(0.2f));
-        playerSkeleton.AnimationState.SetAnimation(0, "hit", false);
+        if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name == "idle" ||
+            playerSkeleton.AnimationState.GetCurrent(0).Animation.Name == "walk")
+        {
+            playerSkeleton.AnimationState.SetAnimation(0, "hit", false);
+        }
     }
 
     public void PlayerDie()
@@ -480,8 +466,12 @@ public class Player : MonoBehaviour
     {
         //主角操作
         PlayerMove();
-        PlayerMoveAnimation();
-//        Debug.Log("枪的方向：" + GameController.S.nearMonsterPosition);
+        if (Input.GetMouseButtonDown(0))
+        {
+            SkillController.S.ShotBulletInvoke();
+            playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
+        }
+        SetBianLiang();
         SetGunRotate(GameController.S.nearMonsterPosition);
     }
 }
