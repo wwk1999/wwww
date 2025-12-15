@@ -75,7 +75,7 @@ public class SnotMonster : MonsterBase
         if (!IsDead)
         {
             MonsterMove();
-            SpriteFlipX(false);
+            SpriteFlipX(true);
         }
     }
     public override void AddMonsterEquip()

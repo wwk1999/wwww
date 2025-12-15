@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Equip;
 using Spine;
 using Spine.Unity;
@@ -46,6 +47,11 @@ public class TreeManBoss : MonsterBase
             IsSkill=false;
         }
 
+        if (trackEntry.Animation.Name == "skill_03"||trackEntry.Animation.Name == "skill_04")
+        {
+            IsSkill=false;
+        }
+
         if (isSkill1)
         {
             IsSkill=true;
@@ -53,10 +59,60 @@ public class TreeManBoss : MonsterBase
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_01", false);
             GroundFissurepos=GameController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(GroundFissurepos);
+        }else if (isSkill2)
+        {
+            IsSkill=true;
+            isSkill2=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_03", false);
+            Skill2();
+        }else if (isSkill3)
+        {
+            IsSkill=true;
+            isSkill3=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_04", false);
+            Dashdirection=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+            GameController.S.CreateSqrtAttack(transform.position,Dashdirection);
         }
         else
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", false);
+        }
+    }
+    
+    public void Zhuang(float speed, Vector2 dir, float time)
+    {
+        StartCoroutine(ZhuangRoutine(speed, dir, time));
+    }
+
+    private IEnumerator ZhuangRoutine(float speed, Vector2 dir, float time)
+    {
+        Vector2 oldVelocity = rigidbody2D.velocity;
+
+        Vector2 v = dir.normalized * speed;
+        rigidbody2D.velocity = v;
+
+        float elapsed = 0f;
+        while (elapsed < time)
+        {
+            elapsed += Time.deltaTime;
+            rigidbody2D.velocity = v;
+            yield return null;
+        }
+
+        rigidbody2D.velocity = oldVelocity;
+    }
+
+    public void Skill2()
+    {
+        Vector2 center = Vector2.zero;   // (0,0)
+        float radius = 12f;
+
+        for (int i = 0; i < 10; i++)
+        {
+            // 在单位圆内随机一个点，再乘以半径 -> 半径为 12 的圆内
+            Vector2 randomInCircle = UnityEngine.Random.insideUnitCircle * radius;
+            Vector3 pos = new Vector3(center.x + randomInCircle.x, center.y + randomInCircle.y, 0f);
+            GameController.S.CreateCircleAttack(pos);
         }
     }
 
@@ -74,8 +130,7 @@ public class TreeManBoss : MonsterBase
         // 根据事件名称处理逻辑
         if (e.Data.Name == "chong")
         {
-            Debug.Log("执行攻击逻辑");
-           
+            Zhuang(8,Dashdirection,1.5f);
         }
         else if (e.Data.Name == "tiao")
         {
@@ -174,6 +229,10 @@ public class TreeManBoss : MonsterBase
         {
             Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
             rigidbody2D.velocity = direction.normalized * Speed; 
+        }
+        else
+        {
+            rigidbody2D.velocity = Vector2.zero;
         }
     }
 

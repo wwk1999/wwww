@@ -266,7 +266,7 @@ public class GameController : XSingleton<GameController>
         circle.gameObject.SetActive(true);
     }
     
-    public void CreateCircleAttack(Vector2 pos, Vector2 dir)
+    public void CreateSqrtAttack(Vector2 pos, Vector2 dir)
     {
         var sqrt = SqrtQueue.Dequeue();
         sqrt.transform.position = pos;
