@@ -27,6 +27,15 @@ public class ChongZiMonster : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Green, 10));
     }
     
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
+    }
+    
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);

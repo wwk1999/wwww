@@ -30,6 +30,15 @@ public class XiaoHuoMonster : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Green, 10));
     }
     
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
+    }
+    
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);
@@ -82,13 +91,13 @@ public class XiaoHuoMonster : MonsterBase
             Speed = 8;
             MonsterMove();
             Invoke("AttackEnd",3f);
-            IsAttack = true;
+            IsDash = true;
         }
     }
 
     public void AttackEnd()
     {
-        IsAttack = false;
+        IsDash = false;
         Speed = 0.3f;
     }
     
@@ -107,7 +116,7 @@ public class XiaoHuoMonster : MonsterBase
             AttackBegin();
             currentTime = 0f;
         }
-        if (!IsDead&&!IsAttack)
+        if (!IsDead&&!IsDash)
         {
             MonsterMove();
             SpriteFlipX(true);

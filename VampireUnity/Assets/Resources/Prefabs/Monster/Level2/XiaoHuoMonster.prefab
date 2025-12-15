@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &489272936000823139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4463102898270557004}
+  m_Layer: 0
+  m_Name: parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4463102898270557004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489272936000823139}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 5990078611105160031}
+  m_Father: {fileID: 4259347604458997795}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951126534552514960
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,9 +64,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 4463102898270557004}
   - {fileID: 589155456252633003}
   - {fileID: 6010128068570849673}
-  - {fileID: 5990078611105160031}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6859644907157086005
@@ -128,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a80f91a723830452595812ad9f16cfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 489272936000823139}
   size: 0
   monsterSkeletonAnimation: {fileID: 6064217565081589767}
   hpSlider: {fileID: 8187887826628676853}
@@ -167,7 +200,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4259347604458997795}
+  m_Father: {fileID: 4463102898270557004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8698751318876226438
 MeshRenderer:

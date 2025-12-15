@@ -12,10 +12,24 @@ public class SpiderMonster : MonsterBase
     public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0) { }
     void Start()
     {
+        base.Start();
         size = 0.15f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
+    }
+    
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
     }
     
     public override void AddMonsterProp()

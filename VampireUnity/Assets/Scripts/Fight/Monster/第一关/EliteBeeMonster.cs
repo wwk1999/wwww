@@ -37,10 +37,21 @@ public class EliteBeeMonster : MonsterBase
 
     public void Start()
     {
+        base.Start();
         size = 0.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+    }
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
+        MonsterSpineName.Skill1Name = "skill";
+
     }
     public override void AddMonsterProp()
     {

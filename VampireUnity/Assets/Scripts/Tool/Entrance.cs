@@ -17,8 +17,8 @@ public class Entrance : MonoBehaviour
             AudioController.S.BGAudioSource.clip = Resources.Load<AudioClip>("Audio/BG/Level1BG");
             AudioController.S.BGAudioSource.Play();
 
-            GameController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp;
-            GameController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp;
+            GameController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp*100;
+            GameController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp*100;
             GameController.S.GameDefense = GlobalPlayerAttribute.TotalDefense;
             GameController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
             GameController.S.GameCrit = GlobalPlayerAttribute.TotalCRIT;
@@ -451,6 +451,12 @@ public class Entrance : MonoBehaviour
         {
             for (int i = 0; i < 100; i++)
             {
+                var Huangzhu =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangZhuMonster").GetComponent<Huangzhu>(),
+                        GameController.S.transform);
+                Huangzhu.gameObject.SetActive(false);
+                GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
+                
                 var chongziMonster =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level2/ChongZiMonster").GetComponent<ChongZiMonster>(),
                         GameController.S.transform);
@@ -489,6 +495,8 @@ public class Entrance : MonoBehaviour
                 daZuiSkillTriggerRight.gameObject.SetActive(false);
                 GameController.S.DaZuiSkillTriggerQueueRight.Enqueue(daZuiSkillTriggerRight.GetComponent<DaZuiSkillTriggerRight>());
                 
+                Collider2D Huangzhucollider2D=Huangzhu.transform.Find("Collider").GetComponent<Collider2D>();
+                GameController.S.MonsterColliderDic.Add(Huangzhucollider2D,Huangzhu.GetComponent<MonsterBase>());
                 
                 Collider2D chongzicollider2D=chongziMonster.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(chongzicollider2D,chongziMonster.GetComponent<MonsterBase>());
@@ -552,12 +560,6 @@ public class Entrance : MonoBehaviour
                         GameController.S.transform);
                 huangshu.gameObject.SetActive(false);
                 GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
-
-                var Huangzhu =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangZhuMonster").GetComponent<Huangzhu>(),
-                        GameController.S.transform);
-                Huangzhu.gameObject.SetActive(false);
-                GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
                 
                 var KuLou = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/KuLouMonster").GetComponent<KuLou>(), GameController.S.transform);
                 KuLou.gameObject.SetActive(false);
@@ -577,9 +579,6 @@ public class Entrance : MonoBehaviour
                 
                 Collider2D Huangshucollider2D=huangshu.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(Huangshucollider2D,huangshu.GetComponent<MonsterBase>());
-                
-                Collider2D Huangzhucollider2D=Huangzhu.transform.Find("Collider").GetComponent<Collider2D>();
-                GameController.S.MonsterColliderDic.Add(Huangzhucollider2D,Huangzhu.GetComponent<MonsterBase>());
                 
                 Collider2D KuLoucollider2D=KuLou.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(KuLoucollider2D,KuLou.GetComponent<MonsterBase>());

@@ -14,6 +14,16 @@ public class EliteDaZuiMonster : MonsterBase
     public ParticleSystem Fire;
     public EliteDaZuiMonster() : base(MonsterType.Elite, "EliteDaZuiMonster", 1, 1000, 0.3f, 20, 5, 50, 100, 10) { }
 
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
+        MonsterSpineName.Skill1Name = "skill";
+
+    }
     public override void AddMonsterSourceStone()
     {
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,2));
@@ -80,7 +90,6 @@ public class EliteDaZuiMonster : MonsterBase
     
     public void AttackBeginLeft()
     {
-        IsAttack = true;
         Dir = false;
         monsterSkeletonAnimation.AnimationState.SetAnimation(0,"skill", true);
         Speed = 0;
@@ -94,7 +103,6 @@ public class EliteDaZuiMonster : MonsterBase
     public void AttackBeginRight()
     {
         Dir = true;
-        IsAttack = true;
         monsterSkeletonAnimation.AnimationState.SetAnimation(0,"skill", true);
         Speed = 0;
         Fire.startRotation = 90* Mathf.Deg2Rad;
@@ -106,7 +114,6 @@ public class EliteDaZuiMonster : MonsterBase
     public void AttackEnd()
     {
         Fire.gameObject.SetActive(false);
-        IsAttack = false;
         Speed = 0.3f;
     }
 
@@ -138,7 +145,7 @@ public class EliteDaZuiMonster : MonsterBase
             AttackBeginRight();
             currentTime = 0f;
         }
-        if (!IsDead&&!IsAttack)
+        if (!IsDead)
         {
             MonsterMove();
             SpriteFlipX(true);

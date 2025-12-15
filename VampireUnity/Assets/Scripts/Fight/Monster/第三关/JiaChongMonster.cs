@@ -27,6 +27,17 @@ public class JiaChongMonster : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Blue, 10));
     }
     
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
+        MonsterSpineName.Skill1Name = "skill";
+
+    }
+    
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);

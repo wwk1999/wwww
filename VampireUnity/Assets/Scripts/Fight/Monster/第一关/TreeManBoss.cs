@@ -30,10 +30,16 @@ public class TreeManBoss : MonsterBase
 
        ObserverModuleManager.S.RegisterEvent(ConstKeys.TreeManFireSkill1,TreeManFireSkill1);
        ObserverModuleManager.S.RegisterEvent(ConstKeys.TreeManDashSkill1,TreeManDashSkill1);
+       
+       MonsterSpineName.AttackName = "attack";
+       MonsterSpineName.HitName = "hit";
+       MonsterSpineName.MoveName = "walk";
+       MonsterSpineName.DieName = "die_02";
     }
 
     public void Start()
     {
+        base.Start();
         size = 1f;
         AddMonsterEquip();
         AddMonsterSourceStone();

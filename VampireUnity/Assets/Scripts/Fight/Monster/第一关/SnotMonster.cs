@@ -16,10 +16,20 @@ public class SnotMonster : MonsterBase
 
     private void Start()
     {
+        base.Start();
         size = 0.15f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+    }
+    
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
     }
 
     private void RandomDelayDie()

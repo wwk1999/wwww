@@ -797,7 +797,7 @@ public class GameController : XSingleton<GameController>
                 }
                 else
                 {
-                    monsterBase = XiNiuMonsterQueue.Dequeue();
+                    monsterBase = HuangZhuQueue.Dequeue();
                 }
 
                 monsterBase.gameObject.SetActive(true);

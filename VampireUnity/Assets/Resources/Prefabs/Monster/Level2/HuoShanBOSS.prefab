@@ -76,7 +76,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5062897436509235299}
+  m_Father: {fileID: 5411353151951784384}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4870978316487708033
 MeshRenderer:
@@ -202,7 +202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3709659037755076425}
+  - {fileID: 5411353151951784384}
   - {fileID: 5245990120422670870}
   - {fileID: 4701954712840554188}
   - {fileID: 2229826644617276990}
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd8c7a5d66664b1795db02880e82d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 3882955410951362448}
   size: 0
   monsterSkeletonAnimation: {fileID: 5740480748716108104}
   hpSlider: {fileID: 7089296241878496232}
@@ -258,6 +259,38 @@ MonoBehaviour:
   collider2D: {fileID: 9128192024816257956}
   rigidbody2D: {fileID: 5959192019789564079}
   huoShanTrigger: {fileID: 0}
+--- !u!1 &3882955410951362448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5411353151951784384}
+  m_Layer: 0
+  m_Name: parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5411353151951784384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882955410951362448}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 3709659037755076425}
+  m_Father: {fileID: 5062897436509235299}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5756122034095441968
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,6 +28,16 @@ public class XueQiE : MonsterBase
             WeaponSourceStoneType.Duration, 0));
     }
     
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack1";
+        MonsterSpineName.HitName = "injured";
+        MonsterSpineName.MoveName = "move";
+        MonsterSpineName.DieName = "fail";
+        MonsterSpineName.Skill1Name = "skill1";
+
+    }
     public override void AddMonsterEquip()
     {
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 1));
@@ -99,56 +109,6 @@ public class XueQiE : MonsterBase
         }
     }
     
-    public void MonsterMove1()
-    {
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move")
-        {
-            GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
-        }
-        else
-        {
-            GetComponent<Rigidbody2D>().velocity = direction.normalized * 0; 
-        }
-    }
-    
-    public void SpriteFlipX1(bool isRight)
-    {
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "move")
-        {
-            return;
-        }
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
-        if(dis<0.2f)
-        {
-            //如果距离小于0.2f，则不翻转
-            return;
-        }
-        //翻转精灵
-        if (isRight)
-        {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
-            {
-                parent.transform.localScale = new Vector3(1, 1, 1);
-            }
-            else
-            {
-                parent.transform.localScale = new Vector3(-1, 1, 1);
-            }
-        }else
-        {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
-            {
-                parent.transform.localScale = new Vector3(-1, 1, 1);
-            }
-            else
-            {
-                parent.transform.localScale = new Vector3(1, 1, 1);
-            }
-        }
-        
-    }
-    
     void Update()
     {
         if (IsDead) return;
@@ -164,8 +124,8 @@ public class XueQiE : MonsterBase
         
         if (!IsDead)
         {
-            MonsterMove1();
-            SpriteFlipX1(false);
+            MonsterMove();
+            SpriteFlipX(false);
         }
     }
     

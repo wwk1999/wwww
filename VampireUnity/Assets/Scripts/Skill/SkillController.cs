@@ -29,21 +29,15 @@ public class SkillController : XSingleton<SkillController>
     public float IceArrowtime => (3f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
     public float IceExplosiontime => (10f*(1-GlobalPlayerAttribute.Skill3CdNum/100.0f));
     public float IceBalltime => (10f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
-    public float Dashtime => (10f*(1-GlobalPlayerAttribute.DashCdNum/100.0f));
+    public float Dashtime => GetDashCd();
     public float DianQuantime => (10f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
     
     [NonSerialized]public float NormalAttackCoolingtime = 1f;
     [NonSerialized]public float IceArrowCoolingtime = 3f;
     [NonSerialized]public float IceExplosionCoolingtime = 10f;
     [NonSerialized]public float IceBallCoolingtime = 10f;
-    public float DashCoolingtime
-    {
-        get
-        {
-            return GetDashCd();
-        }
-        set => DashCoolingtime = value;
-    }
+    public float DashCoolingtime = 0;
+   
 
     [NonSerialized]public float DianQuanCoolingtime = 10f;
     
@@ -81,14 +75,13 @@ public class SkillController : XSingleton<SkillController>
 
     public float GetDashCd()
     {
+        float cd = (10f * (1 - GlobalPlayerAttribute.DashCdNum / 100.0f));
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DashCd))
         {
-            return 7f;
+            cd *= 0.7f;
         }
-        else
-        {
-            return 10f;
-        }
+
+        return cd;
     }
 
 

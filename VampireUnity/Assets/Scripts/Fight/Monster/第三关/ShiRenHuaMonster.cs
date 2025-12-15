@@ -24,6 +24,17 @@ public class ShiRenHuaMonster : MonsterBase
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
             WeaponSourceStoneType.Duration, 2));
     }
+    
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
+        MonsterSpineName.Skill1Name = "skill";
+
+    }
 
     public override void AddMonsterEquip()
     {

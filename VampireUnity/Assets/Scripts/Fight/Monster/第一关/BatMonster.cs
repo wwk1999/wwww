@@ -12,10 +12,20 @@ public class BatMonster : MonsterBase
     public BatMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0) { }
     void Start()
     {
+        base.Start();
         size = 0.15f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+    }
+
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
     }
    
     public override void Skill()
@@ -37,7 +47,7 @@ public class BatMonster : MonsterBase
             AttackBegin();
             currentTime = 0f;
         }
-        if (!IsDead&&!IsAttack)
+        if (!IsDead&&!IsDash)
         {
             MonsterMove();
             SpriteFlipX(false);
@@ -50,7 +60,7 @@ public class BatMonster : MonsterBase
     {
         transform.Find("MonsterWarning").gameObject.SetActive(true);
         transform.Find("MonsterWarning").GetComponent<Animator>().Play("MonsterWarning");
-        IsAttack = true;
+        IsDash = true;
         
         // monsterSkeletonAnimation.AnimationState.SetAnimation(0,"attack", false);
          Speed = 0;

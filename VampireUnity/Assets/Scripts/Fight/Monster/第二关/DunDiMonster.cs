@@ -31,6 +31,15 @@ public class DunDiMonster : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Green, 10));
     }
     
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
+    }
+    
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);
@@ -78,11 +87,9 @@ public class DunDiMonster : MonsterBase
 
     public void AttackBegin()
     {
-        if (IsAttack) return;
         _targetpos= GameController.S.gamePlayer.transform.position;
         monsterSkeletonAnimation.AnimationState.SetAnimation(0,"skill", false);
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        IsAttack = true;
         StartCoroutine(AttackEnd());
     }
     
@@ -112,7 +119,7 @@ public class DunDiMonster : MonsterBase
             AttackBegin();
             currentTime = 0f;
         }
-        if (!IsDead&&!IsAttack)
+        if (!IsDead)
         {
             MonsterMove();
             SpriteFlipX(true);

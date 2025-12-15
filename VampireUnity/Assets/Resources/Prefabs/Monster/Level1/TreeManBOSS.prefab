@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4936157220851954127}
+  - {fileID: 6108698931034447534}
   - {fileID: 4263397349004360686}
   - {fileID: 2778140453400306346}
   - {fileID: 9146937164746908724}
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d50fe43ffdd40edab1849f1ecbf29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 776398213182986402}
   size: 0
   monsterSkeletonAnimation: {fileID: 8786861427826276177}
   hpSlider: {fileID: 1262446244510452240}
@@ -84,6 +85,38 @@ MonoBehaviour:
   collider2D: {fileID: 8226410618161472946}
   rigidbody2D: {fileID: 309112739602808913}
   treeManJumpTrigger: {fileID: 7446876603436987670}
+--- !u!1 &776398213182986402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6108698931034447534}
+  m_Layer: 0
+  m_Name: parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6108698931034447534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776398213182986402}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 4936157220851954127}
+  m_Father: {fileID: 4874842530216351142}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5341893707203114780
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +307,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 4874842530216351142}
+  m_Father: {fileID: 6108698931034447534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2063748942968246825
 MeshRenderer:

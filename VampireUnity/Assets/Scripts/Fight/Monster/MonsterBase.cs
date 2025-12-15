@@ -51,10 +51,22 @@ public class MonsterProp
     }
 }
 
+public class MonsterSpineName
+{
+    public string MoveName;
+    public string HitName;
+    public string DieName;
+    public string AttackName;
+    public string Skill1Name;
+    public string Skill2Name;
+    public string Skill3Name;
+}
 public abstract class MonsterBase : MonoBehaviour
 {
     [NonSerialized] public float YiDianTime = 0;
     [NonSerialized] public float JianSuTime = 0;
+    [NonSerialized] public MonsterSpineName MonsterSpineName=new MonsterSpineName();
+    public GameObject parent;
 
     
     
@@ -70,7 +82,7 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized]public int BloodEnergy;//血能
     [NonSerialized]public int EvolutionEnergy;//源能
     [NonSerialized]public bool IsDead=false;//是否死亡
-    [NonSerialized]public bool IsAttack=false;//是否攻击
+    [NonSerialized]public bool IsDash=false;//是否攻击
     [NonSerialized]public State MonsterState = State.None;
     [NonSerialized]public bool IsSkill=false;//是否在放技能
     [NonReorderable] public float size;//怪物大小
@@ -101,7 +113,6 @@ public abstract class MonsterBase : MonoBehaviour
     public Collider2D collider2D;
     public Rigidbody2D rigidbody2D;
 
-    private SkeletonData skeletonData = null;
 
 
     //构造方法
@@ -126,18 +137,7 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void Awake()
     {
-        skeletonData = monsterSkeletonAnimation.SkeletonDataAsset.GetSkeletonData(false);
         ObserverModuleManager.S.RegisterEvent(ConstKeys.Resumemonster,Resumemonster);
-        Spine.Animation walkAnimation = skeletonData.FindAnimation("walk");
-        if (walkAnimation != null)
-        {
-            monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
-        }
-        else
-        {
-            monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete1;
-        }
-        
         CurrentHp = MaxHp;
         if (MonsterType != MonsterType.Boss)
         {
@@ -149,20 +149,18 @@ public abstract class MonsterBase : MonoBehaviour
     {
         if (monsterSkeletonAnimation != null)
         {
-            Spine.Animation walkAnimation = skeletonData.FindAnimation("walk");
-            if (walkAnimation != null)
-            {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-            }
-            else
-            {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
-            }
+            monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
         else
         {
-            monsterAnimator.Play("move");
+            monsterAnimator.Play(MonsterSpineName.MoveName);
         }
+    }
+
+    private void OnDestroy()
+    {
+        monsterSkeletonAnimation.AnimationState.Complete -= OnAnimationComplete;
     }
 
     private float hurtTime = 0.75f;
@@ -265,37 +263,13 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Resumemonster(object[] args)
     {
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, true);
         IsSkill = false;
         MonsterState= State.Move;
         CameraContraller.CameraStatus= CameraStatus.MoveToPlayer;
     }
 
     public abstract void Skill();
-
-
-    public void OnAnimationComplete(TrackEntry trackEntry)
-    {
-        if (trackEntry.Animation.Name == "attack1")
-        {
-            MonsterState = State.Move;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
-        }
-        //如果动画播放完毕
-        if (trackEntry.Animation.Name == "hit"||trackEntry.Animation.Name == "attack"||trackEntry.Animation.Name == "skill"||trackEntry.Animation.Name == "skill_01"||trackEntry.Animation.Name == "skill_02"||trackEntry.Animation.Name == "skill_03"||trackEntry.Animation.Name == "injured")
-        {
-            //monsterAnimator.SetBool("isHurt", false);
-            MonsterState = State.Move;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-        }
-        if (trackEntry.Animation.Name == "Exit")
-        {
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-            MonsterState= State.Move;
-            FightBGController.S.TreeManBoss.IsSkill = false;
-            CameraContraller.CameraStatus= CameraStatus.MoveToPlayer;
-        }
-    }
 
     IEnumerator DelayXieZi()
     {
@@ -305,60 +279,50 @@ public abstract class MonsterBase : MonoBehaviour
     }
     
     
-    public void OnAnimationComplete1(TrackEntry trackEntry)
+    public void OnAnimationComplete(TrackEntry trackEntry)
     {
-        if (trackEntry.Animation.Name == "fail")
+        if (trackEntry.Animation.Name ==MonsterSpineName.DieName)
         {
             Destroy(gameObject);
             return;
         }
-        if (trackEntry.Animation.Name == "stealth")//沙漠蜥蜴
+        if (trackEntry.Animation.Name == MonsterSpineName.Skill1Name)//沙漠蜥蜴
         {
             isSkill1 = false;
             ShaXiYi shaMoElite=this as ShaXiYi;
             shaMoElite.hideTime = 10;
         }
-        if (trackEntry.Animation.Name == "skill1")//沙漠蜥蜴
-        {
-            isSkill1 = false;
-        }
+       
         if (isSkill2)
         {
             isSkill2 = false;
             if (this is ZhaoZeBoss)
             {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.Skill2Name, false);
             }
 
             if (this is XieZi)
             {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.Skill2Name, false);
                 StartCoroutine(DelayXieZi());
             }
         }
         else if (isSkill1)
         {
-            if (skeletonData.FindAnimation("skill1") != null)
-            {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
-            }
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.Skill1Name, false);
             if (this is ShaMoElite)
             {
                 ShaMoElite shaMoElite=this as ShaMoElite;
                 shaMoElite.CheckSkill();
             }
-            if (this is ShaXiYi)
-            {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "stealth", false);
-            }
         }
         else if(isAttack)
         {
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "attack1", false);
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
         }
         else
         {
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
     }
     
@@ -464,25 +428,14 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void MonsterMove()
     {
-        float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
-        if (dis < GameController.S.gamePlayer.size + size)
-        {
-            if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "attack")
-            {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "attack", true);
-            }
-            return;
-        }
-        //朝着主角以speed的速度前进
         Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-        //刚体移动
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0) == null)
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName||IsDash)
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
         }
-        else if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "Exit" && !IsSkill)
+        else
         {
-            GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
+            GetComponent<Rigidbody2D>().velocity = direction.normalized * 0; 
         }
     }
     
@@ -499,6 +452,10 @@ public abstract class MonsterBase : MonoBehaviour
     // }
     public void SpriteFlipX(bool isRight)
     {
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != MonsterSpineName.MoveName)
+        {
+            return;
+        }
         float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
         if(dis<0.2f)
         {
@@ -510,21 +467,21 @@ public abstract class MonsterBase : MonoBehaviour
         {
             if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
             {
-                monsterSkeletonAnimation.skeleton.FlipX = false;
+                parent.transform.localScale = new Vector3(1, 1, 1);
             }
             else
             {
-                monsterSkeletonAnimation.skeleton.FlipX = true;
+                parent.transform.localScale = new Vector3(-1, 1, 1);
             }
         }else
         {
             if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
             {
-                monsterSkeletonAnimation.skeleton.FlipX = true;
+                parent.transform.localScale = new Vector3(-1, 1, 1);
             }
             else
             {
-                monsterSkeletonAnimation.skeleton.FlipX = false;
+                parent.transform.localScale = new Vector3(1, 1, 1);
             }
         }
         
@@ -659,29 +616,13 @@ public abstract class MonsterBase : MonoBehaviour
        
         if (monsterSkeletonAnimation != null)
         {
-            Spine.Animation walkAnimation = skeletonData.FindAnimation("fail");
-            if (walkAnimation != null)
-            {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "fail", false);
-                Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
-            }
-            else
-            {
-                if (this is TreeManBoss)
-                {
-                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die_02", false);
-                }
-                else
-                {
-                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die", false);
-                    Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
-                }
-            }
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.DieName, false);
+            Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
         }
         else
         {
             isMove=false;
-            monsterAnimator.Play("fail");
+            monsterAnimator.Play(MonsterSpineName.DieName);
             Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
         }
 
@@ -879,15 +820,7 @@ public abstract class MonsterBase : MonoBehaviour
 
             if (monsterSkeletonAnimation != null)
             { 
-                Spine.Animation walkAnimation = skeletonData.FindAnimation("hit");
-                if (walkAnimation != null)
-                {
-                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, "hit", false);
-                }
-                else
-                {
-                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, "injured", false);
-                }
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
             }
             else
             {
@@ -908,22 +841,7 @@ public abstract class MonsterBase : MonoBehaviour
             if(MonsterState== State.Die) return;
             if (MonsterState == State.Move)
             {
-                Spine.Animation walkAnimation = skeletonData.FindAnimation("hit");
-                if (walkAnimation != null)
-                {
-                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, "hit", false);
-                }
-                else
-                {
-                    if (isBeatback)
-                    {
-                        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "beatback", false);
-                    }
-                    else
-                    {
-                        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "injured", false);
-                    }
-                }                
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
                 CurrentHp -= finalDamage;
                 hpSlider.value = (float)CurrentHp / MaxHp;
                 if (CurrentHp <= 0 && !IsDead)
