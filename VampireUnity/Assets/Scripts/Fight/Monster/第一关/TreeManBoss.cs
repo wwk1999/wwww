@@ -17,8 +17,9 @@ public class TreeManBoss : MonsterBase
    [NonSerialized]public Vector2 Dashdirection = Vector2.zero;
    [NonSerialized]public Vector2 GroundFissurepos = Vector2.zero;
    [NonSerialized]public Vector2 BaoZhapos = Vector2.zero;
-   public TreeManJumpTrigger treeManJumpTrigger;
-   [NonSerialized]public bool CircleAttackEnd = false;
+   
+
+   public Transform AttackTrans;
    //[NonSerialized] public bool HaveCircleAttack = false;
 
     public  void Awake()
@@ -26,9 +27,7 @@ public class TreeManBoss : MonsterBase
         size = 1.5f;
         // 获取 SkeletonAnimation
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
-
-       ObserverModuleManager.S.RegisterEvent(ConstKeys.TreeManFireSkill1,TreeManFireSkill1);
-       ObserverModuleManager.S.RegisterEvent(ConstKeys.TreeManDashSkill1,TreeManDashSkill1);
+        monsterSkeletonAnimation.AnimationState.Complete += Complete;
        
        MonsterSpineName.AttackName = "attack";
        MonsterSpineName.HitName = "hit";
@@ -40,9 +39,14 @@ public class TreeManBoss : MonsterBase
        MonsterSpineName.Skill3Name = "skill_03";
     }
 
+    public void Complete(TrackEntry trackEntry)
+    {
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", false);
+    }
+
     public void Start()
     {
-        size = 1f;
+        size = 1.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
@@ -57,7 +61,6 @@ public class TreeManBoss : MonsterBase
         {
             Debug.Log("执行攻击逻辑");
            
-            TreeManDash(Dashdirection);
         }
         else if (e.Data.Name == "tiao")
         {
@@ -70,78 +73,6 @@ public class TreeManBoss : MonsterBase
         }
     }
 
-    public void TreeManDashSkill1(object[] args)
-    {
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        SqrtAttack sqrtAttack = FightBGController.S.SqrtAttackQueue.Dequeue();
-        sqrtAttack.gameObject.SetActive(true);
-        sqrtAttack.transform.position = transform.position;
-        //主角朝最近怪物的方向
-        Vector3 direction = (GameController.S.gamePlayer.transform.position - transform.position).normalized;
-        Dashdirection = direction;
-        //设置枪的位置
-        //currentGun.transform.position = transform.position + direction * _gunDistance;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        sqrtAttack.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        sqrtAttack.transform.position += direction * 4f;
-        //播放冲刺动画，chong的时候开始移动
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_04", false);
-
-       // StartCoroutine(TreeManDash(2f,direction));
-    }
-
-    private void TreeManDash(Vector2 dir)
-    {
-        //朝着主角以speed的速度前进
-        GetComponent<Rigidbody2D>().velocity = dir.normalized * 10;
-        StartCoroutine(TreeManDashEnd(1f));
-    }
-
-    private IEnumerator TreeManDashEnd(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-        MonsterState= State.Move;
-    }
-
-
-
-    public void TreeManFireSkill1(object[] args)
-    {
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_03", true);
-        StartCoroutine(WaitForTime( 0.5f));
-    }
-    private IEnumerator WaitForTime(float waitTime)
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            Debug.Log("TreeManFire技能");
-        
-            // 从队列中取出 CircleAttack
-            CircleAttack circleAttack = FightBGController.S.CircleAttackQueue.Dequeue();
-            // 随机生成速度
-            Vector2 linearVelocity = new Vector2(UnityEngine.Random.Range(-2.5f, 2.5f), UnityEngine.Random.Range(3f, 6f));
-            // 计算落地方位
-            Vector2 pos = FightBGController.S.CalculateLandingPosition(transform.position, linearVelocity, UnityEngine.Random.Range(2f, 3f), 3f);
-            circleAttack.transform.position = pos;
-            circleAttack.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
-            circleAttack.gameObject.SetActive(true);
-            circleAttack.circleAttackState = CircleAttackState.TreeManSkill2;
-            yield return new WaitForSeconds(waitTime);
-        }
-        yield return new WaitForSeconds(1f);
-        MonsterState= State.Move;
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-    }
-
-    private IEnumerator WaitForTimeStill(float waitTime, TreeManFire fire)
-    {
-        yield return new WaitForSeconds(waitTime);
-        fire.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        fire.GetComponent<Rigidbody2D>().gravityScale= 0f;
-    }
-
-
    
     public override void Die()
     {
@@ -150,7 +81,6 @@ public class TreeManBoss : MonsterBase
         CreateBloodEnergy();
         CreateEquip();
         CreateWeaponSourceStone();
-        TreeManBossDie();
         FightBGController.S.PlaySuccessAnim();
         CreateProp();
     }
@@ -160,50 +90,7 @@ public class TreeManBoss : MonsterBase
         MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
 
-    public void TreeManBossDie()
-    {
-        GameController.S.GameOver = true;
-        var protalopen=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/PortalGreenOpen"));
-        protalopen.transform.position = transform.position;
-        GameController.S.StartCoroutine(ProtalIdle(protalopen,transform.position));
-       // hpSlider.gameObject.SetActive(false);
-        Destroy(gameObject);
-    }
     
-    //携程等待1s
-    private IEnumerator ProtalIdle(GameObject obj,Vector3 position)
-    {
-        yield return new WaitForSeconds(0.8f);
-        Destroy(obj);
-        var protalidle=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/PortalGreenIdle"));
-        protalidle.transform.position =position;
-    }
-    
-    public void Skill1Pre()
-    {
-        Debug.Log("Skill1Pre");
-        //播放CircleAttack动画
-        if (!FightBGController.S.HaveCircleAttack)
-        {
-            Skill1End(GameController.S.gamePlayer.transform.position);
-            FightBGController.S.CircleAttack.SetActive(true);
-            FightBGController.S.CircleAttack.GetComponent<CircleAttack>().circleAttackState = CircleAttackState.TreeManSkill1;
-            FightBGController.S.CircleAttack.transform.position=GameController.S.gamePlayer.transform.position;
-        }
-    }
-    
-    
-
-    public void Skill1End(Vector3 pos)
-    {
-        GroundFissurepos = pos;
-        // 设置动画状态为“skill_01”
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_01", false);
-
-        // 开启协程进行平滑移动
-        //StartCoroutine(MoveToTarget(pos, 5f)); // 移动速度：5f
-    }
 
     private IEnumerator MoveToTarget(Vector3 targetPosition, float speed)
     {
@@ -234,9 +121,28 @@ public class TreeManBoss : MonsterBase
     private void Update()
     {
         if (IsDead) return;
-       // base.Update();
+        if (Vector2.Distance(AttackTrans.position, GameController.S.gamePlayer.transform.position) < size&&!IsSkill)
+        {
+            isAttack = true;
+            if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "attack")
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "attack", false);
+            }
+        }
+
+        BossMove();
+        SpriteFlipX(true);
     }
-    
+
+    public void BossMove()
+    {
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "walk" ||
+            monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "hit")
+        {
+            Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+            rigidbody2D.velocity = direction.normalized * Speed; 
+        }
+    }
 
     public override void Skill() { }
     public override void AddMonsterEquip()

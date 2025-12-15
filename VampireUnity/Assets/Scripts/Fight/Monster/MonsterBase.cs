@@ -86,6 +86,7 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized]public bool IsDash=false;//是否攻击
     [NonSerialized]public State MonsterState = State.None;
     [NonSerialized]public bool IsSkill=false;//是否在放技能
+    [NonSerialized]public bool IsAttack=false;//是否在放技能
     [NonReorderable] public float size;//怪物大小
     public SkeletonAnimation monsterSkeletonAnimation;
     //public SpriteRenderer monsterSpriteRenderer;
@@ -851,26 +852,17 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else
         {
-            if(MonsterState== State.Die) return;
-            if (MonsterState == State.Move)
+            if (!isAttack && !IsSkill)
             {
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
-                CurrentHp -= finalDamage;
-                hpSlider.value = (float)CurrentHp / MaxHp;
-                if (CurrentHp <= 0 && !IsDead)
-                {
-                    IsDead = true;
-                    Die();
-                }
-            }else if (MonsterState == State.Skill1 || MonsterState == State.Skill2 || MonsterState == State.Skill3)
+            }
+            CurrentHp -= finalDamage;
+            hpSlider.maxValue = MaxHp;
+            hpSlider.value = CurrentHp;
+            if (CurrentHp <= 0 && !IsDead)
             {
-                CurrentHp -= finalDamage;
-                hpSlider.value = (float)CurrentHp / MaxHp;
-                if (CurrentHp <= 0 && !IsDead)
-                {
-                    IsDead = true;
-                    Die();
-                }
+                IsDead = true;
+                Die();
             }
         }
     }
