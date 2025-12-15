@@ -51,6 +51,11 @@ public class GameController : XSingleton<GameController>
     public BatMonster batMonster;
     public SpiderMonster spiderMonster;
     public EliteBeeMonster elitebeeMonster;
+    
+    //Boss攻击提示对象池
+    [NonSerialized] public Queue<CircleAttack> CircleQueue = new Queue<CircleAttack>();
+    [NonSerialized] public Queue<SqrtAttack> SqrtQueue = new Queue<SqrtAttack>();
+
     //第一关怪
     [NonSerialized] public Queue<SnotMonster> SnotMonsterQueue = new Queue<SnotMonster>();
     [NonSerialized] public Queue<EliteBeeMonster> EliteBeeMonsterQueue = new Queue<EliteBeeMonster>();
@@ -253,6 +258,26 @@ public class GameController : XSingleton<GameController>
     //杀死怪物数量
     [NonSerialized]public int KillMonsterCount=0;
 
+
+    public void CreateCircleAttack(Transform transform)
+    {
+        var circle=CircleQueue.Dequeue();
+        circle.transform.position = transform.position;
+        circle.gameObject.SetActive(true);
+    }
+    
+    public void CreateCircleAttack(Transform from, Vector2 dir)
+    {
+        var sqrt = SqrtQueue.Dequeue();
+        sqrt.transform.position = from.position;
+        sqrt.gameObject.SetActive(true);
+        if (dir.sqrMagnitude > 0.0001f)
+        {
+            dir = dir.normalized;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg; 
+            sqrt.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        }
+    }
     
     public void RegisterEvent()
     {

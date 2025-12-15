@@ -36,6 +36,18 @@ public class Entrance : MonoBehaviour
     //实例化
         //FightBGController
         
+        //Boss攻击对象池
+        for (int i = 0; i < 100; i++)
+        {
+            CircleAttack circle = Instantiate(Resources.Load<CircleAttack>("Prefabs/Tool/CircleAttack"));
+            circle.gameObject.SetActive(false);
+            GameController.S.CircleQueue.Enqueue(circle);
+            
+            SqrtAttack sqrt = Instantiate(Resources.Load<SqrtAttack>("Prefabs/Tool/SqrtAttack"));
+            sqrt.gameObject.SetActive(false);
+            GameController.S.SqrtQueue.Enqueue(sqrt);
+        }
+        
         
         //装备对象池
         for (int i = 0; i < 10; i++)
