@@ -18,10 +18,7 @@ public class SpiderMonster : MonsterBase
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
-        MonsterSpineName.AttackName = "attack";
-        MonsterSpineName.HitName = "hit";
-        MonsterSpineName.MoveName = "walk";
-        MonsterSpineName.DieName = "die";
+        
     }
     
     public void Awake()
@@ -77,11 +74,6 @@ public class SpiderMonster : MonsterBase
             isAttack=false;
         }
         currentTime+= Time.deltaTime;
-        if(currentTime>= attackTime)
-        {
-           // Skill();
-            currentTime = 0f;
-        }
         if (!IsDead)
         {
             MonsterMove();

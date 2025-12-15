@@ -259,17 +259,17 @@ public class GameController : XSingleton<GameController>
     [NonSerialized]public int KillMonsterCount=0;
 
 
-    public void CreateCircleAttack(Transform transform)
+    public void CreateCircleAttack(Vector2 pos)
     {
         var circle=CircleQueue.Dequeue();
-        circle.transform.position = transform.position;
+        circle.transform.position = pos;
         circle.gameObject.SetActive(true);
     }
     
-    public void CreateCircleAttack(Transform from, Vector2 dir)
+    public void CreateCircleAttack(Vector2 pos, Vector2 dir)
     {
         var sqrt = SqrtQueue.Dequeue();
-        sqrt.transform.position = from.position;
+        sqrt.transform.position = pos;
         sqrt.gameObject.SetActive(true);
         if (dir.sqrMagnitude > 0.0001f)
         {

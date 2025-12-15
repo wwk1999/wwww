@@ -30,30 +30,33 @@ public class XiNiuMonster : MonsterBase
     {
         // Implement the skill logic here
     }
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+    }
     
-    private void RandomDelayDie()
+    public override void Die()
+    {
+        //生成随机延迟（0-10帧，转换为秒）
+        float randomDelay = UnityEngine.Random.Range(0, 10) * 0.02f; // 假设60FPS，每帧约0.02秒
+        Invoke(nameof(DoRandomDelayDie), randomDelay);
+    }
+    
+    private void DoRandomDelayDie()
     {
         AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
+        CreateBloodEnergy();
         CreateEquip();
-        CreateProp();
+        CreateWeaponSourceStone();
+        
+        // gameObject.SetActive(false);
+        // GameController.S.SnotMonsterQueue.Enqueue(this);
     }
     
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
-    }
-
-    public override void Die()
-    {
-        //生成随机数
-        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
-        Invoke(nameof(RandomDelayDie),randomDelay);
-    }
-    
-   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
+    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);
         if (!IsDead)
@@ -97,8 +100,6 @@ public class XiNiuMonster : MonsterBase
         size = 0.3f;
         AddMonsterEquip();
         AddMonsterSourceStone();
-        AddMonsterProp();
-
         
         // 确保 isMove 初始化为 true（基类已初始化，这里只是确保）
         isMove = true;

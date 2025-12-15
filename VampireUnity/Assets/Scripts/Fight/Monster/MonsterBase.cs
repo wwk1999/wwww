@@ -109,6 +109,8 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized] public bool isAttack = false;
     [NonSerialized]public bool isSkill1 = false;
     [NonSerialized]public bool isSkill2 = false;
+    [NonSerialized]public bool isSkill3 = false;
+
 
     [NonSerialized]public bool isBeatback = true;
 
