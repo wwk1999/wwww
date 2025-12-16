@@ -463,9 +463,58 @@ public class BagController : XSingleton<BagController>
             EquipidSpriteConfig.Add("ZhaoZeHelmet", ResourcesConfig.ZhaoZeHelmet);
         }
     }
-    
 
-    public void SetPlayerWearGrid(BagGrid equipGrid)
+    public void UnInstallPlayerWearGrid(BagGrid equipGrid)
+    {
+        EquipTable equipTable = equipGrid.tableBase as EquipTable;
+        switch (equipTable.equip_type_id)
+        {
+            case 1:
+                if (PlayerEquipConfig.CloakId == equipTable.equipid)
+                {
+                    PlayerCloakGrid = null;
+                }
+
+                break;
+            case 2:
+                if (PlayerEquipConfig.ClothId == equipTable.equipid)
+                {
+                    PlayerClothGrid = null;
+                }
+
+                break;
+            case 3:
+                if (PlayerEquipConfig.HelmetId == equipTable.equipid)
+                {
+                    PlayerHelmetGrid = null;
+                }
+
+                break;
+            case 4:
+                if (PlayerEquipConfig.NecklaceId == equipTable.equipid)
+                {
+                    PlayerNecklaceGrid = null;
+                }
+
+                break;
+            case 5:
+                if (PlayerEquipConfig.RingId == equipTable.equipid)
+                {
+                    PlayerRingGrid = null;
+                }
+
+                break;
+            case 6:
+                if (PlayerEquipConfig.ShoeId == equipTable.equipid)
+                {
+                    PlayerShoeGrid = null;
+                }
+
+                break;
+        }
+    }
+
+    public void InstallPlayerWearGrid(BagGrid equipGrid)
     {
         EquipTable equipTable = equipGrid.tableBase as EquipTable;
         switch (equipTable.equip_type_id)
@@ -717,7 +766,7 @@ public class BagController : XSingleton<BagController>
                     countTransform.gameObject.SetActive(false);
 
                     bagGridComponent.tableBase = list[i];
-                    SetPlayerWearGrid(bagGridComponent);
+                    InstallPlayerWearGrid(bagGridComponent);
 
                     // 设置装备背景颜色
                     Transform equipGridBGTransform = bagGridins.transform.Find("parent/EquipGridBG");

@@ -201,6 +201,7 @@ public class EquipAttributePanel : MonoBehaviour
                     UninstallE();
                     BagController.S.RefreshPlayerEquip();    
                     StoreController.S.SaveStoreData();
+                    BagController.S.UnInstallPlayerWearGrid(grid);
                     Destroy(gameObject);
             });
         }
@@ -229,6 +230,7 @@ public class EquipAttributePanel : MonoBehaviour
                     StoreController.S.SaveStoreData();
                     BagController.S.SetE();
                     BagController.S.RefreshPlayerEquip();
+                    BagController.S.InstallPlayerWearGrid(grid);
                     Destroy(gameObject);
             });
         }
