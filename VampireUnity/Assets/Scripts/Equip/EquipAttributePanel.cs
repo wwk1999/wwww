@@ -65,7 +65,14 @@ public class EquipAttributePanel : MonoBehaviour
             return;
         }
 
-        equipName.text = EquipName.EquipNameDic[equip.EquipName];
+        if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+        {
+            equipName.text = EquipName.EquipNameDic[equip.EquipName];
+        }
+        else
+        {
+            equipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+        }
         equipImage.sprite=ResourcesConfig.GetEquipSprite(equip);
 
         //基础属性
@@ -179,31 +186,8 @@ public class EquipAttributePanel : MonoBehaviour
             
             exitButton.onClick.AddListener(() =>
             {
-                Debug.Log("EquipAttributePanel: 点击了退出按钮");
-                
-                try
-                {
-                    // 先销毁蒙层，再销毁自身
-                    if (BagController.S != null)
-                    {
-                        BagController.S.DestroyMaskLayer();
-                    }
-                    else
-                    {
-                        Debug.LogError("EquipAttributePanel: BagController.S为null");
-                    }
-                    
-                    Destroy(gameObject);
-                }
-                catch (System.Exception e)
-                {
-                    Debug.LogError($"EquipAttributePanel: 退出按钮异常: {e.Message}\n{e.StackTrace}");
-                }
+                Destroy(gameObject);
             });
-        }
-        else
-        {
-            Debug.LogError("EquipAttributePanel: exitButton为null");
         }
         
         
@@ -214,37 +198,11 @@ public class EquipAttributePanel : MonoBehaviour
             
             uninstallButton.onClick.AddListener(() =>
             {
-                Debug.Log("EquipAttributePanel: 点击了卸下按钮");
-                
-                try
-                {
                     UninstallE();
                     BagController.S.RefreshPlayerEquip();    
                     StoreController.S.SaveStoreData();
-                    
-                    
-                    
-                    // 先销毁蒙层，再销毁自身
-                    if (BagController.S != null)
-                    {
-                        BagController.S.DestroyMaskLayer();
-                    }
-                    else
-                    {
-                        Debug.LogError("EquipAttributePanel: BagController.S为null");
-                    }
-                    
                     Destroy(gameObject);
-                }
-                catch (System.Exception e)
-                {
-                    Debug.LogError($"EquipAttributePanel: 退出按钮异常: {e.Message}\n{e.StackTrace}");
-                }
             });
-        }
-        else
-        {
-            Debug.LogError("EquipAttributePanel: exitButton为null");
         }
         
         
@@ -269,55 +227,6 @@ public class EquipAttributePanel : MonoBehaviour
                     }
                     PlayerData.S.SaveWearEquip(equip.equip_type_id, equip.equipid);
                     StoreController.S.SaveStoreData();
-                    int equiptype = equip.equip_type_id;
-                    switch (equiptype)
-                    {
-                        case 2:
-                            //将这个装备的属性传到Bagtroller
-                            if (BagController.S.PlayerClothGrid != null)
-                            {
-                                BagController.S.PlayerClothGrid.E.gameObject.SetActive(false);
-                            }
-                            BagController.S.PlayerClothGrid = grid;
-                            break;
-                        case 6:
-                            //将这个装备的属性传到Bagtroller
-                            if (BagController.S.PlayerShoeGrid != null)
-                            {
-                                BagController.S.PlayerShoeGrid.E.gameObject.SetActive(false);
-                            }
-                            BagController.S.PlayerShoeGrid = grid;
-                            break;
-                        case 5:
-                            //将这个装备的属性传到Bagtroller
-                            if (BagController.S.PlayerRingGrid != null)
-                            {
-                                BagController.S.PlayerRingGrid.E.gameObject.SetActive(false);
-                            }
-                            BagController.S.PlayerRingGrid = grid;
-                            break;
-                        case 4:
-                            if (BagController.S.PlayerNecklaceGrid != null)
-                            {
-                                BagController.S.PlayerNecklaceGrid.E.gameObject.SetActive(false);
-                            } 
-                            BagController.S.PlayerNecklaceGrid = grid;
-                            break;
-                        case 3:
-                            if (BagController.S.PlayerHelmetGrid != null)
-                            {
-                                BagController.S.PlayerHelmetGrid.E.gameObject.SetActive(false);
-                            }
-                            BagController.S.PlayerHelmetGrid = grid;
-                            break;
-                        case 1:
-                            if (BagController.S.PlayerCloakGrid != null)
-                            {
-                                BagController.S.PlayerCloakGrid.E.gameObject.SetActive(false);
-                            } 
-                            BagController.S.PlayerCloakGrid = grid;
-                            break;
-                    }
                     BagController.S.SetE();
                     BagController.S.RefreshPlayerEquip();
                     Destroy(gameObject);
@@ -404,17 +313,5 @@ public class EquipAttributePanel : MonoBehaviour
             Destroy(gameObject);
         });
        
-    }
-
-    private void OnDestroy()
-    {
-        Debug.Log("EquipAttributePanel.OnDestroy: 装备属性面板被销毁");
-        
-        // 确保在销毁时MaskLayer也被清理
-        if (BagController.S != null && BagController.S.MaskLayer != null)
-        {
-            Debug.Log("EquipAttributePanel.OnDestroy: 检测到MaskLayer未销毁，尝试销毁");
-            BagController.S.DestroyMaskLayer();
-        }
     }
 }

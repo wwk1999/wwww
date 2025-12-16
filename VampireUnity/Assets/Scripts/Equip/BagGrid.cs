@@ -28,25 +28,6 @@ public class BagGrid : MonoBehaviour
         // 添加新的点击监听器
         gridButton.onClick.AddListener(() =>
         {
-            
-            // 检查是否已存在MaskLayer
-            if (BagController.S.MaskLayer != null)
-            {
-                Debug.LogWarning("BagGrid.OnClick: MaskLayer已存在，可能有未关闭的装备属性面板");
-                return;
-            }
-            
-            //生成蒙层
-            BagController.S.CreateMaskLayer();
-            
-            // 检查MaskLayer是否成功创建
-            if (BagController.S.MaskLayer == null)
-            {
-                Debug.LogError("BagGrid.OnClick: 创建MaskLayer失败");
-                return;
-            }
-            
-            //显示装备属性面板
             BagController.S.ShowEquipAttributePanel(tableBase, EquipType,gameObject);
         });
     }

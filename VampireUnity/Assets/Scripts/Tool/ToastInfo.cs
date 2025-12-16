@@ -49,10 +49,9 @@ public class ToastInfo : MonoBehaviour
                     break;
             }
 
-            if (equipTable.OrangeEntry1 == null)
+            if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
             {
                 equipNameText.text = EquipName.EquipNameDic[equipTable.EquipName];
-
             }
             else
             {

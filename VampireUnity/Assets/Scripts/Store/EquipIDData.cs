@@ -32,7 +32,9 @@ public class EquipIDData : XSingleton<EquipIDData>
             Defense = equip.Defense,
             EquipName = equip.EquipName,
             damageEntryInfos= new List<DamageEntryInfo>(equip.damageEntryInfos),
-            defenseEntryInfos= new List<DefenseEntryInfo>(equip.defenseEntryInfos)
+            defenseEntryInfos= new List<DefenseEntryInfo>(equip.defenseEntryInfos),
+            OrangeEntry1 = equip.OrangeEntry1,
+            OrangeEntry2 = equip.OrangeEntry2,
         };
         equipIds.Add(data.equipid,data);
     }
