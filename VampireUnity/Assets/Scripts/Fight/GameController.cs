@@ -627,6 +627,7 @@ public class GameController : XSingleton<GameController>
              treeManBoss.IsSkill = true;
              sk.AnimationState.SetAnimation(0,"Exit",false);
              treeManBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+             treeManBoss.meshRenderer.sortingOrder = 3000;
              MonsterColliderDic.Add(treeManBoss.collider2D,treeManBoss);
         }
         if (LevelInfoConfig.CurrentGameLevel == 6)
@@ -636,6 +637,7 @@ public class GameController : XSingleton<GameController>
             huoShanBoss.transform.position = new Vector3(0, 0, 0f);
             huoShanBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"walk",true);
             MonsterColliderDic.Add(huoShanBoss.collider2D,huoShanBoss);
+            huoShanBoss.meshRenderer.sortingOrder = 3000;
 
         }
         if (LevelInfoConfig.CurrentGameLevel == 9)
@@ -644,6 +646,7 @@ public class GameController : XSingleton<GameController>
             ZhaoZeBoss ZhaoZeboss = Instantiate(Resources.Load<ZhaoZeBoss>("Prefabs/Monster/Level3/ZhaoZeBOSS"));
             ZhaoZeboss.transform.position = new Vector3(0, 0, 0f);
             MonsterColliderDic.Add(ZhaoZeboss.collider2D,ZhaoZeboss);
+            ZhaoZeboss.meshRenderer.sortingOrder = 3000;
 
             ZhaoZeboss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"move",true);
         }
@@ -655,6 +658,8 @@ public class GameController : XSingleton<GameController>
             xieZiboss.transform.position = new Vector3(0, 0, 0f);
             xieZiboss.monsterSkeletonAnimation.AnimationState.SetAnimation(0,"move",false);           
             MonsterColliderDic.Add(xieZiboss.collider2D,xieZiboss);
+            xieZiboss.meshRenderer.sortingOrder = 3000;
+
         }
        
     }
@@ -742,76 +747,54 @@ public class GameController : XSingleton<GameController>
         if (GameOver)
             return;
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
+        MonsterBase eliteMonster = null;
+
         
         if ( LevelInfoConfig.CurrentGameLevel == 2|| LevelInfoConfig.CurrentGameLevel ==3)
         {
-            EliteBeeMonster eliteBeeMonster = EliteBeeMonsterQueue.Dequeue();
-            eliteBeeMonster.gameObject.SetActive(true);
-            eliteBeeMonster.CurrentHp = eliteBeeMonster.MaxHp;
-            eliteBeeMonster.transform.position = monsterRandomPoint;
-            eliteBeeMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-
-            TotalMonsterCount++;
-            EliteMonsterCount++;
+            eliteMonster = EliteBeeMonsterQueue.Dequeue();
+            
             BeeMonsterSkillTrigger beeMonsterSkillTrigger = BeeMonsterSkillTriggerQueue.Dequeue();
-            beeMonsterSkillTrigger.BeeMonster = eliteBeeMonster;
+            beeMonsterSkillTrigger.BeeMonster = eliteMonster as EliteBeeMonster;
             beeMonsterSkillTrigger.gameObject.SetActive(true);
         }
         if ( LevelInfoConfig.CurrentGameLevel ==5 || LevelInfoConfig.CurrentGameLevel ==6)
         {
-            EliteDaZuiMonster eliteDaZuiMonster = EliteDaZuiMonsterQueue.Dequeue();
-            eliteDaZuiMonster.gameObject.SetActive(true);
-            eliteDaZuiMonster.CurrentHp = eliteDaZuiMonster.MaxHp;
-            eliteDaZuiMonster.transform.position = monsterRandomPoint;
-            eliteDaZuiMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-
-            TotalMonsterCount++;
-            EliteMonsterCount++;
+            eliteMonster = EliteDaZuiMonsterQueue.Dequeue();
+           
             
             DaZuiSkillTriggerLeft daZuiSkillTriggerLeft = DaZuiSkillTriggerQueueLeft.Dequeue();
-            daZuiSkillTriggerLeft.DaZuiMonster = eliteDaZuiMonster;
+            daZuiSkillTriggerLeft.DaZuiMonster = eliteMonster as EliteDaZuiMonster;
             daZuiSkillTriggerLeft.gameObject.SetActive(true);
             
             DaZuiSkillTriggerRight daZuiSkillTriggerRight = DaZuiSkillTriggerQueueRight.Dequeue();
-            daZuiSkillTriggerRight.DaZuiMonster = eliteDaZuiMonster;
+            daZuiSkillTriggerRight.DaZuiMonster = eliteMonster as EliteDaZuiMonster;
             daZuiSkillTriggerRight.gameObject.SetActive(true);
         }
 
         if (LevelInfoConfig.CurrentGameLevel == 8 || LevelInfoConfig.CurrentGameLevel == 9 )
         {
-            ShiRenHuaMonster shirenhuaMonster = ShiRenHuaMonsterQueue.Dequeue();
-            shirenhuaMonster.gameObject.SetActive(true);
-            shirenhuaMonster.CurrentHp = shirenhuaMonster.MaxHp;
-            shirenhuaMonster.transform.position = monsterRandomPoint;
-            shirenhuaMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-
-            TotalMonsterCount++;
-            EliteMonsterCount++;
+            eliteMonster = ShiRenHuaMonsterQueue.Dequeue();
         }
         
         if (LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 12 )
         {
-            ShaXiYi shamoElite = ShaXiYiQueue.Dequeue();
-            shamoElite.gameObject.SetActive(true);
-            shamoElite.CurrentHp = shamoElite.MaxHp;
-            shamoElite.transform.position = monsterRandomPoint;
-            shamoElite.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
-
-            TotalMonsterCount++;
-            EliteMonsterCount++;
+            eliteMonster = ShaXiYiQueue.Dequeue();
         }
         
         if (LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15 )
         {
-            YingShu YingShu = YingShuQueue.Dequeue();
-            YingShu.gameObject.SetActive(true);
-            YingShu.CurrentHp = YingShu.MaxHp;
-            YingShu.transform.position = monsterRandomPoint;
-            YingShu.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", false);
-
-            TotalMonsterCount++;
-            EliteMonsterCount++;
+            eliteMonster = YingShuQueue.Dequeue();
         }
+        
+        eliteMonster.gameObject.SetActive(true);
+        eliteMonster.CurrentHp = eliteMonster.MaxHp;
+        eliteMonster.transform.position = monsterRandomPoint;
+        eliteMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, eliteMonster.MonsterSpineName.MoveName, true);
+        eliteMonster.meshRenderer.sortingOrder = 2000+EliteMonsterCount;
+        eliteMonster.hpSliderCanvas.sortingOrder = 2000+EliteMonsterCount;
+        TotalMonsterCount++;
+        EliteMonsterCount++;
     }
 
     //生成怪物
@@ -820,11 +803,11 @@ public class GameController : XSingleton<GameController>
         if (GameOver)
             return;
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
+        MonsterBase monsterBase=null;
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3)
         {
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
-                MonsterBase monsterBase;
                 if (NormalMonsterCount % 3 == 0)
                 {
                     monsterBase = SnotMonsterQueue.Dequeue();
@@ -837,13 +820,6 @@ public class GameController : XSingleton<GameController>
                 {
                     monsterBase = SpiderMonsterQueue.Dequeue();
                 }
-                monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint;
-                monsterBase.CurrentHp = monsterBase.MaxHp;
-                monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-
-                TotalMonsterCount++;
-                NormalMonsterCount++;
             }
             else
             {
@@ -851,11 +827,10 @@ public class GameController : XSingleton<GameController>
             }
         }
 
-        if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6)
+        else if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6)
         {
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
-                MonsterBase monsterBase;
                 if (NormalMonsterCount % 3 == 0)
                 {
                     monsterBase = ChongZiMonsterQueue.Dequeue();
@@ -868,20 +843,6 @@ public class GameController : XSingleton<GameController>
                 {
                     monsterBase = HuangZhuQueue.Dequeue();
                 }
-
-                monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint;
-                monsterBase.CurrentHp = monsterBase.MaxHp;
-                if (monsterBase.monsterSkeletonAnimation != null)
-                {
-                    monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-                }
-                else
-                {
-                    monsterBase.monsterAnimator.Play("move");
-                }
-                TotalMonsterCount++;
-                NormalMonsterCount++;
             }
             else
             {
@@ -890,11 +851,10 @@ public class GameController : XSingleton<GameController>
         }
         
         
-        if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 8 || LevelInfoConfig.CurrentGameLevel == 9)
+        else if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 8 || LevelInfoConfig.CurrentGameLevel == 9)
         {
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
-                MonsterBase monsterBase;
                 if (NormalMonsterCount % 3 == 0)
                 {
                     monsterBase = WenZiMonsterQueue.Dequeue();
@@ -907,13 +867,6 @@ public class GameController : XSingleton<GameController>
                 {
                     monsterBase = JiaChongMonsterQueue.Dequeue();
                 }
-
-                monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint;
-                monsterBase.CurrentHp = monsterBase.MaxHp;
-                monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-                TotalMonsterCount++;
-                NormalMonsterCount++;
             }
             else
             {
@@ -921,11 +874,10 @@ public class GameController : XSingleton<GameController>
             }
         }
         
-        if (LevelInfoConfig.CurrentGameLevel == 10 || LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 12)
+        else if (LevelInfoConfig.CurrentGameLevel == 10 || LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 12)
         {
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
-                MonsterBase monsterBase;
                 if (NormalMonsterCount % 3 == 0)
                 {
                     monsterBase = ShaChongQueue.Dequeue();
@@ -938,13 +890,6 @@ public class GameController : XSingleton<GameController>
                 {
                     monsterBase =XianRenZhangQueue.Dequeue();
                 }
-
-                monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint;
-                monsterBase.CurrentHp = monsterBase.MaxHp;
-                monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
-                TotalMonsterCount++;
-                NormalMonsterCount++;
             }
             else
             {
@@ -953,11 +898,10 @@ public class GameController : XSingleton<GameController>
         }
         
         
-        if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15)
+        else if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15)
         {
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
-                MonsterBase monsterBase;
                 if (NormalMonsterCount % 3 == 0)
                 {
                     monsterBase = XueQiEQueue.Dequeue();
@@ -970,20 +914,27 @@ public class GameController : XSingleton<GameController>
                 {
                     monsterBase =XueQiEQueue.Dequeue();
                 }
-
-                monsterBase.gameObject.SetActive(true);
-                monsterBase.transform.position = monsterRandomPoint;
-                monsterBase.CurrentHp = monsterBase.MaxHp;
-                monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, "move", true);
-                TotalMonsterCount++;
-                NormalMonsterCount++;
             }
             else
             {
                 return;
             }
         }
-
+        monsterBase.gameObject.SetActive(true);
+        monsterBase.transform.position = monsterRandomPoint;
+        monsterBase.CurrentHp = monsterBase.MaxHp;
+        monsterBase.meshRenderer.sortingOrder = 1000+NormalMonsterCount;
+        monsterBase.hpSliderCanvas.sortingOrder = 1000+NormalMonsterCount;
+        if (monsterBase.monsterSkeletonAnimation != null)
+        {
+            monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, monsterBase.MonsterSpineName.MoveName, true);
+        }
+        else
+        {
+            monsterBase.monsterAnimator.Play("move");
+        }
+        TotalMonsterCount++;
+        NormalMonsterCount++;
 
         if(NormalMonsterCount%10==0&& NormalMonsterCount!=0)
          {

@@ -64,6 +64,8 @@ public class MonsterSpineName
 }
 public abstract class MonsterBase : MonoBehaviour
 {
+    public Canvas  hpSliderCanvas;
+    public MeshRenderer  meshRenderer;
     [NonSerialized] public float YiDianTime = 0;
     [NonSerialized] public float JianSuTime = 0;
     [NonSerialized] public MonsterSpineName MonsterSpineName=new MonsterSpineName();

@@ -71,6 +71,14 @@ public class TreeManBoss : MonsterBase
             isSkill3=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_04", false);
             Dashdirection=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+            if (Dashdirection.x>0)
+            {
+                parent.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                parent.transform.localScale = new Vector3(-1, 1, 1);
+            }
             GameController.S.CreateSqrtAttack(transform.position,Dashdirection);
         }
         else
@@ -134,7 +142,7 @@ public class TreeManBoss : MonsterBase
         }
         else if (e.Data.Name == "tiao")
         {
-            Jump(0.8f, GroundFissurepos);
+            Jump(0.6f, GroundFissurepos);
         }else if (e.Data.Name == "baozha")
         {
             Debug.Log("执行跳跃逻辑");
@@ -217,6 +225,10 @@ public class TreeManBoss : MonsterBase
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, "attack", false);
             }
         }
+        else
+        {
+            isAttack = false;
+        }
 
         BossMove();
         SpriteFlipX(true);
@@ -253,12 +265,6 @@ public class TreeManBoss : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.TreeMan, 10));
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.TreeMan, 10));
     }
-
-    // public override void Hurt(int damage)
-    // {
-    //     base.Hurt(damage);
-    //     hpSlider.value -= damage;
-    // }
 
     public override void AddMonsterSourceStone()
     {

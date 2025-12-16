@@ -250,6 +250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd8c7a5d66664b1795db02880e82d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpSliderCanvas: {fileID: 6433811268171596495}
+  meshRenderer: {fileID: 4870978316487708033}
   parent: {fileID: 3882955410951362448}
   size: 0
   monsterSkeletonAnimation: {fileID: 5740480748716108104}
@@ -756,6 +758,11 @@ PrefabInstance:
 --- !u!4 &5245990120422670870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2695124710938598228, guid: a81ff046ad249484095cd7dc9225d0db, type: 3}
+  m_PrefabInstance: {fileID: 7902271009563072834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &6433811268171596495 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 3811167747826113421, guid: a81ff046ad249484095cd7dc9225d0db, type: 3}
   m_PrefabInstance: {fileID: 7902271009563072834}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7089296241878496232 stripped

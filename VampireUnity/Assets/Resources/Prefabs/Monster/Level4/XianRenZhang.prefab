@@ -299,6 +299,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86d2aef429ee74646bc2008c423cb33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpSliderCanvas: {fileID: 4899305461335922445}
+  meshRenderer: {fileID: 5948861315500595275}
+  parent: {fileID: 4708476491572414266}
   size: 0
   monsterSkeletonAnimation: {fileID: 6673869313291743447}
   hpSlider: {fileID: 417654376097925712}
