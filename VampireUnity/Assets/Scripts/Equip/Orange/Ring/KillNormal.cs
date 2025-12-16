@@ -11,7 +11,7 @@ public class KillNormal :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeRingSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "KillNormal";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.KillNormal;

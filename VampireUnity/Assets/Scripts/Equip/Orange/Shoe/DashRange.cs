@@ -11,7 +11,7 @@ public class DashRange :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeRingSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "DashRange";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DashRange;

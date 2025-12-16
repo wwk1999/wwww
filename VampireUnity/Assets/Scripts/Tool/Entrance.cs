@@ -268,173 +268,176 @@ public class Entrance : MonoBehaviour
             OrangeHelmetFight.gameObject.SetActive(false);
             GameController.S.OrangeHelmetQueue.Enqueue(OrangeHelmetFight);
             
-            GameObject FinalDamageReductionFixed = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/FinalDamageReductionFixed"));
+            //传说装备
+            
+            GameObject FinalDamageReductionFixed = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/FinalDamageReductionFixed"));
             FinalDamageReductionFixed.gameObject.SetActive(false);
-            GameController.S.FinalDamageReductionFixedQueue.Enqueue(FinalDamageReductionFixed.GetComponent<FinalDamageReductionFixed>());
+            Debug.LogError(FinalDamageReductionFixed.GetComponent<EquipBase>().enabled);
+            GameController.S.FinalDamageReductionFixedQueue.Enqueue(FinalDamageReductionFixed);
             
-            GameObject FinalDamageReductionPercent = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/FinalDamageReductionPercent"));
+            GameObject FinalDamageReductionPercent = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/FinalDamageReductionPercent"));
             FinalDamageReductionPercent.gameObject.SetActive(false);
-            GameController.S.FinalDamageReductionPercentQueue.Enqueue(FinalDamageReductionPercent.GetComponent<FinalDamageReductionPercent>());
+            GameController.S.FinalDamageReductionPercentQueue.Enqueue(FinalDamageReductionPercent);
             
-            GameObject AllReplyAddPercent = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/AllReplyAddPercent"));
+            GameObject AllReplyAddPercent = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/AllReplyAddPercent"));
             AllReplyAddPercent.gameObject.SetActive(false);
-            GameController.S.AllReplyAddPercentQueue.Enqueue(AllReplyAddPercent.GetComponent<AllReplyAddPercent>());
+            GameController.S.AllReplyAddPercentQueue.Enqueue(AllReplyAddPercent);
             
-            GameObject AddHpForTime = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/AddHpForTime"));
+            GameObject AddHpForTime = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/AddHpForTime"));
             AddHpForTime.gameObject.SetActive(false);
-            GameController.S.AddHpForTimeQueue.Enqueue(AddHpForTime.GetComponent<AddHpForTime>());
+            GameController.S.AddHpForTimeQueue.Enqueue(AddHpForTime);
             
-            GameObject AddDefenseForTime = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/AddDefenseForTime"));
+            GameObject AddDefenseForTime = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/AddDefenseForTime"));
             AddDefenseForTime.gameObject.SetActive(false);
-            GameController.S.AddDefenseForTimeQueue.Enqueue(AddDefenseForTime.GetComponent<AddDefenseForTime>());
+            GameController.S.AddDefenseForTimeQueue.Enqueue(AddDefenseForTime);
             
-            GameObject ReplyDeath = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/ReplyDeath"));
+            GameObject ReplyDeath = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/ReplyDeath"));
             ReplyDeath.gameObject.SetActive(false);
-            GameController.S.ReplyDeathQueue.Enqueue(ReplyDeath.GetComponent<ReplyDeath>());
+            GameController.S.ReplyDeathQueue.Enqueue(ReplyDeath);
             
-            GameObject DelayDamage = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/DelayDamage"));
+            GameObject DelayDamage = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/DelayDamage"));
             DelayDamage.gameObject.SetActive(false);
-            GameController.S.DelayDamageQueue.Enqueue(DelayDamage.GetComponent<DelayDamage>());
+            GameController.S.DelayDamageQueue.Enqueue(DelayDamage);
             
-            GameObject HpReductionReplyAdd50 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/HpReductionReplyAdd50"));
+            GameObject HpReductionReplyAdd50 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/HpReductionReplyAdd50"));
             HpReductionReplyAdd50.gameObject.SetActive(false);
-            GameController.S.HpReductionReplyAdd50Queue.Enqueue(HpReductionReplyAdd50.GetComponent<HpReductionReplyAdd50>());
+            GameController.S.HpReductionReplyAdd50Queue.Enqueue(HpReductionReplyAdd50);
             
-            GameObject HpReductionAddDefense = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/HpReductionAddDefense"));
+            GameObject HpReductionAddDefense = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/HpReductionAddDefense"));
             HpReductionAddDefense.gameObject.SetActive(false);
-            GameController.S.HpReductionAddDefenseQueue.Enqueue(HpReductionAddDefense.GetComponent<HpReductionAddDefense>());
+            GameController.S.HpReductionAddDefenseQueue.Enqueue(HpReductionAddDefense);
             
-            GameObject FinalDamageAddPercent = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/FinalDamageAddPercent"));
+            GameObject FinalDamageAddPercent = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/FinalDamageAddPercent"));
             FinalDamageAddPercent.gameObject.SetActive(false);
-            GameController.S.FinalDamageAddPercentQueue.Enqueue(FinalDamageAddPercent.GetComponent<FinalDamageAddPercent>());
+            GameController.S.FinalDamageAddPercentQueue.Enqueue(FinalDamageAddPercent);
             
-            GameObject KillNormal = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/KillNormal"));
+            GameObject KillNormal = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/KillNormal"));
             KillNormal.gameObject.SetActive(false);
-            GameController.S.KillNormalQueue.Enqueue(KillNormal.GetComponent<KillNormal>());
+            GameController.S.KillNormalQueue.Enqueue(KillNormal);
             
-            GameObject AddAttackForTime = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/AddAttackForTime"));
+            GameObject AddAttackForTime = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/AddAttackForTime"));
             AddAttackForTime.gameObject.SetActive(false);
-            GameController.S.AddAttackForTimeQueue.Enqueue(AddAttackForTime.GetComponent<AddAttackForTime>());
+            GameController.S.AddAttackForTimeQueue.Enqueue(AddAttackForTime);
             
-            GameObject NormalAddDamage = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/NormalAddDamage"));
+            GameObject NormalAddDamage = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NormalAddDamage"));
             NormalAddDamage.gameObject.SetActive(false);
-            GameController.S.NormalAddDamageQueue.Enqueue(NormalAddDamage.GetComponent<NormalAddDamage>());
+            GameController.S.NormalAddDamageQueue.Enqueue(NormalAddDamage);
             
-            GameObject RecudeHpAddAttack = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/RecudeHpAddAttack"));
+            GameObject RecudeHpAddAttack = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/RecudeHpAddAttack"));
             RecudeHpAddAttack.gameObject.SetActive(false);
-            GameController.S.RecudeHpAddAttackQueue.Enqueue(RecudeHpAddAttack.GetComponent<RecudeHpAddAttack>());
+            GameController.S.RecudeHpAddAttackQueue.Enqueue(RecudeHpAddAttack);
             
-            GameObject JianSuAddAttack = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/JianSuAddAttack"));
+            GameObject JianSuAddAttack = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/JianSuAddAttack"));
             JianSuAddAttack.gameObject.SetActive(false);
-            GameController.S.JianSuAddAttackQueue.Enqueue(JianSuAddAttack.GetComponent<JianSuAddAttack>());
+            GameController.S.JianSuAddAttackQueue.Enqueue(JianSuAddAttack);
             
-            GameObject FanPuGuiZhen = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/FanPuGuiZhen"));
+            GameObject FanPuGuiZhen = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/FanPuGuiZhen"));
             FanPuGuiZhen.gameObject.SetActive(false);
-            GameController.S.FanPuGuiZhenQueue.Enqueue(FanPuGuiZhen.GetComponent<FanPuGuiZhen>());
+            GameController.S.FanPuGuiZhenQueue.Enqueue(FanPuGuiZhen);
             
-            GameObject NoSkill = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/NoSkill"));
+            GameObject NoSkill = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NoSkill"));
             NoSkill.gameObject.SetActive(false);
-            GameController.S.NoSkillQueue.Enqueue(NoSkill.GetComponent<NoSkill>());
+            GameController.S.NoSkillQueue.Enqueue(NoSkill);
             
-            GameObject BuWangChuXin = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/BuWangChuXin"));
+            GameObject BuWangChuXin = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/BuWangChuXin"));
             BuWangChuXin.gameObject.SetActive(false);
-            GameController.S.BuWangChuXinQueue.Enqueue(BuWangChuXin.GetComponent<BuWangChuXin>());
+            GameController.S.BuWangChuXinQueue.Enqueue(BuWangChuXin);
             
-            GameObject HeiDongAddSpeed = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/HeiDongAddSpeed"));
+            GameObject HeiDongAddSpeed = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/HeiDongAddSpeed"));
             HeiDongAddSpeed.gameObject.SetActive(false);
-            GameController.S.HeiDongAddSpeedQueue.Enqueue(HeiDongAddSpeed.GetComponent<HeiDongAddSpeed>());
+            GameController.S.HeiDongAddSpeedQueue.Enqueue(HeiDongAddSpeed);
             
-            GameObject DuAddDuQuan = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/DuAddDuQuan"));
+            GameObject DuAddDuQuan = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/DuAddDuQuan"));
             DuAddDuQuan.gameObject.SetActive(false);
-            GameController.S.DuAddDuQuanQueue.Enqueue(DuAddDuQuan.GetComponent<DuAddDuQuan>());
+            GameController.S.DuAddDuQuanQueue.Enqueue(DuAddDuQuan);
             
-            GameObject LvQuanAddScale = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/LvQuanAddScale"));
+            GameObject LvQuanAddScale = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/LvQuanAddScale"));
             LvQuanAddScale.gameObject.SetActive(false);
-            GameController.S.LvQuanAddScaleQueue.Enqueue(LvQuanAddScale.GetComponent<LvQuanAddScale>());
+            GameController.S.LvQuanAddScaleQueue.Enqueue(LvQuanAddScale);
             
-            GameObject XuKongAdd2Dan = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/XuKongAdd2Dan"));
+            GameObject XuKongAdd2Dan = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/XuKongAdd2Dan"));
             XuKongAdd2Dan.gameObject.SetActive(false);
-            GameController.S.XuKongAdd2DanQueue.Enqueue(XuKongAdd2Dan.GetComponent<XuKongAdd2Dan>());
+            GameController.S.XuKongAdd2DanQueue.Enqueue(XuKongAdd2Dan);
             
-            GameObject PuTong3ChuanTou = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/PuTong3ChuanTou"));
+            GameObject PuTong3ChuanTou = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/PuTong3ChuanTou"));
             PuTong3ChuanTou.gameObject.SetActive(false);
-            GameController.S.PuTong3ChuanTouQueue.Enqueue(PuTong3ChuanTou.GetComponent<PuTong3ChuanTou>());
+            GameController.S.PuTong3ChuanTouQueue.Enqueue(PuTong3ChuanTou);
             
-            GameObject FireBaoZha = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/FireBaoZha"));
+            GameObject FireBaoZha = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/FireBaoZha"));
             FireBaoZha.gameObject.SetActive(false);
-            GameController.S.FireBaoZhaQueue.Enqueue(FireBaoZha.GetComponent<FireBaoZha>());
+            GameController.S.FireBaoZhaQueue.Enqueue(FireBaoZha);
             
-            GameObject Skill1ReplaceNormalAttack = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Skill1ReplaceNormalAttack"));
+            GameObject Skill1ReplaceNormalAttack = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill1ReplaceNormalAttack"));
             Skill1ReplaceNormalAttack.gameObject.SetActive(false);
-            GameController.S.Skill1ReplaceNormalAttackQueue.Enqueue(Skill1ReplaceNormalAttack.GetComponent<Skill1ReplaceNormalAttack>());
+            GameController.S.Skill1ReplaceNormalAttackQueue.Enqueue(Skill1ReplaceNormalAttack);
             
-            GameObject Skill1YiDianDouble = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Skill1YiDianDouble"));
+            GameObject Skill1YiDianDouble = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill1YiDianDouble"));
             Skill1YiDianDouble.gameObject.SetActive(false);
-            GameController.S.Skill1YiDianDoubleQueue.Enqueue(Skill1YiDianDouble.GetComponent<Skill1YiDianDouble>());
+            GameController.S.Skill1YiDianDoubleQueue.Enqueue(Skill1YiDianDouble);
             
-            GameObject Skill1AddRange = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Skill1AddRange"));
+            GameObject Skill1AddRange = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/Skill1AddRange"));
             Skill1AddRange.gameObject.SetActive(false);
-            GameController.S.Skill1AddRangeQueue.Enqueue(Skill1AddRange.GetComponent<Skill1AddRange>());
+            GameController.S.Skill1AddRangeQueue.Enqueue(Skill1AddRange);
             
-            GameObject Skill2AddDan = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Skill2AddDan"));
+            GameObject Skill2AddDan = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill2AddDan"));
             Skill2AddDan.gameObject.SetActive(false);
-            GameController.S.Skill2AddDanQueue.Enqueue(Skill2AddDan.GetComponent<Skill2AddDan>());
+            GameController.S.Skill2AddDanQueue.Enqueue(Skill2AddDan);
             
-            GameObject Skill2RotateAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Skill2RotateAdd"));
+            GameObject Skill2RotateAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill2RotateAdd"));
             Skill2RotateAdd.gameObject.SetActive(false);
-            GameController.S.Skill2RotateAddQueue.Enqueue(Skill2RotateAdd.GetComponent<Skill2RotateAdd>());
+            GameController.S.Skill2RotateAddQueue.Enqueue(Skill2RotateAdd);
             
-            GameObject Skill2AddRange = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Skill2AddRange"));
+            GameObject Skill2AddRange = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/Skill2AddRange"));
             Skill2AddRange.gameObject.SetActive(false);
-            GameController.S.Skill2AddRangeQueue.Enqueue(Skill2AddRange.GetComponent<Skill2AddRange>());
+            GameController.S.Skill2AddRangeQueue.Enqueue(Skill2AddRange);
             
-            GameObject Skill3Bian3 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Skill3Bian3"));
+            GameObject Skill3Bian3 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill3Bian3"));
             Skill3Bian3.gameObject.SetActive(false);
-            GameController.S.Skill3Bian3Queue.Enqueue(Skill3Bian3.GetComponent<Skill3Bian3>());
+            GameController.S.Skill3Bian3Queue.Enqueue(Skill3Bian3);
             
-            GameObject Skill3AddRange = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Skill3AddRange"));
+            GameObject Skill3AddRange = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill3AddRange"));
             Skill3AddRange.gameObject.SetActive(false);
-            GameController.S.Skill3AddRangeQueue.Enqueue(Skill3AddRange.GetComponent<Skill3AddRange>());
+            GameController.S.Skill3AddRangeQueue.Enqueue(Skill3AddRange);
             
-            GameObject DashCd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/DashCd"));
+            GameObject DashCd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/DashCd"));
             DashCd.gameObject.SetActive(false);
-            GameController.S.DashCdQueue.Enqueue(DashCd.GetComponent<DashCd>());
+            GameController.S.DashCdQueue.Enqueue(DashCd);
             
-            GameObject DashRange = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/DashRange"));
+            GameObject DashRange = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/DashRange"));
             DashRange.gameObject.SetActive(false);
-            GameController.S.DashRangeQueue.Enqueue(DashRange.GetComponent<DashRange>());
+            GameController.S.DashRangeQueue.Enqueue(DashRange);
             
-            GameObject MoveSpeedAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/MoveSpeedAdd"));
+            GameObject MoveSpeedAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/MoveSpeedAdd"));
             MoveSpeedAdd.gameObject.SetActive(false);
-            GameController.S.MoveSpeedAddQueue.Enqueue(MoveSpeedAdd.GetComponent<MoveSpeedAdd>());
+            GameController.S.MoveSpeedAddQueue.Enqueue(MoveSpeedAdd);
             
-            GameObject ExAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/ExAdd"));
+            GameObject ExAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/ExAdd"));
             ExAdd.gameObject.SetActive(false);
-            GameController.S.ExAddQueue.Enqueue(ExAdd.GetComponent<ExAdd>());
+            GameController.S.ExAddQueue.Enqueue(ExAdd);
             
-            GameObject ClothFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/ClothFortureAdd"));
+            GameObject ClothFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/ClothFortureAdd"));
             ClothFortureAdd.gameObject.SetActive(false);
-            GameController.S.ClothFortureAddQueue.Enqueue(ClothFortureAdd.GetComponent<ClothFortureAdd>());
+            GameController.S.ClothFortureAddQueue.Enqueue(ClothFortureAdd);
             
-            GameObject ShoeFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/ShoeFortureAdd"));
+            GameObject ShoeFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/ShoeFortureAdd"));
             ShoeFortureAdd.gameObject.SetActive(false);
-            GameController.S.ShoeFortureAddQueue.Enqueue(ShoeFortureAdd.GetComponent<ShoeFortureAdd>());
+            GameController.S.ShoeFortureAddQueue.Enqueue(ShoeFortureAdd);
             
-            GameObject CloakFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/CloakFortureAdd"));
+            GameObject CloakFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/CloakFortureAdd"));
             CloakFortureAdd.gameObject.SetActive(false);
-            GameController.S.CloakFortureAddQueue.Enqueue(CloakFortureAdd.GetComponent<CloakFortureAdd>());
+            GameController.S.CloakFortureAddQueue.Enqueue(CloakFortureAdd);
             
-            GameObject NecklaceFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/NecklaceFortureAdd"));
+            GameObject NecklaceFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NecklaceFortureAdd"));
             NecklaceFortureAdd.gameObject.SetActive(false);
-            GameController.S.NecklaceFortureAddQueue.Enqueue(NecklaceFortureAdd.GetComponent<NecklaceFortureAdd>());
+            GameController.S.NecklaceFortureAddQueue.Enqueue(NecklaceFortureAdd);
             
-            GameObject RingFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/RingFortureAdd"));
+            GameObject RingFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/RingFortureAdd"));
             RingFortureAdd.gameObject.SetActive(false);
-            GameController.S.RingFortureAddQueue.Enqueue(RingFortureAdd.GetComponent<RingFortureAdd>());
+            GameController.S.RingFortureAddQueue.Enqueue(RingFortureAdd);
             
-            GameObject HelmetFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/HelmetFortureAdd"));
+            GameObject HelmetFortureAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/HelmetFortureAdd"));
             HelmetFortureAdd.gameObject.SetActive(false);
-            GameController.S.HelmetFortureAddQueue.Enqueue(HelmetFortureAdd.GetComponent<HelmetFortureAdd>());
+            GameController.S.HelmetFortureAddQueue.Enqueue(HelmetFortureAdd);
         }
         
 

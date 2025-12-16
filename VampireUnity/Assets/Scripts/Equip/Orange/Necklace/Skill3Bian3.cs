@@ -11,7 +11,7 @@ public class Skill3Bian3 :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeNecklaceSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "Skill3Bian3";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill3Bian3;

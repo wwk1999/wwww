@@ -11,7 +11,7 @@ public class NecklaceFortureAdd :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeNecklaceSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "NecklaceFortureAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.NecklaceFortureAdd;

@@ -23,7 +23,8 @@ public class PlayerEquipConfig : MonoBehaviour
         Orange ,
         TreeMan,
         HuoShan ,
-        ZhaoZe
+        ZhaoZe,
+        OrangeEntry
     }
     
     public static int HelmetId

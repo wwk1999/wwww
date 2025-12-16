@@ -95,6 +95,7 @@ public abstract class MonsterBase : MonoBehaviour
     //public Animator monsterAnimator;
     public Slider hpSlider;
     [NonSerialized]public List<MonsterEquip> MonsterEquipList=new List<MonsterEquip>() ;//怪物装备列表
+    [NonSerialized]public List<MonsterOrangeEntryEquip> MonsterOrangeEntryEquip=new List<MonsterOrangeEntryEquip>() ;//怪物装备列表
     [NonSerialized]public List<MonsterWeaponSource> MonsterWeaponSourceStoneList=new List<MonsterWeaponSource>() ;//怪物源石列表
     [NonSerialized]public List<MonsterProp> MonsterPropList=new List<MonsterProp>() ;//怪物源石列表
 
@@ -887,6 +888,23 @@ public abstract class MonsterBase : MonoBehaviour
                 equip.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
                 equip.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            }
+        }
+        
+        foreach (MonsterOrangeEntryEquip monsterEquip in MonsterOrangeEntryEquip)
+        {
+            float random = Random.Range(0, 100f);
+            if (random <= monsterEquip.Probability * (1 + GlobalPlayerAttribute.Forture))
+            {
+                GameObject equip = GameController.S.GetOrangeEntryEquip(monsterEquip);
+
+                var comp = equip.GetComponent<EquipBase>();   // 对应的具体脚本
+                Debug.Log($"生成前：{equip.name}, activeSelf={equip.activeSelf}, enabled={(comp != null && comp.enabled)}");
+
+                equip.SetActive(true);
+                equip.transform.position = transform.position;
+
+                Debug.Log($"生成后：{equip.name}, activeSelf={equip.activeSelf}, enabled={(comp != null && comp.enabled)}");
             }
         }
     }

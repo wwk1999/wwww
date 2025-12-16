@@ -209,48 +209,48 @@ public class GameController : XSingleton<GameController>
     
     //传说装备
   
-    [NonReorderable]public Queue<FinalDamageReductionFixed>FinalDamageReductionFixedQueue = new Queue<FinalDamageReductionFixed>();
-    [NonReorderable]public Queue<FinalDamageReductionPercent>FinalDamageReductionPercentQueue = new Queue<FinalDamageReductionPercent>();
-    [NonReorderable]public Queue<AllReplyAddPercent>AllReplyAddPercentQueue = new Queue<AllReplyAddPercent>();
-    [NonReorderable]public Queue<AddHpForTime>AddHpForTimeQueue = new Queue<AddHpForTime>();
-    [NonReorderable]public Queue<AddDefenseForTime>AddDefenseForTimeQueue = new Queue<AddDefenseForTime>();
-    [NonReorderable]public Queue<ReplyDeath>ReplyDeathQueue = new Queue<ReplyDeath>();
-    [NonReorderable]public Queue<DelayDamage>DelayDamageQueue = new Queue<DelayDamage>();
-    [NonReorderable]public Queue<HpReductionReplyAdd50>HpReductionReplyAdd50Queue = new Queue<HpReductionReplyAdd50>();
-    [NonReorderable]public Queue<HpReductionAddDefense>HpReductionAddDefenseQueue = new Queue<HpReductionAddDefense>();
-    [NonReorderable]public Queue<FinalDamageAddPercent>FinalDamageAddPercentQueue = new Queue<FinalDamageAddPercent>();
-    [NonReorderable]public Queue<KillNormal>KillNormalQueue = new Queue<KillNormal>();
-    [NonReorderable]public Queue<AddAttackForTime>AddAttackForTimeQueue = new Queue<AddAttackForTime>();
-    [NonReorderable]public Queue<NormalAddDamage>NormalAddDamageQueue = new Queue<NormalAddDamage>();
-    [NonReorderable]public Queue<RecudeHpAddAttack>RecudeHpAddAttackQueue = new Queue<RecudeHpAddAttack>();
-    [NonReorderable]public Queue<JianSuAddAttack>JianSuAddAttackQueue = new Queue<JianSuAddAttack>();
-    [NonReorderable]public Queue<FanPuGuiZhen>FanPuGuiZhenQueue = new Queue<FanPuGuiZhen>();
-    [NonReorderable]public Queue<NoSkill>NoSkillQueue = new Queue<NoSkill>();
-    [NonReorderable]public Queue<BuWangChuXin>BuWangChuXinQueue = new Queue<BuWangChuXin>();
-    [NonReorderable]public Queue<HeiDongAddSpeed>HeiDongAddSpeedQueue = new Queue<HeiDongAddSpeed>();
-    [NonReorderable]public Queue<DuAddDuQuan>DuAddDuQuanQueue = new Queue<DuAddDuQuan>();
-    [NonReorderable]public Queue<LvQuanAddScale>LvQuanAddScaleQueue = new Queue<LvQuanAddScale>();
-    [NonReorderable]public Queue<XuKongAdd2Dan>XuKongAdd2DanQueue = new Queue<XuKongAdd2Dan>();
-    [NonReorderable]public Queue<PuTong3ChuanTou>PuTong3ChuanTouQueue = new Queue<PuTong3ChuanTou>();
-    [NonReorderable]public Queue<FireBaoZha>FireBaoZhaQueue = new Queue<FireBaoZha>();
-    [NonReorderable]public Queue<Skill1ReplaceNormalAttack>Skill1ReplaceNormalAttackQueue = new Queue<Skill1ReplaceNormalAttack>();
-    [NonReorderable]public Queue<Skill1YiDianDouble>Skill1YiDianDoubleQueue = new Queue<Skill1YiDianDouble>();
-    [NonReorderable]public Queue<Skill1AddRange>Skill1AddRangeQueue = new Queue<Skill1AddRange>();
-    [NonReorderable]public Queue<Skill2AddDan>Skill2AddDanQueue = new Queue<Skill2AddDan>();
-    [NonReorderable]public Queue<Skill2RotateAdd>Skill2RotateAddQueue = new Queue<Skill2RotateAdd>();
-    [NonReorderable]public Queue<Skill2AddRange>Skill2AddRangeQueue = new Queue<Skill2AddRange>();
-    [NonReorderable]public Queue<Skill3Bian3>Skill3Bian3Queue = new Queue<Skill3Bian3>();
-    [NonReorderable]public Queue<Skill3AddRange>Skill3AddRangeQueue = new Queue<Skill3AddRange>();
-    [NonReorderable]public Queue<DashCd>DashCdQueue = new Queue<DashCd>();
-    [NonReorderable]public Queue<DashRange>DashRangeQueue = new Queue<DashRange>();
-    [NonReorderable]public Queue<MoveSpeedAdd>MoveSpeedAddQueue = new Queue<MoveSpeedAdd>();
-    [NonReorderable]public Queue<ExAdd>ExAddQueue = new Queue<ExAdd>();
-    [NonReorderable]public Queue<ClothFortureAdd>ClothFortureAddQueue = new Queue<ClothFortureAdd>();
-    [NonReorderable]public Queue<ShoeFortureAdd>ShoeFortureAddQueue = new Queue<ShoeFortureAdd>();
-    [NonReorderable]public Queue<CloakFortureAdd>CloakFortureAddQueue = new Queue<CloakFortureAdd>();
-    [NonReorderable]public Queue<NecklaceFortureAdd>NecklaceFortureAddQueue = new Queue<NecklaceFortureAdd>();
-    [NonReorderable]public Queue<RingFortureAdd>RingFortureAddQueue = new Queue<RingFortureAdd>();
-    [NonReorderable]public Queue<HelmetFortureAdd>HelmetFortureAddQueue = new Queue<HelmetFortureAdd>();
+    [NonReorderable]public Queue<GameObject>FinalDamageReductionFixedQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>FinalDamageReductionPercentQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>AllReplyAddPercentQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>AddHpForTimeQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>AddDefenseForTimeQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ReplyDeathQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>DelayDamageQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>HpReductionReplyAdd50Queue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>HpReductionAddDefenseQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>FinalDamageAddPercentQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>KillNormalQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>AddAttackForTimeQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>NormalAddDamageQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>RecudeHpAddAttackQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>JianSuAddAttackQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>FanPuGuiZhenQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>NoSkillQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>BuWangChuXinQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>HeiDongAddSpeedQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>DuAddDuQuanQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>LvQuanAddScaleQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XuKongAdd2DanQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PuTong3ChuanTouQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>FireBaoZhaQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Skill1ReplaceNormalAttackQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Skill1YiDianDoubleQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Skill1AddRangeQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Skill2AddDanQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Skill2RotateAddQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Skill2AddRangeQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Skill3Bian3Queue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Skill3AddRangeQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>DashCdQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>DashRangeQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>MoveSpeedAddQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ExAddQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ClothFortureAddQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ShoeFortureAddQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>CloakFortureAddQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>NecklaceFortureAddQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>RingFortureAddQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>HelmetFortureAddQueue = new Queue<GameObject>();
 
 
 
@@ -354,6 +354,141 @@ public class GameController : XSingleton<GameController>
                         return RedWeaponFragmengQueue.Dequeue();
                 }
                 break;
+        }
+
+        return null;
+    }
+
+    public GameObject GetOrangeEntryEquip(MonsterOrangeEntryEquip equip)
+    {
+        switch (equip.OrangeEntry)
+        {
+            case EntryConfig.OrangeEntry.FinalDamageReductionFixed:
+                return FinalDamageReductionFixedQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.FinalDamageReductionPercent:
+                return FinalDamageReductionPercentQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.AllReplyAddPercent:
+                return AllReplyAddPercentQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.AddHpForTime:
+                return AddHpForTimeQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.AddDefenseForTime:
+                return AddDefenseForTimeQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.ReplyDeath:
+                return ReplyDeathQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.DelayDamage:
+                return DelayDamageQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.HpReductionReplyAdd50:
+                return HpReductionReplyAdd50Queue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.HpReductionAddDefense:
+                return HpReductionAddDefenseQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.FinalDamageAddPercent:
+                return FinalDamageAddPercentQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.KillNormal:
+                return KillNormalQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.AddAttackForTime:
+                return AddAttackForTimeQueue.Dequeue();
+            
+            
+            case EntryConfig.OrangeEntry.NormalAddDamage:
+                return NormalAddDamageQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.RecudeHpAddAttack:
+                return RecudeHpAddAttackQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.JianSuAddAttack:
+                return JianSuAddAttackQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.FanPuGuiZhen:
+                return FanPuGuiZhenQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.NoSkill:
+                return NoSkillQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.BuWangChuXin:
+                return BuWangChuXinQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.HeiDongAddSpeed:
+                return HeiDongAddSpeedQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.DuAddDuQuan:
+                return DuAddDuQuanQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.LvQuanAddScale:
+                return LvQuanAddScaleQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.XuKongAdd2Dan:
+                return XuKongAdd2DanQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.PuTong3ChuanTou:
+                return PuTong3ChuanTouQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.FireBaoZha:
+                return FireBaoZhaQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack:
+                return Skill1ReplaceNormalAttackQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.Skill1YiDianDouble:
+                return Skill1YiDianDoubleQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.Skill1AddRange:
+                return Skill1AddRangeQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.Skill2AddDan:
+                return Skill2AddDanQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.Skill2RotateAdd:
+                return Skill2RotateAddQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.Skill2AddRange:
+                return Skill2AddRangeQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.Skill3Bian3:
+                return Skill3Bian3Queue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.Skill3AddRange:
+                return Skill3AddRangeQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.DashCd:
+                return DashCdQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.DashRange:
+                return DashRangeQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.MoveSpeedAdd:
+                return MoveSpeedAddQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.ExAdd:
+                return ExAddQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.ClothFortureAdd:
+                return ClothFortureAddQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.ShoeFortureAdd:
+                return ShoeFortureAddQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.CloakFortureAdd:
+                return CloakFortureAddQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.NecklaceFortureAdd:
+                return NecklaceFortureAddQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.RingFortureAdd:
+                return RingFortureAddQueue.Dequeue();
+            
+            case EntryConfig.OrangeEntry.HelmetFortureAdd:
+                return HelmetFortureAddQueue.Dequeue();
         }
 
         return null;

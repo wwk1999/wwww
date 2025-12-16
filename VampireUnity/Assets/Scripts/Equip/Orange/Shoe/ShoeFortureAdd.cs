@@ -11,7 +11,7 @@ public class ShoeFortureAdd :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeRingSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "ShoeFortureAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.ShoeFortureAdd;

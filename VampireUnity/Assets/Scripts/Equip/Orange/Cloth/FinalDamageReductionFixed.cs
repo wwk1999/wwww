@@ -10,7 +10,7 @@ public class FinalDamageReductionFixed :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeClothSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FinalDamageReductionFixed;
         EquipAttributes.EquipName = "FinalDamageReductionFixed";

@@ -11,7 +11,7 @@ public class FinalDamageAddPercent :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeNecklaceSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "FinalDamageAddPercent";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FinalDamageAddPercent;

@@ -15,4 +15,17 @@ namespace Equip
             Probability = probability;
         }
     }
+    
+    public class MonsterOrangeEntryEquip
+    {
+
+        public EntryConfig.OrangeEntry OrangeEntry;
+        public int Probability;
+
+        public MonsterOrangeEntryEquip(EntryConfig.OrangeEntry orangeEntry,int probability)
+        {
+            OrangeEntry = orangeEntry;
+            Probability = probability;
+        }
+    }
 }

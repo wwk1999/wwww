@@ -10,7 +10,7 @@ public class DelayDamage :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeClothSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "DelayDamage";
         EquipAttributes.suitid = 6;

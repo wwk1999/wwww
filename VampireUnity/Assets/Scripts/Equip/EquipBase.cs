@@ -128,7 +128,6 @@ public class EquipBase : BagObjectBase
             StoreController.S.SaveStoreData();
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,EquipAttributes);
             
-
             //如果被拾取，销毁装备
             gameObject.SetActive(false);
             EnEquipQueue(EquipAttributes);

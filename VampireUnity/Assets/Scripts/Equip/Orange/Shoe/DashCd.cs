@@ -11,7 +11,7 @@ public class DashCd :EquipBase
 
     private void Awake()
     {
-        SpriteRenderer = transform.Find("OrangeRingSprite").GetComponent<SpriteRenderer>();
+        SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "DashCd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DashCd;
