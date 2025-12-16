@@ -209,6 +209,50 @@ public class GameController : XSingleton<GameController>
     
     //传说装备
   
+    [NonReorderable]public Queue<FinalDamageReductionFixed>FinalDamageReductionFixedQueue = new Queue<FinalDamageReductionFixed>();
+    [NonReorderable]public Queue<FinalDamageReductionPercent>FinalDamageReductionPercentQueue = new Queue<FinalDamageReductionPercent>();
+    [NonReorderable]public Queue<AllReplyAddPercent>AllReplyAddPercentQueue = new Queue<AllReplyAddPercent>();
+    [NonReorderable]public Queue<AddHpForTime>AddHpForTimeQueue = new Queue<AddHpForTime>();
+    [NonReorderable]public Queue<AddDefenseForTime>AddDefenseForTimeQueue = new Queue<AddDefenseForTime>();
+    [NonReorderable]public Queue<ReplyDeath>ReplyDeathQueue = new Queue<ReplyDeath>();
+    [NonReorderable]public Queue<DelayDamage>DelayDamageQueue = new Queue<DelayDamage>();
+    [NonReorderable]public Queue<HpReductionReplyAdd50>HpReductionReplyAdd50Queue = new Queue<HpReductionReplyAdd50>();
+    [NonReorderable]public Queue<HpReductionAddDefense>HpReductionAddDefenseQueue = new Queue<HpReductionAddDefense>();
+    [NonReorderable]public Queue<FinalDamageAddPercent>FinalDamageAddPercentQueue = new Queue<FinalDamageAddPercent>();
+    [NonReorderable]public Queue<KillNormal>KillNormalQueue = new Queue<KillNormal>();
+    [NonReorderable]public Queue<AddAttackForTime>AddAttackForTimeQueue = new Queue<AddAttackForTime>();
+    [NonReorderable]public Queue<NormalAddDamage>NormalAddDamageQueue = new Queue<NormalAddDamage>();
+    [NonReorderable]public Queue<RecudeHpAddAttack>RecudeHpAddAttackQueue = new Queue<RecudeHpAddAttack>();
+    [NonReorderable]public Queue<JianSuAddAttack>JianSuAddAttackQueue = new Queue<JianSuAddAttack>();
+    [NonReorderable]public Queue<FanPuGuiZhen>FanPuGuiZhenQueue = new Queue<FanPuGuiZhen>();
+    [NonReorderable]public Queue<NoSkill>NoSkillQueue = new Queue<NoSkill>();
+    [NonReorderable]public Queue<BuWangChuXin>BuWangChuXinQueue = new Queue<BuWangChuXin>();
+    [NonReorderable]public Queue<HeiDongAddSpeed>HeiDongAddSpeedQueue = new Queue<HeiDongAddSpeed>();
+    [NonReorderable]public Queue<DuAddDuQuan>DuAddDuQuanQueue = new Queue<DuAddDuQuan>();
+    [NonReorderable]public Queue<LvQuanAddScale>LvQuanAddScaleQueue = new Queue<LvQuanAddScale>();
+    [NonReorderable]public Queue<XuKongAdd2Dan>XuKongAdd2DanQueue = new Queue<XuKongAdd2Dan>();
+    [NonReorderable]public Queue<PuTong3ChuanTou>PuTong3ChuanTouQueue = new Queue<PuTong3ChuanTou>();
+    [NonReorderable]public Queue<FireBaoZha>FireBaoZhaQueue = new Queue<FireBaoZha>();
+    [NonReorderable]public Queue<Skill1ReplaceNormalAttack>Skill1ReplaceNormalAttackQueue = new Queue<Skill1ReplaceNormalAttack>();
+    [NonReorderable]public Queue<Skill1YiDianDouble>Skill1YiDianDoubleQueue = new Queue<Skill1YiDianDouble>();
+    [NonReorderable]public Queue<Skill1AddRange>Skill1AddRangeQueue = new Queue<Skill1AddRange>();
+    [NonReorderable]public Queue<Skill2AddDan>Skill2AddDanQueue = new Queue<Skill2AddDan>();
+    [NonReorderable]public Queue<Skill2RotateAdd>Skill2RotateAddQueue = new Queue<Skill2RotateAdd>();
+    [NonReorderable]public Queue<Skill2AddRange>Skill2AddRangeQueue = new Queue<Skill2AddRange>();
+    [NonReorderable]public Queue<Skill3Bian3>Skill3Bian3Queue = new Queue<Skill3Bian3>();
+    [NonReorderable]public Queue<Skill3AddRange>Skill3AddRangeQueue = new Queue<Skill3AddRange>();
+    [NonReorderable]public Queue<DashCd>DashCdQueue = new Queue<DashCd>();
+    [NonReorderable]public Queue<DashRange>DashRangeQueue = new Queue<DashRange>();
+    [NonReorderable]public Queue<MoveSpeedAdd>MoveSpeedAddQueue = new Queue<MoveSpeedAdd>();
+    [NonReorderable]public Queue<ExAdd>ExAddQueue = new Queue<ExAdd>();
+    [NonReorderable]public Queue<ClothFortureAdd>ClothFortureAddQueue = new Queue<ClothFortureAdd>();
+    [NonReorderable]public Queue<ShoeFortureAdd>ShoeFortureAddQueue = new Queue<ShoeFortureAdd>();
+    [NonReorderable]public Queue<CloakFortureAdd>CloakFortureAddQueue = new Queue<CloakFortureAdd>();
+    [NonReorderable]public Queue<NecklaceFortureAdd>NecklaceFortureAddQueue = new Queue<NecklaceFortureAdd>();
+    [NonReorderable]public Queue<RingFortureAdd>RingFortureAddQueue = new Queue<RingFortureAdd>();
+    [NonReorderable]public Queue<HelmetFortureAdd>HelmetFortureAddQueue = new Queue<HelmetFortureAdd>();
+
+
 
 
 
