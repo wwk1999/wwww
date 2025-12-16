@@ -47,16 +47,7 @@ public class BagGrid : MonoBehaviour
             }
             
             //显示装备属性面板
-            try
-            {
-                BagController.S.ShowEquipAttributePanel(tableBase, EquipType,gameObject);
-            }
-            catch (System.Exception e)
-            {
-                Debug.LogError($"BagGrid.OnClick: 显示装备属性面板异常: {e.Message}\n{e.StackTrace}");
-                // 出错时确保蒙层被销毁
-                BagController.S.DestroyMaskLayer();
-            }
+            BagController.S.ShowEquipAttributePanel(tableBase, EquipType,gameObject);
         });
     }
 

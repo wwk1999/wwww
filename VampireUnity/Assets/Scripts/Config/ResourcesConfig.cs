@@ -158,7 +158,57 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite OrangeJingCui;
     public static Sprite RedJingCui;
 
+    
+    //传说装备
+    public static Sprite FinalDamageReductionFixedSprite;
+    public static Sprite FinalDamageReductionPercentSprite;
+    public static Sprite AllReplyAddPercentSprite;
+    public static Sprite AddHpForTimeSprite;
+    public static Sprite AddDefenseForTimeSprite;
+    public static Sprite ReplyDeathSprite;
+    public static Sprite DelayDamageSprite;
+    public static Sprite HpReductionReplyAdd50Sprite;
+    public static Sprite HpReductionAddDefenseSprite;
 
+    public static Sprite FinalDamageAddPercentSprite;
+    public static Sprite KillNormalSprite;
+    public static Sprite AddAttackForTimeSprite;
+    public static Sprite NormalAddDamageSprite;
+    public static Sprite RecudeHpAddAttackSprite;
+    public static Sprite JianSuAddAttackSprite;
+
+    public static Sprite FanPuGuiZhenSprite;
+    public static Sprite NoSkillSprite;
+    public static Sprite BuWangChuXinSprite;
+    public static Sprite HeiDongAddSpeedSprite;
+    public static Sprite DuAddDuQuanSprite;
+    public static Sprite LvQuanAddScaleSprite;
+    public static Sprite XuKongAdd2DanSprite;
+    public static Sprite PuTong3ChuanTouSprite;
+    public static Sprite FireBaoZhaSprite;
+
+    public static Sprite Skill1ReplaceNormalAttackSprite;
+    public static Sprite Skill1YiDianDoubleSprite;
+    public static Sprite Skill1AddRangeSprite;
+
+    public static Sprite Skill2AddDanSprite;
+    public static Sprite Skill2RotateAddSprite;
+    public static Sprite Skill2AddRangeSprite;
+
+    public static Sprite Skill3Bian3Sprite;
+    public static Sprite Skill3AddRangeSprite;
+
+    public static Sprite DashCdSprite;
+    public static Sprite DashRangeSprite;
+
+    public static Sprite MoveSpeedAddSprite;
+    public static Sprite ExAddSprite;
+    public static Sprite ClothFortureAddSprite;
+    public static Sprite ShoeFortureAddSprite;
+    public static Sprite CloakFortureAddSprite;
+    public static Sprite NecklaceFortureAddSprite;
+    public static Sprite RingFortureAddSprite;
+    public static Sprite HelmetFortureAddSprite;
 
     public static void Init()
     {
@@ -261,6 +311,57 @@ public class ResourcesConfig : MonoBehaviour
         OrangeHelmet = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/OrangeHelmet");
         OrangeRing = Resources.Load<Sprite>("Sprite/Equip/Orange/Ring/OrangeRing");
         OrangeNecklace = Resources.Load<Sprite>("Sprite/Equip/Orange/Necklace/OrangeNecklace");
+
+        // 传说装备词条图标
+        FinalDamageReductionFixedSprite = Resources.Load<Sprite>("Sprite/Equip/Cloth/FinalDamageReductionFixed");
+        FinalDamageReductionPercentSprite = Resources.Load<Sprite>("Sprite/Equip/Helmet/FinalDamageReductionPercent");
+        AllReplyAddPercentSprite = Resources.Load<Sprite>("Sprite/Equip/Cloth/AllReplyAddPercent");
+        AddHpForTimeSprite = Resources.Load<Sprite>("Sprite/Equip/Helmet/AddHpForTime");
+        AddDefenseForTimeSprite = Resources.Load<Sprite>("Sprite/Equip/Cloth/AddDefenseForTime");
+        ReplyDeathSprite = Resources.Load<Sprite>("Sprite/Equip/Cloth/ReplyDeath");
+        DelayDamageSprite = Resources.Load<Sprite>("Sprite/Equip/Helmet/DelayDamage");
+        HpReductionReplyAdd50Sprite = Resources.Load<Sprite>("Sprite/Equip/Cloth/HpReductionReplyAdd50");
+        HpReductionAddDefenseSprite = Resources.Load<Sprite>("Sprite/Equip/Helmet/HpReductionAddDefense");
+
+        FinalDamageAddPercentSprite = Resources.Load<Sprite>("Sprite/Equip/Necklace/FinalDamageAddPercent");
+        KillNormalSprite = Resources.Load<Sprite>("Sprite/Equip/Ring/KillNormal");
+        AddAttackForTimeSprite = Resources.Load<Sprite>("Sprite/Equip/Ring/AddAttackForTime");
+        NormalAddDamageSprite = Resources.Load<Sprite>("Sprite/Equip/Necklace/NormalAddDamage");
+        RecudeHpAddAttackSprite = Resources.Load<Sprite>("Sprite/Equip/Necklace/RecudeHpAddAttack");
+        JianSuAddAttackSprite = Resources.Load<Sprite>("Sprite/Equip/Shoe/JianSuAddAttack");
+
+        FanPuGuiZhenSprite = Resources.Load<Sprite>("Sprite/Equip/Ring/FanPuGuiZhen");
+        NoSkillSprite = Resources.Load<Sprite>("Sprite/Equip/Necklace/NoSkill");
+        BuWangChuXinSprite = Resources.Load<Sprite>("Sprite/Equip/Cloak/BuWangChuXin");
+        HeiDongAddSpeedSprite = Resources.Load<Sprite>("Sprite/Equip/Cloak/HeiDongAddSpeed");
+        DuAddDuQuanSprite = Resources.Load<Sprite>("Sprite/Equip/Cloak/DuAddDuQuan");
+        LvQuanAddScaleSprite = Resources.Load<Sprite>("Sprite/Equip/Cloak/LvQuanAddScale");
+        XuKongAdd2DanSprite = Resources.Load<Sprite>("Sprite/Equip/Cloak/XuKongAdd2Dan");
+        PuTong3ChuanTouSprite = Resources.Load<Sprite>("Sprite/Equip/Cloak/PuTong3ChuanTou");
+        FireBaoZhaSprite = Resources.Load<Sprite>("Sprite/Equip/Cloak/FireBaoZha");
+
+        Skill1ReplaceNormalAttackSprite = Resources.Load<Sprite>("Sprite/Equip/Necklace/Skill1ReplaceNormalAttack");
+        Skill1YiDianDoubleSprite = Resources.Load<Sprite>("Sprite/Equip/Ring/Skill1YiDianDouble");
+        Skill1AddRangeSprite = Resources.Load<Sprite>("Sprite/Equip/Helmet/Skill1AddRange");
+
+        Skill2AddDanSprite = Resources.Load<Sprite>("Sprite/Equip/Necklace/Skill2AddDan");
+        Skill2RotateAddSprite = Resources.Load<Sprite>("Sprite/Equip/Ring/Skill2RotateAdd");
+        Skill2AddRangeSprite = Resources.Load<Sprite>("Sprite/Equip/Helmet/Skill2AddRange");
+
+        Skill3Bian3Sprite = Resources.Load<Sprite>("Sprite/Equip/Necklace/Skill3Bian3");
+        Skill3AddRangeSprite = Resources.Load<Sprite>("Sprite/Equip/Ring/Skill3AddRange");
+
+        DashCdSprite = Resources.Load<Sprite>("Sprite/Equip/Shoe/DashCd");
+        DashRangeSprite = Resources.Load<Sprite>("Sprite/Equip/Shoe/DashRange");
+
+        MoveSpeedAddSprite = Resources.Load<Sprite>("Sprite/Equip/Shoe/MoveSpeedAdd");
+        ExAddSprite = Resources.Load<Sprite>("Sprite/Equip/Shoe/ExAdd");
+        ClothFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Cloth/FortureAdd");
+        ShoeFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Shoe/FortureAdd");
+        CloakFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Cloak/FortureAdd");
+        NecklaceFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Necklace/FortureAdd");
+        RingFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Ring/FortureAdd");
+        HelmetFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Helmet/FortureAdd");
         
         //武器源石
         WhiteDivision = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteDivision");
@@ -517,6 +618,118 @@ public class ResourcesConfig : MonoBehaviour
     
      public static Sprite GetEquipSprite(EquipTable equipTable)
     {
+        Debug.LogError(equipTable.OrangeEntry1);
+        Debug.LogError(equipTable.EquipName);
+        Debug.LogError(equipTable.suitid);
+
+
+        // 橙装有词条时优先显示对应的词条图标
+        if (equipTable.OrangeEntry1 != EntryConfig.OrangeEntry.None)
+        {
+            Debug.LogError(11112222);
+            switch (equipTable.OrangeEntry1)
+            {
+                // 防御词条
+                case EntryConfig.OrangeEntry.FinalDamageReductionFixed:
+                    return FinalDamageReductionFixedSprite;
+                case EntryConfig.OrangeEntry.FinalDamageReductionPercent:
+                    return FinalDamageReductionPercentSprite;
+                case EntryConfig.OrangeEntry.AllReplyAddPercent:
+                    return AllReplyAddPercentSprite;
+                case EntryConfig.OrangeEntry.AddHpForTime:
+                    return AddHpForTimeSprite;
+                case EntryConfig.OrangeEntry.AddDefenseForTime:
+                    return AddDefenseForTimeSprite;
+                case EntryConfig.OrangeEntry.ReplyDeath:
+                    return ReplyDeathSprite;
+                case EntryConfig.OrangeEntry.DelayDamage:
+                    return DelayDamageSprite;
+                case EntryConfig.OrangeEntry.HpReductionReplyAdd50:
+                    return HpReductionReplyAdd50Sprite;
+                case EntryConfig.OrangeEntry.HpReductionAddDefense:
+                    return HpReductionAddDefenseSprite;
+
+                // 攻击词条
+                case EntryConfig.OrangeEntry.FinalDamageAddPercent:
+                    return FinalDamageAddPercentSprite;
+                case EntryConfig.OrangeEntry.KillNormal:
+                    return KillNormalSprite;
+                case EntryConfig.OrangeEntry.AddAttackForTime:
+                    return AddAttackForTimeSprite;
+                case EntryConfig.OrangeEntry.NormalAddDamage:
+                    return NormalAddDamageSprite;
+                case EntryConfig.OrangeEntry.RecudeHpAddAttack:
+                    return RecudeHpAddAttackSprite;
+                case EntryConfig.OrangeEntry.JianSuAddAttack:
+                    return JianSuAddAttackSprite;
+
+                // 普通攻击相关
+                case EntryConfig.OrangeEntry.FanPuGuiZhen:
+                    return FanPuGuiZhenSprite;
+                case EntryConfig.OrangeEntry.NoSkill:
+                    return NoSkillSprite;
+                case EntryConfig.OrangeEntry.BuWangChuXin:
+                    return BuWangChuXinSprite;
+                case EntryConfig.OrangeEntry.HeiDongAddSpeed:
+                    return HeiDongAddSpeedSprite;
+                case EntryConfig.OrangeEntry.DuAddDuQuan:
+                    return DuAddDuQuanSprite;
+                case EntryConfig.OrangeEntry.LvQuanAddScale:
+                    return LvQuanAddScaleSprite;
+                case EntryConfig.OrangeEntry.XuKongAdd2Dan:
+                    return XuKongAdd2DanSprite;
+                case EntryConfig.OrangeEntry.PuTong3ChuanTou:
+                    return PuTong3ChuanTouSprite;
+                case EntryConfig.OrangeEntry.FireBaoZha:
+                    return FireBaoZhaSprite;
+
+                // Skill1
+                case EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack:
+                    return Skill1ReplaceNormalAttackSprite;
+                case EntryConfig.OrangeEntry.Skill1YiDianDouble:
+                    return Skill1YiDianDoubleSprite;
+                case EntryConfig.OrangeEntry.Skill1AddRange:
+                    return Skill1AddRangeSprite;
+
+                // Skill2
+                case EntryConfig.OrangeEntry.Skill2AddDan:
+                    return Skill2AddDanSprite;
+                case EntryConfig.OrangeEntry.Skill2RotateAdd:
+                    return Skill2RotateAddSprite;
+                case EntryConfig.OrangeEntry.Skill2AddRange:
+                    return Skill2AddRangeSprite;
+
+                // Skill3
+                case EntryConfig.OrangeEntry.Skill3Bian3:
+                    return Skill3Bian3Sprite;
+                case EntryConfig.OrangeEntry.Skill3AddRange:
+                    return Skill3AddRangeSprite;
+
+                // Dash
+                case EntryConfig.OrangeEntry.DashCd:
+                    return DashCdSprite;
+                case EntryConfig.OrangeEntry.DashRange:
+                    return DashRangeSprite;
+
+                // 特殊词条
+                case EntryConfig.OrangeEntry.MoveSpeedAdd:
+                    return MoveSpeedAddSprite;
+                case EntryConfig.OrangeEntry.ExAdd:
+                    return ExAddSprite;
+                case EntryConfig.OrangeEntry.ClothFortureAdd:
+                    return ClothFortureAddSprite;
+                case EntryConfig.OrangeEntry.ShoeFortureAdd:
+                    return ShoeFortureAddSprite;
+                case EntryConfig.OrangeEntry.CloakFortureAdd:
+                    return CloakFortureAddSprite;
+                case EntryConfig.OrangeEntry.NecklaceFortureAdd:
+                    return NecklaceFortureAddSprite;
+                case EntryConfig.OrangeEntry.RingFortureAdd:
+                    return RingFortureAddSprite;
+                case EntryConfig.OrangeEntry.HelmetFortureAdd:
+                    return HelmetFortureAddSprite;
+            }
+        }
         switch (equipTable.suitid)
         {
             case 1:

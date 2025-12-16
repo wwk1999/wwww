@@ -48,7 +48,16 @@ public class ToastInfo : MonoBehaviour
                     equipNameText.color = new Color(255,140,0,255);
                     break;
             }
-            equipNameText.text = EquipName.EquipNameDic[equipTable.EquipName];
+
+            if (equipTable.OrangeEntry1 == null)
+            {
+                equipNameText.text = EquipName.EquipNameDic[equipTable.EquipName];
+
+            }
+            else
+            {
+                equipNameText.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+            }
         }
     }
     

@@ -786,6 +786,7 @@ public class BagController : XSingleton<BagController>
                     // 设置装备属性图标
                     BagGrid bagGridComponent = bagGridins.GetComponent<BagGrid>();
 
+                    Debug.LogError(333333);
                     bagGridComponent.equipAttributeImage =
                         ResourcesConfig.GetEquipSprite(list[i]);
                     bagGridComponent.EquipType = EquipType.Equip;
