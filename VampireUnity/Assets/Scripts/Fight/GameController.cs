@@ -206,6 +206,9 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>OrangeHelmetQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>OrangeNecklaceQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>OrangeShoeQueue = new Queue<GameObject>();
+    
+    //传说装备
+  
 
 
 
@@ -617,7 +620,7 @@ public class GameController : XSingleton<GameController>
      //创建boss
     public void CreateBoss()
     {
-        GameController.S.HaveBoss = true;
+        HaveBoss = true;
         if (LevelInfoConfig.CurrentGameLevel == 3)
         {
             TreeManBoss treeManBoss=Instantiate(Resources.Load<TreeManBoss>("Prefabs/Monster/Level1/TreeManBOSS"));

@@ -43,7 +43,7 @@ public class FightBg : MonoBehaviour
 
     private void Update()
     {
-        if (FightBGController.S.IsBossJiHuo)
+        if (FightBGController.S.IsBossJiHuo&&!GameController.S.HaveBoss)
         {
             jiHuoButton.gameObject.SetActive(true);
         }

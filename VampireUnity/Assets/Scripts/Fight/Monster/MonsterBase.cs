@@ -879,7 +879,7 @@ public abstract class MonsterBase : MonoBehaviour
         //根据MonsterEquip的概率随机生成装备
         foreach (MonsterEquip monsterEquip in MonsterEquipList)
         {
-            float random = UnityEngine.Random.Range(0, 100f);
+            float random = Random.Range(0, 100f);
             if (random <= monsterEquip.Probability*(1+GlobalPlayerAttribute.Forture))
             {
                 //生成装备
