@@ -139,35 +139,54 @@ public class EquipAttributePanel : MonoBehaviour
         switch (equip.equip_type_id)
         {
             case 2:
-                BagController.S.PlayerClothGrid.E.gameObject.SetActive(false);
+                // 使用当前面板关联的 grid 来隐藏提示，而不是依赖 PlayerClothGrid，避免其未初始化导致空引用
+                if (grid != null && grid.E != null)
+                {
+                    grid.E.gameObject.SetActive(false);
+                }
                 BagController.S.PlayerClothGrid = null;
                 PlayerEquipConfig.ClothId = 0;
                 break;
             case 6:
-                BagController.S.PlayerShoeGrid.E.gameObject.SetActive(false);
+                if (grid != null && grid.E != null)
+                {
+                    grid.E.gameObject.SetActive(false);
+                }
                 BagController.S.PlayerShoeGrid = null;
                 PlayerEquipConfig.ShoeId = 0;
 
                 break;
             case 5:
-                BagController.S.PlayerRingGrid.E.gameObject.SetActive(false);
+                if (grid != null && grid.E != null)
+                {
+                    grid.E.gameObject.SetActive(false);
+                }
                 BagController.S.PlayerRingGrid = null;
                 PlayerEquipConfig.RingId = 0;
 
                 break;
             case 4:
-                BagController.S.PlayerNecklaceGrid.E.gameObject.SetActive(false);
+                if (grid != null && grid.E != null)
+                {
+                    grid.E.gameObject.SetActive(false);
+                }
                 BagController.S.PlayerNecklaceGrid = null;
                 PlayerEquipConfig.NecklaceId = 0;
                 break;
             case 3:
-                BagController.S.PlayerHelmetGrid.E.gameObject.SetActive(false);
+                if (grid != null && grid.E != null)
+                {
+                    grid.E.gameObject.SetActive(false);
+                }
                 BagController.S.PlayerHelmetGrid = null;
                 PlayerEquipConfig.HelmetId = 0;
 
                 break;
             case 1:
-                BagController.S.PlayerCloakGrid.E.gameObject.SetActive(false);
+                if (grid != null && grid.E != null)
+                {
+                    grid.E.gameObject.SetActive(false);
+                }
                 BagController.S.PlayerCloakGrid = null;
                 PlayerEquipConfig.CloakId = 0;
 
@@ -199,9 +218,9 @@ public class EquipAttributePanel : MonoBehaviour
             uninstallButton.onClick.AddListener(() =>
             {
                     UninstallE();
+                    BagController.S.UnInstallPlayerWearGrid(grid);
                     BagController.S.RefreshPlayerEquip();    
                     StoreController.S.SaveStoreData();
-                    BagController.S.UnInstallPlayerWearGrid(grid);
                     Destroy(gameObject);
             });
         }
@@ -229,8 +248,8 @@ public class EquipAttributePanel : MonoBehaviour
                     PlayerData.S.SaveWearEquip(equip.equip_type_id, equip.equipid);
                     StoreController.S.SaveStoreData();
                     BagController.S.SetE();
-                    BagController.S.RefreshPlayerEquip();
                     BagController.S.InstallPlayerWearGrid(grid);
+                    BagController.S.RefreshPlayerEquip();
                     Destroy(gameObject);
             });
         }

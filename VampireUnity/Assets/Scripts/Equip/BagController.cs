@@ -466,7 +466,19 @@ public class BagController : XSingleton<BagController>
 
     public void UnInstallPlayerWearGrid(BagGrid equipGrid)
     {
+        if (equipGrid == null || equipGrid.tableBase == null)
+        {
+            Debug.LogWarning("UnInstallPlayerWearGrid: equipGrid 或 tableBase 为空，直接返回");
+            return;
+        }
+
         EquipTable equipTable = equipGrid.tableBase as EquipTable;
+        if (equipTable == null)
+        {
+            Debug.LogWarning("UnInstallPlayerWearGrid: tableBase 不是 EquipTable 类型");
+            return;
+        }
+
         switch (equipTable.equip_type_id)
         {
             case 1:

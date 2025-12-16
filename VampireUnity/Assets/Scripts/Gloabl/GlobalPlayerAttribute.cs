@@ -244,7 +244,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp) * (1.0f + MaxHpPercent));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp) * (1.0f + MaxHpPercent/100f));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            maxhp /= 2;
@@ -254,7 +254,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDamage()
    {
-       float damage=Mathf.RoundToInt((PlayerDamage + EquipDamage)*DamageAddPercent);
+       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage) * (1f + DamageAddPercent / 100f));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            damage *=1.3f;
@@ -264,7 +264,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDefense()
    {
-       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense)*MaxDefensePercent);
+       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense)*(1f+MaxDefensePercent/100f));
        float value = 0;
 
        if (isIceBall)

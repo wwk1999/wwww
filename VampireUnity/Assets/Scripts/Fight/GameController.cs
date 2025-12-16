@@ -851,7 +851,7 @@ public class GameController : XSingleton<GameController>
         var random=Random.Range(0,10000);
         if(GlobalPlayerAttribute.TotalCRIT>=random)
         {
-            return true;
+            return false;
         }
         return true;
     }
