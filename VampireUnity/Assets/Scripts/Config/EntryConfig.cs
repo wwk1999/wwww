@@ -73,6 +73,66 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
     { DamageEntry.DamageAddPercent, "百分比增加Att :" },
     { DamageEntry.BloodSuck, "吸血 :" },
 };
+public static Dictionary<OrangeEntry, string> OrangeEntryNameDic = new Dictionary<OrangeEntry, string>()
+{
+    // 防御
+    { OrangeEntry.FinalDamageReductionFixed, "玄钢寂壁" },
+    { OrangeEntry.FinalDamageReductionPercent, "圣盾头冠" },
+    { OrangeEntry.AllReplyAddPercent, "圣愈潮" },
+    { OrangeEntry.AddHpForTime, "灵泉盔" },
+    { OrangeEntry.AddDefenseForTime, "铁律衣" },
+    { OrangeEntry.ReplyDeath, "回魂衣" },
+    { OrangeEntry.DelayDamage, "迟伤盔" },
+    { OrangeEntry.HpReductionReplyAdd50, "残愈衣" },
+    { OrangeEntry.HpReductionAddDefense, "险域盔" },
+
+    // 攻击
+    { OrangeEntry.FinalDamageAddPercent, "终裁链" },
+    { OrangeEntry.KillNormal, "绝杀戒" },
+    { OrangeEntry.AddAttackForTime, "狂澜戒" },
+    { OrangeEntry.NormalAddDamage, "弃华链" },
+    { OrangeEntry.RecudeHpAddAttack, "血契链" },
+    { OrangeEntry.JianSuAddAttack, "霜猎靴" },
+
+    // 普攻
+    { OrangeEntry.FanPuGuiZhen, "纯白终式" },
+    { OrangeEntry.NoSkill, "孤锋链" },
+    { OrangeEntry.BuWangChuXin, "归真手套" },
+    { OrangeEntry.HeiDongAddSpeed, "黑渊护臂" },
+    { OrangeEntry.DuAddDuQuan, "蚀骨护臂" },
+    { OrangeEntry.LvQuanAddScale, "繁荫护臂" },
+    { OrangeEntry.XuKongAdd2Dan, "虚宙护臂" },
+    { OrangeEntry.PuTong3ChuanTou, "贯魂护臂" },
+    { OrangeEntry.FireBaoZha, "灼狱护臂" },
+
+    // Skill1
+    { OrangeEntry.Skill1ReplaceNormalAttack, "技心链" },
+    { OrangeEntry.Skill1YiDianDouble, "雷殛戒" },
+    { OrangeEntry.Skill1AddRange, "远袭盔" },
+
+    // Skill2
+    { OrangeEntry.Skill2AddDan, "裂空链" },
+    { OrangeEntry.Skill2RotateAdd, "旋锋戒" },
+    { OrangeEntry.Skill2AddRange, "扩域盔" },
+
+    // Skill3
+    { OrangeEntry.Skill3Bian3, "三重终波" },
+    { OrangeEntry.Skill3AddRange, "广域潮汐" },
+
+    // Dash
+    { OrangeEntry.DashCd, "瞬步靴" },
+    { OrangeEntry.DashRange, "飞弧靴" },
+
+    // 特殊
+    { OrangeEntry.MoveSpeedAdd, "疾影靴" },
+    { OrangeEntry.ExAdd, "学识之靴" },
+    { OrangeEntry.ClothFortureAdd, "织运衣" },
+    { OrangeEntry.ShoeFortureAdd, "踏运靴" },
+    { OrangeEntry.CloakFortureAdd, "鸿运手套" },
+    { OrangeEntry.NecklaceFortureAdd, "福泽链" },
+    { OrangeEntry.RingFortureAdd, "财祸戒" },
+    { OrangeEntry.HelmetFortureAdd, "天赐盔" },
+};
     public static List<DefenseEntry> DefenseEntryList = new List<DefenseEntry>()
     {
         DefenseEntry.KillReplyHpPercent,
