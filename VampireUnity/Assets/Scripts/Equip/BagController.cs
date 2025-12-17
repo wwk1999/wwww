@@ -646,6 +646,10 @@ public class BagController : XSingleton<BagController>
 
         foreach (var prop in PropList)
         {
+            if (prop.Value.Count <= 0)
+            {
+                continue;
+            }
             var propGrid = Instantiate(Resources.Load("Prefabs/Prop/PropGrid"), equipContent.transform) as GameObject;
             propGrid.transform.Find("parent/Count").gameObject.SetActive(prop.Value.Count > 1);
             propGrid.transform.Find("parent/Count").GetComponent<Text>().text = prop.Value.Count.ToString();
