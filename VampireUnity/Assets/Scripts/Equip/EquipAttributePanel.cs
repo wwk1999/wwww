@@ -65,6 +65,7 @@ public class EquipAttributePanel : MonoBehaviour
         {
             return;
         }
+        //获取装备名
 
         if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
         {

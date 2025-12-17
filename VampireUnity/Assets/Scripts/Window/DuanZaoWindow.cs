@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Tool;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -89,11 +90,9 @@ public class DuanZaoWindow : MonoBehaviour
     public GameObject equipContent;
     public GameObject equipInfo;
     public Button xiLian;
-    public TextMeshProUGUI equipName;
     public Image equipBg;
     public Animator edge;
     public Image image;
-    public TextMeshProUGUI quality;
     public Text level;
     public Text baseAttribute1;
     public Text baseAttribute2;
@@ -104,9 +103,21 @@ public class DuanZaoWindow : MonoBehaviour
     public Button right;
     public Button left;
     private int PageNum = 1;
+    public TextMeshProUGUI redEquipName;
+    public TextMeshProUGUI orangeEquipName;
+    public TextMeshProUGUI purpleEquipName;
+    public TextMeshProUGUI blueEquipName;
+    public TextMeshProUGUI greenEquipName;
+    public TextMeshProUGUI redQuality;
+    public TextMeshProUGUI orangeQuality;
+    public TextMeshProUGUI purpleQuality;
+    public TextMeshProUGUI blueQuality;
+    public TextMeshProUGUI greenQuality;
+    
 
     public void ShowXiLianBag()
     {
+        equipInfo.gameObject.SetActive(true);
         foreach (Transform child in equipContent.transform)
         {
             Destroy(child.gameObject);
@@ -124,6 +135,7 @@ public class DuanZaoWindow : MonoBehaviour
             }
             GameObject xilianGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XiLianGrid"),equipContent.transform);
             xilianGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GetEquipSprite(list[i]);
+            xilianGrid.GetComponent<XiLianGrid>().equipTable = list[i];
             switch (list[i].Quality)
             {
                 case 1:
@@ -697,6 +709,7 @@ public class DuanZaoWindow : MonoBehaviour
                 gou.gameObject.SetActive(_toggleState);
                 break;
             case PanelType.XiLian:
+                equipInfo.gameObject.SetActive(false);
                 xiLianPanel.SetActive(true);
                 heChongPanel.SetActive(false);
                 jinJiePanel.SetActive(false);
@@ -710,8 +723,181 @@ public class DuanZaoWindow : MonoBehaviour
         }
     }
 
+    public void XiLianEquip(object[] obj)
+    {
+        EquipTable equip=obj[0] as EquipTable;
+        if (equip == null)
+        {
+            return;
+        }
+
+        switch (equip.Quality)
+        {
+            case 2:
+                greenEquipName.gameObject.SetActive(true);
+                blueEquipName.gameObject.SetActive(false);
+                purpleEquipName.gameObject.SetActive(false);
+                orangeEquipName.gameObject.SetActive(false);
+                redEquipName.gameObject.SetActive(false);
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    greenEquipName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    greenEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }
+                greenQuality.gameObject.SetActive(true);
+                blueQuality.gameObject.SetActive(false);
+                purpleQuality.gameObject.SetActive(false);
+                orangeQuality.gameObject.SetActive(false);
+                redQuality.gameObject.SetActive(false);
+                edge.Play("GreenEdge");
+                equipBg.sprite = ResourcesConfig.GreenBg;
+                break;
+            
+            case 3:
+                greenEquipName.gameObject.SetActive(false);
+                blueEquipName.gameObject.SetActive(true);
+                purpleEquipName.gameObject.SetActive(false);
+                orangeEquipName.gameObject.SetActive(false);
+                redEquipName.gameObject.SetActive(false);
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    blueEquipName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    blueEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }
+                greenQuality.gameObject.SetActive(false);
+                blueQuality.gameObject.SetActive(true);
+                purpleQuality.gameObject.SetActive(false);
+                orangeQuality.gameObject.SetActive(false);
+                redQuality.gameObject.SetActive(false);
+                edge.Play("BlueEdge");
+                equipBg.sprite = ResourcesConfig.BlueBg;
+                break;
+            
+            case 4:
+                greenEquipName.gameObject.SetActive(false);
+                blueEquipName.gameObject.SetActive(false);
+                purpleEquipName.gameObject.SetActive(true);
+                orangeEquipName.gameObject.SetActive(false);
+                redEquipName.gameObject.SetActive(false);
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    purpleEquipName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    purpleEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }
+                greenQuality.gameObject.SetActive(false);
+                blueQuality.gameObject.SetActive(false);
+                purpleQuality.gameObject.SetActive(true);
+                orangeQuality.gameObject.SetActive(false);
+                redQuality.gameObject.SetActive(false);
+                edge.Play("PurpleEdge");
+                equipBg.sprite = ResourcesConfig.PurpleBg;
+                break;
+            
+            case 5:
+                greenEquipName.gameObject.SetActive(false);
+                blueEquipName.gameObject.SetActive(false);
+                purpleEquipName.gameObject.SetActive(false);
+                orangeEquipName.gameObject.SetActive(true);
+                redEquipName.gameObject.SetActive(false);
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    orangeEquipName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    orangeEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }
+                greenQuality.gameObject.SetActive(false);
+                blueQuality.gameObject.SetActive(false);
+                purpleQuality.gameObject.SetActive(false);
+                orangeQuality.gameObject.SetActive(true);
+                redQuality.gameObject.SetActive(false);
+                edge.Play("OrangeEdge");
+                equipBg.sprite = ResourcesConfig.OrangeBg;
+                break;
+            
+            case 6:
+                greenEquipName.gameObject.SetActive(false);
+                blueEquipName.gameObject.SetActive(false);
+                purpleEquipName.gameObject.SetActive(false);
+                orangeEquipName.gameObject.SetActive(false);
+                redEquipName.gameObject.SetActive(true);
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    redEquipName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    redEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }
+                greenQuality.gameObject.SetActive(false);
+                blueQuality.gameObject.SetActive(false);
+                purpleQuality.gameObject.SetActive(false);
+                orangeQuality.gameObject.SetActive(false);
+                redQuality.gameObject.SetActive(true);
+                edge.Play("RedEdge");
+                equipBg.sprite = ResourcesConfig.RedBg;
+                break;
+        }
+
+        image.sprite = ResourcesConfig.GetEquipSprite(equip);
+        baseAttribute1.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
+            ? "生命值 :"
+            : "攻击力 :";
+        baseAttribute2.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
+            ? "防御 :"
+            : "暴击 :";
+
+        baseAttribute1Value.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
+            ? equip.HP.ToString()
+            : equip.Damage.ToString();
+        
+        baseAttribute2Value.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
+            ? equip.Defense.ToString()
+            : equip.CRIT.ToString();
+        foreach (Transform child in fuJiaContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        
+        foreach (var item in equip.defenseEntryInfos)
+        {
+            var fuJiaAttributeItem =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/XiLianFuJiaAttribute"),fuJiaContent.transform);
+            fuJiaAttributeItem.transform.Find("BaseAttributeName").GetComponent<Text>().text =
+                EntryConfig.DefenseEntryNameDic[item.DefenseEntry];
+            fuJiaAttributeItem.transform.Find("BaseAttributeCount").GetComponent<TextMeshProUGUI>().text =
+                item.Value + "%";
+        }
+        
+        foreach (var item in equip.damageEntryInfos)
+        {
+            var fuJiaAttributeItem =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/XiLianFuJiaAttribute"),fuJiaContent.transform);
+            fuJiaAttributeItem.transform.Find("BaseAttributeName").GetComponent<Text>().text =
+                EntryConfig.DamageEntryNameDic[item.DamageEntry];
+            fuJiaAttributeItem.transform.Find("BaseAttributeCount").GetComponent<TextMeshProUGUI>().text =
+                item.Value + "%";
+        }
+    }
+
+    private void OnDestroy()
+    {
+        ObserverModuleManager.S.UnRegisterEvent("XiLian",XiLianEquip);
+    }
+
     private void Start()
     {
+        ObserverModuleManager.S.RegisterEvent("XiLian",XiLianEquip);
         ShowPanel(PanelType.HeCheng);
         heCheng.onClick.AddListener(()=>
         {
