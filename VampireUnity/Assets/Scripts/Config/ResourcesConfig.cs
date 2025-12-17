@@ -129,6 +129,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite BlueBg;
     public static Sprite PurpleBg;
     public static Sprite OrangeBg;
+    public static Sprite RedBg;
     
     //颜色背景
     public static Material WhiteMaterial;
@@ -240,6 +241,7 @@ public class ResourcesConfig : MonoBehaviour
         BlueBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipBlueBG");
         PurpleBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipPurpleBG");
         OrangeBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipOrangeBG");
+        RedBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipRedBG");
         
         WhiteMaterial= Resources.Load<Material>("Material/EquipOutline/WhiteEquipOutline");
         GreenMaterial= Resources.Load<Material>("Material/EquipOutline/GreenEquipOutline");
