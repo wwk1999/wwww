@@ -28,10 +28,10 @@ public class RoleWindow1 : MonoBehaviour
     public Button bloodEnergyButton;
     public Text levelText; // 等级文本
     public Slider expSlider; // 经验条
-    public Button friendButton; // 好友按钮
-    public Button rankButton;
     public Button debugLevel;
 
+    public Button debugJingCui;
+    public Button duanzaoButton;
     public void UpdateRoleWindow()
     {
         yuanLinText.text = GlobalPlayerAttribute.BloodEnergy.ToString();// 元灵数量text
@@ -44,114 +44,29 @@ public class RoleWindow1 : MonoBehaviour
     {
         UpdateRoleWindow();
     }
-
-    public void GetSourceStoneConfigSuccess(object[] args)
-    {
-        if (args[0] == null) return;
-        WeaponSourceConfig.SourceStoneConfig = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SourceStoneConfigItem>>(args[0].ToString());
-        Debug.Log("获取服务端源石配置成功！");
-    }
-    public void GetLevelRankSuccess(object[] args)
-    {
-        if (args[0] == null) return;
-        RankConfig.LevelRankData = Newtonsoft.Json.JsonConvert.DeserializeObject<LevelRankData>(args[0].ToString());
-
-        Debug.Log("获取服务端等级排行榜成功！");
-    }
-    public void GetUserLevelRankSuccess(object[] args)
-    {
-        if (args[0] == null) return;
-        RankConfig.UserLevelRankData = Newtonsoft.Json.JsonConvert.DeserializeObject<UserLevelRankData>(args[0].ToString());
-        Debug.Log("获取服务端用户个人等级排行榜成功！");
-    }
-    
-    public void GetUserMonsterCountRankSuccess(object[] args)
-    {
-        if (args[0] == null) return;
-        RankConfig.UserMonsterCountRankData = Newtonsoft.Json.JsonConvert.DeserializeObject<UserMonsterCountRankData>(args[0].ToString());
-        Debug.Log("获取服务端用户个人怪物数量排行榜成功！");
-    }
-    
-    public void GetMonsterCountRankSuccess(object[] args)
-    {
-        if (args[0] == null) return;
-        RankConfig.MonsterCountRankData = Newtonsoft.Json.JsonConvert.DeserializeObject<List<MonsterCountRankDataItem>>(args[0].ToString());
-        Debug.Log("获取服务端怪物数量排行榜成功！");
-    }
-    public void GetUserSourceStoneSuccess(object[] args)
-    {
-        if (args[0] == null) return;
-        WeaponSourceConfig.UserSourceStone = Newtonsoft.Json.JsonConvert.DeserializeObject<List<SourceStoneData>>(args[0].ToString());
-        foreach (var item in WeaponSourceConfig.UserSourceStone)
-        {
-            SourceStoneTable sourceStoneTable = new SourceStoneTable();
-            sourceStoneTable.SourceStoneId = item.sourcestoneid;
-            sourceStoneTable.SourceStoneName = WeaponSourceConfig.GetSourceStoneConfigById(item.sourcestoneid).sourcestonename;
-            sourceStoneTable.SourceStoneDesc = item.sourcestone.sourcestoneeffect;
-            sourceStoneTable.Count = item.sourcestonecount;
-            sourceStoneTable.Quality = WeaponSourceConfig.GetSourceStoneConfigById(item.sourcestoneid).quality;
-            sourceStoneTable.SourceStoneType = WeaponSourceConfig.GetSourceStoneConfigById(item.sourcestoneid).sourcestonetype;
-            BagController.S.SourceStoneTable.Add(sourceStoneTable);
-            switch (sourceStoneTable.Quality)
-            {
-                case 1:
-                    BagController.S.WhiteWeaponSourceStoneTable.Add(sourceStoneTable);
-                    break;
-                case 2:
-                    BagController.S.GreenWeaponSourceStoneTable.Add(sourceStoneTable);
-                    break;
-                case 3:
-                    BagController.S.BlueWeaponSourceStoneTable.Add(sourceStoneTable);
-                    break;
-                case 4:
-                    BagController.S.PurpleWeaponSourceStoneTable.Add(sourceStoneTable);
-                    break;
-                case 5:
-                    BagController.S.OrangeWeaponSourceStoneTable.Add(sourceStoneTable);
-                    break;
-            }
-        }
-        Debug.Log("获取服务器用户源石成功！");
-    }
-    
-   
-    
-   
     
     
     private void Start()
     {
-        ObserverModuleManager.S.RegisterEvent("GetSourceStoneConfigSuccess",GetSourceStoneConfigSuccess);
-        ObserverModuleManager.S.RegisterEvent("GetLevelRankSuccess",GetLevelRankSuccess);
-        ObserverModuleManager.S.RegisterEvent("GetUserLevelRankSuccess",GetUserLevelRankSuccess);
-        ObserverModuleManager.S.RegisterEvent("GetUserMonsterCountRankSuccess",GetUserMonsterCountRankSuccess);
-        ObserverModuleManager.S.RegisterEvent("GetMonsterCountRankSuccess",GetMonsterCountRankSuccess);
-        ObserverModuleManager.S.RegisterEvent("GetUserSourceStoneSuccess",GetUserSourceStoneSuccess);
-        // yuanLinText.text = GlobalPlayerAttribute.BloodEnergy.ToString();// 元灵数量text
-        // //GlobalPlayerAttribute.ExpDic = ExperienceController.S.GetExperienceFromMysql();
-        // expSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
-        // expSlider.value = GlobalPlayerAttribute.Exp;
-        // levelText.text = GlobalPlayerAttribute.Level.ToString();
         Debug.Log("点击进入角色界面");
         InitEquip();
         BagController.S.IsInit = true;
+        
+        debugJingCui.onClick.AddListener(() =>
+        {
+            BagController.S.JingCuiDebug();
+        });
+        
+        duanzaoButton.onClick.AddListener(() =>
+        {
+            GameObject duanzao=Instantiate(Resources.Load<GameObject>("Prefabs/Window/DuanZaoWindow"));
+        });
         
         
         debugLevel.onClick.AddListener(() =>
         {
             GlobalPlayerAttribute.GameLevel = 100;
             StoreController.S.SaveStoreData();
-        });
-        
-        rankButton.onClick.AddListener(() =>
-        {
-            WindowController.S.RankWindow.SetActive(true);
-        });
-        
-        friendButton.onClick.AddListener(() =>
-        {
-            Debug.Log("点击进入好友列表界面");
-            WindowController.S.FriendList.SetActive(true);
         });
         
         monsterBookButton.onClick.AddListener(() =>

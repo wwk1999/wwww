@@ -138,6 +138,63 @@ public class BagController : XSingleton<BagController>
     [NonSerialized] public BagGrid PlayerHelmetGrid = new BagGrid();
 
 
+    public void JingCuiDebug()
+    {
+        if (PropList.ContainsKey(201))
+        {
+            PropList[201].Count += 100;
+        }
+        else
+        {
+            PropList.Add(201,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "WhiteJingCui",Quality = 1});
+        }
+        
+        if (S.PropList.ContainsKey(202))
+        {
+            S.PropList[202].Count += 100;
+        }
+        else
+        {
+            S.PropList.Add(202,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "GreenJingCui",Quality = 2});
+        }                    
+        
+        if (PropList.ContainsKey(203))
+        {
+            PropList[203].Count += 100;
+        }
+        else
+        {
+            PropList.Add(203,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "BlueJingCui",Quality = 3});
+        }
+        
+        if (PropList.ContainsKey(204))
+        {
+            PropList[204].Count += 100;
+        }
+        else
+        {
+            PropList.Add(204,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "PurpleJingCui",Quality = 4});
+        }
+        
+        if (PropList.ContainsKey(205))
+        {
+            PropList[205].Count += 100;
+        }
+        else
+        {
+            PropList.Add(205,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "OrangeJingCui",Quality = 5});
+        }
+        
+        if (PropList.ContainsKey(206))
+        {
+            PropList[206].Count += 100;
+        }
+        else
+        {
+            PropList.Add(206,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "RedJingCui",Quality = 6});
+        }
+    }
+
 
 
     protected override void Awake()
@@ -576,6 +633,7 @@ public class BagController : XSingleton<BagController>
         }
     }
 
+    //显示道具
     public void ShowProp()
     {
         Transform bagPanelContent = bag.GetComponent<BagPanel>().content.transform;
