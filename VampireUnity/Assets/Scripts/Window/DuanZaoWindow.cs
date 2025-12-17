@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -80,6 +83,82 @@ public class DuanZaoWindow : MonoBehaviour
     public Button heCheng;
     private bool _toggleState = false;
     private HeChengType _heChengType = HeChengType.None;
+    
+    
+    //洗练界面
+    public GameObject equipContent;
+    public GameObject equipInfo;
+    public Button xiLian;
+    public TextMeshProUGUI equipName;
+    public Image equipBg;
+    public Animator edge;
+    public Image image;
+    public TextMeshProUGUI quality;
+    public Text level;
+    public Text baseAttribute1;
+    public Text baseAttribute2;
+    public TextMeshProUGUI baseAttribute1Value;
+    public TextMeshProUGUI baseAttribute2Value;
+    public GameObject fuJiaContent;
+    public Text pageNumText;
+    public Button right;
+    public Button left;
+    private int PageNum = 1;
+
+    public void ShowXiLianBag()
+    {
+        foreach (Transform child in equipContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        int startIndex = (PageNum - 1) * 35;
+        int endIndex = Mathf.Min(PageNum * 35, BagController.S.EquipIdList.Count);
+
+        List<EquipTable> list = BagController.S.EquipIdList.Values.ToList();
+
+        for (int i = startIndex; i < endIndex; i++)
+        {
+            if (list[i].Quality < 2)
+            {
+                continue;
+            }
+            GameObject xilianGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XiLianGrid"),equipContent.transform);
+            xilianGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GetEquipSprite(list[i]);
+            switch (list[i].Quality)
+            {
+                case 1:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.WhiteBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                    break;
+                case 2:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.GreenBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
+                    break;
+                case 3:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.BlueBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
+                    break;
+                case 4:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.PurpleBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                    break;
+                case 5:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.OrangeBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                    break;
+                case 6:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.RedBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
+                    break;
+            }
+        }
+    }
 
     public void ShowWeaponFragmentItem1()
     {
@@ -621,6 +700,7 @@ public class DuanZaoWindow : MonoBehaviour
                 xiLianPanel.SetActive(true);
                 heChongPanel.SetActive(false);
                 jinJiePanel.SetActive(false);
+                ShowXiLianBag();
                 break;
             case PanelType.JinJie:
                 xiLianPanel.SetActive(false);
@@ -724,6 +804,30 @@ public class DuanZaoWindow : MonoBehaviour
         });
         
         toggle.onValueChanged.AddListener(_=>SetGou());
+        
+        left.onClick.AddListener(() =>
+        {
+            if (PageNum < 2)
+            {
+                return;
+            }
+
+            PageNum--;
+            pageNumText.text = PageNum.ToString();
+            ShowXiLianBag();
+        });
+        
+        right.onClick.AddListener(() =>
+        {
+            if (PageNum >= 5)
+            {
+                return;
+            }
+
+            PageNum++;
+            pageNumText.text = PageNum.ToString();
+            ShowXiLianBag();
+        });
     }
 
     public void SetGou()
