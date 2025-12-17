@@ -178,6 +178,126 @@ public class DuanZaoWindow : MonoBehaviour
         itemImage.sprite = ResourcesConfig.RedWeaponFragment;
     }
     
+    public void ShowJingCUiItem1()
+    {
+        ShowItems();
+        item1ColorBg.sprite = ResourcesConfig.WhiteBg;
+        item1Edge.Play("WhiteEdge");
+        item1Image.sprite = ResourcesConfig.WhiteJingCui;
+        
+        item2ColorBg.sprite = ResourcesConfig.WhiteBg;
+        item2Edge.Play("WhiteEdge");
+        item2Image.sprite = ResourcesConfig.WhiteJingCui;
+        
+        item3ColorBg.sprite = ResourcesConfig.WhiteBg;
+        item3Edge.Play("WhiteEdge");
+        item3Image.sprite = ResourcesConfig.WhiteJingCui;
+        
+        item4ColorBg.sprite = ResourcesConfig.WhiteBg;
+        item4Edge.Play("WhiteEdge");
+        item4Image.sprite = ResourcesConfig.WhiteJingCui;
+        
+        itemColorBg.sprite = ResourcesConfig.GreenBg;
+        itemEdge.Play("GreenEdge");
+        itemImage.sprite = ResourcesConfig.GreenJingCui;
+    }
+    
+    public void ShowJingCUiItem2()
+    {
+        ShowItems();
+        item1ColorBg.sprite = ResourcesConfig.GreenBg;
+        item1Edge.Play("GreenEdge");
+        item1Image.sprite = ResourcesConfig.GreenJingCui;
+        
+        item2ColorBg.sprite = ResourcesConfig.GreenBg;
+        item2Edge.Play("GreenEdge");
+        item2Image.sprite = ResourcesConfig.GreenJingCui;
+        
+        item3ColorBg.sprite = ResourcesConfig.GreenBg;
+        item3Edge.Play("GreenEdge");
+        item3Image.sprite = ResourcesConfig.GreenJingCui;
+        
+        item4ColorBg.sprite = ResourcesConfig.GreenBg;
+        item4Edge.Play("GreenEdge");
+        item4Image.sprite = ResourcesConfig.GreenJingCui;
+        
+        itemColorBg.sprite = ResourcesConfig.BlueBg;
+        itemEdge.Play("BlueEdge");
+        itemImage.sprite = ResourcesConfig.BlueJingCui;
+    }
+    
+    public void ShowJingCUiItem3()
+    {
+        ShowItems();
+        item1ColorBg.sprite = ResourcesConfig.BlueBg;
+        item1Edge.Play("BlueEdge");
+        item1Image.sprite = ResourcesConfig.BlueJingCui;
+        
+        item2ColorBg.sprite = ResourcesConfig.BlueBg;
+        item2Edge.Play("BlueEdge");
+        item2Image.sprite = ResourcesConfig.BlueJingCui;
+        
+        item3ColorBg.sprite = ResourcesConfig.BlueBg;
+        item3Edge.Play("BlueEdge");
+        item3Image.sprite = ResourcesConfig.BlueJingCui;
+        
+        item4ColorBg.sprite = ResourcesConfig.BlueBg;
+        item4Edge.Play("BlueEdge");
+        item4Image.sprite = ResourcesConfig.BlueJingCui;
+        
+        itemColorBg.sprite = ResourcesConfig.PurpleBg;
+        itemEdge.Play("PurpleEdge");
+        itemImage.sprite = ResourcesConfig.PurpleJingCui;
+    }
+    
+    public void ShowJingCUiItem4()
+    {
+        ShowItems();
+        item1ColorBg.sprite = ResourcesConfig.PurpleBg;
+        item1Edge.Play("PurpleEdge");
+        item1Image.sprite = ResourcesConfig.PurpleJingCui;
+        
+        item2ColorBg.sprite = ResourcesConfig.PurpleBg;
+        item2Edge.Play("PurpleEdge");
+        item2Image.sprite = ResourcesConfig.PurpleJingCui;
+        
+        item3ColorBg.sprite = ResourcesConfig.PurpleBg;
+        item3Edge.Play("PurpleEdge");
+        item3Image.sprite = ResourcesConfig.PurpleJingCui;
+        
+        item4ColorBg.sprite = ResourcesConfig.PurpleBg;
+        item4Edge.Play("PurpleEdge");
+        item4Image.sprite = ResourcesConfig.PurpleJingCui;
+        
+        itemColorBg.sprite = ResourcesConfig.OrangeBg;
+        itemEdge.Play("OrangeEdge");
+        itemImage.sprite = ResourcesConfig.OrangeJingCui;
+    }
+    
+    public void ShowJingCUiItem5()
+    {
+        ShowItems();
+        item1ColorBg.sprite = ResourcesConfig.OrangeBg;
+        item1Edge.Play("OrangeEdge");
+        item1Image.sprite = ResourcesConfig.OrangeJingCui;
+        
+        item2ColorBg.sprite = ResourcesConfig.OrangeBg;
+        item2Edge.Play("OrangeEdge");
+        item2Image.sprite = ResourcesConfig.OrangeJingCui;
+        
+        item3ColorBg.sprite = ResourcesConfig.OrangeBg;
+        item3Edge.Play("OrangeEdge");
+        item3Image.sprite = ResourcesConfig.OrangeJingCui;
+        
+        item4ColorBg.sprite = ResourcesConfig.OrangeBg;
+        item4Edge.Play("OrangeEdge");
+        item4Image.sprite = ResourcesConfig.OrangeJingCui;
+        
+        itemColorBg.sprite = ResourcesConfig.RedBg;
+        itemEdge.Play("RedEdge");
+        itemImage.sprite = ResourcesConfig.RedJingCui;
+    }
+    
     public void ShowItems()
     {
         item1ColorBg.gameObject.SetActive(true);
@@ -304,6 +424,31 @@ public class DuanZaoWindow : MonoBehaviour
         weaponFragmentItem5Button.onClick.AddListener(()=>
         {
             ShowWeaponFragmentItem5();
+        });
+        
+        jingCuiItem1Button.onClick.AddListener(() =>
+        {
+            ShowJingCUiItem1();
+        });
+        
+        jingCuiItem2Button.onClick.AddListener(() =>
+        {
+            ShowJingCUiItem2();
+        });
+        
+        jingCuiItem3Button.onClick.AddListener(() =>
+        {
+            ShowJingCUiItem3();
+        });
+        
+        jingCuiItem4Button.onClick.AddListener(() =>
+        {
+            ShowJingCUiItem4();
+        });
+        
+        jingCuiItem5Button.onClick.AddListener(() =>
+        {
+            ShowJingCUiItem5();
         });
     }
 }
