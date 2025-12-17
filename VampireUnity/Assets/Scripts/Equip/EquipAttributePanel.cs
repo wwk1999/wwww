@@ -26,6 +26,7 @@ public class EquipAttributePanel : MonoBehaviour
     public Animator animator;
 
     public GameObject fuJiaAttributeContent;
+    public TextMeshProUGUI orangeEntryDesc;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 

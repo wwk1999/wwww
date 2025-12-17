@@ -133,6 +133,71 @@ public static Dictionary<OrangeEntry, string> OrangeEntryNameDic = new Dictionar
     { OrangeEntry.RingFortureAdd, "财祸戒" },
     { OrangeEntry.HelmetFortureAdd, "天赐盔" },
 };
+
+
+public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new Dictionary<OrangeEntry, string>()
+{
+    // 防御
+    { OrangeEntry.FinalDamageReductionFixed, "最终伤害减少300" },
+    { OrangeEntry.FinalDamageReductionPercent, "最终伤害减少10%" },
+    { OrangeEntry.AllReplyAddPercent, "所有的治疗效果增加20%" },
+    { OrangeEntry.AddHpForTime, "战斗时每5s增加3%最大生命值，上限100%" },
+    { OrangeEntry.AddDefenseForTime, "战斗时每5s增加2%防御，上限60%" },
+    { OrangeEntry.ReplyDeath, "免疫一次死亡,恢复到30%最大生命值" },
+    { OrangeEntry.DelayDamage, "将收到的伤害的30%存储起来在3s内缓慢施加" },
+    { OrangeEntry.HpReductionReplyAdd50, "血量减少到50%增加30%回复效果" },
+    { OrangeEntry.HpReductionAddDefense, "血量减少到50%增加15%免伤" },
+
+    // 攻击
+    { OrangeEntry.FinalDamageAddPercent, "最终伤害增加15%" },
+    { OrangeEntry.KillNormal, "5%概率秒杀小怪" },
+    { OrangeEntry.AddAttackForTime, "战斗中每5s增加3%攻击，上限100%" },
+    { OrangeEntry.NormalAddDamage, "每穿戴一件传说以下品质装备增加最终伤害30%" },
+    { OrangeEntry.RecudeHpAddAttack, "减少50%hp增加30%attack" },
+    { OrangeEntry.JianSuAddAttack, "对被减速的敌人增加15%伤害" },
+
+    // 普攻
+    { OrangeEntry.FanPuGuiZhen, "装备白色武器最终伤害增加200%，绿色150%，蓝色100%，紫色50%" },
+    { OrangeEntry.NoSkill, "普通攻击伤害增加100%，但是不能使用技能" },
+    { OrangeEntry.BuWangChuXin, "朴素法杖改为连射发射模式，一次发射的弹道数量*2" },
+    { OrangeEntry.HeiDongAddSpeed, "黑渊之杖的攻击速度增加100%" },
+    { OrangeEntry.DuAddDuQuan, "腐蚀权杖击中敌人在原地留下毒圈" },
+    { OrangeEntry.LvQuanAddScale, "增加极圆杖50%大小" },
+    { OrangeEntry.XuKongAdd2Dan, "虚空杖增加2个魔法弹" },
+    { OrangeEntry.PuTong3ChuanTou, "三叉法杖可以穿透敌人" },
+    { OrangeEntry.FireBaoZha, "爆炎杖弹爆炸范围增大50%" },
+
+    // Skill1
+    { OrangeEntry.Skill1ReplaceNormalAttack, "skill1代替普通攻击，最终伤害增加100%，不能普通攻击" },
+    { OrangeEntry.Skill1YiDianDouble, "易电状态伤害增加翻倍" },
+    { OrangeEntry.Skill1AddRange, "skill1范围增加20%" },
+
+    // Skill2
+    { OrangeEntry.Skill2AddDan, "Skill2增加一个魔法弹" },
+    { OrangeEntry.Skill2RotateAdd, "Skill2转速增加30%" },
+    { OrangeEntry.Skill2AddRange, "增加Skill2范围30%,体积增大30%" },
+
+    // Skill3
+    { OrangeEntry.Skill3Bian3, "skill3变为发射3波，每一波伤害减少50%" },
+    { OrangeEntry.Skill3AddRange, "Skill3增加范围30%" },
+
+    // Dash
+    { OrangeEntry.DashCd, "Dash基础Cd减少30%" },
+    { OrangeEntry.DashRange, "Dash距离增加30%" },
+
+    // 特殊
+    { OrangeEntry.MoveSpeedAdd, "移动速度增加25%" },
+    { OrangeEntry.ExAdd, "经验获取增加20%" },
+    { OrangeEntry.ClothFortureAdd, "掉落率增加30%" },
+    { OrangeEntry.ShoeFortureAdd, "掉落率增加30%" },
+    { OrangeEntry.CloakFortureAdd, "掉落率增加30%" },
+    { OrangeEntry.NecklaceFortureAdd, "掉落率增加30%" },
+    { OrangeEntry.RingFortureAdd, "掉落率增加30%" },
+    { OrangeEntry.HelmetFortureAdd, "掉落率增加30%" },
+};
+
+
+
     public static List<DefenseEntry> DefenseEntryList = new List<DefenseEntry>()
     {
         DefenseEntry.KillReplyHpPercent,

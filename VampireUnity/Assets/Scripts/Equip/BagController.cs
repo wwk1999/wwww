@@ -1335,66 +1335,32 @@ public class BagController : XSingleton<BagController>
         // 实例化预制体
         GameObject equipAttribute = null;
         equipAttribute = Instantiate(attributePrefab, transform);
-        equipAttribute.GetComponent<EquipAttributePanel>().tableBase = tablebase;
-        equipAttribute.GetComponent<EquipAttributePanel>().grid = bagGrid.GetComponent<BagGrid>();
+        EquipAttributePanel equipAttributePanel = equipAttribute.GetComponent<EquipAttributePanel>();
+        equipAttributePanel.tableBase = tablebase;
+        equipAttributePanel.grid = bagGrid.GetComponent<BagGrid>();
+        if (equipAttributePanel.orangeEntryDesc != null)
+        {
+            equipAttributePanel.orangeEntryDesc.text = EntryConfig.OrangeEntryAttributeDescDic[equipTable.OrangeEntry1];
+        }
 
 
         //设置是否显示卸下按钮
         if (IsClickInstalled(equipTable))
         {
-            equipAttribute.GetComponent<EquipAttributePanel>().uninstallButton.gameObject.SetActive(true);
-            equipAttribute.GetComponent<EquipAttributePanel>().installButton.gameObject.SetActive(false);
-            equipAttribute.GetComponent<EquipAttributePanel>().sellButton.gameObject.SetActive(false);
+            equipAttributePanel.uninstallButton.gameObject.SetActive(true);
+            equipAttributePanel.installButton.gameObject.SetActive(false);
+            equipAttributePanel.sellButton.gameObject.SetActive(false);
         }
         else
         {
-            equipAttribute.GetComponent<EquipAttributePanel>().uninstallButton.gameObject.SetActive(false);
-            equipAttribute.GetComponent<EquipAttributePanel>().installButton.gameObject.SetActive(true);
-            equipAttribute.GetComponent<EquipAttributePanel>().sellButton.gameObject.SetActive(true);
+            equipAttributePanel.uninstallButton.gameObject.SetActive(false);
+            equipAttributePanel.installButton.gameObject.SetActive(true);
+            equipAttributePanel.sellButton.gameObject.SetActive(true);
         }
 
-        equipAttribute.GetComponent<EquipAttributePanel>().Init();
+        equipAttributePanel.Init();
 
         Debug.Log("装备属性面板显示成功");
-    }
-
-    // 辅助方法：显示装备属性
-    private void DisplayEquipAttribute(EquipTable equipTable, GameObject contentPanel)
-    {
-        if (equipTable.Damage != 0)
-        {
-            CreateAttributeItem(contentPanel, "攻击力：" + equipTable.Damage);
-        }
-
-        if (equipTable.HP != 0)
-        {
-            CreateAttributeItem(contentPanel, "生命值：" + equipTable.HP);
-        }
-
-        if (equipTable.Defense != 0)
-        {
-            CreateAttributeItem(contentPanel, "防御力：" + equipTable.Defense);
-        }
-
-        if (equipTable.CRIT != 0)
-        {
-            CreateAttributeItem(contentPanel, "暴击率：" + equipTable.CRIT);
-        }
-    }
-
-    // 辅助方法：创建属性项
-    private GameObject CreateAttributeItem(GameObject parent, string text)
-    {
-        GameObject itemPrefab = Resources.Load<GameObject>("Prefabs/Equip/EquipAttributeItem");
-        if (itemPrefab == null)
-        {
-            Debug.LogError("CreateAttributeItem出错: 找不到EquipAttributeItem预制体");
-            return null;
-        }
-
-        GameObject item = Instantiate(itemPrefab, parent.transform);
-        item.GetComponent<Text>().text = text;
-        return item;
     }
 
 
