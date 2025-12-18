@@ -532,7 +532,6 @@
     <None Include="Assets\Arts\Shaders\LightDissolve.shader" />
     <None Include="Assets\External Resources\Hovl Studio\Toon Projectiles 2\Shaders\DissolveNoise.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\Arts\Spine\主角\json\zj.atlas.txt" />
     <None Include="Assets\Arts\Shaders\EdgeAlphaFade.shader" />
     <None Include="Assets\Arts\Spine\第二关\小火怪\json\xiaohuoguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\ZhaoZeBoss\Enemy_Boss_crocodile.atlas.txt" />
@@ -576,6 +575,7 @@
     <None Include="Assets\Arts\Spine\第四关\ShaBoss\json\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\DianQuan\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\package.json" />
+    <None Include="Assets\Arts\Spine\主角\主角\zj.json" />
     <None Include="Assets\Arts\Spine\技能\json\action.json" />
     <None Include="Assets\Arts\Spine\第四关\mofaqiu\skeleton.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
@@ -643,6 +643,7 @@
     <None Include="Assets\Arts\Spine\怪物\PenHuoYu\Enemy_Inferiordevil.atlas.txt" />
     <None Include="Assets\Spine\package.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\DuPeng\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\主角\主角\zj.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\GreenWolf\Enemy_Boss_stormwolf.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 2\Enemy_Boss_passfuck.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\PuTong3\action.atlas.txt" />
@@ -706,7 +707,6 @@
     <None Include="Assets\Arts\Spine\第三关\食人花\json\shirenhua.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.director@1.0.0\package.json" />
     <None Include="Packages\com.coffee.ui-particle\Shaders\UIAdditive.shader" />
-    <None Include="Assets\Arts\Spine\主角\json\zj.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\ValidationConfig.json" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Electric_Additive.shader" />
     <None Include="Assets\External Resources\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_IntegratedEffect.shader" />

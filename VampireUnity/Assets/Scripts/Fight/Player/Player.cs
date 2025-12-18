@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Spine;
 using Spine.Unity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Animation = UnityEngine.Animation;
+
 public enum PlayerState
 {
     None,
@@ -81,11 +84,22 @@ public class Player : MonoBehaviour
     {
         currentGun = Instantiate(Resources.Load<GameObject>("Prefabs/Gun/Pistol").GetComponent<GunBase>(),transform);
         playerSkeleton.AnimationState.Complete += OnAnimationComplete;
+        playerSkeleton.AnimationState.Event += OnSpineEvent;
         ObserverModuleManager.S.RegisterEvent(ConstKeys.LevelUpAnim, PlayLevelUpAnim);
+    }
+    
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "attack")
+        {
+            SkillController.S.ShotBulletInvoke();
+        }
     }
 
     private void OnDestroy()
     {
+        playerSkeleton.AnimationState.Complete -= OnAnimationComplete;
+        playerSkeleton.AnimationState.Event -= OnSpineEvent;
         ObserverModuleManager.S.UnRegisterEvent(ConstKeys.LevelUpAnim, PlayLevelUpAnim);
     }
 
@@ -116,7 +130,6 @@ public class Player : MonoBehaviour
     {
         if (MouseDown)
         {
-            SkillController.S.ShotBulletInvoke();
             playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
         }
         else if(MoveJian)
@@ -139,7 +152,7 @@ public class Player : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         if (horizontal == 0 && vertical == 0)
         {
-            if (MoveJian)
+            if (MoveJian&& MouseDown == false)
             {
                 playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
             }
@@ -475,7 +488,6 @@ public class Player : MonoBehaviour
         PlayerMove();
         if (Input.GetMouseButtonDown(0))
         {
-            SkillController.S.ShotBulletInvoke();
             playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
         }
         SetBianLiang();

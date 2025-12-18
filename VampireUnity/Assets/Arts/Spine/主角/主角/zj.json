@@ -1,7 +1,7 @@
 {
 "skeleton": {
-	"hash": "w9jyPltM6wQ",
-	"spine": "4.3.29-beta",
+	"hash": "0cMZbNbiEHE",
+	"spine": "4.3.33-beta",
 	"x": -544.47,
 	"y": -35.62,
 	"width": 743,
@@ -302,6 +302,9 @@
 		}
 	}
 ],
+"events": {
+	"attack": {}
+},
 "animations": {
 	"attack": {
 		"bones": {
@@ -1108,7 +1111,10 @@
 					{ "time": 0.0333, "x": 4.8 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.2667, "name": "attack" }
+		]
 	},
 	"die": {
 		"slots": {
