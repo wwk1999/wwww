@@ -1,0 +1,79 @@
+action.png
+	size: 1694, 628
+	filter: Linear, Linear
+	pma: true
+BP42bp
+	bounds: 2, 153, 473, 645
+	offsets: 124, 33, 700, 700
+	rotate: 90
+skill1_0021
+	bounds: 1522, 433, 193, 113
+	offsets: 18, 37, 262, 258
+	rotate: 90
+skill1_0023
+	bounds: 1078, 58, 197, 124
+	offsets: 16, 26, 262, 258
+skill1_0025
+	bounds: 213, 10, 232, 141
+	offsets: 12, 10, 262, 258
+skill1_0027
+	bounds: 1191, 409, 217, 136
+	offsets: 20, 18, 262, 258
+	rotate: 90
+skill1_0029
+	bounds: 447, 13, 207, 138
+	offsets: 24, 20, 262, 258
+skill1_0031
+	bounds: 2, 2, 209, 149
+	offsets: 24, 18, 262, 258
+skill1_0033
+	bounds: 1044, 184, 220, 156
+	offsets: 20, 14, 262, 258
+	rotate: 90
+skill1_0035
+	bounds: 649, 392, 234, 164
+	offsets: 13, 10, 262, 258
+	rotate: 90
+skill1_0037
+	bounds: 656, 2, 210, 157
+	offsets: 23, 20, 262, 258
+skill1_0039
+	bounds: 1022, 406, 220, 167
+	offsets: 22, 16, 262, 258
+	rotate: 90
+skill1_0041
+	bounds: 868, 7, 208, 174
+	offsets: 24, 20, 262, 258
+skill1_0043
+	bounds: 1202, 193, 214, 186
+	offsets: 23, 14, 262, 258
+	rotate: 90
+skill1_0045
+	bounds: 649, 161, 229, 193
+	offsets: 16, 12, 262, 258
+	rotate: 90
+skill1_0047
+	bounds: 1329, 413, 213, 191
+	offsets: 21, 20, 262, 258
+	rotate: 90
+skill1_0049
+	bounds: 844, 183, 220, 198
+	offsets: 22, 16, 262, 258
+	rotate: 90
+skill1_0051
+	bounds: 1481, 9, 208, 199
+	offsets: 24, 19, 262, 258
+skill1_0053
+	bounds: 1481, 210, 211, 201
+	offsets: 23, 16, 262, 258
+skill1_0055
+	bounds: 815, 405, 221, 205
+	offsets: 20, 13, 262, 258
+	rotate: 90
+skill1_0057
+	bounds: 1277, 4, 202, 187
+	offsets: 27, 22, 262, 258
+skill1_0059
+	bounds: 1390, 221, 190, 75
+	offsets: 34, 23, 262, 258
+	rotate: 90

@@ -1,0 +1,114 @@
+action.png
+	size: 1971, 642
+	filter: Linear, Linear
+	pma: true
+DN92dn
+	bounds: 2, 167, 473, 645
+	offsets: 124, 33, 700, 700
+	rotate: 90
+Glow_00000
+	bounds: 300, 7, 50, 51
+	offsets: 7, 7, 64, 64
+skill2_0000
+	bounds: 160, 26, 138, 139
+	offsets: 39, 31, 230, 210
+skill2_0001
+	bounds: 2, 7, 158, 156
+	offsets: 31, 23, 230, 210
+	rotate: 90
+skill2_0002
+	bounds: 1704, 19, 167, 169
+	offsets: 25, 16, 230, 210
+skill2_0003
+	bounds: 1784, 277, 183, 178
+	offsets: 19, 12, 230, 210
+skill2_0004
+	bounds: 1784, 457, 185, 183
+	offsets: 17, 10, 230, 210
+skill2_0005
+	bounds: 718, 2, 203, 186
+	offsets: 10, 8, 230, 210
+skill2_0006
+	bounds: 1139, 2, 203, 185
+	offsets: 10, 9, 230, 210
+	rotate: 90
+skill2_0007
+	bounds: 1493, 437, 203, 185
+	offsets: 10, 10, 230, 210
+	rotate: 90
+skill2_0008
+	bounds: 1495, 232, 203, 185
+	offsets: 10, 11, 230, 210
+	rotate: 90
+skill2_0009
+	bounds: 1199, 215, 211, 187
+	offsets: 10, 9, 230, 210
+	rotate: 90
+skill2_0010
+	bounds: 1193, 428, 212, 191
+	offsets: 10, 7, 230, 210
+	rotate: 90
+skill2_0011
+	bounds: 923, 3, 214, 193
+	offsets: 10, 6, 230, 210
+skill2_0012
+	bounds: 1015, 207, 215, 182
+	offsets: 10, 17, 230, 210
+	rotate: 90
+skill2_0013
+	bounds: 1013, 424, 216, 178
+	offsets: 10, 21, 230, 210
+	rotate: 90
+skill2_0014
+	bounds: 832, 198, 219, 181
+	offsets: 8, 20, 230, 210
+	rotate: 90
+skill2_0015
+	bounds: 649, 190, 223, 181
+	offsets: 5, 20, 230, 210
+	rotate: 90
+skill2_0016
+	bounds: 649, 415, 225, 180
+	offsets: 3, 19, 230, 210
+	rotate: 90
+skill2_0017
+	bounds: 831, 419, 221, 180
+	offsets: 9, 18, 230, 210
+	rotate: 90
+skill2_0018
+	bounds: 1326, 3, 210, 180
+	offsets: 9, 18, 230, 210
+	rotate: 90
+skill2_0019
+	bounds: 300, 60, 207, 105
+	offsets: 7, 17, 230, 210
+skill2_0020
+	bounds: 509, 60, 207, 105
+	offsets: 8, 17, 230, 210
+skill2_0021
+	bounds: 1386, 434, 206, 105
+	offsets: 8, 17, 230, 210
+	rotate: 90
+skill2_0022
+	bounds: 1388, 227, 205, 105
+	offsets: 9, 17, 230, 210
+	rotate: 90
+skill2_0023
+	bounds: 1680, 439, 201, 102
+	offsets: 10, 19, 230, 210
+	rotate: 90
+skill2_0024
+	bounds: 1508, 34, 196, 99
+	offsets: 15, 22, 230, 210
+	rotate: 90
+skill2_0025
+	bounds: 1609, 42, 188, 93
+	offsets: 22, 28, 230, 210
+	rotate: 90
+skill2_0026
+	bounds: 1682, 249, 188, 92
+	offsets: 22, 29, 230, 210
+	rotate: 90
+skill2_0027
+	bounds: 1776, 190, 182, 85
+	offsets: 28, 35, 230, 210

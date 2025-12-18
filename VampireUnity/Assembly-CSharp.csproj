@@ -436,6 +436,7 @@
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\NewMaterialChange.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueQiE.cs" />
     <Compile Include="Assets\Scripts\Mysql\EquipController.cs" />
+    <None Include="Assets\Arts\Spine\技能\绿爆炸\action.atlas.txt" />
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\useSharedDesignerContext.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaXiYi\shamoxiyi.json" />
     <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
@@ -487,7 +488,9 @@
     <None Include="Assets\Arts\Shaders\LcL\Gradient.shader" />
     <None Include="Assets\Arts\Spine\第四关\XianRenZhang\xianrenzhang.atlas.txt" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\Fail\bui_10.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\复活\action.json" />
     <None Include="Assets\Arts\Shaders\BGLight.shader" />
+    <None Include="Assets\Arts\Spine\技能\Boss出现\action.json" />
     <None Include="Packages\com.coffee.ui-particle\package.json" />
     <None Include="Assets\Arts\Shaders\VacantEyeBullet.shader" />
     <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
@@ -503,6 +506,7 @@
     <None Include="Assets\Arts\Spine\怪物\Boss\fensexionggui.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\External Resources\Hovl Studio\Toon Projectiles 2\Demo scene\Readme.txt" />
+    <None Include="Assets\Arts\Spine\技能\火山boss技能\action.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\IceEx\action.json" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationConfig.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\FireDan\action.json" />
@@ -510,6 +514,7 @@
     <None Include="Assets\Arts\Shaders\LcL\Ghost.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Arts\Shaders\LcL\Glow.shader" />
+    <None Include="Assets\Arts\Spine\技能\主角受伤\action.atlas.txt" />
     <None Include="Assets\Arts\Shaders\Gleam.shader" />
     <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
@@ -550,6 +555,7 @@
     <None Include="Assets\External Resources\ARPG Effects\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\技能\火山boss技能\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第五关\XueRen\xueren.atlas.txt" />
     <None Include="Assets\Arts\Shaders\Shield.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\火焰peng\action.atlas.txt" />
@@ -643,6 +649,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\PuTong3\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\主角受伤\action.json" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\json\wenzi.atlas.txt" />
     <None Include="Assets\Arts\Shaders\UIScan.shader" />
     <None Include="Assets\Arts\Spine\技能\json\H043_Special.atlas.txt" />
@@ -672,6 +679,7 @@
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
     <None Include="Assets\Arts\Shaders\LcL\HueShift.shader" />
+    <None Include="Assets\Arts\Spine\技能\绿爆炸\action.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
     <None Include="Assets\External Resources\闊抽\GameMusicPack_SUITE\Readme_ja.txt" />
@@ -683,6 +691,7 @@
     <None Include="Assets\Arts\Spine\技能\HuoDan\H043_Special.json" />
     <None Include="Assets\Arts\Shaders\tongdaopianyi.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\Du\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\毒圈\action.json" />
     <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\第五关\XueLang2\xuelang.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
@@ -718,12 +727,14 @@
     <None Include="Assets\Arts\Spine\第五关\XueRen\xueren.json" />
     <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
     <None Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Shaders\Add_CenterGlow.shader" />
+    <None Include="Assets\Arts\Spine\技能\毒圈\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Multiplicative\EdgeEffect_Multiplicative.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\EdgeEffect_Additive.shader" />
+    <None Include="Assets\Arts\Spine\技能\Boss出现\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通Peng\action.json" />
     <None Include="Assets\Arts\Spine\怪物\KuLou\Enemy_Skeleton_warrior.atlas.txt" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\UIEffect.shader" />
@@ -746,6 +757,7 @@
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\技能\复活\action.atlas.txt" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\EdgeEffect_Electric_Additive.shader" />
     <None Include="Assets\Arts\Spine\第三关\甲虫\json\jiachong.json" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />

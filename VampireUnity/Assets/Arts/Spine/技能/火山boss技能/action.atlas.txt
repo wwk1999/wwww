@@ -1,0 +1,231 @@
+action.png
+	size: 477, 649
+	filter: Linear, Linear
+	pma: true
+KP276kp
+	bounds: 2, 2, 473, 645
+	offsets: 124, 33, 700, 700
+
+action_2.png
+	size: 2029, 893
+	filter: Linear, Linear
+	pma: true
+effect/baoci_2_01
+	bounds: 317, 15, 107, 177
+	offsets: 8, 8, 128, 256
+	rotate: 90
+effect/baoci_2_02
+	bounds: 124, 5, 117, 191
+	offsets: 5, 32, 128, 256
+	rotate: 90
+effect/baoci_2_03
+	bounds: 1025, 24, 121, 176
+	offsets: 6, 61, 128, 256
+	rotate: 90
+effect/baoci_2_04
+	bounds: 1698, 160, 121, 155
+	offsets: 7, 91, 128, 256
+effect/baoci_2_05
+	bounds: 1311, 19, 121, 136
+	offsets: 7, 115, 128, 256
+	rotate: 90
+effect/baoci_2_06
+	bounds: 1203, 27, 118, 106
+	offsets: 6, 148, 128, 256
+	rotate: 90
+effect/baoci_2_07
+	bounds: 1579, 47, 107, 85
+	offsets: 9, 166, 128, 256
+effect/cjb
+	bounds: 1682, 636, 255, 256
+	offsets: 1, 0, 256, 256
+	rotate: 90
+effect/dl
+	bounds: 847, 147, 446, 471
+	offsets: 32, 29, 512, 512
+	rotate: 90
+effect/ft_00010
+	bounds: 1466, 134, 230, 211
+	offsets: 14, 39, 256, 256
+effect/glow
+	bounds: 2, 2, 120, 120
+	offsets: 4, 4, 128, 128
+effect/guangzhuxs_00000
+	bounds: 2, 734, 845, 157
+	offsets: 55, 176, 900, 500
+effect/guangzhuxs_00002
+	bounds: 2, 581, 843, 151
+	offsets: 57, 178, 900, 500
+effect/guangzhuxs_00004
+	bounds: 849, 740, 831, 151
+	offsets: 58, 177, 900, 500
+effect/guangzhuxs_00006
+	bounds: 2, 428, 830, 151
+	offsets: 58, 177, 900, 500
+effect/guangzhuxs_00008
+	bounds: 2, 273, 813, 153
+	offsets: 69, 179, 900, 500
+effect/guangzhuxs_00010
+	bounds: 2, 124, 666, 147
+	offsets: 201, 180, 900, 500
+effect/guangzhuxs_00012
+	bounds: 849, 595, 590, 143
+	offsets: 232, 177, 900, 500
+effect/guangzhuxs_00014
+	bounds: 1320, 142, 451, 144
+	offsets: 286, 178, 900, 500
+	rotate: 90
+effect/ks
+	bounds: 1724, 405, 229, 218
+	offsets: 8, 19, 256, 256
+	rotate: 90
+effect/ksc (1)
+	bounds: 1698, 2, 156, 75
+	offsets: 12, 8, 180, 90
+	rotate: 90
+effect/ksc (2)
+	bounds: 1775, 77, 161, 75
+	offsets: 10, 7, 180, 90
+effect/ksc (3)
+	bounds: 1821, 154, 161, 81
+	offsets: 1, 1, 162, 82
+	rotate: 90
+effect/ksc (4)
+	bounds: 1724, 317, 173, 86
+	offsets: 4, 3, 180, 90
+effect/ksc (5)
+	bounds: 1940, 717, 174, 86
+	offsets: 3, 2, 180, 90
+	rotate: 90
+effect/ksc (6)
+	bounds: 496, 36, 167, 86
+	offsets: 7, 3, 180, 90
+effect/ksc (7)
+	bounds: 1944, 560, 155, 75
+	offsets: 13, 8, 180, 90
+	rotate: 90
+effect/ksc (8)
+	bounds: 1944, 407, 151, 74
+	offsets: 14, 8, 180, 90
+	rotate: 90
+effect/st_02
+	bounds: 1775, 2, 73, 104
+	offsets: 29, 13, 128, 128
+	rotate: 90
+effect/st_03
+	bounds: 1950, 312, 93, 77
+	offsets: 17, 23, 128, 128
+	rotate: 90
+effect/st_04
+	bounds: 1899, 325, 78, 49
+	offsets: 28, 30, 128, 128
+	rotate: 90
+effect/xg
+	bounds: 1449, 4, 128, 128
+effect/yw_02
+	bounds: 1579, 2, 43, 46
+	offsets: 12, 8, 64, 64
+	rotate: 90
+effect/yw_04
+	bounds: 1961, 209, 49, 52
+	offsets: 9, 5, 64, 64
+	rotate: 90
+effect/yw_06
+	bounds: 1904, 202, 54, 52
+	offsets: 6, 6, 64, 64
+effect/yw_08
+	bounds: 1904, 256, 55, 54
+	offsets: 5, 5, 64, 64
+effect/yw_10
+	bounds: 1881, 18, 57, 53
+	offsets: 3, 6, 64, 64
+	rotate: 90
+effect/yw_12
+	bounds: 1961, 260, 53, 50
+	offsets: 4, 7, 64, 64
+effect/yw_14
+	bounds: 1627, 5, 46, 40
+	offsets: 4, 11, 64, 64
+effect/yw_16
+	bounds: 1904, 175, 40, 25
+	offsets: 5, 28, 64, 64
+effect/yyw_09
+	bounds: 803, 2, 220, 130
+	offsets: 13, 1, 256, 256
+effect/yyw_11
+	bounds: 670, 45, 226, 131
+	offsets: 13, 2, 256, 256
+	rotate: 90
+effect/yyw_13
+	bounds: 1441, 605, 226, 133
+	offsets: 18, 1, 256, 256
+effect/yyw_15
+	bounds: 1466, 347, 256, 256
+
+action_3.png
+	size: 864, 507
+	filter: Linear, Linear
+	pma: true
+effect/yanchen/yanchen_0000
+	bounds: 2, 2, 230, 64
+	offsets: 116, 40, 480, 146
+effect/yanchen/yanchen_0002
+	bounds: 484, 404, 356, 101
+	offsets: 58, 21, 480, 146
+effect/yanchen/yanchen_0004
+	bounds: 2, 362, 480, 143
+	offsets: 0, 1, 480, 146
+effect/yanchen/yanchen_0006
+	bounds: 2, 215, 472, 145
+	offsets: 8, 0, 480, 146
+effect/yanchen/yanchen_0008
+	bounds: 2, 68, 462, 145
+	offsets: 10, 1, 480, 146
+effect/yanchen/yanchen_0010
+	bounds: 466, 9, 396, 142
+	offsets: 42, 3, 480, 146
+effect/yanchen/yanchen_0012
+	bounds: 717, 185, 217, 134
+	offsets: 220, 7, 480, 146
+	rotate: 90
+effect/yanchen/yanchen_0014
+	bounds: 476, 153, 229, 126
+	offsets: 206, 14, 480, 146
+effect/yanchen/yanchen_0016
+	bounds: 484, 281, 231, 121
+	offsets: 203, 18, 480, 146
+effect/yanchen/yanchen_0018
+	bounds: 466, 204, 8, 9
+	offsets: 428, 54, 480, 146
+
+action_4.png
+	size: 101, 245
+	filter: Linear, Linear
+	pma: true
+effect/yw_h/ksyw_02
+	bounds: 2, 158, 94, 41
+	offsets: 19, 0, 128, 64
+effect/yw_h/ksyw_04
+	bounds: 2, 201, 92, 42
+	offsets: 22, 0, 128, 64
+effect/yw_h/ksyw_06
+	bounds: 2, 2, 64, 42
+	offsets: 31, 0, 128, 64
+	rotate: 90
+effect/yw_h/ksyw_08
+	bounds: 2, 113, 63, 43
+	offsets: 30, 0, 128, 64
+effect/yw_h/ksyw_10
+	bounds: 2, 68, 63, 43
+	offsets: 30, 0, 128, 64
+effect/yw_h/ksyw_12
+	bounds: 67, 95, 61, 32
+	offsets: 32, 0, 128, 64
+	rotate: 90
+effect/yw_h/ksyw_14
+	bounds: 67, 41, 52, 31
+	offsets: 36, 0, 128, 64
+	rotate: 90
+effect/yw_h/ksyw_16
+	bounds: 46, 7, 49, 32
+	offsets: 41, 0, 128, 64

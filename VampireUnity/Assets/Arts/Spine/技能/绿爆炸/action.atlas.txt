@@ -1,0 +1,85 @@
+action.png
+	size: 2026, 1023
+	filter: Linear, Linear
+	pma: true
+EP120ep
+	bounds: 2, 548, 473, 645
+	offsets: 124, 33, 700, 700
+	rotate: 90
+j2_hit_000
+	bounds: 356, 14, 219, 205
+	offsets: 78, 62, 358, 358
+j2_hit_001
+	bounds: 649, 673, 348, 356
+	offsets: 10, 0, 358, 358
+	rotate: 90
+j2_hit_002
+	bounds: 1007, 663, 358, 339
+	offsets: 0, 0, 358, 358
+	rotate: 90
+j2_hit_003
+	bounds: 649, 314, 357, 343
+	offsets: 1, 0, 358, 358
+	rotate: 90
+j2_hit_004
+	bounds: 2, 217, 352, 329
+	offsets: 6, 2, 358, 358
+j2_hit_005
+	bounds: 1348, 670, 351, 323
+	offsets: 7, 2, 358, 358
+	rotate: 90
+j2_hit_006
+	bounds: 994, 310, 351, 319
+	offsets: 7, 2, 358, 358
+	rotate: 90
+j2_hit_007
+	bounds: 1348, 347, 351, 321
+	offsets: 7, 2, 358, 358
+j2_hit_008
+	bounds: 1673, 701, 351, 320
+	offsets: 7, 2, 358, 358
+j2_hit_009
+	bounds: 1701, 6, 351, 308
+	offsets: 7, 2, 358, 358
+	rotate: 90
+j2_hit_010
+	bounds: 608, 3, 346, 309
+	offsets: 12, 2, 358, 358
+j2_hit_011
+	bounds: 1701, 359, 340, 309
+	offsets: 18, 2, 358, 358
+	rotate: 90
+j2_hit_012
+	bounds: 1315, 37, 334, 308
+	offsets: 24, 2, 358, 358
+j2_hit_013
+	bounds: 956, 2, 333, 306
+	offsets: 25, 2, 358, 358
+j2_hit_014
+	bounds: 356, 221, 325, 250
+	offsets: 32, 2, 358, 358
+	rotate: 90
+j2_hit_015
+	bounds: 608, 545, 1, 1
+j2_hit_016
+	bounds: 608, 545, 1, 1
+j2_hit_017
+	bounds: 608, 545, 1, 1
+j_f_000
+	bounds: 1651, 233, 112, 45
+	offsets: 5, 0, 140, 45
+	rotate: 90
+j_f_001
+	bounds: 1651, 119, 112, 45
+	offsets: 5, 0, 140, 45
+	rotate: 90
+j_f_002
+	bounds: 1651, 5, 112, 45
+	offsets: 5, 0, 140, 45
+	rotate: 90
+j_f_003
+	bounds: 2, 170, 112, 45
+	offsets: 5, 0, 140, 45
+j_f_004
+	bounds: 116, 170, 112, 45
+	offsets: 5, 0, 140, 45
