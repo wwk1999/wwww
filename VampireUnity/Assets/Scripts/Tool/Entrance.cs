@@ -288,7 +288,6 @@ public class Entrance : MonoBehaviour
             
             GameObject FinalDamageReductionFixed = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/FinalDamageReductionFixed"));
             FinalDamageReductionFixed.gameObject.SetActive(false);
-            Debug.LogError(FinalDamageReductionFixed.GetComponent<EquipBase>().enabled);
             GameController.S.FinalDamageReductionFixedQueue.Enqueue(FinalDamageReductionFixed);
             
             GameObject FinalDamageReductionPercent = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/FinalDamageReductionPercent"));
@@ -641,6 +640,19 @@ public class Entrance : MonoBehaviour
                 
                 Collider2D snotcollider2D=snotMonster.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(snotcollider2D,snotMonster.GetComponent<MonsterBase>());
+            }
+        }
+
+        if (LevelInfoConfig.CurrentGameLevel == 3)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                var treemanSkill =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/Level1/TreeManSkill").GetComponent<TreeManSkill>(),
+                        GameController.S.transform);
+                treemanSkill.gameObject.SetActive(false);
+                GameController.S.TreeManSkillQueue.Enqueue(treemanSkill.GetComponent<TreeManSkill>());
             }
         }
         

@@ -61,8 +61,9 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<EliteBeeMonster> EliteBeeMonsterQueue = new Queue<EliteBeeMonster>();
     [NonSerialized] public Queue<BatMonster> BatMonsterQueue = new Queue<BatMonster>();
     [NonSerialized] public Queue<SpiderMonster> SpiderMonsterQueue = new Queue<SpiderMonster>();
-    //[NonSerialized]public Queue<BatAttackTrigger> BatAttackTriggerQueue = new Queue<BatAttackTrigger>();
     [NonSerialized]public Queue<BeeMonsterSkillTrigger> BeeMonsterSkillTriggerQueue = new Queue<BeeMonsterSkillTrigger>();
+    [NonSerialized] public Queue<TreeManSkill> TreeManSkillQueue = new Queue<TreeManSkill>();
+
     
     //第二关怪
     [NonSerialized] public Queue<ChongZiMonster> ChongZiMonsterQueue = new Queue<ChongZiMonster>();
@@ -311,10 +312,11 @@ public class GameController : XSingleton<GameController>
     [NonSerialized]public int KillMonsterCount=0;
 
 
-    public void CreateCircleAttack(Vector2 pos)
+    public void CreateCircleAttack(Vector2 pos,float scale)
     {
         var circle=CircleQueue.Dequeue();
         circle.transform.position = pos;
+        circle.transform.localScale = new Vector3(scale, scale, scale);
         circle.gameObject.SetActive(true);
     }
     

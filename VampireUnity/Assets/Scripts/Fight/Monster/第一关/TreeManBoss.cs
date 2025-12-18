@@ -9,11 +9,11 @@ using UnityEngine;
 public class TreeManBoss : MonsterBase
 {
     public TreeManBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 1000, 0.5f, 10, 5, 10, 10, 0) { }
-   [NonSerialized]public float FireSkillTime = 30f;
+   [NonSerialized]public float FireSkillTime = 15f;
    [NonSerialized]public float FireSkillCurrentTime = 0f;
    [NonSerialized]public float DashSkillTime = 10f;
    [NonSerialized]public float DashSkillCurrentTime = 0f;
-   [NonSerialized]public float GroundFissureSkillTime = 10f;
+   [NonSerialized]public float GroundFissureSkillTime = 12f;
    [NonSerialized]public float GroundFissureSkillCurrentTime = 0f;
    [NonSerialized]public Vector2 Dashdirection = Vector2.zero;
    [NonSerialized]public Vector2 GroundFissurepos = Vector2.zero;
@@ -58,7 +58,7 @@ public class TreeManBoss : MonsterBase
             isSkill1=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_01", false);
             GroundFissurepos=GameController.S.gamePlayer.transform.position;
-            GameController.S.CreateCircleAttack(GroundFissurepos);
+            GameController.S.CreateCircleAttack(GroundFissurepos,1f);
         }else if (isSkill2)
         {
             IsSkill=true;
@@ -115,14 +115,19 @@ public class TreeManBoss : MonsterBase
         Vector2 center = Vector2.zero;   // (0,0)
         float radius = 12f;
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 15; i++)
         {
             // 在单位圆内随机一个点，再乘以半径 -> 半径为 12 的圆内
             Vector2 randomInCircle = UnityEngine.Random.insideUnitCircle * radius;
             Vector3 pos = new Vector3(center.x + randomInCircle.x, center.y + randomInCircle.y, 0f);
-            GameController.S.CreateCircleAttack(pos);
+            GameController.S.CreateCircleAttack(pos,0.75f);
+            var treeManSkill = GameController.S.TreeManSkillQueue.Dequeue();
+            treeManSkill.transform.position = pos;
+            treeManSkill.damage = Attack;
+            treeManSkill.gameObject.SetActive(true);
         }
     }
+    
 
     public void Start()
     {
