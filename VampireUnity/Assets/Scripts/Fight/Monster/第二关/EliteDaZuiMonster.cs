@@ -81,6 +81,7 @@ public class EliteDaZuiMonster : MonsterBase
     
     private void Start()
     {
+        base.Start();
         size = 0.55f;
         AddMonsterEquip();
         AddMonsterSourceStone();
@@ -92,6 +93,7 @@ public class EliteDaZuiMonster : MonsterBase
     {
         Dir = false;
         monsterSkeletonAnimation.AnimationState.SetAnimation(0,"skill", true);
+        IsSkill = true;
         Speed = 0;
         Fire.startRotation = -90 * Mathf.Deg2Rad;//转换为弧度
         Fire.transform.localPosition = new Vector2(-2.7f, 0);
@@ -103,6 +105,7 @@ public class EliteDaZuiMonster : MonsterBase
     public void AttackBeginRight()
     {
         Dir = true;
+        IsSkill = true;
         monsterSkeletonAnimation.AnimationState.SetAnimation(0,"skill", true);
         Speed = 0;
         Fire.startRotation = 90* Mathf.Deg2Rad;
@@ -147,7 +150,10 @@ public class EliteDaZuiMonster : MonsterBase
         }
         if (!IsDead)
         {
-            MonsterMove();
+            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) >= 2)
+            {
+                MonsterMove();
+            }
             SpriteFlipX(true);
         }
 

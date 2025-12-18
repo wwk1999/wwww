@@ -294,6 +294,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         if (trackEntry.Animation.Name == MonsterSpineName.Skill1Name)//沙漠蜥蜴
         {
+            IsSkill=false;
             isSkill1 = false;
             if (this is ShaXiYi)
             {
@@ -304,6 +305,7 @@ public abstract class MonsterBase : MonoBehaviour
        
         if (isSkill2)
         {
+            IsSkill=false;
             isSkill2 = false;
             if (this is ZhaoZeBoss)
             {
@@ -318,6 +320,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else if (isSkill1)
         {
+            IsSkill=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.Skill1Name, false);
             if (this is ShaMoElite)
             {
@@ -389,6 +392,11 @@ public abstract class MonsterBase : MonoBehaviour
                 gameObject.SetActive(false);
                 GameController.S.XiNiuMonsterQueue.Enqueue(xiNiuMonster);
             }
+            else if (this is HuangShu huangshu)
+            {
+                gameObject.SetActive(false);
+                GameController.S.HuangShuQueue.Enqueue(huangshu);
+            } 
             // 第三关怪物死亡
             else if (this is WenZiMonster wenZiMonster)
             {
@@ -833,8 +841,11 @@ public abstract class MonsterBase : MonoBehaviour
             }
 
             if (monsterSkeletonAnimation != null)
-            { 
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
+            {
+                if (!IsSkill)
+                {
+                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
+                }
             }
             else
             {

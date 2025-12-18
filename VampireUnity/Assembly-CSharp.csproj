@@ -440,6 +440,7 @@
     <None Include="Assets\Arts\Spine\技能\绿爆炸\action.atlas.txt" />
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\useSharedDesignerContext.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaXiYi\shamoxiyi.json" />
+    <None Include="Assets\Arts\Spine\第二关\大嘴\dazuiguai.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\package.json" />
     <None Include="Assets\Arts\Spine\第五关\XueQiE\Enemy_Snowman.json" />
@@ -473,6 +474,7 @@
     <None Include="Assets\External Resources\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_Decal.shader" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\boss\json\huoshanboss.json" />
+    <None Include="Assets\Arts\Spine\第二关\虫子\congzi.json" />
     <None Include="Library\PackageCache\com.unity.ext.nunit@2.0.3\package.json" />
     <None Include="Assets\Arts\Spine\第二关\boss\json\huoshanboss.atlas.txt" />
     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\useSharedDesignerContext.txt" />
@@ -521,6 +523,7 @@
     <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
     <None Include="Assets\Arts\Spine\怪物\Zuan\Enemy_Boss_drill.json" />
+    <None Include="Assets\Arts\Spine\第二关\大嘴\dazuiguai.json" />
     <None Include="Assets\Arts\Spine\技能\ZiPeng\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.burst@1.8.21\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通\action.json" />
@@ -536,7 +539,6 @@
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰peng\action.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\package.json" />
     <None Include="Assets\Arts\Spine\怪物\HuangZhu\Enemy_Boar_L.atlas.txt" />
-    <None Include="Assets\Arts\Spine\第二关\虫子\json\congzi.json" />
     <None Include="Assets\Arts\Spine\第三关\青蛙\json\qingwa.atlas.txt" />
     <None Include="Assets\Arts\Shaders\HeadBG.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\package.json" />
@@ -643,19 +645,18 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\DuPeng\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\GreenWolf\Enemy_Boss_stormwolf.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 2\Enemy_Boss_passfuck.json" />
-    <None Include="Assets\Arts\Spine\第二关\虫子\json\congzi.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\PuTong3\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\json\wenzi.atlas.txt" />
     <None Include="Assets\Arts\Shaders\UIScan.shader" />
     <None Include="Assets\Arts\Spine\技能\json\H043_Special.atlas.txt" />
+    <None Include="Assets\Arts\Spine\第二关\虫子\congzi.atlas.txt" />
     <None Include="Assets\External Resources\Hovl Studio\Toon Projectiles 2\Demo scene\HDRP and URP(LWRP).txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\食人花\dumoshirenhua.json" />
-    <None Include="Assets\Arts\Spine\第二关\大嘴怪\json\dazuiguai.json" />
     <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\IceEx\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\LanXiNiu\BOSSlong_shui.atlas.txt" />
@@ -667,7 +668,6 @@
     <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\DianPeng\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通\action.atlas.txt" />
-    <None Include="Assets\Arts\Spine\第二关\大嘴怪\json\dazuiguai.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通Peng\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
+using Spine;
 using UnityEngine;
 
 public class ChongZiMonster : MonsterBase
@@ -8,6 +9,8 @@ public class ChongZiMonster : MonsterBase
     public ChongZiMonster() : base(MonsterType.Normal, "ChongZiMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0)
     {
     }
+
+    public Transform attackTrans;
     public override void AddMonsterSourceStone()
     {
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,2));
@@ -36,7 +39,7 @@ public class ChongZiMonster : MonsterBase
         MonsterSpineName.DieName = "die";
     }
     
-   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
+    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);
         if (!IsDead)
@@ -74,18 +77,38 @@ public class ChongZiMonster : MonsterBase
     
     private void Start()
     {
-        size = 0.15f;
+        base.Start();
+        size = 0.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
+
     }
     
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "attack")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
+        }
+    }
     
     void Update()
     {
-        if (IsDead) return;
+        if(IsDead) return;
         base.Update();
-        
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        {
+            isAttack=true;
+        }
+        else
+        {
+            isAttack=false;
+        }
         if (!IsDead)
         {
             MonsterMove();

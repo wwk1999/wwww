@@ -1039,7 +1039,7 @@ public class GameController : XSingleton<GameController>
                 }
                 else if (NormalMonsterCount % 3 == 1)
                 {
-                    monsterBase = XiaoHuoMonsterQueue.Dequeue();
+                    monsterBase = HuangShuQueue.Dequeue();
                 }
                 else
                 {

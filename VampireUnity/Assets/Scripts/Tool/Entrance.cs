@@ -660,6 +660,15 @@ public class Entrance : MonoBehaviour
         {
             for (int i = 0; i < 100; i++)
             {
+                var huangshu =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangShuMonster").GetComponent<HuangShu>(),
+                        GameController.S.transform);
+                huangshu.gameObject.SetActive(false);
+                GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
+                
+                Collider2D Huangshucollider2D=huangshu.transform.Find("Collider").GetComponent<Collider2D>();
+                GameController.S.MonsterColliderDic.Add(Huangshucollider2D,huangshu.GetComponent<MonsterBase>());
+                
                 var Huangzhu =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangZhuMonster").GetComponent<Huangzhu>(),
                         GameController.S.transform);
@@ -764,11 +773,6 @@ public class Entrance : MonoBehaviour
         {
             for (int i = 0; i < 100; i++)
             {
-                var huangshu =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangShuMonster").GetComponent<HuangShu>(),
-                        GameController.S.transform);
-                huangshu.gameObject.SetActive(false);
-                GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
                 
                 var KuLou = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/KuLouMonster").GetComponent<KuLou>(), GameController.S.transform);
                 KuLou.gameObject.SetActive(false);
@@ -785,9 +789,6 @@ public class Entrance : MonoBehaviour
                 var XianRenZhang = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/XianRenZhang").GetComponent<XianRenZhang>(), GameController.S.transform);
                 XianRenZhang.gameObject.SetActive(false);
                 GameController.S.XianRenZhangQueue.Enqueue(XianRenZhang.GetComponent<XianRenZhang>());
-                
-                Collider2D Huangshucollider2D=huangshu.transform.Find("Collider").GetComponent<Collider2D>();
-                GameController.S.MonsterColliderDic.Add(Huangshucollider2D,huangshu.GetComponent<MonsterBase>());
                 
                 Collider2D KuLoucollider2D=KuLou.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(KuLoucollider2D,KuLou.GetComponent<MonsterBase>());
