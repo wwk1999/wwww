@@ -655,9 +655,17 @@ public class BagController : XSingleton<BagController>
             propGrid.transform.Find("parent/Count").GetComponent<Text>().text = prop.Value.Count.ToString();
             if (prop.Value.PropType == PropConfig.PropType.ShenHuaCaiLiao)
             {
-                propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
-                propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                    ResourcesConfig.OrangeBg;
+                if (prop.Key == 305)
+                {
+                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
+                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
+                }
+                else
+                {
+                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                }
+                
             }
             else
             {
@@ -779,7 +787,7 @@ public class BagController : XSingleton<BagController>
                             propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
                                 ResourcesConfig.ZuiEYanZhu;
                             break;
-                        case 5:
+                        case 6:
                             propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
                                 ResourcesConfig.ShenHuaZhiXin;
                             break;
@@ -887,23 +895,27 @@ public class BagController : XSingleton<BagController>
                     switch (list[i].Quality)
                     {
                         case 1:
-                            equipGridBGImage.sprite = whiteBg;
+                            equipGridBGImage.sprite = ResourcesConfig.WhiteBg;
                             bagGridButton.image.material = whiteMaterial;
                             break;
                         case 2:
-                            equipGridBGImage.sprite = greenBg;
+                            equipGridBGImage.sprite = ResourcesConfig.GreenBg;
                             bagGridButton.image.material = greenMaterial;
                             break;
                         case 3:
-                            equipGridBGImage.sprite = blueBg;
+                            equipGridBGImage.sprite = ResourcesConfig.BlueBg;
                             bagGridButton.image.material = blueMaterial;
                             break;
                         case 4:
-                            equipGridBGImage.sprite = purpleBg;
+                            equipGridBGImage.sprite = ResourcesConfig.PurpleBg;
                             bagGridButton.image.material = purpleMaterial;
                             break;
                         case 5:
-                            equipGridBGImage.sprite = orangeBg;
+                            equipGridBGImage.sprite = ResourcesConfig.OrangeBg;
+                            bagGridButton.image.material = orangeMaterial;
+                            break;
+                        case 6:
+                            equipGridBGImage.sprite = ResourcesConfig.RedBg;
                             bagGridButton.image.material = orangeMaterial;
                             break;
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Equip;
 using TMPro;
 using Tool;
 using Unity.Mathematics;
@@ -123,7 +124,74 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI greenQuality;
     private int clickEquipid=0;
     
+    
+    
+    //进阶界面
+    
+    public Text jinJiePageNumText;
+    public Button jinJieRight;
+    public Button jinJieLeft;
+    public Image jinJieEquipImage;
+    public Animator jinJieEdge;
+    public Image jinJieEquipBg;
+    public Button jinJie;
+    public GameObject jinJieEquipContent;
+    private int jinJiePageNum = 1;
+    private int jinJieEquipId = 0;
 
+    public void ShowJinJieBag()
+    {
+        jinJieEquipImage.gameObject.SetActive(false);
+        jinJieEdge.gameObject.SetActive(false);
+        jinJieEquipBg.gameObject.SetActive(false);
+        foreach (Transform child in jinJieEquipContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        int startIndex = (jinJiePageNum - 1) * 35;
+        int endIndex = Mathf.Min(jinJiePageNum * 35, BagController.S.EquipIdList.Count);
+        List<EquipTable> list = BagController.S.EquipIdList.Values.ToList();
+        for (int i = startIndex; i < endIndex; i++)
+        {
+            GameObject jinjieGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/JinJieGrid"),jinJieEquipContent.transform);
+            jinjieGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GetEquipSprite(list[i]);
+            jinjieGrid.GetComponent<JinJIeGrid>().equipTable = list[i];
+            switch (list[i].Quality)
+            {
+                case 1:
+                    jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.WhiteBg;
+                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                    break;
+                case 2:
+                    jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.GreenBg;
+                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
+                    break;
+                case 3:
+                    jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.BlueBg;
+                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
+                    break;
+                case 4:
+                    jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.PurpleBg;
+                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                    break;
+                case 5:
+                    jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.OrangeBg;
+                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                    break;
+                case 6:
+                    jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.RedBg;
+                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
+                    break;
+            }
+        }
+    }
+    
     public void ShowXiLianBag()
     {
         equipInfo.gameObject.SetActive(false);
@@ -138,10 +206,6 @@ public class DuanZaoWindow : MonoBehaviour
 
         for (int i = startIndex; i < endIndex; i++)
         {
-            if (list[i].Quality < 2)
-            {
-                continue;
-            }
             GameObject xilianGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XiLianGrid"),equipContent.transform);
             xilianGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GetEquipSprite(list[i]);
             xilianGrid.GetComponent<XiLianGrid>().equipTable = list[i];
@@ -765,7 +829,8 @@ public class DuanZaoWindow : MonoBehaviour
                     else
                     {
                         BagController.S.PropList.Add(305,new PropTable(PropConfig.PropType.ShenHuaCaiLiao,1,"",6));
-                    }                }
+                    }                
+                }
                 break;
         }
         
@@ -817,8 +882,54 @@ public class DuanZaoWindow : MonoBehaviour
                 xiLianPanel.SetActive(false);
                 heChongPanel.SetActive(false);
                 jinJiePanel.SetActive(true);
+                ShowJinJieBag();
+                jinJiePageNum = 1;
                 break;
         }
+    }
+
+    public void JinJieEquip(object[] obj)
+    {
+        EquipTable equip=obj[0] as EquipTable;
+        if (equip == null)
+        {
+            return;
+        }
+
+        if (equip.Quality != 5)
+        {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"传说装备才能进阶");
+            return;
+        }
+
+        jinJieEquipId = equip.equipid;
+        jinJieEdge.gameObject.SetActive(true);
+        jinJieEquipImage.gameObject.SetActive(true);
+        jinJieEquipBg.gameObject.SetActive(true);
+        jinJieEquipImage.sprite = ResourcesConfig.GetEquipSprite(equip);
+        jinJieEquipBg.sprite = ResourcesConfig.OrangeBg;
+        jinJieEdge.Play("OrangeEdge");
+    }
+
+    public void JinJie()
+    {
+        if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(206) || BagController.S
+                .PropList
+                    [206].Count < 10 || !BagController.S.PropList.ContainsKey(305) ||
+            BagController.S.PropList[305].Count < 1)
+        {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+            return;
+        }
+
+        GlobalPlayerAttribute.BloodEnergy -= 10000;
+        BagController.S.PropList[206].Count -= 10;
+        BagController.S.PropList[305].Count -= 1;
+
+        BagController.S.EquipIdList[jinJieEquipId].Quality = 6;
+        jinJieEquipBg.sprite = ResourcesConfig.RedBg;
+        jinJieEdge.Play("RedEdge");
+        ShowJinJieBag();
     }
 
     public void XiLianEquip(object[] obj)
@@ -826,6 +937,12 @@ public class DuanZaoWindow : MonoBehaviour
         EquipTable equip=obj[0] as EquipTable;
         if (equip == null)
         {
+            return;
+        }
+
+        if (equip.Quality < 2)
+        {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"优秀以上品质才能洗练");
             return;
         }
         equipInfo.gameObject.SetActive(true);
@@ -992,11 +1109,14 @@ public class DuanZaoWindow : MonoBehaviour
     private void OnDestroy()
     {
         ObserverModuleManager.S.UnRegisterEvent("XiLian",XiLianEquip);
+        ObserverModuleManager.S.UnRegisterEvent("JinJie",JinJieEquip);
     }
 
     private void Start()
     {
         ObserverModuleManager.S.RegisterEvent("XiLian",XiLianEquip);
+        ObserverModuleManager.S.RegisterEvent("JinJie",JinJieEquip);
+
         ShowPanel(PanelType.HeCheng);
         heCheng.onClick.AddListener(()=>
         {
@@ -1161,6 +1281,34 @@ public class DuanZaoWindow : MonoBehaviour
         shenHuaZhiXinButton.onClick.AddListener(() =>
         {
             ShowShenHuaZhiXinItem();
+        });
+        
+        jinJieLeft.onClick.AddListener(() =>
+        {
+            if (jinJiePageNum < 2)
+            {
+                return;
+            }
+
+            jinJiePageNum--;
+            jinJiePageNumText.text = jinJiePageNum.ToString();
+            ShowJinJieBag();
+        });
+        
+        jinJieRight.onClick.AddListener(() =>
+        {
+            if (jinJiePageNum > 4)
+            {
+                return;
+            }
+
+            jinJiePageNum++;
+            jinJiePageNumText.text = jinJiePageNum.ToString();
+            ShowJinJieBag();
+        });
+        jinJie.onClick.AddListener(() =>
+        {
+            JinJie();
         });
     }
 

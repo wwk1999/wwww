@@ -29,6 +29,7 @@ public class RoleWindow1 : MonoBehaviour
     public Text levelText; // 等级文本
     public Slider expSlider; // 经验条
     public Button debugLevel;
+    public Button debugLingHun;
 
     public Button debugJingCui;
     public Button duanzaoButton;
@@ -51,6 +52,11 @@ public class RoleWindow1 : MonoBehaviour
         Debug.Log("点击进入角色界面");
         InitEquip();
         BagController.S.IsInit = true;
+        debugLingHun.onClick.AddListener(() =>
+        {
+            GlobalPlayerAttribute.BloodEnergy += 100000;
+            StoreController.S.SaveStoreData();
+        });
         
         debugJingCui.onClick.AddListener(() =>
         {
