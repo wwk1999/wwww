@@ -7,6 +7,7 @@ using Tool;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public enum PanelType
 {
@@ -113,11 +114,12 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI purpleQuality;
     public TextMeshProUGUI blueQuality;
     public TextMeshProUGUI greenQuality;
+    private int clickEquipid=0;
     
 
     public void ShowXiLianBag()
     {
-        equipInfo.gameObject.SetActive(true);
+        equipInfo.gameObject.SetActive(false);
         foreach (Transform child in equipContent.transform)
         {
             Destroy(child.gameObject);
@@ -709,11 +711,11 @@ public class DuanZaoWindow : MonoBehaviour
                 gou.gameObject.SetActive(_toggleState);
                 break;
             case PanelType.XiLian:
-                equipInfo.gameObject.SetActive(false);
                 xiLianPanel.SetActive(true);
                 heChongPanel.SetActive(false);
                 jinJiePanel.SetActive(false);
                 ShowXiLianBag();
+                clickEquipid = 0;
                 break;
             case PanelType.JinJie:
                 xiLianPanel.SetActive(false);
@@ -730,7 +732,8 @@ public class DuanZaoWindow : MonoBehaviour
         {
             return;
         }
-
+        equipInfo.gameObject.SetActive(true);
+        clickEquipid = equip.equipid;
         switch (equip.Quality)
         {
             case 2:
@@ -1013,6 +1016,46 @@ public class DuanZaoWindow : MonoBehaviour
             PageNum++;
             pageNumText.text = PageNum.ToString();
             ShowXiLianBag();
+        });
+        xiLian.onClick.AddListener(() =>
+        {
+            if (clickEquipid == 0)
+            {
+                return;
+            }
+            BagController.S.EquipIdList[clickEquipid].defenseEntryInfos.Clear();
+            BagController.S.EquipIdList[clickEquipid].damageEntryInfos.Clear();
+            if (BagController.S.EquipIdList[clickEquipid].equip_type_id == 1 || BagController.S.EquipIdList[clickEquipid].equip_type_id == 4 ||
+                BagController.S.EquipIdList[clickEquipid].equip_type_id == 5)
+            {
+                for (int i = 1; i < BagController.S.EquipIdList[clickEquipid].Quality; i++)
+                {
+                    var damageEntryInfo=new DamageEntryInfo();
+                    int randomIndex = Random.Range(0, EntryConfig.DamageEntryList.Count);
+                    damageEntryInfo.DamageEntry = EntryConfig.DamageEntryList[randomIndex];
+                    float randomValue=Random.Range(EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].minValue, EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].maxValue);
+                    float value = Mathf.Round(randomValue*100)/100;
+                    damageEntryInfo.Value = value;
+                    BagController.S.EquipIdList[clickEquipid].damageEntryInfos.Add(damageEntryInfo);
+                }
+            }
+            else
+            {
+                for (int i = 1; i < BagController.S.EquipIdList[clickEquipid].Quality; i++)
+                {
+                    var DefenseEntryInfo=new DefenseEntryInfo();
+                    int randomIndex = Random.Range(0, EntryConfig.DefenseEntryList.Count);
+                    DefenseEntryInfo.DefenseEntry = EntryConfig.DefenseEntryList[randomIndex];
+                    float randomValue=Random.Range(EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].minValue, EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].maxValue);
+                    float value = Mathf.Round(randomValue*100)/100;
+                    DefenseEntryInfo.Value = value;
+                    BagController.S.EquipIdList[clickEquipid].defenseEntryInfos.Add(DefenseEntryInfo);
+                }
+            }
+
+            object[] obj=new object[1];
+            obj[0] = BagController.S.EquipIdList[clickEquipid];
+            XiLianEquip(obj);
         });
     }
 

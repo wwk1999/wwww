@@ -358,12 +358,12 @@ public class ResourcesConfig : MonoBehaviour
 
         MoveSpeedAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Shoe/MoveSpeedAdd");
         ExAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Shoe/ExAdd");
-        ClothFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloth/FortureAdd");
-        ShoeFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Shoe/FortureAdd");
-        CloakFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloak/FortureAdd");
-        NecklaceFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Necklace/FortureAdd");
-        RingFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Ring/FortureAdd");
-        HelmetFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/FortureAdd");
+        ClothFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloth/ClothFortureAdd");
+        ShoeFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Shoe/ShoeFortureAdd");
+        CloakFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloak/CloakFortureAdd");
+        NecklaceFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Necklace/NecklaceFortureAdd");
+        RingFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Ring/RingFortureAdd");
+        HelmetFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/HelmetFortureAdd");
         
         //武器源石
         WhiteDivision = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteDivision");
