@@ -38,6 +38,10 @@ public class EquipIDData : XSingleton<EquipIDData>
         };
         equipIds.Add(data.equipid,data);
     }
+    /// <summary>
+    ///保存道具，1开头是武器碎片，2开头是精粹，3开头是神话材料
+    /// </summary>
+    /// <param name="prop"></param>
 
     public void SaveProp(PropTable prop)
     {
@@ -50,27 +54,50 @@ public class EquipIDData : XSingleton<EquipIDData>
             EquipName =  prop.EquipName,
         };
         int value = 0;
-        switch (prop.Quality)
+        switch (prop.PropType)
         {
-            case 1:
-                value = 101;
+            case PropConfig.PropType.WeaponFragment:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 101;
+                        break;
+                    case 2:
+                        value = 102;
+                        break;
+                    case 3:
+                        value = 103;
+                        break;
+                    case 4:
+                        value = 104;
+                        break;
+                    case 5:
+                        value = 105;
+                        break;
+                    case 6:
+                        value = 106;
+                        break;
+                }
                 break;
-            case 2:
-                value = 102;
-                break;
-            case 3:
-                value = 103;
-                break;
-            case 4:
-                value = 104;
-                break;
-            case 5:
-                value = 105;
-                break;
-            case 6:
-                value = 106;
+            case PropConfig.PropType.ShenHuaCaiLiao:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 301;
+                        break;
+                    case 2:
+                        value = 302;
+                        break;
+                    case 3:
+                        value = 303;
+                        break;
+                    case 4:
+                        value = 304;
+                        break;
+                }
                 break;
         }
+       
         if (propTables.ContainsKey(value))
         {
             propTables[value].Count+=prop.Count;

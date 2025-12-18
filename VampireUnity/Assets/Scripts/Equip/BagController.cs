@@ -653,39 +653,49 @@ public class BagController : XSingleton<BagController>
             var propGrid = Instantiate(Resources.Load("Prefabs/Prop/PropGrid"), equipContent.transform) as GameObject;
             propGrid.transform.Find("parent/Count").gameObject.SetActive(prop.Value.Count > 1);
             propGrid.transform.Find("parent/Count").GetComponent<Text>().text = prop.Value.Count.ToString();
-            switch (prop.Value.Quality)
+            if (prop.Value.PropType == PropConfig.PropType.ShenHuaCaiLiao)
             {
-                case 1:
-                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
-                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.WhiteBg;
-                    break;
-                case 2:
-                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
-                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.GreenBg;
-                    break;
-                case 3:
-                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
-                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.BlueBg;
-                    break;
-                case 4:
-                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
-                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.PurpleBg;
-                    break;
-                case 5:
-                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
-                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.OrangeBg;
-                    break;
-                case 6:
-                    propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
-                    propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.OrangeBg;
-                    break;
+                propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                    ResourcesConfig.OrangeBg;
             }
+            else
+            {
+                switch (prop.Value.Quality)
+                {
+                    case 1:
+                        propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                        propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.WhiteBg;
+                        break;
+                    case 2:
+                        propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
+                        propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.GreenBg;
+                        break;
+                    case 3:
+                        propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
+                        propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.BlueBg;
+                        break;
+                    case 4:
+                        propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                        propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.PurpleBg;
+                        break;
+                    case 5:
+                        propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                        propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.OrangeBg;
+                        break;
+                    case 6:
+                        propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
+                        propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.OrangeBg;
+                        break;
+                }
+            }
+            
 
             switch (prop.Value.PropType)
             {
@@ -745,6 +755,33 @@ public class BagController : XSingleton<BagController>
                         case 6:
                             propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
                                 ResourcesConfig.RedJingCui;
+                            break;
+                    }
+
+                    break;
+                
+                case PropConfig.PropType.ShenHuaCaiLiao:
+                    switch (prop.Value.Quality)
+                    {
+                        case 1:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.FuMoZhiGu;
+                            break;
+                        case 2:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.GoldBlood;
+                            break;
+                        case 3:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.JuDaYaChi;
+                            break;
+                        case 4:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.ZuiEYanZhu;
+                            break;
+                        case 5:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.ShenHuaZhiXin;
                             break;
                     }
 

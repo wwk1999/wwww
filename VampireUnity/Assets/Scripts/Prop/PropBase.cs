@@ -114,7 +114,6 @@ public class PropBase : MonoBehaviour
                 switch (propTable.Quality)
                 {
                     case 1:
-                        Debug.LogError(5555);
                         GameController.S.FuMoZhiGuQueue.Enqueue(gameObject);
                         break;
                     case 2:

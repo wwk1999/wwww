@@ -158,6 +158,13 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite PurpleJingCui;
     public static Sprite OrangeJingCui;
     public static Sprite RedJingCui;
+    
+    public static Sprite FuMoZhiGu;
+    public static Sprite GoldBlood;
+    public static Sprite ZuiEYanZhu;
+    public static Sprite JuDaYaChi;
+    public static Sprite ShenHuaZhiXin;
+
 
     
     //传说装备
@@ -227,6 +234,13 @@ public class ResourcesConfig : MonoBehaviour
         PurpleJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/PurpleJingCui");
         OrangeJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/OrangeJingCui");
         RedJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/RedJingCui");
+        
+        FuMoZhiGu=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/FuMoZhiGu");
+        GoldBlood=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/GoldBlood");
+        ZuiEYanZhu=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ZuiEYanZhu");
+        JuDaYaChi=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/JuDaYaChi");
+        ShenHuaZhiXin=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ShenHuaZhiXin");
+
 
         
         
