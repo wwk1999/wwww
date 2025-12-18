@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Equip;
 using NUnit.Framework;
+using Spine;
 using UnityEngine;
 
 
@@ -13,13 +14,24 @@ public class SnotMonster : MonsterBase
     void Start()
     {
         base.Start();
-        size = 0.3f;
+        size = 0.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
-        
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
+
     }
     
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "attack")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
+        }
+    }
     public void Awake()
     {
         base.Awake();

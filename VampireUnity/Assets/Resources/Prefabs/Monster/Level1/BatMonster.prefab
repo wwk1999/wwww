@@ -54,7 +54,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c4b5bf542e7e149109aae4b7d9094927, type: 2}
+  - {fileID: 2100000, guid: 5ede5af7c3a127d419a28351a36ab71f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 96176f4e19a56449b9e09e8798dc38a4, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 8d6955ecc57c56742a152685d44b6da6, type: 2}
   initialSkinName: 
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
@@ -157,6 +157,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6573709775183112807}
+  - {fileID: 5917051774373358080}
   m_Father: {fileID: 2526423993814307592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3719212804938255277
@@ -236,6 +237,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.16083, y: 1.8051134}
   m_EdgeRadius: 0
+--- !u!1 &6320665511976350723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5917051774373358080}
+  m_Layer: 0
+  m_Name: attacktrans
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5917051774373358080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320665511976350723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6512894659134897012}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8947400886200884997
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +406,7 @@ MonoBehaviour:
   monsterAnimator: {fileID: 0}
   collider2D: {fileID: 5745585470139755523}
   rigidbody2D: {fileID: 1613834688120958099}
+  attackTrans: {fileID: 5917051774373358080}
 --- !u!1001 &814621646714894940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -582,7 +615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7394250949711020886, guid: 4beb553d22c614bc88cb6477ca532ff4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.35
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7394250949711020886, guid: 4beb553d22c614bc88cb6477ca532ff4, type: 3}
       propertyPath: m_LocalPosition.y

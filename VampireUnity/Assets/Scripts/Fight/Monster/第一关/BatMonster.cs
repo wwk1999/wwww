@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Equip;
+using Spine;
 using UnityEngine;
 
 public class BatMonster : MonsterBase
@@ -8,15 +9,29 @@ public class BatMonster : MonsterBase
     //[NonSerialized]public bool IsTrigger;
     [NonSerialized]public float attackTime = 3f;
     [NonSerialized]public float currentTime = 0f;
+    public Transform attackTrans;
 
     public BatMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0) { }
     void Start()
     {
         base.Start();
-        size = 0.15f;
+        size = 0.5f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
+
+    }
+    
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "attack")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
+        }
     }
 
     public void Awake()

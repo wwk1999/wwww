@@ -451,6 +451,7 @@
     <None Include="Assets\Arts\Shaders\LcL\Shine.shader" />
     <None Include="Assets\Spine\version.txt" />
     <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\第一关\蝙蝠\bf.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\GreenWolf\Enemy_Boss_stormwolf.json" />
     <None Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Demo scenes\Readme.txt" />
     <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
@@ -460,6 +461,7 @@
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.ai@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\第一关\粘液怪\nyg.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 2\Enemy_Boss_passfuck.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\json\wenzi.json" />
     <None Include="Assets\Arts\Spine\第五关\XueQiE\Enemy_Snowman.atlas.txt" />
@@ -488,6 +490,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空\action.atlas.txt" />
     <None Include="Assets\Arts\Shaders\LcL\Gradient.shader" />
     <None Include="Assets\Arts\Spine\第四关\XianRenZhang\xianrenzhang.atlas.txt" />
+    <None Include="Assets\Arts\Spine\第一关\蝙蝠\bf.json" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\Fail\bui_10.atlas.txt" />
     <None Include="Assets\Arts\Shaders\BGLight.shader" />
     <None Include="Assets\Arts\Spine\技能\Boss出现\action.json" />
@@ -540,7 +543,6 @@
     <None Include="Assets\Arts\Shaders\LcL\InnerOutline.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\火焰peng\action.json" />
     <None Include="Assets\Arts\Spine\怪物\json 8\guyalang02.json" />
-    <None Include="Assets\Arts\Spine\第一关\蜘蛛\json\zz.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
@@ -580,7 +582,6 @@
     <None Include="Assets\Arts\Spine\技能\ZiZha\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaChong\shamochong.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.shadergraph@14.0.12\ValidationConfig.json" />
-    <None Include="Assets\Arts\Spine\第一关\蜘蛛\json\zz.json" />
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\ValidationExceptions.json" />
     <None Include="Assets\External Resources\shot\AAA Projectiles Vol 1\Shaders\Blend_CenterGlow.shader" />
     <None Include="Assets\Arts\Spine\技能\DianPeng\action.json" />
@@ -627,7 +628,6 @@
     <None Include="Assets\Arts\Spine\怪物\Zuan\Enemy_Boss_drill.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\link.xml" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\FireDan\action.atlas.txt" />
-    <None Include="Assets\Arts\Spine\第一关\蝙蝠\json\bf.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\PuTong3\action.json" />
     <None Include="Assets\Arts\Spine\第五关\XueLang\xuelang.json" />
@@ -637,7 +637,6 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Arts\Shaders\LcL\Glitch.shader" />
     <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
-    <None Include="Assets\Arts\Spine\第一关\蝙蝠\json\bf.json" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\package.json" />
     <None Include="Assets\Arts\Spine\怪物\PenHuoYu\Enemy_Inferiordevil.atlas.txt" />
     <None Include="Assets\Spine\package.json" />
@@ -656,11 +655,11 @@
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\食人花\dumoshirenhua.json" />
-    <None Include="Assets\Arts\Spine\第一关\粘液怪\json\nyg.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\大嘴怪\json\dazuiguai.json" />
     <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\IceEx\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\LanXiNiu\BOSSlong_shui.atlas.txt" />
+    <None Include="Assets\Arts\Spine\第一关\蜘蛛\zz.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\怪物\json 8\guyalang02.atlas.txt" />
     <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Multiplicative\EdgeEffect_Electric_Multiplicative.shader" />
@@ -717,6 +716,7 @@
     <None Include="Assets\Arts\Shaders\Rage.shader" />
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoBoss\Enemy_Boss_cactus.atlas.txt" />
+    <None Include="Assets\Arts\Spine\第一关\蜘蛛\zz.json" />
     <None Include="Assets\Arts\Shaders\EdgeLight.shader" />
     <None Include="Assets\Arts\Shaders\Transparent.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\AddHp\action.json" />
@@ -741,6 +741,7 @@
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰攻击\action.json" />
     <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\第一关\粘液怪\nyg.json" />
     <None Include="Assets\Arts\Spine\技能\json\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\AddHp\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.atlas.txt" />
@@ -767,7 +768,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空peng\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
-    <None Include="Assets\Arts\Spine\第一关\粘液怪\json\nyg.json" />
     <Reference Include="UnityEngine">
       <HintPath>D:\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

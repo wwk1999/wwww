@@ -186,11 +186,6 @@ public abstract class MonsterBase : MonoBehaviour
         }
         currentHurtTime += Time.deltaTime;
         float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
-        if (dis < GameController.S.gamePlayer.size + size&&currentHurtTime>hurtTime)
-        {
-            currentHurtTime = 0;
-            GameController.S.gamePlayer.PlayerHurt(Attack,MonsterType==MonsterType.Boss);
-        }
 
         if (dis < 5f)
         {
