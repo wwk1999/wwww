@@ -31,7 +31,11 @@ public class SnotMonster : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ShenHuaCaiLiao,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ShenHuaCaiLiao,2),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ShenHuaCaiLiao,3),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ShenHuaCaiLiao,4),100));
+
     }
 
     private void RandomDelayDie()

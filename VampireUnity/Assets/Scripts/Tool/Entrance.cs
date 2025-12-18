@@ -76,6 +76,22 @@ public class Entrance : MonoBehaviour
             RedWeaponFragmeng.gameObject.SetActive(false);
             GameController.S.RedWeaponFragmengQueue.Enqueue(RedWeaponFragmeng);
             
+            GameObject JuDaYaChi = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/JuDaYaChi"));
+            JuDaYaChi.gameObject.SetActive(false);
+            GameController.S.JuDaYaChiQueue.Enqueue(JuDaYaChi);
+            
+            GameObject GoldBlood = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/GoldBlood"));
+            GoldBlood.gameObject.SetActive(false);
+            GameController.S.GoldBloodQueue.Enqueue(GoldBlood);
+            
+            GameObject ZuiEYanZhu = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ZuiEYanZhu"));
+            ZuiEYanZhu.gameObject.SetActive(false);
+            GameController.S.ZuiEYanZhuQueue.Enqueue(ZuiEYanZhu);
+            
+            GameObject FuMoZhiGu = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/FuMoZhiGu"));
+            FuMoZhiGu.gameObject.SetActive(false);
+            GameController.S.FuMoZhiGuQueue.Enqueue(FuMoZhiGu);
+            
             
             
             

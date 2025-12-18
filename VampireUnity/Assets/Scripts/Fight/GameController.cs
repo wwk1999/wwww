@@ -147,7 +147,7 @@ public class GameController : XSingleton<GameController>
 
     
     
-    //武器对象池
+    //武器碎片对象池
     [NonReorderable]public Queue<GameObject>WhiteWeaponFragmengQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>GreenWeaponFragmengQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>BlueWeaponFragmengQueue = new Queue<GameObject>();
@@ -254,6 +254,11 @@ public class GameController : XSingleton<GameController>
 
 
 
+    //神话材料
+    [NonReorderable]public Queue<GameObject>JuDaYaChiQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>FuMoZhiGuQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>GoldBloodQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ZuiEYanZhuQueue = new Queue<GameObject>();
 
 
    
@@ -352,6 +357,19 @@ public class GameController : XSingleton<GameController>
                         return OrangeWeaponFragmengQueue.Dequeue();
                     case 6:
                         return RedWeaponFragmengQueue.Dequeue();
+                }
+                break;
+            case PropConfig.PropType.ShenHuaCaiLiao:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        return FuMoZhiGuQueue.Dequeue();
+                    case 2:
+                        return GoldBloodQueue.Dequeue();
+                    case 3:
+                        return JuDaYaChiQueue.Dequeue();
+                    case 4:
+                        return ZuiEYanZhuQueue.Dequeue();
                 }
                 break;
         }

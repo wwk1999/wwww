@@ -70,6 +70,11 @@ namespace Tool
             {"PurpleWeaponFragment", "紫色武器碎片"},
             {"OrangeWeaponFragment", "橙色武器碎片"},
             {"RedWeaponFragment", "红色武器碎片"},
+            
+            {"FuMoZhiGu", "附魔之骨"},
+            {"GoldBlood", "黄金之血"},
+            {"JuDaYaChi", "巨大牙齿"},
+            {"ZuiEYanZhu", "罪恶眼珠"},
         };
     }
 }

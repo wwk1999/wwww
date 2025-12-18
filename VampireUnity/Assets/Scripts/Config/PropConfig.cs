@@ -8,6 +8,7 @@ public class PropConfig : MonoBehaviour
    {
       None,
       WeaponFragment,
-      JingCui
+      JingCui,
+      ShenHuaCaiLiao,
    }
 }

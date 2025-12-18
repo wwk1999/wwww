@@ -109,6 +109,25 @@ public class PropBase : MonoBehaviour
                         break;
                 }
                 break;
+            
+            case PropConfig.PropType.ShenHuaCaiLiao:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        Debug.LogError(5555);
+                        GameController.S.FuMoZhiGuQueue.Enqueue(gameObject);
+                        break;
+                    case 2:
+                        GameController.S.GoldBloodQueue.Enqueue(gameObject);
+                        break;
+                    case 3:
+                        GameController.S.JuDaYaChiQueue.Enqueue(gameObject);
+                        break;
+                    case 4:
+                        GameController.S.ZuiEYanZhuQueue.Enqueue(gameObject);
+                        break;
+                }
+                break;
         }
     }
 

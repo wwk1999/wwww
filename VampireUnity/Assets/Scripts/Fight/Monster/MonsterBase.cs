@@ -913,7 +913,7 @@ public abstract class MonsterBase : MonoBehaviour
     {
         foreach (MonsterProp prop in MonsterPropList)
         {
-            float random = UnityEngine.Random.Range(0, 100f);
+            float random = Random.Range(0, 100f);
             if (random <= prop.Probability*(1+GlobalPlayerAttribute.Forture))
             {
                 //生成装备
