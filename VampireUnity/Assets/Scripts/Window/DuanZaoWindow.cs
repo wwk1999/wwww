@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Tool;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,6 +31,7 @@ public enum HeChengType
     PurpleJingCui,
     OrangeJingCui,
     RedJingCui,
+    ShenHuaZhiXin
 }
 public class DuanZaoWindow : MonoBehaviour
 {
@@ -85,6 +87,11 @@ public class DuanZaoWindow : MonoBehaviour
     public Button heCheng;
     private bool _toggleState = false;
     private HeChengType _heChengType = HeChengType.None;
+
+    public Button otherButton;
+    public Button shenHuaZhiXinButton;
+    
+    
     
     
     //洗练界面
@@ -433,6 +440,32 @@ public class DuanZaoWindow : MonoBehaviour
         itemImage.sprite = ResourcesConfig.RedJingCui;
     }
     
+    public void ShowShenHuaZhiXinItem()
+    {
+        ShowItems();
+        _heChengType = HeChengType.ShenHuaZhiXin;
+
+        item1ColorBg.sprite = ResourcesConfig.JuDaYaChi;
+        item1Edge.Play("OrangeEdge");
+        item1Image.sprite = ResourcesConfig.OrangeJingCui;
+        
+        item2ColorBg.sprite = ResourcesConfig.FuMoZhiGu;
+        item2Edge.Play("OrangeEdge");
+        item2Image.sprite = ResourcesConfig.OrangeJingCui;
+        
+        item3ColorBg.sprite = ResourcesConfig.GoldBlood;
+        item3Edge.Play("OrangeEdge");
+        item3Image.sprite = ResourcesConfig.OrangeJingCui;
+        
+        item4ColorBg.sprite = ResourcesConfig.ZuiEYanZhu;
+        item4Edge.Play("OrangeEdge");
+        item4Image.sprite = ResourcesConfig.OrangeJingCui;
+        
+        itemColorBg.sprite = ResourcesConfig.ShenHuaZhiXin;
+        itemEdge.Play("RedEdge");
+        itemImage.sprite = ResourcesConfig.RedJingCui;
+    }
+    
     public void ShowItems()
     {
         item1ColorBg.gameObject.SetActive(true);
@@ -670,6 +703,69 @@ public class DuanZaoWindow : MonoBehaviour
                     BagController.S.PropList[205].Count -=  4;
                     BagController.S.PropList[206].Count += 1;
                 }
+                break;
+            
+            case HeChengType.ShenHuaZhiXin:
+                if (!BagController.S.PropList.ContainsKey(301) || BagController.S.PropList[301].Count < 1)
+                {
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+                    return;
+                }
+                if (!BagController.S.PropList.ContainsKey(302) || BagController.S.PropList[302].Count < 1)
+                {
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+                    return;
+                }
+                if (!BagController.S.PropList.ContainsKey(303) || BagController.S.PropList[303].Count < 1)
+                {
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+                    return;
+                }
+                if (!BagController.S.PropList.ContainsKey(304) || BagController.S.PropList[304].Count < 1)
+                {
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+                    return;
+                }
+                
+                if (_toggleState)
+                {
+                    int count1 = BagController.S.PropList[301].Count;
+                    int count2 = BagController.S.PropList[302].Count;
+                    int count3 = BagController.S.PropList[303].Count;
+                    int count4 = BagController.S.PropList[304].Count;
+
+                    int minCOunt=math.min(count1, count2);
+                    minCOunt=math.min(minCOunt, count3);
+                    minCOunt=math.min(minCOunt, count4);
+                    BagController.S.PropList[301].Count -=  minCOunt;
+                    BagController.S.PropList[302].Count -=  minCOunt;
+                    BagController.S.PropList[303].Count -=  minCOunt;
+                    BagController.S.PropList[304].Count -=  minCOunt;
+                    if (BagController.S.PropList.ContainsKey(305))
+                    {
+                        BagController.S.PropList[305].Count +=  minCOunt;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(305,new PropTable(PropConfig.PropType.ShenHuaCaiLiao,minCOunt,"",6));
+                    }
+                    
+
+                }
+                else
+                {
+                    BagController.S.PropList[301].Count -=  1;
+                    BagController.S.PropList[302].Count -=  1;
+                    BagController.S.PropList[303].Count -=  1;
+                    BagController.S.PropList[304].Count -=  1;
+                    if (BagController.S.PropList.ContainsKey(305))
+                    {
+                        BagController.S.PropList[305].Count +=  1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(305,new PropTable(PropConfig.PropType.ShenHuaCaiLiao,1,"",6));
+                    }                }
                 break;
         }
         
@@ -1017,6 +1113,10 @@ public class DuanZaoWindow : MonoBehaviour
             pageNumText.text = PageNum.ToString();
             ShowXiLianBag();
         });
+        otherButton.onClick.AddListener(() =>
+        {
+            shenHuaZhiXinButton.transform.parent.gameObject.SetActive(!shenHuaZhiXinButton.transform.parent.gameObject.activeSelf);
+        });
         xiLian.onClick.AddListener(() =>
         {
             if (clickEquipid == 0)
@@ -1056,6 +1156,11 @@ public class DuanZaoWindow : MonoBehaviour
             object[] obj=new object[1];
             obj[0] = BagController.S.EquipIdList[clickEquipid];
             XiLianEquip(obj);
+        });
+        
+        shenHuaZhiXinButton.onClick.AddListener(() =>
+        {
+            ShowShenHuaZhiXinItem();
         });
     }
 
