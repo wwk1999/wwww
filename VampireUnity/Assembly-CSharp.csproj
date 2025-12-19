@@ -697,6 +697,7 @@
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
     <None Include="Assets\Arts\Texture\UI\排行榜\生成卡通皇座画面 (1).json" />
     <None Include="Assets\Arts\Shaders\LcL\Hologram.shader" />
+    <None Include="Assets\Arts\Texture\UI\技能树\设计说明.txt" />
     <None Include="Assets\Arts\Spine\第三关\石头BOSS\json\shitouBOSS.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\ZiZha\action.json" />
     <None Include="Assets\Arts\Spine\怪物\YingShu\Enemy_Nativedevil.atlas.txt" />
