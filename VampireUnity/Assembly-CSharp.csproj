@@ -332,6 +332,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\BuWangChuXin.cs" />
     <Compile Include="Assets\Scripts\Tool\ReturnButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\Tool\ButtonHoverHandler.cs" />
     <Compile Include="Assets\Scripts\Gun\PistolBullet.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanHelmet.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManNecklace.cs" />
