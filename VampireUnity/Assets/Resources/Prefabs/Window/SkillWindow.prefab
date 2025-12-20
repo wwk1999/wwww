@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.93710685, g: 0.07155199, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2727,56 +2727,98 @@ MonoBehaviour:
   skillSwitchObj: {fileID: 1907914395548908629}
   skillCount: {fileID: 4852711108832386553}
   monsterCount: {fileID: 3881547677412991445}
-  normalAttack: {fileID: 0}
-  attackSpeed: {fileID: 2118908094653054501}
-  dash: {fileID: 0}
-  dashCd: {fileID: 0}
-  crit: {fileID: 0}
-  critDamage: {fileID: 0}
-  moveSpeed: {fileID: 0}
-  moveAddDefense: {fileID: 0}
-  moveAddAttack: {fileID: 0}
-  skill1: {fileID: 8496620548039768117}
-  skill2: {fileID: 0}
-  skill3: {fileID: 0}
-  skill1Cd: {fileID: 0}
-  skill2Cd: {fileID: 0}
-  skill3Cd: {fileID: 0}
-  skill1Range: {fileID: 0}
-  skill1YiDian: {fileID: 0}
-  skill2Time: {fileID: 0}
-  skill2AddDefense: {fileID: 0}
-  skill3Range: {fileID: 0}
-  skill3JianSu: {fileID: 0}
-  attack: {fileID: 2345648716191020412}
-  hp: {fileID: 6029570447801989922}
-  defense: {fileID: 5985363594315415255}
-  critMonster: {fileID: 8382994397616245417}
-  normalAttackLevel: {fileID: 0}
+  normalAttackButton: {fileID: 8236383001212261139}
+  attackSpeedButton: {fileID: 2118908094653054501}
+  dashButton: {fileID: 1107158841777383597}
+  dashCdButton: {fileID: 6638845725513074702}
+  critButton: {fileID: 2214170116560174453}
+  critDamageButton: {fileID: 8026790923562481168}
+  moveSpeedButton: {fileID: 4158461837523651304}
+  moveAddDefenseButton: {fileID: 1029867922496338479}
+  moveAddAttackButton: {fileID: 3592519049878054516}
+  skill1Button: {fileID: 8496620548039768117}
+  skill2Button: {fileID: 6198939312189198655}
+  skill3Button: {fileID: 6416752799269334106}
+  skill1CdButton: {fileID: 9123467324755523026}
+  skill2CdButton: {fileID: 1628495780541681905}
+  skill3CdButton: {fileID: 8980692359480279869}
+  skill1RangeButton: {fileID: 8556091865865220469}
+  skill1YiDianButton: {fileID: 4189387521188577633}
+  skill2TimeButton: {fileID: 8188635415973505473}
+  skill2AddDefenseButton: {fileID: 5398101978930923895}
+  skill3RangeButton: {fileID: 6774705929972827957}
+  skill3JianSuButton: {fileID: 7150050855691141506}
+  attackButton: {fileID: 2345648716191020412}
+  hpButton: {fileID: 6029570447801989922}
+  defenseButton: {fileID: 5985363594315415255}
+  critMonsterButton: {fileID: 8382994397616245417}
+  normalAttackLevel: {fileID: 4213739075159914137}
   attackSpeedLevel: {fileID: 7584014462157587530}
-  dashLevel: {fileID: 0}
-  dashCdLevel: {fileID: 0}
-  critLevel: {fileID: 0}
-  critDamageLevel: {fileID: 0}
-  moveSpeedLevel: {fileID: 0}
-  moveAddDefenseLevel: {fileID: 0}
-  moveAddAttackLevel: {fileID: 0}
+  dashLevel: {fileID: 92687930894688056}
+  dashCdLevel: {fileID: 2127755261344012148}
+  critLevel: {fileID: 3618489793451169734}
+  critDamageLevel: {fileID: 3932384658259367467}
+  moveSpeedLevel: {fileID: 1407869452963652423}
+  moveAddDefenseLevel: {fileID: 2182174465582163581}
+  moveAddAttackLevel: {fileID: 3017301341936404150}
   skill1Level: {fileID: 7621539022910541755}
-  skill2Level: {fileID: 0}
-  skill3Level: {fileID: 0}
-  skill1CdLevel: {fileID: 0}
-  skill2CdLevel: {fileID: 0}
-  skill3CdLevel: {fileID: 0}
-  skill1RangeLevel: {fileID: 0}
-  skill1YiDianLevel: {fileID: 0}
-  skill2TimeLevel: {fileID: 0}
-  skill2AddDefenseLevel: {fileID: 0}
-  skill3RangeLevel: {fileID: 0}
-  skill3JianSuLevel: {fileID: 0}
+  skill2Level: {fileID: 5848468447478645795}
+  skill3Level: {fileID: 4609659666536121254}
+  skill1CdLevel: {fileID: 1552184944493190266}
+  skill2CdLevel: {fileID: 8675711908402289380}
+  skill3CdLevel: {fileID: 1552184944493190266}
+  skill1RangeLevel: {fileID: 7430534082310098078}
+  skill1YiDianLevel: {fileID: 8553312149035217483}
+  skill2TimeLevel: {fileID: 8038466548052248575}
+  skill2AddDefenseLevel: {fileID: 1737548611687772257}
+  skill3RangeLevel: {fileID: 4401036091427817407}
+  skill3JianSuLevel: {fileID: 7666638661316107605}
   attackLevel: {fileID: 1456498161148074316}
   hpLevel: {fileID: 8442227385338078189}
   defenseLevel: {fileID: 6581040156530860097}
   critMonsterLevel: {fileID: 4017504691860145231}
+  normalAttackImage: {fileID: 5011562264732859454}
+  attackSpeedImage: {fileID: 6184049279077108378}
+  dashImage: {fileID: 8572501407183042129}
+  dashCdImage: {fileID: 5027908581826242340}
+  critImage: {fileID: 1487278598497953271}
+  critDamageImage: {fileID: 5537677326297074077}
+  moveSpeedImage: {fileID: 2240438318027577674}
+  moveAddDefenseImage: {fileID: 2315310565269021270}
+  moveAddAttackImage: {fileID: 1135078001352673150}
+  skill1Image: {fileID: 250743987000664197}
+  skill2Image: {fileID: 2481405227907360505}
+  skill3Image: {fileID: 4617793850853728910}
+  skill1CdImage: {fileID: 3959228626069362214}
+  skill2CdImage: {fileID: 1067281426152165818}
+  skill3CdImage: {fileID: 9098015144603523373}
+  skill1RangeImage: {fileID: 4061036613627906895}
+  skill1YiDianImage: {fileID: 608761681380941609}
+  skill2TimeImage: {fileID: 4254321483911626996}
+  skill2AddDefenseImage: {fileID: 5566206516682347706}
+  skill3RangeImage: {fileID: 1087397937490299065}
+  skill3JianSuImage: {fileID: 8655101861174567194}
+  attackImage: {fileID: 0}
+  hpImage: {fileID: 0}
+  defenseImage: {fileID: 0}
+  critMonsterImage: {fileID: 0}
+  skill1RangeLine: {fileID: 3076801027458351620}
+  skill1CdLine: {fileID: 1434197753045546896}
+  skill1YiDianLine1: {fileID: 2958273255762200779}
+  skill1YiDianLine2: {fileID: 6932542875834430241}
+  skill2CdLine: {fileID: 7454303171035845859}
+  skill2TimeLine: {fileID: 9095661734071135243}
+  skill2DefenseLine1: {fileID: 5804037062239206204}
+  skill2DefenseLine2: {fileID: 5804037062239206204}
+  skill3CdLine: {fileID: 1834949817926261944}
+  skill3RangeLine: {fileID: 4332858013041640404}
+  skill3JianSuLine1: {fileID: 7574912114831671325}
+  skill3JianSuLine2: {fileID: 7214631469032261251}
+  attackSpeedLine: {fileID: 2648498655928616193}
+  dashCdLine: {fileID: 1582183630544616069}
+  moveAddAttackLine: {fileID: 3852078635349367261}
+  moveAddDefenseLine: {fileID: 4470197779492638089}
+  critDamageLine: {fileID: 2594014801284407131}
 --- !u!1 &1834949817926261944
 GameObject:
   m_ObjectHideFlags: 0
@@ -6218,7 +6260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9841,7 +9883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11096,7 +11138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13676,7 +13718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5597484, g: 0.46997738, b: 0.46997738, a: 1}
+  m_Color: {r: 0.45911938, g: 0.36816174, b: 0.36816174, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

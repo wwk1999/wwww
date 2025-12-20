@@ -14,37 +14,37 @@ public class SkillWindow1 : MonoBehaviour
 
     public TextMeshProUGUI skillCount;
     public TextMeshProUGUI monsterCount;
-    
-    
-    public Button normalAttack;
-    public Button attackSpeed;
-    
-    public Button dash;
-    public Button dashCd;
-    
-    public Button crit;
-    public Button critDamage;
-    
-    public Button moveSpeed;
-    public Button moveAddDefense;
-    public Button moveAddAttack;
-    
-    public Button skill1;
-    public Button skill2;
-    public Button skill3;
-    public Button skill1Cd;
-    public Button skill2Cd;
-    public Button skill3Cd;
-    public Button skill1Range;
-    public Button skill1YiDian;
-    public Button skill2Time;
-    public Button skill2AddDefense;
-    public Button skill3Range;
-    public Button skill3JianSu;
-    public Button attack;
-    public Button hp;
-    public Button defense;
-    public Button critMonster;
+
+
+    public Button normalAttackButton;
+    public Button attackSpeedButton;
+
+    public Button dashButton;
+    public Button dashCdButton;
+
+    public Button critButton;
+    public Button critDamageButton;
+
+    public Button moveSpeedButton;
+    public Button moveAddDefenseButton;
+    public Button moveAddAttackButton;
+
+    public Button skill1Button;
+    public Button skill2Button;
+    public Button skill3Button;
+    public Button skill1CdButton;
+    public Button skill2CdButton;
+    public Button skill3CdButton;
+    public Button skill1RangeButton;
+    public Button skill1YiDianButton;
+    public Button skill2TimeButton;
+    public Button skill2AddDefenseButton;
+    public Button skill3RangeButton;
+    public Button skill3JianSuButton;
+    public Button attackButton;
+    public Button hpButton;
+    public Button defenseButton;
+    public Button critMonsterButton;
     
     
     
@@ -82,6 +82,77 @@ public class SkillWindow1 : MonoBehaviour
     public TextMeshProUGUI hpLevel;
     public TextMeshProUGUI defenseLevel;
     public TextMeshProUGUI critMonsterLevel;
+    
+    
+    
+    
+    public Image normalAttackImage;
+    public Image attackSpeedImage;
+
+    public Image dashImage;
+    public Image dashCdImage;
+
+    public Image critImage;
+    public Image critDamageImage;
+
+    public Image moveSpeedImage;
+    public Image moveAddDefenseImage;
+    public Image moveAddAttackImage;
+
+    public Image skill1Image;
+    public Image skill2Image;
+    public Image skill3Image;
+    public Image skill1CdImage;
+    public Image skill2CdImage;
+    public Image skill3CdImage;
+    public Image skill1RangeImage;
+    public Image skill1YiDianImage;
+    public Image skill2TimeImage;
+    public Image skill2AddDefenseImage;
+    public Image skill3RangeImage;
+    public Image skill3JianSuImage;
+ 
+
+
+    public GameObject skill1RangeLine;
+    public GameObject skill1CdLine;
+    public GameObject skill1YiDianLine1;
+    public GameObject skill1YiDianLine2;
+    public GameObject skill2CdLine;
+    public GameObject skill2TimeLine;
+    public GameObject skill2DefenseLine1;
+    public GameObject skill2DefenseLine2;
+    public GameObject skill3CdLine;
+    public GameObject skill3RangeLine;
+    public GameObject skill3JianSuLine1;
+    public GameObject skill3JianSuLine2;
+    public GameObject attackSpeedLine;
+    public GameObject dashCdLine;
+    public GameObject moveAddAttackLine;
+    public GameObject moveAddDefenseLine;
+    public GameObject critDamageLine;
+
+    public void SetLine()
+    {
+        skill1RangeLine.SetActive(SkillJiaDian.S.Skill1Range < 1);
+        skill1CdLine.SetActive(SkillJiaDian.S.Skill1Cd < 1);
+        skill1YiDianLine1.SetActive(SkillJiaDian.S.Skill1YiDian < 1);
+        skill1YiDianLine2.SetActive(SkillJiaDian.S.Skill1YiDian < 1);
+        skill2CdLine.SetActive(SkillJiaDian.S.Skill2Cd < 1);
+        skill2TimeLine.SetActive(SkillJiaDian.S.Skill2Time < 1);
+        skill2DefenseLine1.SetActive(SkillJiaDian.S.Skill2AddDefense < 1);
+        skill2DefenseLine2.SetActive(SkillJiaDian.S.Skill2AddDefense < 1);
+        skill3RangeLine.SetActive(SkillJiaDian.S.Skill3Range < 1);
+        skill3CdLine.SetActive(SkillJiaDian.S.Skill3Cd < 1);
+        skill3JianSuLine1.SetActive(SkillJiaDian.S.Skill3JianSu < 1);
+        skill3JianSuLine2.SetActive(SkillJiaDian.S.Skill3JianSu < 1);
+        attackSpeedLine.SetActive(SkillJiaDian.S.AttackSpeed < 1);
+        dashCdLine.SetActive(SkillJiaDian.S.DashCd < 1);
+        moveAddAttackLine.SetActive(SkillJiaDian.S.MoveAddAttack < 1);
+        moveAddDefenseLine.SetActive(SkillJiaDian.S.MoveAddDefense < 1);
+        critDamageLine.SetActive(SkillJiaDian.S.CritDamage < 1);
+    }
+
 
    public void SetShowLevel()
 {
@@ -186,25 +257,146 @@ public class SkillWindow1 : MonoBehaviour
 
     public void SetButtonDisable()
     {
-        attackSpeed.interactable = SkillJiaDian.S.NormalAttack>0;
-        dashCd.interactable = SkillJiaDian.S.Dash>0;
-        moveAddAttack.interactable=SkillJiaDian.S.MoveSpeed>0;
-        moveAddDefense.interactable=SkillJiaDian.S.MoveSpeed>0;
+        SetImage();
+        SetLine();
+        attackSpeedButton.interactable = SkillJiaDian.S.NormalAttack>0;
+        dashCdButton.interactable = SkillJiaDian.S.Dash>0;
+        moveAddAttackButton.interactable=SkillJiaDian.S.MoveSpeed>0;
+        moveAddDefenseButton.interactable=SkillJiaDian.S.MoveSpeed>0;
         
         
-        critDamage.interactable=SkillJiaDian.S.Crit>0;
-        skill1Range.interactable=SkillJiaDian.S.Skill1Damage>0;
-        skill1Cd.interactable=SkillJiaDian.S.Skill1Damage>0;
-        skill1YiDian.interactable=SkillJiaDian.S.Skill1Range>0&&SkillJiaDian.S.Skill1Cd>0;
+        critDamageButton.interactable=SkillJiaDian.S.Crit>0;
+        skill1RangeButton.interactable=SkillJiaDian.S.Skill1Damage>0;
+        skill1CdButton.interactable=SkillJiaDian.S.Skill1Damage>0;
+        skill1YiDianButton.interactable=SkillJiaDian.S.Skill1Range>0&&SkillJiaDian.S.Skill1Cd>0;
         
-        skill2Time.interactable=SkillJiaDian.S.Skill2Damage>0;
-        skill2Cd.interactable=SkillJiaDian.S.Skill2Damage>0;
-        skill2AddDefense.interactable=SkillJiaDian.S.Skill2Time>0&&SkillJiaDian.S.Skill2Cd>0;
+        skill2TimeButton.interactable=SkillJiaDian.S.Skill2Damage>0;
+        skill2CdButton.interactable=SkillJiaDian.S.Skill2Damage>0;
+        skill2AddDefenseButton.interactable=SkillJiaDian.S.Skill2Time>0&&SkillJiaDian.S.Skill2Cd>0;
         
-        skill3Range.interactable=SkillJiaDian.S.Skill3Damage>0;
-        skill3Cd.interactable=SkillJiaDian.S.Skill3Damage>0;
-        skill3JianSu.interactable=SkillJiaDian.S.Skill3Range>0&&SkillJiaDian.S.Skill3Cd>0;
+        skill3RangeButton.interactable=SkillJiaDian.S.Skill3Damage>0;
+        skill3CdButton.interactable=SkillJiaDian.S.Skill3Damage>0;
+        skill3JianSuButton.interactable=SkillJiaDian.S.Skill3Range>0&&SkillJiaDian.S.Skill3Cd>0;
 
+    }
+
+    public void SetImage()
+    {
+        if (SkillJiaDian.S.Skill1Damage < 1)
+        {
+             skill1RangeImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill1RangeImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        if (SkillJiaDian.S.Skill1Damage < 1)
+        {
+            skill1CdImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill1CdImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        if (SkillJiaDian.S.Skill1Range < 1||SkillJiaDian.S.Skill1Cd<1)
+        {
+            skill1YiDianImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill1YiDianImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        if (SkillJiaDian.S.Skill2Damage < 1)
+        {
+            skill2TimeImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill2TimeImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        if (SkillJiaDian.S.Skill2Damage < 1)
+        {
+            skill2CdImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill2CdImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        if (SkillJiaDian.S.Skill2Time < 1||SkillJiaDian.S.Skill2Cd<1)
+        {
+            skill2AddDefenseImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill2AddDefenseImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        if (SkillJiaDian.S.Skill3Damage < 1)
+        {
+            skill3RangeImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill3RangeImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        if (SkillJiaDian.S.Skill3Damage < 1)
+        {
+            skill3CdImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill3CdImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        if (SkillJiaDian.S.Skill3Range < 1||SkillJiaDian.S.Skill3Cd<1)
+        {
+            skill3JianSuImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            skill3JianSuImage.color=new Color32(255, 255, 255, 255);
+        }
+
+
+        if (SkillJiaDian.S.NormalAttack < 1)
+        {
+            attackSpeedImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            attackSpeedImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        if(SkillJiaDian.S.MoveSpeed<1)
+        {
+            moveAddAttackImage.color=new Color32(118, 94, 94, 255);
+            moveAddDefenseImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            moveAddAttackImage.color=new Color32(255, 255, 255, 255);
+            moveAddDefenseImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.Crit < 1)
+        {
+            critDamageImage.color=new Color32(118, 94, 94, 255);
+        }
+        else
+        {
+            critDamageImage.color=new Color32(255, 255, 255, 255);
+        }
     }
 
     private void OnEnable()
@@ -227,7 +419,7 @@ public class SkillWindow1 : MonoBehaviour
         });
         
         
-        normalAttack.onClick.AddListener(() =>
+        normalAttackButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -241,7 +433,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        attackSpeed.onClick.AddListener(() =>
+        attackSpeedButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -255,7 +447,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        dash.onClick.AddListener(() =>
+        dashButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -269,7 +461,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        dashCd.onClick.AddListener(() =>
+        dashCdButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -283,7 +475,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        crit.onClick.AddListener(() =>
+        critButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -297,7 +489,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        critDamage.onClick.AddListener(() =>
+        critDamageButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -311,7 +503,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        moveSpeed.onClick.AddListener(() =>
+        moveSpeedButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -325,7 +517,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        moveAddDefense.onClick.AddListener(() =>
+        moveAddDefenseButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -339,7 +531,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        moveAddAttack.onClick.AddListener(() =>
+        moveAddAttackButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -353,7 +545,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill1.onClick.AddListener(() =>
+        skill1Button.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -367,7 +559,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill2.onClick.AddListener(() =>
+        skill2Button.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -381,7 +573,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill3.onClick.AddListener(() =>
+        skill3Button.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -395,7 +587,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill1Cd.onClick.AddListener(() =>
+        skill1CdButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -409,7 +601,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill2Cd.onClick.AddListener(() =>
+        skill2CdButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -423,7 +615,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill3Cd.onClick.AddListener(() =>
+        skill3CdButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -437,7 +629,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill1Range.onClick.AddListener(() =>
+        skill1RangeButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -451,7 +643,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill1YiDian.onClick.AddListener(() =>
+        skill1YiDianButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -465,7 +657,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill2Time.onClick.AddListener(() =>
+        skill2TimeButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -479,7 +671,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill2AddDefense.onClick.AddListener(() =>
+        skill2AddDefenseButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -493,7 +685,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill3Range.onClick.AddListener(() =>
+        skill3RangeButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -507,7 +699,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        skill3JianSu.onClick.AddListener(() =>
+        skill3JianSuButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -521,7 +713,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        attack.onClick.AddListener(() =>
+        attackButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -535,7 +727,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        hp.onClick.AddListener(() =>
+        hpButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -549,7 +741,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        defense.onClick.AddListener(() =>
+        defenseButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
@@ -563,7 +755,7 @@ public class SkillWindow1 : MonoBehaviour
             SetButtonDisable();
         });
         
-        critMonster.onClick.AddListener(() =>
+        critMonsterButton.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
