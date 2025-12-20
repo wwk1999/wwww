@@ -1117,17 +1117,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 1
-  keyCode: 3
+  buttonType: 2
+  keyCode: 4
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   keyCodeText: {fileID: 6719380456993460707}
   mouseRightListens:
+  - {fileID: 4518069314226324788}
   - {fileID: 2335271848884137651}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4063352658316075061}
+  - {fileID: 3926148239282683905}
+  - {fileID: 4526339601577683578}
   skillSwitchObj: {fileID: 1907914395548908629}
   mask: {fileID: 946897183695456772}
 --- !u!95 &6096589136026846495
@@ -1978,7 +1978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.29559743, g: 0.29559743, b: 0.29559743, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2798,10 +2798,6 @@ MonoBehaviour:
   skill2AddDefenseImage: {fileID: 5566206516682347706}
   skill3RangeImage: {fileID: 1087397937490299065}
   skill3JianSuImage: {fileID: 8655101861174567194}
-  attackImage: {fileID: 0}
-  hpImage: {fileID: 0}
-  defenseImage: {fileID: 0}
-  critMonsterImage: {fileID: 0}
   skill1RangeLine: {fileID: 3076801027458351620}
   skill1CdLine: {fileID: 1434197753045546896}
   skill1YiDianLine1: {fileID: 2958273255762200779}
@@ -2809,7 +2805,7 @@ MonoBehaviour:
   skill2CdLine: {fileID: 7454303171035845859}
   skill2TimeLine: {fileID: 9095661734071135243}
   skill2DefenseLine1: {fileID: 5804037062239206204}
-  skill2DefenseLine2: {fileID: 5804037062239206204}
+  skill2DefenseLine2: {fileID: 2511618542441671706}
   skill3CdLine: {fileID: 1834949817926261944}
   skill3RangeLine: {fileID: 4332858013041640404}
   skill3JianSuLine1: {fileID: 7574912114831671325}
@@ -3810,17 +3806,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 1
-  keyCode: 3
+  buttonType: 3
+  keyCode: 5
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   keyCodeText: {fileID: 8364332974627203104}
   mouseRightListens:
+  - {fileID: 4518069314226324788}
+  - {fileID: 2335271848884137651}
   - {fileID: 4063352658316075061}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3926148239282683905}
+  - {fileID: 4526339601577683578}
   skillSwitchObj: {fileID: 1907914395548908629}
   mask: {fileID: 946897183695456772}
 --- !u!95 &3349508563513085543
@@ -4724,7 +4720,6 @@ GameObject:
   - component: {fileID: 3173012036577198766}
   - component: {fileID: 6957543871387169050}
   - component: {fileID: 4158461837523651304}
-  - component: {fileID: 3190844811132943937}
   - component: {fileID: 2176586855758756015}
   m_Layer: 5
   m_Name: MoveSpeed
@@ -4809,31 +4804,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3190844811132943937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2815138209550293777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonType: 1
-  keyCode: 3
-  canvasRect: {fileID: 3311344604755121102}
-  _skillSwitch: {fileID: 2497931552839264880}
-  keyCodeText: {fileID: 5406654616847640359}
-  mouseRightListens:
-  - {fileID: 3190844811132943937}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  skillSwitchObj: {fileID: 1907914395548908629}
-  mask: {fileID: 946897183695456772}
 --- !u!95 &2176586855758756015
 Animator:
   serializedVersion: 5
@@ -5137,7 +5107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.24528301, g: 0.2275424, b: 0.2275424, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5287,7 +5257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.25157225, g: 0.22230126, b: 0.22230126, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5753,10 +5723,10 @@ MonoBehaviour:
   keyCodeText: {fileID: 6472851435417865174}
   mouseRightListens:
   - {fileID: 4518069314226324788}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2335271848884137651}
+  - {fileID: 4063352658316075061}
+  - {fileID: 3926148239282683905}
+  - {fileID: 4526339601577683578}
   skillSwitchObj: {fileID: 1907914395548908629}
   mask: {fileID: 946897183695456772}
 --- !u!95 &5705408691961472795
@@ -7086,7 +7056,6 @@ GameObject:
   - component: {fileID: 50050764269834789}
   - component: {fileID: 3253961923452113906}
   - component: {fileID: 2214170116560174453}
-  - component: {fileID: 807795261008794133}
   - component: {fileID: 4498689079833456270}
   m_Layer: 5
   m_Name: Crit
@@ -7171,31 +7140,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &807795261008794133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4343453701608268802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonType: 1
-  keyCode: 3
-  canvasRect: {fileID: 3311344604755121102}
-  _skillSwitch: {fileID: 2497931552839264880}
-  keyCodeText: {fileID: 3510636169184841841}
-  mouseRightListens:
-  - {fileID: 807795261008794133}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  skillSwitchObj: {fileID: 1907914395548908629}
-  mask: {fileID: 946897183695456772}
 --- !u!95 &4498689079833456270
 Animator:
   serializedVersion: 5
@@ -10622,7 +10566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23899364, g: 0.21719861, b: 0.21719861, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10971,17 +10915,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 1
-  keyCode: 3
+  buttonType: 4
+  keyCode: 1
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   keyCodeText: {fileID: 6732861455162642852}
   mouseRightListens:
+  - {fileID: 4518069314226324788}
+  - {fileID: 2335271848884137651}
+  - {fileID: 4063352658316075061}
+  - {fileID: 3926148239282683905}
   - {fileID: 4526339601577683578}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   skillSwitchObj: {fileID: 1907914395548908629}
   mask: {fileID: 946897183695456772}
 --- !u!95 &4660705678769389366
@@ -12040,17 +11984,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 1
-  keyCode: 3
+  buttonType: 5
+  keyCode: 2
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   keyCodeText: {fileID: 8569351227906800472}
   mouseRightListens:
+  - {fileID: 4518069314226324788}
+  - {fileID: 2335271848884137651}
+  - {fileID: 4063352658316075061}
   - {fileID: 3926148239282683905}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4526339601577683578}
   skillSwitchObj: {fileID: 1907914395548908629}
   mask: {fileID: 946897183695456772}
 --- !u!95 &866668143242703525

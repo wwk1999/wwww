@@ -30,7 +30,10 @@ public class RoleWindow1 : MonoBehaviour
     public Slider expSlider; // 经验条
     public Button debugLevel;
     public Button debugLingHun;
+    public Button debugSkillCount;
 
+    
+    
     public Button debugJingCui;
     public Button duanzaoButton;
     public void UpdateRoleWindow()
@@ -55,6 +58,11 @@ public class RoleWindow1 : MonoBehaviour
         debugLingHun.onClick.AddListener(() =>
         {
             GlobalPlayerAttribute.BloodEnergy += 100000;
+            StoreController.S.SaveStoreData();
+        });
+        debugSkillCount.onClick.AddListener(()=>
+        {
+            SkillJiaDian.S.CurrentSkillCount += 10;
             StoreController.S.SaveStoreData();
         });
         

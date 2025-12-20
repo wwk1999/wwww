@@ -134,23 +134,23 @@ public class SkillWindow1 : MonoBehaviour
 
     public void SetLine()
     {
-        skill1RangeLine.SetActive(SkillJiaDian.S.Skill1Range < 1);
-        skill1CdLine.SetActive(SkillJiaDian.S.Skill1Cd < 1);
-        skill1YiDianLine1.SetActive(SkillJiaDian.S.Skill1YiDian < 1);
-        skill1YiDianLine2.SetActive(SkillJiaDian.S.Skill1YiDian < 1);
-        skill2CdLine.SetActive(SkillJiaDian.S.Skill2Cd < 1);
-        skill2TimeLine.SetActive(SkillJiaDian.S.Skill2Time < 1);
-        skill2DefenseLine1.SetActive(SkillJiaDian.S.Skill2AddDefense < 1);
-        skill2DefenseLine2.SetActive(SkillJiaDian.S.Skill2AddDefense < 1);
-        skill3RangeLine.SetActive(SkillJiaDian.S.Skill3Range < 1);
-        skill3CdLine.SetActive(SkillJiaDian.S.Skill3Cd < 1);
-        skill3JianSuLine1.SetActive(SkillJiaDian.S.Skill3JianSu < 1);
-        skill3JianSuLine2.SetActive(SkillJiaDian.S.Skill3JianSu < 1);
-        attackSpeedLine.SetActive(SkillJiaDian.S.AttackSpeed < 1);
-        dashCdLine.SetActive(SkillJiaDian.S.DashCd < 1);
-        moveAddAttackLine.SetActive(SkillJiaDian.S.MoveAddAttack < 1);
-        moveAddDefenseLine.SetActive(SkillJiaDian.S.MoveAddDefense < 1);
-        critDamageLine.SetActive(SkillJiaDian.S.CritDamage < 1);
+        skill1RangeLine.SetActive(SkillJiaDian.S.Skill1Range >= 1);
+        skill1CdLine.SetActive(SkillJiaDian.S.Skill1Cd >= 1);
+        skill1YiDianLine1.SetActive(SkillJiaDian.S.Skill1YiDian >= 1);
+        skill1YiDianLine2.SetActive(SkillJiaDian.S.Skill1YiDian >= 1);
+        skill2CdLine.SetActive(SkillJiaDian.S.Skill2Cd >= 1);
+        skill2TimeLine.SetActive(SkillJiaDian.S.Skill2Time >= 1);
+        skill2DefenseLine1.SetActive(SkillJiaDian.S.Skill2AddDefense >= 1);
+        skill2DefenseLine2.SetActive(SkillJiaDian.S.Skill2AddDefense >= 1);
+        skill3RangeLine.SetActive(SkillJiaDian.S.Skill3Range >= 1);
+        skill3CdLine.SetActive(SkillJiaDian.S.Skill3Cd >= 1);
+        skill3JianSuLine1.SetActive(SkillJiaDian.S.Skill3JianSu >= 1);
+        skill3JianSuLine2.SetActive(SkillJiaDian.S.Skill3JianSu >= 1);
+        attackSpeedLine.SetActive(SkillJiaDian.S.AttackSpeed >= 1);
+        dashCdLine.SetActive(SkillJiaDian.S.DashCd >= 1);
+        moveAddAttackLine.SetActive(SkillJiaDian.S.MoveAddAttack >= 1);
+        moveAddDefenseLine.SetActive(SkillJiaDian.S.MoveAddDefense >= 1);
+        critDamageLine.SetActive(SkillJiaDian.S.CritDamage >= 1);
     }
 
 
@@ -284,7 +284,7 @@ public class SkillWindow1 : MonoBehaviour
     {
         if (SkillJiaDian.S.Skill1Damage < 1)
         {
-             skill1RangeImage.color=new Color32(118, 94, 94, 255);
+             skill1RangeImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -293,7 +293,7 @@ public class SkillWindow1 : MonoBehaviour
         
         if (SkillJiaDian.S.Skill1Damage < 1)
         {
-            skill1CdImage.color=new Color32(118, 94, 94, 255);
+            skill1CdImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -302,7 +302,7 @@ public class SkillWindow1 : MonoBehaviour
         
         if (SkillJiaDian.S.Skill1Range < 1||SkillJiaDian.S.Skill1Cd<1)
         {
-            skill1YiDianImage.color=new Color32(118, 94, 94, 255);
+            skill1YiDianImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -313,7 +313,7 @@ public class SkillWindow1 : MonoBehaviour
         
         if (SkillJiaDian.S.Skill2Damage < 1)
         {
-            skill2TimeImage.color=new Color32(118, 94, 94, 255);
+            skill2TimeImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -322,7 +322,7 @@ public class SkillWindow1 : MonoBehaviour
         
         if (SkillJiaDian.S.Skill2Damage < 1)
         {
-            skill2CdImage.color=new Color32(118, 94, 94, 255);
+            skill2CdImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -331,7 +331,7 @@ public class SkillWindow1 : MonoBehaviour
         
         if (SkillJiaDian.S.Skill2Time < 1||SkillJiaDian.S.Skill2Cd<1)
         {
-            skill2AddDefenseImage.color=new Color32(118, 94, 94, 255);
+            skill2AddDefenseImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -342,7 +342,7 @@ public class SkillWindow1 : MonoBehaviour
         
         if (SkillJiaDian.S.Skill3Damage < 1)
         {
-            skill3RangeImage.color=new Color32(118, 94, 94, 255);
+            skill3RangeImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -351,7 +351,7 @@ public class SkillWindow1 : MonoBehaviour
         
         if (SkillJiaDian.S.Skill3Damage < 1)
         {
-            skill3CdImage.color=new Color32(118, 94, 94, 255);
+            skill3CdImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -360,7 +360,7 @@ public class SkillWindow1 : MonoBehaviour
         
         if (SkillJiaDian.S.Skill3Range < 1||SkillJiaDian.S.Skill3Cd<1)
         {
-            skill3JianSuImage.color=new Color32(118, 94, 94, 255);
+            skill3JianSuImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -370,7 +370,7 @@ public class SkillWindow1 : MonoBehaviour
 
         if (SkillJiaDian.S.NormalAttack < 1)
         {
-            attackSpeedImage.color=new Color32(118, 94, 94, 255);
+            attackSpeedImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -380,8 +380,8 @@ public class SkillWindow1 : MonoBehaviour
         
         if(SkillJiaDian.S.MoveSpeed<1)
         {
-            moveAddAttackImage.color=new Color32(118, 94, 94, 255);
-            moveAddDefenseImage.color=new Color32(118, 94, 94, 255);
+            moveAddAttackImage.color=new Color32(76,76, 76, 255);
+            moveAddDefenseImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -391,7 +391,7 @@ public class SkillWindow1 : MonoBehaviour
 
         if (SkillJiaDian.S.Crit < 1)
         {
-            critDamageImage.color=new Color32(118, 94, 94, 255);
+            critDamageImage.color=new Color32(76,76, 76, 255);
         }
         else
         {
@@ -426,6 +426,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            
+            normalAttackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.NormalAttack++;
             StoreController.S.SaveStoreData();
@@ -440,6 +442,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            attackSpeedButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.AttackSpeed++;
             StoreController.S.SaveStoreData();
@@ -454,6 +458,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            dashButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Dash++;
             StoreController.S.SaveStoreData();
@@ -468,6 +474,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            dashCdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.DashCd++;
             StoreController.S.SaveStoreData();
@@ -482,6 +490,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            critButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Crit++;
             StoreController.S.SaveStoreData();
@@ -496,6 +506,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            critDamageButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.CritDamage++;
             StoreController.S.SaveStoreData();
@@ -510,6 +522,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            moveSpeedButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveSpeed++;
             StoreController.S.SaveStoreData();
@@ -524,6 +538,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            moveAddDefenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveAddDefense++;
             StoreController.S.SaveStoreData();
@@ -538,6 +554,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            moveAddAttackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveAddAttack++;
             StoreController.S.SaveStoreData();
@@ -552,6 +570,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill1Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Damage++;
             StoreController.S.SaveStoreData();
@@ -566,6 +586,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill2Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Damage++;
             StoreController.S.SaveStoreData();
@@ -580,6 +602,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill3Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Damage++;
             StoreController.S.SaveStoreData();
@@ -594,6 +618,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill1CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Cd++;
             StoreController.S.SaveStoreData();
@@ -608,6 +634,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill2CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Cd++;
             StoreController.S.SaveStoreData();
@@ -622,6 +650,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill3CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Cd++;
             StoreController.S.SaveStoreData();
@@ -636,6 +666,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill1RangeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Range++;
             StoreController.S.SaveStoreData();
@@ -650,6 +682,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill1YiDianButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1YiDian++;
             StoreController.S.SaveStoreData();
@@ -664,6 +698,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill2TimeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Time++;
             StoreController.S.SaveStoreData();
@@ -678,6 +714,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill2AddDefenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2AddDefense++;
             StoreController.S.SaveStoreData();
@@ -692,6 +730,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill3RangeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Range++;
             StoreController.S.SaveStoreData();
@@ -706,6 +746,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            skill3JianSuButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3JianSu++;
             StoreController.S.SaveStoreData();
@@ -720,6 +762,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            attackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterAttack++;
             StoreController.S.SaveStoreData();
@@ -734,6 +778,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            hpButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterHp++;
             StoreController.S.SaveStoreData();
@@ -748,6 +794,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            defenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterDefense++;
             StoreController.S.SaveStoreData();
@@ -762,6 +810,8 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            critMonsterButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterCrit++;
             StoreController.S.SaveStoreData();
