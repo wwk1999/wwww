@@ -303,35 +303,35 @@ public class GlobalPlayerAttribute
    public static int NormalAttackNum => SkillJiaDian.S.NormalAttack * 5;
    public static int AttackSpeedNum=> SkillJiaDian.S.AttackSpeed * 5;
     
-   public static int CritNum=> SkillJiaDian.S.Crit * 5;
+   public static int CritNum=> SkillJiaDian.S.Crit * 5;//百分比
    public static int CritDamageNum=> SkillJiaDian.S.CritDamage * 5;
     
-   public static int MoveSpeedNum=> SkillJiaDian.S.MoveSpeed * 5;
+   public static int MoveSpeedNum=> SkillJiaDian.S.MoveSpeed * 30;
    public static int MoveAddAttackNum=> SkillJiaDian.S.MoveAddAttack * 5;
    public static int MoveAddDefenseNum=> SkillJiaDian.S.MoveAddDefense * 5;
     
    public static int DashNum=> SkillJiaDian.S.Dash * 5;
    public static int DashCdNum=> SkillJiaDian.S.DashCd * 5;
     
-   public static int Skill1DamageNum=> SkillJiaDian.S.Skill1Damage * 5;
+   public static int Skill1DamageNum=> 100+(SkillJiaDian.S.Skill1Damage-1) * 5;
    public static int Skill1CdNum=> SkillJiaDian.S.Skill1Cd * 5;
    public static int Skill1RangeNum=> SkillJiaDian.S.Skill1Range * 5;
    public static int Skill1YiDianNum=> SkillJiaDian.S.Skill1YiDian * 5;
     
-   public static int Skill2DamageNum=> SkillJiaDian.S.Skill2Damage * 5;
+   public static int Skill2DamageNum=> 100+(SkillJiaDian.S.Skill2Damage-1) * 5;
    public static int Skill2CdNum=> SkillJiaDian.S.Skill2Cd * 5;
-   public static int Skill2TimeNum=> SkillJiaDian.S.Skill2Time * 5;
+   public static int Skill2TimeNum=> SkillJiaDian.S.Skill2Time * 50;//增加基础持续时候
    public static int Skill2AddDefenseNum=> SkillJiaDian.S.Skill2AddDefense * 5;
     
-   public static int Skill3DamageNum=> SkillJiaDian.S.Skill3Damage * 5;
+   public static int Skill3DamageNum=> 100+(SkillJiaDian.S.Skill3Damage-1) * 5;
    public static int Skill3CdNum=> SkillJiaDian.S.Skill3Cd * 5;
    public static int Skill3RangeNum=> SkillJiaDian.S.Skill3Range * 5;
    public static int Skill3JianSuNum=> SkillJiaDian.S.Skill3JianSu * 5;
 
-   public static int MonsterAttackNum=> SkillJiaDian.S.MonsterAttack * 5;
-   public static int MonsterCritNum=> SkillJiaDian.S.MonsterCrit * 5;
-   public static int MonsterHpNum=> SkillJiaDian.S.MonsterHp * 5;
-   public static int MonsterDefenseNum=> SkillJiaDian.S.MonsterDefense * 5;
+   public static int MonsterAttackNum=> SkillJiaDian.S.MonsterAttack * 100;
+   public static int MonsterCritNum=> SkillJiaDian.S.MonsterCrit * 100;
+   public static int MonsterHpNum=> SkillJiaDian.S.MonsterHp * 100;
+   public static int MonsterDefenseNum=> SkillJiaDian.S.MonsterDefense * 100;
 
 
    public static void ResetFuJiaAttribute()

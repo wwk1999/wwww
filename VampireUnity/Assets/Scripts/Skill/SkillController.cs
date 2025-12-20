@@ -12,7 +12,7 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public int ShadowCount = 5;
     [NonSerialized]public int CurrentDashCount = 0;
     //技能相关
-    [NonSerialized]public float IceBallTime = 5*(1+GlobalPlayerAttribute.Skill2TimeNum/100.0f);
+    [NonSerialized]public float IceBallTime = 8+GlobalPlayerAttribute.Skill2TimeNum/100.0f;
     [NonSerialized]public ParticleSystem IceArrow;
     [NonSerialized]public ParticleSystem NormalAttack;
     [NonSerialized]public GameObject NormalAttack2;
