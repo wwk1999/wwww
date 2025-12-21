@@ -768,6 +768,38 @@ public class BagController : XSingleton<BagController>
 
                     break;
                 
+                
+                case PropConfig.PropType.ChiBang:
+                    switch (prop.Value.Quality)
+                    {
+                        case 1:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.WhiteChiBang;
+                            break;
+                        case 2:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.GreenChiBang;
+                            break;
+                        case 3:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.BlueChiBang;
+                            break;
+                        case 4:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.PurpleChiBang;
+                            break;
+                        case 5:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.OrangeChiBang;
+                            break;
+                        case 6:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                                ResourcesConfig.RedChiBang;
+                            break;
+                    }
+
+                    break;
+                
                 case PropConfig.PropType.ShenHuaCaiLiao:
                     switch (prop.Value.Quality)
                     {

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Timeline", "Unity.Timeline.csproj", "{46b70005-2777-3c08-ae42-ea27f42331b0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualEffectGraph.Editor", "Unity.VisualEffectGraph.Editor.csproj", "{e7e69b5c-e3ab-ac98-3465-b259bae1ed39}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{8297d7c1-668a-d664-dff5-41520415f524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualEffectGraph.Editor", "Unity.VisualEffectGraph.Editor.csproj", "{e7e69b5c-e3ab-ac98-3465-b259bae1ed39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.ShaderGraph.Editor", "Unity.ShaderGraph.Editor.csproj", "{b254195c-77b0-da71-0bfc-ee01ecb6f61e}"
 EndProject
@@ -202,10 +202,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{46b70005-2777-3c08-ae42-ea27f42331b0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{46b70005-2777-3c08-ae42-ea27f42331b0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{e7e69b5c-e3ab-ac98-3465-b259bae1ed39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{e7e69b5c-e3ab-ac98-3465-b259bae1ed39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8297d7c1-668a-d664-dff5-41520415f524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8297d7c1-668a-d664-dff5-41520415f524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e7e69b5c-e3ab-ac98-3465-b259bae1ed39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e7e69b5c-e3ab-ac98-3465-b259bae1ed39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b254195c-77b0-da71-0bfc-ee01ecb6f61e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b254195c-77b0-da71-0bfc-ee01ecb6f61e}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6b83c9f4-7f56-a943-8828-51e8a75914f3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

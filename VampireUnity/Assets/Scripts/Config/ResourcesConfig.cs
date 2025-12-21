@@ -159,6 +159,13 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite OrangeJingCui;
     public static Sprite RedJingCui;
     
+    public static Sprite WhiteChiBang;
+    public static Sprite GreenChiBang;
+    public static Sprite BlueChiBang;
+    public static Sprite PurpleChiBang;
+    public static Sprite OrangeChiBang;
+    public static Sprite RedChiBang;
+    
     public static Sprite FuMoZhiGu;
     public static Sprite GoldBlood;
     public static Sprite ZuiEYanZhu;
@@ -234,6 +241,13 @@ public class ResourcesConfig : MonoBehaviour
         PurpleJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/PurpleJingCui");
         OrangeJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/OrangeJingCui");
         RedJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/RedJingCui");
+        
+        WhiteChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/WhiteChiBang");
+        GreenChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/GreenChiBang");
+        BlueChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/BlueChiBang");
+        PurpleChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/PurpleChiBang");
+        OrangeChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/OrangeChiBang");
+        RedChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/RedChiBang");
         
         FuMoZhiGu=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/FuMoZhiGu");
         GoldBlood=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/GoldBlood");
