@@ -173,60 +173,52 @@ public class ChiBangWindow : MonoBehaviour
       var chibangAttribute=ChiBangConfig.ChiBangAttributeDic[PlayerData.S.ChiBangLevel];
       if (chibangAttribute.maxHp != 0)
       {
-         var chibangitem=Resources.Load<ChiBangItem>("Prefabs/Tool/ChiBangItem");
-         chibangitem.attributeName = "生命值：";
-         chibangitem.attributeCount = chibangAttribute.maxHp.ToString();
-         Instantiate(chibangitem, attributeContent.transform);
+         var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="生命值：";
+         chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.maxHp.ToString();
       }  
       if (chibangAttribute.defense != 0)
       {
-         var chibangitem=Resources.Load<ChiBangItem>("Prefabs/Tool/ChiBangItem");
-         chibangitem.attributeName = "防御：";
-         chibangitem.attributeCount = chibangAttribute.defense.ToString();
-         Instantiate(chibangitem, attributeContent.transform);
+         var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="防御：";
+         chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.defense.ToString();
       }
       if (chibangAttribute.attack != 0)
       {
-         var chibangitem=Resources.Load<ChiBangItem>("Prefabs/Tool/ChiBangItem");
-         chibangitem.attributeName = "攻击力：";
-         chibangitem.attributeCount = chibangAttribute.attack.ToString();
-         Instantiate(chibangitem, attributeContent.transform);
+         var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="攻击力：";
+         chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.attack.ToString();
       }
     
       if (chibangAttribute.critDamage != 0)
       {
-         var chibangitem=Resources.Load<ChiBangItem>("Prefabs/Tool/ChiBangItem");
-         chibangitem.attributeName = "暴击伤害：";
-         chibangitem.attributeCount = chibangAttribute.critDamage.ToString();
-         Instantiate(chibangitem, attributeContent.transform);
+         var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="暴击伤害：";
+         chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.critDamage.ToString();
       }
       if (chibangAttribute.attackSpeed != 0)
       {
-         var chibangitem=Resources.Load<ChiBangItem>("Prefabs/Tool/ChiBangItem");
-         chibangitem.attributeName = "攻击速度：";
-         chibangitem.attributeCount = chibangAttribute.attackSpeed.ToString();
-         Instantiate(chibangitem, attributeContent.transform);
+         var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="攻击速度：";
+         chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.attackSpeed.ToString();
       }
       if (chibangAttribute.moveSpeed != 0)
       {
-         var chibangitem=Resources.Load<ChiBangItem>("Prefabs/Tool/ChiBangItem");
-         chibangitem.attributeName = "移动速度：";
-         chibangitem.attributeCount = chibangAttribute.moveSpeed.ToString();
-         Instantiate(chibangitem, attributeContent.transform);
+         var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="移动速度：";
+         chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.moveSpeed.ToString();
       }
       if (chibangAttribute.forture != 0)
       {
-         var chibangitem=Resources.Load<ChiBangItem>("Prefabs/Tool/ChiBangItem");
-         chibangitem.attributeName = "爆率：";
-         chibangitem.attributeCount = chibangAttribute.forture.ToString();
-         Instantiate(chibangitem, attributeContent.transform);
+         var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="爆率：";
+         chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.forture.ToString();
       }
       if (chibangAttribute.finalDamage != 0)
       {
-         var chibangitem=Resources.Load<ChiBangItem>("Prefabs/Tool/ChiBangItem");
-         chibangitem.attributeName = "最终伤害：";
-         chibangitem.attributeCount = chibangAttribute.finalDamage.ToString();
-         Instantiate(chibangitem, attributeContent.transform);
+         var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="最终伤害：";
+         chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.finalDamage.ToString();
       }
    }
 

@@ -13,7 +13,6 @@
 
         public void Start()
         {
-            name.text = attributeName;
-            count.text = attributeCount;
+           
         }
     }
