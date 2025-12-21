@@ -50,8 +50,34 @@ public class Entrance : MonoBehaviour
         
         
         //装备对象池
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 30; i++)
         {
+            
+            GameObject whiteChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangWhite"));
+            whiteChiBang.gameObject.SetActive(false);
+            GameController.S.WhiteChiBang.Enqueue(whiteChiBang);
+            
+            GameObject GreenChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangGreen"));
+            GreenChiBang.gameObject.SetActive(false);
+            GameController.S.GreenChiBang.Enqueue(GreenChiBang);
+            
+            GameObject BlueChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangBlue"));
+            BlueChiBang.gameObject.SetActive(false);
+            GameController.S.BlueChiBang.Enqueue(BlueChiBang);
+            
+            GameObject PurpleChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangPurple"));
+            PurpleChiBang.gameObject.SetActive(false);
+            GameController.S.PurpleChiBang.Enqueue(PurpleChiBang);
+            
+            GameObject OrangeChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangOrange"));
+            OrangeChiBang.gameObject.SetActive(false);
+            GameController.S.OrangeChiBang.Enqueue(OrangeChiBang);
+            
+            GameObject RedChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangRed"));
+            RedChiBang.gameObject.SetActive(false);
+            GameController.S.RedChiBang.Enqueue(RedChiBang);
+            
+            
             GameObject whiteWeaponFragmeng = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/WhiteWeaponFragmeng"));
             whiteWeaponFragmeng.gameObject.SetActive(false);
             GameController.S.WhiteWeaponFragmengQueue.Enqueue(whiteWeaponFragmeng);

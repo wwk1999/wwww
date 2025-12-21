@@ -127,6 +127,30 @@ public class PropBase : MonoBehaviour
                         break;
                 }
                 break;
+            
+            case PropConfig.PropType.ChiBang:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        GameController.S.WhiteChiBang.Enqueue(gameObject);
+                        break;
+                    case 2:
+                        GameController.S.GreenChiBang.Enqueue(gameObject);
+                        break;
+                    case 3:
+                        GameController.S.BlueChiBang.Enqueue(gameObject);
+                        break;
+                    case 4:
+                        GameController.S.PurpleChiBang.Enqueue(gameObject);
+                        break;
+                    case 5:
+                        GameController.S.OrangeChiBang.Enqueue(gameObject);
+                        break;
+                    case6:
+                        GameController.S.RedChiBang.Enqueue(gameObject);
+                        break;
+                }
+                break;
         }
     }
 

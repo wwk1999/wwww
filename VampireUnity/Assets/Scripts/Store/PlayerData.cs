@@ -10,6 +10,8 @@ public class PlayerData : XSingleton<PlayerData>
     public int exp=0;
     public int bloodEnergy=0;
     public int maxGameLevel=1;
+    public int ChiBangLevel=0;
+    public int ChiBangEx=0;
     
     public int clothid;
     public int cloakid;

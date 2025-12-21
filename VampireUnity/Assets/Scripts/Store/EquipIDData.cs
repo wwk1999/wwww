@@ -96,6 +96,30 @@ public class EquipIDData : XSingleton<EquipIDData>
                         break;
                 }
                 break;
+            
+            case PropConfig.PropType.ChiBang:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 401;
+                        break;
+                    case 2:
+                        value = 402;
+                        break;
+                    case 3:
+                        value = 403;
+                        break;
+                    case 4:
+                        value = 404;
+                        break;
+                    case 5:
+                        value = 405;
+                        break;
+                    case 6:
+                        value = 406;
+                        break;
+                }
+                break;
         }
        
         if (propTables.ContainsKey(value))

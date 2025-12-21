@@ -260,6 +260,15 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>FuMoZhiGuQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>GoldBloodQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>ZuiEYanZhuQueue = new Queue<GameObject>();
+    
+    
+    //羽毛
+    [NonReorderable]public Queue<GameObject>WhiteChiBang = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>GreenChiBang = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>BlueChiBang = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PurpleChiBang = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>OrangeChiBang = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>RedChiBang = new Queue<GameObject>();
 
 
    
@@ -372,6 +381,24 @@ public class GameController : XSingleton<GameController>
                         return JuDaYaChiQueue.Dequeue();
                     case 4:
                         return ZuiEYanZhuQueue.Dequeue();
+                }
+                break;
+            
+            case PropConfig.PropType.ChiBang:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        return WhiteChiBang.Dequeue();
+                    case 2:
+                        return GreenChiBang.Dequeue();
+                    case 3:
+                        return BlueChiBang.Dequeue();
+                    case 4:
+                        return PurpleChiBang.Dequeue();
+                    case 5:
+                        return OrangeChiBang.Dequeue();
+                    case 6:
+                        return RedChiBang.Dequeue();
                 }
                 break;
         }

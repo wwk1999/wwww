@@ -75,6 +75,13 @@ namespace Tool
             {"GoldBlood", "黄金之血"},
             {"JuDaYaChi", "巨大牙齿"},
             {"ZuiEYanZhu", "罪恶眼珠"},
+            
+            {"WhiteChiBang", "碧蓝之羽"},
+            {"GreenChiBang", "羽翎之羽"},
+            {"BlueChiBang", "深空之羽"},
+            {"PurpleChiBang", "妖异之羽"},
+            {"OrangeChiBang", "黑虚之羽"},
+            {"RedChiBang", "无端之羽"},
         };
     }
 }

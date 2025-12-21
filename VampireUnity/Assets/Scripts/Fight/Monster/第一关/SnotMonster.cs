@@ -43,11 +43,12 @@ public class SnotMonster : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ShenHuaCaiLiao,1),100));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ShenHuaCaiLiao,2),100));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ShenHuaCaiLiao,3),100));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ShenHuaCaiLiao,4),100));
-
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,2),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,3),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,4),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,5),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,6),100));
     }
 
     private void RandomDelayDie()
