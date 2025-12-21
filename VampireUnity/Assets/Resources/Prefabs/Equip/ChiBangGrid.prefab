@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0c37ece3fe4d529c4dccf1db07deb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chibangButton: {fileID: 4798506044001854168}
 --- !u!1 &6016428683668145451
 GameObject:
   m_ObjectHideFlags: 0

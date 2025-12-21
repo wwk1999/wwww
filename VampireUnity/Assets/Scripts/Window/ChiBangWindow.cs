@@ -1,5 +1,6 @@
 using System;
 using Config;
+using Equip;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -49,6 +50,7 @@ public class ChiBangWindow : MonoBehaviour
       if (BagController.S.PropList.ContainsKey(401) && BagController.S.PropList[401].Count > 0)
       {           
          var chibangGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ChiBangGrid"),yuMaoContent.transform);
+         chibangGrid.GetComponent<ChiBangGrid>().chibangType = 401;
          chibangGrid.transform.Find("ImageBg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
          chibangGrid.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.WhiteChiBang;
          chibangGrid.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
@@ -56,6 +58,7 @@ public class ChiBangWindow : MonoBehaviour
       if (BagController.S.PropList.ContainsKey(402) && BagController.S.PropList[402].Count > 0)
       {           
          var chibangGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ChiBangGrid"),yuMaoContent.transform);
+         chibangGrid.GetComponent<ChiBangGrid>().chibangType = 402;
          chibangGrid.transform.Find("ImageBg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
          chibangGrid.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GreenChiBang;
          chibangGrid.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
@@ -63,6 +66,7 @@ public class ChiBangWindow : MonoBehaviour
       if (BagController.S.PropList.ContainsKey(403) && BagController.S.PropList[403].Count > 0)
       {           
          var chibangGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ChiBangGrid"),yuMaoContent.transform);
+         chibangGrid.GetComponent<ChiBangGrid>().chibangType = 403;
          chibangGrid.transform.Find("ImageBg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
          chibangGrid.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.BlueChiBang;
          chibangGrid.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
@@ -70,6 +74,7 @@ public class ChiBangWindow : MonoBehaviour
       if (BagController.S.PropList.ContainsKey(404) && BagController.S.PropList[404].Count > 0)
       {           
          var chibangGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ChiBangGrid"),yuMaoContent.transform);
+         chibangGrid.GetComponent<ChiBangGrid>().chibangType = 404;
          chibangGrid.transform.Find("ImageBg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
          chibangGrid.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.PurpleChiBang;
          chibangGrid.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
@@ -78,6 +83,7 @@ public class ChiBangWindow : MonoBehaviour
       if (BagController.S.PropList.ContainsKey(405) && BagController.S.PropList[405].Count > 0)
       {
          var chibangGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ChiBangGrid"), yuMaoContent.transform);
+         chibangGrid.GetComponent<ChiBangGrid>().chibangType = 405;
          chibangGrid.transform.Find("ImageBg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
          chibangGrid.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.OrangeChiBang;
          chibangGrid.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
@@ -86,6 +92,7 @@ public class ChiBangWindow : MonoBehaviour
       if (BagController.S.PropList.ContainsKey(406) && BagController.S.PropList[406].Count > 0)
          {           
             var chibangGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ChiBangGrid"),yuMaoContent.transform);
+            chibangGrid.GetComponent<ChiBangGrid>().chibangType = 406;
             chibangGrid.transform.Find("ImageBg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
             chibangGrid.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.RedChiBang;
             chibangGrid.transform.Find("Edge").GetComponent<Animator>().Play("RedEdge");
@@ -225,10 +232,21 @@ public class ChiBangWindow : MonoBehaviour
 
    private void Start()
    {
+      ObserverModuleManager.S.RegisterEvent("ChiBang",RefreshChiBang);
       exitButton.onClick.AddListener(() =>
       {
          Destroy(gameObject);
       });
+      RefreshChiBang();
+   }
+
+   private void OnDestroy()
+   {
+      ObserverModuleManager.S.UnRegisterEvent("ChiBang",RefreshChiBang);
+   }
+
+   public void RefreshChiBang(object[] obj)
+   {
       RefreshChiBang();
    }
    
@@ -247,36 +265,42 @@ public class ChiBangWindow : MonoBehaviour
          case 1:
             rightPanel.gameObject.SetActive(true);
             jieSuo.gameObject.SetActive(false);
+            chiBangAnimator.gameObject.SetActive(true);
             chiBangAnimator.Play("ChiBangWhite");
             ShowChiBangInfo(1);
             break;
          case 2:
             rightPanel.gameObject.SetActive(true);
             jieSuo.gameObject.SetActive(false);
+            chiBangAnimator.gameObject.SetActive(true);
             chiBangAnimator.Play("ChiBangGreen");
             ShowChiBangInfo(2);
             break;
          case 3:
             rightPanel.gameObject.SetActive(true);
             jieSuo.gameObject.SetActive(false);
+            chiBangAnimator.gameObject.SetActive(true);
             chiBangAnimator.Play("ChiBangBlue");
             ShowChiBangInfo(3);
             break;
          case 4:
             rightPanel.gameObject.SetActive(true);
             jieSuo.gameObject.SetActive(false);
+            chiBangAnimator.gameObject.SetActive(true);
             chiBangAnimator.Play("ChiBangPurple");
             ShowChiBangInfo(4);
             break;
          case 5:
             rightPanel.gameObject.SetActive(true);
             jieSuo.gameObject.SetActive(false);
+            chiBangAnimator.gameObject.SetActive(true);
             chiBangAnimator.Play("ChiBangOrange");
             ShowChiBangInfo(5);
             break;
          case 6:
             rightPanel.gameObject.SetActive(true);
             jieSuo.gameObject.SetActive(false);
+            chiBangAnimator.gameObject.SetActive(true);
             chiBangAnimator.Play("ChiBangRed");
             ShowChiBangInfo(6);
             break;
