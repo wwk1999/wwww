@@ -37,12 +37,59 @@ public class RoleWindow1 : MonoBehaviour
     public Button debugJingCui;
     public Button duanzaoButton;
     public Button chibangButton;
+
+    public Animator whiteChiBang;
+    public Animator greenChiBang;
+    public Animator blueChiBang;
+    public Animator purpleChiBang;
+    public Animator orangeChiBang;
+    public Animator redChiBang;
+
     public void UpdateRoleWindow()
     {
+        ShowChiBang();
         yuanLinText.text = GlobalPlayerAttribute.BloodEnergy.ToString();// 元灵数量text
         levelText.text= GlobalPlayerAttribute.Level.ToString();
         expSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
         expSlider.value=GlobalPlayerAttribute.Exp ;
+    }
+
+    public void ShowChiBang()
+    {
+        whiteChiBang.gameObject.SetActive(false);
+        greenChiBang.gameObject.SetActive(false);
+        blueChiBang.gameObject.SetActive(false);
+        purpleChiBang.gameObject.SetActive(false);
+        orangeChiBang.gameObject.SetActive(false);
+        redChiBang.gameObject.SetActive(false);
+
+        switch (PlayerData.S.ChiBangLevel)
+        {
+            case 1:
+                whiteChiBang.gameObject.SetActive(true);
+                whiteChiBang.Play("ChiBangWhite");
+                break;
+            case 2:
+                greenChiBang.gameObject.SetActive(true);
+                greenChiBang.Play("ChiBangGreen");
+                break;
+            case 3:
+                blueChiBang.gameObject.SetActive(true);
+                blueChiBang.Play("ChiBangBlue");
+                break;
+            case 4:
+                purpleChiBang.gameObject.SetActive(true);
+                purpleChiBang.Play("ChiBangPurple");
+                break;
+            case 5:
+                orangeChiBang.gameObject.SetActive(true);
+                orangeChiBang.Play("ChiBangOrange");
+                break;
+            case 6:
+                redChiBang.gameObject.SetActive(true);
+                redChiBang.Play("ChiBangRed");
+                break;
+        }
     }
 
     private void OnEnable()
