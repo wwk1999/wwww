@@ -56,6 +56,14 @@ public class Player : MonoBehaviour
     
     [NonSerialized] public bool MoveJian = false;
     [NonSerialized] public bool MouseDown = false;
+
+    public Animator whiteChiBang;
+    public Animator greenChiBang;
+    public Animator blueChiBang;
+    public Animator purpleChiBang;
+    public Animator orangeChiBang;
+    public Animator redChiBang;
+
     
     // 延迟伤害信息结构
     private struct DelayedDamageInfo

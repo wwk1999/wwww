@@ -820,7 +820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1834697464330534829
 RectTransform:
   m_ObjectHideFlags: 0
@@ -939,7 +939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2329642907573707418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1189,7 +1189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &989829054596533516
 Transform:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8907837781796068286
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1455,7 +1455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5768787662756279450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1708,7 +1708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5595443004382502238
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2414,6 +2414,12 @@ MonoBehaviour:
   exSlider: {fileID: 0}
   levelText: {fileID: 0}
   size: 0.28
+  whiteChiBang: {fileID: 8350704617468324433}
+  greenChiBang: {fileID: 1153286610785297092}
+  blueChiBang: {fileID: 8555429310803219738}
+  purpleChiBang: {fileID: 7524625555747353780}
+  orangeChiBang: {fileID: 7880196479779626469}
+  redChiBang: {fileID: 2456354603980089557}
   levelUpAnim: {fileID: 1143156171060667920}
   attackText: {fileID: 6652492437014025834}
   hpText: {fileID: 1650684257985899066}
@@ -2560,7 +2566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5079553141444493755
 RectTransform:
   m_ObjectHideFlags: 0
