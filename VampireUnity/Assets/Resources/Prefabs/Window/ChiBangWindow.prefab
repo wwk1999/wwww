@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2590885744066561678
 RectTransform:
   m_ObjectHideFlags: 0
@@ -309,7 +309,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 3346746428626015310}
   m_HandleRect: {fileID: 0}
@@ -390,6 +390,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2590885744066561678}
+  - {fileID: 3798277760024307880}
   m_Father: {fileID: 3093209252795289076}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -1951,6 +1952,140 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3329039979337913407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3798277760024307880}
+  - component: {fileID: 1406854718530157514}
+  - component: {fileID: 2389894001367445963}
+  m_Layer: 5
+  m_Name: JieSuo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3798277760024307880
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3329039979337913407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8961454522011195333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0010605, y: 0.0010605}
+  m_SizeDelta: {x: 733.46, y: 392.65}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1406854718530157514
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3329039979337913407}
+  m_CullTransparentMesh: 1
+--- !u!114 &2389894001367445963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3329039979337913407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\u8BF7\u4F7F\u7528\u7FBD\u6BDB\u63D0\u4F9B\u7ECF\u9A8C\u6765\u89E3\u9501\u5347\u7EA7\u7FC5\u8180\uFF01"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3333075500754101170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,7 +2427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8275516515168942044}
-  - component: {fileID: 4212805101164821271}
+  - component: {fileID: 3105383754610520511}
   m_Layer: 0
   m_Name: ChiBangWindow
   m_TagString: Untagged
@@ -2316,7 +2451,7 @@ Transform:
   - {fileID: 8763001573141073016}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4212805101164821271
+--- !u!114 &3105383754610520511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2325,81 +2460,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 4239700766165076135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ec28a992a77f54d8448acfe021956c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0be4225ee0d534145ae00789008b1f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xiLianPanel: {fileID: 0}
-  heChongPanel: {fileID: 0}
-  jinJiePanel: {fileID: 5146890529163807524}
-  heChongButton: {fileID: 0}
-  jinJieButton: {fileID: 0}
-  xiLianButton: {fileID: 0}
+  jieSuo: {fileID: 3329039979337913407}
+  chiBangAnimator: {fileID: 8407631780141321741}
+  exSlider: {fileID: 4317943088306533950}
+  maxEx: {fileID: 8332724358079901156}
+  currentEx: {fileID: 4776081606196739410}
+  yuMaoContent: {fileID: 3623418683193560589}
+  whiteName: {fileID: 2532702687259808256}
+  greenName: {fileID: 5599678668514876146}
+  blueName: {fileID: 6483440184420340749}
+  purpleName: {fileID: 1961324596778507622}
+  orangeName: {fileID: 6669672646683398696}
+  redName: {fileID: 3316141553286695731}
+  whiteQuality: {fileID: 2537785809491331319}
+  greenQuality: {fileID: 2330190780921600175}
+  blueQuality: {fileID: 5379154821385586825}
+  purpleQuality: {fileID: 8965209888570437264}
+  orangeQuality: {fileID: 8121846556573377222}
+  redQuality: {fileID: 5199747377372030544}
+  whiteDesc: {fileID: 3673607073238656237}
+  greenDesc: {fileID: 8250244254289457535}
+  blueDesc: {fileID: 3156321962218258151}
+  purpleDesc: {fileID: 6204157443116172745}
+  orangeDesc: {fileID: 4763627031563066764}
+  redDesc: {fileID: 439792647534358884}
+  attributeContent: {fileID: 5987070813465670519}
+  rightPanel: {fileID: 4682024444230975529}
   exitButton: {fileID: 7746225333926184443}
-  weaponFragmentButton: {fileID: 0}
-  weaponFragmentItem1Button: {fileID: 0}
-  weaponFragmentItem2Button: {fileID: 0}
-  weaponFragmentItem3Button: {fileID: 0}
-  weaponFragmentItem4Button: {fileID: 0}
-  weaponFragmentItem5Button: {fileID: 0}
-  jingCuiButton: {fileID: 0}
-  jingCuiItem1Button: {fileID: 0}
-  jingCuiItem2Button: {fileID: 0}
-  jingCuiItem3Button: {fileID: 0}
-  jingCuiItem4Button: {fileID: 0}
-  jingCuiItem5Button: {fileID: 0}
-  item1ColorBg: {fileID: 0}
-  item1Edge: {fileID: 0}
-  item1Image: {fileID: 0}
-  item2ColorBg: {fileID: 0}
-  item2Edge: {fileID: 0}
-  item2Image: {fileID: 0}
-  item3ColorBg: {fileID: 0}
-  item3Edge: {fileID: 0}
-  item3Image: {fileID: 0}
-  item4ColorBg: {fileID: 0}
-  item4Edge: {fileID: 0}
-  item4Image: {fileID: 0}
-  itemColorBg: {fileID: 0}
-  itemEdge: {fileID: 0}
-  itemImage: {fileID: 0}
-  toggle: {fileID: 0}
-  gou: {fileID: 0}
-  heCheng: {fileID: 0}
-  otherButton: {fileID: 0}
-  shenHuaZhiXinButton: {fileID: 0}
-  equipContent: {fileID: 0}
-  equipInfo: {fileID: 0}
-  xiLian: {fileID: 0}
-  equipBg: {fileID: 0}
-  edge: {fileID: 0}
-  image: {fileID: 0}
-  level: {fileID: 0}
-  baseAttribute1: {fileID: 0}
-  baseAttribute2: {fileID: 0}
-  baseAttribute1Value: {fileID: 0}
-  baseAttribute2Value: {fileID: 0}
-  fuJiaContent: {fileID: 0}
-  pageNumText: {fileID: 0}
-  right: {fileID: 0}
-  left: {fileID: 0}
-  redEquipName: {fileID: 0}
-  orangeEquipName: {fileID: 0}
-  purpleEquipName: {fileID: 0}
-  blueEquipName: {fileID: 0}
-  greenEquipName: {fileID: 0}
-  redQuality: {fileID: 0}
-  orangeQuality: {fileID: 0}
-  purpleQuality: {fileID: 0}
-  blueQuality: {fileID: 0}
-  greenQuality: {fileID: 0}
-  jinJiePageNumText: {fileID: 0}
-  jinJieRight: {fileID: 0}
-  jinJieLeft: {fileID: 0}
-  jinJieEquipImage: {fileID: 0}
-  jinJieEdge: {fileID: 0}
-  jinJieEquipBg: {fileID: 0}
-  jinJie: {fileID: 0}
-  jinJieEquipContent: {fileID: 0}
 --- !u!1 &4279921200505984637
 GameObject:
   m_ObjectHideFlags: 0
@@ -5295,7 +5385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7875422211691167706, guid: abe4231f65c8b244d96b3bbcd202b7e8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 151.1305
+      value: 151.13045
       objectReference: {fileID: 0}
     - target: {fileID: 7875422211691167706, guid: abe4231f65c8b244d96b3bbcd202b7e8, type: 3}
       propertyPath: m_AnchoredPosition.y

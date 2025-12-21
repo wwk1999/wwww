@@ -36,6 +36,7 @@ public class RoleWindow1 : MonoBehaviour
     
     public Button debugJingCui;
     public Button duanzaoButton;
+    public Button chibangButton;
     public void UpdateRoleWindow()
     {
         yuanLinText.text = GlobalPlayerAttribute.BloodEnergy.ToString();// 元灵数量text
@@ -55,6 +56,10 @@ public class RoleWindow1 : MonoBehaviour
         Debug.Log("点击进入角色界面");
         InitEquip();
         BagController.S.IsInit = true;
+        chibangButton.onClick.AddListener(() =>
+        {
+            Instantiate(Resources.Load("Prefabs/Window/ChiBangWindow"));
+        });
         debugLingHun.onClick.AddListener(() =>
         {
             GlobalPlayerAttribute.BloodEnergy += 100000;
