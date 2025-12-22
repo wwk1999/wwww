@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Config;
 using Gloabl;
 using Mysql;
 using Spine.Unity;
@@ -40,17 +41,186 @@ public class WeaponWindow : MonoBehaviour
 
    public GameObject InfoPanel;
    public GameObject UpPanel;
+   public GameObject JieSuoPanel;
+   public GameObject AttributePanel;
 
 
    public Image weaponImage;
-   public TextMeshProUGUI desc;
-   public TextMeshProUGUI teXiao;
+   public TextMeshProUGUI desc1;
+   public TextMeshProUGUI desc2;
+   public TextMeshProUGUI desc3;
+   public TextMeshProUGUI desc4;
+   public TextMeshProUGUI desc5;
+   public TextMeshProUGUI desc6;
+   public TextMeshProUGUI desc7;
+
    public Button upButton;
 
-   public TextMeshProUGUI weaponName;
-   public GameObject infoContent;
+   public TextMeshProUGUI weaponName1;
+   public TextMeshProUGUI weaponName2;
+   public TextMeshProUGUI weaponName3;
+   public TextMeshProUGUI weaponName4;
+   public TextMeshProUGUI weaponName5;
+   public TextMeshProUGUI weaponName6;
+   public TextMeshProUGUI weaponName7;
+
+   public GameObject jieSuoContent;
    public Button JieSuoButton;
 
+   public void HideNameAndDesc()
+   {
+      desc1.gameObject.SetActive(false);
+      desc2.gameObject.SetActive(false);
+      desc3.gameObject.SetActive(false);
+      desc4.gameObject.SetActive(false);
+      desc5.gameObject.SetActive(false);
+      desc6.gameObject.SetActive(false);
+      desc7.gameObject.SetActive(false);
+      
+      weaponName1.gameObject.SetActive(false);
+      weaponName2.gameObject.SetActive(false);
+      weaponName3.gameObject.SetActive(false);
+      weaponName4.gameObject.SetActive(false);
+      weaponName5.gameObject.SetActive(false);
+      weaponName6.gameObject.SetActive(false);
+      weaponName7.gameObject.SetActive(false);
+
+   }
+   
+   public void ShowJieSuo(WeaponType weaponType)
+   {
+      HideNameAndDesc();
+      upButton.gameObject.SetActive(false);
+      JieSuoPanel.gameObject.SetActive(true);
+      AttributePanel.gameObject.SetActive(false);
+      InfoPanel.SetActive(true);
+      UpPanel.SetActive(true);
+      switch (weaponType)
+      {
+         case WeaponType.Primary:
+            desc1.gameObject.SetActive(true);
+            weaponName1.gameObject.SetActive(true);
+            break;
+         case WeaponType.Du:
+            desc2.gameObject.SetActive(true);
+            weaponName2.gameObject.SetActive(true);
+            break;
+         case WeaponType.PuTong3:
+            desc3.gameObject.SetActive(true);
+            weaponName3.gameObject.SetActive(true);
+            break;
+         case WeaponType.XuKong:
+            desc4.gameObject.SetActive(true);
+            weaponName4.gameObject.SetActive(true);
+            break;
+         case WeaponType.Fire:
+            desc5.gameObject.SetActive(true);
+            weaponName5.gameObject.SetActive(true);
+            break;
+         case WeaponType.LvQuan:
+            desc6.gameObject.SetActive(true);
+            weaponName6.gameObject.SetActive(true);
+            break;
+         case WeaponType.HeiDong:
+            desc7.gameObject.SetActive(true);
+            weaponName7.gameObject.SetActive(true);
+            break;
+      }
+
+      foreach (Transform child in jieSuoContent.transform)
+      {
+         Destroy(child.gameObject);
+      }
+
+      var cailiao = WeaponConfig.CaiLiaoDic[weaponType];
+      foreach (var item in cailiao)
+      {
+         var weaponItem = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/CaiLiaoItem"),jieSuoContent.transform);
+         switch (item.PropType)
+         {
+            case PropConfig.PropType.LingHun:
+               weaponItem.transform.Find("prop/ImageBg").gameObject.SetActive(false);
+               weaponItem.transform.Find("prop/Edge").gameObject.SetActive(false);
+               weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.LingHun;
+               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.Count.ToString();
+               break;
+            case PropConfig.PropType.JingCui:
+               switch (item.Quality)
+               {
+                  case 1:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.WhiteJingCui;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                     break;
+                  case 2:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.GreenJingCui;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("GreenEdge");
+                     break;
+                  case 3:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.BlueJingCui;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("BlueEdge");
+                     break;
+                  case 4:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.PurpleJingCui;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                     break;
+                  case 5:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.OrangeJingCui;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                     break;
+                  case 6:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.RedJingCui;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("RedEdge");
+                     break;
+               }
+               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.Count.ToString();
+               break;
+             case PropConfig.PropType.WeaponFragment:
+               switch (item.Quality)
+               {
+                  case 1:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.WhiteWeaponFragment;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                     break;
+                  case 2:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.GreenWeaponFragment;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("GreenEdge");
+                     break;
+                  case 3:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.BlueWeaponFragment;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("BlueEdge");
+                     break;
+                  case 4:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.PurpleWeaponFragment;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                     break;
+                  case 5:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.OrangeWeaponFragment;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                     break;
+                  case 6:
+                     weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.RedWeaponFragment;
+                     weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
+                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("RedEdge");
+                     break;
+               }
+               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.Count.ToString();
+               break;
+         }
+      }
+   }
+   
+   
    public void RefreshWeaponList()
    {
       InfoPanel.SetActive(false);
@@ -140,6 +310,32 @@ public class WeaponWindow : MonoBehaviour
 
    private void Awake()
    {
+      duJieSuoButton.onClick.AddListener(() =>
+      {
+         ShowJieSuo(WeaponType.Du);
+      });
+      puTong3JieSuoButton.onClick.AddListener(() =>
+      {
+         ShowJieSuo(WeaponType.PuTong3);
+      });
+      xukongJieSuoButton.onClick.AddListener(() =>
+      {
+         ShowJieSuo(WeaponType.XuKong);
+      });
+      fireJieSuoButton.onClick.AddListener(() =>
+      {
+         ShowJieSuo(WeaponType.Fire);
+      });
+      lvQuanJieSuoButton.onClick.AddListener(() =>
+      {
+         ShowJieSuo(WeaponType.LvQuan);
+      });
+      heiDongJieSuoButton.onClick.AddListener(() =>
+      {
+         ShowJieSuo(WeaponType.HeiDong);
+      });
+      
+      
       primaryInstallButton.onClick.AddListener(() =>
       {
          GlobalPlayerAttribute.CurrentWeaponType= WeaponType.Primary;

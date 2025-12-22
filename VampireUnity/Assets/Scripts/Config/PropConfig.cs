@@ -10,6 +10,7 @@ public class PropConfig : MonoBehaviour
       WeaponFragment,
       JingCui,
       ShenHuaCaiLiao,
-      ChiBang
+      ChiBang,
+      LingHun
    }
 }

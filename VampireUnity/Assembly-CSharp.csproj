@@ -397,6 +397,7 @@
     <Compile Include="Assets\External Resources\SpecialSkillsEffectsPack\Scripts\ForEffects\MultipleObjectsMake.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\OrangeWeaponFragment.cs" />
+    <Compile Include="Assets\Scripts\Config\WeaponConfig.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Explosion.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor1.cs" />

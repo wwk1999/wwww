@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ResourcesConfig : MonoBehaviour
 {
+    public static Sprite LingHun;
+
+    
     //Resource新手套装
     public static Sprite PrimaryCloth;
     public static Sprite PrimaryCloak;
@@ -277,7 +280,7 @@ public class ResourcesConfig : MonoBehaviour
         PurpleMaterial= Resources.Load<Material>("Material/EquipOutline/PurpleEquipOutline");
         OrangeMaterial= Resources.Load<Material>("Material/EquipOutline/OrangeEquipOutline");
         
-        
+        LingHun=Resources.Load<Sprite>("Sprite/Prop/LingHun");
         //新手套装
         PrimaryCloth= Resources.Load<Sprite>("Sprite/Equip/PrimaryCloth");
         PrimaryCloak = Resources.Load<Sprite>("Sprite/Equip/PrimaryCloak");
