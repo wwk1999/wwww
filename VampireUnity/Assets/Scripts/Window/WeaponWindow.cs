@@ -53,6 +53,14 @@ public class WeaponWindow : MonoBehaviour
    public TextMeshProUGUI desc5;
    public TextMeshProUGUI desc6;
    public TextMeshProUGUI desc7;
+   
+   public TextMeshProUGUI texiao1;
+   public TextMeshProUGUI texiao2;
+   public TextMeshProUGUI texiao3;
+   public TextMeshProUGUI texiao4;
+   public TextMeshProUGUI texiao5;
+   public TextMeshProUGUI texiao6;
+   public TextMeshProUGUI texiao7;
 
    public Button upButton;
 
@@ -66,6 +74,17 @@ public class WeaponWindow : MonoBehaviour
 
    public GameObject jieSuoContent;
    public Button JieSuoButton;
+
+   public GameObject AttributeContent;
+   public Button primaryShowButton; 
+   public Button duShowButton;
+   public Button puTong3ShowButton;
+   public Button xukongShowButton; 
+   public Button fireShowButton; 
+   public Button lvQuanShowButton; 
+   public Button heiDongShowButton; 
+
+   [NonSerialized] public WeaponType currentJieSuoType = WeaponType.None;
 
    public void HideNameAndDesc()
    {
@@ -84,7 +103,90 @@ public class WeaponWindow : MonoBehaviour
       weaponName5.gameObject.SetActive(false);
       weaponName6.gameObject.SetActive(false);
       weaponName7.gameObject.SetActive(false);
+      
+      texiao1.gameObject.SetActive(false);
+      texiao2.gameObject.SetActive(false);
+      texiao3.gameObject.SetActive(false);
+      texiao4.gameObject.SetActive(false);
+      texiao5.gameObject.SetActive(false);
+      texiao6.gameObject.SetActive(false);
+      texiao7.gameObject.SetActive(false);
 
+   }
+
+   public void ShowAttribute(WeaponType weaponType)
+   {
+      HideNameAndDesc();
+      upButton.gameObject.SetActive(true);
+      JieSuoPanel.gameObject.SetActive(false);
+      AttributePanel.gameObject.SetActive(true);
+      InfoPanel.SetActive(true);
+      UpPanel.SetActive(true);
+      
+      switch (weaponType)
+      {
+         case WeaponType.Primary:
+            desc1.gameObject.SetActive(true);
+            weaponName1.gameObject.SetActive(true);
+            texiao1.gameObject.SetActive(true);
+            break;
+         case WeaponType.Du:
+            desc2.gameObject.SetActive(true);
+            weaponName2.gameObject.SetActive(true);
+            texiao2.gameObject.SetActive(true);
+            break;
+         case WeaponType.PuTong3:
+            desc3.gameObject.SetActive(true);
+            weaponName3.gameObject.SetActive(true);
+            texiao3.gameObject.SetActive(true);
+            break;
+         case WeaponType.XuKong:
+            desc4.gameObject.SetActive(true);
+            weaponName4.gameObject.SetActive(true);
+            texiao4.gameObject.SetActive(true);
+            break;
+         case WeaponType.Fire:
+            desc5.gameObject.SetActive(true);
+            weaponName5.gameObject.SetActive(true);
+            texiao5.gameObject.SetActive(true);
+            break;
+         case WeaponType.LvQuan:
+            desc6.gameObject.SetActive(true);
+            weaponName6.gameObject.SetActive(true);
+            texiao6.gameObject.SetActive(true);
+            break;
+         case WeaponType.HeiDong:
+            desc7.gameObject.SetActive(true);
+            weaponName7.gameObject.SetActive(true);
+            texiao7.gameObject.SetActive(true);
+            break;
+      }
+
+      foreach (Transform item in AttributeContent.transform)
+      {
+         Destroy(item.gameObject);
+      }
+
+      var weaponAttribute = WeaponConfig.WeaponAttributeDic[weaponType];
+      GameObject attack = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"),AttributeContent.transform);
+      attack.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "攻击力 :";
+      attack.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = weaponAttribute.Attack.ToString();
+      
+      GameObject defense = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"),AttributeContent.transform);
+      defense.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "防御 :";
+      defense.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = weaponAttribute.Defense.ToString();
+      
+      GameObject crit = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"),AttributeContent.transform);
+      crit.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "暴击 :";
+      crit.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = weaponAttribute.Crit.ToString();
+      
+      GameObject hp = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"),AttributeContent.transform);
+      hp.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "生命值 :";
+      hp.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = weaponAttribute.Hp.ToString();
+      
+      GameObject attackspeed = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"),AttributeContent.transform);
+      attackspeed.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "攻击速度 :";
+      attackspeed.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = weaponAttribute.AttackSpeed.ToString();
    }
    
    public void ShowJieSuo(WeaponType weaponType)
@@ -100,30 +202,37 @@ public class WeaponWindow : MonoBehaviour
          case WeaponType.Primary:
             desc1.gameObject.SetActive(true);
             weaponName1.gameObject.SetActive(true);
+            texiao1.gameObject.SetActive(true);
             break;
          case WeaponType.Du:
             desc2.gameObject.SetActive(true);
             weaponName2.gameObject.SetActive(true);
+            texiao2.gameObject.SetActive(true);
             break;
          case WeaponType.PuTong3:
             desc3.gameObject.SetActive(true);
             weaponName3.gameObject.SetActive(true);
+            texiao3.gameObject.SetActive(true);
             break;
          case WeaponType.XuKong:
             desc4.gameObject.SetActive(true);
             weaponName4.gameObject.SetActive(true);
+            texiao4.gameObject.SetActive(true);
             break;
          case WeaponType.Fire:
             desc5.gameObject.SetActive(true);
             weaponName5.gameObject.SetActive(true);
+            texiao5.gameObject.SetActive(true);
             break;
          case WeaponType.LvQuan:
             desc6.gameObject.SetActive(true);
             weaponName6.gameObject.SetActive(true);
+            texiao6.gameObject.SetActive(true);
             break;
          case WeaponType.HeiDong:
             desc7.gameObject.SetActive(true);
             weaponName7.gameObject.SetActive(true);
+            texiao7.gameObject.SetActive(true);
             break;
       }
 
@@ -308,30 +417,179 @@ public class WeaponWindow : MonoBehaviour
       RefreshWeaponList();
    }
 
+   public void JieSuo()
+   {
+      switch (currentJieSuoType)
+      {
+         case WeaponType.Du:
+            if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
+                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(302) ||
+                BagController.S.PropList[302].Count < 3)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+               return;
+            }
+            GlobalPlayerAttribute.BloodEnergy -= 300;
+            BagController.S.PropList[202].Count -= 3;
+            BagController.S.PropList[302].Count -= 3;
+            PlayerData.S.duWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.PuTong3:
+            if (GlobalPlayerAttribute.BloodEnergy < 500 || !BagController.S.PropList.ContainsKey(203) ||
+                BagController.S.PropList[203].Count < 3 || !BagController.S.PropList.ContainsKey(303) ||
+                BagController.S.PropList[303].Count < 3)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+               return;
+            }
+            GlobalPlayerAttribute.BloodEnergy -= 500;
+            BagController.S.PropList[203].Count -= 3;
+            BagController.S.PropList[303].Count -= 3;
+            PlayerData.S.puTong3WeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.XuKong:
+            if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
+                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(303) ||
+                BagController.S.PropList[303].Count < 5)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+               return;
+            }
+            GlobalPlayerAttribute.BloodEnergy -= 800;
+            BagController.S.PropList[203].Count -= 5;
+            BagController.S.PropList[303].Count -= 5;
+            PlayerData.S.xuKongWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         case WeaponType.Fire:
+            if (GlobalPlayerAttribute.BloodEnergy < 1500 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 5 || !BagController.S.PropList.ContainsKey(304) ||
+                BagController.S.PropList[304].Count < 5)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+               return;
+            }
+            GlobalPlayerAttribute.BloodEnergy -= 1500;
+            BagController.S.PropList[204].Count -= 5;
+            BagController.S.PropList[304].Count -= 5;
+            PlayerData.S.fireWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.LvQuan:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 8 || !BagController.S.PropList.ContainsKey(304) ||
+                BagController.S.PropList[304].Count < 8)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+               return;
+            }
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 8;
+            BagController.S.PropList[304].Count -= 8;
+            PlayerData.S.lvQuanWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.HeiDong:
+            if (GlobalPlayerAttribute.BloodEnergy < 3000 || !BagController.S.PropList.ContainsKey(205) ||
+                BagController.S.PropList[205].Count < 5 || !BagController.S.PropList.ContainsKey(305) ||
+                BagController.S.PropList[305].Count < 5)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+               return;
+            }
+            GlobalPlayerAttribute.BloodEnergy -= 3000;
+            BagController.S.PropList[205].Count -= 5;
+            BagController.S.PropList[305].Count -= 5;
+            PlayerData.S.heiDongWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+      }
+   }
+
    private void Awake()
    {
+      primaryShowButton.onClick.AddListener(()=>
+      {
+         ShowAttribute(WeaponType.Primary);
+      });
+      
+      duShowButton.onClick.AddListener(()=>
+      {
+         ShowAttribute(WeaponType.Du);
+      });
+      
+      puTong3ShowButton.onClick.AddListener(()=>
+      {
+         ShowAttribute(WeaponType.PuTong3);
+      });
+      
+      xukongShowButton.onClick.AddListener(()=>
+      {
+         ShowAttribute(WeaponType.XuKong);
+      });
+      
+      fireShowButton.onClick.AddListener(()=>
+      {
+         ShowAttribute(WeaponType.Fire);
+      });
+      
+      lvQuanShowButton.onClick.AddListener(()=>
+      {
+         ShowAttribute(WeaponType.LvQuan);
+      });
+      
+      heiDongShowButton.onClick.AddListener(()=>
+      {
+         ShowAttribute(WeaponType.HeiDong);
+      });
+      
+      
+      
+      
+      JieSuoButton.onClick.AddListener(() =>
+      {
+         JieSuo();
+      });
       duJieSuoButton.onClick.AddListener(() =>
       {
+         currentJieSuoType = WeaponType.Du;
          ShowJieSuo(WeaponType.Du);
       });
       puTong3JieSuoButton.onClick.AddListener(() =>
       {
+         currentJieSuoType = WeaponType.PuTong3;
          ShowJieSuo(WeaponType.PuTong3);
       });
       xukongJieSuoButton.onClick.AddListener(() =>
       {
+         currentJieSuoType = WeaponType.XuKong;
          ShowJieSuo(WeaponType.XuKong);
       });
       fireJieSuoButton.onClick.AddListener(() =>
       {
+         currentJieSuoType = WeaponType.Fire;
          ShowJieSuo(WeaponType.Fire);
       });
       lvQuanJieSuoButton.onClick.AddListener(() =>
       {
+         currentJieSuoType = WeaponType.LvQuan;
          ShowJieSuo(WeaponType.LvQuan);
       });
       heiDongJieSuoButton.onClick.AddListener(() =>
       {
+         currentJieSuoType = WeaponType.HeiDong;
          ShowJieSuo(WeaponType.HeiDong);
       });
       

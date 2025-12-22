@@ -8,8 +8,32 @@ namespace Config
         public int Quality;
         public int Count;
     }
+
+    public class WeaponAttribute
+    {
+        public float Attack;
+        public float Crit;
+        public float Hp;
+        public float Defense;
+        public float AttackSpeed;
+
+    }
     public class WeaponConfig
     {
+        public static Dictionary<WeaponType, WeaponAttribute> WeaponAttributeDic =
+            new Dictionary<WeaponType, WeaponAttribute>()
+            {
+                { WeaponType.Primary ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
+                { WeaponType.Du ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 10,AttackSpeed = 1}},
+                { WeaponType.PuTong3 ,new WeaponAttribute(){Attack = 40,Crit = 40,Hp = 100,Defense = 20,AttackSpeed = 1}},
+                { WeaponType.XuKong ,new WeaponAttribute(){Attack = 60,Crit = 60,Hp = 150,Defense = 30,AttackSpeed = 1}},
+                { WeaponType.Fire ,new WeaponAttribute(){Attack = 100,Crit = 10,Hp = 300,Defense = 50,AttackSpeed = 1}},
+                { WeaponType.LvQuan ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 0.7f}},
+                { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1000,Defense = 150,AttackSpeed = 0.7f}},
+            };
+        
+        
+        
         public static Dictionary<WeaponType, List<WeaponCaiLiao>> CaiLiaoDic 
             = new Dictionary<WeaponType, List<WeaponCaiLiao>>()
             {
@@ -29,7 +53,7 @@ namespace Config
                     {
                         new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 500  },
                         new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 3,  Count = 3 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 2,  Count = 3 }
+                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 3,  Count = 3 }
                     } 
                 },
                 
