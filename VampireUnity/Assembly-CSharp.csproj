@@ -433,7 +433,6 @@
     <Compile Include="Assets\Scripts\Skill\IceArrow.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />
-    <Compile Include="Assets\Scripts\Config\WeaponSourceConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\BagObjectBase.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\ZuiEYanZhu.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloak.cs" />

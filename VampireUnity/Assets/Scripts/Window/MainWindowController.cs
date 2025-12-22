@@ -23,7 +23,6 @@ public class MainWindowController : MonoBehaviour
         LevelInfoConfig.init();
         AudioController.S.BGAudioSource.Play(); 
         LevelInfoConfig.InitGameLevel();
-        WeaponSourceConfig.InitWeaponSourceConfig();
         StoreController.S.LoadStoreData();
     }
     

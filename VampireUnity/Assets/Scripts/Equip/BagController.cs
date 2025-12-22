@@ -974,13 +974,10 @@ public class BagController : XSingleton<BagController>
 
                 Button bagGridButton = bagGridImageTransform.GetComponent<Button>();
 
-                bagGridButton.image.sprite = WeaponSourceConfig.GetWeaponSourceStoneSprite(item.SourceStoneId);
 
                 // 设置装备属性图标
                 BagGrid bagGridComponent = bagGridins.GetComponent<BagGrid>();
-
-                bagGridComponent.equipAttributeImage =
-                    WeaponSourceConfig.GetWeaponSourceStoneSprite(item.SourceStoneId);
+                
                 bagGridComponent.EquipType = EquipType.SourceStone;
 
                 // 设置bagGrid的TableBase属性
