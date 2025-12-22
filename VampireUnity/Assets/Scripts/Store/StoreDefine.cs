@@ -71,6 +71,14 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int ringid;
         public int shoeid;
         public int necklaceid;
+        
+        public int primaryWeaponLevel=1;
+        public int duWeaponLevel;
+        public int puTong3WeaponLevel;
+        public int xuKongWeaponLevel;
+        public int lvQuanWeaponLevel;
+        public int fireWeaponLevel;
+        public int heiDongWeaponLevel;
 
         public void CopyFromRuntime(PlayerData runtime)
         {
@@ -87,6 +95,14 @@ public class StoreDefine : XSingleton<StoreDefine>
             ringid = runtime.ringid;
             shoeid = runtime.shoeid;
             necklaceid = runtime.necklaceid;
+
+            primaryWeaponLevel = runtime.primaryWeaponLevel;
+            duWeaponLevel = runtime.duWeaponLevel;
+            puTong3WeaponLevel = runtime.puTong3WeaponLevel;
+            xuKongWeaponLevel = runtime.xuKongWeaponLevel;
+            lvQuanWeaponLevel = runtime.lvQuanWeaponLevel;
+            fireWeaponLevel = runtime.fireWeaponLevel;
+            heiDongWeaponLevel = runtime.heiDongWeaponLevel;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -98,14 +114,20 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.ChiBangLevel = ChiBangLevel;
             runtime.ChiBangEx = ChiBangEx;
             
-            
-            
             runtime.clothid = clothid;
             runtime.cloakid = cloakid;
             runtime.helmetid = helmetid;
             runtime.ringid = ringid;
             runtime.shoeid = shoeid;
             runtime.necklaceid = necklaceid;
+            
+            runtime. primaryWeaponLevel = primaryWeaponLevel;
+            runtime.duWeaponLevel = duWeaponLevel;
+            runtime.puTong3WeaponLevel = puTong3WeaponLevel;
+            runtime.xuKongWeaponLevel = xuKongWeaponLevel;
+            runtime.lvQuanWeaponLevel = lvQuanWeaponLevel;
+            runtime.fireWeaponLevel = fireWeaponLevel;
+            runtime.heiDongWeaponLevel = heiDongWeaponLevel;
         }
     }
     

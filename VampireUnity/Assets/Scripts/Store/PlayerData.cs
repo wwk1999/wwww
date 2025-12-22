@@ -19,6 +19,16 @@ public class PlayerData : XSingleton<PlayerData>
     public int ringid;
     public int shoeid;
     public int necklaceid;
+
+
+    public int primaryWeaponLevel=1;
+    public int duWeaponLevel;
+    public int puTong3WeaponLevel;
+    public int xuKongWeaponLevel;
+    public int lvQuanWeaponLevel;
+    public int fireWeaponLevel;
+    public int heiDongWeaponLevel;
+
     protected override void Awake()
     {
         base.Awake();

@@ -25,5 +25,4 @@ public class MainWindowController : MonoBehaviour
         LevelInfoConfig.InitGameLevel();
         StoreController.S.LoadStoreData();
     }
-    
 }
