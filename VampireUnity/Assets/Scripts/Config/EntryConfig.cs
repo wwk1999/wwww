@@ -159,10 +159,10 @@ public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new 
     // 普攻
     { OrangeEntry.FanPuGuiZhen, "装备白色武器最终伤害增加200%，绿色150%，蓝色100%，紫色50%" },
     { OrangeEntry.NoSkill, "普通攻击伤害增加100%，但是不能使用技能" },
-    { OrangeEntry.BuWangChuXin, "朴素法杖改为连射发射模式，一次发射的弹道数量*2" },
+    { OrangeEntry.BuWangChuXin, "原木法杖改为连射发射模式，一次发射的弹道数量*2" },
     { OrangeEntry.HeiDongAddSpeed, "黑渊之杖的攻击速度增加100%" },
     { OrangeEntry.DuAddDuQuan, "腐蚀权杖击中敌人在原地留下毒圈" },
-    { OrangeEntry.LvQuanAddScale, "增加极圆杖50%大小" },
+    { OrangeEntry.LvQuanAddScale, "增加源极杖50%大小" },
     { OrangeEntry.XuKongAdd2Dan, "虚空杖增加2个魔法弹" },
     { OrangeEntry.PuTong3ChuanTou, "三叉法杖可以穿透敌人" },
     { OrangeEntry.FireBaoZha, "爆炎杖弹爆炸范围增大50%" },
