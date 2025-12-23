@@ -585,7 +585,6 @@
     <None Include="Assets\Arts\Shaders\SqrtEdge.shader" />
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\lib\netstandard2.1\Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.json" />
-    <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Multiplicative\Electric_Multiplicative.shader" />
     <None Include="Assets\Arts\Spine\怪物\json 1\Enemy_Boss_ogre.json" />
     <None Include="Assets\Arts\Spine\第四关\ShaNiao\shamoniao.json" />
     <None Include="Assets\Arts\Shaders\LcL\Fade.shader" />
@@ -643,7 +642,6 @@
     <None Include="Assets\Arts\Spine\第一关\蜘蛛\zz.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\怪物\json 8\guyalang02.atlas.txt" />
-    <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Multiplicative\EdgeEffect_Electric_Multiplicative.shader" />
     <None Include="Assets\Arts\Spine\技能\DianQuan\action.json" />
     <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\Bee\Beelzebub.atlas.txt" />
@@ -673,7 +671,6 @@
     <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_Properties.cginc" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
-    <None Include="Assets\Arts\Texture\UI\排行榜\生成卡通皇座画面 (1).json" />
     <None Include="Assets\Arts\Shaders\LcL\Hologram.shader" />
     <None Include="Assets\Arts\Texture\UI\技能树\设计说明.txt" />
     <None Include="Assets\Arts\Spine\第三关\石头BOSS\json\shitouBOSS.atlas.txt" />
@@ -688,7 +685,6 @@
     <None Include="Packages\com.coffee.ui-particle\Shaders\UIAdditive.shader" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\XiaoEMo\akmon_pirest.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\ValidationConfig.json" />
-    <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Electric_Additive.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\Du\action.json" />
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\useSharedDesignerContext.txt" />
     <None Include="Assets\Arts\Spine\第二关\小火怪\json\xiaohuoguai.json" />
@@ -706,15 +702,12 @@
     <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\毒圈\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\Multiplicative\EdgeEffect_Multiplicative.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\EdgeEffect_Additive.shader" />
     <None Include="Assets\Arts\Spine\技能\Boss出现\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通Peng\action.json" />
     <None Include="Assets\Arts\Spine\怪物\KuLou\Enemy_Skeleton_warrior.atlas.txt" />
-    <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\UIEffect.shader" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\XiaoEMo\akmon_pirest.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\淘宝\斩\caocao_skill1_2.json" />
@@ -736,7 +729,6 @@
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
-    <None Include="Assets\UIShaderEffects-EdgeEffects\Shader\EdgeEffect_Electric_Additive.shader" />
     <None Include="Assets\Arts\Spine\第三关\甲虫\json\jiachong.json" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.atlas.txt" />
@@ -744,7 +736,6 @@
     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
     <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
-    <None Include="Assets\dilie\Material\Rock.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空peng\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
@@ -1437,10 +1428,6 @@
       <Project>{b254195c-77b0-da71-0bfc-ee01ecb6f61e}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-unity-examples.csproj">
-      <Project>{c1570e6b-5fa6-56e2-eb51-b5d1dc81907b}</Project>
-      <Name>spine-unity-examples</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{f615235b-3b73-73ff-ac60-157eacf1c9ee}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
@@ -1532,10 +1519,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
       <Project>{dc5997e6-8446-d13a-5076-dce68f33c1a6}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{e95310f4-8037-c347-0c86-198e641d42b3}</Project>
-      <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity.csproj">
       <Project>{0988f295-7454-c435-f5fc-33274ad0853b}</Project>
