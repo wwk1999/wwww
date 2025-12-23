@@ -1,0 +1,94 @@
+Beelzebub.png
+	size: 189, 973
+	filter: Linear, Linear
+	pma: true
+body
+	bounds: 118, 232, 94, 68
+	rotate: 90
+body2
+	bounds: 2, 221, 96, 104
+	rotate: 90
+body3
+	bounds: 2, 319, 114, 186
+effect_attack
+	bounds: 2, 751, 125, 107
+effect_attack2
+	bounds: 118, 328, 100, 69
+	offsets: 0, 7, 100, 76
+	rotate: 90
+effect_exe
+	bounds: 102, 86, 85, 14
+	offsets: 11, 8, 125, 31
+fog
+	bounds: 2, 664, 123, 85
+	offsets: 1, 0, 125, 86
+fog2
+	bounds: 129, 655, 125, 57
+	rotate: 90
+fog3
+	bounds: 2, 85, 98, 51
+	offsets: 0, 2, 100, 55
+head
+	bounds: 2, 601, 61, 121
+	offsets: 13, 0, 74, 121
+	rotate: 90
+horn1
+	bounds: 108, 196, 79, 34
+	offsets: 0, 0, 80, 35
+horn2
+	bounds: 102, 65, 82, 19
+	offsets: 0, 0, 83, 19
+horn3
+	bounds: 107, 157, 77, 37
+	offsets: 0, 0, 78, 37
+leg1_first
+	bounds: 154, 952, 19, 31
+	rotate: 90
+leg1_first_back
+	bounds: 154, 936, 14, 31
+	rotate: 90
+leg1_second
+	bounds: 99, 39, 24, 53
+	rotate: 90
+leg1_second_back
+	bounds: 2, 10, 23, 53
+	rotate: 90
+leg2_first
+	bounds: 154, 881, 53, 28
+	rotate: 90
+leg2_first_back
+	bounds: 154, 840, 39, 28
+	rotate: 90
+leg2_second
+	bounds: 124, 517, 63, 68
+leg2_second_back
+	bounds: 129, 782, 56, 58
+	rotate: 90
+leg3_first
+	bounds: 2, 35, 54, 48
+leg3_first_back
+	bounds: 58, 40, 39, 43
+	offsets: 0, 0, 40, 44
+leg3_second
+	bounds: 120, 430, 85, 67
+	rotate: 90
+leg3_second_back
+	bounds: 107, 102, 53, 75
+	rotate: 90
+mouth
+	bounds: 125, 587, 60, 66
+neck
+	bounds: 58, 2, 36, 37
+	rotate: 90
+wing1
+	bounds: 2, 543, 56, 120
+	offsets: 0, 0, 56, 121
+	rotate: 90
+wing2
+	bounds: 2, 860, 150, 111
+wing3
+	bounds: 2, 507, 34, 116
+	rotate: 90
+wing4
+	bounds: 2, 138, 81, 103
+	rotate: 90

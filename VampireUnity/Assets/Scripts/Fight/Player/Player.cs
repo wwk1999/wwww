@@ -193,10 +193,9 @@ public class Player : MonoBehaviour
         //获得输入
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector2 joydir = FightBGController.S.joystick.input.normalized;
         
         // 判断是否在移动（考虑键盘和摇杆输入）
-        bool isMoving = !(horizontal == 0 && vertical == 0) || joydir != Vector2.zero;
+        bool isMoving = !(horizontal == 0 && vertical == 0);
         
         // 处理移动状态变化时的攻击力加成
         if (isMoving && !isMoveBonusApplied)

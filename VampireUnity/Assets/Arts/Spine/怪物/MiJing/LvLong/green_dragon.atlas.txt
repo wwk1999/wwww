@@ -1,0 +1,388 @@
+green_dragon.png
+	size: 2001, 1698
+	filter: Linear, Linear
+	pma: true
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00000
+	bounds: 1644, 257, 132, 91
+	offsets: 81, 0, 300, 300
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00001
+	bounds: 1873, 813, 126, 123
+	offsets: 104, 0, 300, 300
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00002
+	bounds: 1494, 1160, 159, 247
+	offsets: 69, 0, 300, 300
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00003
+	bounds: 845, 992, 192, 293
+	offsets: 78, 2, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00004
+	bounds: 290, 388, 207, 300
+	offsets: 59, 0, 300, 300
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00005
+	bounds: 449, 877, 181, 294
+	offsets: 48, 6, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00006
+	bounds: 1006, 388, 155, 239
+	offsets: 96, 61, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00007
+	bounds: 1470, 510, 153, 237
+	offsets: 53, 63, 300, 300
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00008
+	bounds: 772, 402, 141, 232
+	offsets: 58, 49, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00009
+	bounds: 398, 694, 181, 244
+	offsets: 60, 56, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00010
+	bounds: 981, 213, 173, 232
+	offsets: 63, 68, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00011
+	bounds: 1247, 306, 150, 222
+	offsets: 85, 64, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00012
+	bounds: 981, 56, 155, 234
+	offsets: 73, 66, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00013
+	bounds: 1634, 938, 144, 218
+	offsets: 78, 69, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00014
+	bounds: 1217, 88, 127, 195
+	offsets: 86, 105, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00015
+	bounds: 1254, 458, 99, 214
+	offsets: 86, 74, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00016
+	bounds: 1215, 217, 87, 189
+	offsets: 113, 111, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00017
+	bounds: 1217, 2, 84, 175
+	offsets: 114, 114, 300, 300
+	rotate: 90
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00018
+	bounds: 1918, 1522, 68, 174
+	offsets: 115, 116, 300, 300
+Elements - Sparks 074 Shot Ray Hit Up noCT noRSZ/Sparks 074 Shot Ray Hit Up_00019
+	bounds: 290, 19, 68, 174
+	offsets: 115, 116, 300, 300
+	rotate: 90
+Flame_06/Flame_06_00001
+	bounds: 1198, 33, 21, 17
+	offsets: 33, 118, 300, 300
+	rotate: 90
+Flame_06/Flame_06_00002
+	bounds: 807, 2, 151, 154
+	offsets: 8, 51, 300, 300
+Flame_06/Flame_06_00003
+	bounds: 772, 545, 239, 235
+	offsets: 13, 12, 300, 300
+Flame_06/Flame_06_00004
+	bounds: 1392, 923, 240, 235
+	offsets: 31, 16, 300, 300
+Flame_06/Flame_06_00005
+	bounds: 1013, 545, 239, 233
+	offsets: 45, 18, 300, 300
+Flame_06/Flame_06_00006
+	bounds: 1140, 934, 250, 229
+	offsets: 50, 35, 300, 300
+Flame_06/Flame_06_00007
+	bounds: 1655, 1190, 248, 233
+	offsets: 52, 27, 300, 300
+Flame_06/Flame_06_00008
+	bounds: 845, 782, 245, 208
+	offsets: 55, 33, 300, 300
+Flame_06/Flame_06_00009
+	bounds: 1254, 559, 214, 188
+	offsets: 86, 38, 300, 300
+Flame_06/Flame_06_00010
+	bounds: 1471, 295, 213, 171
+	offsets: 87, 53, 300, 300
+	rotate: 90
+Flame_06/Flame_06_00011
+	bounds: 1625, 596, 198, 127
+	offsets: 90, 79, 300, 300
+Flame_06/Flame_06_00012
+	bounds: 1644, 350, 163, 114
+	offsets: 94, 93, 300, 300
+	rotate: 90
+Flame_06/Flame_06_00013
+	bounds: 644, 710, 165, 116
+	offsets: 95, 92, 300, 300
+	rotate: 90
+Flame_06/Flame_06_00014
+	bounds: 1773, 478, 107, 116
+	offsets: 154, 92, 300, 300
+Flame_06/Flame_06_00015
+	bounds: 1882, 483, 110, 117
+	offsets: 154, 92, 300, 300
+	rotate: 90
+Flame_06/Flame_06_00016
+	bounds: 745, 941, 98, 117
+	offsets: 165, 92, 300, 300
+Flame_06/Flame_06_00017
+	bounds: 1918, 1403, 72, 117
+	offsets: 195, 92, 300, 300
+Flame_06/Flame_06_00018
+	bounds: 1541, 227, 66, 99
+	offsets: 201, 110, 300, 300
+	rotate: 90
+Flame_06/Flame_06_00019
+	bounds: 1782, 182, 66, 99
+	offsets: 201, 111, 300, 300
+Flame_06/Flame_06_00020
+	bounds: 1934, 955, 64, 98
+	offsets: 203, 112, 300, 300
+Flame_06/Flame_06_00021
+	bounds: 1195, 1409, 4, 9
+	offsets: 263, 140, 300, 300
+	rotate: 90
+Flame_06/Flame_06_00022
+	bounds: 1649, 1152, 4, 6
+	offsets: 264, 142, 300, 300
+body_lvl_1
+	bounds: 2, 1328, 445, 368
+body_lvl_2
+	bounds: 2, 958, 445, 368
+body_lvl_3
+	bounds: 449, 1328, 445, 368
+body_pack_lvl_1
+	bounds: 1905, 1146, 113, 87
+	offsets: 1, 1, 115, 89
+	rotate: 90
+body_pack_lvl_2
+	bounds: 1825, 598, 115, 114
+	offsets: 1, 1, 117, 116
+body_pack_lvl_3
+	bounds: 1760, 362, 115, 114
+	offsets: 1, 1, 117, 116
+eye_close
+	bounds: 1949, 294, 41, 23
+	offsets: 2, 1, 45, 26
+	rotate: 90
+head_lvl_1
+	bounds: 1092, 780, 242, 152
+	offsets: 1, 1, 244, 154
+head_lvl_2
+	bounds: 1336, 749, 242, 172
+	offsets: 1, 1, 244, 174
+head_lvl_3
+	bounds: 807, 158, 242, 172
+	offsets: 1, 1, 244, 174
+	rotate: 90
+head_rope_lvl_1
+	bounds: 1868, 714, 127, 97
+head_rope_lvl_2
+	bounds: 1414, 88, 127, 97
+	rotate: 90
+head_rope_lvl_3
+	bounds: 1513, 88, 127, 97
+	rotate: 90
+left_leg_lvl_1
+	bounds: 762, 797, 142, 78
+	rotate: 90
+left_leg_lvl_2
+	bounds: 1625, 515, 146, 79
+left_leg_lvl_3
+	bounds: 1854, 938, 144, 78
+	rotate: 90
+left_pack_cloth_1_lvl_3
+	bounds: 745, 877, 13, 62
+left_pack_cloth_2_lvl_3
+	bounds: 644, 694, 14, 49
+	rotate: 90
+left_pack_cloth_lvl_2
+	bounds: 1634, 1096, 13, 62
+left_pack_fur_lvl_3
+	bounds: 1957, 455, 26, 42
+	rotate: 90
+left_pack_jewery_1_lvl_3
+	bounds: 1927, 191, 21, 37
+	offsets: 1, 1, 23, 39
+left_thigh_lvl_1
+	bounds: 1612, 91, 80, 132
+	offsets: 1, 1, 82, 134
+	rotate: 90
+left_thigh_lvl_2
+	bounds: 1534, 6, 80, 132
+	offsets: 1, 1, 82, 134
+	rotate: 90
+left_thigh_lvl_3
+	bounds: 1668, 9, 80, 132
+	offsets: 1, 1, 82, 134
+	rotate: 90
+left_wing_hand_lower_lvl_1
+	bounds: 1877, 366, 60, 70
+	offsets: 1, 1, 62, 72
+	rotate: 90
+left_wing_hand_lower_lvl_2
+	bounds: 1888, 294, 59, 70
+	offsets: 2, 1, 62, 72
+left_wing_hand_lower_lvl_3
+	bounds: 466, 17, 64, 70
+	offsets: 1, 1, 66, 72
+left_wing_hand_up_lvl_1
+	bounds: 1580, 752, 53, 43
+	offsets: 1, 1, 55, 45
+	rotate: 90
+left_wing_hand_up_lvl_2
+	bounds: 1092, 937, 53, 43
+	offsets: 1, 1, 55, 45
+	rotate: 90
+left_wing_hand_up_lvl_3
+	bounds: 1944, 21, 52, 43
+	offsets: 1, 1, 54, 45
+	rotate: 90
+left_wing_lower_lvl_1
+	bounds: 2, 359, 286, 329
+left_wing_lower_lvl_2
+	bounds: 2, 28, 286, 329
+left_wing_lower_lvl_3
+	bounds: 1292, 1409, 287, 328
+	rotate: 90
+left_wing_up_lvl_1
+	bounds: 2, 690, 394, 266
+left_wing_up_lvl_2
+	bounds: 449, 1060, 394, 266
+left_wing_up_lvl_3
+	bounds: 896, 1430, 394, 266
+lower_mouth_lvl_1
+	bounds: 1634, 830, 237, 106
+lower_mouth_lvl_2
+	bounds: 1655, 1084, 241, 104
+lower_mouth_lvl_3
+	bounds: 1625, 725, 241, 103
+	offsets: 0, 0, 242, 103
+neck_rope_lvl_1
+	bounds: 1746, 94, 77, 60
+	rotate: 90
+neck_rope_lvl_2
+	bounds: 1882, 428, 73, 53
+neck_rope_lvl_3
+	bounds: 1808, 106, 74, 55
+	rotate: 90
+right_leg_lvl_1
+	bounds: 1642, 173, 138, 82
+right_leg_lvl_2
+	bounds: 1394, 2, 138, 84
+right_leg_lvl_3
+	bounds: 1905, 1261, 140, 83
+	rotate: 90
+right_pack_cloth_1_lvl_3
+	bounds: 762, 782, 13, 63
+	rotate: 90
+right_pack_cloth_2_lvl_3
+	bounds: 695, 694, 14, 49
+	rotate: 90
+right_pack_cloth_lvl_2
+	bounds: 1195, 1415, 13, 63
+	rotate: 90
+right_pack_fur_lvl_3
+	bounds: 1215, 347, 21, 39
+	offsets: 0, 0, 21, 40
+right_pack_jewery_1_lvl_3
+	bounds: 1140, 1168, 16, 35
+	offsets: 1, 1, 18, 37
+	rotate: 90
+right_thigh_lvl_1
+	bounds: 669, 24, 76, 132
+	offsets: 1, 1, 78, 134
+	rotate: 90
+right_thigh_lvl_2
+	bounds: 1406, 217, 76, 133
+	offsets: 1, 1, 78, 135
+	rotate: 90
+right_thigh_lvl_3
+	bounds: 534, 24, 76, 133
+	offsets: 1, 1, 78, 135
+	rotate: 90
+right_wing_hand_lower_lvl_1
+	bounds: 1942, 654, 57, 58
+	offsets: 1, 1, 59, 60
+right_wing_hand_lower_lvl_2
+	bounds: 1931, 131, 56, 58
+	offsets: 1, 1, 58, 60
+right_wing_hand_lower_lvl_3
+	bounds: 1942, 595, 57, 57
+	offsets: 1, 1, 59, 59
+right_wing_hand_up_lvl_1
+	bounds: 1949, 337, 48, 54
+	offsets: 1, 1, 50, 56
+right_wing_hand_up_lvl_2
+	bounds: 1944, 75, 47, 54
+	offsets: 1, 1, 49, 56
+right_wing_lower_lvl_1
+	bounds: 290, 89, 242, 297
+right_wing_lower_lvl_2
+	bounds: 896, 1186, 242, 297
+	rotate: 90
+right_wing_lower_lvl_3
+	bounds: 1195, 1165, 242, 297
+	rotate: 90
+right_wing_up_lvl_1
+	bounds: 1622, 1425, 271, 294
+	rotate: 90
+right_wing_up_lvl_2
+	bounds: 499, 398, 271, 294
+right_wing_up_lvl_3
+	bounds: 534, 102, 271, 294
+scales_head_lvl_1
+	bounds: 1865, 101, 88, 64
+	offsets: 1, 0, 89, 64
+	rotate: 90
+scales_head_lvl_2
+	bounds: 1934, 1055, 89, 65
+	rotate: 90
+scales_head_lvl_3
+	bounds: 1879, 10, 89, 63
+	rotate: 90
+side_teeth
+	bounds: 1927, 230, 62, 35
+	offsets: 1, 1, 64, 37
+	rotate: 90
+skin_side
+	bounds: 1778, 283, 108, 77
+tail_fur_1_lvl_1
+	bounds: 1612, 176, 28, 49
+tail_fur_1_lvl_2
+	bounds: 398, 877, 28, 48
+tail_fur_1_lvl_3
+	bounds: 845, 1187, 16, 23
+tail_fur_2_lvl_1
+	bounds: 1964, 393, 35, 60
+tail_fur_2_lvl_2
+	bounds: 1083, 8, 46, 113
+	rotate: 90
+tail_fur_2_lvl_3
+	bounds: 398, 927, 29, 49
+	offsets: 1, 0, 30, 49
+	rotate: 90
+tail_fur_3_lvl_1
+	bounds: 1580, 807, 35, 114
+tail_fur_3_lvl_2
+	bounds: 1850, 191, 75, 90
+tail_fur_3_lvl_3
+	bounds: 1254, 749, 60, 29
+tail_fur_4_lvl_3
+	bounds: 845, 1212, 47, 114
+tail_fur_5_lvl_3
+	bounds: 1802, 2, 75, 90
+teeth_mouth_lower
+	bounds: 981, 388, 12, 21
+	offsets: 2, 1, 15, 23
+	rotate: 90
+teeth_mouth_up
+	bounds: 2, 3, 27, 23
+	offsets: 1, 1, 29, 25
+tounge_dragon
+	bounds: 960, 4, 121, 50
+	offsets: 1, 0, 122, 53

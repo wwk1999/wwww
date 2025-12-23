@@ -60,10 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\Preset.cs" />
-    <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
-    <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
-    <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
-    <Compile Include="Assets\External Resources\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\Lib\Editor\Localization\differences.ja.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\Lib\Editor\Localization\cm-help.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\Lib\Editor\Localization\semantic.es.txt" />

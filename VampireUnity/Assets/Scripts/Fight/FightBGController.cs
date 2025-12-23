@@ -10,7 +10,6 @@ using UnityEngine.UI;
 
 public class FightBGController : XSingleton<FightBGController>
 {
-    [NonSerialized]public Joystick joystick;//虚拟移动杆
     [NonSerialized]public Button normalAttackButton;//普通攻击按钮
     [NonSerialized]public Button FightStopButton;//战斗暂停按钮
     [NonSerialized]public Button dashButton;

@@ -10,7 +10,6 @@ using UnityEngine.UI;
 public class FightBg : MonoBehaviour
 {
     public Button weaponButton;
-    public Joystick joystick;
     public Button normalAttackButton;
     public Button fightStopButton;
     public Button dashButton;

@@ -720,7 +720,6 @@ public class GameController : XSingleton<GameController>
         
         //赋值
         FightBGController.S.WeaponButton= fightBG.GetComponent<FightBg>().weaponButton;
-        FightBGController.S.joystick=fightBG.GetComponent<FightBg>().joystick;
         FightBGController.S.normalAttackButton=fightBG.GetComponent<FightBg>().normalAttackButton;
         FightBGController.S.FightStopButton=fightBG.GetComponent<FightBg>().fightStopButton;
         FightBGController.S.dashButton=fightBG.GetComponent<FightBg>().dashButton;
