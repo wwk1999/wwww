@@ -299,6 +299,7 @@
     <Compile Include="Assets\Scripts\Store\StoreDefine.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongPro.cs" />
     <Compile Include="Assets\Scripts\Tool\ToastInfo.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManDiLie.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiSkillTriggerRight.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XianRenZhang.cs" />
@@ -461,7 +462,7 @@
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\boss\json\huoshanboss.json" />
     <None Include="Assets\Arts\Spine\第二关\虫子\congzi.json" />
-    <None Include="Assets\Arts\Spine\技能\json7\skeleton.json" />
+    <None Include="Assets\Arts\Spine\技能\传送们\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.ext.nunit@2.0.3\package.json" />
     <None Include="Assets\Arts\Spine\第二关\boss\json\huoshanboss.atlas.txt" />
     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\useSharedDesignerContext.txt" />
@@ -632,11 +633,11 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\json\wenzi.atlas.txt" />
-    <None Include="Assets\Arts\Spine\技能\json2\skeleton.json" />
+    <None Include="Assets\Arts\Spine\技能\Lvquanbao\skeleton.json" />
     <None Include="Assets\Arts\Shaders\UIScan.shader" />
     <None Include="Assets\Arts\Spine\技能\json\H043_Special.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\虫子\congzi.atlas.txt" />
-    <None Include="Assets\Arts\Spine\技能\json6\skeleton.json" />
+    <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
@@ -665,7 +666,7 @@
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
-    <None Include="Assets\Arts\Spine\技能\json6\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\食人花\json\shirenhua.json" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\ValidationConfig.json" />
@@ -676,7 +677,7 @@
     <None Include="Assets\Arts\Spine\技能\毒圈\action.json" />
     <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\第五关\XueLang2\xuelang.atlas.txt" />
-    <None Include="Assets\Arts\Spine\技能\json7\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\传送们\skeleton.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_Properties.cginc" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
@@ -733,7 +734,7 @@
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.atlas.txt" />
     <None Include="Assets\shader\cgwell Add Zoff.shader" />
     <None Include="Assets\Arts\Spine\第五关\XueLang\xuelang.atlas.txt" />
-    <None Include="Assets\Arts\Spine\技能\json2\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\Lvquanbao\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\石头BOSS\json\shitouBOSS.json" />
     <None Include="Assets\Arts\Shaders\BGLightSprite.shader" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.xml" />

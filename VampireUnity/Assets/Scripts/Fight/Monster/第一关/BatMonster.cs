@@ -53,6 +53,10 @@ public class BatMonster : MonsterBase
     {
         if (IsDead) return;
         base.Update();
+        if (Speed == 8&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<0.3f)
+        {
+            GameController.S.gamePlayer.PlayerHurt(Attack,false);
+        }
         
         
         float distance = Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
@@ -76,11 +80,7 @@ public class BatMonster : MonsterBase
         transform.Find("MonsterWarning").gameObject.SetActive(true);
         transform.Find("MonsterWarning").GetComponent<Animator>().Play("MonsterWarning");
         IsDash = true;
-        
-        // monsterSkeletonAnimation.AnimationState.SetAnimation(0,"attack", false);
          Speed = 0;
-        // MonsterMove();
-        // Invoke("AttackEnd",1f);
     }
 
     private void RandomDelayDie()

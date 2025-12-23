@@ -63,6 +63,8 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<SpiderMonster> SpiderMonsterQueue = new Queue<SpiderMonster>();
     [NonSerialized]public Queue<BeeMonsterSkillTrigger> BeeMonsterSkillTriggerQueue = new Queue<BeeMonsterSkillTrigger>();
     [NonSerialized] public Queue<TreeManSkill> TreeManSkillQueue = new Queue<TreeManSkill>();
+    [NonSerialized] public Queue<TreeManDiLie> TreeManDiLieQueue = new Queue<TreeManDiLie>();
+
 
     
     //第二关怪
@@ -320,6 +322,14 @@ public class GameController : XSingleton<GameController>
     //杀死怪物数量
     [NonSerialized]public int KillMonsterCount=0;
 
+
+    public void CreateDiLie(Vector2 pos,float damage)
+    {
+        var dilie = TreeManDiLieQueue.Dequeue();
+        dilie.transform.position = pos;
+        dilie.GetComponent<TreeManDiLie>().damage = damage;
+        dilie.gameObject.SetActive(true);
+    }
 
     public void CreateCircleAttack(Vector2 pos,float scale)
     {
@@ -1055,7 +1065,7 @@ public class GameController : XSingleton<GameController>
     //生成怪物
     public void CreateMonster()
     {
-        if (GameOver)
+        if (GameOver||HaveBoss)
             return;
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
         MonsterBase monsterBase=null;

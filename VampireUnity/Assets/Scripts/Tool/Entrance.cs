@@ -539,14 +539,13 @@ public class Entrance : MonoBehaviour
             switch ( GlobalPlayerAttribute.CurrentWeaponType)
             {
                 case WeaponType.Primary:
-                    var threeNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/3NormalAttack"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                    threeNormalAttack.SetActive(false);
-                    GameController.S.ThreeNormalAttackQueue.Enqueue(threeNormalAttack);
+                    var PuTong31= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTong3"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    PuTong31.SetActive(false);
+                    GameController.S.PuTong3Queue.Enqueue(PuTong31);
                     
-                    
-                    var threeNormalAttackhit= Instantiate(Resources.Load("Prefabs/Skill/3NormalAttackHit"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                    threeNormalAttackhit.SetActive(false);
-                    GameController.S.ThreeNormalAttackHitQueue.Enqueue(threeNormalAttackhit);
+                    var PuTong3Peng1= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTongPeng3"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    PuTong3Peng1.SetActive(false);
+                    GameController.S.PuTong3PengQueue.Enqueue(PuTong3Peng1);
                     break;
                 case WeaponType.LanBao:
                     var twoNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/2NormalAttackPrefab"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
@@ -667,6 +666,13 @@ public class Entrance : MonoBehaviour
                 Collider2D snotcollider2D=snotMonster.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(snotcollider2D,snotMonster.GetComponent<MonsterBase>());
             }
+        }
+        
+        for (int i = 0; i < 100; i++)
+        {
+            var DiLie= Instantiate(Resources.Load<GameObject>("Prefabs/Skill/DiLie").GetComponent<TreeManDiLie>(), GameController.S.transform);
+            DiLie.gameObject.SetActive(false);
+            GameController.S.TreeManDiLieQueue.Enqueue(DiLie.GetComponent<TreeManDiLie>());
         }
 
         if (LevelInfoConfig.CurrentGameLevel == 3)

@@ -154,12 +154,26 @@ public class GunBase : MonoBehaviour
         float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        Vector2 direction = (worldPos- GameController.S.gamePlayer.transform.position).normalized;
-        GameObject bullet = GameController.S.ThreeNormalAttackQueue.Dequeue();
-        bullet.transform.position = GameController.S.gamePlayer.transform.position;
-        bullet.gameObject.SetActive(true);
-        bullet.GetComponent<ThreeNormalAttack>().MoveDirection = direction;
-        bullet.GetComponent<ThreeNormalAttack>().MoveSpeed = 7f;
+        // 原始方向
+        Vector2 baseDir = (worldPos -GameController.S.gamePlayer.transform.position).normalized;
+
+        // 两个偏移角度：+10° 和 -10°
+        Vector2[] dirs =
+        {
+            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+        };
+
+        // 连发两颗
+        foreach (Vector2 dir in dirs)
+        {
+            GameObject bullet = GameController.S.PuTong3Queue.Dequeue();
+            bullet.transform.position = GameController.S.gamePlayer.transform.position;
+
+            var attack = bullet.GetComponent<PuTong3>();
+            attack.MoveDirection = dir;
+            attack.MoveSpeed = 7f;
+            bullet.SetActive(true);
+        }
     }
     
     public void FireShot()

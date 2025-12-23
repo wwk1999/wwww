@@ -51,6 +51,11 @@ public class TreeManBoss : MonsterBase
         {
             IsSkill=false;
         }
+        
+        if (trackEntry.Animation.Name == "skill_04")
+        {
+            IsDash=false;
+        }
 
         if (isSkill1)
         {
@@ -70,6 +75,7 @@ public class TreeManBoss : MonsterBase
             IsSkill=true;
             isSkill3=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_04", false);
+            IsDash = true;
             Dashdirection=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
             if (Dashdirection.x>0)
             {
@@ -139,7 +145,6 @@ public class TreeManBoss : MonsterBase
     
     private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-
         // 根据事件名称处理逻辑
         if (e.Data.Name == "chong")
         {
@@ -150,8 +155,7 @@ public class TreeManBoss : MonsterBase
             Jump(0.6f, GroundFissurepos);
         }else if (e.Data.Name == "baozha")
         {
-            Debug.Log("执行跳跃逻辑");
-            //FightBGController.S.PlayGroundFissure(BaoZhapos);
+            GameController.S.CreateDiLie(transform.position,Attack);
         }
     }
 
@@ -221,6 +225,12 @@ public class TreeManBoss : MonsterBase
         {
             DashSkillCurrentTime = 0;
             isSkill3 = true;
+        }
+
+        if ( IsDash&& Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < size)
+        {
+            IsDash = false;
+            GameController.S.gamePlayer.PlayerHurt(Attack,true);
         }
         if (Vector2.Distance(AttackTrans.position, GameController.S.gamePlayer.transform.position) < size&&!IsSkill)
         {

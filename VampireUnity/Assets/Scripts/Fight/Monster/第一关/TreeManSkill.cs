@@ -26,7 +26,7 @@ public class TreeManSkill : MonoBehaviour
 
     public void Damage()
     {
-        if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.5f)
+        if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.8f)
         {
             GameController.S.gamePlayer.PlayerHurt(damage, true);
         }
