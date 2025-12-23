@@ -619,7 +619,7 @@ public class Entrance : MonoBehaviour
                     break;
                 
                 case WeaponType.LvQuan:
-                    var lvNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/2NormalAttackPrefab"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    var lvNormalAttack= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/LvQuan"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                     lvNormalAttack.SetActive(false);
                     GameController.S.LvQuanQueue.Enqueue(lvNormalAttack);
                     break;

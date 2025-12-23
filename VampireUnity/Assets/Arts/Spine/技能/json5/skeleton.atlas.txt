@@ -1,0 +1,12 @@
+skeleton.png
+	size: 319, 136
+	filter: Linear, Linear
+	pma: true
+baoji0001
+	bounds: 2, 2, 106, 50
+	offsets: 0, 2, 109, 52
+baoji0002
+	bounds: 110, 2, 106, 50
+	offsets: 0, 2, 109, 52
+ling
+	bounds: 2, 54, 315, 80

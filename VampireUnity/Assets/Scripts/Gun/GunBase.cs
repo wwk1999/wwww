@@ -37,8 +37,7 @@ public class GunBase : MonoBehaviour
         // 两个偏移角度：+10° 和 -10°
         Vector2[] dirs =
         {
-            Quaternion.AngleAxis( 10f, Vector3.forward) * baseDir,
-            Quaternion.AngleAxis(-10f, Vector3.forward) * baseDir
+            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir
         };
 
         // 连发两颗

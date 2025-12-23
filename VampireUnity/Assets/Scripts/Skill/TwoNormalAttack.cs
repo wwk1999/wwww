@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
+using Spine.Unity;
 using UnityEngine;
 
 public class TwoNormalAttack : MonoBehaviour
 {
     public Rigidbody2D rg;
-    public ParticleSystem ps;
+    public SkeletonAnimation skeleton;
     [NonSerialized]public float MoveSpeed;
     [NonSerialized]public Vector2 MoveDirection;
     
@@ -15,6 +16,7 @@ public class TwoNormalAttack : MonoBehaviour
     private void OnEnable()
     {
         rg.velocity = MoveDirection * MoveSpeed;
+        skeleton.AnimationState.SetAnimation(0, "animation", true);
         StartCoroutine(DelayHide(rg.gameObject));
     }
     

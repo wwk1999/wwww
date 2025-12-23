@@ -1,0 +1,68 @@
+skeleton.png
+	size: 580, 1076
+	filter: Linear, Linear
+	pma: true
+HQFDn0001
+	bounds: 133, 9, 92, 107
+	offsets: 62, 63, 224, 224
+HQFDn0002
+	bounds: 2, 2, 129, 126
+	offsets: 50, 56, 224, 224
+HQFDn0003
+	bounds: 433, 920, 145, 154
+	offsets: 47, 46, 224, 224
+HQFDn0004
+	bounds: 403, 413, 173, 173
+	offsets: 37, 40, 224, 224
+HQFDn0005
+	bounds: 200, 291, 188, 194
+	offsets: 35, 30, 224, 224
+	rotate: 90
+HQFDn0006
+	bounds: 2, 686, 188, 205
+	offsets: 35, 19, 224, 224
+	rotate: 90
+HQFDn0007
+	bounds: 204, 481, 190, 197
+	offsets: 33, 19, 224, 224
+	rotate: 90
+HQFDn0008
+	bounds: 396, 218, 179, 193
+	offsets: 33, 23, 224, 224
+HQFDn0009
+	bounds: 2, 130, 194, 186
+	offsets: 18, 23, 224, 224
+HQFDn0010
+	bounds: 198, 118, 190, 171
+	offsets: 18, 38, 224, 224
+HQFDn0011
+	bounds: 390, 38, 183, 178
+	offsets: 25, 37, 224, 224
+HQFDn0012
+	bounds: 2, 318, 180, 196
+	offsets: 25, 19, 224, 224
+	rotate: 90
+HQFDn0013
+	bounds: 2, 500, 184, 200
+	offsets: 21, 19, 224, 224
+	rotate: 90
+HQFDn0014
+	bounds: 218, 871, 203, 213
+	offsets: 18, 10, 224, 224
+	rotate: 90
+HQFDn0015
+	bounds: 2, 876, 214, 198
+	offsets: 10, 7, 224, 224
+HQFDn0016
+	bounds: 209, 673, 196, 200
+	offsets: 7, 4, 224, 224
+	rotate: 90
+HQFDn0017
+	bounds: 411, 588, 161, 188
+	offsets: 26, 23, 224, 224
+HQFDn0018
+	bounds: 433, 778, 144, 140
+	offsets: 43, 50, 224, 224
+HQFDn0019
+	bounds: 227, 10, 99, 106
+	offsets: 67, 67, 224, 224

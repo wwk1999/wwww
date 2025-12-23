@@ -1,0 +1,109 @@
+{
+"skeleton": {
+	"hash": "ZN0MUx6e7co",
+	"spine": "4.3.39-beta",
+	"x": -161.83,
+	"y": -38.09,
+	"width": 315,
+	"height": 87.32001,
+	"images": "./0/",
+	"audio": "G:/游戏素材收集/spine特效/spine特效300个全带透明通道【UI、技能特效】第四期/194-eff59uitishibj"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "g", "parent": "root", "length": 285.7, "y": 1.91 },
+	{ "name": "zi", "parent": "root", "length": 335.13, "rotation": 34.31, "x": 5.06, "y": 23.23 },
+	{ "name": "zi2", "parent": "root", "length": 335.13, "rotation": 34.31, "x": 5.06, "y": 23.23 }
+],
+"slots": [
+	{ "name": "ling", "bone": "g", "attachment": "ling", "blend": "additive" },
+	{ "name": "momian1", "bone": "zi", "attachment": "baoji0001" },
+	{ "name": "momian2", "bone": "zi2", "attachment": "baoji0002", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"ling": {
+				"ling": { "x": -4.33, "width": 315, "height": 80 }
+			},
+			"momian1": {
+				"baoji0001": { "rotation": -34.31, "width": 109, "height": 52 }
+			},
+			"momian2": {
+				"baoji0002": { "rotation": -34.31, "width": 109, "height": 52 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"ling": {
+				"rgba": [
+					{ "time": 0.33333334, "color": "ffffffff" },
+					{ "time": 0.43333337, "color": "ffffff00" }
+				]
+			},
+			"momian1": {
+				"rgba": [
+					{ "time": 0.4666667, "color": "ffffffff" },
+					{ "time": 0.53333336, "color": "ffffff00" }
+				]
+			},
+			"momian2": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 0.10000001, "color": "ffd700d3" },
+					{ "time": 0.3, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"g": {
+				"scale": [
+					{ "x": 0.771, "y": 0.724 },
+					{ "time": 0.16666667, "x": 1.291, "y": 0.206 },
+					{ "time": 0.40000004, "x": 0.944, "y": 0.024 }
+				]
+			},
+			"zi": {
+				"translate": [
+					{ "x": -3.3, "y": -14.57 },
+					{ "time": 0.10000001, "x": 2.86, "y": 1.63 },
+					{ "time": 0.3, "x": 0.23, "y": -1.23 },
+					{ "time": 0.40000004, "x": 1.32, "y": -2.92 },
+					{ "time": 0.4666667, "x": 3.47, "y": -5.33 },
+					{ "time": 0.53333336, "x": -4.95, "y": -18.94 }
+				],
+				"scale": [
+					{ "x": 0.2, "y": 0.2 },
+					{ "time": 0.10000001, "x": 1.1, "y": 1.1 },
+					{ "time": 0.3, "curve": "stepped" },
+					{ "time": 0.40000004 },
+					{ "time": 0.4666667, "x": 0.8, "y": 0.8 },
+					{ "time": 0.53333336, "x": 0.2, "y": 0.2 }
+				]
+			},
+			"zi2": {
+				"translate": [
+					{ "x": -3.3, "y": -14.57 },
+					{ "time": 0.10000001, "x": 2.86, "y": 1.63 },
+					{ "time": 0.3, "x": 0.23, "y": -1.23 },
+					{ "time": 0.40000004, "x": 1.32, "y": -2.92 },
+					{ "time": 0.4666667, "x": 3.47, "y": -5.33 },
+					{ "time": 0.53333336, "x": -4.95, "y": -18.94 }
+				],
+				"scale": [
+					{ "x": 0.2, "y": 0.2 },
+					{ "time": 0.10000001, "x": 1.1, "y": 1.1 },
+					{ "time": 0.3, "curve": "stepped" },
+					{ "time": 0.40000004 },
+					{ "time": 0.4666667, "x": 0.8, "y": 0.8 },
+					{ "time": 0.53333336, "x": 0.2, "y": 0.2 }
+				]
+			}
+		}
+	}
+}
+}

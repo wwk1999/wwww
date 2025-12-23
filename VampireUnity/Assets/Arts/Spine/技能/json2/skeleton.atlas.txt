@@ -1,0 +1,139 @@
+skeleton.png
+	size: 1672, 344
+	filter: Linear, Linear
+	pma: true
+zg1
+	bounds: 2, 121, 221, 221
+zg2
+	bounds: 225, 122, 106, 40
+	offsets: 8, 0, 120, 40
+	rotate: 90
+zpcx0001
+	bounds: 2, 7, 112, 112
+	offsets: 8, 4, 130, 120
+zpcx0002
+	bounds: 116, 7, 112, 112
+	offsets: 9, 3, 130, 120
+zpcx0003
+	bounds: 458, 116, 112, 108
+	offsets: 8, 5, 130, 120
+	rotate: 90
+zpcx0004
+	bounds: 225, 230, 112, 112
+	offsets: 8, 3, 130, 120
+zpcx0005
+	bounds: 567, 230, 112, 108
+	offsets: 9, 4, 130, 120
+	rotate: 90
+zpcx0006
+	bounds: 568, 116, 112, 108
+	offsets: 9, 4, 130, 120
+	rotate: 90
+zpcx0007
+	bounds: 677, 230, 112, 108
+	offsets: 9, 7, 130, 120
+	rotate: 90
+zpcx0008
+	bounds: 572, 2, 112, 108
+	offsets: 9, 5, 130, 120
+	rotate: 90
+zpcx0009
+	bounds: 678, 116, 112, 108
+	offsets: 11, 6, 130, 120
+	rotate: 90
+zpcx0010
+	bounds: 1118, 120, 108, 108
+	offsets: 12, 6, 130, 120
+zpcx0011
+	bounds: 1227, 234, 108, 108
+	offsets: 13, 6, 130, 120
+zpcx0012
+	bounds: 1122, 10, 108, 108
+	offsets: 13, 6, 130, 120
+zpcx0013
+	bounds: 787, 230, 112, 108
+	offsets: 11, 7, 130, 120
+	rotate: 90
+zpcx0014
+	bounds: 682, 2, 112, 108
+	offsets: 10, 6, 130, 120
+	rotate: 90
+zpcx0015
+	bounds: 1228, 124, 108, 108
+	offsets: 12, 8, 130, 120
+zpcx0016
+	bounds: 1337, 234, 108, 108
+	offsets: 12, 5, 130, 120
+zpcx0017
+	bounds: 1232, 14, 108, 108
+	offsets: 11, 7, 130, 120
+zpcx0018
+	bounds: 1338, 124, 108, 108
+	offsets: 11, 6, 130, 120
+zpcx0019
+	bounds: 1447, 234, 108, 108
+	offsets: 13, 6, 130, 120
+zpcx0020
+	bounds: 1342, 14, 108, 108
+	offsets: 13, 6, 130, 120
+zpcx0021
+	bounds: 1448, 124, 108, 108
+	offsets: 13, 5, 130, 120
+zpcx0022
+	bounds: 788, 116, 112, 108
+	offsets: 10, 4, 130, 120
+	rotate: 90
+zpcx0023
+	bounds: 1557, 234, 108, 108
+	offsets: 13, 4, 130, 120
+zpcx0024
+	bounds: 897, 230, 108, 112
+	offsets: 12, 3, 130, 120
+zpcx0025
+	bounds: 1452, 14, 108, 108
+	offsets: 12, 5, 130, 120
+zpcx0026
+	bounds: 1558, 124, 108, 108
+	offsets: 12, 3, 130, 120
+zpcx0027
+	bounds: 1562, 14, 108, 108
+	offsets: 13, 5, 130, 120
+zpcx0028
+	bounds: 792, 2, 108, 112
+	offsets: 12, 3, 130, 120
+zpcx0029
+	bounds: 898, 116, 108, 112
+	offsets: 12, 3, 130, 120
+zpcx0030
+	bounds: 1007, 230, 108, 112
+	offsets: 12, 3, 130, 120
+zpcx0031
+	bounds: 902, 2, 108, 112
+	offsets: 14, 3, 130, 120
+zpcx0032
+	bounds: 1008, 116, 108, 112
+	offsets: 12, 4, 130, 120
+zpcx0033
+	bounds: 1117, 230, 108, 112
+	offsets: 14, 3, 130, 120
+zpcx0034
+	bounds: 1012, 2, 108, 112
+	offsets: 13, 4, 130, 120
+zpcx0035
+	bounds: 230, 8, 112, 112
+	offsets: 10, 3, 130, 120
+zpcx0036
+	bounds: 339, 230, 112, 112
+	offsets: 10, 4, 130, 120
+zpcx0037
+	bounds: 344, 116, 112, 112
+	offsets: 10, 2, 130, 120
+zpcx0038
+	bounds: 453, 230, 112, 112
+	offsets: 9, 2, 130, 120
+zpcx0039
+	bounds: 344, 2, 112, 112
+	offsets: 10, 3, 130, 120
+zpcx0040
+	bounds: 458, 2, 112, 112
+	offsets: 9, 2, 130, 120

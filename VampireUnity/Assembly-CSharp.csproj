@@ -457,9 +457,11 @@
     <None Include="Assets\Packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\netstandard2.0\System.Diagnostics.DiagnosticSource.xml" />
     <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoElite\Enemy_Skeleton_berserker.json" />
+    <None Include="Assets\Arts\Spine\技能\json5\skeleton.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\boss\json\huoshanboss.json" />
     <None Include="Assets\Arts\Spine\第二关\虫子\congzi.json" />
+    <None Include="Assets\Arts\Spine\技能\json7\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.ext.nunit@2.0.3\package.json" />
     <None Include="Assets\Arts\Spine\第二关\boss\json\huoshanboss.atlas.txt" />
     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\useSharedDesignerContext.txt" />
@@ -527,6 +529,7 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\package.json" />
     <None Include="Assets\Arts\Shaders\LcL\InnerOutline.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\火焰peng\action.json" />
+    <None Include="Assets\Arts\Spine\技能\json5\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 8\guyalang02.json" />
     <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData.json" />
@@ -554,6 +557,7 @@
     <None Include="Assets\Arts\Shaders\LcL\Blur.shader" />
     <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\第五关\XueZhangLang\xuezhanglang.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\json4\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaBoss\json\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\DianQuan\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\package.json" />
@@ -628,9 +632,11 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\json\wenzi.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\json2\skeleton.json" />
     <None Include="Assets\Arts\Shaders\UIScan.shader" />
     <None Include="Assets\Arts\Spine\技能\json\H043_Special.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\虫子\congzi.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\json6\skeleton.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
@@ -649,6 +655,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通Peng\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\json4\skeleton.json" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Arts\Spine\怪物\PenHuoYu\Enemy_Inferiordevil.json" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.json" />
@@ -658,6 +665,7 @@
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
+    <None Include="Assets\Arts\Spine\技能\json6\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\食人花\json\shirenhua.json" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\ValidationConfig.json" />
@@ -668,6 +676,7 @@
     <None Include="Assets\Arts\Spine\技能\毒圈\action.json" />
     <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\第五关\XueLang2\xuelang.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\json7\skeleton.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_Properties.cginc" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
@@ -693,6 +702,7 @@
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoBoss\Enemy_Boss_cactus.atlas.txt" />
     <None Include="Assets\Arts\Spine\第一关\蜘蛛\zz.json" />
+    <None Include="Assets\Arts\Spine\技能\DiLie\1605122.atlas.txt" />
     <None Include="Assets\Arts\Shaders\EdgeLight.shader" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\DaLong\dragon.json" />
     <None Include="Assets\Arts\Shaders\Transparent.shader" />
@@ -701,6 +711,8 @@
     <None Include="Assets\Arts\Spine\第五关\XueRen\xueren.json" />
     <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\毒圈\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\LvQuan\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\LvQuan\skeleton.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.json" />
@@ -721,6 +733,7 @@
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.atlas.txt" />
     <None Include="Assets\shader\cgwell Add Zoff.shader" />
     <None Include="Assets\Arts\Spine\第五关\XueLang\xuelang.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\json2\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\石头BOSS\json\shitouBOSS.json" />
     <None Include="Assets\Arts\Shaders\BGLightSprite.shader" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.xml" />
@@ -728,6 +741,7 @@
     <None Include="Library\PackageCache\com.unity.burst@1.8.21\Unity.Burst.Unsafe.xml" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\技能\DiLie\1605122.json" />
     <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\第三关\甲虫\json\jiachong.json" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />

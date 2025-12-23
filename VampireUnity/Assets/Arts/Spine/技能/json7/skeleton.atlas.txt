@@ -1,0 +1,84 @@
+skeleton.png
+	size: 1762, 309
+	filter: Linear, Linear
+	pma: true
+Circle/Circle_00000
+	bounds: 1235, 11, 141, 169
+	offsets: 39, 9, 200, 200
+	rotate: 90
+Circle/Circle_00001
+	bounds: 532, 6, 143, 170
+	offsets: 38, 8, 200, 200
+	rotate: 90
+Circle/Circle_00002
+	bounds: 182, 5, 143, 171
+	offsets: 38, 8, 200, 200
+	rotate: 90
+Circle/Circle_00003
+	bounds: 882, 6, 145, 173
+	offsets: 37, 7, 200, 200
+	rotate: 90
+Circle/Circle_00004
+	bounds: 358, 4, 145, 172
+	offsets: 37, 7, 200, 200
+	rotate: 90
+Circle/Circle_00005
+	bounds: 1406, 6, 147, 173
+	offsets: 36, 7, 200, 200
+	rotate: 90
+Circle/Circle_00006
+	bounds: 1232, 154, 153, 172
+	offsets: 35, 6, 200, 200
+	rotate: 90
+Circle/Circle_00007
+	bounds: 882, 153, 154, 173
+	offsets: 36, 6, 200, 200
+	rotate: 90
+Circle/Circle_00008
+	bounds: 182, 150, 157, 174
+	offsets: 36, 5, 200, 200
+	rotate: 90
+Circle/Circle_00009
+	bounds: 358, 151, 156, 176
+	offsets: 38, 4, 200, 200
+	rotate: 90
+Circle/Circle_00010
+	bounds: 2, 148, 159, 178
+	offsets: 37, 3, 200, 200
+	rotate: 90
+Circle/Circle_00011
+	bounds: 1582, 156, 151, 178
+	offsets: 37, 5, 200, 200
+	rotate: 90
+Circle/Circle_00012
+	bounds: 1406, 155, 152, 174
+	offsets: 38, 7, 200, 200
+	rotate: 90
+Circle/Circle_00013
+	bounds: 1057, 4, 148, 176
+	offsets: 37, 7, 200, 200
+	rotate: 90
+Circle/Circle_00014
+	bounds: 1582, 3, 151, 172
+	offsets: 36, 6, 200, 200
+	rotate: 90
+Circle/Circle_00015
+	bounds: 1057, 154, 153, 173
+	offsets: 36, 5, 200, 200
+	rotate: 90
+Circle/Circle_00016
+	bounds: 536, 151, 156, 173
+	offsets: 35, 4, 200, 200
+	rotate: 90
+Circle/Circle_00017
+	bounds: 711, 151, 156, 169
+	offsets: 37, 8, 200, 200
+	rotate: 90
+Circle/Circle_00018
+	bounds: 2, 2, 144, 170
+	offsets: 37, 8, 200, 200
+	rotate: 90
+Circle/Circle_00019
+	bounds: 704, 6, 143, 170
+	offsets: 39, 8, 200, 200
+	rotate: 90

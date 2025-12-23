@@ -194,6 +194,63 @@ public class BagController : XSingleton<BagController>
             PropList.Add(206,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "RedJingCui",Quality = 6});
         }
     }
+    
+    public void WeaponFragmentDebug()
+    {
+        if (PropList.ContainsKey(301))
+        {
+            PropList[301].Count += 100;
+        }
+        else
+        {
+            PropList.Add(301,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "WhiteJingCui",Quality = 1});
+        }
+        
+        if (S.PropList.ContainsKey(302))
+        {
+            S.PropList[302].Count += 100;
+        }
+        else
+        {
+            S.PropList.Add(302,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "GreenJingCui",Quality = 2});
+        }                    
+        
+        if (PropList.ContainsKey(303))
+        {
+            PropList[303].Count += 100;
+        }
+        else
+        {
+            PropList.Add(303,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "BlueJingCui",Quality = 3});
+        }
+        
+        if (PropList.ContainsKey(304))
+        {
+            PropList[304].Count += 100;
+        }
+        else
+        {
+            PropList.Add(304,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "PurpleJingCui",Quality = 4});
+        }
+        
+        if (PropList.ContainsKey(305))
+        {
+            PropList[305].Count += 100;
+        }
+        else
+        {
+            PropList.Add(305,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "OrangeJingCui",Quality = 5});
+        }
+        
+        if (PropList.ContainsKey(306))
+        {
+            PropList[306].Count += 100;
+        }
+        else
+        {
+            PropList.Add(306,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "RedJingCui",Quality = 6});
+        }
+    }
 
 
 

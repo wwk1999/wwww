@@ -1,0 +1,157 @@
+{
+"skeleton": {
+	"hash": "ZDhRsk4cl6k",
+	"spine": "4.3.39-beta",
+	"x": -113.79639,
+	"y": -116.956955,
+	"width": 224,
+	"height": 223.99998,
+	"images": "./0/",
+	"audio": "G:/游戏素材收集/英灵召唤师/effect/skilleffect/eff33d6shfd"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "rotation": -0.42 },
+	{ "name": "hei", "parent": "root", "length": 264.18, "rotation": 12.86, "x": 0.74, "y": 2.51 },
+	{ "name": "lit0", "parent": "root", "length": 239.17, "rotation": 27.64, "x": -1.43, "y": 0.33 },
+	{ "name": "bone2", "parent": "bone", "length": 344.81, "x": -1.76, "y": -4.97 },
+	{ "name": "bone4", "parent": "bone", "length": 344.81, "x": -1.76, "y": -4.97 }
+],
+"slots": [
+	{ "name": "hj", "bone": "bone2", "color": "ffffff59", "attachment": "HQFDn0001" },
+	{ "name": "hj2", "bone": "bone4", "color": "ffffffb1", "attachment": "HQFDn0001", "blend": "additive" },
+	{ "name": "col", "bone": "lit0" },
+	{ "name": "grd", "bone": "hei", "color": "ffffff80" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"hj": {
+				"HQFDn0001": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0002": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0003": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0004": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0005": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0006": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0007": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0008": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0009": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0010": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0011": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0012": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0013": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0014": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0015": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0016": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0017": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0018": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0019": { "rotation": 0.42, "width": 224, "height": 224 }
+			},
+			"hj2": {
+				"HQFDn0001": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0002": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0003": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0004": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0005": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0006": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0007": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0008": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0009": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0010": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0011": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0012": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0013": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0014": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0015": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0016": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0017": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0018": { "rotation": 0.42, "width": 224, "height": 224 },
+				"HQFDn0019": { "rotation": 0.42, "width": 224, "height": 224 }
+			}
+		}
+	}
+],
+"events": {
+	"E-END0": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"col": {
+				"rgba": [
+					{ "color": "ff0005ff" },
+					{ "time": 0.16666667, "color": "ff62daff" },
+					{ "time": 0.43333337, "color": "ff5e00ff" }
+				]
+			},
+			"grd": {
+				"rgba": [
+					{ "color": "ffffffaa" }
+				]
+			},
+			"hj": {
+				"attachment": [
+					{ "time": 0.033333335, "name": "HQFDn0002" },
+					{ "time": 0.06666667, "name": "HQFDn0003" },
+					{ "time": 0.10000001, "name": "HQFDn0004" },
+					{ "time": 0.13333334, "name": "HQFDn0005" },
+					{ "time": 0.16666667, "name": "HQFDn0006" },
+					{ "time": 0.20000002, "name": "HQFDn0007" },
+					{ "time": 0.23333335, "name": "HQFDn0008" },
+					{ "time": 0.26666668, "name": "HQFDn0009" },
+					{ "time": 0.3, "name": "HQFDn0010" },
+					{ "time": 0.33333334, "name": "HQFDn0011" },
+					{ "time": 0.36666667, "name": "HQFDn0012" },
+					{ "time": 0.40000004, "name": "HQFDn0013" },
+					{ "time": 0.43333337, "name": "HQFDn0014" },
+					{ "time": 0.4666667, "name": "HQFDn0015" },
+					{ "time": 0.5, "name": "HQFDn0016" },
+					{ "time": 0.53333336, "name": "HQFDn0017" },
+					{ "time": 0.5666667, "name": "HQFDn0018" },
+					{ "time": 0.6, "name": "HQFDn0019" }
+				]
+			},
+			"hj2": {
+				"attachment": [
+					{ "time": 0.033333335, "name": "HQFDn0002" },
+					{ "time": 0.06666667, "name": "HQFDn0003" },
+					{ "time": 0.10000001, "name": "HQFDn0004" },
+					{ "time": 0.13333334, "name": "HQFDn0005" },
+					{ "time": 0.16666667, "name": "HQFDn0006" },
+					{ "time": 0.20000002, "name": "HQFDn0007" },
+					{ "time": 0.23333335, "name": "HQFDn0008" },
+					{ "time": 0.26666668, "name": "HQFDn0009" },
+					{ "time": 0.3, "name": "HQFDn0010" },
+					{ "time": 0.33333334, "name": "HQFDn0011" },
+					{ "time": 0.36666667, "name": "HQFDn0012" },
+					{ "time": 0.40000004, "name": "HQFDn0013" },
+					{ "time": 0.43333337, "name": "HQFDn0014" },
+					{ "time": 0.4666667, "name": "HQFDn0015" },
+					{ "time": 0.5, "name": "HQFDn0016" },
+					{ "time": 0.53333336, "name": "HQFDn0017" },
+					{ "time": 0.5666667, "name": "HQFDn0018" },
+					{ "time": 0.6, "name": "HQFDn0019" }
+				]
+			}
+		},
+		"bones": {
+			"lit0": {
+				"rotate": [
+					{ "time": 0.43333337, "value": -0.3 }
+				],
+				"scale": [
+					{ "x": 10 },
+					{ "time": 0.033333335, "x": 25, "y": 0.7 },
+					{ "time": 0.16666667, "x": 40, "y": 0.7 },
+					{ "time": 0.43333337, "x": 50, "y": 0.7 },
+					{ "time": 0.6, "x": 10, "y": 0.2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.43333337, "name": "E-END0" }
+		]
+	}
+}
+}

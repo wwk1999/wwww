@@ -1,0 +1,125 @@
+skeleton.png
+	size: 904, 1029
+	filter: Linear, Linear
+	pma: true
+3sc0.50001
+	bounds: 805, 694, 89, 85
+	offsets: 30, 3, 146, 135
+3sc0.50002
+	bounds: 668, 64, 100, 92
+	offsets: 27, 6, 146, 135
+	rotate: 90
+3sc0.50003
+	bounds: 762, 53, 112, 95
+	offsets: 17, 5, 146, 135
+3sc0.50004
+	bounds: 779, 275, 120, 102
+	offsets: 15, 3, 146, 135
+	rotate: 90
+3sc0.50005
+	bounds: 634, 166, 126, 107
+	offsets: 10, 1, 146, 135
+3sc0.50006
+	bounds: 734, 397, 134, 109
+	offsets: 9, 10, 146, 135
+3sc0.50007
+	bounds: 519, 403, 136, 111
+	offsets: 7, 10, 146, 135
+3sc0.50008
+	bounds: 514, 282, 136, 119
+	offsets: 8, 9, 146, 135
+3sc0.50009
+	bounds: 498, 158, 134, 122
+	offsets: 11, 9, 146, 135
+3sc0.50010
+	bounds: 762, 150, 119, 123
+	offsets: 11, 9, 146, 135
+3sc0.50011
+	bounds: 652, 275, 120, 125
+	offsets: 11, 9, 146, 135
+	rotate: 90
+3sc0.50012
+	bounds: 575, 29, 91, 127
+	offsets: 24, 8, 146, 135
+3sc0.50013
+	bounds: 809, 781, 86, 93
+	offsets: 20, 8, 146, 135
+	rotate: 90
+3sc0.50014
+	bounds: 762, 8, 49, 43
+	offsets: 19, 59, 146, 135
+3sc0.50015
+	bounds: 813, 13, 48, 38
+	offsets: 18, 64, 146, 135
+3sc0.50016
+	bounds: 498, 297, 17, 14
+	offsets: 18, 67, 146, 135
+	rotate: 90
+sc0001
+	bounds: 254, 10, 208, 137
+	offsets: 83, 53, 300, 205
+sc0002
+	bounds: 278, 488, 239, 171
+	offsets: 47, 30, 300, 205
+sc0003
+	bounds: 283, 661, 243, 176
+	offsets: 47, 23, 300, 205
+sc0004
+	bounds: 283, 839, 273, 188
+	offsets: 15, 11, 300, 205
+sc0005
+	bounds: 2, 451, 273, 191
+	offsets: 15, 8, 300, 205
+sc0006
+	bounds: 2, 644, 274, 191
+	offsets: 14, 8, 300, 205
+sc0007
+	bounds: 2, 837, 279, 190
+	offsets: 9, 7, 300, 205
+sc0008
+	bounds: 2, 258, 263, 191
+	offsets: 8, 6, 300, 205
+sc0009
+	bounds: 558, 849, 249, 178
+	offsets: 5, 4, 300, 205
+sc0010
+	bounds: 558, 672, 245, 175
+	offsets: 1, 1, 300, 205
+sc0011
+	bounds: 2, 84, 250, 172
+	offsets: 1, 2, 300, 205
+sc0012
+	bounds: 277, 316, 235, 170
+	offsets: 0, 1, 300, 205
+sc0013
+	bounds: 267, 149, 229, 165
+	offsets: 1, 1, 300, 205
+sc0014
+	bounds: 528, 516, 209, 154
+	offsets: 0, 0, 300, 205
+sc0015
+	bounds: 739, 508, 162, 125
+	offsets: 0, 0, 300, 205
+	rotate: 90
+sc0016
+	bounds: 464, 4, 143, 109
+	offsets: 0, 0, 300, 205
+	rotate: 90
+sc0017
+	bounds: 657, 400, 114, 75
+	offsets: 0, 0, 300, 205
+	rotate: 90
+sc0018
+	bounds: 141, 7, 76, 75
+	offsets: 11, 0, 300, 205
+zi1
+	bounds: 2, 2, 80, 137
+	offsets: 0, 0, 80, 138
+	rotate: 90
+zi2
+	bounds: 809, 869, 92, 158
+	offsets: 0, 1, 92, 159
+zi3
+	bounds: 668, 17, 45, 92
+	offsets: 12, 1, 70, 95
+	rotate: 90

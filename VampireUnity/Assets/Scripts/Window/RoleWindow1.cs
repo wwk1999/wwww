@@ -31,6 +31,7 @@ public class RoleWindow1 : MonoBehaviour
     public Button debugLevel;
     public Button debugLingHun;
     public Button debugSkillCount;
+    public Button debugWeaponFragment;
 
     
     
@@ -121,6 +122,11 @@ public class RoleWindow1 : MonoBehaviour
         debugJingCui.onClick.AddListener(() =>
         {
             BagController.S.JingCuiDebug();
+        });
+        
+        debugWeaponFragment.onClick.AddListener(() =>
+        {
+            BagController.S.WeaponFragmentDebug();
         });
         
         duanzaoButton.onClick.AddListener(() =>

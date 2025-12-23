@@ -1,0 +1,66 @@
+1605122.png
+	size: 223, 833
+	filter: Linear, Linear
+	pma: true
+gc
+	bounds: 2, 186, 104, 109
+	offsets: 5, 0, 111, 111
+	rotate: 90
+guanban1
+	bounds: 2, 2, 44, 44
+	offsets: 6, 5, 55, 55
+guangquan
+	bounds: 2, 48, 70, 70
+guangquan_a1
+	bounds: 2, 552, 136, 136
+	offsets: 3, 2, 141, 141
+hdici
+	bounds: 171, 60, 50, 77
+	offsets: 2, 1, 53, 79
+hit_a001
+	bounds: 2, 292, 124, 128
+	offsets: 14, 10, 147, 145
+	rotate: 90
+hit_a002
+	bounds: 2, 690, 141, 141
+saber_ring_0
+	bounds: 2, 120, 86, 64
+	offsets: 13, 7, 167, 75
+saber_ring_1
+	bounds: 132, 215, 105, 71
+	offsets: 18, 3, 167, 75
+	rotate: 90
+saber_ring_2
+	bounds: 140, 541, 126, 75
+	offsets: 29, 0, 167, 75
+	rotate: 90
+saber_ring_3
+	bounds: 138, 428, 111, 75
+	offsets: 44, 0, 167, 75
+	rotate: 90
+saber_ring_4
+	bounds: 138, 322, 104, 75
+	offsets: 51, 0, 167, 75
+	rotate: 90
+saber_ring_5
+	bounds: 113, 139, 88, 74
+	offsets: 67, 0, 167, 75
+saber_ring_6
+	bounds: 90, 69, 79, 68
+	offsets: 76, 0, 167, 75
+saber_ring_7
+	bounds: 74, 9, 58, 63
+	offsets: 97, 0, 167, 75
+	rotate: 90
+suishi_s
+	bounds: 139, 16, 42, 43
+	offsets: 1, 1, 44, 45
+	rotate: 90
+yanliang_dilie1
+	bounds: 145, 669, 162, 74
+	offsets: 1, 3, 165, 80
+	rotate: 90
+yanwu
+	bounds: 2, 418, 132, 134
+	offsets: 4, 1, 138, 138
+	rotate: 90
