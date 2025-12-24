@@ -462,7 +462,7 @@
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\boss\json\huoshanboss.json" />
     <None Include="Assets\Arts\Spine\第二关\虫子\congzi.json" />
-    <None Include="Assets\Arts\Spine\技能\传送们\skeleton.json" />
+    <None Include="Assets\Arts\Spine\技能\传送门\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.ext.nunit@2.0.3\package.json" />
     <None Include="Assets\Arts\Spine\第二关\boss\json\huoshanboss.atlas.txt" />
     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\useSharedDesignerContext.txt" />
@@ -677,7 +677,7 @@
     <None Include="Assets\Arts\Spine\技能\毒圈\action.json" />
     <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\第五关\XueLang2\xuelang.atlas.txt" />
-    <None Include="Assets\Arts\Spine\技能\传送们\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\传送门\skeleton.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_Properties.cginc" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
