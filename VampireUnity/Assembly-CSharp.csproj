@@ -326,7 +326,6 @@
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManNecklace.cs" />
     <Compile Include="Assets\Scripts\Tool\ResourceUsageFinder.cs" />
     <Compile Include="Assets\Scripts\Window\WindowController.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\第一关\BeeMonsterSkillTrigger.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\XuKongAdd2Dan.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanTrigger.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ShiRenHuaMonster.cs" />

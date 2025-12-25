@@ -28,7 +28,6 @@ public class Entrance : MonoBehaviour
             GameController.S.TotalAddAttack = 0;
 
             
-            
             //初始化最大boss能量值
             GameController.S.MaxBossEnergyNum = LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]*2;//这时小怪数量，精英不算数量，每10只普通怪出一只精英，所以正好是2倍
             GameController.S.MaxBossEnergyNum = 10;
@@ -51,7 +50,7 @@ public class Entrance : MonoBehaviour
             sqrt.gameObject.SetActive(false);
             GameController.S.SqrtQueue.Enqueue(sqrt);
         }
-        
+
         
         //装备对象池
         for (int i = 0; i < 30; i++)
@@ -485,6 +484,9 @@ public class Entrance : MonoBehaviour
             GameController.S.HelmetFortureAddQueue.Enqueue(HelmetFortureAdd);
         }
         
+        
+
+        
 
         for (int i = 0; i < 200; i++)
         {
@@ -519,11 +521,9 @@ public class Entrance : MonoBehaviour
             playerhit.SetActive(false);
             FightBGController.S.PlayerHitQueue.Enqueue(playerhit.GetComponent<PlayerHit>());
             
-            var batskillparticle= Instantiate(Resources.Load("Prefabs/Skill/BatSkillParticle").GetComponent<ParticleSystem>(), new Vector3(0, 0, 0), Quaternion.identity);
-            batskillparticle.gameObject.SetActive(false);
-            FightBGController.S.BatSkillParticleQueue.Enqueue(batskillparticle.GetComponent<ParticleSystem>());
-            
         }
+        
+
         
         
         //初始化技能队列
@@ -636,7 +636,6 @@ public class Entrance : MonoBehaviour
         FightBGController.S.CircleAttack = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/CircleAttack")).gameObject;
         FightBGController.S.CircleAttack.SetActive(false);
 
-        
         //初始化怪物队列
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3)
         {
@@ -653,6 +652,12 @@ public class Entrance : MonoBehaviour
                         GameController.S.transform);
                 batMonster.gameObject.SetActive(false);
                 GameController.S.BatMonsterQueue.Enqueue(batMonster.GetComponent<BatMonster>());
+                
+                
+                var beeBullet = Instantiate(Resources.Load<BeeBullet>("Prefabs/Monster/Level1/BeeBullet"),
+                        GameController.S.transform);
+                beeBullet.gameObject.SetActive(false);
+                GameController.S.BeeBulletQueue.Enqueue(beeBullet.GetComponent<BeeBullet>());
 
                 var spiderMonster =
                     Instantiate(
@@ -671,6 +676,8 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(snotcollider2D,snotMonster.GetComponent<MonsterBase>());
             }
         }
+        
+
         
         for (int i = 0; i < 100; i++)
         {
@@ -869,20 +876,14 @@ public class Entrance : MonoBehaviour
                         GameController.S.transform);
                 eliteBeeMonster.gameObject.SetActive(false);
                 GameController.S.EliteBeeMonsterQueue.Enqueue(eliteBeeMonster.GetComponent<EliteBeeMonster>());
-
-                var beeMonsterSkillTrigger =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Tool/BeeSkillTrigger")
-                            .GetComponent<BeeMonsterSkillTrigger>(), GameController.S.transform);
-                beeMonsterSkillTrigger.gameObject.SetActive(false);
-                GameController.S.BeeMonsterSkillTriggerQueue.Enqueue(beeMonsterSkillTrigger
-                    .GetComponent<BeeMonsterSkillTrigger>());
                 
                 Collider2D eliteBeeMonstercollider2D=eliteBeeMonster.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(eliteBeeMonstercollider2D,eliteBeeMonster.GetComponent<MonsterBase>());
                 
             }
         }
+        
+
 
         if (LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6)
         {

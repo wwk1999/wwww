@@ -63,9 +63,9 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<EliteBeeMonster> EliteBeeMonsterQueue = new Queue<EliteBeeMonster>();
     [NonSerialized] public Queue<BatMonster> BatMonsterQueue = new Queue<BatMonster>();
     [NonSerialized] public Queue<SpiderMonster> SpiderMonsterQueue = new Queue<SpiderMonster>();
-    [NonSerialized]public Queue<BeeMonsterSkillTrigger> BeeMonsterSkillTriggerQueue = new Queue<BeeMonsterSkillTrigger>();
     [NonSerialized] public Queue<TreeManSkill> TreeManSkillQueue = new Queue<TreeManSkill>();
     [NonSerialized] public Queue<TreeManDiLie> TreeManDiLieQueue = new Queue<TreeManDiLie>();
+    [NonSerialized] public Queue<BeeBullet> BeeBulletQueue = new Queue<BeeBullet>();
 
 
     
@@ -1020,10 +1020,6 @@ public class GameController : XSingleton<GameController>
         if ( LevelInfoConfig.CurrentGameLevel == 2|| LevelInfoConfig.CurrentGameLevel ==3)
         {
             eliteMonster = EliteBeeMonsterQueue.Dequeue();
-            
-            BeeMonsterSkillTrigger beeMonsterSkillTrigger = BeeMonsterSkillTriggerQueue.Dequeue();
-            beeMonsterSkillTrigger.BeeMonster = eliteMonster as EliteBeeMonster;
-            beeMonsterSkillTrigger.gameObject.SetActive(true);
         }
         if ( LevelInfoConfig.CurrentGameLevel ==5 || LevelInfoConfig.CurrentGameLevel ==6)
         {

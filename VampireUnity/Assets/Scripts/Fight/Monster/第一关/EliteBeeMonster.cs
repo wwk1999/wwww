@@ -8,8 +8,6 @@ public class EliteBeeMonster : MonsterBase
     [NonSerialized] public float SkillTime = 3f;
     [NonSerialized] public float SkillColingTime = 0f;
     //public GameObject skillRangeTrigger;
-    [NonSerialized]public bool IsTrigger = false; // 是否触发攻击
-    public GameObject beeBullet;
    
 
 
@@ -79,17 +77,10 @@ public class EliteBeeMonster : MonsterBase
 
     public override void Skill()
     {
-        GameObject bullet = Instantiate(beeBullet, beeBullet.transform.parent);
-        ParticleSystem flash= bullet.transform.Find("Flash 1").GetComponent<ParticleSystem>();
-        ParticleSystem projectile=bullet.transform.Find("Projectile 1").GetComponent<ParticleSystem>();
-        //主角朝最近怪物的方向
-        Vector3 direction = (GameController.S.gamePlayer.transform.position - transform.position).normalized;
-        //设置枪的位置
-        //currentGun.transform.position = transform.position + direction * _gunDistance;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        bullet.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        flash.Play();
-        projectile.Play();
+        var bullet=GameController.S.BeeBulletQueue.Dequeue();
+        bullet.damage = Attack;
+        bullet.transform.position = transform.position;
+        bullet.gameObject.SetActive(true);
         AudioController.S.PlayBeeSkill();
     }
     void Update()
@@ -98,7 +89,7 @@ public class EliteBeeMonster : MonsterBase
         base.Update();
         
         SkillColingTime+= Time.deltaTime;
-        if(SkillColingTime>=SkillTime&&IsTrigger&& !IsDead)
+        if(SkillColingTime>=SkillTime&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<8f&& !IsDead)
         {
             SkillColingTime = 0;
             isSkill1 = true;
@@ -109,7 +100,7 @@ public class EliteBeeMonster : MonsterBase
             //SpriteFlipX(false);
         }
 
-        if (!IsDead && !IsTrigger)
+        if (!IsDead && Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)>8f)
         {
              MonsterMove();
         }

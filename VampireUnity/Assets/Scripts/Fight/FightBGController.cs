@@ -38,7 +38,6 @@ public class FightBGController : XSingleton<FightBGController>
     [NonSerialized]public Queue<SqrtAttack> SqrtAttackQueue = new Queue<SqrtAttack>();
     [NonSerialized]public Queue<SpiderWeb> SpiderWebQueue = new Queue<SpiderWeb>();
     [NonSerialized]public Queue<PlayerHit> PlayerHitQueue = new Queue<PlayerHit>();
-    [NonSerialized]public Queue<ParticleSystem> BatSkillParticleQueue = new Queue<ParticleSystem>();
     [NonSerialized] public Queue<GameObject> PrimaryNormalAttackExQueue = new Queue<GameObject>();//初始武器普通攻击爆炸队列
 
 
