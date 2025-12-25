@@ -862,8 +862,7 @@ public class GameController : XSingleton<GameController>
         HaveBoss = true;
         if (LevelInfoConfig.CurrentGameLevel == 3)
         {
-            TreeManBoss treeManBoss=Instantiate(Resources.Load<TreeManBoss>("Prefabs/Monster/Level1/TreeManBOSS"));
-              treeManBoss.transform.position = new Vector3(0 ,0, 0f);
+            TreeManBoss treeManBoss=Instantiate(Resources.Load<TreeManBoss>("Prefabs/Monster/Level1/TreeManBOSS")); treeManBoss.transform.position = new Vector3(0 ,0, 0f);
               treeManBoss.gameObject.SetActive(true);
              SkeletonAnimation sk=treeManBoss.transform.Find("parent/TreeManSkeleton").GetComponent<SkeletonAnimation>();
              treeManBoss.IsSkill = true;
@@ -874,13 +873,13 @@ public class GameController : XSingleton<GameController>
         }
         if (LevelInfoConfig.CurrentGameLevel == 6)
         {
-            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
             HuoShanBoss huoShanBoss = Instantiate(Resources.Load<HuoShanBoss>("Prefabs/Monster/Level2/HuoShanBOSS"));
+            huoShanBoss.gameObject.SetActive(true);
             huoShanBoss.transform.position = new Vector3(0, 0, 0f);
-            huoShanBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"walk",true);
+            huoShanBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"Exit",false);
+            huoShanBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(huoShanBoss.collider2D,huoShanBoss);
             huoShanBoss.meshRenderer.sortingOrder = 3000;
-
         }
         if (LevelInfoConfig.CurrentGameLevel == 9)
         {

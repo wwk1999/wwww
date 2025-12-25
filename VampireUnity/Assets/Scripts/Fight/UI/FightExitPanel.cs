@@ -18,7 +18,6 @@ public class FightExitPanel : MonoBehaviour
             Time.timeScale = 1;
             GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
             GlobalPlayerAttribute.IsGame = false;
-            PlayerInfoController.S.UpdatePlayerInfo( GlobalPlayerAttribute.Level, GlobalPlayerAttribute.Exp, GlobalPlayerAttribute.GameLevel, GlobalPlayerAttribute.BloodEnergy);
             SceneManager.LoadScene("UIScene");
         });
         ContinueButton.onClick.AddListener(() =>

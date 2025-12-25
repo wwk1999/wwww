@@ -17,8 +17,6 @@ public class LoginWindow1 : MonoBehaviour
     public string password;
     void Start()
     {
-        ObserverModuleManager.S.UnRegisterEvent("LoginSuccess", OnLoginSuccess);
-        ObserverModuleManager.S.RegisterEvent("LoginSuccess",OnLoginSuccess);
         closeBtn.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);
@@ -28,7 +26,6 @@ public class LoginWindow1 : MonoBehaviour
             Debug.Log("点击登陆按钮");
              username = usernameInputField.text;
             password = passwordInputField.text;
-            ServerConnect.S.SendLoginRequest(username, password);
         });
         registerBtn.onClick.AddListener(() =>
         {
@@ -40,19 +37,4 @@ public class LoginWindow1 : MonoBehaviour
             gameObject.SetActive(false);
         });
     }
-    
-    //收到登录成功的消息
-    public void OnLoginSuccess(object[] args)
-    {
-        var userData = JsonConvert.DeserializeObject<UserData>(JsonConvert.SerializeObject(args[0]));
-        Debug.Log($"用户ID: {userData.userid}, 用户名: {userData.username}");
-        GlobalUserInfo.UserName = username;
-        GlobalUserInfo.PassWord =password;
-        GlobalUserInfo.Userid = userData.userid;
-        GlobalUserInfo.UserName = userData.username;
-        MainWindow1.IsLogin= true;
-        gameObject.SetActive(false);
-    }
-
-   
 }

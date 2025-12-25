@@ -16,8 +16,6 @@ public class ConstKeys
     public const string TreeManDashSkill1 = "TreeManDashSkill1";
     
     
-    public const string HuoShanSkill1Q1L = "HuoShanSkill1Q1L";
-    public const string HuoShanSkill1Q1R = "HuoShanSkill1Q1R";
     public const string Resumemonster = "Resumemonster";
 
 

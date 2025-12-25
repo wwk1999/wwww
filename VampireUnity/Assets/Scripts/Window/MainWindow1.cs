@@ -16,7 +16,6 @@ public class MainWindow1 : MonoBehaviour
        _=PlayerInfoController.S;
       loginButton.onClick.AddListener(async () =>
       {
-          await ServerConnect.S.ConnectAsync();
           WindowController.S.LoginWindow.SetActive(true);
       });
       startButton.onClick.AddListener(async () =>

@@ -31,7 +31,6 @@ public class ExtremeSpeed : FightWeaponSourceStoneBase
                     return;
                 }
             }
-            SourceStoneServer.S.SendAddSourceStoneRequest(SourceStoneTable.SourceStoneId, 1);
 
             //如果被拾取，销毁装备
             Destroy(gameObject);

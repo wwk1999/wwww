@@ -32,7 +32,6 @@ public class Duration : FightWeaponSourceStoneBase
                 }
             }
            
-            SourceStoneServer.S.SendAddSourceStoneRequest(SourceStoneTable.SourceStoneId, 1);
 
             
 

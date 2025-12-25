@@ -21,14 +21,12 @@ public class FailPanel : MonoBehaviour
       {
          Time.timeScale = 1;
          GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
-         PlayerInfoController.S.UpdatePlayerInfo( GlobalPlayerAttribute.Level, GlobalPlayerAttribute.Exp, GlobalPlayerAttribute.GameLevel, GlobalPlayerAttribute.BloodEnergy);
          SceneManager.LoadScene("UIScene");
       });
       againButton.onClick.AddListener(() =>
          {
             Time.timeScale = 1;
             GlobalPlayerAttribute.CurrentExitType = ExitType.Again;
-            PlayerInfoController.S.UpdatePlayerInfo( GlobalPlayerAttribute.Level, GlobalPlayerAttribute.Exp, GlobalPlayerAttribute.GameLevel, GlobalPlayerAttribute.BloodEnergy);
             SceneManager.LoadScene("UIScene");
          }
       );

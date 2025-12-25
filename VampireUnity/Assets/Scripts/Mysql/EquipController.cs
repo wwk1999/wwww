@@ -37,10 +37,7 @@ namespace Mysql
             DontDestroyOnLoad(gameObject);
         }
         
-        public void GetAllEquipFromMysql()
-        {
-            ServerConnect.S.SendGetAllEquipRequest();//获取所有装备请求
-        }
+     
 
         
         

@@ -216,6 +216,5 @@ public class RoleWindow1 : MonoBehaviour
         if (BagController.S.IsInit)
             return;
         BagController.S.InitEquipidSpriteConfig();
-        EquipController.S.GetAllEquipFromMysql();
     }
 }

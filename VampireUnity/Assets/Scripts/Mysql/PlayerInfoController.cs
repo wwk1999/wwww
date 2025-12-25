@@ -46,9 +46,6 @@ public class PlayerInfoController : XSingleton<PlayerInfoController>
     }
     
     
-    public void UpdatePlayerInfo( int level, int experience, int gamelevel,int bloodenergy)
-    {
-       ServerConnect.S.SendUpdatePlayerInfoRequest(level, experience, gamelevel, bloodenergy);
-    }
+  
     
 }

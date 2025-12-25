@@ -86,10 +86,13 @@ public class TreeManBoss : MonsterBase
                 parent.transform.localScale = new Vector3(-1, 1, 1);
             }
             GameController.S.CreateSqrtAttack(transform.position,Dashdirection);
+        } else if(isAttack)
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
         }
         else
         {
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", false);
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
     }
     

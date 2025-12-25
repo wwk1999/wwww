@@ -32,7 +32,6 @@ public class Division : FightWeaponSourceStoneBase
                 }
             }
 
-            SourceStoneServer.S.SendAddSourceStoneRequest(SourceStoneTable.SourceStoneId, 1);
             
             //BagController.S.EquipIdList.Add(SourceStoneTable);
 

@@ -282,6 +282,10 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
+        if (MonsterType == MonsterType.Boss)
+        {
+            return;
+        }
         if (trackEntry.Animation.Name ==MonsterSpineName.DieName)
         {
             Destroy(gameObject);
@@ -844,7 +848,10 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 if (!IsSkill)
                 {
-                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
+                    if (MonsterType != MonsterType.Boss)
+                    {
+                        monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
+                    }
                 }
             }
             else
