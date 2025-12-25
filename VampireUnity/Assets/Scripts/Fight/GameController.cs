@@ -80,6 +80,8 @@ public class GameController : XSingleton<GameController>
     [NonSerialized]public Queue<DaZuiSkillTriggerLeft> DaZuiSkillTriggerQueueLeft = new Queue<DaZuiSkillTriggerLeft>();
     [NonSerialized]public Queue<DaZuiSkillTriggerRight> DaZuiSkillTriggerQueueRight = new Queue<DaZuiSkillTriggerRight>();
     [NonSerialized] public Queue<HuoShanJianQi> HuoShanJianQiQueue = new Queue<HuoShanJianQi>();
+    [NonSerialized] public Queue<HuoShanSkill2> HuoShanSkill2QiQueue = new Queue<HuoShanSkill2>();
+
 
     
     

@@ -22,7 +22,7 @@ public class HuoShanJianQi : MonoBehaviour
             //设置枪的位置
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             parent.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            rg.velocity = direction * 7;
+            rg.velocity = direction * 10;
         }
     }
 

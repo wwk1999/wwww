@@ -848,10 +848,7 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 if (!IsSkill)
                 {
-                    if (MonsterType != MonsterType.Boss)
-                    {
-                        monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
-                    }
+                    monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
                 }
             }
             else
@@ -870,10 +867,6 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else
         {
-            if (!isAttack && !IsSkill)
-            {
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
-            }
             CurrentHp -= finalDamage;
             hpSlider.maxValue = MaxHp;
             hpSlider.value = CurrentHp;

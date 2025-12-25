@@ -708,6 +708,11 @@ public class Entrance : MonoBehaviour
                         GameController.S.transform);
                 jianqi.gameObject.SetActive(false);
                 GameController.S.HuoShanJianQiQueue.Enqueue(jianqi);
+                var huoshanskill2 =
+                    Instantiate(Resources.Load<HuoShanSkill2>("Prefabs/Monster/Level2/HuoShanSkill2"),
+                        GameController.S.transform);
+                huoshanskill2.gameObject.SetActive(false);
+                GameController.S.HuoShanSkill2QiQueue.Enqueue(huoshanskill2);
             }
         }
 

@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.137531, w: 0.99049747}
   m_LocalPosition: {x: 0.07, y: 1.05, z: 0}
-  m_LocalScale: {x: -1, y: -1, z: -1}
+  m_LocalScale: {x: -0.90000004, y: -0.90000004, z: -0.90000004}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7534306311302452393}
@@ -221,9 +221,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.38489628, y: 0.1840806}
+  m_Offset: {x: 0.43647814, y: 0.053929806}
   serializedVersion: 2
-  m_Radius: 2.27387
+  m_Radius: 0.9681636
 --- !u!114 &9053361880634809500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,11 +263,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7341996074650032389}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.0073303473, w: 0.9999731}
-  m_LocalPosition: {x: 0.3, y: -0.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42, y: -0.26, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5928607481907320075}
   m_Father: {fileID: 5571885007082173546}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.84}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -264,6 +264,7 @@
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXLightFade.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SpiderMonster.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\WenZiMonster.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkill2.cs" />
     <Compile Include="Assets\Scripts\WeaponSourceStone\SourceStoneItem.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\DuPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueNecklace.cs" />
