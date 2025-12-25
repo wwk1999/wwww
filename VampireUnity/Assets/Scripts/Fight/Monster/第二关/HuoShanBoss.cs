@@ -11,11 +11,12 @@ public class HuoShanBoss : MonsterBase
 {
     public HuoShanBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 2000, 0.5f, 10, 5, 10, 10, 0) { }
     public Transform attackTrans;
+    public Collider2D skill3Collider;
     [NonSerialized]public float Skill1Time= 5f;
     [NonSerialized]public float Skill1CurrentTime = 0f;
     [NonSerialized]public float Skill2Time = 15f;
     [NonSerialized]public float Skill2CurrentTime = 0f;
-    [NonSerialized]public float Skill3Time = 15f;
+    [NonSerialized]public float Skill3Time = 8f;
     [NonSerialized]public float Skill3CurrentTime = 0f;
     [NonSerialized]public State CurrentState = State.Move;
 
@@ -40,6 +41,28 @@ public class HuoShanBoss : MonsterBase
         monsterSkeletonAnimation.AnimationState.Complete += Complete;
 
     }
+
+    public void CheckCollider()
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        skill3Collider.OverlapCollider(filter, results);
+    
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+               GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            }
+        }
+    }
     
     public void Complete(TrackEntry trackEntry)
     {
@@ -60,7 +83,9 @@ public class HuoShanBoss : MonsterBase
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_02", false);
         }else if (isSkill3)
         {
-           
+            IsSkill=true;
+            isSkill3=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_03", false);
         } else if(isAttack)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
@@ -114,6 +139,10 @@ public class HuoShanBoss : MonsterBase
         if (e.Data.Name == "huoyan"&&trackEntry.Animation.Name == "skill_02")
         {
             Skill2(Vector2.zero,10,0.1f,50);
+        }
+        if (e.Data.Name == "huoyan"&&trackEntry.Animation.Name == "skill_03")
+        {
+            CheckCollider();
         }
     }
     
@@ -175,7 +204,7 @@ public class HuoShanBoss : MonsterBase
             Skill2CurrentTime = 0;
             isSkill2 = true;
         }
-        if (Skill3CurrentTime > Skill3Time&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position) < 3)
+        if (Skill3CurrentTime > Skill3Time&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position) < 5)
         {
             Skill3CurrentTime = 0;
             isSkill3 = true;
