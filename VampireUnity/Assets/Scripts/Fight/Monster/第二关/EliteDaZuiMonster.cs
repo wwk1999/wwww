@@ -2,18 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
+using Spine;
+using Spine.Unity;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EliteDaZuiMonster : MonsterBase
 {
-    [NonSerialized]public bool IsTriggerRight;
-    [NonSerialized]public bool IsTriggerLeft;
-    [NonSerialized]public bool Dir;
-    [NonSerialized]public float attackTime = 5f;
+    [NonSerialized]public float skillTime = 5f;
     [NonSerialized]public float currentTime = 0f;
-    public ParticleSystem Fire;
     public EliteDaZuiMonster() : base(MonsterType.Elite, "EliteDaZuiMonster", 1, 1000, 0.3f, 20, 5, 50, 100, 10) { }
 
+    public SkeletonAnimation fireSke;
+    public Transform attackTrans;
     public void Awake()
     {
         base.Awake();
@@ -22,8 +23,8 @@ public class EliteDaZuiMonster : MonsterBase
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
         MonsterSpineName.Skill1Name = "skill";
-
     }
+    
     public override void AddMonsterSourceStone()
     {
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,2));
@@ -82,88 +83,68 @@ public class EliteDaZuiMonster : MonsterBase
     private void Start()
     {
         base.Start();
-        size = 0.55f;
+        size = 0.7f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
-
-    }
-    
-    public void AttackBeginLeft()
-    {
-        Dir = false;
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0,"skill", true);
-        IsSkill = true;
-        Speed = 0;
-        Fire.startRotation = -90 * Mathf.Deg2Rad;//转换为弧度
-        Fire.transform.localPosition = new Vector2(-2.7f, 0);
-        Invoke("PlayFire",0.5f);
-        Invoke("AttackEnd",2f);
-
-    }
-    
-    public void AttackBeginRight()
-    {
-        Dir = true;
-        IsSkill = true;
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0,"skill", true);
-        Speed = 0;
-        Fire.startRotation = 90* Mathf.Deg2Rad;
-        Fire.transform.localPosition = new Vector2(0.7f, 0);
-        Invoke("PlayFire",0.5f);
-        Invoke("AttackEnd",2f);
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
+        monsterSkeletonAnimation.AnimationState.Complete += Complete;
     }
 
-    public void AttackEnd()
+    public void Complete(TrackEntry trackEntry)
     {
-        Fire.gameObject.SetActive(false);
-        Speed = 0.3f;
-    }
-
-
-    public void PlayFire()
-    {
-        if (Fire!=null)
+        if (trackEntry.Animation.Name == "skill")
         {
-            Fire.gameObject.SetActive(true);
-            Fire.Play();
+            IsSkill = false;
+        }
+        
+        if(isSkill1)
+        {
+            IsSkill=true;
+            isSkill1=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill", false);
+        }else if (isAttack)
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "attack", false);
+        }
+        else
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "walk", false);
+        }
+    }
+
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "akill")
+        {
+            fireSke.gameObject.SetActive(true);
+            fireSke.AnimationState.SetAnimation(0, "animation", false);
         }
     }
     
     void Update()
     {
         if (IsDead) return;
-        
-        //碰撞检测
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
         base.Update();
         currentTime+= Time.deltaTime;
-        if(currentTime>= attackTime&&IsTriggerLeft)
+        if (currentTime > skillTime && Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 3)
         {
-            AttackBeginLeft();
-            currentTime = 0f;
+            currentTime = 0;
+            isSkill1 = true;
         }
-        if(currentTime>= attackTime&&IsTriggerRight)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
-            AttackBeginRight();
-            currentTime = 0f;
+            isAttack=true;
         }
+        else
+        {
+            isAttack=false;
+        }
+        
         if (!IsDead)
         {
-            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) >= 2)
-            {
-                MonsterMove();
-            }
+            MonsterMove();
             SpriteFlipX(true);
-        }
-
-        if (Fire.gameObject.activeSelf && IsTriggerLeft&&!Dir)
-        {
-            GameController.S.gamePlayer.PlayerHurt(10,false);
-        }
-        if (Fire.gameObject.activeSelf && IsTriggerRight&&Dir)
-        {
-            GameController.S.gamePlayer.PlayerHurt(10,false);
         }
     }
 }

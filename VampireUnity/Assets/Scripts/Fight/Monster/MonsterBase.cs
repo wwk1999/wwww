@@ -282,7 +282,7 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
-        if (MonsterType == MonsterType.Boss)
+        if (MonsterType != MonsterType.Normal)
         {
             return;
         }

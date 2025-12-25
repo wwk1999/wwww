@@ -12,20 +12,4 @@ public class DaZuiSkillTriggerRight : MonoBehaviour
         if(DaZuiMonster&&gameObject.activeSelf)
             transform.position= DaZuiMonster.transform.position;
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            DaZuiMonster.IsTriggerRight= true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            DaZuiMonster.IsTriggerRight = false;
-        }    
-    }
 }

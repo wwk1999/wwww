@@ -470,7 +470,9 @@
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.xml" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.10\package.json" />
     <None Include="Assets\Arts\Spine\第三关\青蛙\json\qingwa.json" />
+    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\雪山BOSS\Enemy_Boss_ogre.json" />
     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\雪山BOSS\Enemy_Boss_ogre.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\蓝冲天激光\skeleton.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\package.json" />
@@ -591,7 +593,6 @@
     <None Include="Assets\Arts\Spine\第五关\XueZhangLang\xuezhanglang.json" />
     <None Include="Assets\shader\ParticleAdditiveGlow 1.shader" />
     <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.json" />
-    <None Include="Assets\Arts\Spine\怪物\json 1\Enemy_Boss_ogre.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\紫尾巴\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空\action.json" />
     <None Include="Assets\Arts\Spine\技能\HuoDan\H043_Special.atlas.txt" />
@@ -607,7 +608,6 @@
     <None Include="Assets\Arts\Shaders\SqrtEdge.shader" />
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\lib\netstandard2.1\Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.json" />
-    <None Include="Assets\Arts\Spine\怪物\json 1\Enemy_Boss_ogre.json" />
     <None Include="Assets\Arts\Spine\技能\1225\json13\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaNiao\shamoniao.json" />
     <None Include="Assets\Arts\Shaders\LcL\Fade.shader" />
