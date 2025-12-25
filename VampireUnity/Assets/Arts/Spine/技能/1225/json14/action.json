@@ -1,0 +1,53 @@
+{
+"skeleton": { "hash": "Nhbh+CGu9pM", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\J三國志侵略版\\spine\\技能\\H30081jineng1" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bao/0001", "parent": "root", "x": -0.07, "y": -3.13 }
+],
+"slots": [
+	{ "name": "bao-0001", "bone": "bao/0001" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"bao-0001": {
+				"bao/0001": { "x": 2.32, "y": 155.46, "width": 920, "height": 920 },
+				"bao/0002": { "x": 2.32, "y": 155.46, "width": 920, "height": 920 },
+				"bao/0003": { "x": 2.32, "y": 155.46, "width": 920, "height": 920 },
+				"bao/0004": { "x": 2.32, "y": 155.46, "width": 920, "height": 920 },
+				"bao/0005": { "x": 2.32, "y": 155.46, "width": 920, "height": 920 },
+				"bao/0006": { "x": 2.32, "y": 155.46, "width": 920, "height": 920 },
+				"bao/0007": { "x": 2.32, "y": 155.46, "width": 920, "height": 920 }
+			}
+		}
+	}
+],
+"events": {
+	"attack": {},
+	"back": {},
+	"hit": {},
+	"move": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"bao-0001": {
+				"attachment": [
+					{ "name": "bao/0001" },
+					{ "time": 0.06666667, "name": "bao/0002" },
+					{ "time": 0.13333334, "name": "bao/0003" },
+					{ "time": 0.20000002, "name": "bao/0004" },
+					{ "time": 0.26666668, "name": "bao/0005" },
+					{ "time": 0.33333334, "name": "bao/0006" },
+					{ "time": 0.40000004, "name": "bao/0007" },
+					{ "time": 0.4666667 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.13333334, "name": "hit" }
+		]
+	}
+}
+}

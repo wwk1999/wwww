@@ -1,0 +1,74 @@
+action.png
+	size: 1901, 1801
+	filter: Linear, Linear
+	pma: true
+images/jn1/jn1_00000
+	bounds: 2, 1479, 497, 320
+	offsets: 210, 311, 800, 650
+images/jn1/jn1_00001
+	bounds: 501, 1262, 651, 537
+	offsets: 102, 95, 800, 650
+images/jn1/jn1_00005
+	bounds: 2, 53, 734, 629
+	offsets: 33, 0, 800, 650
+images/jn1/jn1_00012
+	bounds: 746, 623, 798, 616
+	offsets: 1, 9, 800, 650
+images/jn1/jn1_00015
+	bounds: 738, 2, 755, 619
+	offsets: 17, 9, 800, 650
+images/jn1/jn1_00016
+	bounds: 2, 684, 742, 576
+	offsets: 30, 48, 800, 650
+images/jn1/jn1_00017
+	bounds: 1154, 1241, 745, 558
+	offsets: 28, 54, 800, 650
+
+action_2.png
+	size: 1450, 1447
+	filter: Linear, Linear
+	pma: true
+images/jn1/jn1_00006
+	bounds: 2, 76, 734, 647
+	offsets: 33, 0, 800, 650
+	rotate: 90
+images/jn1/jn1_00009
+	bounds: 651, 2, 793, 646
+	offsets: 5, 0, 800, 650
+images/jn1/jn1_00010
+	bounds: 2, 812, 796, 633
+	offsets: 3, 6, 800, 650
+images/jn1/jn1_00011
+	bounds: 800, 650, 795, 648
+	offsets: 4, 0, 800, 650
+	rotate: 90
+
+action_3.png
+	size: 2036, 1966
+	filter: Linear, Linear
+	pma: true
+images/jn1/jn1_00002
+	bounds: 1281, 43, 753, 640
+	offsets: 10, 2, 800, 650
+images/jn1/jn1_00003
+	bounds: 625, 1187, 777, 641
+	offsets: 11, 0, 800, 650
+	rotate: 90
+images/jn1/jn1_00004
+	bounds: 647, 2, 681, 632
+	offsets: 59, 0, 800, 650
+	rotate: 90
+images/jn1/jn1_00007
+	bounds: 1268, 685, 756, 644
+	offsets: 21, 0, 800, 650
+images/jn1/jn1_00008
+	bounds: 2, 395, 782, 643
+	offsets: 13, 0, 800, 650
+	rotate: 90
+images/jn1/jn1_00013
+	bounds: 2, 1179, 785, 621
+	offsets: 1, 4, 800, 650
+	rotate: 90
+images/jn1/jn1_00014
+	bounds: 1268, 1331, 766, 633
+	offsets: 2, 5, 800, 650

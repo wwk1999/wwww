@@ -1,0 +1,22 @@
+action.png
+	size: 415, 170
+	filter: Linear, Linear
+	pma: true
+pugong/pugong_000
+	bounds: 228, 69, 179, 47
+	offsets: 61, 7, 240, 65
+pugong/pugong_001
+	bounds: 228, 118, 184, 50
+	offsets: 56, 5, 240, 65
+pugong/pugong_002
+	bounds: 212, 3, 201, 57
+	offsets: 39, 3, 240, 65
+pugong/pugong_003
+	bounds: 2, 2, 208, 58
+	offsets: 32, 2, 240, 65
+pugong/pugong_004
+	bounds: 2, 62, 221, 53
+	offsets: 19, 4, 240, 65
+pugong/pugong_005
+	bounds: 2, 117, 224, 51
+	offsets: 16, 4, 240, 65

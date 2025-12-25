@@ -1,0 +1,58 @@
+action.png
+	size: 2014, 1102
+	filter: Linear, Linear
+	pma: true
+bao/bao0000
+	bounds: 461, 152, 179, 269
+	offsets: 232, 107, 640, 640
+	rotate: 90
+bao/bao0001
+	bounds: 2, 398, 334, 332
+	offsets: 190, 101, 640, 640
+	rotate: 90
+bao/bao0002
+	bounds: 1682, 336, 329, 376
+	offsets: 156, 60, 640, 640
+bao/bao0003
+	bounds: 1700, 716, 312, 384
+	offsets: 162, 60, 640, 640
+bao/bao0004
+	bounds: 1348, 714, 350, 386
+	offsets: 124, 60, 640, 640
+bao/bao0005
+	bounds: 856, 396, 336, 384
+	offsets: 138, 60, 640, 640
+bao/bao0006
+	bounds: 473, 749, 351, 381
+	offsets: 128, 60, 640, 640
+	rotate: 90
+bao/bao0007
+	bounds: 810, 2, 329, 392
+	offsets: 146, 60, 640, 640
+bao/bao0008
+	bounds: 473, 333, 335, 414
+	offsets: 163, 60, 640, 640
+bao/bao0009
+	bounds: 1572, 22, 312, 431
+	offsets: 162, 60, 640, 640
+	rotate: 90
+bao/bao0010
+	bounds: 2, 83, 313, 457
+	offsets: 161, 60, 640, 640
+	rotate: 90
+bao/bao0011
+	bounds: 856, 782, 318, 490
+	offsets: 160, 60, 640, 640
+	rotate: 90
+bao/bao0012
+	bounds: 2, 734, 366, 469
+	offsets: 160, 61, 640, 640
+	rotate: 90
+bao/bao0013
+	bounds: 1194, 391, 321, 486
+	offsets: 158, 65, 640, 640
+	rotate: 90
+bao/bao0014
+	bounds: 1141, 70, 319, 429
+	offsets: 158, 98, 640, 640
+	rotate: 90

@@ -1,0 +1,83 @@
+{
+"skeleton": { "hash": "hSdYdtLnae0", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H幻之妖姬\\特效\\E10268" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "1", "parent": "root" },
+	{ "name": "fx", "parent": "1" }
+],
+"slots": [
+	{ "name": "1", "bone": "fx" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"1": {
+				"images/jn1/jn1_00000": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00001": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00002": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00003": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00004": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00005": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00006": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00007": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00008": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00009": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00010": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00011": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00012": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00013": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00014": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00015": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00016": { "width": 800, "height": 650 },
+				"images/jn1/jn1_00017": { "width": 800, "height": 650 }
+			}
+		}
+	}
+],
+"events": {
+	"hit": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"1": {
+				"attachment": [
+					{ "name": "images/jn1/jn1_00000" },
+					{ "time": 0.033333335, "name": "images/jn1/jn1_00001" },
+					{ "time": 0.06666667, "name": "images/jn1/jn1_00002" },
+					{ "time": 0.10000001, "name": "images/jn1/jn1_00003" },
+					{ "time": 0.13333334, "name": "images/jn1/jn1_00004" },
+					{ "time": 0.16666667, "name": "images/jn1/jn1_00005" },
+					{ "time": 0.20000002, "name": "images/jn1/jn1_00006" },
+					{ "time": 0.23333335, "name": "images/jn1/jn1_00007" },
+					{ "time": 0.26666668, "name": "images/jn1/jn1_00008" },
+					{ "time": 0.3, "name": "images/jn1/jn1_00009" },
+					{ "time": 0.33333334, "name": "images/jn1/jn1_00010" },
+					{ "time": 0.36666667, "name": "images/jn1/jn1_00011" },
+					{ "time": 0.40000004, "name": "images/jn1/jn1_00012" },
+					{ "time": 0.43333337, "name": "images/jn1/jn1_00013" },
+					{ "time": 0.4666667, "name": "images/jn1/jn1_00014" },
+					{ "time": 0.5, "name": "images/jn1/jn1_00015" },
+					{ "time": 0.53333336, "name": "images/jn1/jn1_00016" },
+					{ "time": 0.5666667, "name": "images/jn1/jn1_00017" },
+					{ "time": 0.6 }
+				]
+			}
+		},
+		"bones": {
+			"fx": {
+				"translate": [
+					{ "y": 127.53 }
+				],
+				"scale": [
+					{ "x": 1.3, "y": 1.3 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.26666668, "name": "hit" }
+		]
+	}
+}
+}

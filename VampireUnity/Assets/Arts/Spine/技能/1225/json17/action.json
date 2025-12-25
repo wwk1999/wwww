@@ -1,0 +1,88 @@
+{
+"skeleton": { "hash": "TZR1ubylcyg", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\J三國志侵略版\\spine\\技能\\H30137jineng2a" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "g1", "parent": "root" },
+	{ "name": "ks1", "parent": "root" }
+],
+"slots": [
+	{ "name": "g1", "bone": "g1", "blend": "additive" },
+	{ "name": "ks1", "bone": "ks1", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"g1": {
+				"effect_skill2_1/g1_00000": { "width": 256, "height": 256 },
+				"effect_skill2_1/g1_00001": { "width": 256, "height": 256 },
+				"effect_skill2_1/g1_00002": { "width": 256, "height": 256 },
+				"effect_skill2_1/g1_00003": { "width": 256, "height": 256 },
+				"effect_skill2_1/g1_00004": { "width": 256, "height": 256 },
+				"effect_skill2_1/g1_00005": { "width": 256, "height": 256 },
+				"effect_skill2_1/g1_00006": { "width": 256, "height": 256 },
+				"effect_skill2_1/g1_00007": { "width": 256, "height": 256 }
+			},
+			"ks1": {
+				"ks1_000": { "y": 46.76, "width": 300, "height": 250 }
+			}
+		}
+	}
+],
+"events": {
+	"attack": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"g1": {
+				"attachment": [
+					{ "name": "effect_skill2_1/g1_00000" },
+					{ "time": 0.10000001, "name": "effect_skill2_1/g1_00001" },
+					{ "time": 0.16666667, "name": "effect_skill2_1/g1_00002" },
+					{ "time": 0.26666668, "name": "effect_skill2_1/g1_00003" },
+					{ "time": 0.36666667, "name": "effect_skill2_1/g1_00004" },
+					{ "time": 0.43333337, "name": "effect_skill2_1/g1_00005" },
+					{ "time": 0.53333336, "name": "effect_skill2_1/g1_00006" },
+					{ "time": 0.6333334, "name": "effect_skill2_1/g1_00007" },
+					{ "time": 0.70000005 }
+				]
+			},
+			"ks1": {
+				"rgba": [
+					{ "time": 0.20000002, "color": "ffffffff" },
+					{ "time": 0.6, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.06666667, "name": "ks1_000" }
+				]
+			}
+		},
+		"bones": {
+			"g1": {
+				"translate": [
+					{ "x": 18.6, "y": 197.16 }
+				],
+				"scale": [
+					{ "x": 2, "y": 2 }
+				]
+			},
+			"ks1": {
+				"translate": [
+					{ "time": 0.06666667, "x": 14.14, "y": -26.13 },
+					{ "time": 0.20000002, "x": 14.14, "y": -67.57 },
+					{ "time": 0.6, "x": 14.14, "y": -62.79 }
+				],
+				"scale": [
+					{ "time": 0.06666667, "x": 1.275, "y": 1.214 },
+					{ "time": 0.20000002, "x": 2.376, "y": 2.263 },
+					{ "time": 0.6, "x": 3.016, "y": 2.969 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.26666668, "name": "attack" }
+		]
+	}
+}
+}

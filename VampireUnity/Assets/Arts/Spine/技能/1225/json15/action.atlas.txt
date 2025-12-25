@@ -1,0 +1,67 @@
+action.png
+	size: 1934, 1175
+	filter: Linear, Linear
+	pma: true
+jineng3/0001
+	bounds: 1281, 595, 252, 164
+	offsets: 240, 196, 600, 600
+jineng3/0002
+	bounds: 2, 4, 404, 256
+	offsets: 99, 114, 600, 600
+jineng3/0003
+	bounds: 1529, 6, 369, 270
+	offsets: 128, 133, 600, 600
+jineng3/0004
+	bounds: 1537, 584, 390, 279
+	offsets: 109, 133, 600, 600
+jineng3/0005
+	bounds: 1537, 865, 395, 308
+	offsets: 92, 134, 600, 600
+jineng3/0006
+	bounds: 733, 2, 392, 320
+	offsets: 76, 139, 600, 600
+jineng3/0007
+	bounds: 963, 337, 415, 316
+	offsets: 67, 151, 600, 600
+	rotate: 90
+jineng3/0008
+	bounds: 637, 324, 423, 324
+	offsets: 75, 153, 600, 600
+	rotate: 90
+jineng3/0009
+	bounds: 2, 262, 453, 335
+	offsets: 71, 150, 600, 600
+	rotate: 90
+jineng3/0010
+	bounds: 891, 754, 419, 330
+	offsets: 122, 151, 600, 600
+	rotate: 90
+jineng3/0011
+	bounds: 564, 749, 424, 325
+	offsets: 123, 152, 600, 600
+	rotate: 90
+jineng3/0012
+	bounds: 339, 304, 431, 296
+	offsets: 122, 152, 600, 600
+	rotate: 90
+jineng3/0013
+	bounds: 291, 737, 436, 271
+	offsets: 110, 151, 600, 600
+	rotate: 90
+jineng3/0014
+	bounds: 2, 717, 456, 287
+	offsets: 94, 153, 600, 600
+	rotate: 90
+jineng3/0015
+	bounds: 1223, 761, 412, 312
+	offsets: 77, 150, 600, 600
+	rotate: 90
+jineng3/0016
+	bounds: 1127, 18, 400, 317
+	offsets: 76, 152, 600, 600
+jineng3/0017
+	bounds: 1529, 278, 376, 304
+	offsets: 94, 152, 600, 600
+jineng3/0018
+	bounds: 408, 7, 323, 295
+	offsets: 160, 156, 600, 600

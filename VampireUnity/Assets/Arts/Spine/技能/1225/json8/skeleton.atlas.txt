@@ -1,0 +1,104 @@
+skeleton.png
+	size: 1905, 511
+	filter: Linear, Linear
+	pma: true
+FS0001
+	bounds: 1640, 416, 13, 153
+	offsets: 45, 1, 106, 898
+	rotate: 90
+FS0002
+	bounds: 1591, 92, 24, 306
+	offsets: 40, 5, 106, 898
+	rotate: 90
+FS0003
+	bounds: 1219, 92, 24, 370
+	offsets: 40, 13, 106, 898
+	rotate: 90
+FS0004
+	bounds: 1407, 286, 23, 496
+	offsets: 41, 16, 106, 898
+	rotate: 90
+FS0005
+	bounds: 2, 2, 24, 557
+	offsets: 39, 19, 106, 898
+	rotate: 90
+FS0006
+	bounds: 2, 129, 35, 716
+	offsets: 34, 16, 106, 898
+	rotate: 90
+FS0007
+	bounds: 862, 399, 44, 776
+	offsets: 32, 44, 106, 898
+	rotate: 90
+FS0008
+	bounds: 2, 373, 58, 839
+	offsets: 24, 40, 106, 898
+	rotate: 90
+FS0009
+	bounds: 862, 445, 64, 782
+	offsets: 19, 106, 106, 898
+	rotate: 90
+FS0010
+	bounds: 2, 433, 76, 858
+	offsets: 14, 40, 106, 898
+	rotate: 90
+FS0011
+	bounds: 2, 265, 106, 744
+	offsets: 0, 135, 106, 898
+	rotate: 90
+FS0012
+	bounds: 2, 166, 97, 705
+	offsets: 1, 183, 106, 898
+	rotate: 90
+FS0013
+	bounds: 2, 28, 99, 601
+	offsets: 3, 297, 106, 898
+	rotate: 90
+FS0014
+	bounds: 843, 299, 98, 562
+	offsets: 2, 332, 106, 898
+	rotate: 90
+FS0015
+	bounds: 748, 195, 102, 532
+	offsets: 3, 362, 106, 898
+	rotate: 90
+FS0016
+	bounds: 720, 100, 93, 497
+	offsets: 5, 400, 106, 898
+	rotate: 90
+FS0017
+	bounds: 605, 4, 94, 481
+	offsets: 6, 415, 106, 898
+	rotate: 90
+FS0018
+	bounds: 1407, 311, 86, 451
+	offsets: 8, 447, 106, 898
+	rotate: 90
+FS0019
+	bounds: 1282, 201, 83, 426
+	offsets: 9, 471, 106, 898
+	rotate: 90
+FS0020
+	bounds: 1282, 118, 81, 405
+	offsets: 10, 493, 106, 898
+	rotate: 90
+FS0021
+	bounds: 1088, 7, 83, 341
+	offsets: 9, 556, 106, 898
+	rotate: 90
+FS0022
+	bounds: 1646, 431, 78, 257
+	offsets: 11, 640, 106, 898
+	rotate: 90
+FS0023
+	bounds: 1431, 10, 80, 327
+	offsets: 12, 561, 106, 898
+	rotate: 90
+FS0024
+	bounds: 1689, 142, 57, 206
+	offsets: 27, 681, 106, 898
+	rotate: 90
+FS0025
+	bounds: 1710, 237, 47, 141
+	offsets: 27, 745, 106, 898
+	rotate: 90

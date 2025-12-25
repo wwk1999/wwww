@@ -1,0 +1,13 @@
+action.png
+	size: 533, 94
+	filter: Linear, Linear
+	pma: true
+attack/DD/00000
+	bounds: 2, 2, 179, 90
+	offsets: 10, 2, 200, 100
+attack/DD/00001
+	bounds: 183, 2, 176, 90
+	offsets: 13, 2, 200, 100
+attack/DD/00002
+	bounds: 361, 2, 170, 90
+	offsets: 19, 2, 200, 100

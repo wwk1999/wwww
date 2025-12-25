@@ -1,0 +1,39 @@
+{
+"skeleton": { "hash": "8SU1JQnvp+E", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H幻之妖姬\\特效\\E10692" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "1", "parent": "root" },
+	{ "name": "fx", "parent": "1" }
+],
+"slots": [
+	{ "name": "tx", "bone": "fx" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"tx": {
+				"skill1/Ddao/00000": { "width": 300, "height": 125 },
+				"skill1/Ddao/00001": { "width": 300, "height": 125 },
+				"skill1/Ddao/00002": { "width": 300, "height": 125 },
+				"skill1/Ddao/00003": { "width": 300, "height": 125 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"tx": {
+				"attachment": [
+					{ "name": "skill1/Ddao/00000" },
+					{ "time": 0.10000001, "name": "skill1/Ddao/00001" },
+					{ "time": 0.20000002, "name": "skill1/Ddao/00002" },
+					{ "time": 0.3, "name": "skill1/Ddao/00003" },
+					{ "time": 0.43333337 }
+				]
+			}
+		}
+	}
+}
+}

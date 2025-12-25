@@ -1,0 +1,71 @@
+{
+"skeleton": {
+	"hash": "WyrA0XnleOA",
+	"spine": "4.3.39-beta",
+	"x": -104,
+	"y": -18,
+	"width": 208,
+	"height": 236,
+	"images": "./0/",
+	"audio": "G:/游戏素材收集/英灵召唤师/effect/skilleffect/eff34meimofd"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "bone2", "parent": "bone", "length": 278.05, "y": 100 }
+],
+"slots": [
+	{ "name": "hjk", "bone": "bone2", "attachment": "PZiFd0001" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"hjk": {
+				"PZiFd0001": { "width": 208, "height": 236 },
+				"PZiFd0002": { "width": 208, "height": 236 },
+				"PZiFd0003": { "width": 208, "height": 236 },
+				"PZiFd0004": { "width": 208, "height": 236 },
+				"PZiFd0005": { "width": 208, "height": 236 },
+				"PZiFd0006": { "width": 208, "height": 236 },
+				"PZiFd0007": { "width": 208, "height": 236 },
+				"PZiFd0008": { "width": 208, "height": 236 },
+				"PZiFd0009": { "width": 208, "height": 236 },
+				"PZiFd0010": { "width": 208, "height": 236 },
+				"PZiFd0011": { "width": 208, "height": 236 },
+				"PZiFd0012": { "width": 208, "height": 236 },
+				"PZiFd0013": { "width": 208, "height": 236 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"hjk": {
+				"rgba": [
+					{ "color": "ffffff00", "curve": "stepped" },
+					{ "time": 0.13333334, "color": "ffffff00" },
+					{ "time": 0.16666667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.90000004, "color": "ffffffff" },
+					{ "time": 0.9333334, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.23333335, "name": "PZiFd0002" },
+					{ "time": 0.3, "name": "PZiFd0003" },
+					{ "time": 0.36666667, "name": "PZiFd0004" },
+					{ "time": 0.43333337, "name": "PZiFd0005" },
+					{ "time": 0.4666667, "name": "PZiFd0006" },
+					{ "time": 0.5, "name": "PZiFd0007" },
+					{ "time": 0.53333336, "name": "PZiFd0008" },
+					{ "time": 0.6, "name": "PZiFd0009" },
+					{ "time": 0.6666667, "name": "PZiFd0010" },
+					{ "time": 0.73333335, "name": "PZiFd0011" },
+					{ "time": 0.8000001, "name": "PZiFd0012" },
+					{ "time": 0.86666673, "name": "PZiFd0013" }
+				]
+			}
+		}
+	}
+}
+}

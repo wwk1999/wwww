@@ -1,0 +1,141 @@
+{
+"skeleton": { "hash": "zYxmy8+UwP8", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H幻之妖姬\\特效\\E10162" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "fx", "parent": "root" },
+	{ "name": "wz", "parent": "fx" },
+	{ "name": "wz2", "parent": "fx" },
+	{ "name": "wz3", "parent": "fx" }
+],
+"slots": [
+	{ "name": "1", "bone": "wz" },
+	{ "name": "2", "bone": "wz2" },
+	{ "name": "3", "bone": "wz3" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"1": {
+				"jn1/jn1_000": { "width": 330, "height": 160 },
+				"jn1/jn1_001": { "width": 330, "height": 160 },
+				"jn1/jn1_002": { "width": 330, "height": 160 },
+				"jn1/jn1_003": { "width": 330, "height": 160 },
+				"jn1/jn1_004": { "width": 330, "height": 160 },
+				"jn1/jn1_005": { "width": 330, "height": 160 },
+				"jn1/jn1_006": { "width": 330, "height": 160 },
+				"jn1/jn1_007": { "width": 330, "height": 160 }
+			},
+			"2": {
+				"jn1/jn1_000": { "width": 330, "height": 160 },
+				"jn1/jn1_001": { "width": 330, "height": 160 },
+				"jn1/jn1_002": { "width": 330, "height": 160 },
+				"jn1/jn1_003": { "width": 330, "height": 160 },
+				"jn1/jn1_004": { "width": 330, "height": 160 },
+				"jn1/jn1_005": { "width": 330, "height": 160 },
+				"jn1/jn1_006": { "width": 330, "height": 160 },
+				"jn1/jn1_007": { "width": 330, "height": 160 }
+			},
+			"3": {
+				"jn1/jn1_000": { "width": 330, "height": 160 },
+				"jn1/jn1_001": { "width": 330, "height": 160 },
+				"jn1/jn1_002": { "width": 330, "height": 160 },
+				"jn1/jn1_003": { "width": 330, "height": 160 },
+				"jn1/jn1_004": { "width": 330, "height": 160 },
+				"jn1/jn1_005": { "width": 330, "height": 160 },
+				"jn1/jn1_006": { "width": 330, "height": 160 },
+				"jn1/jn1_007": { "width": 330, "height": 160 }
+			}
+		}
+	}
+],
+"events": {
+	"hit": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"1": {
+				"rgba": [
+					{ "time": 0.4666667, "color": "ffffffff" },
+					{ "time": 0.6333334, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "jn1/jn1_000" },
+					{ "time": 0.06666667, "name": "jn1/jn1_001" },
+					{ "time": 0.13333334, "name": "jn1/jn1_002" },
+					{ "time": 0.20000002, "name": "jn1/jn1_003" },
+					{ "time": 0.26666668, "name": "jn1/jn1_004" },
+					{ "time": 0.33333334, "name": "jn1/jn1_005" },
+					{ "time": 0.40000004, "name": "jn1/jn1_006" },
+					{ "time": 0.4666667, "name": "jn1/jn1_007" },
+					{ "time": 0.6333334 }
+				]
+			},
+			"2": {
+				"rgba": [
+					{ "time": 0.4666667, "color": "ffffffff" },
+					{ "time": 0.6333334, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "jn1/jn1_000" },
+					{ "time": 0.06666667, "name": "jn1/jn1_001" },
+					{ "time": 0.13333334, "name": "jn1/jn1_002" },
+					{ "time": 0.20000002, "name": "jn1/jn1_003" },
+					{ "time": 0.26666668, "name": "jn1/jn1_004" },
+					{ "time": 0.33333334, "name": "jn1/jn1_005" },
+					{ "time": 0.40000004, "name": "jn1/jn1_006" },
+					{ "time": 0.4666667, "name": "jn1/jn1_007" },
+					{ "time": 0.6333334 }
+				]
+			},
+			"3": {
+				"rgba": [
+					{ "time": 0.4666667, "color": "ffffffff" },
+					{ "time": 0.6333334, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "jn1/jn1_000" },
+					{ "time": 0.06666667, "name": "jn1/jn1_001" },
+					{ "time": 0.13333334, "name": "jn1/jn1_002" },
+					{ "time": 0.20000002, "name": "jn1/jn1_003" },
+					{ "time": 0.26666668, "name": "jn1/jn1_004" },
+					{ "time": 0.33333334, "name": "jn1/jn1_005" },
+					{ "time": 0.40000004, "name": "jn1/jn1_006" },
+					{ "time": 0.4666667, "name": "jn1/jn1_007" },
+					{ "time": 0.6333334 }
+				]
+			}
+		},
+		"bones": {
+			"wz": {
+				"translate": [
+					{ "x": 388.83 }
+				],
+				"scale": [
+					{ "x": 3, "y": 3 }
+				]
+			},
+			"wz3": {
+				"translate": [
+					{ "x": 489.39, "y": -236.3 }
+				],
+				"scale": [
+					{ "x": 3, "y": 3 }
+				]
+			},
+			"wz2": {
+				"translate": [
+					{ "x": 489.39, "y": 236.32 }
+				],
+				"scale": [
+					{ "x": 3, "y": 3 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.23333335, "name": "hit" }
+		]
+	}
+}
+}

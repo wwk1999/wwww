@@ -1,0 +1,220 @@
+skeleton.png
+	size: 2010, 785
+	filter: Linear, Linear
+	pma: true
+BHua0001
+	bounds: 811, 308, 156, 133
+	offsets: 14, 26, 171, 174
+	rotate: 90
+BHua0002
+	bounds: 1627, 30, 151, 128
+	offsets: 17, 31, 171, 174
+BHua0003
+	bounds: 881, 466, 155, 132
+	offsets: 14, 27, 171, 174
+	rotate: 90
+BHua0004
+	bounds: 1144, 9, 151, 151
+	offsets: 17, 8, 171, 174
+BHua0005
+	bounds: 1144, 9, 151, 151
+	offsets: 17, 8, 171, 174
+BHua0006
+	bounds: 1837, 619, 171, 164
+	offsets: 0, 8, 171, 174
+BHua0007
+	bounds: 1297, 3, 166, 164
+	offsets: 2, 8, 171, 174
+BHua0008
+	bounds: 451, 475, 170, 164
+	offsets: 1, 8, 171, 174
+BHua0009
+	bounds: 1505, 488, 166, 164
+	offsets: 2, 8, 171, 174
+BHua0010
+	bounds: 1435, 322, 166, 164
+	offsets: 2, 8, 171, 174
+BHua0011
+	bounds: 1339, 492, 159, 164
+	offsets: 5, 8, 171, 174
+	rotate: 90
+BHua0012
+	bounds: 1673, 489, 159, 166
+	offsets: 5, 6, 171, 174
+BHua0013
+	bounds: 976, 2, 158, 166
+	offsets: 8, 6, 171, 174
+	rotate: 90
+BHua0014
+	bounds: 1125, 162, 158, 166
+	offsets: 8, 6, 171, 174
+	rotate: 90
+BHua0015
+	bounds: 1465, 154, 159, 166
+	offsets: 7, 6, 171, 174
+BHua0016
+	bounds: 1603, 322, 159, 164
+	offsets: 7, 8, 171, 174
+BHua0017
+	bounds: 1169, 492, 159, 168
+	offsets: 7, 4, 171, 174
+	rotate: 90
+BHua0018
+	bounds: 1105, 322, 163, 168
+	offsets: 7, 4, 171, 174
+BHua0019
+	bounds: 1270, 322, 163, 168
+	offsets: 7, 4, 171, 174
+BHua0020
+	bounds: 1834, 454, 163, 168
+	offsets: 7, 4, 171, 174
+	rotate: 90
+BHua0021
+	bounds: 818, 2, 156, 157
+	offsets: 14, 15, 171, 174
+BHua0022
+	bounds: 946, 308, 156, 157
+	offsets: 14, 15, 171, 174
+	rotate: 90
+BHua0023
+	bounds: 525, 2, 170, 154
+	offsets: 0, 18, 171, 174
+BHua0024
+	bounds: 709, 466, 170, 155
+	offsets: 0, 17, 171, 174
+BHua0025
+	bounds: 639, 310, 170, 154
+	offsets: 0, 18, 171, 174
+BHua0026
+	bounds: 1015, 494, 170, 152
+	offsets: 0, 20, 171, 174
+	rotate: 90
+BHua0027
+	bounds: 1293, 169, 170, 151
+	offsets: 0, 21, 171, 174
+BHua0028
+	bounds: 619, 158, 170, 150
+	offsets: 0, 22, 171, 174
+BHua0029
+	bounds: 791, 161, 170, 145
+	offsets: 0, 27, 171, 174
+BHua0030
+	bounds: 1626, 160, 160, 151
+	offsets: 0, 21, 171, 174
+	rotate: 90
+BHua0031
+	bounds: 1626, 160, 160, 151
+	offsets: 0, 21, 171, 174
+	rotate: 90
+BHua0032
+	bounds: 963, 162, 160, 144
+	offsets: 0, 23, 171, 174
+BHua0033
+	bounds: 1465, 8, 160, 144
+	offsets: 0, 23, 171, 174
+BHua0034
+	bounds: 697, 2, 154, 119
+	offsets: 0, 48, 171, 174
+	rotate: 90
+Bh0.5
+	bounds: 525, 158, 191, 92
+	offsets: 51, 34, 288, 280
+	rotate: 90
+Bsan0.750001
+	bounds: 2, 25, 45, 131
+	offsets: 55, 8, 136, 294
+	rotate: 90
+Bsan0.750002
+	bounds: 623, 480, 84, 159
+	offsets: 29, 16, 136, 294
+Bsan0.750003
+	bounds: 935, 666, 117, 233
+	offsets: 10, 8, 136, 294
+	rotate: 90
+Bsan0.750004
+	bounds: 135, 90, 124, 253
+	offsets: 7, 9, 136, 294
+Bsan0.750005
+	bounds: 321, 351, 128, 278
+	offsets: 3, 12, 136, 294
+Bsan0.750006
+	bounds: 57, 345, 132, 284
+	offsets: 0, 9, 136, 294
+Bsan0.750007
+	bounds: 191, 348, 128, 281
+	offsets: 3, 12, 136, 294
+Bsan0.750008
+	bounds: 2, 72, 131, 269
+	offsets: 1, 24, 136, 294
+Bsan0.750009
+	bounds: 261, 94, 130, 252
+	offsets: 1, 41, 136, 294
+Bsan0.750010
+	bounds: 393, 111, 130, 238
+	offsets: 2, 51, 136, 294
+Bsan0.750011
+	bounds: 1170, 653, 130, 228
+	offsets: 1, 59, 136, 294
+	rotate: 90
+Bsan0.750012
+	bounds: 1400, 654, 129, 223
+	offsets: 3, 66, 136, 294
+	rotate: 90
+Bsan0.750013
+	bounds: 1625, 657, 126, 210
+	offsets: 3, 73, 136, 294
+	rotate: 90
+Bsan0.750014
+	bounds: 715, 623, 124, 201
+	offsets: 4, 79, 136, 294
+	rotate: 90
+Bsan0.750015
+	bounds: 451, 351, 122, 186
+	offsets: 5, 95, 136, 294
+	rotate: 90
+Bsan0.750016
+	bounds: 1764, 330, 122, 144
+	offsets: 5, 134, 136, 294
+	rotate: 90
+Bsan0.750017
+	bounds: 1780, 57, 122, 132
+	offsets: 5, 143, 136, 294
+Bsan0.750018
+	bounds: 1779, 191, 121, 137
+	offsets: 5, 140, 136, 294
+Bsan0.750019
+	bounds: 1910, 334, 118, 75
+	offsets: 7, 201, 136, 294
+	rotate: 90
+Bsan0.750020
+	bounds: 135, 19, 117, 69
+	offsets: 8, 198, 136, 294
+Bsan0.750021
+	bounds: 393, 55, 116, 54
+	offsets: 7, 222, 136, 294
+bhz
+	bounds: 502, 641, 211, 106
+	offsets: 0, 1, 212, 117
+xian0001
+	bounds: 502, 749, 34, 431
+	offsets: 6, 49, 60, 504
+	rotate: 90
+xian0002
+	bounds: 2, 343, 53, 440
+	offsets: 0, 35, 60, 504
+xian0003
+	bounds: 57, 742, 41, 443
+	offsets: 11, 20, 60, 504
+	rotate: 90
+xian0004
+	bounds: 57, 631, 38, 390
+	offsets: 12, 87, 60, 504
+	rotate: 90
+xian0005
+	bounds: 57, 671, 32, 416
+	offsets: 17, 76, 60, 504
+	rotate: 90
+xian0006
+	bounds: 57, 705, 35, 436
+	offsets: 12, 56, 60, 504
+	rotate: 90

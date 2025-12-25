@@ -1,0 +1,520 @@
+{
+"skeleton": { "hash": "PBV7k80VtaI", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H女神转生\\spine2\\技能特效\\E30108_jineng2s" },
+"bones": [
+	{ "name": "root", "scaleX": 2, "scaleY": 2 },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "effect", "parent": "bone" },
+	{ "name": "atk_mz-glow", "parent": "effect" },
+	{ "name": "atk_mz_00", "parent": "effect" },
+	{ "name": "atk_sf_1", "parent": "effect", "scaleX": 0.7, "scaleY": 0.7 }
+],
+"slots": [
+	{ "name": "atk_sf_2", "bone": "atk_sf_1", "blend": "additive" },
+	{ "name": "atk_mz_00", "bone": "atk_mz_00", "blend": "multiply" },
+	{ "name": "atk_mz_0", "bone": "atk_mz_00", "blend": "additive" },
+	{ "name": "atk_mz-glow", "bone": "atk_mz-glow", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"atk_mz-glow": {
+				"atk_mz-glow": {
+					"type": "mesh",
+					"path": "effect/attack/atk_mz-glow",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 104, -104.5, -104, -104.5, -104, 104.5, 104, 104.5 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 208,
+					"height": 209
+				}
+			},
+			"atk_mz_0": {
+				"atk_mz_00": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_00",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 69.22, -42.13, -44.78, -42.13, -44.78, 45.87, 69.22, 45.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 114,
+					"height": 88
+				},
+				"atk_mz_01": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_01",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 111.22, -60.13, -95.78, -60.13, -95.78, 88.87, 111.22, 88.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 207,
+					"height": 149
+				},
+				"atk_mz_02": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_02",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 84.22, -83.13, -71.78, -83.13, -71.78, 67.87, 84.22, 67.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 156,
+					"height": 151
+				},
+				"atk_mz_03": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_03",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 84.22, -83.13, -70.78, -83.13, -70.78, 66.87, 84.22, 66.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 155,
+					"height": 150
+				},
+				"atk_mz_04": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_04",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 88.22, -83.13, -77.78, -83.13, -77.78, 67.87, 88.22, 67.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 166,
+					"height": 151
+				},
+				"atk_mz_05": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_05",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 88.22, -81.13, -74.78, -81.13, -74.78, 67.87, 88.22, 67.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 163,
+					"height": 149
+				},
+				"atk_mz_06": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_06",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 87.22, -68.13, -80.78, -68.13, -80.78, 68.87, 87.22, 68.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 168,
+					"height": 137
+				},
+				"atk_mz_08": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_08",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 81.22, -63.13, -80.78, -63.13, -80.78, 67.87, 81.22, 67.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 162,
+					"height": 131
+				},
+				"atk_mz_10": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_10",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 66.22, -61.13, -79.78, -61.13, -79.78, 48.87, 66.22, 48.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 146,
+					"height": 110
+				},
+				"atk_mz_12": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_12",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 65.22, -59.13, -76.78, -59.13, -76.78, 45.87, 65.22, 45.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 142,
+					"height": 105
+				},
+				"atk_mz_14": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_14",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 52.22, -41.13, -69.78, -41.13, -69.78, 33.87, 52.22, 33.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 122,
+					"height": 75
+				},
+				"atk_mz_16": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_16",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 44.22, -37.13, -52.78, -37.13, -52.78, 33.87, 44.22, 33.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 97,
+					"height": 71
+				},
+				"atk_mz_18": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_18",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -27.78, -6.13, -49.78, -6.13, -49.78, 20.87, -27.78, 20.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 22,
+					"height": 27
+				}
+			},
+			"atk_mz_00": {
+				"atk_mz_00": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_00",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 69.22, -42.13, -44.78, -42.13, -44.78, 45.87, 69.22, 45.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 114,
+					"height": 88
+				},
+				"atk_mz_01": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_01",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 111.22, -60.13, -95.78, -60.13, -95.78, 88.87, 111.22, 88.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 207,
+					"height": 149
+				},
+				"atk_mz_02": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_02",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 84.22, -83.13, -71.78, -83.13, -71.78, 67.87, 84.22, 67.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 156,
+					"height": 151
+				},
+				"atk_mz_03": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_03",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 84.22, -83.13, -70.78, -83.13, -70.78, 66.87, 84.22, 66.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 155,
+					"height": 150
+				},
+				"atk_mz_04": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_04",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 88.22, -83.13, -77.78, -83.13, -77.78, 67.87, 88.22, 67.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 166,
+					"height": 151
+				},
+				"atk_mz_05": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_05",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 88.22, -81.13, -74.78, -81.13, -74.78, 67.87, 88.22, 67.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 163,
+					"height": 149
+				},
+				"atk_mz_06": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_06",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 87.22, -68.13, -80.78, -68.13, -80.78, 68.87, 87.22, 68.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 168,
+					"height": 137
+				},
+				"atk_mz_08": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_08",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 81.22, -63.13, -80.78, -63.13, -80.78, 67.87, 81.22, 67.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 162,
+					"height": 131
+				},
+				"atk_mz_10": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_10",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 66.22, -61.13, -79.78, -61.13, -79.78, 48.87, 66.22, 48.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 146,
+					"height": 110
+				},
+				"atk_mz_12": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_12",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 65.22, -59.13, -76.78, -59.13, -76.78, 45.87, 65.22, 45.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 142,
+					"height": 105
+				},
+				"atk_mz_14": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_14",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 52.22, -41.13, -69.78, -41.13, -69.78, 33.87, 52.22, 33.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 122,
+					"height": 75
+				},
+				"atk_mz_16": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_16",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 44.22, -37.13, -52.78, -37.13, -52.78, 33.87, 44.22, 33.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 97,
+					"height": 71
+				},
+				"atk_mz_18": {
+					"type": "mesh",
+					"path": "effect/attack/mz/atk_mz_18",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -27.78, -6.13, -49.78, -6.13, -49.78, 20.87, -27.78, 20.87 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 22,
+					"height": 27
+				}
+			},
+			"atk_sf_2": {
+				"atk_sf_00": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_00",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 38.22, -62.41, -55.78, -62.41, -55.78, 43.59, 38.22, 43.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 94,
+					"height": 106
+				},
+				"atk_sf_01": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_01",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 79.22, -88.41, -86.78, -88.41, -86.78, 90.59, 79.22, 90.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 166,
+					"height": 179
+				},
+				"atk_sf_02": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_02",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 91.22, -103.41, -101.78, -103.41, -101.78, 105.59, 91.22, 105.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 193,
+					"height": 209
+				},
+				"atk_sf_03": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_03",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 95.22, -108.41, -107.78, -108.41, -107.78, 110.59, 95.22, 110.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 203,
+					"height": 219
+				},
+				"atk_sf_04": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_04",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 97.22, -113.41, -109.78, -113.41, -109.78, 113.59, 97.22, 113.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 207,
+					"height": 227
+				},
+				"atk_sf_05": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_05",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 99.22, -115.41, -112.78, -115.41, -112.78, 116.59, 99.22, 116.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 212,
+					"height": 232
+				},
+				"atk_sf_06": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_06",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 45.22, -50.41, -62.78, -50.41, -62.78, 62.59, 45.22, 62.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 108,
+					"height": 113
+				},
+				"atk_sf_07": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_07",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 43.22, -51.41, -51.78, -51.41, -51.78, 60.59, 43.22, 60.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 95,
+					"height": 112
+				},
+				"atk_sf_09": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_09",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 34.22, -22.41, -25.78, -22.41, -25.78, 50.59, 34.22, 50.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 60,
+					"height": 73
+				},
+				"atk_sf_11": {
+					"type": "mesh",
+					"path": "effect/attack/sf/atk_sf_11",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 31.22, -17.41, -22.78, -17.41, -22.78, 48.59, 31.22, 48.59 ],
+					"hull": 4,
+					"edges": [ 0, 6, 0, 2, 2, 4, 4, 6 ],
+					"width": 54,
+					"height": 66
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"atk_mz-glow": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.10000001, 1, 0.27440003, 1, 0.10000001, 1, 0.27440003, 1, 0.10000001, 1, 0.27440003, 1, 0.10000001, 1, 0.27440003, 0.43 ]
+					},
+					{ "time": 0.40000004, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "atk_mz-glow" }
+				]
+			},
+			"atk_mz_0": {
+				"attachment": [
+					{ "name": "atk_mz_00" },
+					{ "time": 0.033333335, "name": "atk_mz_01" },
+					{ "time": 0.06666667, "name": "atk_mz_02" },
+					{ "time": 0.10000001, "name": "atk_mz_03" },
+					{ "time": 0.13333334, "name": "atk_mz_04" },
+					{ "time": 0.16666667, "name": "atk_mz_05" },
+					{ "time": 0.20000002, "name": "atk_mz_06" },
+					{ "time": 0.26666668, "name": "atk_mz_08" },
+					{ "time": 0.33333334, "name": "atk_mz_10" },
+					{ "time": 0.40000004, "name": "atk_mz_12" },
+					{ "time": 0.4666667, "name": "atk_mz_14" },
+					{ "time": 0.53333336, "name": "atk_mz_16" },
+					{ "time": 0.6, "name": "atk_mz_18" },
+					{ "time": 0.6666667 }
+				]
+			},
+			"atk_mz_00": {
+				"attachment": [
+					{ "name": "atk_mz_00" },
+					{ "time": 0.033333335, "name": "atk_mz_01" },
+					{ "time": 0.06666667, "name": "atk_mz_02" },
+					{ "time": 0.10000001, "name": "atk_mz_03" },
+					{ "time": 0.13333334, "name": "atk_mz_04" },
+					{ "time": 0.16666667, "name": "atk_mz_05" },
+					{ "time": 0.20000002, "name": "atk_mz_06" },
+					{ "time": 0.26666668, "name": "atk_mz_08" },
+					{ "time": 0.33333334, "name": "atk_mz_10" },
+					{ "time": 0.40000004, "name": "atk_mz_12" },
+					{ "time": 0.4666667, "name": "atk_mz_14" },
+					{ "time": 0.53333336, "name": "atk_mz_16" },
+					{ "time": 0.6, "name": "atk_mz_18" },
+					{ "time": 0.6666667 }
+				]
+			},
+			"atk_sf_2": {
+				"attachment": [
+					{ "name": "atk_sf_00" },
+					{ "time": 0.033333335, "name": "atk_sf_01" },
+					{ "time": 0.06666667, "name": "atk_sf_02" },
+					{ "time": 0.10000001, "name": "atk_sf_03" },
+					{ "time": 0.13333334, "name": "atk_sf_04" },
+					{ "time": 0.16666667, "name": "atk_sf_05" },
+					{ "time": 0.20000002, "name": "atk_sf_06" },
+					{ "time": 0.23333335, "name": "atk_sf_07" },
+					{ "time": 0.3, "name": "atk_sf_09" },
+					{ "time": 0.36666667, "name": "atk_sf_11" },
+					{ "time": 0.43333337 }
+				]
+			}
+		},
+		"bones": {
+			"atk_mz-glow": {
+				"scale": [
+					{
+						"x": 0.022,
+						"y": 0.022,
+						"curve": [ 0.10000001, 0.022, 0.27440003, 0.70486003, 0.10000001, 0.022, 0.27440003, 0.70486003 ]
+					},
+					{ "time": 0.40000004, "x": 1.22, "y": 1.22 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,227 @@
+action.png
+	size: 2033, 1355
+	filter: Linear, Linear
+	pma: true
+guihuoa_0000
+	bounds: 2, 2, 216, 177
+	offsets: 54, 54, 324, 324
+guihuoa_0002
+	bounds: 1186, 608, 216, 168
+	offsets: 54, 54, 324, 324
+	rotate: 90
+guihuoa_0003
+	bounds: 1003, 287, 216, 146
+	offsets: 54, 54, 324, 324
+	rotate: 90
+guihuoa_0004
+	bounds: 1648, 847, 213, 150
+	offsets: 57, 54, 324, 324
+	rotate: 90
+guihuoa_0005
+	bounds: 1631, 709, 203, 136
+	offsets: 66, 56, 324, 324
+guihuoa_0006
+	bounds: 1151, 305, 198, 125
+	offsets: 62, 57, 324, 324
+	rotate: 90
+guihuoa_0007
+	bounds: 950, 505, 203, 83
+	offsets: 60, 61, 324, 324
+guihuoa_0008
+	bounds: 892, 826, 96, 47
+	offsets: 127, 58, 324, 324
+guikou_0000
+	bounds: 727, 804, 69, 84
+	offsets: 51, 38, 162, 162
+	rotate: 90
+guikou_0001
+	bounds: 813, 805, 68, 77
+	offsets: 51, 42, 162, 162
+	rotate: 90
+guikou_0002
+	bounds: 1705, 12, 64, 77
+	offsets: 51, 41, 162, 162
+	rotate: 90
+guikou_0003
+	bounds: 1155, 510, 63, 78
+	offsets: 51, 39, 162, 162
+guikou_0004
+	bounds: 1624, 13, 63, 79
+	offsets: 51, 37, 162, 162
+	rotate: 90
+guikou_0005
+	bounds: 1856, 38, 62, 78
+	offsets: 52, 40, 162, 162
+guikou_0006
+	bounds: 1959, 152, 56, 72
+	offsets: 54, 43, 162, 162
+	rotate: 90
+guikou_0007
+	bounds: 312, 17, 42, 67
+	offsets: 64, 44, 162, 162
+guikou_0008
+	bounds: 1778, 78, 38, 63
+	offsets: 64, 46, 162, 162
+	rotate: 90
+guikou_0009
+	bounds: 1802, 555, 18, 48
+	offsets: 72, 51, 162, 162
+guiyan_0006
+	bounds: 1784, 11, 70, 65
+	offsets: 48, 49, 162, 162
+heikuo_0000
+	bounds: 1599, 605, 224, 102
+	offsets: 47, 107, 324, 324
+heilizi_0000
+	bounds: 700, 496, 295, 248
+	offsets: 4, 55, 324, 324
+	rotate: 90
+heiyan_0000
+	bounds: 357, 31, 213, 304
+	offsets: 64, 10, 324, 324
+	rotate: 90
+heiyan_0002
+	bounds: 737, 875, 191, 303
+	offsets: 85, 12, 324, 324
+	rotate: 90
+heiyan_0004
+	bounds: 1346, 874, 186, 300
+	offsets: 83, 10, 324, 324
+	rotate: 90
+heiyan_0006
+	bounds: 1356, 733, 139, 273
+	offsets: 82, 31, 324, 324
+	rotate: 90
+heiyan_0008
+	bounds: 1356, 594, 137, 241
+	offsets: 92, 38, 324, 324
+	rotate: 90
+heiyan_0010
+	bounds: 1137, 75, 108, 210
+	offsets: 104, 53, 324, 324
+heiyan_0012
+	bounds: 1778, 118, 82, 179
+	offsets: 121, 63, 324, 324
+	rotate: 90
+heizhua_0000
+	bounds: 1801, 1022, 227, 331
+	offsets: 77, 0, 389, 389
+juliua_0003
+	bounds: 1472, 224, 141, 178
+	offsets: 128, 161, 389, 475
+juliua_0004
+	bounds: 2, 473, 354, 292
+	offsets: 22, 94, 389, 475
+juliua_0006
+	bounds: 2, 181, 353, 290
+	offsets: 18, 95, 389, 475
+juliua_0008
+	bounds: 737, 1068, 357, 285
+	offsets: 19, 96, 389, 475
+juliua_0010
+	bounds: 1096, 1068, 355, 285
+	offsets: 18, 97, 389, 475
+juliua_0012
+	bounds: 1453, 1062, 346, 291
+	offsets: 22, 96, 389, 475
+juliua_0014
+	bounds: 361, 498, 337, 293
+	offsets: 26, 92, 389, 475
+juliua_0016
+	bounds: 2, 767, 357, 297
+	offsets: 30, 88, 389, 475
+juliua_0018
+	bounds: 374, 1067, 361, 286
+	offsets: 15, 94, 389, 475
+juliua_0020
+	bounds: 2, 1066, 370, 287
+	offsets: 18, 97, 389, 475
+juliua_0022
+	bounds: 374, 793, 351, 272
+	offsets: 27, 102, 389, 475
+juliua_0024
+	bounds: 358, 246, 329, 250
+	offsets: 36, 116, 389, 475
+juliua_0026
+	bounds: 1042, 826, 302, 240
+	offsets: 49, 126, 389, 475
+juxian_0001
+	bounds: 1563, 539, 53, 33
+	offsets: 37, 13, 324, 324
+	rotate: 90
+juxian_0003
+	bounds: 1006, 18, 122, 50
+	offsets: 40, 15, 324, 324
+juxian_0005
+	bounds: 1477, 404, 188, 84
+	offsets: 42, 15, 324, 324
+	rotate: 90
+juxian_0007
+	bounds: 1006, 70, 215, 129
+	offsets: 71, 22, 324, 324
+	rotate: 90
+juxian_0009
+	bounds: 1440, 36, 182, 186
+	offsets: 124, 38, 324, 324
+juxian_0011
+	bounds: 1825, 532, 136, 204
+	offsets: 174, 58, 324, 324
+	rotate: 90
+juxian_0013
+	bounds: 220, 2, 90, 177
+	offsets: 220, 85, 324, 324
+juxian_0015
+	bounds: 1956, 210, 49, 140
+	offsets: 260, 123, 324, 324
+juxian_0017
+	bounds: 312, 86, 36, 93
+	offsets: 271, 170, 324, 324
+juxian_0019
+	bounds: 1959, 118, 32, 43
+	offsets: 268, 223, 324, 324
+	rotate: 90
+shizia_0000
+	bounds: 689, 211, 312, 283
+	offsets: 43, 50, 389, 389
+yuanguang_0000
+	bounds: 950, 590, 234, 234
+	offsets: 45, 45, 324, 324
+zilizi_0028
+	bounds: 1800, 855, 210, 165
+	offsets: 110, 212, 324, 576
+zilizi_0030
+	bounds: 663, 2, 207, 168
+	offsets: 112, 218, 324, 576
+	rotate: 90
+zilizi_0032
+	bounds: 833, 5, 204, 171
+	offsets: 114, 223, 324, 576
+	rotate: 90
+zilizi_0034
+	bounds: 1599, 429, 201, 174
+	offsets: 116, 227, 324, 576
+zilizi_0036
+	bounds: 1802, 352, 199, 178
+	offsets: 117, 232, 324, 576
+zilizi_0038
+	bounds: 1278, 411, 197, 181
+	offsets: 117, 236, 324, 576
+zilizi_0040
+	bounds: 1836, 670, 195, 183
+	offsets: 118, 240, 324, 576
+zilizi_0042
+	bounds: 1278, 224, 192, 185
+	offsets: 119, 244, 324, 576
+zilizi_0044
+	bounds: 1247, 36, 191, 186
+	offsets: 119, 247, 324, 576
+zilizi_0046
+	bounds: 1615, 237, 190, 184
+	offsets: 119, 251, 324, 576
+	rotate: 90
+zilizi_0048
+	bounds: 1624, 78, 152, 157
+	offsets: 120, 255, 324, 576
+zilizi_0050
+	bounds: 1801, 202, 153, 148
+	offsets: 121, 262, 324, 576

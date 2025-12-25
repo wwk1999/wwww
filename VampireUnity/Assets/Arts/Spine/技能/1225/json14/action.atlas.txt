@@ -1,0 +1,32 @@
+action.png
+	size: 1790, 987
+	filter: Linear, Linear
+	pma: true
+bao/0001
+	bounds: 2, 751, 234, 256
+	offsets: 337, 197, 920, 920
+	rotate: 90
+bao/0002
+	bounds: 1260, 509, 476, 528
+	offsets: 221, 128, 920, 920
+	rotate: 90
+bao/0003
+	bounds: 512, 24, 491, 613
+	offsets: 213, 121, 920, 920
+	rotate: 90
+bao/0004
+	bounds: 1127, 2, 505, 596
+	offsets: 209, 132, 920, 920
+	rotate: 90
+bao/0005
+	bounds: 2, 39, 480, 508
+	offsets: 219, 174, 920, 920
+	rotate: 90
+bao/0006
+	bounds: 754, 517, 468, 504
+	offsets: 219, 178, 920, 920
+	rotate: 90
+bao/0007
+	bounds: 260, 521, 464, 492
+	offsets: 219, 187, 920, 920
+	rotate: 90

@@ -1,0 +1,67 @@
+action.png
+	size: 1431, 404
+	filter: Linear, Linear
+	pma: true
+effect/attack/atk_mz-glow
+	bounds: 630, 193, 208, 209
+effect/attack/mz/atk_mz_00
+	bounds: 1186, 200, 114, 88
+effect/attack/mz/atk_mz_01
+	bounds: 1035, 195, 207, 149
+	rotate: 90
+effect/attack/mz/atk_mz_02
+	bounds: 759, 35, 156, 151
+	rotate: 90
+effect/attack/mz/atk_mz_03
+	bounds: 912, 36, 155, 150
+	rotate: 90
+effect/attack/mz/atk_mz_04
+	bounds: 183, 2, 166, 151
+	rotate: 90
+effect/attack/mz/atk_mz_05
+	bounds: 475, 18, 163, 149
+	rotate: 90
+effect/attack/mz/atk_mz_06
+	bounds: 336, 5, 168, 137
+	rotate: 90
+effect/attack/mz/atk_mz_08
+	bounds: 626, 19, 162, 131
+	rotate: 90
+effect/attack/mz/atk_mz_10
+	bounds: 1064, 47, 146, 110
+	rotate: 90
+effect/attack/mz/atk_mz_12
+	bounds: 1176, 51, 142, 105
+	rotate: 90
+effect/attack/mz/atk_mz_14
+	bounds: 1283, 327, 122, 75
+effect/attack/mz/atk_mz_16
+	bounds: 1283, 22, 97, 71
+	rotate: 90
+effect/attack/mz/atk_mz_18
+	bounds: 759, 6, 22, 27
+effect/attack/sf/atk_sf_00
+	bounds: 1302, 121, 94, 106
+	rotate: 90
+effect/attack/sf/atk_sf_01
+	bounds: 2, 2, 166, 179
+	rotate: 90
+effect/attack/sf/atk_sf_02
+	bounds: 840, 193, 193, 209
+effect/attack/sf/atk_sf_03
+	bounds: 425, 183, 203, 219
+effect/attack/sf/atk_sf_04
+	bounds: 216, 175, 207, 227
+effect/attack/sf/atk_sf_05
+	bounds: 2, 170, 212, 232
+effect/attack/sf/atk_sf_06
+	bounds: 1302, 217, 108, 113
+	rotate: 90
+effect/attack/sf/atk_sf_07
+	bounds: 1186, 290, 95, 112
+effect/attack/sf/atk_sf_09
+	bounds: 1356, 59, 60, 73
+	rotate: 90
+effect/attack/sf/atk_sf_11
+	bounds: 1356, 3, 54, 66
+	rotate: 90

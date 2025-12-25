@@ -1,0 +1,140 @@
+{
+"skeleton": {
+	"hash": "FYgYEBPJTBw",
+	"spine": "4.3.39-beta",
+	"x": -159.1239,
+	"y": -922.4175,
+	"width": 330.1078,
+	"height": 948.99493,
+	"images": "./0/",
+	"audio": "G:/游戏素材收集/英灵召唤师/effect/skilleffect/eff36diyuhuofx"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root" },
+	{ "name": "hei", "parent": "root", "length": 592.06, "rotation": 16.65, "x": -2.35, "y": 2.16 },
+	{ "name": "lit0", "parent": "root", "length": 277.2, "rotation": 18.29, "x": 0.75, "y": 0.6 },
+	{
+		"name": "bone2",
+		"parent": "bone",
+		"length": 300.96,
+		"rotation": 1.35,
+		"x": 5.93,
+		"y": -447.92,
+		"scaleX": 2,
+		"scaleY": 2
+	}
+],
+"slots": [
+	{ "name": "fx", "bone": "bone2", "attachment": "DyhFS0009" },
+	{ "name": "grd", "bone": "hei" },
+	{ "name": "col", "bone": "lit0" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"fx": {
+				"DyhFS0001": { "width": 154, "height": 471 },
+				"DyhFS0002": { "width": 154, "height": 471 },
+				"DyhFS0003": { "width": 154, "height": 471 },
+				"DyhFS0004": { "width": 154, "height": 471 },
+				"DyhFS0005": { "width": 154, "height": 471 },
+				"DyhFS0006": { "width": 154, "height": 471 },
+				"DyhFS0007": { "width": 154, "height": 471 },
+				"DyhFS0008": { "width": 154, "height": 471 },
+				"DyhFS0009": { "width": 154, "height": 471 },
+				"DyhFS0010": { "width": 154, "height": 471 },
+				"DyhFS0011": { "width": 154, "height": 471 },
+				"DyhFS0012": { "width": 154, "height": 471 },
+				"DyhFS0013": { "width": 154, "height": 471 },
+				"DyhFS0014": { "width": 154, "height": 471 },
+				"DyhFS0015": { "width": 154, "height": 471 },
+				"DyhFS0016": { "width": 154, "height": 471 },
+				"DyhFS0017": { "width": 154, "height": 471 },
+				"DyhFS0018": { "width": 154, "height": 471 },
+				"DyhFS0019": { "width": 154, "height": 471 },
+				"DyhFS0020": { "width": 154, "height": 471 },
+				"DyhFS0021": { "width": 154, "height": 471 },
+				"DyhFS0022": { "width": 154, "height": 471 },
+				"DyhFS0023": { "width": 154, "height": 471 },
+				"DyhFS0024": { "width": 154, "height": 471 },
+				"DyhFS0025": { "width": 154, "height": 471 },
+				"DyhFS0026": { "width": 154, "height": 471 }
+			}
+		}
+	}
+],
+"events": {
+	"E-END0": {}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"col": {
+				"rgba": [
+					{ "color": "4c2fffff" }
+				]
+			},
+			"fx": {
+				"attachment": [
+					{ "name": "DyhFS0001" },
+					{ "time": 0.033333335, "name": "DyhFS0002" },
+					{ "time": 0.06666667, "name": "DyhFS0003" },
+					{ "time": 0.10000001, "name": "DyhFS0004" },
+					{ "time": 0.13333334, "name": "DyhFS0005" },
+					{ "time": 0.16666667, "name": "DyhFS0006" },
+					{ "time": 0.20000002, "name": "DyhFS0007" },
+					{ "time": 0.23333335, "name": "DyhFS0008" },
+					{ "time": 0.26666668, "name": "DyhFS0009" },
+					{ "time": 0.3, "name": "DyhFS0010" },
+					{ "time": 0.33333334, "name": "DyhFS0011" },
+					{ "time": 0.36666667, "name": "DyhFS0012" },
+					{ "time": 0.40000004, "name": "DyhFS0013" },
+					{ "time": 0.43333337, "name": "DyhFS0014" },
+					{ "time": 0.4666667, "name": "DyhFS0015" },
+					{ "time": 0.5, "name": "DyhFS0016" },
+					{ "time": 0.53333336, "name": "DyhFS0017" },
+					{ "time": 0.5666667, "name": "DyhFS0018" },
+					{ "time": 0.6, "name": "DyhFS0019" },
+					{ "time": 0.6333334, "name": "DyhFS0020" },
+					{ "time": 0.6666667, "name": "DyhFS0021" },
+					{ "time": 0.70000005, "name": "DyhFS0022" },
+					{ "time": 0.73333335, "name": "DyhFS0023" },
+					{ "time": 0.7666667, "name": "DyhFS0024" },
+					{ "time": 0.8000001, "name": "DyhFS0025" },
+					{ "time": 0.8333334, "name": "DyhFS0026" }
+				]
+			},
+			"grd": {
+				"rgba": [
+					{ "color": "ffffffaa" }
+				]
+			}
+		},
+		"bones": {
+			"lit0": {
+				"translate": [
+					{ "x": 10.89, "y": -571.38 },
+					{ "time": 0.033333335, "x": 0.79, "y": -425.87 },
+					{ "time": 0.06666667, "x": -3.24, "y": -314.72 },
+					{ "time": 0.10000001, "x": -5.26, "y": -205.58 },
+					{ "time": 0.13333334, "x": 0.79, "y": -144.95 },
+					{ "time": 0.16666667, "x": 2.81, "y": -110.6 },
+					{ "time": 0.20000002, "x": 4.83, "y": -80.28 },
+					{ "time": 0.23333335, "x": 2.81, "y": -54.01 },
+					{ "time": 0.26666668, "x": -1.22, "y": -19.65 }
+				],
+				"scale": [
+					{ "x": 30, "curve": "stepped" },
+					{ "time": 0.23333335, "x": 30 },
+					{ "time": 0.6, "x": 10, "y": 0.4 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.20000002, "name": "E-END0" }
+		]
+	}
+}
+}

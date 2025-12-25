@@ -1,0 +1,270 @@
+skeleton.png
+	size: 2017, 1587
+	filter: Linear, Linear
+	pma: true
+Huoyan0001
+	bounds: 872, 172, 306, 102
+	offsets: 1, 21, 342, 148
+	rotate: 90
+Huoyan0002
+	bounds: 1046, 1277, 306, 112
+	offsets: 1, 14, 342, 148
+Huoyan0003
+	bounds: 593, 76, 307, 115
+	offsets: 1, 13, 342, 148
+	rotate: 90
+Huoyan0004
+	bounds: 326, 472, 309, 117
+	offsets: 1, 14, 342, 148
+Huoyan0005
+	bounds: 1018, 1044, 323, 108
+	offsets: 1, 21, 342, 148
+Huoyan0006
+	bounds: 1670, 1008, 325, 109
+	offsets: 1, 25, 342, 148
+Huoyan0007
+	bounds: 1354, 1283, 326, 108
+	offsets: 2, 27, 342, 148
+Huoyan0008
+	bounds: 666, 947, 323, 108
+	offsets: 2, 26, 342, 148
+Huoyan0009
+	bounds: 991, 948, 323, 94
+	offsets: 2, 30, 342, 148
+Huoyan0010
+	bounds: 1343, 1009, 322, 96
+	offsets: 2, 28, 342, 148
+Huoyan0011
+	bounds: 961, 639, 306, 99
+	offsets: 2, 26, 342, 148
+	rotate: 90
+Huoyan0012
+	bounds: 1220, 643, 303, 94
+	offsets: 1, 29, 342, 148
+	rotate: 90
+Huoyan0013
+	bounds: 710, 75, 302, 94
+	offsets: 1, 30, 342, 148
+Huoyan0014
+	bounds: 1784, 324, 293, 94
+	offsets: 1, 29, 342, 148
+	rotate: 90
+Huoyan0015
+	bounds: 1880, 324, 298, 97
+	offsets: 1, 24, 342, 148
+	rotate: 90
+Huoyan0016
+	bounds: 976, 337, 300, 93
+	offsets: 1, 26, 342, 148
+	rotate: 90
+Huoyan0017
+	bounds: 492, 75, 308, 99
+	offsets: 1, 21, 342, 148
+	rotate: 90
+Huoyan0018
+	bounds: 1591, 782, 304, 101
+	offsets: 1, 18, 342, 148
+Huoyan20001
+	bounds: 1071, 339, 63, 25
+	offsets: 7, 49, 390, 130
+Huoyan20002
+	bounds: 1956, 937, 69, 33
+	offsets: 7, 49, 390, 130
+	rotate: 90
+Huoyan20003
+	bounds: 1868, 624, 156, 43
+	offsets: 2, 40, 390, 130
+	rotate: 90
+Huoyan20004
+	bounds: 2, 6, 162, 54
+	offsets: 2, 37, 390, 130
+Huoyan20005
+	bounds: 1466, 12, 237, 57
+	offsets: 3, 35, 390, 130
+Huoyan20006
+	bounds: 774, 3, 241, 70
+	offsets: 3, 28, 390, 130
+Huoyan20007
+	bounds: 326, 2, 297, 71
+	offsets: 19, 27, 390, 130
+Huoyan20008
+	bounds: 323, 385, 304, 85
+	offsets: 19, 21, 390, 130
+Huoyan20009
+	bounds: 1316, 921, 319, 86
+	offsets: 25, 21, 390, 130
+Huoyan20010
+	bounds: 691, 1057, 325, 104
+	offsets: 25, 8, 390, 130
+Huoyan20011
+	bounds: 1682, 1353, 333, 104
+	offsets: 26, 8, 390, 130
+Huoyan20012
+	bounds: 695, 1277, 349, 112
+	offsets: 26, 3, 390, 130
+Huoyan20013
+	bounds: 694, 1163, 337, 112
+	offsets: 40, 3, 390, 130
+Huoyan20014
+	bounds: 347, 1153, 342, 109
+	offsets: 40, 5, 390, 130
+Huoyan20015
+	bounds: 1670, 1119, 336, 109
+	offsets: 48, 5, 390, 130
+Huoyan20016
+	bounds: 352, 1264, 340, 121
+	offsets: 48, 4, 390, 130
+Huoyan20017
+	bounds: 1682, 1230, 332, 121
+	offsets: 55, 4, 390, 130
+Huoyan20018
+	bounds: 1682, 1459, 333, 126
+	offsets: 55, 3, 390, 130
+Huoyan20019
+	bounds: 198, 56, 326, 126
+	offsets: 62, 3, 390, 130
+	rotate: 90
+Huoyan20020
+	bounds: 1033, 1154, 319, 121
+	offsets: 70, 7, 390, 130
+Huoyan20021
+	bounds: 1637, 885, 317, 121
+	offsets: 73, 7, 390, 130
+Huoyan20022
+	bounds: 1233, 342, 269, 122
+	offsets: 85, 7, 390, 130
+Huoyan20023
+	bounds: 1233, 218, 265, 122
+	offsets: 88, 7, 390, 130
+Huoyan20024
+	bounds: 1774, 61, 261, 124
+	offsets: 93, 6, 390, 130
+	rotate: 90
+Huoyan20025
+	bounds: 1233, 92, 262, 124
+	offsets: 92, 6, 390, 130
+Huoyan20026
+	bounds: 1017, 3, 258, 70
+	offsets: 97, 30, 390, 130
+Huoyan20027
+	bounds: 1277, 17, 187, 73
+	offsets: 168, 29, 390, 130
+Huoyan20028
+	bounds: 625, 2, 147, 71
+	offsets: 174, 29, 390, 130
+Huoyan20029
+	bounds: 1900, 93, 83, 72
+	offsets: 239, 29, 390, 130
+Huoyan20030
+	bounds: 1897, 806, 77, 73
+	offsets: 245, 28, 390, 130
+	rotate: 90
+Huoyan20031
+	bounds: 1343, 1136, 16, 9
+	offsets: 307, 92, 390, 130
+	rotate: 90
+ychen0002
+	bounds: 1900, 167, 155, 83
+	offsets: 13, 83, 474, 228
+	rotate: 90
+ychen0003
+	bounds: 1014, 75, 214, 103
+	offsets: 26, 71, 474, 228
+ychen0004
+	bounds: 1500, 199, 272, 122
+	offsets: 39, 59, 474, 228
+ychen0005
+	bounds: 1497, 71, 271, 126
+	offsets: 46, 56, 474, 228
+ychen0006
+	bounds: 1316, 627, 275, 129
+	offsets: 51, 53, 474, 228
+ychen0007
+	bounds: 1503, 482, 279, 135
+	offsets: 56, 50, 474, 228
+ychen0008
+	bounds: 650, 632, 309, 143
+	offsets: 34, 48, 474, 228
+ychen0009
+	bounds: 647, 480, 309, 150
+	offsets: 43, 46, 474, 228
+ychen0010
+	bounds: 1062, 640, 306, 156
+	offsets: 54, 44, 474, 228
+	rotate: 90
+ychen0011
+	bounds: 710, 171, 307, 160
+	offsets: 59, 43, 474, 228
+	rotate: 90
+ychen0012
+	bounds: 326, 75, 308, 164
+	offsets: 63, 41, 474, 228
+	rotate: 90
+ychen0013
+	bounds: 650, 777, 309, 168
+	offsets: 67, 37, 474, 228
+ychen0014
+	bounds: 1354, 1107, 314, 174
+	offsets: 72, 32, 474, 228
+ychen0015
+	bounds: 326, 591, 319, 178
+	offsets: 76, 27, 474, 228
+ychen0016
+	bounds: 339, 965, 325, 186
+	offsets: 80, 22, 474, 228
+ychen0017
+	bounds: 1353, 1393, 327, 192
+	offsets: 86, 18, 474, 228
+ychen0018
+	bounds: 1025, 1391, 326, 194
+	offsets: 91, 16, 474, 228
+ychen0019
+	bounds: 2, 782, 324, 197
+	offsets: 96, 14, 474, 228
+ychen0020
+	bounds: 2, 582, 322, 198
+	offsets: 101, 13, 474, 228
+ychen0021
+	bounds: 2, 384, 319, 196
+	offsets: 105, 13, 474, 228
+ychen0022
+	bounds: 2, 62, 320, 194
+	offsets: 108, 13, 474, 228
+	rotate: 90
+ychen0023
+	bounds: 328, 771, 320, 192
+	offsets: 113, 13, 474, 228
+ychen0024
+	bounds: 695, 1391, 328, 194
+	offsets: 113, 13, 474, 228
+ychen0025
+	bounds: 2, 981, 335, 196
+	offsets: 114, 14, 474, 228
+ychen0026
+	bounds: 352, 1387, 341, 198
+	offsets: 113, 13, 474, 228
+ychen0027
+	bounds: 2, 1179, 343, 200
+	offsets: 114, 12, 474, 228
+ychen0028
+	bounds: 2, 1381, 348, 204
+	offsets: 115, 9, 474, 228
+ychen0029
+	bounds: 976, 180, 255, 155
+	offsets: 115, 48, 474, 228
+ychen0030
+	bounds: 1504, 323, 261, 157
+	offsets: 115, 46, 474, 228
+ychen0031
+	bounds: 1233, 466, 268, 159
+	offsets: 114, 44, 474, 228
+ychen0032
+	bounds: 1316, 758, 273, 161
+	offsets: 113, 42, 474, 228
+ychen0033
+	bounds: 1593, 619, 273, 161
+	offsets: 114, 43, 474, 228
+ychen0034
+	bounds: 1071, 366, 272, 160
+	offsets: 117, 44, 474, 228
+	rotate: 90

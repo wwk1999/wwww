@@ -1,0 +1,35 @@
+action.png
+	size: 434, 886
+	filter: Linear, Linear
+	pma: true
+effect_skill2_1/g1_00000
+	bounds: 298, 707, 132, 177
+	offsets: 66, 2, 256, 256
+effect_skill2_1/g1_00001
+	bounds: 244, 34, 182, 194
+	offsets: 56, 3, 256, 256
+effect_skill2_1/g1_00002
+	bounds: 2, 2, 220, 228
+	offsets: 25, 3, 256, 256
+	rotate: 90
+effect_skill2_1/g1_00003
+	bounds: 2, 427, 218, 244
+	offsets: 27, 3, 256, 256
+	rotate: 90
+effect_skill2_1/g1_00004
+	bounds: 2, 224, 201, 240
+	offsets: 35, 3, 256, 256
+	rotate: 90
+effect_skill2_1/g1_00005
+	bounds: 248, 299, 184, 222
+	offsets: 42, 3, 256, 256
+effect_skill2_1/g1_00006
+	bounds: 298, 523, 87, 182
+	offsets: 84, 41, 256, 256
+effect_skill2_1/g1_00007
+	bounds: 244, 230, 67, 184
+	offsets: 99, 38, 256, 256
+	rotate: 90
+ks1_000
+	bounds: 2, 647, 294, 237
+	offsets: 3, 5, 300, 250

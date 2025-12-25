@@ -1,0 +1,16 @@
+action.png
+	size: 1172, 129
+	filter: Linear, Linear
+	pma: true
+skill1/Ddao/00000
+	bounds: 302, 2, 297, 125
+	offsets: 2, 0, 300, 125
+skill1/Ddao/00001
+	bounds: 890, 2, 280, 125
+	offsets: 17, 0, 300, 125
+skill1/Ddao/00002
+	bounds: 601, 2, 287, 125
+	offsets: 13, 0, 300, 125
+skill1/Ddao/00003
+	bounds: 2, 2, 298, 125
+	offsets: 2, 0, 300, 125

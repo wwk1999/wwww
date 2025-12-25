@@ -1,0 +1,58 @@
+1209112.png
+	size: 117, 387
+	filter: Linear, Linear
+	pma: true
+gc
+	bounds: 2, 185, 56, 59
+	offsets: 3, 0, 60, 61
+	rotate: 90
+guanban1
+	bounds: 83, 9, 24, 24
+	offsets: 3, 3, 30, 30
+guangquan_a1
+	bounds: 2, 310, 75, 75
+	offsets: 1, 1, 77, 77
+hit_a001
+	bounds: 2, 243, 65, 69
+	offsets: 9, 6, 80, 79
+	rotate: 90
+hitline
+	bounds: 79, 314, 71, 32
+	offsets: 4, 4, 77, 38
+	rotate: 90
+saber_ring_0
+	bounds: 79, 265, 47, 36
+	offsets: 7, 3, 91, 41
+	rotate: 90
+saber_ring_1
+	bounds: 2, 85, 57, 40
+	offsets: 10, 1, 91, 41
+saber_ring_2
+	bounds: 73, 195, 68, 41
+	offsets: 16, 0, 91, 41
+	rotate: 90
+saber_ring_3
+	bounds: 63, 133, 60, 41
+	offsets: 24, 0, 91, 41
+	rotate: 90
+saber_ring_4
+	bounds: 61, 75, 56, 41
+	offsets: 28, 0, 91, 41
+	rotate: 90
+saber_ring_5
+	bounds: 2, 42, 48, 41
+	offsets: 36, 0, 91, 41
+saber_ring_6
+	bounds: 2, 3, 43, 37
+	offsets: 41, 0, 91, 41
+saber_ring_7
+	bounds: 47, 2, 31, 34
+	offsets: 53, 0, 91, 41
+	rotate: 90
+sheet_01
+	bounds: 2, 127, 57, 56
+	offsets: 0, 2, 57, 58
+sheet_02
+	bounds: 52, 35, 38, 49
+	offsets: 1, 0, 39, 49
+	rotate: 90

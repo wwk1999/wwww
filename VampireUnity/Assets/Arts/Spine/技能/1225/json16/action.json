@@ -1,0 +1,67 @@
+{
+"skeleton": { "hash": "8vLk/Jbm+U4", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\J三國志侵略版\\spine\\技能\\H30127jineng4" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bao/bao0000", "parent": "root", "x": 2.51, "y": -0.27 }
+],
+"slots": [
+	{ "name": "bao-bao0000", "bone": "bao/bao0000" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"bao-bao0000": {
+				"bao/bao0000": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0001": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0002": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0003": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0004": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0005": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0006": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0007": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0008": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0009": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0010": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0011": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0012": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0013": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 },
+				"bao/bao0014": { "x": -4.81, "y": 132.72, "width": 640, "height": 640 }
+			}
+		}
+	}
+],
+"events": {
+	"attack": {},
+	"back": {},
+	"hit": {},
+	"move": {},
+	"ready": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"bao-bao0000": {
+				"attachment": [
+					{ "name": "bao/bao0000" },
+					{ "time": 0.033333335, "name": "bao/bao0001" },
+					{ "time": 0.06666667, "name": "bao/bao0002" },
+					{ "time": 0.10000001, "name": "bao/bao0003" },
+					{ "time": 0.16666667, "name": "bao/bao0004" },
+					{ "time": 0.23333335, "name": "bao/bao0005" },
+					{ "time": 0.3, "name": "bao/bao0006" },
+					{ "time": 0.36666667, "name": "bao/bao0007" },
+					{ "time": 0.40000004, "name": "bao/bao0008" },
+					{ "time": 0.4666667, "name": "bao/bao0009" },
+					{ "time": 0.53333336, "name": "bao/bao0010" },
+					{ "time": 0.6, "name": "bao/bao0011" },
+					{ "time": 0.6666667, "name": "bao/bao0012" },
+					{ "time": 0.70000005, "name": "bao/bao0013" },
+					{ "time": 0.7666667, "name": "bao/bao0014" },
+					{ "time": 0.8333334 }
+				]
+			}
+		}
+	}
+}
+}

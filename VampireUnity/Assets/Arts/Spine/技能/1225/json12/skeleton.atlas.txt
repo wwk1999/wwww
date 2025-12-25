@@ -1,0 +1,98 @@
+skeleton.png
+	size: 713, 511
+	filter: Linear, Linear
+	pma: true
+DyhFS0001
+	bounds: 179, 316, 117, 193
+	offsets: 22, 26, 154, 471
+DyhFS0002
+	bounds: 297, 125, 116, 191
+	offsets: 21, 85, 154, 471
+	rotate: 90
+DyhFS0003
+	bounds: 490, 117, 115, 141
+	offsets: 28, 191, 154, 471
+	rotate: 90
+DyhFS0004
+	bounds: 86, 280, 91, 229
+	offsets: 27, 161, 154, 471
+DyhFS0005
+	bounds: 298, 317, 99, 205
+	offsets: 34, 210, 154, 471
+	rotate: 90
+DyhFS0006
+	bounds: 298, 418, 91, 218
+	offsets: 37, 211, 154, 471
+	rotate: 90
+DyhFS0007
+	bounds: 2, 266, 82, 243
+	offsets: 37, 198, 154, 471
+DyhFS0008
+	bounds: 76, 35, 74, 229
+	offsets: 33, 224, 154, 471
+DyhFS0009
+	bounds: 2, 26, 72, 238
+	offsets: 33, 228, 154, 471
+DyhFS0010
+	bounds: 152, 74, 70, 204
+	offsets: 35, 235, 154, 471
+DyhFS0011
+	bounds: 505, 307, 69, 205
+	offsets: 35, 235, 154, 471
+	rotate: 90
+DyhFS0012
+	bounds: 224, 111, 71, 203
+	offsets: 34, 234, 154, 471
+DyhFS0013
+	bounds: 501, 234, 71, 199
+	offsets: 34, 234, 154, 471
+	rotate: 90
+DyhFS0014
+	bounds: 298, 243, 72, 201
+	offsets: 33, 233, 154, 471
+	rotate: 90
+DyhFS0015
+	bounds: 518, 437, 72, 193
+	offsets: 33, 233, 154, 471
+	rotate: 90
+DyhFS0016
+	bounds: 518, 378, 57, 193
+	offsets: 47, 233, 154, 471
+	rotate: 90
+DyhFS0017
+	bounds: 297, 73, 50, 189
+	offsets: 48, 233, 154, 471
+	rotate: 90
+DyhFS0018
+	bounds: 488, 66, 49, 168
+	offsets: 49, 254, 154, 471
+	rotate: 90
+DyhFS0019
+	bounds: 152, 24, 47, 166
+	offsets: 48, 254, 154, 471
+	rotate: 90
+DyhFS0020
+	bounds: 320, 24, 47, 160
+	offsets: 48, 254, 154, 471
+	rotate: 90
+DyhFS0021
+	bounds: 666, 75, 45, 157
+	offsets: 48, 254, 154, 471
+DyhFS0022
+	bounds: 482, 19, 45, 152
+	offsets: 48, 253, 154, 471
+	rotate: 90
+DyhFS0023
+	bounds: 633, 127, 31, 105
+	offsets: 62, 297, 154, 471
+DyhFS0024
+	bounds: 2, 2, 22, 56
+	offsets: 62, 344, 154, 471
+	rotate: 90
+DyhFS0025
+	bounds: 658, 51, 22, 53
+	offsets: 62, 344, 154, 471
+	rotate: 90
+DyhFS0026
+	bounds: 482, 66, 3, 5
+	offsets: 81, 392, 154, 471

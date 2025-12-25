@@ -1,0 +1,72 @@
+{
+"skeleton": { "hash": "yTfSBNNYaJo", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\J三國志侵略版\\spine\\技能\\H30092jineng1" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "jineng3/0001", "parent": "root", "x": 3.89, "y": 4.58, "scaleX": 1.2532, "scaleY": 1.2532 }
+],
+"slots": [
+	{ "name": "jineng3-0001", "bone": "jineng3/0001" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"jineng3-0001": {
+				"jineng3/0001": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0002": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0003": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0004": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0005": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0006": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0007": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0008": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0009": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0010": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0011": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0012": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0013": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0014": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0015": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0016": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0017": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 },
+				"jineng3/0018": { "x": 0.8, "y": 59.94, "width": 600, "height": 600 }
+			}
+		}
+	}
+],
+"events": {
+	"hit": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"jineng3-0001": {
+				"attachment": [
+					{ "name": "jineng3/0001" },
+					{ "time": 0.06666667, "name": "jineng3/0002" },
+					{ "time": 0.13333334, "name": "jineng3/0003" },
+					{ "time": 0.20000002, "name": "jineng3/0004" },
+					{ "time": 0.26666668, "name": "jineng3/0005" },
+					{ "time": 0.33333334, "name": "jineng3/0006" },
+					{ "time": 0.40000004, "name": "jineng3/0007" },
+					{ "time": 0.4666667, "name": "jineng3/0008" },
+					{ "time": 0.53333336, "name": "jineng3/0009" },
+					{ "time": 0.6, "name": "jineng3/0010" },
+					{ "time": 0.6666667, "name": "jineng3/0011" },
+					{ "time": 0.73333335, "name": "jineng3/0012" },
+					{ "time": 0.8000001, "name": "jineng3/0013" },
+					{ "time": 0.86666673, "name": "jineng3/0014" },
+					{ "time": 0.9333334, "name": "jineng3/0015" },
+					{ "time": 1, "name": "jineng3/0016" },
+					{ "time": 1.0666667, "name": "jineng3/0017" },
+					{ "time": 1.1333334, "name": "jineng3/0018" },
+					{ "time": 1.2 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.53333336, "name": "hit" }
+		]
+	}
+}
+}

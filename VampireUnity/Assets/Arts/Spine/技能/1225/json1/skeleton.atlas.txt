@@ -1,0 +1,149 @@
+skeleton.png
+	size: 1907, 1792
+	filter: Linear, Linear
+	pma: true
+1kpzh0001
+	bounds: 1860, 1362, 226, 45
+	offsets: 53, 25, 340, 132
+	rotate: 90
+1kpzh0002
+	bounds: 1370, 2, 282, 58
+	offsets: 28, 16, 340, 132
+	rotate: 90
+1kpzh0003
+	bounds: 1810, 407, 297, 95
+	offsets: 21, 12, 340, 132
+	rotate: 90
+1kpzh0004
+	bounds: 124, 4, 312, 111
+	offsets: 13, 8, 340, 132
+	rotate: 90
+1kpzh0005
+	bounds: 237, 16, 325, 111
+	offsets: 5, 12, 340, 132
+1kpzh0006
+	bounds: 979, 110, 283, 105
+	offsets: 28, 20, 340, 132
+1kpzh0007
+	bounds: 1430, 158, 297, 116
+	offsets: 22, 16, 340, 132
+1kpzh0008
+	bounds: 2, 4, 312, 120
+	offsets: 14, 12, 340, 132
+	rotate: 90
+1kpzh0009
+	bounds: 1743, 1263, 325, 115
+	offsets: 5, 16, 340, 132
+	rotate: 90
+1kpzh0010
+	bounds: 1264, 2, 282, 104
+	offsets: 28, 27, 340, 132
+	rotate: 90
+1kpzh0011
+	bounds: 929, 4, 297, 104
+	offsets: 21, 23, 340, 132
+1kpzh0012
+	bounds: 615, 36, 312, 108
+	offsets: 13, 19, 340, 132
+1kpzh0013
+	bounds: 1809, 706, 325, 96
+	offsets: 5, 23, 340, 132
+	rotate: 90
+1kpzh0014
+	bounds: 979, 217, 186, 69
+	offsets: 86, 50, 340, 132
+1kpzh0015
+	bounds: 1430, 86, 147, 70
+	offsets: 106, 50, 340, 132
+1kpzh0016
+	bounds: 1430, 86, 147, 70
+	offsets: 106, 50, 340, 132
+2kpzh0001
+	bounds: 921, 429, 105, 601
+	offsets: 56, 27, 220, 740
+2kpzh0002
+	bounds: 784, 376, 135, 654
+	offsets: 41, 23, 220, 740
+2kpzh0003
+	bounds: 605, 1069, 200, 721
+	offsets: 11, 5, 220, 740
+2kpzh0004
+	bounds: 594, 335, 188, 723
+	offsets: 17, 7, 220, 740
+2kpzh0005
+	bounds: 404, 1060, 199, 730
+	offsets: 11, 5, 220, 740
+2kpzh0006
+	bounds: 404, 319, 188, 739
+	offsets: 17, 0, 220, 740
+2kpzh0007
+	bounds: 2, 1055, 199, 735
+	offsets: 11, 5, 220, 740
+2kpzh0008
+	bounds: 807, 1412, 188, 732
+	offsets: 17, 7, 220, 740
+	rotate: 90
+2kpzh0009
+	bounds: 2, 318, 199, 735
+	offsets: 11, 5, 220, 740
+2kpzh0010
+	bounds: 807, 1222, 188, 732
+	offsets: 17, 7, 220, 740
+	rotate: 90
+2kpzh0011
+	bounds: 203, 1055, 199, 735
+	offsets: 11, 5, 220, 740
+2kpzh0012
+	bounds: 807, 1032, 188, 728
+	offsets: 17, 7, 220, 740
+	rotate: 90
+2kpzh0013
+	bounds: 203, 319, 199, 734
+	offsets: 11, 5, 220, 740
+2kpzh0014
+	bounds: 807, 1602, 188, 733
+	offsets: 17, 7, 220, 740
+	rotate: 90
+2kpzh0015
+	bounds: 1542, 1590, 200, 361
+	offsets: 11, 5, 220, 740
+	rotate: 90
+2kpzh0016
+	bounds: 1430, 284, 188, 353
+	offsets: 17, 7, 220, 740
+2kpzh0017
+	bounds: 1028, 288, 200, 356
+	offsets: 11, 5, 220, 740
+2kpzh0018
+	bounds: 237, 129, 188, 376
+	offsets: 17, 7, 220, 740
+	rotate: 90
+2kpzh0019
+	bounds: 1028, 646, 199, 384
+	offsets: 11, 5, 220, 740
+2kpzh0020
+	bounds: 1430, 639, 187, 391
+	offsets: 17, 7, 220, 740
+2kpzh0021
+	bounds: 1229, 647, 199, 383
+	offsets: 11, 5, 220, 740
+2kpzh0022
+	bounds: 1619, 648, 188, 383
+	offsets: 17, 7, 220, 740
+2kpzh0023
+	bounds: 1620, 276, 188, 370
+	offsets: 17, 7, 220, 740
+2kpzh0024
+	bounds: 1541, 1218, 200, 370
+	offsets: 11, 5, 220, 740
+2kpzh0025
+	bounds: 615, 146, 187, 362
+	offsets: 18, 7, 220, 740
+	rotate: 90
+2kpzh0026
+	bounds: 1230, 286, 198, 359
+	offsets: 12, 6, 220, 740
+2kpzh0027
+	bounds: 1537, 1033, 183, 349
+	offsets: 19, 9, 220, 740
+	rotate: 90

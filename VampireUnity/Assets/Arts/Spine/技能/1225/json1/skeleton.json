@@ -1,0 +1,136 @@
+{
+"skeleton": {
+	"hash": "2JTCS3YMb1E",
+	"spine": "4.3.39-beta",
+	"x": -170,
+	"y": -51,
+	"width": 340,
+	"height": 746.68,
+	"images": "./0/",
+	"audio": "G:/游戏素材收集/英灵召唤师/effect/battleeffect/qizizhaohuan"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone", "parent": "root", "y": -5 },
+	{ "name": "bone2", "parent": "bone" },
+	{ "name": "bone3", "parent": "bone" },
+	{ "name": "bone4", "parent": "bone3", "x": 3, "y": 330.68 },
+	{ "name": "bone5", "parent": "bone2", "y": 20 }
+],
+"slots": [
+	{ "name": "zh1", "bone": "bone5", "attachment": "1kpzh0001" },
+	{ "name": "zh2", "bone": "bone4", "attachment": "2kpzh0001", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"zh1": {
+				"1kpzh0001": { "width": 340, "height": 132 },
+				"1kpzh0002": { "width": 340, "height": 132 },
+				"1kpzh0003": { "width": 340, "height": 132 },
+				"1kpzh0004": { "width": 340, "height": 132 },
+				"1kpzh0005": { "width": 340, "height": 132 },
+				"1kpzh0006": { "width": 340, "height": 132 },
+				"1kpzh0007": { "width": 340, "height": 132 },
+				"1kpzh0008": { "width": 340, "height": 132 },
+				"1kpzh0009": { "width": 340, "height": 132 },
+				"1kpzh0010": { "width": 340, "height": 132 },
+				"1kpzh0011": { "width": 340, "height": 132 },
+				"1kpzh0012": { "width": 340, "height": 132 },
+				"1kpzh0013": { "width": 340, "height": 132 },
+				"1kpzh0014": { "width": 340, "height": 132 },
+				"1kpzh0015": { "width": 340, "height": 132 },
+				"1kpzh0016": { "width": 340, "height": 132 }
+			},
+			"zh2": {
+				"2kpzh0001": { "width": 220, "height": 740 },
+				"2kpzh0002": { "width": 220, "height": 740 },
+				"2kpzh0003": { "width": 220, "height": 740 },
+				"2kpzh0004": { "width": 220, "height": 740 },
+				"2kpzh0005": { "width": 220, "height": 740 },
+				"2kpzh0006": { "width": 220, "height": 740 },
+				"2kpzh0007": { "width": 220, "height": 740 },
+				"2kpzh0008": { "width": 220, "height": 740 },
+				"2kpzh0009": { "width": 220, "height": 740 },
+				"2kpzh0010": { "width": 220, "height": 740 },
+				"2kpzh0011": { "width": 220, "height": 740 },
+				"2kpzh0012": { "width": 220, "height": 740 },
+				"2kpzh0013": { "width": 220, "height": 740 },
+				"2kpzh0014": { "width": 220, "height": 740 },
+				"2kpzh0015": { "width": 220, "height": 740 },
+				"2kpzh0016": { "width": 220, "height": 740 },
+				"2kpzh0017": { "width": 220, "height": 740 },
+				"2kpzh0018": { "width": 220, "height": 740 },
+				"2kpzh0019": { "width": 220, "height": 740 },
+				"2kpzh0020": { "width": 220, "height": 740 },
+				"2kpzh0021": { "width": 220, "height": 740 },
+				"2kpzh0022": { "width": 220, "height": 740 },
+				"2kpzh0023": { "width": 220, "height": 740 },
+				"2kpzh0024": { "width": 220, "height": 740 },
+				"2kpzh0025": { "width": 220, "height": 740 },
+				"2kpzh0026": { "width": 220, "height": 740 },
+				"2kpzh0027": { "width": 220, "height": 740 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"zh1": {
+				"rgba": [
+					{ "time": 0.53333336, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.033333335, "name": "1kpzh0002" },
+					{ "time": 0.06666667, "name": "1kpzh0003" },
+					{ "time": 0.10000001, "name": "1kpzh0004" },
+					{ "time": 0.13333334, "name": "1kpzh0005" },
+					{ "time": 0.16666667, "name": "1kpzh0006" },
+					{ "time": 0.20000002, "name": "1kpzh0007" },
+					{ "time": 0.23333335, "name": "1kpzh0008" },
+					{ "time": 0.26666668, "name": "1kpzh0009" },
+					{ "time": 0.3, "name": "1kpzh0010" },
+					{ "time": 0.33333334, "name": "1kpzh0011" },
+					{ "time": 0.36666667, "name": "1kpzh0012" },
+					{ "time": 0.40000004, "name": "1kpzh0013" },
+					{ "time": 0.43333337, "name": "1kpzh0014" },
+					{ "time": 0.4666667, "name": "1kpzh0015" },
+					{ "time": 0.5, "name": "1kpzh0016" }
+				]
+			},
+			"zh2": {
+				"attachment": [
+					{ "time": 0.033333335, "name": "2kpzh0002" },
+					{ "time": 0.06666667, "name": "2kpzh0003" },
+					{ "time": 0.10000001, "name": "2kpzh0004" },
+					{ "time": 0.13333334, "name": "2kpzh0005" },
+					{ "time": 0.16666667, "name": "2kpzh0006" },
+					{ "time": 0.20000002, "name": "2kpzh0007" },
+					{ "time": 0.23333335, "name": "2kpzh0008" },
+					{ "time": 0.26666668, "name": "2kpzh0009" },
+					{ "time": 0.3, "name": "2kpzh0010" },
+					{ "time": 0.33333334, "name": "2kpzh0011" },
+					{ "time": 0.36666667, "name": "2kpzh0012" },
+					{ "time": 0.40000004, "name": "2kpzh0013" },
+					{ "time": 0.43333337, "name": "2kpzh0014" },
+					{ "time": 0.4666667, "name": "2kpzh0015" },
+					{ "time": 0.5, "name": "2kpzh0016" },
+					{ "time": 0.53333336, "name": "2kpzh0017" },
+					{ "time": 0.5666667, "name": "2kpzh0018" },
+					{ "time": 0.6, "name": "2kpzh0019" },
+					{ "time": 0.6333334, "name": "2kpzh0020" },
+					{ "time": 0.6666667, "name": "2kpzh0021" },
+					{ "time": 0.70000005, "name": "2kpzh0022" },
+					{ "time": 0.73333335, "name": "2kpzh0023" },
+					{ "time": 0.7666667, "name": "2kpzh0024" },
+					{ "time": 0.8000001, "name": "2kpzh0025" },
+					{ "time": 0.8333334, "name": "2kpzh0026" },
+					{ "time": 0.86666673, "name": "2kpzh0027" }
+				]
+			}
+		}
+	}
+}
+}

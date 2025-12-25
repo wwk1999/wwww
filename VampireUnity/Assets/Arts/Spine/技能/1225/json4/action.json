@@ -1,0 +1,74 @@
+{
+"skeleton": { "hash": "qd0LWxN8cJw", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H幻之妖姬\\特效\\E10498" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "fx", "parent": "root" },
+	{ "name": "wz", "parent": "fx" }
+],
+"slots": [
+	{ "name": "1", "bone": "wz" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"1": {
+				"jn1/jn1_000": { "width": 250, "height": 270 },
+				"jn1/jn1_001": { "width": 250, "height": 270 },
+				"jn1/jn1_002": { "width": 250, "height": 270 },
+				"jn1/jn1_003": { "width": 250, "height": 270 },
+				"jn1/jn1_004": { "width": 250, "height": 270 },
+				"jn1/jn1_005": { "width": 250, "height": 270 },
+				"jn1/jn1_006": { "width": 250, "height": 270 },
+				"jn1/jn1_007": { "width": 250, "height": 270 },
+				"jn1/jn1_008": { "width": 250, "height": 270 },
+				"jn1/jn1_009": { "width": 250, "height": 270 },
+				"jn1/jn1_010": { "width": 250, "height": 270 },
+				"jn1/jn1_011": { "width": 250, "height": 270 },
+				"jn1/jn1_012": { "width": 250, "height": 270 }
+			}
+		}
+	}
+],
+"events": {
+	"hit": {}
+},
+"animations": {
+	"action": {
+		"slots": {
+			"1": {
+				"attachment": [
+					{ "name": "jn1/jn1_000" },
+					{ "time": 0.06666667, "name": "jn1/jn1_001" },
+					{ "time": 0.10000001, "name": "jn1/jn1_002" },
+					{ "time": 0.13333334, "name": "jn1/jn1_003" },
+					{ "time": 0.16666667, "name": "jn1/jn1_004" },
+					{ "time": 0.20000002, "name": "jn1/jn1_005" },
+					{ "time": 0.23333335, "name": "jn1/jn1_006" },
+					{ "time": 0.26666668, "name": "jn1/jn1_007" },
+					{ "time": 0.3, "name": "jn1/jn1_008" },
+					{ "time": 0.33333334, "name": "jn1/jn1_009" },
+					{ "time": 0.36666667, "name": "jn1/jn1_010" },
+					{ "time": 0.40000004, "name": "jn1/jn1_011" },
+					{ "time": 0.43333337, "name": "jn1/jn1_012" },
+					{ "time": 0.4666667 }
+				]
+			}
+		},
+		"bones": {
+			"wz": {
+				"translate": [
+					{ "y": 148.87 },
+					{ "time": 0.10000001, "y": 76.16 }
+				],
+				"scale": [
+					{ "x": 1.5, "y": 1.5 }
+				]
+			}
+		},
+		"events": [
+			{ "time": 0.10000001, "name": "hit" }
+		]
+	}
+}
+}

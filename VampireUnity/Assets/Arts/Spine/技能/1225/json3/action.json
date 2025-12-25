@@ -1,0 +1,53 @@
+{
+"skeleton": { "hash": "7lcWYT0GJtE", "spine": "4.3.39-beta", "images": "./0/", "audio": "I:\\游戏素材收集\\H幻之妖姬\\特效\\E10361" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "fx", "parent": "root" },
+	{ "name": "wz", "parent": "fx" }
+],
+"slots": [
+	{ "name": "1", "bone": "wz" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"1": {
+				"pugong/pugong_000": { "width": 240, "height": 65 },
+				"pugong/pugong_001": { "width": 240, "height": 65 },
+				"pugong/pugong_002": { "width": 240, "height": 65 },
+				"pugong/pugong_003": { "width": 240, "height": 65 },
+				"pugong/pugong_004": { "width": 240, "height": 65 },
+				"pugong/pugong_005": { "width": 240, "height": 65 }
+			}
+		}
+	}
+],
+"animations": {
+	"action": {
+		"slots": {
+			"1": {
+				"attachment": [
+					{ "name": "pugong/pugong_000" },
+					{ "time": 0.033333335, "name": "pugong/pugong_001" },
+					{ "time": 0.06666667, "name": "pugong/pugong_002" },
+					{ "time": 0.10000001, "name": "pugong/pugong_003" },
+					{ "time": 0.13333334, "name": "pugong/pugong_004" },
+					{ "time": 0.16666667, "name": "pugong/pugong_005" },
+					{ "time": 0.20000002 }
+				]
+			}
+		},
+		"bones": {
+			"wz": {
+				"translate": [
+					{ "x": 149.41, "y": 96.91 }
+				],
+				"scale": [
+					{ "x": 2, "y": 2 }
+				]
+			}
+		}
+	}
+}
+}
