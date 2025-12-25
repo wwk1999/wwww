@@ -698,6 +698,19 @@ public class Entrance : MonoBehaviour
                 GameController.S.TreeManSkillQueue.Enqueue(treemanSkill.GetComponent<TreeManSkill>());
             }
         }
+
+        if (LevelInfoConfig.CurrentGameLevel == 6)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                var jianqi =
+                    Instantiate(Resources.Load<HuoShanJianQi>("Prefabs/Monster/Level2/HuoShanJianQi"),
+                        GameController.S.transform);
+                jianqi.gameObject.SetActive(false);
+                GameController.S.HuoShanJianQiQueue.Enqueue(jianqi);
+            }
+        }
+
         
         if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6)
         {

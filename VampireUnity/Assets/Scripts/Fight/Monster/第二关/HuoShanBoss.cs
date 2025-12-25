@@ -18,7 +18,6 @@ public class HuoShanBoss : MonsterBase
     [NonSerialized]public float Skill3Time = 15f;
     [NonSerialized]public float Skill3CurrentTime = 0f;
     [NonSerialized]public State CurrentState = State.Move;
-    public HuoShanTrigger huoShanTrigger;
 
 
     public void Start()
