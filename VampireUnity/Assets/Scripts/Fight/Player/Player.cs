@@ -408,7 +408,7 @@ public class Player : MonoBehaviour
         }
         //打印调用这个方法的脚本name
         AudioController.S.PlayPlayerHurt();
-        CameraContraller.S.CameraShake(0.1f, 0.005f);
+        //CameraContraller.S.CameraShake(0.1f, 0.005f);
         var playerhit = FightBGController.S.PlayerHitQueue.Dequeue();
         playerhit.gameObject.SetActive(true);
         StartCoroutine(DelayCancelWuDi(0.2f));

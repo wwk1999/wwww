@@ -11,7 +11,7 @@ public class TreeManBoss : MonsterBase
     public TreeManBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 1000, 0.5f, 10, 5, 10, 10, 0) { }
    [NonSerialized]public float FireSkillTime = 15f;
    [NonSerialized]public float FireSkillCurrentTime = 0f;
-   [NonSerialized]public float DashSkillTime = 10f;
+   [NonSerialized]public float DashSkillTime = 8f;
    [NonSerialized]public float DashSkillCurrentTime = 0f;
    [NonSerialized]public float GroundFissureSkillTime = 12f;
    [NonSerialized]public float GroundFissureSkillCurrentTime = 0f;
@@ -211,7 +211,7 @@ public class TreeManBoss : MonsterBase
         DashSkillCurrentTime+=Time.deltaTime;
         FireSkillCurrentTime+=Time.deltaTime;
         GroundFissureSkillCurrentTime += Time.deltaTime;
-        if (GroundFissureSkillCurrentTime > GroundFissureSkillTime)
+        if (GroundFissureSkillCurrentTime > GroundFissureSkillTime&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position) > 3)
         {
             GroundFissureSkillCurrentTime = 0;
             isSkill1 = true;

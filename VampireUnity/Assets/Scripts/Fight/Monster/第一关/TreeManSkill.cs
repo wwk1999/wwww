@@ -1,16 +1,30 @@
+using System;
 using Spine.Unity;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 public class TreeManSkill : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
+    public MeshRenderer meshRenderer;
     public float damage;
+    private float time = 0;
+    private bool isDamaged = false;
     
     private void OnEnable()
     {
+        isDamaged=false;
+        meshRenderer.sortingOrder=Random.Range(6000,7000);
+        time = -1;
         Invoke(nameof(show), 1f);
     }
-    
+
+    private void Update()
+    {
+        time+= Time.deltaTime;
+    }
+
     private void OnDisable()
     {
         CancelInvoke();
@@ -18,17 +32,16 @@ public class TreeManSkill : MonoBehaviour
 
     public void show()
     {
-        Debug.LogError("show");
         skeletonAnimation.AnimationState.SetAnimation(0, "action", false);
-        Invoke(nameof(Damage), 0.5f);
-        Invoke(nameof(DelayHide), 1.5f);
+        Invoke(nameof(DelayHide), 2f);
     }
 
-    public void Damage()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.8f)
+        if (other.CompareTag("Player")&&time<=0.5f&&time>=0&&isDamaged==false)
         {
-            GameController.S.gamePlayer.PlayerHurt(damage, true);
+            isDamaged=true;
+            GameController.S.gamePlayer.PlayerHurt(damage,true);
         }
     }
 
