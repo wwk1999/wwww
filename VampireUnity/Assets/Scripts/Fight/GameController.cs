@@ -52,6 +52,8 @@ public class GameController : XSingleton<GameController>
     public SpiderMonster spiderMonster;
     public EliteBeeMonster elitebeeMonster;
     
+    [NonSerialized] public Queue<PlayerHurt> PlayerHurtQueue = new Queue<PlayerHurt>();
+    
     //Boss攻击提示对象池
     [NonSerialized] public Queue<CircleAttack> CircleQueue = new Queue<CircleAttack>();
     [NonSerialized] public Queue<SqrtAttack> SqrtQueue = new Queue<SqrtAttack>();

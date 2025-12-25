@@ -8,6 +8,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Animation = UnityEngine.Animation;
+using Random = UnityEngine.Random;
+
 
 public enum PlayerState
 {
@@ -335,6 +337,19 @@ public class Player : MonoBehaviour
             }
         }
     }
+    
+    public void ShowHurtText(float damage)
+    {
+        MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
+        monsterHpGameObject.isPlayer=true;
+        monsterHpGameObject.transform.position = transform.position;
+        monsterHpGameObject.playerText.text = "-" + damage;
+        float offsetX=Random.Range(-0.6f,0.2f);
+        float offsetY=Random.Range(-0.2f,0.2f);
+        monsterHpGameObject.transform.position = new Vector3(transform.position.x + 0.2f+offsetX,
+            transform.position.y + 0.5f+offsetY, transform.position.z);
+        monsterHpGameObject.gameObject.SetActive(true);
+    }
 
     /// <summary>
     /// 主角受伤
@@ -346,6 +361,10 @@ public class Player : MonoBehaviour
         {
             return;
         }
+
+        var playerHurt=GameController.S.PlayerHurtQueue.Dequeue();
+        playerHurt.transform.position = transform.position;
+        playerHurt.gameObject.SetActive(true);
 
         damage -= GameController.S.GameDefense;
         float realDamage = 0;
@@ -364,7 +383,7 @@ public class Player : MonoBehaviour
         
         // 检查是否有DelayDamage词条
         bool hasDelayDamage = GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DelayDamage);
-        
+        ShowHurtText(realDamage);
         if (hasDelayDamage)
         {
             DelayDamage(realDamage);

@@ -39,6 +39,10 @@ public class Entrance : MonoBehaviour
         //Boss攻击对象池
         for (int i = 0; i < 100; i++)
         {
+            PlayerHurt playerHurt = Instantiate(Resources.Load<PlayerHurt>("Prefabs/Player/PlayerHurt"));
+            playerHurt.gameObject.SetActive(false);
+            GameController.S.PlayerHurtQueue.Enqueue(playerHurt);
+            
             CircleAttack circle = Instantiate(Resources.Load<CircleAttack>("Prefabs/Tool/CircleAttack"));
             circle.gameObject.SetActive(false);
             GameController.S.CircleQueue.Enqueue(circle);

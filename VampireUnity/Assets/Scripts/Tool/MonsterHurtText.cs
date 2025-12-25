@@ -9,16 +9,27 @@ public class MonsterHurtText : MonoBehaviour
     public Animator animator;
     public TextMeshProUGUI normalText;
     public TextMeshProUGUI critText;
+    public TextMeshProUGUI playerText;
+
     [NonSerialized]public bool isCrit=false;
+    [NonSerialized]public bool isPlayer=false;
+
     private void OnEnable()
     {
-        if (isCrit)
+        if (isPlayer)
         {
-            animator.Play("HurtTextCrit");
+            animator.Play("PlayerHurt");
         }
         else
         {
-            animator.Play("HurtText");
+            if (isCrit)
+            {
+                animator.Play("HurtTextCrit");
+            }
+            else
+            {
+                animator.Play("HurtText");
+            }
         }
     }
 
