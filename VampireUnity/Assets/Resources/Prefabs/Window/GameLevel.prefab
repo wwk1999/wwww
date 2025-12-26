@@ -798,14 +798,9 @@ MonoBehaviour:
   level13Button: {fileID: 331044061679255234}
   level14Button: {fileID: 7695268905414147451}
   level15Button: {fileID: 4161189451600163302}
-  level16Button: {fileID: 8651068207844828192}
-  level17Button: {fileID: 331044061679255234}
-  level18Button: {fileID: 8651068207844828192}
-  level19Button: {fileID: 7695268905414147451}
-  level20Button: {fileID: 4161189451600163302}
   levelInfo: {fileID: 5519670577366006398}
   level1TanHao: {fileID: 5557449325850530642}
-  level2TanHao: {fileID: 0}
+  level2TanHao: {fileID: 7238216684430679876}
   level3TanHao: {fileID: 5949994281695095838}
   level4TanHao: {fileID: 2299587703675351581}
   level5TanHao: {fileID: 7272905693803361329}
@@ -819,11 +814,6 @@ MonoBehaviour:
   level13TanHao: {fileID: 4718351319138347410}
   level14TanHao: {fileID: 7272905693803361329}
   level15TanHao: {fileID: 5005358466872699380}
-  level16TanHao: {fileID: 8974916142152984635}
-  level17TanHao: {fileID: 7272905693803361329}
-  level18TanHao: {fileID: 2299587703675351581}
-  level19TanHao: {fileID: 2299587703675351581}
-  level20TanHao: {fileID: 2299587703675351581}
   level1Content: {fileID: 2086998743632302397}
   level2Content: {fileID: 0}
   level3Content: {fileID: 6187434243978741663}
@@ -839,11 +829,6 @@ MonoBehaviour:
   level13Content: {fileID: 4654655447453668027}
   level14Content: {fileID: 0}
   level15Content: {fileID: 6819412243656270291}
-  level16Content: {fileID: 7972806073845776327}
-  level17Content: {fileID: 0}
-  level18Content: {fileID: 0}
-  level19Content: {fileID: 0}
-  level20Content: {fileID: 0}
   rectTransform: {fileID: 3102361412879279442}
 --- !u!1 &1605779013789585245
 GameObject:

@@ -100,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 1478089811625646076}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.66, y: 1.24, z: 0}
+  m_LocalPosition: {x: 0.7, y: 1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -438,10 +438,7 @@ MonoBehaviour:
   parent: {fileID: 3409630746693604734}
   attackTrans: {fileID: 2129269870255309820}
   skill1Trans: {fileID: 1379442071111653511}
-  skill1Time: 10
-  skill2Time: 10
-  currentSkill1Time: 0
-  currentSkill2Time: 0
+  collider2D: {fileID: 8967858855347454807}
 --- !u!1 &4802914828282415935
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +626,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.74999994, y: 0.74999994, z: 0.74999994}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 190662232807095410}
@@ -654,10 +651,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2d86438542d993e41b2be3b1efcdd000, type: 2}
-  - {fileID: 2100000, guid: ccedadfc975434147aa347b2b9b45651, type: 2}
-  - {fileID: 2100000, guid: aef895b16b0fe5044a37be566187b0e5, type: 2}
-  - {fileID: 2100000, guid: 2d86438542d993e41b2be3b1efcdd000, type: 2}
+  - {fileID: 2100000, guid: 5c154ff2f3813324f93e384462766ce5, type: 2}
+  - {fileID: 2100000, guid: ab94bb7cd7f4b794bb96d2f1988da3c5, type: 2}
+  - {fileID: 2100000, guid: 5c154ff2f3813324f93e384462766ce5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -691,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 9f3fed99a0c02594c9daa3c9a56d2f46, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: eb833d15c4c5b1d44a0a70b1dc83f4ca, type: 2}
   initialSkinName: 
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
@@ -755,7 +751,7 @@ Transform:
   m_GameObject: {fileID: 5182860048925372364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 2.75, z: 0}
+  m_LocalPosition: {x: 0.25, y: 2.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

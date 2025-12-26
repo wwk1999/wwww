@@ -146,7 +146,7 @@ public class XieZi : MonsterBase
     private void Start()
     {
         base.Start();
-        size = 1.5f;
+        size = 1.4f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
