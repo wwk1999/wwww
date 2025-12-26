@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
+using Spine;
 using UnityEngine;
 
 public class ShiRenHuaMonster : MonsterBase
@@ -87,11 +88,23 @@ public class ShiRenHuaMonster : MonsterBase
     private void Start()
     {
         base.Start();
-        size = 0.6f;
+        size = 0.8f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
+    }
+    
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "damage")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
+        }
     }
 
 
@@ -99,6 +112,14 @@ public class ShiRenHuaMonster : MonsterBase
     {
         if (IsDead) return;
         base.Update();
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        {
+            isAttack=true;
+        }
+        else
+        {
+            isAttack=false;
+        }
         if (!IsDead)
         {
             MonsterMove();

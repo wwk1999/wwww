@@ -153,14 +153,17 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Start()
     {
-        if (monsterSkeletonAnimation != null)
+        if (MonsterType != MonsterType.Boss)
         {
-            monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
-        }
-        else
-        {
-            monsterAnimator.Play(MonsterSpineName.MoveName);
+            if (monsterSkeletonAnimation != null)
+            {
+                monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
+            }
+            else
+            {
+                monsterAnimator.Play(MonsterSpineName.MoveName);
+            }
         }
     }
 
@@ -282,7 +285,7 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
-        if (MonsterType == MonsterType.Boss||this is EliteDaZuiMonster)
+        if (this is EliteDaZuiMonster)
         {
             return;
         }

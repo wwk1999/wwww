@@ -875,21 +875,25 @@ public class GameController : XSingleton<GameController>
         {
             HuoShanBoss huoShanBoss = Instantiate(Resources.Load<HuoShanBoss>("Prefabs/Monster/Level2/HuoShanBOSS"));
             huoShanBoss.gameObject.SetActive(true);
+            huoShanBoss.IsSkill = true;
             huoShanBoss.transform.position = new Vector3(0, 0, 0f);
-            huoShanBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"Exit",false);
+            SkeletonAnimation sk = huoShanBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+            sk.AnimationState.SetAnimation(0,"Exit",false);
             huoShanBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(huoShanBoss.collider2D,huoShanBoss);
             huoShanBoss.meshRenderer.sortingOrder = 3000;
         }
         if (LevelInfoConfig.CurrentGameLevel == 9)
         {
-            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
             ZhaoZeBoss ZhaoZeboss = Instantiate(Resources.Load<ZhaoZeBoss>("Prefabs/Monster/Level3/ZhaoZeBOSS"));
+            ZhaoZeboss.gameObject.SetActive(true);
+            ZhaoZeboss.IsSkill = true;
             ZhaoZeboss.transform.position = new Vector3(0, 0, 0f);
+            SkeletonAnimation sk = ZhaoZeboss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+            sk.AnimationState.SetAnimation(0,"appear",false);
+            ZhaoZeboss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(ZhaoZeboss.collider2D,ZhaoZeboss);
             ZhaoZeboss.meshRenderer.sortingOrder = 3000;
-
-            ZhaoZeboss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>().AnimationState.SetAnimation(0,"move",true);
         }
         
         if (LevelInfoConfig.CurrentGameLevel == 12)

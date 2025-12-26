@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
+using Spine;
 using UnityEngine;
 
 public class ZhaoZeBoss : MonsterBase
 {
-   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 100, 0.3f, 10, 5, 10, 10, 0)
+   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 10000, 0.3f, 10, 5, 10, 10, 0)
     {
     }
-
-    public GameObject parent;
-    
+    public Transform attackTrans;
+    public void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack1";
+        MonsterSpineName.HitName = "injured";
+        MonsterSpineName.MoveName = "move";
+        MonsterSpineName.DieName = "fail";
+    }
 
     public override void AddMonsterSourceStone()
     {
@@ -54,7 +61,6 @@ public class ZhaoZeBoss : MonsterBase
 
     public override void Die()
     {
-
         //生成随机数
         int randomDelay = UnityEngine.Random.Range(0, 10);
         StartCoroutine(RandomDelayDie(randomDelay));
@@ -83,10 +89,55 @@ public class ZhaoZeBoss : MonsterBase
     private void Start()
     {
         base.Start();
-        size = 1.5f;
+        size = 0.9f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
+        monsterSkeletonAnimation.AnimationState.Complete += Complete;
+    }
+    
+    public void Complete(TrackEntry trackEntry)
+    {
+        if (trackEntry.Animation.Name == "appear"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3")
+        {
+            IsSkill=false;
+        }
+        
+        if (isSkill1)
+        {
+            IsSkill=true;
+            isSkill1=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+        }else if (isSkill2)
+        {
+            IsSkill=true;
+            isSkill2=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+        }else if (isSkill3)
+        {
+            IsSkill=true;
+            isSkill3=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
+        } else if(isAttack)
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
+        }
+        else
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
+        }
+    }
+    
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "damage"&&trackEntry.Animation.Name=="attack1")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
+        }
     }
     
     public override void AddMonsterProp()
@@ -149,6 +200,14 @@ public class ZhaoZeBoss : MonsterBase
     {
         if (IsDead) return;
         base.Update();
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        {
+            isAttack=true;
+        }
+        else
+        {
+            isAttack=false;
+        }
         if (!IsDead)
         {
             MonsterMove1();
