@@ -282,7 +282,7 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
-        if (MonsterType != MonsterType.Normal)
+        if (MonsterType == MonsterType.Boss||this is EliteDaZuiMonster)
         {
             return;
         }

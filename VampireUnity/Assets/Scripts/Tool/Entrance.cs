@@ -760,19 +760,6 @@ public class Entrance : MonoBehaviour
                         GameController.S.transform);
                 dundiMonster.gameObject.SetActive(false);
                 GameController.S.DunDiMonsterQueue.Enqueue(dundiMonster.GetComponent<DunDiMonster>());
-
-                var daZuiSkillTriggerLeft =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Tool/DaZuiSkillTriggerLeft").GetComponent<DaZuiSkillTriggerLeft>(),
-                        GameController.S.transform);
-                daZuiSkillTriggerLeft.gameObject.SetActive(false);
-                GameController.S.DaZuiSkillTriggerQueueLeft.Enqueue(daZuiSkillTriggerLeft.GetComponent<DaZuiSkillTriggerLeft>());
-                var daZuiSkillTriggerRight =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Tool/DaZuiSkillTriggerRight").GetComponent<DaZuiSkillTriggerRight>(),
-                        GameController.S.transform);
-                daZuiSkillTriggerRight.gameObject.SetActive(false);
-                GameController.S.DaZuiSkillTriggerQueueRight.Enqueue(daZuiSkillTriggerRight.GetComponent<DaZuiSkillTriggerRight>());
                 
                 Collider2D Huangzhucollider2D=Huangzhu.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(Huangzhucollider2D,Huangzhu.GetComponent<MonsterBase>());

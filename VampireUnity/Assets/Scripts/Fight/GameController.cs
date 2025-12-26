@@ -77,8 +77,6 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<XiNiuMonster> XiNiuMonsterQueue = new Queue<XiNiuMonster>();
 
   
-    [NonSerialized]public Queue<DaZuiSkillTriggerLeft> DaZuiSkillTriggerQueueLeft = new Queue<DaZuiSkillTriggerLeft>();
-    [NonSerialized]public Queue<DaZuiSkillTriggerRight> DaZuiSkillTriggerQueueRight = new Queue<DaZuiSkillTriggerRight>();
     [NonSerialized] public Queue<HuoShanJianQi> HuoShanJianQiQueue = new Queue<HuoShanJianQi>();
     [NonSerialized] public Queue<HuoShanSkill2> HuoShanSkill2QiQueue = new Queue<HuoShanSkill2>();
 
@@ -1027,15 +1025,6 @@ public class GameController : XSingleton<GameController>
         if ( LevelInfoConfig.CurrentGameLevel ==5 || LevelInfoConfig.CurrentGameLevel ==6)
         {
             eliteMonster = EliteDaZuiMonsterQueue.Dequeue();
-           
-            
-            DaZuiSkillTriggerLeft daZuiSkillTriggerLeft = DaZuiSkillTriggerQueueLeft.Dequeue();
-            daZuiSkillTriggerLeft.DaZuiMonster = eliteMonster as EliteDaZuiMonster;
-            daZuiSkillTriggerLeft.gameObject.SetActive(true);
-            
-            DaZuiSkillTriggerRight daZuiSkillTriggerRight = DaZuiSkillTriggerQueueRight.Dequeue();
-            daZuiSkillTriggerRight.DaZuiMonster = eliteMonster as EliteDaZuiMonster;
-            daZuiSkillTriggerRight.gameObject.SetActive(true);
         }
 
         if (LevelInfoConfig.CurrentGameLevel == 8 || LevelInfoConfig.CurrentGameLevel == 9 )

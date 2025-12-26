@@ -156,7 +156,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\Mysql\UserController.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiSkillTriggerLeft.cs" />
     <Compile Include="Assets\Scripts\Prop\BloodEnergyController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SpiderWeb.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEyeBullet.cs" />
@@ -299,7 +298,6 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongPro.cs" />
     <Compile Include="Assets\Scripts\Tool\ToastInfo.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManDiLie.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiSkillTriggerRight.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XianRenZhang.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\LvQuanAddScale.cs" />
@@ -470,9 +468,7 @@
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.xml" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.10\package.json" />
     <None Include="Assets\Arts\Spine\第三关\青蛙\json\qingwa.json" />
-    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\雪山BOSS\Enemy_Boss_ogre.json" />
     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
-    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\雪山BOSS\Enemy_Boss_ogre.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\蓝冲天激光\skeleton.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\package.json" />

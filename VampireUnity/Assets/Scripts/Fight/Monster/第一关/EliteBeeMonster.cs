@@ -40,6 +40,7 @@ public class EliteBeeMonster : MonsterBase
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+        
     }
     public void Awake()
     {

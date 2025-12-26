@@ -15,6 +15,10 @@ public class EliteDaZuiMonster : MonsterBase
 
     public SkeletonAnimation fireSke;
     public Transform attackTrans;
+    private bool isfire=false;
+    private float fireTime = 0.2f;
+    private float currentFireTime = 0f;
+    public Collider2D fireCollider;
     public void Awake()
     {
         base.Awake();
@@ -89,6 +93,7 @@ public class EliteDaZuiMonster : MonsterBase
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
         monsterSkeletonAnimation.AnimationState.Complete += Complete;
+        fireSke.AnimationState.Event += FireOnSpineEvent;
     }
 
     public void Complete(TrackEntry trackEntry)
@@ -113,6 +118,39 @@ public class EliteDaZuiMonster : MonsterBase
         }
     }
 
+    private void FireOnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "E-SHAKE")
+        {
+            isfire = !isfire;
+        }
+    }
+    
+    
+    public void CheckCollider()
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        fireCollider.OverlapCollider(filter, results);
+    
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            }
+        }
+    }
+
+   
+
     private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
         if (e.Data.Name == "akill")
@@ -127,6 +165,17 @@ public class EliteDaZuiMonster : MonsterBase
         if (IsDead) return;
         base.Update();
         currentTime+= Time.deltaTime;
+        if (isfire)
+        {
+            currentFireTime+=Time.deltaTime;
+        }
+
+        if (currentFireTime > fireTime)
+        {
+            currentFireTime = 0;
+            CheckCollider();
+        }
+       
         if (currentTime > skillTime && Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 3)
         {
             currentTime = 0;
