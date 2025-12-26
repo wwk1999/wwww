@@ -82,7 +82,9 @@ public class WeaponWindow : MonoBehaviour
    public Button xukongShowButton; 
    public Button fireShowButton; 
    public Button lvQuanShowButton; 
-   public Button heiDongShowButton; 
+   public Button heiDongShowButton;
+
+   private WeaponType showType = WeaponType.None;
 
    [NonSerialized] public WeaponType currentJieSuoType = WeaponType.None;
 
@@ -522,36 +524,43 @@ public class WeaponWindow : MonoBehaviour
    {
       primaryShowButton.onClick.AddListener(()=>
       {
+         showType = WeaponType.Primary;
          ShowAttribute(WeaponType.Primary);
       });
       
       duShowButton.onClick.AddListener(()=>
       {
+         showType = WeaponType.Du;
          ShowAttribute(WeaponType.Du);
       });
       
       puTong3ShowButton.onClick.AddListener(()=>
       {
+         showType = WeaponType.PuTong3;
          ShowAttribute(WeaponType.PuTong3);
       });
       
       xukongShowButton.onClick.AddListener(()=>
       {
+         showType = WeaponType.XuKong;
          ShowAttribute(WeaponType.XuKong);
       });
       
       fireShowButton.onClick.AddListener(()=>
       {
+         showType = WeaponType.Fire;
          ShowAttribute(WeaponType.Fire);
       });
       
       lvQuanShowButton.onClick.AddListener(()=>
       {
+         showType = WeaponType.LvQuan;
          ShowAttribute(WeaponType.LvQuan);
       });
       
       heiDongShowButton.onClick.AddListener(()=>
       {
+         showType = WeaponType.HeiDong;
          ShowAttribute(WeaponType.HeiDong);
       });
       
