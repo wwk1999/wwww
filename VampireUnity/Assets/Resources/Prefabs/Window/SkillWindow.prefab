@@ -15337,12 +15337,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3311344604755121102}
     m_Modifications:
+    - target: {fileID: 674131515523852913, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 816595695748521738, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_Name
       value: SkillSwitch
       objectReference: {fileID: 0}
     - target: {fileID: 816595695748521738, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690151210757537228, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3712383358920460591, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
@@ -15371,11 +15379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3712383358920460591, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 3712383358920460591, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 360
+      value: 470
       objectReference: {fileID: 0}
     - target: {fileID: 3712383358920460591, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15425,10 +15433,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3879301778803771773, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6044010135457765543, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6960572033491146634, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: mask
       value: 
       objectReference: {fileID: 946897183695456772}
+    - target: {fileID: 9022027663618212551, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174185467424261024, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

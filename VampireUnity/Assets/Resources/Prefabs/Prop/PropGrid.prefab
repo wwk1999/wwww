@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 2852192169689294303}
   - component: {fileID: 9050817958751673718}
   - component: {fileID: 7001247260471519597}
+  - component: {fileID: 1691897448541099598}
   m_Layer: 5
   m_Name: BagGridImage
   m_TagString: Untagged
@@ -318,6 +319,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1691897448541099598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183514260632143067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3c914de2e8c524b9cc19274e4ec8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourcePath: Prefabs/Window/Propinfo
+  offset: {x: 50, y: -50}
+  parentOverride: {fileID: 0}
 --- !u!1 &5116331250402276747
 GameObject:
   m_ObjectHideFlags: 0

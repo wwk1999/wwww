@@ -708,6 +708,7 @@ public class BagController : XSingleton<BagController>
                 continue;
             }
             var propGrid = Instantiate(Resources.Load("Prefabs/Prop/PropGrid"), equipContent.transform) as GameObject;
+            propGrid.GetComponent<PropGrid>().propType = prop.Key;
             propGrid.transform.Find("parent/Count").gameObject.SetActive(prop.Value.Count > 1);
             propGrid.transform.Find("parent/Count").GetComponent<Text>().text = prop.Value.Count.ToString();
             if (prop.Value.PropType == PropConfig.PropType.ShenHuaCaiLiao)

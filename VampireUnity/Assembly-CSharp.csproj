@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\QingWaMonster.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEye.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueRing.cs" />
+    <Compile Include="Assets\Scripts\Equip\PropGrid.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Demo\Scripts\ARPGSceneSelect.cs" />
     <Compile Include="Assets\Scripts\Tool\ScrollIndexCallback2.cs" />
     <Compile Include="Assets\Scripts\Tool\MonsterHurtText.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Equip\BagExitButton.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeNecklace.cs" />
+    <Compile Include="Assets\Scripts\Tool\ButtonScaleTool.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleNecklace.cs" />
     <Compile Include="Assets\Scripts\Config\RankConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PickUpController.cs" />
@@ -369,6 +371,7 @@
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloak.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\Fight\GameController.cs" />
+    <Compile Include="Assets\Scripts\Tool\PropInfo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\Skill\PlayerHurt.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\OrangeWeaponFragment.cs" />
