@@ -39,7 +39,6 @@ public class HuoShanBoss : MonsterBase
         MonsterSpineName.DieName = "die";
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
         monsterSkeletonAnimation.AnimationState.Complete += Complete;
-
     }
 
     public void CheckCollider()

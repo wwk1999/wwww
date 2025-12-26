@@ -14,10 +14,11 @@ public class XieZi : MonsterBase
      public Transform attackTrans;
      public Transform skill1Trans;
      private float attackRange = 1.5f;
-     public float skill1Time = 10;
-     public float skill2Time = 10;
-     public float currentSkill1Time = 0;
-     public float currentSkill2Time = 0;
+     private float skill1Time = 10;
+     private float skill2Time = 10;
+     private float currentSkill1Time = 0;
+     private float currentSkill2Time = 0;
+     public Collider2D collider2D;
 
 
     public override void AddMonsterSourceStone()
@@ -34,6 +35,60 @@ public class XieZi : MonsterBase
             WeaponSourceStoneType.Scale, 2));
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
             WeaponSourceStoneType.Duration, 2));
+    }
+
+    public  void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack1";
+        MonsterSpineName.HitName = "injured";
+        MonsterSpineName.MoveName = "move";
+        MonsterSpineName.DieName = "fail";
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
+        monsterSkeletonAnimation.AnimationState.Complete += Complete;
+    }
+
+    IEnumerator DelayShow(float time,Vector2 pos)
+    {
+        yield return new WaitForSeconds(time);
+        transform.position = pos;
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
+    }
+    
+    public void Complete(TrackEntry trackEntry)
+    {
+        if (trackEntry.Animation.Name == "skill2")
+        {
+            collider2D.tag = "Bullet";
+            var pos = GameController.S.gamePlayer.transform.position;
+            GameController.S.CreateCircleAttack(pos,1);
+            StartCoroutine(DelayShow(1, pos));
+            return;
+        }
+        if (trackEntry.Animation.Name == "chuchang"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3")
+        {
+            IsSkill=false;
+        }
+        
+        if (isSkill1)
+        {
+            IsSkill=true;
+            isSkill1=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+        }else if (isSkill2)
+        {
+            IsSkill=true;
+            isSkill2=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+        }
+        else if(isAttack)
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
+        }
+        else
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
+        }
     }
 
     public override void AddMonsterEquip()
@@ -95,8 +150,6 @@ public class XieZi : MonsterBase
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
-        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
-
     }
     
     private void OnDestroy()
@@ -115,7 +168,6 @@ public class XieZi : MonsterBase
         }
         if (e.Data.Name == "attack_skill1"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill1")
         {
-            Debug.LogError(1111);
             float waveOffset = Random.Range(0, 30);
             int bulletCount = 10;
             float angleStep = 360f / bulletCount; 
@@ -135,6 +187,7 @@ public class XieZi : MonsterBase
         
         if (e.Data.Name == "attack_skill3"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill3")
         {
+            collider2D.tag="Monster";
             if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 2)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,true);

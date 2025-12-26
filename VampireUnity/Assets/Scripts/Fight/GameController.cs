@@ -898,10 +898,13 @@ public class GameController : XSingleton<GameController>
         
         if (LevelInfoConfig.CurrentGameLevel == 12)
         {
-            ObserverModuleManager.S.SendEvent(ConstKeys.Resumemonster,null);
             XieZi xieZiboss = Instantiate(Resources.Load<XieZi>("Prefabs/Monster/Level4/XieZi"));
+            xieZiboss.gameObject.SetActive(true);
+            xieZiboss.IsSkill = true;
             xieZiboss.transform.position = new Vector3(0, 0, 0f);
-            xieZiboss.monsterSkeletonAnimation.AnimationState.SetAnimation(0,"move",false);           
+            SkeletonAnimation sk = xieZiboss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+            sk.AnimationState.SetAnimation(0,"chuchang",false);
+            xieZiboss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(xieZiboss.collider2D,xieZiboss);
             xieZiboss.meshRenderer.sortingOrder = 3000;
 

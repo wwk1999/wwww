@@ -544,7 +544,6 @@
     <None Include="Assets\Packages\MySqlConnector.2.4.0\lib\netstandard2.1\MySqlConnector.xml" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\Fail\bui_10.json" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
-    <None Include="Assets\Arts\Spine\第四关\ShaBoss\json\xiezi.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.12\package.json" />
     <None Include="Assets\Arts\ARPG Effects\Readme.txt" />
@@ -569,7 +568,6 @@
     <None Include="Assets\Arts\Spine\技能\剑气\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\绿激光\action.json" />
     <None Include="Assets\Arts\Spine\技能\json4\skeleton.atlas.txt" />
-    <None Include="Assets\Arts\Spine\第四关\ShaBoss\json\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\DianQuan\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\package.json" />
     <None Include="Assets\Arts\Spine\主角\主角\zj.json" />
@@ -685,6 +683,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\黄电圈\action.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
+    <None Include="Assets\Arts\Spine\第四关\ShaBoss\Boss\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\沼泽BOSS\Enemy_Boss_crocodile.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
     <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.atlas.txt" />
@@ -731,6 +730,7 @@
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoBoss\Enemy_Boss_cactus.atlas.txt" />
     <None Include="Assets\Arts\Spine\第一关\蜘蛛\zz.json" />
+    <None Include="Assets\Arts\Spine\第四关\ShaBoss\Boss\xiezi.json" />
     <None Include="Assets\Arts\Spine\技能\DiLie\1605122.atlas.txt" />
     <None Include="Assets\Arts\Shaders\EdgeLight.shader" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\DaLong\dragon.json" />
