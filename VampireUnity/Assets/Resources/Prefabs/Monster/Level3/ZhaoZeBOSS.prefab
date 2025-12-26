@@ -287,8 +287,11 @@ MonoBehaviour:
   monsterAnimator: {fileID: 0}
   collider2D: {fileID: 9170511987191292570}
   rigidbody2D: {fileID: 3793560715780194593}
-  parent: {fileID: 3478034542946766569}
   attackTrans: {fileID: 6605010087351421949}
+  skill1Collider: {fileID: 55962925110030332}
+  skill3Collider: {fileID: 8621654435593304579}
+  skill1trans: {fileID: 8400665234724472713}
+  skill3trans: {fileID: 5145329903726114815}
 --- !u!1 &951986790396969813
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +658,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2581712211050597829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8400665234724472713}
+  m_Layer: 13
+  m_Name: skill1trans
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8400665234724472713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2581712211050597829}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.811, y: 0.005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7311691686601161341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3478034542946766569
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +722,8 @@ Transform:
   - {fileID: 141721850237359859}
   - {fileID: 8887201701612358456}
   - {fileID: 6605010087351421949}
+  - {fileID: 8400665234724472713}
+  - {fileID: 5145329903726114815}
   m_Father: {fileID: 3738469682305820635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5068439550334782088
@@ -1079,6 +1115,37 @@ RectTransform:
   m_AnchoredPosition: {x: 20.04895, y: -391}
   m_SizeDelta: {x: -110, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &6962702266467933853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5145329903726114815}
+  m_Layer: 13
+  m_Name: skill3trans
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5145329903726114815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6962702266467933853}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.015, y: 0.388, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7311691686601161341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7319114482910735553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1360,7 @@ GameObject:
   - component: {fileID: 8887201701612358456}
   - component: {fileID: 8621654435593304579}
   m_Layer: 11
-  m_Name: Skill2Trigger
+  m_Name: Skill3Trigger
   m_TagString: MonsterBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

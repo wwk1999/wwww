@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
@@ -10,6 +11,18 @@ public class ZhaoZeBoss : MonsterBase
     {
     }
     public Transform attackTrans;
+    private float skill1Time=5;
+    private float skill2Time=10;
+    private float skill3Time=15;
+    private float currentSkill1Time=0;
+    private float currentSkill2Time=0;
+    private float currentSkill3Time=0;
+    public Collider2D skill1Collider;
+    public Collider2D skill3Collider;
+    public Transform skill1trans;
+    public Transform skill3trans;
+
+
     public void Awake()
     {
         base.Awake();
@@ -17,6 +30,11 @@ public class ZhaoZeBoss : MonsterBase
         MonsterSpineName.HitName = "injured";
         MonsterSpineName.MoveName = "move";
         MonsterSpineName.DieName = "fail";
+        MonsterSpineName.Skill1Name = "skill1";
+        MonsterSpineName.Skill2Name = "skill2";
+        MonsterSpineName.Skill3Name = "skill3";
+
+
     }
 
     public override void AddMonsterSourceStone()
@@ -103,12 +121,18 @@ public class ZhaoZeBoss : MonsterBase
         {
             IsSkill=false;
         }
+
+        if (trackEntry.Animation.Name == "skill1")
+        {
+            monsterSkeletonAnimation.timeScale = 1;
+        }
         
         if (isSkill1)
         {
             IsSkill=true;
             isSkill1=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+            monsterSkeletonAnimation.timeScale = 2;
         }else if (isSkill2)
         {
             IsSkill=true;
@@ -136,6 +160,58 @@ public class ZhaoZeBoss : MonsterBase
             if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
+        }
+        if (e.Data.Name == "damage"&&trackEntry.Animation.Name=="skill1")
+        {
+            CheckSkill1Damage();
+        }
+        if (e.Data.Name == "damage"&&trackEntry.Animation.Name=="skill3")
+        {
+            CheckSkill3Damage();
+        }
+    }
+
+    public void CheckSkill1Damage()
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        skill1Collider.OverlapCollider(filter, results);
+    
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            }
+        }
+    }
+    
+    public void CheckSkill3Damage()
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        skill3Collider.OverlapCollider(filter, results);
+    
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
     }
@@ -200,6 +276,9 @@ public class ZhaoZeBoss : MonsterBase
     {
         if (IsDead) return;
         base.Update();
+        currentSkill1Time+=Time.deltaTime;
+        currentSkill2Time+=Time.deltaTime;
+        currentSkill3Time+=Time.deltaTime;
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
             isAttack=true;
@@ -207,6 +286,19 @@ public class ZhaoZeBoss : MonsterBase
         else
         {
             isAttack=false;
+        }
+
+        if (currentSkill1Time > skill1Time &&
+            Vector2.Distance(skill1trans.position, GameController.S.gamePlayer.transform.position) < 1.5)
+        {
+            currentSkill1Time = 0;
+            isSkill1 = true;
+        }
+
+        if (currentSkill3Time > skill3Time &&Math.Abs(skill3trans.position.x - GameController.S.gamePlayer.transform.position.x) < 3.5&&Math.Abs(skill3trans.position.y - GameController.S.gamePlayer.transform.position.y) < 2)
+        {
+            currentSkill3Time = 0;
+            isSkill3 = true;
         }
         if (!IsDead)
         {
