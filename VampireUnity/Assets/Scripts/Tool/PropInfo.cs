@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -15,6 +17,8 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Transform parentOverride;
 
     private GameObject instance;
+    
+    public PropGrid propGrid;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -48,6 +52,7 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         RectTransform buttonRect = GetComponent<RectTransform>();
 
         instance = Instantiate(prefab, canvas.transform);
+        SetInstance(propGrid.propType);
         
         RectTransform instRect = instance.GetComponent<RectTransform>();
 
@@ -135,14 +140,144 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             if (prop % 100 == 1 || prop % 100 == 2 || prop % 100 == 3 || prop % 100 == 4)
             {
-                transform.Find("bg/image/imagebg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
-                transform.Find("bg/image/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                ShowQuality(5);
+                ShowName(5);
+                instance.transform.Find("bg/image/imagebg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                instance.transform.Find("bg/image/Edge").GetComponent<Animator>().Play("OrangeEdge");
             }
             else
             {
-                transform.Find("bg/image/imagebg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
-                transform.Find("bg/image/Edge").GetComponent<Animator>().Play("RedEdge");
+                ShowQuality(6);
+                ShowName(6);
+                instance.transform.Find("bg/image/imagebg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
+                instance.transform.Find("bg/image/Edge").GetComponent<Animator>().Play("RedEdge");
             }
+        }
+
+        switch (prop)
+        {
+            case 101:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.WhiteWeaponFragment;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 102:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.GreenWeaponFragment;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 103:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.BlueWeaponFragment;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 104:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.PurpleWeaponFragment;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 105:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.OrangeWeaponFragment;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 106:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.RedWeaponFragment;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            
+            case 201:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.WhiteJingCui;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 202:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.GreenJingCui;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 203:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.BlueJingCui;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 204:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.PurpleJingCui;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 205:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.OrangeJingCui;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 206:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.RedJingCui;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            
+            case 301:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.FuMoZhiGu;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 302:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.GoldBlood;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 303:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.JuDaYaChi;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 304:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.ZuiEYanZhu;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 305:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.ShenHuaZhiXin;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+         
+            
+            
+            case 401:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.WhiteChiBang;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 402:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.GreenChiBang;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 403:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.BlueChiBang;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 404:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.PurpleChiBang;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 405:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.OrangeChiBang;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 406:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.RedChiBang;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
         }
     }
     
