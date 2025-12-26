@@ -4747,6 +4747,7 @@ MonoBehaviour:
   fireShowButton: {fileID: 7677420882659576919}
   lvQuanShowButton: {fileID: 6850864417284828553}
   heiDongShowButton: {fileID: 616319713612306875}
+  ShenJiCaiLiao: {fileID: 5055790810197427718}
 --- !u!1 &8788382954656671432
 GameObject:
   m_ObjectHideFlags: 0
@@ -6235,16 +6236,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 816595695748521738, guid: 82208676996105f418be32c1223de3a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5055790810197427718}
   m_SourcePrefab: {fileID: 100100000, guid: 82208676996105f418be32c1223de3a9, type: 3}
 --- !u!1 &536517872669347787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 816595695748521738, guid: 82208676996105f418be32c1223de3a9, type: 3}
   m_PrefabInstance: {fileID: 875731723372908737}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5055790810197427718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536517872669347787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a69dfe036431b54cb03a8885b41228b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shenJiCaiLiaoContent: {fileID: 6027283756238642651}
 --- !u!224 &4585281943018953198 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3712383358920460591, guid: 82208676996105f418be32c1223de3a9, type: 3}
+  m_PrefabInstance: {fileID: 875731723372908737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6027283756238642651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6882080741106699546, guid: 82208676996105f418be32c1223de3a9, type: 3}
   m_PrefabInstance: {fileID: 875731723372908737}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &931237091641316344

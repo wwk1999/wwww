@@ -84,8 +84,7 @@ public class WeaponWindow : MonoBehaviour
    public Button lvQuanShowButton; 
    public Button heiDongShowButton;
 
-   private WeaponType showType = WeaponType.None;
-
+   public ShenJiCaiLiao ShenJiCaiLiao;
    [NonSerialized] public WeaponType currentJieSuoType = WeaponType.None;
 
    public void HideNameAndDesc()
@@ -243,7 +242,7 @@ public class WeaponWindow : MonoBehaviour
          Destroy(child.gameObject);
       }
 
-      var cailiao = WeaponConfig.CaiLiaoDic[weaponType];
+      var cailiao = WeaponConfig.JieSuoCaiLiaoDic[weaponType];
       foreach (var item in cailiao)
       {
          var weaponItem = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/CaiLiaoItem"),jieSuoContent.transform);
@@ -524,45 +523,47 @@ public class WeaponWindow : MonoBehaviour
    {
       primaryShowButton.onClick.AddListener(()=>
       {
-         showType = WeaponType.Primary;
+         ShenJiCaiLiao.showType = WeaponType.Primary;
          ShowAttribute(WeaponType.Primary);
       });
       
       duShowButton.onClick.AddListener(()=>
       {
-         showType = WeaponType.Du;
+         ShenJiCaiLiao.showType = WeaponType.Du;
          ShowAttribute(WeaponType.Du);
       });
       
       puTong3ShowButton.onClick.AddListener(()=>
       {
-         showType = WeaponType.PuTong3;
+         ShenJiCaiLiao.showType = WeaponType.PuTong3;
          ShowAttribute(WeaponType.PuTong3);
       });
       
       xukongShowButton.onClick.AddListener(()=>
       {
-         showType = WeaponType.XuKong;
+         ShenJiCaiLiao.showType = WeaponType.XuKong;
          ShowAttribute(WeaponType.XuKong);
       });
       
       fireShowButton.onClick.AddListener(()=>
       {
-         showType = WeaponType.Fire;
+         ShenJiCaiLiao.showType = WeaponType.Fire;
          ShowAttribute(WeaponType.Fire);
       });
       
       lvQuanShowButton.onClick.AddListener(()=>
       {
-         showType = WeaponType.LvQuan;
+         ShenJiCaiLiao.showType = WeaponType.LvQuan;
          ShowAttribute(WeaponType.LvQuan);
       });
       
       heiDongShowButton.onClick.AddListener(()=>
       {
-         showType = WeaponType.HeiDong;
+         ShenJiCaiLiao.showType = WeaponType.HeiDong;
          ShowAttribute(WeaponType.HeiDong);
       });
+      
+      
       
       
       

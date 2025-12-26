@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: xiezi_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 3d850d72a740b1e44be18153a36c5f94, type: 2}
+  - {fileID: 11400000, guid: 6f8043a8d16e66f4694e0154af9bd034, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 6dad46afea34238468f95e0d9ae165b6, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: a78378f849a4cc1479f14b129dff0068, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0

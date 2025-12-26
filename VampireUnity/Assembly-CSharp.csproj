@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Mysql\TableBase.cs" />
     <Compile Include="Assets\Scripts\Gun\GunBase.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueHelmet.cs" />
+    <Compile Include="Assets\Scripts\Window\ShenJiCaiLiao.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\QingWaMonster.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEye.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueRing.cs" />
@@ -601,6 +602,7 @@
     <None Include="Assets\Arts\Spine\技能\LanShui\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\HuangShu\Enemy_Mouse_patrol.json" />
     <None Include="Assets\Arts\Shaders\LcL\Pixel.shader" />
+    <None Include="Assets\Arts\Spine\第四关\ShaBoss\XieZi\xiezi.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\DuPeng\action.json" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\HongLong\red_dragon.atlas.txt" />
     <None Include="Assets\Arts\Shaders\SqrtEdge.shader" />
@@ -650,6 +652,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\PuTong3\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\第四关\ShaBoss\XieZi\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\Lvquanbao\skeleton.json" />
     <None Include="Assets\Arts\Shaders\UIScan.shader" />
@@ -687,7 +690,6 @@
     <None Include="Assets\Arts\Spine\技能\1225\黄电圈\action.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
-    <None Include="Assets\Arts\Spine\第四关\ShaBoss\Boss\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\沼泽BOSS\Enemy_Boss_crocodile.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
     <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.atlas.txt" />
@@ -734,7 +736,6 @@
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoBoss\Enemy_Boss_cactus.atlas.txt" />
     <None Include="Assets\Arts\Spine\第一关\蜘蛛\zz.json" />
-    <None Include="Assets\Arts\Spine\第四关\ShaBoss\Boss\xiezi.json" />
     <None Include="Assets\Arts\Spine\技能\DiLie\1605122.atlas.txt" />
     <None Include="Assets\Arts\Shaders\EdgeLight.shader" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\DaLong\dragon.json" />
