@@ -414,7 +414,7 @@ MonoBehaviour:
   m_text: "\u795E\u8BDD\u5C5E\u6027"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 8757ad5f05d4cdc4db63b9770fd7388f, type: 2}
+  m_sharedMaterial: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -765,8 +765,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u9644\u52A0\u5C5E\u6027"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: ade9d2d1a41a0814ba184a62e19015a7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 429eae872c47b2940876338f970a4ea5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_text: "\u4E0D\u673D\u4E4B\u773C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 9c041e86370d402cbb76a1cfe620bb7c, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e1027c37e05c44228e90f7cf92db9f21, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1033,8 +1033,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u795E\u8BDD"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 8757ad5f05d4cdc4db63b9770fd7388f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 9c041e86370d402cbb76a1cfe620bb7c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_text: 10000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: ade9d2d1a41a0814ba184a62e19015a7, type: 2}
+  m_sharedMaterial: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_text: 10000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: ade9d2d1a41a0814ba184a62e19015a7, type: 2}
+  m_sharedMaterial: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2437,8 +2437,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u57FA\u7840\u5C5E\u6027"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: ade9d2d1a41a0814ba184a62e19015a7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 429eae872c47b2940876338f970a4ea5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3237,7 +3237,7 @@ MonoBehaviour:
   m_text: "\u4F24\u5BB3+100%"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 8757ad5f05d4cdc4db63b9770fd7388f, type: 2}
+  m_sharedMaterial: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3419,6 +3419,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3545,6 +3549,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3671,6 +3679,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3797,6 +3809,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3923,6 +3939,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

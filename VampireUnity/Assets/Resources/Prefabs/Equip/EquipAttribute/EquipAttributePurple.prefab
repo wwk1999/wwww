@@ -208,6 +208,7 @@ MonoBehaviour:
   equipImage: {fileID: 6608428554171512143}
   animator: {fileID: 2648196601425180986}
   fuJiaAttributeContent: {fileID: 6444532328349616276}
+  orangeEntryDesc: {fileID: 0}
 --- !u!1 &291564570272307520
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,8 +631,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u9644\u52A0\u5C5E\u6027"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: ade9d2d1a41a0814ba184a62e19015a7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 429eae872c47b2940876338f970a4ea5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -898,8 +899,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u666E\u901A"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 268b03ea47bdfe84bb863a65eaa6497e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 3444bc85a2d1477a99ac9c10f1d18f60, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1353,7 +1354,7 @@ MonoBehaviour:
   m_text: 10000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: ade9d2d1a41a0814ba184a62e19015a7, type: 2}
+  m_sharedMaterial: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1882,7 +1883,7 @@ MonoBehaviour:
   m_text: 10000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: ade9d2d1a41a0814ba184a62e19015a7, type: 2}
+  m_sharedMaterial: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2399,8 +2400,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u57FA\u7840\u5C5E\u6027"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: ade9d2d1a41a0814ba184a62e19015a7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 429eae872c47b2940876338f970a4ea5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3110,6 +3111,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3236,6 +3241,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3362,6 +3371,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -128
       objectReference: {fileID: 0}
+    - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
