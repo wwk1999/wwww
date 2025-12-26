@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
+using Spine;
 using UnityEngine;
 
 public class WenZiMonster : MonsterBase
@@ -8,6 +9,8 @@ public class WenZiMonster : MonsterBase
    public WenZiMonster() : base(MonsterType.Normal, "WenZiMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0)
     {
     }
+    public Transform attackTrans;
+
      public override void AddMonsterSourceStone()
     {
         MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,2));
@@ -76,17 +79,38 @@ public class WenZiMonster : MonsterBase
     
     private void Start()
     {
-        size = 0.15f;
+        base.Start();
+        size = 0.4f;
         AddMonsterEquip();
         AddMonsterSourceStone();
         AddMonsterProp();
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
+
     }
     
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "attack")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
+        }
+    }
     
     void Update()
     {
         if (IsDead) return;
         base.Update();
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        {
+            isAttack = true;
+        }
+        else
+        {
+            isAttack = false;
+        }
         if (!IsDead)
         {
             MonsterMove();

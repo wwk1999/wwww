@@ -8,6 +8,8 @@ public class ShiRenHuaMonster : MonsterBase
     public ShiRenHuaMonster() : base(MonsterType.Elite, "ShiRenHuaMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0)
     {
     }
+    public Transform attackTrans;
+
 
     public override void AddMonsterSourceStone()
     {
@@ -28,11 +30,11 @@ public class ShiRenHuaMonster : MonsterBase
     public void Awake()
     {
         base.Awake();
-        MonsterSpineName.AttackName = "attack";
-        MonsterSpineName.HitName = "hit";
-        MonsterSpineName.MoveName = "walk";
-        MonsterSpineName.DieName = "die";
-        MonsterSpineName.Skill1Name = "skill";
+        MonsterSpineName.AttackName = "attack1";
+        MonsterSpineName.HitName = "injured";
+        MonsterSpineName.MoveName = "move";
+        MonsterSpineName.DieName = "fail";
+        MonsterSpineName.Skill1Name = "skill1";
 
     }
 
@@ -84,6 +86,7 @@ public class ShiRenHuaMonster : MonsterBase
 
     private void Start()
     {
+        base.Start();
         size = 0.6f;
         AddMonsterEquip();
         AddMonsterSourceStone();
@@ -99,7 +102,7 @@ public class ShiRenHuaMonster : MonsterBase
         if (!IsDead)
         {
             MonsterMove();
-            SpriteFlipX(true);
+            SpriteFlipX(false);
         }
     }
 }
