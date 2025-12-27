@@ -1,6 +1,7 @@
 using System;
 using Mysql;
 using TMPro;
+using Tool;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -26,6 +27,35 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
         if (parentCanvas == null)
             Debug.LogWarning("EquipAttributeHover: 没有在父级中找到 Canvas。");
     }
+    
+    
+    public void SetFuJiaAttribute(EquipTable equip,BagEquipAttributeInfo bagEquipAttributeInfo)
+    {
+        foreach (Transform child in bagEquipAttributeInfo.fuJiaAttributeContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (var item in equip.defenseEntryInfos)
+        {
+            var fuJiaAttributeItem =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/FuJiaAttributeItem"),bagEquipAttributeInfo.fuJiaAttributeContent.transform);
+            fuJiaAttributeItem.transform.Find("BaseAttributeName").GetComponent<Text>().text =
+                EntryConfig.DefenseEntryNameDic[item.DefenseEntry];
+            fuJiaAttributeItem.transform.Find("BaseAttributeCount").GetComponent<TextMeshProUGUI>().text =
+                item.Value + "%";
+        }
+                
+        foreach (var item in equip.damageEntryInfos)
+        {
+            var fuJiaAttributeItem =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/FuJiaAttributeItem"),bagEquipAttributeInfo.fuJiaAttributeContent.transform);
+            fuJiaAttributeItem.transform.Find("BaseAttributeName").GetComponent<Text>().text =
+                EntryConfig.DamageEntryNameDic[item.DamageEntry];
+            fuJiaAttributeItem.transform.Find("BaseAttributeCount").GetComponent<TextMeshProUGUI>().text =
+                item.Value + "%";
+        }
+    }
+    
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -65,6 +95,77 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
         // 实例化到 Canvas 下（保证是 UI）
         var canvasRect = parentCanvas.GetComponent<RectTransform>();
         instance = Instantiate(prefab, parentCanvas.transform);
+        BagEquipAttributeInfo bagEquipAttributeInfo=instance.GetComponent<BagEquipAttributeInfo>();
+        
+        if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+        {
+            bagEquipAttributeInfo.equipName.text = EquipName.EquipNameDic[equipTable.EquipName];
+        }
+        else
+        {
+            bagEquipAttributeInfo.equipName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+        }
+        bagEquipAttributeInfo.equipImage.sprite=ResourcesConfig.GetEquipSprite(equipTable);
+        
+        //基础属性
+        if (equipTable.equip_type_id == 1 || equipTable.equip_type_id == 4 || equipTable.equip_type_id == 5)
+        {
+            bagEquipAttributeInfo.baseAttributeText1.text = "攻击 :";
+            bagEquipAttributeInfo.baseAttributeText2.text = "暴击 :";
+            bagEquipAttributeInfo.baseAttributeCount1.text = Mathf.RoundToInt(equipTable.Damage).ToString();
+            bagEquipAttributeInfo.baseAttributeCount2.text = Mathf.RoundToInt(equipTable.CRIT).ToString();
+        }
+        else
+        {
+            bagEquipAttributeInfo.baseAttributeText1.text = "生命值 :";
+            bagEquipAttributeInfo.baseAttributeText2.text = "防御 :";
+            bagEquipAttributeInfo.baseAttributeCount1.text = Mathf.RoundToInt(equipTable.HP).ToString();
+            bagEquipAttributeInfo.baseAttributeCount2.text = Mathf.RoundToInt(equipTable.Defense).ToString();
+        }
+        
+        switch (equipTable.Quality)
+        {
+            case 1:
+                bagEquipAttributeInfo.quality.text = "普通";
+                bagEquipAttributeInfo.animator.Play("WhiteEdge");
+                bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.WhiteBg;
+                break;
+            case 2:
+                bagEquipAttributeInfo.quality.text = "优秀";
+                bagEquipAttributeInfo.animator.Play("GreenEdge");
+                bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.GreenBg;
+                SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
+                break;
+            case 3:
+                bagEquipAttributeInfo.quality.text = "精良";
+                bagEquipAttributeInfo.animator.Play("BlueEdge");
+                bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.BlueBg;
+                SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
+                break;
+            case 4:
+                bagEquipAttributeInfo.quality.text = "史诗";
+                bagEquipAttributeInfo.animator.Play("PurpleEdge");
+                bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.PurpleBg;
+                SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
+                break;
+            case 5:
+                bagEquipAttributeInfo.quality.text = "传说";
+                bagEquipAttributeInfo.animator.Play("OrangeEdge");
+                bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.OrangeBg;
+                SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
+                break;
+            case 6:
+                bagEquipAttributeInfo.quality.text = "神话";
+                bagEquipAttributeInfo.animator.Play("RedEdge");
+                bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.OrangeBg;
+                SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
+                break;
+        }
+        
+        
+        
+        
+        
         var instRt = instance.GetComponent<RectTransform>();
 
         // 计算按钮右下角世界坐标

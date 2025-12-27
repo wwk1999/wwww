@@ -82,15 +82,15 @@ public class EquipAttributePanel : MonoBehaviour
         {
             baseAttributeText1.text = "攻击 :";
             baseAttributeText2.text = "暴击 :";
-            baseAttributeCount1.text = equip.Damage.ToString();
-            baseAttributeCount2.text = equip.CRIT.ToString();
+            baseAttributeCount1.text = Mathf.RoundToInt(equip.Damage).ToString();
+            baseAttributeCount2.text = Mathf.RoundToInt(equip.CRIT).ToString();
         }
         else
         {
             baseAttributeText1.text = "生命值 :";
             baseAttributeText2.text = "防御 :";
-            baseAttributeCount1.text = equip.HP.ToString();
-            baseAttributeCount2.text = equip.Defense.ToString();
+            baseAttributeCount1.text = Mathf.RoundToInt(equip.HP).ToString();
+            baseAttributeCount2.text = Mathf.RoundToInt(equip.Defense).ToString();
         }
         
         
