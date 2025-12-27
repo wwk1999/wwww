@@ -1284,6 +1284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5473463204401026133}
+  - component: {fileID: 6984691126625027976}
   m_Layer: 0
   m_Name: EquipAttributePurple
   m_TagString: Untagged
@@ -1311,6 +1312,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 461.0678, y: 230.379}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6984691126625027976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696443886129844930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5fa3dbc9209fe438e30aabe5f3b5ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipName: {fileID: 3398053656528033581}
+  quality: {fileID: 5385486667495677686}
+  baseAttributeText1: {fileID: 5317192200011091862}
+  baseAttributeText2: {fileID: 2908184778965556994}
+  baseAttributeCount1: {fileID: 8243681719349680496}
+  baseAttributeCount2: {fileID: 4887134422211446560}
+  equipBg: {fileID: 8985955217306113766}
+  equipImage: {fileID: 4626428079817744456}
+  animator: {fileID: 1301434960345406523}
+  fuJiaAttributeContent: {fileID: 7752897337587362967}
+  orangeEntryDesc: {fileID: 0}
 --- !u!1 &3746334075923139886
 GameObject:
   m_ObjectHideFlags: 0
