@@ -18,4 +18,6 @@ public class BagEquipAttributeInfo : MonoBehaviour
 
     public GameObject fuJiaAttributeContent;
     public TextMeshProUGUI orangeEntryDesc;
+
+    public Text level;
 }

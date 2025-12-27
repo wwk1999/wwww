@@ -2607,6 +2607,7 @@ MonoBehaviour:
   animator: {fileID: 99197952364949826}
   fuJiaAttributeContent: {fileID: 4607583410502804263}
   orangeEntryDesc: {fileID: 0}
+  level: {fileID: 1157033903518866110}
 --- !u!1 &8665234966456101694
 GameObject:
   m_ObjectHideFlags: 0

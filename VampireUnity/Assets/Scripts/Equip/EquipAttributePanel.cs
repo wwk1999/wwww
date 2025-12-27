@@ -27,6 +27,8 @@ public class EquipAttributePanel : MonoBehaviour
 
     public GameObject fuJiaAttributeContent;
     public TextMeshProUGUI orangeEntryDesc;
+
+    public Text level;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -76,6 +78,7 @@ public class EquipAttributePanel : MonoBehaviour
             equipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
         }
         equipImage.sprite=ResourcesConfig.GetEquipSprite(equip);
+        level.text = equip.EquipLevel.ToString();
 
         //基础属性
         if (equip.equip_type_id == 1 || equip.equip_type_id == 4 || equip.equip_type_id == 5)

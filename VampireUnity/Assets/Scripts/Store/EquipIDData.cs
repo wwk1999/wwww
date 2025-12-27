@@ -24,6 +24,7 @@ public class EquipIDData : XSingleton<EquipIDData>
         {
             equipid = GenerateEquipId(),
             Quality = equip.Quality,
+            EquipLevel = equip.EquipLevel,
             Damage = equip.Damage,
             CRIT = equip.CRIT,
             HP = equip.HP,

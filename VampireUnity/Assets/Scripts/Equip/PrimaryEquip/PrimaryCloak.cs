@@ -12,7 +12,6 @@ namespace Equip
         private void Awake()
         {
             SpriteRenderer = transform.Find("PrimaryCloakSprite").GetComponent<SpriteRenderer>();
-             Random random = new Random();
              EquipAttributes.EquipLevel = 1;
 
             EquipAttributes.EquipName = "PrimaryCloak";

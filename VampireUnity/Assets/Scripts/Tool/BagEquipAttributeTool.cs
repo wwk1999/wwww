@@ -106,6 +106,7 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
             bagEquipAttributeInfo.equipName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
         }
         bagEquipAttributeInfo.equipImage.sprite=ResourcesConfig.GetEquipSprite(equipTable);
+        bagEquipAttributeInfo.level.text = equipTable.EquipLevel.ToString();
         
         //基础属性
         if (equipTable.equip_type_id == 1 || equipTable.equip_type_id == 4 || equipTable.equip_type_id == 5)

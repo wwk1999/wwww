@@ -13,9 +13,7 @@ namespace Equip
         private void Awake()
         {
             SpriteRenderer = transform.Find("PrimaryShoeSprite").GetComponent<SpriteRenderer>();
-            Random random = new Random();
             EquipAttributes.EquipLevel = 1;
-
             EquipAttributes.EquipName = "PrimaryShoe";
             EquipAttributes.suitid = 1;
             EquipAttributes.equip_type_id = 6;
