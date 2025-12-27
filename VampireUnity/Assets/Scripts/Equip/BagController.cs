@@ -1503,6 +1503,7 @@ public class BagController : XSingleton<BagController>
         }
     }
 
+    //显示装备属性面板
     public void ShowEquipAttributePanel(TableBase tablebase, EquipType EquipType, GameObject bagGrid)
     {
         EquipTable equipTable = (EquipTable)tablebase;

@@ -11,7 +11,6 @@ public class GreenCloak : EquipBase
     private void Awake()
     {
         SpriteRenderer = transform.Find("GreenCloakSprite").GetComponent<SpriteRenderer>();
-        Random random = new Random();
         EquipAttributes.EquipLevel = 5;
         EquipAttributes.EquipName = "GreenCloak";
         EquipAttributes.suitid =2;
