@@ -20,7 +20,7 @@ namespace Config
     }
     public class WeaponConfig
     {
-        public static Dictionary<WeaponType, WeaponAttribute> WeaponAttributeDic =
+        public static Dictionary<WeaponType, WeaponAttribute> WeaponBaseAttributeDic =
             new Dictionary<WeaponType, WeaponAttribute>()
             {
                 { WeaponType.Primary ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},

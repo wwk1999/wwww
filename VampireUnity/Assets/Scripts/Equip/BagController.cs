@@ -197,58 +197,58 @@ public class BagController : XSingleton<BagController>
     
     public void WeaponFragmentDebug()
     {
-        if (PropList.ContainsKey(301))
+        if (PropList.ContainsKey(101))
         {
-            PropList[301].Count += 100;
+            PropList[101].Count += 100;
         }
         else
         {
-            PropList.Add(301,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "WhiteJingCui",Quality = 1});
+            PropList.Add(101,new PropTable(){PropType = PropConfig.PropType.WeaponFragment,Count = 100,Desc = "",EquipName = "WhiteWeaponFragment",Quality = 1});
         }
         
-        if (S.PropList.ContainsKey(302))
+        if (S.PropList.ContainsKey(102))
         {
-            S.PropList[302].Count += 100;
+            S.PropList[102].Count += 100;
         }
         else
         {
-            S.PropList.Add(302,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "GreenJingCui",Quality = 2});
+            S.PropList.Add(102,new PropTable(){PropType = PropConfig.PropType.WeaponFragment,Count = 100,Desc = "",EquipName = "GreenWeaponFragment",Quality = 2});
         }                    
         
-        if (PropList.ContainsKey(303))
+        if (PropList.ContainsKey(103))
         {
-            PropList[303].Count += 100;
+            PropList[103].Count += 100;
         }
         else
         {
-            PropList.Add(303,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "BlueJingCui",Quality = 3});
+            PropList.Add(103,new PropTable(){PropType = PropConfig.PropType.WeaponFragment,Count = 100,Desc = "",EquipName = "BlueWeaponFragment",Quality = 3});
         }
         
-        if (PropList.ContainsKey(304))
+        if (PropList.ContainsKey(104))
         {
-            PropList[304].Count += 100;
+            PropList[104].Count += 100;
         }
         else
         {
-            PropList.Add(304,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "PurpleJingCui",Quality = 4});
+            PropList.Add(104,new PropTable(){PropType = PropConfig.PropType.WeaponFragment,Count = 100,Desc = "",EquipName = "PurpleWeaponFragment",Quality = 4});
         }
         
-        if (PropList.ContainsKey(305))
+        if (PropList.ContainsKey(105))
         {
-            PropList[305].Count += 100;
+            PropList[105].Count += 100;
         }
         else
         {
-            PropList.Add(305,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "OrangeJingCui",Quality = 5});
+            PropList.Add(105,new PropTable(){PropType = PropConfig.PropType.WeaponFragment,Count = 100,Desc = "",EquipName = "OrangeWeaponFragment",Quality = 5});
         }
         
-        if (PropList.ContainsKey(306))
+        if (PropList.ContainsKey(106))
         {
-            PropList[306].Count += 100;
+            PropList[106].Count += 100;
         }
         else
         {
-            PropList.Add(306,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "RedJingCui",Quality = 6});
+            PropList.Add(106,new PropTable(){PropType = PropConfig.PropType.WeaponFragment,Count = 100,Desc = "",EquipName = "RedWeaponFragment",Quality = 6});
         }
     }
 
