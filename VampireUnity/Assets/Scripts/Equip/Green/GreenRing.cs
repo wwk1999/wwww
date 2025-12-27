@@ -24,8 +24,8 @@ public class GreenRing : EquipBase
         EquipAttributes.Quality = 2;
         
         
-        EquipAttributes.Damage=random.Next(2,5);
-        EquipAttributes.CRIT=random.Next(3,6);
+        EquipAttributes.Damage=random.Next(10,15);
+        EquipAttributes.CRIT=random.Next(10,15);
         InitEntry();
     }
    

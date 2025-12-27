@@ -594,6 +594,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
 
         GameController.S.KillMonsterCount++;
+        //胜利
         switch (LevelInfoConfig.CurrentGameLevelType)
         {
             case LevelType.Elite:

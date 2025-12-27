@@ -12,19 +12,15 @@ public class GreenHelmet : EquipBase
     private void Awake()
     {
         SpriteRenderer = transform.Find("GreenHelmetSprite").GetComponent<SpriteRenderer>();
-        // EquipAttributes.EquipQuality = EquipQuality.Green;
-        // //添加防御，随机10-20
+       
         Random random = new Random();
-        // EquipAttributes.Attributes.Add(EquipAttribute.Denfense, random.Next(1, 4));
-        // //添加生命值，随机10-20
-        // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "GreenHelmet";
         EquipAttributes.suitid = 2;
         EquipAttributes.equip_type_id = 3;
         EquipAttributes.Quality = 2;
         
-        EquipAttributes.Defense=random.Next(1,3);
-        EquipAttributes.HP=random.Next(5,10);
+        EquipAttributes.Defense=random.Next(4,8);
+        EquipAttributes.HP=random.Next(12,20);
         InitEntry();
     }
     

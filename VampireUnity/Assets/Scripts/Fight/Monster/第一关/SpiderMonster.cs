@@ -11,10 +11,12 @@ public class SpiderMonster : MonsterBase
     public SpiderWeb spiderWeb;
     public Transform attackTrans;
 
-    public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.7f, 10, 5, 10, 10, 0) { }
+    public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.5f, 20, 5, 10, 10, 0) { }
     void Start()
     {
         base.Start();
+        monsterSkeletonAnimation.timeScale = 1.5f;
+
         size = 0.5f;
         AddMonsterEquip();
         AddMonsterProp();
@@ -44,7 +46,7 @@ public class SpiderMonster : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),3));
     }
 
     private void RandomDelayDie()
@@ -94,8 +96,12 @@ public class SpiderMonster : MonsterBase
     }
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Primary, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Primary, 10));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Primary, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Primary, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Primary, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Primary, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Primary, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Primary, 3));
     }
     
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)

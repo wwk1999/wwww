@@ -916,9 +916,9 @@ public class GameController : XSingleton<GameController>
         var random=Random.Range(0,10000);
         if(GlobalPlayerAttribute.TotalCRIT>=random)
         {
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     public void ResumePlayerCamera(object[] args)
@@ -1063,6 +1063,11 @@ public class GameController : XSingleton<GameController>
     {
         if (GameOver||HaveBoss)
             return;
+        //控制同屏怪物数量
+        if (TotalMonsterCount - KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 2)
+        {
+            return;
+        }
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
         MonsterBase monsterBase=null;
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3)
@@ -1181,6 +1186,11 @@ public class GameController : XSingleton<GameController>
                 return;
             }
         }
+
+        if (monsterBase == null)
+        {
+            return;
+        }
         monsterBase.gameObject.SetActive(true);
         monsterBase.transform.position = monsterRandomPoint;
         monsterBase.CurrentHp = monsterBase.MaxHp;
@@ -1199,8 +1209,11 @@ public class GameController : XSingleton<GameController>
 
         if(NormalMonsterCount%10==0&& NormalMonsterCount!=0)
          {
-             Debug.Log("生成精英怪:"+NormalMonsterCount);
-           CreateEliteMonster();
+             if (LevelInfoConfig.CurrentGameLevelType == LevelType.Elite ||
+                 LevelInfoConfig.CurrentGameLevelType == LevelType.Boss)
+             {
+                 CreateEliteMonster();
+             }
          }
     }
     
