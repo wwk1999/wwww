@@ -3,10 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
-/// <summary>
-/// 按钮类型枚举，对应SkillWindow中的所有按钮
-/// </summary>
 public enum SkillButtonType
 {
     None,                    // 无
@@ -36,30 +32,22 @@ public enum SkillButtonType
     Defense,                 // 防御
     CritMonster              // 暴击怪物
 }
-
-/// <summary>
-/// 按钮鼠标悬停事件监听器
-/// 挂载到Button上即可监听鼠标进入和移出事件
-/// </summary>
-public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerMoveHandler
+public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("按钮类型")]
-    [Tooltip("在Inspector中设置此按钮对应的类型")]
     public SkillButtonType buttonType = SkillButtonType.None;
-    
+
     [Header("SkillInfo预制体路径")]
     public string skillInfoPrefabPath = "Prefabs/Window/SkillInfo";
-    
+
     [Header("位置偏移")]
-    public Vector2 positionOffset = new Vector2(10, -10);
-    
+    private Vector2 positionOffset = new Vector2(60, 60);
+
     private GameObject skillInfoInstance;
     private RectTransform skillInfoRectTransform;
     private Canvas parentCanvas;
-    private bool isHovering = false;
-    private float lastUpdateTime = 0f;
-    private const float UPDATE_INTERVAL = 0.05f;
-    
+    private RectTransform buttonRectTransform;
+
     void Start()
     {
         parentCanvas = GetComponentInParent<Canvas>();
@@ -67,262 +55,178 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
         {
             GameObject uiRoot = GameObject.Find("UIRoot");
             if (uiRoot != null)
-            {
                 parentCanvas = uiRoot.GetComponentInChildren<Canvas>();
-            }
         }
+
+        buttonRectTransform = GetComponent<RectTransform>();
     }
-    
+
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (skillInfoInstance == null && !isHovering)
-        {
-            CreateSkillInfo(eventData.position);
-            isHovering = true;
-        }
+        if (skillInfoInstance == null)
+            CreateSkillInfo();
     }
-    
-    public void OnPointerMove(PointerEventData eventData)
-    {
-        if (isHovering && skillInfoInstance != null)
-        {
-            if (Time.time - lastUpdateTime > UPDATE_INTERVAL)
-            {
-                UpdateSkillInfoPosition(eventData.position);
-                lastUpdateTime = Time.time;
-            }
-        }
-    }
-    
+
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (isHovering)
-        {
-            DestroySkillInfo();
-            isHovering = false;
-        }
+        DestroySkillInfo();
     }
-    
-    private void CreateSkillInfo(Vector2 screenPosition)
+
+    private void CreateSkillInfo()
     {
         if (skillInfoInstance != null)
-        {
             return;
-        }
-        
+
         GameObject prefab = Resources.Load<GameObject>(skillInfoPrefabPath);
         if (prefab == null)
         {
             Debug.LogError($"无法加载SkillInfo预制体: {skillInfoPrefabPath}");
             return;
         }
-        
-        Transform parent = null;
-        if (parentCanvas != null)
-        {
-            parent = parentCanvas.transform;
-        }
-        else
-        {
-            GameObject uiRoot = GameObject.Find("UIRoot");
-            if (uiRoot != null)
-            {
-                parent = uiRoot.transform;
-            }
-        }
-        
+
+        Transform parent = parentCanvas != null ? parentCanvas.transform : (GameObject.Find("UIRoot")?.transform);
         skillInfoInstance = Instantiate(prefab, parent);
         skillInfoInstance.name = "SkillInfo_Hover";
         skillInfoRectTransform = skillInfoInstance.GetComponent<RectTransform>();
-        
-        // 设置pivot为左上角
         skillInfoRectTransform.pivot = new Vector2(0, 1);
-        
-        // 禁用 SkillSwitch
+
         SkillSwitch skillSwitch = skillInfoInstance.GetComponentInChildren<SkillSwitch>();
-        if (skillSwitch != null)
-        {
-            skillSwitch.enabled = false;
-        }
-        
-        // 设置CanvasGroup
-        CanvasGroup canvasGroup = skillInfoInstance.GetComponent<CanvasGroup>();
-        if (canvasGroup == null)
-        {
-            canvasGroup = skillInfoInstance.AddComponent<CanvasGroup>();
-        }
-        canvasGroup.blocksRaycasts = false;
-        canvasGroup.interactable = false;
-        
-        // 根据按钮类型更新SkillInfo内容
+        if (skillSwitch != null) skillSwitch.enabled = false;
+
+        CanvasGroup cg = skillInfoInstance.GetComponent<CanvasGroup>();
+        if (cg == null) cg = skillInfoInstance.AddComponent<CanvasGroup>();
+        cg.blocksRaycasts = false;
+        cg.interactable = false;
+
         UpdateSkillInfoContent(buttonType);
-        
-        UpdateSkillInfoPosition(screenPosition);
+
+        // 确保布局更新后再读取尺寸
+        Canvas.ForceUpdateCanvases();
+        PositionSkillInfoFixed();
+
         skillInfoInstance.transform.SetAsLastSibling();
     }
-    
-    /// <summary>
-    /// 根据按钮类型更新SkillInfo的显示内容
-    /// </summary>
-    private void UpdateSkillInfoContent(SkillButtonType buttonType)
+
+    private void UpdateSkillInfoContent(SkillButtonType type)
     {
-        if (skillInfoInstance == null)
-        {
-            return;
-        }
-        
-        // 根据不同的按钮类型设置不同的内容
-        switch (buttonType)
+        if (skillInfoInstance == null) return;
+
+        switch (type)
         {
             case SkillButtonType.NormalAttack:
-                
-                SetSkillInfoContent("普通攻击", true,$"提升普通攻击{GlobalPlayerAttribute.NormalAttackNum}%的伤害");
+                SetSkillInfoContent("普通攻击", true, $"提升普通攻击{GlobalPlayerAttribute.NormalAttackNum}%的伤害");
                 break;
-                
             case SkillButtonType.AttackSpeed:
-                SetSkillInfoContent("攻击速度", false,$"提升普通攻击{GlobalPlayerAttribute.AttackSpeedNum/100f}的攻击速度");
+                SetSkillInfoContent("攻击速度", false, $"提升普通攻击{GlobalPlayerAttribute.AttackSpeedNum/100f}的攻击速度");
                 break;
-                
             case SkillButtonType.Dash:
-                SetSkillInfoContent("瞬身", true,"主角向前瞬移一段距离");
+                SetSkillInfoContent("瞬身", true, "主角向前瞬移一段距离");
                 break;
-                
             case SkillButtonType.DashCd:
-                SetSkillInfoContent("瞬身Cd", false,$"瞬身冷却时间减少{GlobalPlayerAttribute.DashCdNum/100f}%");
+                SetSkillInfoContent("瞬身Cd", false, $"瞬身冷却时间减少{GlobalPlayerAttribute.DashCdNum/100f}%");
                 break;
-                
             case SkillButtonType.Crit:
-                SetSkillInfoContent("暴击", false,$"提升主角{GlobalPlayerAttribute.CritDamageNum}%的暴击");
+                SetSkillInfoContent("暴击", false, $"提升主角{GlobalPlayerAttribute.CritDamageNum}%的暴击");
                 break;
-                
             case SkillButtonType.CritDamage:
-                SetSkillInfoContent("暴击伤害", false,$"提升主角{GlobalPlayerAttribute.CritDamageNum}%的暴击伤害");
+                SetSkillInfoContent("暴击伤害", false, $"提升主角{GlobalPlayerAttribute.CritDamageNum}%的暴击伤害");
                 break;
-                
             case SkillButtonType.MoveSpeed:
-                SetSkillInfoContent("移动速度", false,$"提升主角{GlobalPlayerAttribute.MoveSpeedNum/100f}的基础移动速度");
+                SetSkillInfoContent("移动速度", false, $"提升主角{GlobalPlayerAttribute.MoveSpeedNum/100f}的基础移动速度");
                 break;
-                
             case SkillButtonType.MoveAddDefense:
-                SetSkillInfoContent("疾行如水", false,$"移动时提升主角{GlobalPlayerAttribute.MoveAddDefenseNum}%的防御");
+                SetSkillInfoContent("疾行如水", false, $"移动时提升主角{GlobalPlayerAttribute.MoveAddDefenseNum}%的防御");
                 break;
-                
             case SkillButtonType.MoveAddAttack:
-                SetSkillInfoContent("疾行如火", false,$"提升主角{GlobalPlayerAttribute.MoveAddAttackNum}%的攻击力");
+                SetSkillInfoContent("疾行如火", false, $"提升主角{GlobalPlayerAttribute.MoveAddAttackNum}%的攻击力");
                 break;
-                
             case SkillButtonType.Skill1:
-                SetSkillInfoContent("电光风暴", true,$"在指定位置召唤雷电风暴，造成{GlobalPlayerAttribute.Skill1DamageNum}%的持续伤害");
+                SetSkillInfoContent("电光风暴", true, $"在指定位置召唤雷电风暴，造成{GlobalPlayerAttribute.Skill1DamageNum}%的持续伤害");
                 break;
-                
             case SkillButtonType.Skill2:
-                SetSkillInfoContent("冰晶星轮", true,$"在主角周围召唤4个冰晶星轮，持续8s，造成{GlobalPlayerAttribute.Skill2DamageNum}%的伤害");
+                SetSkillInfoContent("冰晶星轮", true, $"在主角周围召唤4个冰晶星轮，持续8s，造成{GlobalPlayerAttribute.Skill2DamageNum}%的伤害");
                 break;
-                
             case SkillButtonType.Skill3:
-                SetSkillInfoContent("极寒冲击", true,$"朝四周喷发极寒冰，造成{GlobalPlayerAttribute.Skill3DamageNum}%的范围伤害");
+                SetSkillInfoContent("极寒冲击", true, $"朝四周喷发极寒冰，造成{GlobalPlayerAttribute.Skill3DamageNum}%的范围伤害");
                 break;
-                
             case SkillButtonType.Skill1Cd:
-                SetSkillInfoContent("冷却缩减", false,$"减少电光风暴{GlobalPlayerAttribute.Skill1CdNum}%的冷却时间");
+                SetSkillInfoContent("冷却缩减", false, $"减少电光风暴{GlobalPlayerAttribute.Skill1CdNum}%的冷却时间");
                 break;
-                
             case SkillButtonType.Skill2Cd:
-                SetSkillInfoContent("冷却缩减", false,$"减少冰晶星轮{GlobalPlayerAttribute.Skill2CdNum}%的冷却时间");
+                SetSkillInfoContent("冷却缩减", false, $"减少冰晶星轮{GlobalPlayerAttribute.Skill2CdNum}%的冷却时间");
                 break;
-                
             case SkillButtonType.Skill3Cd:
-                SetSkillInfoContent("冷却缩减", false,$"减少极寒冲击{GlobalPlayerAttribute.Skill3CdNum}%的冷却时间");
+                SetSkillInfoContent("冷却缩减", false, $"减少极寒冲击{GlobalPlayerAttribute.Skill3CdNum}%的冷却时间");
                 break;
-                
             case SkillButtonType.Skill1Range:
-                SetSkillInfoContent("风暴扩增", false,$"增加电光风暴{GlobalPlayerAttribute.Skill1RangeNum}%的作用范围");
+                SetSkillInfoContent("风暴扩增", false, $"增加电光风暴{GlobalPlayerAttribute.Skill1RangeNum}%的作用范围");
                 break;
-                
             case SkillButtonType.Skill1YiDian:
-                SetSkillInfoContent("易电状态", false,$"被电光风暴击中的怪物附加持续3s的易电状态，增加受到的{GlobalPlayerAttribute.Skill1YiDianNum}%的伤害");
+                SetSkillInfoContent("易电状态", false, $"被电光风暴击中的怪物附加持续3s的易电状态，增加受到的{GlobalPlayerAttribute.Skill1YiDianNum}%的伤害");
                 break;
-                
             case SkillButtonType.Skill2Time:
-                SetSkillInfoContent("持续时间", false,$"增加的冰晶星轮{GlobalPlayerAttribute.Skill2TimeNum/100f}s的持续时间");
+                SetSkillInfoContent("持续时间", false, $"增加的冰晶星轮{GlobalPlayerAttribute.Skill2TimeNum/100f}s的持续时间");
                 break;
-
             case SkillButtonType.Skill2AddDefense:
                 SetSkillInfoContent("星轮护体", false, $"存在冰晶星轮时增加{GlobalPlayerAttribute.Skill2AddDefenseNum}%的防御");
                 break;
-
             case SkillButtonType.Skill3Range:
-                SetSkillInfoContent("极寒延伸", false,$"极寒冲击的作用范围增大{GlobalPlayerAttribute.Skill3RangeNum/100f}%");
+                SetSkillInfoContent("极寒延伸", false, $"极寒冲击的作用范围增大{GlobalPlayerAttribute.Skill3RangeNum/100f}%");
                 break;
-                
             case SkillButtonType.Skill3JianSu:
-                SetSkillInfoContent("极寒冰冻", false,$"极寒冲击对敌人造成{GlobalPlayerAttribute.Skill3JianSuNum/100f}%的减速效果，持续3s");
+                SetSkillInfoContent("极寒冰冻", false, $"极寒冲击对敌人造成{GlobalPlayerAttribute.Skill3JianSuNum/100f}%的减速效果，持续3s");
                 break;
-                
             case SkillButtonType.Attack:
-                SetSkillInfoContent("攻击力", false,$"提升角色{GlobalPlayerAttribute.MonsterAttackNum}的基础攻击力");
+                SetSkillInfoContent("攻击力", false, $"提升角色{GlobalPlayerAttribute.MonsterAttackNum}的基础攻击力");
                 break;
-                
             case SkillButtonType.Hp:
-                SetSkillInfoContent("生命值", false,$"提升角色{GlobalPlayerAttribute.MonsterHpNum}的最大生命值");
+                SetSkillInfoContent("生命值", false, $"提升角色{GlobalPlayerAttribute.MonsterHpNum}的最大生命值");
                 break;
-                
             case SkillButtonType.Defense:
-                SetSkillInfoContent("防御力", false,$"提升角色{GlobalPlayerAttribute.MonsterDefenseNum}的防御力");
+                SetSkillInfoContent("防御力", false, $"提升角色{GlobalPlayerAttribute.MonsterDefenseNum}的防御力");
                 break;
-                
             case SkillButtonType.CritMonster:
-                SetSkillInfoContent("暴击", false,$"提升角色{GlobalPlayerAttribute.MonsterCritNum}的暴击");
+                SetSkillInfoContent("暴击", false, $"提升角色{GlobalPlayerAttribute.MonsterCritNum}的暴击");
                 break;
-                
-            case SkillButtonType.None:
             default:
-                SetSkillInfoContent("未知", false,"未定义的技能类型");
+                SetSkillInfoContent("未知", false, "未定义的技能类型");
                 break;
         }
     }
-    
-    /// <summary>
-    /// 设置SkillInfo的具体内容
-    /// 需要根据你的SkillInfo预制体的实际结构来修改
-    /// </summary>
-    private void SetSkillInfoContent(string skillName, bool isZhuDong,string skillDescription)
+
+    private void SetSkillInfoContent(string skillName, bool isZhuDong, string skillDescription)
     {
-        if (skillInfoInstance == null)
-        {
-            return;
-        }
-        skillInfoInstance.transform.Find("bg/Image").GetComponent<Image>().sprite = transform.Find("image").GetComponent<Image>().sprite;
-        skillInfoInstance.transform.Find("bg/SkillName").GetComponent<TextMeshProUGUI>().text = skillName;
-        if (isZhuDong)
-        {
-            skillInfoInstance.transform.Find("bg/SkillType").GetComponent<TextMeshProUGUI>().text = "主动技能";
-        }
-        else
-        {
-            skillInfoInstance.transform.Find("bg/SkillType").GetComponent<TextMeshProUGUI>().text = "被动技能";
-        }
-        skillInfoInstance.transform.Find("bg/SkillInfo").GetComponent<TextMeshProUGUI>().text = skillDescription;
+        if (skillInfoInstance == null) return;
+
+        var img = transform.Find("image")?.GetComponent<Image>();
+        var dstImg = skillInfoInstance.transform.Find("bg/Image")?.GetComponent<Image>();
+        if (img != null && dstImg != null) dstImg.sprite = img.sprite;
+
+        var nameText = skillInfoInstance.transform.Find("bg/SkillName")?.GetComponent<TextMeshProUGUI>();
+        var typeText = skillInfoInstance.transform.Find("bg/SkillType")?.GetComponent<TextMeshProUGUI>();
+        var infoText = skillInfoInstance.transform.Find("bg/SkillInfo")?.GetComponent<TextMeshProUGUI>();
+
+        if (nameText != null) nameText.text = skillName;
+        if (typeText != null) typeText.text = isZhuDong ? "主动技能" : "被动技能";
+        if (infoText != null) infoText.text = skillDescription;
     }
-    
-    private void UpdateSkillInfoPosition(Vector2 screenPosition)
+
+    private void PositionSkillInfoFixed()
     {
-        if (skillInfoRectTransform == null || parentCanvas == null)
+        if (skillInfoRectTransform == null || parentCanvas == null || buttonRectTransform == null)
             return;
-        
-        Vector2 localPoint;
+
         RectTransform canvasRect = parentCanvas.GetComponent<RectTransform>();
-        
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvasRect,
-            screenPosition + positionOffset,
-            parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : parentCanvas.worldCamera,
-            out localPoint))
+        Camera cam = parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : parentCanvas.worldCamera;
+
+        Vector2 buttonScreenPos = RectTransformUtility.WorldToScreenPoint(cam, buttonRectTransform.position);
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, buttonScreenPos, cam, out Vector2 buttonLocalPoint))
         {
-            skillInfoRectTransform.anchoredPosition = localPoint;
+            Vector2 anchored = buttonLocalPoint + new Vector2(positionOffset.x, positionOffset.y);
+            skillInfoRectTransform.anchoredPosition = anchored;
         }
     }
-    
+
     private void DestroySkillInfo()
     {
         if (skillInfoInstance != null)
@@ -332,13 +236,12 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
             skillInfoRectTransform = null;
         }
     }
-    
+
     void OnDisable()
     {
         DestroySkillInfo();
-        isHovering = false;
     }
-    
+
     void OnDestroy()
     {
         DestroySkillInfo();
