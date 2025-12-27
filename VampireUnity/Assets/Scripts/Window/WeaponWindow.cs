@@ -263,23 +263,23 @@ public class WeaponWindow : MonoBehaviour
       GameObject attack =
          Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
       attack.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "攻击力 :";
-      attack.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(weaponAttribute.Attack*(1+(level1-1)*0.2f)).ToString();
+      attack.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(weaponAttribute.Attack*(1+(level1-1)*GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
       GameObject defense =
          Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
       defense.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "防御 :";
       defense.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
-         Mathf.RoundToInt(weaponAttribute.Defense * (1 + (level1 - 1) * 0.2f)).ToString();
+         Mathf.RoundToInt(weaponAttribute.Defense * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
       GameObject crit = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
       crit.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "暴击 :";
       crit.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
-         Mathf.RoundToInt(weaponAttribute.Crit * (1 + (level1 - 1) * 0.2f)).ToString();
+         Mathf.RoundToInt(weaponAttribute.Crit * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
       GameObject hp = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
       hp.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "生命值 :";
       hp.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
-         Mathf.RoundToInt(weaponAttribute.Hp * (1 + (level1 - 1) * 0.2f)).ToString();
+         Mathf.RoundToInt(weaponAttribute.Hp * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
       GameObject attackspeed =
          Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
@@ -967,5 +967,6 @@ public class WeaponWindow : MonoBehaviour
             break;
       }
       ShowAttribute(currentShowType);
+      StoreController.S.SaveStoreData();
    }
 }

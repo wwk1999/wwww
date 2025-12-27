@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Config;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -13,6 +14,17 @@ public enum ExitType
 public class GlobalPlayerAttribute 
 {
    public static WeaponType CurrentWeaponType= WeaponType.Primary; //当前武器类型
+   public static float WeaponAttack=>GetWeaponAttack();
+   public static float WeaponDefense=>GetWeaponDefense();
+   public static float WeaponCrit=>GetWeaponCrit();
+   public static float WeaponHp=>GetWeaponHp();
+   public static float WeaponAttackSpeed=>GetWeaponAttackSpeed();
+   public static float WeaponShenJiPercent = 0.2f;
+
+   
+   
+   
+   
    public static bool IsGame = false;
    public static float CurrentHp=0;
    public static bool isIceBall = false;
@@ -20,6 +32,140 @@ public class GlobalPlayerAttribute
 
    public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
 
+   public static float GetWeaponAttack()
+   {
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       int level = 0;
+       switch (CurrentWeaponType)
+       {
+           case WeaponType.Primary:
+               level = PlayerData.S.primaryWeaponLevel;
+               break;
+           case WeaponType.Du:
+               level = PlayerData.S.duWeaponLevel;
+               break;
+           case WeaponType.PuTong3:
+               level = PlayerData.S.puTong3WeaponLevel;
+               break;
+           case WeaponType.XuKong:
+               level = PlayerData.S.xuKongWeaponLevel;
+               break;
+           case WeaponType.Fire:
+               level = PlayerData.S.fireWeaponLevel;
+               break;
+           case WeaponType.LvQuan:
+               level = PlayerData.S.lvQuanWeaponLevel;
+               break;
+           case WeaponType.HeiDong:
+               level = PlayerData.S.heiDongWeaponLevel;
+               break;
+       }
+
+       return weaponAttribute.Attack * (1 + (level - 1) * WeaponShenJiPercent);
+   }
+   
+   public static float GetWeaponDefense()
+   {
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       int level = 0;
+       switch (CurrentWeaponType)
+       {
+           case WeaponType.Primary:
+               level = PlayerData.S.primaryWeaponLevel;
+               break;
+           case WeaponType.Du:
+               level = PlayerData.S.duWeaponLevel;
+               break;
+           case WeaponType.PuTong3:
+               level = PlayerData.S.puTong3WeaponLevel;
+               break;
+           case WeaponType.XuKong:
+               level = PlayerData.S.xuKongWeaponLevel;
+               break;
+           case WeaponType.Fire:
+               level = PlayerData.S.fireWeaponLevel;
+               break;
+           case WeaponType.LvQuan:
+               level = PlayerData.S.lvQuanWeaponLevel;
+               break;
+           case WeaponType.HeiDong:
+               level = PlayerData.S.heiDongWeaponLevel;
+               break;
+       }
+
+       return weaponAttribute.Defense * (1 + (level - 1) * WeaponShenJiPercent);
+   }
+   
+   public static float GetWeaponCrit()
+   {
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       int level = 0;
+       switch (CurrentWeaponType)
+       {
+           case WeaponType.Primary:
+               level = PlayerData.S.primaryWeaponLevel;
+               break;
+           case WeaponType.Du:
+               level = PlayerData.S.duWeaponLevel;
+               break;
+           case WeaponType.PuTong3:
+               level = PlayerData.S.puTong3WeaponLevel;
+               break;
+           case WeaponType.XuKong:
+               level = PlayerData.S.xuKongWeaponLevel;
+               break;
+           case WeaponType.Fire:
+               level = PlayerData.S.fireWeaponLevel;
+               break;
+           case WeaponType.LvQuan:
+               level = PlayerData.S.lvQuanWeaponLevel;
+               break;
+           case WeaponType.HeiDong:
+               level = PlayerData.S.heiDongWeaponLevel;
+               break;
+       }
+
+       return weaponAttribute.Crit * (1 + (level - 1) * WeaponShenJiPercent);
+   }
+   
+   public static float GetWeaponHp()
+   {
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       int level = 0;
+       switch (CurrentWeaponType)
+       {
+           case WeaponType.Primary:
+               level = PlayerData.S.primaryWeaponLevel;
+               break;
+           case WeaponType.Du:
+               level = PlayerData.S.duWeaponLevel;
+               break;
+           case WeaponType.PuTong3:
+               level = PlayerData.S.puTong3WeaponLevel;
+               break;
+           case WeaponType.XuKong:
+               level = PlayerData.S.xuKongWeaponLevel;
+               break;
+           case WeaponType.Fire:
+               level = PlayerData.S.fireWeaponLevel;
+               break;
+           case WeaponType.LvQuan:
+               level = PlayerData.S.lvQuanWeaponLevel;
+               break;
+           case WeaponType.HeiDong:
+               level = PlayerData.S.heiDongWeaponLevel;
+               break;
+       }
+
+       return weaponAttribute.Hp * (1 + (level - 1) * WeaponShenJiPercent);
+   }
+   
+   public static float GetWeaponAttackSpeed()
+   {
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       return weaponAttribute.AttackSpeed;
+   }
+   
    public static void ReplyHp(float value)
    {
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AllReplyAddPercent))
@@ -199,8 +345,13 @@ public class GlobalPlayerAttribute
 
    public static float TotalDamage => GetTotalDamage();
    
-   public static float TotalCRIT => (PlayerCRIT + EquipCRIT)*(1+CritNum/100.0f);
+   public static float TotalCRIT =>GetTotalCrit();
    public static float TotalDefense => GetTotalDefense();
+
+   public static float GetTotalCrit()
+   {
+       return (PlayerCRIT + EquipCRIT+WeaponCrit)*(1+CritNum/100.0f);
+   }
 
    public static float GetForture()
    {
@@ -244,7 +395,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp) * (1.0f + MaxHpPercent/100f));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp) * (1.0f + MaxHpPercent/100f));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            maxhp /= 2;
@@ -254,7 +405,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDamage()
    {
-       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage) * (1f + DamageAddPercent / 100f));
+       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack) * (1f + DamageAddPercent / 100f));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            damage *=1.3f;
@@ -264,7 +415,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDefense()
    {
-       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense)*(1f+MaxDefensePercent/100f));
+       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense)*(1f+MaxDefensePercent/100f));
        float value = 0;
 
        if (isIceBall)
