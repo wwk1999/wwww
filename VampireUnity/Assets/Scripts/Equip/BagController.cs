@@ -1126,6 +1126,39 @@ public class BagController : XSingleton<BagController>
         Debug.Log("ShowBag方法执行完成");
     }
 
+    public void ResetE()
+    {
+        if (PlayerCloakGrid != null)
+        {
+            PlayerCloakGrid.E.gameObject.SetActive(false);
+        }
+
+        if (PlayerClothGrid != null)
+        {
+            PlayerClothGrid.E.gameObject.SetActive(false);
+        }
+
+        if (PlayerRingGrid != null)
+        {
+            PlayerRingGrid.E.gameObject.SetActive(false);
+        }
+
+        if (PlayerNecklaceGrid != null)
+        {
+            PlayerNecklaceGrid.E.gameObject.SetActive(false);
+        }
+
+        if (PlayerShoeGrid != null)
+        {
+            PlayerShoeGrid.E.gameObject.SetActive(false);
+        }
+
+        if (PlayerHelmetGrid != null)
+        {
+            PlayerHelmetGrid.E.gameObject.SetActive(false);
+        }
+    }
+
     public void SetE()
     {
         if (PlayerCloakGrid != null)

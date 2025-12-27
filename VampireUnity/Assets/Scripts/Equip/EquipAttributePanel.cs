@@ -239,8 +239,12 @@ public class EquipAttributePanel : MonoBehaviour
             
             installButton.onClick.AddListener(() =>
             {
-                
                     EquipTable equip = (EquipTable)tableBase;
+                    if (GlobalPlayerAttribute.Level < equip.EquipLevel)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足！");
+                        return;
+                    }
                     foreach (var item in equip.damageEntryInfos)
                     {
                         switch (item.DamageEntry)
@@ -252,8 +256,9 @@ public class EquipAttributePanel : MonoBehaviour
                     }
                     PlayerData.S.SaveWearEquip(equip.equip_type_id, equip.equipid);
                     StoreController.S.SaveStoreData();
-                    BagController.S.SetE();
+                    BagController.S.ResetE();
                     BagController.S.InstallPlayerWearGrid(grid);
+                    BagController.S.SetE();
                     BagController.S.RefreshPlayerEquip();
                     Destroy(gameObject);
             });
@@ -262,6 +267,7 @@ public class EquipAttributePanel : MonoBehaviour
         {
             grid.transform.Find("parent/EquipGridBG").GetComponent<Image>().color =new Color(1, 1, 1, 0);
             grid.transform.Find("parent/BagGridImage").GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            grid.transform.Find("parent/Edge").GetComponent<Image>().color = new Color(1, 1, 1, 0);
             grid.transform.Find("parent/Count").GetComponent<Text>().text = null;
             EquipTable equip = (EquipTable)tableBase;
             BagController.S.EquipIdList.Remove(equip.equipid);

@@ -17,8 +17,8 @@ public class Entrance : MonoBehaviour
             AudioController.S.BGAudioSource.clip = Resources.Load<AudioClip>("Audio/BG/Level1BG");
             AudioController.S.BGAudioSource.Play();
 
-            GameController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp*100;
-            GameController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp*100;
+            GameController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp;
+            GameController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp;
             GameController.S.GameDefense = GlobalPlayerAttribute.TotalDefense;
             GameController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
             GameController.S.GameCrit = GlobalPlayerAttribute.TotalCRIT;
