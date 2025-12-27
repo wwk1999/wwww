@@ -24,8 +24,7 @@ public class PurpleCloak :EquipBase
         EquipAttributes.equip_type_id = 1;
         //暂时写死
         EquipAttributes.Quality = 4;
-        EquipAttributes.CRIT=random.Next(4,8);
-        EquipAttributes.Damage=random.Next(4,8);        
+        SetBaseAttribute();   
         
         InitEntry();
     }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Equip;
 using Mysql;
 using UnityEngine;
@@ -24,6 +25,24 @@ public class EquipBase : BagObjectBase
     
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
 
+    public void SetBaseAttribute()
+    {
+        var equipBaseAttribute=EquipConfig.EquipBaseAttributeDic[EquipAttributes.EquipLevel];
+        var qualityScale = EquipConfig.EquipQualityDic[EquipAttributes.Quality];
+        float random1=Random.Range(0.8f, 1.2f);
+        float random2=Random.Range(0.8f, 1.2f);
+        if (EquipAttributes.equip_type_id == 1 || EquipAttributes.equip_type_id == 4 ||
+            EquipAttributes.equip_type_id == 5)
+        {
+            EquipAttributes.CRIT = equipBaseAttribute.Crit * qualityScale*random1;
+            EquipAttributes.Damage= equipBaseAttribute.Attack * qualityScale*random2;
+        }
+        else
+        {
+            EquipAttributes.HP = equipBaseAttribute.Hp * qualityScale*random1;
+            EquipAttributes.Defense= equipBaseAttribute.Defense * qualityScale*random2;
+        }
+    }
 
     public void InitEntry()
     {

@@ -14,13 +14,13 @@ namespace Equip
         {
             SpriteRenderer = transform.Find("PrimaryShoeSprite").GetComponent<SpriteRenderer>();
             Random random = new Random();
+            EquipAttributes.EquipLevel = 1;
+
             EquipAttributes.EquipName = "PrimaryShoe";
             EquipAttributes.suitid = 1;
             EquipAttributes.equip_type_id = 6;
             EquipAttributes.Quality = 1;
-            
-            EquipAttributes.Defense=random.Next(2,4);
-            EquipAttributes.HP=random.Next(8,15);            
+            SetBaseAttribute();        
         }
        
     }

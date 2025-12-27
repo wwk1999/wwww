@@ -22,8 +22,7 @@ public class TreeManRing : EquipBase
         EquipAttributes.equip_type_id = 5;
         EquipAttributes.Quality = 2;
         
-        EquipAttributes.Damage=random.Next(6,10);
-        EquipAttributes.CRIT=random.Next(7,12);
+        SetBaseAttribute();
         InitEntry();
     }
     

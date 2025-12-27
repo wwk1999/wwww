@@ -21,8 +21,7 @@ public class TreeManHelmet : EquipBase
         EquipAttributes.equip_type_id = 3;
         EquipAttributes.Quality = 2;
         
-        EquipAttributes.Defense=random.Next(4,7);
-        EquipAttributes.HP=random.Next(12,20);
+        SetBaseAttribute();
         InitEntry();
     }
     

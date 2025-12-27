@@ -12,14 +12,14 @@ public class GreenCloak : EquipBase
     {
         SpriteRenderer = transform.Find("GreenCloakSprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
+        EquipAttributes.EquipLevel = 5;
         EquipAttributes.EquipName = "GreenCloak";
         EquipAttributes.suitid =2;
         EquipAttributes.equip_type_id = 1;
         //暂时写死
         EquipAttributes.Quality = 2;
         
-        EquipAttributes.CRIT=random.Next(10,15);
-        EquipAttributes.Damage=random.Next(10,15);
+        SetBaseAttribute();
         
         InitEntry();
     }

@@ -23,8 +23,7 @@ public class BlueRing : EquipBase
         EquipAttributes.equip_type_id = 5;
         EquipAttributes.Quality = 3;
         
-        EquipAttributes.Damage=random.Next(2,5);
-        EquipAttributes.CRIT=random.Next(3,6);
+        SetBaseAttribute();
         InitEntry();
     }
     

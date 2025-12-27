@@ -23,8 +23,7 @@ public class HuoShanNecklace : EquipBase
             EquipAttributes.equip_type_id = 4;
             EquipAttributes.Quality = 3;
             
-            EquipAttributes.CRIT=random.Next(4,8);
-            EquipAttributes.Damage=random.Next(4,8);
+            SetBaseAttribute();
             InitEntry();
         }
       

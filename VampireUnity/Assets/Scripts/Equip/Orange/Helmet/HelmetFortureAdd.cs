@@ -18,8 +18,7 @@ public class HelmetFortureAdd :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.HelmetFortureAdd;
         //暂时写死
         EquipAttributes.Quality = 5;
-        EquipAttributes.CRIT=random.Next(4,8);
-        EquipAttributes.Damage=random.Next(4,8);  
+        SetBaseAttribute();
         InitEntry();
     }
 }

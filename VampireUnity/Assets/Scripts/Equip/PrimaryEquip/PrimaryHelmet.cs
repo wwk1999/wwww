@@ -13,15 +13,15 @@ namespace Equip
         private void Awake()
         {
             SpriteRenderer = transform.Find("PrimaryHelmetSprite").GetComponent<SpriteRenderer>();
-            Random random = new Random();
+            EquipAttributes.EquipLevel = 1;
+
             EquipAttributes.EquipName = "PrimaryHelmet";
             EquipAttributes.suitid = 1;
             EquipAttributes.equip_type_id = 3;
             EquipAttributes.Quality = 1;
-            
-            EquipAttributes.Defense=random.Next(1,3);
-            EquipAttributes.HP=random.Next(8,15);
-            
+
+            SetBaseAttribute();
+
         }
        
     }

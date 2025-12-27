@@ -9,10 +9,10 @@ public class EquipTable:TableBase
     public int equipid { get; set; }
     public int suitid { get; set; } // 套装ID
     public int equip_type_id{ get; set; } // 装备类型ID
-    public int Damage { get; set; }
-    public int CRIT { get; set; }
-    public int Defense { get; set; }
-    public int HP { get; set; }
+    public float Damage { get; set; }
+    public float CRIT { get; set; }
+    public float Defense { get; set; }
+    public float HP { get; set; }
     
     public List<DamageEntryInfo> damageEntryInfos=new List<DamageEntryInfo>();
     public List<DefenseEntryInfo> defenseEntryInfos=new List<DefenseEntryInfo>();
@@ -30,6 +30,7 @@ public class EquipTable:TableBase
         int hp = 0, 
         int suitid = 0,
         int equip_type_id = 0,
+        int level=0,
         List<DamageEntryInfo> damageEntryInfos=null,
         List<DefenseEntryInfo> defenseEntryInfos=null,
         EntryConfig.OrangeEntry OrangeEntry1= EntryConfig.OrangeEntry.None,
@@ -44,6 +45,7 @@ public class EquipTable:TableBase
         Defense = defense;
         HP = hp;
         TableType = TableType.EquipTable;
+        EquipLevel = level;
         this.suitid = suitid;
         this.equip_type_id = equip_type_id;
         this.damageEntryInfos = damageEntryInfos ?? new List<DamageEntryInfo>();

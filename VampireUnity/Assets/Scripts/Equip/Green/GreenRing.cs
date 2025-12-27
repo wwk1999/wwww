@@ -12,20 +12,13 @@ public class GreenRing : EquipBase
     private void Awake()
     {
         SpriteRenderer = transform.Find("GreenRingSprite").GetComponent<SpriteRenderer>();
-        // EquipAttributes.EquipQuality = EquipQuality.Green;
-        // //添加防御，随机10-20
         Random random = new Random();
-        // EquipAttributes.Attributes.Add(EquipAttribute.Denfense, random.Next(1, 4));
-        // //添加生命值，随机10-20
-        // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
+        EquipAttributes.EquipLevel = 5;
         EquipAttributes.EquipName = "GreenRing";
         EquipAttributes.suitid = 2;
         EquipAttributes.equip_type_id = 5;
         EquipAttributes.Quality = 2;
-        
-        
-        EquipAttributes.Damage=random.Next(10,15);
-        EquipAttributes.CRIT=random.Next(10,15);
+        SetBaseAttribute();
         InitEntry();
     }
    

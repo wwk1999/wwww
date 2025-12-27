@@ -318,22 +318,22 @@ public class GlobalPlayerAttribute
    }
    
    //装备属性
-   public static int EquipMaxHp
+   public static float EquipMaxHp
    {
        get => GetEquipMaxHp();
    }
 
-   public static int EquipDamage
+   public static float EquipDamage
    {
        get => GetEquipDamage();
    }
    
-   public static int EquipCRIT
+   public static float EquipCRIT
    {
        get => GetEquipCRIT();
    }
 
-   public static int EquipDefense
+   public static float EquipDefense
    {
        get => GetEquipDefense();
    }
@@ -606,9 +606,9 @@ public class GlobalPlayerAttribute
    }
    
    
-   public static int GetEquipMaxHp()
+   public static float GetEquipMaxHp()
    {
-       int hp = 0;
+       float hp = 0;
        if(PlayerEquipConfig.CloakId!=0)
        {
            var cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
@@ -644,9 +644,9 @@ public class GlobalPlayerAttribute
    }
    
    
-   public static int GetEquipDamage()
+   public static float GetEquipDamage()
    {
-       int Damage = 0;
+       float Damage = 0;
        if(PlayerEquipConfig.CloakId!=0)
        {
            var cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
@@ -683,9 +683,9 @@ public class GlobalPlayerAttribute
    
   
    
-   public static int GetEquipCRIT()
+   public static float GetEquipCRIT()
    {
-       int CRIT = 0;
+       float CRIT = 0;
        if(PlayerEquipConfig.CloakId!=0)
        {
            var cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
@@ -721,9 +721,9 @@ public class GlobalPlayerAttribute
    }
    
    
-   public static int GetEquipDefense()
+   public static float GetEquipDefense()
    {
-       int Defense = 0;
+       float Defense = 0;
        if(PlayerEquipConfig.CloakId!=0)
        {
            var cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];

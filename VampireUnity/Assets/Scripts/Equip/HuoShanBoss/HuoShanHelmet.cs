@@ -23,8 +23,7 @@ public class HuoShanHelmet : EquipBase
         EquipAttributes.equip_type_id = 3;
         EquipAttributes.Quality = 3;
         
-        EquipAttributes.Defense=random.Next(1,3);
-        EquipAttributes.HP=random.Next(5,10);
+        SetBaseAttribute();
         InitEntry();
     }
    

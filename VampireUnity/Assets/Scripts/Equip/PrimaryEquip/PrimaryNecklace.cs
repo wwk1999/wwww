@@ -14,13 +14,14 @@ namespace Equip
         {
             SpriteRenderer = transform.Find("PrimaryNecklaceSprite").GetComponent<SpriteRenderer>();
             Random random = new Random();
+            EquipAttributes.EquipLevel = 1;
+
             EquipAttributes.EquipName = "PrimaryNecklace";
             EquipAttributes.suitid = 1;
             EquipAttributes.equip_type_id = 4;
             EquipAttributes.Quality = 1;
             
-            EquipAttributes.CRIT=random.Next(4,8);
-            EquipAttributes.Damage=random.Next(4,8);
+            SetBaseAttribute();
         }
         
     }

@@ -14,13 +14,13 @@ public class GreenHelmet : EquipBase
         SpriteRenderer = transform.Find("GreenHelmetSprite").GetComponent<SpriteRenderer>();
        
         Random random = new Random();
+        EquipAttributes.EquipLevel = 5;
+
         EquipAttributes.EquipName = "GreenHelmet";
         EquipAttributes.suitid = 2;
         EquipAttributes.equip_type_id = 3;
         EquipAttributes.Quality = 2;
-        
-        EquipAttributes.Defense=random.Next(4,8);
-        EquipAttributes.HP=random.Next(12,20);
+        SetBaseAttribute();
         InitEntry();
     }
     
