@@ -163,6 +163,7 @@ public class SkillController : XSingleton<SkillController>
         NormalAttackCoolingtime+=Time.deltaTime;
     }
 
+    //释放技能
     public void ExcuteSkill(SkillType skillType)
     {
         switch (skillType)
@@ -175,16 +176,6 @@ public class SkillController : XSingleton<SkillController>
                 }
                 break;
             case SkillType.Normal:
-                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
-                {
-                    return;
-                }
-                var name = GameController.S.gamePlayer.playerSkeleton.AnimationState.GetCurrent(0).Animation.Name;
-                if (name == "walk" || name == "idle")
-                {
-                    GameController.S.gamePlayer.isAttack = true;
-                    GameController.S.gamePlayer.playerState = PlayerState.Attack;
-                }
                 break;
             case SkillType.Skill1:
                 if (DianQuanCoolingtime>=DianQuantime)

@@ -307,7 +307,7 @@ public class GlobalPlayerAttribute
 
    public static float PlayerMoveSpeed
    {
-       get => GetPlayerSpeed();
+       get => GetPlayerMoveSpeed();
        set => _baseMoveSpeed = value ; 
    }
 
@@ -347,6 +347,13 @@ public class GlobalPlayerAttribute
    
    public static float TotalCRIT =>GetTotalCrit();
    public static float TotalDefense => GetTotalDefense();
+   public static float TotalAttackSpeed => GetTotalAttackSpeed();
+
+   public static float GetTotalAttackSpeed()
+   {
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       return weaponAttribute.AttackSpeed * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed);
+   }
 
    public static float GetTotalCrit()
    {
@@ -383,7 +390,7 @@ public class GlobalPlayerAttribute
        return forture;
    }
    
-   public static float GetPlayerSpeed()
+   public static float GetPlayerMoveSpeed()
    {
        float speed=_baseMoveSpeed * (1 + MoveSpeedNum / 100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
@@ -439,7 +446,7 @@ public class GlobalPlayerAttribute
 
 
    public static float CRITDamage = 0;
-   public static float DamageSpeed = 0; 
+   public static float FuJiaDamageSpeed = 0; 
    public static float DamageAddForNormal = 0;
    public static float DamageAddForBoss = 0;
    public static float Penetrate = 0;
@@ -497,7 +504,7 @@ public class GlobalPlayerAttribute
 
 
     CRITDamage = 0;
-    DamageSpeed = 0; 
+    FuJiaDamageSpeed = 0; 
     DamageAddForNormal = 0;
     DamageAddForBoss = 0;
     Penetrate = 0;
@@ -527,7 +534,7 @@ public class GlobalPlayerAttribute
                    DamageAddPercent += item.Value;
                    break;
                case EntryConfig.DamageEntry.DamageSpeed:
-                   DamageSpeed += item.Value;
+                   FuJiaDamageSpeed += item.Value;
                    break;
                case EntryConfig.DamageEntry.Penetrate:
                    Penetrate += item.Value;

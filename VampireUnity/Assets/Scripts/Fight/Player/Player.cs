@@ -41,8 +41,6 @@ public class Player : MonoBehaviour
     private float _gunDistance = 0.3f;
     public GameObject iceBall;
     public SkeletonAnimation playerSkeleton;
-    public PlayerState playerState= PlayerState.None;
-    public bool isAttack=false;
     public Slider hpSlider;
     public Slider exSlider;
     public Text levelText;
@@ -140,14 +138,21 @@ public class Player : MonoBehaviour
     {
         if (MouseDown)
         {
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
+            {
+                return;
+            }
+            playerSkeleton.timeScale = GlobalPlayerAttribute.TotalAttackSpeed;
             playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
         }
         else if(MoveJian)
         {
+            playerSkeleton.timeScale = 1;
             playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
         }
         else
         {
+            playerSkeleton.timeScale = 1;
             playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
         }
        
@@ -172,6 +177,7 @@ public class Player : MonoBehaviour
         {
             if (MoveJian == false && MouseDown == false)
             {
+                playerSkeleton.timeScale = 1;
                 playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
             }
             MoveJian = true;
@@ -415,12 +421,14 @@ public class Player : MonoBehaviour
         if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name == "idle" ||
             playerSkeleton.AnimationState.GetCurrent(0).Animation.Name == "walk")
         {
+            playerSkeleton.timeScale = 1;
             playerSkeleton.AnimationState.SetAnimation(0, "hit", false);
         }
     }
 
     public void PlayerDie()
     {
+        playerSkeleton.timeScale = 1;
         playerSkeleton.AnimationState.SetAnimation(0, "die", false);
         StartCoroutine(DelayShowPanel());
     }
@@ -514,6 +522,11 @@ public class Player : MonoBehaviour
         PlayerMove();
         if (Input.GetMouseButtonDown(0))
         {
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
+            {
+                return;
+            }
+            playerSkeleton.timeScale = GlobalPlayerAttribute.TotalAttackSpeed;
             playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
         }
         SetBianLiang();

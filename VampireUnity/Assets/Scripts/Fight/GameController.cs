@@ -774,8 +774,7 @@ public class GameController : XSingleton<GameController>
         //普通攻击按钮
         FightBGController.S.normalAttackButton.onClick.AddListener(() =>
         {
-                gamePlayer.isAttack = true;
-                gamePlayer.playerState= PlayerState.Attack;
+               
         });
         //冲击技能
         FightBGController.S.dashButton.onClick.AddListener(() =>
