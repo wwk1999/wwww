@@ -57,6 +57,8 @@ public class FightBGController : XSingleton<FightBGController>
     private float ReplyHpTime = 10f;
     private float currentReplyHpTime = 0;
     
+    public bool isShowAgain = false;
+    
 
     private void Update()
     {

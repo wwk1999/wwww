@@ -600,12 +600,16 @@ public abstract class MonsterBase : MonoBehaviour
             case LevelType.Elite:
                 if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] + LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 10)
                 {
+                    var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
+                    chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     FightBGController.S.PlaySuccessAnim();
                 }
                 break;
             case LevelType.Normal:
                 if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
                 {
+                    var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
+                    chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     FightBGController.S.PlaySuccessAnim();
                 }
                 break;

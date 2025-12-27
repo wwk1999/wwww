@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EliteBeeMonster : MonsterBase
 {
-    [NonSerialized] public float SkillTime = 3f;
+    [NonSerialized] public float SkillTime = 5f;
     [NonSerialized] public float SkillColingTime = 0f;
     //public GameObject skillRangeTrigger;
    

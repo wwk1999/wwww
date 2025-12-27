@@ -11,13 +11,8 @@ public class TreeManCloth : EquipBase
     private void Awake()
     {
         SpriteRenderer = transform.Find("TreeManClothSprite").GetComponent<SpriteRenderer>();
-        // EquipAttributes.EquipQuality = EquipQuality.White;
-        // //添加防御，随机10-20
-        System.Random random = new Random();
-        // EquipAttributes.Attributes.Add(EquipAttribute.Denfense, random.Next(1, 4));
-        // //添加生命值，随机10-20
-        // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "TreeManCloth";
+        EquipAttributes.EquipLevel = 5;
         EquipAttributes.suitid = 101;
         EquipAttributes.equip_type_id = 2;
         //暂时写死

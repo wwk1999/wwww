@@ -5,6 +5,7 @@ using Coffee.UIExtensions;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FightBg : MonoBehaviour
@@ -38,6 +39,9 @@ public class FightBg : MonoBehaviour
 
     public Button jiHuoButton;
     public GameObject toastContent;
+    
+    public Button againButton;
+    public Button returnButton;
 
 
     private void Update()
@@ -49,6 +53,17 @@ public class FightBg : MonoBehaviour
         else
         {
             jiHuoButton.gameObject.SetActive(false);
+        }
+        
+        if (FightBGController.S.isShowAgain)
+        {
+            againButton.gameObject.SetActive(true);
+            returnButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            againButton.gameObject.SetActive(false);
+            returnButton.gameObject.SetActive(false);
         }
     }
 
@@ -64,6 +79,17 @@ public class FightBg : MonoBehaviour
             GameObject boosQuan=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/BossQuan"));
             boosQuan.transform.position = new Vector3(0, 0, 0);
             GameController.S.CreateBoss();
+        });
+        againButton.onClick.AddListener(() =>
+        {
+            GlobalPlayerAttribute.CurrentExitType = ExitType.Again;
+            SceneManager.LoadScene("UIScene");
+        });
+        
+        returnButton.onClick.AddListener(() =>
+        {
+            GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
+            SceneManager.LoadScene("UIScene");
         });
     }
     

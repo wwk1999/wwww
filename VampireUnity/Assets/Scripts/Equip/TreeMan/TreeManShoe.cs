@@ -18,6 +18,7 @@ public class TreeManShoe : EquipBase
         // //添加生命值，随机10-20
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "TreeManShoe";
+        EquipAttributes.EquipLevel = 5;
         EquipAttributes.suitid = 101;
         EquipAttributes.equip_type_id = 6;
         EquipAttributes.Quality = 2;

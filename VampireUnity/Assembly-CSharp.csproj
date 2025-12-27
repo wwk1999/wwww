@@ -210,6 +210,7 @@
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\FuMoZhiGu.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Scale.cs" />
     <Compile Include="Assets\Scripts\Tool\SqrtAttack.cs" />
+    <Compile Include="Assets\Scripts\Tool\ChuanSongMen.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenShoe.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaNiao.cs" />
     <Compile Include="Assets\Scripts\Config\EquipConfig.cs" />
