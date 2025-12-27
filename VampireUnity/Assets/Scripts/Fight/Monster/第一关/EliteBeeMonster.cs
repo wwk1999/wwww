@@ -12,7 +12,7 @@ public class EliteBeeMonster : MonsterBase
 
 
 
-    public EliteBeeMonster() : base(MonsterType.Elite, "EliteBeeMonster", 1, 1000, 0.3f, 20, 5, 50, 100, 10) { }
+    public EliteBeeMonster() : base(MonsterType.Elite, "EliteBeeMonster", 1, 1000, 0.5f, 20, 5, 50, 100, 10) { }
     public override void AddMonsterEquip()
     {
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Primary, 10));
@@ -23,22 +23,12 @@ public class EliteBeeMonster : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Primary, 10));
     }
     
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Division,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.ExtremeSpeed,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Explosion,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Scale,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Duration,2));
-    }
 
     public void Start()
     {
         base.Start();
         size = 0.5f;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         AddMonsterProp();
         
     }

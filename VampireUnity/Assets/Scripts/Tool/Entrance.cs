@@ -534,7 +534,7 @@ public class Entrance : MonoBehaviour
             GameController.S.DianQuanQueue.Enqueue(dianqian);
         }
 
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 1000; i++)
         {
             var spiderWeb= Instantiate(Resources.Load("Prefabs/Monster/Level1/SpiderWeb"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
             spiderWeb.SetActive(false);

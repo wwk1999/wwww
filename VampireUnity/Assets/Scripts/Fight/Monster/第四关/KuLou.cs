@@ -13,21 +13,7 @@ public class KuLou : MonsterBase
     public GameObject parent;
     public Transform attackTrans;
 
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Penetrate, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Division, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.ExtremeSpeed, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Explosion, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Scale, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Duration, 0));
-    }
+   
     
     public void Awake()
     {
@@ -85,7 +71,6 @@ public class KuLou : MonsterBase
         size = 0.5f;
         isBeatback = false;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         AddMonsterProp();
 
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;

@@ -11,13 +11,12 @@ public class SpiderMonster : MonsterBase
     public SpiderWeb spiderWeb;
     public Transform attackTrans;
 
-    public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0) { }
+    public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.7f, 10, 5, 10, 10, 0) { }
     void Start()
     {
         base.Start();
         size = 0.5f;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
@@ -97,16 +96,6 @@ public class SpiderMonster : MonsterBase
     {
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Primary, 10));
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Primary, 10));
-    }
-    
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Division,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.ExtremeSpeed,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Explosion,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Scale,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Duration,20));
     }
     
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)

@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class TreeManBoss : MonsterBase
 {
-    public TreeManBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 1000, 0.5f, 10, 5, 10, 10, 0) { }
+    public TreeManBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 1000, 1f, 10, 5, 10, 10, 0) { }
    [NonSerialized]public float FireSkillTime = 15f;
    [NonSerialized]public float FireSkillCurrentTime = 0f;
    [NonSerialized]public float DashSkillTime = 8f;
@@ -142,7 +142,6 @@ public class TreeManBoss : MonsterBase
     {
         size = 1.5f;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         AddMonsterProp();
     }
     
@@ -197,7 +196,6 @@ public class TreeManBoss : MonsterBase
         GetEx();
         CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
         FightBGController.S.PlaySuccessAnim();
         CreateProp();
     }
@@ -282,13 +280,5 @@ public class TreeManBoss : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.TreeMan, 10));
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.TreeMan, 10));
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.TreeMan, 10));
-    }
-
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,10));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Division,10));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.ExtremeSpeed,10));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Explosion,10));
     }
 }

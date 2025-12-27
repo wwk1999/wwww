@@ -10,21 +10,7 @@ public class StoneBoss : MonsterBase
     }
     
 
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Penetrate, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Division, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.ExtremeSpeed, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Explosion, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Scale, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Duration, 2));
-    }
+    
 
     public override void AddMonsterEquip()
     {
@@ -71,7 +57,6 @@ public class StoneBoss : MonsterBase
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
         CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
         CreateProp();
 
         // gameObject.SetActive(false);
@@ -86,7 +71,6 @@ public class StoneBoss : MonsterBase
     {
         size = 1.5f;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         AddMonsterProp();
 
     }

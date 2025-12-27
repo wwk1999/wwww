@@ -11,13 +11,12 @@ public class BatMonster : MonsterBase
     [NonSerialized]public float currentTime = 0f;
     public Transform attackTrans;
 
-    public BatMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0) { }
+    public BatMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.7f, 10, 5, 10, 10, 0) { }
     void Start()
     {
         base.Start();
         size = 0.5f;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
@@ -107,7 +106,9 @@ public class BatMonster : MonsterBase
 
     public override void AddMonsterEquip()
 {
+    
     // 防御词条
+    /*
     MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.FinalDamageReductionFixed, 100));
     MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.FinalDamageReductionPercent, 100));
     MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.AllReplyAddPercent, 100));
@@ -164,17 +165,8 @@ public class BatMonster : MonsterBase
     MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.NecklaceFortureAdd, 100));
     MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.RingFortureAdd, 100));
     MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.HelmetFortureAdd, 100));
+    */
 }
-
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Division,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.ExtremeSpeed,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Explosion,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Scale,20));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Duration,20));
-    }
     
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {

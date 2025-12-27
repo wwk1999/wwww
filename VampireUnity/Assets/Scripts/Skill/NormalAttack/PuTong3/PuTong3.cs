@@ -17,12 +17,23 @@ public class PuTong3 : MonoBehaviour
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         rg.velocity = MoveDirection * MoveSpeed;
+        Invoke(nameof(EnQueue),3f);
         //粒子朝向MoveDirection
+    }
+
+    private void OnDisable()
+    {
+        CancelInvoke();
+    }
+
+    private void EnQueue()
+    {
+        gameObject.SetActive(false);
+        GameController.S.PuTong3Queue.Enqueue(gameObject);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-       
         Vector2 closestPoint = other.ClosestPoint(transform.position);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
@@ -32,7 +43,6 @@ public class PuTong3 : MonoBehaviour
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage,isCrit,DamageFrom.Normal);
             gameObject.SetActive(false);
-            GameController.S.PuTong3Queue.Enqueue(gameObject);
         }
     }
 }

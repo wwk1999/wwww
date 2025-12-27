@@ -8,15 +8,7 @@ public class XiNiuMonster : MonsterBase
     public XiNiuMonster() : base(MonsterType.Normal, "XiuNiuMonster", 1, 100, 0.5f, 10, 5, 10, 10, 0)
     {
     }
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Penetrate,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Division,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.ExtremeSpeed,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Explosion,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Scale,2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,WeaponSourceStoneType.Duration,2));
-    }
+   
     public override void AddMonsterEquip()
     {
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Green, 10));
@@ -50,7 +42,6 @@ public class XiNiuMonster : MonsterBase
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
         CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
         
         // gameObject.SetActive(false);
         // GameController.S.SnotMonsterQueue.Enqueue(this);
@@ -99,7 +90,6 @@ public class XiNiuMonster : MonsterBase
     {
         size = 0.3f;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         
         // 确保 isMove 初始化为 true（基类已初始化，这里只是确保）
         isMove = true;

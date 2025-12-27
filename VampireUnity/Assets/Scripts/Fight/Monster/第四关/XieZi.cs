@@ -20,23 +20,7 @@ public class XieZi : MonsterBase
      private float currentSkill2Time = 0;
      public Collider2D collider2D;
 
-
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Penetrate, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Division, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.ExtremeSpeed, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Explosion, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Scale, 2));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Duration, 2));
-    }
-
+    
     public  void Awake()
     {
         base.Awake();
@@ -136,7 +120,6 @@ public class XieZi : MonsterBase
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
         CreateBloodEnergy();
         CreateEquip();
-        CreateWeaponSourceStone();
         CreateProp();
 
         // gameObject.SetActive(false);
@@ -148,7 +131,6 @@ public class XieZi : MonsterBase
         base.Start();
         size = 1.4f;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         AddMonsterProp();
     }
     

@@ -96,7 +96,6 @@ public abstract class MonsterBase : MonoBehaviour
     public Slider hpSlider;
     [NonSerialized]public List<MonsterEquip> MonsterEquipList=new List<MonsterEquip>() ;//怪物装备列表
     [NonSerialized]public List<MonsterOrangeEntryEquip> MonsterOrangeEntryEquip=new List<MonsterOrangeEntryEquip>() ;//怪物装备列表
-    [NonSerialized]public List<MonsterWeaponSource> MonsterWeaponSourceStoneList=new List<MonsterWeaponSource>() ;//怪物源石列表
     [NonSerialized]public List<MonsterProp> MonsterPropList=new List<MonsterProp>() ;//怪物源石列表
 
 
@@ -138,8 +137,6 @@ public abstract class MonsterBase : MonoBehaviour
     }
 
     public abstract void AddMonsterEquip();
-    public abstract void AddMonsterSourceStone();
-    
     public abstract void AddMonsterProp();
     
     public void Awake()
@@ -264,14 +261,7 @@ public abstract class MonsterBase : MonoBehaviour
             }
         }
     }
-
-    public void Resumemonster(object[] args)
-    {
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, true);
-        IsSkill = false;
-        MonsterState= State.Move;
-        CameraContraller.CameraStatus= CameraStatus.MoveToPlayer;
-    }
+    
 
     public abstract void Skill();
 
@@ -563,22 +553,7 @@ public abstract class MonsterBase : MonoBehaviour
             GlobalPlayerAttribute.Exp+= Exp;
         }
     }
-
-    // /// <summary>
-    // /// 获得BOSS能量
-    // /// </summary>
-    // public void GetBossEnergy()
-    // {
-    //     switch (MonsterType)
-    //     {
-    //         case MonsterType.Normal:
-    //             GameController.S.BossEnergy+= 1;
-    //             break;
-    //         case MonsterType.Elite:
-    //             GameController.S.BossEnergy+= 10;
-    //             break;
-    //     }
-    // }
+    
 
     /// <summary>
     /// 生成血能
@@ -930,48 +905,6 @@ public abstract class MonsterBase : MonoBehaviour
                 propObj.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
                 propObj.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            }
-        }
-    }
-     
-     
-    public void CreateWeaponSourceStone()
-    {
-        //根据MonsterEquip的概率随机生成装备
-        foreach (MonsterWeaponSource monsterWeaponSource in MonsterWeaponSourceStoneList)
-        {
-            int random = UnityEngine.Random.Range(0, 100);
-            if (random <= monsterWeaponSource.Probability)
-            {
-                //生成装备
-                Debug.Log("生成源石");
-                GameObject sourcestone;
-                switch (monsterWeaponSource.SourceStoneType)
-                {
-                    case WeaponSourceStoneType.Penetrate:
-                        sourcestone = Instantiate(Resources.Load<GameObject>("Prefabs/WeaponSourceStone/FightWeaponPenetrate"));
-                        break;
-                    case WeaponSourceStoneType.Division:
-                        sourcestone = Instantiate(Resources.Load<GameObject>("Prefabs/WeaponSourceStone/FightWeaponDivision"));
-                        break;
-                    case WeaponSourceStoneType.Explosion:
-                        sourcestone = Instantiate(Resources.Load<GameObject>("Prefabs/WeaponSourceStone/FightWeaponExplosion"));
-                        break;
-                    case WeaponSourceStoneType.ExtremeSpeed:
-                        sourcestone = Instantiate(Resources.Load<GameObject>("Prefabs/WeaponSourceStone/FightWeaponExtremeSpeed"));
-                        break;
-                    case WeaponSourceStoneType.Scale:
-                        sourcestone = Instantiate(Resources.Load<GameObject>("Prefabs/WeaponSourceStone/FightWeaponScale"));
-                        break;
-                    case WeaponSourceStoneType.Duration:
-                        sourcestone = Instantiate(Resources.Load<GameObject>("Prefabs/WeaponSourceStone/FightWeaponDuration"));
-                        break;
-                    default:
-                        sourcestone = Instantiate(Resources.Load<GameObject>("Prefabs/WeaponSourceStone/FightWeaponExtremeSpeed"));
-                        break;
-                }
-                //设置装备位置为怪物位置
-                sourcestone.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
         }
     }

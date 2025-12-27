@@ -146,6 +146,7 @@ public class FightBGController : XSingleton<FightBGController>
         DiLie.transform.Find("GroundFissure/baozha").GetComponent<ParticleSystem>().Play();
     }
 
+    //胜利动画
     public void PlaySuccessAnim()
     {
         var success= Instantiate(Resources.Load<GameObject>("Prefabs/Success/Success"),transform);
@@ -158,7 +159,7 @@ public class FightBGController : XSingleton<FightBGController>
             StoreController.S.SaveStoreData();
         }
 
-        StartCoroutine(DelayDisableDiLie(success));
+        StartCoroutine(DelayDisable(success));
     }
     IEnumerator DelayPlaySuccessAnim(SkeletonGraphic skeletonGraphic)
     {
@@ -166,7 +167,7 @@ public class FightBGController : XSingleton<FightBGController>
         skeletonGraphic.AnimationState.SetAnimation(0, "bui_9_2", false);
     }
     
-    IEnumerator DelayDisableDiLie(GameObject obj)
+    IEnumerator DelayDisable(GameObject obj)
     {
         yield return new WaitForSeconds(5f);
         Destroy(obj);

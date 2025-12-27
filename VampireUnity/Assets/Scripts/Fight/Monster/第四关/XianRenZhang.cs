@@ -14,21 +14,6 @@ public class XianRenZhang : MonsterBase
     private float attackRange = 0.65f;
 
     
-    public override void AddMonsterSourceStone()
-    {
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Penetrate, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Division, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.ExtremeSpeed, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Explosion, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Scale, 0));
-        MonsterWeaponSourceStoneList.Add(new MonsterWeaponSource(WeaponSourceStoneQuality.White,
-            WeaponSourceStoneType.Duration, 0));
-    }
     
     public void Awake()
     {
@@ -91,7 +76,6 @@ public class XianRenZhang : MonsterBase
         size = 0.5f;
         isBeatback = false;
         AddMonsterEquip();
-        AddMonsterSourceStone();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
     }
