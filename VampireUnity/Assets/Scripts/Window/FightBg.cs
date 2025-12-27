@@ -43,6 +43,17 @@ public class FightBg : MonoBehaviour
     public Button againButton;
     public Button returnButton;
 
+    public Image LMBBg;
+    public Image LMB;
+    public Image RMBBg;
+    public Image RMB;
+    public Image skill1Bg;
+    public Image skill1;
+    public Image skill2Bg;
+    public Image skill2;
+    public Image skill3Bg;
+    public Image skill3;
+
 
     private void Update()
     {
@@ -91,6 +102,86 @@ public class FightBg : MonoBehaviour
             GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
             SceneManager.LoadScene("UIScene");
         });
+        
+        
+        
+        
+        if (GetSkillSprite(SkillController.S.LMB) == null)
+        {
+            LMB.gameObject.SetActive(false);
+            LMBBg.gameObject.SetActive(false);
+        }
+        else
+        {
+            LMB.sprite=GetSkillSprite(SkillController.S.LMB);
+            LMBBg.sprite=GetSkillSprite(SkillController.S.LMB);
+        }
+        
+        if (GetSkillSprite(SkillController.S.RMB) == null)
+        {
+            RMB.gameObject.SetActive(false);
+            RMBBg.gameObject.SetActive(false);
+        }
+        else
+        {
+            RMB.sprite=GetSkillSprite(SkillController.S.RMB);
+            RMBBg.sprite=GetSkillSprite(SkillController.S.RMB);
+        }
+        
+        if (GetSkillSprite(SkillController.S.Alpha1) == null)
+        {
+            skill1.gameObject.SetActive(false);
+            skill1Bg.gameObject.SetActive(false);
+        }
+        else
+        {
+            skill1Bg.sprite=GetSkillSprite(SkillController.S.Alpha1);
+            skill1.sprite=GetSkillSprite(SkillController.S.Alpha1);
+        }
+        
+        if (GetSkillSprite(SkillController.S.Alpha2) == null)
+        {
+            skill2.gameObject.SetActive(false);
+            skill2Bg.gameObject.SetActive(false);
+        }
+        else
+        {
+            skill2.sprite=GetSkillSprite(SkillController.S.Alpha2);
+            skill2Bg.sprite=GetSkillSprite(SkillController.S.Alpha2);
+
+        }
+        
+        if (GetSkillSprite(SkillController.S.Alpha3) == null)
+        {
+            skill3.gameObject.SetActive(false);
+            skill3Bg.gameObject.SetActive(false);
+        }
+        else
+        {
+            skill3.sprite=GetSkillSprite(SkillController.S.Alpha3);
+            skill3Bg.sprite=GetSkillSprite(SkillController.S.Alpha3);
+
+        }
+        
+    }
+
+    public Sprite GetSkillSprite(SkillType skillType)
+    {
+        switch (skillType)
+        {
+            case SkillType.Skill1:
+                return ResourcesConfig.Skill1;
+            case SkillType.Skill2:
+                return ResourcesConfig.Skill2;
+            case SkillType.Skill3:
+                return ResourcesConfig.Skill3;
+            case SkillType.Dash:
+                return ResourcesConfig.Dash;
+            case SkillType.Normal:
+                return ResourcesConfig.NormalAttack;
+        }
+
+        return null;
     }
     
     private void OnDestroy()

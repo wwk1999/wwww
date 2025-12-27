@@ -53,7 +53,9 @@ public class EliteBeeMonster : MonsterBase
     public override void AddMonsterProp()
     {
         MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),10));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),3));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),4));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,1),10));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,2),4));
     }
 
     private void RandomDelayDie()

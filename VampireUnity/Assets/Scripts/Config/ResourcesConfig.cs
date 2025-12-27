@@ -79,33 +79,12 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite WhitePenetrate;
     public static Sprite WhiteScale;
     
-    public static Sprite GreenDivision;
-    public static Sprite GreenDuration;
-    public static Sprite GreenExplosion;
-    public static Sprite GreenExtremeSpeed;
-    public static Sprite GreenPenetrate;
-    public static Sprite GreenScale;
-    
-    public static Sprite BlueDivision;
-    public static Sprite BlueDuration;
-    public static Sprite BlueExplosion;
-    public static Sprite BlueExtremeSpeed;
-    public static Sprite BluePenetrate;
-    public static Sprite BlueScale;
-    
-    public static Sprite PurpleDivision;
-    public static Sprite PurpleDuration;
-    public static Sprite PurpleExplosion;
-    public static Sprite PurpleExtremeSpeed;
-    public static Sprite PurplePenetrate;
-    public static Sprite PurpleScale;
-    
-    public static Sprite OrangeDivision;
-    public static Sprite OrangeDuration;
-    public static Sprite OrangeExplosion;
-    public static Sprite OrangeExtremeSpeed;
-    public static Sprite OrangePenetrate;
-    public static Sprite OrangeScale;
+    //技能
+    public static Sprite Skill1;
+    public static Sprite Skill2;
+    public static Sprite Skill3;
+    public static Sprite NormalAttack;
+    public static Sprite Dash;
     
     //关卡界面怪物icon
     public static Sprite SnotIcon;
@@ -230,6 +209,13 @@ public class ResourcesConfig : MonoBehaviour
 
     public static void Init()
     {
+        Skill1=Resources.Load<Sprite>("Sprite/Skill/skill1");
+        Skill2=Resources.Load<Sprite>("Sprite/Skill/skill2");
+        Skill3=Resources.Load<Sprite>("Sprite/Skill/skill3");
+        Dash=Resources.Load<Sprite>("Sprite/Skill/dash");
+        NormalAttack=Resources.Load<Sprite>("Sprite/Skill/normalAttack");
+
+        
         //道具
         WhiteWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/WhiteWeaponFragment");
         GreenWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/GreenWeaponFragment");
