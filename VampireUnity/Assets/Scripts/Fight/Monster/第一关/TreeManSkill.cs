@@ -15,7 +15,7 @@ public class TreeManSkill : MonoBehaviour
     private void OnEnable()
     {
         isDamaged=false;
-        meshRenderer.sortingOrder=Random.Range(6000,7000);
+        meshRenderer.sortingOrder=Random.Range(0,1000);
         time = -1;
         Invoke(nameof(show), 1f);
     }

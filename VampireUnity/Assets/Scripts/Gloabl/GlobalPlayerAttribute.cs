@@ -179,8 +179,8 @@ public class GlobalPlayerAttribute
                value *= 1.3f;
            }
        }
-       CurrentHp+= value;
-       CurrentHp=Math.Min(CurrentHp,TotalMaxHp);
+       GameController.S.GameCurrentHp+= value;
+       GameController.S.GameCurrentHp=Math.Min(GameController.S.GameCurrentHp,GameController.S.GameMaxHp);
    }
    
    

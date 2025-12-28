@@ -88,6 +88,7 @@ public class FightBGController : XSingleton<FightBGController>
                 GameController.S.gamePlayer.LevelUp.SetActive(true);
                 GameController.S.gamePlayer.LevelUpParticle.Play();
                 GlobalPlayerAttribute.Level++;
+                ObserverModuleManager.S.SendEvent("ShenJi");
                 playerLevelText.text =  GlobalPlayerAttribute.Level.ToString();
                 GlobalPlayerAttribute.Exp=GlobalPlayerAttribute.Exp-GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level-1];
                 // PlayerInfoController.S.UpdatePlayerInfo( GlobalPlayerAttribute.Level, GlobalPlayerAttribute.Exp, GlobalPlayerAttribute.GameLevel, GlobalPlayerAttribute.BloodEnergy);

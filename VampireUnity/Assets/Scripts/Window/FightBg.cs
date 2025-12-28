@@ -98,10 +98,17 @@ public class FightBg : MonoBehaviour
         return 0;
     }
 
+    public void ShenJi(object[] obj)
+    {
+        playerLevelText.text = GlobalPlayerAttribute.Level.ToString();
+    }
+
     private void Start()
     {
         //技能按钮点击特效
+        playerLevelText.text = GlobalPlayerAttribute.Level.ToString();
         ObserverModuleManager.S.RegisterEvent(ConstKeys.ShowToast, ShowTaost);
+        ObserverModuleManager.S.RegisterEvent("ShenJi", ShenJi);
         SkillController.S.IceArrowUIFX = iceArrowUIFX;
         SkillController.S.IceBallUIFX = iceBallUIFX;
         SkillController.S.IceExUIFX = iceExUIFX;
@@ -193,6 +200,7 @@ public class FightBg : MonoBehaviour
     private void OnDestroy()
     {
         ObserverModuleManager.S.UnRegisterEvent(ConstKeys.ShowToast, ShowTaost);
+        ObserverModuleManager.S.UnRegisterEvent("ShenJi", ShenJi);
     }
 
     public void ShowTaost(object[] obj)

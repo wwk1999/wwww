@@ -517,12 +517,16 @@ public abstract class MonsterBase : MonoBehaviour
         switch (MonsterType)
         {
             case MonsterType.Normal:
+                GlobalPlayerAttribute.BloodEnergy++;
                 GameController.S.NormalCount++;
                 break;
             case MonsterType.Elite:
+                GlobalPlayerAttribute.BloodEnergy+=10;
+
                 GameController.S.EliteCount++;
                 break;
             case MonsterType.Boss:
+                GlobalPlayerAttribute.BloodEnergy+=100;
                 GameController.S.BossCount++;
                 break;
         }
@@ -593,8 +597,13 @@ public abstract class MonsterBase : MonoBehaviour
         monsterHpGameObject.transform.position = transform.position;
         float offsetX=Random.Range(-0.3f,0.3f);
         float offsetY=Random.Range(-0.2f,0.2f);
+        float bossOffsetY = 0;
+        if (MonsterType == MonsterType.Boss)
+        {
+            bossOffsetY = 1;
+        }
         monsterHpGameObject.transform.position = new Vector3(transform.position.x + 0.1f+offsetX,
-            transform.position.y + 0.5f+offsetY, transform.position.z);
+            transform.position.y + 0.5f+offsetY+bossOffsetY, transform.position.z);
         monsterHpGameObject.gameObject.SetActive(true);
     }
 
@@ -773,6 +782,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else
         {
+            ShowHurtText(finalDamage, isCrit);
             CurrentHp -= finalDamage;
             hpSlider.maxValue = MaxHp;
             hpSlider.value = CurrentHp;

@@ -18,6 +18,11 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public float GameDefense = 0;
     [NonSerialized] public float GameAttack = 0;
     [NonSerialized] public float GameCrit = 0;
+    
+    
+    
+    
+    
     [NonSerialized] public float OrangeEntryTime = 5f;
     [NonSerialized] public float CurrentOrangeEntryTime = 0f;
     [NonSerialized] public bool isFuHuo = true;
@@ -838,10 +843,8 @@ public class GameController : XSingleton<GameController>
 
         FightBGController.S.BossEnergySlider.maxValue = MaxBossEnergyNum;
         FightBGController.S.BossEnergySlider.value = BossEnergyNum;
-        Debug.Log("最大能量值："+MaxBossEnergyNum);
-        Debug.Log("当前能量值："+BossEnergyNum);
         //召唤BOSS
-        if (BossEnergyNum > 1 && HaveBossWarning == false&&LevelInfoConfig.CurrentGameLevelType==LevelType.Boss)
+        if (KillMonsterCount>=LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/2 && HaveBossWarning == false&&LevelInfoConfig.CurrentGameLevelType==LevelType.Boss)
         {
             HaveBossWarning=true;
             BossJiHuo = true;

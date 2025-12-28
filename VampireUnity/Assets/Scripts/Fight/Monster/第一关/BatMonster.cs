@@ -102,8 +102,8 @@ public class BatMonster : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),4));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,1),4));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),5));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,1),5));
     }
 
     public override void AddMonsterEquip()

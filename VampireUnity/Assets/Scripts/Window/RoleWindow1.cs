@@ -103,6 +103,8 @@ public class RoleWindow1 : MonoBehaviour
     {
         Debug.Log("点击进入角色界面");
         InitEquip();
+        GlobalPlayerAttribute.RefreshFuJiaAttribute();
+
         BagController.S.IsInit = true;
         chibangButton.onClick.AddListener(() =>
         {

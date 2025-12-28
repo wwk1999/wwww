@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Spine;
 using Spine.Unity;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -369,6 +370,7 @@ public class Player : MonoBehaviour
         
         
         realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
+        realDamage=Math.Max(0,realDamage);
         
         // 检查是否有DelayDamage词条
         bool hasDelayDamage = GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DelayDamage);

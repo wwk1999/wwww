@@ -3,6 +3,7 @@ using Mysql;
 using TMPro;
 using Tool;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EquipAttributePanel : MonoBehaviour
@@ -222,6 +223,12 @@ public class EquipAttributePanel : MonoBehaviour
             
             uninstallButton.onClick.AddListener(() =>
             {
+                Scene active = SceneManager.GetActiveScene();
+                if (active.name == "FightScene") 
+                {
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"战斗场景不能更换装备");
+                    return;
+                }
                     UninstallE();
                     BagController.S.UnInstallPlayerWearGrid(grid);
                     BagController.S.RefreshPlayerEquip();    
@@ -239,6 +246,13 @@ public class EquipAttributePanel : MonoBehaviour
             
             installButton.onClick.AddListener(() =>
             {
+                Scene active = SceneManager.GetActiveScene();
+                if (active.name == "FightScene") 
+                {
+                  ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"战斗场景不能更换装备");
+                  return;
+                }
+                
                     EquipTable equip = (EquipTable)tableBase;
                     if (GlobalPlayerAttribute.Level < equip.EquipLevel)
                     {
