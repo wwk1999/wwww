@@ -276,105 +276,86 @@ public abstract class MonsterBase : MonoBehaviour
     
     void DelayDestroy()
     {
+        gameObject.SetActive(false);
          //第一关怪物死亡
            if (this is SnotMonster snotMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.SnotMonsterQueue.Enqueue(snotMonster);
             }
             else if (this is BatMonster batMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.BatMonsterQueue.Enqueue(batMonster);
             }
             else if (this is SpiderMonster spiderMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.SpiderMonsterQueue.Enqueue(spiderMonster);
             }
             else if (this is EliteBeeMonster eliteBeeMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.EliteBeeMonsterQueue.Enqueue(eliteBeeMonster);
             }
             // 第二关怪物死亡
             else if (this is ChongZiMonster chongZiMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.ChongZiMonsterQueue.Enqueue(chongZiMonster);
             }
             else if (this is XiaoHuoMonster xiaoHuoMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.XiaoHuoMonsterQueue.Enqueue(xiaoHuoMonster);
             }
             else if (this is DunDiMonster dunDiMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.DunDiMonsterQueue.Enqueue(dunDiMonster);
             }
             else if (this is EliteDaZuiMonster eliteDaZuiMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.EliteDaZuiMonsterQueue.Enqueue(eliteDaZuiMonster);
             }
             else if (this is XiNiuMonster xiNiuMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.XiNiuMonsterQueue.Enqueue(xiNiuMonster);
             }
             else if (this is HuangShu huangshu)
             {
-                gameObject.SetActive(false);
                 GameController.S.HuangShuQueue.Enqueue(huangshu);
             } 
             // 第三关怪物死亡
             else if (this is WenZiMonster wenZiMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.WenZiMonsterQueue.Enqueue(wenZiMonster);
             }
             else if (this is QingWaMonster qingWaMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.QingWaMonsterQueue.Enqueue(qingWaMonster);
             }
             else if (this is JiaChongMonster jiaChongMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.JiaChongMonsterQueue.Enqueue(jiaChongMonster);
             }
             else if (this is ShiRenHuaMonster shiRenHuaMonster)
             {
-                gameObject.SetActive(false);
                 GameController.S.ShiRenHuaMonsterQueue.Enqueue(shiRenHuaMonster);
             }
             // 第四关怪物死亡
             else if (this is KuLou kuLou)
             {
-                gameObject.SetActive(false);
                 GameController.S.KuLouQueue.Enqueue(kuLou);
             }
             else if (this is Huangzhu huangzhu)
             {
-                gameObject.SetActive(false);
                 GameController.S.HuangZhuQueue.Enqueue(huangzhu);
             }
             else if (this is ShaChong shaChong)
             {
-                gameObject.SetActive(false);
                 GameController.S.ShaChongQueue.Enqueue(shaChong);
             } else if (this is ShaNiao shaniao)
             {
-                gameObject.SetActive(false);
                 GameController.S.ShaNiaoQueue.Enqueue(shaniao);
             } else if (this is XianRenZhang xianrenzhang)
             {
-                gameObject.SetActive(false);
                 GameController.S.XianRenZhangQueue.Enqueue(xianrenzhang);
             }  else if (this is ShaXiYi shaxiyi)
             {
-                gameObject.SetActive(false);
                 GameController.S.ShaXiYiQueue.Enqueue(shaxiyi);
             } 
     }
@@ -551,14 +532,6 @@ public abstract class MonsterBase : MonoBehaviour
                     FightBGController.S.PlaySuccessAnim();
                 }
                 break;
-        }
-
-        if (monsterSkeletonAnimation != null)
-        {
-             if (monsterSkeletonAnimation.timeScale == 0)
-             {
-                 monsterSkeletonAnimation.timeScale = 1;
-            }
         }
        
         if (monsterSkeletonAnimation != null)
@@ -743,7 +716,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
         finalDamage = OrangeEntryDamage(finalDamage);
-        GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck * finalDamage);
+        GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck/100.0f * finalDamage);
         ShowHurtText(finalDamage, isCrit);
         var random=Random.Range(0, 100);
         if (random < 5 && GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.KillNormal)&&MonsterType==MonsterType.Normal)
@@ -782,7 +755,6 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else
         {
-            ShowHurtText(finalDamage, isCrit);
             CurrentHp -= finalDamage;
             hpSlider.maxValue = MaxHp;
             hpSlider.value = CurrentHp;
