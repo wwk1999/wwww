@@ -587,7 +587,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 6
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &9212558879822177949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,8 +599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &496961563206976205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,16 +1164,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 2
-  keyCode: 4
+  keyCode: 0
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   keyCodeText: {fileID: 6719380456993460707}
   mouseRightListens:
-  - {fileID: 4518069314226324788}
+  - {fileID: 4371742062717704462}
   - {fileID: 2335271848884137651}
   - {fileID: 4063352658316075061}
   - {fileID: 3926148239282683905}
-  - {fileID: 4526339601577683578}
   skillSwitchObj: {fileID: 1907914395548908629}
   mask: {fileID: 946897183695456772}
 --- !u!95 &6096589136026846495
@@ -1214,7 +1210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 11
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &564437904197812279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,8 +1222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &887130811711200130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,7 +1940,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 25
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &5973877114276361981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1960,8 +1952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &1078473165991872463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2431,7 +2421,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 21
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &3205633350131743964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2444,8 +2433,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &1534684598202683196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3882,16 +3869,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 3
-  keyCode: 5
+  keyCode: 0
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   keyCodeText: {fileID: 8364332974627203104}
   mouseRightListens:
-  - {fileID: 4518069314226324788}
+  - {fileID: 4371742062717704462}
   - {fileID: 2335271848884137651}
   - {fileID: 4063352658316075061}
   - {fileID: 3926148239282683905}
-  - {fileID: 4526339601577683578}
   skillSwitchObj: {fileID: 1907914395548908629}
   mask: {fileID: 946897183695456772}
 --- !u!95 &3349508563513085543
@@ -3929,7 +3915,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 12
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &8679303603986372601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3942,8 +3927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &2511618542441671706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4464,7 +4447,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 15
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &538121106891408977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4477,8 +4459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &2648498655928616193
 GameObject:
   m_ObjectHideFlags: 0
@@ -4849,7 +4829,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 18
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &4136880971723507349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4862,8 +4841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &2786894211827225397
 GameObject:
   m_ObjectHideFlags: 0
@@ -5150,7 +5127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 7
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &8822292048852132356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5163,8 +5139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &2835380351351699504
 GameObject:
   m_ObjectHideFlags: 0
@@ -5326,7 +5300,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 8
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &7785167116475820148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5339,8 +5312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &2908736517876133022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5915,10 +5886,10 @@ GameObject:
   - component: {fileID: 732188273319991945}
   - component: {fileID: 7568243962527345301}
   - component: {fileID: 8496620548039768117}
-  - component: {fileID: 4518069314226324788}
   - component: {fileID: 5705408691961472795}
   - component: {fileID: 3356635530718891561}
   - component: {fileID: 5086053715967273169}
+  - component: {fileID: 4371742062717704462}
   m_Layer: 5
   m_Name: Skill1
   m_TagString: Untagged
@@ -6002,31 +5973,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4518069314226324788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3424632768174814408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonType: 1
-  keyCode: 3
-  canvasRect: {fileID: 3311344604755121102}
-  _skillSwitch: {fileID: 2497931552839264880}
-  keyCodeText: {fileID: 6472851435417865174}
-  mouseRightListens:
-  - {fileID: 4518069314226324788}
-  - {fileID: 2335271848884137651}
-  - {fileID: 4063352658316075061}
-  - {fileID: 3926148239282683905}
-  - {fileID: 4526339601577683578}
-  skillSwitchObj: {fileID: 1907914395548908629}
-  mask: {fileID: 946897183695456772}
 --- !u!95 &5705408691961472795
 Animator:
   serializedVersion: 5
@@ -6062,7 +6008,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 10
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &5086053715967273169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6075,8 +6020,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
+--- !u!114 &4371742062717704462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3424632768174814408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 1
+  keyCode: 0
+  canvasRect: {fileID: 3311344604755121102}
+  _skillSwitch: {fileID: 2497931552839264880}
+  keyCodeText: {fileID: 6472851435417865174}
+  mouseRightListens:
+  - {fileID: 4371742062717704462}
+  - {fileID: 2335271848884137651}
+  - {fileID: 4063352658316075061}
+  - {fileID: 3926148239282683905}
+  skillSwitchObj: {fileID: 1907914395548908629}
+  mask: {fileID: 946897183695456772}
 --- !u!1 &3429919479564748330
 GameObject:
   m_ObjectHideFlags: 0
@@ -7500,7 +7467,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 5
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &4115680386369460234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7513,8 +7479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &4470197779492638089
 GameObject:
   m_ObjectHideFlags: 0
@@ -7905,7 +7869,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 9
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &2476489662479964825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7918,8 +7881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &4738534528594672893
 GameObject:
   m_ObjectHideFlags: 0
@@ -8461,7 +8422,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 23
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &1287711070362966051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8474,8 +8434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &5015306311229455642
 GameObject:
   m_ObjectHideFlags: 0
@@ -8866,7 +8824,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 14
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &1271037301935444093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8879,8 +8836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &5374045916762712579
 GameObject:
   m_ObjectHideFlags: 0
@@ -9276,7 +9231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 19
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &7962926359044939710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9289,8 +9243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &5746960940449107375
 GameObject:
   m_ObjectHideFlags: 0
@@ -9452,7 +9404,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 13
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &1060298779326675202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9465,8 +9416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &5776160518251911241
 GameObject:
   m_ObjectHideFlags: 0
@@ -9628,7 +9577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 4
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &3324547129374391355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9641,8 +9589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &5797503948629245121
 GameObject:
   m_ObjectHideFlags: 0
@@ -10914,7 +10860,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 22
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &3189831851102379955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10927,8 +10872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &6827066333803925528
 GameObject:
   m_ObjectHideFlags: 0
@@ -11759,7 +11702,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 20
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &1975291863878330929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11772,8 +11714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &7095270300468533367
 GameObject:
   m_ObjectHideFlags: 0
@@ -11864,7 +11804,6 @@ GameObject:
   - component: {fileID: 5107554463528800022}
   - component: {fileID: 3503925999258205262}
   - component: {fileID: 8236383001212261139}
-  - component: {fileID: 4526339601577683578}
   - component: {fileID: 4660705678769389366}
   - component: {fileID: 1004015142347130214}
   - component: {fileID: 7125620188765363474}
@@ -11951,31 +11890,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4526339601577683578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7137597430530161600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 147068cf1e55d28498becfa9ba7e09cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonType: 4
-  keyCode: 1
-  canvasRect: {fileID: 3311344604755121102}
-  _skillSwitch: {fileID: 2497931552839264880}
-  keyCodeText: {fileID: 6732861455162642852}
-  mouseRightListens:
-  - {fileID: 4518069314226324788}
-  - {fileID: 2335271848884137651}
-  - {fileID: 4063352658316075061}
-  - {fileID: 3926148239282683905}
-  - {fileID: 4526339601577683578}
-  skillSwitchObj: {fileID: 1907914395548908629}
-  mask: {fileID: 946897183695456772}
 --- !u!95 &4660705678769389366
 Animator:
   serializedVersion: 5
@@ -12011,7 +11925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 1
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &7125620188765363474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12024,8 +11937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &7214631469032261251
 GameObject:
   m_ObjectHideFlags: 0
@@ -12899,16 +12810,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 5
-  keyCode: 2
+  keyCode: 0
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   keyCodeText: {fileID: 8569351227906800472}
   mouseRightListens:
-  - {fileID: 4518069314226324788}
+  - {fileID: 4371742062717704462}
   - {fileID: 2335271848884137651}
   - {fileID: 4063352658316075061}
   - {fileID: 3926148239282683905}
-  - {fileID: 4526339601577683578}
   skillSwitchObj: {fileID: 1907914395548908629}
   mask: {fileID: 946897183695456772}
 --- !u!95 &866668143242703525
@@ -12946,7 +12856,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 3
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &5871568564085699206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12959,8 +12868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &7653341557915341689
 GameObject:
   m_ObjectHideFlags: 0
@@ -13197,7 +13104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 2
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &3065082451781713402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13210,8 +13116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &7681478867095271972
 GameObject:
   m_ObjectHideFlags: 0
@@ -13718,7 +13622,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 24
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &5156051367203234356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13731,8 +13634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &8186512583237041104
 GameObject:
   m_ObjectHideFlags: 0
@@ -14184,7 +14085,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 17
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &3366145938519915276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14197,8 +14097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &8406363291899933760
 GameObject:
   m_ObjectHideFlags: 0
@@ -14360,7 +14258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 16
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
-  positionOffset: {x: 10, y: -10}
 --- !u!114 &8703887657310730043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14373,8 +14270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMultiplier: 1.2
-  duration: 0.2
 --- !u!1 &8420763928486255941
 GameObject:
   m_ObjectHideFlags: 0
@@ -15758,7 +15653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3712383358920460591, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 470
+      value: 413.5683
       objectReference: {fileID: 0}
     - target: {fileID: 3712383358920460591, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15794,7 +15689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3712383358920460591, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 28.2158
       objectReference: {fileID: 0}
     - target: {fileID: 3712383358920460591, guid: a3d6f9e2150a5be49a1e4d0b36a411a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

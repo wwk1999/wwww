@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class SkillSwitch : MonoBehaviour
 {
     [NonSerialized]public List<MouseRightListen>  mouseRightListens = new List<MouseRightListen>();
-    public Button LMB;
     public Button RMB;
     public Button Alpha1;
     public Button Alpha2;
@@ -81,15 +80,6 @@ public class SkillSwitch : MonoBehaviour
     {
         switch (keyCodeType)
         {
-            case KeyCodeType.LMB:
-                foreach (MouseRightListen listen in mouseRightListens)
-                {
-                    if (listen.keyCode == KeyCodeType.LMB)
-                    {
-                        listen.keyCode=KeyCodeType.None;
-                    }
-                }
-                break;
             case KeyCodeType.RMB:
                 foreach (MouseRightListen listen in mouseRightListens)
                 {
@@ -130,16 +120,6 @@ public class SkillSwitch : MonoBehaviour
     }
     private void Start()
     {
-        LMB.onClick.AddListener(() =>
-        {
-            ResetKeyCode(KeyCodeType.LMB);
-            ClickMouseRightListen.keyCode=KeyCodeType.LMB;
-            SetKeyCodeText();
-            SaveSkillKeyCode();
-            StoreController.S.SaveStoreData();
-            gameObject.SetActive(false);
-            mask.SetActive(false);
-        });
         RMB.onClick.AddListener(() =>
         {
             ResetKeyCode(KeyCodeType.RMB);

@@ -6,11 +6,9 @@ using System.Collections;
 [RequireComponent(typeof(Button))]
 public class ButtonScaleTool : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [Tooltip("目标缩放倍数（相对于初始局部缩放）")]
-    [SerializeField] private float targetMultiplier = 1.2f;
+    private float targetMultiplier = 1.2f;
 
-    [Tooltip("过渡时长（秒）")]
-    [SerializeField] private float duration = 0.2f;
+     private float duration = 0.2f;
 
     private Vector3 originalScale;
     private Coroutine scaleCoroutine;
