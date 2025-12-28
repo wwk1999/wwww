@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: Enemy_Boss_ogre_SkeletonData
+  m_EditorClassIdentifier: 
+  atlasAssets:
+  - {fileID: 11400000, guid: 136eb380ac4bbce43b9f5f8f81de0882, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: ee95b8eb4d98d874aa6ce7e9a363a1b6, type: 3}
+  isUpgradingBlendModeMaterials: 0
+  blendModeMaterials:
+    requiresBlendModeMaterials: 1
+    applyAdditiveMaterial: 1
+    additiveMaterials:
+    - pageName: Enemy_Boss_ogre_8.png
+      material: {fileID: 2100000, guid: be7cb72d2ee038c458d2795a7b399c4f, type: 2}
+    - pageName: Enemy_Boss_ogre_4.png
+      material: {fileID: 2100000, guid: 6930deffd83567b4693a02b29eae4583, type: 2}
+    - pageName: Enemy_Boss_ogre_6.png
+      material: {fileID: 2100000, guid: 9e8251cdd32e2e44dac963ded4ec97d8, type: 2}
+    multiplyMaterials:
+    - pageName: Enemy_Boss_ogre_8.png
+      material: {fileID: 2100000, guid: e3e7d89524941c842bf22be7fc251aaa, type: 2}
+    - pageName: Enemy_Boss_ogre_4.png
+      material: {fileID: 2100000, guid: 9814c62610290c54f86c4bbc762eebd0, type: 2}
+    - pageName: Enemy_Boss_ogre_6.png
+      material: {fileID: 2100000, guid: 6106823e854aebd4fbbf671c62482641, type: 2}
+    screenMaterials:
+    - pageName: Enemy_Boss_ogre_2.png
+      material: {fileID: 2100000, guid: 82408d2af2f36e644beb2673596afa31, type: 2}
+  skeletonDataModifiers: []
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0.2
+  controller: {fileID: 0}
