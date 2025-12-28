@@ -132,6 +132,21 @@ public class SkillWindow1 : MonoBehaviour
     public GameObject moveAddAttackLine;
     public GameObject moveAddDefenseLine;
     public GameObject critDamageLine;
+    
+    
+    public GameObject skill1Auto;
+    public GameObject skill2Auto;
+    public GameObject skill3Auto;
+    public GameObject dashAuto;
+
+    public void SetAuto()
+    {
+        skill1Auto.gameObject.SetActive(SkillData.S.skill1Auto);
+        skill2Auto.gameObject.SetActive(SkillData.S.skill2Auto);
+        skill3Auto.gameObject.SetActive(SkillData.S.skill3Auto);
+        dashAuto.gameObject.SetActive(SkillData.S.dashAuto);
+
+    }
 
     public void SetLine()
     {
@@ -404,6 +419,7 @@ public class SkillWindow1 : MonoBehaviour
     {
         SetButtonDisable();
         SetShowLevel();
+        SetAuto();
     }
 
     private void Start()

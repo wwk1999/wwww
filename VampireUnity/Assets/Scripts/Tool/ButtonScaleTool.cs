@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -16,6 +17,11 @@ public class ButtonScaleTool : MonoBehaviour, IPointerEnterHandler, IPointerExit
     private void Awake()
     {
         originalScale = transform.localScale;
+    }
+
+    private void OnEnable()
+    {
+        transform.localScale = new Vector3(1, 1, 1);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

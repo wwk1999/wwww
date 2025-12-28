@@ -30,6 +30,12 @@ public class SkillData : XSingleton<SkillData>
     public SkillType Alpha2 = SkillType.None;
     public SkillType Alpha3 = SkillType.None;
     
+    public bool skill1Auto=false;
+    public bool skill2Auto=false;
+    public bool skill3Auto=false;
+    public bool dashAuto=false;
+
+    
     public SkillJiaDian JiaDian=new SkillJiaDian();
     protected override void Awake()
     {

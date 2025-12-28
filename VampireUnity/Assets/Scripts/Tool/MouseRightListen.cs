@@ -23,6 +23,10 @@ public class MouseRightListen : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
+            if (!CheckSkillLevel())
+            {
+                return;
+            }
            Vector2 localPoint;
            var cam = canvasRect.GetComponentInParent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main;
            
@@ -32,9 +36,26 @@ public class MouseRightListen : MonoBehaviour, IPointerClickHandler
                mask.SetActive(true);
                skillSwitchObj.GetComponent<SkillSwitch>().mouseRightListens= mouseRightListens;
                skillSwitchObj.GetComponent<SkillSwitch>().ClickMouseRightListen= this;
+               skillSwitchObj.GetComponent<SkillSwitch>().buttonType= buttonType;
                _skillSwitch.anchoredPosition =  new Vector2(gameObject.GetComponent<RectTransform>().anchoredPosition.x+_skillSwitch.sizeDelta.x/2, gameObject.GetComponent<RectTransform>().anchoredPosition.y-_skillSwitch.sizeDelta.y/2);
            }
         }
+    }
+
+    public bool CheckSkillLevel()
+    {
+        switch (buttonType)
+        {
+            case SkillType.Skill1:
+                return SkillJiaDian.S.Skill1Damage >= 1;
+            case SkillType.Skill2:
+                return SkillJiaDian.S.Skill2Damage >= 1;
+            case SkillType.Skill3:
+                return SkillJiaDian.S.Skill3Damage >= 1;
+            case SkillType.Dash:
+                return SkillJiaDian.S.Dash >= 1;
+        }
+        return false;
     }
 
     public KeyCodeType GetKeyCodeSkill(SkillType skillType)

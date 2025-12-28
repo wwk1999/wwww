@@ -250,6 +250,27 @@ public class SkillController : XSingleton<SkillController>
         IceBallCoolingtime+= Time.deltaTime;
         DashCoolingtime+=Time.deltaTime;
         DianQuanCoolingtime+= Time.deltaTime;
+
+        if (DashCoolingtime >= Dashtime && SkillJiaDian.S.Dash >= 1&&SkillData.S.dashAuto)
+        {
+            ExcuteSkill(SkillType.Dash);
+        }
+        
+        if (DianQuanCoolingtime >= DianQuantime && SkillJiaDian.S.Skill1Damage >= 1&&SkillData.S.skill1Auto)
+        {
+            ExcuteSkill(SkillType.Skill1);
+        }
+        
+        if (IceBallCoolingtime >= IceBallTime && SkillJiaDian.S.Skill2Damage >= 1&&SkillData.S.skill2Auto)
+        {
+            ExcuteSkill(SkillType.Skill2);
+        }
+        
+        if (IceExplosionCoolingtime >= IceExplosiontime && SkillJiaDian.S.Skill3Damage >= 1&&SkillData.S.skill3Auto)
+        {
+            ExcuteSkill(SkillType.Skill3);
+        }
+        
         
         //技能CD
         FightBGController.S.IceExYellowCd.GetComponent<Image>().fillAmount= IceExplosionCoolingtime / IceExplosiontime;

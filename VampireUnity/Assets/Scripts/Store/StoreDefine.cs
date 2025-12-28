@@ -140,6 +140,10 @@ public class StoreDefine : XSingleton<StoreDefine>
         public SkillType Alpha2 = SkillType.None;
         public SkillType Alpha3 = SkillType.None;
         
+        public bool skill1Auto=false;
+        public bool skill2Auto=false;
+        public bool skill3Auto=false;
+        public bool dashAuto=false;
 
         public void CopyFromRuntime(SkillData runtime)
         {
@@ -148,6 +152,10 @@ public class StoreDefine : XSingleton<StoreDefine>
             Alpha1=runtime.Alpha1;
             Alpha2=runtime.Alpha2;
             Alpha3=runtime.Alpha3;
+            skill1Auto=runtime.skill1Auto;
+            skill2Auto=runtime.skill2Auto;
+            skill3Auto=runtime.skill3Auto;
+            dashAuto=runtime.dashAuto;
         }
 
         public void ApplyToRuntime(SkillData runtime)
@@ -157,6 +165,10 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.Alpha1=Alpha1;
             runtime.Alpha2=Alpha2;
             runtime.Alpha3=Alpha3;
+            runtime.skill1Auto=skill1Auto;
+            runtime.skill2Auto=skill2Auto;
+            runtime.skill3Auto=skill3Auto;
+            runtime.dashAuto = dashAuto;
         }
     }
     

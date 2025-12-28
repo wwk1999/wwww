@@ -13,6 +13,12 @@ public class SkillSwitch : MonoBehaviour
     public Button Auto;
     public GameObject mask;
 
+    public SkillWindow1 skillWindow1;
+    
+
+    
+    [NonSerialized]public SkillType buttonType=SkillType.None;
+
     
     [NonSerialized]public MouseRightListen ClickMouseRightListen;
 
@@ -156,6 +162,28 @@ public class SkillSwitch : MonoBehaviour
             ClickMouseRightListen.keyCode=KeyCodeType.Alpha3;
             SetKeyCodeText();
             SaveSkillKeyCode();
+            StoreController.S.SaveStoreData();
+            gameObject.SetActive(false);
+            mask.SetActive(false);
+        });
+        Auto.onClick.AddListener(() =>
+        {
+            switch (buttonType)
+            {
+                case SkillType.Skill1:
+                    SkillData.S.skill1Auto=!SkillData.S.skill1Auto;
+                    break;
+                case SkillType.Skill2:
+                    SkillData.S.skill2Auto=!SkillData.S.skill2Auto;
+                    break;
+                case SkillType.Skill3:
+                    SkillData.S.skill3Auto=!SkillData.S.skill3Auto;
+                    break;
+                case SkillType.Dash:
+                    SkillData.S.dashAuto=!SkillData.S.dashAuto;
+                    break;
+            }
+            skillWindow1.SetAuto();
             StoreController.S.SaveStoreData();
             gameObject.SetActive(false);
             mask.SetActive(false);
