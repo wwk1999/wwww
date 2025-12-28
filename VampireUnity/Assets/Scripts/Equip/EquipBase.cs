@@ -54,7 +54,7 @@ public class EquipBase : BagObjectBase
                var damageEntryInfo=new DamageEntryInfo();
                int randomIndex = Random.Range(0, EntryConfig.DamageEntryList.Count);
                damageEntryInfo.DamageEntry = EntryConfig.DamageEntryList[randomIndex];
-               float randomValue=Random.Range(EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].minValue, EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].maxValue);
+               float randomValue=Random.Range(EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].minValue*EquipConfig.EquipEntryQualityDic[EquipAttributes.Quality], EntryConfig.DamageEntryConfigs[damageEntryInfo.DamageEntry].maxValue*EquipConfig.EquipEntryQualityDic[EquipAttributes.Quality]);
                float value = Mathf.Round(randomValue*100)/100;
                damageEntryInfo.Value = value;
                EquipAttributes.damageEntryInfos.Add(damageEntryInfo);
@@ -67,7 +67,7 @@ public class EquipBase : BagObjectBase
                 var DefenseEntryInfo=new DefenseEntryInfo();
                 int randomIndex = Random.Range(0, EntryConfig.DefenseEntryList.Count);
                 DefenseEntryInfo.DefenseEntry = EntryConfig.DefenseEntryList[randomIndex];
-                float randomValue=Random.Range(EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].minValue, EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].maxValue);
+                float randomValue=Random.Range(EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].minValue*EquipConfig.EquipEntryQualityDic[EquipAttributes.Quality], EntryConfig.DefenseEntryConfigs[DefenseEntryInfo.DefenseEntry].maxValue*EquipConfig.EquipEntryQualityDic[EquipAttributes.Quality]);
                 float value = Mathf.Round(randomValue*100)/100;
                 DefenseEntryInfo.Value = value;
                 EquipAttributes.defenseEntryInfos.Add(DefenseEntryInfo);

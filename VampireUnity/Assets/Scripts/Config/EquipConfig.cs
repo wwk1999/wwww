@@ -43,5 +43,14 @@ namespace Config
             { 5, 2.5f },
             { 6, 3.5f },
         };
+        
+        public static Dictionary<int, float> EquipEntryQualityDic = new Dictionary<int, float>()
+        {
+            { 2, 1f },
+            { 3, 1.25f },
+            { 4, 1.5f },
+            { 5, 2f },
+            { 6, 3f },
+        };
     }
 }
