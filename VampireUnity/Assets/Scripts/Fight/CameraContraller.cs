@@ -17,6 +17,13 @@ public class CameraContraller : XSingleton<CameraContraller>
     [NonSerialized] float ElapsedTime = 0f;
     [NonSerialized]public static CameraStatus CameraStatus = CameraStatus.FollowPlayer;
     [NonSerialized] public bool IsShaking = false;
+    
+    [NonSerialized] public float UpLimit = 11f;
+    [NonSerialized] public float ButtomLimit = -10f;
+    [NonSerialized] public float LeftLimit = -19f;
+    [NonSerialized] public float RightLimit = 19f;
+
+
     private void Awake()
     {
         ObserverModuleManager.S.RegisterEvent(ConstKeys.CameraMoveToBoss, OnCameraMoveBegin);
@@ -80,13 +87,13 @@ public class CameraContraller : XSingleton<CameraContraller>
         }
 
 
-        if (transform.position.x < -19f)
+        if (transform.position.x < LeftLimit)
             transform.position = new Vector3(-19f, transform.position.y, transform.position.z);
-        if (transform.position.x > 19f)
+        if (transform.position.x > RightLimit)
             transform.position = new Vector3(19f, transform.position.y, transform.position.z);
-        if (transform.position.y < -10f)
+        if (transform.position.y < ButtomLimit)
             transform.position = new Vector3(transform.position.x, -10f, transform.position.z);
-        if (transform.position.y > 11f)
+        if (transform.position.y > UpLimit)
             transform.position = new Vector3(transform.position.x, 11f, transform.position.z);
     }
     

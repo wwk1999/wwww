@@ -1006,11 +1006,17 @@ public class GameController : XSingleton<GameController>
     // 获取距离玩家10单位的圆周上随机一点
     Vector2 GetRandomPointOnCircle(float radius = 10f)
     {
-        // 获取单位圆内的随机点，然后归一化到圆周上
+        Vector2 pos = Vector2.zero;
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
-    
+        pos=(Vector2)gamePlayer.transform.position + randomDirection * radius;
+        while (pos.x <= CameraContraller.S.LeftLimit + 2 || pos.x > CameraContraller.S.RightLimit - 2 ||
+               pos.y > CameraContraller.S.UpLimit - 2 || pos.y < CameraContraller.S.ButtomLimit + 2)
+        {
+            randomDirection = Random.insideUnitCircle.normalized;
+            pos=(Vector2)gamePlayer.transform.position + randomDirection * radius;
+        }
         // 乘以半径并加上玩家位置
-        return (Vector2)GameController.S.gamePlayer.transform.position + randomDirection * radius;
+        return pos;
     }
     
     public void CreateEliteMonster()

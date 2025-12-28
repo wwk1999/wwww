@@ -569,12 +569,26 @@ public class DuanZaoWindow : MonoBehaviour
                     int count = BagController.S.PropList[101].Count;
 
                     BagController.S.PropList[101].Count %=  4;
-                    BagController.S.PropList[102].Count += count / 4;
+                    if (BagController.S.PropList.ContainsKey(102))
+                    {
+                        BagController.S.PropList[102].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(102,new PropTable(PropConfig.PropType.WeaponFragment,count/4,"",2,"GreenWeaponFragment"));
+                    }
                 }
                 else
                 {
                     BagController.S.PropList[101].Count -=  4;
-                    BagController.S.PropList[102].Count += 1;
+                    if (BagController.S.PropList.ContainsKey(102))
+                    {
+                        BagController.S.PropList[102].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(102,new PropTable(PropConfig.PropType.WeaponFragment,1,"",2,"GreenWeaponFragment"));
+                    }
                 }
                 break;
             
@@ -585,18 +599,30 @@ public class DuanZaoWindow : MonoBehaviour
                     return;
                 }
 
-                if (_toggleState == true)
+                if (_toggleState)
                 {
                     int count = BagController.S.PropList[102].Count;
 
                     BagController.S.PropList[102].Count %=  4;
-                    BagController.S.PropList[103].Count += count / 4;
-                }
+                    if (BagController.S.PropList.ContainsKey(103))
+                    {
+                        BagController.S.PropList[103].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(103,new PropTable(PropConfig.PropType.WeaponFragment,count/4,"",3,"BlueWeaponFragment"));
+                    }                }
                 else
                 {
                     BagController.S.PropList[102].Count -=  4;
-                    BagController.S.PropList[103].Count += 1;
-                }
+                    if (BagController.S.PropList.ContainsKey(103))
+                    {
+                        BagController.S.PropList[103].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(103,new PropTable(PropConfig.PropType.WeaponFragment,1,"",3,"BlueWeaponFragment"));
+                    }                       }
                 break;
             
             case HeChengType.PurpleWeaponFragment:
@@ -611,13 +637,26 @@ public class DuanZaoWindow : MonoBehaviour
                     int count = BagController.S.PropList[103].Count;
 
                     BagController.S.PropList[103].Count %=  4;
-                    BagController.S.PropList[104].Count += count / 4;
+                    if (BagController.S.PropList.ContainsKey(104))
+                    {
+                        BagController.S.PropList[104].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(104,new PropTable(PropConfig.PropType.WeaponFragment,count/4,"",4,"PurpleWeaponFragment"));
+                    }
                 }
                 else
                 {
                     BagController.S.PropList[103].Count -=  4;
-                    BagController.S.PropList[104].Count += 1;
-                }
+                    if (BagController.S.PropList.ContainsKey(104))
+                    {
+                        BagController.S.PropList[104].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(104,new PropTable(PropConfig.PropType.WeaponFragment,1,"",4,"PurpleWeaponFragment"));
+                    }                       }
                 break;
             
             case HeChengType.OrangeWeaponFragment:
@@ -632,13 +671,26 @@ public class DuanZaoWindow : MonoBehaviour
                     int count = BagController.S.PropList[104].Count;
 
                     BagController.S.PropList[104].Count %=  4;
-                    BagController.S.PropList[105].Count += count / 4;
+                    if (BagController.S.PropList.ContainsKey(105))
+                    {
+                        BagController.S.PropList[105].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(105,new PropTable(PropConfig.PropType.WeaponFragment,count/4,"",5,"OrangeWeaponFragment"));
+                    }                       
                 }
                 else
                 {
                     BagController.S.PropList[104].Count -=  4;
-                    BagController.S.PropList[105].Count += 1;
-                }
+                    if (BagController.S.PropList.ContainsKey(105))
+                    {
+                        BagController.S.PropList[105].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(105,new PropTable(PropConfig.PropType.WeaponFragment,1,"",5,"OrangeWeaponFragment"));
+                    }                          }
                 break;
             
             case HeChengType.RedWeaponFragment:
@@ -648,19 +700,35 @@ public class DuanZaoWindow : MonoBehaviour
                     return;
                 }
 
-                if (_toggleState == true)
+                if (_toggleState)
                 {
                     int count = BagController.S.PropList[105].Count;
 
                     BagController.S.PropList[105].Count %=  4;
-                    BagController.S.PropList[106].Count += count / 4;
+                    if (BagController.S.PropList.ContainsKey(106))
+                    {
+                        BagController.S.PropList[106].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(106,new PropTable(PropConfig.PropType.WeaponFragment,count/4,"",6,"RedWeaponFragment"));
+                    }                          
                 }
                 else
                 {
                     BagController.S.PropList[105].Count -=  4;
-                    BagController.S.PropList[106].Count += 1;
+                    if (BagController.S.PropList.ContainsKey(106))
+                    {
+                        BagController.S.PropList[106].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(106,new PropTable(PropConfig.PropType.WeaponFragment,1,"",6,"RedWeaponFragment"));
+                    }                   
                 }
                 break;
+            
+            
             
             
             
@@ -674,17 +742,31 @@ public class DuanZaoWindow : MonoBehaviour
                     return;
                 }
 
-                if (_toggleState == true)
+                if (_toggleState)
                 {
                     int count = BagController.S.PropList[201].Count;
 
                     BagController.S.PropList[201].Count %=  4;
-                    BagController.S.PropList[202].Count += count / 4;
+                    if (BagController.S.PropList.ContainsKey(202))
+                    {
+                        BagController.S.PropList[202].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(202,new PropTable(PropConfig.PropType.JingCui,count/4,"",2,"GreenJingCui"));
+                    }
                 }
                 else
                 {
                     BagController.S.PropList[201].Count -=  4;
-                    BagController.S.PropList[202].Count += 1;
+                    if (BagController.S.PropList.ContainsKey(202))
+                    {
+                        BagController.S.PropList[202].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(202,new PropTable(PropConfig.PropType.JingCui,1,"",2,"GreenJingCui"));
+                    }
                 }
                 break;
             
@@ -695,18 +777,30 @@ public class DuanZaoWindow : MonoBehaviour
                     return;
                 }
 
-                if (_toggleState == true)
+                if (_toggleState)
                 {
                     int count = BagController.S.PropList[202].Count;
 
                     BagController.S.PropList[202].Count %=  4;
-                    BagController.S.PropList[203].Count += count / 4;
-                }
+                    if (BagController.S.PropList.ContainsKey(203))
+                    {
+                        BagController.S.PropList[203].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(203,new PropTable(PropConfig.PropType.JingCui,count/4,"",3,"BlueJingCui"));
+                    }                }
                 else
                 {
                     BagController.S.PropList[202].Count -=  4;
-                    BagController.S.PropList[203].Count += 1;
-                }
+                    if (BagController.S.PropList.ContainsKey(203))
+                    {
+                        BagController.S.PropList[203].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(203,new PropTable(PropConfig.PropType.JingCui,1,"",3,"BlueJingCui"));
+                    }                       }
                 break;
             
             case HeChengType.PurpleJingCui:
@@ -719,14 +813,28 @@ public class DuanZaoWindow : MonoBehaviour
                 if (_toggleState == true)
                 {
                     int count = BagController.S.PropList[203].Count;
+
                     BagController.S.PropList[203].Count %=  4;
-                    BagController.S.PropList[204].Count += count / 4;
+                    if (BagController.S.PropList.ContainsKey(204))
+                    {
+                        BagController.S.PropList[204].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(204,new PropTable(PropConfig.PropType.JingCui,count/4,"",4,"PurpleJingCui"));
+                    }
                 }
                 else
                 {
                     BagController.S.PropList[203].Count -=  4;
-                    BagController.S.PropList[204].Count += 1;
-                }
+                    if (BagController.S.PropList.ContainsKey(204))
+                    {
+                        BagController.S.PropList[204].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(204,new PropTable(PropConfig.PropType.JingCui,1,"",4,"PurpleJingCui"));
+                    }                       }
                 break;
             
             case HeChengType.OrangeJingCui:
@@ -739,14 +847,28 @@ public class DuanZaoWindow : MonoBehaviour
                 if (_toggleState == true)
                 {
                     int count = BagController.S.PropList[204].Count;
+
                     BagController.S.PropList[204].Count %=  4;
-                    BagController.S.PropList[205].Count += count / 4;
+                    if (BagController.S.PropList.ContainsKey(205))
+                    {
+                        BagController.S.PropList[205].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(205,new PropTable(PropConfig.PropType.JingCui,count/4,"",5,"OrangeJingCui"));
+                    }                       
                 }
                 else
                 {
                     BagController.S.PropList[204].Count -=  4;
-                    BagController.S.PropList[205].Count += 1;
-                }
+                    if (BagController.S.PropList.ContainsKey(205))
+                    {
+                        BagController.S.PropList[205].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(205,new PropTable(PropConfig.PropType.JingCui,1,"",5,"OrangeJingCui"));
+                    }                          }
                 break;
             
             case HeChengType.RedJingCui:
@@ -756,18 +878,41 @@ public class DuanZaoWindow : MonoBehaviour
                     return;
                 }
 
-                if (_toggleState == true)
+                if (_toggleState)
                 {
                     int count = BagController.S.PropList[205].Count;
+
                     BagController.S.PropList[205].Count %=  4;
-                    BagController.S.PropList[206].Count += count / 4;
+                    if (BagController.S.PropList.ContainsKey(206))
+                    {
+                        BagController.S.PropList[206].Count += count / 4;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(206,new PropTable(PropConfig.PropType.JingCui,count/4,"",6,"RedJingCui"));
+                    }                          
                 }
                 else
                 {
                     BagController.S.PropList[205].Count -=  4;
-                    BagController.S.PropList[206].Count += 1;
+                    if (BagController.S.PropList.ContainsKey(206))
+                    {
+                        BagController.S.PropList[206].Count += 1;
+                    }
+                    else
+                    {
+                        BagController.S.PropList.Add(206,new PropTable(PropConfig.PropType.JingCui,1,"",6,"RedJingCui"));
+                    }                   
                 }
                 break;
+            
+            
+            
+            
+            
+            
+            
+            
             
             case HeChengType.ShenHuaZhiXin:
                 if (!BagController.S.PropList.ContainsKey(301) || BagController.S.PropList[301].Count < 1)
