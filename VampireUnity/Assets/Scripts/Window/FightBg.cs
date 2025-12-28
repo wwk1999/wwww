@@ -103,7 +103,7 @@ public class FightBg : MonoBehaviour
             SceneManager.LoadScene("UIScene");
         });
         
-        
+        Debug.LogError(SkillController.S.LMB);
         
         
         if (GetSkillSprite(SkillController.S.LMB) == null)
@@ -113,6 +113,8 @@ public class FightBg : MonoBehaviour
         }
         else
         {
+            LMB.gameObject.SetActive(true);
+            LMBBg.gameObject.SetActive(true);
             LMB.sprite=GetSkillSprite(SkillController.S.LMB);
             LMBBg.sprite=GetSkillSprite(SkillController.S.LMB);
         }
