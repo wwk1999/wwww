@@ -533,8 +533,8 @@ public class WeaponWindow : MonoBehaviour
       {
          case WeaponType.Du:
             if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
-                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(302) ||
-                BagController.S.PropList[302].Count < 3)
+                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
+                BagController.S.PropList[102].Count < 3)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
                return;
@@ -542,7 +542,7 @@ public class WeaponWindow : MonoBehaviour
 
             GlobalPlayerAttribute.BloodEnergy -= 300;
             BagController.S.PropList[202].Count -= 3;
-            BagController.S.PropList[302].Count -= 3;
+            BagController.S.PropList[102].Count -= 3;
             PlayerData.S.duWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
@@ -550,8 +550,8 @@ public class WeaponWindow : MonoBehaviour
 
          case WeaponType.PuTong3:
             if (GlobalPlayerAttribute.BloodEnergy < 500 || !BagController.S.PropList.ContainsKey(203) ||
-                BagController.S.PropList[203].Count < 3 || !BagController.S.PropList.ContainsKey(303) ||
-                BagController.S.PropList[303].Count < 3)
+                BagController.S.PropList[203].Count < 3 || !BagController.S.PropList.ContainsKey(103) ||
+                BagController.S.PropList[103].Count < 3)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
                return;
@@ -559,7 +559,7 @@ public class WeaponWindow : MonoBehaviour
 
             GlobalPlayerAttribute.BloodEnergy -= 500;
             BagController.S.PropList[203].Count -= 3;
-            BagController.S.PropList[303].Count -= 3;
+            BagController.S.PropList[103].Count -= 3;
             PlayerData.S.puTong3WeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
@@ -567,8 +567,8 @@ public class WeaponWindow : MonoBehaviour
 
          case WeaponType.XuKong:
             if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
-                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(303) ||
-                BagController.S.PropList[303].Count < 5)
+                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
+                BagController.S.PropList[103].Count < 5)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
                return;
@@ -576,15 +576,15 @@ public class WeaponWindow : MonoBehaviour
 
             GlobalPlayerAttribute.BloodEnergy -= 800;
             BagController.S.PropList[203].Count -= 5;
-            BagController.S.PropList[303].Count -= 5;
+            BagController.S.PropList[103].Count -= 5;
             PlayerData.S.xuKongWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
             break;
          case WeaponType.Fire:
             if (GlobalPlayerAttribute.BloodEnergy < 1500 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 5 || !BagController.S.PropList.ContainsKey(304) ||
-                BagController.S.PropList[304].Count < 5)
+                BagController.S.PropList[204].Count < 5 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 5)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
                return;
@@ -592,7 +592,7 @@ public class WeaponWindow : MonoBehaviour
 
             GlobalPlayerAttribute.BloodEnergy -= 1500;
             BagController.S.PropList[204].Count -= 5;
-            BagController.S.PropList[304].Count -= 5;
+            BagController.S.PropList[104].Count -= 5;
             PlayerData.S.fireWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
@@ -600,8 +600,8 @@ public class WeaponWindow : MonoBehaviour
 
          case WeaponType.LvQuan:
             if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 8 || !BagController.S.PropList.ContainsKey(304) ||
-                BagController.S.PropList[304].Count < 8)
+                BagController.S.PropList[204].Count < 8 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 8)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
                return;
@@ -609,7 +609,7 @@ public class WeaponWindow : MonoBehaviour
 
             GlobalPlayerAttribute.BloodEnergy -= 2000;
             BagController.S.PropList[204].Count -= 8;
-            BagController.S.PropList[304].Count -= 8;
+            BagController.S.PropList[104].Count -= 8;
             PlayerData.S.lvQuanWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
@@ -617,8 +617,8 @@ public class WeaponWindow : MonoBehaviour
 
          case WeaponType.HeiDong:
             if (GlobalPlayerAttribute.BloodEnergy < 3000 || !BagController.S.PropList.ContainsKey(205) ||
-                BagController.S.PropList[205].Count < 5 || !BagController.S.PropList.ContainsKey(305) ||
-                BagController.S.PropList[305].Count < 5)
+                BagController.S.PropList[205].Count < 5 || !BagController.S.PropList.ContainsKey(105) ||
+                BagController.S.PropList[105].Count < 5)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
                return;
@@ -626,7 +626,7 @@ public class WeaponWindow : MonoBehaviour
 
             GlobalPlayerAttribute.BloodEnergy -= 3000;
             BagController.S.PropList[205].Count -= 5;
-            BagController.S.PropList[305].Count -= 5;
+            BagController.S.PropList[105].Count -= 5;
             PlayerData.S.heiDongWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();

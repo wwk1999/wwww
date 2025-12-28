@@ -64,12 +64,10 @@ public class XiNiuMonster : MonsterBase
             if (dis < GameController.S.gamePlayer.size + size)
             {
                 isMove = false;
-                monsterAnimator.Play("attack1");
             }
             else
             {
                 isMove = true;
-                monsterAnimator.Play("move");
             }
         }
         
@@ -106,7 +104,6 @@ public class XiNiuMonster : MonsterBase
         if (!IsDead)
         {
             MonsterMove1();
-            SpriteFlipX1(false);
         }
     }
 }

@@ -1604,56 +1604,71 @@ public class BagController : XSingleton<BagController>
         // 从内存中同步移除装备数据
         if (isWhite)
         {
-            // 从内存中移除白色装备
-            WhiteEquipidTable.RemoveAll(item =>
+            foreach (var item in WhiteEquipidTable)
             {
                 if (item.equipid == PlayerEquipConfig.CloakId || item.equipid == PlayerEquipConfig.ClothId ||
                     item.equipid == PlayerEquipConfig.NecklaceId || item.equipid == PlayerEquipConfig.RingId ||
                     item.equipid == PlayerEquipConfig.HelmetId || item.equipid == PlayerEquipConfig.ShoeId)
                 {
-                    return false;
+                    continue;
                 }
-
                 EquipIdList.Remove(item.equipid);
-                return true;
-            });
-            Debug.Log("已从内存中移除白色装备。");
+                if (PropList.ContainsKey(201))
+                {
+                    PropList[201].Count++;
+                }
+                else
+                {
+                    PropList.Add(201, new PropTable(PropConfig.PropType.JingCui,1,"",1,"WhiteJingCui"));
+                }
+            }
+            WhiteEquipidTable.Clear();
         }
 
         if (isGreen)
         {
-            // 从内存中移除绿色装备
-            GreenEquipidTable.RemoveAll(item =>
+            foreach (var item in GreenEquipidTable)
             {
                 if (item.equipid == PlayerEquipConfig.CloakId || item.equipid == PlayerEquipConfig.ClothId ||
                     item.equipid == PlayerEquipConfig.NecklaceId || item.equipid == PlayerEquipConfig.RingId ||
                     item.equipid == PlayerEquipConfig.HelmetId || item.equipid == PlayerEquipConfig.ShoeId)
                 {
-                    return false;
+                    continue;
                 }
-
                 EquipIdList.Remove(item.equipid);
-                return true;
-            });
-            Debug.Log("已从内存中移除绿色装备。");
+                if (PropList.ContainsKey(202))
+                {
+                    PropList[202].Count++;
+                }
+                else
+                {
+                    PropList.Add(202, new PropTable(PropConfig.PropType.JingCui,1,"",2,"GreenJingCui"));
+                }
+            }
+            GreenEquipidTable.Clear();
         }
 
         if (isBlue)
         {
-            // 从内存中移除蓝色装备
-            BlueEquipidTable.RemoveAll(item =>
+            foreach (var item in BlueEquipidTable)
             {
                 if (item.equipid == PlayerEquipConfig.CloakId || item.equipid == PlayerEquipConfig.ClothId ||
                     item.equipid == PlayerEquipConfig.NecklaceId || item.equipid == PlayerEquipConfig.RingId ||
                     item.equipid == PlayerEquipConfig.HelmetId || item.equipid == PlayerEquipConfig.ShoeId)
                 {
-                    return false;
+                    continue;
                 }
-
                 EquipIdList.Remove(item.equipid);
-                return true;
-            });
-            Debug.Log("已从内存中移除蓝色装备。");
+                if (PropList.ContainsKey(203))
+                {
+                    PropList[203].Count++;
+                }
+                else
+                {
+                    PropList.Add(203, new PropTable(PropConfig.PropType.JingCui,1,"",3,"BlueJingCui"));
+                }
+            }
+            BlueEquipidTable.Clear();
         }
 
         StoreController.S.SaveStoreData();

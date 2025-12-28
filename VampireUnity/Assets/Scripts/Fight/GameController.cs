@@ -1197,10 +1197,7 @@ public class GameController : XSingleton<GameController>
         {
             monsterBase.monsterSkeletonAnimation.AnimationState.SetAnimation(0, monsterBase.MonsterSpineName.MoveName, true);
         }
-        else
-        {
-            monsterBase.monsterAnimator.Play("move");
-        }
+      
         TotalMonsterCount++;
         NormalMonsterCount++;
 

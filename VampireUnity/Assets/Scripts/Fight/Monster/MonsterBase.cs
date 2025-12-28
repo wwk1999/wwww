@@ -64,6 +64,12 @@ public class MonsterSpineName
 }
 public abstract class MonsterBase : MonoBehaviour
 {
+    public GameObject du;
+    public GameObject jiansu;
+    [NonSerialized] public float duTime = 0;
+    [NonSerialized] public float jiansuTime = 0;
+    
+    
     public Canvas  hpSliderCanvas;
     public MeshRenderer  meshRenderer;
     [NonSerialized] public float YiDianTime = 0;
@@ -101,11 +107,6 @@ public abstract class MonsterBase : MonoBehaviour
 
     //经验相关
     [NonSerialized]public Text playerLevelText;
-
-    
-    public SpriteRenderer monsterSprite;
-    public Animator monsterAnimator;
-
     [NonSerialized]public bool isMove = true;
     [NonSerialized]public bool isHit = false;
     [NonSerialized] public bool isAttack = false;
@@ -157,10 +158,6 @@ public abstract class MonsterBase : MonoBehaviour
                 monsterSkeletonAnimation.AnimationState.Complete += OnAnimationComplete;
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
             }
-            else
-            {
-                monsterAnimator.Play(MonsterSpineName.MoveName);
-            }
         }
     }
 
@@ -174,6 +171,26 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Update()
     {
+        if (duTime > 0)
+        {
+            duTime -= Time.deltaTime;
+            du.gameObject.SetActive(true);
+        }
+        else
+        {
+            du.gameObject.SetActive(false);
+        }
+        
+        if (jiansuTime > 0)
+        {
+            jiansuTime -= Time.deltaTime;
+            jiansu.gameObject.SetActive(true);
+        }
+        else
+        {
+            jiansu.gameObject.SetActive(false);
+        }
+        
         if (YiDianTime > 0)
         {
             YiDianTime -= Time.deltaTime;
@@ -421,42 +438,6 @@ public abstract class MonsterBase : MonoBehaviour
         
     }
     
-    public void SpriteFlipX1(bool isRight)
-    {
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
-        if(dis<0.2f)
-        {
-            //如果距离小于0.2f，则不翻转
-            return;
-        }
-        //翻转精灵
-        if (isRight)
-        {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
-            {
-                monsterSprite.flipX = false;
-            }
-            else
-            {
-                monsterSprite.flipX = true;
-            }
-        }else
-        {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
-            {
-                monsterSprite.flipX = true;
-            }
-            else
-            {
-                monsterSprite.flipX = false;
-            }
-        }
-        
-    }
-
-    /// <summary>
-    /// 获得经验
-    /// </summary>
     public void GetEx()
     {
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.ExAdd))
@@ -537,12 +518,6 @@ public abstract class MonsterBase : MonoBehaviour
         if (monsterSkeletonAnimation != null)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.DieName, false);
-            Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
-        }
-        else
-        {
-            isMove=false;
-            monsterAnimator.Play(MonsterSpineName.DieName);
             Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
         }
         if(collider2D != null)
@@ -738,11 +713,6 @@ public abstract class MonsterBase : MonoBehaviour
                 {
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
                 }
-            }
-            else
-            {
-                isHit = true;
-                monsterAnimator.Play("beatback");
             }
             CurrentHp -= finalDamage;
             //设置血条
