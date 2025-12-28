@@ -106,7 +106,7 @@ public class ShaXiYi : MonsterBase
         {
             var skeleton = monsterSkeletonAnimation.Skeleton;
             skeleton.SetSkin("skin_yinshen_hou");   // 确认名字无误
-            skeleton.SetSlotsToSetupPose();         // 或 skeleton.SetToSetupPose();
+            //skeleton.SetSlotsToSetupPose();         // 或 skeleton.SetToSetupPose();
             monsterSkeletonAnimation.AnimationState.Apply(skeleton); // 重新应用当前动画
             collider2D.tag = "Bullet";
         }
@@ -114,7 +114,7 @@ public class ShaXiYi : MonsterBase
         {
             var skeleton = monsterSkeletonAnimation.Skeleton;
             skeleton.SetSkin("skin_yinshen_qian");
-            skeleton.SetSlotsToSetupPose();
+           // skeleton.SetSlotsToSetupPose();
             monsterSkeletonAnimation.AnimationState.Apply(skeleton);
             collider2D.tag = "Monster";
         }

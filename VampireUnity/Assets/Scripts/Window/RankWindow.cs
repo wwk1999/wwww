@@ -51,9 +51,12 @@ public class RankWindow : MonoBehaviour
          UpdateMonsterCountRank();
       });
       
-      onespine.AnimationState.SetAnimation(0, "idle", true);
-      twospine.AnimationState.SetAnimation(0, "idle", true);
-      threespine.AnimationState.SetAnimation(0, "idle", true);
+      var onespineAnim = onespine.GetComponent<Spine.Unity.SkeletonAnimation>();
+      if (onespineAnim != null) onespineAnim.AnimationState.SetAnimation(0, "idle", true);
+      var twospineAnim = twospine.GetComponent<Spine.Unity.SkeletonAnimation>();
+      if (twospineAnim != null) twospineAnim.AnimationState.SetAnimation(0, "idle", true);
+      var threespineAnim = threespine.GetComponent<Spine.Unity.SkeletonAnimation>();
+      if (threespineAnim != null) threespineAnim.AnimationState.SetAnimation(0, "idle", true);
 
 
       UpdateLevelRank();

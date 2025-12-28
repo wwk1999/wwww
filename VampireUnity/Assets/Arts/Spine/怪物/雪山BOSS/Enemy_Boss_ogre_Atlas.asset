@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Enemy_Boss_ogre_Atlas
+  m_EditorClassIdentifier: 
+  serializedMaterialOverrides: []
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 476b2c11acd061e47b2ed5217f75cdf9, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 4598857b61a38034c817a4cbc1a4ac2c, type: 2}
+  - {fileID: 2100000, guid: 81774dbec7c94dd47861dd79400169ff, type: 2}
+  - {fileID: 2100000, guid: d7e00ce94ba781a4ca973fb346b3b73a, type: 2}
+  - {fileID: 2100000, guid: f7b65ee9f48c8e745bd565fc7c179e57, type: 2}
+  - {fileID: 2100000, guid: 5d7815e4a10561e48b7262c544666fb8, type: 2}
+  - {fileID: 2100000, guid: 007569fc789fa8a41a4f81efa3669b14, type: 2}
+  - {fileID: 2100000, guid: bf005f0ce6653b14d8fb0a70fc3661f4, type: 2}
+  - {fileID: 2100000, guid: 203c2c4221e0f3b4cb6588a2bd02c6b9, type: 2}

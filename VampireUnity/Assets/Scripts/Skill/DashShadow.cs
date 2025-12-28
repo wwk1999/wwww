@@ -9,7 +9,7 @@ public class DashShadow : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(GameController.S.gamePlayer.playerSkeleton.Skeleton.FlipX)
+        if (GameController.S.gamePlayer.playerSkeleton.Skeleton.ScaleX < 0)
         {
             spriteRenderer.flipX = true;
             transform.localPosition=new Vector3(transform.localPosition.x+0.3f,transform.localPosition.y-0.05f,transform.localPosition.z);

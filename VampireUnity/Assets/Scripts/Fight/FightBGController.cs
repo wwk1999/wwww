@@ -154,7 +154,10 @@ public class FightBGController : XSingleton<FightBGController>
     {
         var success= Instantiate(Resources.Load<GameObject>("Prefabs/Success/Success"),transform);
         SkeletonGraphic skeletonGraphic= success.transform.Find("Canvas/Content").GetComponent<SkeletonGraphic>();
-        skeletonGraphic.AnimationState.SetAnimation(0, "bui_9_1", false);
+        var skAnim = skeletonGraphic.GetComponent<SkeletonAnimation>();
+        if (skAnim != null) {
+            skAnim.AnimationName = "bui_9_1";
+        }
         StartCoroutine(DelayPlaySuccessAnim(skeletonGraphic));
         if (LevelInfoConfig.CurrentGameLevel + 1 > LevelInfoConfig.MaxGameLevel)
         {
@@ -167,7 +170,10 @@ public class FightBGController : XSingleton<FightBGController>
     IEnumerator DelayPlaySuccessAnim(SkeletonGraphic skeletonGraphic)
     {
         yield return new WaitForSeconds(1.67f);
-        skeletonGraphic.AnimationState.SetAnimation(0, "bui_9_2", false);
+        var skAnim = skeletonGraphic.GetComponent<SkeletonAnimation>();
+        if (skAnim != null) {
+            skAnim.AnimationName = "bui_9_2";
+        }
     }
     
     IEnumerator DelayDisable(GameObject obj)

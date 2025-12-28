@@ -8,6 +8,7 @@ using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using Slider = UnityEngine.UI.Slider;
 
 //怪物类型枚举
 public enum MonsterType

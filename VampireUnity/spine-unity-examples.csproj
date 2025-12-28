@@ -132,7 +132,6 @@
     <Compile Include="Assets\Spine Examples\Scripts\HeroEffectsHandlerExample.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Sample Components\CombinedSkin.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Getting Started Scripts\SpineboyBeginnerView.cs" />
-    <Compile Include="Assets\Spine Examples\Scripts\Getting Started Scripts\SpineboyBeginnerViewGraphic.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Sample Components\OutlineSkeletonGraphic.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\MecanimAnimationMatchModifier\AnimationMatchModifierAsset.cs" />
     <Compile Include="Assets\Spine Examples\Scripts\Mecanim as Logic\SkeletonAnimationHandleExample.cs" />
@@ -144,11 +143,11 @@
     <None Include="Assets\Spine Examples\Spine Skeletons\Stretchyman\stretchyman.json" />
     <None Include="Assets\Spine Examples\Spine Skeletons\raptor-pro-and-mask\raptor-pro.json" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Eyes\eyes.atlas.txt" />
-    <None Include="Assets\Spine Examples\Spine Skeletons\raptor-pro-and-mask\raptor-pma.atlas.txt" />
+    <None Include="Assets\Spine Examples\Spine Skeletons\raptor-pro-and-mask\raptor.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Hero\hero-pro.json" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Goblins\goblins.json" />
     <None Include="Assets\Spine Examples\Spine Skeletons\spineboy-unity\spineboy-unity.json" />
-    <None Include="Assets\Spine Examples\Spine Skeletons\snowglobe\snowglobe-pma.atlas.txt" />
+    <None Include="Assets\Spine Examples\Spine Skeletons\snowglobe\snowglobe.atlas.txt" />
     <None Include="Assets\Spine Examples\Scripts\MecanimAnimationMatchModifier\AnimationMatchModifierAsset.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\mix-and-match\mix-and-match-pro.json" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Dragon\dragon.json" />
@@ -156,21 +155,21 @@
     <None Include="Assets\Spine Examples\Spine Skeletons\Goblins\goblins.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Hero\hero-pro.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\whirlyblendmodes\whirlyblendmodes.atlas.txt" />
-    <None Include="Assets\Spine Examples\Spine Skeletons\cloud-pot\cloud-pot-pma.atlas.txt" />
+    <None Include="Assets\Spine Examples\Spine Skeletons\cloud-pot\cloud-pot.atlas.txt" />
     <None Include="Assets\Spine Examples\Scripts\Sample Components\Ghost\Shaders\Spine-Special-Skeleton-Ghost.shader" />
     <None Include="Assets\Spine Examples\Spine Skeletons\celestial-circus\celestial-circus-pro.json" />
-    <None Include="Assets\Spine Examples\Spine Skeletons\Stretchyman\stretchyman-diffuse-pma.atlas.txt" />
+    <None Include="Assets\Spine Examples\Spine Skeletons\Stretchyman\stretchyman-diffuse.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Spineunitygirl\Doi.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\whirlyblendmodes\whirlyblendmodes.json" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Raptor\raptor.json" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Gauge\Gauge.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Dragon\license.txt" />
-    <None Include="Assets\Spine Examples\Spine Skeletons\mix-and-match\mix-and-match-pma.atlas.txt" />
+    <None Include="Assets\Spine Examples\Spine Skeletons\mix-and-match\mix-and-match.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\spineboy-pro\spineboy-pro.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\FootSoldier\FS_White.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\spineboy-unity\spineboy.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Hero\license.txt" />
-    <None Include="Assets\Spine Examples\Spine Skeletons\sack\sack-pma.atlas.txt" />
+    <None Include="Assets\Spine Examples\Spine Skeletons\sack\sack.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Raptor\raptor.atlas.txt" />
     <None Include="Assets\Spine Examples\Scripts\Sample Components\SkeletonRenderTexture\RenderQuadShader.shader" />
@@ -179,7 +178,7 @@
     <None Include="Assets\Spine Examples\Spine Skeletons\FootSoldier\Equipment\Equipment.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\FootSoldier\license.txt" />
     <None Include="Assets\Spine Examples\spine-unity-examples.asmdef" />
-    <None Include="Assets\Spine Examples\Spine Skeletons\celestial-circus\celestial-circus-pma.atlas.txt" />
+    <None Include="Assets\Spine Examples\Spine Skeletons\celestial-circus\celestial-circus.atlas.txt" />
     <None Include="Assets\Spine Examples\Spine Skeletons\Gauge\Gauge.json" />
     <Reference Include="UnityEngine">
       <HintPath>D:\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

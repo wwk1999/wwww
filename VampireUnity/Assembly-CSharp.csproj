@@ -89,7 +89,6 @@
     <Compile Include="Assets\Scripts\Config\SkillConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\ChiBangGrid.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\HpReductionReplyAdd50.cs" />
-    <Compile Include="Assets\Scripts\Tool\IkTool.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenNecklace.cs" />
@@ -198,6 +197,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\XuKong\XuKongPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\ClothFortureAdd.cs" />
     <Compile Include="Assets\Scripts\Skill\IceExplosion.cs" />
+    <Compile Include="Assets\Scripts\Common\DamageFrom.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\DashRange.cs" />
     <Compile Include="Assets\Scripts\Equip\MonsterEquip.cs" />
@@ -601,6 +601,7 @@
     <None Include="Assets\shader\ParticleAdditiveGlow 1.shader" />
     <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.json" />
     <None Include="Assets\Arts\Spine\技能\1225\紫尾巴\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\Enemy_Boss_ogre.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空\action.json" />
     <None Include="Assets\Arts\Spine\技能\HuoDan\H043_Special.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\喷火\skeleton.atlas.txt" />
@@ -781,6 +782,7 @@
     <None Include="Assets\Arts\Spine\技能\Lvquanbao\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\紫冲天1\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\树人技能\action.json" />
+    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\Enemy_Boss_ogre.json" />
     <None Include="Assets\Arts\Shaders\BGLightSprite.shader" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />

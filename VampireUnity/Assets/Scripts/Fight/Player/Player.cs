@@ -216,14 +216,10 @@ public class Player : MonoBehaviour
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         
-        if(worldPos.x>transform.position.x)
-        {
-            playerSkeleton.Skeleton.FlipX = false;
-        }
-        else if(worldPos.x<transform.position.x)
-        { 
-            playerSkeleton.Skeleton.FlipX = true;
-        }
+        // 使用 ScaleX 的正负来表示翻转（新版 Spine runtime 移除了 FlipX 属性）
+        float currentScaleX = playerSkeleton.Skeleton.ScaleX;
+        float absScaleX = Mathf.Abs(currentScaleX);
+        playerSkeleton.Skeleton.ScaleX = (worldPos.x > transform.position.x) ? absScaleX : -absScaleX;
 
         if (!MouseDown)
         {

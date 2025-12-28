@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
+using Spine;
+using Spine.Unity;
 
 public class MonsterBook : MonoBehaviour
 {
@@ -69,7 +71,8 @@ public class MonsterBook : MonoBehaviour
 
    private void Start()
    {
-      monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+      Spine.Unity.SkeletonAnimation monsterAnim = monsterSkeleton.GetComponent<Spine.Unity.SkeletonAnimation>();
+      if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
       monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.snotBookData._scale, MonsterBookConfig.snotBookData._scale, 1);
       exitButton.onClick.AddListener(() =>
       {
@@ -84,7 +87,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.snotBookData._scale, MonsterBookConfig.snotBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = snotskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.snotBookData._name;
          locationText.text = MonsterBookConfig.snotBookData._location;
          monsterTypeText.text = MonsterBookConfig.snotBookData._monsterType;
@@ -105,7 +108,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.spiderBookData._scale, MonsterBookConfig.spiderBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = spiderskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.spiderBookData._name;
          locationText.text = MonsterBookConfig.spiderBookData._location;
          monsterTypeText.text = MonsterBookConfig.spiderBookData._monsterType;
@@ -126,7 +129,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.batBookData._scale, MonsterBookConfig.batBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = batskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.batBookData._name;
          locationText.text = MonsterBookConfig.batBookData._location;
          monsterTypeText.text = MonsterBookConfig.batBookData._monsterType;
@@ -147,7 +150,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.eliteBeeBookData._scale, MonsterBookConfig.eliteBeeBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = eliteBeeskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.eliteBeeBookData._name;
          locationText.text = MonsterBookConfig.eliteBeeBookData._location;
          monsterTypeText.text = MonsterBookConfig.eliteBeeBookData._monsterType;
@@ -168,7 +171,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.bossTreeManBookData._scale, MonsterBookConfig.bossTreeManBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = bossTreeManskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.bossTreeManBookData._name;
          locationText.text = MonsterBookConfig.bossTreeManBookData._location;
          monsterTypeText.text = MonsterBookConfig.bossTreeManBookData._monsterType;
@@ -189,7 +192,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.chongziBookData._scale, MonsterBookConfig.chongziBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = chongziskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.chongziBookData._name;
          locationText.text = MonsterBookConfig.chongziBookData._location;
          monsterTypeText.text = MonsterBookConfig.chongziBookData._monsterType;
@@ -209,7 +212,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.xiaohuoBookData._scale, MonsterBookConfig.xiaohuoBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = xiaohuoskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.xiaohuoBookData._name;
          locationText.text = MonsterBookConfig.xiaohuoBookData._location;
          monsterTypeText.text = MonsterBookConfig.xiaohuoBookData._monsterType;
@@ -230,7 +233,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.dundiBookData._scale, MonsterBookConfig.dundiBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = dundiskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.dundiBookData._name;
          locationText.text = MonsterBookConfig.dundiBookData._location;
          monsterTypeText.text = MonsterBookConfig.dundiBookData._monsterType;
@@ -251,7 +254,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.elitedazuiBookData._scale, MonsterBookConfig.elitedazuiBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = eliteDaZuiskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.elitedazuiBookData._name;
          locationText.text = MonsterBookConfig.elitedazuiBookData._location;
          monsterTypeText.text = MonsterBookConfig.elitedazuiBookData._monsterType;
@@ -272,7 +275,7 @@ public class MonsterBook : MonoBehaviour
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.bossHuoShanBookData._scale, MonsterBookConfig.bossHuoShanBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = bossHuoShanskeleton;
          monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.bossHuoShanBookData._name;
          locationText.text = MonsterBookConfig.bossHuoShanBookData._location;
          monsterTypeText.text = MonsterBookConfig.bossHuoShanBookData._monsterType;
@@ -292,8 +295,8 @@ public class MonsterBook : MonoBehaviour
          _index = 11;
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.wenziBookData._scale, MonsterBookConfig.wenziBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = wenziskeleton;
-         monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.wenziBookData._name;
          locationText.text = MonsterBookConfig.wenziBookData._location;
          monsterTypeText.text = MonsterBookConfig.wenziBookData._monsterType;
@@ -313,8 +316,8 @@ public class MonsterBook : MonoBehaviour
          _index = 12;
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.qingwaBookData._scale, MonsterBookConfig.qingwaBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = qingwaskeleton;
-         monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.qingwaBookData._name;
          locationText.text = MonsterBookConfig.qingwaBookData._location;
          monsterTypeText.text = MonsterBookConfig.qingwaBookData._monsterType;
@@ -334,8 +337,8 @@ public class MonsterBook : MonoBehaviour
          _index = 13;
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.jiachongBookData._scale, MonsterBookConfig.jiachongBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = jiachongskeleton;
-         monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.jiachongBookData._name;
          locationText.text = MonsterBookConfig.jiachongBookData._location;
          monsterTypeText.text = MonsterBookConfig.jiachongBookData._monsterType;
@@ -355,8 +358,8 @@ public class MonsterBook : MonoBehaviour
          _index = 14;
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.shirenhuaBookData._scale, MonsterBookConfig.shirenhuaBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = shirenhuaskeleton;
-         monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.shirenhuaBookData._name;
          locationText.text = MonsterBookConfig.shirenhuaBookData._location;
          monsterTypeText.text = MonsterBookConfig.shirenhuaBookData._monsterType;
@@ -376,8 +379,8 @@ public class MonsterBook : MonoBehaviour
          _index = 15;
          monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.bossStoneBookData._scale, MonsterBookConfig.bossStoneBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = bossStoneskeleton;
-         monsterSkeleton.Initialize(true);
-         monsterSkeleton.AnimationState.SetAnimation(0, "idle", true);
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
          nameText.text = MonsterBookConfig.bossStoneBookData._name;
          locationText.text = MonsterBookConfig.bossStoneBookData._location;
          monsterTypeText.text = MonsterBookConfig.bossStoneBookData._monsterType;
