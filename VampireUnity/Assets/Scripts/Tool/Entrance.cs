@@ -540,7 +540,7 @@ public class Entrance : MonoBehaviour
             spiderWeb.SetActive(false);
             FightBGController.S.SpiderWebQueue.Enqueue(spiderWeb.GetComponent<SpiderWeb>());
 
-            switch ( GlobalPlayerAttribute.CurrentWeaponType)
+            switch ( PlayerData.S.playerWeaponType)
             {
                 case WeaponType.Primary:
                     var PuTong31= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTong3"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;

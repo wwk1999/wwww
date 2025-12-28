@@ -727,17 +727,17 @@ public class WeaponWindow : MonoBehaviour
       });
 
 
-      primaryInstallButton.onClick.AddListener(() => { GlobalPlayerAttribute.CurrentWeaponType = WeaponType.Primary; });
-      fireInstallButton.onClick.AddListener(() => { GlobalPlayerAttribute.CurrentWeaponType = WeaponType.Fire; });
-      xukongInstallButton.onClick.AddListener(() => { GlobalPlayerAttribute.CurrentWeaponType = WeaponType.XuKong; });
+      primaryInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Primary; StoreController.S.SaveStoreData();});
+      fireInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Fire; StoreController.S.SaveStoreData();});
+      xukongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.XuKong; StoreController.S.SaveStoreData();});
 
-      lvQuanInstallButton.onClick.AddListener(() => { GlobalPlayerAttribute.CurrentWeaponType = WeaponType.LvQuan; });
+      lvQuanInstallButton.onClick.AddListener(() => {PlayerData.S.playerWeaponType = WeaponType.LvQuan; StoreController.S.SaveStoreData();});
 
-      heiDongInstallButton.onClick.AddListener(() => { GlobalPlayerAttribute.CurrentWeaponType = WeaponType.HeiDong; });
+      heiDongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.HeiDong;StoreController.S.SaveStoreData(); });
 
-      duInstallButton.onClick.AddListener(() => { GlobalPlayerAttribute.CurrentWeaponType = WeaponType.Du; });
+      duInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.Du; StoreController.S.SaveStoreData();});
 
-      puTong3InstallButton.onClick.AddListener(() => { GlobalPlayerAttribute.CurrentWeaponType = WeaponType.PuTong3; });
+      puTong3InstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.PuTong3; StoreController.S.SaveStoreData();});
 
       exitButton.onClick.AddListener(() =>
       {

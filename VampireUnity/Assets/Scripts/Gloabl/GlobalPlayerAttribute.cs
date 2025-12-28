@@ -13,7 +13,6 @@ public enum ExitType
 }
 public class GlobalPlayerAttribute 
 {
-   public static WeaponType CurrentWeaponType= WeaponType.Primary; //当前武器类型
    public static float WeaponAttack=>GetWeaponAttack();
    public static float WeaponDefense=>GetWeaponDefense();
    public static float WeaponCrit=>GetWeaponCrit();
@@ -34,9 +33,9 @@ public class GlobalPlayerAttribute
 
    public static float GetWeaponAttack()
    {
-       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
        int level = 0;
-       switch (CurrentWeaponType)
+       switch (PlayerData.S.playerWeaponType)
        {
            case WeaponType.Primary:
                level = PlayerData.S.primaryWeaponLevel;
@@ -66,9 +65,9 @@ public class GlobalPlayerAttribute
    
    public static float GetWeaponDefense()
    {
-       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
        int level = 0;
-       switch (CurrentWeaponType)
+       switch (PlayerData.S.playerWeaponType)
        {
            case WeaponType.Primary:
                level = PlayerData.S.primaryWeaponLevel;
@@ -98,9 +97,9 @@ public class GlobalPlayerAttribute
    
    public static float GetWeaponCrit()
    {
-       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
        int level = 0;
-       switch (CurrentWeaponType)
+       switch (PlayerData.S.playerWeaponType)
        {
            case WeaponType.Primary:
                level = PlayerData.S.primaryWeaponLevel;
@@ -130,9 +129,9 @@ public class GlobalPlayerAttribute
    
    public static float GetWeaponHp()
    {
-       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
        int level = 0;
-       switch (CurrentWeaponType)
+       switch (PlayerData.S.playerWeaponType)
        {
            case WeaponType.Primary:
                level = PlayerData.S.primaryWeaponLevel;
@@ -162,7 +161,7 @@ public class GlobalPlayerAttribute
    
    public static float GetWeaponAttackSpeed()
    {
-       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
        return weaponAttribute.AttackSpeed;
    }
    
@@ -351,7 +350,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalAttackSpeed()
    {
-       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[CurrentWeaponType];
+       var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
        return weaponAttribute.AttackSpeed * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed);
    }
 

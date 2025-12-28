@@ -29,6 +29,8 @@ public class PlayerData : XSingleton<PlayerData>
     public int fireWeaponLevel;
     public int heiDongWeaponLevel;
 
+    public WeaponType playerWeaponType=WeaponType.Primary;
+
     protected override void Awake()
     {
         base.Awake();

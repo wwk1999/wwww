@@ -129,7 +129,7 @@ public class SkillController : XSingleton<SkillController>
 
     public void ShotBulletInvoke()
     {
-        switch (GlobalPlayerAttribute.CurrentWeaponType)
+        switch (PlayerData.S.playerWeaponType)
         {
             case WeaponType.Primary:
                 GameController.S.gamePlayer.currentGun.PrimaryShot();

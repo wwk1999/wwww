@@ -79,6 +79,9 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int lvQuanWeaponLevel;
         public int fireWeaponLevel;
         public int heiDongWeaponLevel;
+        
+        public WeaponType playerWeaponType=WeaponType.Primary;
+
 
         public void CopyFromRuntime(PlayerData runtime)
         {
@@ -103,6 +106,8 @@ public class StoreDefine : XSingleton<StoreDefine>
             lvQuanWeaponLevel = runtime.lvQuanWeaponLevel;
             fireWeaponLevel = runtime.fireWeaponLevel;
             heiDongWeaponLevel = runtime.heiDongWeaponLevel;
+
+            playerWeaponType = runtime.playerWeaponType;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -128,6 +133,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.lvQuanWeaponLevel = lvQuanWeaponLevel;
             runtime.fireWeaponLevel = fireWeaponLevel;
             runtime.heiDongWeaponLevel = heiDongWeaponLevel;
+            runtime.playerWeaponType = playerWeaponType;
         }
     }
     
