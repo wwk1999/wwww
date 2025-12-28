@@ -114,7 +114,7 @@ public class ShaXiYi : MonsterBase
         {
             var skeleton = monsterSkeletonAnimation.Skeleton;
             skeleton.SetSkin("skin_yinshen_qian");
-           // skeleton.SetSlotsToSetupPose();
+            //skeleton.SetSlotsToSetupPose();
             monsterSkeletonAnimation.AnimationState.Apply(skeleton);
             collider2D.tag = "Monster";
         }

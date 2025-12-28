@@ -351,7 +351,7 @@ public class GlobalPlayerAttribute
    public static float GetTotalAttackSpeed()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       return weaponAttribute.AttackSpeed * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed);
+       return weaponAttribute.AttackSpeed * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed/100.0f);
    }
 
    public static float GetTotalCrit()

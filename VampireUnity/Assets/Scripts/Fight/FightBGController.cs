@@ -67,7 +67,7 @@ public class FightBGController : XSingleton<FightBGController>
         currentReplyHpTime+=Time.deltaTime;
         if (currentReplyHpTime > ReplyHpTime)
         {
-            float replyHp = GameController.S.GameMaxHp * GlobalPlayerAttribute.ReplyHpPercent;
+            float replyHp = GameController.S.GameMaxHp * GlobalPlayerAttribute.ReplyHpPercent/100f;
             GlobalPlayerAttribute.ReplyHp(replyHp);
         }
         

@@ -472,7 +472,7 @@ public abstract class MonsterBase : MonoBehaviour
     {
         
         //附加属性
-        int replyHp = Mathf.RoundToInt(GameController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent);
+        int replyHp = Mathf.RoundToInt(GameController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
         GlobalPlayerAttribute.ReplyHp(replyHp);
         
         
@@ -561,7 +561,7 @@ public abstract class MonsterBase : MonoBehaviour
         float finalDamage = baseDamage;
         var random = Random.Range(0.92f, 1.08f);
         finalDamage *= random;
-        var monsterDenfense = Defense * (1 - GlobalPlayerAttribute.Penetrate);
+        var monsterDenfense = Defense * (1 - GlobalPlayerAttribute.Penetrate/100f);
         finalDamage-=monsterDenfense;
         if (isCrit)
         {
@@ -570,11 +570,11 @@ public abstract class MonsterBase : MonoBehaviour
 
         if (MonsterType == MonsterType.Boss)
         {
-            finalDamage *= (1 + GlobalPlayerAttribute.DamageAddForBoss);
+            finalDamage *= (1 + GlobalPlayerAttribute.DamageAddForBoss/100f);
         }
         else
         {
-            finalDamage *= (1 + GlobalPlayerAttribute.DamageAddForNormal);
+            finalDamage *= (1 + GlobalPlayerAttribute.DamageAddForNormal/100f);
         }
 
         switch (damageFrom)

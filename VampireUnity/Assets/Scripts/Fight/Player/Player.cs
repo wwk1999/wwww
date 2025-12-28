@@ -126,6 +126,7 @@ public class Player : MonoBehaviour
             {
                 return;
             }
+            Debug.LogError(GlobalPlayerAttribute.TotalAttackSpeed);
             playerSkeleton.timeScale = GlobalPlayerAttribute.TotalAttackSpeed;
             playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
         }
@@ -356,13 +357,13 @@ public class Player : MonoBehaviour
         float realDamage = 0;
         if (isBoss)
         {
-            realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForBoss);
+            realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForBoss/100f);
         }
         else
         {
-            realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForNormal);
+            realDamage = damage*(1-GlobalPlayerAttribute.DamageReductionPercentForNormal/100f);
         }
-        realDamage *= (1 - GlobalPlayerAttribute.DamageReductionPercent);
+        realDamage *= (1 - GlobalPlayerAttribute.DamageReductionPercent/100f);
         
         
         realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
