@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -426,6 +427,12 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+
+            if (SkillJiaDian.S.NormalAttack >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.NormalAttack])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             
             normalAttackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
             SkillJiaDian.S.CurrentSkillCount--;
@@ -440,6 +447,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.AttackSpeed >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.AttackSpeed])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             attackSpeedButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -458,6 +470,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.Dash >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Dash])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             dashButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -472,6 +489,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.DashCd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DashCd])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             dashCdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -490,6 +512,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.Crit >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Crit])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             critButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -504,6 +531,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.CritDamage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.CritDamage])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             critDamageButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -522,6 +554,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.MoveSpeed >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.MoveSpeed])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             moveSpeedButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -536,6 +573,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.MoveAddDefense >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.MoveAddDefense])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             moveAddDefenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -554,6 +596,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.MoveAddAttack >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.MoveAddAttack])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             moveAddAttackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -568,6 +615,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.Skill1Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             skill1Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -586,6 +638,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.Skill2Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             skill2Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -600,6 +657,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.Skill3Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             skill3Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -618,6 +680,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.Skill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1Cd])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             skill1CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -632,6 +699,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.Skill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2Cd])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             skill2CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -650,6 +722,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.Skill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3Cd])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             skill3CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -664,6 +741,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.Skill1Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1Range])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             skill1RangeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -682,6 +764,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.Skill1YiDian >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1YiDian])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             skill1YiDianButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -696,6 +783,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.Skill2Time >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2Time])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             skill2TimeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -714,6 +806,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.Skill2AddDefense >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2AddDefense])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             skill2AddDefenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -728,6 +825,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.Skill3Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3Range])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             skill3RangeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -746,6 +848,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.Skill3JianSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3JianSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             skill3JianSuButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -760,6 +867,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.MonsterAttack >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Attack])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             attackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
@@ -778,6 +890,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.MonsterHp >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Hp])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             hpButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -794,6 +911,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
+            if (SkillJiaDian.S.MonsterDefense >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Defense])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
             defenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
 
             SkillJiaDian.S.CurrentSkillCount--;
@@ -808,6 +930,11 @@ public class SkillWindow1 : MonoBehaviour
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+            if (SkillJiaDian.S.MonsterCrit >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.CritMonster])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
             critMonsterButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);

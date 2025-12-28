@@ -173,7 +173,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d7bb2aca84d621648a998525514f7109, type: 2}
+  - {fileID: 2100000, guid: 85b430cfdae50ce4ab253f207fb083fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -194,12 +194,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c60e6296bfee7cf4e93295d119fa9245, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dae25627c68f34542a9edb5af7bc35a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.75, y: 0.75}
+  m_Size: {x: 1.17, y: 1.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -213,6 +213,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9194239089396070304}
     m_Modifications:
+    - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.6866667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.6866667
+      objectReference: {fileID: 0}
     - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -252,6 +264,10 @@ PrefabInstance:
     - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8250302192196525216, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8250302192196887184, guid: 37ac3666d47ab4fb7aab80f05a170773, type: 3}
       propertyPath: m_Name

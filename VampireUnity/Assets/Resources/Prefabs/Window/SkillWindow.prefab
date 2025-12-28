@@ -5888,7 +5888,6 @@ GameObject:
   - component: {fileID: 8496620548039768117}
   - component: {fileID: 5705408691961472795}
   - component: {fileID: 3356635530718891561}
-  - component: {fileID: 5086053715967273169}
   - component: {fileID: 4371742062717704462}
   m_Layer: 5
   m_Name: Skill1
@@ -6008,18 +6007,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonType: 10
   skillInfoPrefabPath: Prefabs/Window/SkillInfo
---- !u!114 &5086053715967273169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3424632768174814408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518dff61db17f5d48adb86f450bf58aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4371742062717704462
 MonoBehaviour:
   m_ObjectHideFlags: 0

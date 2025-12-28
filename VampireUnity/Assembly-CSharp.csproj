@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\JianSuAddAttack.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXLightFlicker.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\ExtremeSpeed.cs" />
+    <Compile Include="Assets\Scripts\Config\SkillConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\ChiBangGrid.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\HpReductionReplyAdd50.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonster.cs" />

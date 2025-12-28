@@ -42,9 +42,7 @@ public class FightBg : MonoBehaviour
     
     public Button againButton;
     public Button returnButton;
-
-    public Image LMBBg;
-    public Image LMB;
+    
     public Image RMBBg;
     public Image RMB;
     public Image skill1Bg;
@@ -76,6 +74,28 @@ public class FightBg : MonoBehaviour
             againButton.gameObject.SetActive(false);
             returnButton.gameObject.SetActive(false);
         }
+
+        RMB.fillAmount = GetFillAmout(SkillData.S.RMB);
+        skill1.fillAmount = GetFillAmout(SkillData.S.Alpha1);
+        skill2.fillAmount = GetFillAmout(SkillData.S.Alpha2);
+        skill3.fillAmount = GetFillAmout(SkillData.S.Alpha3);
+    }
+
+    public float GetFillAmout(SkillType skillType)
+    {
+        switch (skillType)
+        {
+            case SkillType.Skill1:
+                return SkillController.S.DianQuanCoolingtime / SkillController.S.DianQuantime;
+            case SkillType.Skill2:
+                return SkillController.S.IceBallCoolingtime / SkillController.S.IceBallTime;
+            case SkillType.Skill3:
+                return SkillController.S.IceExplosionCoolingtime / SkillController.S.IceExplosiontime;
+            case SkillType.Dash:
+                return SkillController.S.DashCoolingtime / SkillController.S.Dashtime;
+        }
+
+        return 0;
     }
 
     private void Start()
@@ -102,22 +122,6 @@ public class FightBg : MonoBehaviour
             GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
             SceneManager.LoadScene("UIScene");
         });
-        
-        Debug.LogError(SkillController.S.LMB);
-        
-        
-        if (GetSkillSprite(SkillController.S.LMB) == null)
-        {
-            LMB.gameObject.SetActive(false);
-            LMBBg.gameObject.SetActive(false);
-        }
-        else
-        {
-            LMB.gameObject.SetActive(true);
-            LMBBg.gameObject.SetActive(true);
-            LMB.sprite=GetSkillSprite(SkillController.S.LMB);
-            LMBBg.sprite=GetSkillSprite(SkillController.S.LMB);
-        }
         
         if (GetSkillSprite(SkillController.S.RMB) == null)
         {

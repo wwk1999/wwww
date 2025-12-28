@@ -32,14 +32,13 @@ public class SkillController : XSingleton<SkillController>
     public float Dashtime => GetDashCd();
     public float DianQuantime => (10f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
     
-    [NonSerialized]public float NormalAttackCoolingtime = 1f;
-    [NonSerialized]public float IceArrowCoolingtime = 3f;
-    [NonSerialized]public float IceExplosionCoolingtime = 10f;
-    [NonSerialized]public float IceBallCoolingtime = 10f;
+    [NonSerialized]public float IceArrowCoolingtime = 0;
+    [NonSerialized]public float IceExplosionCoolingtime = 0f;
+    [NonSerialized]public float IceBallCoolingtime = 0f;
     public float DashCoolingtime = 0;
    
 
-    [NonSerialized]public float DianQuanCoolingtime = 10f;
+    [NonSerialized]public float DianQuanCoolingtime = 0f;
     
     //技能点击特效
     [NonSerialized]public UIParticle IceArrowUIFX;
@@ -160,7 +159,6 @@ public class SkillController : XSingleton<SkillController>
                 GameController.S.gamePlayer.currentGun.PuTong3Shot();
                 break;
         }
-        NormalAttackCoolingtime+=Time.deltaTime;
     }
 
     //释放技能
@@ -247,7 +245,6 @@ public class SkillController : XSingleton<SkillController>
         }
         
         //技能冷却时间
-        NormalAttackCoolingtime+= Time.deltaTime;
         IceArrowCoolingtime+= Time.deltaTime;
         IceExplosionCoolingtime+=Time.deltaTime;
         IceBallCoolingtime+= Time.deltaTime;
