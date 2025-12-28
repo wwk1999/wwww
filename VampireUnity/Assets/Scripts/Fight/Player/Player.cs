@@ -9,17 +9,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Animation = UnityEngine.Animation;
 using Random = UnityEngine.Random;
-
-
-public enum PlayerState
-{
-    None,
-    Idle,
-    Walk,
-    Attack,
-    Hurt,
-    Dead
-}
 public enum WeaponType
 {
     None,
@@ -35,15 +24,9 @@ public enum WeaponType
 }
 public class Player : MonoBehaviour
 {
-    //public Animator animator;
-    public WeaponType weaponType = WeaponType.Primary;
     public GunBase currentGun;
     private float _gunDistance = 0.3f;
-    public GameObject iceBall;
     public SkeletonAnimation playerSkeleton;
-    public Slider hpSlider;
-    public Slider exSlider;
-    public Text levelText;
     public float size = 0.28f;
     [NonSerialized] public bool IsWuDi = false;//红闪的时候无敌
     
@@ -526,6 +509,7 @@ public class Player : MonoBehaviour
             {
                 return;
             }
+            MouseDown = true;
             playerSkeleton.timeScale = GlobalPlayerAttribute.TotalAttackSpeed;
             playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
         }

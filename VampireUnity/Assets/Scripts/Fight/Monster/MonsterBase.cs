@@ -193,72 +193,6 @@ public abstract class MonsterBase : MonoBehaviour
                 return;
             if(transform.position.y > GameController.S.gamePlayer.transform.position.y+4)
                 return;
-            GameController.S.monsterDetetor4.Add(this);
-        }
-
-        if (dis > 5f)
-        {
-            GameController.S.monsterDetetor4.Remove(this);
-        }
-
-        if (dis < 4f)
-        {
-            GameController.S.monsterDetetor3.Add(this);
-            //如果_monsterDetetor3中存在monster，则移除
-            if (GameController.S.monsterDetetor4.Contains(this))
-            {
-                GameController.S.monsterDetetor4.Remove(this);
-            }
-        }
-
-        if (dis > 4f&&dis<5f)
-        {
-            GameController.S.monsterDetetor3.Remove(this);
-            //如果_monsterDetetor4中不存在monster，则添加
-            if (!GameController.S.monsterDetetor4.Contains(this))
-            {
-                GameController.S.monsterDetetor4.Add(this);
-            }
-        }
-
-        if (dis < 3f)
-        {
-            GameController.S.monsterDetetor2.Add(this);
-            //如果_monsterDetetor3中存在monster，则移除
-            if (GameController.S.monsterDetetor3.Contains(this))
-            {
-                GameController.S.monsterDetetor3.Remove(this);
-            }
-        }
-
-        if (dis > 3f && dis < 4f)
-        {
-            GameController.S.monsterDetetor2.Remove(this);
-            //如果_monsterDetetor3中不存在monster，则添加
-            if (!GameController.S.monsterDetetor3.Contains(this))
-            {
-                GameController.S.monsterDetetor3.Add(this);
-            }
-        }
-        
-        if (dis <2f)
-        {
-            GameController.S.monsterDetetor1.Add(this);
-            //如果_monsterDetetor2中存在monster，则移除
-            if (GameController.S.monsterDetetor2.Contains(this))
-            {
-                GameController.S.monsterDetetor2.Remove(this);
-            }
-        }
-
-        if (dis > 2f && dis < 3f)
-        {
-            GameController.S.monsterDetetor1.Remove(this);
-            //如果_monsterDetetor2中不存在monster，则添加
-            if (!GameController.S.monsterDetetor2.Contains(this))
-            {
-                GameController.S.monsterDetetor2.Add(this);
-            }
         }
     }
     
@@ -634,17 +568,6 @@ public abstract class MonsterBase : MonoBehaviour
             monsterAnimator.Play(MonsterSpineName.DieName);
             Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
         }
-
-        // 从所有探测器列表中移除自己
-        // 立即从所有探测器列表中移除自己
-        if (GameController.S != null)
-        {
-            GameController.S.monsterDetetor1.Remove(this);
-            GameController.S.monsterDetetor2.Remove(this);
-            GameController.S.monsterDetetor3.Remove(this);
-            GameController.S.monsterDetetor4.Remove(this);
-        }
-        // 禁用碰撞器，防止继续触发碰撞
         if(collider2D != null)
             collider2D.enabled = false;
         

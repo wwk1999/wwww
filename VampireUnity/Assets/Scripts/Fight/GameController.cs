@@ -39,7 +39,6 @@ public class GameController : XSingleton<GameController>
     
     
     
-    private float distanceUpdateTimer = 0f;
     [NonSerialized]public Player gamePlayer;
     [NonSerialized]public GameObject MonsterBirthPoint1;
     [NonSerialized]public GameObject MonsterBirthPoint2;
@@ -297,11 +296,6 @@ public class GameController : XSingleton<GameController>
     [NonSerialized]public Transform[] MonsterBirthPoints2;
     [NonSerialized]public Transform[] MonsterBirthPoints3;
     [NonSerialized]public Transform[] PlayerBirthPoints;
-    //怪物探测器，检测最近的怪物
-    public HashSet<MonsterBase> monsterDetetor1 = new HashSet<MonsterBase>();
-    public HashSet<MonsterBase> monsterDetetor2 = new HashSet<MonsterBase>();
-    public HashSet<MonsterBase> monsterDetetor3 = new HashSet<MonsterBase>();
-    public HashSet<MonsterBase> monsterDetetor4 = new HashSet<MonsterBase>();
 
     //最近怪物位置
     public Vector3 nearMonsterPosition;
@@ -1302,52 +1296,11 @@ public class GameController : XSingleton<GameController>
         
         //生成怪物
         currentTime += Time.deltaTime;
-        distanceUpdateTimer+=Time.deltaTime;
         if (currentTime >= monsterBirthTimeScale)
         {
             CreateMonster();
             currentTime = 0f;
         }
-        //获得距离最近的怪物位置
-        // 在排序之前清理无效的怪物引用
-        // 在排序之前清理无效的怪物引用
-// 1. 在Update中添加对IsDead的检查
-        if (distanceUpdateTimer > 0.2f)
-        {
-            distanceUpdateTimer = 0;
-            // 清理无效的怪物引用
-            monsterDetetor1.RemoveWhere(monster =>
-                monster == null || monster.gameObject == null || !monster.gameObject.activeSelf || monster.IsDead);
-            monsterDetetor2.RemoveWhere(monster =>
-                monster == null || monster.gameObject == null || !monster.gameObject.activeSelf || monster.IsDead);
-            monsterDetetor3.RemoveWhere(monster =>
-                monster == null || monster.gameObject == null || !monster.gameObject.activeSelf || monster.IsDead);
-            monsterDetetor4.RemoveWhere(monster =>
-                monster == null || monster.gameObject == null || !monster.gameObject.activeSelf || monster.IsDead);
-
-            // 直接找到最近的怪物，不需要排序
-            MonsterBase nearestMonster = FindNearestMonster(monsterDetetor1);
-            if (nearestMonster == null)
-                nearestMonster = FindNearestMonster(monsterDetetor2);
-            if (nearestMonster == null)
-                nearestMonster = FindNearestMonster(monsterDetetor3);
-            if (nearestMonster == null)
-                nearestMonster = FindNearestMonster(monsterDetetor4);
-
-            if (nearestMonster != null)
-            {
-                nearMonsterPosition = nearestMonster.transform.position;
-            }
-            else
-            {
-                //朝向player的右边
-                if (gamePlayer.playerSkeleton.Skeleton.FlipX)
-                    nearMonsterPosition = gamePlayer.transform.position + new Vector3(-10, 0, 0);
-                else
-                    nearMonsterPosition = gamePlayer.transform.position + new Vector3(10, 0, 0);
-            }
-        }
-
     }
     
 

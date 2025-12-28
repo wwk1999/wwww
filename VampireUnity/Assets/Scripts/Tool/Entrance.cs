@@ -993,11 +993,5 @@ public class Entrance : MonoBehaviour
         GameController.S.FirstlevelMonsterList.Add(GameController.S.snotMonster);
         GameController.S.FirstlevelMonsterList.Add(GameController.S.batMonster);
         GameController.S.FirstlevelMonsterList.Add(GameController.S.spiderMonster);
-
-        GameController.S.monsterDetetor1 = new HashSet<MonsterBase>();
-        GameController.S.monsterDetetor2 = new HashSet<MonsterBase>();
-        GameController.S.monsterDetetor3 = new HashSet<MonsterBase>();
-        GameController.S.monsterDetetor4 = new HashSet<MonsterBase>();
-        
     }
 }

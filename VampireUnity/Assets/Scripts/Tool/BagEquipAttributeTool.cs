@@ -70,19 +70,19 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
                     prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeWhite");
                     break;
                 case 2:
-                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeWhite");
+                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeGreen");
                     break;
                 case 3:
-                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeWhite");
+                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeBlue");
                     break;
                 case 4:
-                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeWhite");
+                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributePurple");
                     break;
                 case 5:
-                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeWhite");
+                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeOrange");
                     break;
                 case 6:
-                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeWhite");
+                    prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeRed");
                     break;
             }
         }
