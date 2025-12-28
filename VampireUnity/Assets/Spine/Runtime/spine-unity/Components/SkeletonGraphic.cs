@@ -49,16 +49,17 @@ namespace Spine.Unity {
 #endif
 	[RequireComponent(typeof(CanvasRenderer), typeof(RectTransform)), DisallowMultipleComponent]
 	[AddComponentMenu("Spine/SkeletonGraphic (Unity UI Canvas)")]
-	[HelpURL("https://esotericsoftware.com/spine-unity-main-components#SkeletonGraphic-Component")]
+	[HelpURL("http://esotericsoftware.com/spine-unity#SkeletonGraphic-Component")]
 	public class SkeletonGraphic : MaskableGraphic, ISkeletonComponent, IAnimationStateComponent, ISkeletonAnimation, IHasSkeletonDataAsset {
 
 		#region Inspector
 		public SkeletonDataAsset skeletonDataAsset;
-		public SkeletonDataAsset SkeletonDataAsset 
-		{ 
-			get { return skeletonDataAsset; } 
-			set { skeletonDataAsset = value; }
+		public SkeletonDataAsset SkeletonDataAsset { 
+			get 
+			{ return skeletonDataAsset; }
+			set { }
 		}
+
 		public Material additiveMaterial;
 		public Material multiplyMaterial;
 		public Material screenMaterial;
@@ -1027,7 +1028,7 @@ namespace Spine.Unity {
 							usedMaterial = multiplyMaterial;
 						else if (blendMode == BlendMode.Screen && screenMaterial)
 							usedMaterial = screenMaterial;
-						usedMaterialItems[i] = submeshGraphics[i].GetModifiedMaterial(usedMaterial);
+						usedMaterialItems[i] = submeshGraphics[i].UpdateModifiedMaterial(usedMaterial);
 					}
 				} else {
 					Texture originalTexture = submeshMaterial.mainTexture;
@@ -1038,7 +1039,7 @@ namespace Spine.Unity {
 					if (!customTextureOverride.TryGetValue(originalTexture, out usedTexture))
 						usedTexture = originalTexture;
 
-					usedMaterialItems[i] = submeshGraphics[i].GetModifiedMaterial(usedMaterial);
+					usedMaterialItems[i] = submeshGraphics[i].UpdateModifiedMaterial(usedMaterial);
 					usedTextureItems[i] = usedTexture;
 				}
 			}
@@ -1091,7 +1092,8 @@ namespace Spine.Unity {
 					canvasRenderer.SetMesh(null);
 
 				SkeletonSubmeshGraphic submeshGraphic = submeshGraphics[i];
-				if (useOriginalTextureAndMaterial && hasBlendModeMaterials) {
+				if (useOriginalTextureAndMaterial &&
+					(hasBlendModeMaterials || submeshInstructionItem.hasPMAAdditiveSlot)) {
 					bool allowCullTransparentMesh = true;
 					BlendMode materialBlendMode = blendModeMaterials.BlendModeForMaterial(usedMaterialItems[i]);
 					if ((materialBlendMode == BlendMode.Normal && submeshInstructionItem.hasPMAAdditiveSlot) ||

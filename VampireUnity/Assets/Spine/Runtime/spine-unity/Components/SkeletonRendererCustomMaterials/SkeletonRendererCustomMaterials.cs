@@ -44,7 +44,7 @@ namespace Spine.Unity {
 #else
 	[ExecuteInEditMode]
 #endif
-	[HelpURL("https://esotericsoftware.com/spine-unity-utility-components#SkeletonRendererCustomMaterials")]
+	[HelpURL("http://esotericsoftware.com/spine-unity#SkeletonRendererCustomMaterials")]
 	public class SkeletonRendererCustomMaterials : MonoBehaviour {
 
 		#region Inspector

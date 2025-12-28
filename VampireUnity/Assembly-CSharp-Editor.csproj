@@ -912,6 +912,10 @@
       <Project>{b254195c-77b0-da71-0bfc-ee01ecb6f61e}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{c1570e6b-5fa6-56e2-eb51-b5d1dc81907b}</Project>
+      <Name>spine-unity-examples</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{f615235b-3b73-73ff-ac60-157eacf1c9ee}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
@@ -1003,6 +1007,10 @@
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
       <Project>{dc5997e6-8446-d13a-5076-dce68f33c1a6}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{e95310f4-8037-c347-0c86-198e641d42b3}</Project>
+      <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity.csproj">
       <Project>{0988f295-7454-c435-f5fc-33274ad0853b}</Project>

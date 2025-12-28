@@ -31,7 +31,7 @@ using UnityEngine;
 
 namespace Spine.Unity {
 	[RequireComponent(typeof(MeshRenderer), typeof(MeshFilter))]
-	[HelpURL("https://esotericsoftware.com/spine-unity-utility-components#SkeletonRenderSeparator")]
+	[HelpURL("http://esotericsoftware.com/spine-unity#SkeletonRenderSeparator")]
 	public class SkeletonPartsRenderer : MonoBehaviour {
 
 		#region Properties

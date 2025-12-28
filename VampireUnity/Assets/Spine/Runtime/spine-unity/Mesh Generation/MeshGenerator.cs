@@ -603,7 +603,11 @@ namespace Spine.Unity {
 
 			for (int slotIndex = instruction.startSlot; slotIndex < instruction.endSlot; slotIndex++) {
 				Slot slot = drawOrderItems[slotIndex];
-				if (!slot.Bone.Active) {
+				if (!slot.Bone.Active
+#if SLOT_ALPHA_DISABLES_ATTACHMENT
+					|| slot.A == 0f
+#endif
+					) {
 					clipper.ClipEnd(slot);
 					continue;
 				}
@@ -682,8 +686,8 @@ namespace Spine.Unity {
 					color.b = (byte)(skeletonB * slot.B * c.b * 255);
 				}
 
-				if (useClipping && clipper.IsClipping
-					&& clipper.ClipTriangles(workingVerts, attachmentTriangleIndices, attachmentIndexCount, uvs)) {
+				if (useClipping && clipper.IsClipping) {
+					clipper.ClipTriangles(workingVerts, attachmentTriangleIndices, attachmentIndexCount, uvs);
 					workingVerts = clipper.ClippedVertices.Items;
 					attachmentVertexCount = clipper.ClippedVertices.Count >> 1;
 					attachmentTriangleIndices = clipper.ClippedTriangles.Items;

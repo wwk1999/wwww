@@ -27,14 +27,39 @@
  * THE SPINE RUNTIMES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
+//#define SPINE_ALLOW_UNSAFE // note: this define can be set via Edit - Preferences - Spine.
+
+#if UNITY_2021_2_OR_NEWER
+#define TEXT_ASSET_HAS_GET_DATA_BYTES
+#endif
+
+#if SPINE_ALLOW_UNSAFE && TEXT_ASSET_HAS_GET_DATA_BYTES
+#define UNSAFE_DIRECT_ACCESS_TEXT_ASSET_DATA
+#endif
+
 using System;
 using System.Collections.Generic;
 using System.IO;
+#if UNSAFE_DIRECT_ACCESS_TEXT_ASSET_DATA
+using Unity.Collections;
+#endif
 using UnityEngine;
-
 using CompatibilityProblemInfo = Spine.Unity.SkeletonDataCompatibility.CompatibilityProblemInfo;
 
 namespace Spine.Unity {
+#if UNSAFE_DIRECT_ACCESS_TEXT_ASSET_DATA
+	public static class TextAssetExtensions {
+		public static Stream GetStreamUnsafe (this TextAsset textAsset) {
+			NativeArray<byte> dataNativeArray = textAsset.GetData<byte>();
+			return dataNativeArray.GetUnmanagedMemoryStream();
+		}
+
+		public static unsafe UnmanagedMemoryStream GetUnmanagedMemoryStream<T> (this NativeArray<T> nativeArray) where T : struct {
+			return new UnmanagedMemoryStream((byte*)global::Unity.Collections.LowLevel.Unsafe.
+				NativeArrayUnsafeUtility.GetUnsafeReadOnlyPtr(nativeArray), nativeArray.Length);
+		}
+	}
+#endif
 
 	[CreateAssetMenu(fileName = "New SkeletonDataAsset", menuName = "Spine/SkeletonData Asset")]
 	public class SkeletonDataAsset : ScriptableObject {
@@ -127,7 +152,8 @@ namespace Spine.Unity {
 			return stateData;
 		}
 
-		/// <summary>Loads, caches and returns the SkeletonData from the skeleton data file. Returns the cached SkeletonData after the first time it is called. Pass false to prevent direct errors from being logged.</summary>
+		/// <summary>Loads, caches and returns the SkeletonData from the skeleton data file. Returns the cached SkeletonData after the first time it is called.</summary>
+		/// <param name="quiet">Pass true to prevent direct errors from being logged.</param>
 		public SkeletonData GetSkeletonData (bool quiet) {
 			if (skeletonJSON == null) {
 #if UNITY_EDITOR
@@ -188,9 +214,15 @@ namespace Spine.Unity {
 			SkeletonData loadedSkeletonData = null;
 
 			try {
-				if (hasBinaryExtension)
+				if (hasBinaryExtension) {
+#if UNSAFE_DIRECT_ACCESS_TEXT_ASSET_DATA
+					using (Stream stream = skeletonJSON.GetStreamUnsafe()) {
+						loadedSkeletonData = SkeletonDataAsset.ReadSkeletonData(stream, attachmentLoader, skeletonDataScale);
+					}
+#else
 					loadedSkeletonData = SkeletonDataAsset.ReadSkeletonData(skeletonJSON.bytes, attachmentLoader, skeletonDataScale);
-				else
+#endif
+				} else
 					loadedSkeletonData = SkeletonDataAsset.ReadSkeletonData(skeletonJSON.text, attachmentLoader, skeletonDataScale);
 			} catch (Exception ex) {
 				if (!quiet)
@@ -285,6 +317,13 @@ namespace Spine.Unity {
 				};
 				return binary.ReadSkeletonData(input);
 			}
+		}
+
+		internal static SkeletonData ReadSkeletonData (Stream assetStream, AttachmentLoader attachmentLoader, float scale) {
+			SkeletonBinary binary = new SkeletonBinary(attachmentLoader) {
+				Scale = scale
+			};
+			return binary.ReadSkeletonData(assetStream);
 		}
 
 		internal static SkeletonData ReadSkeletonData (string text, AttachmentLoader attachmentLoader, float scale) {

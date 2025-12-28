@@ -180,7 +180,7 @@ namespace Spine.Unity.Editor {
 							try {
 								attachmentType = (AttachmentType)System.Enum.Parse(typeof(AttachmentType), typeString, true);
 							} catch (System.ArgumentException e) {
-								// For more info, visit: https://esotericsoftware.com/forum/d/6534-spine-editor-and-runtime-version-management
+								// For more info, visit: http://esotericsoftware.com/forum/Spine-editor-and-runtime-version-management-6534
 								Debug.LogWarning(string.Format("Unidentified Attachment type: \"{0}\". Skeleton may have been exported from an incompatible Spine version.", typeString), spineJson);
 								throw e;
 							}
@@ -1097,7 +1097,7 @@ namespace Spine.Unity.Editor {
 						skeletonDataAsset.skeletonJSON = spineJson;
 						skeletonDataAsset.defaultMix = SpineEditorUtilities.Preferences.defaultMix;
 						skeletonDataAsset.scale = SpineEditorUtilities.Preferences.defaultScale;
-						skeletonDataAsset.blendModeMaterials.applyAdditiveMaterial = !SpineEditorUtilities.Preferences.UsesPMAWorkflow;
+						skeletonDataAsset.blendModeMaterials.applyAdditiveMaterial = SpineEditorUtilities.Preferences.applyAdditiveMaterial;
 					}
 					AssetDatabase.CreateAsset(skeletonDataAsset, filePath);
 				} else {

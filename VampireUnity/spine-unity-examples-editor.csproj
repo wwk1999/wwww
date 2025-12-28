@@ -774,10 +774,6 @@
       <Project>{c1570e6b-5fa6-56e2-eb51-b5d1dc81907b}</Project>
       <Name>spine-unity-examples</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-csharp.csproj">
-      <Project>{cc05bfbf-c4ed-11dc-b3e7-ec0fd4797500}</Project>
-      <Name>spine-csharp</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{4f644e03-7368-e12d-2ddc-c69bdcecb7b1}</Project>
       <Name>UnityEditor.UI</Name>

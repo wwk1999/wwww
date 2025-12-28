@@ -42,7 +42,7 @@ namespace Spine.Unity {
 	[ExecuteInEditMode]
 #endif
 	[RequireComponent(typeof(ISkeletonAnimation))]
-	[HelpURL("https://esotericsoftware.com/spine-unity-utility-components#SkeletonUtility")]
+	[HelpURL("http://esotericsoftware.com/spine-unity#SkeletonUtility")]
 	public sealed class SkeletonUtility : MonoBehaviour {
 
 		#region BoundingBoxAttachment
@@ -360,7 +360,7 @@ namespace Spine.Unity {
 
 				ExposedList<TransformConstraint> transformConstraints = skeleton.TransformConstraints;
 				for (int i = 0, n = transformConstraints.Count; i < n; i++)
-					constraintTargets.Add(transformConstraints.Items[i].Source);
+					constraintTargets.Add(transformConstraints.Items[i].Target);
 
 				List<SkeletonUtilityBone> boneComponents = this.boneComponents;
 				for (int i = 0, n = boneComponents.Count; i < n; i++) {

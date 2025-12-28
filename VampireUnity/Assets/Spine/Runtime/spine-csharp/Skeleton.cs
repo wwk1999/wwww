@@ -289,7 +289,8 @@ namespace Spine {
 				&& (!constraint.data.skinRequired || (skin != null && skin.constraints.Contains(constraint.data)));
 			if (!constraint.active) return;
 
-			SortBone(constraint.target);
+			Bone target = constraint.target;
+			SortBone(target);
 
 			ExposedList<Bone> constrained = constraint.bones;
 			Bone parent = constrained.Items[0];
@@ -310,15 +311,15 @@ namespace Spine {
 		}
 
 		private void SortTransformConstraint (TransformConstraint constraint) {
-			constraint.active = constraint.source.active
+			constraint.active = constraint.target.active
 				&& (!constraint.data.skinRequired || (skin != null && skin.constraints.Contains(constraint.data)));
 			if (!constraint.active) return;
 
-			SortBone(constraint.source);
+			SortBone(constraint.target);
 
 			Bone[] constrained = constraint.bones.Items;
 			int boneCount = constraint.bones.Count;
-			if (constraint.data.localSource) {
+			if (constraint.data.local) {
 				for (int i = 0; i < boneCount; i++) {
 					Bone child = constrained[i];
 					SortBone(child.parent);
@@ -338,18 +339,19 @@ namespace Spine {
 		}
 
 		private void SortPathConstraint (PathConstraint constraint) {
-			constraint.active = constraint.slot.bone.active
+			constraint.active = constraint.target.bone.active
 				&& (!constraint.data.skinRequired || (skin != null && skin.constraints.Contains(constraint.data)));
 			if (!constraint.active) return;
 
-			Slot slot = constraint.slot;
+			Slot slot = constraint.target;
 			int slotIndex = slot.data.index;
 			Bone slotBone = slot.bone;
 			if (skin != null) SortPathConstraintAttachment(skin, slotIndex, slotBone);
 			if (data.defaultSkin != null && data.defaultSkin != skin)
 				SortPathConstraintAttachment(data.defaultSkin, slotIndex, slotBone);
 
-			SortPathConstraintAttachment(slot.attachment, slotBone);
+			Attachment attachment = slot.attachment;
+			if (attachment is PathAttachment) SortPathConstraintAttachment(attachment, slotBone);
 
 			Bone[] constrained = constraint.bones.Items;
 			int boneCount = constraint.bones.Count;
@@ -734,7 +736,8 @@ namespace Spine {
 				}
 
 				if (vertices != null) {
-					if (clipper != null && clipper.IsClipping && clipper.ClipTriangles(vertices, triangles, triangles.Length)) {
+					if (clipper != null && clipper.IsClipping) {
+						clipper.ClipTriangles(vertices, triangles, triangles.Length);
 						vertices = clipper.ClippedVertices.Items;
 						verticesLength = clipper.ClippedVertices.Count;
 					}
