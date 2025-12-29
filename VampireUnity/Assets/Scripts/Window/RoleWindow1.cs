@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mysql;
+using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,7 @@ public class AddUserSourceStoneData
 }
 public class RoleWindow1 : MonoBehaviour
 {
+    public SkeletonGraphic playerSkeleton;
     public Text yuanLinText;
     public Text yuanNengText;
     public Button weaponButton; // 武器按钮
@@ -106,6 +108,7 @@ public class RoleWindow1 : MonoBehaviour
         GlobalPlayerAttribute.RefreshFuJiaAttribute();
 
         BagController.S.IsInit = true;
+        ((SkeletonAnimation)playerSkeleton.Animation).AnimationState.SetAnimation(0, "idle", true);
         chibangButton.onClick.AddListener(() =>
         {
             Instantiate(Resources.Load("Prefabs/Window/ChiBangWindow"));

@@ -3,6 +3,7 @@ using System.Collections;
 using Equip;
 using Spine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BatMonster : MonsterBase
 {
@@ -37,6 +38,8 @@ public class BatMonster : MonsterBase
     public void Awake()
     {
         base.Awake();
+        var randomSpeed=Random.Range(-0.1f,0.1f);
+        Speed+=randomSpeed;
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "walk";

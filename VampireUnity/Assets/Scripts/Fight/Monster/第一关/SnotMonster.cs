@@ -4,6 +4,7 @@ using Equip;
 using NUnit.Framework;
 using Spine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 public class SnotMonster : MonsterBase
@@ -36,6 +37,8 @@ public class SnotMonster : MonsterBase
     public void Awake()
     {
         base.Awake();
+        var randomSpeed=Random.Range(-0.1f,0.1f);
+        Speed+=randomSpeed;
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "walk";
@@ -60,7 +63,7 @@ public class SnotMonster : MonsterBase
     public override void Die()
     {
         //生成随机数
-        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
+        float randomDelay = Random.Range(0, 20) * 0.02f;
         Invoke(nameof(RandomDelayDie),randomDelay);
     }
     

@@ -18,6 +18,8 @@ public class Huangzhu : MonsterBase
     public void Awake()
     {
         base.Awake();
+        var randomSpeed=Random.Range(-0.1f,0.1f);
+        Speed+=randomSpeed;
         MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "injured";
         MonsterSpineName.MoveName = "move";
