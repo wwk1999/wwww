@@ -12,7 +12,7 @@ public class EliteDaZuiMonster : MonsterBase
 {
     [NonSerialized]public float skillTime = 5f;
     [NonSerialized]public float currentTime = 0f;
-    public EliteDaZuiMonster() : base(MonsterType.Elite, "EliteDaZuiMonster", 1, 5000, 0.6f, 100, 30, 50, 100, 10) { }
+    public EliteDaZuiMonster() : base(MonsterType.Elite, "EliteDaZuiMonster", 1, 5000, 0.8f, 100, 30, 50, 100, 10) { }
 
     public SkeletonAnimation fireSke;
     public GameObject fireParent;

@@ -99,12 +99,19 @@ public class RoleWindow1 : MonoBehaviour
     {
         UpdateRoleWindow();
     }
+
+    public void RefreshChiBang(object[] obj)
+    {
+        UpdateRoleWindow();
+    }
     
     
     private void Start()
     {
         Debug.Log("点击进入角色界面");
         InitEquip();
+        ObserverModuleManager.S.RegisterEvent("ChiBang",RefreshChiBang);
+
         GlobalPlayerAttribute.RefreshFuJiaAttribute();
 
         BagController.S.IsInit = true;

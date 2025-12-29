@@ -197,7 +197,8 @@ public abstract class MonsterBase : MonoBehaviour
             ShowHurtText(Mathf.RoundToInt(duDamage), false,YiChangState.Du);
             CurrentHp -= duDamage;
             //设置血条
-            hpSlider.value = (float)CurrentHp / MaxHp;
+            hpSlider.value = CurrentHp;
+            hpSlider.maxValue = MaxHp;
             if (CurrentHp <= 0 && !IsDead)
             {
                 IsDead = true;
@@ -595,7 +596,7 @@ public abstract class MonsterBase : MonoBehaviour
         finalDamage-=monsterDenfense;
         if (isCrit)
         {
-            finalDamage *= (2+GlobalPlayerAttribute.CRITDamage+GlobalPlayerAttribute.CritDamageNum/100.0f);
+            finalDamage *= (2+GlobalPlayerAttribute.TotalCritDamage);
         }
 
         if (MonsterType == MonsterType.Boss)
@@ -706,6 +707,7 @@ public abstract class MonsterBase : MonoBehaviour
         {
             finalDamage+=1f;
         }
+        finalDamage+=GlobalPlayerAttribute.PlayerChiBangAttribute.finalDamage;
         return damage*(1+finalDamage);
     }
     public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom)
@@ -721,7 +723,7 @@ public abstract class MonsterBase : MonoBehaviour
             JianSuTime = 3;
         }
         float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
-        finalDamage = OrangeEntryDamage(finalDamage);
+        finalDamage = OrangeEntryDamage(finalDamage);//最终伤害
         GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck/100.0f * finalDamage);
         ShowHurtText(finalDamage, isCrit);
         var random=Random.Range(0, 100);

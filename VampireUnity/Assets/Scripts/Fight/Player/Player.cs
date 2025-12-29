@@ -126,7 +126,6 @@ public class Player : MonoBehaviour
             {
                 return;
             }
-            Debug.LogError(GlobalPlayerAttribute.TotalAttackSpeed);
             playerSkeleton.timeScale = GlobalPlayerAttribute.TotalAttackSpeed;
             playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
         }

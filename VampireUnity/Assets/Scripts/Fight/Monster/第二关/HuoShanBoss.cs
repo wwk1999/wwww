@@ -9,12 +9,12 @@ using Random = UnityEngine.Random;
 
 public class HuoShanBoss : MonsterBase
 {
-    public HuoShanBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 2000, 0.5f, 10, 5, 10, 10, 0) { }
+    public HuoShanBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 30000, 0.7f, 150, 50, 10, 10, 0) { }
     public Transform attackTrans;
     public Collider2D skill3Collider;
-    [NonSerialized]public float Skill1Time= 5f;
+    [NonSerialized]public float Skill1Time= 3f;
     [NonSerialized]public float Skill1CurrentTime = 0f;
-    [NonSerialized]public float Skill2Time = 15f;
+    [NonSerialized]public float Skill2Time = 10f;
     [NonSerialized]public float Skill2CurrentTime = 0f;
     [NonSerialized]public float Skill3Time = 8f;
     [NonSerialized]public float Skill3CurrentTime = 0f;
@@ -136,7 +136,7 @@ public class HuoShanBoss : MonsterBase
         }
         if (e.Data.Name == "huoyan"&&trackEntry.Animation.Name == "skill_02")
         {
-            Skill2(Vector2.zero,10,0.1f,50);
+            Skill2(GameController.S.gamePlayer.transform.position,10,0.05f,50);
         }
         if (e.Data.Name == "huoyan"&&trackEntry.Animation.Name == "skill_03")
         {
@@ -169,7 +169,17 @@ public class HuoShanBoss : MonsterBase
         CreateBloodEnergy();
         CreateEquip();
         CreateProp();
+        
+        GameController.S.StartCoroutine(DelayChuanSongMen());
+
     }
+    IEnumerator DelayChuanSongMen()
+    {
+        yield return new WaitForSeconds(1f);
+        var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
+        chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    }
+
     
     public override void AddMonsterProp()
     {

@@ -22,7 +22,7 @@ public class HuoShanJianQi : MonoBehaviour
             //设置枪的位置
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             parent.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
-            rg.velocity = direction * 10;
+            rg.velocity = direction * 12;
         }
     }
 
@@ -31,7 +31,6 @@ public class HuoShanJianQi : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameController.S.gamePlayer.PlayerHurt(damage,false);
-            gameObject.SetActive(false);
         }
     }
 

@@ -41,7 +41,7 @@ namespace Equip
                         break;
                 }
 
-                if (PlayerData.S.ChiBangEx > ChiBangConfig.ChiBangExDic[PlayerData.S.ChiBangLevel])
+                if (PlayerData.S.ChiBangEx >= ChiBangConfig.ChiBangExDic[PlayerData.S.ChiBangLevel])
                 {
                     PlayerData.S.ChiBangEx -= ChiBangConfig.ChiBangExDic[PlayerData.S.ChiBangLevel];
                     PlayerData.S.ChiBangLevel += 1;

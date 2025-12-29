@@ -11,8 +11,15 @@ public enum ExitType
     Exit,
     Again
 }
-public class GlobalPlayerAttribute 
+public class GlobalPlayerAttribute
 {
+    public static ChiBangAttribute PlayerChiBangAttribute => GetPlayerChiBang();
+
+    public static ChiBangAttribute GetPlayerChiBang()
+    {
+        return ChiBangConfig.ChiBangAttributeDic[PlayerData.S.ChiBangLevel];
+    }
+    
    public static float WeaponAttack=>GetWeaponAttack();
    public static float WeaponDefense=>GetWeaponDefense();
    public static float WeaponCrit=>GetWeaponCrit();
@@ -341,7 +348,7 @@ public class GlobalPlayerAttribute
    
    //基础属性
    public static float TotalMaxHp => GetTotalMaxHp();
-
+   public static float TotalCritDamage => GetTotalCritDamage();
    public static float TotalDamage => GetTotalDamage();
    
    public static float TotalCRIT =>GetTotalCrit();
@@ -351,7 +358,7 @@ public class GlobalPlayerAttribute
    public static float GetTotalAttackSpeed()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       return weaponAttribute.AttackSpeed * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed/100.0f);
+       return (weaponAttribute.AttackSpeed+PlayerChiBangAttribute.attackSpeed) * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed/100.0f);
    }
 
    public static float GetTotalCrit()
@@ -386,12 +393,14 @@ public class GlobalPlayerAttribute
        {
            forture += 0.3f;
        }
+
+       forture += PlayerChiBangAttribute.forture;
        return forture;
    }
    
    public static float GetPlayerMoveSpeed()
    {
-       float speed=_baseMoveSpeed * (1 + MoveSpeedNum / 100f);
+       float speed=(_baseMoveSpeed+PlayerChiBangAttribute.moveSpeed) * (1 + MoveSpeedNum / 100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
        {
            speed*=1.25f;
@@ -399,9 +408,14 @@ public class GlobalPlayerAttribute
        return speed;
    }
 
+   public static float GetTotalCritDamage()
+   {
+       return CRITDamage+CritDamageNum/100.0f+PlayerChiBangAttribute.critDamage;
+   }
+
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp) * (1.0f + MaxHpPercent/100f));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp) * (1.0f + MaxHpPercent/100f));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            maxhp /= 2;
@@ -411,7 +425,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDamage()
    {
-       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack) * (1f + DamageAddPercent / 100f));
+       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack) * (1f + DamageAddPercent / 100f));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            damage *=1.3f;
@@ -421,7 +435,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDefense()
    {
-       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense)*(1f+MaxDefensePercent/100f));
+       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense)*(1f+MaxDefensePercent/100f));
        float value = 0;
 
        if (isIceBall)
