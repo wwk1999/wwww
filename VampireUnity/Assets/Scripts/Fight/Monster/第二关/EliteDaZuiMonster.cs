@@ -11,9 +11,10 @@ public class EliteDaZuiMonster : MonsterBase
 {
     [NonSerialized]public float skillTime = 5f;
     [NonSerialized]public float currentTime = 0f;
-    public EliteDaZuiMonster() : base(MonsterType.Elite, "EliteDaZuiMonster", 1, 1000, 0.3f, 20, 5, 50, 100, 10) { }
+    public EliteDaZuiMonster() : base(MonsterType.Elite, "EliteDaZuiMonster", 1, 5000, 0.6f, 100, 30, 50, 100, 10) { }
 
     public SkeletonAnimation fireSke;
+    public GameObject fireParent;
     public Transform attackTrans;
     private bool isfire=false;
     private float fireTime = 0.2f;
@@ -146,7 +147,10 @@ public class EliteDaZuiMonster : MonsterBase
     {
         if (e.Data.Name == "akill")
         {
-            fireSke.gameObject.SetActive(true);
+            var MoveDirection=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+            float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
+            fireParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            fireParent.gameObject.SetActive(true);
             fireSke.AnimationState.SetAnimation(0, "animation", false);
         }
     }
@@ -166,8 +170,10 @@ public class EliteDaZuiMonster : MonsterBase
             currentFireTime = 0;
             CheckCollider();
         }
-       
-        if (currentTime > skillTime && Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 3)
+       float yabs=Math.Abs(transform.position.y-GameController.S.gamePlayer.transform.position.y);
+       float xabs=Math.Abs(transform.position.x-GameController.S.gamePlayer.transform.position.x);
+       float bili = yabs / xabs;
+        if (currentTime > skillTime && Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 3&&bili<1.5)
         {
             currentTime = 0;
             isSkill1 = true;

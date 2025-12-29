@@ -68,7 +68,10 @@ public abstract class MonsterBase : MonoBehaviour
     public GameObject du;
     public GameObject jiansu;
     [NonSerialized] public float duTime = 0;
+    [NonSerialized] public float duDamage = 0;
     [NonSerialized] public float jiansuTime = 0;
+    [NonSerialized] public float duCurrentTime = 0;
+
     
     
     public Canvas  hpSliderCanvas;
@@ -170,18 +173,37 @@ public abstract class MonsterBase : MonoBehaviour
     private float hurtTime = 0.75f;
     private float currentHurtTime = 0;
 
+    private void OnEnable()
+    {
+        duCurrentTime = 0;
+    }
+
     public void Update()
     {
         if (duTime > 0)
         {
             duTime -= Time.deltaTime;
+            duCurrentTime+=Time.deltaTime;
             du.gameObject.SetActive(true);
         }
         else
         {
             du.gameObject.SetActive(false);
         }
-        
+
+        if (duCurrentTime >= 1)
+        {
+            duCurrentTime = 0;
+            ShowHurtText(Mathf.RoundToInt(duDamage), false,YiChangState.Du);
+            CurrentHp -= duDamage;
+            //设置血条
+            hpSlider.value = (float)CurrentHp / MaxHp;
+            if (CurrentHp <= 0 && !IsDead)
+            {
+                IsDead = true;
+                Die();
+            }
+        }
         if (jiansuTime > 0)
         {
             jiansuTime -= Time.deltaTime;
@@ -531,9 +553,17 @@ public abstract class MonsterBase : MonoBehaviour
 
     public abstract void Die();
 
-    public void ShowHurtText(float damage,bool isCrit)
+    public void ShowHurtText(float damage,bool isCrit,YiChangState yiChangState=YiChangState.None)
     {
         MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
+        monsterHpGameObject.yiChangState=yiChangState;
+        switch (yiChangState)
+        {
+            case YiChangState.Du:
+                monsterHpGameObject.duText.text = "-" + damage;
+                break;
+        }
+
         monsterHpGameObject.isCrit=isCrit;
         if (isCrit)
         {

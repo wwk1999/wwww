@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Huangzhu : MonsterBase
 {
-    public Huangzhu() : base(MonsterType.Normal, "Huangzhu", 1, 300, 0.5f, 50, 20, 10, 10, 0)
+    public Huangzhu() : base(MonsterType.Normal, "Huangzhu", 1, 500, 0.5f, 100, 20, 10, 10, 0)
     {
     }
     
