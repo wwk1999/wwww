@@ -10,8 +10,8 @@ public class PuTong3Peng : MonoBehaviour
 
     private void OnEnable()
     {
-        var trackEntry = skeleton.AnimationState.SetAnimation(0, "action", false);
-        trackEntry.Complete += OnActionAnimationComplete;
+       skeleton.AnimationState.SetAnimation(0, "action", false);
+       skeleton.AnimationState.Complete += OnActionAnimationComplete;
     }
 
     private void OnActionAnimationComplete(TrackEntry trackEntry)
@@ -19,7 +19,7 @@ public class PuTong3Peng : MonoBehaviour
         if (trackEntry.Animation.Name == "action")
         {
             gameObject.SetActive(false);
-            GameController.S.PuTong3PengQueue.Enqueue(gameObject);
+            //GameController.S.PuTong3PengQueue.Enqueue(gameObject);
         }
         // 取消订阅，避免重复调用
         trackEntry.Complete -= OnActionAnimationComplete;

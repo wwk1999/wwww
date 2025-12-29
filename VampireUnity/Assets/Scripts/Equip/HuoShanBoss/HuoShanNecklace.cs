@@ -19,10 +19,10 @@ public class HuoShanNecklace : EquipBase
             // //添加生命值，随机10-20
             // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
             EquipAttributes.EquipName = "HuoShanNecklace";
+            EquipAttributes.EquipLevel = 15;
             EquipAttributes.suitid = 102;
             EquipAttributes.equip_type_id = 4;
             EquipAttributes.Quality = 3;
-            
             SetBaseAttribute();
             InitEntry();
         }

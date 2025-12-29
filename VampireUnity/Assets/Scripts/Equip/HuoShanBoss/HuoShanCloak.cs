@@ -19,6 +19,7 @@ public class HuoShanCloak : EquipBase
         // //添加生命值，随机10-20
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "HuoShanCloak";
+        EquipAttributes.EquipLevel = 15;
         EquipAttributes.suitid = 102;
         EquipAttributes.equip_type_id = 1;
         //暂时写死

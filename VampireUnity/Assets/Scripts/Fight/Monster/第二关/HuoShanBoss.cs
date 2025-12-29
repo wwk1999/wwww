@@ -169,6 +169,7 @@ public class HuoShanBoss : MonsterBase
         CreateBloodEnergy();
         CreateEquip();
         CreateProp();
+        FightBGController.S.PlaySuccessAnim();
         
         GameController.S.StartCoroutine(DelayChuanSongMen());
 
