@@ -10,8 +10,8 @@ public class DianQuan : MonoBehaviour
     public SkeletonAnimation skeletonAnimation;
     public Collider2D collider;
     private bool isAttacking = false;
-    private float attackTime = 0.5f;
-    private float currentAttackTime = 0.5f;
+    private float attackTime = 0.2f;
+    private float currentAttackTime = 0.2f;
 
     private void Start()
     {

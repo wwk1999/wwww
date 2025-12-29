@@ -522,6 +522,7 @@ public abstract class MonsterBase : MonoBehaviour
         switch (LevelInfoConfig.CurrentGameLevelType)
         {
             case LevelType.Elite:
+                Debug.LogError("GameController.S.KillMonsterCount："+GameController.S.KillMonsterCount+","+LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] + LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 10);
                 if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] + LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 10)
                 {
                     var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
