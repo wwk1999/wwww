@@ -1019,7 +1019,7 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 5684110836140596066}
   hpSlider: {fileID: 6515589411300208428}
-  collider2D: {fileID: 8964013065192241439}
+  collider2D: {fileID: 0}
   rigidbody2D: {fileID: 3513499961834868068}
   attackTrans: {fileID: 6006090304651002513}
   skill1Collider: {fileID: 1961036959311709017}
@@ -1027,6 +1027,7 @@ MonoBehaviour:
   skill3Collider: {fileID: 5804859042026695697}
   skill1trans: {fileID: 8936647191257971934}
   skill3trans: {fileID: 2761780755257315950}
+  isSkill4: 0
 --- !u!1 &3774229070775702272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,7 +1073,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3457946440800882845}
-  - component: {fileID: 8964013065192241439}
+  - component: {fileID: 6896123283768798701}
   m_Layer: 16
   m_Name: Collider
   m_TagString: Monster
@@ -1095,8 +1096,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9098205236390442111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &8964013065192241439
-EdgeCollider2D:
+--- !u!60 &6896123283768798701
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1128,29 +1129,26 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -0.5370646, y: -0.15355429}
-  - {x: 0.01830616, y: -0.16414496}
-  - {x: 0.3414207, y: -0.04964725}
-  - {x: 0.56916654, y: 0.23301877}
-  - {x: 0.71038234, y: 0.15445144}
-  - {x: 0.7956615, y: -0.13567291}
-  - {x: 2.0031266, y: -0.19367138}
-  - {x: 2.3486865, y: 0.0036650002}
-  - {x: 2.2436073, y: 0.38346332}
-  - {x: 1.7521684, y: 0.612487}
-  - {x: 0.83712876, y: 0.57286304}
-  - {x: 0.07564926, y: 0.9239353}
-  - {x: -0.6212083, y: 1.1130246}
-  - {x: -1.9314135, y: 0.5560353}
-  - {x: -1.7256054, y: 0.036886036}
-  - {x: -0.87766945, y: 0.37448883}
-  - {x: -0.4636885, y: -0.063539505}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: -1.9001302, y: 0.5583799}
+      - {x: -1.7238923, y: 0.11144966}
+      - {x: -0.8434602, y: 0.3821962}
+      - {x: -0.4470619, y: -0.11020719}
+      - {x: 2.3135915, y: -0.08847874}
+      - {x: 2.259329, y: 0.42024788}
+      - {x: 0.45688695, y: 0.7053681}
+      - {x: -0.29245365, y: 1.1806364}
+  m_UseDelaunayMesh: 0
 --- !u!1 &5036366321621978545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,7 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: skill2
+  animationName: move
   loop: 1
   timeScale: 1
   unscaledTime: 0

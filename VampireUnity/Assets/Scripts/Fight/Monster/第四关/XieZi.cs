@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XieZi : MonsterBase
 {
-    public XieZi() : base(MonsterType.Boss, "XieZi", 1, 100, 1f, 10, 5, 10, 10, 0)
+    public XieZi() : base(MonsterType.Boss, "XieZi", 1, 100000, 1.2f, 1000, 300, 10, 10, 0)
     {
     }
     
@@ -43,7 +43,7 @@ public class XieZi : MonsterBase
     {
         if (trackEntry.Animation.Name == "skill2")
         {
-            collider2D.tag = "Bullet";
+            collider2D.tag = "Bullet"; 
             var pos = GameController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(pos,1);
             StartCoroutine(DelayShow(1, pos));

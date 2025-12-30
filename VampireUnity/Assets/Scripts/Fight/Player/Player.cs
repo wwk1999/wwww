@@ -48,6 +48,9 @@ public class Player : MonoBehaviour
     public Animator orangeChiBang;
     public Animator redChiBang;
 
+    public GameObject IceBall4;
+    public GameObject IceBall5;
+
     
     // 延迟伤害信息结构
     private struct DelayedDamageInfo

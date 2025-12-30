@@ -849,7 +849,6 @@ public class GameController : XSingleton<GameController>
             if (SkillController.S.IceArrowCoolingtime > SkillController.S.IceArrowtime)
             {
                 AudioController.S.PlayIceArrow();
-                SkillController.S.IceArrowUIFX.Play();
                 SkillController.S.IceArrowCoolingtime = 0;
                 SkillController.S.IceArrow.Play();
                 SkillController.S.IceArrow.transform.Find("Trail").gameObject.SetActive(true);
@@ -860,7 +859,6 @@ public class GameController : XSingleton<GameController>
         {
             if (SkillController.S.IceExplosionCoolingtime > SkillController.S.IceExplosiontime)
             {
-                SkillController.S.IceExUIFX.Play();
                 AudioController.S.PlayIceEx();
                 SkillController.S.IceExplosionCoolingtime=0;
                 SkillController.S.IceExplosion1.Play();
@@ -875,7 +873,6 @@ public class GameController : XSingleton<GameController>
             if (SkillController.S.IceBallCoolingtime > SkillController.S.IceBalltime)
             {
                 AudioController.S.PlayIceBall();
-                SkillController.S.IceBallUIFX.Play();
                 SkillController.S.IceBallCoolingtime=0;
                 SkillController.S.StartIceBallSkill(1);
             }

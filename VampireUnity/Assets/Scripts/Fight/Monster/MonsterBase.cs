@@ -268,11 +268,6 @@ public abstract class MonsterBase : MonoBehaviour
         {
             IsSkill=false;
             isSkill1 = false;
-            if (this is ShaXiYi)
-            {
-                ShaXiYi shaMoElite=this as ShaXiYi;
-                shaMoElite.hideTime = 10;
-            }
         }
        
         if (isSkill2)
@@ -300,6 +295,17 @@ public abstract class MonsterBase : MonoBehaviour
                 shaMoElite.CheckSkill();
             }
 
+            if (this is ShaXiYi)
+            {
+                ShaXiYi shaxiyi = this as ShaXiYi;
+                var skeleton = monsterSkeletonAnimation.Skeleton;
+                skeleton.SetSkin("skin_yinshen_hou");
+                skeleton.SetupPoseSlots(); // 添加这行来重置插槽
+                collider2D.tag = "Bullet";
+                var random = Random.Range(4f, 6f);
+                Invoke(nameof(ExitYinShen), random);
+            }
+
             if (this is EliteBeeMonster)
             {
                 Skill();
@@ -313,6 +319,14 @@ public abstract class MonsterBase : MonoBehaviour
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
+    }
+
+    public void ExitYinShen()
+    {
+        var skeleton = monsterSkeletonAnimation.Skeleton;
+        skeleton.SetSkin("skin_yinshen_qian");
+        skeleton.SetupPoseSlots();
+        collider2D.tag = "Monster";
     }
     
     void DelayDestroy()
@@ -522,7 +536,6 @@ public abstract class MonsterBase : MonoBehaviour
         switch (LevelInfoConfig.CurrentGameLevelType)
         {
             case LevelType.Elite:
-                Debug.LogError("GameController.S.KillMonsterCount："+GameController.S.KillMonsterCount+","+LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] + LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 10);
                 if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] + LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 10)
                 {
                     var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));

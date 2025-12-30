@@ -109,9 +109,6 @@ public class FightBg : MonoBehaviour
         playerLevelText.text = GlobalPlayerAttribute.Level.ToString();
         ObserverModuleManager.S.RegisterEvent(ConstKeys.ShowToast, ShowTaost);
         ObserverModuleManager.S.RegisterEvent("ShenJi", ShenJi);
-        SkillController.S.IceArrowUIFX = iceArrowUIFX;
-        SkillController.S.IceBallUIFX = iceBallUIFX;
-        SkillController.S.IceExUIFX = iceExUIFX;
         jiHuoButton.onClick.AddListener(() =>
         {
             GameObject boosQuan=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/BossQuan"));

@@ -219,6 +219,7 @@
     <Compile Include="Assets\Scripts\Tool\SqrtAttack.cs" />
     <Compile Include="Assets\Scripts\Tool\ChuanSongMen.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenShoe.cs" />
+    <Compile Include="Assets\Scripts\Skill\IceBallSkill.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaNiao.cs" />
     <Compile Include="Assets\Scripts\Config\EquipConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\MonsterWeaponSource.cs" />
@@ -687,6 +688,7 @@
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\食人花\dumoshirenhua.json" />
+    <None Include="Assets\Arts\Spine\技能\冰球\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\wenzi.json" />
     <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\IceEx\action.atlas.txt" />
@@ -709,6 +711,7 @@
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
     <None Include="Assets\Arts\Shaders\LcL\HueShift.shader" />
+    <None Include="Assets\Arts\Spine\技能\冰球\skeleton.json" />
     <None Include="Assets\Arts\Spine\技能\绿爆炸\action.json" />
     <None Include="Assets\Arts\Spine\技能\1225\黄电圈\action.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />

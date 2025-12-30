@@ -29,6 +29,7 @@ public class SkillController : XSingleton<SkillController>
     public float IceArrowtime => (3f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
     public float IceExplosiontime => (10f*(1-GlobalPlayerAttribute.Skill3CdNum/100.0f));
     public float IceBalltime => (10f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
+    public float IceBallDuration = 5;
     public float Dashtime => GetDashCd();
     public float DianQuantime => (10f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
     
@@ -39,11 +40,6 @@ public class SkillController : XSingleton<SkillController>
    
 
     [NonSerialized]public float DianQuanCoolingtime = 0f;
-    
-    //技能点击特效
-    [NonSerialized]public UIParticle IceArrowUIFX;
-    [NonSerialized]public UIParticle IceBallUIFX;
-    [NonSerialized]public UIParticle IceExUIFX;
     
     public SkillType LMB
     {
@@ -182,7 +178,6 @@ public class SkillController : XSingleton<SkillController>
                     float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
                     mouseScreen.z = depth; 
                     Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-                    IceArrowUIFX.Play();
                     IceArrowCoolingtime = 0;
                     DianQuanCoolingtime = 0;
                     var dianquan= GameController.S.DianQuanQueue.Dequeue();
@@ -195,15 +190,14 @@ public class SkillController : XSingleton<SkillController>
                 if (IceBallCoolingtime >= IceBalltime)
                 {
                     AudioController.S.PlayIceBall();
-                    IceBallUIFX.Play();
                     IceBallCoolingtime=0;
                     if(GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill2AddDan))
                     {
-                        StartIceBallSkill(3);
+                        StartIceBallSkill(5);
                     }
                     else
                     {
-                        StartIceBallSkill(2);
+                        StartIceBallSkill(4);
                     }
                 }
                 break;
@@ -212,7 +206,6 @@ public class SkillController : XSingleton<SkillController>
                 {
                     AudioController.S.PlayIceEx();
                     Debug.Log("mac点击了冰爆技能!");
-                    IceExUIFX.Play();
                     IceExplosionCoolingtime=0;
                     if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill3AddRange))
                     {
@@ -234,16 +227,6 @@ public class SkillController : XSingleton<SkillController>
     }
     void Update()
     {
-        if (IceBallGameObject != null)
-        {
-            var iceBallSpeed = IceBallSpeed;
-            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill2RotateAdd))
-            {
-                iceBallSpeed *= 1.3f;
-            }
-           IceBallGameObject.transform.Rotate(0, 0, iceBallSpeed);
-        }
-        
         //技能冷却时间
         IceArrowCoolingtime+= Time.deltaTime;
         IceExplosionCoolingtime+=Time.deltaTime;
@@ -320,7 +303,6 @@ public class SkillController : XSingleton<SkillController>
         {
             Debug.Log("mac点击了冰箭技能");
             AudioController.S.PlayIceArrow();
-            IceArrowUIFX.Play();
            
             IceArrowCoolingtime = 0;
            IceArrow.Play();
@@ -353,20 +335,12 @@ public class SkillController : XSingleton<SkillController>
     {
         switch (num)
         {
-            case 1:
-                IceBallGameObject = Instantiate(Resources.Load("Prefabs/Skill/IceBall").GameObject(), GameController.S.gamePlayer.transform);
+            case 4:
+                GameController.S.gamePlayer.IceBall4.SetActive(true);
                 break;
-            case 2:
-                IceBallGameObject = Instantiate(Resources.Load("Prefabs/Skill/IceBall2").GameObject(), GameController.S.gamePlayer.transform);
-                break;
-            case 3:
-                IceBallGameObject = Instantiate(Resources.Load("Prefabs/Skill/IceBall3").GameObject(), GameController.S.gamePlayer.transform);
-                break;
-            default:
-                IceBallGameObject = Instantiate(Resources.Load("Prefabs/Skill/IceBall").GameObject(), GameController.S.gamePlayer.transform);
+            case 5:
+                GameController.S.gamePlayer.IceBall5.SetActive(true);
                 break;
         }
-        IceBallGameObject.transform.localScale = new Vector3(15, 15, 15);
-        
     }
 }

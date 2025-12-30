@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class ShaXiYi : MonsterBase
 {
-    public ShaXiYi() : base(MonsterType.Elite, "ShaXiYi", 1, 100, 0.3f, 10, 5, 10, 10, 0)
+    public ShaXiYi() : base(MonsterType.Elite, "ShaXiYi", 1, 10000, 1.2f, 600, 200, 10, 10, 0)
     {
     }
     public GameObject parent;
     public Transform attackTrans;
     private float attackRange = 0.7f;
     
-    private float skill1Time = 30f;
+    private float skill1Time = 10f;
     private float currentSkill1Time = 0f;
     public float hideTime = 0; 
 
@@ -28,9 +28,12 @@ public class ShaXiYi : MonsterBase
     }
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
     }
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
@@ -67,7 +70,9 @@ public class ShaXiYi : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),10));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,3),10));
+
     }
     
     private void Start()
@@ -102,22 +107,6 @@ public class ShaXiYi : MonsterBase
         if (IsDead) return;
         hideTime-=Time.deltaTime;
         currentSkill1Time+=Time.deltaTime;
-        if (hideTime > 0)
-        {
-            var skeleton = monsterSkeletonAnimation.Skeleton;
-            skeleton.SetSkin("skin_yinshen_hou");   // 确认名字无误
-            //skeleton.SetSlotsToSetupPose();         // 或 skeleton.SetToSetupPose();
-            monsterSkeletonAnimation.AnimationState.Apply(skeleton); // 重新应用当前动画
-            collider2D.tag = "Bullet";
-        }
-        else
-        {
-            var skeleton = monsterSkeletonAnimation.Skeleton;
-            skeleton.SetSkin("skin_yinshen_qian");
-            //skeleton.SetSlotsToSetupPose();
-            monsterSkeletonAnimation.AnimationState.Apply(skeleton);
-            collider2D.tag = "Monster";
-        }
 
         if (currentSkill1Time > skill1Time)
         {
