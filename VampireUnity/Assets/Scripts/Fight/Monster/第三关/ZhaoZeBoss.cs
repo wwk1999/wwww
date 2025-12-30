@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using Equip;
 using Spine;
 using UnityEngine;
+using UnityEngine.InputSystem.Android.LowLevel;
 
 public class ZhaoZeBoss : MonsterBase
 {
-   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 50000, 0.7f, 300, 100, 10, 10, 0)
+   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 50000, 1f, 300, 100, 10, 10, 0)
     {
     }
     public Transform attackTrans;
@@ -18,6 +19,7 @@ public class ZhaoZeBoss : MonsterBase
     private float currentSkill2Time=0;
     private float currentSkill3Time=0;
     public Collider2D skill1Collider;
+    public Collider2D skill2Collider;
     public Collider2D skill3Collider;
     public Transform skill1trans;
     public Transform skill3trans;
@@ -33,8 +35,6 @@ public class ZhaoZeBoss : MonsterBase
         MonsterSpineName.Skill1Name = "skill1";
         MonsterSpineName.Skill2Name = "skill2";
         MonsterSpineName.Skill3Name = "skill3";
-
-
     }
 
     
@@ -103,6 +103,19 @@ public class ZhaoZeBoss : MonsterBase
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
         monsterSkeletonAnimation.AnimationState.Complete += Complete;
     }
+
+    IEnumerator DelayChuXian()
+    {
+        yield return new WaitForSeconds(1f);
+        var pos = GameController.S.gamePlayer.transform.position;
+        GameController.S.CreateCircleAttack(new Vector2(pos.x+2,pos.y),1);
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(true);
+        parent.transform.localScale = new Vector3(1, 1, 1);
+        transform.position = pos;
+        monsterSkeletonAnimation.timeScale = 1.3f;
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+    }
     
     public void Complete(TrackEntry trackEntry)
     {
@@ -111,9 +124,11 @@ public class ZhaoZeBoss : MonsterBase
             IsSkill=false;
         }
 
-        if (trackEntry.Animation.Name == "skill1")
+        if (trackEntry.Animation.Name == "skill3")
         {
-            monsterSkeletonAnimation.timeScale = 1;
+            gameObject.SetActive(false);
+            GameController.S.StartCoroutine(DelayChuXian());
+            return;
         }
         
         if (isSkill1)
@@ -121,23 +136,27 @@ public class ZhaoZeBoss : MonsterBase
             IsSkill=true;
             isSkill1=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
-            monsterSkeletonAnimation.timeScale = 2;
+            monsterSkeletonAnimation.timeScale = 3;
         }else if (isSkill2)
         {
             IsSkill=true;
             isSkill2=false;
+            monsterSkeletonAnimation.timeScale = 1;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
         }else if (isSkill3)
         {
             IsSkill=true;
             isSkill3=false;
+            monsterSkeletonAnimation.timeScale = 1.5f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
         } else if(isAttack)
         {
+            monsterSkeletonAnimation.timeScale = 2;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1.3f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
     }
@@ -155,6 +174,10 @@ public class ZhaoZeBoss : MonsterBase
         {
             CheckSkill1Damage();
         }
+        if (e.Data.Name == "damage"&&trackEntry.Animation.Name=="skill2")
+        {
+            CheckSkill2Damage();
+        }
         if (e.Data.Name == "damage"&&trackEntry.Animation.Name=="skill3")
         {
             CheckSkill3Damage();
@@ -170,6 +193,28 @@ public class ZhaoZeBoss : MonsterBase
         filter.useTriggers = true;
     
         skill1Collider.OverlapCollider(filter, results);
+    
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            }
+        }
+    }
+    
+    public void CheckSkill2Damage()
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        skill2Collider.OverlapCollider(filter, results);
     
         // 找出所有怪物并处理
         foreach (Collider2D col in results)
@@ -226,7 +271,7 @@ public class ZhaoZeBoss : MonsterBase
     
     public void SpriteFlipX1(bool isRight)
     {
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "move")
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != MonsterSpineName.MoveName)
         {
             return;
         }
@@ -285,7 +330,7 @@ public class ZhaoZeBoss : MonsterBase
             isSkill1 = true;
         }
 
-        if (currentSkill3Time > skill3Time &&Math.Abs(skill3trans.position.x - GameController.S.gamePlayer.transform.position.x) < 3.5&&Math.Abs(skill3trans.position.y - GameController.S.gamePlayer.transform.position.y) < 2)
+        if (currentSkill3Time > skill3Time &&Math.Abs(skill3trans.position.x - GameController.S.gamePlayer.transform.position.x) < 5&&Math.Abs(skill3trans.position.y - GameController.S.gamePlayer.transform.position.y) < 5)
         {
             currentSkill3Time = 0;
             isSkill3 = true;
