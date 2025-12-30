@@ -15,7 +15,7 @@ public class PurpleCloak1 :EquipBase
         SpriteRenderer = transform.Find("PurpleCloakSprite1").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipLevel = 25;
         EquipAttributes.EquipName = "PurpleCloak1";
-        EquipAttributes.suitid = 4;
+        EquipAttributes.suitid = 7;
         EquipAttributes.equip_type_id = 1;
         EquipAttributes.Quality = 4;
         SetBaseAttribute();   

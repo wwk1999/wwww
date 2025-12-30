@@ -36,6 +36,23 @@ namespace Tool
             {"TreeManShoe", "树人鞋子"},
             
             
+            {"Purple1Cloak", "树人披风"},
+            {"Purple1Cloth", "树人衣服"},
+            {"Purple1Helmet", "树人头盔"},
+            {"Purple1Necklace", "树人项链"},
+            {"Purple1Ring", "树人戒指"},
+            {"Purple1Shoe", "树人鞋子"},
+            
+            
+            
+            {"ZhaoZeCloak", "水泽护手"},
+            {"ZhaoZeCloth", "水泽护身衣"},
+            {"ZhaoZeHelmet", "水泽盔"},
+            {"ZhaoZeNecklace", "水泽项链"},
+            {"ZhaoZeRing", "水泽戒指"},
+            {"ZhaoZeShoe", "水泽靴"},
+            
+            
             {"HuoShanCloak", "火山披风"},
             {"HuoShanCloth", "火山衣服"},
             {"HuoShanHelmet", "火山头盔"},

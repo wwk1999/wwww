@@ -6,7 +6,7 @@ public class ResourcesConfig : MonoBehaviour
 {
     public static Sprite LingHun;
 
-    
+
     //Resource新手套装
     public static Sprite PrimaryCloth;
     public static Sprite PrimaryCloak;
@@ -14,7 +14,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite PrimaryHelmet;
     public static Sprite PrimaryRing;
     public static Sprite PrimaryNecklace;
-    
+
     //Resource绿色套装
     public static Sprite GreenCloth;
     public static Sprite GreenCloak;
@@ -22,7 +22,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite GreenHelmet;
     public static Sprite GreenRing;
     public static Sprite GreenNecklace;
-    
+
     //Resource蓝色套装
     public static Sprite BlueCloth;
     public static Sprite BlueCloak;
@@ -30,7 +30,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite BlueHelmet;
     public static Sprite BlueRing;
     public static Sprite BlueNecklace;
-    
+
     // Resource树人套装
     public static Sprite TreeManCloth;
     public static Sprite TreeManCloak;
@@ -38,7 +38,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite TreeManHelmet;
     public static Sprite TreeManRing;
     public static Sprite TreeManNecklace;
-    
+
     // Resource火山套装
     public static Sprite HuoShanCloth;
     public static Sprite HuoShanCloak;
@@ -46,7 +46,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite HuoShanHelmet;
     public static Sprite HuoShanRing;
     public static Sprite HuoShanNecklace;
-    
+
     // Resource沼泽套装
     public static Sprite ZhaoZeCloth;
     public static Sprite ZhaoZeCloak;
@@ -54,7 +54,15 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ZhaoZeHelmet;
     public static Sprite ZhaoZeRing;
     public static Sprite ZhaoZeNecklace;
-    
+
+    // Resource沼泽套装
+    public static Sprite Purple1Cloth;
+    public static Sprite Purple1Cloak;
+    public static Sprite Purple1Shoe;
+    public static Sprite Purple1Helmet;
+    public static Sprite Purple1Ring;
+    public static Sprite Purple1Necklace;
+
     // Resource紫色套装
     public static Sprite PurpleCloth;
     public static Sprite PurpleCloak;
@@ -62,7 +70,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite PurpleHelmet;
     public static Sprite PurpleRing;
     public static Sprite PurpleNecklace;
-    
+
     // Resource金色套装
     public static Sprite OrangeCloth;
     public static Sprite OrangeCloak;
@@ -70,7 +78,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite OrangeHelmet;
     public static Sprite OrangeRing;
     public static Sprite OrangeNecklace;
-    
+
     // Resource武器源石
     public static Sprite WhiteDivision;
     public static Sprite WhiteDuration;
@@ -78,33 +86,33 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite WhiteExtremeSpeed;
     public static Sprite WhitePenetrate;
     public static Sprite WhiteScale;
-    
+
     //技能
     public static Sprite Skill1;
     public static Sprite Skill2;
     public static Sprite Skill3;
     public static Sprite NormalAttack;
     public static Sprite Dash;
-    
+
     //关卡界面怪物icon
     public static Sprite SnotIcon;
     public static Sprite BatIcon;
     public static Sprite Spidericon;
     public static Sprite EliteBeeIcon;
     public static Sprite BossTreeManIcon;
-    
+
     public static Sprite ChongZiIcon;
     public static Sprite XiaoHuoIcon;
     public static Sprite DunDiicon;
     public static Sprite DaZuiIcon;
     public static Sprite BossHuoShanIcon;
-    
+
     public static Sprite QingWaIcon;
     public static Sprite JiaChongIcon;
     public static Sprite XiYiicon;
     public static Sprite ShiRenHuaIcon;
     public static Sprite BossShiRenIcon;
-    
+
     //颜色背景
     public static Sprite WhiteBg;
     public static Sprite GreenBg;
@@ -112,20 +120,20 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite PurpleBg;
     public static Sprite OrangeBg;
     public static Sprite RedBg;
-    
+
     //颜色背景
     public static Material WhiteMaterial;
     public static Material GreenMaterial;
     public static Material BlueMaterial;
     public static Material PurpleMaterial;
     public static Material OrangeMaterial;
-    
+
     //武器
     public static Sprite OneWeapon;
     public static Sprite TwoWeapon;
     public static Sprite ThreeWeapon;
     public static Sprite FourWeapon;
-    
+
     //道具
     public static Sprite WhiteWeaponFragment;
     public static Sprite GreenWeaponFragment;
@@ -140,14 +148,14 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite PurpleJingCui;
     public static Sprite OrangeJingCui;
     public static Sprite RedJingCui;
-    
+
     public static Sprite WhiteChiBang;
     public static Sprite GreenChiBang;
     public static Sprite BlueChiBang;
     public static Sprite PurpleChiBang;
     public static Sprite OrangeChiBang;
     public static Sprite RedChiBang;
-    
+
     public static Sprite FuMoZhiGu;
     public static Sprite GoldBlood;
     public static Sprite ZuiEYanZhu;
@@ -155,7 +163,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ShenHuaZhiXin;
 
 
-    
+
     //传说装备
     public static Sprite FinalDamageReductionFixedSprite;
     public static Sprite FinalDamageReductionPercentSprite;
@@ -209,88 +217,88 @@ public class ResourcesConfig : MonoBehaviour
 
     public static void Init()
     {
-        Skill1=Resources.Load<Sprite>("Sprite/Skill/skill1");
-        Skill2=Resources.Load<Sprite>("Sprite/Skill/skill2");
-        Skill3=Resources.Load<Sprite>("Sprite/Skill/skill3");
-        Dash=Resources.Load<Sprite>("Sprite/Skill/dash");
-        NormalAttack=Resources.Load<Sprite>("Sprite/Skill/normalAttack");
+        Skill1 = Resources.Load<Sprite>("Sprite/Skill/skill1");
+        Skill2 = Resources.Load<Sprite>("Sprite/Skill/skill2");
+        Skill3 = Resources.Load<Sprite>("Sprite/Skill/skill3");
+        Dash = Resources.Load<Sprite>("Sprite/Skill/dash");
+        NormalAttack = Resources.Load<Sprite>("Sprite/Skill/normalAttack");
 
-        
+
         //道具
-        WhiteWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/WhiteWeaponFragment");
-        GreenWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/GreenWeaponFragment");
-        BlueWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/BlueWeaponFragment");
-        PurpleWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/PurpleWeaponFragment");
-        OrangeWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/OrangeWeaponFragment");
-        RedWeaponFragment=Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/RedWeaponFragment");
-        
-        WhiteJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/WhiteJingCui");
-        GreenJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/GreenJingCui");
-        BlueJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/BlueJingCui");
-        PurpleJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/PurpleJingCui");
-        OrangeJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/OrangeJingCui");
-        RedJingCui=Resources.Load<Sprite>("Sprite/Prop/JingCui/RedJingCui");
-        
-        WhiteChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/WhiteChiBang");
-        GreenChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/GreenChiBang");
-        BlueChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/BlueChiBang");
-        PurpleChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/PurpleChiBang");
-        OrangeChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/OrangeChiBang");
-        RedChiBang=Resources.Load<Sprite>("Sprite/Prop/ChiBang/RedChiBang");
-        
-        FuMoZhiGu=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/FuMoZhiGu");
-        GoldBlood=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/GoldBlood");
-        ZuiEYanZhu=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ZuiEYanZhu");
-        JuDaYaChi=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/JuDaYaChi");
-        ShenHuaZhiXin=Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ShenHuaZhiXin");
+        WhiteWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/WhiteWeaponFragment");
+        GreenWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/GreenWeaponFragment");
+        BlueWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/BlueWeaponFragment");
+        PurpleWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/PurpleWeaponFragment");
+        OrangeWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/OrangeWeaponFragment");
+        RedWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/RedWeaponFragment");
+
+        WhiteJingCui = Resources.Load<Sprite>("Sprite/Prop/JingCui/WhiteJingCui");
+        GreenJingCui = Resources.Load<Sprite>("Sprite/Prop/JingCui/GreenJingCui");
+        BlueJingCui = Resources.Load<Sprite>("Sprite/Prop/JingCui/BlueJingCui");
+        PurpleJingCui = Resources.Load<Sprite>("Sprite/Prop/JingCui/PurpleJingCui");
+        OrangeJingCui = Resources.Load<Sprite>("Sprite/Prop/JingCui/OrangeJingCui");
+        RedJingCui = Resources.Load<Sprite>("Sprite/Prop/JingCui/RedJingCui");
+
+        WhiteChiBang = Resources.Load<Sprite>("Sprite/Prop/ChiBang/WhiteChiBang");
+        GreenChiBang = Resources.Load<Sprite>("Sprite/Prop/ChiBang/GreenChiBang");
+        BlueChiBang = Resources.Load<Sprite>("Sprite/Prop/ChiBang/BlueChiBang");
+        PurpleChiBang = Resources.Load<Sprite>("Sprite/Prop/ChiBang/PurpleChiBang");
+        OrangeChiBang = Resources.Load<Sprite>("Sprite/Prop/ChiBang/OrangeChiBang");
+        RedChiBang = Resources.Load<Sprite>("Sprite/Prop/ChiBang/RedChiBang");
+
+        FuMoZhiGu = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/FuMoZhiGu");
+        GoldBlood = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/GoldBlood");
+        ZuiEYanZhu = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ZuiEYanZhu");
+        JuDaYaChi = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/JuDaYaChi");
+        ShenHuaZhiXin = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ShenHuaZhiXin");
 
 
-        
-        
+
+
         //武器
         OneWeapon = Resources.Load<Sprite>("Sprite/Weapon/OneWeapon");
         TwoWeapon = Resources.Load<Sprite>("Sprite/Weapon/TwoWeapon");
         ThreeWeapon = Resources.Load<Sprite>("Sprite/Weapon/ThreeWeapon");
         FourWeapon = Resources.Load<Sprite>("Sprite/Weapon/FourWeapon");
         //颜色背景
-        WhiteBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipWhiteBG");
-        GreenBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipGreenBG");
-        BlueBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipBlueBG");
-        PurpleBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipPurpleBG");
-        OrangeBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipOrangeBG");
-        RedBg= Resources.Load<Sprite>("Sprite/ColorBg/EquipRedBG");
-        
-        WhiteMaterial= Resources.Load<Material>("Material/EquipOutline/WhiteEquipOutline");
-        GreenMaterial= Resources.Load<Material>("Material/EquipOutline/GreenEquipOutline");
-        BlueMaterial= Resources.Load<Material>("Material/EquipOutline/BlueEquipOutline");
-        PurpleMaterial= Resources.Load<Material>("Material/EquipOutline/PurpleEquipOutline");
-        OrangeMaterial= Resources.Load<Material>("Material/EquipOutline/OrangeEquipOutline");
-        
-        LingHun=Resources.Load<Sprite>("Sprite/Prop/LingHun");
+        WhiteBg = Resources.Load<Sprite>("Sprite/ColorBg/EquipWhiteBG");
+        GreenBg = Resources.Load<Sprite>("Sprite/ColorBg/EquipGreenBG");
+        BlueBg = Resources.Load<Sprite>("Sprite/ColorBg/EquipBlueBG");
+        PurpleBg = Resources.Load<Sprite>("Sprite/ColorBg/EquipPurpleBG");
+        OrangeBg = Resources.Load<Sprite>("Sprite/ColorBg/EquipOrangeBG");
+        RedBg = Resources.Load<Sprite>("Sprite/ColorBg/EquipRedBG");
+
+        WhiteMaterial = Resources.Load<Material>("Material/EquipOutline/WhiteEquipOutline");
+        GreenMaterial = Resources.Load<Material>("Material/EquipOutline/GreenEquipOutline");
+        BlueMaterial = Resources.Load<Material>("Material/EquipOutline/BlueEquipOutline");
+        PurpleMaterial = Resources.Load<Material>("Material/EquipOutline/PurpleEquipOutline");
+        OrangeMaterial = Resources.Load<Material>("Material/EquipOutline/OrangeEquipOutline");
+
+        LingHun = Resources.Load<Sprite>("Sprite/Prop/LingHun");
         //新手套装
-        PrimaryCloth= Resources.Load<Sprite>("Sprite/Equip/PrimaryCloth");
+        PrimaryCloth = Resources.Load<Sprite>("Sprite/Equip/PrimaryCloth");
         PrimaryCloak = Resources.Load<Sprite>("Sprite/Equip/PrimaryCloak");
         PrimaryShoe = Resources.Load<Sprite>("Sprite/Equip/PrimaryShoe");
         PrimaryHelmet = Resources.Load<Sprite>("Sprite/Equip/PrimaryHelmet");
         PrimaryRing = Resources.Load<Sprite>("Sprite/Equip/PrimaryRing");
         PrimaryNecklace = Resources.Load<Sprite>("Sprite/Equip/PrimaryNecklace");
-        
+
         //绿色套装
-        GreenCloth= Resources.Load<Sprite>("Sprite/Equip/GreenCloth");
+        GreenCloth = Resources.Load<Sprite>("Sprite/Equip/GreenCloth");
         GreenCloak = Resources.Load<Sprite>("Sprite/Equip/GreenCloak");
         GreenShoe = Resources.Load<Sprite>("Sprite/Equip/GreenShoe");
         GreenHelmet = Resources.Load<Sprite>("Sprite/Equip/GreenHelmet");
         GreenRing = Resources.Load<Sprite>("Sprite/Equip/GreenRing");
         GreenNecklace = Resources.Load<Sprite>("Sprite/Equip/GreenNecklace");
-        
+
         //蓝色套装
-        BlueCloth= Resources.Load<Sprite>("Sprite/Equip/BlueCloth");
+        BlueCloth = Resources.Load<Sprite>("Sprite/Equip/BlueCloth");
         BlueCloak = Resources.Load<Sprite>("Sprite/Equip/BlueCloak");
         BlueShoe = Resources.Load<Sprite>("Sprite/Equip/BlueShoe");
         BlueHelmet = Resources.Load<Sprite>("Sprite/Equip/BlueHelmet");
         BlueRing = Resources.Load<Sprite>("Sprite/Equip/BlueRing");
         BlueNecklace = Resources.Load<Sprite>("Sprite/Equip/BlueNecklace");
-        
+
         //树人套装
         TreeManCloth = Resources.Load<Sprite>("Sprite/Equip/TreeManCloth");
         TreeManCloak = Resources.Load<Sprite>("Sprite/Equip/TreeManCloak");
@@ -298,7 +306,7 @@ public class ResourcesConfig : MonoBehaviour
         TreeManHelmet = Resources.Load<Sprite>("Sprite/Equip/TreeManHelmet");
         TreeManRing = Resources.Load<Sprite>("Sprite/Equip/TreeManRing");
         TreeManNecklace = Resources.Load<Sprite>("Sprite/Equip/TreeManNecklace");
-        
+
         //火山套装
         HuoShanCloth = Resources.Load<Sprite>("Sprite/Equip/HuoShanCloth");
         HuoShanCloak = Resources.Load<Sprite>("Sprite/Equip/HuoShanCloak");
@@ -306,25 +314,33 @@ public class ResourcesConfig : MonoBehaviour
         HuoShanHelmet = Resources.Load<Sprite>("Sprite/Equip/HuoShanHelmet");
         HuoShanRing = Resources.Load<Sprite>("Sprite/Equip/HuoShanRing");
         HuoShanNecklace = Resources.Load<Sprite>("Sprite/Equip/HuoShanNecklace");
-        
+
         //沼泽套装
-        ZhaoZeCloth= Resources.Load<Sprite>("Sprite/Equip/ZhaoZeCloth");
+        ZhaoZeCloth = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeCloth");
         ZhaoZeCloak = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeCloak");
         ZhaoZeShoe = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeShoe");
         ZhaoZeHelmet = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeHelmet");
         ZhaoZeRing = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeRing");
         ZhaoZeNecklace = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeNecklace");
-        
+
         //紫色套装
-        PurpleCloth= Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloth");
+        PurpleCloth = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloth");
         PurpleCloak = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloak");
         PurpleShoe = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleShoe");
         PurpleHelmet = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleHelmet");
         PurpleRing = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleRing");
         PurpleNecklace = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleNecklace");
-        
+
+        //紫色套装1
+        Purple1Cloth = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloth1");
+        Purple1Cloak = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloak1");
+        Purple1Shoe = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleShoe1");
+        Purple1Helmet = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleHelmet1");
+        Purple1Ring = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleRing1");
+        Purple1Necklace = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleNecklace1");
+
         //橙色套装
-        OrangeCloth= Resources.Load<Sprite>("Sprite/Equip/Orange/Cloth/OrangeCloth");
+        OrangeCloth = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloth/OrangeCloth");
         OrangeCloak = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloak/OrangeCloak");
         OrangeShoe = Resources.Load<Sprite>("Sprite/Equip/Orange/Shoe/OrangeShoe");
         OrangeHelmet = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/OrangeHelmet");
@@ -333,7 +349,8 @@ public class ResourcesConfig : MonoBehaviour
 
         // 传说装备词条图标
         FinalDamageReductionFixedSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloth/FinalDamageReductionFixed");
-        FinalDamageReductionPercentSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/FinalDamageReductionPercent");
+        FinalDamageReductionPercentSprite =
+            Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/FinalDamageReductionPercent");
         AllReplyAddPercentSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloth/AllReplyAddPercent");
         AddHpForTimeSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/AddHpForTime");
         AddDefenseForTimeSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloth/AddDefenseForTime");
@@ -359,7 +376,8 @@ public class ResourcesConfig : MonoBehaviour
         PuTong3ChuanTouSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloak/PuTong3ChuanTou");
         FireBaoZhaSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Cloak/FireBaoZha");
 
-        Skill1ReplaceNormalAttackSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Necklace/Skill1ReplaceNormalAttack");
+        Skill1ReplaceNormalAttackSprite =
+            Resources.Load<Sprite>("Sprite/Equip/Orange/Necklace/Skill1ReplaceNormalAttack");
         Skill1YiDianDoubleSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Ring/Skill1YiDianDouble");
         Skill1AddRangeSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/Skill1AddRange");
 
@@ -381,7 +399,7 @@ public class ResourcesConfig : MonoBehaviour
         NecklaceFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Necklace/NecklaceFortureAdd");
         RingFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Ring/RingFortureAdd");
         HelmetFortureAddSprite = Resources.Load<Sprite>("Sprite/Equip/Orange/Helmet/HelmetFortureAdd");
-        
+
         //武器源石
         WhiteDivision = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteDivision");
         WhiteDuration = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteDuration");
@@ -389,7 +407,7 @@ public class ResourcesConfig : MonoBehaviour
         WhiteExtremeSpeed = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteExtremeSpeed");
         WhitePenetrate = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhitePenetrate");
         WhiteScale = Resources.Load<Sprite>("Sprite/WeaponSourceStone/WhiteScale");
-        
+
         // GreenDivision = Resources.Load<Sprite>("Sprite/WeaponSourceStone/GreenDivision");
         // GreenDuration = Resources.Load<Sprite>("Sprite/WeaponSourceStone/GreenDuration");
         // GreenExplosion = Resources.Load<Sprite>("Sprite/WeaponSourceStone/GreenExplosion");
@@ -417,22 +435,22 @@ public class ResourcesConfig : MonoBehaviour
         // OrangeExtremeSpeed = Resources.Load<Sprite>("Sprite/WeaponSourceStone/OrangeExtremeSpeed");
         // OrangePenetrate = Resources.Load<Sprite>("Sprite/WeaponSourceStone/OrangePenetrate");
         // OrangeScale = Resources.Load<Sprite>("Sprite/WeaponSourceStone/OrangeScale");
-        
-        
-        
+
+
+
         //关卡界面怪物icon
         SnotIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/snot");
         BatIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/bat");
         Spidericon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/spider");
         EliteBeeIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/bee");
         BossTreeManIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/treeman");
-        
+
         ChongZiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/chongzi");
         DunDiicon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dundi");
         XiaoHuoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiaohuo");
         DaZuiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dazui");
         BossHuoShanIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/huoshanboss");
-        
+
         JiaChongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/jiachong");
         XiYiicon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiyi");
         QingWaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/qingwa");
@@ -458,7 +476,7 @@ public class ResourcesConfig : MonoBehaviour
 
         return null;
     }
-    
+
     public static Sprite GetEquipColorBgBySuitId(int suitId)
     {
         switch (suitId)
@@ -489,24 +507,25 @@ public class ResourcesConfig : MonoBehaviour
         switch (equipTable.SuitId)
         {
             case 1:
-                
-                        switch (equipTable.EquipType)
-                        {
-                            case 1:
-                                return PrimaryCloak;
-                            case 2:
-                                return PrimaryCloth;
-                            case 3:
-                                return PrimaryHelmet;
-                            case 4:
-                                return PrimaryNecklace;
-                            case 5:
-                                return PrimaryRing;
-                            case 6:
-                                return PrimaryShoe;
-                        }
-                        break;
-               
+
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return PrimaryCloak;
+                    case 2:
+                        return PrimaryCloth;
+                    case 3:
+                        return PrimaryHelmet;
+                    case 4:
+                        return PrimaryNecklace;
+                    case 5:
+                        return PrimaryRing;
+                    case 6:
+                        return PrimaryShoe;
+                }
+
+                break;
+
             case 2:
                 switch (equipTable.EquipType)
                 {
@@ -523,8 +542,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return GreenShoe;
                 }
+
                 break;
-            
+
             case 3:
                 switch (equipTable.EquipType)
                 {
@@ -541,8 +561,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return BlueShoe;
                 }
+
                 break;
-            
+
             case 4:
                 switch (equipTable.EquipType)
                 {
@@ -559,8 +580,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return PurpleShoe;
                 }
+
                 break;
-            
+
             case 5:
                 switch (equipTable.EquipType)
                 {
@@ -577,8 +599,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return OrangeShoe;
                 }
+
                 break;
-            
+
             case 101:
                 switch (equipTable.EquipType)
                 {
@@ -595,6 +618,7 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return TreeManShoe;
                 }
+
                 break;
             case 102:
                 switch (equipTable.EquipType)
@@ -612,8 +636,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HuoShanShoe;
                 }
+
                 break;
-            
+
             case 103:
                 switch (equipTable.EquipType)
                 {
@@ -630,12 +655,14 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return ZhaoZeShoe;
                 }
+
                 break;
         }
+
         return null;
     }
-    
-     public static Sprite GetEquipSprite(EquipTable equipTable)
+
+    public static Sprite GetEquipSprite(EquipTable equipTable)
     {
         // 橙装有词条时优先显示对应的词条图标
         if (equipTable.OrangeEntry1 != EntryConfig.OrangeEntry.None)
@@ -743,6 +770,7 @@ public class ResourcesConfig : MonoBehaviour
                     return HelmetFortureAddSprite;
             }
         }
+
         switch (equipTable.suitid)
         {
             case 1:
@@ -764,8 +792,10 @@ public class ResourcesConfig : MonoBehaviour
                             case 6:
                                 return PrimaryShoe;
                         }
+
                         break;
                 }
+
                 break;
             case 2:
                 switch (equipTable.equip_type_id)
@@ -783,8 +813,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return GreenShoe;
                 }
+
                 break;
-            
+
             case 3:
                 switch (equipTable.equip_type_id)
                 {
@@ -801,8 +832,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return BlueShoe;
                 }
+
                 break;
-            
+
             case 4:
                 switch (equipTable.equip_type_id)
                 {
@@ -819,8 +851,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return PurpleShoe;
                 }
+
                 break;
-            
+
             case 5:
                 switch (equipTable.equip_type_id)
                 {
@@ -837,8 +870,45 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return OrangeShoe;
                 }
+
                 break;
-            
+
+            case 6:
+                switch (equipTable.equip_type_id)
+                {
+                    case 1:
+                        return ZhaoZeCloak;
+                    case 2:
+                        return ZhaoZeCloth;
+                    case 3:
+                        return ZhaoZeHelmet;
+                    case 4:
+                        return ZhaoZeNecklace;
+                    case 5:
+                        return ZhaoZeRing;
+                    case 6:
+                        return ZhaoZeShoe;
+                }
+
+                break;
+            case 7:
+                switch (equipTable.equip_type_id)
+                {
+                    case 1:
+                        return Purple1Cloak;
+                    case 2:
+                        return Purple1Cloth;
+                    case 3:
+                        return Purple1Helmet;
+                    case 4:
+                        return Purple1Necklace;
+                    case 5:
+                        return Purple1Ring;
+                    case 6:
+                        return Purple1Shoe;
+                }
+
+                break;
             case 101:
                 switch (equipTable.equip_type_id)
                 {
@@ -855,6 +925,7 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return TreeManShoe;
                 }
+
                 break;
             case 102:
                 switch (equipTable.equip_type_id)
@@ -872,8 +943,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HuoShanShoe;
                 }
+
                 break;
-            
+
             case 103:
                 switch (equipTable.equip_type_id)
                 {
@@ -890,8 +962,10 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return ZhaoZeShoe;
                 }
+
                 break;
         }
+
         return null;
     }
 }

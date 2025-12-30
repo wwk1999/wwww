@@ -14,7 +14,7 @@ public class PurpleNecklace1 :EquipBase
         SpriteRenderer = transform.Find("PurpleNecklaceSprite1").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipLevel = 25;
         EquipAttributes.EquipName = "PurpleNecklace1";
-        EquipAttributes.suitid = 4;
+        EquipAttributes.suitid = 7;
         EquipAttributes.equip_type_id = 4;
         //暂时写死
         EquipAttributes.Quality = 4;

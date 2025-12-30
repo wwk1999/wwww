@@ -14,7 +14,7 @@ public class ZhaoZeCloak : EquipBase
         EquipAttributes.EquipName = "ZhaoZeCloak";
         EquipAttributes.EquipLevel = 20;
 
-        EquipAttributes.suitid = 3;
+        EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 1;
         //暂时写死
         EquipAttributes.Quality = 3;

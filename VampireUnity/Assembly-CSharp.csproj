@@ -519,6 +519,7 @@
     <None Include="Library\PackageCache\com.unity.timeline@1.8.7\package.json" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\LvLong\green_dragon.json" />
     <None Include="Assets\Arts\Shaders\Outline.shader" />
+    <None Include="Assets\Arts\Spine\怪物\ZhaoZeBoss\Enemy_Boss_crocodile.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\json18\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\紫爆\action.json" />
     <None Include="Assets\Arts\Spine\怪物\Boss\fensexionggui.atlas.txt" />
@@ -618,6 +619,7 @@
     <None Include="Assets\Arts\Spine\技能\HuoDan\H043_Special.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\喷火\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\出场\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\ZhaoZeBoss\Enemy_Boss_crocodile.json" />
     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\LanShui\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\HuangShu\Enemy_Mouse_patrol.json" />
@@ -710,7 +712,6 @@
     <None Include="Assets\Arts\Spine\技能\1225\黄电圈\action.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
-    <None Include="Assets\Arts\Spine\怪物\沼泽BOSS\Enemy_Boss_crocodile.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
     <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.atlas.txt" />
@@ -730,7 +731,6 @@
     <None Include="Assets\Arts\Spine\技能\1225\bee技能\action.json" />
     <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹\action.json" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
-    <None Include="Assets\Arts\Spine\怪物\沼泽BOSS\Enemy_Boss_crocodile.json" />
     <None Include="Assets\Arts\Spine\技能\1225\出场\action.json" />
     <None Include="Assets\Arts\Shaders\LcL\Hologram.shader" />
     <None Include="Assets\Arts\Texture\UI\技能树\设计说明.txt" />

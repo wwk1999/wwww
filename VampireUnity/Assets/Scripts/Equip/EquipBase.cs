@@ -176,6 +176,12 @@ public class EquipBase : BagObjectBase
                     case 5:
                         GameController.S.OrangeCloakQueue.Enqueue(gameObject);
                         break;
+                    case 6:
+                        GameController.S.ZhaoZeCloakQueue.Enqueue(gameObject);
+                        break;
+                    case 7:
+                        GameController.S.Purple1CloakQueue.Enqueue(gameObject);
+                        break;
                     case 101:
                         GameController.S.TreeManCloakQueue.Enqueue(gameObject);
                         break;
@@ -202,6 +208,12 @@ public class EquipBase : BagObjectBase
                         break;
                     case 5:
                         GameController.S.OrangeClothQueue.Enqueue(gameObject);
+                        break;
+                    case 6:
+                        GameController.S.ZhaoZeClothQueue.Enqueue(gameObject);
+                        break;
+                    case 7:
+                        GameController.S.Purple1ClothQueue.Enqueue(gameObject);
                         break;
                     case 101:
                         GameController.S.TreeManClothQueue.Enqueue(gameObject);
@@ -230,6 +242,12 @@ public class EquipBase : BagObjectBase
                     case 5:
                         GameController.S.OrangeHelmetQueue.Enqueue(gameObject);
                         break;
+                    case 6:
+                        GameController.S.ZhaoZeHelmetQueue.Enqueue(gameObject);
+                        break;
+                    case 7:
+                        GameController.S.Purple1HelmetQueue.Enqueue(gameObject);
+                        break;
                     case 101:
                         GameController.S.TreeManHelmetQueue.Enqueue(gameObject);
                         break;
@@ -256,6 +274,12 @@ public class EquipBase : BagObjectBase
                         break;
                     case 5:
                         GameController.S.OrangeNecklaceQueue.Enqueue(gameObject);
+                        break;
+                    case 6:
+                        GameController.S.ZhaoZeNecklaceQueue.Enqueue(gameObject);
+                        break;
+                    case 7:
+                        GameController.S.Purple1NecklaceQueue.Enqueue(gameObject);
                         break;
                     case 101:
                         GameController.S.TreeManNecklaceQueue.Enqueue(gameObject);
@@ -284,6 +308,12 @@ public class EquipBase : BagObjectBase
                     case 5:
                         GameController.S.OrangeRingQueue.Enqueue(gameObject);
                         break;
+                    case 6:
+                        GameController.S.ZhaoZeRingQueue.Enqueue(gameObject);
+                        break;
+                    case 7:
+                        GameController.S.Purple1RingQueue.Enqueue(gameObject);
+                        break;
                     case 101:
                         GameController.S.TreeManRingQueue.Enqueue(gameObject);
                         break;
@@ -310,6 +340,12 @@ public class EquipBase : BagObjectBase
                         break;
                     case 5:
                         GameController.S.OrangeShoeQueue.Enqueue(gameObject);
+                        break;
+                    case 6:
+                        GameController.S.ZhaoZeShoeQueue.Enqueue(gameObject);
+                        break;
+                    case 7:
+                        GameController.S.Purple1ShoeQueue.Enqueue(gameObject);
                         break;
                     case 101:
                         GameController.S.TreeManShoeQueue.Enqueue(gameObject);

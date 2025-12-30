@@ -15,7 +15,7 @@ public class ZhaoZeRing : EquipBase
         EquipAttributes.EquipName = "ZhaoZeRing";
         EquipAttributes.EquipLevel = 20;
 
-        EquipAttributes.suitid = 3;
+        EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 5;
         EquipAttributes.Quality = 3;
         

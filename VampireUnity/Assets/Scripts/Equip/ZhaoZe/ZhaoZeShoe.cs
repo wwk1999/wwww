@@ -14,7 +14,7 @@ public class ZhaoZeShoe : EquipBase
         SpriteRenderer = transform.Find("ZhaoZeShoeSprite").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipName = "ZhaoZeShoe";
         EquipAttributes.EquipLevel = 20;
-        EquipAttributes.suitid = 3;
+        EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 6;
         EquipAttributes.Quality = 3;
         

@@ -14,7 +14,7 @@ public class ZhaoZeHelmet : EquipBase
         EquipAttributes.EquipName = "ZhaoZeHelmet";
         EquipAttributes.EquipLevel = 20;
 
-        EquipAttributes.suitid = 3;
+        EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 3;
         EquipAttributes.Quality = 3;
         
