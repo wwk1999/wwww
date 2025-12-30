@@ -674,6 +674,10 @@ public class Entrance : MonoBehaviour
                     var FirePengAttack= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/FirePeng"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                     FirePengAttack.SetActive(false);
                     GameController.S.FirePengQueue.Enqueue(FirePengAttack);
+                    
+                    var FireBaoZha= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/FireBaoZha"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    FireBaoZha.SetActive(false);
+                    GameController.S.FireBaoZha1Queue.Enqueue(FireBaoZha);
                     break;
                 
                 case WeaponType.XuKong:

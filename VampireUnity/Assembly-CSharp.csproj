@@ -154,6 +154,7 @@
     <Compile Include="Assets\Scripts\Tool\ImageCropTool.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\Skill2AddDan.cs" />
     <Compile Include="Assets\Scripts\Window\RankWindow.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireBaoZha1.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\WhiteWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Mysql\ConnectMysql.cs" />
     <Compile Include="Assets\Scripts\Fight\CameraContraller.cs" />
@@ -514,6 +515,7 @@
     <None Include="Assets\Arts\Spine\第一关\蜜蜂\json\mf.json" />
     <None Include="Assets\Arts\Spine\第四关\mofaqiu\skeleton.json" />
     <None Include="Assets\Arts\Shaders\LcL\TikTok.shader" />
+    <None Include="Assets\Arts\Spine\技能\红爆炸\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Arts\Spine\怪物\Boss1\Enemy_Panther_warrior.json" />
     <None Include="Assets\Arts\Spine\技能\ZiPeng\action.json" />
@@ -620,6 +622,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空\action.json" />
     <None Include="Assets\Arts\Spine\技能\HuoDan\H043_Special.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\喷火\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\红球\lalafei_magic.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\出场\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\ZhaoZeBoss\Enemy_Boss_crocodile.json" />
     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
@@ -635,6 +638,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\json13\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaNiao\shamoniao.json" />
     <None Include="Assets\Arts\Shaders\LcL\Fade.shader" />
+    <None Include="Assets\Arts\Spine\技能\红球\lalafei_magic.json" />
     <None Include="Assets\Arts\Spine\怪物\Boss\fensexionggui.json" />
     <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -791,6 +795,7 @@
     <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\第一关\粘液怪\nyg.json" />
     <None Include="Assets\Arts\Spine\技能\json\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\红爆炸\action.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\AddHp\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.atlas.txt" />
     <None Include="Assets\shader\cgwell Add Zoff.shader" />

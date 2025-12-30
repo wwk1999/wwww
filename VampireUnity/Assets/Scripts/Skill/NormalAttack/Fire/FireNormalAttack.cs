@@ -25,9 +25,9 @@ public class FireNormalAttack : MonoBehaviour
         Vector2 closestPoint = other.ClosestPoint(transform.position);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.FirePengQueue.Dequeue();
-            hit.SetActive(true);
-            hit.transform.position = closestPoint;
+            var firebaozha = GameController.S.FireBaoZha1Queue.Dequeue();
+            firebaozha.SetActive(true);
+            firebaozha.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage,isCrit,DamageFrom.Normal);
             gameObject.SetActive(false);
