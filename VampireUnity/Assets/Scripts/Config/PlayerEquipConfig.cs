@@ -24,6 +24,7 @@ public class PlayerEquipConfig : MonoBehaviour
         TreeMan,
         HuoShan ,
         ZhaoZe,
+        Purple1,
         OrangeEntry
     }
     

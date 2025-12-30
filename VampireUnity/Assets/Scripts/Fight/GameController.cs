@@ -190,6 +190,20 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>BlueNecklaceQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>BlueShoeQueue = new Queue<GameObject>();
     
+    [NonReorderable]public Queue<GameObject>ZhaoZeCloakQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ZhaoZeClothQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ZhaoZeRingQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ZhaoZeHelmetQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ZhaoZeNecklaceQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>ZhaoZeShoeQueue = new Queue<GameObject>();
+    
+    [NonReorderable]public Queue<GameObject>Purple1CloakQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Purple1ClothQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Purple1RingQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Purple1HelmetQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Purple1NecklaceQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>Purple1ShoeQueue = new Queue<GameObject>();
+    
     [NonReorderable]public Queue<GameObject>TreeManCloakQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>TreeManClothQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>TreeManRingQueue = new Queue<GameObject>();
@@ -679,6 +693,42 @@ public class GameController : XSingleton<GameController>
                         return OrangeHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
                         return OrangeNecklaceQueue.Dequeue();
+                }
+                break;
+            
+            case PlayerEquipConfig.EquipLevel.ZhaoZe:
+                switch (monsterEquip.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return ZhaoZeCloakQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return ZhaoZeClothQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return ZhaoZeRingQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return ZhaoZeShoeQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return ZhaoZeHelmetQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return ZhaoZeNecklaceQueue.Dequeue();
+                }
+                break;
+            
+            case PlayerEquipConfig.EquipLevel.Purple1:
+                switch (monsterEquip.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return Purple1CloakQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return Purple1ClothQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return Purple1RingQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return Purple1ShoeQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return Purple1HelmetQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return Purple1NecklaceQueue.Dequeue();
                 }
                 break;
         }

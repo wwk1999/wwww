@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ZhaoZeBoss : MonsterBase
 {
-   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 10000, 0.3f, 10, 5, 10, 10, 0)
+   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 50000, 0.7f, 300, 100, 10, 10, 0)
     {
     }
     public Transform attackTrans;
@@ -41,12 +41,12 @@ public class ZhaoZeBoss : MonsterBase
 
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Blue, 10));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.ZhaoZe, 100));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.ZhaoZe, 100));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.ZhaoZe, 100));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.ZhaoZe, 200));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.ZhaoZe, 200));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.ZhaoZe, 200));
     }
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
@@ -80,13 +80,18 @@ public class ZhaoZeBoss : MonsterBase
         AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
-        ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
         CreateBloodEnergy();
         CreateEquip();
         CreateProp();
+        FightBGController.S.PlaySuccessAnim();
+        GameController.S.StartCoroutine(DelayChuanSongMen());
+    }
 
-        // gameObject.SetActive(false);
-        // GameController.S.SnotMonsterQueue.Enqueue(this);
+    IEnumerator DelayChuanSongMen()
+    {
+        yield return new WaitForSeconds(1f);
+        var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
+        chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     private void Start()
@@ -202,7 +207,8 @@ public class ZhaoZeBoss : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),100));
     }
     
     public void MonsterMove1()

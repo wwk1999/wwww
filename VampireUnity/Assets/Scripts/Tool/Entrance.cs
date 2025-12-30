@@ -210,6 +210,71 @@ public class Entrance : MonoBehaviour
             
             
             
+            GameObject ZhaoZeCloakFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeCloakFight"));
+            ZhaoZeCloakFight.gameObject.SetActive(false);
+            GameController.S.ZhaoZeCloakQueue.Enqueue(ZhaoZeCloakFight);
+            
+            GameObject ZhaoZeClothFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeClothFight"));
+            ZhaoZeClothFight.gameObject.SetActive(false);
+            GameController.S.ZhaoZeClothQueue.Enqueue(ZhaoZeClothFight);
+            
+            GameObject ZhaoZeRingFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeRingFight"));
+            ZhaoZeRingFight.gameObject.SetActive(false);
+            GameController.S.ZhaoZeRingQueue.Enqueue(ZhaoZeRingFight);
+            
+            GameObject ZhaoZeShoeFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeShoeFight"));
+            ZhaoZeShoeFight.gameObject.SetActive(false);
+            GameController.S.ZhaoZeShoeQueue.Enqueue(ZhaoZeShoeFight);
+            
+            GameObject ZhaoZeNecklaceFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeNecklaceFight"));
+            ZhaoZeNecklaceFight.gameObject.SetActive(false);
+            GameController.S.ZhaoZeNecklaceQueue.Enqueue(ZhaoZeNecklaceFight);
+            
+            GameObject ZhaoZeHelmetFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeHelmetFight"));
+            ZhaoZeHelmetFight.gameObject.SetActive(false);
+            GameController.S.ZhaoZeHelmetQueue.Enqueue(ZhaoZeHelmetFight);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            GameObject PurpleCloakFight1 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleCloakFight1"));
+            PurpleCloakFight1.gameObject.SetActive(false);
+            GameController.S.Purple1CloakQueue.Enqueue(PurpleCloakFight1);
+            
+            GameObject PurpleClothFight1 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleClothFight1"));
+            PurpleClothFight1.gameObject.SetActive(false);
+            GameController.S.Purple1ClothQueue.Enqueue(PurpleClothFight1);
+            
+            GameObject PurpleRingFight1 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleRingFight1"));
+            PurpleRingFight1.gameObject.SetActive(false);
+            GameController.S.Purple1RingQueue.Enqueue(PurpleRingFight1);
+            
+            GameObject PurpleShoeFight1 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleShoeFight1"));
+            PurpleShoeFight1.gameObject.SetActive(false);
+            GameController.S.Purple1ShoeQueue.Enqueue(PurpleShoeFight1);
+            
+            GameObject PurpleNecklaceFight1 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleNecklaceFight1"));
+            PurpleNecklaceFight1.gameObject.SetActive(false);
+            GameController.S.Purple1NecklaceQueue.Enqueue(PurpleNecklaceFight1);
+            
+            GameObject PurpleHelmetFight1 = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleHelmetFight1"));
+            PurpleHelmetFight1.gameObject.SetActive(false);
+            GameController.S.Purple1HelmetQueue.Enqueue(PurpleHelmetFight1);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             GameObject TreeManCloakFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManCloakFight"));
             TreeManCloakFight.gameObject.SetActive(false);
             GameController.S.TreeManCloakQueue.Enqueue(TreeManCloakFight);
