@@ -15,10 +15,13 @@ public class XieZi : MonsterBase
      public Transform skill1Trans;
      private float attackRange = 1.5f;
      private float skill1Time = 10;
-     private float skill2Time = 10;
+     private float skill2Time = 12;
+     private float skill4Time = 8;
      private float currentSkill1Time = 0;
      private float currentSkill2Time = 0;
+     private float currentSkill4Time = 0;
      public Collider2D collider2D;
+     private bool IsSkill4 = false;
 
     
     public  void Awake()
@@ -64,6 +67,12 @@ public class XieZi : MonsterBase
             IsSkill=true;
             isSkill2=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+        }
+        else if(IsSkill4)
+        {
+            IsSkill=true;
+            IsSkill4=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill4", false);
         }
         else if(isAttack)
         {
@@ -175,6 +184,30 @@ public class XieZi : MonsterBase
                 GameController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
+        
+        if (e.Data.Name == "attack_skill4"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill4")
+        {
+            StartCoroutine(ShuiSkill());
+        }
+    }
+    
+    IEnumerator ShuiSkill()
+    {
+        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        yield return  new WaitForSeconds(1f);
+        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        yield return  new WaitForSeconds(1f);
+        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+    }
+
+    IEnumerator DelayShui(Vector2 pos)
+    {
+        GameController.S.CreateCircleAttack(pos,1);
+        yield return  new WaitForSeconds(1f);
+        var shui = GameController.S.XieZiSkill4Queue.Dequeue();
+        shui.transform.position = pos;
+        shui.gameObject.SetActive(true);
+        shui.damage = Attack;
     }
     
     public override void AddMonsterProp()
@@ -239,6 +272,7 @@ public class XieZi : MonsterBase
         base.Update();
         currentSkill1Time+=Time.deltaTime;
         currentSkill2Time+=Time.deltaTime;
+        currentSkill4Time+=Time.deltaTime;
         if (currentSkill1Time > skill1Time)
         {
             currentSkill1Time = 0;
@@ -249,6 +283,12 @@ public class XieZi : MonsterBase
         {
             currentSkill2Time = 0;
             isSkill2 = true;
+        }
+
+        if (currentSkill4Time > skill4Time)
+        {
+            currentSkill4Time = 0;
+            IsSkill4 = true;
         }
         
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)

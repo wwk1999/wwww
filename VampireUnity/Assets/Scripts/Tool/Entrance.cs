@@ -1056,6 +1056,13 @@ public class Entrance : MonoBehaviour
                 xieziskill1.gameObject.SetActive(false);
                 GameController.S.XieZiSkill1Queue.Enqueue(xieziskill1);
             }
+            
+            for (int i = 0; i < 100; i++)
+            {
+                var xieziskill4= Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/XieZiSkill4").GetComponent<XieZiSkill4>(), GameController.S.transform);
+                xieziskill4.gameObject.SetActive(false);
+                GameController.S.XieZiSkill4Queue.Enqueue(xieziskill4);
+            }
         }
         
         

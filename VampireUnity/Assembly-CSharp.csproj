@@ -183,6 +183,7 @@
     <Compile Include="Assets\Scripts\Skill\TreeManFire.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FirePeng.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BeeBullet.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZiSkill4.cs" />
     <Compile Include="Assets\Scripts\Mysql\SourceStoneTable.cs" />
     <Compile Include="Assets\Scripts\Gloabl\PrimaryWeapon.cs" />
     <Compile Include="Assets\Scripts\Window\ChiBangWindow.cs" />

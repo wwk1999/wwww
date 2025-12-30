@@ -14,7 +14,7 @@ public class XieZiSkill1 : MonoBehaviour
    private void OnEnable()
    {
       skeletonAnimation.AnimationState.SetAnimation(0, "idle", true);
-      rg.velocity = MoveDirection * 5f;
+      rg.velocity = MoveDirection * 7f;
    }
    
    private void OnTriggerEnter2D(Collider2D other)
