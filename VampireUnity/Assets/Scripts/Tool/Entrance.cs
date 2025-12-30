@@ -780,6 +780,19 @@ public class Entrance : MonoBehaviour
                 GameController.S.HuoShanSkill2QiQueue.Enqueue(huoshanskill2);
             }
         }
+        
+        
+        if (LevelInfoConfig.CurrentGameLevel == 9)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                var zhaozeSkill = Instantiate(Resources.Load<ZhaoZeSkill>("Prefabs/Monster/Level3/ZhaoZeBossSkill"), GameController.S.transform);
+                zhaozeSkill.gameObject.SetActive(false);
+                GameController.S.ZhaoZeSkillQueue.Enqueue(zhaozeSkill);
+            }
+        }
+        
+        
 
         
         if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6)

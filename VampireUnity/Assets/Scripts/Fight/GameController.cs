@@ -92,6 +92,9 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<WenZiMonster> WenZiMonsterQueue = new Queue<WenZiMonster>();
     [NonSerialized] public Queue<QingWaMonster> QingWaMonsterQueue = new Queue<QingWaMonster>();
     [NonSerialized] public Queue<ShiRenHuaMonster> ShiRenHuaMonsterQueue = new Queue<ShiRenHuaMonster>();
+    
+    [NonSerialized] public Queue<ZhaoZeSkill> ZhaoZeSkillQueue = new Queue<ZhaoZeSkill>();
+
 
 
     //第四关怪
@@ -148,7 +151,7 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>DianQuanQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>DianQuanPengQueue = new Queue<GameObject>();
 
-    
+
     
     
     //血能对象池队列

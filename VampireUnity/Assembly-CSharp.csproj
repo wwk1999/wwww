@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\Skill\ThreeNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Window\LoginWindow1.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryShoe.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeSkill.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\GoldBlood.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\AddHpForTime.cs" />
     <Compile Include="Assets\Scripts\Window\FightBg.cs" />

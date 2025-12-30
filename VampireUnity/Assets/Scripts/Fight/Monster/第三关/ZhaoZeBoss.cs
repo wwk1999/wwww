@@ -12,17 +12,19 @@ public class ZhaoZeBoss : MonsterBase
     {
     }
     public Transform attackTrans;
-    private float skill1Time=5;
-    private float skill2Time=10;
-    private float skill3Time=15;
+    private float skill1Time=3;
+    private float skill3Time=10;
+    private float skill4Time=6;
     private float currentSkill1Time=0;
-    private float currentSkill2Time=0;
     private float currentSkill3Time=0;
+    private float currentSkill4Time=0;
     public Collider2D skill1Collider;
     public Collider2D skill2Collider;
     public Collider2D skill3Collider;
     public Transform skill1trans;
     public Transform skill3trans;
+
+    public bool isSkill4=false;
 
 
     public void Awake()
@@ -116,10 +118,28 @@ public class ZhaoZeBoss : MonsterBase
         monsterSkeletonAnimation.timeScale = 1.3f;
         monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
     }
+
+    IEnumerator ShuiSkill()
+    {
+        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        yield return  new WaitForSeconds(1f);
+        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        yield return  new WaitForSeconds(1f);
+        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+    }
+
+    IEnumerator DelayShui(Vector2 pos)
+    {
+        GameController.S.CreateCircleAttack(pos,1);
+        yield return  new WaitForSeconds(1f);
+        var shui = GameController.S.ZhaoZeSkillQueue.Dequeue();
+        shui.transform.position = pos;
+        shui.gameObject.SetActive(true);
+    }
     
     public void Complete(TrackEntry trackEntry)
     {
-        if (trackEntry.Animation.Name == "appear"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3")
+        if (trackEntry.Animation.Name == "appear"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill3")
         {
             IsSkill=false;
         }
@@ -137,12 +157,14 @@ public class ZhaoZeBoss : MonsterBase
             isSkill1=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
             monsterSkeletonAnimation.timeScale = 3;
-        }else if (isSkill2)
+        }else if (isSkill4)
         {
             IsSkill=true;
-            isSkill2=false;
-            monsterSkeletonAnimation.timeScale = 1;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+            isSkill4=false;
+            monsterSkeletonAnimation.timeScale = 1.3f;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill4", false);
+            var pos = GameController.S.gamePlayer.transform.position;
+            StartCoroutine(ShuiSkill());
         }else if (isSkill3)
         {
             IsSkill=true;
@@ -312,8 +334,9 @@ public class ZhaoZeBoss : MonsterBase
         if (IsDead) return;
         base.Update();
         currentSkill1Time+=Time.deltaTime;
-        currentSkill2Time+=Time.deltaTime;
         currentSkill3Time+=Time.deltaTime;
+        currentSkill4Time+=Time.deltaTime;
+
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
             isAttack=true;
@@ -334,6 +357,12 @@ public class ZhaoZeBoss : MonsterBase
         {
             currentSkill3Time = 0;
             isSkill3 = true;
+        }
+
+        if (currentSkill4Time >= skill4Time)
+        {
+            currentSkill4Time = 0;
+            isSkill4 = true;
         }
         if (!IsDead)
         {
