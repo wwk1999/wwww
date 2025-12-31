@@ -2232,7 +2232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9053\u5177"
+  m_Text: 
 --- !u!1 &2984283442376344193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,16 +2476,16 @@ RectTransform:
   m_GameObject: {fileID: 3246882798405004335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5897558668632333199}
   m_Father: {fileID: 8616462999491542531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -275, y: 268}
-  m_SizeDelta: {x: 116.36, y: 46.3136}
+  m_AnchoredPosition: {x: -275, y: 264}
+  m_SizeDelta: {x: 290, y: 137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8208493283732985824
 CanvasRenderer:
@@ -2515,8 +2515,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: cc83a1bbdf2286d409293a4dccfb8d02, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3094,16 +3094,16 @@ RectTransform:
   m_GameObject: {fileID: 3823524406534012977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6473756840729395422}
   m_Father: {fileID: 8616462999491542531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149, y: 268}
-  m_SizeDelta: {x: 116.36, y: 46.3136}
+  m_AnchoredPosition: {x: -149, y: 264}
+  m_SizeDelta: {x: 290, y: 137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2688716901446574037
 CanvasRenderer:
@@ -3133,8 +3133,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8d20ff18ca9982e4cb6f875070b9b4c5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7148,7 +7148,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u88C5\u5907"
+  m_Text: 
 --- !u!1001 &60714123237542307
 PrefabInstance:
   m_ObjectHideFlags: 0
