@@ -945,16 +945,33 @@ public class Entrance : MonoBehaviour
                 XueQiE.gameObject.SetActive(false);
                 GameController.S.XueQiEQueue.Enqueue(XueQiE.GetComponent<XueQiE>());
                 
+                
+                Collider2D XueQiEcollider2D=XueQiE.transform.Find("Collider").GetComponent<Collider2D>();
+                                GameController.S.MonsterColliderDic.Add(XueQiEcollider2D,XueQiE.GetComponent<MonsterBase>());
+                                
+                                
                 var XueZhangLang =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level5/XueZhangLang").GetComponent<XueZhangLang>(), GameController.S.transform);
                 XueZhangLang.gameObject.SetActive(false);
                 GameController.S.XueZhangLangQueue.Enqueue(XueZhangLang.GetComponent<XueZhangLang>());
                 
-                Collider2D XueQiEcollider2D=XueQiE.transform.Find("Collider").GetComponent<Collider2D>();
-                GameController.S.MonsterColliderDic.Add(XueQiEcollider2D,XueQiE.GetComponent<MonsterBase>());
                 
-                Collider2D XueZhangLangcollider2D=XueZhangLang.transform.Find("Collider").GetComponent<Collider2D>();
-                GameController.S.MonsterColliderDic.Add(XueZhangLangcollider2D,XueZhangLang.GetComponent<MonsterBase>());
+                 Collider2D XueZhangLangcollider2D=XueZhangLang.transform.Find("Collider").GetComponent<Collider2D>();
+                                GameController.S.MonsterColliderDic.Add(XueZhangLangcollider2D,XueZhangLang.GetComponent<MonsterBase>());
+                                
+                var XueRen =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRen").GetComponent<XueRen>(), GameController.S.transform);
+                XueRen.gameObject.SetActive(false);
+                GameController.S.XueRenQueue.Enqueue(XueRen.GetComponent<XueRen>());
+                
+                Collider2D XueRencollider2D=XueRen.transform.Find("Collider").GetComponent<Collider2D>();
+                GameController.S.MonsterColliderDic.Add(XueRencollider2D,XueRen.GetComponent<MonsterBase>());
+                
+               
+                var XueRenJian =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRenJian").GetComponent<XueRenJian>(), GameController.S.transform);
+                XueRenJian.gameObject.SetActive(false);
+                GameController.S.XueRenJianQueue.Enqueue(XueRenJian.GetComponent<XueRenJian>());
             }
         }
         

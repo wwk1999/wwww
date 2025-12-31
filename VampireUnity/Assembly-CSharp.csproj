@@ -309,6 +309,7 @@
     <Compile Include="Assets\Scripts\Equip\BagGrid.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\PuTong3\PuTong3.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenJian.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\FanPuGuiZhen.cs" />
     <Compile Include="Assets\Scripts\Skill\DianQuan\DianQuan.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloak.cs" />
@@ -359,6 +360,7 @@
     <Compile Include="Assets\Scripts\Window\GameLevelInfo.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\GreenChiBang.cs" />
     <Compile Include="Assets\Scripts\Gun\BulletBase.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRen1.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\FinalDamageReductionPercent.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryHelmet.cs" />

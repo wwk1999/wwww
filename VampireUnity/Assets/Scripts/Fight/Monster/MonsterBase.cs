@@ -250,13 +250,13 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
-        if (this is EliteDaZuiMonster)
+        if (this is EliteDaZuiMonster||this is XueRen)
         {
             return;
         }
         if (trackEntry.Animation.Name ==MonsterSpineName.DieName)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             return;
         }
 

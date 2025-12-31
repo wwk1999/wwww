@@ -114,6 +114,10 @@ public class GameController : XSingleton<GameController>
     //第五关怪
     [NonSerialized] public Queue<XueQiE> XueQiEQueue = new Queue<XueQiE>();
     [NonSerialized] public Queue<XueZhangLang> XueZhangLangQueue = new Queue<XueZhangLang>();
+    [NonSerialized] public Queue<XueRen> XueRenQueue = new Queue<XueRen>();
+    [NonSerialized] public Queue<XueRenJian> XueRenJianQueue = new Queue<XueRenJian>();
+
+
 
     [NonSerialized] public Queue<YingShu> YingShuQueue = new Queue<YingShu>();
 
@@ -1238,7 +1242,7 @@ public class GameController : XSingleton<GameController>
                 }
                 else
                 {
-                    monsterBase =XueQiEQueue.Dequeue();
+                    monsterBase =XueRenQueue.Dequeue();
                 }
             }
             else
