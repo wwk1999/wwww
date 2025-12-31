@@ -457,7 +457,6 @@
     <None Include="Assets\Arts\Spine\第二关\大嘴\dazuiguai.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\package.json" />
-    <None Include="Assets\Arts\Spine\怪物\雪人\Enemy_Boss_ogre.json" />
     <None Include="Assets\Arts\Spine\第五关\XueQiE\Enemy_Snowman.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰攻击\action.atlas.txt" />
@@ -753,7 +752,6 @@
     <None Include="Assets\Arts\Spine\第一关\蜜蜂\json\mf.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoElite\Enemy_Skeleton_berserker.atlas.txt" />
-    <None Include="Assets\Arts\Spine\怪物\雪人\Enemy_Boss_ogre.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.director@1.0.0\package.json" />
     <None Include="Packages\com.coffee.ui-particle\Shaders\UIAdditive.shader" />
     <None Include="Assets\Arts\Spine\技能\1225\蝎子技能\action.json" />
