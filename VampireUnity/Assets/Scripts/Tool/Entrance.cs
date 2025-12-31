@@ -945,8 +945,16 @@ public class Entrance : MonoBehaviour
                 XueQiE.gameObject.SetActive(false);
                 GameController.S.XueQiEQueue.Enqueue(XueQiE.GetComponent<XueQiE>());
                 
+                var XueZhangLang =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level5/XueZhangLang").GetComponent<XueZhangLang>(), GameController.S.transform);
+                XueZhangLang.gameObject.SetActive(false);
+                GameController.S.XueZhangLangQueue.Enqueue(XueZhangLang.GetComponent<XueZhangLang>());
+                
                 Collider2D XueQiEcollider2D=XueQiE.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(XueQiEcollider2D,XueQiE.GetComponent<MonsterBase>());
+                
+                Collider2D XueZhangLangcollider2D=XueZhangLang.transform.Find("Collider").GetComponent<Collider2D>();
+                GameController.S.MonsterColliderDic.Add(XueZhangLangcollider2D,XueZhangLang.GetComponent<MonsterBase>());
             }
         }
         

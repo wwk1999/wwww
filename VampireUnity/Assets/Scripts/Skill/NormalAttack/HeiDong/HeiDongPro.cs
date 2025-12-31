@@ -18,7 +18,7 @@ public class HeiDongPro : MonoBehaviour
 
     IEnumerator DelayBaoZha()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
         GameController.S.HeiDongQueue.Enqueue(gameObject);
         var heidongnext = GameController.S.HeiDongNextQueue.Dequeue();

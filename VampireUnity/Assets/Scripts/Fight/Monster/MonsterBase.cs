@@ -413,6 +413,19 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 GameController.S.ShaXiYiQueue.Enqueue(shaxiyi);
             } 
+           
+           //第五关怪物
+           else if (this is XueQiE xueQiE)
+           {
+               GameController.S.XueQiEQueue.Enqueue(xueQiE);
+           } 
+           else if (this is XueZhangLang xueZhangLang)
+           {
+               GameController.S.XueZhangLangQueue.Enqueue(xueZhangLang);
+           } else if (this is YingShu yingShu)
+           {
+               GameController.S.YingShuQueue.Enqueue(yingShu);
+           } 
     }
 
     public void MonsterMove()

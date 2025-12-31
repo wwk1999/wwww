@@ -113,6 +113,8 @@ public class GameController : XSingleton<GameController>
 
     //第五关怪
     [NonSerialized] public Queue<XueQiE> XueQiEQueue = new Queue<XueQiE>();
+    [NonSerialized] public Queue<XueZhangLang> XueZhangLangQueue = new Queue<XueZhangLang>();
+
     [NonSerialized] public Queue<YingShu> YingShuQueue = new Queue<YingShu>();
 
     
@@ -1232,7 +1234,7 @@ public class GameController : XSingleton<GameController>
                 }
                 else if (NormalMonsterCount % 3 == 1)
                 {
-                    monsterBase = XueQiEQueue.Dequeue();
+                    monsterBase = XueZhangLangQueue.Dequeue();
                 }
                 else
                 {
