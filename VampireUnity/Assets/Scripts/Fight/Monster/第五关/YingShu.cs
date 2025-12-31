@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class YingShu : MonsterBase
 {
-    public YingShu() : base(MonsterType.Normal, "YingShu", 1, 100, 0.5f, 10, 5, 10, 10, 0)
+    public YingShu() : base(MonsterType.Normal, "YingShu", 1, 15000, 1.2f, 800, 300, 10, 10, 0)
     {
     }
     
@@ -28,9 +28,9 @@ public class YingShu : MonsterBase
 
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Purple, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Purple, 1));
     }
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {

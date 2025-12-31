@@ -86,12 +86,12 @@ public class XieZi : MonsterBase
 
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Blue, 10));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Purple, 20));
     }
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
@@ -130,9 +130,14 @@ public class XieZi : MonsterBase
         CreateBloodEnergy();
         CreateEquip();
         CreateProp();
-
-        // gameObject.SetActive(false);
-        // GameController.S.SnotMonsterQueue.Enqueue(this);
+        FightBGController.S.PlaySuccessAnim();
+        GameController.S.StartCoroutine(DelayChuanSongMen());
+    }
+    IEnumerator DelayChuanSongMen()
+    {
+        yield return new WaitForSeconds(1f);
+        var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
+        chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     private void Start()
@@ -202,7 +207,7 @@ public class XieZi : MonsterBase
 
     IEnumerator DelayShui(Vector2 pos)
     {
-        GameController.S.CreateCircleAttack(pos,1);
+        GameController.S.CreateCircleAttack(pos,0.7f);
         yield return  new WaitForSeconds(1f);
         var shui = GameController.S.XieZiSkill4Queue.Dequeue();
         shui.transform.position = pos;
@@ -212,7 +217,9 @@ public class XieZi : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,4),10));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,4),10));
+
     }
     
     public void MonsterMove1()

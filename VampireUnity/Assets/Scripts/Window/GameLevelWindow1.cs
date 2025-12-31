@@ -99,13 +99,11 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
         level10TanHao.SetActive(LevelInfoConfig.MaxGameLevel==10);
         level11TanHao.SetActive(LevelInfoConfig.MaxGameLevel==11);
         level12TanHao.SetActive(LevelInfoConfig.MaxGameLevel==12);
+        /*
         level13TanHao.SetActive(LevelInfoConfig.MaxGameLevel==13);
         level14TanHao.SetActive(LevelInfoConfig.MaxGameLevel==14);
         level15TanHao.SetActive(LevelInfoConfig.MaxGameLevel==15);
-        //level17TanHao.SetActive(LevelInfoConfig.MaxGameLevel==17);
-        //level18TanHao.SetActive(LevelInfoConfig.MaxGameLevel==18);
-        //level19TanHao.SetActive(LevelInfoConfig.MaxGameLevel==19);
-        //level20TanHao.SetActive(LevelInfoConfig.MaxGameLevel==20);
+        */
     }
 
     public void ShowGameLevelButton()
@@ -125,10 +123,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
         level13Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=13);
         level14Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=14);
         level15Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=15);
-        //level17Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=17);
-        //level18Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=18);
-        //level19Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=19);
-        //level20Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=20);
     }
 
     public void PlayGameLevelAnim()
@@ -171,6 +165,7 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
             case 12:
                 level12Content.Play("GameLevel");
                 break;
+            /*
             case 13:
                 level13Content.Play("GameLevel");
                 break;
@@ -179,6 +174,7 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
                 break;
             case 15:
                 level15Content.Play("GameLevel");
+                */
                 break;
            
         }

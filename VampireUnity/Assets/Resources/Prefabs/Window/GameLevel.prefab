@@ -518,7 +518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8126383930550976261
 RectTransform:
   m_ObjectHideFlags: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
   level14TanHao: {fileID: 7272905693803361329}
   level15TanHao: {fileID: 5005358466872699380}
   level1Content: {fileID: 2086998743632302397}
-  level2Content: {fileID: 0}
+  level2Content: {fileID: 5523607210018900959}
   level3Content: {fileID: 6187434243978741663}
   level4Content: {fileID: 7570000781885550945}
   level5Content: {fileID: 7828257289381281426}
@@ -4655,7 +4655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -43, y: 617}
+  m_AnchoredPosition: {x: -137, y: 653}
   m_SizeDelta: {x: 63, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &638458661444087918
@@ -6407,7 +6407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 268, y: 638}
+  m_AnchoredPosition: {x: 241, y: 680}
   m_SizeDelta: {x: 63, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5557057483691585595

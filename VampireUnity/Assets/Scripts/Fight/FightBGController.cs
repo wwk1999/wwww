@@ -112,8 +112,8 @@ public class FightBGController : XSingleton<FightBGController>
             GameController.S.GameCurrentHp=GameController.S.GameMaxHp;
         }
 
-        GameMaxHp.text = GameController.S.GameMaxHp.ToString();
-        GameCurrentHp.text = GameController.S.GameCurrentHp.ToString();
+        GameMaxHp.text = Mathf.RoundToInt(GameController.S.GameMaxHp).ToString();
+        GameCurrentHp.text = Mathf.RoundToInt(GameController.S.GameCurrentHp).ToString();
         playerHpSlider.maxValue = GameController.S.GameMaxHp;
         playerHpSlider.value = GameController.S.GameCurrentHp;
     }

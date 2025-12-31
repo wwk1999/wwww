@@ -373,7 +373,7 @@ public class Player : MonoBehaviour
         
         // 检查是否有DelayDamage词条
         bool hasDelayDamage = GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DelayDamage);
-        ShowHurtText(realDamage);
+        ShowHurtText(Mathf.RoundToInt(realDamage));
         if (hasDelayDamage)
         {
             DelayDamage(realDamage);

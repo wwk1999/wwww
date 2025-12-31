@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XueQiE : MonsterBase
 {
-    public XueQiE() : base(MonsterType.Normal, "XueQiE", 1, 100, 0.3f, 10, 5, 10, 10, 0)
+    public XueQiE() : base(MonsterType.Normal, "XueQiE", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
     {
     }
     public GameObject parent;
@@ -25,9 +25,12 @@ public class XueQiE : MonsterBase
     }
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.ZhaoZe, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.ZhaoZe, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.ZhaoZe, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.ZhaoZe, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.ZhaoZe, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.ZhaoZe, 2));
     }
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
@@ -53,7 +56,9 @@ public class XueQiE : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),5));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,3),5));
+
     }
 
     private void  RandomDelayDie()
