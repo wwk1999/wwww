@@ -60,20 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Equip\JinJIeGrid.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\DaLong.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo1.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo2.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo3.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong1.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong2.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong3.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong1.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong2.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong3.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLang.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong1.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong2.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong3.cs" />
     <Compile Include="Assets\Scripts\Fight\UI\FightExitPanel.cs" />
     <Compile Include="Assets\Scripts\Mysql\TableBase.cs" />
     <Compile Include="Assets\Scripts\Gun\GunBase.cs" />
@@ -107,6 +93,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenNecklace.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo2.cs" />
     <Compile Include="Assets\Scripts\Fight\FightBGController.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeHelmet.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\XuKong\XuKong.cs" />
@@ -140,6 +127,7 @@
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleHelmet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManJumpTrigger.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong1.cs" />
     <Compile Include="Assets\Scripts\Skill\FourNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\ExAdd.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossAttack.cs" />
@@ -150,6 +138,7 @@
     <Compile Include="Assets\Scripts\Equip\Green\GreenHelmet.cs" />
     <Compile Include="Assets\Scripts\Store\SkillJiaDian.cs" />
     <Compile Include="Assets\Scripts\Tool\ChiBangItem.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong3.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Demo\Scripts\ARPGFXLoopScript.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManBoss.cs" />
     <Compile Include="Assets\Scripts\Window\WeaponWindowRole1.cs" />
@@ -193,6 +182,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\RecudeHpAddAttack.cs" />
     <Compile Include="Assets\Scripts\Window\MonsterBook.cs" />
     <Compile Include="Assets\Scripts\Equip\BagPanel.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo1.cs" />
     <Compile Include="Assets\Scripts\Gloabl\SourceStoneText.cs" />
     <Compile Include="Assets\Scripts\Skill\TreeManFire.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FirePeng.cs" />
@@ -243,6 +233,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeShoe.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\DelayDamage.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\RingFortureAdd.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong1.cs" />
     <Compile Include="Assets\Scripts\Tool\ClickFx.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongNext.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\GreenWeaponFragment.cs" />
@@ -278,6 +269,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterFlyObjectBase.cs" />
     <Compile Include="Assets\Scripts\Mysql\ExperienceController.cs" />
     <Compile Include="Assets\Scripts\Tool\ObserverModuleManager.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLang.cs" />
     <Compile Include="Assets\Scripts\Window\SkillWindow1.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor2.cs" />
@@ -293,6 +285,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\AddAttackForTime.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXLightFade.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeShoe.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo3.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SpiderMonster.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\WenZiMonster.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkill2.cs" />
@@ -307,6 +300,7 @@
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Division.cs" />
     <Compile Include="Assets\Scripts\Skill\IceExTrigger.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenCloak.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong3.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleRing.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloth.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenRing.cs" />
@@ -379,12 +373,14 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryHelmet.cs" />
     <Compile Include="Assets\Scripts\Skill\TwoNormalAttack.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong2.cs" />
     <Compile Include="Assets\Scripts\Window\MainWindow1.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\BlueChiBang.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\KuLou.cs" />
     <Compile Include="Assets\Scripts\Config\EntryConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\AddDefenseForTime.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\StoneBoss.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\DaLong.cs" />
     <Compile Include="Assets\Scripts\Tool\SequenceFrameAnimationGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill2.cs" />
@@ -405,6 +401,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\FireBaoZha.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXRotation.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloak.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong2.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\Fight\GameController.cs" />
     <Compile Include="Assets\Scripts\Tool\PropInfo.cs" />
@@ -432,6 +429,7 @@
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManShoe.cs" />
     <Compile Include="Assets\Scripts\Config\LevelInfoItem.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\XiNiuMonster.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong1.cs" />
     <Compile Include="Assets\Scripts\Window\DuanZaoWindow.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeRing.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZiSkill1.cs" />
@@ -454,6 +452,7 @@
     <Compile Include="Assets\Scripts\Equip\BagObjectBase.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\ZuiEYanZhu.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloak.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong3.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Penetrate.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleCloth1.cs" />
     <Compile Include="Assets\Scripts\Tool\EquipName.cs" />
@@ -463,6 +462,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\HelmetFortureAdd.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueQiE.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong2.cs" />
     <Compile Include="Assets\Scripts\Mysql\EquipController.cs" />
     <None Include="Assets\Arts\Spine\技能\1225\紫爆\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\紫冲天\skeleton.atlas.txt" />
