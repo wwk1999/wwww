@@ -116,6 +116,7 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<XueZhangLang> XueZhangLangQueue = new Queue<XueZhangLang>();
     [NonSerialized] public Queue<XueRen> XueRenQueue = new Queue<XueRen>();
     [NonSerialized] public Queue<XueRenJian> XueRenJianQueue = new Queue<XueRenJian>();
+    [NonSerialized] public Queue<XueRenBossSkill1> XueRenBossSkill1Queue = new Queue<XueRenBossSkill1>();
 
 
 
@@ -964,6 +965,20 @@ public class GameController : XSingleton<GameController>
             xieZiboss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(xieZiboss.collider2D,xieZiboss);
             xieZiboss.meshRenderer.sortingOrder = 3000;
+
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 15)
+        {
+            XueRenBoss XueRenBoss = Instantiate(Resources.Load<XueRenBoss>("Prefabs/Monster/Level5/XueRenBoss"));
+            XueRenBoss.gameObject.SetActive(true);
+            XueRenBoss.IsSkill = true;
+            XueRenBoss.transform.position = new Vector3(0, 0, 0f);
+            SkeletonAnimation sk = XueRenBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+            sk.AnimationState.SetAnimation(0,"appear",false);
+            XueRenBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            MonsterColliderDic.Add(XueRenBoss.collider2D,XueRenBoss);
+            XueRenBoss.meshRenderer.sortingOrder = 3000;
 
         }
        

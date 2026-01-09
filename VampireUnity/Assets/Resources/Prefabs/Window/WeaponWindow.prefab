@@ -5943,6 +5943,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_text
+      value: "\u8150\u8680\u6743\u6756"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 36cfcda6f3ee42eea705fc63954b5fbb, type: 2}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6980260545181212138, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6289,6 +6301,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireBaoZha
       objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_text
+      value: "\u7206\u708E\u6756"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 4048b29b7d6447f78ce6f29b63ab560e, type: 2}
     - target: {fileID: 6980260545181212138, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6447,6 +6467,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuTong3
       objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_text
+      value: "\u4E09\u53C9\u6CD5\u6756"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0afba460e73e4a4d9a7237b8d95d62cd, type: 2}
     - target: {fileID: 6980260545181212138, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6817,6 +6845,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_text
+      value: "\u6E90\u6781\u6756"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3444bc85a2d1477a99ac9c10f1d18f60, type: 2}
     - target: {fileID: 6980260545181212138, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7689,6 +7725,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeiDong
       objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_text
+      value: "\u6E6E\u706D\u4E4B\u6756"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 240795d209924f9198eaf6d4a640b4bb, type: 2}
     - target: {fileID: 6980260545181212138, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7847,6 +7891,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Xukong
       objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_text
+      value: "\u865A\u7A7A\u6CD5\u6756"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088407924467823490, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0afba460e73e4a4d9a7237b8d95d62cd, type: 2}
     - target: {fileID: 6980260545181212138, guid: 3b4b60987437a4597b16a340456cc2a2, type: 3}
       propertyPath: m_Sprite
       value: 

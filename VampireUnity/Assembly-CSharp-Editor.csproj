@@ -960,10 +960,6 @@
       <Project>{0dfc59e0-b386-2bcb-5c30-8dd325c966c5}</Project>
       <Name>Unity.RenderPipelines.Universal.2D.Internal</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{393565e0-8b60-bbf1-5002-39e492112397}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualEffectGraph.Editor.csproj">
       <Project>{e7e69b5c-e3ab-ac98-3465-b259bae1ed39}</Project>
       <Name>Unity.VisualEffectGraph.Editor</Name>
@@ -983,6 +979,10 @@
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
       <Project>{8b43f9e3-f55b-247d-0e60-3d50e9a76748}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{393565e0-8b60-bbf1-5002-39e492112397}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{46b70005-2777-3c08-ae42-ea27f42331b0}</Project>

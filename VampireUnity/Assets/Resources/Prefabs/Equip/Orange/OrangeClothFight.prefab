@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8562913918296545211}
   - component: {fileID: 1323891211963956223}
   - component: {fileID: 6410351043422412133}
-  - component: {fileID: 5230131073351188010}
+  - component: {fileID: 3727148464190988944}
   m_Layer: 7
   m_Name: OrangeClothFight
   m_TagString: Equip
@@ -192,7 +192,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5230131073351188010
+--- !u!114 &3727148464190988944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

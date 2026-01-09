@@ -356,26 +356,32 @@ public class Entrance : MonoBehaviour
             
             GameObject OrangeCloakFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeCloakFight"));
             OrangeCloakFight.gameObject.SetActive(false);
+            OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
             GameController.S.OrangeCloakQueue.Enqueue(OrangeCloakFight);
             
             GameObject OrangeClothFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeClothFight"));
             OrangeClothFight.gameObject.SetActive(false);
+            OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
             GameController.S.OrangeClothQueue.Enqueue(OrangeClothFight);
             
             GameObject OrangeRingFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeRingFight"));
             OrangeRingFight.gameObject.SetActive(false);
+            OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
             GameController.S.OrangeRingQueue.Enqueue(OrangeRingFight);
             
             GameObject OrangeShoeFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeShoeFight"));
             OrangeShoeFight.gameObject.SetActive(false);
+            OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
             GameController.S.OrangeShoeQueue.Enqueue(OrangeShoeFight);
             
             GameObject OrangeNecklaceFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeNecklaceFight"));
             OrangeNecklaceFight.gameObject.SetActive(false);
+            OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
             GameController.S.OrangeNecklaceQueue.Enqueue(OrangeNecklaceFight);
             
             GameObject OrangeHelmetFight = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeHelmetFight"));
             OrangeHelmetFight.gameObject.SetActive(false);
+            OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
             GameController.S.OrangeHelmetQueue.Enqueue(OrangeHelmetFight);
             
             //传说装备
@@ -974,8 +980,16 @@ public class Entrance : MonoBehaviour
                 GameController.S.XueRenJianQueue.Enqueue(XueRenJian.GetComponent<XueRenJian>());
             }
         }
-        
-        
+
+        if (LevelInfoConfig.CurrentGameLevel == 15)
+        {
+            var XueRenBossSkill1 =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRenBossSkill1").GetComponent<XueRenBossSkill1>(), GameController.S.transform);
+            XueRenBossSkill1.gameObject.SetActive(false);
+            GameController.S.XueRenBossSkill1Queue.Enqueue(XueRenBossSkill1.GetComponent<XueRenBossSkill1>());
+        }
+
+
 
         //精英怪队列
         if (LevelInfoConfig.CurrentGameLevel == 2|| LevelInfoConfig.CurrentGameLevel == 3)

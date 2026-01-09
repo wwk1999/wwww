@@ -28,6 +28,7 @@ namespace Config
 
         public static Dictionary<int, ChiBangAttribute> ChiBangAttributeDic = new Dictionary<int, ChiBangAttribute>()
         {
+            { 0, new ChiBangAttribute { maxHp = 0, attack = 0, defense = 0 } },
             { 1, new ChiBangAttribute { maxHp = 100, attack = 30, defense = 10 } },
             { 2, new ChiBangAttribute { maxHp = 300, attack = 50, defense = 20,critDamage = 10 } },
             { 3, new ChiBangAttribute { maxHp = 800, attack = 120, defense = 40 ,critDamage = 20 ,attackSpeed = 0.1f} },

@@ -809,6 +809,7 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 //生成装备
                 GameObject equip = GameController.S.GetEquip(monsterEquip);
+                equip.GetComponent<EquipBase>().enabled = true;
                 equip.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
                 equip.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -823,6 +824,7 @@ public abstract class MonsterBase : MonoBehaviour
                 GameObject equip = GameController.S.GetOrangeEntryEquip(monsterEquip);
 
                 var comp = equip.GetComponent<EquipBase>();   // 对应的具体脚本
+                comp.enabled = true;
                 Debug.Log($"生成前：{equip.name}, activeSelf={equip.activeSelf}, enabled={(comp != null && comp.enabled)}");
 
                 equip.SetActive(true);

@@ -1,0 +1,139 @@
+skeleton.png
+size:1916,1051
+filter:Linear,Linear
+pma:true
+fzhuan1
+bounds:852,15,182,176
+offsets:33,27,220,225
+rotate:90
+fzhuan2
+bounds:1030,19,176,183
+offsets:23,5,220,225
+rotate:90
+fzhuan3
+bounds:1215,19,182,176
+offsets:1,20,220,225
+fzhuan4
+bounds:1493,203,176,183
+offsets:16,37,220,225
+huo (1)
+bounds:1696,521,201,151
+offsets:21,46,450,300
+huo (10)
+bounds:818,806,372,243
+offsets:20,31,450,300
+huo (11)
+bounds:1192,811,368,238
+offsets:18,43,450,300
+huo (12)
+bounds:463,573,300,233
+offsets:80,52,450,300
+huo (13)
+bounds:765,565,292,239
+offsets:90,45,450,300
+huo (14)
+bounds:1274,582,241,227
+offsets:109,41,450,300
+huo (15)
+bounds:1059,576,228,213
+offsets:117,52,450,300
+rotate:90
+huo (16)
+bounds:1517,606,177,203
+offsets:131,60,450,300
+huo (17)
+bounds:1663,389,130,188
+offsets:179,66,450,300
+rotate:90
+huo (18)
+bounds:1671,213,123,174
+offsets:188,72,450,300
+huo (19)
+bounds:1796,212,112,175
+offsets:195,75,450,300
+huo (2)
+bounds:463,412,266,159
+offsets:19,42,450,300
+huo (20)
+bounds:1399,216,92,151
+offsets:216,97,450,300
+huo (21)
+bounds:1399,8,66,106
+offsets:219,130,450,300
+rotate:90
+huo (3)
+bounds:731,398,332,165
+offsets:18,55,450,300
+huo (4)
+bounds:1562,853,352,196
+offsets:20,40,450,300
+huo (5)
+bounds:244,438,362,217
+offsets:21,23,450,300
+rotate:90
+huo (6)
+bounds:2,2,388,225
+offsets:19,18,450,300
+rotate:90
+huo (7)
+bounds:2,802,407,247
+offsets:20,27,450,300
+huo (8)
+bounds:411,808,405,241
+offsets:20,37,450,300
+huo (9)
+bounds:2,392,408,240
+offsets:21,37,450,300
+rotate:90
+huo1
+bounds:1568,66,135,107
+offsets:0,27,213,204
+rotate:90
+huo2
+bounds:1399,76,167,125
+offsets:0,21,213,204
+huo3
+bounds:1062,197,205,169
+offsets:0,6,213,204
+huo4
+bounds:1696,674,203,177
+offsets:0,1,213,204
+huo5
+bounds:646,18,204,179
+offsets:7,0,213,204
+huo6
+bounds:1493,388,192,168
+offsets:15,7,213,204
+rotate:90
+huo7
+bounds:1788,70,121,140
+offsets:69,62,213,204
+huo8
+bounds:1677,97,109,114
+offsets:73,89,213,204
+hxs1
+bounds:869,209,191,187
+offsets:13,15,219,213
+hxs2
+bounds:669,199,198,197
+offsets:9,9,219,213
+hxs3
+bounds:444,4,198,200
+offsets:9,7,219,213
+rotate:90
+hxs4
+bounds:1065,368,208,206
+offsets:3,2,219,213
+hxs5
+bounds:244,226,214,210
+offsets:1,2,219,213
+hxs6
+bounds:1275,369,216,211
+offsets:2,1,219,213
+hxs7
+bounds:229,16,213,208
+offsets:2,2,219,213
+hxs8
+bounds:460,204,206,207
+offsets:7,3,219,213
+rotate:90

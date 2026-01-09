@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: red_dragon_Atlas
+  m_EditorClassIdentifier: 
+  serializedMaterialOverrides: []
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: d2c65ad1ee5152347b15407d90f6f53c, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 116dd4b94756cee4983b18fda2fc604a, type: 2}
+  - {fileID: 2100000, guid: c4ecdfee58e02da4d8474a7e6cff03ec, type: 2}
+  - {fileID: 2100000, guid: 56a4773f943252d4bb413b9944552ebc, type: 2}
+  - {fileID: 2100000, guid: 9d6d8dbe2e890c54c96854b02c6fefbd, type: 2}
+  - {fileID: 2100000, guid: 519ba7706ad7bd446867fcb9c6a879b8, type: 2}
+  - {fileID: 2100000, guid: 2ce46153e7d782f42b2ab0c59eab4419, type: 2}
+  - {fileID: 2100000, guid: b73278cf32561e44191ac907f2c888eb, type: 2}
+  - {fileID: 2100000, guid: ad1877f3c87cb5749a517de8c691a842, type: 2}

@@ -375,6 +375,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NoSkill.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenBoss.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalPlayerAttribute.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBallItem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
@@ -401,18 +402,19 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\Tool\BuildReportViewer.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenBossSkill1.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor1.cs" />
     <Compile Include="Assets\Scripts\Skill\SkillController.cs" />
     <Compile Include="Assets\Scripts\Server\SourceStoneServer.cs" />
     <Compile Include="Assets\Scripts\Gun\Pistol.cs" />
-    <Compile Include="Assets\Scripts\Skill\TwoNormalAttackTrigger.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleShoe1.cs" />
+    <Compile Include="Assets\Scripts\Skill\TwoNormalAttackTrigger.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerInfoConfig.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\JuDaYaChi.cs" />
+    <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeRing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueZhangLang.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\JiaChongMonster.cs" />
-    <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeRing.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManShoe.cs" />
     <Compile Include="Assets\Scripts\Config\LevelInfoItem.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\XiNiuMonster.cs" />
@@ -490,6 +492,7 @@
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\甲虫\jiachong.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\虫子\congzi.json" />
+    <None Include="Assets\Arts\Spine\怪物\红龙打包\red_dragon.json" />
     <None Include="Assets\Arts\Spine\技能\传送门\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.ext.nunit@2.0.3\package.json" />
     <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\useSharedDesignerContext.txt" />
@@ -517,9 +520,11 @@
     <None Include="Assets\Arts\Spine\第一关\蜜蜂\json\mf.json" />
     <None Include="Assets\Arts\Spine\第四关\mofaqiu\skeleton.json" />
     <None Include="Assets\Arts\Shaders\LcL\TikTok.shader" />
+    <None Include="Assets\Arts\Spine\怪物\红龙打包\red_dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\红爆炸\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Arts\Spine\怪物\Boss1\Enemy_Panther_warrior.json" />
+    <None Include="Assets\Arts\Spine\怪物\小恶魔打包\akmon_pirest.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\ZiPeng\action.json" />
     <None Include="Assets\Arts\Shaders\EquipOutline.shader" />
     <None Include="Library\PackageCache\com.unity.timeline@1.8.7\package.json" />
@@ -553,11 +558,13 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Arts\Spine\第二关\boss\huoshanboss.atlas.txt" />
     <None Include="Assets\Arts\Shaders\EdgeAlphaFade.shader" />
+    <None Include="Assets\Arts\Spine\怪物\蓝龙打包\blue_dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\小火怪\json\xiaohuoguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\DaLong\dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰peng\action.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\package.json" />
     <None Include="Assets\Arts\Spine\怪物\HuangZhu\Enemy_Boar_L.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\雪山喷火\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Shaders\HeadBG.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\package.json" />
     <None Include="Assets\Arts\Shaders\LcL\InnerOutline.shader" />
@@ -574,6 +581,7 @@
     <None Include="Assets\Arts\Spine\第三关\食人花\shirenhua.atlas.txt" />
     <None Include="Assets\Packages\MySqlConnector.2.4.0\lib\netstandard2.1\MySqlConnector.xml" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\Fail\bui_10.json" />
+    <None Include="Assets\Arts\Spine\怪物\雪山Boss\Enemy_Boss_ogre.json" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.12\package.json" />
@@ -594,6 +602,7 @@
     <None Include="Assets\Arts\Shaders\LcL\Blur.shader" />
     <None Include="Assets\Arts\Spine\第三关\青蛙\qingwa.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\紫冲天1\skeleton.json" />
+    <None Include="Assets\Arts\Spine\怪物\雪山喷火\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\第五关\XueZhangLang\xuezhanglang.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\剑气\skeleton.atlas.txt" />
@@ -617,10 +626,10 @@
     <None Include="Library\PackageCache\com.unity.test-framework@1.4.5\package.json" />
     <None Include="Assets\Arts\Spine\怪物\LanXiNiu\BOSSlong_shui.json" />
     <None Include="Assets\Arts\Spine\第五关\XueZhangLang\xuezhanglang.json" />
+    <None Include="Assets\Arts\Spine\怪物\绿龙打包\green_dragon.atlas.txt" />
     <None Include="Assets\shader\ParticleAdditiveGlow 1.shader" />
     <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.json" />
     <None Include="Assets\Arts\Spine\技能\1225\紫尾巴\skeleton.atlas.txt" />
-    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\Enemy_Boss_ogre.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空\action.json" />
     <None Include="Assets\Arts\Spine\技能\HuoDan\H043_Special.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\喷火\skeleton.atlas.txt" />
@@ -639,6 +648,7 @@
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.json" />
     <None Include="Assets\Arts\Spine\技能\1225\json13\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaNiao\shamoniao.json" />
+    <None Include="Assets\Arts\Spine\怪物\DALONG打包\dragon.json" />
     <None Include="Assets\Arts\Shaders\LcL\Fade.shader" />
     <None Include="Assets\Arts\Spine\技能\红球\lalafei_magic.json" />
     <None Include="Assets\Arts\Spine\怪物\Boss\fensexionggui.json" />
@@ -722,6 +732,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\黄电圈\action.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
+    <None Include="Assets\Arts\Spine\怪物\雪山Boss\Enemy_Boss_ogre.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
     <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.atlas.txt" />
@@ -753,6 +764,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoElite\Enemy_Skeleton_berserker.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.director@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\怪物\绿龙打包\green_dragon.json" />
     <None Include="Packages\com.coffee.ui-particle\Shaders\UIAdditive.shader" />
     <None Include="Assets\Arts\Spine\技能\1225\蝎子技能\action.json" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\XiaoEMo\akmon_pirest.json" />
@@ -780,6 +792,7 @@
     <None Include="Assets\Arts\Spine\技能\LvQuan\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\LvQuan\skeleton.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Arts\Spine\怪物\DALONG打包\dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\主角受伤\1209112.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.json" />
@@ -805,11 +818,11 @@
     <None Include="Assets\Arts\Spine\技能\Lvquanbao\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\紫冲天1\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\树人技能\action.json" />
-    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\Enemy_Boss_ogre.json" />
     <None Include="Assets\Arts\Shaders\BGLightSprite.shader" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Library\PackageCache\com.unity.burst@1.8.21\Unity.Burst.Unsafe.xml" />
+    <None Include="Assets\Arts\Spine\怪物\小恶魔打包\akmon_pirest.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\DiLie\1605122.json" />
@@ -828,6 +841,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空peng\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\蓝冲天激光\skeleton.json" />
+    <None Include="Assets\Arts\Spine\怪物\蓝龙打包\blue_dragon.json" />
     <Reference Include="UnityEngine">
       <HintPath>D:\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -1565,10 +1579,6 @@
       <Project>{0dfc59e0-b386-2bcb-5c30-8dd325c966c5}</Project>
       <Name>Unity.RenderPipelines.Universal.2D.Internal</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{393565e0-8b60-bbf1-5002-39e492112397}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualEffectGraph.Editor.csproj">
       <Project>{e7e69b5c-e3ab-ac98-3465-b259bae1ed39}</Project>
       <Name>Unity.VisualEffectGraph.Editor</Name>
@@ -1588,6 +1598,10 @@
     <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
       <Project>{8b43f9e3-f55b-247d-0e60-3d50e9a76748}</Project>
       <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{393565e0-8b60-bbf1-5002-39e492112397}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{46b70005-2777-3c08-ae42-ea27f42331b0}</Project>
