@@ -7,14 +7,14 @@ using UnityEngine;
 
 public class XueRenBoss : MonsterBase
 {
-    public XueRenBoss() : base(MonsterType.Boss, "XueRenBoss", 1, 1000000, 1.2f, 1000, 300, 10, 10, 0)
+    public XueRenBoss() : base(MonsterType.Boss, "XueRenBoss", 1, 100000, 1.2f, 1000, 300, 10, 10, 0)
     {
     }
     
     public Transform attackTrans;
-    private float skill1Time = 100;
+    private float skill1Time = 10;
     private float skill2Time = 5;
-    private float skill3Time = 80;
+    private float skill3Time = 8;
     private float currentSkill1Time = 0;
     private float currentSkill2Time = 0;
     private float currentSkill3Time = 0;
@@ -43,7 +43,9 @@ public class XueRenBoss : MonsterBase
         var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         skill2parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        skill2parent.transform.localScale=parent.transform.localScale;
         skill2ske.AnimationState.SetAnimation(0, "animation", false);
+        skill2ske.timeScale = 1.5f;
     }
 
     public void Skill2Complete(TrackEntry trackEntry)
@@ -64,11 +66,13 @@ public class XueRenBoss : MonsterBase
             IsSkill=true;
             isSkill1=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+            monsterSkeletonAnimation.timeScale = 1.5f;
         }else if (isSkill2)
         {
             IsSkill=true;
             isSkill2=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+            monsterSkeletonAnimation.timeScale = 1.2f;
             Invoke(nameof(ShowSkill2),1.8f);
         }
         else if(isSkill3)
@@ -76,6 +80,9 @@ public class XueRenBoss : MonsterBase
             IsSkill=true;
             isSkill3=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
+            monsterSkeletonAnimation.timeScale = 1.5f;
+            Invoke(nameof(Dash),1.8f);
+            Invoke(nameof(ExitDash),2.5f);
         }
         else if(isAttack)
         {
@@ -84,9 +91,21 @@ public class XueRenBoss : MonsterBase
         }
         else
         {
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.timeScale = 1.2f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
+    }
+
+    public void Dash()
+    {
+        IsDash = true;
+        Speed = 8;
+    }
+
+    public void ExitDash()
+    {
+        IsDash = false;
+        Speed = 1.2f;
     }
 
     public override void AddMonsterEquip()
@@ -217,7 +236,7 @@ public class XueRenBoss : MonsterBase
     public void MonsterMove1()
     {
         Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move")
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move"||IsDash)
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
         }
