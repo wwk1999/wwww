@@ -11,10 +11,16 @@ public class XueRenBossSkill1 : MonoBehaviour
 
     private void OnEnable()
     {
+        transform.localScale = new Vector3(1, 1, 1);
         var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (angle < 0)
+        {
+            angle += 10;
+            transform.localScale = new Vector3(1, -1, 1);
+        }
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        rg.velocity = dir*7f;
+        rg.velocity = dir*10f;
         Invoke(nameof(Hide), 3f);
     }
     

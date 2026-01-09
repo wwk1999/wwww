@@ -152,6 +152,14 @@ public class XueRenBoss : MonsterBase
                 GameController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
+        
+        if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill1")
+        {
+            var xuerenbossskill1 = GameController.S.XueRenBossSkill1Queue.Dequeue();
+            xuerenbossskill1.Damage = Attack;
+            xuerenbossskill1.transform.position=transform.position;
+            xuerenbossskill1.gameObject.SetActive(true);
+        }
        
     }
     
