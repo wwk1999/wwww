@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Equip;
 using Spine;
+using Spine.Unity;
 using UnityEngine;
 
 public class XueRenBoss : MonsterBase
@@ -11,12 +12,17 @@ public class XueRenBoss : MonsterBase
     }
     
     public Transform attackTrans;
-    private float skill1Time = 10;
-    private float skill2Time = 120;
+    private float skill1Time = 100;
+    private float skill2Time = 5;
     private float skill3Time = 80;
     private float currentSkill1Time = 0;
     private float currentSkill2Time = 0;
     private float currentSkill3Time = 0;
+
+    public GameObject skill2;
+    public SkeletonAnimation skill2ske;
+    public Collider2D Skill2Collider2D;
+    public GameObject skill2parent;
     
     public  void Awake()
     {
@@ -27,19 +33,27 @@ public class XueRenBoss : MonsterBase
         MonsterSpineName.DieName = "fail";
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
         monsterSkeletonAnimation.AnimationState.Complete += Complete;
+        skill2ske.AnimationState.Event += Skill2OnSpineEvent;
+        skill2ske.AnimationState.Complete += Skill2Complete;
     }
-    
+
+    public void ShowSkill2()
+    {
+        skill2.SetActive(true);
+        var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        skill2parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        skill2ske.AnimationState.SetAnimation(0, "animation", false);
+    }
+
+    public void Skill2Complete(TrackEntry trackEntry)
+    {
+        skill2.gameObject.SetActive(false);
+    }
     
      public void Complete(TrackEntry trackEntry)
     {
         monsterSkeletonAnimation.timeScale = 1f;
-        if (trackEntry.Animation.Name == "skill2")
-        {
-            collider2D.tag = "Bullet"; 
-            var pos = GameController.S.gamePlayer.transform.position;
-            GameController.S.CreateCircleAttack(pos,1);
-            return;
-        }
         if (trackEntry.Animation.Name == "chuchang"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3")
         {
             IsSkill=false;
@@ -55,6 +69,7 @@ public class XueRenBoss : MonsterBase
             IsSkill=true;
             isSkill2=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+            Invoke(nameof(ShowSkill2),1.8f);
         }
         else if(isSkill3)
         {
@@ -143,6 +158,34 @@ public class XueRenBoss : MonsterBase
         monsterSkeletonAnimation.AnimationState.Event -= OnSpineEvent;
     }
 
+    public void Skill2Collider()
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        Skill2Collider2D.OverlapCollider(filter, results);
+    
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+               GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            }
+        }
+    }
+
+    public void Skill2OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "damage")
+        {
+            Skill2Collider();
+        }
+    }
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
         if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
