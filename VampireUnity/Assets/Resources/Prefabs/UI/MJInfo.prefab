@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 5187954699033697600}
   - component: {fileID: 1988782753181106234}
   - component: {fileID: 6092302405814547109}
-  - component: {fileID: 4457122253039447958}
+  - component: {fileID: 4369148591004624390}
   m_Layer: 5
   m_Name: MJInfo
   m_TagString: Untagged
@@ -826,7 +826,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4457122253039447958
+--- !u!114 &4369148591004624390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -835,15 +835,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 2006137113235349116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 146b41477efd645cd8485010078c6dfd, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bd65b8ce7f77f140b5eb69686fd7f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitButton: {fileID: 5272422502149309582}
-  tiaozhanButton: {fileID: 0}
-  LevelNameText: {fileID: 0}
-  TuiJianLevelText: {fileID: 0}
-  MonsterListContent: {fileID: 0}
-  DiaoLuoListContent: {fileID: 0}
+  whiteName: {fileID: 8397570753806673400}
+  greenName: {fileID: 7663211553976041768}
+  blueName: {fileID: 3857815263328708243}
+  purpleName: {fileID: 6069741640043265261}
+  orangeName: {fileID: 846766584140492020}
+  redName: {fileID: 5641416092824264120}
+  leftButton: {fileID: 968083578018231655}
+  rightButton: {fileID: 22594526982315077}
+  MonsterHp: {fileID: 7969120056128854779}
+  MonsterAtk: {fileID: 1794546858968035402}
+  MonsterDef: {fileID: 1827812989072624281}
+  PlayerLinhun: {fileID: 6176200481810575797}
+  PlayerEx: {fileID: 4252905886172777383}
+  PlayerBao: {fileID: 1931208218389457247}
+  jiangliEx: {fileID: 7228111202709602063}
+  jiangliLinhun: {fileID: 1075996530737771711}
+  jinCuiCount: {fileID: 5447633905852284744}
+  ExitButton: {fileID: 5272422502149309582}
 --- !u!1 &2036915305507577191
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +868,7 @@ GameObject:
   - component: {fileID: 3551887967787981538}
   - component: {fileID: 6176200481810575797}
   m_Layer: 5
-  m_Name: defense
+  m_Name: linhun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1356,7 +1368,7 @@ GameObject:
   - component: {fileID: 5147158600453901716}
   - component: {fileID: 22594526982315077}
   m_Layer: 5
-  m_Name: LeftArrow (1)
+  m_Name: RightArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1828,7 +1840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95, y: 5.1861}
+  m_AnchoredPosition: {x: 95, y: 1}
   m_SizeDelta: {x: 165.21, y: 60.3722}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9117567175400378954
@@ -3399,8 +3411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 0}
-  m_SizeDelta: {x: 71.2471, y: 50}
+  m_AnchoredPosition: {x: -29, y: 1}
+  m_SizeDelta: {x: 101.7918, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9084038952128109962
 CanvasRenderer:

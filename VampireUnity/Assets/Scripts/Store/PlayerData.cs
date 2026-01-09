@@ -30,6 +30,7 @@ public class PlayerData : XSingleton<PlayerData>
     public int heiDongWeaponLevel;
 
     public WeaponType playerWeaponType=WeaponType.Primary;
+    public MJLevel mJLevel = MJLevel.White;
 
     protected override void Awake()
     {

@@ -81,6 +81,8 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int heiDongWeaponLevel;
         
         public WeaponType playerWeaponType=WeaponType.Primary;
+        public MJLevel mJLevel = MJLevel.White;
+
 
 
         public void CopyFromRuntime(PlayerData runtime)
@@ -108,6 +110,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             heiDongWeaponLevel = runtime.heiDongWeaponLevel;
 
             playerWeaponType = runtime.playerWeaponType;
+            mJLevel = runtime.mJLevel;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -134,6 +137,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.fireWeaponLevel = fireWeaponLevel;
             runtime.heiDongWeaponLevel = heiDongWeaponLevel;
             runtime.playerWeaponType = playerWeaponType;
+            runtime.mJLevel = mJLevel;
         }
     }
     

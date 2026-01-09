@@ -64,6 +64,10 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     public Animation level14Content;
     public Animation level15Content;
 
+
+    public GameObject MJInfo;
+    public Button MJButton;
+
     
     public RectTransform rectTransform; // 当前UI的RectTransform
     private Vector2 lastMousePosition;   // 上次鼠标位置
@@ -412,7 +416,11 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
         // 初始化地图位置到中心
         InitializeMapPosition();
         
-        //initOnStart = loopScrollRect.GetComponent<InitOnStart>();
+        MJButton.onClick.AddListener(() =>
+        {
+            MJInfo.gameObject.SetActive(true);
+        });
+        
         exitButton.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);

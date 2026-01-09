@@ -398,6 +398,7 @@
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor4.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLeiPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManRing.cs" />
+    <Compile Include="Assets\Scripts\Window\MJinfo.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\FireBaoZha.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXRotation.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloak.cs" />
@@ -449,6 +450,7 @@
     <Compile Include="Assets\Scripts\Skill\IceArrow.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />
+    <Compile Include="Assets\Scripts\Config\MJConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\BagObjectBase.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\ZuiEYanZhu.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloak.cs" />
