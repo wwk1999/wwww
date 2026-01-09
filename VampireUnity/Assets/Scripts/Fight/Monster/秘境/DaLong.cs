@@ -4,9 +4,9 @@ using Equip;
 using Spine;
 using UnityEngine;
 
-public class XueQiE : MonsterBase
+public class DaLong : MonsterBase
 {
-    public XueQiE() : base(MonsterType.Normal, "XueQiE", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
+    public DaLong() : base(MonsterType.Normal, "DaLong", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
     {
     }
     public Transform attackTrans;
@@ -15,12 +15,10 @@ public class XueQiE : MonsterBase
     public void Awake()
     {
         base.Awake();
-        MonsterSpineName.AttackName = "attack1";
-        MonsterSpineName.HitName = "injured";
-        MonsterSpineName.MoveName = "move";
-        MonsterSpineName.DieName = "fail";
-        MonsterSpineName.Skill1Name = "skill1";
-
+        MonsterSpineName.AttackName = "dragon_attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "dragon_walk";
+        MonsterSpineName.DieName = "dragon_death";
     }
     public override void AddMonsterEquip()
     {

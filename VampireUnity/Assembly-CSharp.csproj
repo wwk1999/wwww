@@ -60,6 +60,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Equip\JinJIeGrid.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\DaLong.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo1.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo2.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo3.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong1.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong2.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong3.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong1.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong2.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong3.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLang.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong1.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong2.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong3.cs" />
     <Compile Include="Assets\Scripts\Fight\UI\FightExitPanel.cs" />
     <Compile Include="Assets\Scripts\Mysql\TableBase.cs" />
     <Compile Include="Assets\Scripts\Gun\GunBase.cs" />

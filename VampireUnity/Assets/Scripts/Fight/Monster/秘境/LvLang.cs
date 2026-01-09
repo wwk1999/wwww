@@ -4,9 +4,9 @@ using Equip;
 using Spine;
 using UnityEngine;
 
-public class XueQiE : MonsterBase
+public class LvLang : MonsterBase
 {
-    public XueQiE() : base(MonsterType.Normal, "XueQiE", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
+    public LvLang() : base(MonsterType.Normal, "LvLang", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
     {
     }
     public Transform attackTrans;
@@ -19,7 +19,6 @@ public class XueQiE : MonsterBase
         MonsterSpineName.HitName = "injured";
         MonsterSpineName.MoveName = "move";
         MonsterSpineName.DieName = "fail";
-        MonsterSpineName.Skill1Name = "skill1";
 
     }
     public override void AddMonsterEquip()
