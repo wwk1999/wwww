@@ -94,6 +94,7 @@ public class LvLang : MonsterBase
         }
     }
     
+    
     void Update()
     {
         if (IsDead) return;

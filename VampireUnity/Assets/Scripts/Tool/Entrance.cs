@@ -7,8 +7,10 @@ using UnityEngine.UI;
 
 public class Entrance : MonoBehaviour
 {
+    
     private void Awake()
-    { 
+    {
+            GameController.S.MonsterList = GameController.S.SelectTwoUniqueNumbers();
             GameController.S.MonsterColliderDic.Clear();
             Application.targetFrameRate = 30;
             GlobalPlayerAttribute.CurrentHp = GlobalPlayerAttribute.TotalMaxHp;
@@ -31,6 +33,85 @@ public class Entrance : MonoBehaviour
             //初始化最大boss能量值
             GameController.S.MaxBossEnergyNum = LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]*2;//这时小怪数量，精英不算数量，每10只普通怪出一只精英，所以正好是2倍
             GameController.S.MaxBossEnergyNum = 10;
+            
+            
+            //秘境怪物
+            foreach (int item in GameController.S.MonsterList)
+            {
+                switch (item)
+                {
+                    case 1:
+                        var Monster1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),GameController.S.transform);
+                        Monster1.gameObject.SetActive(false);
+                        GameController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
+                        break;
+                    case 2:
+                        var Monster2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo1").GetComponent<EMo1>(),GameController.S.transform);
+                        Monster2.gameObject.SetActive(false);
+                        GameController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
+                        break;
+                    case 3:
+                        var Monster3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo2").GetComponent<EMo2>(),GameController.S.transform);
+                        Monster3.gameObject.SetActive(false);
+                        GameController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
+                        break;
+                    case 4:
+                        var Monster4 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo3").GetComponent<EMo3>(),GameController.S.transform);
+                        Monster4.gameObject.SetActive(false);
+                        GameController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
+                        break;
+                    case 5:
+                        var Monster5 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1").GetComponent<HongLong1>(),GameController.S.transform);
+                        Monster5.gameObject.SetActive(false);
+                        GameController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
+                        break;
+                    case 6:
+                        var Monster6 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2").GetComponent<HongLong2>(),GameController.S.transform);
+                        Monster6.gameObject.SetActive(false);
+                        GameController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
+                        break;
+                    case 7:
+                        var Monster7 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3").GetComponent<HongLong3>(),GameController.S.transform);
+                        Monster7.gameObject.SetActive(false);
+                        GameController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
+                        break;
+                    case 8:
+                        var Monster8 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong1").GetComponent<LanLong1>(),GameController.S.transform);
+                        Monster8.gameObject.SetActive(false);
+                        GameController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
+                        break;
+                    case 9:
+                        var Monster9 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong2").GetComponent<LanLong2>(),GameController.S.transform);
+                        Monster9.gameObject.SetActive(false);
+                        GameController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
+                        break;
+                    case 10:
+                        var Monster10 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),GameController.S.transform);
+                        Monster10.gameObject.SetActive(false);
+                        GameController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
+                        break;
+                    case 11:
+                        var Monster11 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLang").GetComponent<LvLang>(),GameController.S.transform);
+                        Monster11.gameObject.SetActive(false);
+                        GameController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
+                        break;
+                    case 12:
+                        var Monster12 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong1").GetComponent<LvLong1>(),GameController.S.transform);
+                        Monster12.gameObject.SetActive(false);
+                        GameController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
+                        break;
+                    case 13:
+                        var Monster13 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong2").GetComponent<LvLong2>(),GameController.S.transform);
+                        Monster13.gameObject.SetActive(false);
+                        GameController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
+                        break;
+                    case 14:
+                        var Monster14 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),GameController.S.transform);
+                        Monster14.gameObject.SetActive(false);
+                        GameController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
+                        break;
+                }
+            }
 
     //实例化
         //FightBGController
@@ -716,9 +797,7 @@ public class Entrance : MonoBehaviour
         {
             for (int i = 0; i < 100; i++)
             {
-                var snotMonster =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level1/SnotMonster").GetComponent<SnotMonster>(),
-                        GameController.S.transform);
+                var snotMonster = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level1/SnotMonster").GetComponent<SnotMonster>(),GameController.S.transform);
                 snotMonster.gameObject.SetActive(false);
                 GameController.S.SnotMonsterQueue.Enqueue(snotMonster.GetComponent<SnotMonster>());
 

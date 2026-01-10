@@ -13,6 +13,8 @@ using Random = UnityEngine.Random;
 
 public class GameController : XSingleton<GameController>
 {
+    
+    [NonSerialized] public int[] MonsterList = new int[2];
     [NonSerialized] public float GameMaxHp = 0;
     [NonSerialized] public float GameCurrentHp = 0;
     [NonSerialized] public float GameDefense = 0;
@@ -117,10 +119,24 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<XueRen> XueRenQueue = new Queue<XueRen>();
     [NonSerialized] public Queue<XueRenJian> XueRenJianQueue = new Queue<XueRenJian>();
     [NonSerialized] public Queue<XueRenBossSkill1> XueRenBossSkill1Queue = new Queue<XueRenBossSkill1>();
-
-
-
     [NonSerialized] public Queue<YingShu> YingShuQueue = new Queue<YingShu>();
+    
+    //秘境怪物
+    [NonSerialized] public Queue<DaLong> DaLongQueue = new Queue<DaLong>();
+    [NonSerialized] public Queue<EMo1> EMo1Queue = new Queue<EMo1>();
+    [NonSerialized] public Queue<EMo2> EMo2Queue = new Queue<EMo2>();
+    [NonSerialized] public Queue<EMo3> EMo3Queue = new Queue<EMo3>();
+    [NonSerialized] public Queue<HongLong1> HongLong1Queue = new Queue<HongLong1>();
+    [NonSerialized] public Queue<HongLong2> HongLong2Queue = new Queue<HongLong2>();
+    [NonSerialized] public Queue<HongLong3> HongLong3Queue = new Queue<HongLong3>();
+    [NonSerialized] public Queue<LanLong1> LanLong1Queue = new Queue<LanLong1>();
+    [NonSerialized] public Queue<LanLong2> LanLong2Queue = new Queue<LanLong2>();
+    [NonSerialized] public Queue<LanLong3> LanLong3Queue = new Queue<LanLong3>();
+    [NonSerialized] public Queue<LvLang> LvLangQueue = new Queue<LvLang>();
+    [NonSerialized] public Queue<LvLong1> LvLong1Queue = new Queue<LvLong1>();
+    [NonSerialized] public Queue<LvLong2> LvLong2Queue = new Queue<LvLong2>();
+    [NonSerialized] public Queue<LvLong3> LvLong3Queue = new Queue<LvLong3>();
+
 
     
     
@@ -756,16 +772,22 @@ public class GameController : XSingleton<GameController>
         RegisterEvent();
         GameOver = false;
         var _ = SkillController.S;//激活SkillController
-        
-        
-        
-        
-        //实例化UI
-        // Instantiate(Resources.Load<GameObject>("Prefabs/UI/RoleInfoFight"), transform);
-        
-        
     }
 
+    public int[] SelectTwoUniqueNumbers()
+    {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 ,10,11,12,13,14};
+        int[] selected = new int[2];
+        
+        for (int i = 0; i < 2; i++)
+        {
+            int randomIndex = Random.Range(0, numbers.Count);
+            selected[i] = numbers[randomIndex];
+            numbers.RemoveAt(randomIndex);
+        }
+        
+        return selected;
+    }
     private void Start()
     {
         KillMonsterCount = 0;
@@ -810,6 +832,7 @@ public class GameController : XSingleton<GameController>
                     break;
             }
         }
+        
         
         //赋值
         FightBGController.S.WeaponButton= fightBG.GetComponent<FightBg>().weaponButton;
@@ -1278,6 +1301,56 @@ public class GameController : XSingleton<GameController>
             else
             {
                 return;
+            }
+        }else if (LevelInfoConfig.CurrentGameLevel > 15)
+        {
+            var random=new System.Random();
+            int index=random.Next(0,2);
+            int i = MonsterList[index];
+            switch (i)
+            {
+                case 1:
+                    monsterBase = DaLongQueue.Dequeue();
+                    break;
+                case 2:
+                    monsterBase = EMo1Queue.Dequeue();
+                    break;
+                case 3:
+                    monsterBase = EMo2Queue.Dequeue();
+                    break;
+                case 4:
+                    monsterBase = EMo3Queue.Dequeue();
+                    break;
+                case 5:
+                    monsterBase = HongLong1Queue.Dequeue();
+                    break;
+                case 6:
+                    monsterBase = HongLong2Queue.Dequeue();
+                    break;
+                case 7:
+                    monsterBase = HongLong3Queue.Dequeue();
+                    break;
+                case 8:
+                    monsterBase = LanLong1Queue.Dequeue();
+                    break;
+                case 9:
+                    monsterBase = LanLong2Queue.Dequeue();
+                    break;
+                case 10:
+                    monsterBase = LanLong3Queue.Dequeue();
+                    break;
+                case 11:
+                    monsterBase = LvLangQueue.Dequeue();
+                    break;
+                case 12:
+                    monsterBase = LvLong1Queue.Dequeue();
+                    break;
+                case 13:
+                    monsterBase = LvLong2Queue.Dequeue();
+                    break;
+                case 14:
+                    monsterBase = LvLong3Queue.Dequeue();
+                    break;
             }
         }
 
