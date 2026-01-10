@@ -87,7 +87,7 @@ public class LvLang : MonsterBase
     {
         if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.6f)
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.5f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.5f)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
@@ -98,12 +98,14 @@ public class LvLang : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.6f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.5f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.5f)
         {
+            monsterSkeletonAnimation.timeScale = 1.5f;
             isAttack=true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1.4f;
             isAttack=false;
         }
         

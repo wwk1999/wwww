@@ -86,9 +86,9 @@ public class HongLong2 : MonsterBase
     
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
+        if (e.Data.Name == "attack"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.6f)
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.5f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position)<0.5f)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
@@ -99,12 +99,14 @@ public class HongLong2 : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.6f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.5f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position)<0.5f)
         {
+            monsterSkeletonAnimation.timeScale = 2;
             isAttack=true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1.5f;
             isAttack=false;
         }
         

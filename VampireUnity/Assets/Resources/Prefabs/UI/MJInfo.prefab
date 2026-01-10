@@ -855,6 +855,9 @@ MonoBehaviour:
   jiangliEx: {fileID: 7228111202709602063}
   jiangliLinhun: {fileID: 1075996530737771711}
   jinCuiCount: {fileID: 5447633905852284744}
+  MonsterName: {fileID: 428541019784169953}
+  PlayerName: {fileID: 7179073320414609195}
+  TiaoZhanButton: {fileID: 764052251637050212}
   ExitButton: {fileID: 5272422502149309582}
 --- !u!1 &2036915305507577191
 GameObject:

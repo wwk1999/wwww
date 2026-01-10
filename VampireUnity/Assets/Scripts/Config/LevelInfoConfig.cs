@@ -92,13 +92,39 @@ public class LevelInfoConfig
         LevelMonsterCount[12] = 100;
         LevelMonsterCount[13] = 100;
         LevelMonsterCount[14] = 100;
-        LevelMonsterCount[15] = 10;
-        LevelMonsterCount[16] = 100;
-        LevelMonsterCount[17] = 100;
-        LevelMonsterCount[18] = 100;
-        LevelMonsterCount[19] = 100;
-        LevelMonsterCount[20] = 100;
-        LevelMonsterCount[21] = 100;
+        LevelMonsterCount[15] = 100;
+        LevelMonsterCount[16] = 110;
+        LevelMonsterCount[17] = 120;
+        LevelMonsterCount[18] = 130;
+        LevelMonsterCount[19] = 140;
+        LevelMonsterCount[20] = 150;
+        LevelMonsterCount[21] = 160;
+        
+        LevelMonsterCount[22] = 170;
+        LevelMonsterCount[23] = 180;
+        LevelMonsterCount[24] = 190;
+        LevelMonsterCount[25] = 200;
+        LevelMonsterCount[26] = 210;
+        LevelMonsterCount[27] = 220;
+        LevelMonsterCount[28] = 230;
+        LevelMonsterCount[29] = 240;
+        LevelMonsterCount[30] = 250;
+        LevelMonsterCount[31] = 260;
+        LevelMonsterCount[32] = 270;
+        LevelMonsterCount[33] = 280;
+        LevelMonsterCount[34] = 290;
+        LevelMonsterCount[35] = 300;
+        LevelMonsterCount[36] = 300;
+        LevelMonsterCount[37] = 300;
+        LevelMonsterCount[38] = 300;
+        LevelMonsterCount[39] = 300;
+        LevelMonsterCount[40] = 300;
+        LevelMonsterCount[41] = 300;
+        LevelMonsterCount[42] = 300;
+        LevelMonsterCount[43] = 300;
+        LevelMonsterCount[44] = 300;
+        LevelMonsterCount[45] = 300;
+        LevelMonsterCount[46] = 300;
         
         
         if (IsOneGame)

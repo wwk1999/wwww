@@ -769,6 +769,7 @@ public class GameController : XSingleton<GameController>
     private void Start()
     {
         KillMonsterCount = 0;
+        //初始化地图
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 ||
             LevelInfoConfig.CurrentGameLevel == 3)
         {
@@ -794,7 +795,21 @@ public class GameController : XSingleton<GameController>
         {
             transform.Find("FightBG(Clone)/Level5").gameObject.SetActive(true);
         }
-        
+
+        if (LevelInfoConfig.CurrentGameLevel > 15)
+        {
+            var random = new System.Random();
+            var index= random.Next(1, 3);
+            switch (index)
+            {
+                case 1:
+                    transform.Find("FightBG(Clone)/MiJing1").gameObject.SetActive(true);
+                    break;
+                case 2:
+                    transform.Find("FightBG(Clone)/MiJing2").gameObject.SetActive(true);
+                    break;
+            }
+        }
         
         //赋值
         FightBGController.S.WeaponButton= fightBG.GetComponent<FightBg>().weaponButton;

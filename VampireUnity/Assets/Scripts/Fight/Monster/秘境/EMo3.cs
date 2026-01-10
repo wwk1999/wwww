@@ -84,9 +84,9 @@ public class EMo3 : MonsterBase
     
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
+        if (e.Data.Name == "attack"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.6f)
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.7f)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
@@ -97,13 +97,15 @@ public class EMo3 : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.6f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.7f)
         {
             isAttack=true;
+            monsterSkeletonAnimation.timeScale = 1.5f;
         }
         else
         {
             isAttack=false;
+            monsterSkeletonAnimation.timeScale = 1f;
         }
         
         if (!IsDead)
