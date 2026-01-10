@@ -86,7 +86,7 @@ public class EMo3 : MonsterBase
     {
         if (e.Data.Name == "attack"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.7f)
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 1.2f)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
@@ -97,7 +97,7 @@ public class EMo3 : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.7f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <1.2f)
         {
             isAttack=true;
             monsterSkeletonAnimation.timeScale = 1.5f;
@@ -111,7 +111,7 @@ public class EMo3 : MonsterBase
         if (!IsDead)
         {
             MonsterMove();
-            SpriteFlipX(false);
+            SpriteFlipX(true);
         }
     }
 }

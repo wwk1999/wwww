@@ -38,78 +38,148 @@ public class Entrance : MonoBehaviour
             //秘境怪物
             foreach (int item in GameController.S.MonsterList)
             {
-                switch (item)
+                for (int i = 0; i < 200; i++)
                 {
-                    case 1:
-                        var Monster1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),GameController.S.transform);
-                        Monster1.gameObject.SetActive(false);
-                        GameController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
-                        break;
-                    case 2:
-                        var Monster2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo1").GetComponent<EMo1>(),GameController.S.transform);
-                        Monster2.gameObject.SetActive(false);
-                        GameController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
-                        break;
-                    case 3:
-                        var Monster3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo2").GetComponent<EMo2>(),GameController.S.transform);
-                        Monster3.gameObject.SetActive(false);
-                        GameController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
-                        break;
-                    case 4:
-                        var Monster4 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo3").GetComponent<EMo3>(),GameController.S.transform);
-                        Monster4.gameObject.SetActive(false);
-                        GameController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
-                        break;
-                    case 5:
-                        var Monster5 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1").GetComponent<HongLong1>(),GameController.S.transform);
-                        Monster5.gameObject.SetActive(false);
-                        GameController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
-                        break;
-                    case 6:
-                        var Monster6 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2").GetComponent<HongLong2>(),GameController.S.transform);
-                        Monster6.gameObject.SetActive(false);
-                        GameController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
-                        break;
-                    case 7:
-                        var Monster7 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3").GetComponent<HongLong3>(),GameController.S.transform);
-                        Monster7.gameObject.SetActive(false);
-                        GameController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
-                        break;
-                    case 8:
-                        var Monster8 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong1").GetComponent<LanLong1>(),GameController.S.transform);
-                        Monster8.gameObject.SetActive(false);
-                        GameController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
-                        break;
-                    case 9:
-                        var Monster9 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong2").GetComponent<LanLong2>(),GameController.S.transform);
-                        Monster9.gameObject.SetActive(false);
-                        GameController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
-                        break;
-                    case 10:
-                        var Monster10 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),GameController.S.transform);
-                        Monster10.gameObject.SetActive(false);
-                        GameController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
-                        break;
-                    case 11:
-                        var Monster11 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLang").GetComponent<LvLang>(),GameController.S.transform);
-                        Monster11.gameObject.SetActive(false);
-                        GameController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
-                        break;
-                    case 12:
-                        var Monster12 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong1").GetComponent<LvLong1>(),GameController.S.transform);
-                        Monster12.gameObject.SetActive(false);
-                        GameController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
-                        break;
-                    case 13:
-                        var Monster13 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong2").GetComponent<LvLong2>(),GameController.S.transform);
-                        Monster13.gameObject.SetActive(false);
-                        GameController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
-                        break;
-                    case 14:
-                        var Monster14 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),GameController.S.transform);
-                        Monster14.gameObject.SetActive(false);
-                        GameController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
-                        break;
+                    switch (item)
+                    {
+                        case 1:
+                            var Monster1 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),
+                                    GameController.S.transform);
+                            Monster1.gameObject.SetActive(false);
+                            GameController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
+                            Collider2D collider2D=Monster1.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D,Monster1.GetComponent<MonsterBase>());
+                            break;
+                        case 2:
+                            var Monster2 =
+                                Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo1").GetComponent<EMo1>(),
+                                    GameController.S.transform);
+                            Monster2.gameObject.SetActive(false);
+                            GameController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
+                            Collider2D collider2D2=Monster2.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D2,Monster2.GetComponent<MonsterBase>());
+                            break;
+                        case 3:
+                            var Monster3 =
+                                Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo2").GetComponent<EMo2>(),
+                                    GameController.S.transform);
+                            Monster3.gameObject.SetActive(false);
+                            GameController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
+                            Collider2D collider2D3=Monster3.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D3,Monster3.GetComponent<MonsterBase>());
+                            break;
+                        case 4:
+                            var Monster4 =
+                                Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo3").GetComponent<EMo3>(),
+                                    GameController.S.transform);
+                            Monster4.gameObject.SetActive(false);
+                            GameController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
+                            Collider2D collider2D4=Monster4.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D4,Monster4.GetComponent<MonsterBase>());
+                            break;
+                        case 5:
+                            var Monster5 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1")
+                                        .GetComponent<HongLong1>(), GameController.S.transform);
+                            Monster5.gameObject.SetActive(false);
+                            GameController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
+                            Collider2D collider2D5=Monster5.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D5,Monster5.GetComponent<MonsterBase>());
+                            break;
+                        case 6:
+                            var Monster6 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2")
+                                        .GetComponent<HongLong2>(), GameController.S.transform);
+                            Monster6.gameObject.SetActive(false);
+                            GameController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
+                            Collider2D collider2D6=Monster6.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D6,Monster6.GetComponent<MonsterBase>());
+                            break;
+                        case 7:
+                            var Monster7 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3")
+                                        .GetComponent<HongLong3>(), GameController.S.transform);
+                            Monster7.gameObject.SetActive(false);
+                            GameController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
+                            Collider2D collider2D7=Monster7.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D7,Monster7.GetComponent<MonsterBase>());
+                            break;
+                        case 8:
+                            var Monster8 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong1").GetComponent<LanLong1>(),
+                                    GameController.S.transform);
+                            Monster8.gameObject.SetActive(false);
+                            GameController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
+                            Collider2D collider2D8=Monster8.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D8,Monster8.GetComponent<MonsterBase>());
+                            break;
+                        case 9:
+                            var Monster9 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong2").GetComponent<LanLong2>(),
+                                    GameController.S.transform);
+                            Monster9.gameObject.SetActive(false);
+                            GameController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
+                            Collider2D collider2D9=Monster9.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D9,Monster9.GetComponent<MonsterBase>());
+                            break;
+                        case 10:
+                            var Monster10 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),
+                                    GameController.S.transform);
+                            Monster10.gameObject.SetActive(false);
+                            GameController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
+                            Collider2D collider2D10=Monster10.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D10,Monster10.GetComponent<MonsterBase>());
+                            break;
+                        case 11:
+                            var Monster11 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLang").GetComponent<LvLang>(),
+                                    GameController.S.transform);
+                            Monster11.gameObject.SetActive(false);
+                            GameController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
+                            Collider2D collider2D11=Monster11.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D11,Monster11.GetComponent<MonsterBase>());
+                            break;
+                        case 12:
+                            var Monster12 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong1").GetComponent<LvLong1>(),
+                                    GameController.S.transform);
+                            Monster12.gameObject.SetActive(false);
+                            GameController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
+                            Collider2D collider2D12=Monster12.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D12,Monster12.GetComponent<MonsterBase>());
+                            break;
+                        case 13:
+                            var Monster13 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong2").GetComponent<LvLong2>(),
+                                    GameController.S.transform);
+                            Monster13.gameObject.SetActive(false);
+                            GameController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
+                            Collider2D collider2D13=Monster13.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D13,Monster13.GetComponent<MonsterBase>());
+                            break;
+                        case 14:
+                            var Monster14 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),
+                                    GameController.S.transform);
+                            Monster14.gameObject.SetActive(false);
+                            GameController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
+                            Collider2D collider2D14=Monster14.transform.Find("Collider").GetComponent<Collider2D>();
+                            GameController.S.MonsterColliderDic.Add(collider2D14,Monster14.GetComponent<MonsterBase>());
+                            break;
+                    }
                 }
             }
 

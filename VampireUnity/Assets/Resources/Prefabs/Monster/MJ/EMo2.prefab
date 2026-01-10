@@ -1181,6 +1181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6653453527178096557}
   - component: {fileID: 1550242213392908826}
+  - component: {fileID: 7493966942052883993}
   m_Layer: 6
   m_Name: EMo2
   m_TagString: Monster
@@ -1198,7 +1199,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5668160321000377178}
@@ -1233,6 +1234,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7493966942052883993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698013273616362365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346b09fcfd8f4582a193d7c1942269d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  du: {fileID: 8059532762764831019}
+  jiansu: {fileID: 5432680207564801476}
+  hpSliderCanvas: {fileID: 8518212361908229511}
+  meshRenderer: {fileID: 4167793254909542039}
+  parent: {fileID: 5860166997824884356}
+  size: 0
+  monsterSkeletonAnimation: {fileID: 453220666297556707}
+  hpSlider: {fileID: 1128351686178558827}
+  collider2D: {fileID: 1119371393336926460}
+  rigidbody2D: {fileID: 1550242213392908826}
+  attackTrans: {fileID: 5189471751596021331}
 --- !u!1 &8827929175875591702
 GameObject:
   m_ObjectHideFlags: 0

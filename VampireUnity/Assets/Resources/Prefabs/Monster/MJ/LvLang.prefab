@@ -547,7 +547,7 @@ Transform:
   m_GameObject: {fileID: 2888489255581601816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.414, y: 0.407, z: 0}
+  m_LocalPosition: {x: -0.479, y: 0.482, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -589,7 +589,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00042445172, y: 0}
+  m_AnchoredPosition: {x: -0.00012559771, y: 0.00030899048}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5221046835508565155
@@ -642,6 +642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2651970368488167740}
   - component: {fileID: 3722790683620161398}
+  - component: {fileID: 4277762235124705788}
   m_Layer: 6
   m_Name: LvLang
   m_TagString: Monster
@@ -659,7 +660,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3912322523050485411}
@@ -694,6 +695,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4277762235124705788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4583143042422629376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31035d4e146d4c69bcce6e72914695d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  du: {fileID: 7080132142740435212}
+  jiansu: {fileID: 5362262084622000638}
+  hpSliderCanvas: {fileID: 7097020737148534896}
+  meshRenderer: {fileID: 817559188779191513}
+  parent: {fileID: 2419830093802022402}
+  size: 0
+  monsterSkeletonAnimation: {fileID: 6237071707622298289}
+  hpSlider: {fileID: 5828657918247031309}
+  collider2D: {fileID: 5124622669535811391}
+  rigidbody2D: {fileID: 3722790683620161398}
+  attackTrans: {fileID: 1909255781954889}
 --- !u!1 &5055330101625853050
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class LvLong3 : MonsterBase
     public void Awake()
     {
         base.Awake();
-        MonsterSpineName.AttackName = "dragon_Spatk_1";
+        MonsterSpineName.AttackName = "dragon_atk_1";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "dragon_walk";
         MonsterSpineName.DieName = "die";
@@ -86,7 +86,7 @@ public class LvLong3 : MonsterBase
     {
         if (e.Data.Name == "attack"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.AttackName)
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.7f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.5f)
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 1.2f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.9f)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
@@ -97,7 +97,7 @@ public class LvLong3 : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.7f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.5f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 1.2f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.9f)
         {
             monsterSkeletonAnimation.timeScale = 1.3f;
             isAttack=true;
@@ -111,7 +111,7 @@ public class LvLong3 : MonsterBase
         if (!IsDead)
         {
             MonsterMove();
-            SpriteFlipX(false);
+            SpriteFlipX(true);
         }
     }
 }

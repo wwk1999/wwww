@@ -87,7 +87,7 @@ public class HongLong3 : MonsterBase
     {
         if (e.Data.Name == "attack"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.5f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position)<0.5f)
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.9f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position)<0.9f)
             {
                 GameController.S.gamePlayer.PlayerHurt(Attack,false);
             }
@@ -98,7 +98,7 @@ public class HongLong3 : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.5f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position)<0.5f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.9f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position)<0.9f)
         {
             monsterSkeletonAnimation.timeScale = 2;
             isAttack=true;
@@ -112,7 +112,7 @@ public class HongLong3 : MonsterBase
         if (!IsDead)
         {
             MonsterMove();
-            SpriteFlipX(false);
+            SpriteFlipX(true);
         }
     }
 }

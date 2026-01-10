@@ -250,6 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3438654264109310449}
   - component: {fileID: 4806908363958112730}
+  - component: {fileID: 6257898938279876805}
   m_Layer: 6
   m_Name: LvLong2
   m_TagString: Monster
@@ -267,7 +268,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3784490431062683573}
@@ -302,6 +303,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6257898938279876805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443825504476141901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5464944d25042089ce93a59d2de7e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  du: {fileID: 4064000295927657899}
+  jiansu: {fileID: 932297282889635348}
+  hpSliderCanvas: {fileID: 1777314599336903}
+  meshRenderer: {fileID: 5679649649985374930}
+  parent: {fileID: 2944757887757225771}
+  size: 0
+  monsterSkeletonAnimation: {fileID: 7861250455656580788}
+  hpSlider: {fileID: 8438451755128230384}
+  collider2D: {fileID: 4955170687081105955}
+  rigidbody2D: {fileID: 4806908363958112730}
+  attackTrans: {fileID: 1435151579446005644}
 --- !u!1 &1942262813846973471
 GameObject:
   m_ObjectHideFlags: 0
