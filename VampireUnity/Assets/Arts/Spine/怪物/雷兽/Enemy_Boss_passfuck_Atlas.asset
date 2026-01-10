@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: Enemy_Boss_passfuck_Atlas
+  m_EditorClassIdentifier: 
+  serializedMaterialOverrides: []
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 83ab538c63b56fa4aad5757c1e8dffa8, type: 3}
+  materials:
+  - {fileID: 2100000, guid: e9130e4f0e0374744bb2814cc5bbbf30, type: 2}
+  - {fileID: 2100000, guid: 670c3d853f906ba4fa4b1f1cdb60d280, type: 2}
+  - {fileID: 2100000, guid: 4fb144114639726498f2a654f5b70a9a, type: 2}
+  - {fileID: 2100000, guid: d9a7c3c3e782aab46b28cd6c00ce9486, type: 2}
+  - {fileID: 2100000, guid: 7dc992004e6f13f41b2ebe2f313c9c8b, type: 2}
+  - {fileID: 2100000, guid: 8b28e83e19f00a74da16d1fb3ad5555a, type: 2}
+  - {fileID: 2100000, guid: 2dc9ccf17258ef3458b26b4cd5006d32, type: 2}
+  - {fileID: 2100000, guid: f19fce8e2a3b22f429e1673d09dd3a2f, type: 2}
+  - {fileID: 2100000, guid: e1cdb5b01c29c3b419339cd8c93cc2b9, type: 2}
+  - {fileID: 2100000, guid: 2271cd0126c9555488f2ba51a557813b, type: 2}
+  - {fileID: 2100000, guid: 6d7f10f85ab0adf40ac3b468e0f62311, type: 2}
+  - {fileID: 2100000, guid: c59e03190652ead4088c91813a493c8a, type: 2}
+  - {fileID: 2100000, guid: 01ce37851da13f641b5e6f01ca9be447, type: 2}

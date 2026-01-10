@@ -553,6 +553,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\bee技能\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\Arts\Spine\技能\火山boss技能\action.json" />
+    <None Include="Assets\Arts\Spine\怪物\雷兽\Enemy_Boss_passfuck.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\IceEx\action.json" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationConfig.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\FireDan\action.json" />
@@ -636,6 +637,7 @@
     <None Include="Assets\Arts\Spine\技能\ZiZha\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaChong\shamochong.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.shadergraph@14.0.12\ValidationConfig.json" />
+    <None Include="Assets\Arts\Spine\怪物\喷黑火打包\skeleton.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\技能\DianPeng\action.json" />
     <None Include="Assets\Arts\Spine\技能\1225\喷火\skeleton.json" />
@@ -810,6 +812,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Arts\Spine\怪物\DALONG打包\dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\主角受伤\1209112.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\喷黑火打包\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.json" />
     <None Include="Assets\Arts\Spine\第三关\食人花\shirenhua.json" />
@@ -854,6 +857,7 @@
     <None Include="Assets\Arts\Spine\第三关\甲虫\jiachong.json" />
     <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Arts\Spine\怪物\雷兽\Enemy_Boss_passfuck.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空peng\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\蓝冲天激光\skeleton.json" />
