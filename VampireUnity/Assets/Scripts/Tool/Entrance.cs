@@ -64,6 +64,13 @@ public class Entrance : MonoBehaviour
                             GameController.S.transform);
                     Monster4.gameObject.SetActive(false);
                     GameController.S.LvXuanFenQueue.Enqueue(Monster4.GetComponent<LvXuanFen>());
+                    
+                    var Monster5 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/BaoZiSkill2").GetComponent<BaoZiSkill2>(),
+                            GameController.S.transform);
+                    Monster5.gameObject.SetActive(false);
+                    GameController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
                 }
             }
             

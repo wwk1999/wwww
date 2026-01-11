@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Equip;
 using Fight.Monster.秘境.盔甲boss;
+using Fight.Monster.秘境.豹子;
 using Fight.Monster.秘境.雷兽;
 using Mysql;
 using Spine.Unity;
@@ -143,6 +144,8 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<HeiXuanFen> HeiXuanFenQueue = new Queue<HeiXuanFen>();
     [NonSerialized] public Queue<LvZhuiZong> LvZhuiZongQueue = new Queue<LvZhuiZong>();
     [NonSerialized] public Queue<LvXuanFen> LvXuanFenQueue = new Queue<LvXuanFen>();
+    [NonSerialized] public Queue<BaoZiSkill2> BaoZiSkill2Queue = new Queue<BaoZiSkill2>();
+
 
 
 
@@ -1032,7 +1035,7 @@ public class GameController : XSingleton<GameController>
 
         if (LevelInfoConfig.CurrentGameLevel > 15)
         {
-            var random=Random.Range(2,3);
+            var random=Random.Range(3,4);
             
             switch (random)
             {
@@ -1058,6 +1061,19 @@ public class GameController : XSingleton<GameController>
                     KuiJiaBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     MonsterColliderDic.Add(KuiJiaBoss.collider2D,KuiJiaBoss);
                     KuiJiaBoss.meshRenderer.sortingOrder = 3000;
+                    break;
+                
+                case 3:
+                    BaoZiBoss BaoZiBoss = Instantiate(Resources.Load<BaoZiBoss>("Prefabs/Monster/MJ/BaoZi/BaoZiBoss"));
+                    BaoZiBoss.gameObject.SetActive(true);
+                    BaoZiBoss.IsSkill = true;
+                    BaoZiBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk2 = BaoZiBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk2.AnimationState.SetAnimation(0,"skill1",false);
+                    BaoZiBoss.BaoZiSkillType = BaoZiSkillType.ChuChang;
+                    BaoZiBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    MonsterColliderDic.Add(BaoZiBoss.collider2D,BaoZiBoss);
+                    BaoZiBoss.meshRenderer.sortingOrder = 3000;
                     break;
             }
         }
