@@ -15,8 +15,8 @@ namespace Fight.Monster.秘境.雷兽
     
         public Transform attackTrans;
         private float skill1Time = 5;
-        private float skill2Time = 55;
-        private float skill3Time = 85;
+        private float skill2Time = 10;
+        private float skill3Time = 8;
         private float currentSkill1Time = 0;
         private float currentSkill2Time = 0;
         private float currentSkill3Time = 0;
@@ -47,13 +47,51 @@ namespace Fight.Monster.秘境.雷兽
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         skill1parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         skill1parent.transform.localScale=parent.transform.localScale;
-        skill1ske.AnimationState.SetAnimation(0, "animation", false);
-        skill1ske.timeScale = 2f;
+        skill1ske.AnimationState.SetAnimation(0, "heihuo", false);
+        skill1ske.timeScale = 2.2f;
     }
 
     public void Skill1Complete(TrackEntry trackEntry)
     {
         skill1.gameObject.SetActive(false);
+    }
+
+    IEnumerator Skill3(float delay,Vector2 spawnPos)
+    {
+         GameController.S.CreateCircleAttack(spawnPos,1f);
+         yield return new WaitForSeconds(delay);
+         LeiShouSkill3 huoyan=GameController.S.LeiShouSkill3Queue.Dequeue();
+         huoyan.transform.position = spawnPos;
+         huoyan.damage = Attack;
+         huoyan.gameObject.SetActive(true);
+    }
+    
+    private IEnumerator Skill3Coroutine(float delay,Vector2 pos, float dis, float time, int count)
+    {
+        yield return  new WaitForSeconds(delay);
+        for (int i = 0; i < count; i++)
+        {
+            // 随机点：Random.insideUnitCircle 返回单位圆内随机点，乘以 dis 后移到指定半径范围
+            Vector2 randomOffset = Random.insideUnitCircle * dis;
+            Vector2 spawnPos = pos + randomOffset;
+            StartCoroutine(Skill3(0.5f,spawnPos));
+            if (time > 0f)
+                yield return new WaitForSeconds(time);
+            else
+                yield return null;
+        }
+    }
+    
+
+    IEnumerator ShunYiNext()
+    {
+        yield return new WaitForSeconds(2f);
+        var pos = GameController.S.gamePlayer.transform.position;
+        GameController.S.CreateCircleAttack(pos,1);
+        yield return new WaitForSeconds(0.5f);
+        transform.position = pos;
+        collider2D.tag = "Boss";
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill5", false);
     }
     
      public void Complete(TrackEntry trackEntry)
@@ -62,6 +100,13 @@ namespace Fight.Monster.秘境.雷兽
         if (trackEntry.Animation.Name == "chuchang"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill5")
         {
             IsSkill=false;
+        }
+
+        if (trackEntry.Animation.Name == "skill4")
+        {
+            collider2D.tag = "Bullet";
+            StartCoroutine(ShunYiNext());
+            return;
         }
         
         if (isSkill1)
@@ -75,16 +120,16 @@ namespace Fight.Monster.秘境.雷兽
         {
             IsSkill=true;
             isSkill2=false;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
-            monsterSkeletonAnimation.timeScale = 1.2f;
-            
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill4", false);
+            monsterSkeletonAnimation.timeScale = 1f;
         }
         else if(isSkill3)
         {
             IsSkill=true;
             isSkill3=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.timeScale = 2f;
+            StartCoroutine(Skill3Coroutine(1f,transform.position,8f,0.3f,25));
         }
         else if(isAttack)
         {
@@ -197,6 +242,22 @@ namespace Fight.Monster.秘境.雷兽
     }
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
+        if (e.Data.Name == "lightning")
+        {
+            LeiShouShunYi light=Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/LeiShou/LeiShouShunYi")).GetComponent<LeiShouShunYi>();
+            light.damage = Attack;
+            light.transform.position = transform.position;
+            light.gameObject.SetActive(true);
+        }
+
+        if (e.Data.Name == "draw" && trackEntry.Animation.Name == "attack1")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size ||
+                Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.5f)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            }
+        }
     }
     
     
@@ -262,13 +323,25 @@ namespace Fight.Monster.秘境.雷兽
     {
         if (IsDead) return;
         base.Update();
-        currentSkill1Time+=Time.deltaTime;
-        currentSkill2Time+=Time.deltaTime;
-        currentSkill3Time+=Time.deltaTime;
+        if (!IsSkill)
+        {
+            currentSkill1Time += Time.deltaTime;
+            currentSkill2Time += Time.deltaTime;
+            currentSkill3Time += Time.deltaTime;
+        }
+
         if (currentSkill1Time > skill1Time)
         {
-            currentSkill1Time = 0;
-            isSkill1 = true;
+            if (parent.transform.localScale.x > 0&&transform.position.x-GameController.S.gamePlayer.transform.position.x>1)
+            {
+                currentSkill1Time = 0;
+                isSkill1 = true;
+            }
+            if (parent.transform.localScale.x < 0&&GameController.S.gamePlayer.transform.position.x-transform.position.x>1)
+            {
+                currentSkill1Time = 0;
+                isSkill1 = true;
+            }
         }
         
         if (currentSkill2Time > skill2Time)
