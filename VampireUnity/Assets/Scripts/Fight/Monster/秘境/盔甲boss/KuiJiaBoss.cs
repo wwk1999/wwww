@@ -21,12 +21,14 @@ namespace Fight.Monster.秘境.盔甲boss
         }
 
         public Transform attackTrans;
-        private float skill1Time = 5;
-        private float skill2Time = 100;
+        private float skill1Time = 500;
+        private float skill2Time = 5;
         private float skill3Time = 80;
         private float currentSkill1Time = 0;
         private float currentSkill2Time = 0;
         private float currentSkill3Time = 0;
+        public GameObject hudun;
+        public Animator hudunAnimator;
         [NonSerialized] public KuiJiaSkillType KuiJiaSkillType = KuiJiaSkillType.None;
 
         public void Awake()
@@ -61,7 +63,8 @@ namespace Fight.Monster.秘境.盔甲boss
                 IsSkill = true;
                 isSkill2 = false;
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
-                monsterSkeletonAnimation.timeScale = 1f;
+                KuiJiaSkillType = KuiJiaSkillType.HuDun;
+                monsterSkeletonAnimation.timeScale = 1.2f;
             }
             else if (isSkill3)
             {
@@ -192,9 +195,19 @@ namespace Fight.Monster.秘境.盔甲boss
                 }
                 else if(KuiJiaSkillType == KuiJiaSkillType.HuDun)
                 {
-                    
+                    StartCoroutine(HudunSkill());
                 }
             }
+        }
+
+        IEnumerator HudunSkill()
+        {
+            hudun.gameObject.SetActive(true);
+            hudunAnimator.Play("NewSequenceAnim");
+            Defense *= 2;
+            yield return new WaitForSeconds(5f);
+            Defense /= 2;
+            hudun.gameObject.SetActive(false);
         }
 
 
