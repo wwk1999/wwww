@@ -141,6 +141,10 @@ public class GameController : XSingleton<GameController>
     
     [NonSerialized] public Queue<LeiShouSkill3> LeiShouSkill3Queue = new Queue<LeiShouSkill3>();
     [NonSerialized] public Queue<HeiXuanFen> HeiXuanFenQueue = new Queue<HeiXuanFen>();
+    [NonSerialized] public Queue<LvZhuiZong> LvZhuiZongQueue = new Queue<LvZhuiZong>();
+    [NonSerialized] public Queue<LvXuanFen> LvXuanFenQueue = new Queue<LvXuanFen>();
+
+
 
 
 

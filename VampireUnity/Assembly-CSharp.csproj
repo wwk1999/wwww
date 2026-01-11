@@ -145,6 +145,7 @@
     <Compile Include="Assets\Arts\ARPG Effects\Demo\Scripts\ARPGFXLoopScript.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManBoss.cs" />
     <Compile Include="Assets\Scripts\Window\WeaponWindowRole1.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvXuanFen.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\DuAddDuQuan.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\ReplyDeath.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Duration.cs" />
@@ -392,6 +393,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NoSkill.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenBoss.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvZhuiZong.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalPlayerAttribute.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBallItem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
