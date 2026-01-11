@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Equip;
+using Fight.Monster.秘境.盔甲boss;
 using Fight.Monster.秘境.雷兽;
 using Mysql;
 using Spine.Unity;
@@ -139,6 +140,8 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<LvLong3> LvLong3Queue = new Queue<LvLong3>();
     
     [NonSerialized] public Queue<LeiShouSkill3> LeiShouSkill3Queue = new Queue<LeiShouSkill3>();
+    [NonSerialized] public Queue<HeiXuanFen> HeiXuanFenQueue = new Queue<HeiXuanFen>();
+
 
 
 
@@ -1025,7 +1028,7 @@ public class GameController : XSingleton<GameController>
 
         if (LevelInfoConfig.CurrentGameLevel > 15)
         {
-            var random=Random.Range(1,2);
+            var random=Random.Range(2,3);
             
             switch (random)
             {
@@ -1039,6 +1042,18 @@ public class GameController : XSingleton<GameController>
                     LeiShouBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     MonsterColliderDic.Add(LeiShouBoss.collider2D,LeiShouBoss);
                     LeiShouBoss.meshRenderer.sortingOrder = 3000;
+                    break;
+                case 2:
+                    KuiJiaBoss KuiJiaBoss = Instantiate(Resources.Load<KuiJiaBoss>("Prefabs/Monster/MJ/KuiJia/KuiJiaBoss"));
+                    KuiJiaBoss.gameObject.SetActive(true);
+                    KuiJiaBoss.IsSkill = true;
+                    KuiJiaBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk1 = KuiJiaBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk1.AnimationState.SetAnimation(0,"skill2",false);
+                    KuiJiaBoss.KuiJiaSkillType = KuiJiaSkillType.ChuChang;
+                    KuiJiaBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    MonsterColliderDic.Add(KuiJiaBoss.collider2D,KuiJiaBoss);
+                    KuiJiaBoss.meshRenderer.sortingOrder = 3000;
                     break;
             }
         }

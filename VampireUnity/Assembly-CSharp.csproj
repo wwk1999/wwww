@@ -202,6 +202,7 @@
     <Compile Include="Assets\Scripts\Prop\ChiBang\PurpleChiBang.cs" />
     <Compile Include="Assets\Scripts\Tool\Entrance.cs" />
     <Compile Include="Assets\Scripts\Mysql\EquipTable.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\盔甲boss\KuiJiaBoss.cs" />
     <Compile Include="Assets\Scripts\UIFrameWork\UIManager.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\FinalDamageReductionFixed.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\XiaoHuoMonster.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Assets\Scripts\UIFrameWork\PanelManager.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\CloakFortureAdd.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\XuKong\XuKongPeng.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\盔甲boss\HeiXuanFen.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\ClothFortureAdd.cs" />
     <Compile Include="Assets\Scripts\Skill\IceExplosion.cs" />
     <Compile Include="Assets\Scripts\Common\DamageFrom.cs" />
@@ -521,6 +523,7 @@
     <None Include="Assets\Arts\Spine\技能\json\H043_Special.json" />
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.xml" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.10\package.json" />
+    <None Include="Assets\Arts\Spine\怪物\盔甲人输出\fensexionggui.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\1225\蓝冲天激光\skeleton.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -646,7 +649,9 @@
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.36\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\技能\DianPeng\action.json" />
     <None Include="Assets\Arts\Spine\技能\1225\喷火\skeleton.json" />
+    <None Include="Assets\Arts\Spine\怪物\盔甲人输出\fensexionggui.json" />
     <None Include="Library\PackageCache\com.unity.test-framework@1.4.5\package.json" />
+    <None Include="Assets\Arts\Spine\怪物\豹子boss输出\Enemy_Panther_warrior.json" />
     <None Include="Assets\Arts\Spine\怪物\LanXiNiu\BOSSlong_shui.json" />
     <None Include="Assets\Arts\Spine\第五关\XueZhangLang\xuezhanglang.json" />
     <None Include="Assets\Arts\Spine\怪物\绿龙打包\green_dragon.atlas.txt" />
@@ -726,6 +731,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\紫尾巴\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\怪物\豹能量打包\Enemy_Panther_warrior.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\食人花\dumoshirenhua.json" />
     <None Include="Assets\Arts\Spine\技能\冰球\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\wenzi.json" />
@@ -769,6 +775,7 @@
     <None Include="Assets\Arts\Spine\技能\毒圈\action.json" />
     <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\第五关\XueLang2\xuelang.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\豹能量打包\Enemy_Panther_warrior.json" />
     <None Include="Assets\Arts\Spine\技能\传送门\skeleton.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_Properties.cginc" />
@@ -854,6 +861,7 @@
     <None Include="Assets\Arts\Spine\第二关\boss\huoshanboss.json" />
     <None Include="Assets\Arts\Spine\技能\1225\黄散射\action.json" />
     <None Include="Assets\Arts\Spine\技能\1225\绿激光\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\豹子boss输出\Enemy_Panther_warrior.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\YingShu\Enemy_Nativedevil.json" />

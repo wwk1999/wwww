@@ -44,6 +44,13 @@ public class Entrance : MonoBehaviour
                             GameController.S.transform);
                     Monster1.gameObject.SetActive(false);
                     GameController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
+                    
+                    var Monster2 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/KuiJia/HeiXuanFen").GetComponent<HeiXuanFen>(),
+                            GameController.S.transform);
+                    Monster2.gameObject.SetActive(false);
+                    GameController.S.HeiXuanFenQueue.Enqueue(Monster2.GetComponent<HeiXuanFen>());
                 }
             }
             
