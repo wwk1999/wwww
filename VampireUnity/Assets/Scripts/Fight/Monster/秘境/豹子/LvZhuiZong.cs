@@ -20,7 +20,7 @@ public class LvZhuiZong : MonoBehaviour
         currentDamageTime = 0;
         animator.Play("NewSequenceAnim");
         rg.velocity = MoveDirection * 7f;
-        float random=Random.Range(1.5f, 2f);
+        float random=Random.Range(1f, 1.5f);
         StartCoroutine(Stop(random));
         Invoke("Hide", 8f);
     }

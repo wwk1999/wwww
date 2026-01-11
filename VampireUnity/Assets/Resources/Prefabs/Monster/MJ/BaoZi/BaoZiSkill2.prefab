@@ -75,7 +75,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rg: {fileID: 5240389289656739844}
   Animator: {fileID: 645460692007396474}
-  direction: {x: 0, y: 0}
 --- !u!1 &3817190780164773347
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +275,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

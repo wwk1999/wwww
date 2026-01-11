@@ -285,19 +285,8 @@ namespace Fight.Monster.秘境.盔甲boss
 
             if (currentSkill1Time > skill1Time)
             {
-                if (parent.transform.localScale.x > 0 &&
-                    transform.position.x - GameController.S.gamePlayer.transform.position.x > 1)
-                {
-                    currentSkill1Time = 0;
-                    isSkill1 = true;
-                }
-
-                if (parent.transform.localScale.x < 0 &&
-                    GameController.S.gamePlayer.transform.position.x - transform.position.x > 1)
-                {
-                    currentSkill1Time = 0;
-                    isSkill1 = true;
-                }
+                currentSkill1Time = 0;
+                isSkill1 = true;
             }
 
             if (currentSkill2Time > skill2Time)

@@ -380,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9126282565515601458}
   - component: {fileID: 8088780955854376662}
-  - component: {fileID: 1569828864175572981}
+  - component: {fileID: 7184796401327114634}
   m_Layer: 13
   m_Name: BaoZiBoss
   m_TagString: Boss
@@ -434,7 +434,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1569828864175572981
+--- !u!114 &7184796401327114634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1301791146980186362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 702a6b94284f40549397848378ea6dc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0daa5a3ca9bb414cb759c9e5ca533fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   du: {fileID: 2784067197371134784}
@@ -451,14 +451,12 @@ MonoBehaviour:
   hpSliderCanvas: {fileID: 7947589386579945151}
   meshRenderer: {fileID: 7689161179092393981}
   parent: {fileID: 301220613437005358}
-  size: 1.2
+  size: 0
   monsterSkeletonAnimation: {fileID: 1860269375543174654}
   hpSlider: {fileID: 2474785857096728083}
   collider2D: {fileID: 8520199557699552651}
   rigidbody2D: {fileID: 8088780955854376662}
   attackTrans: {fileID: 7219769740055006061}
-  hudun: {fileID: 5604135076616639953}
-  hudunAnimator: {fileID: 5416171860235725440}
 --- !u!1 &1609655145587122629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,9 +1607,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5935de6016d10114c9b1dd6de83c82c2, type: 2}
-  - {fileID: 2100000, guid: 44da4f53e1dfb26468ba49dad660e4b9, type: 2}
-  - {fileID: 2100000, guid: 5935de6016d10114c9b1dd6de83c82c2, type: 2}
-  - {fileID: 2100000, guid: 44da4f53e1dfb26468ba49dad660e4b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

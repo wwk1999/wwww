@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Equip;
 using Spine;
 using UnityEngine;
@@ -21,9 +22,9 @@ namespace Fight.Monster.秘境.豹子
         }
         
         public Transform attackTrans;
-        private float skill1Time = 500;
+        private float skill1Time = 10;
         private float skill2Time = 5;
-        private float skill3Time = 80;
+        private float skill3Time = 8;
         private float currentSkill1Time = 0;
         private float currentSkill2Time = 0;
         private float currentSkill3Time = 0;
@@ -54,26 +55,28 @@ namespace Fight.Monster.秘境.豹子
             {
                 IsSkill = true;
                 isSkill1 = false;
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
                 monsterSkeletonAnimation.timeScale = 1.2f;
+                BaoZiSkillType = BaoZiSkillType.LvXuanFen;
             }
             else if (isSkill2)
             {
                 IsSkill = true;
                 isSkill2 = false;
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
-                monsterSkeletonAnimation.timeScale = 1.2f;
+                monsterSkeletonAnimation.timeScale = 1.5f;
             }
             else if (isSkill3)
             {
                 IsSkill = true;
                 isSkill3 = false;
-                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
-                monsterSkeletonAnimation.timeScale = 2f;
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+                BaoZiSkillType = BaoZiSkillType.LvZhuiZong;
+                monsterSkeletonAnimation.timeScale = 1.2f;
             }
             else if (isAttack)
             {
-                monsterSkeletonAnimation.timeScale = 1.5f;
+                monsterSkeletonAnimation.timeScale = 2f;
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
             }
             else
@@ -160,6 +163,29 @@ namespace Fight.Monster.秘境.豹子
             monsterSkeletonAnimation.AnimationState.Event -= OnSpineEvent;
         }
 
+        IEnumerator LvXuanFenSkill(int count,float dis)
+        {
+            List<Vector2> posList = new List<Vector2>();
+            for (int i = 0; i < count; i++)
+            {
+                float randomx=Random.Range(0, dis);
+                float randomy=Random.Range(0, dis);
+                Vector2 pos=new Vector2(randomx,randomy);
+                posList.Add(pos);
+            }
+            foreach (var item in posList)
+            {
+                GameController.S.CreateCircleAttack(item,0.8f);
+            }
+            yield return  new WaitForSeconds(0.5f);
+            foreach (var item in posList)
+            {
+                var LvXuanFen = GameController.S.LvXuanFenQueue.Dequeue();
+                LvXuanFen.damage = Attack;
+                LvXuanFen.transform.position = item;
+                LvXuanFen.gameObject.SetActive(true);            }
+        }
+
         public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
         {
             if (e.Data.Name == "damage" && trackEntry.Animation.Name == "attack1")
@@ -171,9 +197,54 @@ namespace Fight.Monster.秘境.豹子
                 }
             }
             
+            if (e.Data.Name == "damage" && trackEntry.Animation.Name == "skill1")
+            {
+                switch (BaoZiSkillType)
+                {
+                    case BaoZiSkillType.LvXuanFen:
+                        StartCoroutine(LvXuanFenSkill(1, 6f));
+                        break;
+                    case BaoZiSkillType.LvZhuiZong:
+                        float waveOffset = Random.Range(0, 30);
+                        int bulletCount = 12;
+                        float angleStep = 360f / bulletCount; 
+            
+                        for (int i = 0; i < bulletCount; i++)
+                        {
+                            var xieZiSkill1 = GameController.S.LvZhuiZongQueue.Dequeue();
+                            float angle = i * angleStep + waveOffset;
+                            float angleRad = angle * Mathf.Deg2Rad;
+                            Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+                            xieZiSkill1.transform.position = transform.position;
+                            xieZiSkill1.MoveDirection = direction;
+                            xieZiSkill1.damage = Attack;
+                            xieZiSkill1.gameObject.SetActive(true);
+                        }
+                        break;
+                }
+            }
+            
             if (e.Data.Name == "damage" && trackEntry.Animation.Name == "skill2")
             {
-               
+                Vector2 baseDir = (GameController.S.gamePlayer.transform.position-transform.position).normalized;
+
+                // 两个偏移角度：+10° 和 -10°
+                Vector2[] dirs =
+                {
+                    Quaternion.AngleAxis( 10f, Vector3.forward) * baseDir,
+                    Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+                    Quaternion.AngleAxis(-10f, Vector3.forward) * baseDir
+                };
+
+                // 连发两颗
+                foreach (Vector2 dir in dirs)
+                {
+                    var bullet = GameController.S.BaoZiSkill2Queue.Dequeue();
+                    bullet.transform.position = transform.position;
+                    bullet.direction = dir;
+                    bullet.damage = Attack;
+                    bullet.gameObject.SetActive(true);
+                }
             }
         }
         public override void AddMonsterProp()
@@ -250,19 +321,8 @@ namespace Fight.Monster.秘境.豹子
 
             if (currentSkill1Time > skill1Time)
             {
-                if (parent.transform.localScale.x > 0 &&
-                    transform.position.x - GameController.S.gamePlayer.transform.position.x > 1)
-                {
-                    currentSkill1Time = 0;
-                    isSkill1 = true;
-                }
-
-                if (parent.transform.localScale.x < 0 &&
-                    GameController.S.gamePlayer.transform.position.x - transform.position.x > 1)
-                {
-                    currentSkill1Time = 0;
-                    isSkill1 = true;
-                }
+                currentSkill1Time = 0;
+                isSkill1 = true;
             }
 
             if (currentSkill2Time > skill2Time)
