@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Equip;
+using Fight.Monster.秘境.雷兽;
 using Mysql;
 using Spine.Unity;
 using Unity.VisualScripting;
@@ -136,6 +137,9 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<LvLong1> LvLong1Queue = new Queue<LvLong1>();
     [NonSerialized] public Queue<LvLong2> LvLong2Queue = new Queue<LvLong2>();
     [NonSerialized] public Queue<LvLong3> LvLong3Queue = new Queue<LvLong3>();
+    
+    [NonSerialized] public Queue<LeiShouSkill3> LeiShouSkill3Queue = new Queue<LeiShouSkill3>();
+
 
 
     
@@ -943,8 +947,8 @@ public class GameController : XSingleton<GameController>
 
         FightBGController.S.BossEnergySlider.maxValue = MaxBossEnergyNum;
         FightBGController.S.BossEnergySlider.value = BossEnergyNum;
-        //召唤BOSS
-        if (KillMonsterCount>=LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/2 && HaveBossWarning == false&&LevelInfoConfig.CurrentGameLevelType==LevelType.Boss)
+        //召唤BOSS，激活BOSS
+        if (KillMonsterCount>=LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/2 && HaveBossWarning == false&&(LevelInfoConfig.CurrentGameLevelType==LevelType.Boss||LevelInfoConfig.CurrentGameLevelType==LevelType.MJ))
         {
             HaveBossWarning=true;
             BossJiHuo = true;
@@ -1017,9 +1021,27 @@ public class GameController : XSingleton<GameController>
             XueRenBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(XueRenBoss.collider2D,XueRenBoss);
             XueRenBoss.meshRenderer.sortingOrder = 3000;
-
         }
-       
+
+        if (LevelInfoConfig.CurrentGameLevel > 15)
+        {
+            var random=Random.Range(1,2);
+            
+            switch (random)
+            {
+                case 1:
+                    LeiShouBoss LeiShouBoss = Instantiate(Resources.Load<LeiShouBoss>("Prefabs/Monster/MJ/LeiShou/LeiShouBoss"));
+                    LeiShouBoss.gameObject.SetActive(true);
+                    LeiShouBoss.IsSkill = true;
+                    LeiShouBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk = LeiShouBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk.AnimationState.SetAnimation(0,"skill2",false);
+                    LeiShouBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    MonsterColliderDic.Add(LeiShouBoss.collider2D,LeiShouBoss);
+                    LeiShouBoss.meshRenderer.sortingOrder = 3000;
+                    break;
+            }
+        }
     }
 
     public bool GetIsCrit()
@@ -1304,6 +1326,10 @@ public class GameController : XSingleton<GameController>
             }
         }else if (LevelInfoConfig.CurrentGameLevel > 15)
         {
+            if (NormalMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
+            {
+                return;
+            }
             var random=new System.Random();
             int index=random.Next(0,2);
             int i = MonsterList[index];

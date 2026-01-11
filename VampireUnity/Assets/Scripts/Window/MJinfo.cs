@@ -196,6 +196,7 @@ public class MJinfo : MonoBehaviour
         {
             gameObject.SetActive(false);
             LevelInfoConfig.CurrentGameLevel = 15 + (int)PlayerData.S.mJLevel;
+            LevelInfoConfig.CurrentGameLevelType = LevelType.MJ;
             WindowController.S.Message.SetActive(false);
             WindowController.S.SceneLoadingWindow.SetActive(true);
         });

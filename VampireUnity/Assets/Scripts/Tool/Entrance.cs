@@ -33,6 +33,19 @@ public class Entrance : MonoBehaviour
             //初始化最大boss能量值
             GameController.S.MaxBossEnergyNum = LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]*2;//这时小怪数量，精英不算数量，每10只普通怪出一只精英，所以正好是2倍
             GameController.S.MaxBossEnergyNum = 10;
+
+            if (LevelInfoConfig.CurrentGameLevel > 15)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    var Monster1 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LeiShou/LeiShouSkill3").GetComponent<LeiShouSkill3>(),
+                            GameController.S.transform);
+                    Monster1.gameObject.SetActive(false);
+                    GameController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
+                }
+            }
             
             
             //秘境怪物

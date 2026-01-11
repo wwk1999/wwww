@@ -7,7 +7,8 @@ public enum LevelType
 {
     Normal,
     Elite,
-    Boss
+    Boss,
+    MJ
 }
 public class LevelInfoItem
 {

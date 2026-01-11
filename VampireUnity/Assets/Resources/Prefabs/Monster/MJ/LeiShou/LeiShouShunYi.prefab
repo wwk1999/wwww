@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8298361707061037861}
   - component: {fileID: 1414889153993586099}
   - component: {fileID: 5935759172870323726}
+  - component: {fileID: 8803512614609615374}
   m_Layer: 0
   m_Name: LeiShouShunYi
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10000
   m_Sprite: {fileID: 7675358330561261743, guid: 0207cc2f4067b40478fd5b86c1ed2742, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -106,6 +107,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8803512614609615374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189113836028153848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc1467b7b810e2479620ea1a4126064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 7255033975307445759}
+  LeiShouShunYi: {fileID: 614362728884078237}
 --- !u!1 &3144703999043453664
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,6 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6255473401584265049}
+  - component: {fileID: 614362728884078237}
   m_Layer: 0
   m_Name: LeiShouShunYi
   m_TagString: Untagged
@@ -138,6 +154,20 @@ Transform:
   - {fileID: 1230735205031790}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &614362728884078237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144703999043453664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1c70314a2528a144ae0174b5666c3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 5935759172870323726}
+  damage: 0
 --- !u!1 &5550306565382858964
 GameObject:
   m_ObjectHideFlags: 0

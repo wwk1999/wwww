@@ -1,0 +1,303 @@
+using System.Collections;
+using System.Collections.Generic;
+using Equip;
+using Spine;
+using Spine.Unity;
+using UnityEngine;
+
+namespace Fight.Monster.秘境.雷兽
+{
+    public class LeiShouBoss:MonsterBase
+    {
+        public LeiShouBoss() : base(MonsterType.Boss, "LeiShouBoss", 1, 100000, 1.2f, 1000, 300, 10, 10, 0)
+        {
+        }
+    
+        public Transform attackTrans;
+        private float skill1Time = 5;
+        private float skill2Time = 55;
+        private float skill3Time = 85;
+        private float currentSkill1Time = 0;
+        private float currentSkill2Time = 0;
+        private float currentSkill3Time = 0;
+
+        public GameObject skill1;
+        public SkeletonAnimation skill1ske;
+        public Collider2D Skill1Collider2D;
+        public GameObject skill1parent;
+        
+        
+         public  void Awake()
+    {
+        base.Awake();
+        MonsterSpineName.AttackName = "attack1";
+        MonsterSpineName.HitName = "injured";
+        MonsterSpineName.MoveName = "move";
+        MonsterSpineName.DieName = "fail";
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
+        monsterSkeletonAnimation.AnimationState.Complete += Complete;
+        skill1ske.AnimationState.Event += Skill1OnSpineEvent;
+        skill1ske.AnimationState.Complete += Skill1Complete;
+    }
+
+    public void ShowSkill1()
+    {
+        skill1.SetActive(true);
+        var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        skill1parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        skill1parent.transform.localScale=parent.transform.localScale;
+        skill1ske.AnimationState.SetAnimation(0, "animation", false);
+        skill1ske.timeScale = 2f;
+    }
+
+    public void Skill1Complete(TrackEntry trackEntry)
+    {
+        skill1.gameObject.SetActive(false);
+    }
+    
+     public void Complete(TrackEntry trackEntry)
+    {
+        monsterSkeletonAnimation.timeScale = 1f;
+        if (trackEntry.Animation.Name == "chuchang"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill5")
+        {
+            IsSkill=false;
+        }
+        
+        if (isSkill1)
+        {
+            IsSkill=true;
+            isSkill1=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+            monsterSkeletonAnimation.timeScale = 1.5f;
+            Invoke(nameof(ShowSkill1),1.5f);
+        }else if (isSkill2)
+        {
+            IsSkill=true;
+            isSkill2=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+            monsterSkeletonAnimation.timeScale = 1.2f;
+            
+        }
+        else if(isSkill3)
+        {
+            IsSkill=true;
+            isSkill3=false;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
+            monsterSkeletonAnimation.timeScale = 1.5f;
+        }
+        else if(isAttack)
+        {
+            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
+        }
+        else
+        {
+            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
+        }
+    }
+
+    public override void AddMonsterEquip()
+    {
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Purple, 20));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Purple, 20));
+    }
+
+   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
+    {
+        base.Hurt(damage,isCrit,damageFrom);
+        if (!IsDead)
+        {
+            AudioController.S.PlayBatHit();
+        }
+    }
+
+    public override void Skill()
+    {
+        // Implement the skill logic here
+    }
+
+    public override void Die()
+    {
+
+        //生成随机数
+        int randomDelay = UnityEngine.Random.Range(0, 10);
+        StartCoroutine(RandomDelayDie(randomDelay));
+    }
+
+    private IEnumerator RandomDelayDie(int delay)
+    {
+        for (int i = 0; i < delay; i++)
+        {
+            yield return null;
+        }
+
+        AudioController.S.PlaySnotDie();
+        GeneralDie();
+        GetEx();
+        ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
+        CreateBloodEnergy();
+        CreateEquip();
+        CreateProp();
+        FightBGController.S.PlaySuccessAnim();
+        GameController.S.StartCoroutine(DelayChuanSongMen());
+    }
+    IEnumerator DelayChuanSongMen()
+    {
+        yield return new WaitForSeconds(1f);
+        var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
+        chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    }
+    
+     private void Start()
+    {
+        base.Start();
+        size = 1.2f;
+        AddMonsterEquip();
+        AddMonsterProp();
+    }
+    
+    private void OnDestroy()
+    {
+        monsterSkeletonAnimation.AnimationState.Event -= OnSpineEvent;
+    }
+
+    public void Skill1Collider()
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        Skill1Collider2D.OverlapCollider(filter, results);
+    
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+               GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            }
+        }
+    }
+
+    public void Skill1OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "damage")
+        {
+            Skill1Collider();
+        }
+    }
+    public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
+    {
+    }
+    
+    
+     public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,4),10));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,4),10));
+
+    }
+    
+    public void MonsterMove1()
+    {
+        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move"||IsDash)
+        {
+            GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = direction.normalized * 0; 
+        }
+    }
+    
+    public void SpriteFlipX1(bool isRight)
+    {
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "move")
+        {
+            return;
+        }
+        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
+        if(dis<0.2f)
+        {
+            //如果距离小于0.2f，则不翻转
+            return;
+        }
+        //翻转精灵
+        if (isRight)
+        {
+            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            {
+                parent.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                parent.transform.localScale = new Vector3(-1, 1, 1);
+            }
+        }else
+        {
+            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            {
+                parent.transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else
+            {
+                parent.transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
+        
+    }
+
+
+    void Update()
+    {
+        if (IsDead) return;
+        base.Update();
+        currentSkill1Time+=Time.deltaTime;
+        currentSkill2Time+=Time.deltaTime;
+        currentSkill3Time+=Time.deltaTime;
+        if (currentSkill1Time > skill1Time)
+        {
+            currentSkill1Time = 0;
+            isSkill1 = true;
+        }
+        
+        if (currentSkill2Time > skill2Time)
+        {
+            currentSkill2Time = 0;
+            isSkill2 = true;
+        }
+
+        if (currentSkill3Time > skill3Time)
+        {
+            currentSkill3Time = 0;
+            isSkill3 = true;
+        }
+        
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.5f)
+        {
+            isAttack=true;
+        }
+        else
+        {
+            isAttack=false;
+        }
+        
+        
+        if (!IsDead)
+        {
+            MonsterMove1();
+            SpriteFlipX1(false);
+        }
+    }
+    }
+}
