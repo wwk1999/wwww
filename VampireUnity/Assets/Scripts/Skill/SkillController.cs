@@ -205,22 +205,14 @@ public class SkillController : XSingleton<SkillController>
                 if (IceExplosionCoolingtime >= IceExplosiontime)
                 {
                     AudioController.S.PlayIceEx();
-                    Debug.Log("mac点击了冰爆技能!");
                     IceExplosionCoolingtime=0;
+                    var iceex = GameController.S.IceExQueue.Dequeue();
                     if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill3AddRange))
                     {
-                        IceExplosion1.transform.localScale=new Vector3(1.3f,1.3f,1.3f);
-                        IceExplosion2.transform.localScale=new Vector3(1.3f,1.3f,1.3f);
-                        IceExplosion3.transform.localScale=new Vector3(1.3f,1.3f,1.3f);
-                        IceExTrigger.transform.parent.localScale=new Vector3(1.3f,1.3f,1.3f);
+                        iceex.transform.localScale=new Vector3(1.3f,1.3f,1.3f);
                     }
-                    IceExplosion1.Play();
-                    IceExplosion2.Play();
-                    IceExplosion3.Play();
-                    IceExTrigger.gameObject.SetActive(true);
-                    IceExplosion.transform.localScale=new Vector3( IceExplosion.transform.localScale.x*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f),IceExplosion.transform.localScale.y*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f),IceExplosion.transform.localScale.z*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f));
-                    IceExTrigger.transform.localScale=new Vector3( IceExTrigger.transform.localScale.x*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f),IceExTrigger.transform.localScale.y*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f),IceExTrigger.transform.localScale.z*(1+GlobalPlayerAttribute.Skill3RangeNum/100.0f));
-                    
+                    iceex.transform.position=GameController.S.gamePlayer.transform.position;
+                   iceex.gameObject.SetActive(true);
                 }
                 break;
         }

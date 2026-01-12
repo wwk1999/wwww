@@ -192,6 +192,8 @@ public class GameController : XSingleton<GameController>
     //技能队列
     [NonReorderable]public Queue<GameObject>DianQuanQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>DianQuanPengQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<IceExplosion>IceExQueue = new Queue<IceExplosion>();
+
 
 
     
