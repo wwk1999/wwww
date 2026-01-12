@@ -30,6 +30,7 @@ namespace Config
                 { WeaponType.Fire ,new WeaponAttribute(){Attack = 100,Crit = 10,Hp = 300,Defense = 50,AttackSpeed = 1}},
                 { WeaponType.LvQuan ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 0.7f}},
                 { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1000,Defense = 150,AttackSpeed = 0.7f}},
+                { WeaponType.JianQi ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
             };
         
         
@@ -91,6 +92,16 @@ namespace Config
                 
                 { 
                     WeaponType.HeiDong, 
+                    new List<WeaponCaiLiao>()
+                    {
+                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 3000  },
+                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 5,  Count = 5 },
+                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 5,  Count = 5 }
+                    } 
+                },
+                
+                { 
+                    WeaponType.JianQi, 
                     new List<WeaponCaiLiao>()
                     {
                         new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 3000  },
@@ -171,6 +182,16 @@ namespace Config
                 
                 { 
                     WeaponType.HeiDong, 
+                    new List<WeaponCaiLiao>()
+                    {
+                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 1500  },
+                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 5,  Count = 3 },
+                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 5,  Count = 3 }
+                    } 
+                },
+                
+                { 
+                    WeaponType.JianQi, 
                     new List<WeaponCaiLiao>()
                     {
                         new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 1500  },

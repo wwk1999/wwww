@@ -96,6 +96,20 @@ public class GunBase : MonoBehaviour
         bullet.GetComponent<Du>().MoveSpeed = 7f;
         bullet.gameObject.SetActive(true);
     }
+
+    public void JianQiShot()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- GameController.S.gamePlayer.transform.position).normalized;
+        PlayerJianQi bullet = GameController.S.PlayerJianQiQueue.Dequeue();
+        bullet.transform.position = GameController.S.gamePlayer.transform.position;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
     
     public void PuTong3Shot()
     {

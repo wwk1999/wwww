@@ -1,0 +1,16 @@
+skeleton.png
+size:1528,1037
+filter:Linear,Linear
+pma:true
+jianqi_00000
+bounds:804,545,722,490
+offsets:78,137,800,800
+jianqi_00001
+bounds:2,2,776,511
+offsets:24,138,800,800
+jianqi_00002
+bounds:2,515,800,520
+offsets:0,135,800,800
+jianqi_00003
+bounds:804,49,716,494
+offsets:84,135,800,800

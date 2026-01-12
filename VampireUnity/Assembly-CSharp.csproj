@@ -124,6 +124,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\AllReplyAddPercent.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\ShoeFortureAdd.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\HuangShu.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\剑气\PlayerJianQi.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanBoss.cs" />
     <Compile Include="Assets\Scripts\Window\SkillSwitch.cs" />
     <Compile Include="Assets\Scripts\Config\ResourcesConfig.cs" />
@@ -311,6 +312,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong3.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleRing.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloth.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\剑气\ZiPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenRing.cs" />
     <Compile Include="Assets\Scripts\Tool\ImageAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -602,6 +604,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\火焰peng\action.json" />
     <None Include="Assets\Arts\Spine\技能\json5\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 8\guyalang02.json" />
+    <None Include="Assets\Arts\Spine\技能\主角剑气\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
@@ -859,6 +862,7 @@
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Library\PackageCache\com.unity.burst@1.8.21\Unity.Burst.Unsafe.xml" />
+    <None Include="Assets\Arts\Spine\技能\主角剑气\skeleton.json" />
     <None Include="Assets\Arts\Spine\怪物\小恶魔打包\akmon_pirest.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />

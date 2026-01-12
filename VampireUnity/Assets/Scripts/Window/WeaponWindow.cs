@@ -19,6 +19,7 @@ public class WeaponWindow : MonoBehaviour
    public Button fireInstallButton; // fire爆炸武器安装按钮
    public Button lvQuanInstallButton; // 绿圈武器安装按钮
    public Button heiDongInstallButton; // 黑洞武器安装按钮
+   public Button jianQiInstallButton; // 剑气武器安装按钮
    public Button exitButton; // 退出按钮
 
 
@@ -29,6 +30,16 @@ public class WeaponWindow : MonoBehaviour
    public Button fireJieSuoButton; // fire爆炸武器解锁按钮
    public Button lvQuanJieSuoButton; // 绿圈武器解锁按钮
    public Button heiDongJieSuoButton; // 黑洞武器解锁按钮
+   public Button jianQiJieSuoButton; // 剑气武器解锁按钮
+
+   public Button primaryShowButton;
+   public Button duShowButton;
+   public Button puTong3ShowButton;
+   public Button xukongShowButton;
+   public Button fireShowButton;
+   public Button lvQuanShowButton;
+   public Button heiDongShowButton;
+   public Button jianQiShowButton;
 
 
    public Image primaryMask; //初始武器mask
@@ -38,6 +49,8 @@ public class WeaponWindow : MonoBehaviour
    public Image fireMask; // fire爆炸武器mask
    public Image lvQuanMask; // 绿圈武器mask
    public Image heiDongMask; // 黑洞武器mask
+   public Image jianQiMask; // 剑气武器mask
+
 
 
    public GameObject InfoPanel;
@@ -54,6 +67,8 @@ public class WeaponWindow : MonoBehaviour
    public TextMeshProUGUI desc5;
    public TextMeshProUGUI desc6;
    public TextMeshProUGUI desc7;
+   public TextMeshProUGUI desc8;
+
 
    public TextMeshProUGUI texiao1;
    public TextMeshProUGUI texiao2;
@@ -62,6 +77,8 @@ public class WeaponWindow : MonoBehaviour
    public TextMeshProUGUI texiao5;
    public TextMeshProUGUI texiao6;
    public TextMeshProUGUI texiao7;
+   public TextMeshProUGUI texiao8;
+
 
    public Button upButton;
 
@@ -72,18 +89,13 @@ public class WeaponWindow : MonoBehaviour
    public TextMeshProUGUI weaponName5;
    public TextMeshProUGUI weaponName6;
    public TextMeshProUGUI weaponName7;
+   public TextMeshProUGUI weaponName8;
+
 
    public GameObject jieSuoContent;
    public Button JieSuoButton;
 
    public GameObject AttributeContent;
-   public Button primaryShowButton;
-   public Button duShowButton;
-   public Button puTong3ShowButton;
-   public Button xukongShowButton;
-   public Button fireShowButton;
-   public Button lvQuanShowButton;
-   public Button heiDongShowButton;
 
    public ShenJiCaiLiao ShenJiCaiLiao;
    [NonSerialized] public WeaponType currentJieSuoType = WeaponType.None;
@@ -99,6 +111,8 @@ public class WeaponWindow : MonoBehaviour
       desc5.gameObject.SetActive(false);
       desc6.gameObject.SetActive(false);
       desc7.gameObject.SetActive(false);
+      desc8.gameObject.SetActive(false);
+
 
       weaponName1.gameObject.SetActive(false);
       weaponName2.gameObject.SetActive(false);
@@ -107,6 +121,8 @@ public class WeaponWindow : MonoBehaviour
       weaponName5.gameObject.SetActive(false);
       weaponName6.gameObject.SetActive(false);
       weaponName7.gameObject.SetActive(false);
+      weaponName8.gameObject.SetActive(false);
+
 
       texiao1.gameObject.SetActive(false);
       texiao2.gameObject.SetActive(false);
@@ -115,6 +131,8 @@ public class WeaponWindow : MonoBehaviour
       texiao5.gameObject.SetActive(false);
       texiao6.gameObject.SetActive(false);
       texiao7.gameObject.SetActive(false);
+      texiao8.gameObject.SetActive(false);
+
 
    }
 
@@ -227,6 +245,21 @@ public class WeaponWindow : MonoBehaviour
                weaponName7.text="湮灭魔杖+"+level;
             }
             break;
+         
+         case WeaponType.JianQi:
+            desc8.gameObject.SetActive(true);
+            weaponName8.gameObject.SetActive(true);
+            texiao8.gameObject.SetActive(true);
+            if (PlayerData.S.heiDongWeaponLevel < 2)
+            {
+               weaponName7.text = "刀光剑影";
+            }
+            else
+            {
+               var level = PlayerData.S.jianQiWeaponLevel - 1;
+               weaponName7.text="刀光剑影+"+level;
+            }
+            break;
       }
 
       foreach (Transform item in AttributeContent.transform)
@@ -331,6 +364,11 @@ public class WeaponWindow : MonoBehaviour
             desc7.gameObject.SetActive(true);
             weaponName7.gameObject.SetActive(true);
             texiao7.gameObject.SetActive(true);
+            break;
+         case WeaponType.JianQi:
+            desc8.gameObject.SetActive(true);
+            weaponName8.gameObject.SetActive(true);
+            texiao8.gameObject.SetActive(true);
             break;
       }
 
@@ -520,6 +558,17 @@ public class WeaponWindow : MonoBehaviour
          heiDongJieSuoButton.gameObject.SetActive(true);
          heiDongMask.gameObject.SetActive(true);
       }
+      
+      if (PlayerData.S.jianQiWeaponLevel >= 1)
+      {
+         jianQiJieSuoButton.gameObject.SetActive(false);
+         jianQiMask.gameObject.SetActive(false);
+      }
+      else
+      {
+         jianQiJieSuoButton.gameObject.SetActive(true);
+         jianQiMask.gameObject.SetActive(true);
+      }
    }
 
    private void OnEnable()
@@ -631,6 +680,23 @@ public class WeaponWindow : MonoBehaviour
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
             break;
+         
+         case WeaponType.JianQi:
+            if (GlobalPlayerAttribute.BloodEnergy < 3000 || !BagController.S.PropList.ContainsKey(205) ||
+                BagController.S.PropList[205].Count < 5 || !BagController.S.PropList.ContainsKey(105) ||
+                BagController.S.PropList[105].Count < 5)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 3000;
+            BagController.S.PropList[205].Count -= 5;
+            BagController.S.PropList[105].Count -= 5;
+            PlayerData.S.jianQiWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
       }
    }
 
@@ -688,6 +754,14 @@ public class WeaponWindow : MonoBehaviour
          ShenJiCaiLiao.showType = WeaponType.HeiDong;
          ShowAttribute(WeaponType.HeiDong);
       });
+      
+      jianQiShowButton.onClick.AddListener(() =>
+      {
+         currentShowType = WeaponType.JianQi;
+         ShenJiCaiLiao.showType = WeaponType.JianQi;
+         ShowAttribute(WeaponType.JianQi);
+      });
+      
 
 
 
@@ -725,6 +799,13 @@ public class WeaponWindow : MonoBehaviour
          currentJieSuoType = WeaponType.HeiDong;
          ShowJieSuo(WeaponType.HeiDong);
       });
+      
+      jianQiJieSuoButton.onClick.AddListener(() =>
+      {
+         currentJieSuoType = WeaponType.JianQi;
+         ShowJieSuo(WeaponType.JianQi);
+      });
+
 
 
       primaryInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Primary; StoreController.S.SaveStoreData();});
@@ -734,6 +815,7 @@ public class WeaponWindow : MonoBehaviour
       lvQuanInstallButton.onClick.AddListener(() => {PlayerData.S.playerWeaponType = WeaponType.LvQuan; StoreController.S.SaveStoreData();});
 
       heiDongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.HeiDong;StoreController.S.SaveStoreData(); });
+      jianQiInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.JianQi;StoreController.S.SaveStoreData(); });
 
       duInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.Du; StoreController.S.SaveStoreData();});
 

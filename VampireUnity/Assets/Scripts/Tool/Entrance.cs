@@ -902,6 +902,16 @@ public class Entrance : MonoBehaviour
                     lvNormalAttack.SetActive(false);
                     GameController.S.LvQuanQueue.Enqueue(lvNormalAttack);
                     break;
+                
+                case WeaponType.JianQi:
+                    var JianQi= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PlayerJianQi"), new Vector3(0, 0, 0), Quaternion.identity).GetComponent<PlayerJianQi>();
+                    JianQi.gameObject.SetActive(false);
+                    GameController.S.PlayerJianQiQueue.Enqueue(JianQi);
+                    
+                    var zibaozha= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/ZiPeng"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    zibaozha.SetActive(false);
+                    GameController.S.ZiBaoZhaQueue.Enqueue(zibaozha);
+                    break;
                     
             }
         }

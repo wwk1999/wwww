@@ -79,6 +79,8 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int lvQuanWeaponLevel;
         public int fireWeaponLevel;
         public int heiDongWeaponLevel;
+        public int jianQiWeaponLevel;
+
         
         public WeaponType playerWeaponType=WeaponType.Primary;
         public MJLevel mJLevel = MJLevel.White;
@@ -108,6 +110,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             lvQuanWeaponLevel = runtime.lvQuanWeaponLevel;
             fireWeaponLevel = runtime.fireWeaponLevel;
             heiDongWeaponLevel = runtime.heiDongWeaponLevel;
+            jianQiWeaponLevel = runtime.jianQiWeaponLevel;
 
             playerWeaponType = runtime.playerWeaponType;
             mJLevel = runtime.mJLevel;
@@ -136,6 +139,9 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.lvQuanWeaponLevel = lvQuanWeaponLevel;
             runtime.fireWeaponLevel = fireWeaponLevel;
             runtime.heiDongWeaponLevel = heiDongWeaponLevel;
+            runtime.jianQiWeaponLevel = jianQiWeaponLevel;
+            
+            
             runtime.playerWeaponType = playerWeaponType;
             runtime.mJLevel = mJLevel;
         }

@@ -21,7 +21,8 @@ public enum WeaponType
     HeiDong,
     Du,
     LuoLei,
-    PuTong3
+    PuTong3,
+    JianQi
 }
 public class Player : MonoBehaviour
 {
@@ -85,7 +86,7 @@ public class Player : MonoBehaviour
     
     private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "attack")
+        if (e.Data.Name == "attack"&&GlobalPlayerAttribute.TotalAttackSpeed<3)
         {
             SkillController.S.ShotBulletInvoke();
         }
@@ -121,8 +122,13 @@ public class Player : MonoBehaviour
 
     }
 
-    public void OnAnimationComplete(Spine.TrackEntry trackEntry)
+    public void OnAnimationComplete(TrackEntry trackEntry)
     {
+
+        if (trackEntry.Animation.Name == "attack" &&GlobalPlayerAttribute.TotalAttackSpeed>=3)
+        {
+            SkillController.S.ShotBulletInvoke();
+        }
         if (MouseDown)
         {
             if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))

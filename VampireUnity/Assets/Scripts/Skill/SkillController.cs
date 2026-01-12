@@ -123,6 +123,7 @@ public class SkillController : XSingleton<SkillController>
         IceExplosion3.Stop();
     }
 
+    //普通攻击发射子弹
     public void ShotBulletInvoke()
     {
         switch (PlayerData.S.playerWeaponType)
@@ -153,6 +154,9 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case WeaponType.PuTong3:
                 GameController.S.gamePlayer.currentGun.PuTong3Shot();
+                break;
+            case WeaponType.JianQi:
+                GameController.S.gamePlayer.currentGun.JianQiShot();
                 break;
         }
     }

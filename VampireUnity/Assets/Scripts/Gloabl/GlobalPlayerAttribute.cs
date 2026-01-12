@@ -65,6 +65,9 @@ public class GlobalPlayerAttribute
            case WeaponType.HeiDong:
                level = PlayerData.S.heiDongWeaponLevel;
                break;
+           case WeaponType.JianQi:
+               level = PlayerData.S.jianQiWeaponLevel;
+               break;
        }
 
        return weaponAttribute.Attack * (1 + (level - 1) * WeaponShenJiPercent);
@@ -96,6 +99,9 @@ public class GlobalPlayerAttribute
                break;
            case WeaponType.HeiDong:
                level = PlayerData.S.heiDongWeaponLevel;
+               break;
+           case WeaponType.JianQi:
+               level = PlayerData.S.jianQiWeaponLevel;
                break;
        }
 
@@ -129,6 +135,9 @@ public class GlobalPlayerAttribute
            case WeaponType.HeiDong:
                level = PlayerData.S.heiDongWeaponLevel;
                break;
+           case WeaponType.JianQi:
+               level = PlayerData.S.jianQiWeaponLevel;
+               break;
        }
 
        return weaponAttribute.Crit * (1 + (level - 1) * WeaponShenJiPercent);
@@ -160,6 +169,9 @@ public class GlobalPlayerAttribute
                break;
            case WeaponType.HeiDong:
                level = PlayerData.S.heiDongWeaponLevel;
+               break;
+           case WeaponType.JianQi:
+               level = PlayerData.S.jianQiWeaponLevel;
                break;
        }
 
