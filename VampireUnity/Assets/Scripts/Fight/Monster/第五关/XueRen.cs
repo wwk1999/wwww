@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XueRen : MonsterBase
 {
-     public XueRen() : base(MonsterType.Normal, "XueRen", 1, 3000, 0.6f, 300, 100, 10, 10, 0)
+     public XueRen() : base(MonsterType.Normal, "XueRen", 1, 3000, 0.6f, 300, 100, 50, 5, 0)
     {
     }
     

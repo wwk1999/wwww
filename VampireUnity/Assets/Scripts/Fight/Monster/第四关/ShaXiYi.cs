@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShaXiYi : MonsterBase
 {
-    public ShaXiYi() : base(MonsterType.Elite, "ShaXiYi", 1, 10000, 1.2f, 600, 200, 10, 10, 0)
+    public ShaXiYi() : base(MonsterType.Elite, "ShaXiYi", 1, 10000, 1.2f, 600, 200, 200, 20, 0)
     {
     }
     public GameObject parent;

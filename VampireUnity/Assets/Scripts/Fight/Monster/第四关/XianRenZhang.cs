@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XianRenZhang : MonsterBase
 {
-    public XianRenZhang() : base(MonsterType.Normal, "XianRenZhang", 1, 3000, 0.7f, 300, 100, 10, 10, 0)
+    public XianRenZhang() : base(MonsterType.Normal, "XianRenZhang", 1, 3000, 0.7f, 300, 100, 40, 4, 0)
     {
     }
     public GameObject parent;

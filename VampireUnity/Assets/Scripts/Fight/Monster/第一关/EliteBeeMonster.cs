@@ -13,7 +13,7 @@ public class EliteBeeMonster : MonsterBase
 
 
 
-    public EliteBeeMonster() : base(MonsterType.Elite, "EliteBeeMonster", 1, 1000, 0.3f, 30, 5, 50, 5, 10) { }
+    public EliteBeeMonster() : base(MonsterType.Elite, "EliteBeeMonster", 1, 1000, 0.5f, 30, 5, 50, 5, 10) { }
     public override void AddMonsterEquip()
     {
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Primary, 10));

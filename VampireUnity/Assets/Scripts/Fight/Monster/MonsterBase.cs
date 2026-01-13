@@ -431,7 +431,7 @@ public abstract class MonsterBase : MonoBehaviour
     public void MonsterMove()
     {
         Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName||IsDash)
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName||IsDash||monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name==MonsterSpineName.HitName)
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
         }

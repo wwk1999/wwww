@@ -73,7 +73,7 @@ public class DunDiMonster : MonsterBase
     private void Start()
     {
         base.Start();
-        size = 0.6f;
+        size = 0.7f;
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
@@ -97,10 +97,12 @@ public class DunDiMonster : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
+            monsterSkeletonAnimation.timeScale = 2;
             isAttack=true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1;
             isAttack=false;
         }
         if (!IsDead)

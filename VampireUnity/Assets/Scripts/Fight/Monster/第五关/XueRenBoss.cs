@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class XueRenBoss : MonsterBase
 {
-    public XueRenBoss() : base(MonsterType.Boss, "XueRenBoss", 1, 100000, 1.2f, 1000, 300, 10, 10, 0)
+    public XueRenBoss() : base(MonsterType.Boss, "XueRenBoss", 1, 100000, 1.2f, 1000, 300, 1000, 100, 0)
     {
     }
     

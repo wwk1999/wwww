@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XueQiE : MonsterBase
 {
-    public XueQiE() : base(MonsterType.Normal, "XueQiE", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
+    public XueQiE() : base(MonsterType.Normal, "XueQiE", 1, 5000, 0.8f, 500, 150, 50, 5, 0)
     {
     }
     public Transform attackTrans;

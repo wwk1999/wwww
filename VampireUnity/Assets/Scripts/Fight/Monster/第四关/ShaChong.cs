@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShaChong : MonsterBase
 {
-    public ShaChong() : base(MonsterType.Normal, "ShaChong", 1, 3000, 0.7f, 300, 100, 10, 10, 0)
+    public ShaChong() : base(MonsterType.Normal, "ShaChong", 1, 3000, 0.7f, 300, 100, 40, 4, 0)
     {
     }
     

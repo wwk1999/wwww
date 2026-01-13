@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XieZi : MonsterBase
 {
-    public XieZi() : base(MonsterType.Boss, "XieZi", 1, 100000, 1.2f, 1000, 300, 10, 10, 0)
+    public XieZi() : base(MonsterType.Boss, "XieZi", 1, 100000, 1.2f, 1000, 300, 1000, 100, 0)
     {
     }
     

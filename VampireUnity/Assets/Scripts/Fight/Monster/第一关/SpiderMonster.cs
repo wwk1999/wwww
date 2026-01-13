@@ -12,13 +12,13 @@ public class SpiderMonster : MonsterBase
     public SpiderWeb spiderWeb;
     public Transform attackTrans;
 
-    public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.5f, 20, 5, 10, 1, 0) { }
+    public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.6f, 20, 5, 10, 1, 0) { }
     void Start()
     {
         base.Start();
         monsterSkeletonAnimation.timeScale = 1.5f;
 
-        size = 0.5f;
+        size = 0.6f;
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;

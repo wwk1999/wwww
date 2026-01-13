@@ -100,10 +100,12 @@ public class XiaoHuoMonster : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
+            monsterSkeletonAnimation.timeScale = 1.5f;
             isAttack=true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1;
             isAttack=false;
         }
         if (!IsDead)

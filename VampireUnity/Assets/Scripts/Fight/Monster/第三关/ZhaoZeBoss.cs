@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.Android.LowLevel;
 
 public class ZhaoZeBoss : MonsterBase
 {
-   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 50000, 1f, 300, 100, 10, 10, 0)
+   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 50000, 1f, 300, 100, 600, 60, 0)
     {
     }
     public Transform attackTrans;

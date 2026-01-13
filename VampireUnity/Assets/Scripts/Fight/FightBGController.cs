@@ -96,6 +96,7 @@ public class FightBGController : XSingleton<FightBGController>
             }
             playerExSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
             playerExSlider.value=GlobalPlayerAttribute.Exp ;
+            StoreController.S.SaveStoreData();
         }
     }
 
