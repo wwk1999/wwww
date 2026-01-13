@@ -20,7 +20,6 @@ public class WindowController : XSingleton<WindowController>
    [NonSerialized] public GameObject BagWindow;
    [NonSerialized] public GameObject FriendList;
    [NonSerialized] public GameObject AddFriendWindow;
-   [NonSerialized] public GameObject RankWindow;
    
    public void InitPanel()
    {
@@ -40,7 +39,6 @@ public class WindowController : XSingleton<WindowController>
       MonsterBookWindow=Instantiate(Resources.Load("Prefabs/Window/MonsterBook") as GameObject);
       FriendList=Instantiate(Resources.Load("Prefabs/Window/FriendList") as GameObject);
       AddFriendWindow=Instantiate(Resources.Load("Prefabs/Window/AddFriendWindow") as GameObject);
-      RankWindow=Instantiate(Resources.Load("Prefabs/Window/RankWindow") as GameObject);
 
       
       
@@ -59,6 +57,5 @@ public class WindowController : XSingleton<WindowController>
       Message.SetActive(false);
       FriendList.SetActive(false);
       AddFriendWindow.SetActive(false);
-      RankWindow.SetActive(false);
    }
 }

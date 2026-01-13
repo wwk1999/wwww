@@ -37,7 +37,6 @@ public class RankWindow : MonoBehaviour
    {
       exitButton.onClick.AddListener(() =>
       {
-         WindowController.S.RankWindow.SetActive(false);
       });
       
       
