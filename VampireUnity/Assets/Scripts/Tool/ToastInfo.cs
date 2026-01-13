@@ -8,9 +8,19 @@ using UnityEngine.UI;
 
 public class ToastInfo : MonoBehaviour
 {
-    public TextMeshProUGUI equipNameText;
-    public Text countText;
+    public TextMeshProUGUI redName;
+    public TextMeshProUGUI purpleName;
+    public TextMeshProUGUI orangeName;
+    public TextMeshProUGUI blueName;
+    public TextMeshProUGUI greenName;
+    public TextMeshProUGUI whiteName;
+
+    public Image bg;
+    public Image image;
+    public Animator anim;
+
     public Animation toastAnim;
+
     void Start()
     {
         if (toastAnim != null)
@@ -20,6 +30,7 @@ public class ToastInfo : MonoBehaviour
 
         StartCoroutine(DelayDestroy());
     }
+
     IEnumerator DelayDestroy()
     {
         yield return new WaitForSeconds(2.5f);
@@ -28,69 +39,161 @@ public class ToastInfo : MonoBehaviour
 
     public void SetEquipToast(EquipTable equipTable)
     {
+        redName.gameObject.SetActive(false);
+        orangeName.gameObject.SetActive(false);
+        purpleName.gameObject.SetActive(false);
+        blueName.gameObject.SetActive(false);
+        greenName.gameObject.SetActive(false);
+        whiteName.gameObject.SetActive(false);
+
         if (equipTable != null)
         {
             switch (equipTable.Quality)
             {
                 case 1:
-                    equipNameText.color = Color.white;
+                    whiteName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.WhiteBg;
+                    anim.Play("WhiteEdge");
+                    if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                    {
+                        whiteName.text = EquipName.EquipNameDic[equipTable.EquipName];
+                    }
+                    else
+                    {
+                        whiteName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                    }
+
                     break;
                 case 2:
-                    equipNameText.color = Color.green;
+                    greenName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.GreenBg;
+                    anim.Play("GreenEdge");
+                    if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                    {
+                        greenName.text = EquipName.EquipNameDic[equipTable.EquipName];
+                    }
+                    else
+                    {
+                        greenName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                    }
+
                     break;
                 case 3:
-                    equipNameText.color = Color.blue;
+                    blueName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.BlueBg;
+                    anim.Play("BlueEdge");
+                    if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                    {
+                        blueName.text = EquipName.EquipNameDic[equipTable.EquipName];
+                    }
+                    else
+                    {
+                        blueName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                    }
+
                     break;
                 case 4:
-                    equipNameText.color = new Color32(241, 20, 231, 255);
+                    purpleName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.PurpleBg;
+                    anim.Play("PurpleEdge");
+                    if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                    {
+                        purpleName.text = EquipName.EquipNameDic[equipTable.EquipName];
+                    }
+                    else
+                    {
+                        purpleName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                    }
+
                     break;
                 case 5:
-                    equipNameText.color = new Color(255,140,0,255);
+                    orangeName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.OrangeBg;
+                    anim.Play("OrangeEdge");
+                    if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                    {
+                        orangeName.text = EquipName.EquipNameDic[equipTable.EquipName];
+                    }
+                    else
+                    {
+                        orangeName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                    }
+
+                    break;
+                case 6:
+                    redName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.RedBg;
+                    anim.Play("RedEdge");
+                    if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                    {
+                        redName.text = EquipName.EquipNameDic[equipTable.EquipName];
+                    }
+                    else
+                    {
+                        redName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                    }
+
                     break;
             }
 
-            if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
-            {
-                equipNameText.text = EquipName.EquipNameDic[equipTable.EquipName];
-            }
-            else
-            {
-                equipNameText.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
-            }
+            image.sprite = ResourcesConfig.GetEquipSprite(equipTable);
         }
     }
-    
+
     public void SetPropToast(PropTable propTable)
     {
+        redName.gameObject.SetActive(false);
+        orangeName.gameObject.SetActive(false);
+        purpleName.gameObject.SetActive(false);
+        blueName.gameObject.SetActive(false);
+        greenName.gameObject.SetActive(false);
+        whiteName.gameObject.SetActive(false);
+
         if (propTable != null)
         {
-            if (propTable.PropType == PropConfig.PropType.ShenHuaCaiLiao)
+            switch (propTable.Quality)
             {
-                equipNameText.color = new Color(255,140,0,255);
-            }
-            else
-            {
-                switch (propTable.Quality)
-                {
-                    case 1:
-                        equipNameText.color = Color.white;
-                        break;
-                    case 2:
-                        equipNameText.color = Color.green;
-                        break;
-                    case 3:
-                        equipNameText.color = Color.blue;
-                        break;
-                    case 4:
-                        equipNameText.color = new Color32(241, 20, 231, 255);
-                        break;
-                    case 5:
-                        equipNameText.color = new Color(255, 140, 0, 255);
-                        break;
-                }
+                case 1:
+                    whiteName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.WhiteBg;
+                    anim.Play("WhiteEdge");
+                    whiteName.text = EquipName.EquipNameDic[propTable.EquipName];
+                    break;
+                case 2:
+                    greenName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.GreenBg;
+                    anim.Play("GreenEdge");
+                    greenName.text = EquipName.EquipNameDic[propTable.EquipName];
+
+                    break;
+                case 3:
+                    blueName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.BlueBg;
+                    anim.Play("BlueEdge");
+                    blueName.text = EquipName.EquipNameDic[propTable.EquipName];
+                    break;
+                case 4:
+                    purpleName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.PurpleBg;
+                    anim.Play("PurpleEdge");
+                    purpleName.text = EquipName.EquipNameDic[propTable.EquipName];
+                    break;
+                case 5:
+                    orangeName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.OrangeBg;
+                    anim.Play("OrangeEdge");
+                    orangeName.text = EquipName.EquipNameDic[propTable.EquipName];
+                    break;
+                case 6:
+                    redName.gameObject.SetActive(true);
+                    bg.sprite = ResourcesConfig.RedBg;
+                    anim.Play("RedEdge");
+                    redName.text = EquipName.EquipNameDic[propTable.EquipName];
+                    break;
             }
 
-            equipNameText.text = EquipName.EquipNameDic[propTable.EquipName];
+            image.sprite = ResourcesConfig.GetPropSprite(propTable);
         }
+
     }
 }

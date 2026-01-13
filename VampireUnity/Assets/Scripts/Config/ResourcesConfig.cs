@@ -662,6 +662,79 @@ public class ResourcesConfig : MonoBehaviour
         return null;
     }
 
+    public static Sprite GetPropSprite(PropTable propTable)
+    {
+        switch (propTable.PropType)
+        {
+            case PropConfig.PropType.WeaponFragment:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return WhiteWeaponFragment;
+                    case 2:
+                        return GreenWeaponFragment;
+                    case 3:
+                        return BlueWeaponFragment;
+                    case 4:
+                        return PurpleWeaponFragment;
+                    case 5:
+                        return OrangeWeaponFragment;
+                    case 6:
+                        return RedWeaponFragment;
+                }
+                break;
+            case PropConfig.PropType.JingCui:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return WhiteJingCui;
+                    case 2:
+                        return GreenJingCui;
+                    case 3:
+                        return BlueJingCui;
+                    case 4:
+                        return PurpleJingCui;
+                    case 5:
+                        return OrangeJingCui;
+                    case 6:
+                        return RedJingCui;
+                }
+                break;
+            case PropConfig.PropType.ChiBang:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return WhiteChiBang;
+                    case 2:
+                        return GreenChiBang;
+                    case 3:
+                        return BlueChiBang;
+                    case 4:
+                        return PurpleChiBang;
+                    case 5:
+                        return OrangeChiBang;
+                    case 6:
+                        return RedChiBang;
+                }
+                break;
+            case  PropConfig.PropType.ShenHuaCaiLiao:
+                switch (propTable.EquipName)
+                {
+                    case "FuMoZhiGu":
+                        return FuMoZhiGu;
+                    case "GoldBlood":
+                        return GoldBlood;
+                    case "JuDaYaChi":
+                        return JuDaYaChi;
+                    case "ZuiEYanZhu":
+                        return ZuiEYanZhu;
+                }
+                break;
+        }
+
+        return null;
+    }
+
     public static Sprite GetEquipSprite(EquipTable equipTable)
     {
         // 橙装有词条时优先显示对应的词条图标

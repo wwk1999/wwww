@@ -4,6 +4,7 @@ using System.Linq;
 using Gloabl;
 using Mysql;
 using MySqlConnector;
+using TMPro;
 using Tool;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -710,7 +711,7 @@ public class BagController : XSingleton<BagController>
             var propGrid = Instantiate(Resources.Load("Prefabs/Prop/PropGrid"), equipContent.transform) as GameObject;
             propGrid.GetComponent<PropGrid>().propType = prop.Key;
             propGrid.transform.Find("parent/Count").gameObject.SetActive(prop.Value.Count > 1);
-            propGrid.transform.Find("parent/Count").GetComponent<Text>().text = prop.Value.Count.ToString();
+            propGrid.transform.Find("parent/Count").GetComponent<TextMeshProUGUI>().text = prop.Value.Count.ToString();
             if (prop.Value.PropType == PropConfig.PropType.ShenHuaCaiLiao)
             {
                 if (prop.Key == 305)

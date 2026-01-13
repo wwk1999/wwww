@@ -2004,7 +2004,7 @@ MonoBehaviour:
   m_text: "\u8BDE\u751F\u4E8E\u521B\u751F\u4E0E\u6BC1\u706D\u4E4B\u95F4\uFF0C\u7528\u4E8E\u8FDB\u9636\u7684\u7EC8\u6781\u6750\u6599\uFF01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
-  m_sharedMaterial: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 429eae872c47b2940876338f970a4ea5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
