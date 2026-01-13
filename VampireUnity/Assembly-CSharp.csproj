@@ -499,6 +499,7 @@
     <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\第一关\蝙蝠\bf.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\GreenWolf\Enemy_Boss_stormwolf.json" />
+    <None Include="Assets\Arts\Spine\开始游戏打包\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Arts\Spine\技能\ZiDan\action.atlas.txt" />
@@ -686,6 +687,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\json13\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaNiao\shamoniao.json" />
     <None Include="Assets\Arts\Spine\怪物\DALONG打包\dragon.json" />
+    <None Include="Assets\Arts\Spine\输出标题画面\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Shaders\LcL\Fade.shader" />
     <None Include="Assets\Arts\Spine\技能\红球\lalafei_magic.json" />
     <None Include="Assets\Arts\Spine\怪物\Boss\fensexionggui.json" />
@@ -830,6 +832,7 @@
     <None Include="Assets\Arts\Spine\技能\毒圈\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\LvQuan\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\LvQuan\skeleton.json" />
+    <None Include="Assets\Arts\Spine\输出标题画面\skeleton.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Arts\Spine\怪物\DALONG打包\dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\主角受伤\1209112.atlas.txt" />
@@ -854,6 +857,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\AddHp\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.atlas.txt" />
     <None Include="Assets\shader\cgwell Add Zoff.shader" />
+    <None Include="Assets\Arts\Spine\开始游戏打包\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第五关\XueLang\xuelang.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\Lvquanbao\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\紫冲天1\skeleton.atlas.txt" />
