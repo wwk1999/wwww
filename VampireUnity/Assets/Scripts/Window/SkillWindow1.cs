@@ -174,100 +174,100 @@ public class SkillWindow1 : MonoBehaviour
 {
     // Normal Attack
     normalAttackLevel.gameObject.SetActive(SkillJiaDian.S.NormalAttack > 0);
-    normalAttackLevel.text = SkillJiaDian.S.NormalAttack.ToString();
+    normalAttackLevel.text = "["+SkillJiaDian.S.NormalAttack+"]";
     
     // Attack Speed
     attackSpeedLevel.gameObject.SetActive(SkillJiaDian.S.AttackSpeed > 0);
-    attackSpeedLevel.text = SkillJiaDian.S.AttackSpeed.ToString();
+    attackSpeedLevel.text = "["+SkillJiaDian.S.AttackSpeed+"]";
     
     // Dash
     dashLevel.gameObject.SetActive(SkillJiaDian.S.Dash > 0);
-    dashLevel.text = SkillJiaDian.S.Dash.ToString();
+    dashLevel.text = "["+SkillJiaDian.S.Dash+"]";
     
     // Dash CD
     dashCdLevel.gameObject.SetActive(SkillJiaDian.S.DashCd > 0);
-    dashCdLevel.text = SkillJiaDian.S.DashCd.ToString();
+    dashCdLevel.text = "["+SkillJiaDian.S.DashCd+"]";
     
     // Crit
     critLevel.gameObject.SetActive(SkillJiaDian.S.Crit > 0);
-    critLevel.text = SkillJiaDian.S.Crit.ToString();
+    critLevel.text = "["+SkillJiaDian.S.Crit+"]";
     
     // Crit Damage
     critDamageLevel.gameObject.SetActive(SkillJiaDian.S.CritDamage > 0);
-    critDamageLevel.text = SkillJiaDian.S.CritDamage.ToString();
+    critDamageLevel.text = "["+SkillJiaDian.S.CritDamage+"]";
     
     // Move Speed
     moveSpeedLevel.gameObject.SetActive(SkillJiaDian.S.MoveSpeed > 0);
-    moveSpeedLevel.text = SkillJiaDian.S.MoveSpeed.ToString();
+    moveSpeedLevel.text = "["+SkillJiaDian.S.MoveSpeed+"]";
     
     // Move Add Defense
     moveAddDefenseLevel.gameObject.SetActive(SkillJiaDian.S.MoveAddDefense > 0);
-    moveAddDefenseLevel.text = SkillJiaDian.S.MoveAddDefense.ToString();
+    moveAddDefenseLevel.text = "["+SkillJiaDian.S.MoveAddDefense+"]";
     
     // Move Add Attack
     moveAddAttackLevel.gameObject.SetActive(SkillJiaDian.S.MoveAddAttack > 0);
-    moveAddAttackLevel.text = SkillJiaDian.S.MoveAddAttack.ToString();
+    moveAddAttackLevel.text = "["+SkillJiaDian.S.MoveAddAttack+"]";
     
     // Skill1 Level (Damage)
     skill1Level.gameObject.SetActive(SkillJiaDian.S.Skill1Damage > 0);
-    skill1Level.text = SkillJiaDian.S.Skill1Damage.ToString();
+    skill1Level.text = "["+SkillJiaDian.S.Skill1Damage+"]";
     
     // Skill2 Level (Damage)
     skill2Level.gameObject.SetActive(SkillJiaDian.S.Skill2Damage > 0);
-    skill2Level.text = SkillJiaDian.S.Skill2Damage.ToString();
+    skill2Level.text = "["+SkillJiaDian.S.Skill2Damage+"]";
     
     // Skill3 Level (Damage)
     skill3Level.gameObject.SetActive(SkillJiaDian.S.Skill3Damage > 0);
-    skill3Level.text = SkillJiaDian.S.Skill3Damage.ToString();
+    skill3Level.text = "["+SkillJiaDian.S.Skill3Damage+"]";
     
     // Skill1 CD
     skill1CdLevel.gameObject.SetActive(SkillJiaDian.S.Skill1Cd > 0);
-    skill1CdLevel.text = SkillJiaDian.S.Skill1Cd.ToString();
+    skill1CdLevel.text = "["+SkillJiaDian.S.Skill1Cd+"]";
     
     // Skill2 CD
     skill2CdLevel.gameObject.SetActive(SkillJiaDian.S.Skill2Cd > 0);
-    skill2CdLevel.text = SkillJiaDian.S.Skill2Cd.ToString();
+    skill2CdLevel.text = "["+SkillJiaDian.S.Skill2Cd+"]";
     
     // Skill3 CD
     skill3CdLevel.gameObject.SetActive(SkillJiaDian.S.Skill3Cd > 0);
-    skill3CdLevel.text = SkillJiaDian.S.Skill3Cd.ToString();
+    skill3CdLevel.text = "["+SkillJiaDian.S.Skill3Cd+"]";
     
     // Skill1 Range
     skill1RangeLevel.gameObject.SetActive(SkillJiaDian.S.Skill1Range > 0);
-    skill1RangeLevel.text = SkillJiaDian.S.Skill1Range.ToString();
+    skill1RangeLevel.text = "["+SkillJiaDian.S.Skill1Range+"]";
     
     // Skill1 YiDian
     skill1YiDianLevel.gameObject.SetActive(SkillJiaDian.S.Skill1YiDian > 0);
-    skill1YiDianLevel.text = SkillJiaDian.S.Skill1YiDian.ToString();
+    skill1YiDianLevel.text = "["+SkillJiaDian.S.Skill1YiDian+"]";
     
     // Skill2 Time
     skill2TimeLevel.gameObject.SetActive(SkillJiaDian.S.Skill2Time > 0);
-    skill2TimeLevel.text = SkillJiaDian.S.Skill2Time.ToString();
+    skill2TimeLevel.text = "["+SkillJiaDian.S.Skill2Time+"]";
     
     // Skill2 Add Defense
     skill2AddDefenseLevel.gameObject.SetActive(SkillJiaDian.S.Skill2AddDefense > 0);
-    skill2AddDefenseLevel.text = SkillJiaDian.S.Skill2AddDefense.ToString();
+    skill2AddDefenseLevel.text = "["+SkillJiaDian.S.Skill2AddDefense+"]";
     
     // Skill3 Range
     skill3RangeLevel.gameObject.SetActive(SkillJiaDian.S.Skill3Range > 0);
-    skill3RangeLevel.text = SkillJiaDian.S.Skill3Range.ToString();
+    skill3RangeLevel.text = "["+SkillJiaDian.S.Skill3Range+"]";
     
     // Skill3 JianSu
     skill3JianSuLevel.gameObject.SetActive(SkillJiaDian.S.Skill3JianSu > 0);
-    skill3JianSuLevel.text = SkillJiaDian.S.Skill3JianSu.ToString();
+    skill3JianSuLevel.text = "["+SkillJiaDian.S.Skill3JianSu+"]";
     
     
     attackLevel.gameObject.SetActive(SkillJiaDian.S.MonsterAttack > 0);
-    attackLevel.text = SkillJiaDian.S.MonsterAttack.ToString();
+    attackLevel.text = "["+SkillJiaDian.S.MonsterAttack+"]";
     
     critMonsterLevel.gameObject.SetActive(SkillJiaDian.S.MonsterCrit > 0);
-    critMonsterLevel.text = SkillJiaDian.S.MonsterCrit.ToString();
+    critMonsterLevel.text = "["+SkillJiaDian.S.MonsterCrit+"]";
     
     hpLevel.gameObject.SetActive(SkillJiaDian.S.MonsterHp > 0);
-    hpLevel.text = SkillJiaDian.S.MonsterHp.ToString();
+    hpLevel.text = "["+SkillJiaDian.S.MonsterHp+"]";
     
     defenseLevel.gameObject.SetActive(SkillJiaDian.S.MonsterDefense > 0);
-    defenseLevel.text = SkillJiaDian.S.MonsterDefense.ToString();
+    defenseLevel.text = "["+SkillJiaDian.S.MonsterDefense+"]";
 }
 
 
@@ -412,6 +412,15 @@ public class SkillWindow1 : MonoBehaviour
         else
         {
             critDamageImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        if (SkillJiaDian.S.Dash < 1)
+        {
+            dashCdImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            dashCdImage.color=new Color32(255, 255, 255, 255);
         }
     }
 

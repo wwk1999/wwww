@@ -2910,7 +2910,7 @@ MonoBehaviour:
   skill3Level: {fileID: 4609659666536121254}
   skill1CdLevel: {fileID: 1552184944493190266}
   skill2CdLevel: {fileID: 8675711908402289380}
-  skill3CdLevel: {fileID: 1552184944493190266}
+  skill3CdLevel: {fileID: 3888110925518694815}
   skill1RangeLevel: {fileID: 7430534082310098078}
   skill1YiDianLevel: {fileID: 8553312149035217483}
   skill2TimeLevel: {fileID: 8038466548052248575}
