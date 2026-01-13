@@ -2,16 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
+using Spine;
 using UnityEngine;
 
 public class DunDiMonster : MonsterBase
 {
-    [NonSerialized]public float attackTime = 6f;
-    [NonSerialized]public float currentTime = 0f;
-    private Vector2 _targetpos;
-    public DunDiMonster() : base(MonsterType.Normal, "DunDiMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0)
+    public DunDiMonster() : base(MonsterType.Normal, "DunDiMonster", 1, 500, 0.7f, 100, 20, 20, 2, 0)
     {
     }
+
+    public Transform attackTrans;
     
     public override void AddMonsterEquip()
     {
@@ -32,7 +32,7 @@ public class DunDiMonster : MonsterBase
         MonsterSpineName.DieName = "die";
     }
     
-   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
+    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);
         if (!IsDead)
@@ -58,7 +58,9 @@ public class DunDiMonster : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,2),5));
+
     }
 
     public override void Die()
@@ -70,45 +72,36 @@ public class DunDiMonster : MonsterBase
     
     private void Start()
     {
-        size = 0.3f;
+        base.Start();
+        size = 0.6f;
         AddMonsterEquip();
         AddMonsterProp();
-    }
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
-
-    public void AttackBegin()
-    {
-        _targetpos= GameController.S.gamePlayer.transform.position;
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0,"skill", false);
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        StartCoroutine(AttackEnd());
     }
     
-    
-    //  协程等待3s
-    private IEnumerator AttackEnd()
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        yield return new WaitForSeconds(2f);
-        //gameObject.SetActive(true);
-        transform.localScale=new Vector3(1,1,1);
-        monsterSkeletonAnimation.AnimationState.SetAnimation(0,"chuxian", false);
-        transform.position = _targetpos;
+        if (e.Data.Name == "attack")
+        {
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
+        }
     }
-    
     
     void Update()
     {
-        if (IsDead) return;
-        //碰撞检测
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
+        if(IsDead) return;
         base.Update();
-        
-        
-        currentTime+= Time.deltaTime;
-        if(currentTime>= attackTime&&dis<15f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
-            AttackBegin();
-            currentTime = 0f;
+            isAttack=true;
+        }
+        else
+        {
+            isAttack=false;
         }
         if (!IsDead)
         {

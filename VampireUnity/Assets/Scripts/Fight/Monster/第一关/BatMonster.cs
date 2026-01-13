@@ -12,7 +12,7 @@ public class BatMonster : MonsterBase
     [NonSerialized]public float currentTime = 0f;
     public Transform attackTrans;
 
-    public BatMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.5f, 15, 5, 10, 10, 0) { }
+    public BatMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.5f, 15, 5, 10, 1, 0) { }
     void Start()
     {
         base.Start();

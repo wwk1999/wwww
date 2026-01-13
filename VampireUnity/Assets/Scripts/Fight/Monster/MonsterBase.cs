@@ -530,20 +530,17 @@ public abstract class MonsterBase : MonoBehaviour
         switch (MonsterType)
         {
             case MonsterType.Normal:
-                GlobalPlayerAttribute.BloodEnergy++;
                 GameController.S.NormalCount++;
                 break;
             case MonsterType.Elite:
-                GlobalPlayerAttribute.BloodEnergy+=10;
 
                 GameController.S.EliteCount++;
                 break;
             case MonsterType.Boss:
-                GlobalPlayerAttribute.BloodEnergy+=100;
                 GameController.S.BossCount++;
                 break;
         }
-
+        GlobalPlayerAttribute.BloodEnergy+=BloodEnergy;
         GameController.S.KillMonsterCount++;
         //胜利
         switch (LevelInfoConfig.CurrentGameLevelType)

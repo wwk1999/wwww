@@ -2,36 +2,40 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Equip;
+using Spine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class XiaoHuoMonster : MonsterBase
 {
-    [NonSerialized]public float attackTime = 5f;
-    [NonSerialized]public float currentTime = 0f;
-    public XiaoHuoMonster() : base(MonsterType.Normal, "XIaoHuoMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0)
+    public XiaoHuoMonster() : base(MonsterType.Normal, "XiaoHuoMonster", 1, 500, 0.7f, 100, 20, 20, 2, 0)
     {
     }
-  
+
+    public Transform attackTrans;
+   
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Green, 10));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Green, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Green, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Green, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Green, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Green, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Green, 2));
     }
     
     public void Awake()
     {
         base.Awake();
+        var randomSpeed=Random.Range(-0.1f, 0.1f);
+        Speed+=randomSpeed;
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
     }
     
-   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
+    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);
         if (!IsDead)
@@ -57,7 +61,9 @@ public class XiaoHuoMonster : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,2),5));
+
     }
 
     public override void Die()
@@ -69,45 +75,38 @@ public class XiaoHuoMonster : MonsterBase
     
     private void Start()
     {
-        size = 0.15f;
+        base.Start();
+        size = 0.5f;
         AddMonsterEquip();
         AddMonsterProp();
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
     }
     
-    public void AttackBegin()
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (!IsDead)
+        if (e.Data.Name == "attack")
         {
-            Speed = 8;
-            MonsterMove();
-            Invoke("AttackEnd",3f);
-            IsDash = true;
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            }
         }
-    }
-
-    public void AttackEnd()
-    {
-        IsDash = false;
-        Speed = 0.3f;
     }
     
     void Update()
-    { 
-        if (IsDead) return;
-        //碰撞检测
-        float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
+    {
+        if(IsDead) return;
         base.Update();
-        
-       
-       
-        currentTime+= Time.deltaTime;
-        if(currentTime>= attackTime&&dis<4f)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
-            AttackBegin();
-            currentTime = 0f;
+            isAttack=true;
         }
-        if (!IsDead&&!IsDash)
+        else
+        {
+            isAttack=false;
+        }
+        if (!IsDead)
         {
             MonsterMove();
             SpriteFlipX(true);

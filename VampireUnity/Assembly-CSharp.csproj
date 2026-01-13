@@ -534,6 +534,7 @@
     <None Include="Assets\Arts\Spine\怪物\盔甲人输出\fensexionggui.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\1225\蓝冲天激光\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\第二关\遁地\dundiguai.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.imgui@1.0.0\package.json" />
@@ -593,7 +594,6 @@
     <None Include="Assets\Arts\Spine\第二关\boss\huoshanboss.atlas.txt" />
     <None Include="Assets\Arts\Shaders\EdgeAlphaFade.shader" />
     <None Include="Assets\Arts\Spine\怪物\蓝龙打包\blue_dragon.atlas.txt" />
-    <None Include="Assets\Arts\Spine\第二关\小火怪\json\xiaohuoguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\DaLong\dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰peng\action.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\package.json" />
@@ -606,12 +606,12 @@
     <None Include="Assets\Arts\Spine\技能\json5\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\json 8\guyalang02.json" />
     <None Include="Assets\Arts\Spine\技能\主角剑气\skeleton.atlas.txt" />
-    <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\1225\黄散射\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\json15\action.json" />
     <None Include="Assets\Arts\Shaders\LcL\ColorSwap.shader" />
+    <None Include="Assets\Arts\Spine\第二关\小火怪\xiaohuoguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\火山boss\action.json" />
     <None Include="Assets\Arts\Spine\第三关\食人花\shirenhua.atlas.txt" />
     <None Include="Assets\Packages\MySqlConnector.2.4.0\lib\netstandard2.1\MySqlConnector.xml" />
@@ -668,6 +668,7 @@
     <None Include="Assets\shader\ParticleAdditiveGlow 1.shader" />
     <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.json" />
     <None Include="Assets\Arts\Spine\技能\1225\紫尾巴\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Spine\第二关\小火怪\xiaohuoguai.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空\action.json" />
     <None Include="Assets\Arts\Spine\技能\HuoDan\H043_Special.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\喷火\skeleton.atlas.txt" />
@@ -784,7 +785,6 @@
     <None Include="Assets\Arts\Shaders\tongdaopianyi.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\Du\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\毒圈\action.json" />
-    <None Include="Assets\Arts\Spine\第二关\遁地怪\json\dundiguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\第五关\XueLang2\xuelang.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\豹能量打包\Enemy_Panther_warrior.json" />
     <None Include="Assets\Arts\Spine\技能\传送门\skeleton.atlas.txt" />
@@ -801,6 +801,7 @@
     <None Include="Assets\Arts\Spine\怪物\YingShu\Enemy_Nativedevil.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
     <None Include="Assets\Arts\Spine\技能\1225\json13\skeleton.json" />
+    <None Include="Assets\Arts\Spine\第二关\遁地\dundiguai.atlas.txt" />
     <None Include="Assets\Arts\Spine\第一关\蜜蜂\json\mf.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoElite\Enemy_Skeleton_berserker.atlas.txt" />
@@ -812,7 +813,6 @@
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\ValidationConfig.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\Du\action.json" />
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\useSharedDesignerContext.txt" />
-    <None Include="Assets\Arts\Spine\第二关\小火怪\json\xiaohuoguai.json" />
     <None Include="Assets\Arts\Shaders\Rage.shader" />
     <None Include="Assets\Arts\Spine\技能\1225\json18\action.json" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\LvLong\green_dragon.atlas.txt" />

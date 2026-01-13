@@ -12,7 +12,7 @@ public class SpiderMonster : MonsterBase
     public SpiderWeb spiderWeb;
     public Transform attackTrans;
 
-    public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.5f, 20, 5, 10, 10, 0) { }
+    public SpiderMonster() : base(MonsterType.Normal, "BatMonster", 1, 100, 0.5f, 20, 5, 10, 1, 0) { }
     void Start()
     {
         base.Start();

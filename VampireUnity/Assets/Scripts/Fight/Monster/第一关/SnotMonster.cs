@@ -11,7 +11,7 @@ public class SnotMonster : MonsterBase
 {
    public Transform attackTrans;
 
-    public SnotMonster() : base(MonsterType.Normal, "SnotMonster", 1, 100, 0.5f, 20, 5, 10, 10, 0) { }
+    public SnotMonster() : base(MonsterType.Normal, "SnotMonster", 1, 100, 0.5f, 20, 5, 10, 1, 0) { }
     void Start()
     {
         base.Start();

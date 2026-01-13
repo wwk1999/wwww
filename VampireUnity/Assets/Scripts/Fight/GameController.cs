@@ -1283,11 +1283,11 @@ public class GameController : XSingleton<GameController>
                 }
                 else if (NormalMonsterCount % 3 == 1)
                 {
-                    monsterBase = HuangShuQueue.Dequeue();
+                    monsterBase = DunDiMonsterQueue.Dequeue();
                 }
                 else
                 {
-                    monsterBase = HuangZhuQueue.Dequeue();
+                    monsterBase = XiaoHuoMonsterQueue.Dequeue();
                 }
             }
             else

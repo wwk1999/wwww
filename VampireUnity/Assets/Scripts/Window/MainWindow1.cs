@@ -40,7 +40,7 @@ public class MainWindow1 : MonoBehaviour
 
        bgSke.AnimationState.SetAnimation(0, "开始", false);
        startButtonSke.AnimationState.SetAnimation(0, "chuchang", false);
-
+       bgSke.timeScale = 2;
       startButton.onClick.AddListener(async () =>
       {
           Debug.Log("点击进入末世");
