@@ -78,8 +78,8 @@ public class LevelInfoConfig
     public static void InitGameLevel()
     {
         LevelMonsterCount[0] = 0;
-        LevelMonsterCount[1] = 30;
-        LevelMonsterCount[2] = 50;
+        LevelMonsterCount[1] = 20;
+        LevelMonsterCount[2] = 30;
         LevelMonsterCount[3] = 50;
         LevelMonsterCount[4] = 50;
         LevelMonsterCount[5] = 60;

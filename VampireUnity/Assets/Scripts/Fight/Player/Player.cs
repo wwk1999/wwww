@@ -425,7 +425,7 @@ public class Player : MonoBehaviour
 
     IEnumerator DelayShowPanel()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Time.timeScale = 0;
         Instantiate(Resources.Load("Prefabs/Window/FailPanel") as GameObject);
     }

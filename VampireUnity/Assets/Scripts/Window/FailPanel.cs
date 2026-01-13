@@ -9,16 +9,15 @@ using UnityEngine.UI;
 
 public class FailPanel : MonoBehaviour
 {
-   public SkeletonGraphic skeletonGraphic;
+   public SkeletonAnimation SkeletonAnimation;
    public Button exitButton;
    public Button againButton;
 
    private void Start()
    {
-      var skAnim = skeletonGraphic.GetComponent<SkeletonAnimation>();
-      if (skAnim != null) {
-         skAnim.AnimationName = "bui_10_1";
-         skAnim.AnimationState.Complete += Complete;
+      if (SkeletonAnimation != null) {
+         SkeletonAnimation.AnimationState.SetAnimation(0,"bui_10_1",false);
+         SkeletonAnimation.AnimationState.Complete += Complete;
       }
       exitButton.onClick.AddListener(() =>
       {
@@ -37,16 +36,14 @@ public class FailPanel : MonoBehaviour
 
    private void OnDestroy()
    {
-      var skAnim = skeletonGraphic.GetComponent<SkeletonAnimation>();
-      if (skAnim != null) skAnim.AnimationState.Complete -= Complete;
+      SkeletonAnimation.AnimationState.Complete -= Complete;
    }
 
    public void Complete(TrackEntry trackEntry)
    {
       if (trackEntry.Animation.Name == "bui_10_1")
       {
-         var skAnim = skeletonGraphic.GetComponent<SkeletonAnimation>();
-         if (skAnim != null) skAnim.AnimationName = "bui_10_2";
+         SkeletonAnimation.AnimationState.SetAnimation(0,"bui_10_2",true);         
       }
    }
    
