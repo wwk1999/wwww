@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using Equip;
 using Mysql;
 using Spine;
@@ -578,6 +579,24 @@ public abstract class MonsterBase : MonoBehaviour
 
     public abstract void Die();
 
+    public static string FloatToSpriteString(float value)
+    {
+        long intPart = (long)Math.Abs(Math.Truncate(value));
+        // 特判 0
+        if (intPart == 0) return "<sprite=0>";
+
+        string digits = intPart.ToString();
+        var sb = new StringBuilder(digits.Length * 10);
+        foreach (char c in digits)
+        {
+            if (c >= '0' && c <= '9')
+            {
+                int index = c - '0';
+                sb.Append("<sprite=").Append(index).Append('>');
+            }
+        }
+        return sb.ToString();
+    }
     public void ShowHurtText(float damage,bool isCrit,YiChangState yiChangState=YiChangState.None)
     {
         MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
@@ -585,18 +604,18 @@ public abstract class MonsterBase : MonoBehaviour
         switch (yiChangState)
         {
             case YiChangState.Du:
-                monsterHpGameObject.duText.text = "-" + damage;
+                monsterHpGameObject.duText.text = "-" + FloatToSpriteString(damage);
                 break;
         }
 
         monsterHpGameObject.isCrit=isCrit;
         if (isCrit)
         {
-            monsterHpGameObject.critText.text = "-" + damage;
+            monsterHpGameObject.critText.text = "-" + FloatToSpriteString(damage);
         }
         else
         {
-            monsterHpGameObject.normalText.text = "-" + damage;
+            monsterHpGameObject.normalText.text = "-" + FloatToSpriteString(damage);
         }
         monsterHpGameObject.transform.position = transform.position;
         float offsetX=Random.Range(-0.3f,0.3f);

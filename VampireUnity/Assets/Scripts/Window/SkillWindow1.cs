@@ -148,9 +148,11 @@ public class SkillWindow1 : MonoBehaviour
 
     }
 
-    public void RefreshSkillCount()
+    private void TriggerButtonClickAnim(Button btn)
     {
-        skillCount.text=SkillJiaDian.S.CurrentSkillCount.ToString();
+        if (btn == null) return;
+        var anim = btn.gameObject.GetComponent<Animator>();
+        if (anim != null) anim.SetTrigger("Click");
     }
 
     public void SetLine()
@@ -434,7 +436,6 @@ public class SkillWindow1 : MonoBehaviour
         SetButtonDisable();
         SetShowLevel();
         SetAuto();
-        RefreshSkillCount();
     }
 
     private void Start()
@@ -465,11 +466,10 @@ public class SkillWindow1 : MonoBehaviour
                 return;
             }
             
-            normalAttackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(normalAttackButton);
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.NormalAttack++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -486,13 +486,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            attackSpeedButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(attackSpeedButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.AttackSpeed++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -509,13 +507,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            dashButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(dashButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Dash++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -532,13 +528,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            dashCdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(dashCdButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.DashCd++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -555,13 +549,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            critButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(critButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Crit++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -578,13 +570,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            critDamageButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(critDamageButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.CritDamage++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -601,13 +591,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            moveSpeedButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(moveSpeedButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveSpeed++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -624,13 +612,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            moveAddDefenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(moveAddDefenseButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveAddDefense++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -647,13 +633,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            moveAddAttackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(moveAddAttackButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveAddAttack++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -670,13 +654,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill1Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill1Button);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Damage++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -693,13 +675,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill2Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill2Button);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Damage++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -716,13 +696,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill3Button.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill3Button);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Damage++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -739,13 +717,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill1CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill1CdButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Cd++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -762,13 +738,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill2CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill2CdButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Cd++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -785,13 +759,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill3CdButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill3CdButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Cd++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -808,13 +780,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill1RangeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill1RangeButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Range++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -831,13 +801,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill1YiDianButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill1YiDianButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1YiDian++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -854,13 +822,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill2TimeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill2TimeButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Time++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -877,13 +843,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill2AddDefenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill2AddDefenseButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2AddDefense++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -900,13 +864,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill3RangeButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill3RangeButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Range++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -923,13 +885,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            skill3JianSuButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(skill3JianSuButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3JianSu++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -946,13 +906,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            attackButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(attackButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterAttack++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -969,13 +927,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            hpButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(hpButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterHp++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -992,13 +948,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            defenseButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(defenseButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterDefense++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });
@@ -1015,13 +969,11 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
             }
-            critMonsterButton.gameObject.GetComponent<Animator>().Play("SkillClick",0,0f);
+            TriggerButtonClickAnim(critMonsterButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterCrit++;
             StoreController.S.SaveStoreData();
-            RefreshSkillCount();
-
             SetShowLevel();
             SetButtonDisable();
         });

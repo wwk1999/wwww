@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using Spine;
 using Spine.Unity;
 using TMPro;
@@ -338,12 +339,31 @@ public class Player : MonoBehaviour
         MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
         monsterHpGameObject.isPlayer=true;
         monsterHpGameObject.transform.position = transform.position;
-        monsterHpGameObject.playerText.text = "-" + damage;
+        monsterHpGameObject.playerText.text =FloatToSpriteString(damage);
         float offsetX=Random.Range(-0.6f,0.2f);
         float offsetY=Random.Range(-0.2f,0.2f);
         monsterHpGameObject.transform.position = new Vector3(transform.position.x + 0.2f+offsetX,
             transform.position.y + 0.5f+offsetY, transform.position.z);
         monsterHpGameObject.gameObject.SetActive(true);
+    }
+    
+    public static string FloatToSpriteString(float value)
+    {
+        long intPart = (long)Math.Abs(Math.Truncate(value));
+        // 特判 0
+        if (intPart == 0) return "<sprite=0>";
+
+        string digits = intPart.ToString();
+        var sb = new StringBuilder(digits.Length * 10);
+        foreach (char c in digits)
+        {
+            if (c >= '0' && c <= '9')
+            {
+                int index = c - '0';
+                sb.Append("<sprite=").Append(index).Append('>');
+            }
+        }
+        return sb.ToString();
     }
 
     /// <summary>
