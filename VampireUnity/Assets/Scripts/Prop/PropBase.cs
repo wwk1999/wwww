@@ -6,7 +6,7 @@ using UnityEngine;
 public class PropBase : MonoBehaviour
 {
     public Rigidbody2D equipRb;
-    [NonSerialized]public float speed = 10f; // 装备跟随的速度
+    [NonSerialized]public float speed = 12f; // 装备跟随的速度
     [NonSerialized]public bool isPickUp = false; // 是否被拾取
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
     [NonSerialized]public PropTable propTables;
@@ -75,6 +75,7 @@ public class PropBase : MonoBehaviour
             EquipIDData.S.SaveProp(propTables);
             StoreController.S.SaveStoreData();
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,propTables);
+            GameController.S.PropBaseSet.Remove(this);
             //如果被拾取，销毁装备
             gameObject.SetActive(false);
             EnEquipQueue(propTables);

@@ -16,6 +16,9 @@ using Random = UnityEngine.Random;
 
 public class GameController : XSingleton<GameController>
 {
+    [NonSerialized]public HashSet<EquipBase> EquipBaseSet = new HashSet<EquipBase>();
+    [NonSerialized]public HashSet<PropBase> PropBaseSet = new HashSet<PropBase>();
+
     
     [NonSerialized] public int[] MonsterList = new int[2];
     [NonSerialized] public float GameMaxHp = 0;
@@ -913,17 +916,6 @@ public class GameController : XSingleton<GameController>
         {
             gamePlayer.transform.Find("Shield").gameObject.SetActive(true);
         });
-        //按钮冰箭技能
-        FightBGController.S.iceArrowButton.onClick.AddListener(() =>
-        {
-            if (SkillController.S.IceArrowCoolingtime > SkillController.S.IceArrowtime)
-            {
-                AudioController.S.PlayIceArrow();
-                SkillController.S.IceArrowCoolingtime = 0;
-                SkillController.S.IceArrow.Play();
-                SkillController.S.IceArrow.transform.Find("Trail").gameObject.SetActive(true);
-            }
-        });
         //按钮冰爆技能
         FightBGController.S.iceExButton.onClick.AddListener(() =>
         {
@@ -1503,6 +1495,18 @@ public class GameController : XSingleton<GameController>
                   
                 }
             }
+    }
+
+    public void CollectEquip()
+    {
+        foreach (var item in EquipBaseSet)
+        {
+            item.isPickUp = true;
+        }
+        foreach (var item in PropBaseSet)
+        {
+            item.isPickUp = true;
+        }
     }
 
     private void Update()

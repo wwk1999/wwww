@@ -109,8 +109,10 @@ public class FightBg : MonoBehaviour
         playerLevelText.text = GlobalPlayerAttribute.Level.ToString();
         ObserverModuleManager.S.RegisterEvent(ConstKeys.ShowToast, ShowTaost);
         ObserverModuleManager.S.RegisterEvent("ShenJi", ShenJi);
+        //召唤boss按钮监听事件
         jiHuoButton.onClick.AddListener(() =>
         {
+            GameController.S.CollectEquip();
             GameObject boosQuan=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/BossQuan"));
             boosQuan.transform.position = new Vector3(0, 0, 0);
             GameController.S.CreateBoss();

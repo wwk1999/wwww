@@ -521,7 +521,10 @@ public abstract class MonsterBase : MonoBehaviour
     /// </summary>
     public void GeneralDie()
     {
-        
+        if (MonsterType == MonsterType.Boss)
+        {
+            GameController.S.CollectEquip();
+        }
         //附加属性
         int replyHp = Mathf.RoundToInt(GameController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
         GlobalPlayerAttribute.ReplyHp(replyHp);
@@ -549,6 +552,7 @@ public abstract class MonsterBase : MonoBehaviour
             case LevelType.Elite:
                 if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] + LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 10)
                 {
+                    GameController.S.CollectEquip();
                     var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
                     chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     FightBGController.S.PlaySuccessAnim();
@@ -557,6 +561,7 @@ public abstract class MonsterBase : MonoBehaviour
             case LevelType.Normal:
                 if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
                 {
+                    GameController.S.CollectEquip();
                     var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
                     chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                     FightBGController.S.PlaySuccessAnim();
@@ -567,7 +572,7 @@ public abstract class MonsterBase : MonoBehaviour
         if (monsterSkeletonAnimation != null)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.DieName, false);
-            Invoke(nameof(DelayDestroy), 1f); // ← 几乎不分配内存
+            Invoke(nameof(DelayDestroy), 0.5f); // ← 几乎不分配内存
         }
         if(collider2D != null)
             collider2D.enabled = false;
@@ -657,13 +662,13 @@ public abstract class MonsterBase : MonoBehaviour
                 finalDamage*=(1+GlobalPlayerAttribute.NormalAttackNum/100.0f);
                 break;
             case DamageFrom.Skill1:
-                finalDamage*=(1+GlobalPlayerAttribute.Skill1DamageNum/100.0f);
+                finalDamage*=(1+(GlobalPlayerAttribute.Skill1DamageNum-100f)/100.0f);
                 break;
             case DamageFrom.Skill2:
-                finalDamage*=(1+GlobalPlayerAttribute.Skill2DamageNum/100.0f);
+                finalDamage*=(1+(GlobalPlayerAttribute.Skill2DamageNum-100f)/100.0f);
                 break;
             case DamageFrom.Skill3:
-                finalDamage*=(1+GlobalPlayerAttribute.Skill3DamageNum/100.0f);
+                finalDamage*=(1+(GlobalPlayerAttribute.Skill3DamageNum-100f)/100.0f);
                 break;
         }
         if (damageFrom == DamageFrom.Skill1&&YiDianTime>0)
@@ -826,7 +831,9 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 //生成装备
                 GameObject equip = GameController.S.GetEquip(monsterEquip);
-                equip.GetComponent<EquipBase>().enabled = true;
+                EquipBase equipbase=equip.GetComponent<EquipBase>();
+                GameController.S.EquipBaseSet.Add(equipbase);
+                equipbase.enabled = true;
                 equip.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
                 equip.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -840,7 +847,9 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 GameObject equip = GameController.S.GetOrangeEntryEquip(monsterEquip);
 
-                var comp = equip.GetComponent<EquipBase>();   // 对应的具体脚本
+                var comp = equip.GetComponent<EquipBase>(); 
+                GameController.S.EquipBaseSet.Add(comp);
+                // 对应的具体脚本
                 comp.enabled = true;
                 Debug.Log($"生成前：{equip.name}, activeSelf={equip.activeSelf}, enabled={(comp != null && comp.enabled)}");
 
@@ -861,6 +870,7 @@ public abstract class MonsterBase : MonoBehaviour
             {
                 //生成装备
                 GameObject propObj = GameController.S.GetProp(prop.PropItem);
+                GameController.S.PropBaseSet.Add(propObj.GetComponent<PropBase>());
                 propObj.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
                 propObj.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);

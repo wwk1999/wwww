@@ -12,7 +12,6 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public int ShadowCount = 5;
     [NonSerialized]public int CurrentDashCount = 0;
     //技能相关
-    [NonSerialized]public ParticleSystem IceArrow;
     [NonSerialized]public ParticleSystem NormalAttack;
     [NonSerialized]public GameObject NormalAttack2;
     [NonSerialized]public GameObject NormalAttack3;
@@ -82,8 +81,6 @@ public class SkillController : XSingleton<SkillController>
     void Start()
     {
         //技能相关
-        IceArrow = GameController.S.transform.Find("Player(Clone)/Pistol(Clone)/IceArrow/IceArrowParticleSystem").GetComponent<ParticleSystem>();
-        IceArrow.Stop();
         NormalAttack= GameController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack").GetComponent<ParticleSystem>();
         NormalAttack2= GameController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack2").gameObject;
         NormalAttack3= GameController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack3").gameObject;
@@ -292,16 +289,6 @@ public class SkillController : XSingleton<SkillController>
         if (Input.GetKeyDown(KeyCode.K))
         {
             GameController.S.gamePlayer.transform.Find("Rage").gameObject.SetActive(true);
-        }
-        //mac点击冰箭技能
-        if (Input.GetKeyDown(KeyCode.U)&&IceArrowCoolingtime>= IceArrowtime)
-        {
-            Debug.Log("mac点击了冰箭技能");
-            AudioController.S.PlayIceArrow();
-           
-            IceArrowCoolingtime = 0;
-           IceArrow.Play();
-           IceArrow.transform.Find("Trail").gameObject.SetActive(true);
         }
         
         if (IsDash )

@@ -18,7 +18,7 @@ public class EquipBase : BagObjectBase
     [NonSerialized]public Rigidbody2D equipRb;
    [NonSerialized]public string equipName;//装备名字
    [NonSerialized]public EquipTable EquipAttributes; // 装备属性
-    [NonSerialized]public float speed = 10f; // 装备跟随的速度
+    [NonSerialized]public float speed = 12f; // 装备跟随的速度
     [NonSerialized]public bool isPickUp = false; // 是否被拾取
     [NonSerialized]public SpriteRenderer SpriteRenderer;
     [NonSerialized]public SuitType suitType = SuitType.None; // 装备套装类型
@@ -84,6 +84,7 @@ public class EquipBase : BagObjectBase
     }
     void OnEnable()
     {
+        isPickUp = false;
         bagObjectType = BagObjectType.Equip;
         equipRb=GetComponent<Rigidbody2D>();
         equipRb.velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), UnityEngine.Random.Range(3f, 5f));
@@ -146,7 +147,7 @@ public class EquipBase : BagObjectBase
             EquipIDData.S.SavaEquip(EquipAttributes);
             StoreController.S.SaveStoreData();
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,EquipAttributes);
-            
+            GameController.S.EquipBaseSet.Remove(this);
             //如果被拾取，销毁装备
             gameObject.SetActive(false);
             EnEquipQueue(EquipAttributes);
