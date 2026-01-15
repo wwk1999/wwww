@@ -45,11 +45,6 @@ public class SnotMonster : MonsterBase
         MonsterSpineName.DieName = "die";
     }
     
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),5));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,1),5));    }
-
     private void RandomDelayDie()
     {
         AudioController.S.PlaySnotDie();
@@ -94,22 +89,35 @@ public class SnotMonster : MonsterBase
             SpriteFlipX(true);
         }
     }
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),3));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,1),3));
+    }
+
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Primary, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Primary, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Primary, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Primary, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Primary, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Primary, 2));
+
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Primary,
+            1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Primary,
+            1));
+        MonsterEquipList.Add(
+            new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 1));
+        MonsterEquipList.Add(
+            new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Primary, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,
+            PlayerEquipConfig.EquipLevel.Primary, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Primary,
+            1));
     }
-    
-   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
+
+    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
+{
+    base.Hurt(damage,isCrit,damageFrom);
+    if (!IsDead)
     {
-        base.Hurt(damage,isCrit,damageFrom);
-        if (!IsDead)
-        {
-            AudioController.S.PlayBatHit();
-        }
+        AudioController.S.PlayBatHit();
     }
+}
 }

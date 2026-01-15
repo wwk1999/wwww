@@ -1,0 +1,15 @@
+skeleton.png
+size:5974,5921
+filter:Linear,Linear
+pma:true
+能量环
+bounds:3001,2,2944,2945
+offsets:29,24,3000,3000
+rotate:90
+能量环2
+bounds:3001,2948,2971,2971
+offsets:16,11,3000,3000
+能量环3
+bounds:2,2920,2999,2997
+offsets:1,0,3000,3000
+rotate:90

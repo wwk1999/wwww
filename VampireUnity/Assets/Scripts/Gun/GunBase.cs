@@ -93,7 +93,7 @@ public class GunBase : MonoBehaviour
         GameObject bullet = GameController.S.DuQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.GetComponent<Du>().MoveDirection = direction;
-        bullet.GetComponent<Du>().MoveSpeed = 7f;
+        bullet.GetComponent<Du>().MoveSpeed = 10f;
         bullet.gameObject.SetActive(true);
     }
 
@@ -136,7 +136,7 @@ public class GunBase : MonoBehaviour
 
             var attack = bullet.GetComponent<PuTong3>();
             attack.MoveDirection = dir;
-            attack.MoveSpeed = 7f;
+            attack.MoveSpeed = 10f;
             bullet.SetActive(true);
         }
         
@@ -185,7 +185,7 @@ public class GunBase : MonoBehaviour
 
             var attack = bullet.GetComponent<PuTong3>();
             attack.MoveDirection = dir;
-            attack.MoveSpeed = 7f;
+            attack.MoveSpeed = 10f;
             bullet.SetActive(true);
         }
     }
@@ -200,7 +200,7 @@ public class GunBase : MonoBehaviour
         GameObject bullet = GameController.S.FireQueue.Dequeue();
         bullet.transform.position = GameController.S.gamePlayer.transform.position;
         bullet.GetComponent<FireNormalAttack>().MoveDirection = direction;
-        bullet.GetComponent<FireNormalAttack>().MoveSpeed =7f;
+        bullet.GetComponent<FireNormalAttack>().MoveSpeed =10f;
         bullet.gameObject.SetActive(true);
     }
     

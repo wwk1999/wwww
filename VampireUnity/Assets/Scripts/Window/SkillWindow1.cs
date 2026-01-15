@@ -176,6 +176,11 @@ public class SkillWindow1 : MonoBehaviour
         critDamageLine.SetActive(SkillJiaDian.S.CritDamage >= 1);
     }
 
+    public void ResfreshSkillCount()
+    {
+        skillCount.text = SkillJiaDian.S.CurrentSkillCount.ToString();
+    }
+
 
    public void SetShowLevel()
 {
@@ -436,6 +441,7 @@ public class SkillWindow1 : MonoBehaviour
         SetButtonDisable();
         SetShowLevel();
         SetAuto();
+        ResfreshSkillCount();
     }
 
     private void Start()
@@ -470,6 +476,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.NormalAttack++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -491,6 +498,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.AttackSpeed++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -512,6 +520,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Dash++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -533,6 +542,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.DashCd++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -554,6 +564,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Crit++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -575,6 +586,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.CritDamage++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -596,6 +608,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveSpeed++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -617,6 +630,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveAddDefense++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -638,6 +652,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MoveAddAttack++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -659,6 +674,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Damage++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -680,6 +696,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Damage++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -701,6 +718,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Damage++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -722,6 +740,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Cd++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -743,6 +762,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Cd++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -764,6 +784,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Cd++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -785,6 +806,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1Range++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -806,6 +828,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill1YiDian++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -827,6 +850,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2Time++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -848,6 +872,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill2AddDefense++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -869,6 +894,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3Range++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -890,6 +916,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.Skill3JianSu++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -911,6 +938,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterAttack++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -932,6 +960,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterHp++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -953,6 +982,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterDefense++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
@@ -974,6 +1004,7 @@ public class SkillWindow1 : MonoBehaviour
             SkillJiaDian.S.CurrentSkillCount--;
             SkillJiaDian.S.MonsterCrit++;
             StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
             SetShowLevel();
             SetButtonDisable();
         });
