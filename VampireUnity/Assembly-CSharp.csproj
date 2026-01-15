@@ -274,6 +274,7 @@
     <Compile Include="Assets\Scripts\Tool\FolderToAtlasTool.cs" />
     <Compile Include="Assets\Scripts\Window\TaskWindow1.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerEquipConfig.cs" />
+    <Compile Include="Assets\Scripts\Window\AttributePanel.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaChong.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\HpReductionAddDefense.cs" />
     <Compile Include="Assets\Scripts\Tool\AnimCallBack.cs" />
@@ -493,7 +494,7 @@
     <None Include="Assets\Arts\Spine\技能\绿爆炸\action.atlas.txt" />
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\useSharedDesignerContext.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaXiYi\shamoxiyi.json" />
-    <None Include="Assets\Arts\Spine\第三关\石头Boss\shitouBOSS.json" />
+    <None Include="Assets\Arts\Spine\第三关\石头BOSS\shitouBOSS.json" />
     <None Include="Assets\Arts\Spine\第二关\大嘴\dazuiguai.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\package.json" />
@@ -632,7 +633,7 @@
     <None Include="Assets\Arts\Spine\第三关\食人花\shirenhua.atlas.txt" />
     <None Include="Assets\Packages\MySqlConnector.2.4.0\lib\netstandard2.1\MySqlConnector.xml" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\Fail\bui_10.json" />
-    <None Include="Assets\Arts\Spine\怪物\雪山Boss\Enemy_Boss_ogre.json" />
+    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\Enemy_Boss_ogre.json" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.12\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@14.0.12\package.json" />
@@ -732,7 +733,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\PuTong3\action.json" />
     <None Include="Assets\Arts\Spine\第五关\XueLang\xuelang.json" />
     <None Include="Assets\Arts\Spine\淘宝\斩\caocao_skill1_2.atlas.txt" />
-    <None Include="Assets\Arts\Spine\第三关\石头Boss\shitouBOSS.atlas.txt" />
+    <None Include="Assets\Arts\Spine\第三关\石头BOSS\shitouBOSS.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -791,7 +792,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\黄电圈\action.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
-    <None Include="Assets\Arts\Spine\怪物\雪山Boss\Enemy_Boss_ogre.atlas.txt" />
+    <None Include="Assets\Arts\Spine\怪物\雪山BOSS\Enemy_Boss_ogre.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
     <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.atlas.txt" />

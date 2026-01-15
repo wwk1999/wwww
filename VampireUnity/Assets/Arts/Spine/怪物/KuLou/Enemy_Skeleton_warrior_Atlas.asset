@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: Enemy_Skeleton_warrior_Atlas
   m_EditorClassIdentifier: 
+  serializedMaterialOverrides: []
   textureLoadingMode: 0
   onDemandTextureLoader: {fileID: 0}
   atlasFile: {fileID: 4900000, guid: 3e2e006c6ca20634bb8f0761b5d700f0, type: 3}
