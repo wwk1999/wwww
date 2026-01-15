@@ -12,7 +12,6 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public int ShadowCount = 5;
     [NonSerialized]public int CurrentDashCount = 0;
     //技能相关
-    [NonSerialized]public float IceBallTime = 8+GlobalPlayerAttribute.Skill2TimeNum/100.0f;
     [NonSerialized]public ParticleSystem IceArrow;
     [NonSerialized]public ParticleSystem NormalAttack;
     [NonSerialized]public GameObject NormalAttack2;
@@ -28,7 +27,7 @@ public class SkillController : XSingleton<SkillController>
     //技能冷却时间
     public float IceArrowtime => (3f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
     public float IceExplosiontime => (10f*(1-GlobalPlayerAttribute.Skill3CdNum/100.0f));
-    public float IceBalltime => (10f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
+    public float IceBalltime => (15f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
     public float IceBallDuration = 5;
     public float Dashtime => GetDashCd();
     public float DianQuantime => (10f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
@@ -240,7 +239,7 @@ public class SkillController : XSingleton<SkillController>
             ExcuteSkill(SkillType.Skill1);
         }
         
-        if (IceBallCoolingtime >= IceBallTime && SkillJiaDian.S.Skill2Damage >= 1&&SkillData.S.skill2Auto)
+        if (IceBallCoolingtime >= IceBalltime && SkillJiaDian.S.Skill2Damage >= 1&&SkillData.S.skill2Auto)
         {
             ExcuteSkill(SkillType.Skill2);
         }

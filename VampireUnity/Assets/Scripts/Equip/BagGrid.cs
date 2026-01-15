@@ -18,6 +18,8 @@ public class BagGrid : MonoBehaviour
     [NonSerialized]public Sprite equipAttributeImage;
     public GameObject E;
     public Animator animator;
+    public GameObject Lock;
+
 
     private void Awake()
     {

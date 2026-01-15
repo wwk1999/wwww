@@ -792,7 +792,8 @@ public abstract class MonsterBase : MonoBehaviour
             }
             CurrentHp -= finalDamage;
             //设置血条
-            hpSlider.value = (float)CurrentHp / MaxHp;
+            hpSlider.maxValue = MaxHp;
+            hpSlider.value = CurrentHp;            
             if (CurrentHp <= 0 && !IsDead)
             {
                 IsDead = true;

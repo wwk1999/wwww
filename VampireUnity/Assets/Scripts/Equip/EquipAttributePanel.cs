@@ -279,11 +279,16 @@ public class EquipAttributePanel : MonoBehaviour
         }
         sellButton.onClick.AddListener(() =>
         {
+            EquipTable equip = (EquipTable)tableBase;
+            if (equip.Lock)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"装备已锁定，无法分解");
+                return;
+            }
             grid.transform.Find("parent/EquipGridBG").GetComponent<Image>().color =new Color(1, 1, 1, 0);
             grid.transform.Find("parent/BagGridImage").GetComponent<Image>().color = new Color(1, 1, 1, 0);
             grid.transform.Find("parent/Edge").GetComponent<Image>().color = new Color(1, 1, 1, 0);
             grid.transform.Find("parent/Count").GetComponent<Text>().text = null;
-            EquipTable equip = (EquipTable)tableBase;
             BagController.S.EquipIdList.Remove(equip.equipid);
             switch (equip.Quality)
             {

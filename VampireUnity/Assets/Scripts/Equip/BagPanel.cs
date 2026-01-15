@@ -57,7 +57,7 @@ public class BagPanel : MonoBehaviour
     
     public Button equipButton; // 装备按钮
     public Button propbutton; // 道具按钮
-    [NonSerialized] public int currentBagType = 1;//1是装备，2是源石，3是道具
+    [NonSerialized] public int currentBagType = 1;//1是装备，2是道具
 
 
     private void OnEnable()
@@ -70,7 +70,11 @@ public class BagPanel : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         equipButton.onClick.AddListener(() =>
-        {
+        { 
+            if (BagController.S.PageNum == 1 && currentBagType == 1)
+            {
+                return;
+            }
             BagController.S.PageNum = 1;
             currentBagType = 1;
             BagController.S.ShowEquip();
@@ -78,6 +82,10 @@ public class BagPanel : MonoBehaviour
         
         propbutton.onClick.AddListener(() =>
         {
+            if (currentBagType == 2)
+            {
+                return;
+            }
             BagController.S.PageNum = 1;
             currentBagType = 2;
             BagController.S.ShowProp();

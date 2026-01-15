@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\JianSuAddAttack.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXLightFlicker.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\ExtremeSpeed.cs" />
+    <Compile Include="Assets\Scripts\Tool\MouseLock.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\雷兽\LeiShouShunYi.cs" />
     <Compile Include="Assets\Scripts\Config\SkillConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\ChiBangGrid.cs" />
@@ -540,6 +541,7 @@
     <None Include="Assets\Arts\Spine\技能\json\H043_Special.json" />
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.xml" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal-config@14.0.10\package.json" />
+    <None Include="Assets\Arts\Spine\Loading\加载动画打包\zj.json" />
     <None Include="Assets\Arts\Spine\怪物\盔甲人输出\fensexionggui.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\1225\蓝冲天激光\skeleton.atlas.txt" />
@@ -864,6 +866,7 @@
     <None Include="Assets\Arts\Spine\怪物\MiJing\XiaoEMo\akmon_pirest.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\淘宝\斩\caocao_skill1_2.json" />
+    <None Include="Assets\Arts\Spine\Loading\加载动画打包\zj.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\LanLong\blue_dragon.json" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰攻击\action.json" />

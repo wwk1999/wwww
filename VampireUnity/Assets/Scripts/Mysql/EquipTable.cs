@@ -13,6 +13,8 @@ public class EquipTable:TableBase
     public float CRIT { get; set; }
     public float Defense { get; set; }
     public float HP { get; set; }
+    public bool Lock { get; set; }
+
     
     public List<DamageEntryInfo> damageEntryInfos=new List<DamageEntryInfo>();
     public List<DefenseEntryInfo> defenseEntryInfos=new List<DefenseEntryInfo>();

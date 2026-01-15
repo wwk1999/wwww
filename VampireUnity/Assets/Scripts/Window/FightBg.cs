@@ -88,7 +88,7 @@ public class FightBg : MonoBehaviour
             case SkillType.Skill1:
                 return SkillController.S.DianQuanCoolingtime / SkillController.S.DianQuantime;
             case SkillType.Skill2:
-                return SkillController.S.IceBallCoolingtime / SkillController.S.IceBallTime;
+                return SkillController.S.IceBallCoolingtime / SkillController.S.IceBalltime;
             case SkillType.Skill3:
                 return SkillController.S.IceExplosionCoolingtime / SkillController.S.IceExplosiontime;
             case SkillType.Dash:

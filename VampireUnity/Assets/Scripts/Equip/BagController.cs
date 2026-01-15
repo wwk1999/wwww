@@ -946,6 +946,14 @@ public class BagController : XSingleton<BagController>
                         ResourcesConfig.GetEquipSprite(list[i]);
                     bagGridComponent.EquipType = EquipType.Equip;
 
+                    if (list[i].Lock)
+                    {
+                        bagGridComponent.Lock.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        bagGridComponent.Lock.gameObject.SetActive(false);
+                    }
                     //播放边框动画
                     switch (list[i].Quality)
                     {
@@ -1613,6 +1621,11 @@ public class BagController : XSingleton<BagController>
                 {
                     continue;
                 }
+
+                if (item.Lock)
+                {
+                    continue;
+                }
                 EquipIdList.Remove(item.equipid);
                 if (PropList.ContainsKey(201))
                 {
@@ -1636,6 +1649,10 @@ public class BagController : XSingleton<BagController>
                 {
                     continue;
                 }
+                if (item.Lock)
+                {
+                    continue;
+                }
                 EquipIdList.Remove(item.equipid);
                 if (PropList.ContainsKey(202))
                 {
@@ -1656,6 +1673,10 @@ public class BagController : XSingleton<BagController>
                 if (item.equipid == PlayerEquipConfig.CloakId || item.equipid == PlayerEquipConfig.ClothId ||
                     item.equipid == PlayerEquipConfig.NecklaceId || item.equipid == PlayerEquipConfig.RingId ||
                     item.equipid == PlayerEquipConfig.HelmetId || item.equipid == PlayerEquipConfig.ShoeId)
+                {
+                    continue;
+                }
+                if (item.Lock)
                 {
                     continue;
                 }

@@ -161,6 +161,15 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ZuiEYanZhu;
     public static Sprite JuDaYaChi;
     public static Sprite ShenHuaZhiXin;
+    
+    //loading页
+    public static Sprite Loading1;
+    public static Sprite Loading2;
+    public static Sprite Loading3;
+    public static Sprite Loading4;
+    public static Sprite Loading5;
+    public static Sprite Loading6;
+
 
 
 
@@ -251,6 +260,16 @@ public class ResourcesConfig : MonoBehaviour
         ZuiEYanZhu = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ZuiEYanZhu");
         JuDaYaChi = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/JuDaYaChi");
         ShenHuaZhiXin = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ShenHuaZhiXin");
+        
+        
+        //loading页
+        Loading1= Resources.Load<Sprite>("Sprite/Loading/bg1");
+        Loading2= Resources.Load<Sprite>("Sprite/Loading/bg2");
+        Loading3= Resources.Load<Sprite>("Sprite/Loading/bg3");
+        Loading4= Resources.Load<Sprite>("Sprite/Loading/bg4");
+        Loading5= Resources.Load<Sprite>("Sprite/Loading/bg5");
+        Loading6= Resources.Load<Sprite>("Sprite/Loading/bg6");
+
 
 
 
@@ -456,6 +475,39 @@ public class ResourcesConfig : MonoBehaviour
         QingWaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/qingwa");
         ShiRenHuaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenhua");
         BossShiRenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenboss");
+    }
+
+    public static Sprite GetLoadingBg()
+    {
+        if (LevelInfoConfig.CurrentGameLevel < 4)
+        {
+            return Loading1;
+        }
+        if (LevelInfoConfig.CurrentGameLevel >= 4&& LevelInfoConfig.CurrentGameLevel < 7)
+        {
+            return Loading2;
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel >= 7&& LevelInfoConfig.CurrentGameLevel < 10)
+        {
+            return Loading3;
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel >= 10&& LevelInfoConfig.CurrentGameLevel < 13)
+        {
+            return Loading4;
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel >= 13&& LevelInfoConfig.CurrentGameLevel < 16)
+        {
+            return Loading5;
+        }
+        if (LevelInfoConfig.CurrentGameLevel >= 16)
+        {
+            return Loading6;
+        }
+
+        return null;
     }
 
     public static Sprite GetEquipColorBgByQuality(int quality)

@@ -7,12 +7,11 @@ using UnityEngine.UI;
 
 public class SceneLoading1 : MonoBehaviour
 {
-    public SkeletonAnimation  skeletonAnimation;
+    public Image bg;
     public Slider loadSlider;
     void Start()
     {
-        skeletonAnimation.AnimationState.SetAnimation(0, "walk", true);
-        
+        bg.sprite = ResourcesConfig.GetLoadingBg();
         GlobalPlayerAttribute.IsGame = true;
         var async = SceneManager.LoadSceneAsync("FightScene");
         async.allowSceneActivation = false; // 禁止自动场景激活，让你手动控制
