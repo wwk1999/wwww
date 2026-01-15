@@ -12,7 +12,7 @@ public class BlueHelmet : EquipBase
     {
         SpriteRenderer = transform.Find("BlueHelmetSprite").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipName = "BlueHelmet";
-        EquipAttributes.EquipLevel = 15;
+        EquipAttributes.EquipLevel = 10;
 
         EquipAttributes.suitid = 3;
         EquipAttributes.equip_type_id = 3;

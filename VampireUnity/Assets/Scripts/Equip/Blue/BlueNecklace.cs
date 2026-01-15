@@ -13,7 +13,7 @@ public class BlueNecklace : EquipBase
         {
             SpriteRenderer = transform.Find("BlueNecklaceSprite").GetComponent<SpriteRenderer>();
             EquipAttributes.EquipName = "BlueNecklace";
-            EquipAttributes.EquipLevel = 15;
+            EquipAttributes.EquipLevel = 10;
 
             EquipAttributes.suitid =3;
             EquipAttributes.equip_type_id = 4;

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShiRenHuaMonster : MonsterBase
 {
-    public ShiRenHuaMonster() : base(MonsterType.Elite, "ShiRenHuaMonster", 1, 5000, 0.7f, 300, 100, 150, 15, 0)
+    public ShiRenHuaMonster() : base(MonsterType.Elite, "ShiRenHuaMonster", 1, 8000, 0.7f, 500, 150, 150, 15, 0)
     {
     }
     public Transform attackTrans;
@@ -68,8 +68,8 @@ public class ShiRenHuaMonster : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),5));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),5));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),10));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),10));
 
     }
 

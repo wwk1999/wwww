@@ -1108,7 +1108,7 @@ MonoBehaviour:
   whiteName: {fileID: 4599820320718224851}
   bg: {fileID: 8588770882992257591}
   image: {fileID: 5479864068677261146}
-  anim: {fileID: 0}
+  anim: {fileID: 271393373831376109}
   toastAnim: {fileID: 8905231985167830055}
 --- !u!1 &8360034970718068116
 GameObject:

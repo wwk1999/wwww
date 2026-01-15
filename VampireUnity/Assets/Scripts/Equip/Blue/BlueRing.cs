@@ -13,7 +13,7 @@ public class BlueRing : EquipBase
     {
         SpriteRenderer = transform.Find("BlueRingSprite").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipName = "BlueRing";
-        EquipAttributes.EquipLevel = 15;
+        EquipAttributes.EquipLevel = 10;
 
         EquipAttributes.suitid = 3;
         EquipAttributes.equip_type_id = 5;

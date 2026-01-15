@@ -12,7 +12,7 @@ public class BlueCloak : EquipBase
     {
         SpriteRenderer = transform.Find("BlueCloakSprite").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipName = "BlueCloak";
-        EquipAttributes.EquipLevel = 15;
+        EquipAttributes.EquipLevel = 10;
 
         EquipAttributes.suitid = 3;
         EquipAttributes.equip_type_id = 1;

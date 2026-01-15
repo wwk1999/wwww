@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class WenZiMonster : MonsterBase
 {
-   public WenZiMonster() : base(MonsterType.Normal, "WenZiMonster", 1, 1500, 0.7f, 150, 50, 30, 3, 0)
+   public WenZiMonster() : base(MonsterType.Normal, "WenZiMonster", 1, 2500, 0.7f, 250, 100, 30, 3, 0)
     {
     }
     public Transform attackTrans;
@@ -59,8 +59,8 @@ public class WenZiMonster : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),5));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),5));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5));
 
     }
 
