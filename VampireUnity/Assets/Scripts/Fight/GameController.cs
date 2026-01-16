@@ -968,6 +968,7 @@ public class GameController : XSingleton<GameController>
         //召唤BOSS，激活BOSS，bosswarning动画
         if (KillMonsterCount>=LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/2 && HaveBossWarning == false&&(LevelInfoConfig.CurrentGameLevelType==LevelType.Boss||LevelInfoConfig.CurrentGameLevelType==LevelType.MJ))
         {
+            gamePlayer.ShowArrow();
             HaveBossWarning=true;
             BossJiHuo = true;
             ShowChuanSongZhen();

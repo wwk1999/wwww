@@ -27,6 +27,7 @@ public enum WeaponType
 }
 public class Player : MonoBehaviour
 {
+    public GameObject arrow;
     public GunBase currentGun;
     private float _gunDistance = 0.3f;
     public SkeletonAnimation playerSkeleton;
@@ -527,8 +528,21 @@ public class Player : MonoBehaviour
         delayedDamageCoroutine = null;
     }
 
+    public void ShowArrow()
+    {
+        arrow.SetActive(true);
+    }
+
+    public void HideArrow()
+    {
+        arrow.SetActive(false);
+    }
+
     private void Update()
     {
+        Vector2 dir = (Vector2.zero - new Vector2(transform.position.x, transform.position.y)).normalized;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         //主角操作
         PlayerMove();
         if (Input.GetMouseButtonDown(0))
