@@ -9,7 +9,6 @@ public class ShaMoElite : MonsterBase
     public ShaMoElite() : base(MonsterType.Normal, "ShaMoElite", 1, 100, 0.3f, 10, 5, 10, 10, 0)
     {
     }
-    public GameObject parent;
     public Transform skillTrans1;
     public Transform skillTrans2;
     public Transform skillTrans3;

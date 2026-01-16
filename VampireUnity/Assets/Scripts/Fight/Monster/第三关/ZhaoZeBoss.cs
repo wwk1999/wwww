@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.Android.LowLevel;
 
 public class ZhaoZeBoss : MonsterBase
 {
-   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 50000, 1f, 300, 100, 600, 60, 0)
+   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 100000, 1f, 500, 150, 600, 60, 0)
     {
     }
     public Transform attackTrans;
@@ -112,7 +112,6 @@ public class ZhaoZeBoss : MonsterBase
         var pos = GameController.S.gamePlayer.transform.position;
         GameController.S.CreateCircleAttack(new Vector2(pos.x+2,pos.y),1);
         yield return new WaitForSeconds(1f);
-        gameObject.SetActive(true);
         parent.transform.localScale = new Vector3(1, 1, 1);
         transform.position = pos;
         monsterSkeletonAnimation.timeScale = 1.3f;
@@ -133,6 +132,7 @@ public class ZhaoZeBoss : MonsterBase
         GameController.S.CreateCircleAttack(pos,1);
         yield return  new WaitForSeconds(1f);
         var shui = GameController.S.ZhaoZeSkillQueue.Dequeue();
+        shui.damage = Attack;
         shui.transform.position = pos;
         shui.gameObject.SetActive(true);
     }
@@ -146,7 +146,6 @@ public class ZhaoZeBoss : MonsterBase
 
         if (trackEntry.Animation.Name == "skill3")
         {
-            gameObject.SetActive(false);
             GameController.S.StartCoroutine(DelayChuXian());
             return;
         }

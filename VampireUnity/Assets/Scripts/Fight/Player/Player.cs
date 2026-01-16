@@ -440,6 +440,7 @@ public class Player : MonoBehaviour
     {
         playerSkeleton.timeScale = 1;
         playerSkeleton.AnimationState.SetAnimation(0, "die", false);
+        FightBGController.S.SetHp();
         StartCoroutine(DelayShowPanel());
     }
 

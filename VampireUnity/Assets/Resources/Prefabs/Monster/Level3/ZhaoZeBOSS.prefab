@@ -1019,7 +1019,7 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 5684110836140596066}
   hpSlider: {fileID: 6515589411300208428}
-  collider2D: {fileID: 0}
+  collider2D: {fileID: 6896123283768798701}
   rigidbody2D: {fileID: 3513499961834868068}
   attackTrans: {fileID: 6006090304651002513}
   skill1Collider: {fileID: 1961036959311709017}
@@ -1204,8 +1204,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d1053765a1a8ed44e831781975db575f, type: 2}
-  - {fileID: 2100000, guid: 2346b91c460ad5f4a8e01b61b5753bd8, type: 2}
+  - {fileID: 2100000, guid: 930970d34252b134c8291e84ba330cae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1284,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 8b9bff295e1558a4ab7835342d77ece1, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 0049ff2c54729f74cad3c3ac5da72fd6, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0

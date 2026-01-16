@@ -6,13 +6,12 @@ using UnityEngine;
 
 public class ShaChong : MonsterBase
 {
-    public ShaChong() : base(MonsterType.Normal, "ShaChong", 1, 3000, 0.7f, 300, 100, 40, 4, 0)
+    public ShaChong() : base(MonsterType.Normal, "ShaChong", 1, 5000, 0.8f, 500, 150, 40, 4, 0)
     {
     }
     
-     public GameObject parent;
     public Transform attackTrans;
-    private float attackRange = 0.45f;
+    private float attackRange = 0.65f;
 
    
     
@@ -29,12 +28,12 @@ public class ShaChong : MonsterBase
 
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Blue, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Blue, 2));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Blue, 2));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Blue, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Blue, 1));
     }
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
@@ -107,10 +106,12 @@ public class ShaChong : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)
         {
+            monsterSkeletonAnimation.timeScale = 1.2f;
             isAttack=true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1.2f;
             isAttack=false;
         }
         

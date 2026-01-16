@@ -93,7 +93,7 @@ public class LevelInfoConfig
         LevelMonsterCount[13] = 100;
         LevelMonsterCount[14] = 100;
         LevelMonsterCount[15] = 100;
-        LevelMonsterCount[16] = 10;
+        LevelMonsterCount[16] = 110;
         LevelMonsterCount[17] = 120;
         LevelMonsterCount[18] = 130;
         LevelMonsterCount[19] = 140;

@@ -74,7 +74,7 @@ public class WenZiMonster : MonsterBase
     private void Start()
     {
         base.Start();
-        size = 0.4f;
+        size = 0.6f;
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
@@ -98,10 +98,12 @@ public class WenZiMonster : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
+            monsterSkeletonAnimation.timeScale = 2;
             isAttack = true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1;
             isAttack = false;
         }
         if (!IsDead)

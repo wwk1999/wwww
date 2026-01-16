@@ -6,12 +6,11 @@ using UnityEngine;
 
 public class XianRenZhang : MonsterBase
 {
-    public XianRenZhang() : base(MonsterType.Normal, "XianRenZhang", 1, 3000, 0.7f, 300, 100, 40, 4, 0)
+    public XianRenZhang() : base(MonsterType.Normal, "XianRenZhang", 1, 5000, 0.8f, 500, 150, 40, 4, 0)
     {
     }
-    public GameObject parent;
     public Transform attackTrans;
-    private float attackRange = 0.65f;
+    private float attackRange = 1f;
 
     
     

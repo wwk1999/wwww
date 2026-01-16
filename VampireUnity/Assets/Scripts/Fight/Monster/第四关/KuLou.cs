@@ -10,7 +10,6 @@ public class KuLou : MonsterBase
     public KuLou() : base(MonsterType.Normal, "KuLou", 1, 100, 0.3f, 10, 5, 10, 10, 0)
     {
     }
-    public GameObject parent;
     public Transform attackTrans;
 
    

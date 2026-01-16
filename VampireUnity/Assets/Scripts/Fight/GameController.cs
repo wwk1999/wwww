@@ -1501,10 +1501,12 @@ public class GameController : XSingleton<GameController>
     {
         foreach (var item in EquipBaseSet)
         {
+            item.speed = 5;
             item.isPickUp = true;
         }
         foreach (var item in PropBaseSet)
         {
+            item.speed = 5;
             item.isPickUp = true;
         }
     }

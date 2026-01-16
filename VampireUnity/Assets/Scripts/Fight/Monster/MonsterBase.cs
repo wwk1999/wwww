@@ -644,7 +644,7 @@ public abstract class MonsterBase : MonoBehaviour
         finalDamage-=monsterDenfense;
         if (isCrit)
         {
-            finalDamage *= (2+GlobalPlayerAttribute.TotalCritDamage);
+            finalDamage *= (2+GlobalPlayerAttribute.TotalCritDamage/100.0f);
         }
 
         if (MonsterType == MonsterType.Boss)

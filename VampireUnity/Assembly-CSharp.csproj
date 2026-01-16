@@ -506,6 +506,7 @@
     <None Include="Library\PackageCache\com.unity.burst@1.8.21\package.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shine.shader" />
     <None Include="Assets\Spine\version.txt" />
+    <None Include="Assets\Arts\Spine\怪物\沼泽BOSS\Enemy_Boss_crocodile.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\第一关\蝙蝠\bf.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\GreenWolf\Enemy_Boss_stormwolf.json" />
@@ -578,7 +579,6 @@
     <None Include="Library\PackageCache\com.unity.timeline@1.8.7\package.json" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\LvLong\green_dragon.json" />
     <None Include="Assets\Arts\Shaders\Outline.shader" />
-    <None Include="Assets\Arts\Spine\怪物\ZhaoZeBoss\Enemy_Boss_crocodile.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\json18\action.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.4\package.json" />
     <None Include="Assets\Arts\Spine\技能\1225\紫爆\action.json" />
@@ -684,6 +684,7 @@
     <None Include="Assets\Arts\Spine\怪物\绿龙打包\green_dragon.atlas.txt" />
     <None Include="Assets\shader\ParticleAdditiveGlow 1.shader" />
     <None Include="Assets\Number Themes\Readme_First\readme.txt" />
+    <None Include="Assets\Arts\Spine\怪物\沼泽BOSS\Enemy_Boss_crocodile.json" />
     <None Include="Assets\Arts\Spine\淘宝\Skill1\dingfeng_skill1_2.json" />
     <None Include="Assets\Arts\Spine\技能\1225\紫尾巴\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第二关\小火怪\xiaohuoguai.json" />
@@ -692,7 +693,6 @@
     <None Include="Assets\Arts\Spine\技能\1225\喷火\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\红球\lalafei_magic.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\出场\action.atlas.txt" />
-    <None Include="Assets\Arts\Spine\怪物\ZhaoZeBoss\Enemy_Boss_crocodile.json" />
     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\LanShui\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\HuangShu\Enemy_Mouse_patrol.json" />

@@ -6,10 +6,9 @@ using UnityEngine;
 
 public class ShaNiao : MonsterBase
 {
-    public ShaNiao() : base(MonsterType.Normal, "ShaNiao", 1, 3000, 0.7f, 300, 100, 40, 4, 0)
+    public ShaNiao() : base(MonsterType.Normal, "ShaNiao", 1, 5000, 0.8f, 500, 150, 40, 4, 0)
     {
     }
-     public GameObject parent;
     public Transform attackTrans;
     private float attackRange = 0.7f;
     public void Awake()
@@ -107,10 +106,12 @@ public class ShaNiao : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.2f)
         {
+            monsterSkeletonAnimation.timeScale = 1.5f;
             isAttack=true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1.2f;
             isAttack=false;
         }
         

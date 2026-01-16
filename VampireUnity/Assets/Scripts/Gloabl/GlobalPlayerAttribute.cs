@@ -449,7 +449,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCritDamage()
    {
-       return CRITDamage+CritDamageNum/100.0f+PlayerChiBangAttribute.critDamage;
+       return CRITDamage+CritDamageNum+PlayerChiBangAttribute.critDamage;
    }
 
    public static float GetTotalMaxHp()

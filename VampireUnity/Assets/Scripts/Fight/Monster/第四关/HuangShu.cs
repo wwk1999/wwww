@@ -10,7 +10,6 @@ public class HuangShu : MonsterBase
     {
     }
     
-    public GameObject parent;
     public Transform attackTrans;
 
     
