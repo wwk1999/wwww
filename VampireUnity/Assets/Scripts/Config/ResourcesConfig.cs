@@ -112,6 +112,21 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite XiYiicon;
     public static Sprite ShiRenHuaIcon;
     public static Sprite BossShiRenIcon;
+    public static Sprite WenZiIcon;
+    public static Sprite ZhaoZeBossIcon;
+    
+    public static Sprite ShaChongIcon;
+    public static Sprite ShaNiaoIcon;
+    public static Sprite XianRenZhangIcon;
+    public static Sprite ShaXiYiIcon;
+    public static Sprite XieZiIcon;
+    
+    public static Sprite XueQiEIcon;
+    public static Sprite XueRenIcon;
+    public static Sprite XUeZhangLangIcon;
+    public static Sprite YingShuIcon;
+    public static Sprite XueRenBossIcon;
+
 
     //颜色背景
     public static Sprite WhiteBg;
@@ -471,10 +486,24 @@ public class ResourcesConfig : MonoBehaviour
         BossHuoShanIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/huoshanboss");
 
         JiaChongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/jiachong");
-        XiYiicon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiyi");
+        XiYiicon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaxiyi");
         QingWaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/qingwa");
         ShiRenHuaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenhua");
         BossShiRenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenboss");
+        WenZiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/wenzi");
+        ZhaoZeBossIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhaozeboss");
+        
+        ShaChongIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shachong");
+        ShaNiaoIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaniao");
+        XianRenZhangIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xianrenzhang");
+        ShaXiYiIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaxiyi");
+        XieZiIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiezi");
+
+        XueQiEIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueqie");
+        XueRenBossIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueren");
+        XUeZhangLangIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuezhanglang");
+        YingShuIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yingshu");
+        XueRenBossIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuerenboss");
     }
 
     public static Sprite GetLoadingBg()

@@ -117,6 +117,12 @@ public class GameLevelInfo : MonoBehaviour
                 return LevelInfoConfig.LevelMonster11;
             case 12:
                 return LevelInfoConfig.LevelMonster12;
+            case 13:
+                return LevelInfoConfig.LevelMonster13;
+            case 14:
+                return LevelInfoConfig.LevelMonster14;
+            case 15:
+                return LevelInfoConfig.LevelMonster15;
         }
 
         return null;
@@ -181,14 +187,39 @@ public class GameLevelInfo : MonoBehaviour
                 return ResourcesConfig.BossHuoShanIcon;
             case MonsterTypeByName.JiaChong:
                 return ResourcesConfig.JiaChongIcon;
-            case MonsterTypeByName.XiYi:
-                return ResourcesConfig.XiYiicon;
             case MonsterTypeByName.QingWa:
                 return ResourcesConfig.QingWaIcon;
             case MonsterTypeByName.ShiRenHua:
                 return ResourcesConfig.ShiRenHuaIcon;
             case MonsterTypeByName.ShiRenBoss:
                 return ResourcesConfig.BossShiRenIcon;
+            
+            case MonsterTypeByName.WenZi:
+                return ResourcesConfig.WenZiIcon;
+            case MonsterTypeByName.ZhaoZeBoss:
+                return ResourcesConfig.ZhaoZeBossIcon;
+            
+            case MonsterTypeByName.ShaChong:
+                return ResourcesConfig.ShaChongIcon;
+            case MonsterTypeByName.ShaNiao:
+                return ResourcesConfig.ShaNiaoIcon;
+            case MonsterTypeByName.ShaXiYi:
+                return ResourcesConfig.XiYiicon;
+            case MonsterTypeByName.XianRenZhang:
+                return ResourcesConfig.XianRenZhangIcon;
+            case MonsterTypeByName.XieZi:
+                return ResourcesConfig.XieZiIcon;
+            
+            case MonsterTypeByName.XueQiE:
+                return ResourcesConfig.XueQiEIcon;
+            case MonsterTypeByName.XueRen:
+                return ResourcesConfig.XueRenIcon;
+            case MonsterTypeByName.XueZhangLang:
+                return ResourcesConfig.XUeZhangLangIcon;
+            case MonsterTypeByName.YingShu:
+                return ResourcesConfig.YingShuIcon;
+            case MonsterTypeByName.XueRenBoss:
+                return ResourcesConfig.XueRenBossIcon;
         }
         return null;
     }

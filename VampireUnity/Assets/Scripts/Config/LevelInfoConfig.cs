@@ -28,8 +28,19 @@ public enum MonsterTypeByName
     ChongZi,
     HuoShanBoss,
     ShiRenHua,
-    XiYi,
     JiaChong,
+    WenZi,
+    ZhaoZeBoss,
+    ShaChong,
+    ShaNiao,
+    ShaXiYi,
+    XianRenZhang,
+    XieZi,
+    XueRen,
+    XueZhangLang,
+    XueQiE,
+    YingShu,
+    XueRenBoss,
     ShiRenBoss,
     QingWa
 }
@@ -73,6 +84,10 @@ public class LevelInfoConfig
     public static List<MonsterTypeByName> LevelMonster10 = new List<MonsterTypeByName>();//关卡敌人列表
     public static List<MonsterTypeByName> LevelMonster11 = new List<MonsterTypeByName>();//关卡敌人列表
     public static List<MonsterTypeByName> LevelMonster12 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster13 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster14 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster15 = new List<MonsterTypeByName>();//关卡敌人列表
+
 
    
     public static void InitGameLevel()
@@ -139,6 +154,7 @@ public class LevelInfoConfig
             LevelMonster2.Add(MonsterTypeByName.Bat);
             LevelMonster2.Add(MonsterTypeByName.Snot);
             LevelMonster2.Add(MonsterTypeByName.Spider);
+            LevelMonster2.Add(MonsterTypeByName.Bee);
         }
         
         if (IsOneGame)
@@ -147,15 +163,15 @@ public class LevelInfoConfig
             LevelMonster3.Add(MonsterTypeByName.Snot);
             LevelMonster3.Add(MonsterTypeByName.Spider);
             LevelMonster3.Add(MonsterTypeByName.Bee);
+            LevelMonster3.Add(MonsterTypeByName.TreeMan);
+
         }
         
         if (IsOneGame)
         {
-            LevelMonster4.Add(MonsterTypeByName.Bat);
-            LevelMonster4.Add(MonsterTypeByName.Snot);
-            LevelMonster4.Add(MonsterTypeByName.Spider);
-            LevelMonster4.Add(MonsterTypeByName.Bee);
-            LevelMonster4.Add(MonsterTypeByName.TreeMan);
+            LevelMonster4.Add(MonsterTypeByName.XiaoHuo);
+            LevelMonster4.Add(MonsterTypeByName.ChongZi);
+            LevelMonster4.Add(MonsterTypeByName.DunDi);
         }
         
         if (IsOneGame)
@@ -163,6 +179,8 @@ public class LevelInfoConfig
             LevelMonster5.Add(MonsterTypeByName.XiaoHuo);
             LevelMonster5.Add(MonsterTypeByName.ChongZi);
             LevelMonster5.Add(MonsterTypeByName.DunDi);
+            LevelMonster5.Add(MonsterTypeByName.DaZui);
+
         }
         
         if (IsOneGame)
@@ -170,54 +188,80 @@ public class LevelInfoConfig
             LevelMonster6.Add(MonsterTypeByName.XiaoHuo);
             LevelMonster6.Add(MonsterTypeByName.ChongZi);
             LevelMonster6.Add(MonsterTypeByName.DunDi);
+            LevelMonster6.Add(MonsterTypeByName.DaZui);
+            LevelMonster6.Add(MonsterTypeByName.HuoShanBoss);
         }
         
         if (IsOneGame)
         {
-            LevelMonster7.Add(MonsterTypeByName.XiaoHuo);
-            LevelMonster7.Add(MonsterTypeByName.ChongZi);
-            LevelMonster7.Add(MonsterTypeByName.DunDi);
-            LevelMonster7.Add(MonsterTypeByName.DaZui);
+            LevelMonster7.Add(MonsterTypeByName.JiaChong);
+            LevelMonster7.Add(MonsterTypeByName.QingWa);
+            LevelMonster7.Add(MonsterTypeByName.WenZi);
         }
         
         if (IsOneGame)
         {
-            LevelMonster8.Add(MonsterTypeByName.XiaoHuo);
-            LevelMonster8.Add(MonsterTypeByName.ChongZi);
-            LevelMonster8.Add(MonsterTypeByName.DunDi);
-            LevelMonster8.Add(MonsterTypeByName.DaZui);
-            LevelMonster8.Add(MonsterTypeByName.HuoShanBoss);
+            LevelMonster8.Add(MonsterTypeByName.JiaChong);
+            LevelMonster8.Add(MonsterTypeByName.QingWa);
+            LevelMonster8.Add(MonsterTypeByName.WenZi);
+            LevelMonster8.Add(MonsterTypeByName.ShiRenHua);
         }
         
         if (IsOneGame)
         {
             LevelMonster9.Add(MonsterTypeByName.JiaChong);
-            LevelMonster9.Add(MonsterTypeByName.XiYi);
             LevelMonster9.Add(MonsterTypeByName.QingWa);
+            LevelMonster9.Add(MonsterTypeByName.WenZi);
+            LevelMonster9.Add(MonsterTypeByName.ShiRenHua);
+            LevelMonster9.Add(MonsterTypeByName.ZhaoZeBoss);
         }
         
         if (IsOneGame)
         {
-            LevelMonster10.Add(MonsterTypeByName.JiaChong);
-            LevelMonster10.Add(MonsterTypeByName.XiYi);
-            LevelMonster10.Add(MonsterTypeByName.QingWa);
+            LevelMonster10.Add(MonsterTypeByName.ShaChong);
+            LevelMonster10.Add(MonsterTypeByName.XianRenZhang);
+            LevelMonster10.Add(MonsterTypeByName.ShaNiao);
         }
         
         if (IsOneGame)
         {
-            LevelMonster11.Add(MonsterTypeByName.JiaChong);
-            LevelMonster11.Add(MonsterTypeByName.XiYi);
-            LevelMonster11.Add(MonsterTypeByName.QingWa);
-            LevelMonster11.Add(MonsterTypeByName.ShiRenHua);
+            LevelMonster11.Add(MonsterTypeByName.ShaChong);
+            LevelMonster11.Add(MonsterTypeByName.ShaNiao);
+            LevelMonster11.Add(MonsterTypeByName.XianRenZhang);
+            LevelMonster11.Add(MonsterTypeByName.ShaXiYi);
         }
         
         if (IsOneGame)
         {
-            LevelMonster12.Add(MonsterTypeByName.JiaChong);
-            LevelMonster12.Add(MonsterTypeByName.XiYi);
-            LevelMonster12.Add(MonsterTypeByName.QingWa);
-            LevelMonster11.Add(MonsterTypeByName.ShiRenHua);
-            LevelMonster11.Add(MonsterTypeByName.ShiRenBoss);
+            LevelMonster12.Add(MonsterTypeByName.ShaChong);
+            LevelMonster12.Add(MonsterTypeByName.ShaNiao);
+            LevelMonster12.Add(MonsterTypeByName.XianRenZhang);
+            LevelMonster12.Add(MonsterTypeByName.ShaXiYi);
+            LevelMonster12.Add(MonsterTypeByName.XieZi);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster13.Add(MonsterTypeByName.XueQiE);
+            LevelMonster13.Add(MonsterTypeByName.XueZhangLang);
+            LevelMonster13.Add(MonsterTypeByName.XueRen);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster14.Add(MonsterTypeByName.XueQiE);
+            LevelMonster14.Add(MonsterTypeByName.XueZhangLang);
+            LevelMonster14.Add(MonsterTypeByName.XueRen);
+            LevelMonster14.Add(MonsterTypeByName.YingShu);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster15.Add(MonsterTypeByName.XueQiE);
+            LevelMonster15.Add(MonsterTypeByName.XueZhangLang);
+            LevelMonster15.Add(MonsterTypeByName.XueRen);
+            LevelMonster15.Add(MonsterTypeByName.YingShu);
+            LevelMonster15.Add(MonsterTypeByName.XueRenBoss);
         }
         
         
