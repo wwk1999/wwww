@@ -811,6 +811,16 @@ public class GameController : XSingleton<GameController>
         
         return selected;
     }
+
+    public void ShowChuanSongZhen()
+    {
+        fightBG.GetComponent<FightBg>().ChuanSongZhen.SetActive(true);
+    }
+
+    public void JiHuoChuanSongZhen()
+    {
+        fightBG.GetComponent<FightBg>().ChuanSongZhenAnimator.Play("NewSequenceAnim");
+    }
     private void Start()
     {
         KillMonsterCount = 0;
@@ -955,11 +965,12 @@ public class GameController : XSingleton<GameController>
 
         FightBGController.S.BossEnergySlider.maxValue = MaxBossEnergyNum;
         FightBGController.S.BossEnergySlider.value = BossEnergyNum;
-        //召唤BOSS，激活BOSS
+        //召唤BOSS，激活BOSS，bosswarning动画
         if (KillMonsterCount>=LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/2 && HaveBossWarning == false&&(LevelInfoConfig.CurrentGameLevelType==LevelType.Boss||LevelInfoConfig.CurrentGameLevelType==LevelType.MJ))
         {
             HaveBossWarning=true;
             BossJiHuo = true;
+            ShowChuanSongZhen();
             Instantiate(Resources.Load("Prefabs/Tool/Warning"));
         }
     }

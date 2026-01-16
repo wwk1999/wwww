@@ -52,6 +52,9 @@ public class FightBg : MonoBehaviour
     public Image skill3Bg;
     public Image skill3;
 
+    public GameObject ChuanSongZhen;
+    public Animator ChuanSongZhenAnimator;
+
 
     private void Update()
     {
@@ -115,6 +118,7 @@ public class FightBg : MonoBehaviour
             GameController.S.CollectEquip();
             GameObject boosQuan=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/BossQuan"));
             boosQuan.transform.position = new Vector3(0, 0, 0);
+            GameController.S.JiHuoChuanSongZhen();
             GameController.S.CreateBoss();
         });
         againButton.onClick.AddListener(() =>

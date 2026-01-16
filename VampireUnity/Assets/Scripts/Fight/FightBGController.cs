@@ -119,38 +119,7 @@ public class FightBGController : XSingleton<FightBGController>
         playerHpSlider.value = GameController.S.GameCurrentHp;
     }
 
-    /// <summary>
-    /// 计算物体在指定时间下的落地点位置
-    /// </summary>
-    /// <param name="initialPosition">物体的初始位置</param>
-    /// <param name="linearVelocity">物体的线性速度 (单位: 世界坐标速度，Vector3)</param>
-    /// <param name="time">运动的时间 (秒)</param>
-    /// <param name="gravityCoefficient">重力加速度系数 (单位: m/s^2，通常地球环境为9.8f)</param>
-    /// <returns>物体的落地点位置 (Vector3)</returns>
-    public Vector3 CalculateLandingPosition(Vector3 initialPosition, Vector3 linearVelocity, float time, float gravityCoefficient)
-    {
-        // 计算水平位置变化 (X、Z轴)
-        Vector3 horizontalDisplacement = linearVelocity * time;
-
-        // 计算重力的影响 (Y轴变化)
-        float verticalDisplacement = linearVelocity.y * time - 0.5f * gravityCoefficient * time * time;
-
-        // 合并位移计算最终位置
-        Vector3 landingPosition = initialPosition + new Vector3(horizontalDisplacement.x, verticalDisplacement, horizontalDisplacement.z);
-
-        return landingPosition;
-    }
-
     
-    public void PlayGroundFissure(Vector3 pos)
-    {
-        DiLie.transform.position = pos;
-        DiLie.SetActive(true);
-        DiLie.transform.Find("DiLie").GetComponent<ParticleSystem>().Play();
-        DiLie.transform.Find("GroundFissure/qitiao").GetComponent<ParticleSystem>().Play();
-        DiLie.transform.Find("GroundFissure/baozha").GetComponent<ParticleSystem>().Play();
-    }
-
     //胜利动画
     public void PlaySuccessAnim()
     {
