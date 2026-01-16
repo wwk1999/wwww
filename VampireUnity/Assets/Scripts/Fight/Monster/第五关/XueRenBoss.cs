@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class XueRenBoss : MonsterBase
 {
-    public XueRenBoss() : base(MonsterType.Boss, "XueRenBoss", 1, 100000, 1.2f, 1000, 300, 1000, 100, 0)
+    public XueRenBoss() : base(MonsterType.Boss, "XueRenBoss", 1, 400000, 1.3f, 2500, 600, 1000, 100, 0)
     {
     }
     
@@ -64,34 +64,34 @@ public class XueRenBoss : MonsterBase
         if (isSkill1)
         {
             IsSkill=true;
-            isSkill1=false;
+            isSkill1 = false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.timeScale = 2.5f;
         }else if (isSkill2)
         {
             IsSkill=true;
             isSkill2=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
-            monsterSkeletonAnimation.timeScale = 1.2f;
-            Invoke(nameof(ShowSkill2),1.8f);
+            monsterSkeletonAnimation.timeScale = 2f;
+            Invoke(nameof(ShowSkill2),1f);
         }
         else if(isSkill3)
         {
             IsSkill=true;
             isSkill3=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.timeScale = 2f;
             Invoke(nameof(Dash),1.8f);
             Invoke(nameof(ExitDash),2.5f);
         }
         else if(isAttack)
         {
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.timeScale = 2f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
         }
         else
         {
-            monsterSkeletonAnimation.timeScale = 1.2f;
+            monsterSkeletonAnimation.timeScale = 1.5f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
     }
@@ -105,7 +105,7 @@ public class XueRenBoss : MonsterBase
     public void ExitDash()
     {
         IsDash = false;
-        Speed = 1.2f;
+        Speed = 1.3f;
     }
 
     public override void AddMonsterEquip()

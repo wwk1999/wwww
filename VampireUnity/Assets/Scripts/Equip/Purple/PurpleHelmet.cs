@@ -12,7 +12,7 @@ public class PurpleHelmet :EquipBase
     private void Awake()
     {
         SpriteRenderer = transform.Find("PurpleHelmetSprite").GetComponent<SpriteRenderer>();
-        EquipAttributes.EquipLevel = 20;
+        EquipAttributes.EquipLevel = 25;
 
         EquipAttributes.EquipName = "PurpleHelmet";
         EquipAttributes.suitid = 4;

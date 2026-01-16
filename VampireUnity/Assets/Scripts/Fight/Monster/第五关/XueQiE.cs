@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XueQiE : MonsterBase
 {
-    public XueQiE() : base(MonsterType.Normal, "XueQiE", 1, 10000, 0.8f, 800, 30, 50, 5, 0)
+    public XueQiE() : base(MonsterType.Normal, "XueQiE", 1, 15000, 0.8f, 1000, 400, 50, 5, 0)
     {
     }
     public Transform attackTrans;
@@ -101,10 +101,12 @@ public class XueQiE : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.6f)
         {
+            monsterSkeletonAnimation.timeScale = 1.5f;
             isAttack=true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1.2f;
             isAttack=false;
         }
         

@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class XueRen : MonsterBase
 {
-     public XueRen() : base(MonsterType.Normal, "XueRen", 1, 6000, 0.6f, 700, 200, 50, 5, 0)
+     public XueRen() : base(MonsterType.Normal, "XueRen", 1, 10000, 0.6f, 1000, 200, 50, 5, 0)
     {
     }
     
     public Transform skillTransform;
 
     private float currentAttackTime = 0;
-    private float attackTime = 5;
+    private float attackTime = 3;
     
     
     public void Awake()

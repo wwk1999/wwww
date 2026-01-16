@@ -14,7 +14,7 @@ public class XueRenJian : MonoBehaviour
     var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
     transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-    rb.velocity = dir*5f;
+    rb.velocity = dir*7f;
     Invoke(nameof(Hide), 3f);
   }
 

@@ -6,11 +6,10 @@ using UnityEngine;
 
 public class XueZhangLang : MonsterBase
 {
-    public XueZhangLang() : base(MonsterType.Normal, "XueZhangLang", 1, 10000, 0.8f, 800, 250, 50, 5, 0)
+    public XueZhangLang() : base(MonsterType.Normal, "XueZhangLang", 1, 15000, 0.8f, 1000, 350, 50, 5, 0)
     {
     }
     
-    public GameObject parent;
     public Transform attackTrans;
 
     
@@ -106,10 +105,12 @@ public class XueZhangLang : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < size)
         {
+            monsterSkeletonAnimation.timeScale = 1.5f;
             isAttack=true;
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1.2f;
             isAttack=false;
         }
         

@@ -6,11 +6,10 @@ using UnityEngine;
 
 public class YingShu : MonsterBase
 {
-    public YingShu() : base(MonsterType.Normal, "YingShu", 1, 30000, 1.2f, 1000, 400, 250, 25, 0)
+    public YingShu() : base(MonsterType.Normal, "YingShu", 1, 50000, 1.2f, 1500, 500, 250, 25, 0)
     {
     }
     
-    public GameObject parent;
     public Transform attackTrans;
     
     
