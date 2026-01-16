@@ -558,6 +558,35 @@ public class ResourcesConfig : MonoBehaviour
         return null;
     }
 
+
+    public static Sprite GetPropColorBg(int propId)
+    {
+        if (propId / 100 == 3)
+        {
+            return OrangeBg;
+        }
+        else
+        {
+            switch (propId%100)
+            {
+                case 1:
+                    return WhiteBg;
+                case 2:
+                    return GreenBg;
+                case 3:
+                    return BlueBg;
+                case 4:
+                    return PurpleBg;
+                case 5:
+                    return OrangeBg;
+                case 6:
+                    return RedBg;
+            }
+        }
+
+        return null;
+    }
+
     public static Sprite GetEquipColorBgBySuitId(int suitId)
     {
         switch (suitId)
@@ -569,6 +598,7 @@ public class ResourcesConfig : MonoBehaviour
             case 3:
                 return BlueBg;
             case 4:
+            case 7:
                 return PurpleBg;
             case 5:
                 return OrangeBg;
@@ -738,11 +768,90 @@ public class ResourcesConfig : MonoBehaviour
                 }
 
                 break;
+            
+            case 7:
+                switch (equipTable.EquipType)
+                {
+                    case 1:
+                        return Purple1Cloak;
+                    case 2:
+                        return Purple1Cloth;
+                    case 3:
+                        return Purple1Helmet;
+                    case 4:
+                        return Purple1Necklace;
+                    case 5:
+                        return Purple1Ring;
+                    case 6:
+                        return Purple1Shoe;
+                }
+
+                break;
         }
 
         return null;
     }
 
+    public static Sprite GetPropSprite(int propId)
+    {
+        switch (propId)
+        {
+            case 101:
+                return WhiteWeaponFragment;
+            case 102:
+                return GreenWeaponFragment;
+            case 103:
+                return BlueWeaponFragment;
+            case 104:
+                return PurpleWeaponFragment;
+            case 105:
+                return OrangeWeaponFragment;
+            case 106:
+                return RedWeaponFragment;
+            
+            case 201:
+                return WhiteJingCui;
+            case 202:
+                return GreenJingCui;
+            case 203:
+                return BlueJingCui;
+            case 204:
+                return PurpleJingCui;
+            case 205:
+                return OrangeJingCui;
+            case 206:
+                return RedJingCui;
+            
+            case 301:
+                return FuMoZhiGu;
+            case 302:
+                return GoldBlood;
+            case 303:
+                return JuDaYaChi;
+            case 304:
+                return ZuiEYanZhu;
+            case 305:
+                return ShenHuaZhiXin;
+            
+            
+            case 401:
+                return WhiteChiBang;
+            case 402:
+                return GreenChiBang;
+            case 403:
+                return BlueChiBang;
+            case 404:
+                return PurpleChiBang;
+            case 405:
+                return OrangeChiBang;
+            case 406:
+                return RedChiBang;
+        }
+
+        return null;
+    }
+
+    
     public static Sprite GetPropSprite(PropTable propTable)
     {
         switch (propTable.PropType)

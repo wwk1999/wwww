@@ -57,32 +57,73 @@ public class GameLevelInfo : MonoBehaviour
         {
             foreach (var item in DiaoLuoList)
             {
-                var DiaoluoEquipSprite = ResourcesConfig.GetEquipSprite(item);
-                if (DiaoluoEquipSprite != null)
+                if (item.PropId == 0)
                 {
-                    var DiaoLuoGrid=Instantiate(Resources.Load<GameObject>("Prefabs/UI/DiaoLuoGrid"),DiaoLuoListContent.transform);
-                    DiaoLuoGrid.transform.Find("BagGridImage").GetComponent<Image>().sprite = DiaoluoEquipSprite;
-                    DiaoLuoGrid.transform.Find("EquipGridBG").GetComponent<Image>().sprite = ResourcesConfig.GetEquipColorBgBySuitId(item.SuitId);
-                    switch (item.SuitId)
+                    var DiaoluoEquipSprite = ResourcesConfig.GetEquipSprite(item);
+                    if (DiaoluoEquipSprite != null)
                     {
-                        case 1:
-                            DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
-                            break;
-                        case 2:
-                        case 101:
-                            DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
-                            break;
-                        case 3:
-                        case 102:
-                        case 103:
-                            DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-                            break;
-                        case 4:
-                            DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
-                            break;
-                        case 5:
-                            DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
-                            break;
+                        var DiaoLuoGrid = Instantiate(Resources.Load<GameObject>("Prefabs/UI/DiaoLuoGrid"),
+                            DiaoLuoListContent.transform);
+                        DiaoLuoGrid.transform.Find("BagGridImage").GetComponent<Image>().sprite = DiaoluoEquipSprite;
+                        DiaoLuoGrid.transform.Find("EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.GetEquipColorBgBySuitId(item.SuitId);
+                        switch (item.SuitId)
+                        {
+                            case 1:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                                break;
+                            case 2:
+                            case 101:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                                break;
+                            case 3:
+                            case 102:
+                            case 103:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                                break;
+                            case 4:
+                            case 7:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                                break;
+                            case 5:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                                break;
+                        }
+                    }
+                }
+                else
+                {
+                    var DiaoluoPropSprite = ResourcesConfig.GetPropSprite(item.PropId);
+                    var DiaoLuoGrid = Instantiate(Resources.Load<GameObject>("Prefabs/UI/DiaoLuoGrid"),
+                        DiaoLuoListContent.transform);
+                    DiaoLuoGrid.transform.Find("BagGridImage").GetComponent<Image>().sprite = DiaoluoPropSprite;
+                    DiaoLuoGrid.transform.Find("EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.GetPropColorBg(item.PropId);
+
+                    if (item.PropId == 3)
+                    {
+                        DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                    }
+                    else
+                    {
+                        switch (item.PropId % 100)
+                        {
+                            case 1:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                                break;
+                            case 2:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                                break;
+                            case 3:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                                break;
+                            case 4:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                                break;
+                            case 5:
+                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                                break;
+                        }
                     }
                 }
             }
@@ -156,6 +197,12 @@ public class GameLevelInfo : MonoBehaviour
                 return LevelInfoConfig.LevelDiaoLuo11;
             case 12:
                 return LevelInfoConfig.LevelDiaoLuo12;
+            case 13:
+                return LevelInfoConfig.LevelDiaoLuo13;
+            case 14:
+                return LevelInfoConfig.LevelDiaoLuo14;
+            case 15:
+                return LevelInfoConfig.LevelDiaoLuo15;
         }
 
         return null;
