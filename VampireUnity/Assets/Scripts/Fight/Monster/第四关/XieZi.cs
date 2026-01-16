@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XieZi : MonsterBase
 {
-    public XieZi() : base(MonsterType.Boss, "XieZi", 1, 100000, 1.2f, 1000, 300, 1000, 100, 0)
+    public XieZi() : base(MonsterType.Boss, "XieZi", 1, 150000, 1.2f, 800, 300, 1000, 100, 0)
     {
     }
     
@@ -14,9 +14,9 @@ public class XieZi : MonsterBase
      public Transform attackTrans;
      public Transform skill1Trans;
      private float attackRange = 1.5f;
-     private float skill1Time = 10;
-     private float skill2Time = 12;
-     private float skill4Time = 8;
+     private float skill1Time = 12;
+     private float skill2Time = 20;
+     private float skill4Time = 10;
      private float currentSkill1Time = 0;
      private float currentSkill2Time = 0;
      private float currentSkill4Time = 0;

@@ -21,8 +21,8 @@ public class AttributePanel : MonoBehaviour
         hp.text = Mathf.RoundToInt(GlobalPlayerAttribute.TotalMaxHp).ToString();
         crit.text = Mathf.RoundToInt(GlobalPlayerAttribute.TotalCRIT).ToString();
         critdamage.text = Mathf.RoundToInt(GlobalPlayerAttribute.TotalDamage).ToString();
-        movespeed.text = Mathf.RoundToInt(GlobalPlayerAttribute.PlayerMoveSpeed).ToString();
-        attackSpeed.text = Mathf.RoundToInt(GlobalPlayerAttribute.TotalAttackSpeed).ToString();
+        movespeed.text = GlobalPlayerAttribute.PlayerMoveSpeed.ToString();
+        attackSpeed.text = GlobalPlayerAttribute.TotalAttackSpeed.ToString();
 
     }
 }

@@ -105,7 +105,7 @@ public class FightBGController : XSingleton<FightBGController>
         
         if (GameController.S.GameCurrentHp < 0)
         {
-            return;
+            GameController.S.GameCurrentHp = 0f;
         }
 
         if (GameController.S.GameCurrentHp > GameController.S.GameMaxHp)

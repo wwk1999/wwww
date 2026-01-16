@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class YingShu : MonsterBase
 {
-    public YingShu() : base(MonsterType.Normal, "YingShu", 1, 15000, 1.2f, 800, 300, 250, 25, 0)
+    public YingShu() : base(MonsterType.Normal, "YingShu", 1, 30000, 1.2f, 1000, 400, 250, 25, 0)
     {
     }
     
@@ -31,6 +31,9 @@ public class YingShu : MonsterBase
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple, 1));
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Purple, 1));
         MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Purple, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Purple, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Purple, 1));
     }
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
@@ -66,7 +69,8 @@ public class YingShu : MonsterBase
     
     public override void AddMonsterProp()
     {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),10));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.JingCui,3),10));
     }
     
     private void Start()
