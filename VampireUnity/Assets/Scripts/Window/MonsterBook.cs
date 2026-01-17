@@ -28,7 +28,19 @@ public class MonsterBook : MonoBehaviour
    public SkeletonDataAsset qingwaskeleton;
    public SkeletonDataAsset jiachongskeleton;
    public SkeletonDataAsset shirenhuaskeleton;
-   public SkeletonDataAsset bossStoneskeleton;
+   public SkeletonDataAsset bossZhaoZeskeleton;
+   
+   public SkeletonDataAsset shachongkeleton;
+   public SkeletonDataAsset shaniaoskeleton;
+   public SkeletonDataAsset xianrenzhangskeleton;
+   public SkeletonDataAsset shaxiyiskeleton;
+   public SkeletonDataAsset xieziskeleton;
+   
+   public SkeletonDataAsset xueqieskeleton;
+   public SkeletonDataAsset xuerenskeleton;
+   public SkeletonDataAsset xuezhanglangskeleton;
+   public SkeletonDataAsset yingshuskeleton;
+   public SkeletonDataAsset xuerenBossskeleton;
 
    
    public Button snotButton;//粘液怪怪物列表按钮
@@ -50,6 +62,20 @@ public class MonsterBook : MonoBehaviour
    public Button jiachongButton;//甲虫怪物列表按钮
    public Button shirenhuaButton;//精英食人花怪物列表按钮
    public Button zhaozebossManButton;//石头Boss怪物列表按钮
+   
+   //第四关
+   public Button shachongButton;//蚊子怪怪物列表按钮
+   public Button shaniaoButton;//青蛙怪物列表按钮
+   public Button xianrenzhangButton;//甲虫怪物列表按钮
+   public Button shaxiyiButton;//精英食人花怪物列表按钮
+   public Button xieziManButton;//石头Boss怪物列表按钮
+   
+   //第五关
+   public Button xueqieButton;//蚊子怪怪物列表按钮
+   public Button xuerenButton;//青蛙怪物列表按钮
+   public Button xuezhanglangButton;//甲虫怪物列表按钮
+   public Button yingshuButton;//精英食人花怪物列表按钮
+   public Button xuerenBossManButton;//石头Boss怪物列表按钮
    
    public Text nameText;
    public Text locationText;
@@ -685,16 +711,454 @@ public class MonsterBook : MonoBehaviour
       {
          if (_index == 15) return;
          _index = 15;
-         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.bossZhaoZeBookData._scale, MonsterBookConfig.bossZhaoZeBookData._scale, 1);
-         monsterSkeleton.SkeletonDataAsset = bossStoneskeleton;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.ShaChongBookData._scale, MonsterBookConfig.ShaChongBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = bossZhaoZeskeleton;
         monsterSkeleton.Initialize(true);
         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
-         nameText.text = MonsterBookConfig.bossZhaoZeBookData._name;
-         locationText.text = MonsterBookConfig.bossZhaoZeBookData._location;
-         monsterTypeText.text = MonsterBookConfig.bossZhaoZeBookData._monsterType;
-         introduceText.text = MonsterBookConfig.bossZhaoZeBookData._introduce;
+         nameText.text = MonsterBookConfig.ShaChongBookData._name;
+         locationText.text = MonsterBookConfig.ShaChongBookData._location;
+         monsterTypeText.text = MonsterBookConfig.ShaChongBookData._monsterType;
+         introduceText.text = MonsterBookConfig.ShaChongBookData._introduce;
          CleanContent();
-         foreach (var item in MonsterBookConfig.bossZhaoZeBookData._diaoluoList)
+         foreach (var item in MonsterBookConfig.ShaChongBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+      
+      
+      
+       shachongButton.onClick.AddListener(() =>
+      {
+         if (_index == 16) return;
+         _index = 16;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.ShaChongBookData._scale, MonsterBookConfig.ShaChongBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = shachongkeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.ShaChongBookData._name;
+         locationText.text = MonsterBookConfig.ShaChongBookData._location;
+         monsterTypeText.text = MonsterBookConfig.ShaChongBookData._monsterType;
+         introduceText.text = MonsterBookConfig.ShaChongBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.ShaChongBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+       
+        shaniaoButton.onClick.AddListener(() =>
+      {
+         if (_index == 17) return;
+         _index = 17;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.ShaNiaoZeBookData._scale, MonsterBookConfig.ShaNiaoZeBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = shaniaoskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.ShaNiaoZeBookData._name;
+         locationText.text = MonsterBookConfig.ShaNiaoZeBookData._location;
+         monsterTypeText.text = MonsterBookConfig.ShaNiaoZeBookData._monsterType;
+         introduceText.text = MonsterBookConfig.ShaNiaoZeBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.ShaNiaoZeBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+        
+         xianrenzhangButton.onClick.AddListener(() =>
+      {
+         if (_index == 18) return;
+         _index = 18;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.XianRenZhangBookData._scale, MonsterBookConfig.XianRenZhangBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = xianrenzhangskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.XianRenZhangBookData._name;
+         locationText.text = MonsterBookConfig.XianRenZhangBookData._location;
+         monsterTypeText.text = MonsterBookConfig.XianRenZhangBookData._monsterType;
+         introduceText.text = MonsterBookConfig.XianRenZhangBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.XianRenZhangBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+         
+          shaxiyiButton.onClick.AddListener(() =>
+      {
+         if (_index == 19) return;
+         _index = 19;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.ShaXiYiBookData._scale, MonsterBookConfig.ShaXiYiBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = shaxiyiskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.ShaXiYiBookData._name;
+         locationText.text = MonsterBookConfig.ShaXiYiBookData._location;
+         monsterTypeText.text = MonsterBookConfig.ShaXiYiBookData._monsterType;
+         introduceText.text = MonsterBookConfig.ShaXiYiBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.ShaXiYiBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+          
+           xieziManButton.onClick.AddListener(() =>
+      {
+         if (_index == 20) return;
+         _index = 20;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.XieZiZeBookData._scale, MonsterBookConfig.XieZiZeBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = xieziskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.XieZiZeBookData._name;
+         locationText.text = MonsterBookConfig.XieZiZeBookData._location;
+         monsterTypeText.text = MonsterBookConfig.XieZiZeBookData._monsterType;
+         introduceText.text = MonsterBookConfig.XieZiZeBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.XieZiZeBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+           
+           
+           
+           
+           
+           
+           
+            xueqieButton.onClick.AddListener(() =>
+      {
+         if (_index == 21) return;
+         _index = 21;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.XueQiEZeBookData._scale, MonsterBookConfig.XueQiEZeBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = xueqieskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.XueQiEZeBookData._name;
+         locationText.text = MonsterBookConfig.XueQiEZeBookData._location;
+         monsterTypeText.text = MonsterBookConfig.XueQiEZeBookData._monsterType;
+         introduceText.text = MonsterBookConfig.XueQiEZeBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.XueQiEZeBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+       
+        xuerenButton.onClick.AddListener(() =>
+      {
+         if (_index == 22) return;
+         _index = 22;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.XueRenBookData._scale, MonsterBookConfig.XueRenBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = xuerenskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.XueRenBookData._name;
+         locationText.text = MonsterBookConfig.XueRenBookData._location;
+         monsterTypeText.text = MonsterBookConfig.XueRenBookData._monsterType;
+         introduceText.text = MonsterBookConfig.XueRenBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.XueRenBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+        
+         xuezhanglangButton.onClick.AddListener(() =>
+      {
+         if (_index == 23) return;
+         _index = 23;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.XueZhangLangBookData._scale, MonsterBookConfig.XueZhangLangBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = xuezhanglangskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.XueZhangLangBookData._name;
+         locationText.text = MonsterBookConfig.XueZhangLangBookData._location;
+         monsterTypeText.text = MonsterBookConfig.XueZhangLangBookData._monsterType;
+         introduceText.text = MonsterBookConfig.XueZhangLangBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.XueZhangLangBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+         
+          yingshuButton.onClick.AddListener(() =>
+      {
+         if (_index == 24) return;
+         _index = 24;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.YingShuBookData._scale, MonsterBookConfig.YingShuBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = yingshuskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.YingShuBookData._name;
+         locationText.text = MonsterBookConfig.YingShuBookData._location;
+         monsterTypeText.text = MonsterBookConfig.YingShuBookData._monsterType;
+         introduceText.text = MonsterBookConfig.YingShuBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.YingShuBookData._diaoluoList)
+         {
+            var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
+            diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
+         }
+      });
+          
+           xuerenBossManButton.onClick.AddListener(() =>
+      {
+         if (_index == 25) return;
+         _index = 25;
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.XueRenBossBookData._scale, MonsterBookConfig.XueRenBossBookData._scale, 1);
+         monsterSkeleton.SkeletonDataAsset = xuerenBossskeleton;
+        monsterSkeleton.Initialize(true);
+        if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
+         nameText.text = MonsterBookConfig.XueRenBossBookData._name;
+         locationText.text = MonsterBookConfig.XueRenBossBookData._location;
+         monsterTypeText.text = MonsterBookConfig.XueRenBossBookData._monsterType;
+         introduceText.text = MonsterBookConfig.XueRenBossBookData._introduce;
+         CleanContent();
+         foreach (var item in MonsterBookConfig.XueRenBossBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
             switch (item.quality)
