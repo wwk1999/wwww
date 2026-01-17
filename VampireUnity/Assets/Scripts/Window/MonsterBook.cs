@@ -49,7 +49,7 @@ public class MonsterBook : MonoBehaviour
    public Button qingwaButton;//青蛙怪物列表按钮
    public Button jiachongButton;//甲虫怪物列表按钮
    public Button shirenhuaButton;//精英食人花怪物列表按钮
-   public Button stonebossManButton;//石头Boss怪物列表按钮
+   public Button zhaozebossManButton;//石头Boss怪物列表按钮
    
    public Text nameText;
    public Text locationText;
@@ -96,7 +96,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.snotBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -117,7 +139,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.spiderBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -138,7 +182,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.batBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -159,7 +225,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.eliteBeeBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -180,7 +268,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.bossTreeManBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -201,7 +311,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.chongziBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -221,7 +353,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.xiaohuoBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -242,7 +396,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.dundiBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -263,7 +439,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.elitedazuiBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -284,7 +482,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.bossHuoShanBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -305,7 +525,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.wenziBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -326,7 +568,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.qingwaBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -347,7 +611,29 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.jiachongBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
@@ -368,28 +654,72 @@ public class MonsterBook : MonoBehaviour
          foreach (var item in MonsterBookConfig.shirenhuaBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });
       
-      stonebossManButton.onClick.AddListener(() =>
+      zhaozebossManButton.onClick.AddListener(() =>
       {
          if (_index == 15) return;
          _index = 15;
-         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.bossStoneBookData._scale, MonsterBookConfig.bossStoneBookData._scale, 1);
+         monsterSkeleton.transform.localScale=new Vector3(MonsterBookConfig.bossZhaoZeBookData._scale, MonsterBookConfig.bossZhaoZeBookData._scale, 1);
          monsterSkeleton.SkeletonDataAsset = bossStoneskeleton;
         monsterSkeleton.Initialize(true);
         if (monsterAnim != null) monsterAnim.AnimationState.SetAnimation(0, "idle", true);
-         nameText.text = MonsterBookConfig.bossStoneBookData._name;
-         locationText.text = MonsterBookConfig.bossStoneBookData._location;
-         monsterTypeText.text = MonsterBookConfig.bossStoneBookData._monsterType;
-         introduceText.text = MonsterBookConfig.bossStoneBookData._introduce;
+         nameText.text = MonsterBookConfig.bossZhaoZeBookData._name;
+         locationText.text = MonsterBookConfig.bossZhaoZeBookData._location;
+         monsterTypeText.text = MonsterBookConfig.bossZhaoZeBookData._monsterType;
+         introduceText.text = MonsterBookConfig.bossZhaoZeBookData._introduce;
          CleanContent();
-         foreach (var item in MonsterBookConfig.bossStoneBookData._diaoluoList)
+         foreach (var item in MonsterBookConfig.bossZhaoZeBookData._diaoluoList)
          {
             var diaoluo = Instantiate(Resources.Load("Prefabs/Tool/MonsterBookItem") as GameObject, diaoLuoContent.transform);
-            diaoluo.transform.Find("bg").GetComponent<Image>().sprite = item._bg;
+            switch (item.quality)
+            {
+               case 1:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+                  break;
+               case 2:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+                  break;
+               case 3:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                  break;
+               case 4:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+                  break;
+               case 5:
+                  diaoluo.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                  diaoluo.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                  break;
+            }
             diaoluo.transform.Find("Button (Legacy)").GetComponent<Image>().sprite = item._buttonIcon;
          }
       });

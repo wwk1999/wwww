@@ -4,7 +4,7 @@ using UnityEngine;
 
 public struct MonsterDiaoLuoListItem
 {
-    public Sprite _bg;
+    public int quality;
     public Sprite _buttonIcon;
 }
 public struct MonsterBookData
@@ -23,98 +23,114 @@ public class MonsterBookConfig
     public static MonsterBookData snotBookData = new MonsterBookData
     {
         _name = "粘液怪",
-        _location = "幽影密林",
+        _location = "寂静森林",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloak },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteChiBang } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryCloak },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryRing } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryNecklace },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryHelmet } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryShoe },
         }
     };
     public static MonsterBookData spiderBookData = new MonsterBookData
     {
-        _name = "蜘蛛",
-        _location = "幽影密林",
+        _name = "织网蛛",
+        _location = "寂静森林",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryHelmet },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteChiBang } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryCloak },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryRing } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryNecklace },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryHelmet } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryShoe },
         }
     };
     public static MonsterBookData batBookData = new MonsterBookData
     {
-        _name = "蝙蝠",
-        _location = "幽影密林",
+        _name = "夜翼蝠",
+        _location = "寂静森林",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryNecklace },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteChiBang } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryCloak },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryRing } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryNecklace },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryHelmet } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryShoe },
         }
     };
     public static MonsterBookData eliteBeeBookData = new MonsterBookData
     {
-        _name = "蜜蜂",
-        _location = "幽影密林",
+        _name = "刃翅魔蜂",
+        _location = "寂静森林",
         _monsterType = "精英怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDivision },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDuration },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExplosion },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExtremeSpeed },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhitePenetrate },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteScale },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteChiBang } ,
+           
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryCloak },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryRing } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryNecklace },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryHelmet } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.PrimaryShoe },
+            
+             new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+             new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+             
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloth } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenRing } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenNecklace },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenHelmet } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenShoe },
         }
     };
     static public MonsterBookData bossTreeManBookData = new MonsterBookData
     {
-        _name = "幽影守护神",
-        _location = "幽影密林",
+        _name = "森林守护者",
+        _location = "寂静森林",
         _monsterType = "首领",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.2f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDivision },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDuration },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExplosion },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExtremeSpeed },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhitePenetrate },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteScale },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.TreeManCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.TreeManCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.TreeManShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.TreeManHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.TreeManRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.TreeManNecklace },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+           
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloth } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenShoe } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenHelmet },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenRing } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenNecklace },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.TreeManCloth } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.TreeManCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.TreeManShoe } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.TreeManHelmet },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.TreeManRing } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.TreeManNecklace },
         }
     };
     
@@ -123,112 +139,110 @@ public class MonsterBookConfig
     //第二关怪物列表配置
     public static MonsterBookData chongziBookData = new MonsterBookData
     {
-        _name = "虫子怪",
+        _name = "火山虫",
         _location = "熔岩火山",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 1f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloak },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloth } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenShoe } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenHelmet },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenRing } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenNecklace },
         }
     };
     public static MonsterBookData xiaohuoBookData = new MonsterBookData
     {
-        _name = "小火怪",
+        _name = "熔岩鬼火",
         _location = "熔岩火山",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 1f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenHelmet },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloth } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenShoe } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenHelmet },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenRing } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenNecklace },
         }
     };
     public static MonsterBookData dundiBookData = new MonsterBookData
     {
-        _name = "遁地怪",
+        _name = "熔岩蠕虫",
         _location = "熔岩火山",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.6f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenNecklace },
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 1, _buttonIcon = ResourcesConfig.WhiteChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloth } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenShoe } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenHelmet },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenRing } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenNecklace },
         }
     };
     public static MonsterBookData elitedazuiBookData = new MonsterBookData
     {
-        _name = "大嘴怪",
+        _name = "熔岩巨螯",
         _location = "熔岩火山",
         _monsterType = "精英怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDivision },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDuration },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExplosion },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExtremeSpeed },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhitePenetrate },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteScale },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenNecklace },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloth } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenShoe } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenHelmet },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenRing } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenNecklace },
 
         }
     };
     static public MonsterBookData bossHuoShanBookData = new MonsterBookData
     {
-        _name = "火山Boss",
+        _name = "熔岩行者",
         _location = "熔岩火山",
         _monsterType = "首领",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.PrimaryNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDivision },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDuration },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExplosion },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExtremeSpeed },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhitePenetrate },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteScale },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.HuoShanCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.HuoShanCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.HuoShanShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.HuoShanHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.HuoShanRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.HuoShanNecklace },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloth } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenShoe } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenHelmet },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenRing } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenNecklace },
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanNecklace },
         }
     };
     
@@ -236,112 +250,312 @@ public class MonsterBookConfig
      //第三关怪物列表配置
     public static MonsterBookData wenziBookData = new MonsterBookData
     {
-        _name = "蚊子怪",
-        _location = "死地沼泽",
+        _name = "红眼蝇",
+        _location = "迷雾沼泽",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.6f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueCloak },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueNecklace },
         }
     };
     public static MonsterBookData qingwaBookData = new MonsterBookData
     {
-        _name = "青蛙怪",
-        _location = "死地沼泽",
+        _name = "沼泽蟾蜍",
+        _location = "迷雾沼泽",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.6f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueHelmet },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueNecklace },
         }
     };
     public static MonsterBookData jiachongBookData = new MonsterBookData
     {
-        _name = "甲虫怪",
-        _location = "死地沼泽",
+        _name = "刺壳兽",
+        _location = "迷雾沼泽",
         _monsterType = "普通怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueNecklace },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueNecklace },
         }
     };
     public static MonsterBookData shirenhuaBookData = new MonsterBookData
     {
-        _name = "食人花",
-        _location = "死地沼泽",
+        _name = "血花妖",
+        _location = "迷雾沼泽",
         _monsterType = "精英怪",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.8f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDivision },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDuration },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExplosion },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExtremeSpeed },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhitePenetrate },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteScale },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueNecklace },
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.HuoShanNecklace },
 
         }
     };
-    static public MonsterBookData bossStoneBookData = new MonsterBookData
+    static public MonsterBookData bossZhaoZeBookData = new MonsterBookData
     {
-        _name = "石头Boss",
-        _location = "死地沼泽",
+        _name = "泥沼龙王",
+        _location = "迷雾沼泽",
         _monsterType = "首领",
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
         {
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.GreenBg, _buttonIcon = ResourcesConfig.GreenNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDivision },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteDuration },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExplosion },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteExtremeSpeed },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhitePenetrate },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.WhiteBg, _buttonIcon = ResourcesConfig.WhiteScale },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.BlueNecklace },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.ZhaoZeCloth } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.ZhaoZeCloak },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.ZhaoZeShoe } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.ZhaoZeHelmet },
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.ZhaoZeRing } ,
-            new MonsterDiaoLuoListItem { _bg =ResourcesConfig.BlueBg, _buttonIcon = ResourcesConfig.ZhaoZeNecklace },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeNecklace },
+        }
+    };
+    
+    static public MonsterBookData ShaChongBookData = new MonsterBookData
+    {
+        _name = "沙丘甲虫",
+        _location = "死亡沙漠",
+        _monsterType = "普通怪",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueNecklace },
+        }
+    };
+    
+    static public MonsterBookData ShaNiaoZeBookData = new MonsterBookData
+    {
+        _name = "红羽鸟",
+        _location = "死亡沙漠",
+        _monsterType = "普通怪",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueNecklace },
+        }
+    };
+    
+    static public MonsterBookData XianRenZhangBookData = new MonsterBookData
+    {
+        _name = "死亡仙人掌",
+        _location = "死亡沙漠",
+        _monsterType = "普通怪",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 2, _buttonIcon = ResourcesConfig.GreenChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueNecklace },
+        }
+    };
+    
+    static public MonsterBookData ShaXiYiBookData = new MonsterBookData
+    {
+        _name = "紫魔蜥",
+        _location = "死亡沙漠",
+        _monsterType = "精英怪",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeNecklace },
+        }
+    };
+    
+    static public MonsterBookData XieZiZeBookData = new MonsterBookData
+    {
+        _name = "沙影蝎王",
+        _location = "死亡沙漠",
+        _monsterType = "首领",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleCloth } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleCloak },
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleShoe } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleHelmet },
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleRing } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleNecklace },
+        }
+    };
+    static public MonsterBookData XueQiEZeBookData = new MonsterBookData
+    {
+        _name = "雪企鹅",
+        _location = "北境雪域",
+        _monsterType = "普通怪",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeNecklace },
+        }
+    };
+    
+    static public MonsterBookData XueRenBookData = new MonsterBookData
+    {
+        _name = "野雪人",
+        _location = "北境雪域",
+        _monsterType = "普通怪",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeNecklace },
+        }
+    };
+    
+    static public MonsterBookData XueZhangLangBookData = new MonsterBookData
+    {
+        _name = "雪蟑螂",
+        _location = "北境雪域",
+        _monsterType = "普通怪",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloth } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeCloak },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeShoe } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeHelmet },
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeRing } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.ZhaoZeNecklace },
+        }
+    };
+    
+    static public MonsterBookData YingShuBookData = new MonsterBookData
+    {
+        _name = "银角鼠",
+        _location = "北境雪域",
+        _monsterType = "精英怪",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 3, _buttonIcon = ResourcesConfig.BlueChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleCloth } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleCloak },
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleShoe } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleHelmet },
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleRing } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleNecklace },
+        }
+    };
+    
+    static public MonsterBookData XueRenBossBookData = new MonsterBookData
+    {
+        _name = "雪山泰坦",
+        _location = "北境雪域",
+        _monsterType = "首领",
+        _introduce = "A small, green, slimy creature that attacks in groups.",
+        _scale = 0.4f,
+        _diaoluoList = new List<MonsterDiaoLuoListItem>
+        {
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleWeaponFragment } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.PurpleChiBang } ,
+            
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.Purple1Cloth } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.Purple1Cloak },
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.Purple1Shoe } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.Purple1Helmet },
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.Purple1Ring } ,
+            new MonsterDiaoLuoListItem { quality = 4, _buttonIcon = ResourcesConfig.Purple1Necklace },
         }
     };
 }
