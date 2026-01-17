@@ -150,9 +150,8 @@ public class SkillWindow1 : MonoBehaviour
 
     private void TriggerButtonClickAnim(Button btn)
     {
-        if (btn == null) return;
         var anim = btn.gameObject.GetComponent<Animator>();
-        if (anim != null) anim.SetTrigger("Click");
+        anim.Play("SkillClick",0,0);
     }
 
     public void SetLine()

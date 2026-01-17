@@ -2508,6 +2508,7 @@ GameObject:
   - component: {fileID: 8208493283732985824}
   - component: {fileID: 5348925990847889256}
   - component: {fileID: 7851578283435907120}
+  - component: {fileID: 7655273414160422698}
   m_Layer: 5
   m_Name: EquipButton
   m_TagString: Untagged
@@ -2617,6 +2618,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7655273414160422698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3246882798405004335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcceec5f6ecf4400bfa94c34540181f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  upOffset: 0
+  rightOffset: 0
 --- !u!1 &3317838467781308641
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,6 +3142,7 @@ GameObject:
   - component: {fileID: 2688716901446574037}
   - component: {fileID: 4163408471463403723}
   - component: {fileID: 1222469522057646385}
+  - component: {fileID: 1465803356681484202}
   m_Layer: 5
   m_Name: PropButton
   m_TagString: Untagged
@@ -3235,6 +3252,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1465803356681484202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3823524406534012977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcceec5f6ecf4400bfa94c34540181f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  upOffset: 0
+  rightOffset: 0
 --- !u!1 &3861262093706759637
 GameObject:
   m_ObjectHideFlags: 0
