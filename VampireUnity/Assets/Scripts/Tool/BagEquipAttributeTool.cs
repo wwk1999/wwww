@@ -105,6 +105,11 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
         {
             bagEquipAttributeInfo.equipName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
         }
+
+        if (bagEquipAttributeInfo.orangeEntryDesc != null)
+        {
+            bagEquipAttributeInfo.orangeEntryDesc.text = EntryConfig.OrangeEntryAttributeDescDic[equipTable.OrangeEntry1];
+        }
         bagEquipAttributeInfo.equipImage.sprite=ResourcesConfig.GetEquipSprite(equipTable);
         bagEquipAttributeInfo.level.text = equipTable.EquipLevel.ToString();
         

@@ -288,14 +288,14 @@ namespace Fight.Monster.秘境.雷兽
         
             if (col.CompareTag("Player"))
             {
-               GameController.S.gamePlayer.PlayerHurt(Attack,true);
+               GameController.S.gamePlayer.PlayerHurt(Attack*0.7f,true);
             }
         }
     }
 
     public void Skill1OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "damage")
+        if (e.Data.Name == "huoyan")
         {
             Skill1Collider();
         }
