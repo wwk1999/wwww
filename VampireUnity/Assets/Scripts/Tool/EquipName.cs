@@ -67,6 +67,13 @@ namespace Tool
             {"PurpleRing", "虚空戒指"},
             {"PurpleShoe", "虚空鞋子"},
             
+            {"PurpleCloak1", "雪域披风"},
+            {"PurpleCloth1", "雪域衣"},
+            {"PurpleHelmet1", "雪域头盔"},
+            {"PurpleNecklace1", "雪域项链"},
+            {"PurpleRing1", "雪域戒指"},
+            {"PurpleShoe1", "雪域鞋子"},
+            
             {"OrangeCloak", "炽炎披风"},
             {"OrangeCloth", "炽炎衣服"},
             {"OrangeHelmet", "炽炎头盔"},

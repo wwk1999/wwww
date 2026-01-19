@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class XueRenBoss : MonsterBase
 {
-    public XueRenBoss() : base(MonsterType.Boss, "XueRenBoss", 1, 400000, 1.3f, 2500, 600, 1000, 100, 0)
+    public XueRenBoss() : base(MonsterType.Boss, "XueRenBoss", 1, 400000, 1.3f, 1500, 600, 1000, 100, 0)
     {
     }
     
@@ -113,12 +113,14 @@ public class XueRenBoss : MonsterBase
         {
             IsSkill=true;
             isSkill1 = false;
+            SpriteFlipX1(false);
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
             monsterSkeletonAnimation.timeScale = 2.5f;
         }else if (isSkill2)
         {
             IsSkill=true;
             isSkill2=false;
+            SpriteFlipX1(false);
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
             monsterSkeletonAnimation.timeScale = 2f;
             Invoke(nameof(ShowSkill2),1f);
@@ -127,6 +129,7 @@ public class XueRenBoss : MonsterBase
         {
             IsSkill=true;
             isSkill3=false;
+            SpriteFlipX1(false);
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
             monsterSkeletonAnimation.timeScale = 2f;
             luodiPos = GameController.S.gamePlayer.transform.position;
@@ -172,7 +175,7 @@ public class XueRenBoss : MonsterBase
     {
 
         //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
+        int randomDelay = Random.Range(0, 10);
         StartCoroutine(RandomDelayDie(randomDelay));
     }
 

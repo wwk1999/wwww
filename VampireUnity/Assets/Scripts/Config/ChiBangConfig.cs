@@ -18,12 +18,12 @@ namespace Config
         public static Dictionary<int, int> ChiBangExDic = new Dictionary<int, int>()
         {
             {0,10},
-            {1,50},
-            {2,250},
-            {3,1000},
-            {4,5000},
-            {5,20000},
-            {6,100000},
+            {1,100},
+            {2,500},
+            {3,3000},
+            {4,20000},
+            {5,100000},
+            {6,1000000},
         };
 
         public static Dictionary<int, ChiBangAttribute> ChiBangAttributeDic = new Dictionary<int, ChiBangAttribute>()

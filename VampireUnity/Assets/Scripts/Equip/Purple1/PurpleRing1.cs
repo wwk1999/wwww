@@ -12,7 +12,7 @@ public class PurpleRing1 :EquipBase
     private void Awake()
     {
         SpriteRenderer = transform.Find("PurpleRingSprite1").GetComponent<SpriteRenderer>();
-        EquipAttributes.EquipLevel = 25;
+        EquipAttributes.EquipLevel = 30;
         EquipAttributes.EquipName = "PurpleRing1";
         EquipAttributes.suitid = 7;
         EquipAttributes.equip_type_id = 5;

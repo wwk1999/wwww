@@ -1137,6 +1137,7 @@ MonoBehaviour:
   level15Content: {fileID: 6819412243656270291}
   MJInfo: {fileID: 7210535803419341211}
   MJButton: {fileID: 8064948751338635749}
+  MjGameObject: {fileID: 308277926755361464}
   rectTransform: {fileID: 3102361412879279442}
 --- !u!1 &1605779013789585245
 GameObject:

@@ -1045,11 +1045,10 @@ public class GameController : XSingleton<GameController>
 
         if (LevelInfoConfig.CurrentGameLevel > 15)
         {
-            var random=Random.Range(3,4);
             
-            switch (random)
+            switch (PlayerData.S.mJLevel)
             {
-                case 1:
+                case MJLevel.White:
                     LeiShouBoss LeiShouBoss = Instantiate(Resources.Load<LeiShouBoss>("Prefabs/Monster/MJ/LeiShou/LeiShouBoss"));
                     LeiShouBoss.gameObject.SetActive(true);
                     LeiShouBoss.IsSkill = true;
@@ -1060,7 +1059,7 @@ public class GameController : XSingleton<GameController>
                     MonsterColliderDic.Add(LeiShouBoss.collider2D,LeiShouBoss);
                     LeiShouBoss.meshRenderer.sortingOrder = 3000;
                     break;
-                case 2:
+                case MJLevel.Green:
                     KuiJiaBoss KuiJiaBoss = Instantiate(Resources.Load<KuiJiaBoss>("Prefabs/Monster/MJ/KuiJia/KuiJiaBoss"));
                     KuiJiaBoss.gameObject.SetActive(true);
                     KuiJiaBoss.IsSkill = true;
@@ -1073,7 +1072,7 @@ public class GameController : XSingleton<GameController>
                     KuiJiaBoss.meshRenderer.sortingOrder = 3000;
                     break;
                 
-                case 3:
+                case MJLevel.Blue:
                     BaoZiBoss BaoZiBoss = Instantiate(Resources.Load<BaoZiBoss>("Prefabs/Monster/MJ/BaoZi/BaoZiBoss"));
                     BaoZiBoss.gameObject.SetActive(true);
                     BaoZiBoss.IsSkill = true;
@@ -1376,52 +1375,105 @@ public class GameController : XSingleton<GameController>
                 return;
             }
             var random=new System.Random();
-            int index=random.Next(0,2);
-            int i = MonsterList[index];
-            switch (i)
+            int index=random.Next(1,3);
+
+            switch (PlayerData.S.mJLevel)
             {
-                case 1:
-                    monsterBase = DaLongQueue.Dequeue();
+                case MJLevel.White:
+                    switch (index)
+                    {
+                        case 1:
+                            monsterBase = EMo1Queue.Dequeue();
+                            break;
+                        case 2:
+                            monsterBase = HongLong1Queue.Dequeue();
+                            break;
+                    }
                     break;
-                case 2:
-                    monsterBase = EMo1Queue.Dequeue();
+                case MJLevel.Green:
+                    switch (index)
+                    {
+                        case 1:
+                            monsterBase = LanLong1Queue.Dequeue();
+                            break;
+                        case 2:
+                            monsterBase = LvLong1Queue.Dequeue();
+                            break;
+                    }
                     break;
-                case 3:
-                    monsterBase = EMo2Queue.Dequeue();
+                
+                case MJLevel.Blue:
+                    switch (index)
+                    {
+                        case 1:
+                            monsterBase = DaLongQueue.Dequeue();
+                            break;
+                        case 2:
+                            monsterBase = LvLangQueue.Dequeue();
+                            break;
+                    }
                     break;
-                case 4:
-                    monsterBase = EMo3Queue.Dequeue();
+                
+                case MJLevel.Purple:
+                    switch (index)
+                    {
+                        case 1:
+                            monsterBase = EMo2Queue.Dequeue();
+                            break;
+                        case 2:
+                            monsterBase = HongLong2Queue.Dequeue();
+                            break;
+                    }
                     break;
-                case 5:
-                    monsterBase = HongLong1Queue.Dequeue();
+                
+                case MJLevel.Orange:
+                    switch (index)
+                    {
+                        case 1:
+                            monsterBase = LanLong2Queue.Dequeue();
+                            break;
+                        case 2:
+                            monsterBase = LvLong2Queue.Dequeue();
+                            break;
+                    }
                     break;
-                case 6:
-                    monsterBase = HongLong2Queue.Dequeue();
+                
+                case MJLevel.Red1:
+                    switch (index)
+                    {
+                        case 1:
+                            monsterBase = HuangShuQueue.Dequeue();
+                            break;
+                        case 2:
+                            monsterBase = HuangZhuQueue.Dequeue();
+                            break;
+                    }
                     break;
-                case 7:
-                    monsterBase = HongLong3Queue.Dequeue();
+                
+                case MJLevel.Red2:
+                    switch (index)
+                    {
+                        case 1:
+                            monsterBase = EMo3Queue.Dequeue();
+                            break;
+                        case 2:
+                            monsterBase = HongLong3Queue.Dequeue();
+                            break;
+                    }
                     break;
-                case 8:
-                    monsterBase = LanLong1Queue.Dequeue();
+                
+                case MJLevel.Red3:
+                    switch (index)
+                    {
+                        case 1:
+                            monsterBase = LanLong3Queue.Dequeue();
+                            break;
+                        case 2:
+                            monsterBase = LvLong3Queue.Dequeue();
+                            break;
+                    }
                     break;
-                case 9:
-                    monsterBase = LanLong2Queue.Dequeue();
-                    break;
-                case 10:
-                    monsterBase = LanLong3Queue.Dequeue();
-                    break;
-                case 11:
-                    monsterBase = LvLangQueue.Dequeue();
-                    break;
-                case 12:
-                    monsterBase = LvLong1Queue.Dequeue();
-                    break;
-                case 13:
-                    monsterBase = LvLong2Queue.Dequeue();
-                    break;
-                case 14:
-                    monsterBase = LvLong3Queue.Dequeue();
-                    break;
+                
             }
         }
 

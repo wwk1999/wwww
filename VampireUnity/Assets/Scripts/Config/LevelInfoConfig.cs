@@ -50,6 +50,8 @@ public class LevelInfoConfig
 {
     public static bool IsOneGame = true; //第一次游戏
     public static int CurrentGameLevel = 1; // 当前游戏关卡
+    public static int CurrentMJLevel = 1; // 当前秘境关卡
+
 
     public static int MaxGameLevel
     {
