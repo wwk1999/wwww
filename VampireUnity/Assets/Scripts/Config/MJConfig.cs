@@ -44,6 +44,7 @@ namespace Config
         public int ex;
         public int linhun;
         public int jingcui;
+        public int zhuanjin;
     }
 
     public class BaseMonsterAttribute
@@ -117,26 +118,26 @@ namespace Config
         
         public static Dictionary<MJLevel, JiangLi> JiangLiDic = new Dictionary<MJLevel, JiangLi>()
         {
-            { MJLevel.White ,new JiangLi{ex=100,linhun=100,jingcui = 1}},
-            { MJLevel.Green ,new JiangLi{ex=150,linhun=120,jingcui = 2}},
-            { MJLevel.Blue ,new JiangLi{ex=200,linhun=150,jingcui = 3}},
-            { MJLevel.Purple ,new JiangLi{ex=300,linhun=200,jingcui = 4}},
-            { MJLevel.Orange ,new JiangLi{ex=500,linhun=250,jingcui = 5}},
-            { MJLevel.Red1 ,new JiangLi{ex=800,linhun=300,jingcui = 6}},
-            { MJLevel.Red2 ,new JiangLi{ex=1000,linhun=400,jingcui = 7}},
-            { MJLevel.Red3 ,new JiangLi{ex=1200,linhun=500,jingcui = 8}},
-            { MJLevel.Red4 ,new JiangLi{ex=1500,linhun=600,jingcui = 9}},
-            { MJLevel.Red5 ,new JiangLi{ex=1800,linhun=700,jingcui = 10}},
-            { MJLevel.Red6 ,new JiangLi{ex=2000,linhun=800,jingcui = 11}},
-            { MJLevel.Red7 ,new JiangLi{ex=2300,linhun=900,jingcui = 12}},
-            { MJLevel.Red8 ,new JiangLi{ex=2600,linhun=1000,jingcui = 13}},
-            { MJLevel.Red9 ,new JiangLi{ex=3000,linhun=1100,jingcui = 14}},
-            { MJLevel.Red10 ,new JiangLi{ex=3500,linhun=1200,jingcui = 15}},
-            { MJLevel.Red11 ,new JiangLi{ex=4000,linhun=1300,jingcui = 16}},
-            { MJLevel.Red12 ,new JiangLi{ex=4500,linhun=1400,jingcui = 17}},
-            { MJLevel.Red13 ,new JiangLi{ex=5000,linhun=1500,jingcui = 18}},
-            { MJLevel.Red14 ,new JiangLi{ex=6000,linhun=1700,jingcui = 19}},
-            { MJLevel.Red15 ,new JiangLi{ex=7000,linhun=2000,jingcui = 20}},
+            { MJLevel.White ,new JiangLi{ex=100,linhun=100,jingcui = 1,zhuanjin = 1}},
+            { MJLevel.Green ,new JiangLi{ex=150,linhun=120,jingcui = 2,zhuanjin = 2}},
+            { MJLevel.Blue ,new JiangLi{ex=200,linhun=150,jingcui = 3,zhuanjin = 3}},
+            { MJLevel.Purple ,new JiangLi{ex=300,linhun=200,jingcui = 4,zhuanjin = 4}},
+            { MJLevel.Orange ,new JiangLi{ex=500,linhun=250,jingcui = 5,zhuanjin = 5}},
+            { MJLevel.Red1 ,new JiangLi{ex=800,linhun=300,jingcui = 6,zhuanjin = 6}},
+            { MJLevel.Red2 ,new JiangLi{ex=1000,linhun=400,jingcui = 7,zhuanjin = 7}},
+            { MJLevel.Red3 ,new JiangLi{ex=1200,linhun=500,jingcui = 8,zhuanjin = 8}},
+            { MJLevel.Red4 ,new JiangLi{ex=1500,linhun=600,jingcui = 9,zhuanjin = 9}},
+            { MJLevel.Red5 ,new JiangLi{ex=1800,linhun=700,jingcui = 10,zhuanjin = 10}},
+            { MJLevel.Red6 ,new JiangLi{ex=2000,linhun=800,jingcui = 11,zhuanjin = 11}},
+            { MJLevel.Red7 ,new JiangLi{ex=2300,linhun=900,jingcui = 12,zhuanjin = 12}},
+            { MJLevel.Red8 ,new JiangLi{ex=2600,linhun=1000,jingcui = 13,zhuanjin = 13}},
+            { MJLevel.Red9 ,new JiangLi{ex=3000,linhun=1100,jingcui = 14,zhuanjin = 14}},
+            { MJLevel.Red10 ,new JiangLi{ex=3500,linhun=1200,jingcui = 15,zhuanjin = 15}},
+            { MJLevel.Red11 ,new JiangLi{ex=4000,linhun=1300,jingcui = 16,zhuanjin = 16}},
+            { MJLevel.Red12 ,new JiangLi{ex=4500,linhun=1400,jingcui = 17,zhuanjin = 17}},
+            { MJLevel.Red13 ,new JiangLi{ex=5000,linhun=1500,jingcui = 18,zhuanjin = 18}},
+            { MJLevel.Red14 ,new JiangLi{ex=6000,linhun=1700,jingcui = 19,zhuanjin = 19}},
+            { MJLevel.Red15 ,new JiangLi{ex=7000,linhun=2000,jingcui = 20,zhuanjin = 20}},
         };
     }
 }

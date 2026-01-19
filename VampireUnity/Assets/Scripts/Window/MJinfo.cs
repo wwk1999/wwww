@@ -29,6 +29,10 @@ public class MJinfo : MonoBehaviour
     public TextMeshProUGUI jiangliEx;
     public TextMeshProUGUI jiangliLinhun;
     public TextMeshProUGUI jinCuiCount;
+    public TextMeshProUGUI zhuanjinCount;
+    public Animator jingcuiAnimator;
+    public Animator zhuanjinAnimator;
+
 
     public TextMeshProUGUI MonsterName;
     public TextMeshProUGUI PlayerName;
@@ -178,6 +182,9 @@ public class MJinfo : MonoBehaviour
         jiangliEx.text=MJConfig.JiangLiDic[mJLevel].ex+"经验";
         jiangliLinhun.text=MJConfig.JiangLiDic[mJLevel].linhun+"灵魂";
         jinCuiCount.text="X"+MJConfig.JiangLiDic[mJLevel].jingcui;
+        zhuanjinCount.text="X"+MJConfig.JiangLiDic[mJLevel].zhuanjin;
+        jingcuiAnimator.Play("OrangeEdge");
+        zhuanjinAnimator.Play("OrangeEdge");
     }
 
     private void OnEnable()
