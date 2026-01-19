@@ -10,14 +10,8 @@ public class LeiShouSkill3 : MonoBehaviour
 
     private void OnEnable()
     {
-        Animator.Play("NewSequenceAnim",10000,0);
-        Invoke(nameof(Hide),2f);
+        Animator.Play("NewSequenceAnim",0,0);
     }
-
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-        GameController.S.LeiShouSkill3Queue.Enqueue(this);
-    }
+    
     
 }

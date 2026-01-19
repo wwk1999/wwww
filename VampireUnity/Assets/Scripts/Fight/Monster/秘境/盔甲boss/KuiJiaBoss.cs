@@ -17,7 +17,7 @@ namespace Fight.Monster.秘境.盔甲boss
 {
     public class KuiJiaBoss : MonsterBase
     {
-        public KuiJiaBoss() : base(MonsterType.Normal, "KuiJiaBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Green].hp, 0.8f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Green].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Green].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Green].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Green].linhun, 0)
+        public KuiJiaBoss() : base(MonsterType.Boss, "KuiJiaBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Green].hp, 0.8f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Green].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Green].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Green].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Green].linhun, 0)
         {
         }
 

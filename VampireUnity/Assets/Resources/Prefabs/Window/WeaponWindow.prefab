@@ -5257,7 +5257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u653B\u51FB\u7279\u6548\uFF1A\u53D1\u5C04\u6E90\u5F39\u5BF9\u89E6\u78B0\u7684\u654C\u4EBA\u6301\u7EED\u9020\u6210100%\u653B\u51FB\u529B\u7684\u4F24\u5BB3\u3002"
+  m_text: "\u653B\u51FB\u7279\u6548\uFF1A\u53D1\u5C04\u6E90\u5F39\u5BF9\u89E6\u78B0\u7684\u654C\u4EBA\u6301\u7EED\u9020\u6210150%\u653B\u51FB\u529B\u7684\u4F24\u5BB3\u3002"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
   m_sharedMaterial: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
@@ -5266,7 +5266,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

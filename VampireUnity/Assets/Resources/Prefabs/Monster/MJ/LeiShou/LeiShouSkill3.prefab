@@ -268,3 +268,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 4429719437810210795}
   LeiShouSkill3: {fileID: 6356244293441280570}
+  obj: {fileID: 5880718134308962029}

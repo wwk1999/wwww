@@ -3163,6 +3163,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1900030945381261498, guid: 86ed0640777374aaeb381a78b6e5364b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991251352597531636, guid: 86ed0640777374aaeb381a78b6e5364b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2505802273977086307, guid: 86ed0640777374aaeb381a78b6e5364b, type: 3}
       propertyPath: Skeleton
       value: 
@@ -3174,6 +3182,18 @@ PrefabInstance:
     - target: {fileID: 3405390563810961248, guid: 86ed0640777374aaeb381a78b6e5364b, type: 3}
       propertyPath: m_Name
       value: IceBall4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3405390563810961248, guid: 86ed0640777374aaeb381a78b6e5364b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943022114237996550, guid: 86ed0640777374aaeb381a78b6e5364b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449110624304135922, guid: 86ed0640777374aaeb381a78b6e5364b, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7054877847175720747, guid: 86ed0640777374aaeb381a78b6e5364b, type: 3}
       propertyPath: Skeleton

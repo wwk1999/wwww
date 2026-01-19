@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class LanLong3 : MonsterBase
 {
-    public LanLong3() : base(MonsterType.Normal, "LanLong3", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Red3].hp, 0.8f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Red3].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Red3].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Red3].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Red3].linhun, 0)
+    public LanLong3() : base(MonsterType.Normal, "LanLong3", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Red3].hp, 1f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Red3].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Red3].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Red3].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Red3].linhun, 0)
     {
     }
     public Transform attackTrans;
@@ -15,12 +15,12 @@ public class LanLong3 : MonsterBase
     
     public void Awake()
     {
-        base.Awake();
         MaxHp /= 100;
         Attack /= 100;
         Defense/= 100;
         Exp/= 100;
         BloodEnergy/= 100;
+        base.Awake();
         MonsterSpineName.AttackName = "dragon_Spatk_1";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "dragon_walk";

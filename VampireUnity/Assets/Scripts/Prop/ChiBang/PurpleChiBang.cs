@@ -10,6 +10,6 @@ public class PurpleChiBang : PropBase
         propTables.Count = 1;
         propTables.Desc = null;
         propTables.PropType = PropConfig.PropType.ChiBang;
-        propTables.Quality = 5;
+        propTables.Quality = 4;
     }
 }

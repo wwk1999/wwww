@@ -656,7 +656,8 @@ public class DuanZaoWindow : MonoBehaviour
                     else
                     {
                         BagController.S.PropList.Add(104,new PropTable(PropConfig.PropType.WeaponFragment,1,"",4,"PurpleWeaponFragment"));
-                    }                       }
+                    }                       
+                }
                 break;
             
             case HeChengType.OrangeWeaponFragment:

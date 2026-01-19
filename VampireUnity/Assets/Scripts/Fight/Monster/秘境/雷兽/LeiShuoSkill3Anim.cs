@@ -5,6 +5,13 @@ public class LeiShuoSkill3Anim : MonoBehaviour
 {
     public Collider2D collider;
     public LeiShouSkill3 LeiShouSkill3;
+    public GameObject obj;
+
+    public void Hide()
+    {
+        obj.SetActive(false);
+        GameController.S.LeiShouSkill3Queue.Enqueue(LeiShouSkill3);
+    }
     public void CheckCollisionWithMonsters()
     {
         // 检测所有重叠的碰撞体

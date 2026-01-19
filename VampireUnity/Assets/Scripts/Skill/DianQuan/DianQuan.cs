@@ -82,7 +82,7 @@ public class DianQuan : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GlobalPlayerAttribute.TotalDamage,GameController.S.GetIsCrit(),DamageFrom.Skill1);
+                monster.Hurt(GlobalPlayerAttribute.TotalDamage*2f,GameController.S.GetIsCrit(),DamageFrom.Skill1);
                 var hit = GameController.S.DianQuanPengQueue.Dequeue();
                 hit.transform.position = monster.transform.position;
                 hit.SetActive(true);

@@ -38,7 +38,7 @@ public class EntryConfig : MonoBehaviour
     { DefenseEntry.DamageReductionPercent,   new DefenseEntryConfig { DefenseEntry = DefenseEntry.DamageReductionPercent,   minValue = 2, maxValue = 3 } },
     { DefenseEntry.DamageReductionPercentForNormal, new DefenseEntryConfig { DefenseEntry = DefenseEntry.DamageReductionPercentForNormal, minValue = 2, maxValue = 4 } },
     { DefenseEntry.DamageReductionPercentForBoss,   new DefenseEntryConfig { DefenseEntry = DefenseEntry.DamageReductionPercentForBoss,   minValue = 2, maxValue = 4 } },
-    { DefenseEntry.ReplyHpPercent,           new DefenseEntryConfig { DefenseEntry = DefenseEntry.ReplyHpPercent,           minValue = 2, maxValue = 4 } },
+    { DefenseEntry.ReplyHpPercent,           new DefenseEntryConfig { DefenseEntry = DefenseEntry.ReplyHpPercent,           minValue = 1, maxValue = 2 } },
 };
 
 public static Dictionary<DamageEntry, DamageEntryConfig> DamageEntryConfigs =

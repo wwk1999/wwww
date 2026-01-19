@@ -10,17 +10,17 @@ namespace Fight.Monster.秘境.雷兽
 {
     public class LeiShouBoss:MonsterBase
     {
-        public LeiShouBoss() : base(MonsterType.Normal, "LeiShouBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.White].hp, 0.8f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.White].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.White].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.White].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.White].linhun, 0)
+        public LeiShouBoss() : base(MonsterType.Boss, "LeiShouBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.White].hp, 0.8f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.White].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.White].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.White].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.White].linhun, 0)
         {
         }
     
         public Transform attackTrans;
-        private float skill1Time = 5;
-        private float skill2Time = 10;
-        private float skill3Time = 8;
-        private float currentSkill1Time = 0;
-        private float currentSkill2Time = 0;
-        private float currentSkill3Time = 0;
+        private float skill1Time = 15;
+        private float skill2Time = 20;
+        private float skill3Time = 18;
+        private float currentSkill1Time = 10;
+        private float currentSkill2Time = 6;
+        private float currentSkill3Time = 7;
 
         public GameObject skill1;
         public SkeletonAnimation skill1ske;
@@ -30,12 +30,12 @@ namespace Fight.Monster.秘境.雷兽
         
          public  void Awake()
     {
-        base.Awake();
         MaxHp /= 100;
         Attack /= 100;
         Defense/= 100;
         Exp/= 100;
         BloodEnergy/= 100;
+        base.Awake();
         MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "injured";
         MonsterSpineName.MoveName = "move";
@@ -103,7 +103,7 @@ namespace Fight.Monster.秘境.雷兽
      public void Complete(TrackEntry trackEntry)
     {
         monsterSkeletonAnimation.timeScale = 1f;
-        if (trackEntry.Animation.Name == "chuchang"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill5")
+        if (trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill5")
         {
             IsSkill=false;
         }
@@ -383,12 +383,14 @@ namespace Fight.Monster.秘境.雷兽
     {
         if (IsDead) return;
         base.Update();
-        if (!IsSkill)
+       
+        if (!IsSkill)  // 添加这个条件
         {
             currentSkill1Time += Time.deltaTime;
             currentSkill2Time += Time.deltaTime;
             currentSkill3Time += Time.deltaTime;
         }
+        
 
         if (currentSkill1Time > skill1Time)
         {

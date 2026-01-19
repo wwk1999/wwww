@@ -649,16 +649,16 @@ public class WeaponWindow : MonoBehaviour
 
          case WeaponType.LvQuan:
             if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 8 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 8)
+                BagController.S.PropList[204].Count < 5 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 5)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
                return;
             }
 
             GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 8;
-            BagController.S.PropList[104].Count -= 8;
+            BagController.S.PropList[204].Count -= 5;
+            BagController.S.PropList[104].Count -= 5;
             PlayerData.S.lvQuanWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
