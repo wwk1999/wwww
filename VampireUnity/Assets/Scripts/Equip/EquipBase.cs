@@ -25,6 +25,43 @@ public class EquipBase : BagObjectBase
     
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
 
+    public int GetOrangeLevel()
+    {
+        switch (PlayerData.S.mJLevel)
+        {
+            case MJLevel.White:
+                return 35;
+            case MJLevel.Green:
+                return 40;
+            case MJLevel.Blue:
+                return 45;
+            case MJLevel.Purple:
+                return 50;
+            case MJLevel.Orange:
+                return 55;
+            case MJLevel.Red1:
+                return 60;
+            case MJLevel.Red2:
+                return 65;
+            case MJLevel.Red3:
+                return 70;
+            case MJLevel.Red4:
+                return 75;
+            case MJLevel.Red5:
+                return 80;
+            case MJLevel.Red6:
+                return 85;
+            case MJLevel.Red7:
+                return 90;
+            case MJLevel.Red8:
+                return 95;
+            case MJLevel.Red9:
+                return 100;
+        }
+
+        return 1;
+    }
+    
     public void SetBaseAttribute()
     {
         var equipBaseAttribute=EquipConfig.EquipBaseAttributeDic[EquipAttributes.EquipLevel];

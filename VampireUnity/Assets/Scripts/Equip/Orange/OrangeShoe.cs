@@ -23,6 +23,8 @@ public class OrangeShoe :EquipBase
         EquipAttributes.equip_type_id = 6;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         SetBaseAttribute();
         
         InitEntry();

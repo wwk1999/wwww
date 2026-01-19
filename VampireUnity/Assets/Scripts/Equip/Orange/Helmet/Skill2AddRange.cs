@@ -18,6 +18,8 @@ public class Skill2AddRange :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill2AddRange;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         SetBaseAttribute();
         InitEntry();
     }

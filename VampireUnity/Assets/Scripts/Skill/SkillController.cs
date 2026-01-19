@@ -103,7 +103,6 @@ public class SkillController : XSingleton<SkillController>
         normalAttack44.Stop();
 
         NormalAttack.Stop();
-        IceExTrigger.SetActive(false);
     }
 
     //普通攻击发射子弹

@@ -17,6 +17,8 @@ public class OrangeCloak :EquipBase
         EquipAttributes.equip_type_id = 1;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         SetBaseAttribute();
         InitEntry();
     }

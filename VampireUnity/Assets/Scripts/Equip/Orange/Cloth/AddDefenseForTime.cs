@@ -18,6 +18,8 @@ public class AddDefenseForTime :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.AddDefenseForTime;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         SetBaseAttribute();
         InitEntry();
     }

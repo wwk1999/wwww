@@ -19,6 +19,8 @@ public class Skill1ReplaceNormalAttack :EquipBase
         EquipAttributes.equip_type_id = 4;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         SetBaseAttribute();
         
         InitEntry();

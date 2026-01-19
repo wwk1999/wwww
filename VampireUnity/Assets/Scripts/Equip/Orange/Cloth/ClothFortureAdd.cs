@@ -18,6 +18,8 @@ public class ClothFortureAdd :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.ClothFortureAdd;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         SetBaseAttribute();
         InitEntry();
     }

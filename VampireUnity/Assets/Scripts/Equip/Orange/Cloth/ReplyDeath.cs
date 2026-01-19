@@ -18,6 +18,8 @@ public class ReplyDeath :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.ReplyDeath;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         SetBaseAttribute();
         InitEntry();
     }

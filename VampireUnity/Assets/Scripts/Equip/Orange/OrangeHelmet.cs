@@ -23,6 +23,8 @@ public class OrangeHelmet :EquipBase
         EquipAttributes.equip_type_id = 3;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         
         SetBaseAttribute();   
         

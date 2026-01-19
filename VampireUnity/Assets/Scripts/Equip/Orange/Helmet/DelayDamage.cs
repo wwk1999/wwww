@@ -18,6 +18,8 @@ public class DelayDamage :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DelayDamage;
         //暂时写死
         EquipAttributes.Quality = 5;
+        EquipAttributes.EquipLevel = GetOrangeLevel();
+
         SetBaseAttribute();
         InitEntry();
     }
