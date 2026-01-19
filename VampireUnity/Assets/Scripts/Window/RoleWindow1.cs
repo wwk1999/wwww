@@ -34,10 +34,11 @@ public class RoleWindow1 : MonoBehaviour
     public Button debugLingHun;
     public Button debugSkillCount;
     public Button debugWeaponFragment;
+    public Button debugJingCui;
+    public Button debugPlayerLevel;
 
     
     
-    public Button debugJingCui;
     public Button duanzaoButton;
     public Button chibangButton;
 
@@ -114,6 +115,14 @@ public class RoleWindow1 : MonoBehaviour
 
         GlobalPlayerAttribute.RefreshFuJiaAttribute();
 
+        debugPlayerLevel.onClick.AddListener(() =>
+        {
+            {
+                GlobalPlayerAttribute.Level++;
+                StoreController.S.SaveStoreData();
+            }
+        });
+        
         BagController.S.IsInit = true;
         ((SkeletonAnimation)playerSkeleton.Animation).AnimationState.SetAnimation(0, "idle", true);
         chibangButton.onClick.AddListener(() =>

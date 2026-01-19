@@ -114,8 +114,7 @@ public class PlayerEquipAttribute :  MonoBehaviour, IPointerEnterHandler, IPoint
         {
             return;
         }
-        if (prefab == null)
-        {
+        
             switch (equipTable.Quality)
             {
                 case 1:
@@ -137,7 +136,7 @@ public class PlayerEquipAttribute :  MonoBehaviour, IPointerEnterHandler, IPoint
                     prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeRed");
                     break;
             }
-        }
+        
         if (prefab == null)
         {
             Debug.LogWarning($"EquipAttributeHover: 无法找到预制体（请在 inspector 指定或放入 Resources/{resourcePath}）");

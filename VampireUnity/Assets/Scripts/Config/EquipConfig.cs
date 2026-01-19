@@ -32,6 +32,16 @@ namespace Config
             { 40, new EquipAttribute(90,130,130,40) },
             { 45, new EquipAttribute(110,160,160,45) },
             { 50, new EquipAttribute(130,200,200,50) },
+            { 55, new EquipAttribute(150,250,250,75) },
+            { 60, new EquipAttribute(180,300,300,100) },
+            { 65, new EquipAttribute(210,370,370,140) },
+            { 70, new EquipAttribute(240,440,440,180) },
+            { 75, new EquipAttribute(280,520,520,230) },
+            { 80, new EquipAttribute(350,600,600,290) },
+            { 85, new EquipAttribute(420,700,700,360) },
+            { 90, new EquipAttribute(500,820,820,420) },
+            { 95, new EquipAttribute(600,950,950,500) },
+            { 100, new EquipAttribute(750,1100,1100,600) },
         };
 
         public static Dictionary<int, float> EquipQualityDic = new Dictionary<int, float>()
