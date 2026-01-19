@@ -58,7 +58,7 @@ namespace Config
     public class BossMonsterAttribute
     {
         public int hp = 600000;
-        public int atk = 1500;
+        public int atk = 1800;
         public int def = 800;
         public int ex = 2000;
         public int linhun = 200;

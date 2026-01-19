@@ -509,25 +509,25 @@ public class DuanZaoWindow : MonoBehaviour
         ShowItems();
         _heChengType = HeChengType.ShenHuaZhiXin;
 
-        item1ColorBg.sprite = ResourcesConfig.JuDaYaChi;
+        item1ColorBg.sprite = ResourcesConfig.OrangeBg;
         item1Edge.Play("OrangeEdge");
-        item1Image.sprite = ResourcesConfig.OrangeJingCui;
+        item1Image.sprite = ResourcesConfig.FuMoZhiGu;
         
-        item2ColorBg.sprite = ResourcesConfig.FuMoZhiGu;
+        item2ColorBg.sprite = ResourcesConfig.OrangeBg;
         item2Edge.Play("OrangeEdge");
-        item2Image.sprite = ResourcesConfig.OrangeJingCui;
+        item2Image.sprite = ResourcesConfig.GoldBlood;
         
-        item3ColorBg.sprite = ResourcesConfig.GoldBlood;
+        item3ColorBg.sprite = ResourcesConfig.OrangeBg;
         item3Edge.Play("OrangeEdge");
-        item3Image.sprite = ResourcesConfig.OrangeJingCui;
+        item3Image.sprite = ResourcesConfig.JuDaYaChi;
         
-        item4ColorBg.sprite = ResourcesConfig.ZuiEYanZhu;
+        item4ColorBg.sprite = ResourcesConfig.OrangeBg;
         item4Edge.Play("OrangeEdge");
-        item4Image.sprite = ResourcesConfig.OrangeJingCui;
+        item4Image.sprite = ResourcesConfig.ZuiEYanZhu;
         
-        itemColorBg.sprite = ResourcesConfig.ShenHuaZhiXin;
+        itemColorBg.sprite = ResourcesConfig.RedBg;
         itemEdge.Play("RedEdge");
-        itemImage.sprite = ResourcesConfig.RedJingCui;
+        itemImage.sprite = ResourcesConfig.ShenHuaZhiXin;
     }
     
     public void ShowItems()

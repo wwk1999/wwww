@@ -76,62 +76,62 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
 public static Dictionary<OrangeEntry, string> OrangeEntryNameDic = new Dictionary<OrangeEntry, string>()
 {
     // 防御
-    { OrangeEntry.FinalDamageReductionFixed, "玄钢寂壁" },
-    { OrangeEntry.FinalDamageReductionPercent, "圣盾头冠" },
-    { OrangeEntry.AllReplyAddPercent, "圣愈潮" },
-    { OrangeEntry.AddHpForTime, "灵泉盔" },
-    { OrangeEntry.AddDefenseForTime, "铁律衣" },
-    { OrangeEntry.ReplyDeath, "回魂衣" },
-    { OrangeEntry.DelayDamage, "迟伤盔" },
-    { OrangeEntry.HpReductionReplyAdd50, "残愈衣" },
-    { OrangeEntry.HpReductionAddDefense, "险域盔" },
+    { OrangeEntry.FinalDamageReductionFixed, "不朽圣袍" },
+    { OrangeEntry.FinalDamageReductionPercent, "终焉壁垒" },
+    { OrangeEntry.AllReplyAddPercent, "涌泉圣衣" },
+    { OrangeEntry.AddHpForTime, "不息之冠" },
+    { OrangeEntry.AddDefenseForTime, "磐石心甲" },
+    { OrangeEntry.ReplyDeath, "不死羽衣" },
+    { OrangeEntry.DelayDamage, "时砂面甲" },
+    { OrangeEntry.HpReductionReplyAdd50, "背水战袍" },
+    { OrangeEntry.HpReductionAddDefense, "绝境铁盔" },
 
     // 攻击
-    { OrangeEntry.FinalDamageAddPercent, "终裁链" },
-    { OrangeEntry.KillNormal, "绝杀戒" },
-    { OrangeEntry.AddAttackForTime, "狂澜戒" },
-    { OrangeEntry.NormalAddDamage, "弃华链" },
-    { OrangeEntry.RecudeHpAddAttack, "血契链" },
-    { OrangeEntry.JianSuAddAttack, "霜猎靴" },
+    { OrangeEntry.FinalDamageAddPercent, "裁决吊坠" },
+    { OrangeEntry.KillNormal, "诛灭指环" },
+    { OrangeEntry.AddAttackForTime, "怒意魔戒" },
+    { OrangeEntry.NormalAddDamage, "凡骨逆鳞" },
+    { OrangeEntry.RecudeHpAddAttack, "血戮项链" },
+    { OrangeEntry.JianSuAddAttack, "霜噬战靴" },
 
     // 普攻
-    { OrangeEntry.FanPuGuiZhen, "纯白终式" },
-    { OrangeEntry.NoSkill, "孤锋链" },
-    { OrangeEntry.BuWangChuXin, "归真手套" },
-    { OrangeEntry.HeiDongAddSpeed, "黑渊护臂" },
-    { OrangeEntry.DuAddDuQuan, "蚀骨护臂" },
-    { OrangeEntry.LvQuanAddScale, "繁荫护臂" },
-    { OrangeEntry.XuKongAdd2Dan, "虚宙护臂" },
-    { OrangeEntry.PuTong3ChuanTou, "贯魂护臂" },
-    { OrangeEntry.FireBaoZha, "灼狱护臂" },
+    { OrangeEntry.FanPuGuiZhen, "归真宝戒" },
+    { OrangeEntry.NoSkill, "禁法颈链" },
+    { OrangeEntry.BuWangChuXin, "连星斗篷" },
+    { OrangeEntry.HeiDongAddSpeed, "奇点披风" },
+    { OrangeEntry.DuAddDuQuan, "疫病斗篷" },
+    { OrangeEntry.LvQuanAddScale, "生命披风" },
+    { OrangeEntry.XuKongAdd2Dan, "增生披风" },
+    { OrangeEntry.PuTong3ChuanTou, "贯穿斗篷" },
+    { OrangeEntry.FireBaoZha, "爆炎斗篷" },
 
     // Skill1
-    { OrangeEntry.Skill1ReplaceNormalAttack, "技心链" },
-    { OrangeEntry.Skill1YiDianDouble, "雷殛戒" },
-    { OrangeEntry.Skill1AddRange, "远袭盔" },
+    { OrangeEntry.Skill1ReplaceNormalAttack, "技极项链" },
+    { OrangeEntry.Skill1YiDianDouble, "蓄雷指环" },
+    { OrangeEntry.Skill1AddRange, "扩散头盔" },
 
     // Skill2
-    { OrangeEntry.Skill2AddDan, "裂空链" },
-    { OrangeEntry.Skill2RotateAdd, "旋锋戒" },
-    { OrangeEntry.Skill2AddRange, "扩域盔" },
+    { OrangeEntry.Skill2AddDan, "双子项链" },
+    { OrangeEntry.Skill2RotateAdd, "回旋指环" },
+    { OrangeEntry.Skill2AddRange, "引力头盔" },
 
     // Skill3
-    { OrangeEntry.Skill3Bian3, "三重终波" },
-    { OrangeEntry.Skill3AddRange, "广域潮汐" },
+    { OrangeEntry.Skill3Bian3, "三重项链" },
+    { OrangeEntry.Skill3AddRange, "回响指环" },
 
     // Dash
-    { OrangeEntry.DashCd, "瞬步靴" },
-    { OrangeEntry.DashRange, "飞弧靴" },
+    { OrangeEntry.DashCd, "瞬步战靴" },
+    { OrangeEntry.DashRange, "幻影胫甲" },
 
     // 特殊
-    { OrangeEntry.MoveSpeedAdd, "疾影靴" },
-    { OrangeEntry.ExAdd, "学识之靴" },
-    { OrangeEntry.ClothFortureAdd, "织运衣" },
-    { OrangeEntry.ShoeFortureAdd, "踏运靴" },
-    { OrangeEntry.CloakFortureAdd, "鸿运手套" },
-    { OrangeEntry.NecklaceFortureAdd, "福泽链" },
-    { OrangeEntry.RingFortureAdd, "财祸戒" },
-    { OrangeEntry.HelmetFortureAdd, "天赐盔" },
+    { OrangeEntry.MoveSpeedAdd, "追风便靴" },
+    { OrangeEntry.ExAdd, "贤者之靴" },
+    { OrangeEntry.ClothFortureAdd, "命运长袍" },
+    { OrangeEntry.ShoeFortureAdd, "幸运之靴" },
+    { OrangeEntry.CloakFortureAdd, "锦鲤披风" },
+    { OrangeEntry.NecklaceFortureAdd, "天佑项链" },
+    { OrangeEntry.RingFortureAdd, "探宝指环" },
+    { OrangeEntry.HelmetFortureAdd, "探知头盔" },
 };
 
 
