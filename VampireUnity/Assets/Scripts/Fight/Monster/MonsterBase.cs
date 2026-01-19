@@ -827,7 +827,7 @@ public abstract class MonsterBase : MonoBehaviour
         foreach (MonsterEquip monsterEquip in MonsterEquipList)
         {
             float random = Random.Range(0, 100f);
-            if (random <= monsterEquip.Probability*(1+GlobalPlayerAttribute.Forture))
+            if (random <= monsterEquip.Probability*(1.0f+GlobalPlayerAttribute.Forture))
             {
                 //生成装备
                 GameObject equip = GameController.S.GetEquip(monsterEquip);
@@ -843,20 +843,15 @@ public abstract class MonsterBase : MonoBehaviour
         foreach (MonsterOrangeEntryEquip monsterEquip in MonsterOrangeEntryEquip)
         {
             float random = Random.Range(0, 100f);
-            if (random <= monsterEquip.Probability * (1 + GlobalPlayerAttribute.Forture))
+            if (random <= monsterEquip.Probability * (1.0f + GlobalPlayerAttribute.Forture))
             {
                 GameObject equip = GameController.S.GetOrangeEntryEquip(monsterEquip);
-
                 var comp = equip.GetComponent<EquipBase>(); 
                 GameController.S.EquipBaseSet.Add(comp);
                 // 对应的具体脚本
                 comp.enabled = true;
-                Debug.Log($"生成前：{equip.name}, activeSelf={equip.activeSelf}, enabled={(comp != null && comp.enabled)}");
-
                 equip.SetActive(true);
                 equip.transform.position = transform.position;
-
-                Debug.Log($"生成后：{equip.name}, activeSelf={equip.activeSelf}, enabled={(comp != null && comp.enabled)}");
             }
         }
     }

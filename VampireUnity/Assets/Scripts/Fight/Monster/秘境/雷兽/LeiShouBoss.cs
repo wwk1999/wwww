@@ -151,12 +151,66 @@ namespace Fight.Monster.秘境.雷兽
 
     public override void AddMonsterEquip()
     {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Purple, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Purple, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Purple, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Purple, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Purple, 20));
+       // 防御词条
+
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.FinalDamageReductionFixed, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.FinalDamageReductionPercent, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.AllReplyAddPercent, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.AddHpForTime, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.AddDefenseForTime, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.ReplyDeath, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.DelayDamage, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.HpReductionReplyAdd50, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.HpReductionAddDefense, 5));
+    
+    
+    // 攻击词条
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.FinalDamageAddPercent, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.KillNormal, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.AddAttackForTime, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.NormalAddDamage, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.RecudeHpAddAttack, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.JianSuAddAttack, 5));
+    
+    // 普通攻击
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.FanPuGuiZhen, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.NoSkill, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.BuWangChuXin, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.HeiDongAddSpeed, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.DuAddDuQuan, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.LvQuanAddScale, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.XuKongAdd2Dan, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.PuTong3ChuanTou, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.FireBaoZha, 5));
+    
+    // Skill1
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.Skill1YiDianDouble, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.Skill1AddRange, 5));
+    
+    // Skill2
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.Skill2AddDan, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.Skill2RotateAdd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.Skill2AddRange, 5));
+    
+    // Skill3
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.Skill3Bian3, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.Skill3AddRange, 5));
+    
+    // Dash
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.DashCd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.DashRange, 5));
+    
+    // 特殊词条
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.MoveSpeedAdd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.ExAdd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.ClothFortureAdd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.ShoeFortureAdd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.CloakFortureAdd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.NecklaceFortureAdd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.RingFortureAdd, 5));
+    MonsterOrangeEntryEquip.Add(new MonsterOrangeEntryEquip(EntryConfig.OrangeEntry.HelmetFortureAdd, 5));
+    
     }
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
