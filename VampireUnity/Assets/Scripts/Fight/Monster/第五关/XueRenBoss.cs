@@ -12,9 +12,9 @@ public class XueRenBoss : MonsterBase
     }
     
     public Transform attackTrans;
-    private float skill1Time = 10;
-    private float skill2Time = 5;
-    private float skill3Time = 8;
+    private float skill1Time = 12;
+    private float skill2Time = 7;
+    private float skill3Time = 10;
     private float currentSkill1Time = 0;
     private float currentSkill2Time = 0;
     private float currentSkill3Time = 0;
@@ -24,6 +24,9 @@ public class XueRenBoss : MonsterBase
     public Collider2D Skill2Collider2D;
     public GameObject skill2parent;
     
+    public Collider2D luodiCollider;
+    
+    private Vector2 luodiPos=Vector2.zero;
     public  void Awake()
     {
         base.Awake();
@@ -45,12 +48,57 @@ public class XueRenBoss : MonsterBase
         skill2parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         skill2parent.transform.localScale=parent.transform.localScale;
         skill2ske.AnimationState.SetAnimation(0, "animation", false);
-        skill2ske.timeScale = 1.5f;
+        skill2ske.timeScale = 1.6f;
     }
 
     public void Skill2Complete(TrackEntry trackEntry)
     {
         skill2.gameObject.SetActive(false);
+    }
+    
+    private IEnumerator JumpRoutine(float time, Vector2 target)
+    {
+        Vector2 startPos = rigidbody2D.position;
+        Vector2 endPos   = target;
+
+        float elapsed = 0f;
+        while (elapsed < time)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / time);
+
+            // 线性插值移动刚体
+            Vector2 newPos = Vector2.Lerp(startPos, endPos, t);
+            rigidbody2D.MovePosition(newPos);
+
+            yield return null;
+        }
+
+        // 确保最后到达精确位置
+        rigidbody2D.MovePosition(endPos);
+        IsSkill=false;
+    }
+    
+    public void CheckCollisionWithMonsters()
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        luodiCollider.OverlapCollider(filter, results);
+    
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+               GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            }
+        }
     }
     
      public void Complete(TrackEntry trackEntry)
@@ -81,6 +129,8 @@ public class XueRenBoss : MonsterBase
             isSkill3=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
             monsterSkeletonAnimation.timeScale = 2f;
+            luodiPos = GameController.S.gamePlayer.transform.position;
+            GameController.S.CreateCircleAttack(luodiPos,1);
         }
         else if(isAttack)
         {
@@ -92,18 +142,6 @@ public class XueRenBoss : MonsterBase
             monsterSkeletonAnimation.timeScale = 1.5f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
-    }
-
-    public void Dash()
-    {
-        IsDash = true;
-        Speed = 8;
-    }
-
-    public void ExitDash()
-    {
-        IsDash = false;
-        Speed = 1.3f;
     }
 
     public override void AddMonsterEquip()
@@ -191,16 +229,15 @@ public class XueRenBoss : MonsterBase
         
             if (col.CompareTag("Player"))
             {
-               GameController.S.gamePlayer.PlayerHurt(Attack,true);
+               GameController.S.gamePlayer.PlayerHurt(Attack*0.6f,true);
             }
         }
     }
 
     public void Skill2OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "huoyan"||e.Data.Name == "huovan")
+        if (e.Data.Name == "huoyan")
         {
-            Debug.LogError(111);
             Skill2Collider();
         }
     }
@@ -222,14 +259,21 @@ public class XueRenBoss : MonsterBase
             xuerenbossskill1.gameObject.SetActive(true);
         }
 
+        if (e.Data.Name == "damage" && monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill2")
+        {
+            monsterSkeletonAnimation.timeScale = 1;
+        }
+
+
         if (e.Data.Name == "jump")
         {
-            Dash();
+            monsterSkeletonAnimation.timeScale = 1;
+            StartCoroutine(JumpRoutine(0.3f,luodiPos));
         }
 
         if (e.Data.Name == "luodi")
         {
-            ExitDash();
+            CheckCollisionWithMonsters();
         }
     }
     

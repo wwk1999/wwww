@@ -67,6 +67,8 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
 
     public GameObject MJInfo;
     public Button MJButton;
+    public GameObject MjGameObject;
+
 
     
     public RectTransform rectTransform; // 当前UI的RectTransform
@@ -127,6 +129,7 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
         level13Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=13);
         level14Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=14);
         level15Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=15);
+        MjGameObject.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=16);
     }
 
     public void PlayGameLevelAnim()
