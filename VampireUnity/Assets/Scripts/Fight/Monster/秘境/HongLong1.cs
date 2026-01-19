@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Equip;
 using Spine;
 using UnityEngine;
 
 public class HongLong1 : MonsterBase
 {
-    public HongLong1() : base(MonsterType.Normal, "HongLong1", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
+    public HongLong1() : base(MonsterType.Normal, "HongLong1", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.White].hp, 0.8f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.White].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.White].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.White].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.White].linhun, 0)
     {
     }
     public Transform attackTrans;

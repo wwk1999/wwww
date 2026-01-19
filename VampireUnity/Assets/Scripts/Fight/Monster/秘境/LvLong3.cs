@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Equip;
 using Spine;
 using UnityEngine;
 
 public class LvLong3 : MonsterBase
 {
-    public LvLong3() : base(MonsterType.Normal, "LvLong3", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
+    public LvLong3() : base(MonsterType.Normal, "LvLong3", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Red3].hp, 0.8f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Red3].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Red3].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Red3].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Red3].linhun, 0)
     {
     }
     public Transform attackTrans;

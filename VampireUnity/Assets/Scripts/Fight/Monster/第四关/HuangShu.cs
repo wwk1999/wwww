@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Equip;
 using Spine;
 using UnityEngine;
 
 public class HuangShu : MonsterBase
 {
-    public HuangShu() : base(MonsterType.Normal, "HuangShu", 1, 500, 0.7f, 100, 20, 10, 10, 0)
+    public HuangShu() : base(MonsterType.Normal, "HuangShu", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Red1].hp, 0.8f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Red1].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Red1].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Red1].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Red1].linhun, 0)
     {
     }
     

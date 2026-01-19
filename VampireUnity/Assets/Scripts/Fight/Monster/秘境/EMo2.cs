@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Equip;
 using Spine;
 using UnityEngine;
 
 public class EMo2 : MonsterBase
 {
-    public EMo2() : base(MonsterType.Normal, "EMo2", 1, 5000, 0.8f, 500, 150, 10, 10, 0)
+    public EMo2() : base(MonsterType.Normal, "EMo2", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Purple].hp, 0.8f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Purple].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Purple].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Purple].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Purple].linhun, 0)
     {
     }
     public Transform attackTrans;
