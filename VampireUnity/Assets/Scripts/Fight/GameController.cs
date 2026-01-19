@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Config;
 using Equip;
 using Fight.Monster.秘境.盔甲boss;
 using Fight.Monster.秘境.豹子;
@@ -811,6 +812,7 @@ public class GameController : XSingleton<GameController>
         
         return selected;
     }
+    
 
     public void ShowChuanSongZhen()
     {

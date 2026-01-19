@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Mysql;
 using Spine.Unity;
 using TMPro;
@@ -59,6 +60,38 @@ public class FightBGController : XSingleton<FightBGController>
     
     public bool isShowAgain = false;
     
+    
+    public void GetMJJiangLi()
+    {
+        var jiangli=MJConfig.JiangLiDic[PlayerData.S.mJLevel];
+        GlobalPlayerAttribute.Exp+=jiangli.ex;
+        while (GlobalPlayerAttribute.Exp > GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level])
+        {
+            //升级
+            SkillJiaDian.S.CurrentSkillCount++;
+            ObserverModuleManager.S.SendEvent(ConstKeys.LevelUpAnim);
+            GameController.S.gamePlayer.LevelUp.SetActive(true);
+            GameController.S.gamePlayer.LevelUpParticle.Play();
+            GlobalPlayerAttribute.Level++;
+            ObserverModuleManager.S.SendEvent("ShenJi");
+            playerLevelText.text =  GlobalPlayerAttribute.Level.ToString();
+            GlobalPlayerAttribute.Exp=GlobalPlayerAttribute.Exp-GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level-1];
+        }
+        playerExSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
+        playerExSlider.value=GlobalPlayerAttribute.Exp ;
+        GlobalPlayerAttribute.BloodEnergy += jiangli.linhun;
+        if (BagController.S.PropList.ContainsKey(205))
+        {
+            BagController.S.PropList[205].Count += jiangli.jingcui;
+        }
+        else
+        {
+            BagController.S.PropList.Add(205,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = jiangli.jingcui,Desc = "",EquipName = "OrangeJingCui",Quality = 5});
+        }
+
+        PlayerData.S.zhuanjinCount += jiangli.zhuanjin;
+        StoreController.S.SaveStoreData();
+    }
 
     private void Update()
     {

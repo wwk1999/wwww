@@ -30,6 +30,8 @@ public class PlayerData : XSingleton<PlayerData>
     public int heiDongWeaponLevel;
     public int jianQiWeaponLevel;
 
+    public int zhuanjinCount = 0;
+
 
     public WeaponType playerWeaponType=WeaponType.Primary;
     public MJLevel mJLevel = MJLevel.White;
