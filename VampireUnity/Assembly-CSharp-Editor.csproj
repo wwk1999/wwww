@@ -1064,10 +1064,6 @@
       <Project>{eb55ebce-6783-8500-b92b-09b1c8d9ae3a}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{93667a2c-a5c2-f76c-39f3-efb1edc585cf}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64.csproj">
       <Project>{11d1a425-a1cd-bc69-bc0c-feae34843eda}</Project>
       <Name>Unity.Toolchain.Win-x86_64-Linux-x86_64</Name>
@@ -1075,6 +1071,10 @@
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
       <Project>{38991dbd-5b18-d676-711c-133942b19760}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{93667a2c-a5c2-f76c-39f3-efb1edc585cf}</Project>
+      <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
       <Project>{54c06cb3-ec45-ee80-3bc3-1100e605c426}</Project>

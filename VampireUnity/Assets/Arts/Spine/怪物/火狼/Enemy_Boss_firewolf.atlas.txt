@@ -1,0 +1,187 @@
+Enemy_Boss_firewolf.png
+	size: 1020, 1020
+	filter: Linear, Linear
+	pma: true
+1
+	bounds: 305, 374, 110, 184
+	rotate: 90
+2
+	bounds: 273, 263, 109, 184
+	rotate: 270
+3
+	bounds: 109, 161, 85, 133
+	offsets: 5, 2, 90, 135
+	rotate: 90
+4
+	bounds: 823, 145, 77, 131
+	offsets: 0, 0, 94, 131
+	rotate: 270
+a
+	bounds: 485, 949, 24, 19
+	offsets: 7, 5, 32, 25
+b
+	bounds: 455, 942, 28, 26
+	offsets: 1, 1, 30, 27
+biyan
+	bounds: 985, 790, 35, 30
+	offsets: 0, 2, 35, 35
+	rotate: 90
+c
+	bounds: 956, 134, 54, 58
+	offsets: 0, 0, 55, 58
+chentu1
+	bounds: 2, 132, 93, 32
+chentu2
+	bounds: 976, 390, 105, 42
+	rotate: 90
+chentu3
+	bounds: 2, 166, 105, 56
+	offsets: 0, 1, 112, 58
+chentu4
+	bounds: 687, 124, 73, 45
+d
+	bounds: 161, 114, 51, 50
+e
+	bounds: 762, 118, 51, 61
+	offsets: 0, 1, 51, 62
+	rotate: 90
+effect/Vertigo/Vertigo1
+	bounds: 243, 157, 110, 46
+	offsets: 1, 6, 116, 53
+effect/Vertigo/Vertigo2
+	bounds: 403, 679, 104, 43
+	offsets: 7, 6, 116, 53
+	rotate: 90
+effect/Vertigo/Vertigo3
+	bounds: 447, 154, 108, 42
+	offsets: 7, 6, 116, 53
+effect/Vertigo/Vertigo4
+	bounds: 586, 297, 104, 51
+	offsets: 7, 1, 116, 53
+effect/atk/blood 2_00
+	bounds: 580, 155, 105, 73
+	offsets: 26, 6, 180, 84
+effect/atk/blood 2_01
+	bounds: 448, 198, 130, 72
+	offsets: 17, 6, 180, 84
+effect/atk/blood 2_02
+	bounds: 530, 837, 158, 70
+	offsets: 9, 6, 180, 84
+	rotate: 90
+effect/atk/blood 2_03
+	bounds: 2, 286, 163, 68
+	offsets: 6, 5, 180, 84
+effect/atk/blood 2_04
+	bounds: 709, 296, 166, 70
+	offsets: 6, 4, 180, 84
+effect/atk/blood 2_05
+	bounds: 586, 230, 167, 64
+	offsets: 5, 9, 180, 84
+effect/atk/blood 2_06
+	bounds: 909, 328, 167, 65
+	offsets: 6, 7, 180, 84
+	rotate: 90
+effect/atk/blood 2_07
+	bounds: 267, 205, 164, 56
+	offsets: 10, 10, 180, 84
+effect/atk/blood 2_08
+	bounds: 140, 734, 34, 39
+	offsets: 139, 23, 180, 84
+	rotate: 90
+effect/atk/line_s
+	bounds: 2, 770, 196, 199
+	offsets: 0, 0, 213, 199
+	rotate: 90
+effect/atk/quan
+	bounds: 530, 997, 89, 21
+	offsets: 2, 0, 94, 23
+effect/atk/sheng
+	bounds: 355, 152, 90, 51
+effect/atk/xtraoa1
+	bounds: 755, 228, 161, 66
+	offsets: 2, 1, 165, 69
+effect/atk/xtraoa3
+	bounds: 2, 968, 263, 50
+	offsets: 1, 1, 265, 53
+effect/atk/xtraoa5
+	bounds: 267, 970, 261, 48
+	offsets: 1, 1, 263, 51
+effect/atk/xtraoa7
+	bounds: 2, 224, 169, 60
+	offsets: 2, 1, 172, 63
+effect/atk/xtraoa9
+	bounds: 687, 171, 134, 55
+	offsets: 12, 2, 147, 59
+effect/jn2/fire_0
+	bounds: 2, 357, 98, 30
+	offsets: 72, 168, 200, 200
+effect/jn2/fire_1
+	bounds: 918, 194, 132, 69
+	offsets: 28, 126, 200, 200
+	rotate: 90
+effect/jn2/fire_10
+	bounds: 305, 486, 150, 147
+	offsets: 4, 0, 200, 200
+effect/jn2/fire_11
+	bounds: 140, 487, 143, 149
+	offsets: 5, 1, 200, 200
+	rotate: 90
+effect/jn2/fire_12
+	bounds: 153, 356, 129, 150
+	offsets: 9, 1, 200, 200
+	rotate: 90
+effect/jn2/fire_13
+	bounds: 173, 248, 92, 106
+	offsets: 20, 17, 200, 200
+effect/jn2/fire_2
+	bounds: 638, 640, 165, 188
+	offsets: 4, 8, 200, 200
+	rotate: 90
+effect/jn2/fire_3
+	bounds: 448, 635, 170, 188
+	offsets: 1, 7, 200, 200
+	rotate: 90
+effect/jn2/fire_4
+	bounds: 856, 827, 149, 191
+	offsets: 0, 2, 200, 200
+effect/jn2/fire_5
+	bounds: 2, 579, 136, 189
+	offsets: 2, 0, 200, 200
+effect/jn2/fire_6
+	bounds: 638, 503, 135, 190
+	offsets: 5, 1, 200, 200
+	rotate: 90
+effect/jn2/fire_7
+	bounds: 749, 368, 127, 158
+	offsets: 17, 2, 200, 200
+	rotate: 90
+effect/jn2/fire_8
+	bounds: 457, 498, 135, 159
+	offsets: 13, 2, 200, 200
+	rotate: 90
+effect/jn2/fire_9
+	bounds: 830, 497, 141, 157
+	offsets: 14, 3, 200, 200
+	rotate: 90
+f
+	bounds: 491, 418, 78, 78
+	offsets: 1, 0, 79, 79
+langhao
+	bounds: 171, 632, 207, 148
+shenti
+	bounds: 213, 782, 312, 186
+tou
+	bounds: 621, 807, 233, 211
+	offsets: 0, 0, 234, 211
+weiba
+	bounds: 2, 389, 149, 188
+	rotate: 180
+xiongmao
+	bounds: 575, 350, 172, 151
+xiongmao2
+	bounds: 832, 640, 185, 157
+	rotate: 90
+zui
+	bounds: 462, 272, 120, 122
+	offsets: 1, 0, 122, 122
+	rotate: 90

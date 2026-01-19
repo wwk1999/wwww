@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: fensexionggui_Atlas
+  m_EditorClassIdentifier: 
+  serializedMaterialOverrides: []
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 8d29f1980630c1b48b06172ce10f37b5, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 4aec7a6fcddc00d439a074560f7f2e41, type: 2}
+  - {fileID: 2100000, guid: 60bfa111023a7094cb6c035f4844b1ee, type: 2}
+  - {fileID: 2100000, guid: 133ad7e85f2f57d41bac21a4bf72043f, type: 2}
+  - {fileID: 2100000, guid: f1c5ed962b34a3d488ad335d14ef61c3, type: 2}
+  - {fileID: 2100000, guid: c046ba29e47d8f04f9bd3e6294654cd2, type: 2}
+  - {fileID: 2100000, guid: 9c97d590b5d1b2844866104eb9bba983, type: 2}
+  - {fileID: 2100000, guid: 63a782ab80cfec747973de72d1eb180a, type: 2}
+  - {fileID: 2100000, guid: 02495a6ed5cfed645aee53638b0f6ca1, type: 2}
+  - {fileID: 2100000, guid: 287206d0354d4b647ac995cf2b52e39b, type: 2}
+  - {fileID: 2100000, guid: 7292f3f1da56731408bcf6bb951fcd25, type: 2}
+  - {fileID: 2100000, guid: 30d2ba15d0da43540b92622e3bc71574, type: 2}
+  - {fileID: 2100000, guid: 81f5a7a4b08d61a4882f00db224916f6, type: 2}
+  - {fileID: 2100000, guid: a864809b4e071a34ea8b93b86e7a5fcc, type: 2}

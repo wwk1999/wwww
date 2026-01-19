@@ -81,8 +81,6 @@ public class XueRenBoss : MonsterBase
             isSkill3=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
             monsterSkeletonAnimation.timeScale = 2f;
-            Invoke(nameof(Dash),1.8f);
-            Invoke(nameof(ExitDash),2.5f);
         }
         else if(isAttack)
         {
@@ -200,8 +198,9 @@ public class XueRenBoss : MonsterBase
 
     public void Skill2OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "damage")
+        if (e.Data.Name == "huoyan"||e.Data.Name == "huovan")
         {
+            Debug.LogError(111);
             Skill2Collider();
         }
     }
@@ -222,7 +221,16 @@ public class XueRenBoss : MonsterBase
             xuerenbossskill1.transform.position=transform.position;
             xuerenbossskill1.gameObject.SetActive(true);
         }
-       
+
+        if (e.Data.Name == "jump")
+        {
+            Dash();
+        }
+
+        if (e.Data.Name == "luodi")
+        {
+            ExitDash();
+        }
     }
     
     
