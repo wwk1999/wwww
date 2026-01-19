@@ -16,6 +16,11 @@ public class LvLang : MonsterBase
     public void Awake()
     {
         base.Awake();
+        MaxHp /= 100;
+        Attack /= 100;
+        Defense/= 100;
+        Exp/= 100;
+        BloodEnergy/= 100;
         MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "injured";
         MonsterSpineName.MoveName = "move";

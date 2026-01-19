@@ -54,9 +54,19 @@ namespace Config
         public int ex = 80;
         public int linhun = 8;
     }
+    
+    public class BossMonsterAttribute
+    {
+        public int hp = 600000;
+        public int atk = 2000;
+        public int def = 1000;
+        public int ex = 2000;
+        public int linhun = 200;
+    }
     public class MJConfig
     {
-        public static BaseMonsterAttribute BaseMonsterAttribute;
+        public static BaseMonsterAttribute BaseMonsterAttribute=new BaseMonsterAttribute();
+        public static BossMonsterAttribute BossMonsterAttribute=new BossMonsterAttribute();
         public static Dictionary<MJLevel, MonsterAttribute> MonsterAttributeDic = new Dictionary<MJLevel, MonsterAttribute>()
         {
             { MJLevel.White ,new MonsterAttribute{hp=100,atk=100,def=100}},

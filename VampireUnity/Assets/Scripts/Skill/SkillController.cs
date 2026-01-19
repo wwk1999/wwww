@@ -16,10 +16,6 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public GameObject NormalAttack2;
     [NonSerialized]public GameObject NormalAttack3;
     [NonSerialized]public GameObject NormalAttack4;
-    [NonSerialized]public GameObject IceExplosion;
-    [NonSerialized]public ParticleSystem IceExplosion1;
-    [NonSerialized]public ParticleSystem IceExplosion2;
-    [NonSerialized]public ParticleSystem IceExplosion3;
     [NonSerialized]public GameObject IceExTrigger;
     [NonSerialized]public float IceBallSpeed = 5f;
     [NonSerialized]public GameObject IceBallGameObject;
@@ -107,16 +103,7 @@ public class SkillController : XSingleton<SkillController>
         normalAttack44.Stop();
 
         NormalAttack.Stop();
-        
-        IceExplosion= GameController.S.transform.Find("Player(Clone)/IceExplosion").gameObject;
-        IceExplosion1= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion1/IceExplosionP1").GetComponent<ParticleSystem>();
-        IceExplosion2= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion2/IceExplosionP2").GetComponent<ParticleSystem>();
-        IceExplosion3= GameController.S.transform.Find("Player(Clone)/IceExplosion/IceExplosion2/IceExplosionP3").GetComponent<ParticleSystem>();
-        IceExTrigger = GameController.S.transform.Find("Player(Clone)/IceExplosion/parent/IceExTrigger").gameObject;
         IceExTrigger.SetActive(false);
-        IceExplosion1.Stop();
-        IceExplosion2.Stop();
-        IceExplosion3.Stop();
     }
 
     //普通攻击发射子弹

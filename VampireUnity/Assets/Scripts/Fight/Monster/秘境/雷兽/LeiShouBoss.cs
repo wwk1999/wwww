@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Equip;
 using Spine;
 using Spine.Unity;
@@ -9,7 +10,7 @@ namespace Fight.Monster.秘境.雷兽
 {
     public class LeiShouBoss:MonsterBase
     {
-        public LeiShouBoss() : base(MonsterType.Boss, "LeiShouBoss", 1, 100000, 1.2f, 1000, 300, 10, 10, 0)
+        public LeiShouBoss() : base(MonsterType.Normal, "LeiShouBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.White].hp, 0.8f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.White].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.White].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.White].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.White].linhun, 0)
         {
         }
     
@@ -30,6 +31,11 @@ namespace Fight.Monster.秘境.雷兽
          public  void Awake()
     {
         base.Awake();
+        MaxHp /= 100;
+        Attack /= 100;
+        Defense/= 100;
+        Exp/= 100;
+        BloodEnergy/= 100;
         MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "injured";
         MonsterSpineName.MoveName = "move";

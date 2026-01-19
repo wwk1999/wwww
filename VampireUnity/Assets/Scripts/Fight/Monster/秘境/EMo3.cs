@@ -16,6 +16,11 @@ public class EMo3 : MonsterBase
     public void Awake()
     {
         base.Awake();
+        MaxHp /= 100;
+        Attack /= 100;
+        Defense/= 100;
+        Exp/= 100;
+        BloodEnergy/= 100;
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "walking";

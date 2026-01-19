@@ -16,6 +16,11 @@ public class LvLong2 : MonsterBase
     public void Awake()
     {
         base.Awake();
+        MaxHp /= 100;
+        Attack /= 100;
+        Defense/= 100;
+        Exp/= 100;
+        BloodEnergy/= 100;
         MonsterSpineName.AttackName = "dragon_atk_1";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "dragon_walk";

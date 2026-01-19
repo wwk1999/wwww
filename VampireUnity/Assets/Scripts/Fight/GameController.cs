@@ -933,9 +933,6 @@ public class GameController : XSingleton<GameController>
             {
                 AudioController.S.PlayIceEx();
                 SkillController.S.IceExplosionCoolingtime=0;
-                SkillController.S.IceExplosion1.Play();
-                SkillController.S.IceExplosion2.Play();
-                SkillController.S.IceExplosion3.Play();
                 SkillController.S.IceExTrigger.gameObject.SetActive(true);
             }
         });
