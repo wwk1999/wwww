@@ -20,6 +20,8 @@ public class GlobalPlayerAttribute
         return ChiBangConfig.ChiBangAttributeDic[PlayerData.S.ChiBangLevel];
     }
     
+    //武器属性
+    
    public static float WeaponAttack=>GetWeaponAttack();
    public static float WeaponDefense=>GetWeaponDefense();
    public static float WeaponCrit=>GetWeaponCrit();
@@ -28,7 +30,12 @@ public class GlobalPlayerAttribute
    public static float WeaponShenJiPercent = 0.2f;
 
    
-   
+   //专精属性
+   public static float MonsterAttack => GetMonsterAttack();
+   public static float MonsterDefense => GetMonsterDefense();
+   public static float MonsterHp => GetMonsterHp();
+   public static float MonsterCrit => GetMonsterCrit();
+
    
    
    public static bool IsGame = false;
@@ -38,6 +45,25 @@ public class GlobalPlayerAttribute
 
    public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
 
+   public static float GetMonsterAttack()
+   {
+       return SkillJiaDian.S.MonsterAttack * SkillConfig.BaseMonsterDic[Config.MonsterType.Attack];
+   }
+   
+   public static float GetMonsterDefense()
+   {
+       return SkillJiaDian.S.MonsterDefense * SkillConfig.BaseMonsterDic[Config.MonsterType.Defense];
+   }
+   
+   public static float GetMonsterHp()
+   {
+       return SkillJiaDian.S.MonsterHp * SkillConfig.BaseMonsterDic[Config.MonsterType.Hp];
+   }
+   
+   public static float GetMonsterCrit()
+   {
+       return SkillJiaDian.S.MonsterCrit * SkillConfig.BaseMonsterDic[Config.MonsterType.Crit];
+   }
    public static float GetWeaponAttack()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
@@ -402,7 +428,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCrit()
    {
-       return (PlayerCRIT + EquipCRIT+WeaponCrit)*(1+CritNum/100.0f);
+       return (PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit)*(1+CritNum/100.0f);
    }
 
    public static float GetForture()
@@ -454,7 +480,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp) * (1.0f + MaxHpPercent/100f));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp) * (1.0f + MaxHpPercent/100f));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            maxhp /= 2;
@@ -464,7 +490,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDamage()
    {
-       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack) * (1f + DamageAddPercent / 100f));
+       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack) * (1f + DamageAddPercent / 100f));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            damage *=1.3f;
@@ -474,7 +500,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDefense()
    {
-       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense)*(1f+MaxDefensePercent/100f));
+       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense)*(1f+MaxDefensePercent/100f));
        float value = 0;
 
        if (isIceBall)

@@ -2,6 +2,15 @@ using System.Collections.Generic;
 
 namespace Config
 {
+
+    public enum MonsterType
+    {
+        None,
+        Attack,
+        Defense,
+        Hp,
+        Crit
+    }
     public class SkillConfig
     {
         public enum SkillButtonType
@@ -33,6 +42,14 @@ namespace Config
             Defense,                 // 防御
             CritMonster              // 暴击怪物
         }
+
+        public static Dictionary<MonsterType, float> BaseMonsterDic = new Dictionary<MonsterType, float>()
+        {
+            { MonsterType.Attack, 5 },
+            { MonsterType.Defense, 5 },
+            { MonsterType.Hp, 15 },
+            { MonsterType.Crit, 15 },
+        };
 
         public static Dictionary<SkillButtonType, int> MaxSkillLevel = new Dictionary<SkillButtonType, int>()
         {

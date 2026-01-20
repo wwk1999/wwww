@@ -178,6 +178,7 @@ public class SkillWindow1 : MonoBehaviour
     public void ResfreshSkillCount()
     {
         skillCount.text = SkillJiaDian.S.CurrentSkillCount.ToString();
+        monsterCount.text=PlayerData.S.zhuanjinCount.ToString();
     }
 
 
@@ -922,90 +923,70 @@ public class SkillWindow1 : MonoBehaviour
         
         attackButton.onClick.AddListener(() =>
         {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            if (PlayerData.S.zhuanjinCount <= 0)
             {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前专精点数不足");
                 return;
             }
-            if (SkillJiaDian.S.MonsterAttack >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Attack])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
+          
             TriggerButtonClickAnim(attackButton);
 
-            SkillJiaDian.S.CurrentSkillCount--;
+            PlayerData.S.zhuanjinCount--;
             SkillJiaDian.S.MonsterAttack++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
-            SetButtonDisable();
         });
         
         hpButton.onClick.AddListener(() =>
         {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            if (PlayerData.S.zhuanjinCount <= 0)
             {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前专精点数不足");
                 return;
             }
-            if (SkillJiaDian.S.MonsterHp >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Hp])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(hpButton);
+          
+            TriggerButtonClickAnim(attackButton);
 
-            SkillJiaDian.S.CurrentSkillCount--;
+            PlayerData.S.zhuanjinCount--;
             SkillJiaDian.S.MonsterHp++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
-            SetButtonDisable();
         });
         
         defenseButton.onClick.AddListener(() =>
         {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            if (PlayerData.S.zhuanjinCount <= 0)
             {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前专精点数不足");
                 return;
             }
-            if (SkillJiaDian.S.MonsterDefense >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Defense])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(defenseButton);
+          
+            TriggerButtonClickAnim(attackButton);
 
-            SkillJiaDian.S.CurrentSkillCount--;
+            PlayerData.S.zhuanjinCount--;
             SkillJiaDian.S.MonsterDefense++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
-            SetButtonDisable();
         });
         
         critMonsterButton.onClick.AddListener(() =>
         {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            if (PlayerData.S.zhuanjinCount <= 0)
             {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前专精点数不足");
                 return;
             }
-            if (SkillJiaDian.S.MonsterCrit >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.CritMonster])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(critMonsterButton);
+          
+            TriggerButtonClickAnim(attackButton);
 
-            SkillJiaDian.S.CurrentSkillCount--;
+            PlayerData.S.zhuanjinCount--;
             SkillJiaDian.S.MonsterCrit++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
-            SetButtonDisable();
         });
     }
 }
