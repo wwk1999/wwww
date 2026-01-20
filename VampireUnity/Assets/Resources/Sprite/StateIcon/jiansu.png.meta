@@ -126,12 +126,12 @@ TextureImporter:
       name: jiansu_0
       rect:
         serializedVersion: 2
-        x: 347
-        y: 361
-        width: 1376
-        height: 1318
+        x: 219
+        y: 227
+        width: 859
+        height: 823
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
