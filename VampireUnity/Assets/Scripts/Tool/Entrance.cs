@@ -81,6 +81,13 @@ public class Entrance : MonoBehaviour
                             GameController.S.transform);
                     Monster5.gameObject.SetActive(false);
                     GameController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
+                    
+                    var Monster6 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoLang/HuoLangSkill2").GetComponent<HuoLangSkill2>(),
+                            GameController.S.transform);
+                    Monster6.gameObject.SetActive(false);
+                    GameController.S.HuoLangSkill2Queue.Enqueue(Monster6.GetComponent<HuoLangSkill2>());
                 }
             }
             

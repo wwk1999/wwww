@@ -47,6 +47,6 @@ public class LvXuanFen : MonoBehaviour
    private void Update()
    {
       Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-      rg.velocity = direction.normalized * 0.9f; 
+      rg.velocity = direction.normalized * 1.3f; 
    }
 }

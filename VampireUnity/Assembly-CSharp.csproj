@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\Equip\Green\GreenNecklace.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo2.cs" />
     <Compile Include="Assets\Scripts\Fight\FightBGController.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill3Dan.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeHelmet.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\XuKong\XuKong.cs" />
     <Compile Include="Assets\Scripts\Window\GameLevelWindow1.cs" />
@@ -179,6 +180,7 @@
     <Compile Include="Assets\Scripts\Mysql\UserController.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack.cs" />
     <Compile Include="Assets\Scripts\Prop\BloodEnergyController.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill3Anim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SpiderWeb.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEyeBullet.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\Skill1YiDianDouble.cs" />
@@ -332,6 +334,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Scripts\Tool\UpgradeButton.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill3BaoZha.cs" />
     <Compile Include="Assets\Scripts\Prop\PropBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\Scripts\Equip\BagGrid.cs" />
@@ -349,6 +352,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManDiLie.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XianRenZhang.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill2Anim.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\LvQuanAddScale.cs" />
     <Compile Include="Assets\Scripts\Singleton\NeedDestroyAttribute.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\WhiteChiBang.cs" />
@@ -364,6 +368,7 @@
     <Compile Include="Assets\Scripts\Tool\UnityMainThreadDispatcher.cs" />
     <Compile Include="Assets\Scripts\Config\LevelInfoConfig.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\PuTong3\PuTong3Peng.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\BuWangChuXin.cs" />
     <Compile Include="Assets\Scripts\Tool\ReturnButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
@@ -423,6 +428,7 @@
     <Compile Include="Assets\Scripts\Window\MJinfo.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\FireBaoZha.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXRotation.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangBoss.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloak.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong2.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />

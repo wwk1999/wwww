@@ -15,7 +15,7 @@ public class BaoZiSkill2 : MonoBehaviour
     {
         Animator.Play("NewSequenceAnim");
         Invoke(nameof(EnQueue), 5f);
-        rg.velocity = direction * 10;
+        rg.velocity = direction * 7;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

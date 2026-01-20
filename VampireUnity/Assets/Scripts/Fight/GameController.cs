@@ -150,6 +150,7 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<LvXuanFen> LvXuanFenQueue = new Queue<LvXuanFen>();
     [NonSerialized] public Queue<BaoZiSkill2> BaoZiSkill2Queue = new Queue<BaoZiSkill2>();
 
+    [NonSerialized] public Queue<HuoLangSkill2> HuoLangSkill2Queue = new Queue<HuoLangSkill2>();
 
 
 
@@ -1082,6 +1083,19 @@ public class GameController : XSingleton<GameController>
                     BaoZiBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     MonsterColliderDic.Add(BaoZiBoss.collider2D,BaoZiBoss);
                     BaoZiBoss.meshRenderer.sortingOrder = 3000;
+                    break;
+                
+                case MJLevel.Purple:
+                    HuoLangBoss HuoLangBoss = Instantiate(Resources.Load<HuoLangBoss>("Prefabs/Monster/MJ/HuoLang/HuoLangBoss"));
+                    HuoLangBoss.gameObject.SetActive(true);
+                    HuoLangBoss.IsSkill = true;
+                    HuoLangBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk3 = HuoLangBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk3.AnimationState.SetAnimation(0,"skill2",false);
+                    HuoLangBoss.HuoLangSkill2Type = HuoLangSkill2Type.ChuChang;
+                    HuoLangBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    MonsterColliderDic.Add(HuoLangBoss.collider2D,HuoLangBoss);
+                    HuoLangBoss.meshRenderer.sortingOrder = 3000;
                     break;
             }
         }

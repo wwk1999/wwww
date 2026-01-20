@@ -68,6 +68,9 @@ public abstract class MonsterBase : MonoBehaviour
 {
     public GameObject du;
     public GameObject jiansu;
+    public GameObject yidian;
+    public GameObject zhuoshao;
+
     [NonSerialized] public float duTime = 0;
     [NonSerialized] public float duDamage = 0;
     [NonSerialized] public float jiansuTime = 0;
