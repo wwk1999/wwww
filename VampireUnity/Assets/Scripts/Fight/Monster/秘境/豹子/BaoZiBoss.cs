@@ -18,29 +18,29 @@ namespace Fight.Monster.秘境.豹子
     }
     public class BaoZiBoss:MonsterBase
     {
-        public BaoZiBoss() : base(MonsterType.Boss, "BaoZiBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Blue].hp, 0.8f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Blue].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Blue].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Blue].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Blue].linhun, 0)
+        public BaoZiBoss() : base(MonsterType.Boss, "BaoZiBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Blue].hp, 1.3f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Blue].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Blue].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Blue].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Blue].linhun, 0)
         {
         }
         
         public Transform attackTrans;
-        private float skill1Time = 10;
-        private float skill2Time = 5;
-        private float skill3Time = 8;
-        private float currentSkill1Time = 0;
-        private float currentSkill2Time = 0;
-        private float currentSkill3Time = 0;
+        private float skill1Time = 13;
+        private float skill2Time = 8;
+        private float skill3Time = 11;
+        private float currentSkill1Time = 2;
+        private float currentSkill2Time = 3;
+        private float currentSkill3Time = 4;
         [NonSerialized] public BaoZiSkillType BaoZiSkillType = BaoZiSkillType.None;
         
         
         
           public void Awake()
         {
-            base.Awake();
             MaxHp /= 100;
             Attack /= 100;
             Defense/= 100;
             Exp/= 100;
             BloodEnergy/= 100;
+            base.Awake();
             MonsterSpineName.AttackName = "attack1";
             MonsterSpineName.HitName = "injured";
             MonsterSpineName.MoveName = "move";

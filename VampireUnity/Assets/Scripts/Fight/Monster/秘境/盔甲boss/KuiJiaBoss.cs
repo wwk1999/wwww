@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Config;
 using Equip;
 using Spine;
@@ -17,29 +18,31 @@ namespace Fight.Monster.秘境.盔甲boss
 {
     public class KuiJiaBoss : MonsterBase
     {
-        public KuiJiaBoss() : base(MonsterType.Boss, "KuiJiaBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Green].hp, 0.8f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Green].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Green].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Green].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Green].linhun, 0)
+        public KuiJiaBoss() : base(MonsterType.Boss, "KuiJiaBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Green].hp, 1.3f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Green].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Green].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Green].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Green].linhun, 0)
         {
         }
 
         public Transform attackTrans;
-        private float skill1Time = 500;
-        private float skill2Time = 5;
-        private float skill3Time = 80;
-        private float currentSkill1Time = 0;
-        private float currentSkill2Time = 0;
-        private float currentSkill3Time = 0;
+        private float skill1Time = 15;
+        private float skill2Time = 12;
+        private float skill3Time = 8;
+        private float currentSkill1Time = 5;
+        private float currentSkill2Time = 5;
+        private float currentSkill3Time = 5;
         public GameObject hudun;
         public Animator hudunAnimator;
         [NonSerialized] public KuiJiaSkillType KuiJiaSkillType = KuiJiaSkillType.None;
+        public Collider2D Skill3Collider2D;
+        private Vector2 skill3Position = Vector2.zero;
 
         public void Awake()
         {
-            base.Awake();
             MaxHp /= 100;
             Attack /= 100;
             Defense/= 100;
             Exp/= 100;
             BloodEnergy/= 100;
+            base.Awake();
             MonsterSpineName.AttackName = "attack1";
             MonsterSpineName.HitName = "injured";
             MonsterSpineName.MoveName = "move";
@@ -77,7 +80,9 @@ namespace Fight.Monster.秘境.盔甲boss
                 IsSkill = true;
                 isSkill3 = false;
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
-                monsterSkeletonAnimation.timeScale = 2f;
+                skill3Position=GameController.S.gamePlayer.transform.position;
+                GameController.S.CreateCircleAttack(skill3Position,1.2f);
+                monsterSkeletonAnimation.timeScale = 1.5f;
             }
             else if (isAttack)
             {
@@ -167,6 +172,51 @@ namespace Fight.Monster.秘境.盔甲boss
         {
             monsterSkeletonAnimation.AnimationState.Event -= OnSpineEvent;
         }
+        
+        private IEnumerator JumpRoutine(float time, Vector2 target)
+        {
+            Vector2 startPos = rigidbody2D.position;
+            Vector2 endPos   = target;
+
+            float elapsed = 0f;
+            while (elapsed < time)
+            {
+                elapsed += Time.deltaTime;
+                float t = Mathf.Clamp01(elapsed / time);
+
+                // 线性插值移动刚体
+                Vector2 newPos = Vector2.Lerp(startPos, endPos, t);
+                rigidbody2D.MovePosition(newPos);
+
+                yield return null;
+            }
+
+            // 确保最后到达精确位置
+            rigidbody2D.MovePosition(endPos);
+            IsSkill=false;
+        }
+        
+        public void CheckCollisionWithMonsters()
+        {
+            // 检测所有重叠的碰撞体
+            List<Collider2D> results = new List<Collider2D>();
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.NoFilter();
+            filter.useTriggers = true;
+    
+            Skill3Collider2D.OverlapCollider(filter, results);
+    
+            // 找出所有怪物并处理
+            foreach (Collider2D col in results)
+            {
+                if (col.gameObject == gameObject) continue;
+        
+                if (col.CompareTag("Player"))
+                {
+                    GameController.S.gamePlayer.PlayerHurt(Attack,true);
+                }
+            }
+        }
 
         public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
         {
@@ -177,6 +227,17 @@ namespace Fight.Monster.秘境.盔甲boss
                 {
                     GameController.S.gamePlayer.PlayerHurt(Attack, true);
                 }
+            }
+
+            if (e.Data.Name == "jump" && trackEntry.Animation.Name == "skill3")
+            {
+                monsterSkeletonAnimation.timeScale = 1f;
+                StartCoroutine(JumpRoutine(0.5f, skill3Position));
+            }
+
+            if (e.Data.Name == "damage" && trackEntry.Animation.Name == "skill3")
+            {
+                CheckCollisionWithMonsters();
             }
             
             if (e.Data.Name == "damage" && trackEntry.Animation.Name == "skill2")

@@ -10,7 +10,7 @@ namespace Fight.Monster.秘境.雷兽
 {
     public class LeiShouBoss:MonsterBase
     {
-        public LeiShouBoss() : base(MonsterType.Boss, "LeiShouBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.White].hp, 0.8f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.White].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.White].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.White].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.White].linhun, 0)
+        public LeiShouBoss() : base(MonsterType.Boss, "LeiShouBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.White].hp, 1.3f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.White].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.White].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.White].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.White].linhun, 0)
         {
         }
     
@@ -30,7 +30,7 @@ namespace Fight.Monster.秘境.雷兽
         
          public  void Awake()
     {
-        MaxHp /= 10000;
+        MaxHp /= 100;
         Attack /= 100;
         Defense/= 100;
         Exp/= 100;
@@ -45,7 +45,8 @@ namespace Fight.Monster.秘境.雷兽
         skill1ske.AnimationState.Event += Skill1OnSpineEvent;
         skill1ske.AnimationState.Complete += Skill1Complete;
     }
-
+         
+        
     public void ShowSkill1()
     {
         skill1.SetActive(true);

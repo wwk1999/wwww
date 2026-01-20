@@ -1369,7 +1369,7 @@ public class GameController : XSingleton<GameController>
             }
         }else if (LevelInfoConfig.CurrentGameLevel > 15)
         {
-            if (NormalMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
+            if (NormalMonsterCount >= LevelInfoConfig.LevelMonsterCount[15+(int)PlayerData.S.mJLevel])
             {
                 return;
             }
