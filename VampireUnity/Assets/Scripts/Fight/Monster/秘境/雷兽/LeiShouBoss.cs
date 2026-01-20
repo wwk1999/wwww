@@ -30,7 +30,7 @@ namespace Fight.Monster.秘境.雷兽
         
          public  void Awake()
     {
-        MaxHp /= 100;
+        MaxHp /= 10000;
         Attack /= 100;
         Defense/= 100;
         Exp/= 100;

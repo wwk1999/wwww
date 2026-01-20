@@ -90,6 +90,8 @@ public class FightBGController : XSingleton<FightBGController>
         }
 
         PlayerData.S.zhuanjinCount += jiangli.zhuanjin;
+        var MJtoast=Instantiate(Resources.Load<GameObject>("Prefabs/Window/MJToast"));
+        
         StoreController.S.SaveStoreData();
     }
 
@@ -169,7 +171,18 @@ public class FightBGController : XSingleton<FightBGController>
             StoreController.S.SaveStoreData();
         }
 
+        if (LevelInfoConfig.CurrentGameLevel >15)
+        {
+            StartCoroutine(DelayGetMJjiangli());
+        }
+
         StartCoroutine(DelayDisable(success));
+    }
+
+    IEnumerator DelayGetMJjiangli()
+    {
+        yield return new WaitForSeconds(1f);
+        GetMJJiangLi();
     }
     IEnumerator DelayPlaySuccessAnim(SkeletonGraphic skeletonGraphic)
     {

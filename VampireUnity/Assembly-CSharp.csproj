@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\Window\GameLevelWindow1.cs" />
     <Compile Include="Assets\Scripts\Skill\ThreeNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Window\LoginWindow1.cs" />
+    <Compile Include="Assets\Scripts\Window\MJToast.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryShoe.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeSkill.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\GoldBlood.cs" />
