@@ -1100,6 +1100,18 @@ public class GameController : XSingleton<GameController>
                     MonsterColliderDic.Add(HuoLangBoss.collider2D,HuoLangBoss);
                     HuoLangBoss.meshRenderer.sortingOrder = 3000;
                     break;
+                
+                case MJLevel.Orange:
+                    ShuangDaoBoss ShuangDaoBoss = Instantiate(Resources.Load<ShuangDaoBoss>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoBoss"));
+                    ShuangDaoBoss.gameObject.SetActive(true);
+                    ShuangDaoBoss.IsSkill = true;
+                    ShuangDaoBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk4 = ShuangDaoBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk4.AnimationState.SetAnimation(0,"chuchang",false);
+                    ShuangDaoBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    MonsterColliderDic.Add(ShuangDaoBoss.collider2D,ShuangDaoBoss);
+                    ShuangDaoBoss.meshRenderer.sortingOrder = 3000;
+                    break;
             }
         }
     }
