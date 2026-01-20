@@ -90,6 +90,7 @@
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXLightFlicker.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\ExtremeSpeed.cs" />
     <Compile Include="Assets\Scripts\Tool\MouseLock.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\双刀\ShuangDaoSkill2Anim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\雷兽\LeiShouShunYi.cs" />
     <Compile Include="Assets\Scripts\Config\SkillConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\ChiBangGrid.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\GoldBlood.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\AddHpForTime.cs" />
     <Compile Include="Assets\Scripts\Window\FightBg.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\双刀\ShuangDaoBoss.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DunDiMonster.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Tool\ConstKeys.cs" />
@@ -161,6 +163,7 @@
     <Compile Include="Assets\Scripts\Equip\BagExitButton.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeNecklace.cs" />
     <Compile Include="Assets\Scripts\Tool\ButtonScaleTool.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\双刀\ShuangDaoSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleNecklace.cs" />
     <Compile Include="Assets\Scripts\Config\RankConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PickUpController.cs" />
@@ -291,6 +294,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLang.cs" />
     <Compile Include="Assets\Scripts\Window\SkillWindow1.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireAnim.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\双刀\ShuangDaoSkill3.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor2.cs" />
     <Compile Include="Assets\Scripts\Window\FailPanel.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanCloak.cs" />

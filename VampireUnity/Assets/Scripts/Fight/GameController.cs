@@ -151,6 +151,9 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<BaoZiSkill2> BaoZiSkill2Queue = new Queue<BaoZiSkill2>();
 
     [NonSerialized] public Queue<HuoLangSkill2> HuoLangSkill2Queue = new Queue<HuoLangSkill2>();
+    [NonSerialized] public Queue<ShuangDaoSkill2> ShuangDaoSkill2Queue = new Queue<ShuangDaoSkill2>();
+    [NonSerialized] public Queue<ShuangDaoSkill3> ShuangDaoSkill3Queue = new Queue<ShuangDaoSkill3>();
+
 
 
 
