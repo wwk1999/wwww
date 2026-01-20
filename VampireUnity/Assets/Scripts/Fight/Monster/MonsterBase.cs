@@ -159,6 +159,11 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Start()
     {
+        du.gameObject.SetActive(false);
+        jiansu.gameObject.SetActive(false);
+        yidian.gameObject.SetActive(false);
+        zhuoshao.gameObject.SetActive(false);
+
         if (MonsterType != MonsterType.Boss)
         {
             if (monsterSkeletonAnimation != null)

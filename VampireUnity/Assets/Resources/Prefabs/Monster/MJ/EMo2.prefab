@@ -1233,8 +1233,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346b09fcfd8f4582a193d7c1942269d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  du: {fileID: 0}
-  jiansu: {fileID: 0}
+  du: {fileID: 1487287103017489773}
+  jiansu: {fileID: 257172466153236245}
+  yidian: {fileID: 6938279019509537305}
+  zhuoshao: {fileID: 9179243543386741159}
   hpSliderCanvas: {fileID: 8518212361908229511}
   meshRenderer: {fileID: 4167793254909542039}
   parent: {fileID: 5860166997824884356}

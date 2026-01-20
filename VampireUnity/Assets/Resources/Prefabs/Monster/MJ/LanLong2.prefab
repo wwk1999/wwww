@@ -75,8 +75,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad5ddfbeed242c29f43720b87736306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  du: {fileID: 0}
-  jiansu: {fileID: 0}
+  du: {fileID: 8060593210203246561}
+  jiansu: {fileID: 810093939596273437}
+  yidian: {fileID: 5644291041863795171}
+  zhuoshao: {fileID: 3561911641163724900}
   hpSliderCanvas: {fileID: 3464401562710904703}
   meshRenderer: {fileID: 3373640941788320059}
   parent: {fileID: 176438842401140646}
@@ -556,7 +558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.3016149, y: 0.33234808}
+  m_AnchoredPosition: {x: -0.000011018639, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &823065660626522570
