@@ -72,16 +72,18 @@ public abstract class MonsterBase : MonoBehaviour
     public GameObject zhuoshao;
 
     [NonSerialized] public float duTime = 0;
+    [NonSerialized] public float duCurrentTime = 0;//毒间隔时间
     [NonSerialized] public float duDamage = 0;
+    
+    
     [NonSerialized] public float jiansuTime = 0;
-    [NonSerialized] public float duCurrentTime = 0;
-
+    [NonSerialized] public float YiDianTime = 0;
+    [NonSerialized] public float JianSuTime = 0;
     
     
     public Canvas  hpSliderCanvas;
     public MeshRenderer  meshRenderer;
-    [NonSerialized] public float YiDianTime = 0;
-    [NonSerialized] public float JianSuTime = 0;
+   
     [NonSerialized] public MonsterSpineName MonsterSpineName=new MonsterSpineName();
     public GameObject parent;
 
@@ -226,7 +228,12 @@ public abstract class MonsterBase : MonoBehaviour
         
         if (YiDianTime > 0)
         {
+            yidian.gameObject.SetActive(true);
             YiDianTime -= Time.deltaTime;
+        }
+        else
+        {
+            yidian.gameObject.SetActive(false);
         }
         
         if (JianSuTime > 0)
@@ -679,7 +686,7 @@ public abstract class MonsterBase : MonoBehaviour
                 finalDamage*=(1+(GlobalPlayerAttribute.Skill3DamageNum-100f)/100.0f);
                 break;
         }
-        if (damageFrom == DamageFrom.Skill1&&YiDianTime>0)
+        if (YiDianTime>0)
         {
             if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1YiDianDouble))
             {
@@ -770,10 +777,6 @@ public abstract class MonsterBase : MonoBehaviour
     {
         if (IsDead) return;
         if(MonsterState== State.Die) return;
-        if (damageFrom == DamageFrom.Skill1&&GlobalPlayerAttribute.Skill1YiDianNum>0)
-        {
-            YiDianTime = 3;
-        }
         if (damageFrom == DamageFrom.Skill3&&GlobalPlayerAttribute.Skill3JianSuNum>0)
         {
             JianSuTime = 3;
