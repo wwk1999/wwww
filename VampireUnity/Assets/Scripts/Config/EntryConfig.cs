@@ -282,7 +282,7 @@ public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new 
         AddAttackForTime,//战斗中每5s增加3%攻击，上限100%           ring        1111
         NormalAddDamage,//每穿戴一件传说以下品质装备增加最终伤害30%    necklace    1111
         RecudeHpAddAttack,//减少50%hp增加30%attack               necklace    1111
-        JianSuAddAttack,//对被减速的敌人增加15%伤害                 Shoe
+        JianSuAddAttack,//对被减速的敌人增加15%伤害                 Shoe        1111
         //普通攻击
         FanPuGuiZhen,//装备白色武器最终伤害增加200%，绿色武器最终伤害增加150%，蓝色100%，紫色50%    ring
         NoSkill,//普通攻击伤害增加100%，但是不能使用技能（技能伤害）          necklace
@@ -302,7 +302,7 @@ public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new 
         Skill2RotateAdd,//Skill2转速增加30%                                      ring            1111
         Skill2AddRange,//增加Skill2范围30%,体积增大30%                             helmet          1111
         //Skill3
-        Skill3Bian3,//skill3变为发射3波，每一波伤害减少50%                           necklace
+        Skill3Bian3,//skill3变为发射3波，每一波伤害减少30%                           necklace         2222
         Skill3AddRange,//Skill3增加范围30%                                       ring             1111
         //Dash
         DashCd,//Dash基础Cd减少30%                 shoe                                           1111

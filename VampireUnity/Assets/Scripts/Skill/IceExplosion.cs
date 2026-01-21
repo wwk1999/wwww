@@ -7,6 +7,7 @@ public class IceExplosion : MonoBehaviour
 {
    public Animator animator;
    public SkeletonAnimation skeletonAnimation;
+   [NonSerialized] public float damageCount = 1;
 
    private void Start()
    {
@@ -36,7 +37,7 @@ public class IceExplosion : MonoBehaviour
       if (other.CompareTag("Monster")||other.CompareTag("Boss"))
       {
          bool isCrit = GameController.S.GetIsCrit();
-         GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage*5f,isCrit,DamageFrom.Skill3);
+         GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage*5f*damageCount,isCrit,DamageFrom.Skill3);
          if (SkillJiaDian.S.Skill3JianSu >= 1)
          {
             GameController.S.MonsterColliderDic[other].jiansuTime = 3f;

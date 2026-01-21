@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Coffee.UIExtensions;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -192,15 +193,40 @@ public class SkillController : XSingleton<SkillController>
                 {
                     AudioController.S.PlayIceEx();
                     IceExplosionCoolingtime=0;
-                    var iceex = GameController.S.IceExQueue.Dequeue();
-                    if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill3AddRange))
+                    if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill3Bian3))
                     {
-                        iceex.transform.localScale=new Vector3(1.3f,1.3f,1.3f);
+                        StartCoroutine(Skill3Bian3());
                     }
-                    iceex.transform.position=GameController.S.gamePlayer.transform.position;
-                   iceex.gameObject.SetActive(true);
+                    else
+                    {
+                        var iceex = GameController.S.IceExQueue.Dequeue();
+                        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill3AddRange))
+                        {
+                            iceex.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+                        }
+
+                        iceex.transform.position = GameController.S.gamePlayer.transform.position;
+                        iceex.gameObject.SetActive(true);
+                    }
                 }
                 break;
+        }
+    }
+
+
+    IEnumerator Skill3Bian3()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            var iceex = GameController.S.IceExQueue.Dequeue();
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill3AddRange))
+            {
+                iceex.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+            }
+            iceex.transform.position = GameController.S.gamePlayer.transform.position;
+            iceex.damageCount = 0.7f;
+            iceex.gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
         }
     }
     void Update()

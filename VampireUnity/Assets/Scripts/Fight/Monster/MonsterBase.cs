@@ -705,6 +705,14 @@ public abstract class MonsterBase : MonoBehaviour
             }
         }
 
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.JianSuAddAttack))
+        {
+            if (jiansuTime > 0)
+            {
+                finalDamage*=1.15f;
+            }
+        }
+
         return Mathf.RoundToInt(finalDamage);
     }
 
