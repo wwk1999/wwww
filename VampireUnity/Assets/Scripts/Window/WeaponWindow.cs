@@ -98,10 +98,59 @@ public class WeaponWindow : MonoBehaviour
    public GameObject AttributeContent;
 
    public ShenJiCaiLiao ShenJiCaiLiao;
+
+   public GameObject PrimaryEquipIcon;
+   public GameObject DuEquipIcon;
+   public GameObject PuTong3EquipIcon;
+   public GameObject XuKongEquipIcon;
+   public GameObject FireEquipIcon;
+   public GameObject LvQuanEquipIcon;
+   public GameObject HeiDongEquipIcon;
+   public GameObject JianQiEquipIcon;
+
    [NonSerialized] public WeaponType currentJieSuoType = WeaponType.None;
    [NonSerialized] public WeaponType currentShowType = WeaponType.None;
 
+   public void RefreshEquipIcon()
+   {
+      PrimaryEquipIcon.gameObject.SetActive(false);
+      DuEquipIcon.gameObject.SetActive(false);
+      PuTong3EquipIcon.gameObject.SetActive(false);
+      XuKongEquipIcon.gameObject.SetActive(false);
+      FireEquipIcon.gameObject.SetActive(false);
+      LvQuanEquipIcon.gameObject.SetActive(false);
+      HeiDongEquipIcon.gameObject.SetActive(false);
+      JianQiEquipIcon.gameObject.SetActive(false);
 
+      switch (PlayerData.S.playerWeaponType)
+      {
+         case WeaponType.Primary:
+            PrimaryEquipIcon.gameObject.SetActive(true);
+            break;
+         case WeaponType.Du:
+            DuEquipIcon.gameObject.SetActive(true);
+            break;
+         case WeaponType.PuTong3:
+            PuTong3EquipIcon.gameObject.SetActive(true);
+            break;
+         case WeaponType.XuKong:
+            XuKongEquipIcon.gameObject.SetActive(true);
+            break;
+         case WeaponType.Fire:
+            FireEquipIcon.gameObject.SetActive(true);
+            break;
+         case WeaponType.LvQuan:
+            LvQuanEquipIcon.gameObject.SetActive(true);
+            break;
+         case WeaponType.HeiDong:
+            HeiDongEquipIcon.gameObject.SetActive(true);
+            break;
+         case WeaponType.JianQi:
+            JianQiEquipIcon.gameObject.SetActive(true);
+            break;
+      }
+   }
+   
    public void HideNameAndDesc()
    {
       desc1.gameObject.SetActive(false);
@@ -574,6 +623,7 @@ public class WeaponWindow : MonoBehaviour
    private void OnEnable()
    {
       RefreshWeaponList();
+      RefreshEquipIcon();
    }
 
    public void JieSuo()
@@ -808,18 +858,18 @@ public class WeaponWindow : MonoBehaviour
 
 
 
-      primaryInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Primary; StoreController.S.SaveStoreData();});
-      fireInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Fire; StoreController.S.SaveStoreData();});
-      xukongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.XuKong; StoreController.S.SaveStoreData();});
+      primaryInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Primary; StoreController.S.SaveStoreData();RefreshEquipIcon();});
+      fireInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Fire; StoreController.S.SaveStoreData();RefreshEquipIcon();});
+      xukongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.XuKong; StoreController.S.SaveStoreData();RefreshEquipIcon();});
 
-      lvQuanInstallButton.onClick.AddListener(() => {PlayerData.S.playerWeaponType = WeaponType.LvQuan; StoreController.S.SaveStoreData();});
+      lvQuanInstallButton.onClick.AddListener(() => {PlayerData.S.playerWeaponType = WeaponType.LvQuan; StoreController.S.SaveStoreData();RefreshEquipIcon();});
 
-      heiDongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.HeiDong;StoreController.S.SaveStoreData(); });
-      jianQiInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.JianQi;StoreController.S.SaveStoreData(); });
+      heiDongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.HeiDong;StoreController.S.SaveStoreData(); RefreshEquipIcon();});
+      jianQiInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.JianQi;StoreController.S.SaveStoreData(); RefreshEquipIcon();});
 
-      duInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.Du; StoreController.S.SaveStoreData();});
+      duInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.Du; StoreController.S.SaveStoreData();RefreshEquipIcon();});
 
-      puTong3InstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.PuTong3; StoreController.S.SaveStoreData();});
+      puTong3InstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.PuTong3; StoreController.S.SaveStoreData();RefreshEquipIcon();});
 
       exitButton.onClick.AddListener(() =>
       {
