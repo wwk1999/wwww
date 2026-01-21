@@ -24,6 +24,13 @@ public class ShuangDaoBoss : MonsterBase
     private float currentSkill1Time = 5;
     private float currentSkill2Time = 5;
     private float currentSkill3Time = 5;
+
+    public Collider2D attackCollider;
+    public Collider2D Skill1Collider1;
+    public Collider2D Skill1Collider2;
+    public Collider2D Skill1Collider3;
+    public Collider2D Skill3Collider;
+
     
     
     public void Awake()
@@ -151,7 +158,7 @@ public class ShuangDaoBoss : MonsterBase
     private void Start()
     {
         base.Start();
-        size = 1.5f;
+        size = 2f;
         AddMonsterEquip();
         AddMonsterProp();
     }
@@ -208,13 +215,9 @@ public class ShuangDaoBoss : MonsterBase
 
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "damage" && trackEntry.Animation.Name == "attack1")
+        if (e.Data.Name == "attack" && trackEntry.Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size ||
-                Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.2f)
-            {
-                GameController.S.gamePlayer.PlayerHurt(Attack, true);
-            }
+            CheckCollisionWithMonsters(attackCollider);
         }
     }
 
