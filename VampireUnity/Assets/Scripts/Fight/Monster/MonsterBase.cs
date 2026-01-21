@@ -77,8 +77,12 @@ public abstract class MonsterBase : MonoBehaviour
     
     
     [NonSerialized] public float jiansuTime = 0;
+    [NonSerialized] public float jiansuCount = 0;
     [NonSerialized] public float YiDianTime = 0;
     [NonSerialized] public float JianSuTime = 0;
+    
+    [NonSerialized] public float baseSpeed = 0;
+
     
     
     public Canvas  hpSliderCanvas;
@@ -161,6 +165,7 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Start()
     {
+        baseSpeed = Speed;
         du.gameObject.SetActive(false);
         jiansu.gameObject.SetActive(false);
         yidian.gameObject.SetActive(false);
@@ -219,10 +224,12 @@ public abstract class MonsterBase : MonoBehaviour
         if (jiansuTime > 0)
         {
             jiansuTime -= Time.deltaTime;
+            Speed = baseSpeed*jiansuCount;
             jiansu.gameObject.SetActive(true);
         }
         else
         {
+            Speed = baseSpeed;
             jiansu.gameObject.SetActive(false);
         }
         

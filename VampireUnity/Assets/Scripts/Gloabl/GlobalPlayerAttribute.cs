@@ -536,38 +536,38 @@ public class GlobalPlayerAttribute
    
    //技能面板
 
-   public static int NormalAttackNum => SkillJiaDian.S.NormalAttack * 5;
-   public static int AttackSpeedNum=> SkillJiaDian.S.AttackSpeed * 5;
+   public static float NormalAttackNum => SkillJiaDian.S.NormalAttack * 5;
+   public static float AttackSpeedNum=> SkillJiaDian.S.AttackSpeed * 5;
     
-   public static int CritNum=> SkillJiaDian.S.Crit * 5;//百分比
-   public static int CritDamageNum=> SkillJiaDian.S.CritDamage * 5;
+   public static float CritNum=> SkillJiaDian.S.Crit * 5;//百分比
+   public static float CritDamageNum=> SkillJiaDian.S.CritDamage * 5;
     
-   public static int MoveSpeedNum=> SkillJiaDian.S.MoveSpeed * 30;
-   public static int MoveAddAttackNum=> SkillJiaDian.S.MoveAddAttack * 5;
-   public static int MoveAddDefenseNum=> SkillJiaDian.S.MoveAddDefense * 5;
+   public static float MoveSpeedNum=> SkillJiaDian.S.MoveSpeed * 30;
+   public static float MoveAddAttackNum=> SkillJiaDian.S.MoveAddAttack * 5;
+   public static float MoveAddDefenseNum=> SkillJiaDian.S.MoveAddDefense * 5;
     
-   public static int DashNum=> SkillJiaDian.S.Dash * 5;
-   public static int DashCdNum=> SkillJiaDian.S.DashCd * 5;
+   public static float DashNum=> SkillJiaDian.S.Dash * 5;
+   public static float DashCdNum=> SkillJiaDian.S.DashCd * 5;
     
-   public static int Skill1DamageNum=> 100+(SkillJiaDian.S.Skill1Damage-1) * 5;
-   public static int Skill1CdNum=> SkillJiaDian.S.Skill1Cd * 5;
-   public static int Skill1RangeNum=> SkillJiaDian.S.Skill1Range * 5;
-   public static int Skill1YiDianNum=> SkillJiaDian.S.Skill1YiDian * 5;
+   public static float Skill1DamageNum=> 100+(SkillJiaDian.S.Skill1Damage-1) * 5;
+   public static float Skill1CdNum=> SkillJiaDian.S.Skill1Cd * 5;
+   public static float Skill1RangeNum=> SkillJiaDian.S.Skill1Range * 5;
+   public static float Skill1YiDianNum=> SkillJiaDian.S.Skill1YiDian * 5;
     
-   public static int Skill2DamageNum=> 100+(SkillJiaDian.S.Skill2Damage-1) * 5;
-   public static int Skill2CdNum=> SkillJiaDian.S.Skill2Cd * 5;
-   public static int Skill2TimeNum=> SkillJiaDian.S.Skill2Time * 50;//增加基础持续时候
-   public static int Skill2AddDefenseNum=> SkillJiaDian.S.Skill2AddDefense * 5;
+   public static float Skill2DamageNum=> 100+(SkillJiaDian.S.Skill2Damage-1) * 5;
+   public static float Skill2CdNum=> SkillJiaDian.S.Skill2Cd * 5;
+   public static float Skill2TimeNum=> SkillJiaDian.S.Skill2Time * 50;//增加基础持续时候
+   public static float Skill2AddDefenseNum=> SkillJiaDian.S.Skill2AddDefense * 5;
     
-   public static int Skill3DamageNum=> 100+(SkillJiaDian.S.Skill3Damage-1) * 5;
-   public static int Skill3CdNum=> SkillJiaDian.S.Skill3Cd * 5;
-   public static int Skill3RangeNum=> SkillJiaDian.S.Skill3Range * 5;
-   public static int Skill3JianSuNum=> SkillJiaDian.S.Skill3JianSu * 5;
+   public static float Skill3DamageNum=> 100+(SkillJiaDian.S.Skill3Damage-1) * 5;
+   public static float Skill3CdNum=> SkillJiaDian.S.Skill3Cd * 5;
+   public static float Skill3RangeNum=> SkillJiaDian.S.Skill3Range * 5;
+   public static float Skill3JianSuNum=> SkillJiaDian.S.Skill3JianSu * 5;
 
-   public static int MonsterAttackNum=> SkillJiaDian.S.MonsterAttack * 100;
-   public static int MonsterCritNum=> SkillJiaDian.S.MonsterCrit * 100;
-   public static int MonsterHpNum=> SkillJiaDian.S.MonsterHp * 100;
-   public static int MonsterDefenseNum=> SkillJiaDian.S.MonsterDefense * 100;
+   public static float MonsterAttackNum=> SkillJiaDian.S.MonsterAttack * 100;
+   public static float MonsterCritNum=> SkillJiaDian.S.MonsterCrit * 100;
+   public static float MonsterHpNum=> SkillJiaDian.S.MonsterHp * 100;
+   public static float MonsterDefenseNum=> SkillJiaDian.S.MonsterDefense * 100;
 
 
    public static void ResetFuJiaAttribute()

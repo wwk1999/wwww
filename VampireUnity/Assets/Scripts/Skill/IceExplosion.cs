@@ -37,6 +37,11 @@ public class IceExplosion : MonoBehaviour
       {
          bool isCrit = GameController.S.GetIsCrit();
          GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage*5f,isCrit,DamageFrom.Skill3);
+         if (SkillJiaDian.S.Skill3JianSu >= 1)
+         {
+            GameController.S.MonsterColliderDic[other].jiansuTime = 3f;
+            GameController.S.MonsterColliderDic[other].jiansuCount = (1 -GlobalPlayerAttribute.Skill3JianSuNum/100f);
+         }
       }
    }
 }
