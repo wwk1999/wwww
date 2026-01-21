@@ -5,6 +5,7 @@ using Config;
 using Equip;
 using Spine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ShuangDaoBoss : MonsterBase
 {
@@ -18,9 +19,9 @@ public class ShuangDaoBoss : MonsterBase
     }
     
     public Transform attackTrans;
-    private float skill1Time = 12;
-    private float skill2Time = 15;
-    private float skill3Time = 8;
+    private float skill1Time = 8;
+    private float skill2Time = 8;
+    private float skill3Time = 10;
     private float currentSkill1Time = 5;
     private float currentSkill2Time = 5;
     private float currentSkill3Time = 5;
@@ -30,6 +31,8 @@ public class ShuangDaoBoss : MonsterBase
     public Collider2D Skill1Collider2;
     public Collider2D Skill1Collider3;
     public Collider2D Skill3Collider;
+
+    private Vector2 ShortJumpPos = Vector2.zero;
 
     
     
@@ -49,12 +52,50 @@ public class ShuangDaoBoss : MonsterBase
         monsterSkeletonAnimation.AnimationState.Complete += Complete;
     }
     
+    public void Skill2(Vector2 pos,float dis,float  time,float delayTime,int count)
+    {
+        StartCoroutine(Skill2Coroutine(pos, dis, time, delayTime,count));
+    }
+
+    private IEnumerator Skill2Coroutine(Vector2 pos, float dis, float time, float delayTime,int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            StartCoroutine(Skill2Item(pos, dis, delayTime));
+            // 等待下一个生成
+            if (time > 0f)
+                yield return new WaitForSeconds(time);
+            else
+                yield return null;
+        }
+    }
+
+    IEnumerator Skill2Item(Vector2 pos, float dis, float time)
+    {
+        Vector2 randomOffset = Random.insideUnitCircle * dis;
+        Vector2 spawnPos = pos + randomOffset;
+
+        // 调用创建方法（假设 CreateCircleAttack 接受 Vector2 位置）
+        GameController.S.CreateCircleAttack(spawnPos,1f);
+        yield return new WaitForSeconds(time);
+        ShuangDaoSkill2 huoyan=GameController.S.ShuangDaoSkill2Queue.Dequeue();
+        huoyan.transform.position = spawnPos;
+        huoyan.damage = Attack;
+        huoyan.gameObject.SetActive(true);
+    }
+    
     
     public void Complete(TrackEntry trackEntry)
     {
         monsterSkeletonAnimation.timeScale = 1f;
+        if (trackEntry.Animation.Name == "short jump")
+        {
+            monsterSkeletonAnimation.timeScale = 2f;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+            return;
+        }
         if (trackEntry.Animation.Name == "skill1" || trackEntry.Animation.Name == "skill2" ||
-            trackEntry.Animation.Name == "skill3")
+            trackEntry.Animation.Name == "skill3"|| trackEntry.Animation.Name == "chuchang"|| trackEntry.Animation.Name == "skill4")
         {
             IsSkill = false;
         }
@@ -63,30 +104,36 @@ public class ShuangDaoBoss : MonsterBase
         {
             IsSkill = true;
             isSkill1 = false;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "short jump", false);
+            ShortJumpPos=GameController.S.gamePlayer.transform.position;
+            GameController.S.CreateCircleAttack(ShortJumpPos,1f);
+            monsterSkeletonAnimation.timeScale = 1.5f;
         }
         else if (isSkill2)
         {
             IsSkill = true;
             isSkill2 = false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
+            Vector2 pos = new Vector2(GameController.S.gamePlayer.transform.position.x,
+                GameController.S.gamePlayer.transform.position.y);
+            Skill2(pos,8f,0.15f,0.7f,15);
             monsterSkeletonAnimation.timeScale = 1.2f;
         }
         else if (isSkill3)
         {
             IsSkill = true;
             isSkill3 = false;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
-            monsterSkeletonAnimation.timeScale = 1.2f;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill4", false);
+            monsterSkeletonAnimation.timeScale = 1.5f;
         }
         else if (isAttack)
         {
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.timeScale = 2.5f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
         }
         else
         {
-            monsterSkeletonAnimation.timeScale = 1f;
+            monsterSkeletonAnimation.timeScale = 1.3f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
     }
@@ -213,11 +260,56 @@ public class ShuangDaoBoss : MonsterBase
         }
     }
 
+    public void Skill3()
+    {
+        float waveOffset = Random.Range(0, 30);
+        int bulletCount = 12;
+        float angleStep = 360f / bulletCount; 
+            
+        for (int i = 0; i < bulletCount; i++)
+        {
+            var xieZiSkill1 = GameController.S.ShuangDaoSkill3Queue.Dequeue();
+            float angle = i * angleStep + waveOffset;
+            float angleRad = angle * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+            xieZiSkill1.transform.position = transform.position;
+            xieZiSkill1.dir = direction;
+            xieZiSkill1.damage = Attack;
+            xieZiSkill1.gameObject.SetActive(true);
+        }
+    }
+
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
         if (e.Data.Name == "attack" && trackEntry.Animation.Name == "attack1")
         {
             CheckCollisionWithMonsters(attackCollider);
+        }
+
+        if (e.Data.Name == "short jump" && trackEntry.Animation.Name == "short jump")
+        {
+            StartCoroutine(JumpRoutine(0.4f,ShortJumpPos));
+        }
+
+        if (e.Data.Name == "skill1_1" && trackEntry.Animation.Name == "skill1")
+        {
+            CheckCollisionWithMonsters(Skill1Collider1);
+        }
+        
+        if (e.Data.Name == "skill1_2" && trackEntry.Animation.Name == "skill1")
+        {
+            CheckCollisionWithMonsters(Skill1Collider2);
+        }
+        
+        if (e.Data.Name == "skill1_3" && trackEntry.Animation.Name == "skill1")
+        {
+            CheckCollisionWithMonsters(Skill1Collider3);
+        }
+        
+        if (e.Data.Name == "skill4" && trackEntry.Animation.Name == "skill4")
+        {
+            CheckCollisionWithMonsters(Skill3Collider);
+            Skill3();
         }
     }
 
