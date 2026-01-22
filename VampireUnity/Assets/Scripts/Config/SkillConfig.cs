@@ -45,10 +45,10 @@ namespace Config
 
         public static Dictionary<MonsterType, float> BaseMonsterDic = new Dictionary<MonsterType, float>()
         {
-            { MonsterType.Attack, 5 },
-            { MonsterType.Defense, 5 },
-            { MonsterType.Hp, 15 },
-            { MonsterType.Crit, 15 },
+            { MonsterType.Attack, 1 },
+            { MonsterType.Defense, 1 },
+            { MonsterType.Hp, 3 },
+            { MonsterType.Crit, 3 },
         };
 
         public static Dictionary<SkillButtonType, int> MaxSkillLevel = new Dictionary<SkillButtonType, int>()
