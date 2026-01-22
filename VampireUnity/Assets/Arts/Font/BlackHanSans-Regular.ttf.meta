@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 686080f4d81f184429d5e3f267c4e92d
+guid: cebc1b131f5dc2149b95a589c896a56f
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Adelle Sans Global
+  - Black Han Sans
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
