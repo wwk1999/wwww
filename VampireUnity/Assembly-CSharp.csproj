@@ -257,6 +257,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\RingFortureAdd.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong1.cs" />
     <Compile Include="Assets\Scripts\Tool\ClickFx.cs" />
+    <Compile Include="Assets\Scripts\Window\SettingWindow.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongNext.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\GreenWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Skill\FireTrigger.cs" />

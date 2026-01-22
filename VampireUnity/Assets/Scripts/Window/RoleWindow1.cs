@@ -114,7 +114,6 @@ public class RoleWindow1 : MonoBehaviour
         settingButton.onClick.AddListener(() =>
         {
             WindowController.S.SettingWindow.SetActive(true);
-            gameObject.SetActive(false);
         });
         ObserverModuleManager.S.RegisterEvent("ChiBang",RefreshChiBang);
 
