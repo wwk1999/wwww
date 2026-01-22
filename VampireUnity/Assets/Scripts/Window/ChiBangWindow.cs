@@ -211,7 +211,7 @@ public class ChiBangWindow : MonoBehaviour
       if (chibangAttribute.forture != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="爆率：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="掉宝值：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.forture.ToString();
       }
       if (chibangAttribute.finalDamage != 0)

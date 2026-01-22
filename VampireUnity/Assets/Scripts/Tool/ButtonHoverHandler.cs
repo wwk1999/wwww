@@ -140,7 +140,7 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
         case SkillConfig.SkillButtonType.MoveSpeed:
             level.text = SkillJiaDian.S.MoveSpeed.ToString();
 
-            SetSkillInfoContent("移动速度", false, $"每级提供基础移动速度 0.3（即 30/100）");
+            SetSkillInfoContent("移动速度", false, $"每级提供基础移动速度 0.3");
             break;
 
         case SkillConfig.SkillButtonType.MoveAddDefense:
@@ -158,19 +158,19 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
         case SkillConfig.SkillButtonType.Skill1:
             level.text = SkillJiaDian.S.Skill1Damage.ToString();
 
-            SetSkillInfoContent("电光风暴", true, $"每级额外提供电光风暴伤害 5%（基础 100%）");
+            SetSkillInfoContent("电光风暴", true, $"每级额外提供电光风暴伤害 5%");
             break;
 
         case SkillConfig.SkillButtonType.Skill2:
             level.text = SkillJiaDian.S.Skill2Damage.ToString();
 
-            SetSkillInfoContent("冰晶星轮", true, $"每级额外提供冰晶星轮伤害 5%（基础 100%）");
+            SetSkillInfoContent("冰晶星轮", true, $"每级额外提供冰晶星轮伤害 5%");
             break;
 
         case SkillConfig.SkillButtonType.Skill3:
             level.text = SkillJiaDian.S.Skill3Damage.ToString();
 
-            SetSkillInfoContent("极寒冲击", true, $"每级额外提供极寒冲击伤害 5%（基础 100%）");
+            SetSkillInfoContent("极寒冲击", true, $"每级额外提供极寒冲击伤害 5%");
             break;
 
         case SkillConfig.SkillButtonType.Skill1Cd:
