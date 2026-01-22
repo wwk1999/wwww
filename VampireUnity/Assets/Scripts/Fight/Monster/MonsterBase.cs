@@ -783,7 +783,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
         {
-            finalDamage+=1f;
+            finalDamage+=0.5f;
         }
         finalDamage+=GlobalPlayerAttribute.PlayerChiBangAttribute.finalDamage;
         return damage*(1+finalDamage);

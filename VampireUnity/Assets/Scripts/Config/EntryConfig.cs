@@ -294,7 +294,7 @@ public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new 
         PuTong3ChuanTou,//普通3可以穿透敌人                             cloak
         FireBaoZha,//火焰弹爆炸范围增大50%                              cloak
         //skill1
-        Skill1ReplaceNormalAttack,//skill1代替普通攻击，最终伤害增加100%，不能普通攻击       necklace   1111
+        Skill1ReplaceNormalAttack,//skill1代替普通攻击，skill1CD减少50%，最终伤害增加50%，不能普通攻击       necklace   1111
         Skill1YiDianDouble,//易电状态伤害增加翻倍                                 ring              1111
         Skill1AddRange,//skill1范围增加20%                                      helmet           1111
         //skill2

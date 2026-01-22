@@ -26,8 +26,18 @@ public class SkillController : XSingleton<SkillController>
     public float IceBalltime => (15f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
     public float IceBallDuration = 5;
     public float Dashtime => GetDashCd();
-    public float DianQuantime => (10f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
-    
+    public float DianQuantime => GetDianQuanTime();
+
+
+    public float GetDianQuanTime()
+    {
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
+        {
+            return (10f * (1 - GlobalPlayerAttribute.Skill1CdNum / 100.0f)) * 0.5f;
+        }
+
+        return (10f * (1 - GlobalPlayerAttribute.Skill1CdNum / 100.0f));
+    }
     [NonSerialized]public float IceArrowCoolingtime = 0;
     [NonSerialized]public float IceExplosionCoolingtime = 0f;
     [NonSerialized]public float IceBallCoolingtime = 0f;
