@@ -10,7 +10,6 @@ public class WindowController : XSingleton<WindowController>
    [NonSerialized]public GameObject LoginWindow;
    [NonSerialized]public GameObject MainWindow;
    [NonSerialized]public GameObject RoleWindow;
-   [NonSerialized]public GameObject Setting;
    [NonSerialized]public GameObject ShopWindow;
    [NonSerialized]public GameObject SkillWindow;
    [NonSerialized]public GameObject TaskWindow;
@@ -18,8 +17,8 @@ public class WindowController : XSingleton<WindowController>
    [NonSerialized]public GameObject MonsterBookWindow;
    [NonSerialized] public GameObject Message;
    [NonSerialized] public GameObject BagWindow;
-   [NonSerialized] public GameObject FriendList;
-   [NonSerialized] public GameObject AddFriendWindow;
+   [NonSerialized] public GameObject SettingWindow;
+
    
    public void InitPanel()
    {
@@ -29,7 +28,6 @@ public class WindowController : XSingleton<WindowController>
       LoginWindow=Instantiate(Resources.Load("Prefabs/Window/LoginWindow") as GameObject);
       MainWindow=Instantiate(Resources.Load("Prefabs/Window/MainWindow") as GameObject);
       RoleWindow=Instantiate(Resources.Load("Prefabs/Window/RoleWindow") as GameObject);
-      Setting=Instantiate(Resources.Load("Prefabs/Window/Setting") as GameObject);
       ShopWindow=Instantiate(Resources.Load("Prefabs/Window/ShopWindow") as GameObject);
       SkillWindow=Instantiate(Resources.Load("Prefabs/Window/SkillWindow") as GameObject);
       TaskWindow=Instantiate(Resources.Load("Prefabs/Window/TaskWindow") as GameObject);
@@ -37,8 +35,7 @@ public class WindowController : XSingleton<WindowController>
       Message=Instantiate(Resources.Load("Prefabs/Tool/Message") as GameObject);
       Message.GetComponent<Canvas>().renderMode= RenderMode.ScreenSpaceOverlay;
       MonsterBookWindow=Instantiate(Resources.Load("Prefabs/Window/MonsterBook") as GameObject);
-      FriendList=Instantiate(Resources.Load("Prefabs/Window/FriendList") as GameObject);
-      AddFriendWindow=Instantiate(Resources.Load("Prefabs/Window/AddFriendWindow") as GameObject);
+      SettingWindow=Instantiate(Resources.Load("Prefabs/Window/SettingWindow") as GameObject);
 
       
       
@@ -48,14 +45,12 @@ public class WindowController : XSingleton<WindowController>
       LoginWindow.gameObject.SetActive(false);
       MainWindow.gameObject.SetActive(false);
       RoleWindow.gameObject.SetActive(false);
-      Setting.gameObject.SetActive(false);
       ShopWindow.gameObject.SetActive(false);
       SkillWindow.gameObject.SetActive(false);
       TaskWindow.gameObject.SetActive(false);
       WeaponWindow.gameObject.SetActive(false);
       MonsterBookWindow.gameObject.SetActive(false);
+      SettingWindow.gameObject.SetActive(false);
       Message.SetActive(false);
-      FriendList.SetActive(false);
-      AddFriendWindow.SetActive(false);
    }
 }
