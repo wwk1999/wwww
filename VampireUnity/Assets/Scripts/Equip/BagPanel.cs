@@ -1,4 +1,6 @@
 using System;
+using Config;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,9 +33,25 @@ public class BagPanel : MonoBehaviour
     public Button propbutton; // 道具按钮
     [NonSerialized] public int currentBagType = 1;//1是装备，2是道具
 
+    
+    public TextMeshProUGUI BagName;
+    public TextMeshProUGUI EquipName;
+    public TextMeshProUGUI PropName;
+    public TextMeshProUGUI FenjieNane;
+    public TextMeshProUGUI ShuXin;
+
+    public void SwitchLanguage()
+    {
+        BagName.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BagWindowLanguage.Bag;
+        EquipName.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BagWindowLanguage.Equip;
+        PropName.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BagWindowLanguage.Prop;
+        FenjieNane.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BagWindowLanguage.FenJie;
+        ShuXin.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BagWindowLanguage.DetailAttribute;
+    }
 
     private void OnEnable()
     {
+        SwitchLanguage();
         currentBagType = 1;
     }
 
