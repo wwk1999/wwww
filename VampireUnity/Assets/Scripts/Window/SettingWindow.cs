@@ -25,7 +25,8 @@ public class SettingWindow : MonoBehaviour
 
    private void OnEnable()
    {
-      SwitchLanguage(PlayerData.S.LanguageType);
+      LanguageDropdown.value=(int)PlayerData.S.langType;
+      SwitchLanguage(PlayerData.S.langType);
    }
 
    public void SwitchLanguageObj(object[] obj)
@@ -47,8 +48,6 @@ public class SettingWindow : MonoBehaviour
             LanguageDropdown.options[2].text = LanguageConfig.LanguageItems[LanguageType.Chinese].SettingWindowLanguage.HanWen;
             LanguageDropdown.options[3].text = LanguageConfig.LanguageItems[LanguageType.Chinese].SettingWindowLanguage.RiWen;
             LanguageDropdown.RefreshShownValue();
-            PlayerData.S.LanguageType = LanguageType.Chinese;
-            StoreController.S.SaveStoreData();
             break;
          case LanguageType.English:
             Language.text = LanguageConfig.LanguageItems[LanguageType.English].SettingWindowLanguage.Language;
@@ -58,8 +57,6 @@ public class SettingWindow : MonoBehaviour
             LanguageDropdown.options[2].text = LanguageConfig.LanguageItems[LanguageType.English].SettingWindowLanguage.HanWen;
             LanguageDropdown.options[3].text = LanguageConfig.LanguageItems[LanguageType.English].SettingWindowLanguage.RiWen;
             LanguageDropdown.RefreshShownValue();
-            PlayerData.S.LanguageType = LanguageType.English;
-            StoreController.S.SaveStoreData();
             break;
          case LanguageType.Han:
             Language.text = LanguageConfig.LanguageItems[LanguageType.Han].SettingWindowLanguage.Language;
@@ -69,8 +66,6 @@ public class SettingWindow : MonoBehaviour
             LanguageDropdown.options[2].text = LanguageConfig.LanguageItems[LanguageType.Han].SettingWindowLanguage.HanWen;
             LanguageDropdown.options[3].text = LanguageConfig.LanguageItems[LanguageType.Han].SettingWindowLanguage.RiWen;
             LanguageDropdown.RefreshShownValue();
-            PlayerData.S.LanguageType = LanguageType.Han;
-            StoreController.S.SaveStoreData();
             break;
          case LanguageType.Ri:
             Language.text = LanguageConfig.LanguageItems[LanguageType.Ri].SettingWindowLanguage.Language;
@@ -80,8 +75,6 @@ public class SettingWindow : MonoBehaviour
             LanguageDropdown.options[2].text = LanguageConfig.LanguageItems[LanguageType.Ri].SettingWindowLanguage.HanWen;
             LanguageDropdown.options[3].text = LanguageConfig.LanguageItems[LanguageType.Ri].SettingWindowLanguage.RiWen;
             LanguageDropdown.RefreshShownValue();
-            PlayerData.S.LanguageType = LanguageType.Ri;
-            StoreController.S.SaveStoreData();
             break;
       }
    }
@@ -100,19 +93,30 @@ public class SettingWindow : MonoBehaviour
       {
          case 0:
             Debug.Log("切换到中文");
+            PlayerData.S.langType = LanguageType.Chinese;
             ObserverModuleManager.S.SendEvent(ConstKeys.SwitchLanguage, LanguageType.Chinese);
+            StoreController.S.SaveStoreData();
             break;
          case 1:
             Debug.Log("切换到英文");
+            PlayerData.S.langType = LanguageType.English;
             ObserverModuleManager.S.SendEvent(ConstKeys.SwitchLanguage, LanguageType.English);
+            StoreController.S.SaveStoreData();
+
             break;
          case 2:
             Debug.Log("切换到韩文");
+            PlayerData.S.langType = LanguageType.Han;
             ObserverModuleManager.S.SendEvent(ConstKeys.SwitchLanguage, LanguageType.Han);
+            StoreController.S.SaveStoreData();
+
             break;
          case 3:
             Debug.Log("切换到日文");
+            PlayerData.S.langType = LanguageType.Ri;
             ObserverModuleManager.S.SendEvent(ConstKeys.SwitchLanguage, LanguageType.Ri);
+            StoreController.S.SaveStoreData();
+
             break;
          default:
             break;

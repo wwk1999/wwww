@@ -65,6 +65,15 @@ public class RoleWindow1 : MonoBehaviour
         switch (language)
         {
             case LanguageType.Chinese:
+                TuJian.characterSpacing = 20;
+                Weapon.characterSpacing = 20;
+                Bag.characterSpacing = 20;
+                ChiBang.characterSpacing = 20;
+                Skill.characterSpacing =20;
+                Setting.characterSpacing = 20;
+                DuanZao.characterSpacing = 20;
+                StartGame.characterSpacing =20;
+                
                 TuJian.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.TuJian;
                 Weapon.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.WuQi;
                 Bag.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.Bag;
@@ -75,6 +84,15 @@ public class RoleWindow1 : MonoBehaviour
                 StartGame.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.StartGame;
                 break;
             case LanguageType.English:
+                TuJian.characterSpacing = 0;
+                Weapon.characterSpacing = 0;
+                Bag.characterSpacing = 0;
+                ChiBang.characterSpacing = 0;
+                Skill.characterSpacing =0;
+                Setting.characterSpacing = 0;
+                DuanZao.characterSpacing = 0;
+                StartGame.characterSpacing =0;
+                
                 TuJian.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.TuJian;
                 Weapon.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.WuQi;
                 Bag.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.Bag;
@@ -159,7 +177,7 @@ public class RoleWindow1 : MonoBehaviour
     private void OnEnable()
     {
         UpdateRoleWindow();
-        SwitchLanguage(PlayerData.S.LanguageType);
+        SwitchLanguage(PlayerData.S.langType);
     }
 
     public void RefreshChiBang(object[] obj)

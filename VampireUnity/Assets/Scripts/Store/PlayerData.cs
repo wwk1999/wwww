@@ -36,7 +36,7 @@ public class PlayerData : XSingleton<PlayerData>
 
     public WeaponType playerWeaponType=WeaponType.Primary;
     public MJLevel mJLevel = MJLevel.White;
-    public LanguageType LanguageType=LanguageType.Chinese;
+    public LanguageType langType=LanguageType.Chinese;
 
     protected override void Awake()
     {
