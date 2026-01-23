@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Mysql;
 using Spine.Unity;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,6 +50,64 @@ public class RoleWindow1 : MonoBehaviour
     public Animator purpleChiBang;
     public Animator orangeChiBang;
     public Animator redChiBang;
+
+    public TextMeshProUGUI TuJian;
+    public TextMeshProUGUI Weapon;
+    public TextMeshProUGUI Bag;
+    public TextMeshProUGUI ChiBang;
+    public TextMeshProUGUI Skill;
+    public TextMeshProUGUI Setting;
+    public TextMeshProUGUI DuanZao;
+    public TextMeshProUGUI StartGame;
+
+    public void SwitchLanguage(LanguageType language)
+    {
+        switch (language)
+        {
+            case LanguageType.Chinese:
+                TuJian.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.TuJian;
+                Weapon.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.WuQi;
+                Bag.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.Bag;
+                ChiBang.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.ChiBang;
+                Skill.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.Skill;
+                Setting.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.Setting;
+                DuanZao.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.DuanZao;
+                StartGame.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.StartGame;
+                break;
+            case LanguageType.English:
+                TuJian.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.TuJian;
+                Weapon.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.WuQi;
+                Bag.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.Bag;
+                ChiBang.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.ChiBang;
+                Skill.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.Skill;
+                Setting.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.Setting;
+                DuanZao.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.DuanZao;
+                StartGame.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.StartGame;
+                break;
+            case LanguageType.Han:
+                TuJian.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.TuJian;
+                Weapon.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.WuQi;
+                Bag.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.Bag;
+                ChiBang.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.ChiBang;
+                Skill.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.Skill;
+                Setting.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.Setting;
+                DuanZao.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.DuanZao;
+                StartGame.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.StartGame;
+                break;
+            case LanguageType.Ri:
+                TuJian.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.TuJian;
+                Weapon.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.WuQi;
+                Bag.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.Bag;
+                ChiBang.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.ChiBang;
+                Skill.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.Skill;
+                Setting.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.Setting;
+                DuanZao.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.DuanZao;
+                StartGame.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.StartGame;
+                break;
+        }
+    }
+    
+    
 
     public void UpdateRoleWindow()
     {
@@ -99,11 +159,18 @@ public class RoleWindow1 : MonoBehaviour
     private void OnEnable()
     {
         UpdateRoleWindow();
+        SwitchLanguage(PlayerData.S.LanguageType);
     }
 
     public void RefreshChiBang(object[] obj)
     {
         UpdateRoleWindow();
+    }
+
+    public void SwitchLanguageObj(object[] obj)
+    {
+        LanguageType langType = (LanguageType)obj[0];
+        SwitchLanguage(langType);
     }
     
     
@@ -111,6 +178,7 @@ public class RoleWindow1 : MonoBehaviour
     {
         Debug.Log("点击进入角色界面");
         InitEquip();
+        ObserverModuleManager.S.RegisterEvent(ConstKeys.SwitchLanguage,SwitchLanguageObj);
         settingButton.onClick.AddListener(() =>
         {
             WindowController.S.SettingWindow.SetActive(true);

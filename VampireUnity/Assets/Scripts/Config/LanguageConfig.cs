@@ -315,7 +315,7 @@ namespace Config
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
                             TuJian = "图鉴", WuQi = "武器", Bag = "背包", ChiBang = "翅膀", Skill = "技能", Setting = "设置",
-                            DuanZao = "锻造", StartGame = "开始游戏"
+                            DuanZao = "锻造", StartGame = "开始"
                         },
                         MonsterBookWindowLanguage = new MonsterBookWindowLanguage()
                         {
@@ -475,7 +475,7 @@ namespace Config
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
                             TuJian = "Bestiary", WuQi = "Weapon", Bag = "Bag", ChiBang = "Wings", Skill = "Skill",
-                            Setting = "Settings", DuanZao = "Forge", StartGame = "Start Game"
+                            Setting = "Settings", DuanZao = "Forge", StartGame = "Start"
                         },
                         MonsterBookWindowLanguage = new MonsterBookWindowLanguage()
                         {
@@ -707,7 +707,7 @@ namespace Config
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
                             TuJian = "도감", WuQi = "무기", Bag = "가방", ChiBang = "날개", Skill = "스킬", Setting = "설정",
-                            DuanZao = "제작", StartGame = "게임 시작"
+                            DuanZao = "제작", StartGame = "시작"
                         },
                         MonsterBookWindowLanguage = new MonsterBookWindowLanguage()
                         {
@@ -918,7 +918,7 @@ namespace Config
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
                             TuJian = "図鑑", WuQi = "武器", Bag = "バッグ", ChiBang = "翼", Skill = "スキル", Setting = "設定",
-                            DuanZao = "鍛造", StartGame = "ゲーム開始"
+                            DuanZao = "鍛造", StartGame = "始める"
                         },
                         MonsterBookWindowLanguage = new MonsterBookWindowLanguage()
                         {

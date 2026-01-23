@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using UnityEngine;
 
 public class StoreDefine : XSingleton<StoreDefine>
@@ -86,6 +87,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         
         public WeaponType playerWeaponType=WeaponType.Primary;
         public MJLevel mJLevel = MJLevel.White;
+        public LanguageType LanguageType=LanguageType.Chinese;
 
 
 
@@ -117,6 +119,7 @@ public class StoreDefine : XSingleton<StoreDefine>
 
             playerWeaponType = runtime.playerWeaponType;
             mJLevel = runtime.mJLevel;
+            LanguageType = runtime.LanguageType;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -148,6 +151,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             
             runtime.playerWeaponType = playerWeaponType;
             runtime.mJLevel = mJLevel;
+            runtime.LanguageType = LanguageType;
         }
     }
     

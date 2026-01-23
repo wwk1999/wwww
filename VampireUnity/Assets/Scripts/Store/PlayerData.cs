@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -35,6 +36,7 @@ public class PlayerData : XSingleton<PlayerData>
 
     public WeaponType playerWeaponType=WeaponType.Primary;
     public MJLevel mJLevel = MJLevel.White;
+    public LanguageType LanguageType=LanguageType.Chinese;
 
     protected override void Awake()
     {
