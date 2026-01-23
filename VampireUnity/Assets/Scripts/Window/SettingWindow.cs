@@ -25,7 +25,21 @@ public class SettingWindow : MonoBehaviour
 
    private void OnEnable()
    {
-      LanguageDropdown.value=(int)PlayerData.S.langType;
+      switch (PlayerData.S.langType)
+      {
+         case LanguageType.Chinese:
+            LanguageDropdown.value = 0;
+            break;
+         case LanguageType.English:
+            LanguageDropdown.value = 1;
+            break;
+         case LanguageType.Han:
+            LanguageDropdown.value = 2;
+            break;
+         case LanguageType.Ri:
+            LanguageDropdown.value = 3;
+            break;
+      }
       SwitchLanguage(PlayerData.S.langType);
    }
 
