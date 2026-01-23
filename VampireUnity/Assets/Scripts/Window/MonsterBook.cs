@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
 using Spine;
 using Spine.Unity;
+using TMPro;
 
 public class MonsterBook : MonoBehaviour
 {
@@ -83,6 +85,21 @@ public class MonsterBook : MonoBehaviour
    public Text introduceText;
    public GameObject diaoLuoContent;
    
+   public TextMeshProUGUI MonsterTypeText;
+   public TextMeshProUGUI MonsterNameText;
+   public TextMeshProUGUI MonsterLocationText;
+   public TextMeshProUGUI MonsterText;
+   public TextMeshProUGUI DiaoLuo;
+
+
+   public void SwitchLanguage()
+   {
+      MonsterTypeText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.MonsterType;
+      MonsterText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].RoleWindowLanguage.TuJian;
+      MonsterLocationText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.DunDi;
+      MonsterNameText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.MonsterName;
+      DiaoLuo.text = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.DiaoLuoList;
+   }
    
    private int _index=1; // 当前怪物索引
    
@@ -93,6 +110,11 @@ public class MonsterBook : MonoBehaviour
       {
          Destroy(child.gameObject);
       }
+   }
+
+   private void OnEnable()
+   {
+      SwitchLanguage();
    }
 
    private void Start()
