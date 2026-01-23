@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using UnityEngine;
 
 public struct MonsterDiaoLuoListItem
@@ -22,9 +23,9 @@ public class MonsterBookConfig
     //第一关怪物列表配置
     public static MonsterBookData snotBookData = new MonsterBookData
     {
-        _name = "粘液怪",
-        _location = "寂静森林",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Snot,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName1,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -41,9 +42,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData spiderBookData = new MonsterBookData
     {
-        _name = "织网蛛",
-        _location = "寂静森林",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Spider,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName1,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -60,9 +61,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData batBookData = new MonsterBookData
     {
-        _name = "夜翼蝠",
-        _location = "寂静森林",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Bat,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName1,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -79,9 +80,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData eliteBeeBookData = new MonsterBookData
     {
-        _name = "刃翅魔蜂",
-        _location = "寂静森林",
-        _monsterType = "精英怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Bee,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName1,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.EliteMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -109,9 +110,9 @@ public class MonsterBookConfig
     };
     static public MonsterBookData bossTreeManBookData = new MonsterBookData
     {
-        _name = "森林守护者",
-        _location = "寂静森林",
-        _monsterType = "首领",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.TreeMan,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName1,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Boss,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.2f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -139,9 +140,9 @@ public class MonsterBookConfig
     //第二关怪物列表配置
     public static MonsterBookData chongziBookData = new MonsterBookData
     {
-        _name = "火山虫",
-        _location = "熔岩火山",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.ChongZi,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName2,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 1f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -159,9 +160,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData xiaohuoBookData = new MonsterBookData
     {
-        _name = "熔岩鬼火",
-        _location = "熔岩火山",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.XiaoHuo,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName2,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 1f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -179,9 +180,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData dundiBookData = new MonsterBookData
     {
-        _name = "熔岩蠕虫",
-        _location = "熔岩火山",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.DunDi,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName2,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.6f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -199,9 +200,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData elitedazuiBookData = new MonsterBookData
     {
-        _name = "熔岩巨螯",
-        _location = "熔岩火山",
-        _monsterType = "精英怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.DaZui,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName2,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.EliteMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -220,9 +221,9 @@ public class MonsterBookConfig
     };
     static public MonsterBookData bossHuoShanBookData = new MonsterBookData
     {
-        _name = "熔岩行者",
-        _location = "熔岩火山",
-        _monsterType = "首领",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.HuoShanBoss,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName2,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Boss,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -250,9 +251,9 @@ public class MonsterBookConfig
      //第三关怪物列表配置
     public static MonsterBookData wenziBookData = new MonsterBookData
     {
-        _name = "红眼蝇",
-        _location = "迷雾沼泽",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.WenZi,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName3,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.6f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -270,9 +271,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData qingwaBookData = new MonsterBookData
     {
-        _name = "沼泽蟾蜍",
-        _location = "迷雾沼泽",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.QingWa,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName3,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.6f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -290,9 +291,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData jiachongBookData = new MonsterBookData
     {
-        _name = "刺壳兽",
-        _location = "迷雾沼泽",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.JiaChong,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName3,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.5f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -310,9 +311,9 @@ public class MonsterBookConfig
     };
     public static MonsterBookData shirenhuaBookData = new MonsterBookData
     {
-        _name = "血花妖",
-        _location = "迷雾沼泽",
-        _monsterType = "精英怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.ShiRenHua,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName3,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.EliteMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.8f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -331,9 +332,9 @@ public class MonsterBookConfig
     };
     static public MonsterBookData bossZhaoZeBookData = new MonsterBookData
     {
-        _name = "泥沼龙王",
-        _location = "迷雾沼泽",
-        _monsterType = "首领",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.ZhaoZeBoss,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName3,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Boss,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -352,9 +353,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData ShaChongBookData = new MonsterBookData
     {
-        _name = "沙丘甲虫",
-        _location = "死亡沙漠",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.ShaChong,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -373,9 +374,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData ShaNiaoZeBookData = new MonsterBookData
     {
-        _name = "红羽鸟",
-        _location = "死亡沙漠",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.ShaNiao,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -394,9 +395,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData XianRenZhangBookData = new MonsterBookData
     {
-        _name = "死亡仙人掌",
-        _location = "死亡沙漠",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.XianRenZhang,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -415,9 +416,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData ShaXiYiBookData = new MonsterBookData
     {
-        _name = "紫魔蜥",
-        _location = "死亡沙漠",
-        _monsterType = "精英怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.ShaXiYi,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.EliteMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -436,9 +437,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData XieZiZeBookData = new MonsterBookData
     {
-        _name = "沙影蝎王",
-        _location = "死亡沙漠",
-        _monsterType = "首领",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.XieZi,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Boss,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -456,9 +457,9 @@ public class MonsterBookConfig
     };
     static public MonsterBookData XueQiEZeBookData = new MonsterBookData
     {
-        _name = "雪企鹅",
-        _location = "北境雪域",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.XueQiE,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -477,9 +478,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData XueRenBookData = new MonsterBookData
     {
-        _name = "野雪人",
-        _location = "北境雪域",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.XueRen,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -498,9 +499,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData XueZhangLangBookData = new MonsterBookData
     {
-        _name = "雪蟑螂",
-        _location = "北境雪域",
-        _monsterType = "普通怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.XueZhangLang,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.NormalMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -519,9 +520,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData YingShuBookData = new MonsterBookData
     {
-        _name = "银角鼠",
-        _location = "北境雪域",
-        _monsterType = "精英怪",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.YingShu,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.EliteMonster,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>
@@ -540,9 +541,9 @@ public class MonsterBookConfig
     
     static public MonsterBookData XueRenBossBookData = new MonsterBookData
     {
-        _name = "雪山泰坦",
-        _location = "北境雪域",
-        _monsterType = "首领",
+        _name = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.XueRenBoss,
+        _location = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.LevelName4,
+        _monsterType = LanguageConfig.LanguageItems[PlayerData.S.langType].MonsterBookWindowLanguage.Boss,
         _introduce = "A small, green, slimy creature that attacks in groups.",
         _scale = 0.4f,
         _diaoluoList = new List<MonsterDiaoLuoListItem>

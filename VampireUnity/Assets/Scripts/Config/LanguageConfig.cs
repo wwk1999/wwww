@@ -63,6 +63,10 @@ namespace Config
         public string XueQiE;
         public string YingShu;
         public string XueRenBoss;
+        
+        public string NormalMonster;
+        public string EliteMonster;
+        public string Boss;
     }
 
     public class WeaponWindowLanguage
@@ -327,7 +331,7 @@ namespace Config
                             HuoShanBoss = "熔岩行者", JiaChong = "刺壳兽", QingWa = "沼泽蟾蜍", WenZi = "红眼蝇", ShiRenHua = "血花妖",
                             ZhaoZeBoss = "泥沼龙王", ShaNiao = "红羽鸟", ShaChong = "沙丘甲虫", XianRenZhang = "死亡仙人掌",
                             ShaXiYi = "紫魔蜥", XieZi = "沙影蝎王", XueRen = "野雪人", XueZhangLang = "雪蟑螂", XueQiE = "雪企鹅",
-                            YingShu = "银角鼠", XueRenBoss = "雪山泰坦",
+                            YingShu = "银角鼠", XueRenBoss = "雪山泰坦",NormalMonster = "普通怪",EliteMonster = "精英怪",Boss = "首领",
                         },
                         WeaponWindowLanguage = new WeaponWindowLanguage()
                         {
@@ -492,7 +496,9 @@ namespace Config
                             ShaChong = "Sand Dune Beetle", XianRenZhang = "Death Cactus",
                             ShaXiYi = "Purple Demon Lizard", XieZi = "Sand Shadow Scorpion King",
                             XueRen = "Wild Snowman", XueZhangLang = "Snow Cockroach", XueQiE = "Snow Penguin",
-                            YingShu = "Silver Horn Rat", XueRenBoss = "Snow Mountain Titan",
+                            YingShu = "Silver Horn Rat", XueRenBoss = "Snow Mountain Titan",NormalMonster = "Normal Monster",
+                            EliteMonster = "Elite Monster", 
+                            Boss = "Boss"
                         },
                         WeaponWindowLanguage = new WeaponWindowLanguage()
                         {
@@ -719,7 +725,9 @@ namespace Config
                             HuoShanBoss = "용암 행자", JiaChong = "가시 껍질", QingWa = "늪 두꺼비", WenZi = "붉은 눈 파리",
                             ShiRenHua = "피 꽃 요괴", ZhaoZeBoss = "진흙 늪 용왕", ShaNiao = "붉은 깃털 새", ShaChong = "모래 언덕 딱정벌레",
                             XianRenZhang = "죽음의 선인장", ShaXiYi = "보라 마왕 도마뱀", XieZi = "모래 그림자 전갈 왕", XueRen = "야생 설인",
-                            XueZhangLang = "눈 바퀴벌레", XueQiE = "눈 펭귄", YingShu = "은 뿔 쥐", XueRenBoss = "설산 타이탄",
+                            XueZhangLang = "눈 바퀴벌레", XueQiE = "눈 펭귄", YingShu = "은 뿔 쥐", XueRenBoss = "설산 타이탄",NormalMonster = "일반 몬스터",
+                            EliteMonster = "정예 몬스터",
+                            Boss = "보스"
                         },
                         WeaponWindowLanguage = new WeaponWindowLanguage()
                         {
@@ -931,7 +939,9 @@ namespace Config
                             QingWa = "沼ガエル", WenZi = "赤目ハエ", ShiRenHua = "血花妖魔", ZhaoZeBoss = "泥沼龍王", ShaNiao = "赤羽鳥",
                             ShaChong = "砂丘甲虫", XianRenZhang = "死のサボテン", ShaXiYi = "紫魔トカゲ", XieZi = "砂影蠍王",
                             XueRen = "野生雪男", XueZhangLang = "雪ゴキブリ", XueQiE = "雪ペンギン", YingShu = "銀角鼠",
-                            XueRenBoss = "雪山タイタン",
+                            XueRenBoss = "雪山タイタン",NormalMonster = "通常モンスター",
+                            EliteMonster = "エリートモンスター",
+                            Boss = "ボス"
                         },
                         WeaponWindowLanguage = new WeaponWindowLanguage()
                         {
