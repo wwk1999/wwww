@@ -277,6 +277,17 @@ namespace Config
         public string TiaoZhan;
     }
 
+    public class SettingWindowLanguage
+    {
+        public string Language;
+        public string Audio;
+        public string ZhongWen;
+        public string YingWen;
+        public string RiWen;
+        public string HanWen;
+
+    }
+
     public class LanguageItem
     {
         public RoleWindowLanguage RoleWindowLanguage;
@@ -289,7 +300,7 @@ namespace Config
         public PropLanguage PropLanguage;
         public DuanZaoWindowLanguage DuanZaoWindowLanguage;
         public GameLevelWindowLanguage GameLevelWindowLanguage;
-
+        public SettingWindowLanguage SettingWindowLanguage;
     }
 
     public class LanguageConfig
@@ -449,6 +460,10 @@ namespace Config
                         GameLevelWindowLanguage = new GameLevelWindowLanguage()
                         {
                             TuiJianLevel = "推荐等级", MonsterList = "怪物列表", TiaoZhan = "挑战",
+                        },
+                        SettingWindowLanguage =  new SettingWindowLanguage()
+                        {
+                            Language = "语言",Audio = "音效",ZhongWen = "中文",YingWen = "英文",RiWen = "日文",HanWen = "韩文"
                         },
                     }
                 },
@@ -672,6 +687,15 @@ namespace Config
                             TuiJianLevel = "Recommended Level",
                             MonsterList = "Monster List",
                             TiaoZhan = "Challenge"
+                        },
+                        SettingWindowLanguage = new SettingWindowLanguage()
+                        {
+                            Language = "Language",
+                            Audio = "Audio",
+                            ZhongWen = "Chinese",
+                            YingWen = "English",
+                            RiWen = "Japanese",
+                            HanWen = "Korean"
                         }
                     }
                 },
@@ -874,7 +898,16 @@ namespace Config
                             TuiJianLevel = "권장 레벨",
                             MonsterList = "몬스터 목록",
                             TiaoZhan = "도전"
-                        }
+                        },
+                        SettingWindowLanguage = new SettingWindowLanguage()
+                        {
+                            Language = "언어",
+                            Audio = "오디오",
+                            ZhongWen = "중국어",
+                            YingWen = "영어",
+                            RiWen = "일본어",
+                            HanWen = "한국어"
+                        },
                     }
                 },
 
@@ -1072,7 +1105,16 @@ namespace Config
                             TuiJianLevel = "推奨レベル",
                             MonsterList = "モンスターリスト",
                             TiaoZhan = "挑戦"
-                        }
+                        },
+                        SettingWindowLanguage = new SettingWindowLanguage()
+                        {
+                            Language = "言語",
+                            Audio = "音声",
+                            ZhongWen = "中国語",
+                            YingWen = "英語",
+                            RiWen = "日本語",
+                            HanWen = "韓国語"
+                        },
                     }
                 }
             };

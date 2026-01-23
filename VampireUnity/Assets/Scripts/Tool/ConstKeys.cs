@@ -27,6 +27,7 @@ public class ConstKeys
     public const string ShowJiHuoBoss = "ShowJiHuoBoss";
     public const string HideJiHuoBoss = "HideJiHuoBoss";
 
+    public const string SwitchLanguage = "SwitchLanguage";
 
 
 
