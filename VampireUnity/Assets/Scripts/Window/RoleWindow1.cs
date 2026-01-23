@@ -103,6 +103,15 @@ public class RoleWindow1 : MonoBehaviour
                 StartGame.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.StartGame;
                 break;
             case LanguageType.Han:
+                TuJian.characterSpacing = 20;
+                Weapon.characterSpacing = 20;
+                Bag.characterSpacing = 20;
+                ChiBang.characterSpacing = 20;
+                Skill.characterSpacing =20;
+                Setting.characterSpacing = 20;
+                DuanZao.characterSpacing = 20;
+                StartGame.characterSpacing =20;
+                
                 TuJian.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.TuJian;
                 Weapon.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.WuQi;
                 Bag.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.Bag;
@@ -113,6 +122,15 @@ public class RoleWindow1 : MonoBehaviour
                 StartGame.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.StartGame;
                 break;
             case LanguageType.Ri:
+                TuJian.characterSpacing = 20;
+                Weapon.characterSpacing = 20;
+                Bag.characterSpacing = 20;
+                ChiBang.characterSpacing = 20;
+                Skill.characterSpacing =20;
+                Setting.characterSpacing = 20;
+                DuanZao.characterSpacing = 20;
+                StartGame.characterSpacing =20;
+                
                 TuJian.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.TuJian;
                 Weapon.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.WuQi;
                 Bag.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.Bag;

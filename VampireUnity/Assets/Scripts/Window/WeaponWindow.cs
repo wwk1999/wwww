@@ -108,6 +108,127 @@ public class WeaponWindow : MonoBehaviour
    public GameObject HeiDongEquipIcon;
    public GameObject JianQiEquipIcon;
 
+
+   public TextMeshProUGUI WeaponName1;
+   public TextMeshProUGUI WeaponName2;
+   public TextMeshProUGUI WeaponName3;
+   public TextMeshProUGUI WeaponName4;
+   public TextMeshProUGUI WeaponName5;
+   public TextMeshProUGUI WeaponName6;
+   public TextMeshProUGUI WeaponName7;
+   public TextMeshProUGUI WeaponName8;
+
+   
+   public TextMeshProUGUI Desc1;
+   public TextMeshProUGUI Desc2;
+   public TextMeshProUGUI Desc3;
+   public TextMeshProUGUI Desc4;
+   public TextMeshProUGUI Desc5;
+   public TextMeshProUGUI Desc6;
+   public TextMeshProUGUI Desc7;
+   public TextMeshProUGUI Desc8;
+
+   
+   public TextMeshProUGUI TeXiao1;
+   public TextMeshProUGUI TeXiao2;
+   public TextMeshProUGUI TeXiao3;
+   public TextMeshProUGUI TeXiao4;
+   public TextMeshProUGUI TeXiao5;
+   public TextMeshProUGUI TeXiao6;
+   public TextMeshProUGUI TeXiao7;
+   public TextMeshProUGUI TeXiao8;
+   
+   public TextMeshProUGUI Equip1;
+   public TextMeshProUGUI Equip2;
+   public TextMeshProUGUI Equip3;
+   public TextMeshProUGUI Equip4;
+   public TextMeshProUGUI Equip5;
+   public TextMeshProUGUI Equip6;
+   public TextMeshProUGUI Equip7;
+   public TextMeshProUGUI Equip8;
+   
+   public TextMeshProUGUI YiEquip1;
+   public TextMeshProUGUI YiEquip2;
+   public TextMeshProUGUI YiEquip3;
+   public TextMeshProUGUI YiEquip4;
+   public TextMeshProUGUI YiEquip5;
+   public TextMeshProUGUI YiEquip6;
+   public TextMeshProUGUI YiEquip7;
+   public TextMeshProUGUI YiEquip8;
+   
+   public TextMeshProUGUI ShenJiText;
+   public TextMeshProUGUI JieSuoText;
+   public  TextMeshProUGUI WeaponInfoName1;
+   public  TextMeshProUGUI WeaponInfoName2;
+   public  TextMeshProUGUI WeaponInfoName3;
+   public  TextMeshProUGUI WeaponInfoName4;
+   public  TextMeshProUGUI WeaponInfoName5;
+   public  TextMeshProUGUI WeaponInfoName6;
+   public  TextMeshProUGUI WeaponInfoName7;
+   public  TextMeshProUGUI WeaponInfoName8;
+
+   public void SwitchLanguage()
+   {
+            WeaponName1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1;
+            WeaponName2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName2;
+            WeaponName3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName3;
+            WeaponName4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName4;
+            WeaponName5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName5;
+            WeaponName6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName6;
+            WeaponName7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7;
+            WeaponName8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8;
+            
+            Desc1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc1;
+            Desc2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc2;
+            Desc3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc3;
+            Desc4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc4;
+            Desc5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc5;
+            Desc6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc6;
+            Desc7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc7;
+            Desc8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc8;
+            
+            TeXiao1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao1;
+            TeXiao2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao2;
+            TeXiao3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao3;
+            TeXiao4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao4;
+            TeXiao5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao5;
+            TeXiao6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao6;
+            TeXiao7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao7;
+            TeXiao8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao8;
+            
+            Equip1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
+            Equip2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
+            Equip3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
+            Equip4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
+            Equip5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
+            Equip6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
+            Equip7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
+            Equip8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
+            
+            YiEquip1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
+            YiEquip2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
+            YiEquip3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
+            YiEquip4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
+            YiEquip5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
+            YiEquip6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
+            YiEquip7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
+            YiEquip8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
+            
+            ShenJiText.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.ShenJi;
+            JieSuoText.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.JieSuo;
+            WeaponInfoName1.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1;
+            WeaponInfoName2.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName2;
+            WeaponInfoName3.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName3;
+            WeaponInfoName4.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName4;
+            WeaponInfoName5.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName5;
+            WeaponInfoName6.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName6;
+            WeaponInfoName7.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7;
+            WeaponInfoName8.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8;
+
+   }
+
+
+   
    [NonSerialized] public WeaponType currentJieSuoType = WeaponType.None;
    [NonSerialized] public WeaponType currentShowType = WeaponType.None;
 
@@ -202,12 +323,12 @@ public class WeaponWindow : MonoBehaviour
             texiao1.gameObject.SetActive(true);
             if (PlayerData.S.primaryWeaponLevel < 2)
             {
-               weaponName1.text = "原木法杖";
+               weaponName1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1;;
             }
             else
             {
                var level = PlayerData.S.primaryWeaponLevel - 1;
-               weaponName1.text="原木法杖+"+level;
+               weaponName1.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1+"+"+level;
             }
             break;
          case WeaponType.Du:
@@ -216,12 +337,12 @@ public class WeaponWindow : MonoBehaviour
             texiao2.gameObject.SetActive(true);
             if (PlayerData.S.duWeaponLevel < 2)
             {
-               weaponName2.text = "腐蚀权杖";
+               weaponName2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName2;;
             }
             else
             {
                var level = PlayerData.S.duWeaponLevel - 1;
-               weaponName2.text="腐蚀权杖+"+level;
+               weaponName2.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1+"+"+level;
             }
             break;
          case WeaponType.PuTong3:
@@ -230,12 +351,12 @@ public class WeaponWindow : MonoBehaviour
             texiao3.gameObject.SetActive(true);
             if (PlayerData.S.puTong3WeaponLevel < 2)
             {
-               weaponName3.text = "三叉法杖";
+               weaponName3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName3;
             }
             else
             {
                var level = PlayerData.S.puTong3WeaponLevel - 1;
-               weaponName3.text="三叉法杖+"+level;
+               weaponName3.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName3+"+"+level;
             }
             break;
          case WeaponType.XuKong:
@@ -244,12 +365,12 @@ public class WeaponWindow : MonoBehaviour
             texiao4.gameObject.SetActive(true);
             if (PlayerData.S.xuKongWeaponLevel < 2)
             {
-               weaponName4.text = "虚空之杖";
+               weaponName4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName4;
             }
             else
             {
                var level = PlayerData.S.xuKongWeaponLevel - 1;
-               weaponName4.text="虚空之杖+"+level;
+               weaponName4.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName4+"+"+level;
             }
             break;
          case WeaponType.Fire:
@@ -258,12 +379,12 @@ public class WeaponWindow : MonoBehaviour
             texiao5.gameObject.SetActive(true);
             if (PlayerData.S.fireWeaponLevel < 2)
             {
-               weaponName5.text = "爆炎杖";
+               weaponName5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName5;
             }
             else
             {
                var level = PlayerData.S.fireWeaponLevel - 1;
-               weaponName5.text="爆炎杖+"+level;
+               weaponName5.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName5+"+"+level;
             }
             break;
          case WeaponType.LvQuan:
@@ -272,12 +393,12 @@ public class WeaponWindow : MonoBehaviour
             texiao6.gameObject.SetActive(true);
             if (PlayerData.S.lvQuanWeaponLevel < 2)
             {
-               weaponName6.text = "源极杖";
+               weaponName6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName6;
             }
             else
             {
                var level = PlayerData.S.lvQuanWeaponLevel - 1;
-               weaponName6.text="源极杖+"+level;
+               weaponName6.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName6+"+"+level;
             }
             break;
          case WeaponType.HeiDong:
@@ -286,12 +407,12 @@ public class WeaponWindow : MonoBehaviour
             texiao7.gameObject.SetActive(true);
             if (PlayerData.S.heiDongWeaponLevel < 2)
             {
-               weaponName7.text = "湮灭魔杖";
+               weaponName7.text =LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7;
             }
             else
             {
                var level = PlayerData.S.heiDongWeaponLevel - 1;
-               weaponName7.text="湮灭魔杖+"+level;
+               weaponName7.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7+"+"+level;
             }
             break;
          
@@ -301,12 +422,12 @@ public class WeaponWindow : MonoBehaviour
             texiao8.gameObject.SetActive(true);
             if (PlayerData.S.heiDongWeaponLevel < 2)
             {
-               weaponName7.text = "刀光剑影";
+               weaponName7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8;
             }
             else
             {
                var level = PlayerData.S.jianQiWeaponLevel - 1;
-               weaponName7.text="刀光剑影+"+level;
+               weaponName7.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8+"+"+level;
             }
             break;
       }
@@ -344,28 +465,28 @@ public class WeaponWindow : MonoBehaviour
       }
       GameObject attack =
          Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      attack.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "攻击力 :";
+      attack.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack+" :";
       attack.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(weaponAttribute.Attack*(1+(level1-1)*GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
       GameObject defense =
          Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      defense.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "防御 :";
+      defense.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense+" :";
       defense.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
          Mathf.RoundToInt(weaponAttribute.Defense * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
       GameObject crit = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      crit.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "暴击 :";
+      crit.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit+" :";
       crit.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
          Mathf.RoundToInt(weaponAttribute.Crit * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
       GameObject hp = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      hp.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "生命值 :";
+      hp.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp+" :";
       hp.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
          Mathf.RoundToInt(weaponAttribute.Hp * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
       GameObject attackspeed =
          Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      attackspeed.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "攻击速度 :";
+      attackspeed.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack+" :";
       attackspeed.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = weaponAttribute.AttackSpeed.ToString();
    }
 
@@ -624,6 +745,7 @@ public class WeaponWindow : MonoBehaviour
    {
       RefreshWeaponList();
       RefreshEquipIcon();
+      SwitchLanguage();
    }
 
    public void JieSuo()
