@@ -59,7 +59,6 @@
     <Analyzer Include="D:\2022.3.62f2c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Config\BaoShiConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\JinJIeGrid.cs" />
     <Compile Include="Assets\Scripts\Fight\UI\FightExitPanel.cs" />
     <Compile Include="Assets\Scripts\Mysql\TableBase.cs" />
@@ -169,6 +168,7 @@
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleNecklace.cs" />
     <Compile Include="Assets\Scripts\Config\RankConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PickUpController.cs" />
+    <Compile Include="Assets\Scripts\Prop\BaoShi\BaoShi.cs" />
     <Compile Include="Assets\Scripts\Tool\ImageCropTool.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\Skill2AddDan.cs" />
     <Compile Include="Assets\Scripts\Window\RankWindow.cs" />
@@ -200,6 +200,7 @@
     <Compile Include="Assets\Scripts\Equip\BagPanel.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo1.cs" />
     <Compile Include="Assets\Scripts\Gloabl\SourceStoneText.cs" />
+    <Compile Include="Assets\Scripts\Config\BaoShiConfig.cs" />
     <Compile Include="Assets\Scripts\Skill\TreeManFire.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FirePeng.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\BaoZiBoss.cs" />

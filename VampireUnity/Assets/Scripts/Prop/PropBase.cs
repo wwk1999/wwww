@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Prop.BaoShi;
 using UnityEngine;
 
 public class PropBase : MonoBehaviour
@@ -11,7 +12,7 @@ public class PropBase : MonoBehaviour
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
     [NonSerialized]public PropTable propTables;
 
-    void OnEnable()
+    public void OnEnable()
     {
         equipRb.velocity = new Vector2(UnityEngine.Random.Range(-2f, 2f), UnityEngine.Random.Range(3f, 5f));
         StartCoroutine(StopVelocityAfterDelay(equipRb, 0.75f));
@@ -152,6 +153,19 @@ public class PropBase : MonoBehaviour
                         break;
                 }
                 break;
+            case PropConfig.PropType.HH:
+            case PropConfig.PropType.HA:
+            case PropConfig.PropType.HC:
+            case PropConfig.PropType.HD:
+            case PropConfig.PropType.AA:
+            case PropConfig.PropType.AC:
+            case PropConfig.PropType.AD:
+            case PropConfig.PropType.CC:
+            case PropConfig.PropType.CD:
+            case PropConfig.PropType.DD:
+                GameController.S.BaoShiQueue.Enqueue(this as BaoShi);
+                break;
+
         }
     }
 

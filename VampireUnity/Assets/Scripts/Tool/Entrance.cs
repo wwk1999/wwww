@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Mysql;
+using Prop.BaoShi;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -241,7 +242,13 @@ public class Entrance : MonoBehaviour
             SqrtAttack sqrt = Instantiate(Resources.Load<SqrtAttack>("Prefabs/Tool/SqrtAttack"));
             sqrt.gameObject.SetActive(false);
             GameController.S.SqrtQueue.Enqueue(sqrt);
+            
+            BaoShi BaoShi = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BaoShi")).GetComponent<BaoShi>();
+            BaoShi.gameObject.SetActive(false);
+            GameController.S.BaoShiQueue.Enqueue(BaoShi);
         }
+        
+        
 
         
         //装备对象池

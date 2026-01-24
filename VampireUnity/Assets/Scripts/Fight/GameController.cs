@@ -7,6 +7,7 @@ using Fight.Monster.秘境.盔甲boss;
 using Fight.Monster.秘境.豹子;
 using Fight.Monster.秘境.雷兽;
 using Mysql;
+using Prop.BaoShi;
 using Spine.Unity;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -336,6 +337,7 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>RingFortureAddQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>HelmetFortureAddQueue = new Queue<GameObject>();
 
+    [NonReorderable]public Queue<BaoShi>BaoShiQueue = new Queue<BaoShi>();
 
 
     //神话材料
@@ -487,8 +489,386 @@ public class GameController : XSingleton<GameController>
                         return RedChiBang.Dequeue();
                 }
                 break;
-        }
+            case PropConfig.PropType.AA:
+                BaoShi baoshi=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi.propTables.PropType=PropConfig.PropType.AA;
+                        baoshi.propTables.Quality = 1;
+                        baoshi.propTables.EquipName = "AA1";
+                        break;
+                    case 2:
+                        baoshi.propTables.PropType=PropConfig.PropType.AA;
+                        baoshi.propTables.Quality = 2;
+                        baoshi.propTables.EquipName = "AA2";
+                        break;                   
+                    case 3:
+                        baoshi.propTables.PropType=PropConfig.PropType.AA;
+                        baoshi.propTables.Quality = 3;
+                        baoshi.propTables.EquipName = "AA3";
+                        break;
+                    case 4:
+                        baoshi.propTables.PropType=PropConfig.PropType.AA;
+                        baoshi.propTables.Quality = 4;
+                        baoshi.propTables.EquipName = "AA4";
+                        break;
+                    case 5:
+                        baoshi.propTables.PropType=PropConfig.PropType.AA;
+                        baoshi.propTables.Quality = 5;
+                        baoshi.propTables.EquipName = "AA5";
+                        break;
+                    case 6:
+                        baoshi.propTables.PropType=PropConfig.PropType.AA;
+                        baoshi.propTables.Quality = 6;
+                        baoshi.propTables.EquipName = "AA6";
+                        break;
+                }
 
+                return baoshi.gameObject;
+            
+            case PropConfig.PropType.AC:
+                BaoShi baoshi9=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi9.propTables.PropType=PropConfig.PropType.AC;
+                        baoshi9.propTables.Quality = 1;
+                        baoshi9.propTables.EquipName = "AC1";
+                        break;
+                    case 2:
+                        baoshi9.propTables.PropType=PropConfig.PropType.AC;
+                        baoshi9.propTables.Quality = 2;
+                        baoshi9.propTables.EquipName = "AC2";
+                        break;                   
+                    case 3:
+                        baoshi9.propTables.PropType=PropConfig.PropType.AC;
+                        baoshi9.propTables.Quality = 3;
+                        baoshi9.propTables.EquipName = "AC3";
+                        break;
+                    case 4:
+                        baoshi9.propTables.PropType=PropConfig.PropType.AC;
+                        baoshi9.propTables.Quality = 4;
+                        baoshi9.propTables.EquipName = "AC4";
+                        break;
+                    case 5:
+                        baoshi9.propTables.PropType=PropConfig.PropType.AC;
+                        baoshi9.propTables.Quality = 5;
+                        baoshi9.propTables.EquipName = "AC5";
+                        break;
+                    case 6:
+                        baoshi9.propTables.PropType=PropConfig.PropType.AC;
+                        baoshi9.propTables.Quality = 6;
+                        baoshi9.propTables.EquipName = "AC6";
+                        break;
+                }
+
+                return baoshi9.gameObject;
+            
+            case PropConfig.PropType.AD:
+                BaoShi baoshi8=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi8.propTables.PropType=PropConfig.PropType.AD;
+                        baoshi8.propTables.Quality = 1;
+                        baoshi8.propTables.EquipName = "AD1";
+                        break;
+                    case 2:
+                        baoshi8.propTables.PropType=PropConfig.PropType.AD;
+                        baoshi8.propTables.Quality = 2;
+                        baoshi8.propTables.EquipName = "AD2";
+                        break;                   
+                    case 3:
+                        baoshi8.propTables.PropType=PropConfig.PropType.AD;
+                        baoshi8.propTables.Quality = 3;
+                        baoshi8.propTables.EquipName = "AD3";
+                        break;
+                    case 4:
+                        baoshi8.propTables.PropType=PropConfig.PropType.AD;
+                        baoshi8.propTables.Quality = 4;
+                        baoshi8.propTables.EquipName = "AD4";
+                        break;
+                    case 5:
+                        baoshi8.propTables.PropType=PropConfig.PropType.AD;
+                        baoshi8.propTables.Quality = 5;
+                        baoshi8.propTables.EquipName = "AD5";
+                        break;
+                    case 6:
+                        baoshi8.propTables.PropType=PropConfig.PropType.AD;
+                        baoshi8.propTables.Quality = 6;
+                        baoshi8.propTables.EquipName = "AD6";
+                        break;
+                }
+
+                return baoshi8.gameObject;
+            
+            case PropConfig.PropType.HH:
+                BaoShi baoshi7=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi7.propTables.PropType=PropConfig.PropType.HH;
+                        baoshi7.propTables.Quality = 1;
+                        baoshi7.propTables.EquipName = "HH1";
+                        break;
+                    case 2:
+                        baoshi7.propTables.PropType=PropConfig.PropType.HH;
+                        baoshi7.propTables.Quality = 2;
+                        baoshi7.propTables.EquipName = "HH2";
+                        break;                   
+                    case 3:
+                        baoshi7.propTables.PropType=PropConfig.PropType.HH;
+                        baoshi7.propTables.Quality = 3;
+                        baoshi7.propTables.EquipName = "HH3";
+                        break;
+                    case 4:
+                        baoshi7.propTables.PropType=PropConfig.PropType.HH;
+                        baoshi7.propTables.Quality = 4;
+                        baoshi7.propTables.EquipName = "HH4";
+                        break;
+                    case 5:
+                        baoshi7.propTables.PropType=PropConfig.PropType.HH;
+                        baoshi7.propTables.Quality = 5;
+                        baoshi7.propTables.EquipName = "HH5";
+                        break;
+                    case 6:
+                        baoshi7.propTables.PropType=PropConfig.PropType.HH;
+                        baoshi7.propTables.Quality = 6;
+                        baoshi7.propTables.EquipName = "HH6";
+                        break;
+                }
+
+                return baoshi7.gameObject;
+            
+            case PropConfig.PropType.HA:
+                BaoShi baoshi6=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi6.propTables.PropType=PropConfig.PropType.HA;
+                        baoshi6.propTables.Quality = 1;
+                        baoshi6.propTables.EquipName = "HA1";
+                        break;
+                    case 2:
+                        baoshi6.propTables.PropType=PropConfig.PropType.HA;
+                        baoshi6.propTables.Quality = 2;
+                        baoshi6.propTables.EquipName = "HA2";
+                        break;                   
+                    case 3:
+                        baoshi6.propTables.PropType=PropConfig.PropType.HA;
+                        baoshi6.propTables.Quality = 3;
+                        baoshi6.propTables.EquipName = "HA3";
+                        break;
+                    case 4:
+                        baoshi6.propTables.PropType=PropConfig.PropType.HA;
+                        baoshi6.propTables.Quality = 4;
+                        baoshi6.propTables.EquipName = "HA4";
+                        break;
+                    case 5:
+                        baoshi6.propTables.PropType=PropConfig.PropType.HA;
+                        baoshi6.propTables.Quality = 5;
+                        baoshi6.propTables.EquipName = "HA5";
+                        break;
+                    case 6:
+                        baoshi6.propTables.PropType=PropConfig.PropType.HA;
+                        baoshi6.propTables.Quality = 6;
+                        baoshi6.propTables.EquipName = "HA6";
+                        break;
+                }
+
+                return baoshi6.gameObject;
+            
+            case PropConfig.PropType.HC:
+                BaoShi baoshi5=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi5.propTables.PropType=PropConfig.PropType.HC;
+                        baoshi5.propTables.Quality = 1;
+                        baoshi5.propTables.EquipName = "HC1";
+                        break;
+                    case 2:
+                        baoshi5.propTables.PropType=PropConfig.PropType.HC;
+                        baoshi5.propTables.Quality = 2;
+                        baoshi5.propTables.EquipName = "HC2";
+                        break;                   
+                    case 3:
+                        baoshi5.propTables.PropType=PropConfig.PropType.HC;
+                        baoshi5.propTables.Quality = 3;
+                        baoshi5.propTables.EquipName = "HC3";
+                        break;
+                    case 4:
+                        baoshi5.propTables.PropType=PropConfig.PropType.HC;
+                        baoshi5.propTables.Quality = 4;
+                        baoshi5.propTables.EquipName = "HC4";
+                        break;
+                    case 5:
+                        baoshi5.propTables.PropType=PropConfig.PropType.HC;
+                        baoshi5.propTables.Quality = 5;
+                        baoshi5.propTables.EquipName = "HC5";
+                        break;
+                    case 6:
+                        baoshi5.propTables.PropType=PropConfig.PropType.HC;
+                        baoshi5.propTables.Quality = 6;
+                        baoshi5.propTables.EquipName = "HC6";
+                        break;
+                }
+
+                return baoshi5.gameObject;
+            
+            case PropConfig.PropType.HD:
+                BaoShi baoshi4=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi4.propTables.PropType=PropConfig.PropType.HD;
+                        baoshi4.propTables.Quality = 1;
+                        baoshi4.propTables.EquipName = "HD1";
+                        break;
+                    case 2:
+                        baoshi4.propTables.PropType=PropConfig.PropType.HD;
+                        baoshi4.propTables.Quality = 2;
+                        baoshi4.propTables.EquipName = "HD2";
+                        break;                   
+                    case 3:
+                        baoshi4.propTables.PropType=PropConfig.PropType.HD;
+                        baoshi4.propTables.Quality = 3;
+                        baoshi4.propTables.EquipName = "HD3";
+                        break;
+                    case 4:
+                        baoshi4.propTables.PropType=PropConfig.PropType.HD;
+                        baoshi4.propTables.Quality = 4;
+                        baoshi4.propTables.EquipName = "HD4";
+                        break;
+                    case 5:
+                        baoshi4.propTables.PropType=PropConfig.PropType.HD;
+                        baoshi4.propTables.Quality = 5;
+                        baoshi4.propTables.EquipName = "HD5";
+                        break;
+                    case 6:
+                        baoshi4.propTables.PropType=PropConfig.PropType.HD;
+                        baoshi4.propTables.Quality = 6;
+                        baoshi4.propTables.EquipName = "HD6";
+                        break;
+                }
+
+                return baoshi4.gameObject;
+            
+            case PropConfig.PropType.CC:
+                BaoShi baoshi3=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi3.propTables.PropType=PropConfig.PropType.CC;
+                        baoshi3.propTables.Quality = 1;
+                        baoshi3.propTables.EquipName = "CC1";
+                        break;
+                    case 2:
+                        baoshi3.propTables.PropType=PropConfig.PropType.CC;
+                        baoshi3.propTables.Quality = 2;
+                        baoshi3.propTables.EquipName = "CC2";
+                        break;                   
+                    case 3:
+                        baoshi3.propTables.PropType=PropConfig.PropType.CC;
+                        baoshi3.propTables.Quality = 3;
+                        baoshi3.propTables.EquipName = "CC3";
+                        break;
+                    case 4:
+                        baoshi3.propTables.PropType=PropConfig.PropType.CC;
+                        baoshi3.propTables.Quality = 4;
+                        baoshi3.propTables.EquipName = "CC4";
+                        break;
+                    case 5:
+                        baoshi3.propTables.PropType=PropConfig.PropType.CC;
+                        baoshi3.propTables.Quality = 5;
+                        baoshi3.propTables.EquipName = "CC5";
+                        break;
+                    case 6:
+                        baoshi3.propTables.PropType=PropConfig.PropType.CC;
+                        baoshi3.propTables.Quality = 6;
+                        baoshi3.propTables.EquipName = "CC6";
+                        break;
+                }
+
+                return baoshi3.gameObject;
+            
+            case PropConfig.PropType.CD:
+                BaoShi baoshi2=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi2.propTables.PropType=PropConfig.PropType.CD;
+                        baoshi2.propTables.Quality = 1;
+                        baoshi2.propTables.EquipName = "CD1";
+                        break;
+                    case 2:
+                        baoshi2.propTables.PropType=PropConfig.PropType.CD;
+                        baoshi2.propTables.Quality = 2;
+                        baoshi2.propTables.EquipName = "CD2";
+                        break;                   
+                    case 3:
+                        baoshi2.propTables.PropType=PropConfig.PropType.CD;
+                        baoshi2.propTables.Quality = 3;
+                        baoshi2.propTables.EquipName = "CD3";
+                        break;
+                    case 4:
+                        baoshi2.propTables.PropType=PropConfig.PropType.CD;
+                        baoshi2.propTables.Quality = 4;
+                        baoshi2.propTables.EquipName = "CD4";
+                        break;
+                    case 5:
+                        baoshi2.propTables.PropType=PropConfig.PropType.CD;
+                        baoshi2.propTables.Quality = 5;
+                        baoshi2.propTables.EquipName = "CD5";
+                        break;
+                    case 6:
+                        baoshi2.propTables.PropType=PropConfig.PropType.CD;
+                        baoshi2.propTables.Quality = 6;
+                        baoshi2.propTables.EquipName = "CD6";
+                        break;
+                }
+
+                return baoshi2.gameObject;
+            
+            case PropConfig.PropType.DD:
+                BaoShi baoshi1=BaoShiQueue.Dequeue();
+                switch (prop.Quality)
+                {
+                    case 1:
+                        baoshi1.propTables.PropType=PropConfig.PropType.DD;
+                        baoshi1.propTables.Quality = 1;
+                        baoshi1.propTables.EquipName = "DD1";
+                        break;
+                    case 2:
+                        baoshi1.propTables.PropType=PropConfig.PropType.DD;
+                        baoshi1.propTables.Quality = 2;
+                        baoshi1.propTables.EquipName = "DD2";
+                        break;                   
+                    case 3:
+                        baoshi1.propTables.PropType=PropConfig.PropType.DD;
+                        baoshi1.propTables.Quality = 3;
+                        baoshi1.propTables.EquipName = "DD3";
+                        break;
+                    case 4:
+                        baoshi1.propTables.PropType=PropConfig.PropType.DD;
+                        baoshi1.propTables.Quality = 4;
+                        baoshi1.propTables.EquipName = "DD4";
+                        break;
+                    case 5:
+                        baoshi1.propTables.PropType=PropConfig.PropType.DD;
+                        baoshi1.propTables.Quality = 5;
+                        baoshi1.propTables.EquipName = "DD5";
+                        break;
+                    case 6:
+                        baoshi1.propTables.PropType=PropConfig.PropType.DD;
+                        baoshi1.propTables.Quality = 6;
+                        baoshi1.propTables.EquipName = "DD6";
+                        break;
+                }
+
+                return baoshi1.gameObject;
+        }
         return null;
     }
 

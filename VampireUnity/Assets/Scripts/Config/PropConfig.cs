@@ -11,7 +11,17 @@ public class PropConfig : MonoBehaviour
       JingCui,
       ShenHuaCaiLiao,
       ChiBang,
-      LingHun
+      LingHun,
+      HH,
+      HA,
+      HC,
+      HD,
+      AA,
+      AC,
+      AD,
+      CC,
+      CD,
+      DD,
    }
 
    public static Dictionary<int, string> PropNameDic = new Dictionary<int, string>()

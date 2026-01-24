@@ -1,11 +1,82 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using UnityEngine;
 
 public class ResourcesConfig : MonoBehaviour
 {
     public static Sprite LingHun;
 
+    //宝石
+    public static Sprite HH1;
+    public static Sprite HH2;
+    public static Sprite HH3;
+    public static Sprite HH4;
+    public static Sprite HH5;
+    public static Sprite HH6;
+
+    public static Sprite HA1;
+    public static Sprite HA2;
+    public static Sprite HA3;
+    public static Sprite HA4;
+    public static Sprite HA5;
+    public static Sprite HA6;
+    
+    public static Sprite HC1;
+    public static Sprite HC2;
+    public static Sprite HC3;
+    public static Sprite HC4;
+    public static Sprite HC5;
+    public static Sprite HC6;
+    
+    public static Sprite HD1;
+    public static Sprite HD2;
+    public static Sprite HD3;
+    public static Sprite HD4;
+    public static Sprite HD5;
+    public static Sprite HD6;
+    
+    public static Sprite AA1;
+    public static Sprite AA2;
+    public static Sprite AA3;
+    public static Sprite AA4;
+    public static Sprite AA5;
+    public static Sprite AA6;
+    
+    public static Sprite AC1;
+    public static Sprite AC2;
+    public static Sprite AC3;
+    public static Sprite AC4;
+    public static Sprite AC5;
+    public static Sprite AC6;
+    
+    public static Sprite AD1;
+    public static Sprite AD2;
+    public static Sprite AD3;
+    public static Sprite AD4;
+    public static Sprite AD5;
+    public static Sprite AD6;
+    
+    public static Sprite CD1;
+    public static Sprite CD2;
+    public static Sprite CD3;
+    public static Sprite CD4;
+    public static Sprite CD5;
+    public static Sprite CD6;
+    
+    public static Sprite CC1;
+    public static Sprite CC2;
+    public static Sprite CC3;
+    public static Sprite CC4;
+    public static Sprite CC5;
+    public static Sprite CC6;
+    
+    public static Sprite DD1;
+    public static Sprite DD2;
+    public static Sprite DD3;
+    public static Sprite DD4;
+    public static Sprite DD5;
+    public static Sprite DD6;
 
     //Resource新手套装
     public static Sprite PrimaryCloth;
@@ -239,8 +310,268 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite RingFortureAddSprite;
     public static Sprite HelmetFortureAddSprite;
 
+    public static Sprite GetBaoShiSprite(BaoShiInfo info)
+    {
+        switch (info.BaoShiType)
+        {
+            case BaoShiType.AA:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return AA1;
+                    case 2:
+                        return AA2;
+                    case 3:
+                        return AA3;
+                    case 4:
+                        return AA4;
+                    case 5:
+                        return AA5;
+                    case 6:
+                        return AA6;
+                }
+                break;
+            
+            case BaoShiType.HH:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return HH1;
+                    case 2:
+                        return HH2;
+                    case 3:
+                        return HH3;
+                    case 4:
+                        return HH4;
+                    case 5:
+                        return HH5;
+                    case 6:
+                        return HH6;
+                }
+                break;
+            
+            case BaoShiType.HA:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return HA1;
+                    case 2:
+                        return HA2;
+                    case 3:
+                        return HA3;
+                    case 4:
+                        return HA4;
+                    case 5:
+                        return HA5;
+                    case 6:
+                        return HA6;
+                }
+                break;
+            
+            case BaoShiType.HC:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return HC1;
+                    case 2:
+                        return HC2;
+                    case 3:
+                        return HC3;
+                    case 4:
+                        return HC4;
+                    case 5:
+                        return HC5;
+                    case 6:
+                        return HC6;
+                }
+                break;
+            
+            case BaoShiType.HD:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return HD1;
+                    case 2:
+                        return HD2;
+                    case 3:
+                        return HD3;
+                    case 4:
+                        return HD4;
+                    case 5:
+                        return HD5;
+                    case 6:
+                        return HD6;
+                }
+                break;
+            
+            case BaoShiType.AC:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return AC1;
+                    case 2:
+                        return AC2;
+                    case 3:
+                        return AC3;
+                    case 4:
+                        return AC4;
+                    case 5:
+                        return AC5;
+                    case 6:
+                        return AC6;
+                }
+                break;
+            
+            case BaoShiType.AD:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return AD1;
+                    case 2:
+                        return AD2;
+                    case 3:
+                        return AD3;
+                    case 4:
+                        return AD4;
+                    case 5:
+                        return AD5;
+                    case 6:
+                        return AD6;
+                }
+                break;
+            
+            case BaoShiType.CC:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return CC1;
+                    case 2:
+                        return CC2;
+                    case 3:
+                        return CC3;
+                    case 4:
+                        return CC4;
+                    case 5:
+                        return CC5;
+                    case 6:
+                        return CC6;
+                }
+                break;
+            
+            case BaoShiType.DD:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return DD1;
+                    case 2:
+                        return DD2;
+                    case 3:
+                        return DD3;
+                    case 4:
+                        return DD4;
+                    case 5:
+                        return DD5;
+                    case 6:
+                        return DD6;
+                }
+                break;
+            
+            case BaoShiType.CD:
+                switch (info.Quality)
+                {
+                    case 1:
+                        return CD1;
+                    case 2:
+                        return CD2;
+                    case 3:
+                        return CD3;
+                    case 4:
+                        return CD4;
+                    case 5:
+                        return CD5;
+                    case 6:
+                        return CD6;
+                }
+                break;
+        }
+        return null;
+    }
+    
     public static void Init()
     {
+        //宝石
+        HH1= Resources.Load<Sprite>("Sprite/BaoShi/HH1");
+        HH2= Resources.Load<Sprite>("Sprite/BaoShi/HH2");
+        HH3= Resources.Load<Sprite>("Sprite/BaoShi/HH3");
+        HH4= Resources.Load<Sprite>("Sprite/BaoShi/HH4");
+        HH5= Resources.Load<Sprite>("Sprite/BaoShi/HH5");
+        HH6= Resources.Load<Sprite>("Sprite/BaoShi/HH6");
+
+        HA1= Resources.Load<Sprite>("Sprite/BaoShi/HA1");
+        HA2= Resources.Load<Sprite>("Sprite/BaoShi/HA2");
+        HA3= Resources.Load<Sprite>("Sprite/BaoShi/HA3");
+        HA4= Resources.Load<Sprite>("Sprite/BaoShi/HA4");
+        HA5= Resources.Load<Sprite>("Sprite/BaoShi/HA5");
+        HA6= Resources.Load<Sprite>("Sprite/BaoShi/HA6");
+        
+        HC1= Resources.Load<Sprite>("Sprite/BaoShi/HC1");
+        HC2= Resources.Load<Sprite>("Sprite/BaoShi/HC2");
+        HC3= Resources.Load<Sprite>("Sprite/BaoShi/HC3");
+        HC4= Resources.Load<Sprite>("Sprite/BaoShi/HC4");
+        HC5= Resources.Load<Sprite>("Sprite/BaoShi/HC5");
+        HC6= Resources.Load<Sprite>("Sprite/BaoShi/HC6");
+        
+        HD1= Resources.Load<Sprite>("Sprite/BaoShi/HD1");
+        HD2= Resources.Load<Sprite>("Sprite/BaoShi/HD2");
+        HD3= Resources.Load<Sprite>("Sprite/BaoShi/HD3");
+        HD4= Resources.Load<Sprite>("Sprite/BaoShi/HD4");
+        HD5= Resources.Load<Sprite>("Sprite/BaoShi/HD5");
+        HD6= Resources.Load<Sprite>("Sprite/BaoShi/HD6");
+        
+        AA1= Resources.Load<Sprite>("Sprite/BaoShi/AA1");
+        AA2= Resources.Load<Sprite>("Sprite/BaoShi/AA2");
+        AA3= Resources.Load<Sprite>("Sprite/BaoShi/AA3");
+        AA4= Resources.Load<Sprite>("Sprite/BaoShi/AA4");
+        AA5= Resources.Load<Sprite>("Sprite/BaoShi/AA5");
+        AA6= Resources.Load<Sprite>("Sprite/BaoShi/AA6");
+        
+        AC1= Resources.Load<Sprite>("Sprite/BaoShi/AC1");
+        AC2= Resources.Load<Sprite>("Sprite/BaoShi/AC2");
+        AC3= Resources.Load<Sprite>("Sprite/BaoShi/AC3");
+        AC4= Resources.Load<Sprite>("Sprite/BaoShi/AC4");
+        AC5= Resources.Load<Sprite>("Sprite/BaoShi/AC5");
+        AC6= Resources.Load<Sprite>("Sprite/BaoShi/AC6");
+        
+        AD1= Resources.Load<Sprite>("Sprite/BaoShi/AD1");
+        AD2= Resources.Load<Sprite>("Sprite/BaoShi/AD2");
+        AD3= Resources.Load<Sprite>("Sprite/BaoShi/AD3");
+        AD4= Resources.Load<Sprite>("Sprite/BaoShi/AD4");
+        AD5= Resources.Load<Sprite>("Sprite/BaoShi/AD5");
+        AD6= Resources.Load<Sprite>("Sprite/BaoShi/AD6");
+        
+        CC1= Resources.Load<Sprite>("Sprite/BaoShi/CC1");
+        CC2= Resources.Load<Sprite>("Sprite/BaoShi/CC2");
+        CC3= Resources.Load<Sprite>("Sprite/BaoShi/CC3");
+        CC4= Resources.Load<Sprite>("Sprite/BaoShi/CC4");
+        CC5= Resources.Load<Sprite>("Sprite/BaoShi/CC5");
+        CC6= Resources.Load<Sprite>("Sprite/BaoShi/CC6");
+        
+        CD1= Resources.Load<Sprite>("Sprite/BaoShi/CD1");
+        CD2= Resources.Load<Sprite>("Sprite/BaoShi/CD2");
+        CD3= Resources.Load<Sprite>("Sprite/BaoShi/CD3");
+        CD4= Resources.Load<Sprite>("Sprite/BaoShi/CD4");
+        CD5= Resources.Load<Sprite>("Sprite/BaoShi/CD5");
+        CD6= Resources.Load<Sprite>("Sprite/BaoShi/CD6");
+        
+        DD1= Resources.Load<Sprite>("Sprite/BaoShi/DD1");
+        DD2= Resources.Load<Sprite>("Sprite/BaoShi/DD2");
+        DD3= Resources.Load<Sprite>("Sprite/BaoShi/DD3");
+        DD4= Resources.Load<Sprite>("Sprite/BaoShi/DD4");
+        DD5= Resources.Load<Sprite>("Sprite/BaoShi/DD5");
+        DD6= Resources.Load<Sprite>("Sprite/BaoShi/DD6");
+        
+        
+        
         Skill1 = Resources.Load<Sprite>("Sprite/Skill/skill1");
         Skill2 = Resources.Load<Sprite>("Sprite/Skill/skill2");
         Skill3 = Resources.Load<Sprite>("Sprite/Skill/skill3");
