@@ -340,6 +340,15 @@ namespace Config
                 {
                     LanguageType.Chinese, new LanguageItem()
                     {
+                        DuanZaoWindowLanguage=new DuanZaoWindowLanguage()
+                        {
+                            HeCheng="合成",
+                            XiLian="洗练",
+                            JinJie="进阶",
+                            WeaponFragment="武器碎片",
+                            JingCui="精粹",
+                            YiJianHeCheng="一键合成",
+                        },
                         EquipLanguage=new EquipLanguage()
                         {
                             BaseAttribute = "基本属性",FuJiaAttribute = "附加属性",OrangeAttribute = "传说属性",CRITDamage = "暴击伤害",DamageSpeed = "攻击速度",DamageAddForNormal = "对普通怪伤害",DamageAddForBoss = "对Boss伤害",Penetrate = "防御穿透",DamageAddPercent = "百分比增加Att",BloodSuck = "吸血",KillReplyHpPercent = "击杀回复Hp",MaxHpPercent = "百分比增加Hp",MaxDefensePercent = "百分比增加Def",DamageReductionPercent = "伤害减免",DamageReductionPercentForNormal = "减免普通怪伤害",DamageReductionPercentForBoss = "减免Boss伤害",ReplyHpPercent = "每3s回复生命值",
@@ -504,6 +513,15 @@ namespace Config
                 {
                     LanguageType.English, new LanguageItem()
                     {
+                        DuanZaoWindowLanguage = new DuanZaoWindowLanguage()
+                        {
+                            HeCheng = "Synthesis",
+                            XiLian = "Refinement",
+                            JinJie = "Advancement",
+                            WeaponFragment = "Weapon Fragment",
+                            JingCui = "Essence",
+                            YiJianHeCheng = "One-click Synthesis",
+                        },
                         EquipLanguage = new EquipLanguage()
                         {
                             BaseAttribute = "Base Attribute",
@@ -758,6 +776,15 @@ namespace Config
                 {
                     LanguageType.Han, new LanguageItem()
                     {
+                        DuanZaoWindowLanguage = new DuanZaoWindowLanguage()
+                        {
+                            HeCheng = "합성",
+                            XiLian = "세공",
+                            JinJie = "진화",
+                            WeaponFragment = "무기 조각",
+                            JingCui = "정수",
+                            YiJianHeCheng = "한 번에 합성",
+                        },
                         EquipLanguage = new EquipLanguage()
                         {
                             BaseAttribute = "기본 속성",
@@ -991,6 +1018,15 @@ namespace Config
                 {
                     LanguageType.Ri, new LanguageItem()
                     {
+                        DuanZaoWindowLanguage = new DuanZaoWindowLanguage()
+                        {
+                            HeCheng = "合成",
+                            XiLian = "練成",
+                            JinJie = "進化",
+                            WeaponFragment = "武器の欠片",
+                            JingCui = "精髄",
+                            YiJianHeCheng = "ワンクリック合成",
+                        },
                         EquipLanguage = new EquipLanguage()
                         {
                             BaseAttribute = "基本属性",

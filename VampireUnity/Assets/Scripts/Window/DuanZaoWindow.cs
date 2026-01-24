@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Config;
 using Equip;
 using TMPro;
 using Tool;
@@ -148,9 +149,49 @@ public class DuanZaoWindow : MonoBehaviour
     
     public TextMeshProUGUI BaseAttribute;
     public TextMeshProUGUI FuJiaAttribute;
+    public TextMeshProUGUI XiLianButton;
 
     
-    
+    public TextMeshProUGUI LinHun;
+    public TextMeshProUGUI JingCui;
+    public TextMeshProUGUI ShenHuaZhiXinCaiLiao;
+    public TextMeshProUGUI JinJieButton;
+
+    public void SwitchLanguage()
+    {
+        TopHeChengText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.HeCheng;
+        TopXiLianText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.XiLian;
+        TopJinJieText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.JinJie;
+
+        WeaponFragmentText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.WeaponFragment;
+        WeaponFragment2Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.GreenWeaponFragment;
+        WeaponFragment3Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.BlueWeaponFragment;
+        WeaponFragment4Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.PurpleWeaponFragment;
+        WeaponFragment5Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.OrangeWeaponFragment;
+        WeaponFragment6Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.RedWeaponFragment;
+        
+        JingCuiText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.JingCui;
+        JingCui2Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.GreenJingCui;
+        JingCui3Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.BlueJingCui;
+        JingCui4Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.PurpleJingCui;
+        JingCui5Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.OrangeJingCui;
+        JingCui6Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.RedJingCui;
+
+        
+        ShenHuaZhiXin.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.ShenHuaZhiXin;
+        ShenHuaZhiXinText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.ShenHuaZhiXin;
+        HeChengButtonText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.HeCheng;
+        YiJianHeChen.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.YiJianHeCheng;
+
+        BaseAttribute.text = LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.BaseAttribute;
+        FuJiaAttribute.text = LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.FuJiaAttribute;
+        XiLianButton.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.XiLian;
+
+        LinHun.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.LinHun+" X 10000";
+        JingCui.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.OrangeJingCui+" X 10";
+        ShenHuaZhiXinCaiLiao.text = LanguageConfig.LanguageItems[PlayerData.S.langType].PropLanguage.ShenHuaZhiXin+" X 1";
+        JinJieButton.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.JinJie;
+    }
     
     //进阶界面
     
@@ -164,6 +205,11 @@ public class DuanZaoWindow : MonoBehaviour
     public GameObject jinJieEquipContent;
     private int jinJiePageNum = 1;
     private int jinJieEquipId = 0;
+
+    private void OnEnable()
+    {
+        SwitchLanguage();
+    }
 
     public void ShowJinJieBag()
     {
@@ -1239,11 +1285,11 @@ public class DuanZaoWindow : MonoBehaviour
 
         image.sprite = ResourcesConfig.GetEquipSprite(equip);
         baseAttribute1.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
-            ? "生命值 :"
-            : "攻击力 :";
+            ? LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp+" :"
+            : LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack+" :";
         baseAttribute2.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
-            ? "防御 :"
-            : "暴击 :";
+            ? LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense+" :"
+            : LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit+" :";
 
         baseAttribute1Value.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
             ? equip.HP.ToString()
