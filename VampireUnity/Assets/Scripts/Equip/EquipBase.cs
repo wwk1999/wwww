@@ -24,7 +24,39 @@ public class EquipBase : BagObjectBase
     [NonSerialized]public SuitType suitType = SuitType.None; // 装备套装类型
     
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
+    [NonSerialized] private int KongCount = 0;
 
+    public void SetKongCount()
+    {
+        int random =0;
+        switch (EquipAttributes.Quality)
+        {
+            case 1:
+                KongCount = 0;
+                break;
+            case 2:
+                random=Random.Range(1, 2);
+                KongCount = random;
+                break;
+            case 3:
+                random=Random.Range(1, 3);
+                KongCount = random;
+                break;
+            case 4:
+                random=Random.Range(1, 4);
+                KongCount = random;
+                break;
+            case 5:
+                random=Random.Range(1, 5);
+                KongCount = random;
+                break;
+        }
+
+        for (int i = 1; i <= random; i++)
+        {
+            EquipAttributes.BaoShiDic.Add(i,new BaoShiInfo(){BaoShiType = BaoShiType.None});
+        }
+    }
     public int GetOrangeLevel()
     {
         switch (PlayerData.S.mJLevel)
@@ -64,6 +96,7 @@ public class EquipBase : BagObjectBase
     
     public void SetBaseAttribute()
     {
+        SetKongCount();
         var equipBaseAttribute=EquipConfig.EquipBaseAttributeDic[EquipAttributes.EquipLevel];
         var qualityScale = EquipConfig.EquipQualityDic[EquipAttributes.Quality];
         float random1=Random.Range(0.8f, 1.2f);

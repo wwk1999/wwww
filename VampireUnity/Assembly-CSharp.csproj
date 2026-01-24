@@ -371,6 +371,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\Huangzhu.cs" />
+    <Compile Include="Assets\Scripts\Equip\EquipKong.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipAttribute.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonsterWarning.cs" />
     <Compile Include="Assets\Scripts\Tool\UnityMainThreadDispatcher.cs" />

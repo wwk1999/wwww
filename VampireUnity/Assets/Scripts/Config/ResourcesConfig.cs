@@ -884,6 +884,8 @@ public class ResourcesConfig : MonoBehaviour
                 return PurpleBg;
             case 5:
                 return OrangeBg;
+            case 6:
+                return RedBg;
         }
 
         return null;

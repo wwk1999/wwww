@@ -1,5 +1,6 @@
 using System;
 using Mysql;
+using Prop.BaoShi;
 using TMPro;
 using Tool;
 using UnityEngine;
@@ -30,6 +31,9 @@ public class EquipAttributePanel : MonoBehaviour
     public TextMeshProUGUI orangeEntryDesc;
 
     public Text level;
+
+    public GameObject kongListContent;
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -60,7 +64,22 @@ public class EquipAttributePanel : MonoBehaviour
                 item.Value + "%";
         }
     }
-    
+
+    public void SetKong()
+    {
+        EquipTable equip=(EquipTable)tableBase;
+
+        foreach (Transform item in kongListContent.transform)
+        {
+            Destroy(item.gameObject);
+        }
+
+        foreach (var item in equip.BaoShiDic)
+        {
+            EquipKong baoShiKong=Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipKong"),kongListContent.transform).GetComponent<EquipKong>();
+            baoShiKong.SetKong(item.Value);
+        }
+    }
     public void Init()
     {
         EquipTable equip=(EquipTable)tableBase;
@@ -69,7 +88,7 @@ public class EquipAttributePanel : MonoBehaviour
             return;
         }
         //获取装备名
-
+        SetKong();
         if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
         {
             equipName.text = EquipName.EquipNameDic[equip.EquipName];

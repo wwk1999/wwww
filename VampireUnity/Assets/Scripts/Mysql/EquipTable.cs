@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Config;
 using Mysql;
 using Tool;
 
@@ -22,6 +23,7 @@ public class EquipTable:TableBase
     public EntryConfig.OrangeEntry OrangeEntry1 = EntryConfig.OrangeEntry.None;
     public EntryConfig.OrangeEntry OrangeEntry2 = EntryConfig.OrangeEntry.None;
 
+    public Dictionary<int,BaoShiInfo> BaoShiDic=new Dictionary<int,BaoShiInfo>();
     public EquipTable(
         int equipid = 0,
         string equipName = null,

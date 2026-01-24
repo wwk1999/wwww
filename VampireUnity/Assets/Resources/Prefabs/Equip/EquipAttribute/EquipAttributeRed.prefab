@@ -210,6 +210,7 @@ MonoBehaviour:
   fuJiaAttributeContent: {fileID: 6444532328349616276}
   orangeEntryDesc: {fileID: 1118546221864579597}
   level: {fileID: 8158589205886451397}
+  kongListContent: {fileID: 6028387044037070184}
 --- !u!1 &291564570272307520
 GameObject:
   m_ObjectHideFlags: 0
