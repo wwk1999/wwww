@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Config;
 using Gloabl;
 using Mysql;
 using MySqlConnector;
@@ -884,6 +885,22 @@ public class BagController : XSingleton<BagController>
                             break;
                     }
 
+                    break;
+                
+                case PropConfig.PropType.AA:
+                case PropConfig.PropType.AC:
+                case PropConfig.PropType.AD:
+                case PropConfig.PropType.HH:
+                case PropConfig.PropType.HD:
+                case PropConfig.PropType.HC:
+                case PropConfig.PropType.HA:
+                case PropConfig.PropType.CC:
+                case PropConfig.PropType.CD:
+                case PropConfig.PropType.DD:
+                    BaoShiInfo baoshi=new BaoShiInfo();
+                    baoshi.BaoShiType = (BaoShiType)(prop.Value.PropType - 5);
+                    baoshi.Quality=prop.Value.Quality;
+                    propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =ResourcesConfig.GetBaoShiSprite(baoshi);
                     break;
             }
         }

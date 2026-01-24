@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using UnityEngine;
 
 public class EquipIDData : XSingleton<EquipIDData>
@@ -118,6 +119,244 @@ public class EquipIDData : XSingleton<EquipIDData>
                         break;
                     case 6:
                         value = 406;
+                        break;
+                }
+                break;
+            case PropConfig.PropType.HH:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 601;
+                        break;
+                    case 2:
+                        value = 602;
+                        break;
+                    case 3:
+                        value = 603;
+                        break;
+                    case 4:
+                        value = 604;
+                        break;
+                    case 5:
+                        value = 605;
+                        break;
+                    case 6:
+                        value = 606;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.HA:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 701;
+                        break;
+                    case 2:
+                        value = 702;
+                        break;
+                    case 3:
+                        value = 703;
+                        break;
+                    case 4:
+                        value = 704;
+                        break;
+                    case 5:
+                        value = 705;
+                        break;
+                    case 6:
+                        value = 706;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.HC:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 801;
+                        break;
+                    case 2:
+                        value = 802;
+                        break;
+                    case 3:
+                        value = 803;
+                        break;
+                    case 4:
+                        value = 804;
+                        break;
+                    case 5:
+                        value = 805;
+                        break;
+                    case 6:
+                        value = 806;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.HD:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 901;
+                        break;
+                    case 2:
+                        value = 902;
+                        break;
+                    case 3:
+                        value = 903;
+                        break;
+                    case 4:
+                        value = 904;
+                        break;
+                    case 5:
+                        value = 905;
+                        break;
+                    case 6:
+                        value = 906;
+                        break;
+                }
+                break;
+            case PropConfig.PropType.AD:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 1001;
+                        break;
+                    case 2:
+                        value = 1002;
+                        break;
+                    case 3:
+                        value = 1003;
+                        break;
+                    case 4:
+                        value = 1004;
+                        break;
+                    case 5:
+                        value = 1005;
+                        break;
+                    case 6:
+                        value = 1006;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.AC:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 1101;
+                        break;
+                    case 2:
+                        value = 1102;
+                        break;
+                    case 3:
+                        value = 1103;
+                        break;
+                    case 4:
+                        value = 1104;
+                        break;
+                    case 5:
+                        value = 1105;
+                        break;
+                    case 6:
+                        value = 1106;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.AA:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 1201;
+                        break;
+                    case 2:
+                        value = 1202;
+                        break;
+                    case 3:
+                        value = 1203;
+                        break;
+                    case 4:
+                        value = 1204;
+                        break;
+                    case 5:
+                        value = 1205;
+                        break;
+                    case 6:
+                        value = 1206;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.CC:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 1301;
+                        break;
+                    case 2:
+                        value = 1302;
+                        break;
+                    case 3:
+                        value = 1303;
+                        break;
+                    case 4:
+                        value = 1304;
+                        break;
+                    case 5:
+                        value = 1305;
+                        break;
+                    case 6:
+                        value = 1306;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.CD:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 1401;
+                        break;
+                    case 2:
+                        value = 1402;
+                        break;
+                    case 3:
+                        value = 1403;
+                        break;
+                    case 4:
+                        value = 1404;
+                        break;
+                    case 5:
+                        value = 1405;
+                        break;
+                    case 6:
+                        value = 1406;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.DD:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 1501;
+                        break;
+                    case 2:
+                        value = 1502;
+                        break;
+                    case 3:
+                        value = 1503;
+                        break;
+                    case 4:
+                        value = 1504;
+                        break;
+                    case 5:
+                        value = 1505;
+                        break;
+                    case 6:
+                        value = 1506;
                         break;
                 }
                 break;
