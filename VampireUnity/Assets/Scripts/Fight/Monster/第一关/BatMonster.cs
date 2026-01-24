@@ -56,7 +56,7 @@ public class BatMonster : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Speed == 8&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<0.3f)
+        if (Speed == 8&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<0.6f)
         {
             GameController.S.gamePlayer.PlayerHurt(Attack,false);
         }

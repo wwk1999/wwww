@@ -123,6 +123,32 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI blueQuality;
     public TextMeshProUGUI greenQuality;
     private int clickEquipid=0;
+
+
+    public TextMeshProUGUI TopHeChengText;
+    public TextMeshProUGUI TopXiLianText;
+    public TextMeshProUGUI TopJinJieText;
+    public TextMeshProUGUI WeaponFragmentText;
+    public TextMeshProUGUI WeaponFragment2Text;
+    public TextMeshProUGUI WeaponFragment3Text;
+    public TextMeshProUGUI WeaponFragment4Text;
+    public TextMeshProUGUI WeaponFragment5Text;
+    public TextMeshProUGUI WeaponFragment6Text;
+    public TextMeshProUGUI JingCuiText;
+    public TextMeshProUGUI JingCui2Text;
+    public TextMeshProUGUI JingCui3Text;
+    public TextMeshProUGUI JingCui4Text;
+    public TextMeshProUGUI JingCui5Text;
+    public TextMeshProUGUI JingCui6Text;
+    public TextMeshProUGUI ShenHuaZhiXin;
+    public TextMeshProUGUI ShenHuaZhiXinText;
+    public TextMeshProUGUI HeChengButtonText;
+    public TextMeshProUGUI YiJianHeChen;
+
+    
+    public TextMeshProUGUI BaseAttribute;
+    public TextMeshProUGUI FuJiaAttribute;
+
     
     
     

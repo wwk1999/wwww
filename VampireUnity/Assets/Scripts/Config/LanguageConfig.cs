@@ -292,6 +292,29 @@ namespace Config
 
     }
 
+    public class EquipLanguage
+    {
+        public string BaseAttribute;
+        public string FuJiaAttribute;
+        public string OrangeAttribute;
+        public string KillReplyHpPercent;
+        public string MaxHpPercent;
+        public string MaxDefensePercent;
+        public string DamageReductionPercent;
+        public string DamageReductionPercentForNormal;
+        public string DamageReductionPercentForBoss;
+        public string ReplyHpPercent;
+        public string CRITDamage;
+        public string DamageSpeed;
+        public string DamageAddForNormal;
+        public string DamageAddForBoss;
+        public string Penetrate;
+        public string DamageAddPercent;
+        public string BloodSuck;
+
+
+    }
+
     public class LanguageItem
     {
         public RoleWindowLanguage RoleWindowLanguage;
@@ -305,6 +328,7 @@ namespace Config
         public DuanZaoWindowLanguage DuanZaoWindowLanguage;
         public GameLevelWindowLanguage GameLevelWindowLanguage;
         public SettingWindowLanguage SettingWindowLanguage;
+        public EquipLanguage EquipLanguage;
     }
 
     public class LanguageConfig
@@ -316,6 +340,10 @@ namespace Config
                 {
                     LanguageType.Chinese, new LanguageItem()
                     {
+                        EquipLanguage=new EquipLanguage()
+                        {
+                            BaseAttribute = "基本属性",FuJiaAttribute = "附加属性",OrangeAttribute = "传说属性",CRITDamage = "暴击伤害",DamageSpeed = "攻击速度",DamageAddForNormal = "对普通怪伤害",DamageAddForBoss = "对Boss伤害",Penetrate = "防御穿透",DamageAddPercent = "百分比增加Att",BloodSuck = "吸血",KillReplyHpPercent = "击杀回复Hp",MaxHpPercent = "百分比增加Hp",MaxDefensePercent = "百分比增加Def",DamageReductionPercent = "伤害减免",DamageReductionPercentForNormal = "减免普通怪伤害",DamageReductionPercentForBoss = "减免Boss伤害",ReplyHpPercent = "每3s回复生命值",
+                        },
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
                             TuJian = "图鉴", WuQi = "武器", Bag = "背包", ChiBang = "翅膀", Skill = "技能", Setting = "设置",
@@ -476,6 +504,26 @@ namespace Config
                 {
                     LanguageType.English, new LanguageItem()
                     {
+                        EquipLanguage = new EquipLanguage()
+                        {
+                            BaseAttribute = "Base Attribute",
+                            FuJiaAttribute = "Additional Attribute",
+                            OrangeAttribute = "Legendary Attribute",
+                            CRITDamage = "Critical Damage",
+                            DamageSpeed = "Attack Speed",
+                            DamageAddForNormal = "Damage to Normal Monsters",
+                            DamageAddForBoss = "Damage to Boss",
+                            Penetrate = "Defense Penetration",
+                            DamageAddPercent = "Percentage Attack Increase",
+                            BloodSuck = "Life Steal",
+                            KillReplyHpPercent = "HP Recovery on Kill",
+                            MaxHpPercent = "Percentage HP Increase",
+                            MaxDefensePercent = "Percentage Defense Increase",
+                            DamageReductionPercent = "Damage Reduction",
+                            DamageReductionPercentForNormal = "Damage Reduction from Normal Monsters",
+                            DamageReductionPercentForBoss = "Damage Reduction from Boss",
+                            ReplyHpPercent = "HP Recovery per 3s",
+                        },
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
                             TuJian = "Bestiary", WuQi = "Weapon", Bag = "Bag", ChiBang = "Wings", Skill = "Skill",
@@ -710,6 +758,26 @@ namespace Config
                 {
                     LanguageType.Han, new LanguageItem()
                     {
+                        EquipLanguage = new EquipLanguage()
+                        {
+                            BaseAttribute = "기본 속성",
+                            FuJiaAttribute = "추가 속성",
+                            OrangeAttribute = "전설 속성",
+                            CRITDamage = "치명타 피해",
+                            DamageSpeed = "공격 속도",
+                            DamageAddForNormal = "일반 몬스터 피해",
+                            DamageAddForBoss = "보스 피해",
+                            Penetrate = "방어 관통",
+                            DamageAddPercent = "공격력 % 증가",
+                            BloodSuck = "생명력 흡수",
+                            KillReplyHpPercent = "처치 시 체력 회복",
+                            MaxHpPercent = "체력 % 증가",
+                            MaxDefensePercent = "방어력 % 증가",
+                            DamageReductionPercent = "피해 감소",
+                            DamageReductionPercentForNormal = "일반 몬스터 피해 감소",
+                            DamageReductionPercentForBoss = "보스 피해 감소",
+                            ReplyHpPercent = "3초당 체력 회복",
+                        },
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
                             TuJian = "도감", WuQi = "무기", Bag = "가방", ChiBang = "날개", Skill = "스킬", Setting = "설정",
@@ -923,6 +991,26 @@ namespace Config
                 {
                     LanguageType.Ri, new LanguageItem()
                     {
+                        EquipLanguage = new EquipLanguage()
+                        {
+                            BaseAttribute = "基本属性",
+                            FuJiaAttribute = "追加属性",
+                            OrangeAttribute = "伝説属性",
+                            CRITDamage = "クリティカルダメージ",
+                            DamageSpeed = "攻撃速度",
+                            DamageAddForNormal = "通常モンスターへのダメージ",
+                            DamageAddForBoss = "ボスへのダメージ",
+                            Penetrate = "防御貫通",
+                            DamageAddPercent = "攻撃力％増加",
+                            BloodSuck = "吸血",
+                            KillReplyHpPercent = "撃破時HP回復",
+                            MaxHpPercent = "HP％増加",
+                            MaxDefensePercent = "防御力％増加",
+                            DamageReductionPercent = "ダメージ軽減",
+                            DamageReductionPercentForNormal = "通常モンスターからのダメージ軽減",
+                            DamageReductionPercentForBoss = "ボスからのダメージ軽減",
+                            ReplyHpPercent = "3秒毎HP回復",
+                        },
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
                             TuJian = "図鑑", WuQi = "武器", Bag = "バッグ", ChiBang = "翼", Skill = "スキル", Setting = "設定",

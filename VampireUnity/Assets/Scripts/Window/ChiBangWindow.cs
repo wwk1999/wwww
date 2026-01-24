@@ -40,6 +40,59 @@ public class ChiBangWindow : MonoBehaviour
    public GameObject rightPanel;
    public Button exitButton;
 
+
+   public TextMeshProUGUI JieSuoText;
+   public TextMeshProUGUI ChiBangName1;
+   public TextMeshProUGUI ChiBangName2;
+   public TextMeshProUGUI ChiBangName3;
+   public TextMeshProUGUI ChiBangName4;
+   public TextMeshProUGUI ChiBangName5;
+   public TextMeshProUGUI ChiBangName6;
+   public TextMeshProUGUI Desc1;
+   public TextMeshProUGUI Desc2;
+   public TextMeshProUGUI Desc3;
+   public TextMeshProUGUI Desc4;
+   public TextMeshProUGUI Desc5;
+   public TextMeshProUGUI Desc6;
+   
+   public TextMeshProUGUI Quality;
+   public TextMeshProUGUI Quality1;
+   public TextMeshProUGUI Quality2;
+   public TextMeshProUGUI Quality3;
+   public TextMeshProUGUI Quality4;
+   public TextMeshProUGUI Quality5;
+   public TextMeshProUGUI Quality6;
+
+
+
+
+   public void SwitchLanguage()
+   {
+      JieSuoText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.JieSuoDesc;
+      ChiBangName1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.ChiBangName1;
+      ChiBangName2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.ChiBangName2;
+      ChiBangName3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.ChiBangName3;
+      ChiBangName4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.ChiBangName4;
+      ChiBangName5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.ChiBangName5;
+      ChiBangName6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.ChiBangName6;
+      
+      Desc1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.Desc1;
+      Desc2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.Desc2;
+      Desc3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.Desc3;
+      Desc4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.Desc4;
+      Desc5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.Desc5;
+      Desc6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].ChiBangWindowLanguage.Desc6;
+
+      Quality.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Quality;
+      Quality1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.WhiteQuality;
+      Quality2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.GreenQuality;
+      Quality3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.BlueQuality;
+      Quality4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.PurpleQuality;
+      Quality5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.OrangeQuality;
+      Quality6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.RedQuality;
+
+   }
+
    public void RefreshYuMao()
    {
       foreach (Transform child in yuMaoContent.transform)
@@ -174,50 +227,50 @@ public class ChiBangWindow : MonoBehaviour
       if (chibangAttribute.maxHp != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="生命值：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp+"：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.maxHp.ToString();
       }  
       if (chibangAttribute.defense != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="防御：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense+"：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.defense.ToString();
       }
       if (chibangAttribute.attack != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="攻击力：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack+ "：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.attack.ToString();
       }
     
       if (chibangAttribute.critDamage != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="暴击伤害：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.CritDamage+"：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.critDamage.ToString();
       }
       if (chibangAttribute.attackSpeed != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="攻击速度：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttackSpeed+"：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.attackSpeed.ToString();
       }
       if (chibangAttribute.moveSpeed != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="移动速度：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.MoveSpeed+"：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.moveSpeed.ToString();
       }
       if (chibangAttribute.forture != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="掉宝值：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.DiaoBao+"：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.forture.ToString();
       }
       if (chibangAttribute.finalDamage != 0)
       {
          var chibangitem=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChiBangItem"), attributeContent.transform);
-         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text="最终伤害：";
+         chibangitem.transform.Find("AttributeName").GetComponent<TextMeshProUGUI>().text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.FinalDamage+"：";
          chibangitem.transform.Find("AttributeCount").GetComponent<TextMeshProUGUI>().text=chibangAttribute.finalDamage.ToString();
       }
    }
@@ -241,7 +294,13 @@ public class ChiBangWindow : MonoBehaviour
    {
       RefreshChiBang();
    }
-   
+
+   private void OnEnable()
+   {
+      SwitchLanguage();
+      RefreshChiBang();
+   }
+
 
    public void RefreshChiBang()
    {

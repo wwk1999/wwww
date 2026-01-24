@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using UnityEngine;
 
 public class DefenseEntryInfo
@@ -55,23 +56,23 @@ public static Dictionary<DamageEntry, DamageEntryConfig> DamageEntryConfigs =
 
 public static Dictionary<DefenseEntry, string> DefenseEntryNameDic = new Dictionary<DefenseEntry, string>()
 {
-    { DefenseEntry.KillReplyHpPercent, "击杀回复Hp :" },
-    { DefenseEntry.MaxHpPercent, "百分比增加Hp :" },
-    { DefenseEntry.MaxDefensePercent, "百分比增加Def :" },
-    { DefenseEntry.DamageReductionPercent, "伤害减免 :" },
-    { DefenseEntry.DamageReductionPercentForNormal, "减免普通怪伤害 :" },
-    { DefenseEntry.DamageReductionPercentForBoss, "减免Boss伤害 :" },
-    { DefenseEntry.ReplyHpPercent, "每3s回复生命值 :" },
+    { DefenseEntry.KillReplyHpPercent,LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.KillReplyHpPercent+ " :" },
+    { DefenseEntry.MaxHpPercent, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.MaxHpPercent+" :" },
+    { DefenseEntry.MaxDefensePercent, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.MaxDefensePercent+" :" },
+    { DefenseEntry.DamageReductionPercent, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.DamageReductionPercent+" :" },
+    { DefenseEntry.DamageReductionPercentForNormal, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.DamageReductionPercentForNormal+" :" },
+    { DefenseEntry.DamageReductionPercentForBoss,LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.DamageReductionPercentForBoss+ " :" },
+    { DefenseEntry.ReplyHpPercent, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.ReplyHpPercent+" :" },
 };
 public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionary<DamageEntry, string>()
 {
-    { DamageEntry.CRITDamage, "暴击伤害 :" },
-    { DamageEntry.DamageSpeed, "攻击速度 :" },
-    { DamageEntry.DamageAddForNormal, "对普通怪伤害 :" },
-    { DamageEntry.DamageAddForBoss, "对Boss伤害 :" },
-    { DamageEntry.Penetrate, "防御穿透 :" },
-    { DamageEntry.DamageAddPercent, "百分比增加Att :" },
-    { DamageEntry.BloodSuck, "吸血 :" },
+    { DamageEntry.CRITDamage, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.CRITDamage+" :" },
+    { DamageEntry.DamageSpeed, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.DamageSpeed+" :" },
+    { DamageEntry.DamageAddForNormal, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.DamageAddForNormal+" :" },
+    { DamageEntry.DamageAddForBoss, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.DamageAddForBoss+" :" },
+    { DamageEntry.Penetrate, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.Penetrate+" :" },
+    { DamageEntry.DamageAddPercent, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.DamageAddPercent+" :" },
+    { DamageEntry.BloodSuck,LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.BloodSuck+ " :" },
 };
 public static Dictionary<OrangeEntry, string> OrangeEntryNameDic = new Dictionary<OrangeEntry, string>()
 {
