@@ -23,6 +23,20 @@ namespace Config
         public string StartGame;
     }
 
+    public class BaoShiLanguage
+    {
+        public string HHName;
+        public string HAName;
+        public string HCName;
+        public string HDName;
+        public string ACName;
+        public string AAName;
+        public string ADName;
+        public string CCName;
+        public string CDName;
+        public string DDName;
+    }
+
     public class MonsterBookWindowLanguage
     {
         public string MonsterName;
@@ -329,6 +343,7 @@ namespace Config
         public GameLevelWindowLanguage GameLevelWindowLanguage;
         public SettingWindowLanguage SettingWindowLanguage;
         public EquipLanguage EquipLanguage;
+        public BaoShiLanguage  BaoShiLanguage;
     }
 
     public class LanguageConfig
@@ -340,6 +355,10 @@ namespace Config
                 {
                     LanguageType.Chinese, new LanguageItem()
                     {
+                        BaoShiLanguage =  new BaoShiLanguage()
+                        {
+                            HHName = "仙石", HAName =  "龙血晶", HCName = "魂玉", HDName = "铁魄石", AAName = "白虎石", ACName = "血珀石", ADName = "摄魂石", CCName = "命晶", CDName = "镜石", DDName = "玄武石",
+                        },
                         DuanZaoWindowLanguage=new DuanZaoWindowLanguage()
                         {
                             HeCheng="合成",
@@ -513,6 +532,19 @@ namespace Config
                 {
                     LanguageType.English, new LanguageItem()
                     {
+                        BaoShiLanguage = new BaoShiLanguage()
+                        {
+                            HHName = "Fairy Stone", 
+                            HAName = "Dragon Crystal", 
+                            HCName = "Soul Jade", 
+                            HDName = "Ironheart Stone", 
+                            AAName = "Tiger Stone", 
+                            ACName = "Blood Amber", 
+                            ADName = "Soul Stone", 
+                            CCName = "Fate Crystal", 
+                            CDName = "Mirror Stone", 
+                            DDName = "Tortoise Stone",
+                        },
                         DuanZaoWindowLanguage = new DuanZaoWindowLanguage()
                         {
                             HeCheng = "Synthesis",
@@ -776,6 +808,19 @@ namespace Config
                 {
                     LanguageType.Han, new LanguageItem()
                     {
+                        BaoShiLanguage = new BaoShiLanguage()
+                        {
+                            HHName = "선석", 
+                            HAName = "용혈정", 
+                            HCName = "혼옥", 
+                            HDName = "철백석", 
+                            AAName = "백호석", 
+                            ACName = "혈백석", 
+                            ADName = "섭혼석", 
+                            CCName = "명정", 
+                            CDName = "경석", 
+                            DDName = "현무석",
+                        },
                         DuanZaoWindowLanguage = new DuanZaoWindowLanguage()
                         {
                             HeCheng = "합성",
@@ -1018,6 +1063,19 @@ namespace Config
                 {
                     LanguageType.Ri, new LanguageItem()
                     {
+                        BaoShiLanguage = new BaoShiLanguage()
+                        {
+                            HHName = "仙石", 
+                            HAName = "竜血晶", 
+                            HCName = "魂玉", 
+                            HDName = "鉄魄石", 
+                            AAName = "白虎石", 
+                            ACName = "血珀石", 
+                            ADName = "摂魂石", 
+                            CCName = "命晶", 
+                            CDName = "鏡石", 
+                            DDName = "玄武石",
+                        },
                         DuanZaoWindowLanguage = new DuanZaoWindowLanguage()
                         {
                             HeCheng = "合成",
