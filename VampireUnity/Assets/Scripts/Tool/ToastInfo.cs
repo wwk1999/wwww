@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Mysql;
+using Prop.BaoShi;
 using TMPro;
 using Tool;
 using UnityEngine;
@@ -192,7 +194,21 @@ public class ToastInfo : MonoBehaviour
                     break;
             }
 
-            image.sprite = ResourcesConfig.GetPropSprite(propTable);
+            if (propTable.PropType == PropConfig.PropType.HH || propTable.PropType == PropConfig.PropType.HA ||
+                propTable.PropType == PropConfig.PropType.HC || propTable.PropType == PropConfig.PropType.HD ||
+                propTable.PropType == PropConfig.PropType.AA || propTable.PropType == PropConfig.PropType.AC ||
+                propTable.PropType == PropConfig.PropType.AD || propTable.PropType == PropConfig.PropType.CC ||
+                propTable.PropType == PropConfig.PropType.DD || propTable.PropType == PropConfig.PropType.CD)
+            {
+                BaoShiInfo baoshi = new BaoShiInfo();
+                baoshi.BaoShiType= (BaoShiType)(propTable.PropType-5);
+                baoshi.Quality = propTable.Quality;
+                image.sprite = ResourcesConfig.GetBaoShiSprite(baoshi);
+            }
+            else
+            {
+                image.sprite = ResourcesConfig.GetPropSprite(propTable);
+            }
         }
 
     }

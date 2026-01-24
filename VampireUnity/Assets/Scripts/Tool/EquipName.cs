@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Config;
 
 namespace Tool
 {
@@ -106,6 +107,76 @@ namespace Tool
             {"PurpleChiBang", "妖异之羽"},
             {"OrangeChiBang", "黑虚之羽"},
             {"RedChiBang", "无端之羽"},
+            
+            {"HH1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+            {"HH2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+            {"HH3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+            {"HH4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+            {"HH5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+            {"HH6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+            
+            {"HA1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+            {"HA2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+            {"HA3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+            {"HA4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+            {"HA5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+            {"HA6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+            
+            {"HC1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+            {"HC2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+            {"HC3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+            {"HC4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+            {"HC5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+            {"HC6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+            
+            {"HD1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+            {"HD2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+            {"HD3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+            {"HD4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+            {"HD5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+            {"HD6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+            
+            {"AA1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+            {"AA2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+            {"AA3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+            {"AA4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+            {"AA5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+            {"AA6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+            
+            {"AC1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+            {"AC2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+            {"AC3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+            {"AC4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+            {"AC5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+            {"AC6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+            
+            {"AD1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+            {"AD2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+            {"AD3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+            {"AD4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+            {"AD5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+            {"AD6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+            
+            {"CC1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+            {"CC2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+            {"CC3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+            {"CC4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+            {"CC5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+            {"CC6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+            
+            {"CD1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+            {"CD2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+            {"CD3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+            {"CD4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+            {"CD5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+            {"CD6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+            
+            {"DD1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+            {"DD2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+            {"DD3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+            {"DD4", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+            {"DD5", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+            {"DD6", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
         };
     }
 }
