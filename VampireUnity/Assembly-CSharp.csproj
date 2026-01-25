@@ -341,6 +341,7 @@
     <Compile Include="Assets\Scripts\Singleton\SingletonNameAttribute.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\Scripts\Equip\XiangQianGrid.cs" />
     <Compile Include="Assets\Scripts\Tool\UpgradeButton.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill3BaoZha.cs" />
     <Compile Include="Assets\Scripts\Prop\PropBase.cs" />

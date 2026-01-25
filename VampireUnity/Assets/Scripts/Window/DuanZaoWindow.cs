@@ -18,6 +18,7 @@ public enum PanelType
     XiLian,
     HeCheng,
     JinJie,
+    XiangQian
 }
 
 public enum HeChengType
@@ -151,11 +152,55 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI FuJiaAttribute;
     public TextMeshProUGUI XiLianButton;
 
+    //进阶界面
     
     public TextMeshProUGUI LinHun;
     public TextMeshProUGUI JingCui;
     public TextMeshProUGUI ShenHuaZhiXinCaiLiao;
     public TextMeshProUGUI JinJieButton;
+    public Text jinJiePageNumText;
+    public Button jinJieRight;
+    public Button jinJieLeft;
+    public Image jinJieEquipImage;
+    public Animator jinJieEdge;
+    public Image jinJieEquipBg;
+    public Button jinJie;
+    public GameObject jinJieEquipContent;
+    private int jinJiePageNum = 1;
+    private int jinJieEquipId = 0;
+
+    
+    //镶嵌界面
+    public GameObject XiangQianPanel;
+    public GameObject XiangQianEquipPanel;
+    public Button TopXiangQianButton;
+    public GameObject XiangQianEquipContent;
+    public Button XiangQianRight;
+    public Button XiangQianLeft;
+    private int XiangQianPageNum = 1;
+    private int XiangQianEquipId = 0;
+    public Image XiangQianEquipImage;
+    public Animator XiangQianEdge;
+    public Image XiangQianEquipBg;
+    public Text XiangQianPageNumText;
+    public Button XiangQian;
+    public Button XiangQianExitButton;
+
+
+    public TextMeshProUGUI XiangQianGreenName;
+    public TextMeshProUGUI XiangQianBlueName;
+    public TextMeshProUGUI XiangQianPurpleName;
+    public TextMeshProUGUI XiangQianOrangeName;
+    public TextMeshProUGUI XiangQianRedName;
+    public TextMeshProUGUI LevelText;
+    public TextMeshProUGUI LevelCount;
+    public TextMeshProUGUI Quality;
+    public TextMeshProUGUI XiangQianGreenQuality;
+    public TextMeshProUGUI XiangQianBlueQuality;
+    public TextMeshProUGUI XiangQianPurpleQuality;
+    public TextMeshProUGUI XiangQianOrangeQuality;
+    public TextMeshProUGUI XiangQianRedQuality;
+
 
     public void SwitchLanguage()
     {
@@ -193,22 +238,62 @@ public class DuanZaoWindow : MonoBehaviour
         JinJieButton.text = LanguageConfig.LanguageItems[PlayerData.S.langType].DuanZaoWindowLanguage.JinJie;
     }
     
-    //进阶界面
-    
-    public Text jinJiePageNumText;
-    public Button jinJieRight;
-    public Button jinJieLeft;
-    public Image jinJieEquipImage;
-    public Animator jinJieEdge;
-    public Image jinJieEquipBg;
-    public Button jinJie;
-    public GameObject jinJieEquipContent;
-    private int jinJiePageNum = 1;
-    private int jinJieEquipId = 0;
-
     private void OnEnable()
     {
         SwitchLanguage();
+    }
+
+    public void ShowXiangQianBag()
+    {
+        XiangQianEquipPanel.gameObject.SetActive(false);
+         foreach (Transform child in XiangQianEquipContent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        int startIndex = (PageNum - 1) * 35;
+        int endIndex = Mathf.Min(PageNum * 35, BagController.S.EquipIdList.Count);
+
+        List<EquipTable> list = BagController.S.EquipIdList.Values.ToList();
+
+        for (int i = startIndex; i < endIndex; i++)
+        {
+            GameObject xilianGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XiangQianGrid"),XiangQianEquipContent.transform);
+            xilianGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GetEquipSprite(list[i]);
+            xilianGrid.GetComponent<XiangQianGrid>().equipTable = list[i];
+            switch (list[i].Quality)
+            {
+                case 1:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.WhiteBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                    break;
+                case 2:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.GreenBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
+                    break;
+                case 3:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.BlueBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
+                    break;
+                case 4:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.PurpleBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                    break;
+                case 5:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.OrangeBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                    break;
+                case 6:
+                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                        ResourcesConfig.RedBg;
+                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
+                    break;
+            }
+        }
     }
 
     public void ShowJinJieBag()
@@ -1085,6 +1170,7 @@ public class DuanZaoWindow : MonoBehaviour
                 xiLianPanel.SetActive(false);
                 heChongPanel.SetActive(true);
                 jinJiePanel.SetActive(false);
+                XiangQianPanel.SetActive(false);
                 ResetItems();
                 _toggleState = false;
                 gou.gameObject.SetActive(_toggleState);
@@ -1093,6 +1179,7 @@ public class DuanZaoWindow : MonoBehaviour
                 xiLianPanel.SetActive(true);
                 heChongPanel.SetActive(false);
                 jinJiePanel.SetActive(false);
+                XiangQianPanel.SetActive(false);
                 ShowXiLianBag();
                 clickEquipid = 0;
                 break;
@@ -1100,8 +1187,17 @@ public class DuanZaoWindow : MonoBehaviour
                 xiLianPanel.SetActive(false);
                 heChongPanel.SetActive(false);
                 jinJiePanel.SetActive(true);
+                XiangQianPanel.SetActive(false);
                 ShowJinJieBag();
                 jinJiePageNum = 1;
+                break;
+            case PanelType.XiangQian:
+                xiLianPanel.SetActive(false);
+                heChongPanel.SetActive(false);
+                jinJiePanel.SetActive(false);
+                XiangQianPanel.SetActive(true);
+                ShowXiangQianBag();
+                XiangQianPageNum = 1;
                 break;
         }
     }
@@ -1355,6 +1451,10 @@ public class DuanZaoWindow : MonoBehaviour
         jinJieButton.onClick.AddListener(() =>
         {
             ShowPanel(PanelType.JinJie);
+        });
+        TopXiangQianButton.onClick.AddListener(() =>
+        {
+            ShowPanel(PanelType.XiangQian);
         });
         
         weaponFragmentButton.onClick.AddListener(() =>
