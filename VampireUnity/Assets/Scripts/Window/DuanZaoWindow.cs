@@ -201,6 +201,11 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI XiangQianOrangeQuality;
     public TextMeshProUGUI XiangQianRedQuality;
 
+    public Button EquipButton;
+    public Button BaoShiButton;
+    public GameObject XiangQianKongContent;
+
+    private bool isEquipPage=true;
 
     public void SwitchLanguage()
     {
@@ -1424,12 +1429,101 @@ public class DuanZaoWindow : MonoBehaviour
     {
         ObserverModuleManager.S.UnRegisterEvent("XiLian",XiLianEquip);
         ObserverModuleManager.S.UnRegisterEvent("JinJie",JinJieEquip);
+        ObserverModuleManager.S.UnRegisterEvent("XiangQian",XiangQianEquip);
+
+    }
+
+    public void XiangQianEquip(object[] obj)
+    {
+        EquipTable equip=obj[0] as EquipTable;
+        foreach (Transform item in XiangQianKongContent.transform)
+        {
+            Destroy(item.gameObject);
+        }
+
+        foreach (var baoshi in equip.BaoShiDic)
+        {
+            var baoshikong=Instantiate(Resources.Load("Prefabs/Equip/XiangQianEquipKong"),XiangQianKongContent.transform)as  GameObject;
+            EquipKong equipKong=baoshikong.GetComponent<EquipKong>();
+            equipKong.SetKong(baoshi.Value);
+        }
+        
+        XiangQianEquipPanel.gameObject.SetActive(true);
+        XiangQianGreenName.gameObject.SetActive(false);
+        XiangQianBlueName.gameObject.SetActive(false);
+        XiangQianPurpleName.gameObject.SetActive(false);
+        XiangQianOrangeName.gameObject.SetActive(false);
+        XiangQianRedName.gameObject.SetActive(false);
+        
+        XiangQianBlueQuality.gameObject.SetActive(false);
+        XiangQianGreenQuality.gameObject.SetActive(false);
+        XiangQianPurpleQuality.gameObject.SetActive(false);
+        XiangQianOrangeQuality.gameObject.SetActive(false);
+        XiangQianRedQuality.gameObject.SetActive(false);
+
+        Quality.text=LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Quality+"：";
+        level.text="等级：";
+        LevelCount.text = equip.EquipLevel.ToString();
+        XiangQianEquipImage.sprite = ResourcesConfig.GetEquipSprite(equip);
+        switch (equip.Quality)
+        {
+            case 2:
+                XiangQianGreenName.gameObject.SetActive(true);
+                XiangQianGreenQuality.gameObject.SetActive(true);
+                XiangQianGreenName.text = EquipName.EquipNameDic[equip.EquipName];
+                XiangQianGreenQuality.text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.GreenQuality;
+                XiangQianEquipBg.sprite = ResourcesConfig.GreenBg;
+                XiangQianEdge.Play("GreenEdge");
+                break;
+            
+            case 3:
+                XiangQianBlueName.gameObject.SetActive(true);
+                XiangQianBlueQuality.gameObject.SetActive(true);
+                XiangQianBlueName.text = EquipName.EquipNameDic[equip.EquipName];
+                XiangQianBlueQuality.text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.BlueQuality;
+                XiangQianEquipBg.sprite = ResourcesConfig.BlueBg;
+                XiangQianEdge.Play("BlueEdge");
+                break;
+            case 4:
+                XiangQianPurpleName.gameObject.SetActive(true);
+                XiangQianPurpleQuality.gameObject.SetActive(true);
+                XiangQianPurpleName.text = EquipName.EquipNameDic[equip.EquipName];
+                XiangQianPurpleQuality.text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.PurpleQuality;
+                XiangQianEquipBg.sprite = ResourcesConfig.PurpleBg;
+                XiangQianEdge.Play("PurpleEdge");
+                break;
+            
+            case 5:
+                XiangQianOrangeName.gameObject.SetActive(true);
+                XiangQianOrangeQuality.gameObject.SetActive(true);
+                XiangQianOrangeName.text = EquipName.EquipNameDic[equip.EquipName];
+                XiangQianOrangeQuality.text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.OrangeQuality;
+                XiangQianEquipBg.sprite = ResourcesConfig.OrangeBg;
+                XiangQianEdge.Play("OrangeEdge");
+                break;
+            
+            case 6:
+                XiangQianRedName.gameObject.SetActive(true);
+                XiangQianRedQuality.gameObject.SetActive(true);
+                XiangQianRedName.text = EquipName.EquipNameDic[equip.EquipName];
+                XiangQianRedQuality.text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.RedQuality;
+                XiangQianEquipBg.sprite = ResourcesConfig.RedBg;
+                XiangQianEdge.Play("RedEdge");
+                break;
+        }
     }
 
     private void Start()
     {
         ObserverModuleManager.S.RegisterEvent("XiLian",XiLianEquip);
         ObserverModuleManager.S.RegisterEvent("JinJie",JinJieEquip);
+        ObserverModuleManager.S.RegisterEvent("XiangQian",XiangQianEquip);
+
 
         ShowPanel(PanelType.HeCheng);
         heCheng.onClick.AddListener(()=>
