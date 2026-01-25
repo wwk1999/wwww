@@ -201,8 +201,8 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI XiangQianOrangeQuality;
     public TextMeshProUGUI XiangQianRedQuality;
 
-    public Button EquipButton;
-    public Button BaoShiButton;
+    public Button XiangQianEquipButton;
+    public Button XiangQianBaoShiButton;
     public GameObject XiangQianKongContent;
 
     private bool isEquipPage=true;
@@ -255,48 +255,108 @@ public class DuanZaoWindow : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        int startIndex = (PageNum - 1) * 35;
-        int endIndex = Mathf.Min(PageNum * 35, BagController.S.EquipIdList.Count);
 
-        List<EquipTable> list = BagController.S.EquipIdList.Values.ToList();
-
-        for (int i = startIndex; i < endIndex; i++)
+        if (isEquipPage)
         {
-            GameObject xilianGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XiangQianGrid"),XiangQianEquipContent.transform);
-            xilianGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GetEquipSprite(list[i]);
-            xilianGrid.GetComponent<XiangQianGrid>().equipTable = list[i];
-            switch (list[i].Quality)
+            int startIndex = (XiangQianPageNum - 1) * 35;
+            int endIndex = Mathf.Min(XiangQianPageNum * 35, BagController.S.EquipIdList.Count);
+
+            List<EquipTable> list = BagController.S.EquipIdList.Values.ToList();
+
+            for (int i = startIndex; i < endIndex; i++)
             {
-                case 1:
-                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.WhiteBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
-                    break;
-                case 2:
-                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.GreenBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
-                    break;
-                case 3:
-                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.BlueBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
-                    break;
-                case 4:
-                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.PurpleBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
-                    break;
-                case 5:
-                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.OrangeBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
-                    break;
-                case 6:
-                    xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                        ResourcesConfig.RedBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
-                    break;
+                GameObject xilianGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XiangQianGrid"),
+                    XiangQianEquipContent.transform);
+                xilianGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                    ResourcesConfig.GetEquipSprite(list[i]);
+                xilianGrid.GetComponent<XiangQianGrid>().equipTable = list[i];
+                switch (list[i].Quality)
+                {
+                    case 1:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.WhiteBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                        break;
+                    case 2:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.GreenBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
+                        break;
+                    case 3:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.BlueBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
+                        break;
+                    case 4:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.PurpleBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                        break;
+                    case 5:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.OrangeBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                        break;
+                    case 6:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.RedBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
+                        break;
+                }
+            }
+        }
+        else
+        {
+            int startIndex = (XiangQianPageNum - 1) * 35;
+            int endIndex = Mathf.Min(XiangQianPageNum * 35, BagController.S.PropList.Count);
+            List<PropTable> list = BagController.S.PropList.Values.ToList();
+             for (int i = startIndex; i < endIndex; i++)
+            {
+                if (list[i].PropType == PropConfig.PropType.WeaponFragment ||
+                    list[i].PropType == PropConfig.PropType.JingCui ||
+                    list[i].PropType == PropConfig.PropType.ShenHuaCaiLiao ||
+                    list[i].PropType == PropConfig.PropType.ChiBang || list[i].PropType == PropConfig.PropType.LingHun|| list[i].PropType == PropConfig.PropType.None)
+                {
+                    continue;
+                }
+                GameObject xilianGrid = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XiangQianBaoShiGrid"),
+                    XiangQianEquipContent.transform);
+                xilianGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
+                    ResourcesConfig.GetPropSprite(list[i]);
+                xilianGrid.GetComponent<XiangQianBaoShiGrid>().propTable = list[i];
+                switch (list[i].Quality)
+                {
+                    case 1:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.WhiteBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
+                        break;
+                    case 2:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.GreenBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
+                        break;
+                    case 3:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.BlueBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
+                        break;
+                    case 4:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.PurpleBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
+                        break;
+                    case 5:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.OrangeBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
+                        break;
+                    case 6:
+                        xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
+                            ResourcesConfig.RedBg;
+                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
+                        break;
+                }
             }
         }
     }
@@ -1201,8 +1261,9 @@ public class DuanZaoWindow : MonoBehaviour
                 heChongPanel.SetActive(false);
                 jinJiePanel.SetActive(false);
                 XiangQianPanel.SetActive(true);
-                ShowXiangQianBag();
+                isEquipPage = true;
                 XiangQianPageNum = 1;
+                ShowXiangQianBag();
                 break;
         }
     }
@@ -1523,6 +1584,45 @@ public class DuanZaoWindow : MonoBehaviour
         ObserverModuleManager.S.RegisterEvent("XiLian",XiLianEquip);
         ObserverModuleManager.S.RegisterEvent("JinJie",JinJieEquip);
         ObserverModuleManager.S.RegisterEvent("XiangQian",XiangQianEquip);
+        ObserverModuleManager.S.RegisterEvent("XiangQianBaoShi",XiangQianEquip);
+
+        XiangQianEquipButton.onClick.AddListener(() =>
+        {
+            isEquipPage = true;
+            XiangQianPageNum = 1;
+            XiangQianPageNumText.text = XiangQianPageNum.ToString();
+            ShowXiangQianBag();
+        });
+        
+        XiangQianBaoShiButton.onClick.AddListener(() =>
+        {
+            isEquipPage = false;
+            XiangQianPageNum = 1;
+            XiangQianPageNumText.text = XiangQianPageNum.ToString();
+            ShowXiangQianBag();
+        });
+        
+        XiangQianRight.onClick.AddListener(() =>
+        {
+            if (XiangQianPageNum >= 6)
+            {
+                return;
+            }
+            XiangQianPageNum++;
+            XiangQianPageNumText.text = XiangQianPageNum.ToString();
+            ShowXiangQianBag();
+        });
+        
+        XiangQianLeft.onClick.AddListener(() =>
+        {
+            if (XiangQianPageNum <= 1)
+            {
+                return;
+            }
+            XiangQianPageNum--;
+            XiangQianPageNumText.text = XiangQianPageNum.ToString();
+            ShowXiangQianBag();
+        });
 
 
         ShowPanel(PanelType.HeCheng);

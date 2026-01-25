@@ -1253,6 +1253,185 @@ public class ResourcesConfig : MonoBehaviour
                         return ZuiEYanZhu;
                 }
                 break;
+            case PropConfig.PropType.AA:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return AA1;
+                    case 2:
+                        return AA2;
+                    case 3:
+                        return AA3;
+                    case 4:
+                        return AA4;
+                    case 5:
+                        return AA5;
+                    case 6:
+                        return AA6;
+                }
+                break;
+            
+            case PropConfig.PropType.AC:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return AC1;
+                    case 2:
+                        return AC2;
+                    case 3:
+                        return AC3;
+                    case 4:
+                        return AC4;
+                    case 5:
+                        return AC5;
+                    case 6:
+                        return AC6;
+                }
+                break;
+            
+            case PropConfig.PropType.AD:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return AD1;
+                    case 2:
+                        return AD2;
+                    case 3:
+                        return AD3;
+                    case 4:
+                        return AD4;
+                    case 5:
+                        return AD5;
+                    case 6:
+                        return AD6;
+                }
+                break;
+            
+            case PropConfig.PropType.HH:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return HH1;
+                    case 2:
+                        return HH2;
+                    case 3:
+                        return HH3;
+                    case 4:
+                        return HH4;
+                    case 5:
+                        return HH5;
+                    case 6:
+                        return HH6;
+                }
+                break;
+            
+            case PropConfig.PropType.HA:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return HA1;
+                    case 2:
+                        return HA2;
+                    case 3:
+                        return HA3;
+                    case 4:
+                        return HA4;
+                    case 5:
+                        return HA5;
+                    case 6:
+                        return HA6;
+                }
+                break;
+            
+            case PropConfig.PropType.HC:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return HC1;
+                    case 2:
+                        return HC2;
+                    case 3:
+                        return HC3;
+                    case 4:
+                        return HC4;
+                    case 5:
+                        return HC5;
+                    case 6:
+                        return HC6;
+                }
+                break;
+            
+            case PropConfig.PropType.HD:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return HD1;
+                    case 2:
+                        return HD2;
+                    case 3:
+                        return HD3;
+                    case 4:
+                        return HD4;
+                    case 5:
+                        return HD5;
+                    case 6:
+                        return HD6;
+                }
+                break;
+            
+            case PropConfig.PropType.CC:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return CC1;
+                    case 2:
+                        return CC2;
+                    case 3:
+                        return CC3;
+                    case 4:
+                        return CC4;
+                    case 5:
+                        return CC5;
+                    case 6:
+                        return CC6;
+                }
+                break;
+            
+            case PropConfig.PropType.CD:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return CD1;
+                    case 2:
+                        return CD2;
+                    case 3:
+                        return CD3;
+                    case 4:
+                        return CD4;
+                    case 5:
+                        return CD5;
+                    case 6:
+                        return CD6;
+                }
+                break;
+            
+            case PropConfig.PropType.DD:
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        return DD1;
+                    case 2:
+                        return DD2;
+                    case 3:
+                        return DD3;
+                    case 4:
+                        return DD4;
+                    case 5:
+                        return DD5;
+                    case 6:
+                        return DD6;
+                }
+                break;
         }
 
         return null;

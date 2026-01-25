@@ -11991,8 +11991,8 @@ MonoBehaviour:
   XiangQianPurpleQuality: {fileID: 5465691322382850577}
   XiangQianOrangeQuality: {fileID: 5778842005171288324}
   XiangQianRedQuality: {fileID: 9220608359473265277}
-  EquipButton: {fileID: 4753027894853872507}
-  BaoShiButton: {fileID: 4837899683412567764}
+  XiangQianEquipButton: {fileID: 4753027894853872507}
+  XiangQianBaoShiButton: {fileID: 4837899683412567764}
   XiangQianKongContent: {fileID: 6862911906260684578}
 --- !u!1 &4260771354865299460
 GameObject:
@@ -14854,7 +14854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23816,7 +23816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

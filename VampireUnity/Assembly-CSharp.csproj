@@ -189,6 +189,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SpiderWeb.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEyeBullet.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\Skill1YiDianDouble.cs" />
+    <Compile Include="Assets\Scripts\Equip\XiangQianBaoShiGrid.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryNecklace.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipBase.cs" />
