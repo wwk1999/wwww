@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageButton: {fileID: 3753271196319937697}
+  Gou: {fileID: 820501572467891187}
 --- !u!1 &820501572467891187
 GameObject:
   m_ObjectHideFlags: 0

@@ -196,6 +196,92 @@ public class BagController : XSingleton<BagController>
             PropList.Add(206,new PropTable(){PropType = PropConfig.PropType.JingCui,Count = 100,Desc = "",EquipName = "RedJingCui",Quality = 6});
         }
     }
+
+    public void BaoShiDebug()
+    {
+        DebugTool(601, "HH1");
+        DebugTool(602, "HH2");
+        DebugTool(603, "HH3");
+        DebugTool(604, "HH4");
+        DebugTool(605, "HH5");
+        DebugTool(606, "HH6");
+        
+        DebugTool(701, "HA1");
+        DebugTool(702, "HA2");
+        DebugTool(703, "HA3");
+        DebugTool(704, "HA4");
+        DebugTool(705, "HA5");
+        DebugTool(706, "HA6");
+        
+        DebugTool(801, "HC1");
+        DebugTool(802, "HC2");
+        DebugTool(803, "HC3");
+        DebugTool(804, "HC4");
+        DebugTool(805, "HC5");
+        DebugTool(806, "HC6");
+        
+        DebugTool(901, "HD1");
+        DebugTool(902, "HD2");
+        DebugTool(903, "HD3");
+        DebugTool(904, "HD4");
+        DebugTool(905, "HD5");
+        DebugTool(906, "HD6");
+        
+        DebugTool(1001, "AA1");
+        DebugTool(1002, "AA2");
+        DebugTool(1003, "AA3");
+        DebugTool(1004, "AA4");
+        DebugTool(1005, "AA5");
+        DebugTool(1006, "AA6");
+        
+        DebugTool(1101, "AC1");
+        DebugTool(1102, "AC2");
+        DebugTool(1103, "AC3");
+        DebugTool(1104, "AC4");
+        DebugTool(1105, "AC5");
+        DebugTool(1106, "AC6");
+        
+        DebugTool(1201, "AD1");
+        DebugTool(1202, "AD2");
+        DebugTool(1203, "AD3");
+        DebugTool(1204, "AD4");
+        DebugTool(1205, "AD5");
+        DebugTool(1206, "AD6");
+        
+        DebugTool(1301, "CC1");
+        DebugTool(1302, "CC2");
+        DebugTool(1303, "CC3");
+        DebugTool(1304, "CC4");
+        DebugTool(1305, "CC5");
+        DebugTool(1306, "CC6");
+        
+        DebugTool(1401, "CD1");
+        DebugTool(1402, "CD2");
+        DebugTool(1403, "CD3");
+        DebugTool(1404, "CD4");
+        DebugTool(1405, "CD5");
+        DebugTool(1406, "CD6");
+        
+        DebugTool(1501, "DD1");
+        DebugTool(1502, "DD2");
+        DebugTool(1503, "DD3");
+        DebugTool(1504, "DD4");
+        DebugTool(1505, "DD5");
+        DebugTool(1506, "DD6");
+    }
+
+    public void DebugTool(int code,string Name)
+    {
+        if (PropList.ContainsKey(code))
+        {
+            PropList[code].Count += 100;
+        }
+        else
+        {
+            PropList.Add(code,new PropTable(){PropType = (PropConfig.PropType)(code/100),Count = 100,Desc = "",EquipName = Name,Quality = code%100});
+        }
+    }
+    
     
     public void WeaponFragmentDebug()
     {
@@ -258,7 +344,6 @@ public class BagController : XSingleton<BagController>
 
     protected override void Awake()
     {
-        Debug.Log("BagController Awake方法被调用");
         InitBag();
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += OnSceneLoaded;

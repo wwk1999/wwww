@@ -1579,12 +1579,35 @@ public class DuanZaoWindow : MonoBehaviour
         }
     }
 
+    public void XiangQianBaoShi(object[] obj)
+    {
+        XiangQianBaoShiGrid baoshi = obj[0] as XiangQianBaoShiGrid;
+        if (XiangQianEquipContent == null)
+        {
+            Debug.LogError("XiangQianEquipContent is null");
+            return;
+        }
+        foreach (Transform item in XiangQianEquipContent.transform)
+        {
+            XiangQianBaoShiGrid itembaoshi = item.gameObject.GetComponent<XiangQianBaoShiGrid>();
+            if (baoshi.propTable.PropType == itembaoshi.propTable.PropType &&
+                baoshi.propTable.Quality == itembaoshi.propTable.Quality)
+            {
+                itembaoshi.Gou.SetActive(true);
+            }
+            else
+            {
+                itembaoshi.Gou.SetActive(false);
+            }
+        }
+    }
+
     private void Start()
     {
         ObserverModuleManager.S.RegisterEvent("XiLian",XiLianEquip);
         ObserverModuleManager.S.RegisterEvent("JinJie",JinJieEquip);
         ObserverModuleManager.S.RegisterEvent("XiangQian",XiangQianEquip);
-        ObserverModuleManager.S.RegisterEvent("XiangQianBaoShi",XiangQianEquip);
+        ObserverModuleManager.S.RegisterEvent("XiangQianBaoShi",XiangQianBaoShi);
 
         XiangQianEquipButton.onClick.AddListener(() =>
         {

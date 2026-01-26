@@ -8,12 +8,13 @@ public class XiangQianBaoShiGrid : MonoBehaviour
 {
     [NonSerialized]public PropTable propTable;
     public Button imageButton;
+    public GameObject Gou;
 
     private void Start()
     {
         imageButton.onClick.AddListener(() =>
         {
-            ObserverModuleManager.S.SendEvent("XiangQianBaoShi",propTable);
+            ObserverModuleManager.S.SendEvent("XiangQianBaoShi",this);
         });
     }
 }

@@ -38,6 +38,8 @@ public class RoleWindow1 : MonoBehaviour
     public Button debugWeaponFragment;
     public Button debugJingCui;
     public Button debugPlayerLevel;
+    public Button debugBaoshi;
+
 
     
     
@@ -215,6 +217,10 @@ public class RoleWindow1 : MonoBehaviour
         Debug.Log("点击进入角色界面");
         InitEquip();
         ObserverModuleManager.S.RegisterEvent(ConstKeys.SwitchLanguage,SwitchLanguageObj);
+        debugBaoshi.onClick.AddListener(() =>
+        {
+           BagController.S.BaoShiDebug();
+        });
         settingButton.onClick.AddListener(() =>
         {
             WindowController.S.SettingWindow.SetActive(true);
