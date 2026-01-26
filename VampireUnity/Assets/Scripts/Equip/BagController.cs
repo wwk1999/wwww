@@ -787,20 +787,24 @@ public class BagController : XSingleton<BagController>
         {
             Destroy(child.gameObject);
         }
+        int startIndex = (PageNum - 1) * 40;
+        int endIndex = Mathf.Min(PageNum * 40, PropList.Count);
+        List<PropTable> list = PropList.Values.ToList();
+        List<int> keylist = PropList.Keys.ToList();
 
-        foreach (var prop in PropList)
+        for (int i = startIndex; i < endIndex; i++)
         {
-            if (prop.Value.Count <= 0)
+            if (list[i].Count <= 0)
             {
                 continue;
             }
             var propGrid = Instantiate(Resources.Load("Prefabs/Prop/PropGrid"), equipContent.transform) as GameObject;
-            propGrid.GetComponent<PropGrid>().propType = prop.Key;
-            propGrid.transform.Find("parent/Count").gameObject.SetActive(prop.Value.Count > 1);
-            propGrid.transform.Find("parent/Count").GetComponent<TextMeshProUGUI>().text = prop.Value.Count.ToString();
-            if (prop.Value.PropType == PropConfig.PropType.ShenHuaCaiLiao)
+            propGrid.GetComponent<PropGrid>().propType = keylist[i];
+            propGrid.transform.Find("parent/Count").gameObject.SetActive(list[i].Count > 1);
+            propGrid.transform.Find("parent/Count").GetComponent<TextMeshProUGUI>().text = list[i].Count.ToString();
+            if (list[i].PropType == PropConfig.PropType.ShenHuaCaiLiao)
             {
-                if (prop.Key == 305)
+                if (keylist[i] == 305)
                 {
                     propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
                     propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
@@ -814,7 +818,7 @@ public class BagController : XSingleton<BagController>
             }
             else
             {
-                switch (prop.Value.Quality)
+                switch (list[i].Quality)
                 {
                     case 1:
                         propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
@@ -850,10 +854,10 @@ public class BagController : XSingleton<BagController>
             }
             
 
-            switch (prop.Value.PropType)
+            switch (list[i].PropType)
             {
                 case PropConfig.PropType.WeaponFragment:
-                    switch (prop.Value.Quality)
+                    switch (list[i].Quality)
                     {
                         case 1:
                             propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
@@ -883,7 +887,7 @@ public class BagController : XSingleton<BagController>
 
                     break;
                 case PropConfig.PropType.JingCui:
-                    switch (prop.Value.Quality)
+                    switch (list[i].Quality)
                     {
                         case 1:
                             propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
@@ -915,7 +919,7 @@ public class BagController : XSingleton<BagController>
                 
                 
                 case PropConfig.PropType.ChiBang:
-                    switch (prop.Value.Quality)
+                    switch (list[i].Quality)
                     {
                         case 1:
                             propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
@@ -946,7 +950,7 @@ public class BagController : XSingleton<BagController>
                     break;
                 
                 case PropConfig.PropType.ShenHuaCaiLiao:
-                    switch (prop.Value.Quality)
+                    switch (list[i].Quality)
                     {
                         case 1:
                             propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =
@@ -983,8 +987,8 @@ public class BagController : XSingleton<BagController>
                 case PropConfig.PropType.CD:
                 case PropConfig.PropType.DD:
                     BaoShiInfo baoshi=new BaoShiInfo();
-                    baoshi.BaoShiType = (BaoShiType)(prop.Value.PropType - 5);
-                    baoshi.Quality=prop.Value.Quality;
+                    baoshi.BaoShiType = (BaoShiType)(list[i].PropType - 5);
+                    baoshi.Quality=list[i].Quality;
                     propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =ResourcesConfig.GetBaoShiSprite(baoshi);
                     break;
             }

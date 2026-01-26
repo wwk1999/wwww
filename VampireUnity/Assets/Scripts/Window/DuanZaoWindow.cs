@@ -204,7 +204,7 @@ public class DuanZaoWindow : MonoBehaviour
     public Button XiangQianEquipButton;
     public Button XiangQianBaoShiButton;
     public GameObject XiangQianKongContent;
-
+    private XiangQianBaoShiGrid ClickBaoShi=null;
     private bool isEquipPage=true;
 
     public void SwitchLanguage()
@@ -1263,6 +1263,7 @@ public class DuanZaoWindow : MonoBehaviour
                 XiangQianPanel.SetActive(true);
                 isEquipPage = true;
                 XiangQianPageNum = 1;
+                ClickBaoShi = null;
                 ShowXiangQianBag();
                 break;
         }
@@ -1582,6 +1583,7 @@ public class DuanZaoWindow : MonoBehaviour
     public void XiangQianBaoShi(object[] obj)
     {
         XiangQianBaoShiGrid baoshi = obj[0] as XiangQianBaoShiGrid;
+        ClickBaoShi = baoshi;
         if (XiangQianEquipContent == null)
         {
             Debug.LogError("XiangQianEquipContent is null");

@@ -93,22 +93,37 @@ public class BagPanel : MonoBehaviour
       //  pageText = transform.Find("Mask/BagBg/BagBG (1)/EquipPanel/PageNumText").GetComponent<Text>();
         leftPageButton.onClick.AddListener(() =>
         {
-            if (currentBagType == 2||BagController.S.PageNum==1)
+            if (BagController.S.PageNum==1)
             {
                 return;
             }
             BagController.S.PageNum= Mathf.Max(1, BagController.S.PageNum - 1);
-            BagController.S.ShowEquip();
+            if (currentBagType == 1)
+            {
+                BagController.S.ShowEquip();
+            }
+            else
+            {
+                BagController.S.ShowProp();
+            }
+            
             pageText.text = BagController.S.PageNum.ToString();
         });
         rightPageButton.onClick.AddListener(() =>
         {
-            if (currentBagType == 2||BagController.S.PageNum==5)
+            if (BagController.S.PageNum==5)
             {
                 return;
             }
             BagController.S.PageNum= Mathf.Min(5, BagController.S.PageNum + 1);
-            BagController.S.ShowEquip();
+            if (currentBagType == 1)
+            {
+                BagController.S.ShowEquip();
+            }
+            else
+            {
+                BagController.S.ShowProp();
+            }
             pageText.text = BagController.S.PageNum.ToString();
         });
     }
