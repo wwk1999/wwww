@@ -184,7 +184,7 @@ public class DuanZaoWindow : MonoBehaviour
     public Image XiangQianEquipBg;
     public Text XiangQianPageNumText;
     public Button XiangQian;
-    public Button XiangQianExitButton;
+    public Button XiangQianQuXiaButton;
 
 
     public TextMeshProUGUI XiangQianGreenName;
@@ -1589,6 +1589,194 @@ public class DuanZaoWindow : MonoBehaviour
         }
     }
 
+    public String GetBaoShiName(BaoShiInfo baoShiInfo)
+    {
+        switch (baoShiInfo.BaoShiType)
+        {
+            case BaoShiType.HH:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "HH1";
+                    case 2:
+                        return "HH2";
+                    case 3:
+                        return "HH3";
+                    case 4:
+                        return "HH4";
+                    case 5:
+                        return "HH5";
+                    case 6:
+                        return "HH6";
+                }
+                break;
+            
+            case BaoShiType.HA:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "HA1";
+                    case 2:
+                        return "HA2";
+                    case 3:
+                        return "HA3";
+                    case 4:
+                        return "HA4";
+                    case 5:
+                        return "HA5";
+                    case 6:
+                        return "HA6";
+                }
+                break;
+            
+            case BaoShiType.HC:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "HC1";
+                    case 2:
+                        return "HC2";
+                    case 3:
+                        return "HC3";
+                    case 4:
+                        return "HC4";
+                    case 5:
+                        return "HC5";
+                    case 6:
+                        return "HC6";
+                }
+                break;
+            
+            case BaoShiType.HD:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "HD1";
+                    case 2:
+                        return "HD2";
+                    case 3:
+                        return "HD3";
+                    case 4:
+                        return "HD4";
+                    case 5:
+                        return "HD5";
+                    case 6:
+                        return "HD6";
+                }
+                break;
+            
+            case BaoShiType.AA:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "AA1";
+                    case 2:
+                        return "AA2";
+                    case 3:
+                        return "AA3";
+                    case 4:
+                        return "AA4";
+                    case 5:
+                        return "AA5";
+                    case 6:
+                        return "AA6";
+                }
+                break;
+            
+            case BaoShiType.AC:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "AC1";
+                    case 2:
+                        return "AC2";
+                    case 3:
+                        return "AC3";
+                    case 4:
+                        return "AC4";
+                    case 5:
+                        return "AC5";
+                    case 6:
+                        return "AC6";
+                }
+                break;
+            
+            case BaoShiType.AD:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "AD1";
+                    case 2:
+                        return "AD2";
+                    case 3:
+                        return "AD3";
+                    case 4:
+                        return "AD4";
+                    case 5:
+                        return "AD5";
+                    case 6:
+                        return "AD6";
+                }
+                break;
+            
+            case BaoShiType.CC:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "CC1";
+                    case 2:
+                        return "CC2";
+                    case 3:
+                        return "CC3";
+                    case 4:
+                        return "CC4";
+                    case 5:
+                        return "CC5";
+                    case 6:
+                        return "CC6";
+                }
+                break;
+            
+            case BaoShiType.CD:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "CD1";
+                    case 2:
+                        return "CD2";
+                    case 3:
+                        return "CD3";
+                    case 4:
+                        return "CD4";
+                    case 5:
+                        return "CD5";
+                    case 6:
+                        return "CD6";
+                }
+                break;
+            
+            case BaoShiType.DD:
+                switch (baoShiInfo.Quality)
+                {
+                    case 1:
+                        return "DD1";
+                    case 2:
+                        return "DD2";
+                    case 3:
+                        return "DD3";
+                    case 4:
+                        return "DD4";
+                    case 5:
+                        return "DD5";
+                    case 6:
+                        return "DD6";
+                }
+                break;
+        }
+
+        return "";
+    }
+
     public int GetBaoShiCode(BaoShiInfo baoShiInfo)
     {
         switch (baoShiInfo.BaoShiType)
@@ -1624,7 +1812,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 704;
                     case 5:
                         return 705;
-                    case 7:
+                    case 6:
                         return 706;
                 }
                 break;
@@ -1642,7 +1830,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 804;
                     case 5:
                         return 805;
-                    case 8:
+                    case 6:
                         return 806;
                 }
                 break;
@@ -1660,7 +1848,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 904;
                     case 5:
                         return 905;
-                    case 9:
+                    case 6:
                         return 906;
                 }
                 break;
@@ -1678,7 +1866,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 1004;
                     case 5:
                         return 1005;
-                    case 10:
+                    case 6:
                         return 1006;
                 }
                 break;
@@ -1696,7 +1884,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 1104;
                     case 5:
                         return 1105;
-                    case 11:
+                    case 6:
                         return 1106;
                 }
                 break;
@@ -1714,7 +1902,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 1204;
                     case 5:
                         return 1205;
-                    case 12:
+                    case 6:
                         return 1206;
                 }
                 break;
@@ -1732,7 +1920,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 1304;
                     case 5:
                         return 1305;
-                    case 13:
+                    case 6:
                         return 1306;
                 }
                 break;
@@ -1750,7 +1938,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 1404;
                     case 5:
                         return 1405;
-                    case 14:
+                    case 6:
                         return 1406;
                 }
                 break;
@@ -1768,7 +1956,7 @@ public class DuanZaoWindow : MonoBehaviour
                         return 1504;
                     case 5:
                         return 1505;
-                    case 15:
+                    case 6:
                         return 1506;
                 }
                 break;
@@ -1792,9 +1980,47 @@ public class DuanZaoWindow : MonoBehaviour
     {
         if (ClickBaoShi == null || XiangQianEquipTable == null)
         {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"请选择宝石或装备");
             return;
         }
-        BaoShiInfo baoshiinfo=new BaoShiInfo(){BaoShiType = (BaoShiType)(ClickBaoShi.propTable.PropType - 5),Quality = ClickBaoShi.propTable.Quality};
+        BaoShiType baoShiType;
+        switch (ClickBaoShi.propTable.PropType)
+        {
+            case PropConfig.PropType.HH:
+                baoShiType = BaoShiType.HH;
+                break;
+            case PropConfig.PropType.HA:
+                baoShiType = BaoShiType.HA;
+                break;
+            case PropConfig.PropType.HC:
+                baoShiType = BaoShiType.HC;
+                break;
+            case PropConfig.PropType.HD:
+                baoShiType = BaoShiType.HD;
+                break;
+            case PropConfig.PropType.AA:
+                baoShiType = BaoShiType.AA;
+                break;
+            case PropConfig.PropType.AC:
+                baoShiType = BaoShiType.AC;
+                break;
+            case PropConfig.PropType.AD:
+                baoShiType = BaoShiType.AD;
+                break;
+            case PropConfig.PropType.CC:
+                baoShiType = BaoShiType.CC;
+                break;
+            case PropConfig.PropType.CD:
+                baoShiType = BaoShiType.CD;
+                break;
+            case PropConfig.PropType.DD:
+                baoShiType = BaoShiType.DD;
+                break;
+            default:
+                baoShiType = BaoShiType.None;
+                break;
+        }
+        BaoShiInfo baoshiinfo=new BaoShiInfo(){BaoShiType = baoShiType,Quality = ClickBaoShi.propTable.Quality};
         int code = GetBaoShiCode(baoshiinfo);
         if (BagController.S.PropList[code].Count <= 0)
         {
@@ -1805,14 +2031,52 @@ public class DuanZaoWindow : MonoBehaviour
         {
             if (item.Value.BaoShiType == BaoShiType.None)
             {
-                item.Value.BaoShiType = (BaoShiType)(ClickBaoShi.propTable.PropType - 5);
+                item.Value.BaoShiType = baoShiType;
                 item.Value.Quality=ClickBaoShi.propTable.Quality;
                 BagController.S.PropList[code].Count--;
                 RefreshBaoshi(ClickBaoShi, BagController.S.PropList[code].Count);
                 XiangQianEquip(XiangQianEquipTable);
+                return;
             }
         }
         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"装备孔不足");
+    }
+
+    public GameObject GetBaoShiGrid(BaoShiInfo baoshi)
+    {
+        if (isEquipPage)
+        {
+            return null;
+        }
+        foreach (Transform item in XiangQianEquipContent.transform)
+        {
+            var proptable = item.gameObject.GetComponent<XiangQianBaoShiGrid>().propTable;
+            if ((int)(proptable.PropType - 5) == (int)baoshi.BaoShiType && proptable.Quality == baoshi.Quality)
+            {
+                return item.gameObject;
+            }
+        }
+
+        return null;
+    }
+
+    public void QuXia()
+    {
+        foreach (var item in XiangQianEquipTable.BaoShiDic)
+        {
+            int code = GetBaoShiCode(item.Value);
+            item.Value.BaoShiType=BaoShiType.None;
+            if (BagController.S.PropList.ContainsKey(code))
+            {
+                BagController.S.PropList[code].Count++;
+            }
+            else
+            {
+                BagController.S.PropList.Add(code,new PropTable(){Count = 1,Desc = "",EquipName = GetBaoShiName(item.Value),PropType = (PropConfig.PropType)(item.Value.BaoShiType+5),Quality = item.Value.Quality});
+            }
+        }
+        XiangQianEquip(XiangQianEquipTable);
+        ShowXiangQianBag();
     }
 
     public void XiangQianBaoShi(object[] obj)
@@ -1888,6 +2152,10 @@ public class DuanZaoWindow : MonoBehaviour
         XiangQian.onClick.AddListener(() =>
         {
             XiangQianButtonClick();
+        });
+        XiangQianQuXiaButton.onClick.AddListener(() =>
+        {
+            QuXia();
         });
 
 
