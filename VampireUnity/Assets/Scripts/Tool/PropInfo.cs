@@ -1,4 +1,5 @@
 using System;
+using Config;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -94,7 +95,7 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void SetInstance(int prop)
     {
-        if (prop / 100 == 1 || prop / 100 == 2 || prop / 100 == 4)
+        if (prop / 100 != 3)
         {
             switch (prop%100)
             {
@@ -275,6 +276,322 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 break;
             case 406:
                 instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.RedChiBang;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            
+            
+            
+            case 601:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HH1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 602:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HH2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 603:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HH3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 604:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HH4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 605:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HH5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 606:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HH6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            
+            
+            
+            case 701:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HA1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 702:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HA2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 703:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HA3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 704:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HA4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 705:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HA5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 706:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HA6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 801:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HC1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 802:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HC2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 803:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HC3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 804:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HC4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 805:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HC5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 806:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HC6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 901:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HD1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 902:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HD2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 903:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HD3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 904:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HD4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 905:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HD5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 906:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.HD6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 1001:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AA1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1002:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AA2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1003:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AA3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1004:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AA4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1005:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AA5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1006:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AA6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 1101:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AC1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1102:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AC2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1103:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AC3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1104:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AC4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1105:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AC5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1106:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AC6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 1201:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AD1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1202:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AD2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1203:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AD3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1204:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AD4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1205:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AD5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1206:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.AD6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 1301:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CC1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1302:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CC2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1303:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CC3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1304:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CC4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1305:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CC5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1306:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CC6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 1401:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CD1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1402:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CD2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1403:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CD3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1404:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CD4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1405:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CD5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1406:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.CD6;
+                instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 1501:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.DD1;
+                instance.transform.Find("bg/Name/Name1").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1502:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.DD2;
+                instance.transform.Find("bg/Name/Name2").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1503:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.DD3;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1504:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.DD4;
+                instance.transform.Find("bg/Name/Name4").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1505:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.DD5;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
+                instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            case 1506:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.DD6;
                 instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
                 instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
                 break;

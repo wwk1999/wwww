@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using UnityEngine;
 
 public class PropConfig : MonoBehaviour
@@ -52,6 +53,76 @@ public class PropConfig : MonoBehaviour
       { 404,"史诗羽毛"},
       { 405,"传说羽毛"},
       { 406,"神话羽毛"},
+      
+      { 601,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+      { 602,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+      { 603,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+      { 604,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+      { 605,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+      { 606,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
+      
+      { 701,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+      { 702,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+      { 703,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+      { 704,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+      { 705,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+      { 706,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HAName},
+      
+      { 801,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+      { 802,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+      { 803,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+      { 804,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+      { 805,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+      { 806,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCName},
+      
+      { 901,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+      { 902,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+      { 903,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+      { 904,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+      { 905,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+      { 906,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDName},
+      
+      { 1001,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+      { 1002,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+      { 1003,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+      { 1004,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+      { 1005,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+      { 1006,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AAName},
+      
+      { 1101,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+      { 1102,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+      { 1103,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+      { 1104,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+      { 1105,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+      { 1106,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACName},
+      
+      { 1201,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+      { 1202,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+      { 1203,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+      { 1204,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+      { 1205,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+      { 1206,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADName},
+      
+      { 1301,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+      { 1302,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+      { 1303,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+      { 1304,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+      { 1305,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+      { 1306,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
+      
+      { 1401,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+      { 1402,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+      { 1403,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+      { 1404,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+      { 1405,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+      { 1406,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
+      
+      { 1501,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+      { 1502,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+      { 1503,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+      { 1504,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+      { 1505,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+      { 1506,LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
    };
 
 
@@ -84,5 +155,75 @@ public class PropConfig : MonoBehaviour
       {404,"战羽遗留，蕴含着磅礴之力" },
       {405,"传说羽翎，承载远古飞兽的力量印记" },
       {406,"羽端汇星辰，跨界之羽，进阶的终极之选" },
+      
+      {601,"天地灵气所钟，大幅增强生命本源" },
+      {602,"天地灵气所钟，大幅增强生命本源" },
+      {603,"天地灵气所钟，大幅增强生命本源" },
+      {604,"天地灵气所钟，大幅增强生命本源" },
+      {605,"天地灵气所钟，大幅增强生命本源" },
+      {606,"天地灵气所钟，大幅增强生命本源" },
+      
+      {701,"龙血浇灌而成，赋予生命与毁灭之力" },
+      {702,"龙血浇灌而成，赋予生命与毁灭之力" },
+      {703,"龙血浇灌而成，赋予生命与毁灭之力" },
+      {704,"龙血浇灌而成，赋予生命与毁灭之力" },
+      {705,"龙血浇灌而成，赋予生命与毁灭之力" },
+      {706,"龙血浇灌而成，赋予生命与毁灭之力" },
+      
+      {801,"温养魂魄之玉，让生命与暴击完美共鸣" },
+      {802,"温养魂魄之玉，让生命与暴击完美共鸣" },
+      {803,"温养魂魄之玉，让生命与暴击完美共鸣" },
+      {804,"温养魂魄之玉，让生命与暴击完美共鸣" },
+      {805,"温养魂魄之玉，让生命与暴击完美共鸣" },
+      {806,"温养魂魄之玉，让生命与暴击完美共鸣" },
+      
+      {901,"不屈战魂所化，铸就钢铁般的生命防线" },
+      {902,"不屈战魂所化，铸就钢铁般的生命防线" },
+      {903,"不屈战魂所化，铸就钢铁般的生命防线" },
+      {904,"不屈战魂所化，铸就钢铁般的生命防线" },
+      {905,"不屈战魂所化，铸就钢铁般的生命防线" },
+      {906,"不屈战魂所化，铸就钢铁般的生命防线" },
+      
+      {1001,"白虎凶星之力，纯粹追求极致的物理破坏" },
+      {1002,"白虎凶星之力，纯粹追求极致的物理破坏" },
+      {1003,"白虎凶星之力，纯粹追求极致的物理破坏" },
+      {1004,"白虎凶星之力，纯粹追求极致的物理破坏" },
+      {1005,"白虎凶星之力，纯粹追求极致的物理破坏" },
+      {1006,"白虎凶星之力，纯粹追求极致的物理破坏" },
+      
+      {1101,"凝结杀戮精华，让每一次攻击都直指要害" },
+      {1102,"凝结杀戮精华，让每一次攻击都直指要害" },
+      {1103,"凝结杀戮精华，让每一次攻击都直指要害" },
+      {1104,"凝结杀戮精华，让每一次攻击都直指要害" },
+      {1105,"凝结杀戮精华，让每一次攻击都直指要害" },
+      {1106,"凝结杀戮精华，让每一次攻击都直指要害" },
+      
+      {1201,"攻防一体奇石，在坚固堡垒中暗藏杀机" },
+      {1202,"攻防一体奇石，在坚固堡垒中暗藏杀机" },
+      {1203,"攻防一体奇石，在坚固堡垒中暗藏杀机" },
+      {1204,"攻防一体奇石，在坚固堡垒中暗藏杀机" },
+      {1205,"攻防一体奇石，在坚固堡垒中暗藏杀机" },
+      {1206,"攻防一体奇石，在坚固堡垒中暗藏杀机" },
+      
+      {1301,"窥见命运裂隙，将战斗的胜负归于概率之神" },
+      {1302,"窥见命运裂隙，将战斗的胜负归于概率之神" },
+      {1303,"窥见命运裂隙，将战斗的胜负归于概率之神" },
+      {1304,"窥见命运裂隙，将战斗的胜负归于概率之神" },
+      {1305,"窥见命运裂隙，将战斗的胜负归于概率之神" },
+      {1306,"窥见命运裂隙，将战斗的胜负归于概率之神" },
+      
+      {1401,"完美格挡反击，从绝对防御中寻得制胜一击" },
+      {1402,"完美格挡反击，从绝对防御中寻得制胜一击" },
+      {1403,"完美格挡反击，从绝对防御中寻得制胜一击" },
+      {1404,"完美格挡反击，从绝对防御中寻得制胜一击" },
+      {1405,"完美格挡反击，从绝对防御中寻得制胜一击" },
+      {1406,"完美格挡反击，从绝对防御中寻得制胜一击" },
+      
+      {1501,"背负玄武汉子，将自身化为不可逾越的叹息之墙" },
+      {1502,"背负玄武汉子，将自身化为不可逾越的叹息之墙" },
+      {1503,"背负玄武汉子，将自身化为不可逾越的叹息之墙" },
+      {1504,"背负玄武汉子，将自身化为不可逾越的叹息之墙" },
+      {1505,"背负玄武汉子，将自身化为不可逾越的叹息之墙" },
+      {1506,"背负玄武汉子，将自身化为不可逾越的叹息之墙" },
    };
 }

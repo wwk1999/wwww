@@ -848,7 +848,7 @@ public class BagController : XSingleton<BagController>
                     case 6:
                         propGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
                         propGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
-                            ResourcesConfig.OrangeBg;
+                            ResourcesConfig.RedBg;
                         break;
                 }
             }
