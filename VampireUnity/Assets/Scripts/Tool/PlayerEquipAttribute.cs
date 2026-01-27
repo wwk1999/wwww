@@ -64,6 +64,20 @@ public class PlayerEquipAttribute :  MonoBehaviour, IPointerEnterHandler, IPoint
       }
    }
    
+   public void SetKong(EquipTable equipTable)
+   {
+       BagEquipAttributeInfo bagEquipAttributeInfo=instance.GetComponent<BagEquipAttributeInfo>();
+       foreach (Transform item in bagEquipAttributeInfo.kongListContent.transform)
+       {
+           Destroy(item.gameObject);
+       }
+
+       foreach (var item in equipTable.BaoShiDic)
+       {
+           EquipKong baoShiKong=Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipKong"),bagEquipAttributeInfo.kongListContent.transform).GetComponent<EquipKong>();
+           baoShiKong.SetKong(item.Value);
+       }
+   }
    
    
    public void OnPointerEnter(PointerEventData eventData)
@@ -147,6 +161,7 @@ public class PlayerEquipAttribute :  MonoBehaviour, IPointerEnterHandler, IPoint
         var canvasRect = parentCanvas.GetComponent<RectTransform>();
         instance = Instantiate(prefab, parentCanvas.transform);
         BagEquipAttributeInfo bagEquipAttributeInfo=instance.GetComponent<BagEquipAttributeInfo>();
+        SetKong(equipTable);
         
         if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
         {

@@ -1541,7 +1541,14 @@ public class DuanZaoWindow : MonoBehaviour
             case 2:
                 XiangQianGreenName.gameObject.SetActive(true);
                 XiangQianGreenQuality.gameObject.SetActive(true);
-                XiangQianGreenName.text = EquipName.EquipNameDic[equip.EquipName];
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    XiangQianGreenName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    XiangQianGreenName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }
                 XiangQianGreenQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.GreenQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.GreenBg;
@@ -1551,8 +1558,14 @@ public class DuanZaoWindow : MonoBehaviour
             case 3:
                 XiangQianBlueName.gameObject.SetActive(true);
                 XiangQianBlueQuality.gameObject.SetActive(true);
-                XiangQianBlueName.text = EquipName.EquipNameDic[equip.EquipName];
-                XiangQianBlueQuality.text =
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    XiangQianBlueName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    XiangQianBlueName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }                XiangQianBlueQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.BlueQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.BlueBg;
                 XiangQianEdge.Play("BlueEdge");
@@ -1560,8 +1573,14 @@ public class DuanZaoWindow : MonoBehaviour
             case 4:
                 XiangQianPurpleName.gameObject.SetActive(true);
                 XiangQianPurpleQuality.gameObject.SetActive(true);
-                XiangQianPurpleName.text = EquipName.EquipNameDic[equip.EquipName];
-                XiangQianPurpleQuality.text =
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    XiangQianPurpleName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    XiangQianPurpleName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }                XiangQianPurpleQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.PurpleQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.PurpleBg;
                 XiangQianEdge.Play("PurpleEdge");
@@ -1570,8 +1589,15 @@ public class DuanZaoWindow : MonoBehaviour
             case 5:
                 XiangQianOrangeName.gameObject.SetActive(true);
                 XiangQianOrangeQuality.gameObject.SetActive(true);
-                XiangQianOrangeName.text = EquipName.EquipNameDic[equip.EquipName];
-                XiangQianOrangeQuality.text =
+                
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    XiangQianOrangeName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    XiangQianOrangeName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }                XiangQianOrangeQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.OrangeQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.OrangeBg;
                 XiangQianEdge.Play("OrangeEdge");
@@ -1580,8 +1606,14 @@ public class DuanZaoWindow : MonoBehaviour
             case 6:
                 XiangQianRedName.gameObject.SetActive(true);
                 XiangQianRedQuality.gameObject.SetActive(true);
-                XiangQianRedName.text = EquipName.EquipNameDic[equip.EquipName];
-                XiangQianRedQuality.text =
+                if (equip.OrangeEntry1 == EntryConfig.OrangeEntry.None)
+                {
+                    XiangQianRedName.text = EquipName.EquipNameDic[equip.EquipName];
+                }
+                else
+                {
+                    XiangQianRedName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                }                XiangQianRedQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.RedQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.RedBg;
                 XiangQianEdge.Play("RedEdge");

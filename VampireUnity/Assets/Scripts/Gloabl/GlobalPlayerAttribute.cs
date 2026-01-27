@@ -43,7 +43,27 @@ public class GlobalPlayerAttribute
    public static float BaoShiDefense => GetBaoShiDefense();
    public static float BaoShiHp => GetBaoShiHp();
    public static float BaoShiCrit => GetBaoShiCrit();
+   
+   public static int BaoShiTeXiao3Count=>GetBaoShiTeXiao3Count();
 
+   public static float BaoShiXiaoGuo => BaoShiTeXiao3Count * 0.1f;
+
+   public static int HH5Count => GetHH5Count();
+   public static int HA5Count => GetHA5Count();
+   public static int HC5Count => GetHC5Count();
+   public static int HD5Count => GetHD5Count();
+   public static int AA5Count => GetAA5Count();
+   public static int AC5Count => GetAC5Count();
+   public static int AD5Count => GetAD5Count();
+   public static int CC5Count => GetCC5Count();
+   public static int CD5Count => GetCD5Count();
+   public static int DD5Count => GetDD5Count();
+
+   
+   
+   
+   
+   
    
    
    public static bool IsGame = false;
@@ -54,6 +74,1322 @@ public class GlobalPlayerAttribute
    public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
 
 
+
+   public static int GetHH5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.HH && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.HH &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.HH && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.HH &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.HH)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.HH && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.HH &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.HH && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.HH &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.HH)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.HH && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.HH &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.HH && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.HH &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.HH)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.HH && Ring.BaoShiDic[2].BaoShiType == BaoShiType.HH &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.HH && Ring.BaoShiDic[4].BaoShiType == BaoShiType.HH &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.HH)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.HH && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.HH &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.HH && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.HH &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.HH)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.HH && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.HH &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.HH && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.HH &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.HH)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   
+   public static int GetHA5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.HA && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.HA &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.HA && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.HA &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.HA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.HA && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.HA &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.HA && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.HA &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.HA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.HA && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.HA &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.HA && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.HA &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.HA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.HA && Ring.BaoShiDic[2].BaoShiType == BaoShiType.HA &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.HA && Ring.BaoShiDic[4].BaoShiType == BaoShiType.HA &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.HA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.HA && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.HA &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.HA && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.HA &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.HA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.HA && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.HA &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.HA && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.HA &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.HA)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   public static int GetHC5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.HC && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.HC &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.HC && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.HC &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.HC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.HC && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.HC &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.HC && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.HC &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.HC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.HC && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.HC &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.HC && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.HC &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.HC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.HC && Ring.BaoShiDic[2].BaoShiType == BaoShiType.HC &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.HC && Ring.BaoShiDic[4].BaoShiType == BaoShiType.HC &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.HC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.HC && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.HC &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.HC && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.HC &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.HC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.HC && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.HC &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.HC && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.HC &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.HC)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   public static int GetHD5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.HD && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.HD &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.HD && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.HD &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.HD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.HD && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.HD &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.HD && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.HD &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.HD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.HD && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.HD &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.HD && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.HD &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.HD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.HD && Ring.BaoShiDic[2].BaoShiType == BaoShiType.HD &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.HD && Ring.BaoShiDic[4].BaoShiType == BaoShiType.HD &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.HD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.HD && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.HD &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.HD && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.HD &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.HD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.HD && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.HD &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.HD && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.HD &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.HD)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   public static int GetAA5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.AA && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.AA &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.AA && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.AA &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.AA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.AA && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.AA &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.AA && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.AA &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.AA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.AA && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.AA &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.AA && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.AA &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.AA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.AA && Ring.BaoShiDic[2].BaoShiType == BaoShiType.AA &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.AA && Ring.BaoShiDic[4].BaoShiType == BaoShiType.AA &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.AA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.AA && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.AA &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.AA && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.AA &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.AA)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.AA && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.AA &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.AA && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.AA &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.AA)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   public static int GetAC5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.AC && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.AC &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.AC && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.AC &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.AC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.AC && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.AC &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.AC && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.AC &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.AC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.AC && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.AC &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.AC && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.AC &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.AC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.AC && Ring.BaoShiDic[2].BaoShiType == BaoShiType.AC &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.AC && Ring.BaoShiDic[4].BaoShiType == BaoShiType.AC &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.AC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.AC && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.AC &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.AC && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.AC &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.AC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.AC && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.AC &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.AC && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.AC &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.AC)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   public static int GetAD5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.AD && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.AD &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.AD && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.AD &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.AD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.AD && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.AD &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.AD && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.AD &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.AD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.AD && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.AD &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.AD && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.AD &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.AD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.AD && Ring.BaoShiDic[2].BaoShiType == BaoShiType.AD &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.AD && Ring.BaoShiDic[4].BaoShiType == BaoShiType.AD &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.AD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.AD && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.AD &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.AD && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.AD &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.AD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.AD && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.AD &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.AD && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.AD &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.AD)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   public static int GetCC5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.CC && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.CC &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.CC && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.CC &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.CC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.CC && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.CC &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.CC && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.CC &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.CC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.CC && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.CC &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.CC && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.CC &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.CC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.CC && Ring.BaoShiDic[2].BaoShiType == BaoShiType.CC &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.CC && Ring.BaoShiDic[4].BaoShiType == BaoShiType.CC &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.CC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.CC && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.CC &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.CC && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.CC &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.CC)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.CC && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.CC &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.CC && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.CC &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.CC)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   public static int GetCD5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.CD && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.CD &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.CD && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.CD &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.CD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.CD && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.CD &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.CD && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.CD &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.CD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.CD && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.CD &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.CD && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.CD &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.CD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.CD && Ring.BaoShiDic[2].BaoShiType == BaoShiType.CD &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.CD && Ring.BaoShiDic[4].BaoShiType == BaoShiType.CD &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.CD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.CD && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.CD &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.CD && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.CD &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.CD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.CD && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.CD &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.CD && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.CD &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.CD)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   public static int GetDD5Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 5)
+           {
+               if (Cloak.BaoShiDic[1].BaoShiType == BaoShiType.DD && Cloak.BaoShiDic[2].BaoShiType == BaoShiType.DD &&
+                   Cloak.BaoShiDic[3].BaoShiType == BaoShiType.DD && Cloak.BaoShiDic[4].BaoShiType == BaoShiType.DD &&
+                   Cloak.BaoShiDic[5].BaoShiType == BaoShiType.DD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 5)
+           {
+               if (Helmet.BaoShiDic[1].BaoShiType == BaoShiType.DD && Helmet.BaoShiDic[2].BaoShiType == BaoShiType.DD &&
+                   Helmet.BaoShiDic[3].BaoShiType == BaoShiType.DD && Helmet.BaoShiDic[4].BaoShiType == BaoShiType.DD &&
+                   Helmet.BaoShiDic[5].BaoShiType == BaoShiType.DD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 5)
+           {
+               if (Necklace.BaoShiDic[1].BaoShiType == BaoShiType.DD && Necklace.BaoShiDic[2].BaoShiType == BaoShiType.DD &&
+                   Necklace.BaoShiDic[3].BaoShiType == BaoShiType.DD && Necklace.BaoShiDic[4].BaoShiType == BaoShiType.DD &&
+                   Necklace.BaoShiDic[5].BaoShiType == BaoShiType.DD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 5)
+           {
+               if (Ring.BaoShiDic[1].BaoShiType == BaoShiType.DD && Ring.BaoShiDic[2].BaoShiType == BaoShiType.DD &&
+                   Ring.BaoShiDic[3].BaoShiType == BaoShiType.DD && Ring.BaoShiDic[4].BaoShiType == BaoShiType.DD &&
+                   Ring.BaoShiDic[5].BaoShiType == BaoShiType.DD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 5)
+           {
+               if (Shoe.BaoShiDic[1].BaoShiType == BaoShiType.DD && Shoe.BaoShiDic[2].BaoShiType == BaoShiType.DD &&
+                   Shoe.BaoShiDic[3].BaoShiType == BaoShiType.DD && Shoe.BaoShiDic[4].BaoShiType == BaoShiType.DD &&
+                   Shoe.BaoShiDic[5].BaoShiType == BaoShiType.DD)
+               {
+                   value++;
+               }
+           }
+       }
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 5)
+           {
+               if (Cloth.BaoShiDic[1].BaoShiType == BaoShiType.DD && Cloth.BaoShiDic[2].BaoShiType == BaoShiType.DD &&
+                   Cloth.BaoShiDic[3].BaoShiType == BaoShiType.DD && Cloth.BaoShiDic[4].BaoShiType == BaoShiType.DD &&
+                   Cloth.BaoShiDic[5].BaoShiType == BaoShiType.DD)
+               {
+                   value++;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   
+   public static int GetBaoShiTeXiao3Count()
+   {
+       int value = 0;
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+           if (Cloak.BaoShiDic.Count >= 3)
+           {
+               int HHCount = 0;
+               int HACount = 0;
+               int HCCount = 0;
+               int HDCount = 0;
+               int AACount = 0;
+               int ACCount = 0;
+               int ADCount = 0;
+               int CCCount = 0;
+               int CDCount = 0;
+               int DDCount = 0;
+                foreach (var baoshi in Cloak.BaoShiDic)
+                {
+                    switch (baoshi.Value.BaoShiType)
+                    {
+                        case BaoShiType.HH:
+                            HHCount++;
+                            break;
+                        case BaoShiType.HA:
+                            HACount++;
+                            break;
+                        case BaoShiType.HC:
+                            HCCount++;
+                            break;
+                        case BaoShiType.HD:
+                            HDCount++;
+                            break;
+                        case BaoShiType.AA:
+                            AACount++;
+                            break;
+                        case BaoShiType.AC:
+                            ACCount++;
+                            break;
+                        case BaoShiType.AD:
+                            ADCount++;
+                            break;
+                        case BaoShiType.CC:
+                            CCCount++;
+                            break;
+                        case BaoShiType.CD:
+                            CDCount++;
+                            break;
+                        case BaoShiType.DD:
+                            DDCount++;
+                            break;
+                    }
+                }
+
+                if (HHCount >= 3 || HACount >= 3 || HCCount >= 3 || HDCount >= 3 || AACount >= 3 || ACCount >= 3 ||
+                    ADCount >= 3 || CCCount >= 3 || CDCount >= 3 || DDCount >= 3)
+                {
+                    value++;
+                }
+           }
+       }
+       
+       
+       
+       
+       
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+           if (Helmet.BaoShiDic.Count >= 3)
+           {
+               int HHCount = 0;
+               int HACount = 0;
+               int HCCount = 0;
+               int HDCount = 0;
+               int AACount = 0;
+               int ACCount = 0;
+               int ADCount = 0;
+               int CCCount = 0;
+               int CDCount = 0;
+               int DDCount = 0;
+                foreach (var baoshi in Helmet.BaoShiDic)
+                {
+                    switch (baoshi.Value.BaoShiType)
+                    {
+                        case BaoShiType.HH:
+                            HHCount++;
+                            break;
+                        case BaoShiType.HA:
+                            HACount++;
+                            break;
+                        case BaoShiType.HC:
+                            HCCount++;
+                            break;
+                        case BaoShiType.HD:
+                            HDCount++;
+                            break;
+                        case BaoShiType.AA:
+                            AACount++;
+                            break;
+                        case BaoShiType.AC:
+                            ACCount++;
+                            break;
+                        case BaoShiType.AD:
+                            ADCount++;
+                            break;
+                        case BaoShiType.CC:
+                            CCCount++;
+                            break;
+                        case BaoShiType.CD:
+                            CDCount++;
+                            break;
+                        case BaoShiType.DD:
+                            DDCount++;
+                            break;
+                    }
+                }
+
+                if (HHCount >= 3 || HACount >= 3 || HCCount >= 3 || HDCount >= 3 || AACount >= 3 || ACCount >= 3 ||
+                    ADCount >= 3 || CCCount >= 3 || CDCount >= 3 || DDCount >= 3)
+                {
+                    value++;
+                }
+           }
+       }
+       
+       
+       
+       
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           if (Cloth.BaoShiDic.Count >= 3)
+           {
+               int HHCount = 0;
+               int HACount = 0;
+               int HCCount = 0;
+               int HDCount = 0;
+               int AACount = 0;
+               int ACCount = 0;
+               int ADCount = 0;
+               int CCCount = 0;
+               int CDCount = 0;
+               int DDCount = 0;
+                foreach (var baoshi in Cloth.BaoShiDic)
+                {
+                    switch (baoshi.Value.BaoShiType)
+                    {
+                        case BaoShiType.HH:
+                            HHCount++;
+                            break;
+                        case BaoShiType.HA:
+                            HACount++;
+                            break;
+                        case BaoShiType.HC:
+                            HCCount++;
+                            break;
+                        case BaoShiType.HD:
+                            HDCount++;
+                            break;
+                        case BaoShiType.AA:
+                            AACount++;
+                            break;
+                        case BaoShiType.AC:
+                            ACCount++;
+                            break;
+                        case BaoShiType.AD:
+                            ADCount++;
+                            break;
+                        case BaoShiType.CC:
+                            CCCount++;
+                            break;
+                        case BaoShiType.CD:
+                            CDCount++;
+                            break;
+                        case BaoShiType.DD:
+                            DDCount++;
+                            break;
+                    }
+                }
+
+                if (HHCount >= 3 || HACount >= 3 || HCCount >= 3 || HDCount >= 3 || AACount >= 3 || ACCount >= 3 ||
+                    ADCount >= 3 || CCCount >= 3 || CDCount >= 3 || DDCount >= 3)
+                {
+                    value++;
+                }
+           }
+       }
+       
+       
+       
+       
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+           if (Necklace.BaoShiDic.Count >= 3)
+           {
+               int HHCount = 0;
+               int HACount = 0;
+               int HCCount = 0;
+               int HDCount = 0;
+               int AACount = 0;
+               int ACCount = 0;
+               int ADCount = 0;
+               int CCCount = 0;
+               int CDCount = 0;
+               int DDCount = 0;
+                foreach (var baoshi in Necklace.BaoShiDic)
+                {
+                    switch (baoshi.Value.BaoShiType)
+                    {
+                        case BaoShiType.HH:
+                            HHCount++;
+                            break;
+                        case BaoShiType.HA:
+                            HACount++;
+                            break;
+                        case BaoShiType.HC:
+                            HCCount++;
+                            break;
+                        case BaoShiType.HD:
+                            HDCount++;
+                            break;
+                        case BaoShiType.AA:
+                            AACount++;
+                            break;
+                        case BaoShiType.AC:
+                            ACCount++;
+                            break;
+                        case BaoShiType.AD:
+                            ADCount++;
+                            break;
+                        case BaoShiType.CC:
+                            CCCount++;
+                            break;
+                        case BaoShiType.CD:
+                            CDCount++;
+                            break;
+                        case BaoShiType.DD:
+                            DDCount++;
+                            break;
+                    }
+                }
+
+                if (HHCount >= 3 || HACount >= 3 || HCCount >= 3 || HDCount >= 3 || AACount >= 3 || ACCount >= 3 ||
+                    ADCount >= 3 || CCCount >= 3 || CDCount >= 3 || DDCount >= 3)
+                {
+                    value++;
+                }
+           }
+       }
+       
+       
+       
+       
+       
+       
+       
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+           if (Ring.BaoShiDic.Count >= 3)
+           {
+               int HHCount = 0;
+               int HACount = 0;
+               int HCCount = 0;
+               int HDCount = 0;
+               int AACount = 0;
+               int ACCount = 0;
+               int ADCount = 0;
+               int CCCount = 0;
+               int CDCount = 0;
+               int DDCount = 0;
+                foreach (var baoshi in Ring.BaoShiDic)
+                {
+                    switch (baoshi.Value.BaoShiType)
+                    {
+                        case BaoShiType.HH:
+                            HHCount++;
+                            break;
+                        case BaoShiType.HA:
+                            HACount++;
+                            break;
+                        case BaoShiType.HC:
+                            HCCount++;
+                            break;
+                        case BaoShiType.HD:
+                            HDCount++;
+                            break;
+                        case BaoShiType.AA:
+                            AACount++;
+                            break;
+                        case BaoShiType.AC:
+                            ACCount++;
+                            break;
+                        case BaoShiType.AD:
+                            ADCount++;
+                            break;
+                        case BaoShiType.CC:
+                            CCCount++;
+                            break;
+                        case BaoShiType.CD:
+                            CDCount++;
+                            break;
+                        case BaoShiType.DD:
+                            DDCount++;
+                            break;
+                    }
+                }
+
+                if (HHCount >= 3 || HACount >= 3 || HCCount >= 3 || HDCount >= 3 || AACount >= 3 || ACCount >= 3 ||
+                    ADCount >= 3 || CCCount >= 3 || CDCount >= 3 || DDCount >= 3)
+                {
+                    value++;
+                }
+           }
+       }
+       
+       
+       
+       
+       
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+           if (Shoe.BaoShiDic.Count >= 3)
+           {
+               int HHCount = 0;
+               int HACount = 0;
+               int HCCount = 0;
+               int HDCount = 0;
+               int AACount = 0;
+               int ACCount = 0;
+               int ADCount = 0;
+               int CCCount = 0;
+               int CDCount = 0;
+               int DDCount = 0;
+                foreach (var baoshi in Shoe.BaoShiDic)
+                {
+                    switch (baoshi.Value.BaoShiType)
+                    {
+                        case BaoShiType.HH:
+                            HHCount++;
+                            break;
+                        case BaoShiType.HA:
+                            HACount++;
+                            break;
+                        case BaoShiType.HC:
+                            HCCount++;
+                            break;
+                        case BaoShiType.HD:
+                            HDCount++;
+                            break;
+                        case BaoShiType.AA:
+                            AACount++;
+                            break;
+                        case BaoShiType.AC:
+                            ACCount++;
+                            break;
+                        case BaoShiType.AD:
+                            ADCount++;
+                            break;
+                        case BaoShiType.CC:
+                            CCCount++;
+                            break;
+                        case BaoShiType.CD:
+                            CDCount++;
+                            break;
+                        case BaoShiType.DD:
+                            DDCount++;
+                            break;
+                    }
+                }
+
+                if (HHCount >= 3 || HACount >= 3 || HCCount >= 3 || HDCount >= 3 || AACount >= 3 || ACCount >= 3 ||
+                    ADCount >= 3 || CCCount >= 3 || CDCount >= 3 || DDCount >= 3)
+                {
+                    value++;
+                }
+           }
+       }
+
+       return value;
+   }
+   
    public static float GetBaoShiAttack()
    {
        float value = 0;
@@ -191,6 +1527,7 @@ public class GlobalPlayerAttribute
 
        return value;
    }
+   
    
    
    
