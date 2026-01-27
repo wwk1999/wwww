@@ -35,6 +35,28 @@ namespace Config
         public string CCName;
         public string CDName;
         public string DDName;
+        
+        public string HHTeXiao3;
+        public string HATeXiao3;
+        public string HCTeXiao3;
+        public string HDTeXiao3;
+        public string ACTeXiao3;
+        public string AATeXiao3;
+        public string ADTeXiao3;
+        public string CCTeXiao3;
+        public string CDTeXiao3;
+        public string DDTeXiao3;
+        
+        public string HHTeXiao5;
+        public string HATeXiao5;
+        public string HCTeXiao5;
+        public string HDTeXiao5;
+        public string ACTeXiao5;
+        public string AATeXiao5;
+        public string ADTeXiao5;
+        public string CCTeXiao5;
+        public string CDTeXiao5;
+        public string DDTeXiao5;
     }
 
     public class MonsterBookWindowLanguage
@@ -358,6 +380,8 @@ namespace Config
                         BaoShiLanguage =  new BaoShiLanguage()
                         {
                             HHName = "仙石", HAName =  "龙血晶", HCName = "魂玉", HDName = "铁魄石", AAName = "白虎石", ACName = "血珀石", ADName = "摄魂石", CCName = "命晶", CDName = "镜石", DDName = "玄武石",
+                            HHTeXiao3 = "所有宝石效果增加10%",HATeXiao3 = "所有宝石效果增加10%",HCTeXiao3 = "所有宝石效果增加10%",HDTeXiao3 = "所有宝石效果增加10%",AATeXiao3 = "所有宝石效果增加10%",ACTeXiao3 = "所有宝石效果增加10%",ADTeXiao3 = "所有宝石效果增加10%",CCTeXiao3 = "所有宝石效果增加10%",CDTeXiao3 = "所有宝石效果增加10%",DDTeXiao3 = "所有宝石效果增加10%",
+                            HHTeXiao5 = "单次伤害永远不会超过自身50%最大生命值",HATeXiao5 = "移动速度增加30%",HCTeXiao5 = "所有宝石效果增加70%",HDTeXiao5 = "所有宝石效果增加10%",AATeXiao5 = "最终伤害增加30%",ACTeXiao5 = "暴击时增加3%的攻击力，最多叠加10层",ADTeXiao5 = "攻击力的10%也会参与防御值的计算",CCTeXiao5 = "暴击伤害增加50%",CDTeXiao5 = "被攻击后增加30%暴击和暴击伤害，持续5s%",DDTeXiao5 = "每次被攻击增加3%防御，最多叠加10层",
                         },
                         DuanZaoWindowLanguage=new DuanZaoWindowLanguage()
                         {

@@ -9,9 +9,9 @@ namespace Config
         HA,
         HD,
         HC,
-        AD,
-        AC,
         AA,
+        AC,
+        AD,
         CC,
         CD,
         DD
@@ -56,6 +56,11 @@ namespace Config
             { BaoShiType.CC, LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCName},
             { BaoShiType.CD, LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDName},
             { BaoShiType.DD, LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
+        };
+
+        public static Dictionary<BaoShiType, string> BaoShiTeXiaoDic = new Dictionary<BaoShiType, string>()
+        {
+            { BaoShiType.HH,}
         };
 
         public static Dictionary<BaoShiInfo, BaoShiAttribute> BaoShiAttributeDic =
