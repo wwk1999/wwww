@@ -7,8 +7,8 @@ namespace Config
         None,
         HH,
         HA,
-        HD,
         HC,
+        HD,
         AA,
         AC,
         AD,
@@ -42,6 +42,12 @@ namespace Config
         public BaseAttribute BaseAttribute;
         public float Count;
     }
+
+    public class BaoShiTeXiao
+    {
+        public string TeXiao3;
+        public string TeXiao5;
+    }
     public class BaoShiConfig
     {
         public static Dictionary<BaoShiType, string> BaoShiNameDic = new Dictionary<BaoShiType, string>()
@@ -58,9 +64,18 @@ namespace Config
             { BaoShiType.DD, LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDName},
         };
 
-        public static Dictionary<BaoShiType, string> BaoShiTeXiaoDic = new Dictionary<BaoShiType, string>()
+        public static Dictionary<BaoShiType, BaoShiTeXiao> BaoShiTeXiaoDic = new Dictionary<BaoShiType, BaoShiTeXiao>()
         {
-            { BaoShiType.HH,}
+            { BaoShiType.HH,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao5}},
+            { BaoShiType.HA,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao5}},
+            { BaoShiType.HC,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao5}},
+            { BaoShiType.HD,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao5}},
+            { BaoShiType.AA,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao5}},
+            { BaoShiType.AC,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao5}},
+            { BaoShiType.AD,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao5}},
+            { BaoShiType.CC,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao5}},
+            { BaoShiType.CD,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao5}},
+            { BaoShiType.DD,new BaoShiTeXiao(){TeXiao3 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3,TeXiao5 = LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao5}},
         };
 
         public static Dictionary<BaoShiInfo, BaoShiAttribute> BaoShiAttributeDic =

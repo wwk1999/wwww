@@ -9,10 +9,12 @@ using UnityEngine.UI;
 public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Tooltip("Resources 下的路径（不含 Resources/ 前缀），例如 Prefabs/Window/Propinfo")]
-    public string resourcePath = "Prefabs/Window/Propinfo";
+    private string resourcePath = "Prefabs/Window/Propinfo";
+    private string baoshiInfoPath = "Prefabs/Window/BaoShiInfo";
+
 
     [Tooltip("相对于按钮右下角的偏移（x 向右为正，y 向上为正）。右 50、下 50 => (50, -50)")]
-    private Vector2 offset = new Vector2(250f, -100f);
+    private Vector2 offset = new Vector2(250f, 0f);
 
     [Tooltip("可选：指定父物体（若为空则以 Canvas 为父）")]
     public Transform parentOverride;
@@ -34,8 +36,15 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void Spawn()
     {
         if (instance != null) return;
-
-        GameObject prefab = Resources.Load<GameObject>(resourcePath);
+        GameObject prefab = null;
+        if (propGrid.propType < 500)
+        {
+            prefab = Resources.Load<GameObject>(resourcePath);
+        }
+        else
+        {
+            prefab = Resources.Load<GameObject>(baoshiInfoPath);
+        }
         if (prefab == null)
         {
             Debug.LogError($"PropInfoSpawner: 找不到 Resources/{resourcePath} 的预制体。");
@@ -63,6 +72,7 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         // 使用按钮的右下角（world）转换到屏幕坐标，再加偏移（屏幕空间）
         Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(canvas.worldCamera, corners[3]);
         screenPoint += offset;
+        //screenPoint += new Vector2(0, -instance.GetComponent<RectTransform>().sizeDelta.y);
 
         Vector3 worldPos;
         RectTransformUtility.ScreenPointToWorldPointInRectangle(canvasRect, screenPoint, canvas.worldCamera, out worldPos);
