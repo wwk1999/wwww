@@ -20,4 +20,5 @@ public class BagEquipAttributeInfo : MonoBehaviour
     public TextMeshProUGUI orangeEntryDesc;
 
     public Text level;
+    public GameObject kongListContent;
 }

@@ -381,7 +381,7 @@ namespace Config
                         {
                             HHName = "仙石", HAName =  "龙血晶", HCName = "魂玉", HDName = "铁魄石", AAName = "白虎石", ACName = "血珀石", ADName = "摄魂石", CCName = "命晶", CDName = "镜石", DDName = "玄武石",
                             HHTeXiao3 = "所有宝石效果增加10%",HATeXiao3 = "所有宝石效果增加10%",HCTeXiao3 = "所有宝石效果增加10%",HDTeXiao3 = "所有宝石效果增加10%",AATeXiao3 = "所有宝石效果增加10%",ACTeXiao3 = "所有宝石效果增加10%",ADTeXiao3 = "所有宝石效果增加10%",CCTeXiao3 = "所有宝石效果增加10%",CDTeXiao3 = "所有宝石效果增加10%",DDTeXiao3 = "所有宝石效果增加10%",
-                            HHTeXiao5 = "单次伤害永远不会超过自身50%最大生命值",HATeXiao5 = "移动速度增加30%",HCTeXiao5 = "所有宝石效果增加70%",HDTeXiao5 = "所有宝石效果增加10%",AATeXiao5 = "最终伤害增加30%",ACTeXiao5 = "暴击时增加3%的攻击力，最多叠加10层",ADTeXiao5 = "攻击力的10%也会参与防御值的计算",CCTeXiao5 = "暴击伤害增加50%",CDTeXiao5 = "被攻击后增加30%暴击和暴击伤害，持续5s%",DDTeXiao5 = "每次被攻击增加3%防御，最多叠加10层",
+                            HHTeXiao5 = "单次伤害永远不会超过自身50%最大生命值",HATeXiao5 = "移动速度增加30%",HCTeXiao5 = "所有宝石效果增加70%",HDTeXiao5 = "掉宝值增加30%",AATeXiao5 = "最终伤害增加30%",ACTeXiao5 = "暴击时增加3%的攻击力，最多叠加10层",ADTeXiao5 = "攻击力的10%也会参与防御值的计算",CCTeXiao5 = "暴击伤害增加50%",CDTeXiao5 = "被攻击后增加30%暴击和暴击伤害，持续5s",DDTeXiao5 = "每次被攻击增加3%防御，最多叠加10层",
                         },
                         DuanZaoWindowLanguage=new DuanZaoWindowLanguage()
                         {
@@ -581,7 +581,7 @@ namespace Config
                             HHTeXiao5 = "Single damage never exceeds 50% of max HP",
                             HATeXiao5 = "Movement speed increased by 30%",
                             HCTeXiao5 = "All gem effects increased by 70%",
-                            HDTeXiao5 = "All gem effects increased by 10%",
+                            HDTeXiao5 = "Item Drop Rate increased by 30%",
                             AATeXiao5 = "Final damage increased by 30%",
                             ACTeXiao5 = "Critical hits increase ATK by 3%, up to 10 stacks",
                             ADTeXiao5 = "10% of ATK also contributes to DEF calculation",
@@ -877,7 +877,7 @@ namespace Config
                             HHTeXiao5 = "단일 피해 최대 체력 50% 초과 불가",
                             HATeXiao5 = "이동 속도 30% 증가",
                             HCTeXiao5 = "모든 보석 효과 70% 증가",
-                            HDTeXiao5 = "모든 보석 효과 10% 증가",
+                            HDTeXiao5 = "아이템 드랍률 +30%",
                             AATeXiao5 = "최종 피해 30% 증가",
                             ACTeXiao5 = "치명타 시 공격력 3% 증가, 최대 10중첩",
                             ADTeXiao5 = "공격력 10%가 방어력 계산에 추가 반영",
@@ -1152,7 +1152,7 @@ namespace Config
                             HHTeXiao5 = "単発ダメージが最大HP50%を超えない",
                             HATeXiao5 = "移動速度+30%",
                             HCTeXiao5 = "全ての宝石効果+70%",
-                            HDTeXiao5 = "全ての宝石効果+10%",
+                            HDTeXiao5 = "アイテムドロップ率 +30%",
                             AATeXiao5 = "最終ダメージ+30%",
                             ACTeXiao5 = "クリティカル時、攻撃力+3%、最大10スタック",
                             ADTeXiao5 = "攻撃力の10%が防御力計算に加算",

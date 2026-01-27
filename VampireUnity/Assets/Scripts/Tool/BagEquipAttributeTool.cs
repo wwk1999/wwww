@@ -56,12 +56,27 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
         }
     }
     
+    public void SetKong()
+    {
+        EquipTable equip = bagGrid.tableBase as EquipTable;
+        BagEquipAttributeInfo bagEquipAttributeInfo=instance.GetComponent<BagEquipAttributeInfo>();
+        foreach (Transform item in bagEquipAttributeInfo.kongListContent.transform)
+        {
+            Destroy(item.gameObject);
+        }
+
+        foreach (var item in equip.BaoShiDic)
+        {
+            EquipKong baoShiKong=Instantiate(Resources.Load<GameObject>("Prefabs/Equip/EquipAttribute/EquipKong"),bagEquipAttributeInfo.kongListContent.transform).GetComponent<EquipKong>();
+            baoShiKong.SetKong(item.Value);
+        }
+    }
+    
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (instance != null) return;
         EquipTable equipTable = bagGrid.tableBase as EquipTable;
-
         if (prefab == null)
         {
             switch (equipTable.Quality)
@@ -96,6 +111,10 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
         var canvasRect = parentCanvas.GetComponent<RectTransform>();
         instance = Instantiate(prefab, parentCanvas.transform);
         BagEquipAttributeInfo bagEquipAttributeInfo=instance.GetComponent<BagEquipAttributeInfo>();
+        if (equipTable.Quality >= 2)
+        {
+            SetKong(); 
+        }
         
         if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
         {

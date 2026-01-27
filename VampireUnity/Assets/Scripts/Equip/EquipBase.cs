@@ -35,19 +35,19 @@ public class EquipBase : BagObjectBase
                 KongCount = 0;
                 break;
             case 2:
-                random=Random.Range(1, 2);
-                KongCount = random;
-                break;
-            case 3:
                 random=Random.Range(1, 3);
                 KongCount = random;
                 break;
-            case 4:
+            case 3:
                 random=Random.Range(1, 4);
                 KongCount = random;
                 break;
-            case 5:
+            case 4:
                 random=Random.Range(1, 5);
+                KongCount = random;
+                break;
+            case 5:
+                random=Random.Range(1, 6);
                 KongCount = random;
                 break;
         }

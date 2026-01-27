@@ -33,13 +33,13 @@ public class CameraContraller : XSingleton<CameraContraller>
     public void CameraMovePlayer()
     {
         Vector3 targetPosition = new Vector3(GameController.S.gamePlayer.transform.position.x,
-            GameController.S.gamePlayer.transform.position.y, -10);
+            GameController.S.gamePlayer.transform.position.y, GameController.S.gamePlayer.transform.position.z);
         Vector3 startPosition = transform.position;
         ElapsedTime += Time.deltaTime;
         float t = Mathf.Clamp01(ElapsedTime / Duration);
         transform.position = Vector3.Lerp(startPosition, targetPosition, t);
         if (transform.transform.position== new Vector3(GameController.S.gamePlayer.transform.position.x,
-                GameController.S.gamePlayer.transform.position.y, -10))
+                GameController.S.gamePlayer.transform.position.y, -12))
         {
             CameraStatus= CameraStatus.FollowPlayer;
             ObserverModuleManager.S.SendEvent(ConstKeys.ResumePlayerCamera);
@@ -64,17 +64,17 @@ public class CameraContraller : XSingleton<CameraContraller>
                 if (GameController.S.gamePlayer != null)
                 {
                     transform.position = new Vector3(GameController.S.gamePlayer.transform.position.x,
-                        GameController.S.gamePlayer.transform.position.y, -10);
+                        GameController.S.gamePlayer.transform.position.y, -12);
                 }
             }
             else if (CameraStatus == CameraStatus.MoveToBoss)
             {
-                Vector3 targetPosition = new Vector3(-5.5f, 10, -10);
+                Vector3 targetPosition = new Vector3(-5.5f, 10, -12);
                 Vector3 startPosition = transform.position;
                 ElapsedTime += Time.deltaTime;
                 float t = Mathf.Clamp01(ElapsedTime / Duration);
                 transform.position = Vector3.Lerp(startPosition, targetPosition, t);
-                if (transform.transform.position == new Vector3(-5.5f, 10, -10) && !GameController.S.HaveBoss)
+                if (transform.transform.position == new Vector3(-5.5f, 10, -12) && !GameController.S.HaveBoss)
                 {
                     // FollowPlayer = true;
                     ObserverModuleManager.S.UnRegisterEvent(ConstKeys.CameraMoveToBoss, OnCameraMoveBegin);

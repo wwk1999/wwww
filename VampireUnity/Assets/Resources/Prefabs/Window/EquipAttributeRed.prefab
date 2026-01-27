@@ -281,8 +281,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1028,8 +1028,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
-  m_sharedMaterial: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2801,6 +2801,7 @@ MonoBehaviour:
   fuJiaAttributeContent: {fileID: 7768993492598865440}
   orangeEntryDesc: {fileID: 8283019960316647795}
   level: {fileID: 6894569148496288104}
+  kongListContent: {fileID: 7203078486616946090}
 --- !u!1 &9202657512555923586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,7 +3098,7 @@ PrefabInstance:
     - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
+      objectReference: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3635,7 +3636,7 @@ PrefabInstance:
     - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
+      objectReference: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3765,7 +3766,7 @@ PrefabInstance:
     - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
+      objectReference: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3895,7 +3896,7 @@ PrefabInstance:
     - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
+      objectReference: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4025,7 +4026,7 @@ PrefabInstance:
     - target: {fileID: 7707327900657644882, guid: 9f1b183c6381f9245b1e186637341991, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 6217267035100044172, guid: 78c50b1363d4d50418f12b9c3fd36162, type: 2}
+      objectReference: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

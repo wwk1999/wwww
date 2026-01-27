@@ -35,6 +35,14 @@ public class GlobalPlayerAttribute
    public static float MonsterDefense => GetMonsterDefense();
    public static float MonsterHp => GetMonsterHp();
    public static float MonsterCrit => GetMonsterCrit();
+   
+   
+   
+   //宝石属性
+   public static float BaoShiAttack => GetBaoShiAttack();
+   public static float BaoShiDefense => GetBaoShiDefense();
+   public static float BaoShiHp => GetBaoShiHp();
+   public static float BaoShiCrit => GetBaoShiCrit();
 
    
    
@@ -45,6 +53,583 @@ public class GlobalPlayerAttribute
 
    public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
 
+
+   public static float GetBaoShiAttack()
+   {
+       float value = 0;
+       if(PlayerEquipConfig.CloakId!=0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+         foreach (var baoshi in Cloak.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.ClothId!=0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           foreach (var baoshi in Cloth.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.ShoeId!=0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+          foreach (var baoshi in Shoe.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.RingId!=0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+          foreach (var baoshi in Ring.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.NecklaceId!=0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+          foreach (var baoshi in Necklace.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.HelmetId!=0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+          foreach (var baoshi in Helmet.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Attack)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   public static float GetBaoShiCrit()
+   {
+       float value = 0;
+       if(PlayerEquipConfig.CloakId!=0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+         foreach (var baoshi in Cloak.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.ClothId!=0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           foreach (var baoshi in Cloth.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.ShoeId!=0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+          foreach (var baoshi in Shoe.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.RingId!=0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+          foreach (var baoshi in Ring.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.NecklaceId!=0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+          foreach (var baoshi in Necklace.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.HelmetId!=0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+          foreach (var baoshi in Helmet.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Crit)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   
+   
+   
+   public static float GetBaoShiDefense()
+   {
+       float value = 0;
+       if(PlayerEquipConfig.CloakId!=0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+         foreach (var baoshi in Cloak.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.ClothId!=0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           foreach (var baoshi in Cloth.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.ShoeId!=0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+          foreach (var baoshi in Shoe.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.RingId!=0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+          foreach (var baoshi in Ring.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.NecklaceId!=0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+          foreach (var baoshi in Necklace.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.HelmetId!=0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+          foreach (var baoshi in Helmet.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Defense)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   
+   
+   
+   public static float GetBaoShiHp()
+   {
+       float value = 0;
+       if(PlayerEquipConfig.CloakId!=0)
+       {
+           var Cloak = BagController.S.EquipIdList[PlayerEquipConfig.CloakId];
+         foreach (var baoshi in Cloak.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.ClothId!=0)
+       {
+           var Cloth = BagController.S.EquipIdList[PlayerEquipConfig.ClothId];
+           foreach (var baoshi in Cloth.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.ShoeId!=0)
+       {
+           var Shoe = BagController.S.EquipIdList[PlayerEquipConfig.ShoeId];
+          foreach (var baoshi in Shoe.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.RingId!=0)
+       {
+           var Ring = BagController.S.EquipIdList[PlayerEquipConfig.RingId];
+          foreach (var baoshi in Ring.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.NecklaceId!=0)
+       {
+           var Necklace = BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId];
+          foreach (var baoshi in Necklace.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+       
+       if(PlayerEquipConfig.HelmetId!=0)
+       {
+           var Helmet = BagController.S.EquipIdList[PlayerEquipConfig.HelmetId];
+          foreach (var baoshi in Helmet.BaoShiDic)
+           {
+               if (baoshi.Value.BaoShiType == BaoShiType.None)
+               {
+                   continue;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem1.Count;
+               }
+               if (BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.BaseAttribute ==
+                   BaseAttribute.Hp)
+               {
+                   value += BaoShiConfig.BaoShiAttributeDic[baoshi.Value].BaoShiAttributeItem2.Count;
+               }
+           }
+       }
+
+       return value;
+   }
+   
+   
+   
+   
+   
+   
    public static float GetMonsterAttack()
    {
        return SkillJiaDian.S.MonsterAttack * SkillConfig.BaseMonsterDic[Config.MonsterType.Attack];
@@ -428,7 +1013,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCrit()
    {
-       return (PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit)*(1+CritNum/100.0f);
+       return (PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit)*(1+CritNum/100.0f)*(1.0f + BaoShiCrit/100);
    }
 
    public static float GetForture()
@@ -480,7 +1065,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp) * (1.0f + MaxHpPercent/100f));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp) * (1.0f + MaxHpPercent/100f)*(1.0f + BaoShiHp/100));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            maxhp /= 2;
@@ -490,7 +1075,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDamage()
    {
-       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack) * (1f + DamageAddPercent / 100f));
+       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack) * (1f + DamageAddPercent / 100f)*(1.0f + BaoShiAttack/100));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            damage *=1.3f;
@@ -500,7 +1085,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDefense()
    {
-       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense)*(1f+MaxDefensePercent/100f));
+       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense)*(1f+MaxDefensePercent/100f)*(1.0f + BaoShiDefense/100));
        float value = 0;
 
        if (isIceBall)
