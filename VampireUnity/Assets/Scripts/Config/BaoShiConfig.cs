@@ -30,6 +30,26 @@ namespace Config
     {
         public BaoShiType BaoShiType;
         public int Quality;
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            BaoShiInfo other = (BaoShiInfo)obj;
+            return BaoShiType == other.BaoShiType && Quality == other.Quality;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 23 + BaoShiType.GetHashCode();
+                hash = hash * 23 + Quality.GetHashCode();
+                return hash;
+            }
+        }
     }
     public class BaoShiAttribute
     {

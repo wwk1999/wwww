@@ -1544,7 +1544,7 @@ GameObject:
   - component: {fileID: 5103241181621924839}
   - component: {fileID: 6420131635813171584}
   m_Layer: 5
-  m_Name: TeXIao2
+  m_Name: TeXiao2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2871,7 +2871,7 @@ GameObject:
   - component: {fileID: 7959509448391257477}
   - component: {fileID: 1283805773844346404}
   m_Layer: 5
-  m_Name: TeXIao1
+  m_Name: TeXiao1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

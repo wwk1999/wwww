@@ -111,12 +111,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
@@ -129,12 +129,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
@@ -147,12 +147,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
@@ -165,12 +165,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
@@ -182,12 +182,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
@@ -200,12 +200,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
@@ -221,12 +221,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
@@ -239,12 +239,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
@@ -257,12 +257,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
@@ -275,12 +275,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
@@ -292,12 +292,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
@@ -310,12 +310,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
@@ -331,12 +331,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
@@ -349,12 +349,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
@@ -367,12 +367,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
@@ -385,12 +385,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
@@ -402,12 +402,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
@@ -420,12 +420,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
@@ -442,12 +442,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
@@ -460,12 +460,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
@@ -478,12 +478,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
@@ -496,12 +496,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
@@ -513,12 +513,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
@@ -531,12 +531,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
@@ -553,12 +553,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
@@ -571,12 +571,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
@@ -589,12 +589,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
@@ -607,12 +607,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
@@ -624,12 +624,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
@@ -642,12 +642,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
@@ -664,12 +664,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
@@ -682,12 +682,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
@@ -700,12 +700,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
@@ -718,12 +718,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
@@ -735,12 +735,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
@@ -753,12 +753,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
@@ -776,12 +776,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
@@ -794,12 +794,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
@@ -812,12 +812,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
@@ -830,12 +830,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
@@ -847,12 +847,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
@@ -865,12 +865,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
@@ -887,12 +887,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
@@ -905,12 +905,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
@@ -923,12 +923,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
@@ -941,12 +941,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
@@ -958,12 +958,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
@@ -976,12 +976,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
@@ -1000,12 +1000,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
@@ -1018,12 +1018,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
@@ -1036,12 +1036,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
@@ -1054,12 +1054,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
@@ -1071,12 +1071,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
@@ -1089,12 +1089,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
@@ -1113,12 +1113,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 1 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 1 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
@@ -1131,12 +1131,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 2 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 2 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
@@ -1149,12 +1149,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 3 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 3 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
@@ -1167,12 +1167,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 4 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 4 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
@@ -1184,12 +1184,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 5 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 5 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
@@ -1202,12 +1202,12 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 6 }]
-                        .BaoShiAttributeItem1 + "%";
+                        .BaoShiAttributeItem1.Count + "%";
                 
                 instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
                         .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 6 }]
-                        .BaoShiAttributeItem2 + "%";
+                        .BaoShiAttributeItem2.Count + "%";
 
                 instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
