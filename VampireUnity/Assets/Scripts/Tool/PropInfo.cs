@@ -103,8 +103,1129 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         instance.transform.Find("bg/Name/Name6").gameObject.SetActive(Name==6);
     }
 
+    public void SetBaoShi()
+    {
+        switch (propGrid.propType)
+        {
+            case 601:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao5;
+                break;
+            
+            case 602:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao5;
+                break;
+            
+            case 603:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao5;
+                break;
+            
+            case 604:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao5;
+                break;
+            case 605:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao5;
+                break;
+            
+            case 606:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HH, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHTeXiao5;
+                break;
+            
+            
+            
+            
+            case 701:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao5;
+                break;
+            
+            case 702:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao5;
+                break;
+            
+            case 703:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao5;
+                break;
+            
+            case 704:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao5;
+                break;
+            case 705:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao5;
+                break;
+            
+            case 706:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HA, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HATeXiao5;
+                break;
+            
+            
+            
+            
+            case 801:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao5;
+                break;
+            
+            case 802:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao5;
+                break;
+            
+            case 803:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao5;
+                break;
+            
+            case 804:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao5;
+                break;
+            case 805:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao5;
+                break;
+            
+            case 806:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HC, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HCTeXiao5;
+                break;
+            
+            
+            
+            
+            
+            case 901:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao5;
+                break;
+            
+            case 902:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao5;
+                break;
+            
+            case 903:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao5;
+                break;
+            
+            case 904:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao5;
+                break;
+            case 905:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao5;
+                break;
+            
+            case 906:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.HD, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HDTeXiao5;
+                break;
+            
+            
+            
+            
+            
+            case 1001:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao5;
+                break;
+            
+            case 1002:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao5;
+                break;
+            
+            case 1003:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao5;
+                break;
+            
+            case 1004:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao5;
+                break;
+            case 1005:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao5;
+                break;
+            
+            case 1006:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AA, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.AATeXiao5;
+                break;
+            
+            
+            
+            
+            
+            case 1101:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao5;
+                break;
+            
+            case 1102:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao5;
+                break;
+            
+            case 1103:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao5;
+                break;
+            
+            case 1104:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao5;
+                break;
+            case 1105:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao5;
+                break;
+            
+            case 1106:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AC, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ACTeXiao5;
+                break;
+            
+            
+            
+            
+            
+            
+            case 1201:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao5;
+                break;
+            
+            case 1202:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao5;
+                break;
+            
+            case 1203:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao5;
+                break;
+            
+            case 1204:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao5;
+                break;
+            case 1205:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao5;
+                break;
+            
+            case 1206:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.AD, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.ADTeXiao5;
+                break;
+            
+            
+            
+            
+            
+            case 1301:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao5;
+                break;
+            
+            case 1302:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao5;
+                break;
+            
+            case 1303:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao5;
+                break;
+            
+            case 1304:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao5;
+                break;
+            case 1305:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao5;
+                break;
+            
+            case 1306:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CC, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CCTeXiao5;
+                break;
+            
+            
+            
+            
+            
+            
+            
+            case 1401:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao5;
+                break;
+            
+            case 1402:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao5;
+                break;
+            
+            case 1403:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao5;
+                break;
+            
+            case 1404:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao5;
+                break;
+            case 1405:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao5;
+                break;
+            
+            case 1406:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.CD, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.CDTeXiao5;
+                break;
+            
+            
+            
+            
+            
+            
+            
+            case 1501:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 1 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 1 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao5;
+                break;
+            
+            case 1502:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 2 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 2 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao5;
+                break;
+            
+            case 1503:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 3 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 3 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao5;
+                break;
+            
+            case 1504:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 4 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 4 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao5;
+                break;
+            case 1505:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 5 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 5 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao5;
+                break;
+            
+            case 1506:
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 6 }]
+                        .BaoShiAttributeItem1 + "%";
+                
+                instance.transform.Find("bg/BaoShi/Attribute/Attribute2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense + "：" + BaoShiConfig
+                        .BaoShiAttributeDic[new BaoShiInfo() { BaoShiType = BaoShiType.DD, Quality = 6 }]
+                        .BaoShiAttributeItem2 + "%";
+
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao1").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao3;
+                
+                instance.transform.Find("bg/BaoShi/TeXiao/TeXiao2").GetComponent<TextMeshProUGUI>().text =
+                    LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.DDTeXiao5;
+                break;
+            
+            
+        }
+    }
+
     public void SetInstance(int prop)
     {
+        if (prop > 500)
+        {
+            SetBaoShi();
+        }
         if (prop / 100 != 3)
         {
             switch (prop%100)
