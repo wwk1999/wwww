@@ -397,7 +397,10 @@ public class Player : MonoBehaviour
         
         realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
         realDamage=Math.Max(0,realDamage);
-        
+        if (GlobalPlayerAttribute.HH5Count > 0 && realDamage >= GameController.S.GameCurrentHp * 0.5f)
+        {
+            realDamage = GameController.S.GameCurrentHp * 0.5f;
+        }
         // 检查是否有DelayDamage词条
         bool hasDelayDamage = GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DelayDamage);
         ShowHurtText(Mathf.RoundToInt(realDamage));

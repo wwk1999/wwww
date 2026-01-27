@@ -786,6 +786,7 @@ public abstract class MonsterBase : MonoBehaviour
             finalDamage+=0.5f;
         }
         finalDamage+=GlobalPlayerAttribute.PlayerChiBangAttribute.finalDamage;
+        finalDamage += GlobalPlayerAttribute.AA5Count * 0.3f;
         return damage*(1+finalDamage);
     }
     public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom)

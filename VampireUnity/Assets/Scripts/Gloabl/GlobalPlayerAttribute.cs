@@ -46,7 +46,7 @@ public class GlobalPlayerAttribute
    
    public static int BaoShiTeXiao3Count=>GetBaoShiTeXiao3Count();
 
-   public static float BaoShiXiaoGuo => BaoShiTeXiao3Count * 0.1f;
+   public static float BaoShiXiaoGuo => GetBaoShiXiaoGuo();
 
    public static int HH5Count => GetHH5Count();
    public static int HA5Count => GetHA5Count();
@@ -74,6 +74,12 @@ public class GlobalPlayerAttribute
    public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
 
 
+   public static float GetBaoShiXiaoGuo()
+   {
+       float value=BaoShiTeXiao3Count * 0.1f;
+       value += HC5Count * 0.7f;
+       return value;
+   }
 
    public static int GetHH5Count()
    {
@@ -1525,6 +1531,8 @@ public class GlobalPlayerAttribute
            }
        }
 
+       value *= (1.0f + BaoShiXiaoGuo);
+
        return value;
    }
    
@@ -1670,6 +1678,8 @@ public class GlobalPlayerAttribute
                }
            }
        }
+       value *= (1.0f + BaoShiXiaoGuo);
+
 
        return value;
    }
@@ -1814,6 +1824,7 @@ public class GlobalPlayerAttribute
                }
            }
        }
+       value *= (1.0f + BaoShiXiaoGuo);
 
        return value;
    }
@@ -1958,6 +1969,7 @@ public class GlobalPlayerAttribute
                }
            }
        }
+       value *= (1.0f + BaoShiXiaoGuo);
 
        return value;
    }
@@ -2382,6 +2394,7 @@ public class GlobalPlayerAttribute
        }
 
        forture += PlayerChiBangAttribute.forture;
+       forture += HD5Count*0.3f;
        return forture;
    }
    
@@ -2392,6 +2405,8 @@ public class GlobalPlayerAttribute
        {
            speed*=1.25f;
        }
+
+       speed *= (1.0f + HA5Count * 0.3f);
        return speed;
    }
 
