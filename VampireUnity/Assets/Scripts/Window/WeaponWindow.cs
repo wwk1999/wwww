@@ -166,6 +166,34 @@ public class WeaponWindow : MonoBehaviour
    public  TextMeshProUGUI WeaponInfoName6;
    public  TextMeshProUGUI WeaponInfoName7;
    public  TextMeshProUGUI WeaponInfoName8;
+   
+   //魂器
+
+   public TextMeshProUGUI HunQi1Text;
+   public TextMeshProUGUI HunQi1Desc;
+   
+   public TextMeshProUGUI HunQi2Text;
+   public TextMeshProUGUI HunQi2Desc;
+   
+   public TextMeshProUGUI HunQi3Text;
+   public TextMeshProUGUI HunQi3Desc;
+   
+   public TextMeshProUGUI HunQi4Text;
+   public TextMeshProUGUI HunQi4Desc;
+   
+   public TextMeshProUGUI HunQi5Text;
+   public TextMeshProUGUI HunQi5Desc;
+   
+   public TextMeshProUGUI AllHunQiText;
+   public TextMeshProUGUI AllHunQiLevel;
+   
+   public Button AttributeButton;
+   public Button HunQiButton;
+   public GameObject HunQiPanel;
+   public TextMeshProUGUI AttributeButtonText;
+   public TextMeshProUGUI HunQiButtonText;
+
+
 
    public void SwitchLanguage()
    {
@@ -225,12 +253,35 @@ public class WeaponWindow : MonoBehaviour
             WeaponInfoName7.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7;
             WeaponInfoName8.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8;
 
+            HunQiButtonText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQi;
+           AttributeButtonText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Attribute;
+
    }
 
 
    
    [NonSerialized] public WeaponType currentJieSuoType = WeaponType.None;
    [NonSerialized] public WeaponType currentShowType = WeaponType.None;
+
+   public void SetHunQiPanel()
+   {
+      HunQi1Desc.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage
+         .WeaponHunQiDic[currentShowType].HunQi1;
+      HunQi2Desc.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage
+         .WeaponHunQiDic[currentShowType].HunQi2;
+      HunQi3Desc.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage
+         .WeaponHunQiDic[currentShowType].HunQi3;
+      HunQi4Desc.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage
+         .WeaponHunQiDic[currentShowType].HunQi4;
+      HunQi5Desc.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage
+         .WeaponHunQiDic[currentShowType].HunQi5;
+
+      HunQi1Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "1:";
+      HunQi2Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "2:";
+      HunQi3Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "3:";
+      HunQi4Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "4:";
+      HunQi5Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "5:";
+   }
 
    public void RefreshEquipIcon()
    {
@@ -878,6 +929,9 @@ public class WeaponWindow : MonoBehaviour
       {
          currentShowType = WeaponType.Primary;
          ShenJiCaiLiao.showType = WeaponType.Primary;
+         AttributeButton.gameObject.SetActive(true);
+         HunQiButton.gameObject.SetActive(true);
+         SetHunQiPanel();
          ShowAttribute(WeaponType.Primary);
       });
 
@@ -885,38 +939,49 @@ public class WeaponWindow : MonoBehaviour
       {
          currentShowType = WeaponType.Du;
          ShenJiCaiLiao.showType = WeaponType.Du;
+         AttributeButton.gameObject.SetActive(true);
+         HunQiButton.gameObject.SetActive(true);
+         SetHunQiPanel();
          ShowAttribute(WeaponType.Du);
       });
 
       puTong3ShowButton.onClick.AddListener(() =>
       {
          currentShowType = WeaponType.PuTong3;
-
-         ShenJiCaiLiao.showType = WeaponType.PuTong3;
+         ShenJiCaiLiao.showType = WeaponType.PuTong3; 
+         AttributeButton.gameObject.SetActive(true);
+         HunQiButton.gameObject.SetActive(true);
+         SetHunQiPanel();
          ShowAttribute(WeaponType.PuTong3);
       });
 
       xukongShowButton.onClick.AddListener(() =>
       {
          currentShowType = WeaponType.XuKong;
-
          ShenJiCaiLiao.showType = WeaponType.XuKong;
+         AttributeButton.gameObject.SetActive(true);
+         HunQiButton.gameObject.SetActive(true);
+         SetHunQiPanel();
          ShowAttribute(WeaponType.XuKong);
       });
 
       fireShowButton.onClick.AddListener(() =>
       {
          currentShowType = WeaponType.Fire;
-
          ShenJiCaiLiao.showType = WeaponType.Fire;
+         AttributeButton.gameObject.SetActive(true);
+         HunQiButton.gameObject.SetActive(true);
+         SetHunQiPanel();
          ShowAttribute(WeaponType.Fire);
       });
 
       lvQuanShowButton.onClick.AddListener(() =>
       {
          currentShowType = WeaponType.LvQuan;
-
          ShenJiCaiLiao.showType = WeaponType.LvQuan;
+         AttributeButton.gameObject.SetActive(true);
+         HunQiButton.gameObject.SetActive(true);
+         SetHunQiPanel();
          ShowAttribute(WeaponType.LvQuan);
       });
 
@@ -924,6 +989,9 @@ public class WeaponWindow : MonoBehaviour
       {
          currentShowType = WeaponType.HeiDong;
          ShenJiCaiLiao.showType = WeaponType.HeiDong;
+         AttributeButton.gameObject.SetActive(true);
+         HunQiButton.gameObject.SetActive(true);
+         SetHunQiPanel();
          ShowAttribute(WeaponType.HeiDong);
       });
       
@@ -931,11 +999,25 @@ public class WeaponWindow : MonoBehaviour
       {
          currentShowType = WeaponType.JianQi;
          ShenJiCaiLiao.showType = WeaponType.JianQi;
+         AttributeButton.gameObject.SetActive(true);
+         HunQiButton.gameObject.SetActive(true);
+         SetHunQiPanel();
          ShowAttribute(WeaponType.JianQi);
       });
       
 
 
+      AttributeButton.onClick.AddListener(() =>
+      {
+         AttributePanel.gameObject.SetActive(true);
+         HunQiPanel.gameObject.SetActive(false);
+      });
+      
+      HunQiButton.onClick.AddListener(() =>
+      {
+         AttributePanel.gameObject.SetActive(false);
+         HunQiPanel.gameObject.SetActive(true);
+      });
 
 
 
@@ -945,37 +1027,65 @@ public class WeaponWindow : MonoBehaviour
       {
          currentJieSuoType = WeaponType.Du;
          ShowJieSuo(WeaponType.Du);
+         AttributeButton.gameObject.SetActive(false);
+         HunQiButton.gameObject.SetActive(false);
+         AttributePanel.gameObject.SetActive(false);
+         HunQiPanel.gameObject.SetActive(false);
       });
       puTong3JieSuoButton.onClick.AddListener(() =>
       {
          currentJieSuoType = WeaponType.PuTong3;
          ShowJieSuo(WeaponType.PuTong3);
+         AttributeButton.gameObject.SetActive(false);
+         HunQiButton.gameObject.SetActive(false);
+         AttributePanel.gameObject.SetActive(false);
+         HunQiPanel.gameObject.SetActive(false);
       });
       xukongJieSuoButton.onClick.AddListener(() =>
       {
          currentJieSuoType = WeaponType.XuKong;
          ShowJieSuo(WeaponType.XuKong);
+         AttributeButton.gameObject.SetActive(false);
+         HunQiButton.gameObject.SetActive(false);
+         AttributePanel.gameObject.SetActive(false);
+         HunQiPanel.gameObject.SetActive(false);
       });
       fireJieSuoButton.onClick.AddListener(() =>
       {
          currentJieSuoType = WeaponType.Fire;
          ShowJieSuo(WeaponType.Fire);
+         AttributeButton.gameObject.SetActive(false);
+         HunQiButton.gameObject.SetActive(false);
+         AttributePanel.gameObject.SetActive(false);
+         HunQiPanel.gameObject.SetActive(false);
       });
       lvQuanJieSuoButton.onClick.AddListener(() =>
       {
          currentJieSuoType = WeaponType.LvQuan;
          ShowJieSuo(WeaponType.LvQuan);
+         AttributeButton.gameObject.SetActive(false);
+         HunQiButton.gameObject.SetActive(false);
+         AttributePanel.gameObject.SetActive(false);
+         HunQiPanel.gameObject.SetActive(false);
       });
       heiDongJieSuoButton.onClick.AddListener(() =>
       {
          currentJieSuoType = WeaponType.HeiDong;
          ShowJieSuo(WeaponType.HeiDong);
+         AttributeButton.gameObject.SetActive(false);
+         HunQiButton.gameObject.SetActive(false);
+         AttributePanel.gameObject.SetActive(false);
+         HunQiPanel.gameObject.SetActive(false);
       });
       
       jianQiJieSuoButton.onClick.AddListener(() =>
       {
          currentJieSuoType = WeaponType.JianQi;
          ShowJieSuo(WeaponType.JianQi);
+         AttributeButton.gameObject.SetActive(false);
+         HunQiButton.gameObject.SetActive(false);
+         AttributePanel.gameObject.SetActive(false);
+         HunQiPanel.gameObject.SetActive(false);
       });
 
 
