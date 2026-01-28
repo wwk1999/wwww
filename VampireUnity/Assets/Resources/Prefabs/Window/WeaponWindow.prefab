@@ -11268,6 +11268,10 @@ MonoBehaviour:
   HunQiPanel: {fileID: 2428489418595251645}
   AttributeButtonText: {fileID: 5495870843699251754}
   HunQiButtonText: {fileID: 7849088318091200962}
+  HunQiExSlider: {fileID: 6398658783824066536}
+  HunQiCurrentEx: {fileID: 541315603084404491}
+  HunQiMaxEx: {fileID: 63006468967652209}
+  HunQiLevel: {fileID: 6396652680539044238}
 --- !u!1 &8695919393308372538
 GameObject:
   m_ObjectHideFlags: 0

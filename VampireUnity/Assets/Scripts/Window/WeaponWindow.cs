@@ -192,6 +192,11 @@ public class WeaponWindow : MonoBehaviour
    public GameObject HunQiPanel;
    public TextMeshProUGUI AttributeButtonText;
    public TextMeshProUGUI HunQiButtonText;
+   
+   public Slider HunQiExSlider;
+   public TextMeshProUGUI HunQiCurrentEx;
+   public TextMeshProUGUI HunQiMaxEx;
+   public TextMeshProUGUI HunQiLevel;
 
 
 
@@ -281,6 +286,242 @@ public class WeaponWindow : MonoBehaviour
       HunQi3Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "3:";
       HunQi4Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "4:";
       HunQi5Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "5:";
+
+      switch (currentShowType)
+      {
+         case WeaponType.Primary:
+            HunQiLevel.text="Lv "+PlayerData.S.primaryHunQiLevel;
+            HunQiExSlider.value = PlayerData.S.primaryHunQiEx;
+            HunQiCurrentEx.text = PlayerData.S.primaryHunQiEx.ToString();
+            switch (PlayerData.S.primaryHunQiLevel)
+            {
+               case 0:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Primary].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Primary].Level1.ToString();
+                  break;
+               case 1:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Primary].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Primary].Level2.ToString();
+                  break;
+               case 2:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Primary].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Primary].Level3.ToString();
+                  break;
+               case 3:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Primary].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Primary].Level4.ToString();
+                  break;
+               case 4:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Primary].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Primary].Level5.ToString();
+                  break;
+            }
+            break;
+         
+         case WeaponType.Du:
+            HunQiLevel.text="Lv "+PlayerData.S.duHunQiLevel;
+            HunQiExSlider.value = PlayerData.S.duHunQiEx;
+            HunQiCurrentEx.text = PlayerData.S.duHunQiEx.ToString();
+            switch (PlayerData.S.duHunQiLevel)
+            {
+               case 0:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level1.ToString();
+                  break;
+               case 1:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level2.ToString();
+                  break;
+               case 2:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level3.ToString();
+                  break;
+               case 3:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level4.ToString();
+                  break;
+               case 4:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level5.ToString();
+                  break;
+            }
+            break;
+         
+         case WeaponType.PuTong3:
+            HunQiLevel.text="Lv "+PlayerData.S.puTong3HunQiLevel;
+            HunQiExSlider.value = PlayerData.S.puTong3HunQiEx;
+            HunQiCurrentEx.text = PlayerData.S.puTong3HunQiEx.ToString();
+            switch (PlayerData.S.puTong3HunQiLevel)
+            {
+               case 0:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level1.ToString();
+                  break;
+               case 1:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level2.ToString();
+                  break;
+               case 2:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level3.ToString();
+                  break;
+               case 3:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level4.ToString();
+                  break;
+               case 4:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level5.ToString();
+                  break;
+            }
+            break;
+         
+         
+         case WeaponType.XuKong:
+            HunQiLevel.text="Lv "+PlayerData.S.xuKongHunQiLevel;
+            HunQiExSlider.value = PlayerData.S.xuKongHunQiEx;
+            HunQiCurrentEx.text = PlayerData.S.xuKongHunQiEx.ToString();
+            switch (PlayerData.S.xuKongHunQiLevel)
+            {
+               case 0:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.XuKong].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.XuKong].Level1.ToString();
+                  break;
+               case 1:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.XuKong].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.XuKong].Level2.ToString();
+                  break;
+               case 2:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.XuKong].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.XuKong].Level3.ToString();
+                  break;
+               case 3:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.XuKong].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.XuKong].Level4.ToString();
+                  break;
+               case 4:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.XuKong].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.XuKong].Level5.ToString();
+                  break;
+            }
+            break;
+         
+         case WeaponType.Fire:
+            HunQiLevel.text="Lv "+PlayerData.S.fireHunQiLevel;
+            HunQiExSlider.value = PlayerData.S.fireHunQiEx;
+            HunQiCurrentEx.text = PlayerData.S.fireHunQiEx.ToString();
+            switch (PlayerData.S.fireHunQiLevel)
+            {
+               case 0:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Fire].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Fire].Level1.ToString();
+                  break;
+               case 1:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Fire].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Fire].Level2.ToString();
+                  break;
+               case 2:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Fire].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Fire].Level3.ToString();
+                  break;
+               case 3:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Fire].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Fire].Level4.ToString();
+                  break;
+               case 4:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Fire].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Fire].Level5.ToString();
+                  break;
+            }
+            break;
+         
+         case WeaponType.LvQuan:
+            HunQiLevel.text="Lv "+PlayerData.S.lvQuanHunQiLevel;
+            HunQiExSlider.value = PlayerData.S.lvQuanHunQiEx;
+            HunQiCurrentEx.text = PlayerData.S.lvQuanHunQiEx.ToString();
+            switch (PlayerData.S.lvQuanHunQiLevel)
+            {
+               case 0:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level1.ToString();
+                  break;
+               case 1:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level2.ToString();
+                  break;
+               case 2:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level3.ToString();
+                  break;
+               case 3:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level4.ToString();
+                  break;
+               case 4:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level5.ToString();
+                  break;
+            }
+            break;
+         
+         case WeaponType.HeiDong:
+            HunQiLevel.text="Lv "+PlayerData.S.heiDongHunQiLevel;
+            HunQiExSlider.value = PlayerData.S.heiDongHunQiEx;
+            HunQiCurrentEx.text = PlayerData.S.heiDongHunQiEx.ToString();
+            switch (PlayerData.S.heiDongHunQiLevel)
+            {
+               case 0:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level1.ToString();
+                  break;
+               case 1:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level2.ToString();
+                  break;
+               case 2:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level3.ToString();
+                  break;
+               case 3:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level4.ToString();
+                  break;
+               case 4:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level5.ToString();
+                  break;
+            }
+            break;
+         
+         case WeaponType.JianQi:
+            HunQiLevel.text="Lv "+PlayerData.S.jianQiHunQiLevel;
+            HunQiExSlider.value = PlayerData.S.jianQiHunQiEx;
+            HunQiCurrentEx.text = PlayerData.S.jianQiHunQiEx.ToString();
+            switch (PlayerData.S.jianQiHunQiLevel)
+            {
+               case 0:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.JianQi].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.JianQi].Level1.ToString();
+                  break;
+               case 1:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.JianQi].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.JianQi].Level2.ToString();
+                  break;
+               case 2:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.JianQi].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.JianQi].Level3.ToString();
+                  break;
+               case 3:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.JianQi].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.JianQi].Level4.ToString();
+                  break;
+               case 4:
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.JianQi].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.JianQi].Level5.ToString();
+                  break;
+            }
+            break;
+      }
    }
 
    public void RefreshEquipIcon()
@@ -797,6 +1038,11 @@ public class WeaponWindow : MonoBehaviour
       RefreshWeaponList();
       RefreshEquipIcon();
       SwitchLanguage();
+      AllHunQiText.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.AllHunQiLevel;
+      AllHunQiLevel.text = (PlayerData.S.primaryHunQiLevel + PlayerData.S.duHunQiLevel +
+                            PlayerData.S.puTong3HunQiLevel + PlayerData.S.fireHunQiLevel +
+                            PlayerData.S.xuKongHunQiLevel + PlayerData.S.lvQuanHunQiLevel +
+                            PlayerData.S.heiDongHunQiLevel + PlayerData.S.jianQiHunQiLevel).ToString();
    }
 
    public void JieSuo()
