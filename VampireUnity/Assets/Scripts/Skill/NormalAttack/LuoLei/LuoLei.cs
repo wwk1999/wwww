@@ -28,7 +28,7 @@ public class LuoLei : MonoBehaviour
             var hit = GameController.S.LuoLeiPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GlobalPlayerAttribute.TotalDamage,isCrit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack,isCrit,DamageFrom.Normal);
             hit.SetActive(true);
         }
     }

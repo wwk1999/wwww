@@ -206,8 +206,7 @@ public class Player : MonoBehaviour
             // 从静止变为移动：应用加成
             if (GlobalPlayerAttribute.MoveAddAttackNum > 0)
             {
-                GameController.S.GameAttack *= (1 + GlobalPlayerAttribute.MoveAddAttackNum / 100f);
-                GameController.S.GameDefense *= (1 + GlobalPlayerAttribute.MoveAddDefenseNum / 100f);
+                GameController.S.MoveAddAttackCount = 1;
                 isMoveBonusApplied = true;
             }
         }
@@ -216,8 +215,7 @@ public class Player : MonoBehaviour
             // 从移动变为静止：移除加成
             if (GlobalPlayerAttribute.MoveAddAttackNum > 0)
             {
-                GameController.S.GameAttack /= (1 + GlobalPlayerAttribute.MoveAddAttackNum / 100f);
-                GameController.S.GameDefense /= (1 + GlobalPlayerAttribute.MoveAddDefenseNum / 100f);
+                GameController.S.MoveAddAttackCount = 0;
                 isMoveBonusApplied = false;
             }
         }
@@ -377,6 +375,10 @@ public class Player : MonoBehaviour
         {
             return;
         }
+
+        GameController.S.HitCount++;
+        GameController.S.HitCount=Math.Min(10, GameController.S.HitCount);
+        GameController.S.CDTeXiao5Time = 5;
 
         var playerHurt=GameController.S.PlayerHurtQueue.Dequeue();
         playerHurt.transform.position = transform.position;

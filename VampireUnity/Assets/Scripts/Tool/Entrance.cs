@@ -22,13 +22,12 @@ public class Entrance : MonoBehaviour
 
             GameController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp;
             GameController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp;
-            GameController.S.GameDefense = GlobalPlayerAttribute.TotalDefense;
-            GameController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
+            //GameController.S.GameDefense = GlobalPlayerAttribute.TotalDefense;
+            //GameController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
             GameController.S.GameCrit = GlobalPlayerAttribute.TotalCRIT;
             GameController.S.isFuHuo = true;
             GameController.S.TotalAddHp = 0;
-            GameController.S.TotalAddDefense = 0;
-            GameController.S.TotalAddAttack = 0;
+        
 
             
             //初始化最大boss能量值

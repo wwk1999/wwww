@@ -9,6 +9,7 @@ using Fight.Monster.秘境.雷兽;
 using Mysql;
 using Prop.BaoShi;
 using Spine.Unity;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -25,12 +26,38 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public int[] MonsterList = new int[2];
     [NonSerialized] public float GameMaxHp = 0;
     [NonSerialized] public float GameCurrentHp = 0;
-    [NonSerialized] public float GameDefense = 0;
-    [NonSerialized] public float GameAttack = 0;
+    public float GameDefense =>GetGameDefense();
+    public float GameAttack =>GetGameAttack();
     [NonSerialized] public float GameCrit = 0;
     
-    
-    
+
+    private int CritCount = 0;
+    private int AddAttackForTimeCount=0;
+    private int AddDefenseForTimeCount=0;
+
+    [NonSerialized]public float CDTeXiao5Time = 0;
+    [NonSerialized]public int HitCount = 0;
+    [NonSerialized]public int MoveAddAttackCount = 0;
+
+    public float GetGameDefense()
+    {
+        float value = GlobalPlayerAttribute.TotalDefense;
+        value += (GlobalPlayerAttribute.TotalDefense * 0.03f * HitCount * GlobalPlayerAttribute.DD5Count);
+        value += GlobalPlayerAttribute.TotalDefense * (GlobalPlayerAttribute.MoveAddDefenseNum / 100f) * MoveAddAttackCount;
+        value += GlobalPlayerAttribute.TotalDefense*(AddDefenseForTimeCount * 0.02f );
+
+        return value;
+    }
+
+    public float GetGameAttack()
+    {
+        float value = GlobalPlayerAttribute.TotalDamage;
+        value += GlobalPlayerAttribute.TotalDamage*(CritCount * 0.03f * GlobalPlayerAttribute.AC5Count);
+        value += GlobalPlayerAttribute.TotalDamage*(AddAttackForTimeCount * 0.03f );
+        value += GlobalPlayerAttribute.TotalDamage*(GlobalPlayerAttribute.MoveAddAttackNum / 100f)*MoveAddAttackCount;
+
+        return value;
+    }
     
     
     [NonSerialized] public float OrangeEntryTime = 5f;
@@ -38,8 +65,6 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public bool isFuHuo = true;
     
     [NonSerialized] public  float TotalAddHp = 0;
-    [NonSerialized] public  float TotalAddDefense = 0;
-    [NonSerialized] public  float TotalAddAttack = 0;
     
 
     //碰撞字典
@@ -1501,6 +1526,8 @@ public class GameController : XSingleton<GameController>
         var random=Random.Range(0,10000);
         if(GlobalPlayerAttribute.TotalCRIT>=random)
         {
+            CritCount++;
+            CritCount=Math.Min(10,CritCount);
             return true;
         }
         return false;
@@ -1939,33 +1966,16 @@ public class GameController : XSingleton<GameController>
                                       (TotalAddHp - 0.03f * GlobalPlayerAttribute.TotalMaxHp));
                 }
             }
-            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddDefenseForTime)&&TotalAddDefense<GlobalPlayerAttribute.TotalDefense*0.6f)
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddDefenseForTime))
             {
-                TotalAddDefense+=0.02f * GlobalPlayerAttribute.TotalDefense;
-                if (TotalAddDefense < GlobalPlayerAttribute.TotalDefense * 0.6f)
-                {
-                    GameDefense += 0.02f * GlobalPlayerAttribute.TotalDefense;
-                }
-                else
-                {
-                    GameDefense += (GlobalPlayerAttribute.TotalDefense -
-                                    (TotalAddHp - 0.02f * GlobalPlayerAttribute.TotalDefense));
-                }
+                AddDefenseForTimeCount++;
+                AddDefenseForTimeCount = Math.Min(10, AddDefenseForTimeCount);
             }
             
-            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAttackForTime)&&TotalAddAttack<GlobalPlayerAttribute.TotalDamage)
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAttackForTime))
             {
-                TotalAddAttack+=0.03f * GlobalPlayerAttribute.TotalDamage;
-                if (TotalAddAttack < GlobalPlayerAttribute.TotalDamage)
-                {
-                    GameAttack += 0.03f * GlobalPlayerAttribute.TotalDamage;
-                }
-                else
-                {
-                    GameAttack += (GlobalPlayerAttribute.TotalDamage -
-                                  (TotalAddAttack - 0.03f * GlobalPlayerAttribute.TotalDamage));
-                  
-                }
+                AddAttackForTimeCount++;
+                AddAttackForTimeCount = Math.Min(10, AddAttackForTimeCount);
             }
     }
 
@@ -1987,6 +1997,10 @@ public class GameController : XSingleton<GameController>
     {
         if (GlobalPlayerAttribute.IsGame == false)
             return;
+        if (CDTeXiao5Time > 0)
+        {
+            CDTeXiao5Time-= Time.deltaTime;
+        }
         
         CurrentOrangeEntryTime+=Time.deltaTime;
         if (CurrentOrangeEntryTime > OrangeEntryTime)

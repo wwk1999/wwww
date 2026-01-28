@@ -47,7 +47,7 @@ public class FireBaoZha1 : MonoBehaviour
             hit.SetActive(true);
             hit.transform.position = closestPoint;
             var crit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[col].Hurt(GlobalPlayerAttribute.TotalDamage*1.5f,crit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f,crit,DamageFrom.Normal);
          }
       }
    }

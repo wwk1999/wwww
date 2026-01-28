@@ -2362,7 +2362,12 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCrit()
    {
-       return (PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit)*(1+CritNum/100.0f)*(1.0f + BaoShiCrit/100);
+       float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit)*(1+CritNum/100.0f)*(1.0f + BaoShiCrit/100);
+       if (GameController.S.CDTeXiao5Time > 0)
+       {
+           value *= (1.0f + CD5Count * 0.3f);
+       }
+       return value;
    }
 
    public static float GetForture()
@@ -2412,7 +2417,13 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCritDamage()
    {
-       return CRITDamage+CritDamageNum+PlayerChiBangAttribute.critDamage;
+       float value= CRITDamage+CritDamageNum+PlayerChiBangAttribute.critDamage;
+       value += (CC5Count * 50f);
+       if (GameController.S.CDTeXiao5Time > 0)
+       {
+           value += (CD5Count * 30f);
+       }
+       return value;
    }
 
    public static float GetTotalMaxHp()
@@ -2446,6 +2457,7 @@ public class GlobalPlayerAttribute
        }
 
        defense *= (1 + value);
+       defense += (AD5Count*TotalDamage*0.1f);
        return defense;
    }
    
