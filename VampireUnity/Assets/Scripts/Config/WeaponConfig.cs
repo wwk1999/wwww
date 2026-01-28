@@ -18,8 +18,33 @@ namespace Config
         public float AttackSpeed;
 
     }
+
+    public class WeaponHunQiDesc
+    {
+        public string HunQi1;
+        public string HunQi2;
+        public string HunQi3;
+        public string HunQi4;
+        public string HunQi5;
+
+    }
     public class WeaponConfig
     {
+
+        public static Dictionary<WeaponType, WeaponHunQiDesc> WeaponHunQiDic =
+            new Dictionary<WeaponType, WeaponHunQiDesc>()
+            {
+                { WeaponType.Primary ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "魔法弹数量+1",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
+                { WeaponType.Du ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "中毒伤害翻倍",HunQi4 = "武器伤害+20%",HunQi5 = "击中生成毒液圈"} },
+                { WeaponType.PuTong3 ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "武器伤害+20%",HunQi4 = "基础攻击速度+0.2",HunQi5 = "魔法弹可以穿透"} },
+                { WeaponType.XuKong ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "魔法弹数量+1",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
+                { WeaponType.Fire ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "爆炸造成灼烧效果",HunQi4 = "武器伤害+20%",HunQi5 = "爆炸范围扩大"} },
+                { WeaponType.LvQuan ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "魔法弹大小+20%",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
+                { WeaponType.HeiDong ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "爆炸范围增加20%",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
+                { WeaponType.JianQi ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.3",HunQi3 = "剑气数量+1",HunQi4 = "武器伤害+20%",HunQi5 = "剑气数量+1"} },
+            };
+        
+        
         public static Dictionary<WeaponType, WeaponAttribute> WeaponBaseAttributeDic =
             new Dictionary<WeaponType, WeaponAttribute>()
             {
