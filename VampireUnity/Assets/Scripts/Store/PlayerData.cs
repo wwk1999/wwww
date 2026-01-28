@@ -30,6 +30,24 @@ public class PlayerData : XSingleton<PlayerData>
     public int fireWeaponLevel;
     public int heiDongWeaponLevel;
     public int jianQiWeaponLevel;
+    
+    public int primaryHunQiLevel=0;
+    public int duHunQiLevel=0;
+    public int puTong3HunQiLevel=0;
+    public int xuKongHunQiLevel=0;
+    public int lvQuanHunQiLevel=0;
+    public int fireHunQiLevel=0;
+    public int heiDongHunQiLevel=0;
+    public int jianQiHunQiLevel=0;
+    
+    public int primaryHunQiEx=0;
+    public int duHunQiEx=0;
+    public int puTong3HunQiEx=0;
+    public int xuKongHunQiEx=0;
+    public int lvQuanHunQiEx=0;
+    public int fireHunQiEx=0;
+    public int heiDongHunQiEx=0;
+    public int jianQiHunQiEx=0;
 
     public int zhuanjinCount = 0;
 

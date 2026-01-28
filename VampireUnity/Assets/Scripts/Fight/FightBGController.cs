@@ -131,7 +131,358 @@ public class FightBGController : XSingleton<FightBGController>
             }
             playerExSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
             playerExSlider.value=GlobalPlayerAttribute.Exp ;
+            AddHunQiLevel();
             StoreController.S.SaveStoreData();
+        }
+    }
+
+    public void AddHunQiLevel()
+    {
+        switch (PlayerData.S.playerWeaponType)
+        {
+            case WeaponType.Primary:
+                switch (PlayerData.S.primaryHunQiLevel)
+                {
+                    case 0:
+                        if (PlayerData.S.primaryHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Primary].Level1)
+                        {
+                            PlayerData.S.primaryHunQiLevel++;
+                            PlayerData.S.primaryHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Primary].Level1;
+                        }
+                        break;
+                    case 1:
+                        if (PlayerData.S.primaryHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Primary].Level2)
+                        {
+                            PlayerData.S.primaryHunQiLevel++;
+                            PlayerData.S.primaryHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Primary].Level2;
+                        }
+                        break;
+                    case 2:
+                        if (PlayerData.S.primaryHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Primary].Level3)
+                        {
+                            PlayerData.S.primaryHunQiLevel++;
+                            PlayerData.S.primaryHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Primary].Level3;
+                        }
+                        break;
+                    case 3:
+                        if (PlayerData.S.primaryHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Primary].Level4)
+                        {
+                            PlayerData.S.primaryHunQiLevel++;
+                            PlayerData.S.primaryHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Primary].Level4;
+                        }
+                        break;
+                    case 4:
+                        if (PlayerData.S.primaryHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Primary].Level5)
+                        {
+                            PlayerData.S.primaryHunQiLevel++;
+                            PlayerData.S.primaryHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Primary].Level5;
+                        }
+                        break;
+                }
+                break;
+            
+            
+             case WeaponType.Du:
+                switch (PlayerData.S.duHunQiLevel)
+                {
+                    case 0:
+                        if (PlayerData.S.duHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Du].Level1)
+                        {
+                            PlayerData.S.duHunQiLevel++;
+                            PlayerData.S.duHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Du].Level1;
+                        }
+                        break;
+                    case 1:
+                        if (PlayerData.S.duHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Du].Level2)
+                        {
+                            PlayerData.S.duHunQiLevel++;
+                            PlayerData.S.duHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Du].Level2;
+                        }
+                        break;
+                    case 2:
+                        if (PlayerData.S.duHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Du].Level3)
+                        {
+                            PlayerData.S.duHunQiLevel++;
+                            PlayerData.S.duHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Du].Level3;
+                        }
+                        break;
+                    case 3:
+                        if (PlayerData.S.duHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Du].Level4)
+                        {
+                            PlayerData.S.duHunQiLevel++;
+                            PlayerData.S.duHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Du].Level4;
+                        }
+                        break;
+                    case 4:
+                        if (PlayerData.S.duHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Du].Level5)
+                        {
+                            PlayerData.S.duHunQiLevel++;
+                            PlayerData.S.duHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Du].Level5;
+                        }
+                        break;
+                }
+                break;
+             
+             
+              case WeaponType.PuTong3:
+                switch (PlayerData.S.puTong3HunQiLevel)
+                {
+                    case 0:
+                        if (PlayerData.S.puTong3HunQiEx >= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level1)
+                        {
+                            PlayerData.S.puTong3HunQiLevel++;
+                            PlayerData.S.puTong3HunQiEx -= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level1;
+                        }
+                        break;
+                    case 1:
+                        if (PlayerData.S.puTong3HunQiEx >= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level2)
+                        {
+                            PlayerData.S.puTong3HunQiLevel++;
+                            PlayerData.S.puTong3HunQiEx -= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level2;
+                        }
+                        break;
+                    case 2:
+                        if (PlayerData.S.puTong3HunQiEx >= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level3)
+                        {
+                            PlayerData.S.puTong3HunQiLevel++;
+                            PlayerData.S.puTong3HunQiEx -= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level3;
+                        }
+                        break;
+                    case 3:
+                        if (PlayerData.S.puTong3HunQiEx >= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level4)
+                        {
+                            PlayerData.S.puTong3HunQiLevel++;
+                            PlayerData.S.puTong3HunQiEx -= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level4;
+                        }
+                        break;
+                    case 4:
+                        if (PlayerData.S.puTong3HunQiEx >= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level5)
+                        {
+                            PlayerData.S.puTong3HunQiLevel++;
+                            PlayerData.S.puTong3HunQiEx -= WeaponConfig.HunQiExDic[WeaponType.PuTong3].Level5;
+                        }
+                        break;
+                }
+                break;
+              
+              
+               case WeaponType.XuKong:
+                switch (PlayerData.S.xuKongHunQiLevel)
+                {
+                    case 0:
+                        if (PlayerData.S.xuKongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level1)
+                        {
+                            PlayerData.S.xuKongHunQiLevel++;
+                            PlayerData.S.xuKongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level1;
+                        }
+                        break;
+                    case 1:
+                        if (PlayerData.S.xuKongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level2)
+                        {
+                            PlayerData.S.xuKongHunQiLevel++;
+                            PlayerData.S.xuKongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level2;
+                        }
+                        break;
+                    case 2:
+                        if (PlayerData.S.xuKongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level3)
+                        {
+                            PlayerData.S.xuKongHunQiLevel++;
+                            PlayerData.S.xuKongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level3;
+                        }
+                        break;
+                    case 3:
+                        if (PlayerData.S.xuKongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level4)
+                        {
+                            PlayerData.S.xuKongHunQiLevel++;
+                            PlayerData.S.xuKongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level4;
+                        }
+                        break;
+                    case 4:
+                        if (PlayerData.S.xuKongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level5)
+                        {
+                            PlayerData.S.xuKongHunQiLevel++;
+                            PlayerData.S.xuKongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.XuKong].Level5;
+                        }
+                        break;
+                }
+                break;
+               
+               
+               
+                case WeaponType.Fire:
+                switch (PlayerData.S.fireHunQiLevel)
+                {
+                    case 0:
+                        if (PlayerData.S.fireHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Fire].Level1)
+                        {
+                            PlayerData.S.fireHunQiLevel++;
+                            PlayerData.S.fireHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Fire].Level1;
+                        }
+                        break;
+                    case 1:
+                        if (PlayerData.S.fireHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Fire].Level2)
+                        {
+                            PlayerData.S.fireHunQiLevel++;
+                            PlayerData.S.fireHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Fire].Level2;
+                        }
+                        break;
+                    case 2:
+                        if (PlayerData.S.fireHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Fire].Level3)
+                        {
+                            PlayerData.S.fireHunQiLevel++;
+                            PlayerData.S.fireHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Fire].Level3;
+                        }
+                        break;
+                    case 3:
+                        if (PlayerData.S.fireHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Fire].Level4)
+                        {
+                            PlayerData.S.fireHunQiLevel++;
+                            PlayerData.S.fireHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Fire].Level4;
+                        }
+                        break;
+                    case 4:
+                        if (PlayerData.S.fireHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.Fire].Level5)
+                        {
+                            PlayerData.S.fireHunQiLevel++;
+                            PlayerData.S.fireHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.Fire].Level5;
+                        }
+                        break;
+                }
+                break;
+                
+                
+                
+                
+                 case WeaponType.LvQuan:
+                switch (PlayerData.S.lvQuanHunQiLevel)
+                {
+                    case 0:
+                        if (PlayerData.S.lvQuanHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level1)
+                        {
+                            PlayerData.S.lvQuanHunQiLevel++;
+                            PlayerData.S.lvQuanHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level1;
+                        }
+                        break;
+                    case 1:
+                        if (PlayerData.S.lvQuanHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level2)
+                        {
+                            PlayerData.S.lvQuanHunQiLevel++;
+                            PlayerData.S.lvQuanHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level2;
+                        }
+                        break;
+                    case 2:
+                        if (PlayerData.S.lvQuanHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level3)
+                        {
+                            PlayerData.S.lvQuanHunQiLevel++;
+                            PlayerData.S.lvQuanHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level3;
+                        }
+                        break;
+                    case 3:
+                        if (PlayerData.S.lvQuanHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level4)
+                        {
+                            PlayerData.S.lvQuanHunQiLevel++;
+                            PlayerData.S.lvQuanHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level4;
+                        }
+                        break;
+                    case 4:
+                        if (PlayerData.S.lvQuanHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level5)
+                        {
+                            PlayerData.S.lvQuanHunQiLevel++;
+                            PlayerData.S.lvQuanHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.LvQuan].Level5;
+                        }
+                        break;
+                }
+                break;
+                 
+                 
+                 
+                 
+                  case WeaponType.HeiDong:
+                switch (PlayerData.S.heiDongHunQiLevel)
+                {
+                    case 0:
+                        if (PlayerData.S.heiDongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level1)
+                        {
+                            PlayerData.S.heiDongHunQiLevel++;
+                            PlayerData.S.heiDongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level1;
+                        }
+                        break;
+                    case 1:
+                        if (PlayerData.S.heiDongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level2)
+                        {
+                            PlayerData.S.heiDongHunQiLevel++;
+                            PlayerData.S.heiDongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level2;
+                        }
+                        break;
+                    case 2:
+                        if (PlayerData.S.heiDongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level3)
+                        {
+                            PlayerData.S.heiDongHunQiLevel++;
+                            PlayerData.S.heiDongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level3;
+                        }
+                        break;
+                    case 3:
+                        if (PlayerData.S.heiDongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level4)
+                        {
+                            PlayerData.S.heiDongHunQiLevel++;
+                            PlayerData.S.heiDongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level4;
+                        }
+                        break;
+                    case 4:
+                        if (PlayerData.S.heiDongHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level5)
+                        {
+                            PlayerData.S.heiDongHunQiLevel++;
+                            PlayerData.S.heiDongHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.HeiDong].Level5;
+                        }
+                        break;
+                }
+                break;
+                  
+                  
+                  
+                  
+                  
+                   case WeaponType.JianQi:
+                switch (PlayerData.S.jianQiHunQiLevel)
+                {
+                    case 0:
+                        if (PlayerData.S.jianQiHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level1)
+                        {
+                            PlayerData.S.jianQiHunQiLevel++;
+                            PlayerData.S.jianQiHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level1;
+                        }
+                        break;
+                    case 1:
+                        if (PlayerData.S.jianQiHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level2)
+                        {
+                            PlayerData.S.jianQiHunQiLevel++;
+                            PlayerData.S.jianQiHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level2;
+                        }
+                        break;
+                    case 2:
+                        if (PlayerData.S.jianQiHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level3)
+                        {
+                            PlayerData.S.jianQiHunQiLevel++;
+                            PlayerData.S.jianQiHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level3;
+                        }
+                        break;
+                    case 3:
+                        if (PlayerData.S.jianQiHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level4)
+                        {
+                            PlayerData.S.jianQiHunQiLevel++;
+                            PlayerData.S.jianQiHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level4;
+                        }
+                        break;
+                    case 4:
+                        if (PlayerData.S.jianQiHunQiEx >= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level5)
+                        {
+                            PlayerData.S.jianQiHunQiLevel++;
+                            PlayerData.S.jianQiHunQiEx -= WeaponConfig.HunQiExDic[WeaponType.JianQi].Level5;
+                        }
+                        break;
+                }
+                break;
+           
         }
     }
 

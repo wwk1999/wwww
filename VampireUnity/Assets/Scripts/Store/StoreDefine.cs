@@ -81,6 +81,25 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int fireWeaponLevel;
         public int heiDongWeaponLevel;
         public int jianQiWeaponLevel;
+        
+        public int primaryHunQiLevel=0;
+        public int duHunQiLevel=0;
+        public int puTong3HunQiLevel=0;
+        public int xuKongHunQiLevel=0;
+        public int lvQuanHunQiLevel=0;
+        public int fireHunQiLevel=0;
+        public int heiDongHunQiLevel=0;
+        public int jianQiHunQiLevel=0;
+        
+        
+        public int primaryHunQiEx=0;
+        public int duHunQiEx=0;
+        public int puTong3HunQiEx=0;
+        public int xuKongHunQiEx=0;
+        public int lvQuanHunQiEx=0;
+        public int fireHunQiEx=0;
+        public int heiDongHunQiEx=0;
+        public int jianQiHunQiEx=0;
 
         public int zhuanjinCount = 0;
 
@@ -116,6 +135,27 @@ public class StoreDefine : XSingleton<StoreDefine>
             heiDongWeaponLevel = runtime.heiDongWeaponLevel;
             jianQiWeaponLevel = runtime.jianQiWeaponLevel;
             zhuanjinCount=runtime.zhuanjinCount;
+            
+            
+            primaryHunQiLevel = runtime.primaryHunQiLevel;
+            duHunQiLevel = runtime.duHunQiLevel;
+            puTong3HunQiLevel = runtime.puTong3HunQiLevel;
+            xuKongHunQiLevel = runtime.xuKongHunQiLevel;
+            lvQuanHunQiLevel = runtime.lvQuanHunQiLevel;
+            fireHunQiLevel = runtime.fireHunQiLevel;
+            heiDongHunQiLevel = runtime.heiDongHunQiLevel;
+            jianQiHunQiLevel = runtime.jianQiHunQiLevel;
+            
+            
+            primaryHunQiEx = runtime.primaryHunQiEx;
+            duHunQiEx = runtime.duHunQiEx;
+            puTong3HunQiEx = runtime.puTong3HunQiEx;
+            xuKongHunQiEx = runtime.xuKongHunQiEx;
+            lvQuanHunQiEx = runtime.lvQuanHunQiEx;
+            fireHunQiEx = runtime.fireHunQiEx;
+            heiDongHunQiEx = runtime.heiDongHunQiEx;
+            jianQiHunQiEx = runtime.jianQiHunQiEx;
+
 
             playerWeaponType = runtime.playerWeaponType;
             mJLevel = runtime.mJLevel;
@@ -138,7 +178,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.shoeid = shoeid;
             runtime.necklaceid = necklaceid;
             
-            runtime. primaryWeaponLevel = primaryWeaponLevel;
+            runtime.primaryWeaponLevel = primaryWeaponLevel;
             runtime.duWeaponLevel = duWeaponLevel;
             runtime.puTong3WeaponLevel = puTong3WeaponLevel;
             runtime.xuKongWeaponLevel = xuKongWeaponLevel;
@@ -146,6 +186,27 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.fireWeaponLevel = fireWeaponLevel;
             runtime.heiDongWeaponLevel = heiDongWeaponLevel;
             runtime.jianQiWeaponLevel = jianQiWeaponLevel;
+            
+            runtime.primaryHunQiLevel = primaryHunQiLevel;
+            runtime.duHunQiLevel = duHunQiLevel;
+            runtime.puTong3HunQiLevel = puTong3HunQiLevel;
+            runtime.xuKongHunQiLevel = xuKongHunQiLevel;
+            runtime.lvQuanHunQiLevel = lvQuanHunQiLevel;
+            runtime.fireHunQiLevel = fireHunQiLevel;
+            runtime.heiDongHunQiLevel = heiDongHunQiLevel;
+            runtime.jianQiHunQiLevel = jianQiHunQiLevel;
+            
+            
+            runtime.primaryHunQiEx = primaryHunQiEx;
+            runtime.duHunQiEx = duHunQiEx;
+            runtime.puTong3HunQiEx = puTong3HunQiEx;
+            runtime.xuKongHunQiEx = xuKongHunQiEx;
+            runtime.lvQuanHunQiEx = lvQuanHunQiEx;
+            runtime.fireHunQiEx = fireHunQiEx;
+            runtime.heiDongHunQiEx = heiDongHunQiEx;
+            runtime.jianQiHunQiEx = jianQiHunQiEx;
+            
+            
             runtime.zhuanjinCount = zhuanjinCount;
             
             

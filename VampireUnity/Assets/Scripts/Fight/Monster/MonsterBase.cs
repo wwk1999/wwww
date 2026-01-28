@@ -537,6 +537,37 @@ public abstract class MonsterBase : MonoBehaviour
         bloodEnergy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
+    public void AddHunQiEx()
+    {
+        switch (PlayerData.S.playerWeaponType)
+        {
+            case WeaponType.Primary:
+                PlayerData.S.primaryHunQiEx++;
+                break;
+            case WeaponType.Du:
+                PlayerData.S.primaryHunQiEx++;
+                break;
+            case WeaponType.PuTong3:
+                PlayerData.S.primaryHunQiEx++;
+                break;
+            case WeaponType.XuKong:
+                PlayerData.S.primaryHunQiEx++;
+                break;
+            case WeaponType.Fire:
+                PlayerData.S.primaryHunQiEx++;
+                break;
+            case WeaponType.LvQuan:
+                PlayerData.S.primaryHunQiEx++;
+                break;
+            case WeaponType.HeiDong:
+                PlayerData.S.primaryHunQiEx++;
+                break;
+            case WeaponType.JianQi:
+                PlayerData.S.primaryHunQiEx++;
+                break;
+        }
+    }
+
 
     /// <summary>
     /// 死亡通用
@@ -550,8 +581,8 @@ public abstract class MonsterBase : MonoBehaviour
         //附加属性
         int replyHp = Mathf.RoundToInt(GameController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
         GlobalPlayerAttribute.ReplyHp(replyHp);
-        
-        
+
+        AddHunQiEx();
         //怪物数量排行榜
         switch (MonsterType)
         {

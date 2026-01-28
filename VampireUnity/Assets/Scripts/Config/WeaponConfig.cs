@@ -26,10 +26,30 @@ namespace Config
         public string HunQi3;
         public string HunQi4;
         public string HunQi5;
+    }
 
+    public class HunQiEx
+    {
+        public int Level1;
+        public int Level2;
+        public int Level3;
+        public int Level4;
+        public int Level5;
     }
     public class WeaponConfig
     {
+
+        public static Dictionary<WeaponType, HunQiEx> HunQiExDic = new Dictionary<WeaponType, HunQiEx>()
+        {
+            { WeaponType.Primary,new HunQiEx(){Level1 = 30,Level2 = 50,Level3 = 80,Level4 = 120,Level5 = 180}},
+            { WeaponType.Du,new HunQiEx(){Level1 = 50,Level2 = 80,Level3 = 120,Level4 = 180,Level5 = 250}},
+            { WeaponType.PuTong3,new HunQiEx(){Level1 = 100,Level2 = 150,Level3 = 200,Level4 = 280,Level5 = 400}},
+            { WeaponType.XuKong,new HunQiEx(){Level1 = 100,Level2 = 150,Level3 = 200,Level4 = 280,Level5 = 400}},
+            { WeaponType.Fire,new HunQiEx(){Level1 = 150,Level2 = 220,Level3 = 300,Level4 = 400,Level5 = 550}},
+            { WeaponType.LvQuan,new HunQiEx(){Level1 = 150,Level2 = 220,Level3 = 300,Level4 = 400,Level5 = 550}},
+            { WeaponType.HeiDong,new HunQiEx(){Level1 = 200,Level2 = 300,Level3 = 400,Level4 = 550,Level5 = 700}},
+            { WeaponType.JianQi,new HunQiEx(){Level1 = 200,Level2 = 300,Level3 = 400,Level4 = 550,Level5 = 700}},
+        };
 
         public static Dictionary<WeaponType, WeaponHunQiDesc> WeaponHunQiDic =
             new Dictionary<WeaponType, WeaponHunQiDesc>()
