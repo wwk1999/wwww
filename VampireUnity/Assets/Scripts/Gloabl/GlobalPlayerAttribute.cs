@@ -29,6 +29,10 @@ public class GlobalPlayerAttribute
    public static float WeaponAttackSpeed=>GetWeaponAttackSpeed();
    public static float WeaponShenJiPercent = 0.2f;
 
+   public static float HunQiDamage => GetHunQiDamage();
+   public static float HunQiAttackSpeed => GetHunQiAttackSpeed();
+
+
    
    //专精属性
    public static float MonsterAttack => GetMonsterAttack();
@@ -73,6 +77,93 @@ public class GlobalPlayerAttribute
 
    public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
 
+   public static float GetHunQiDamage()
+   {
+       switch (PlayerData.S.playerWeaponType)
+       {
+           case WeaponType.Primary:
+           case WeaponType.Du:
+           case WeaponType.XuKong:
+           case WeaponType.Fire:
+           case WeaponType.LvQuan:
+           case WeaponType.HeiDong:
+           case WeaponType.JianQi:
+               switch (PlayerData.S.primaryHunQiLevel)
+               {
+                   case 0:
+                       return 0;
+                   case 1:
+                   case 2:
+                   case 3:
+                       return 0.1f;
+                   case 4:
+                   case 5:
+                       return 0.3f;
+               }
+               break;
+           case WeaponType.PuTong3:
+               switch (PlayerData.S.primaryHunQiLevel)
+               {
+                   case 0:
+                       return 0;
+                   case 1:
+                   case 2:
+                       return 0.1f;
+                   case 3:
+                   case 4:
+                   case 5:
+                       return 0.3f;
+               }
+               break;
+       }
+
+       return 0;
+   }
+   
+   
+   public static float GetHunQiAttackSpeed()
+   {
+       switch (PlayerData.S.playerWeaponType)
+       {
+           case WeaponType.Primary:
+           case WeaponType.Du:
+           case WeaponType.XuKong:
+           case WeaponType.Fire:
+           case WeaponType.LvQuan:
+           case WeaponType.HeiDong:
+           case WeaponType.JianQi:
+               switch (PlayerData.S.primaryHunQiLevel)
+               {
+                   case 0:
+                   case 1:
+                       return 0;
+                   case 2:
+                   case 3:
+                   case 4:
+                   case 5:
+                       return 0.2f;
+               }
+               break;
+           case WeaponType.PuTong3:
+               switch (PlayerData.S.primaryHunQiLevel)
+               {
+                   case 0:
+                   case 1:
+                       return 0;
+                   case 2:
+                   case 3:
+                       return 0.2f;
+                   case 4:
+                   case 5:
+                       return 0.4f;
+               }
+               break;
+       }
+
+       return 0;
+   }
+
+   
 
    public static float GetBaoShiXiaoGuo()
    {
@@ -170,8 +261,6 @@ public class GlobalPlayerAttribute
 
        return value;
    }
-   
-   
    
    
    
@@ -2357,7 +2446,7 @@ public class GlobalPlayerAttribute
    public static float GetTotalAttackSpeed()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       return (weaponAttribute.AttackSpeed+PlayerChiBangAttribute.attackSpeed) * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed/100.0f);
+       return (weaponAttribute.AttackSpeed+PlayerChiBangAttribute.attackSpeed+HunQiAttackSpeed) * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed/100.0f);
    }
 
    public static float GetTotalCrit()

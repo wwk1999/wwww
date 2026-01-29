@@ -61,7 +61,7 @@ namespace Config
                 { WeaponType.Fire ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "爆炸造成灼烧效果",HunQi4 = "武器伤害+20%",HunQi5 = "爆炸范围扩大"} },
                 { WeaponType.LvQuan ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "魔法弹大小+20%",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
                 { WeaponType.HeiDong ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "爆炸范围增加20%",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
-                { WeaponType.JianQi ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.3",HunQi3 = "剑气数量+1",HunQi4 = "武器伤害+20%",HunQi5 = "剑气数量+1"} },
+                { WeaponType.JianQi ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "剑气数量+1",HunQi4 = "武器伤害+20%",HunQi5 = "剑气数量+1"} },
             };
         
         

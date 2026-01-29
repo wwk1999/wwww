@@ -830,6 +830,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
         finalDamage = OrangeEntryDamage(finalDamage);//最终伤害
+        finalDamage *= (1.0f + GlobalPlayerAttribute.HunQiDamage);
         GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck/100.0f * finalDamage);
         ShowHurtText(finalDamage, isCrit);
         var random=Random.Range(0, 100);
