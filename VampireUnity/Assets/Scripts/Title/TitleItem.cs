@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Config;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TitleItem : MonoBehaviour
 {
@@ -34,6 +36,155 @@ public class TitleItem : MonoBehaviour
     public GameObject ChiBang4 ;
     public GameObject ChiBang5 ;
     public GameObject DiaoLuo ;
+    
+    
+    
+    
+    
+    public Button Level5Button;
+    public Button Level15Button;
+    public Button Level30Button;
+    public Button Level50Button;
+    public Button Level75Button;
+    public Button Level100Button;
+    
+    public Button MonsterCount1Button;
+    public Button MonsterCount2Button;
+    public Button MonsterCount3Button;
+    public Button MonsterCount4Button;
+    public Button MonsterCount5Button;
+    public Button MonsterCount6Button;
+
+    public Button LingHunButton;
+    public Button BaoShiButton;
+    public Button GuanKa3Button;
+    public Button GuanKa4Button;
+    public Button GuanKa5Button;
+    public Button HunQi3Button;
+    public Button HunQi4Button;
+    public Button HunQi5Button;
+    public Button ChiBang4Button;
+    public Button ChiBang5Button;
+    public Button DiaoLuoButton;
+
+    private void Start()
+    {
+        Level5Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.Level5);
+        });
+        
+        Level15Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.Level15);
+        });
+        
+        Level30Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.Level30);
+        });
+        
+        Level50Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.Level50);
+        });
+        
+        Level75Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.Level75);
+        });
+        
+        Level100Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.Level100);
+        });
+        
+        MonsterCount1Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.MonsterCount1);
+        });
+        
+        MonsterCount2Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.MonsterCount2);
+        });
+        
+        MonsterCount3Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.MonsterCount3);
+        });
+        
+        MonsterCount4Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.MonsterCount4);
+        });
+        
+        MonsterCount5Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.MonsterCount5);
+        });
+        
+        MonsterCount6Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.MonsterCount6);
+        });
+        
+        LingHunButton.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.LinHun);
+        });
+        
+        BaoShiButton.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.BaoShi);
+        });
+        
+        HunQi3Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.HunQi3);
+        });
+        
+        HunQi4Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.HunQi4);
+        });
+        
+        HunQi5Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.HunQi5);
+        });
+        
+        GuanKa3Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.GuanKa3);
+        });
+        
+        GuanKa4Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.GuanKa4);
+        });
+        
+        GuanKa5Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.GuanKa5);
+        });
+        
+        ChiBang4Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.ChiBang4);
+        });
+        
+        ChiBang5Button.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.ChiBang5);
+        });
+        
+        DiaoLuoButton.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("TitleInfo",TitleType.DiaoLuo);
+        });
+        
+    }
 
     public void SetTitle(TitleType titleType,bool JieSuo)
     {
