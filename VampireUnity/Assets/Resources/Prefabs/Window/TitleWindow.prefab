@@ -10678,7 +10678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1389752718931327353}
   m_Layer: 5
-  m_Name: HunQi2
+  m_Name: HunQi4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11249,7 +11249,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.45
+  m_fontSize: 25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15703,7 +15703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3781018738288461469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27867,7 +27867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924602869127736499}
   m_Layer: 5
-  m_Name: HunQi1
+  m_Name: HunQi3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39744,7 +39744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4103482355149346606}
   m_Layer: 5
-  m_Name: HunQi3
+  m_Name: HunQi5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47754,6 +47754,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1071655434321827820}
     m_Modifications:
+    - target: {fileID: 384890088666091341, guid: 772d1b78d7e00df41b505150977270a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.60030365
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682771146409081130, guid: 772d1b78d7e00df41b505150977270a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.60030365
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657081365227692189, guid: 772d1b78d7e00df41b505150977270a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.60030365
+      objectReference: {fileID: 0}
     - target: {fileID: 3501262943884810337, guid: 772d1b78d7e00df41b505150977270a8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -47834,14 +47846,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4476261486409925635, guid: 772d1b78d7e00df41b505150977270a8, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 0afba460e73e4a4d9a7237b8d95d62cd, type: 2}
-    - target: {fileID: 6014628553395705038, guid: 772d1b78d7e00df41b505150977270a8, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6551f4dca4cdd3c43b473087c4e7c10f, type: 3}
+    - target: {fileID: 4173967375500166172, guid: 772d1b78d7e00df41b505150977270a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.38288
+      objectReference: {fileID: 0}
     - target: {fileID: 8037327364168339519, guid: 772d1b78d7e00df41b505150977270a8, type: 3}
       propertyPath: m_Name
       value: TitleItem

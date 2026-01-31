@@ -50,6 +50,34 @@ public class PlayerData : XSingleton<PlayerData>
     public int jianQiHunQiEx=0;
 
     public int zhuanjinCount = 0;
+    
+    public bool Level5 = false;
+    public bool Level15 = false;
+    public bool Level30 = false;
+    public bool Level50 = false;
+    public bool Level75 = false;
+    public bool Level100 = false;
+    
+    public bool MonsterCount1 = false;
+    public bool MonsterCount2 = false;
+    public bool MonsterCount3 = false;
+    public bool MonsterCount4 = false;
+    public bool MonsterCount5 = false;
+    public bool MonsterCount6 = false;
+
+    public bool LingHun = false;
+    public bool BaoShi = false;
+    public bool Guanka3 = false;
+    public bool Guanka4 = false;
+    public bool Guanka5 = false;
+    public bool HunQi1 = false;
+    public bool HunQi2 = false;
+    public bool HunQi3 = false;
+    public bool ChiBang4 = false;
+    public bool ChiBang5 = false;
+    public bool DiaoLuo = false;
+    
+
 
 
     public WeaponType playerWeaponType=WeaponType.Primary;

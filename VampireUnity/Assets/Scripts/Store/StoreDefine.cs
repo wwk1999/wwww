@@ -102,12 +102,41 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int jianQiHunQiEx=0;
 
         public int zhuanjinCount = 0;
-
+        
         
         public WeaponType playerWeaponType=WeaponType.Primary;
         public MJLevel mJLevel = MJLevel.White;
         public LanguageType langType=LanguageType.Chinese;
 
+
+        
+        
+        
+        public bool Level5 = false;
+        public bool Level15 = false;
+        public bool Level30 = false;
+        public bool Level50 = false;
+        public bool Level75 = false;
+        public bool Level100 = false;
+    
+        public bool MonsterCount1 = false;
+        public bool MonsterCount2 = false;
+        public bool MonsterCount3 = false;
+        public bool MonsterCount4 = false;
+        public bool MonsterCount5 = false;
+        public bool MonsterCount6 = false;
+
+        public bool LingHun = false;
+        public bool BaoShi = false;
+        public bool Guanka3 = false;
+        public bool Guanka4 = false;
+        public bool Guanka5 = false;
+        public bool HunQi1 = false;
+        public bool HunQi2 = false;
+        public bool HunQi3 = false;
+        public bool ChiBang4 = false;
+        public bool ChiBang5 = false;
+        public bool DiaoLuo = false;
 
 
         public void CopyFromRuntime(PlayerData runtime)
@@ -160,6 +189,33 @@ public class StoreDefine : XSingleton<StoreDefine>
             playerWeaponType = runtime.playerWeaponType;
             mJLevel = runtime.mJLevel;
             langType = runtime.langType;
+            
+         Level5 = runtime.Level5;
+         Level15 = runtime.Level15;
+         Level30 = runtime.Level30;
+         Level50 = runtime.Level50;
+         Level75 = runtime.Level75;
+         Level100 = runtime.Level100;
+    
+         MonsterCount1 = runtime.MonsterCount1;
+         MonsterCount2 = runtime.MonsterCount2;
+         MonsterCount3 = runtime.MonsterCount3;
+         MonsterCount4 = runtime.MonsterCount4;
+         MonsterCount5 = runtime.MonsterCount5;
+         MonsterCount6 = runtime.MonsterCount6;
+
+         LingHun = runtime.LingHun;
+         BaoShi = runtime.BaoShi;
+         Guanka3 = runtime.Guanka3;
+         Guanka4 = runtime.Guanka4;
+         Guanka5 = runtime.Guanka5;
+         HunQi1 = runtime.HunQi1;
+         HunQi2 = runtime.HunQi2;
+         HunQi3 = runtime.HunQi3;
+         ChiBang4 = runtime.ChiBang4;
+         ChiBang5 = runtime.ChiBang5;
+         DiaoLuo = runtime.DiaoLuo;
+
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -213,6 +269,33 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.playerWeaponType = playerWeaponType;
             runtime.mJLevel = mJLevel;
             runtime.langType = langType;
+            
+            
+            
+            runtime.Level5=Level5;
+            runtime.Level15=Level15;
+            runtime.Level30=Level30;
+            runtime.Level50=Level50;
+            runtime.Level75=Level75;
+            runtime.Level100=Level100;
+            runtime.MonsterCount1=MonsterCount1;
+            runtime.MonsterCount2=MonsterCount2;
+            runtime.MonsterCount3=MonsterCount3;
+            runtime.MonsterCount4=MonsterCount4;
+            runtime.MonsterCount5=MonsterCount5;
+            runtime.MonsterCount6=MonsterCount6;
+
+            runtime.LingHun=LingHun;
+            runtime.BaoShi=BaoShi;
+            runtime.Guanka3=Guanka3;
+            runtime.Guanka4=Guanka4;
+            runtime.Guanka5=Guanka5;
+            runtime.HunQi1=HunQi1;
+            runtime.HunQi2=HunQi2;
+            runtime.HunQi3=HunQi3;
+            runtime.ChiBang4=ChiBang4;
+            runtime.ChiBang5=ChiBang5;
+            runtime.DiaoLuo=DiaoLuo;
         }
     }
     

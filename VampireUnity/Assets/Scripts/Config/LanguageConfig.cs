@@ -394,7 +394,7 @@ namespace Config
                         {
                             TitleInfoDic = new Dictionary<TitleType, TitleItemInfo>()
                             {
-                                { TitleType.Level5, new TitleItemInfo() { Quality = 1, Name = "见习学徒" } },
+                                { TitleType.Level5, new TitleItemInfo() { Quality = 1, Name = "魔法学徒" } },
                                 { TitleType.Level15, new TitleItemInfo() { Quality = 2, Name = "魔法学者" } },
                                 { TitleType.Level30, new TitleItemInfo() { Quality = 3, Name = "大魔导师" } },
                                 { TitleType.Level50, new TitleItemInfo() { Quality = 4, Name = "奥义领主" } },
@@ -410,14 +410,14 @@ namespace Config
 
                                 { TitleType.LinHun, new TitleItemInfo() { Quality = 4, Name = "灵魂收割者" } },
                                 { TitleType.BaoShi, new TitleItemInfo() { Quality = 4, Name = "宝石收藏家" } },
-                                { TitleType.HunQi1, new TitleItemInfo() { Quality = 3, Name = "魂器达人" } },
-                                { TitleType.HunQi2, new TitleItemInfo() { Quality = 4, Name = "魂器专家" } },
-                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 5, Name = "魂器大师" } },
-                                { TitleType.ChiBang1, new TitleItemInfo() { Quality = 4, Name = "流光之翼" } },
-                                { TitleType.ChiBang2, new TitleItemInfo() { Quality = 5, Name = "不朽之翼" } },
-                                { TitleType.GuanKa1, new TitleItemInfo() { Quality = 3, Name = "初出茅庐" } },
-                                { TitleType.GuanKa2, new TitleItemInfo() { Quality = 4, Name = "初识异界" } },
-                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 5, Name = "异界主宰" } },
+                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 3, Name = "魂器达人" } },
+                                { TitleType.HunQi4, new TitleItemInfo() { Quality = 4, Name = "魂器专家" } },
+                                { TitleType.HunQi5, new TitleItemInfo() { Quality = 5, Name = "魂器大师" } },
+                                { TitleType.ChiBang4, new TitleItemInfo() { Quality = 4, Name = "流光之翼" } },
+                                { TitleType.ChiBang5, new TitleItemInfo() { Quality = 5, Name = "不朽之翼" } },
+                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 3, Name = "初出茅庐" } },
+                                { TitleType.GuanKa4, new TitleItemInfo() { Quality = 4, Name = "初识异界" } },
+                                { TitleType.GuanKa5, new TitleItemInfo() { Quality = 5, Name = "异界主宰" } },
                                 { TitleType.DiaoLuo, new TitleItemInfo() { Quality = 5, Name = "寻宝大师" } },
                             }
                         },
@@ -721,24 +721,24 @@ namespace Config
 
                                 { TitleType.LinHun, new TitleItemInfo() { Quality = 4, Name = "Soul Reaper" } },
                                 { TitleType.BaoShi, new TitleItemInfo() { Quality = 4, Name = "Gem Collector" } },
-                                { TitleType.HunQi1, new TitleItemInfo() { Quality = 3, Name = "Soul Artifact Adept" } },
+                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 3, Name = "Soul Artifact Adept" } },
                                 {
-                                    TitleType.HunQi2, new TitleItemInfo() { Quality = 4, Name = "Soul Artifact Expert" }
+                                    TitleType.HunQi4, new TitleItemInfo() { Quality = 4, Name = "Soul Artifact Expert" }
                                 },
                                 {
-                                    TitleType.HunQi3, new TitleItemInfo() { Quality = 5, Name = "Soul Artifact Master" }
+                                    TitleType.HunQi5, new TitleItemInfo() { Quality = 5, Name = "Soul Artifact Master" }
                                 },
-                                { TitleType.ChiBang1, new TitleItemInfo() { Quality = 4, Name = "Wings of Radiance" } },
+                                { TitleType.ChiBang4, new TitleItemInfo() { Quality = 4, Name = "Wings of Radiance" } },
                                 {
-                                    TitleType.ChiBang2,
+                                    TitleType.ChiBang5,
                                     new TitleItemInfo() { Quality = 5, Name = "Wings of Immortality" }
                                 },
-                                { TitleType.GuanKa1, new TitleItemInfo() { Quality = 3, Name = "Greenhorn" } },
+                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 3, Name = "Greenhorn" } },
                                 {
-                                    TitleType.GuanKa2, new TitleItemInfo() { Quality = 4, Name = "Otherworld Initiate" }
+                                    TitleType.GuanKa4, new TitleItemInfo() { Quality = 4, Name = "Otherworld Initiate" }
                                 },
                                 {
-                                    TitleType.GuanKa3,
+                                    TitleType.GuanKa5,
                                     new TitleItemInfo() { Quality = 5, Name = "Otherworld Sovereign" }
                                 },
                                 { TitleType.DiaoLuo, new TitleItemInfo() { Quality = 5, Name = "Treasure Master" } },
@@ -1142,14 +1142,14 @@ namespace Config
 
                                 { TitleType.LinHun, new TitleItemInfo() { Quality = 4, Name = "영혼 수확자" } },
                                 { TitleType.BaoShi, new TitleItemInfo() { Quality = 4, Name = "보석 수집가" } },
-                                { TitleType.HunQi1, new TitleItemInfo() { Quality = 3, Name = "혼기 전문가" } },
-                                { TitleType.HunQi2, new TitleItemInfo() { Quality = 4, Name = "혼기 달인" } },
-                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 5, Name = "혼기 대가" } },
-                                { TitleType.ChiBang1, new TitleItemInfo() { Quality = 4, Name = "빛의 날개" } },
-                                { TitleType.ChiBang2, new TitleItemInfo() { Quality = 5, Name = "불멸의 날개" } },
-                                { TitleType.GuanKa1, new TitleItemInfo() { Quality = 3, Name = "초심자" } },
-                                { TitleType.GuanKa2, new TitleItemInfo() { Quality = 4, Name = "이세계 초보" } },
-                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 5, Name = "이세계 지배자" } },
+                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 3, Name = "혼기 전문가" } },
+                                { TitleType.HunQi4, new TitleItemInfo() { Quality = 4, Name = "혼기 달인" } },
+                                { TitleType.HunQi5, new TitleItemInfo() { Quality = 5, Name = "혼기 대가" } },
+                                { TitleType.ChiBang4, new TitleItemInfo() { Quality = 4, Name = "빛의 날개" } },
+                                { TitleType.ChiBang5, new TitleItemInfo() { Quality = 5, Name = "불멸의 날개" } },
+                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 3, Name = "초심자" } },
+                                { TitleType.GuanKa4, new TitleItemInfo() { Quality = 4, Name = "이세계 초보" } },
+                                { TitleType.GuanKa5, new TitleItemInfo() { Quality = 5, Name = "이세계 지배자" } },
                                 { TitleType.DiaoLuo, new TitleItemInfo() { Quality = 5, Name = "보물 사냥꾼" } },
                             }
                         },
@@ -1522,14 +1522,14 @@ namespace Config
 
                                 { TitleType.LinHun, new TitleItemInfo() { Quality = 4, Name = "魂刈り手" } },
                                 { TitleType.BaoShi, new TitleItemInfo() { Quality = 4, Name = "宝石収集家" } },
-                                { TitleType.HunQi1, new TitleItemInfo() { Quality = 3, Name = "魂器達人" } },
-                                { TitleType.HunQi2, new TitleItemInfo() { Quality = 4, Name = "魂器エキスパート" } },
-                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 5, Name = "魂器マスター" } },
-                                { TitleType.ChiBang1, new TitleItemInfo() { Quality = 4, Name = "流光の翼" } },
-                                { TitleType.ChiBang2, new TitleItemInfo() { Quality = 5, Name = "不朽の翼" } },
-                                { TitleType.GuanKa1, new TitleItemInfo() { Quality = 3, Name = "駆け出し" } },
-                                { TitleType.GuanKa2, new TitleItemInfo() { Quality = 4, Name = "異界初心者" } },
-                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 5, Name = "異界支配者" } },
+                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 3, Name = "魂器達人" } },
+                                { TitleType.HunQi4, new TitleItemInfo() { Quality = 4, Name = "魂器エキスパート" } },
+                                { TitleType.HunQi5, new TitleItemInfo() { Quality = 5, Name = "魂器マスター" } },
+                                { TitleType.ChiBang4, new TitleItemInfo() { Quality = 4, Name = "流光の翼" } },
+                                { TitleType.ChiBang5, new TitleItemInfo() { Quality = 5, Name = "不朽の翼" } },
+                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 3, Name = "駆け出し" } },
+                                { TitleType.GuanKa4, new TitleItemInfo() { Quality = 4, Name = "異界初心者" } },
+                                { TitleType.GuanKa5, new TitleItemInfo() { Quality = 5, Name = "異界支配者" } },
                                 { TitleType.DiaoLuo, new TitleItemInfo() { Quality = 5, Name = "宝探しの達人" } },
                             }
                         },
