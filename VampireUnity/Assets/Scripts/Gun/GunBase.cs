@@ -122,12 +122,27 @@ public class GunBase : MonoBehaviour
         Vector2 baseDir = (worldPos -GameController.S.gamePlayer.transform.position).normalized;
 
         // 两个偏移角度：+10° 和 -10°
-        Vector2[] dirs =
+        Vector2[] dirs3 =
         {
             Quaternion.AngleAxis( 5f, Vector3.forward) * baseDir,
             Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
             Quaternion.AngleAxis(-5f, Vector3.forward) * baseDir
         };
+        
+        Vector2[] dirs5 =
+        {
+            Quaternion.AngleAxis( 3f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis(-3f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis(-5f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis(-5f, Vector3.forward) * baseDir,
+        };
+        int bulletCount = 3;
+        Vector2[] dirs = dirs3;
+        if (PlayerData.S.puTong3HunQiLevel >= 5)
+        {
+            dirs = dirs5;
+        }
 
         // 连发两颗
         foreach (Vector2 dir in dirs)
@@ -172,7 +187,7 @@ public class GunBase : MonoBehaviour
         // 原始方向
         Vector2 baseDir = (worldPos -GameController.S.gamePlayer.transform.position).normalized;
 
-        int bulletCount = 0;
+        int bulletCount = 1;
         if (PlayerData.S.primaryHunQiLevel >= 3)
         {
             bulletCount++;
