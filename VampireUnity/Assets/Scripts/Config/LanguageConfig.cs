@@ -35,7 +35,7 @@ namespace Config
         public string CCName;
         public string CDName;
         public string DDName;
-        
+
         public string HHTeXiao3;
         public string HATeXiao3;
         public string HCTeXiao3;
@@ -46,7 +46,7 @@ namespace Config
         public string CCTeXiao3;
         public string CDTeXiao3;
         public string DDTeXiao3;
-        
+
         public string HHTeXiao5;
         public string HATeXiao5;
         public string HCTeXiao5;
@@ -99,7 +99,7 @@ namespace Config
         public string XueQiE;
         public string YingShu;
         public string XueRenBoss;
-        
+
         public string NormalMonster;
         public string EliteMonster;
         public string Boss;
@@ -143,8 +143,11 @@ namespace Config
         public string AllHunQiLevel;
         public string HunQi;
         public string Attribute;
-        public Dictionary<WeaponType, WeaponHunQiDesc> WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>() { };
+
+        public Dictionary<WeaponType, WeaponHunQiDesc> WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
+            { };
     }
+
 
 
     public class SkillWindowLanguage
@@ -352,8 +355,12 @@ namespace Config
         public string Penetrate;
         public string DamageAddPercent;
         public string BloodSuck;
+    }
 
 
+    public class TitleLanguage
+    {
+        public Dictionary<TitleType, TitleItemInfo> TitleInfoDic = new Dictionary<TitleType, TitleItemInfo>();
     }
 
     public class LanguageItem
@@ -370,7 +377,8 @@ namespace Config
         public GameLevelWindowLanguage GameLevelWindowLanguage;
         public SettingWindowLanguage SettingWindowLanguage;
         public EquipLanguage EquipLanguage;
-        public BaoShiLanguage  BaoShiLanguage;
+        public BaoShiLanguage BaoShiLanguage;
+        public TitleLanguage TitleLanguage;
     }
 
     public class LanguageConfig
@@ -382,24 +390,68 @@ namespace Config
                 {
                     LanguageType.Chinese, new LanguageItem()
                     {
-                        BaoShiLanguage =  new BaoShiLanguage()
+                        TitleLanguage = new TitleLanguage()
                         {
-                            HHName = "仙石", HAName =  "龙血晶", HCName = "魂玉", HDName = "铁魄石", AAName = "白虎石", ACName = "血珀石", ADName = "摄魂石", CCName = "命晶", CDName = "镜石", DDName = "玄武石",
-                            HHTeXiao3 = "所有宝石效果增加10%",HATeXiao3 = "所有宝石效果增加10%",HCTeXiao3 = "所有宝石效果增加10%",HDTeXiao3 = "所有宝石效果增加10%",AATeXiao3 = "所有宝石效果增加10%",ACTeXiao3 = "所有宝石效果增加10%",ADTeXiao3 = "所有宝石效果增加10%",CCTeXiao3 = "所有宝石效果增加10%",CDTeXiao3 = "所有宝石效果增加10%",DDTeXiao3 = "所有宝石效果增加10%",
-                            HHTeXiao5 = "单次伤害永远不会超过自身50%最大生命值",HATeXiao5 = "移动速度增加30%",HCTeXiao5 = "所有宝石效果增加70%",HDTeXiao5 = "掉宝值增加30%",AATeXiao5 = "最终伤害增加30%",ACTeXiao5 = "暴击时增加3%的攻击力，最多叠加10层",ADTeXiao5 = "攻击力的10%也会参与防御值的计算",CCTeXiao5 = "暴击伤害增加50%",CDTeXiao5 = "被攻击后增加30%暴击和暴击伤害，持续5s",DDTeXiao5 = "每次被攻击增加3%防御，最多叠加10层",
+                            TitleInfoDic = new Dictionary<TitleType, TitleItemInfo>()
+                            {
+                                { TitleType.Level5, new TitleItemInfo() { Quality = 1, Name = "见习学徒" } },
+                                { TitleType.Level15, new TitleItemInfo() { Quality = 2, Name = "魔法学者" } },
+                                { TitleType.Level30, new TitleItemInfo() { Quality = 3, Name = "大魔导师" } },
+                                { TitleType.Level50, new TitleItemInfo() { Quality = 4, Name = "奥义领主" } },
+                                { TitleType.Level75, new TitleItemInfo() { Quality = 5, Name = "圣魔法师" } },
+                                { TitleType.Level100, new TitleItemInfo() { Quality = 6, Name = "不朽法神" } },
+
+                                { TitleType.MonsterCount1, new TitleItemInfo() { Quality = 1, Name = "见习猎手" } },
+                                { TitleType.MonsterCount2, new TitleItemInfo() { Quality = 2, Name = "精英猎手" } },
+                                { TitleType.MonsterCount3, new TitleItemInfo() { Quality = 3, Name = "大师猎手" } },
+                                { TitleType.MonsterCount4, new TitleItemInfo() { Quality = 4, Name = "传奇狩猎者" } },
+                                { TitleType.MonsterCount5, new TitleItemInfo() { Quality = 5, Name = "灾厄肃清者" } },
+                                { TitleType.MonsterCount6, new TitleItemInfo() { Quality = 6, Name = "终焉净化者" } },
+
+                                { TitleType.LinHun, new TitleItemInfo() { Quality = 4, Name = "灵魂收割者" } },
+                                { TitleType.BaoShi, new TitleItemInfo() { Quality = 4, Name = "宝石收藏家" } },
+                                { TitleType.HunQi1, new TitleItemInfo() { Quality = 3, Name = "魂器达人" } },
+                                { TitleType.HunQi2, new TitleItemInfo() { Quality = 4, Name = "魂器专家" } },
+                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 5, Name = "魂器大师" } },
+                                { TitleType.ChiBang1, new TitleItemInfo() { Quality = 4, Name = "流光之翼" } },
+                                { TitleType.ChiBang2, new TitleItemInfo() { Quality = 5, Name = "不朽之翼" } },
+                                { TitleType.GuanKa1, new TitleItemInfo() { Quality = 3, Name = "初出茅庐" } },
+                                { TitleType.GuanKa2, new TitleItemInfo() { Quality = 4, Name = "初识异界" } },
+                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 5, Name = "异界主宰" } },
+                                { TitleType.DiaoLuo, new TitleItemInfo() { Quality = 5, Name = "寻宝大师" } },
+                            }
                         },
-                        DuanZaoWindowLanguage=new DuanZaoWindowLanguage()
+                        BaoShiLanguage = new BaoShiLanguage()
                         {
-                            HeCheng="合成",
-                            XiLian="洗练",
-                            JinJie="进阶",
-                            WeaponFragment="武器碎片",
-                            JingCui="精粹",
-                            YiJianHeCheng="一键合成",
+                            HHName = "仙石", HAName = "龙血晶", HCName = "魂玉", HDName = "铁魄石", AAName = "白虎石",
+                            ACName = "血珀石", ADName = "摄魂石", CCName = "命晶", CDName = "镜石", DDName = "玄武石",
+                            HHTeXiao3 = "所有宝石效果增加10%", HATeXiao3 = "所有宝石效果增加10%", HCTeXiao3 = "所有宝石效果增加10%",
+                            HDTeXiao3 = "所有宝石效果增加10%", AATeXiao3 = "所有宝石效果增加10%", ACTeXiao3 = "所有宝石效果增加10%",
+                            ADTeXiao3 = "所有宝石效果增加10%", CCTeXiao3 = "所有宝石效果增加10%", CDTeXiao3 = "所有宝石效果增加10%",
+                            DDTeXiao3 = "所有宝石效果增加10%",
+                            HHTeXiao5 = "单次伤害永远不会超过自身50%最大生命值", HATeXiao5 = "移动速度增加30%", HCTeXiao5 = "所有宝石效果增加70%",
+                            HDTeXiao5 = "掉宝值增加30%", AATeXiao5 = "最终伤害增加30%", ACTeXiao5 = "暴击时增加3%的攻击力，最多叠加10层",
+                            ADTeXiao5 = "攻击力的10%也会参与防御值的计算", CCTeXiao5 = "暴击伤害增加50%",
+                            CDTeXiao5 = "被攻击后增加30%暴击和暴击伤害，持续5s", DDTeXiao5 = "每次被攻击增加3%防御，最多叠加10层",
                         },
-                        EquipLanguage=new EquipLanguage()
+                        DuanZaoWindowLanguage = new DuanZaoWindowLanguage()
                         {
-                            BaseAttribute = "基本属性",FuJiaAttribute = "附加属性",OrangeAttribute = "传说属性",CRITDamage = "暴击伤害",DamageSpeed = "攻击速度",DamageAddForNormal = "对普通怪伤害",DamageAddForBoss = "对Boss伤害",Penetrate = "防御穿透",DamageAddPercent = "百分比增加Att",BloodSuck = "吸血",KillReplyHpPercent = "击杀回复Hp",MaxHpPercent = "百分比增加Hp",MaxDefensePercent = "百分比增加Def",DamageReductionPercent = "伤害减免",DamageReductionPercentForNormal = "减免普通怪伤害",DamageReductionPercentForBoss = "减免Boss伤害",ReplyHpPercent = "每3s回复生命值",
+                            HeCheng = "合成",
+                            XiLian = "洗练",
+                            JinJie = "进阶",
+                            WeaponFragment = "武器碎片",
+                            JingCui = "精粹",
+                            YiJianHeCheng = "一键合成",
+                        },
+                        EquipLanguage = new EquipLanguage()
+                        {
+                            BaseAttribute = "基本属性", FuJiaAttribute = "附加属性", OrangeAttribute = "传说属性",
+                            CRITDamage = "暴击伤害", DamageSpeed = "攻击速度", DamageAddForNormal = "对普通怪伤害",
+                            DamageAddForBoss = "对Boss伤害", Penetrate = "防御穿透", DamageAddPercent = "百分比增加Att",
+                            BloodSuck = "吸血", KillReplyHpPercent = "击杀回复Hp", MaxHpPercent = "百分比增加Hp",
+                            MaxDefensePercent = "百分比增加Def", DamageReductionPercent = "伤害减免",
+                            DamageReductionPercentForNormal = "减免普通怪伤害", DamageReductionPercentForBoss = "减免Boss伤害",
+                            ReplyHpPercent = "每3s回复生命值",
                         },
                         RoleWindowLanguage = new RoleWindowLanguage()
                         {
@@ -416,7 +468,8 @@ namespace Config
                             HuoShanBoss = "熔岩行者", JiaChong = "刺壳兽", QingWa = "沼泽蟾蜍", WenZi = "红眼蝇", ShiRenHua = "血花妖",
                             ZhaoZeBoss = "泥沼龙王", ShaNiao = "红羽鸟", ShaChong = "沙丘甲虫", XianRenZhang = "死亡仙人掌",
                             ShaXiYi = "紫魔蜥", XieZi = "沙影蝎王", XueRen = "野雪人", XueZhangLang = "雪蟑螂", XueQiE = "雪企鹅",
-                            YingShu = "银角鼠", XueRenBoss = "雪山泰坦",NormalMonster = "普通怪",EliteMonster = "精英怪",Boss = "首领",
+                            YingShu = "银角鼠", XueRenBoss = "雪山泰坦", NormalMonster = "普通怪", EliteMonster = "精英怪",
+                            Boss = "首领",
                         },
                         WeaponWindowLanguage = new WeaponWindowLanguage()
                         {
@@ -433,21 +486,77 @@ namespace Config
                             TeXiao6 = "攻击特效：发射源弹对触碰的敌人持续造成150%攻击力的伤害。",
                             TeXiao7 = "攻击特效：湮灭弹对触碰的敌人持续造成100%的伤害，随后湮灭坍塌，造成500%的伤害。",
                             TeXiao8 = "攻击特效：快速发射剑气穿透敌人，并造成100%的伤害",
-                            HunQiLevel ="魂器等级",
+                            HunQiLevel = "魂器等级",
                             AllHunQiLevel = "总魂器等级",
                             HunQi = "魂器",
                             Attribute = "属性",
                             WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
+                            {
                                 {
-                                    { WeaponType.Primary ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "魔法弹数量+1",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
-                                    { WeaponType.Du ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "中毒伤害翻倍",HunQi4 = "武器伤害+20%",HunQi5 = "击中生成毒液圈"} },
-                                    { WeaponType.PuTong3 ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "武器伤害+20%",HunQi4 = "基础攻击速度+0.2",HunQi5 = "魔法弹可以穿透"} },
-                                    { WeaponType.XuKong ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "魔法弹数量+1",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
-                                    { WeaponType.Fire ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "爆炸造成灼烧效果",HunQi4 = "武器伤害+20%",HunQi5 = "爆炸范围扩大"} },
-                                    { WeaponType.LvQuan ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "魔法弹大小+20%",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
-                                    { WeaponType.HeiDong ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.2",HunQi3 = "爆炸范围增加20%",HunQi4 = "武器伤害+20%",HunQi5 = "魔法弹数量+1"} },
-                                    { WeaponType.JianQi ,new WeaponHunQiDesc(){HunQi1 = "武器伤害+10%",HunQi2 = "基础攻击速度+0.3",HunQi3 = "剑气数量+1",HunQi4 = "武器伤害+20%",HunQi5 = "剑气数量+1"} },
+                                    WeaponType.Primary,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "魔法弹数量+1",
+                                        HunQi4 = "武器伤害+20%", HunQi5 = "魔法弹数量+1"
+                                    }
                                 },
+                                {
+                                    WeaponType.Du,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "中毒伤害翻倍",
+                                        HunQi4 = "武器伤害+20%", HunQi5 = "击中生成毒液圈"
+                                    }
+                                },
+                                {
+                                    WeaponType.PuTong3,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "武器伤害+20%",
+                                        HunQi4 = "基础攻击速度+0.2", HunQi5 = "魔法弹可以穿透"
+                                    }
+                                },
+                                {
+                                    WeaponType.XuKong,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "魔法弹数量+1",
+                                        HunQi4 = "武器伤害+20%", HunQi5 = "魔法弹数量+1"
+                                    }
+                                },
+                                {
+                                    WeaponType.Fire,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "爆炸造成灼烧效果",
+                                        HunQi4 = "武器伤害+20%", HunQi5 = "爆炸范围扩大"
+                                    }
+                                },
+                                {
+                                    WeaponType.LvQuan,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "魔法弹大小+20%",
+                                        HunQi4 = "武器伤害+20%", HunQi5 = "魔法弹数量+1"
+                                    }
+                                },
+                                {
+                                    WeaponType.HeiDong,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "爆炸范围增加20%",
+                                        HunQi4 = "武器伤害+20%", HunQi5 = "魔法弹数量+1"
+                                    }
+                                },
+                                {
+                                    WeaponType.JianQi,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.3", HunQi3 = "剑气数量+1",
+                                        HunQi4 = "武器伤害+20%", HunQi5 = "剑气数量+1"
+                                    }
+                                },
+                            },
                         },
                         SkillWindowLanguage = new SkillWindowLanguage()
                         {
@@ -565,9 +674,9 @@ namespace Config
                         {
                             TuiJianLevel = "推荐等级", MonsterList = "怪物列表", TiaoZhan = "挑战",
                         },
-                        SettingWindowLanguage =  new SettingWindowLanguage()
+                        SettingWindowLanguage = new SettingWindowLanguage()
                         {
-                            Language = "语言",Audio = "音效",ZhongWen = "中文",YingWen = "英文",RiWen = "日文",HanWen = "韩文"
+                            Language = "语言", Audio = "音效", ZhongWen = "中文", YingWen = "英文", RiWen = "日文", HanWen = "韩文"
                         },
                     }
                 },
@@ -576,17 +685,78 @@ namespace Config
                 {
                     LanguageType.English, new LanguageItem()
                     {
+                        TitleLanguage = new TitleLanguage()
+                        {
+                            TitleInfoDic = new Dictionary<TitleType, TitleItemInfo>()
+                            {
+                                { TitleType.Level5, new TitleItemInfo() { Quality = 1, Name = "Novice Apprentice" } },
+                                { TitleType.Level15, new TitleItemInfo() { Quality = 2, Name = "Magic Scholar" } },
+                                { TitleType.Level30, new TitleItemInfo() { Quality = 3, Name = "Grand Archmage" } },
+                                { TitleType.Level50, new TitleItemInfo() { Quality = 4, Name = "Arcane Lord" } },
+                                { TitleType.Level75, new TitleItemInfo() { Quality = 5, Name = "Holy Mage" } },
+                                {
+                                    TitleType.Level100,
+                                    new TitleItemInfo() { Quality = 6, Name = "Immortal God of Magic" }
+                                },
+
+                                {
+                                    TitleType.MonsterCount1, new TitleItemInfo() { Quality = 1, Name = "Novice Hunter" }
+                                },
+                                { TitleType.MonsterCount2, new TitleItemInfo() { Quality = 2, Name = "Elite Hunter" } },
+                                {
+                                    TitleType.MonsterCount3, new TitleItemInfo() { Quality = 3, Name = "Master Hunter" }
+                                },
+                                {
+                                    TitleType.MonsterCount4,
+                                    new TitleItemInfo() { Quality = 4, Name = "Legendary Slayer" }
+                                },
+                                {
+                                    TitleType.MonsterCount5,
+                                    new TitleItemInfo() { Quality = 5, Name = "Calamity Purger" }
+                                },
+                                {
+                                    TitleType.MonsterCount6,
+                                    new TitleItemInfo() { Quality = 6, Name = "Final Purifier" }
+                                },
+
+                                { TitleType.LinHun, new TitleItemInfo() { Quality = 4, Name = "Soul Reaper" } },
+                                { TitleType.BaoShi, new TitleItemInfo() { Quality = 4, Name = "Gem Collector" } },
+                                { TitleType.HunQi1, new TitleItemInfo() { Quality = 3, Name = "Soul Artifact Adept" } },
+                                {
+                                    TitleType.HunQi2, new TitleItemInfo() { Quality = 4, Name = "Soul Artifact Expert" }
+                                },
+                                {
+                                    TitleType.HunQi3, new TitleItemInfo() { Quality = 5, Name = "Soul Artifact Master" }
+                                },
+                                { TitleType.ChiBang1, new TitleItemInfo() { Quality = 4, Name = "Wings of Radiance" } },
+                                {
+                                    TitleType.ChiBang2,
+                                    new TitleItemInfo() { Quality = 5, Name = "Wings of Immortality" }
+                                },
+                                { TitleType.GuanKa1, new TitleItemInfo() { Quality = 3, Name = "Greenhorn" } },
+                                {
+                                    TitleType.GuanKa2, new TitleItemInfo() { Quality = 4, Name = "Otherworld Initiate" }
+                                },
+                                {
+                                    TitleType.GuanKa3,
+                                    new TitleItemInfo() { Quality = 5, Name = "Otherworld Sovereign" }
+                                },
+                                { TitleType.DiaoLuo, new TitleItemInfo() { Quality = 5, Name = "Treasure Master" } },
+                            }
+                        },
+
+
                         BaoShiLanguage = new BaoShiLanguage()
                         {
-                            HHName = "Fairy Stone", 
-                            HAName = "Dragon Crystal", 
-                            HCName = "Soul Jade", 
-                            HDName = "Ironheart Stone", 
-                            AAName = "Tiger Stone", 
-                            ACName = "Blood Amber", 
-                            ADName = "Soul Stone", 
-                            CCName = "Fate Crystal", 
-                            CDName = "Mirror Stone", 
+                            HHName = "Fairy Stone",
+                            HAName = "Dragon Crystal",
+                            HCName = "Soul Jade",
+                            HDName = "Ironheart Stone",
+                            AAName = "Tiger Stone",
+                            ACName = "Blood Amber",
+                            ADName = "Soul Stone",
+                            CCName = "Fate Crystal",
+                            CDName = "Mirror Stone",
                             DDName = "Tortoise Stone",
                             HHTeXiao3 = "All gem effects increased by 10%",
                             HATeXiao3 = "All gem effects increased by 10%",
@@ -658,8 +828,9 @@ namespace Config
                             ShaChong = "Sand Dune Beetle", XianRenZhang = "Death Cactus",
                             ShaXiYi = "Purple Demon Lizard", XieZi = "Sand Shadow Scorpion King",
                             XueRen = "Wild Snowman", XueZhangLang = "Snow Cockroach", XueQiE = "Snow Penguin",
-                            YingShu = "Silver Horn Rat", XueRenBoss = "Snow Mountain Titan",NormalMonster = "Normal Monster",
-                            EliteMonster = "Elite Monster", 
+                            YingShu = "Silver Horn Rat", XueRenBoss = "Snow Mountain Titan",
+                            NormalMonster = "Normal Monster",
+                            EliteMonster = "Elite Monster",
                             Boss = "Boss"
                         },
                         WeaponWindowLanguage = new WeaponWindowLanguage()
@@ -704,14 +875,78 @@ namespace Config
                             Attribute = "Attribute",
                             WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
                             {
-                                { WeaponType.Primary, new WeaponHunQiDesc(){ HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2", HunQi3 = "Magic Projectile Count +1", HunQi4 = "Weapon Damage +20%", HunQi5 = "Magic Projectile Count +1" } },
-                                { WeaponType.Du, new WeaponHunQiDesc(){ HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2", HunQi3 = "Poison Damage Doubled", HunQi4 = "Weapon Damage +20%", HunQi5 = "Creates Poison Pool on Hit" } },
-                                { WeaponType.PuTong3, new WeaponHunQiDesc(){ HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2", HunQi3 = "Weapon Damage +20%", HunQi4 = "Base Attack Speed +0.2", HunQi5 = "Magic Projectiles Can Pierce" } },
-                                { WeaponType.XuKong, new WeaponHunQiDesc(){ HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2", HunQi3 = "Magic Projectile Count +1", HunQi4 = "Weapon Damage +20%", HunQi5 = "Magic Projectile Count +1" } },
-                                { WeaponType.Fire, new WeaponHunQiDesc(){ HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2", HunQi3 = "Explosion Causes Burn Effect", HunQi4 = "Weapon Damage +20%", HunQi5 = "Explosion Radius Increased" } },
-                                { WeaponType.LvQuan, new WeaponHunQiDesc(){ HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2", HunQi3 = "Magic Projectile Size +20%", HunQi4 = "Weapon Damage +20%", HunQi5 = "Magic Projectile Count +1" } },
-                                { WeaponType.HeiDong, new WeaponHunQiDesc(){ HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2", HunQi3 = "Explosion Radius +20%", HunQi4 = "Weapon Damage +20%", HunQi5 = "Magic Projectile Count +1" } },
-                                { WeaponType.JianQi, new WeaponHunQiDesc(){ HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.3", HunQi3 = "Sword Qi Count +1", HunQi4 = "Weapon Damage +20%", HunQi5 = "Sword Qi Count +1" } },
+                                {
+                                    WeaponType.Primary,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
+                                        HunQi3 = "Magic Projectile Count +1", HunQi4 = "Weapon Damage +20%",
+                                        HunQi5 = "Magic Projectile Count +1"
+                                    }
+                                },
+                                {
+                                    WeaponType.Du,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
+                                        HunQi3 = "Poison Damage Doubled", HunQi4 = "Weapon Damage +20%",
+                                        HunQi5 = "Creates Poison Pool on Hit"
+                                    }
+                                },
+                                {
+                                    WeaponType.PuTong3,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
+                                        HunQi3 = "Weapon Damage +20%", HunQi4 = "Base Attack Speed +0.2",
+                                        HunQi5 = "Magic Projectiles Can Pierce"
+                                    }
+                                },
+                                {
+                                    WeaponType.XuKong,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
+                                        HunQi3 = "Magic Projectile Count +1", HunQi4 = "Weapon Damage +20%",
+                                        HunQi5 = "Magic Projectile Count +1"
+                                    }
+                                },
+                                {
+                                    WeaponType.Fire,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
+                                        HunQi3 = "Explosion Causes Burn Effect", HunQi4 = "Weapon Damage +20%",
+                                        HunQi5 = "Explosion Radius Increased"
+                                    }
+                                },
+                                {
+                                    WeaponType.LvQuan,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
+                                        HunQi3 = "Magic Projectile Size +20%", HunQi4 = "Weapon Damage +20%",
+                                        HunQi5 = "Magic Projectile Count +1"
+                                    }
+                                },
+                                {
+                                    WeaponType.HeiDong,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
+                                        HunQi3 = "Explosion Radius +20%", HunQi4 = "Weapon Damage +20%",
+                                        HunQi5 = "Magic Projectile Count +1"
+                                    }
+                                },
+                                {
+                                    WeaponType.JianQi,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.3",
+                                        HunQi3 = "Sword Qi Count +1", HunQi4 = "Weapon Damage +20%",
+                                        HunQi5 = "Sword Qi Count +1"
+                                    }
+                                },
                             }
                         },
                         SkillWindowLanguage = new SkillWindowLanguage()
@@ -887,17 +1122,50 @@ namespace Config
                 {
                     LanguageType.Han, new LanguageItem()
                     {
+                        TitleLanguage = new TitleLanguage()
+                        {
+                            TitleInfoDic = new Dictionary<TitleType, TitleItemInfo>()
+                            {
+                                { TitleType.Level5, new TitleItemInfo() { Quality = 1, Name = "견습생" } },
+                                { TitleType.Level15, new TitleItemInfo() { Quality = 2, Name = "마법 학자" } },
+                                { TitleType.Level30, new TitleItemInfo() { Quality = 3, Name = "대마도사" } },
+                                { TitleType.Level50, new TitleItemInfo() { Quality = 4, Name = "오의 군주" } },
+                                { TitleType.Level75, new TitleItemInfo() { Quality = 5, Name = "성스러운 마법사" } },
+                                { TitleType.Level100, new TitleItemInfo() { Quality = 6, Name = "불멸의 법신" } },
+
+                                { TitleType.MonsterCount1, new TitleItemInfo() { Quality = 1, Name = "견습 사냥꾼" } },
+                                { TitleType.MonsterCount2, new TitleItemInfo() { Quality = 2, Name = "정예 사냥꾼" } },
+                                { TitleType.MonsterCount3, new TitleItemInfo() { Quality = 3, Name = "마스터 헌터" } },
+                                { TitleType.MonsterCount4, new TitleItemInfo() { Quality = 4, Name = "전설의 사냥꾼" } },
+                                { TitleType.MonsterCount5, new TitleItemInfo() { Quality = 5, Name = "재앙 숙청자" } },
+                                { TitleType.MonsterCount6, new TitleItemInfo() { Quality = 6, Name = "종말의 정화자" } },
+
+                                { TitleType.LinHun, new TitleItemInfo() { Quality = 4, Name = "영혼 수확자" } },
+                                { TitleType.BaoShi, new TitleItemInfo() { Quality = 4, Name = "보석 수집가" } },
+                                { TitleType.HunQi1, new TitleItemInfo() { Quality = 3, Name = "혼기 전문가" } },
+                                { TitleType.HunQi2, new TitleItemInfo() { Quality = 4, Name = "혼기 달인" } },
+                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 5, Name = "혼기 대가" } },
+                                { TitleType.ChiBang1, new TitleItemInfo() { Quality = 4, Name = "빛의 날개" } },
+                                { TitleType.ChiBang2, new TitleItemInfo() { Quality = 5, Name = "불멸의 날개" } },
+                                { TitleType.GuanKa1, new TitleItemInfo() { Quality = 3, Name = "초심자" } },
+                                { TitleType.GuanKa2, new TitleItemInfo() { Quality = 4, Name = "이세계 초보" } },
+                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 5, Name = "이세계 지배자" } },
+                                { TitleType.DiaoLuo, new TitleItemInfo() { Quality = 5, Name = "보물 사냥꾼" } },
+                            }
+                        },
+
+
                         BaoShiLanguage = new BaoShiLanguage()
                         {
-                            HHName = "선석", 
-                            HAName = "용혈정", 
-                            HCName = "혼옥", 
-                            HDName = "철백석", 
-                            AAName = "백호석", 
-                            ACName = "혈백석", 
-                            ADName = "섭혼석", 
-                            CCName = "명정", 
-                            CDName = "경석", 
+                            HHName = "선석",
+                            HAName = "용혈정",
+                            HCName = "혼옥",
+                            HDName = "철백석",
+                            AAName = "백호석",
+                            ACName = "혈백석",
+                            ADName = "섭혼석",
+                            CCName = "명정",
+                            CDName = "경석",
                             DDName = "현무석",
                             HHTeXiao3 = "모든 보석 효과 10% 증가",
                             HATeXiao3 = "모든 보석 효과 10% 증가",
@@ -964,7 +1232,8 @@ namespace Config
                             HuoShanBoss = "용암 행자", JiaChong = "가시 껍질", QingWa = "늪 두꺼비", WenZi = "붉은 눈 파리",
                             ShiRenHua = "피 꽃 요괴", ZhaoZeBoss = "진흙 늪 용왕", ShaNiao = "붉은 깃털 새", ShaChong = "모래 언덕 딱정벌레",
                             XianRenZhang = "죽음의 선인장", ShaXiYi = "보라 마왕 도마뱀", XieZi = "모래 그림자 전갈 왕", XueRen = "야생 설인",
-                            XueZhangLang = "눈 바퀴벌레", XueQiE = "눈 펭귄", YingShu = "은 뿔 쥐", XueRenBoss = "설산 타이탄",NormalMonster = "일반 몬스터",
+                            XueZhangLang = "눈 바퀴벌레", XueQiE = "눈 펭귄", YingShu = "은 뿔 쥐", XueRenBoss = "설산 타이탄",
+                            NormalMonster = "일반 몬스터",
                             EliteMonster = "정예 몬스터",
                             Boss = "보스"
                         },
@@ -996,14 +1265,70 @@ namespace Config
                             Attribute = "속성",
                             WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
                             {
-                                { WeaponType.Primary, new WeaponHunQiDesc(){ HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 수 +1", HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1" } },
-                                { WeaponType.Du, new WeaponHunQiDesc(){ HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "중독 피해 2배", HunQi4 = "무기 피해 +20%", HunQi5 = "적중 시 독액 풀 생성" } },
-                                { WeaponType.PuTong3, new WeaponHunQiDesc(){ HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "무기 피해 +20%", HunQi4 = "기본 공격 속도 +0.2", HunQi5 = "마법탄 관통 가능" } },
-                                { WeaponType.XuKong, new WeaponHunQiDesc(){ HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 수 +1", HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1" } },
-                                { WeaponType.Fire, new WeaponHunQiDesc(){ HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "폭발 시 화상 효과", HunQi4 = "무기 피해 +20%", HunQi5 = "폭발 범위 증가" } },
-                                { WeaponType.LvQuan, new WeaponHunQiDesc(){ HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 크기 +20%", HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1" } },
-                                { WeaponType.HeiDong, new WeaponHunQiDesc(){ HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "폭발 범위 +20%", HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1" } },
-                                { WeaponType.JianQi, new WeaponHunQiDesc(){ HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.3", HunQi3 = "검기 수 +1", HunQi4 = "무기 피해 +20%", HunQi5 = "검기 수 +1" } },
+                                {
+                                    WeaponType.Primary,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 수 +1",
+                                        HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1"
+                                    }
+                                },
+                                {
+                                    WeaponType.Du,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "중독 피해 2배",
+                                        HunQi4 = "무기 피해 +20%", HunQi5 = "적중 시 독액 풀 생성"
+                                    }
+                                },
+                                {
+                                    WeaponType.PuTong3,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "무기 피해 +20%",
+                                        HunQi4 = "기본 공격 속도 +0.2", HunQi5 = "마법탄 관통 가능"
+                                    }
+                                },
+                                {
+                                    WeaponType.XuKong,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 수 +1",
+                                        HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1"
+                                    }
+                                },
+                                {
+                                    WeaponType.Fire,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "폭발 시 화상 효과",
+                                        HunQi4 = "무기 피해 +20%", HunQi5 = "폭발 범위 증가"
+                                    }
+                                },
+                                {
+                                    WeaponType.LvQuan,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 크기 +20%",
+                                        HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1"
+                                    }
+                                },
+                                {
+                                    WeaponType.HeiDong,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "폭발 범위 +20%",
+                                        HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1"
+                                    }
+                                },
+                                {
+                                    WeaponType.JianQi,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.3", HunQi3 = "검기 수 +1",
+                                        HunQi4 = "무기 피해 +20%", HunQi5 = "검기 수 +1"
+                                    }
+                                },
                             }
                         },
                         SkillWindowLanguage = new SkillWindowLanguage()
@@ -1177,17 +1502,49 @@ namespace Config
                 {
                     LanguageType.Ri, new LanguageItem()
                     {
+                        TitleLanguage = new TitleLanguage()
+                        {
+                            TitleInfoDic = new Dictionary<TitleType, TitleItemInfo>()
+                            {
+                                { TitleType.Level5, new TitleItemInfo() { Quality = 1, Name = "見習い徒弟" } },
+                                { TitleType.Level15, new TitleItemInfo() { Quality = 2, Name = "魔法学者" } },
+                                { TitleType.Level30, new TitleItemInfo() { Quality = 3, Name = "大魔導師" } },
+                                { TitleType.Level50, new TitleItemInfo() { Quality = 4, Name = "奥義領主" } },
+                                { TitleType.Level75, new TitleItemInfo() { Quality = 5, Name = "聖魔法師" } },
+                                { TitleType.Level100, new TitleItemInfo() { Quality = 6, Name = "不朽の法神" } },
+
+                                { TitleType.MonsterCount1, new TitleItemInfo() { Quality = 1, Name = "見習いハンター" } },
+                                { TitleType.MonsterCount2, new TitleItemInfo() { Quality = 2, Name = "エリートハンター" } },
+                                { TitleType.MonsterCount3, new TitleItemInfo() { Quality = 3, Name = "マスターハンター" } },
+                                { TitleType.MonsterCount4, new TitleItemInfo() { Quality = 4, Name = "伝説の狩人" } },
+                                { TitleType.MonsterCount5, new TitleItemInfo() { Quality = 5, Name = "災厄粛清者" } },
+                                { TitleType.MonsterCount6, new TitleItemInfo() { Quality = 6, Name = "終焉の浄化者" } },
+
+                                { TitleType.LinHun, new TitleItemInfo() { Quality = 4, Name = "魂刈り手" } },
+                                { TitleType.BaoShi, new TitleItemInfo() { Quality = 4, Name = "宝石収集家" } },
+                                { TitleType.HunQi1, new TitleItemInfo() { Quality = 3, Name = "魂器達人" } },
+                                { TitleType.HunQi2, new TitleItemInfo() { Quality = 4, Name = "魂器エキスパート" } },
+                                { TitleType.HunQi3, new TitleItemInfo() { Quality = 5, Name = "魂器マスター" } },
+                                { TitleType.ChiBang1, new TitleItemInfo() { Quality = 4, Name = "流光の翼" } },
+                                { TitleType.ChiBang2, new TitleItemInfo() { Quality = 5, Name = "不朽の翼" } },
+                                { TitleType.GuanKa1, new TitleItemInfo() { Quality = 3, Name = "駆け出し" } },
+                                { TitleType.GuanKa2, new TitleItemInfo() { Quality = 4, Name = "異界初心者" } },
+                                { TitleType.GuanKa3, new TitleItemInfo() { Quality = 5, Name = "異界支配者" } },
+                                { TitleType.DiaoLuo, new TitleItemInfo() { Quality = 5, Name = "宝探しの達人" } },
+                            }
+                        },
+
                         BaoShiLanguage = new BaoShiLanguage()
                         {
-                            HHName = "仙石", 
-                            HAName = "竜血晶", 
-                            HCName = "魂玉", 
-                            HDName = "鉄魄石", 
-                            AAName = "白虎石", 
-                            ACName = "血珀石", 
-                            ADName = "摂魂石", 
-                            CCName = "命晶", 
-                            CDName = "鏡石", 
+                            HHName = "仙石",
+                            HAName = "竜血晶",
+                            HCName = "魂玉",
+                            HDName = "鉄魄石",
+                            AAName = "白虎石",
+                            ACName = "血珀石",
+                            ADName = "摂魂石",
+                            CCName = "命晶",
+                            CDName = "鏡石",
                             DDName = "玄武石",
                             HHTeXiao3 = "全ての宝石効果+10%",
                             HATeXiao3 = "全ての宝石効果+10%",
@@ -1255,7 +1612,7 @@ namespace Config
                             QingWa = "沼ガエル", WenZi = "赤目ハエ", ShiRenHua = "血花妖魔", ZhaoZeBoss = "泥沼龍王", ShaNiao = "赤羽鳥",
                             ShaChong = "砂丘甲虫", XianRenZhang = "死のサボテン", ShaXiYi = "紫魔トカゲ", XieZi = "砂影蠍王",
                             XueRen = "野生雪男", XueZhangLang = "雪ゴキブリ", XueQiE = "雪ペンギン", YingShu = "銀角鼠",
-                            XueRenBoss = "雪山タイタン",NormalMonster = "通常モンスター",
+                            XueRenBoss = "雪山タイタン", NormalMonster = "通常モンスター",
                             EliteMonster = "エリートモンスター",
                             Boss = "ボス"
                         },
@@ -1282,14 +1639,70 @@ namespace Config
                             Attribute = "属性",
                             WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
                             {
-                                { WeaponType.Primary, new WeaponHunQiDesc(){ HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾数+1", HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1" } },
-                                { WeaponType.Du, new WeaponHunQiDesc(){ HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "毒ダメージ2倍", HunQi4 = "武器ダメージ+20%", HunQi5 = "命中時に毒液プール生成" } },
-                                { WeaponType.PuTong3, new WeaponHunQiDesc(){ HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "武器ダメージ+20%", HunQi4 = "基本攻撃速度+0.2", HunQi5 = "魔法弾貫通可能" } },
-                                { WeaponType.XuKong, new WeaponHunQiDesc(){ HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾数+1", HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1" } },
-                                { WeaponType.Fire, new WeaponHunQiDesc(){ HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "爆発で燃焼効果", HunQi4 = "武器ダメージ+20%", HunQi5 = "爆発範囲拡大" } },
-                                { WeaponType.LvQuan, new WeaponHunQiDesc(){ HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾サイズ+20%", HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1" } },
-                                { WeaponType.HeiDong, new WeaponHunQiDesc(){ HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "爆発範囲+20%", HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1" } },
-                                { WeaponType.JianQi, new WeaponHunQiDesc(){ HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.3", HunQi3 = "剣気数+1", HunQi4 = "武器ダメージ+20%", HunQi5 = "剣気数+1" } },
+                                {
+                                    WeaponType.Primary,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾数+1",
+                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1"
+                                    }
+                                },
+                                {
+                                    WeaponType.Du,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "毒ダメージ2倍",
+                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "命中時に毒液プール生成"
+                                    }
+                                },
+                                {
+                                    WeaponType.PuTong3,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "武器ダメージ+20%",
+                                        HunQi4 = "基本攻撃速度+0.2", HunQi5 = "魔法弾貫通可能"
+                                    }
+                                },
+                                {
+                                    WeaponType.XuKong,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾数+1",
+                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1"
+                                    }
+                                },
+                                {
+                                    WeaponType.Fire,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "爆発で燃焼効果",
+                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "爆発範囲拡大"
+                                    }
+                                },
+                                {
+                                    WeaponType.LvQuan,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾サイズ+20%",
+                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1"
+                                    }
+                                },
+                                {
+                                    WeaponType.HeiDong,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "爆発範囲+20%",
+                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1"
+                                    }
+                                },
+                                {
+                                    WeaponType.JianQi,
+                                    new WeaponHunQiDesc()
+                                    {
+                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.3", HunQi3 = "剣気数+1",
+                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "剣気数+1"
+                                    }
+                                },
                             }
                         },
                         SkillWindowLanguage = new SkillWindowLanguage()

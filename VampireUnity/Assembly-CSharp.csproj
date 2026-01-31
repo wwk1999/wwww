@@ -419,6 +419,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\DaLong.cs" />
     <Compile Include="Assets\Scripts\Tool\SequenceFrameAnimationGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\Scripts\Title\TitleItem.cs" />
     <Compile Include="Assets\Scripts\Tool\BossQuan.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NoSkill.cs" />
@@ -478,6 +479,7 @@
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanRing.cs" />
     <Compile Include="Assets\Scripts\Tool\BagEquipAttributeInfo.cs" />
     <Compile Include="Assets\Scripts\Skill\DianQuan\DianPeng.cs" />
+    <Compile Include="Assets\Scripts\Config\TitleConfig.cs" />
     <Compile Include="Assets\Scripts\Tool\ScrollLimit.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeCloak.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBoss.cs" />

@@ -283,10 +283,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u89C1\u4E60\u730E\u624B"
+  m_text: "\u4E0D\u673D\u6CD5\u795E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
-  m_sharedMaterial: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 9c041e86370d402cbb76a1cfe620bb7c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3026,7 +3026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &200848040704299327
 Transform:
   m_ObjectHideFlags: 0
@@ -3609,7 +3609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2706941068820780249}
   m_Layer: 8
-  m_Name: MonsterCount30
+  m_Name: MonsterCount3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4717,7 +4717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1853126255699370261}
   m_Layer: 8
-  m_Name: MonsterCount50
+  m_Name: MonsterCount4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5668,7 +5668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3887996048094508090}
   m_Layer: 8
-  m_Name: MonsterCount100
+  m_Name: MonsterCount6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6039,7 +6039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5283739594098502009}
   m_Layer: 8
-  m_Name: MonsterCount75
+  m_Name: MonsterCount5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9979,7 +9979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8816222715911361706}
   m_Layer: 8
-  m_Name: MonsterCount15
+  m_Name: MonsterCount2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10012,7 +10012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870984769623590485}
   m_Layer: 8
-  m_Name: MonsterCount5
+  m_Name: MonsterCount1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
