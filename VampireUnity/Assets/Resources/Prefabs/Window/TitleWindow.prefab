@@ -52,7 +52,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0.000024557114}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &9132914623795053521
@@ -558,6 +558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8275516515168942044}
+  - component: {fileID: 2760677608821610672}
   m_Layer: 0
   m_Name: TitleWindow
   m_TagString: Untagged
@@ -581,6 +582,20 @@ Transform:
   - {fileID: 8763001573141073016}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2760677608821610672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239700766165076135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a580a6ad22502d24091d5e646d201a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TitleListContent: {fileID: 668376843470769399}
+  ExitButton: {fileID: 7746225333926184443}
 --- !u!1 &4737485482975756001
 GameObject:
   m_ObjectHideFlags: 0

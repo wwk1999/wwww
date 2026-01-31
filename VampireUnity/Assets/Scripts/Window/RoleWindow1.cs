@@ -62,6 +62,9 @@ public class RoleWindow1 : MonoBehaviour
     public TextMeshProUGUI DuanZao;
     public TextMeshProUGUI StartGame;
 
+
+    public Button TitleButton;
+
     public void SwitchLanguage(LanguageType language)
     {
         switch (language)
@@ -216,6 +219,10 @@ public class RoleWindow1 : MonoBehaviour
     {
         Debug.Log("点击进入角色界面");
         InitEquip();
+        TitleButton.onClick.AddListener(() =>
+        {
+            WindowController.S.TitleWindow.gameObject.SetActive(true);
+        });
         ObserverModuleManager.S.RegisterEvent(ConstKeys.SwitchLanguage,SwitchLanguageObj);
         debugBaoshi.onClick.AddListener(() =>
         {

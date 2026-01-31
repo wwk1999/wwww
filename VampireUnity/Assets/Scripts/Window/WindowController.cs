@@ -18,11 +18,11 @@ public class WindowController : XSingleton<WindowController>
    [NonSerialized] public GameObject Message;
    [NonSerialized] public GameObject BagWindow;
    [NonSerialized] public GameObject SettingWindow;
+   [NonSerialized] public GameObject TitleWindow;
 
    
    public void InitPanel()
    {
-      //BagWindow=Instantiate(Resources.Load("Prefabs/Window/Bag") as GameObject);
       GameLevelWindow=Instantiate(Resources.Load("Prefabs/Window/GameLevel") as GameObject);
       SceneLoadingWindow=Instantiate(Resources.Load("Prefabs/Window/SceneLoading") as GameObject);
       LoginWindow=Instantiate(Resources.Load("Prefabs/Window/LoginWindow") as GameObject);
@@ -36,6 +36,7 @@ public class WindowController : XSingleton<WindowController>
       Message.GetComponent<Canvas>().renderMode= RenderMode.ScreenSpaceOverlay;
       MonsterBookWindow=Instantiate(Resources.Load("Prefabs/Window/MonsterBook") as GameObject);
       SettingWindow=Instantiate(Resources.Load("Prefabs/Window/SettingWindow") as GameObject);
+      TitleWindow=Instantiate(Resources.Load("Prefabs/Window/TitleWindow") as GameObject);
 
       
       
@@ -51,6 +52,7 @@ public class WindowController : XSingleton<WindowController>
       WeaponWindow.gameObject.SetActive(false);
       MonsterBookWindow.gameObject.SetActive(false);
       SettingWindow.gameObject.SetActive(false);
+      TitleWindow.gameObject.SetActive(false);
       Message.SetActive(false);
    }
 }
