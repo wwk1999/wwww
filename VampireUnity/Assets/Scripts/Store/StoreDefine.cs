@@ -142,6 +142,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int MonsterCount = 0;
         public int LinHun = 0;
 
+        public TitleType CurrentInstallTitle = TitleType.None;
 
 
 
@@ -224,6 +225,7 @@ public class StoreDefine : XSingleton<StoreDefine>
 
          MonsterCount=runtime.MonsterCount;
          LinHun=runtime.LinHun;
+         CurrentInstallTitle=runtime.CurrentInstallTitle;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -308,6 +310,8 @@ public class StoreDefine : XSingleton<StoreDefine>
 
             runtime.MonsterCount = MonsterCount;
             runtime.LinHun=LinHun;
+            
+            runtime.CurrentInstallTitle=CurrentInstallTitle;
         }
     }
     

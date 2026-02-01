@@ -82,6 +82,8 @@ public class PlayerData : XSingleton<PlayerData>
     public int LinHun = 0;
     public int HunQiCount = 0;
     public int OrangeCount = 0;
+    
+    public TitleType CurrentInstallTitle = TitleType.None;
 
 
 

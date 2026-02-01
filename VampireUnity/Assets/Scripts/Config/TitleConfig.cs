@@ -504,7 +504,7 @@ public class TitleConfig : MonoBehaviour
                 {
                     new TitleAttributeItem() { Type = TitleAttributeType.Attack, Value = 200f },
                     new TitleAttributeItem() { Type = TitleAttributeType.MoveSpeed, Value = 1.5f },
-                }
+                } 
             }
         },
         

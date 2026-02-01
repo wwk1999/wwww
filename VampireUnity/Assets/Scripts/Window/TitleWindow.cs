@@ -39,12 +39,223 @@ public class TitleWindow : MonoBehaviour
 
     public Button InstallButton;
     private TitleType CurrentTitleType;
+    private List<TitleItem> TitleItems = new List<TitleItem>();
+
+    public void RefreshGou()
+    {
+        foreach (var item in TitleItems)
+        {
+            if (item.TitleItemType == PlayerData.S.CurrentInstallTitle)
+            {
+                item.Gou.SetActive(true);
+            }
+            else
+            {
+                item.Gou.SetActive(false);
+            }
+        }
+    }
 
     private void Start()
     {
         ExitButton.onClick.AddListener(() => { WindowController.S.TitleWindow.gameObject.SetActive(false); });
-
+        InstallButton.onClick.AddListener(() =>
+        {
+            switch (CurrentTitleType)
+            {
+                case TitleType.Level5:
+                    if (PlayerData.S.Level5 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.Level15:
+                    if (PlayerData.S.Level15 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.Level30:
+                    if (PlayerData.S.Level30 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.Level50:
+                    if (PlayerData.S.Level50 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.Level75:
+                    if (PlayerData.S.Level75 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.Level100:
+                    if (PlayerData.S.Level100 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.MonsterCount1:
+                    if (PlayerData.S.MonsterCount1 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.MonsterCount2:
+                    if (PlayerData.S.MonsterCount2 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.MonsterCount3:
+                    if (PlayerData.S.MonsterCount3 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.MonsterCount4:
+                    if (PlayerData.S.MonsterCount4 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.MonsterCount5:
+                    if (PlayerData.S.MonsterCount5 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.MonsterCount6:
+                    if (PlayerData.S.MonsterCount6 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.LinHun:
+                    if (PlayerData.S.LingHun == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.BaoShi:
+                    if (PlayerData.S.BaoShi == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.HunQi3:
+                    if (PlayerData.S.HunQi3 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.HunQi4:
+                    if (PlayerData.S.HunQi4 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.HunQi5:
+                    if (PlayerData.S.HunQi5 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.ChiBang4:
+                    if (PlayerData.S.ChiBang4 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.ChiBang5:
+                    if (PlayerData.S.ChiBang5 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.GuanKa3:
+                    if (PlayerData.S.GuanKa3 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.GuanKa4:
+                    if (PlayerData.S.GuanKa4 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.GuanKa5:
+                    if (PlayerData.S.GuanKa5 == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+                
+                case TitleType.DiaoLuo:
+                    if (PlayerData.S.DiaoLuo == false)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"未激活");
+                        return;
+                    }
+                    break;
+            }
+            PlayerData.S.CurrentInstallTitle = CurrentTitleType;
+            RefreshGou();
+        });
         ObserverModuleManager.S.RegisterEvent("TitleInfo", TitleInfo);
+    }
+
+    private void OnDestroy()
+    {
+        ObserverModuleManager.S.UnRegisterEvent("TitleInfo", TitleInfo);
     }
 
     public void TitleInfo(object[] obj)
@@ -179,12 +390,14 @@ public class TitleWindow : MonoBehaviour
         {
             Destroy(item.gameObject);
         }
+        TitleItems.Clear();
 
         foreach (var item in LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic)
         {
             TitleItem titleitem =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Title/TitleItem"), TitleListContent.transform)
                     .GetComponent<TitleItem>();
+            TitleItems.Add(titleitem);
             switch (item.Key)
             {
                 case TitleType.Level5:
@@ -259,5 +472,7 @@ public class TitleWindow : MonoBehaviour
              
             }
         }
+
+        RefreshGou();
     }
 }

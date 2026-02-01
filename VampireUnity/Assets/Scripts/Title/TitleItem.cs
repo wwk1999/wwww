@@ -67,6 +67,9 @@ public class TitleItem : MonoBehaviour
     public Button ChiBang5Button;
     public Button DiaoLuoButton;
 
+    public GameObject Gou;
+
+    public TitleType TitleItemType = TitleType.None;
     private void Start()
     {
         Level5Button.onClick.AddListener(() =>
@@ -192,115 +195,161 @@ public class TitleItem : MonoBehaviour
         switch (titleType)
         {
             case TitleType.Level5:
+                TitleItemType = TitleType.Level5;
                 Level5.gameObject.SetActive(true);
                 Level5.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.Level5].Name;
                 break;
             case TitleType.Level15:
+                TitleItemType = TitleType.Level15;
+
                 Level15.gameObject.SetActive(true);
                 Level15.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.Level15].Name;
                 break;
             
             case TitleType.Level30:
+                TitleItemType = TitleType.Level30;
+
                 Level30.gameObject.SetActive(true);
                 Level30.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.Level30].Name;
                 break;
             
             case TitleType.Level50:
+                TitleItemType = TitleType.Level50;
+
                 Level50.gameObject.SetActive(true);
                 Level50.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.Level50].Name;
                 break;
             
             case TitleType.Level75:
+                TitleItemType = TitleType.Level75;
+
                 Level75.gameObject.SetActive(true);
                 Level75.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.Level75].Name;
                 break;
             
             case TitleType.Level100:
+                TitleItemType = TitleType.Level100;
+
                 Level100.gameObject.SetActive(true);
                 Level100.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.Level100].Name;
                 break;
             
             case TitleType.MonsterCount1:
+                
+                TitleItemType = TitleType.MonsterCount1;
+
                 MonsterCount1.gameObject.SetActive(true);
                 MonsterCount1.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.MonsterCount1].Name;
                 break;
             
             case TitleType.MonsterCount2:
+                TitleItemType = TitleType.MonsterCount2;
+
                 MonsterCount2.gameObject.SetActive(true);
                 MonsterCount2.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.MonsterCount2].Name;
                 break;
             
             case TitleType.MonsterCount3:
+                TitleItemType = TitleType.MonsterCount3;
+
                 MonsterCount3.gameObject.SetActive(true);
                 MonsterCount3.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.MonsterCount3].Name;
                 break;
             
             case TitleType.MonsterCount4:
+                TitleItemType = TitleType.MonsterCount4;
+
                 MonsterCount4.gameObject.SetActive(true);
                 MonsterCount4.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.MonsterCount4].Name;
                 break;
             
             case TitleType.MonsterCount5:
+                TitleItemType = TitleType.MonsterCount5;
+
                 MonsterCount5.gameObject.SetActive(true);
                 MonsterCount5.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.MonsterCount5].Name;
                 break;
             
             case TitleType.MonsterCount6:
+                TitleItemType = TitleType.MonsterCount6;
+
                 MonsterCount6.gameObject.SetActive(true);
                 MonsterCount6.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.MonsterCount6].Name;
                 break;
             
             case TitleType.LinHun:
+                TitleItemType = TitleType.LinHun;
+
                 LingHun.gameObject.SetActive(true);
                 LingHun.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.LinHun].Name;
                 break;
             
             case TitleType.BaoShi:
+                TitleItemType = TitleType.BaoShi;
+
                 BaoShi.gameObject.SetActive(true);
                 BaoShi.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.BaoShi].Name;
                 break;
             
             case TitleType.GuanKa3:
+                TitleItemType = TitleType.GuanKa3;
+
                 GuanKa3.gameObject.SetActive(true);
                 GuanKa3.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.GuanKa3].Name;
                 break;
             
             case TitleType.GuanKa4:
+                TitleItemType = TitleType.GuanKa4;
+
                 GuanKa4.gameObject.SetActive(true);
                 GuanKa4.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.GuanKa4].Name;
                 break;
             
             case TitleType.GuanKa5:
+                TitleItemType = TitleType.GuanKa5;
+
                 GuanKa5.gameObject.SetActive(true);
                 GuanKa5.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.GuanKa5].Name;
                 break;
             
             case TitleType.ChiBang4:
+                TitleItemType = TitleType.ChiBang4;
+
                 ChiBang4.gameObject.SetActive(true);
                 ChiBang4.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.ChiBang4].Name;
                 break;
             
             case TitleType.ChiBang5:
+                TitleItemType = TitleType.ChiBang5;
+
                 ChiBang5.gameObject.SetActive(true);
                 ChiBang5.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.ChiBang5].Name;
                 break;
             
             case TitleType.HunQi3:
+                TitleItemType = TitleType.HunQi3;
+
                 HunQi3.gameObject.SetActive(true);
                 HunQi3.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.HunQi3].Name;
                 break;
             
             case TitleType.HunQi4:
+                TitleItemType = TitleType.HunQi4;
+
                 HunQi4.gameObject.SetActive(true);
                 HunQi4.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.HunQi4].Name;
                 break;
             
             case TitleType.HunQi5:
+                TitleItemType = TitleType.HunQi5;
+
                 HunQi5.gameObject.SetActive(true);
                 HunQi5.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.HunQi5].Name;
                 break;
             
             case TitleType.DiaoLuo:
+                TitleItemType = TitleType.DiaoLuo;
+
                 DiaoLuo.gameObject.SetActive(true);
                 DiaoLuo.transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic[TitleType.DiaoLuo].Name;
                 break;
