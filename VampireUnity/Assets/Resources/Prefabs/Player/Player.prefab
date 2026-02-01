@@ -2904,7 +2904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7440935788857964070}
   m_Layer: 8
-  m_Name: GuanKa3
+  m_Name: GuanKa5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3878,7 +3878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5407063669663414790}
   m_Layer: 8
-  m_Name: GuanKa1
+  m_Name: GuanKa3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4281,7 +4281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8281901740151722750}
   m_Layer: 8
-  m_Name: HunQi1
+  m_Name: HunQi3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6006,7 +6006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5604530365631558180}
   m_Layer: 8
-  m_Name: HunQi2
+  m_Name: HunQi4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8920,7 +8920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8994503566794662579}
   m_Layer: 8
-  m_Name: ChiBang2
+  m_Name: ChiBang5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8953,7 +8953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841390416068351807}
   m_Layer: 8
-  m_Name: HunQi3
+  m_Name: HunQi5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9946,7 +9946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2429974014036396266}
   m_Layer: 8
-  m_Name: GuanKa2
+  m_Name: GuanKa4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10147,7 +10147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2792482122895085560}
   m_Layer: 8
-  m_Name: ChiBang1
+  m_Name: ChiBang4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10293,6 +10293,29 @@ MonoBehaviour:
   redChiBang: {fileID: 2456354603980089557}
   IceBall4: {fileID: 6482957223972964755}
   IceBall5: {fileID: 973818906440218611}
+  Level5Title: {fileID: 5832692911891177087}
+  Level15Title: {fileID: 9208012941857123022}
+  Level30Title: {fileID: 6920317965607605487}
+  Level50Title: {fileID: 4129245369172859351}
+  Level75Title: {fileID: 7523132165286669687}
+  Level100Title: {fileID: 4842186846645435985}
+  MonsterCount1Title: {fileID: 9015561563991804735}
+  MonsterCount2Title: {fileID: 8979087495287293425}
+  MonsterCount3Title: {fileID: 3083732699761526000}
+  MonsterCount4Title: {fileID: 4216672663014193417}
+  MonsterCount5Title: {fileID: 5081835098537046792}
+  MonsterCount6Title: {fileID: 4879195187388294150}
+  LinHunTitle: {fileID: 1799068536884422454}
+  BaoShiTitle: {fileID: 752482608207818867}
+  GuanKa3Title: {fileID: 3627125577169109922}
+  GuanKa4Title: {fileID: 8610029223809456096}
+  GuanKa5Title: {fileID: 2044852445226369470}
+  HunQi3Title: {fileID: 3766383491429260807}
+  HunQi4Title: {fileID: 5053266572812111962}
+  HunQi5Title: {fileID: 7821959848256738845}
+  DiaoLuoTitle: {fileID: 2325014214640157900}
+  ChiBang4Title: {fileID: 9074527878119252701}
+  ChiBang5Title: {fileID: 7536050460070538163}
   levelUpAnim: {fileID: 1143156171060667920}
   attackText: {fileID: 6652492437014025834}
   hpText: {fileID: 1650684257985899066}
