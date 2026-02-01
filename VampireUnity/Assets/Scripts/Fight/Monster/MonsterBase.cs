@@ -581,6 +581,8 @@ public abstract class MonsterBase : MonoBehaviour
         //附加属性
         int replyHp = Mathf.RoundToInt(GameController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
         GlobalPlayerAttribute.ReplyHp(replyHp);
+        PlayerData.S.MonsterCount++;
+        PlayerData.S.LinHun += BloodEnergy;
 
         AddHunQiEx();
         //怪物数量排行榜

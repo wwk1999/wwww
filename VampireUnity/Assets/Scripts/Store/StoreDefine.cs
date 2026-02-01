@@ -128,15 +128,21 @@ public class StoreDefine : XSingleton<StoreDefine>
 
         public bool LingHun = false;
         public bool BaoShi = false;
-        public bool Guanka3 = false;
-        public bool Guanka4 = false;
-        public bool Guanka5 = false;
-        public bool HunQi1 = false;
-        public bool HunQi2 = false;
+        public bool GuanKa3 = false;
+        public bool GuanKa4 = false;
+        public bool GuanKa5 = false;
         public bool HunQi3 = false;
+        public bool HunQi4 = false;
+        public bool HunQi5 = false;
         public bool ChiBang4 = false;
         public bool ChiBang5 = false;
         public bool DiaoLuo = false;
+        
+        
+        public int MonsterCount = 0;
+        public int LinHun = 0;
+
+
 
 
         public void CopyFromRuntime(PlayerData runtime)
@@ -206,16 +212,18 @@ public class StoreDefine : XSingleton<StoreDefine>
 
          LingHun = runtime.LingHun;
          BaoShi = runtime.BaoShi;
-         Guanka3 = runtime.Guanka3;
-         Guanka4 = runtime.Guanka4;
-         Guanka5 = runtime.Guanka5;
-         HunQi1 = runtime.HunQi1;
-         HunQi2 = runtime.HunQi2;
+         GuanKa3 = runtime.GuanKa3;
+         GuanKa4 = runtime.GuanKa4;
+         GuanKa5 = runtime.GuanKa5;
          HunQi3 = runtime.HunQi3;
+         HunQi4 = runtime.HunQi4;
+         HunQi5 = runtime.HunQi5;
          ChiBang4 = runtime.ChiBang4;
          ChiBang5 = runtime.ChiBang5;
          DiaoLuo = runtime.DiaoLuo;
 
+         MonsterCount=runtime.MonsterCount;
+         LinHun=runtime.LinHun;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -287,15 +295,19 @@ public class StoreDefine : XSingleton<StoreDefine>
 
             runtime.LingHun=LingHun;
             runtime.BaoShi=BaoShi;
-            runtime.Guanka3=Guanka3;
-            runtime.Guanka4=Guanka4;
-            runtime.Guanka5=Guanka5;
-            runtime.HunQi1=HunQi1;
-            runtime.HunQi2=HunQi2;
+            runtime.GuanKa3=GuanKa3;
+            runtime.GuanKa4=GuanKa4;
+            runtime.GuanKa5=GuanKa5;
             runtime.HunQi3=HunQi3;
+            runtime.HunQi4=HunQi4;
+            runtime.HunQi5=HunQi5;
             runtime.ChiBang4=ChiBang4;
             runtime.ChiBang5=ChiBang5;
             runtime.DiaoLuo=DiaoLuo;
+
+
+            runtime.MonsterCount = MonsterCount;
+            runtime.LinHun=LinHun;
         }
     }
     

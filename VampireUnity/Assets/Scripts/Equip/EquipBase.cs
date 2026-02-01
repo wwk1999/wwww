@@ -221,6 +221,16 @@ public class EquipBase : BagObjectBase
             //如果被拾取，销毁装备
             gameObject.SetActive(false);
             EnEquipQueue(EquipAttributes);
+            if (EquipAttributes.Quality >= 5)
+            {
+                PlayerData.S.OrangeCount++;
+            }
+
+            if (PlayerData.S.DiaoLuo == false&&PlayerData.S.OrangeCount>=100)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                PlayerData.S.DiaoLuo = true;
+            }
         }
     }
 

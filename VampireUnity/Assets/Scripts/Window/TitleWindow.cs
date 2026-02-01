@@ -9,7 +9,7 @@ public class TitleWindow : MonoBehaviour
 {
     public GameObject TitleListContent;
     public Button ExitButton;
-    
+
     public GameObject Level5Info;
     public GameObject Level15Info;
     public GameObject Level30Info;
@@ -23,7 +23,7 @@ public class TitleWindow : MonoBehaviour
     public GameObject MonsterCount4Info;
     public GameObject MonsterCount5Info;
     public GameObject MonsterCount6Info;
-    
+
     public GameObject LinHun;
     public GameObject BaoShi;
     public GameObject HunQi3;
@@ -39,45 +39,43 @@ public class TitleWindow : MonoBehaviour
 
     public Button InstallButton;
     private TitleType CurrentTitleType;
+
     private void Start()
     {
-        ExitButton.onClick.AddListener(() =>
-        {
-            WindowController.S.TitleWindow.gameObject.SetActive(false);
-        });
-        
-        ObserverModuleManager.S.RegisterEvent("TitleInfo",TitleInfo);
+        ExitButton.onClick.AddListener(() => { WindowController.S.TitleWindow.gameObject.SetActive(false); });
+
+        ObserverModuleManager.S.RegisterEvent("TitleInfo", TitleInfo);
     }
 
     public void TitleInfo(object[] obj)
     {
         InstallButton.gameObject.SetActive(true);
-     Level5Info.SetActive(false);
-     Level15Info.SetActive(false);
-     Level30Info.SetActive(false);
-     Level50Info.SetActive(false);
-     Level75Info.SetActive(false);
-     Level100Info.SetActive(false);
+        Level5Info.SetActive(false);
+        Level15Info.SetActive(false);
+        Level30Info.SetActive(false);
+        Level50Info.SetActive(false);
+        Level75Info.SetActive(false);
+        Level100Info.SetActive(false);
 
-     MonsterCount1Info.SetActive(false);
-     MonsterCount2Info.SetActive(false);
-     MonsterCount3Info.SetActive(false);
-     MonsterCount4Info.SetActive(false);
-     MonsterCount5Info.SetActive(false);
-     MonsterCount6Info.SetActive(false);
-    
-     LinHun.SetActive(false);
-     BaoShi.SetActive(false);
-     HunQi3.SetActive(false);
-     HunQi4.SetActive(false);
-     HunQi5.SetActive(false);
-     GuanKa3.SetActive(false);
-     GuanKa4.SetActive(false);
-     GuanKa5.SetActive(false);
-     ChiBang4.SetActive(false);
-     ChiBang5.SetActive(false);
-     DiaoLuo.SetActive(false);
-        TitleType  titleType = (TitleType)obj[0];
+        MonsterCount1Info.SetActive(false);
+        MonsterCount2Info.SetActive(false);
+        MonsterCount3Info.SetActive(false);
+        MonsterCount4Info.SetActive(false);
+        MonsterCount5Info.SetActive(false);
+        MonsterCount6Info.SetActive(false);
+
+        LinHun.SetActive(false);
+        BaoShi.SetActive(false);
+        HunQi3.SetActive(false);
+        HunQi4.SetActive(false);
+        HunQi5.SetActive(false);
+        GuanKa3.SetActive(false);
+        GuanKa4.SetActive(false);
+        GuanKa5.SetActive(false);
+        ChiBang4.SetActive(false);
+        ChiBang5.SetActive(false);
+        DiaoLuo.SetActive(false);
+        TitleType titleType = (TitleType)obj[0];
         switch (titleType)
         {
             case TitleType.Level5:
@@ -181,10 +179,85 @@ public class TitleWindow : MonoBehaviour
         {
             Destroy(item.gameObject);
         }
+
         foreach (var item in LanguageConfig.LanguageItems[PlayerData.S.langType].TitleLanguage.TitleInfoDic)
         {
-            TitleItem titleitem=Instantiate(Resources.Load<GameObject>("Prefabs/Title/TitleItem"),TitleListContent.transform).GetComponent<TitleItem>();
-            titleitem.SetTitle(item.Key,true);
+            TitleItem titleitem =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Title/TitleItem"), TitleListContent.transform)
+                    .GetComponent<TitleItem>();
+            switch (item.Key)
+            {
+                case TitleType.Level5:
+                    titleitem.SetTitle(item.Key, PlayerData.S.Level5);
+                    break;
+                case TitleType.Level15:
+                    titleitem.SetTitle(item.Key, PlayerData.S.Level15);
+                    break;
+                case TitleType.Level30:
+                    titleitem.SetTitle(item.Key, PlayerData.S.Level30);
+                    break;
+                case TitleType.Level50:
+                    titleitem.SetTitle(item.Key, PlayerData.S.Level50);
+                    break;
+                case TitleType.Level75:
+                    titleitem.SetTitle(item.Key, PlayerData.S.Level75);
+                    break;
+                case TitleType.Level100:
+                    titleitem.SetTitle(item.Key, PlayerData.S.Level100);
+                    break;
+                case TitleType.MonsterCount1:
+                    titleitem.SetTitle(item.Key, PlayerData.S.MonsterCount1);
+                    break;
+                case TitleType.MonsterCount2:
+                    titleitem.SetTitle(item.Key, PlayerData.S.MonsterCount2);
+                    break;
+                case TitleType.MonsterCount3:
+                    titleitem.SetTitle(item.Key, PlayerData.S.MonsterCount3);
+                    break;
+                case TitleType.MonsterCount4:
+                    titleitem.SetTitle(item.Key, PlayerData.S.MonsterCount4);
+                    break;
+                case TitleType.MonsterCount5:
+                    titleitem.SetTitle(item.Key, PlayerData.S.MonsterCount5);
+                    break;
+                case TitleType.MonsterCount6:
+                    titleitem.SetTitle(item.Key, PlayerData.S.MonsterCount6);
+                    break;
+                case TitleType.LinHun:
+                    titleitem.SetTitle(item.Key, PlayerData.S.LingHun);
+                    break;
+                case TitleType.BaoShi:
+                    titleitem.SetTitle(item.Key, PlayerData.S.BaoShi);
+                    break;
+                case TitleType.GuanKa3:
+                    titleitem.SetTitle(item.Key, PlayerData.S.GuanKa3);
+                    break;
+                case TitleType.GuanKa4:
+                    titleitem.SetTitle(item.Key, PlayerData.S.GuanKa4);
+                    break;
+                case TitleType.GuanKa5:
+                    titleitem.SetTitle(item.Key, PlayerData.S.GuanKa5);
+                    break;
+                case TitleType.HunQi3:
+                    titleitem.SetTitle(item.Key, PlayerData.S.HunQi3);
+                    break;
+                case TitleType.HunQi4:
+                    titleitem.SetTitle(item.Key, PlayerData.S.HunQi4);
+                    break;
+                case TitleType.HunQi5:
+                    titleitem.SetTitle(item.Key, PlayerData.S.HunQi5);
+                    break;
+                case TitleType.DiaoLuo:
+                    titleitem.SetTitle(item.Key, PlayerData.S.DiaoLuo);
+                    break;
+                case TitleType.ChiBang4:
+                    titleitem.SetTitle(item.Key, PlayerData.S.ChiBang4);
+                    break;
+                case TitleType.ChiBang5:
+                    titleitem.SetTitle(item.Key, PlayerData.S.ChiBang5);
+                    break;
+             
+            }
         }
     }
 }

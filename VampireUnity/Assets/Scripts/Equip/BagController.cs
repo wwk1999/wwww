@@ -1343,9 +1343,90 @@ public class BagController : XSingleton<BagController>
         }
     }
 
+    public void CheckBaoShiTitle()
+    {
+        if(PlayerData.S.BaoShi == true)
+        {
+            return;
+        }
+        int count = 0;
+        if (PlayerEquipConfig.CloakId != 0)
+        {
+            foreach (var item in BagController.S.EquipIdList[PlayerEquipConfig.CloakId].BaoShiDic)
+            {
+                if (item.Value.BaoShiType != BaoShiType.None)
+                {
+                    count++;
+                }
+            }
+        }
+        
+        if (PlayerEquipConfig.HelmetId != 0)
+        {
+            foreach (var item in BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].BaoShiDic)
+            {
+                if (item.Value.BaoShiType != BaoShiType.None)
+                {
+                    count++;
+                }
+            }
+        }
+        
+        if (PlayerEquipConfig.NecklaceId != 0)
+        {
+            foreach (var item in BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].BaoShiDic)
+            {
+                if (item.Value.BaoShiType != BaoShiType.None)
+                {
+                    count++;
+                }
+            }
+        }
+        
+        if (PlayerEquipConfig.RingId != 0)
+        {
+            foreach (var item in BagController.S.EquipIdList[PlayerEquipConfig.RingId].BaoShiDic)
+            {
+                if (item.Value.BaoShiType != BaoShiType.None)
+                {
+                    count++;
+                }
+            }
+        }
+        
+        if (PlayerEquipConfig.ShoeId != 0)
+        {
+            foreach (var item in BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].BaoShiDic)
+            {
+                if (item.Value.BaoShiType != BaoShiType.None)
+                {
+                    count++;
+                }
+            }
+        }
+        
+        if (PlayerEquipConfig.ClothId != 0)
+        {
+            foreach (var item in BagController.S.EquipIdList[PlayerEquipConfig.ClothId].BaoShiDic)
+            {
+                if (item.Value.BaoShiType != BaoShiType.None)
+                {
+                    count++;
+                }
+            }
+        }
+
+        if (count>=25&&PlayerData.S.BaoShi == false)
+        {
+            PlayerData.S.BaoShi = true;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
+        }
+    }
+
     public void RefreshPlayerEquip()
     {
         GlobalPlayerAttribute.RefreshFuJiaAttribute();
+        CheckBaoShiTitle();
         if (PlayerEquipConfig.CloakId == 0)
         {
             IsInstallCloak = false;

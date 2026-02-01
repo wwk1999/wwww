@@ -301,11 +301,33 @@ public class ChiBangWindow : MonoBehaviour
       RefreshChiBang();
    }
 
+   public void CheckChiBangTitle()
+   {
+      if (PlayerData.S.ChiBang4==false)
+      {
+         if (PlayerData.S.ChiBangLevel >= 5)
+         {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
+            PlayerData.S.ChiBang4 = true;
+         }
+      }
+      
+      if (PlayerData.S.ChiBang5==false)
+      {
+         if (PlayerData.S.ChiBangLevel >= 6)
+         {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
+            PlayerData.S.ChiBang5 = true;
+         }
+      }
+   }
 
    public void RefreshChiBang()
    {
       RefreshYuMao();
       RefreshEx();
+      CheckChiBangTitle();
+      
       switch (PlayerData.S.ChiBangLevel)
       {
          case 0:

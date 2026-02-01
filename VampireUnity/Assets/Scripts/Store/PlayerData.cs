@@ -67,16 +67,21 @@ public class PlayerData : XSingleton<PlayerData>
 
     public bool LingHun = false;
     public bool BaoShi = false;
-    public bool Guanka3 = false;
-    public bool Guanka4 = false;
-    public bool Guanka5 = false;
-    public bool HunQi1 = false;
-    public bool HunQi2 = false;
+    public bool GuanKa3 = false;
+    public bool GuanKa4 = false;
+    public bool GuanKa5 = false;
     public bool HunQi3 = false;
+    public bool HunQi4 = false;
+    public bool HunQi5 = false;
     public bool ChiBang4 = false;
     public bool ChiBang5 = false;
     public bool DiaoLuo = false;
-    
+
+
+    public int MonsterCount = 0;
+    public int LinHun = 0;
+    public int HunQiCount = 0;
+    public int OrangeCount = 0;
 
 
 
