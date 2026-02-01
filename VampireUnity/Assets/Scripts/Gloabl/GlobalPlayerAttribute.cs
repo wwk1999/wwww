@@ -11,6 +11,22 @@ public enum ExitType
     Exit,
     Again
 }
+
+public class TitleAttributeAll
+{
+    public float Attack;
+    public float Defense;
+    public float Hp;
+    public float Crit;
+    public float FinalDamage;
+    public float AllBaseAttribute;
+    public float AllDamage;
+    public float BaoShiTeXiao;
+    public float DiaoLuo;
+    public float LinHun;
+    public float NormalAttackDamage;
+    public float MoveSpeed;
+}
 public class GlobalPlayerAttribute
 {
     public static ChiBangAttribute PlayerChiBangAttribute => GetPlayerChiBang();
@@ -51,6 +67,17 @@ public class GlobalPlayerAttribute
    public static int BaoShiTeXiao3Count=>GetBaoShiTeXiao3Count();
 
    public static float BaoShiXiaoGuo => GetBaoShiXiaoGuo();
+   
+   
+   
+   //称号属性
+   public static TitleAttributeAll TitleAttributeAll => GetTitleAttributeAll();
+
+   public static float LinHun => GetLinHun();
+   public static float AllDamage => GetAllDamage();
+   
+   public static float FinalDamage => GetFinalDamage();
+
 
    public static int HH5Count => GetHH5Count();
    public static int HA5Count => GetHA5Count();
@@ -77,8 +104,375 @@ public class GlobalPlayerAttribute
 
    public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
 
+   public static float NormalAddDamage(float finalDamage)
+   {
+       if (PlayerEquipConfig.CloakId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.CloakId].Quality < 5)
+           {
+               finalDamage += 0.3f;
+           }
+       }
+            
+       if (PlayerEquipConfig.ClothId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.ClothId].Quality < 5)
+           {
+               finalDamage += 0.3f;
+           }
+       }
+            
+       if (PlayerEquipConfig.NecklaceId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].Quality < 5)
+           {
+               finalDamage += 0.3f;
+           }
+       }
+            
+       if (PlayerEquipConfig.RingId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.RingId].Quality < 5)
+           {
+               finalDamage += 0.3f;
+           }
+       }
+            
+       if (PlayerEquipConfig.ShoeId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].Quality < 5)
+           {
+               finalDamage += 0.3f;
+           }
+       }
+            
+       if (PlayerEquipConfig.HelmetId != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].Quality < 5)
+           {
+               finalDamage += 0.3f;
+           }
+       }
+
+       return finalDamage;
+   }
+
+   
+   
+   public static float GetFinalDamage()
+   {
+       float finalDamage = 0;//最终伤害
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FinalDamageAddPercent))
+       {
+           finalDamage += 0.15f;
+       }
+
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NormalAddDamage))
+       {
+           finalDamage=NormalAddDamage(finalDamage);
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
+       {
+           finalDamage+=0.5f;
+       }
+       finalDamage+=PlayerChiBangAttribute.finalDamage;
+       finalDamage += AA5Count * 0.3f;
+       finalDamage += TitleAttributeAll.FinalDamage;
+       return finalDamage;
+   }
+
+   public static float GetLinHun()
+   {
+       float value = 0;
+       value += TitleAttributeAll.LinHun;
+       return value;
+   }
+
+   public static float GetAllDamage()
+   {
+       float value = 0;
+       value += TitleAttributeAll.AllDamage;
+       return value;
+   }
+   
+   
+   public static void JiHuoAttribute(TitleType titleType, TitleAttributeAll titleAttributeAll)
+   {
+       foreach (var Level5item1 in TitleConfig.TitleAttributeDic[titleType].JiHuoList)
+       {
+           switch (Level5item1.Type)
+           {
+               case TitleAttributeType.Attack:
+                   titleAttributeAll.Attack += Level5item1.Value;
+                   break;
+               case TitleAttributeType.Defense:
+                   titleAttributeAll.Defense += Level5item1.Value;
+                   break;
+               case TitleAttributeType.Crit:
+                   titleAttributeAll.Crit += Level5item1.Value;
+                   break;
+               case TitleAttributeType.Hp:
+                   titleAttributeAll.Hp += Level5item1.Value;
+                   break;
+               case TitleAttributeType.LinHun:
+                   titleAttributeAll.LinHun += Level5item1.Value;
+                   break;
+               case TitleAttributeType.BaoShiTeXiao:
+                   titleAttributeAll.BaoShiTeXiao += Level5item1.Value;
+                   break;
+               case TitleAttributeType.AllBaseAttribute:
+                   titleAttributeAll.AllBaseAttribute += Level5item1.Value;
+                   break;
+               case TitleAttributeType.AllDamage:
+                   titleAttributeAll.AllDamage += Level5item1.Value;
+                   break;
+               case TitleAttributeType.NormalAttackDamage:
+                   titleAttributeAll.NormalAttackDamage += Level5item1.Value;
+                   break;
+               case TitleAttributeType.DiaoLuo:
+                   titleAttributeAll.DiaoLuo += Level5item1.Value;
+                   break;
+               case TitleAttributeType.FinalDamage:
+                   titleAttributeAll.FinalDamage += Level5item1.Value;
+                   break;
+               case TitleAttributeType.MoveSpeed:
+                   titleAttributeAll.MoveSpeed += Level5item1.Value;
+                   break;
+           }
+       }
+   }
+
+   public static void GetJiHuoAttribute(TitleAttributeAll titleAttributeAll)
+   {
+        if (PlayerData.S.Level5)
+       {
+           JiHuoAttribute(TitleType.Level5, titleAttributeAll);
+       }
+       if (PlayerData.S.Level15)
+       {
+           JiHuoAttribute(TitleType.Level15, titleAttributeAll);
+       }
+       
+       if (PlayerData.S.Level30)
+       {
+           JiHuoAttribute(TitleType.Level30, titleAttributeAll);
+       }
+       if (PlayerData.S.Level50)
+       {
+           JiHuoAttribute(TitleType.Level50, titleAttributeAll);
+       }
+       if (PlayerData.S.Level75)
+       {
+           JiHuoAttribute(TitleType.Level75, titleAttributeAll);
+       }
+       if (PlayerData.S.Level100)
+       {
+           JiHuoAttribute(TitleType.Level100, titleAttributeAll);
+       }
+       if (PlayerData.S.MonsterCount1)
+       {
+           JiHuoAttribute(TitleType.MonsterCount1, titleAttributeAll);
+       }
+       if (PlayerData.S.MonsterCount2)
+       {
+           JiHuoAttribute(TitleType.MonsterCount2, titleAttributeAll);
+       }
+       if (PlayerData.S.MonsterCount3)
+       {
+           JiHuoAttribute(TitleType.MonsterCount3, titleAttributeAll);
+       }
+       if (PlayerData.S.MonsterCount4)
+       {
+           JiHuoAttribute(TitleType.MonsterCount4, titleAttributeAll);
+       }
+       if (PlayerData.S.MonsterCount5)
+       {
+           JiHuoAttribute(TitleType.MonsterCount5, titleAttributeAll);
+       }
+       if (PlayerData.S.MonsterCount6)
+       {
+           JiHuoAttribute(TitleType.MonsterCount6, titleAttributeAll);
+       }
+       if (PlayerData.S.LingHun)
+       {
+           JiHuoAttribute(TitleType.LinHun, titleAttributeAll);
+       }
+       if (PlayerData.S.BaoShi)
+       {
+           JiHuoAttribute(TitleType.BaoShi, titleAttributeAll);
+       }
+       if (PlayerData.S.HunQi3)
+       {
+           JiHuoAttribute(TitleType.HunQi3, titleAttributeAll);
+       }
+       if (PlayerData.S.HunQi4)
+       {
+           JiHuoAttribute(TitleType.HunQi4, titleAttributeAll);
+       }
+       if (PlayerData.S.HunQi5)
+       {
+           JiHuoAttribute(TitleType.HunQi5, titleAttributeAll);
+       }
+
+       if (PlayerData.S.GuanKa3)
+       {
+           JiHuoAttribute(TitleType.GuanKa3, titleAttributeAll);
+       }
+       if (PlayerData.S.GuanKa4)
+       {
+           JiHuoAttribute(TitleType.GuanKa4, titleAttributeAll);
+       }
+       if (PlayerData.S.GuanKa5)
+       {
+           JiHuoAttribute(TitleType.GuanKa5, titleAttributeAll);
+       }
+       
+       if (PlayerData.S.ChiBang4)
+       {
+           JiHuoAttribute(TitleType.ChiBang5, titleAttributeAll);
+       }
+       
+       if (PlayerData.S.ChiBang5)
+       {
+           JiHuoAttribute(TitleType.ChiBang5, titleAttributeAll);
+       }
+       
+       if (PlayerData.S.DiaoLuo)
+       {
+           JiHuoAttribute(TitleType.DiaoLuo, titleAttributeAll);
+       }
+   }
+
+   public static void InstallAttribute(TitleType titleType,TitleAttributeAll titleAttributeAll)
+   {
+       foreach (var installItem in TitleConfig.TitleAttributeDic[titleType].InstallList)
+               {
+                   switch (installItem.Type)
+                   {
+                       case TitleAttributeType.Attack:
+                           titleAttributeAll.Attack += installItem.Value;
+                           break;
+                       case TitleAttributeType.Defense:
+                           titleAttributeAll.Defense += installItem.Value;
+                           break;
+                       case TitleAttributeType.Crit:
+                           titleAttributeAll.Crit += installItem.Value;
+                           break;
+                       case TitleAttributeType.Hp:
+                           titleAttributeAll.Hp += installItem.Value;
+                           break;
+                       case TitleAttributeType.LinHun:
+                           titleAttributeAll.LinHun += installItem.Value;
+                           break;
+                       case TitleAttributeType.BaoShiTeXiao:
+                           titleAttributeAll.BaoShiTeXiao += installItem.Value;
+                           break;
+                       case TitleAttributeType.AllBaseAttribute:
+                           titleAttributeAll.AllBaseAttribute += installItem.Value;
+                           break;
+                       case TitleAttributeType.AllDamage:
+                           titleAttributeAll.AllDamage += installItem.Value;
+                           break;
+                       case TitleAttributeType.NormalAttackDamage:
+                           titleAttributeAll.NormalAttackDamage += installItem.Value;
+                           break;
+                       case TitleAttributeType.DiaoLuo:
+                           titleAttributeAll.DiaoLuo += installItem.Value;
+                           break;
+                       case TitleAttributeType.FinalDamage:
+                           titleAttributeAll.FinalDamage += installItem.Value;
+                           break;
+                       case TitleAttributeType.MoveSpeed:
+                           titleAttributeAll.MoveSpeed += installItem.Value;
+                           break;
+                   }
+               }
+   }
+
+   public static TitleAttributeAll GetTitleAttributeAll()
+   {
+       TitleAttributeAll titleAttributeAll = new TitleAttributeAll();
+       GetJiHuoAttribute(titleAttributeAll);
+       switch (PlayerData.S.CurrentInstallTitle)
+       {
+           case TitleType.Level5:
+               InstallAttribute(TitleType.Level5, titleAttributeAll);
+               break;
+           case TitleType.Level15:
+               InstallAttribute(TitleType.Level15, titleAttributeAll);
+               break;
+           case TitleType.Level30:
+               InstallAttribute(TitleType.Level30, titleAttributeAll);
+               break;
+           case TitleType.Level50:
+               InstallAttribute(TitleType.Level50, titleAttributeAll);
+               break;
+           case TitleType.Level75:
+               InstallAttribute(TitleType.Level75, titleAttributeAll);
+               break;
+           case TitleType.Level100:
+               InstallAttribute(TitleType.Level100, titleAttributeAll);
+               break;
+           case TitleType.MonsterCount1:
+               InstallAttribute(TitleType.MonsterCount1, titleAttributeAll);
+               break;
+           case TitleType.MonsterCount2:
+               InstallAttribute(TitleType.MonsterCount2, titleAttributeAll);
+               break;
+           case TitleType.MonsterCount3:
+               InstallAttribute(TitleType.MonsterCount3, titleAttributeAll);
+               break;
+           case TitleType.MonsterCount4:
+               InstallAttribute(TitleType.MonsterCount4, titleAttributeAll);
+               break;
+           case TitleType.MonsterCount5:
+               InstallAttribute(TitleType.MonsterCount5, titleAttributeAll);
+               break;
+           case TitleType.MonsterCount6:
+               InstallAttribute(TitleType.MonsterCount6, titleAttributeAll);
+               break;
+           case TitleType.LinHun:
+               InstallAttribute(TitleType.LinHun, titleAttributeAll);
+               break;
+           case TitleType.BaoShi:
+               InstallAttribute(TitleType.BaoShi, titleAttributeAll);
+               break;
+           case TitleType.HunQi3:
+               InstallAttribute(TitleType.HunQi3, titleAttributeAll);
+               break;
+           case TitleType.HunQi4:
+               InstallAttribute(TitleType.HunQi4, titleAttributeAll);
+               break;
+           case TitleType.HunQi5:
+               InstallAttribute(TitleType.HunQi5, titleAttributeAll);
+               break;
+           case TitleType.GuanKa3:
+               InstallAttribute(TitleType.GuanKa3, titleAttributeAll);
+               break;
+           case TitleType.GuanKa4:
+               InstallAttribute(TitleType.GuanKa4, titleAttributeAll);
+               break;
+           case TitleType.GuanKa5:
+               InstallAttribute(TitleType.GuanKa5, titleAttributeAll);
+               break;
+           case TitleType.DiaoLuo:
+               InstallAttribute(TitleType.DiaoLuo, titleAttributeAll);
+               break;
+           case TitleType.ChiBang4:
+               InstallAttribute(TitleType.ChiBang4, titleAttributeAll);
+               break;
+           case TitleType.ChiBang5:
+               InstallAttribute(TitleType.ChiBang5, titleAttributeAll);
+               break;
+       }
+
+       return titleAttributeAll;
+   }
+
+
    public static float GetHunQiDamage()
    {
+       float value = 0;
        switch (PlayerData.S.playerWeaponType)
        {
            case WeaponType.Primary:
@@ -91,32 +485,46 @@ public class GlobalPlayerAttribute
                switch (PlayerData.S.primaryHunQiLevel)
                {
                    case 0:
-                       return 0;
+                       break;
                    case 1:
                    case 2:
                    case 3:
-                       return 0.1f;
+                       value += 0.1f;
+                       break;
                    case 4:
                    case 5:
-                       return 0.3f;
+                       value += 0.3f;
+                       break;
                }
                break;
            case WeaponType.PuTong3:
                switch (PlayerData.S.primaryHunQiLevel)
                {
                    case 0:
-                       return 0;
+                       break;
                    case 1:
                    case 2:
-                       return 0.1f;
+                       value += 0.1f;
+                       break;
                    case 3:
                    case 4:
                    case 5:
-                       return 0.3f;
+                       value += 0.3f;
+                       break;
                }
                break;
        }
 
+       value += PlayerData.S.primaryHunQiLevel / 100f;
+       value += PlayerData.S.duHunQiLevel / 100f;
+       value += PlayerData.S.puTong3HunQiLevel / 100f;
+       value += PlayerData.S.fireHunQiLevel / 100f;
+       value += PlayerData.S.xuKongHunQiLevel / 100f;
+       value += PlayerData.S.lvQuanHunQiLevel / 100f;
+       value += PlayerData.S.heiDongHunQiLevel / 100f;
+       value += PlayerData.S.jianQiHunQiLevel / 100f;
+
+       value += TitleAttributeAll.NormalAttackDamage;
        return 0;
    }
    
@@ -169,6 +577,7 @@ public class GlobalPlayerAttribute
    {
        float value=BaoShiTeXiao3Count * 0.1f;
        value += HC5Count * 0.7f;
+       value += TitleAttributeAll.BaoShiTeXiao;
        return value;
    }
 
@@ -2451,7 +2860,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCrit()
    {
-       float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit)*(1+CritNum/100.0f)*(1.0f + BaoShiCrit/100);
+       float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit+TitleAttributeAll.Crit)*(1+CritNum/100.0f)*(1.0f + BaoShiCrit/100)*(1.0f+TitleAttributeAll.AllBaseAttribute);
        if (GameController.S.CDTeXiao5Time > 0)
        {
            value *= (1.0f + CD5Count * 0.3f);
@@ -2489,12 +2898,13 @@ public class GlobalPlayerAttribute
 
        forture += PlayerChiBangAttribute.forture;
        forture += HD5Count*0.3f;
+       forture += TitleAttributeAll.DiaoLuo;
        return forture;
    }
    
    public static float GetPlayerMoveSpeed()
    {
-       float speed=(_baseMoveSpeed+PlayerChiBangAttribute.moveSpeed) * (1 + MoveSpeedNum / 100f);
+       float speed=(_baseMoveSpeed+PlayerChiBangAttribute.moveSpeed+TitleAttributeAll.MoveSpeed) * (1 + MoveSpeedNum / 100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
        {
            speed*=1.25f;
@@ -2517,7 +2927,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp) * (1.0f + MaxHpPercent/100f)*(1.0f + BaoShiHp/100));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp+TitleAttributeAll.Hp) * (1.0f + MaxHpPercent/100f)*(1.0f + BaoShiHp/100)*(1.0f+TitleAttributeAll.AllBaseAttribute));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            maxhp /= 2;
@@ -2527,7 +2937,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDamage()
    {
-       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack) * (1f + DamageAddPercent / 100f)*(1.0f + BaoShiAttack/100));
+       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack+TitleAttributeAll.Attack) * (1f + DamageAddPercent / 100f)*(1.0f + BaoShiAttack/100)*(1.0f+TitleAttributeAll.AllBaseAttribute));
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            damage *=1.3f;
@@ -2537,7 +2947,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDefense()
    {
-       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense)*(1f+MaxDefensePercent/100f)*(1.0f + BaoShiDefense/100));
+       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense+TitleAttributeAll.Defense)*(1f+MaxDefensePercent/100f)*(1.0f + BaoShiDefense/100)*(1.0f+TitleAttributeAll.AllBaseAttribute));
        float value = 0;
 
        if (isIceBall)

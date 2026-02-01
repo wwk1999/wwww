@@ -582,7 +582,7 @@ public abstract class MonsterBase : MonoBehaviour
         int replyHp = Mathf.RoundToInt(GameController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
         GlobalPlayerAttribute.ReplyHp(replyHp);
         PlayerData.S.MonsterCount++;
-        PlayerData.S.LinHun += BloodEnergy;
+        PlayerData.S.LinHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun));
 
         AddHunQiEx();
         //怪物数量排行榜
@@ -748,60 +748,7 @@ public abstract class MonsterBase : MonoBehaviour
 
         return Mathf.RoundToInt(finalDamage);
     }
-
-    public float NormalAddDamage(float finalDamage)
-    {
-        if (PlayerEquipConfig.CloakId != 0)
-        {
-            if (BagController.S.EquipIdList[PlayerEquipConfig.CloakId].Quality < 5)
-            {
-                finalDamage += 0.3f;
-            }
-        }
-            
-        if (PlayerEquipConfig.ClothId != 0)
-        {
-            if (BagController.S.EquipIdList[PlayerEquipConfig.ClothId].Quality < 5)
-            {
-                finalDamage += 0.3f;
-            }
-        }
-            
-        if (PlayerEquipConfig.NecklaceId != 0)
-        {
-            if (BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].Quality < 5)
-            {
-                finalDamage += 0.3f;
-            }
-        }
-            
-        if (PlayerEquipConfig.RingId != 0)
-        {
-            if (BagController.S.EquipIdList[PlayerEquipConfig.RingId].Quality < 5)
-            {
-                finalDamage += 0.3f;
-            }
-        }
-            
-        if (PlayerEquipConfig.ShoeId != 0)
-        {
-            if (BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].Quality < 5)
-            {
-                finalDamage += 0.3f;
-            }
-        }
-            
-        if (PlayerEquipConfig.HelmetId != 0)
-        {
-            if (BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].Quality < 5)
-            {
-                finalDamage += 0.3f;
-            }
-        }
-
-        return finalDamage;
-    }
-
+    
     public float OrangeEntryDamage(float damage)
     {
         float finalDamage = 0;//最终伤害
@@ -820,6 +767,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         finalDamage+=GlobalPlayerAttribute.PlayerChiBangAttribute.finalDamage;
         finalDamage += GlobalPlayerAttribute.AA5Count * 0.3f;
+        finalDamage+=GlobalPlayerAttribute
         return damage*(1+finalDamage);
     }
     public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom)
@@ -831,8 +779,13 @@ public abstract class MonsterBase : MonoBehaviour
             JianSuTime = 3;
         }
         float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
-        finalDamage = OrangeEntryDamage(finalDamage);//最终伤害
-        finalDamage *= (1.0f + GlobalPlayerAttribute.HunQiDamage);
+        finalDamage *= (1.0f+GlobalPlayerAttribute.FinalDamage);//最终伤害
+        if (damageFrom == DamageFrom.Normal)
+        {
+            finalDamage *= (1.0f + GlobalPlayerAttribute.HunQiDamage);
+        }
+
+        finalDamage *= (1.0f + GlobalPlayerAttribute.AllDamage);
         GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck/100.0f * finalDamage);
         ShowHurtText(finalDamage, isCrit);
         var random=Random.Range(0, 100);
