@@ -164,43 +164,43 @@ public class FightBGController : XSingleton<FightBGController>
                 ObserverModuleManager.S.SendEvent("ShenJi");
                 playerLevelText.text =  GlobalPlayerAttribute.Level.ToString();
                 GlobalPlayerAttribute.Exp=GlobalPlayerAttribute.Exp-GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level-1];
-                
-                if (GlobalPlayerAttribute.Level == 5)
+
+                if (PlayerData.S.Level5 == false&&GlobalPlayerAttribute.Level>=5)
                 {
                     PlayerData.S.Level5 = true;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"解锁新称号");
                 }
-            
-                if (GlobalPlayerAttribute.Level == 15)
+                
+                if (PlayerData.S.Level15 == false&&GlobalPlayerAttribute.Level>=15)
                 {
                     PlayerData.S.Level15 = true;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"解锁新称号");
                 }
-            
-                if (GlobalPlayerAttribute.Level == 30)
+                
+                if (PlayerData.S.Level30 == false&&GlobalPlayerAttribute.Level>=30)
                 {
                     PlayerData.S.Level30 = true;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"解锁新称号");
                 }
-            
-                if (GlobalPlayerAttribute.Level == 50)
+                
+                if (PlayerData.S.Level50 == false&&GlobalPlayerAttribute.Level>=50)
                 {
                     PlayerData.S.Level50 = true;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"解锁新称号");
                 }
-            
-                if (GlobalPlayerAttribute.Level == 75)
+                
+                if (PlayerData.S.Level75 == false&&GlobalPlayerAttribute.Level>=75)
                 {
                     PlayerData.S.Level75 = true;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"解锁新称号");
                 }
-            
-                if (GlobalPlayerAttribute.Level == 100)
+                
+                if (PlayerData.S.Level100 == false&&GlobalPlayerAttribute.Level>=100)
                 {
                     PlayerData.S.Level100 = true;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"解锁新称号");
                 }
-                // PlayerInfoController.S.UpdatePlayerInfo( GlobalPlayerAttribute.Level, GlobalPlayerAttribute.Exp, GlobalPlayerAttribute.GameLevel, GlobalPlayerAttribute.BloodEnergy);
+                
             }
             playerExSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
             playerExSlider.value=GlobalPlayerAttribute.Exp ;
@@ -209,7 +209,7 @@ public class FightBGController : XSingleton<FightBGController>
             {
                 if (PlayerData.S.MonsterCount1 == false)
                 {
-                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 }
                 PlayerData.S.MonsterCount1 = true;
             }
@@ -218,7 +218,7 @@ public class FightBGController : XSingleton<FightBGController>
             {
                 if (PlayerData.S.MonsterCount2 == false)
                 {
-                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 }
                 PlayerData.S.MonsterCount2 = true;
             }
@@ -227,7 +227,7 @@ public class FightBGController : XSingleton<FightBGController>
             {
                 if (PlayerData.S.MonsterCount3 == false)
                 {
-                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 }
                 PlayerData.S.MonsterCount3 = true;
             }
@@ -237,7 +237,7 @@ public class FightBGController : XSingleton<FightBGController>
             {
                 if (PlayerData.S.MonsterCount4 == false)
                 {
-                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 }
                 PlayerData.S.MonsterCount4 = true;
             }
@@ -247,7 +247,7 @@ public class FightBGController : XSingleton<FightBGController>
             {
                 if (PlayerData.S.MonsterCount5 == false)
                 {
-                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 }
                 PlayerData.S.MonsterCount5 = true;
             }
@@ -257,7 +257,7 @@ public class FightBGController : XSingleton<FightBGController>
             {
                 if (PlayerData.S.MonsterCount6 == false)
                 {
-                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 }
                 PlayerData.S.MonsterCount6 = true;
             }
@@ -266,7 +266,7 @@ public class FightBGController : XSingleton<FightBGController>
             {
                 if (PlayerData.S.LingHun == false)
                 {
-                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                    ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 }
                 PlayerData.S.LingHun = true;
             }
@@ -633,19 +633,19 @@ public class FightBGController : XSingleton<FightBGController>
         }
         if (PlayerData.S.HunQi3 ==false&&PlayerData.S.HunQiCount>=1)
         {
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
             PlayerData.S.HunQi3 = true;
         }
         
         if (PlayerData.S.HunQi4 ==false&&PlayerData.S.HunQiCount>=3)
         {
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
             PlayerData.S.HunQi4 = true;
         }
         
         if (PlayerData.S.HunQi5 ==false&&PlayerData.S.HunQiCount>=5)
         {
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
             PlayerData.S.HunQi5 = true;
         }
     }
@@ -675,7 +675,7 @@ public class FightBGController : XSingleton<FightBGController>
         {
             if (LevelInfoConfig.CurrentGameLevel == 9)
             {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 PlayerData.S.GuanKa3 = true;
             }
         }
@@ -684,7 +684,7 @@ public class FightBGController : XSingleton<FightBGController>
         {
             if (LevelInfoConfig.CurrentGameLevel == 15)
             {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 PlayerData.S.GuanKa4 = true;
             }
         }
@@ -693,7 +693,7 @@ public class FightBGController : XSingleton<FightBGController>
         {
             if (LevelInfoConfig.CurrentGameLevel == 16&&PlayerData.S.mJLevel==MJLevel.Red1)
             {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 PlayerData.S.GuanKa5 = true;
             }
         }
