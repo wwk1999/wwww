@@ -749,27 +749,7 @@ public abstract class MonsterBase : MonoBehaviour
         return Mathf.RoundToInt(finalDamage);
     }
     
-    public float OrangeEntryDamage(float damage)
-    {
-        float finalDamage = 0;//最终伤害
-        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FinalDamageAddPercent))
-        {
-            finalDamage += 0.15f;
-        }
-
-        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NormalAddDamage))
-        {
-            finalDamage=NormalAddDamage(finalDamage);
-        }
-        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
-        {
-            finalDamage+=0.5f;
-        }
-        finalDamage+=GlobalPlayerAttribute.PlayerChiBangAttribute.finalDamage;
-        finalDamage += GlobalPlayerAttribute.AA5Count * 0.3f;
-        finalDamage+=GlobalPlayerAttribute
-        return damage*(1+finalDamage);
-    }
+  
     public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom)
     {
         if (IsDead) return;

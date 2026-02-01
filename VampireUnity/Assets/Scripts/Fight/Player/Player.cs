@@ -378,7 +378,7 @@ public class Player : MonoBehaviour
 
         GameController.S.HitCount++;
         GameController.S.HitCount=Math.Min(10, GameController.S.HitCount);
-        GameController.S.CDTeXiao5Time = 5;
+        GlobalPlayerAttribute.CDTeXiao5Time = 5;
 
         var playerHurt=GameController.S.PlayerHurtQueue.Dequeue();
         playerHurt.transform.position = transform.position;

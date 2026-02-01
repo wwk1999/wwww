@@ -2861,10 +2861,11 @@ public class GlobalPlayerAttribute
    public static float GetTotalCrit()
    {
        float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit+TitleAttributeAll.Crit)*(1+CritNum/100.0f)*(1.0f + BaoShiCrit/100)*(1.0f+TitleAttributeAll.AllBaseAttribute);
-       if (GameController.S.CDTeXiao5Time > 0)
+       if (CDTeXiao5Time > 0)
        {
            value *= (1.0f + CD5Count * 0.3f);
        }
+
        return value;
    }
 
@@ -2913,12 +2914,14 @@ public class GlobalPlayerAttribute
        speed *= (1.0f + HA5Count * 0.3f);
        return speed;
    }
+   [NonSerialized]public static float CDTeXiao5Time = 0;
+
 
    public static float GetTotalCritDamage()
    {
        float value= CRITDamage+CritDamageNum+PlayerChiBangAttribute.critDamage;
        value += (CC5Count * 50f);
-       if (GameController.S.CDTeXiao5Time > 0)
+       if (CDTeXiao5Time > 0)
        {
            value += (CD5Count * 30f);
        }
@@ -2943,6 +2946,8 @@ public class GlobalPlayerAttribute
            damage *=1.3f;
        }
        return damage;
+       
+       
    }
    
    public static float GetTotalDefense()
@@ -2957,6 +2962,7 @@ public class GlobalPlayerAttribute
 
        defense *= (1 + value);
        defense += (AD5Count*TotalDamage*0.1f);
+
        return defense;
    }
    

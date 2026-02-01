@@ -35,7 +35,6 @@ public class GameController : XSingleton<GameController>
     private int AddAttackForTimeCount=0;
     private int AddDefenseForTimeCount=0;
 
-    [NonSerialized]public float CDTeXiao5Time = 0;
     [NonSerialized]public int HitCount = 0;
     [NonSerialized]public int MoveAddAttackCount = 0;
 
@@ -1997,9 +1996,9 @@ public class GameController : XSingleton<GameController>
     {
         if (GlobalPlayerAttribute.IsGame == false)
             return;
-        if (CDTeXiao5Time > 0)
+        if (GlobalPlayerAttribute.CDTeXiao5Time > 0)
         {
-            CDTeXiao5Time-= Time.deltaTime;
+            GlobalPlayerAttribute.CDTeXiao5Time-= Time.deltaTime;
         }
         
         CurrentOrangeEntryTime+=Time.deltaTime;
