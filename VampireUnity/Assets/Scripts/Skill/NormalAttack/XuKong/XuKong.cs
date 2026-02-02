@@ -10,11 +10,11 @@ public class XuKong : MonoBehaviour
     public Rigidbody2D rg;
     [NonSerialized]public float MoveSpeed;
     [NonSerialized]public Vector2 MoveDirection;
-    public Animator animator;
+    public SkeletonAnimation ske;
     public GameObject bullet;
     private void OnEnable()
     {
-        animator.Play("XuKong");
+        ske.AnimationState.SetAnimation(0, "fly_5", true);
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         rg.velocity = MoveDirection * MoveSpeed;

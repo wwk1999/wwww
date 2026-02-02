@@ -67,6 +67,7 @@
     <Compile Include="Assets\Number Themes\Scripts\ClickingOn3DObject.cs" />
     <Compile Include="Assets\Scripts\Window\ShenJiCaiLiao.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\QingWaMonster.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireBaoZhaAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEye.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueRing.cs" />
     <Compile Include="Assets\Scripts\Equip\PropGrid.cs" />

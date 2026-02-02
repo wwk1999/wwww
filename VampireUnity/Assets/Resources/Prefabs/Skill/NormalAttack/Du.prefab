@@ -94,9 +94,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.2865443, y: 0.009207251}
+  m_Offset: {x: 0.92564416, y: -0.0047965813}
   serializedVersion: 2
-  m_Radius: 0.15521935
+  m_Radius: 0.13990976
 --- !u!114 &2575691061985433364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,8 +173,8 @@ Transform:
   m_GameObject: {fileID: 6250509302642511218}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.353, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalPosition: {x: -0.041, y: 0, z: 0}
+  m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1.4999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4773886759100711590}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: fly_37
+  animationName: fly_48
   loop: 1
   timeScale: 1
   unscaledTime: 0

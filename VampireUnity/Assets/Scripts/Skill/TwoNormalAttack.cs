@@ -13,10 +13,15 @@ public class TwoNormalAttack : MonoBehaviour
     [NonSerialized] public float HitTime = 0.5f;
     [NonSerialized] public float CurrentTime = 0f;
 
+    public GameObject parent;
+
     private void OnEnable()
     {
         rg.velocity = MoveDirection * MoveSpeed;
-        skeleton.AnimationState.SetAnimation(0, "animation", true);
+        float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
+        parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        skeleton.AnimationState.SetAnimation(0, "fly_32", true);
+        skeleton.timeScale = 2f;
         StartCoroutine(DelayHide(rg.gameObject));
     }
     

@@ -25,12 +25,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6508781003083147660}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.028, y: -0.078, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5090346475262224261}
+  m_Father: {fileID: 6982123777041045447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &5406437981930245846
 CircleCollider2D:
@@ -64,9 +64,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.08023813, y: -0.06115055}
   serializedVersion: 2
-  m_Radius: 0.4744323
+  m_Radius: 0.33304358
 --- !u!1 &7594397100888385654
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,8 +96,8 @@ Transform:
   m_GameObject: {fileID: 7594397100888385654}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: 0.433, y: -0.556, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6982123777041045447}
@@ -122,8 +122,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6fcce511b7e62514ca7a7a3ef516ea64, type: 2}
-  - {fileID: 2100000, guid: c2ee4813759749f41b328c60db1da433, type: 2}
+  - {fileID: 2100000, guid: 59cb10de94bdd444e8d25a500dc9d015, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -159,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: animation
+  animationName: fly_32
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -202,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 6ee5e400359d9dd4e97d3557249bc38d, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 60ca4865608b5d6419c9322450a2cbc1, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -266,7 +265,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2447520947494588407}
   - {fileID: 6982123777041045447}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -284,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rg: {fileID: 926326437314677559}
   skeleton: {fileID: 5688871145977413914}
+  parent: {fileID: 8384156165022048264}
 --- !u!50 &926326437314677559
 Rigidbody2D:
   serializedVersion: 4
@@ -340,6 +339,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2447520947494588407}
   - {fileID: 2351391477462895172}
   m_Father: {fileID: 5090346475262224261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
