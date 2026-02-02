@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public enum YiChangState
 {
     None,
-    Du,
+    ZhuoShao,
+    JianSu,
+    YiDian
 }
 public class MonsterHurtText : MonoBehaviour
 {
@@ -32,7 +34,7 @@ public class MonsterHurtText : MonoBehaviour
         {
             switch (yiChangState)
             {
-                case YiChangState.Du:
+                case YiChangState.ZhuoShao:
                     animator.Play("DuText");
                     break;
             }

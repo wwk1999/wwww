@@ -71,9 +71,9 @@ public abstract class MonsterBase : MonoBehaviour
     public GameObject yidian;
     public GameObject zhuoshao;
 
-    [NonSerialized] public float duTime = 0;
-    [NonSerialized] public float duCurrentTime = 0;//毒间隔时间
-    [NonSerialized] public float duDamage = 0;
+    [NonSerialized] public float zhuoShaoTime = 0;
+    [NonSerialized] public float zhuoShaoCurrentTime = 0;//毒间隔时间
+    public float zhuoShaoDamage =>GlobalPlayerAttribute.TotalDamage*0.2f;
     
     
     [NonSerialized] public float jiansuTime = 0;
@@ -191,27 +191,27 @@ public abstract class MonsterBase : MonoBehaviour
 
     private void OnEnable()
     {
-        duCurrentTime = 0;
+        zhuoShaoCurrentTime = 0;
     }
 
     public void Update()
     {
-        if (duTime > 0)
+        if (zhuoShaoTime > 0)
         {
-            duTime -= Time.deltaTime;
-            duCurrentTime+=Time.deltaTime;
-            du.gameObject.SetActive(true);
+            zhuoShaoTime -= Time.deltaTime;
+            zhuoShaoCurrentTime+=Time.deltaTime;
+            zhuoshao.gameObject.SetActive(true);
         }
         else
         {
-            du.gameObject.SetActive(false);
+            zhuoshao.gameObject.SetActive(false);
         }
 
-        if (duCurrentTime >= 1)
+        if (zhuoShaoCurrentTime >= 1)
         {
-            duCurrentTime = 0;
-            ShowHurtText(Mathf.RoundToInt(duDamage), false,YiChangState.Du);
-            CurrentHp -= duDamage;
+            zhuoShaoCurrentTime = 0;
+            ShowHurtText(Mathf.RoundToInt(zhuoShaoDamage), false,YiChangState.ZhuoShao);
+            CurrentHp -= zhuoShaoDamage;
             //设置血条
             hpSlider.value = CurrentHp;
             hpSlider.maxValue = MaxHp;
@@ -663,7 +663,7 @@ public abstract class MonsterBase : MonoBehaviour
         monsterHpGameObject.yiChangState=yiChangState;
         switch (yiChangState)
         {
-            case YiChangState.Du:
+            case YiChangState.ZhuoShao:
                 monsterHpGameObject.duText.text = "-" + FloatToSpriteString(damage);
                 break;
         }
