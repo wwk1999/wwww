@@ -230,10 +230,10 @@ public class GunBase : MonoBehaviour
         // 连发两颗
         foreach (Vector2 dir in dirs)
         {
-            GameObject bullet = GameController.S.PuTong3Queue.Dequeue();
+            GameObject bullet = GameController.S.PrimaryQueue.Dequeue();
             bullet.transform.position = GameController.S.gamePlayer.transform.position;
 
-            var attack = bullet.GetComponent<PuTong3>();
+            var attack = bullet.GetComponent<Primary>();
             attack.MoveDirection = dir;
             attack.MoveSpeed = 10f;
             bullet.SetActive(true);

@@ -812,9 +812,9 @@ public class Entrance : MonoBehaviour
             switch ( PlayerData.S.playerWeaponType)
             {
                 case WeaponType.Primary:
-                    var PuTong31= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTong3"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                    var PuTong31= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/Primary"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                     PuTong31.SetActive(false);
-                    GameController.S.PuTong3Queue.Enqueue(PuTong31);
+                    GameController.S.PrimaryQueue.Enqueue(PuTong31);
                     
                     var PuTong3Peng1= Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTongPeng3"), new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                     PuTong3Peng1.SetActive(false);

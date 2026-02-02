@@ -73,7 +73,7 @@ public abstract class MonsterBase : MonoBehaviour
 
     [NonSerialized] public float zhuoShaoTime = 0;
     [NonSerialized] public float zhuoShaoCurrentTime = 0;//毒间隔时间
-    public float zhuoShaoDamage =>GlobalPlayerAttribute.TotalDamage*0.2f;
+    public float zhuoShaoDamage =>GameController.S.GameAttack*0.2f;
     
     
     [NonSerialized] public float jiansuTime = 0;
