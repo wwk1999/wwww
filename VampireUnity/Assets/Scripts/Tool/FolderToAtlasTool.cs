@@ -146,7 +146,7 @@ public class FolderToAtlasTool : EditorWindow
 
         // 为避免压缩格式问题，拷贝到 RGBA32 纹理再编码
         var atlasReadable = new Texture2D(atlas.width, atlas.height, TextureFormat.RGBA32, false);
-        atlasReadable.SetPixels(atlas.GetPixels());
+        atlasReadable.SetPixels32(atlas.GetPixels32());
         atlasReadable.Apply();
 
         byte[] pngData = atlasReadable.EncodeToPNG();
