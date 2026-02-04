@@ -240,6 +240,14 @@ public class GunBase : MonoBehaviour
         }
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
     public void FireShot()
     {
         Vector3 mouseScreen = Input.mousePosition;

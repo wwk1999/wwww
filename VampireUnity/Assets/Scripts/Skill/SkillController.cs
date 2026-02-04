@@ -115,6 +115,40 @@ public class SkillController : XSingleton<SkillController>
 
         NormalAttack.Stop();
     }
+    
+    
+    public void HuoSkill1()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        // 原始方向
+        Vector2 baseDir = (worldPos -GameController.S.gamePlayer.transform.position).normalized;
+
+        int bulletCount = 3;
+        // 两个偏移角度：+10° 和 -10°
+      
+        Vector2[] dirs3 =
+        {
+            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -5f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 5f, Vector3.forward) * baseDir,
+        };
+        Vector2[] dirs=dirs3;
+       
+        foreach (Vector2 dir in dirs)
+        {
+            HuoSkill1 bullet = GameController.S.HuoSkill1Queue.Dequeue();
+            bullet.transform.position = GameController.S.gamePlayer.transform.position;
+            
+            bullet.MoveDirection = dir;
+            bullet.MoveSpeed = 10f;
+            bullet.gameObject.SetActive(true);
+        }
+    }
+    
+    
 
     //普通攻击发射子弹
     public void ShotBulletInvoke()
@@ -282,6 +316,11 @@ public class SkillController : XSingleton<SkillController>
         if (Input.GetMouseButton(0))
         {
             ExcuteSkill(LMB);
+        }
+        
+        if (Input.GetKey(KeyCode.Alpha4))
+        {
+            HuoSkill1();
         }
         
         if (Input.GetMouseButton(1))
