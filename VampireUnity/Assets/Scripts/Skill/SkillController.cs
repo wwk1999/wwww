@@ -217,6 +217,18 @@ public class SkillController : XSingleton<SkillController>
         }
     }
 
+
+    public void DianSkill2()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        var dianquan= GameController.S.DianSkill2Queue.Dequeue();
+        dianquan.gameObject.SetActive(true);
+        dianquan.transform.position = worldPos;
+    }
+
     //释放技能
     public void ExcuteSkill(SkillType skillType)
     {
@@ -349,7 +361,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            HuoSkill2();
+            DianSkill2();
         }
         
         if (Input.GetMouseButton(1))

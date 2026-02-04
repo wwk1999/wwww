@@ -368,6 +368,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill2Anim.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\LvQuanAddScale.cs" />
     <Compile Include="Assets\Scripts\Singleton\NeedDestroyAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill2Anim.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\WhiteChiBang.cs" />
     <Compile Include="Assets\Scripts\Mysql\PropTable.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\Du.cs" />
@@ -491,6 +492,7 @@
     <Compile Include="Assets\Scripts\Server\RankServer.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\KillNormal.cs" />
     <Compile Include="Assets\Scripts\Mysql\UserTable.cs" />
+    <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill2.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\雷兽\LeiShouBoss.cs" />
     <Compile Include="Assets\Scripts\Window\MaskMouseRight.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\Skill2AddRange.cs" />
