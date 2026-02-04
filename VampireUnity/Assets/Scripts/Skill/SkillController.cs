@@ -25,10 +25,25 @@ public class SkillController : XSingleton<SkillController>
     public float IceExplosiontime => (10f*(1-GlobalPlayerAttribute.Skill3CdNum/100.0f));
     public float IceBalltime => (15f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
     public float IceBallDuration = 5;
+    public float HuoSkill2Duration = 5;
     public float Dashtime => GetDashCd();
     public float DianQuantime => GetDianQuanTime();
 
 
+
+    public float HuoDamage => GetHuoDamage();
+    public bool IsHuoSkill2=false;
+
+
+    public float GetHuoDamage()
+    {
+        float value = 1.0f;
+        if (IsHuoSkill2)
+        {
+            value += 0.3f;
+        }
+        return value;
+    }
     public float GetDianQuanTime()
     {
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
@@ -115,7 +130,19 @@ public class SkillController : XSingleton<SkillController>
 
         NormalAttack.Stop();
     }
-    
+
+    public void HuoSkill2()
+    {
+        GameController.S.gamePlayer.HuoSkill2.gameObject.SetActive(true);
+        IsHuoSkill2 = true;
+        Invoke(nameof(StopHuoSkill2),HuoSkill2Duration);
+    }
+
+    public void StopHuoSkill2()
+    {
+        GameController.S.gamePlayer.HuoSkill2.gameObject.SetActive(false);
+        IsHuoSkill2 = false;
+    }
     
     public void HuoSkill1()
     {
@@ -129,13 +156,15 @@ public class SkillController : XSingleton<SkillController>
         int bulletCount = 3;
         // 两个偏移角度：+10° 和 -10°
       
-        Vector2[] dirs3 =
+        Vector2[] dirs5 =
         {
             Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -3f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 3f, Vector3.forward) * baseDir,
             Quaternion.AngleAxis( -5f, Vector3.forward) * baseDir,
             Quaternion.AngleAxis( 5f, Vector3.forward) * baseDir,
         };
-        Vector2[] dirs=dirs3;
+        Vector2[] dirs=dirs5;
        
         foreach (Vector2 dir in dirs)
         {
@@ -320,7 +349,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            HuoSkill1();
+            HuoSkill2();
         }
         
         if (Input.GetMouseButton(1))

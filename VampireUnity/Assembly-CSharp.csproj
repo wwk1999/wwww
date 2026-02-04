@@ -443,6 +443,7 @@
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManRing.cs" />
     <Compile Include="Assets\Scripts\Window\MJinfo.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\FireBaoZha.cs" />
+    <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill2.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXRotation.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangBoss.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloak.cs" />

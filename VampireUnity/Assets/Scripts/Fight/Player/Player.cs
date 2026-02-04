@@ -81,6 +81,9 @@ public class Player : MonoBehaviour
     public GameObject ChiBang4Title;
     public GameObject ChiBang5Title;
 
+
+    public GameObject HuoSkill2;
+
     public void ShowTitle()
     {
         Level5Title.gameObject.SetActive(false);
