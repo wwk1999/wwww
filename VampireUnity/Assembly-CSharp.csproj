@@ -336,6 +336,7 @@
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleRing.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueCloth.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\剑气\ZiPeng.cs" />
+    <Compile Include="Assets\Scripts\Skill\HeiAnSkill\heiAnSkill3Anim.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenRing.cs" />
     <Compile Include="Assets\Scripts\Tool\ImageAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -364,6 +365,7 @@
     <Compile Include="Assets\Scripts\Tool\ToastInfo.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManDiLie.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
+    <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill3.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XianRenZhang.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill2Anim.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\LvQuanAddScale.cs" />

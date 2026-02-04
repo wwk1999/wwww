@@ -217,6 +217,16 @@ public class SkillController : XSingleton<SkillController>
         }
     }
 
+    public void HeiAnSkill3()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        var dianquan= GameController.S.HeiAnSkill3Queue.Dequeue();
+        dianquan.gameObject.SetActive(true);
+        dianquan.transform.position = worldPos;
+    }
 
     public void DianSkill2()
     {
@@ -361,7 +371,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            DianSkill2();
+            HeiAnSkill3();
         }
         
         if (Input.GetMouseButton(1))

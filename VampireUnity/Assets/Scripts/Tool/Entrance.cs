@@ -64,6 +64,16 @@ public class Entrance : MonoBehaviour
                 GameController.S.DianSkill2Queue.Enqueue(Monster1);            
             }
             
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill3").GetComponent<HeiAnSkill3>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.HeiAnSkill3Queue.Enqueue(Monster1);            
+            }
+            
 
             if (LevelInfoConfig.CurrentGameLevel > 15)
             {
