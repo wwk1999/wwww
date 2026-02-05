@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\QingWaMonster.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireBaoZhaAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEye.cs" />
+    <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueRing.cs" />
     <Compile Include="Assets\Scripts\Equip\PropGrid.cs" />
     <Compile Include="Assets\Scripts\Tool\BagEquipAttributeTool.cs" />

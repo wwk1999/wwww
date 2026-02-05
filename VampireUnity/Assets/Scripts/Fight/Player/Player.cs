@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
 
     public GameObject HuoSkill2;
     public GameObject DianSkill2;
+    public GameObject HeiAnSkill2;
 
     public void ShowTitle()
     {

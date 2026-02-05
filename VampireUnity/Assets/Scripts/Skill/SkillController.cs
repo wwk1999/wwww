@@ -27,6 +27,7 @@ public class SkillController : XSingleton<SkillController>
     public float IceBallDuration = 5;
     public float HuoSkill2Duration = 5;
     public float DianSkill2Duration = 5;
+    public float HeiAnSkill2Duration = 5;
 
     public float Dashtime => GetDashCd();
     public float DianQuantime => GetDianQuanTime();
@@ -35,9 +36,12 @@ public class SkillController : XSingleton<SkillController>
 
     public float HuoDamage => GetHuoDamage();
     public float DianDamage => GetDianDamage();
+    public float HeiAnDamage => GetHeiAnDamage();
+
 
     public bool IsHuoSkill2=false;
     public bool IsDianSkill2=false;
+    public bool IsHeiAnSkill2=false;
 
 
 
@@ -56,6 +60,16 @@ public class SkillController : XSingleton<SkillController>
     {
         float value = 1.0f;
         if (IsDianSkill2)
+        {
+            value += 0.3f;
+        }
+        return value;
+    }
+    
+    public float GetHeiAnDamage()
+    {
+        float value = 1.0f;
+        if (IsHeiAnSkill2)
         {
             value += 0.3f;
         }
@@ -161,6 +175,13 @@ public class SkillController : XSingleton<SkillController>
         IsDianSkill2 = true;
         Invoke(nameof(StopDianSkill2),DianSkill2Duration);
     }
+    
+    public void HeiAnSkill2()
+    {
+        GameController.S.gamePlayer.HeiAnSkill2.gameObject.SetActive(true);
+        IsHeiAnSkill2 = true;
+        Invoke(nameof(StopHeiAnSkill2),HeiAnSkill2Duration);
+    }
 
     public void StopHuoSkill2()
     {
@@ -172,6 +193,12 @@ public class SkillController : XSingleton<SkillController>
     {
         GameController.S.gamePlayer.DianSkill2.gameObject.SetActive(false);
         IsDianSkill2 = false;
+    }
+    
+    public void StopHeiAnSkill2()
+    {
+        GameController.S.gamePlayer.HeiAnSkill2.gameObject.SetActive(false);
+        IsHeiAnSkill2 = false;
     }
     
     public void HuoSkill1()
@@ -391,7 +418,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            HeiAnSkill3();
+            HeiAnSkill2();
         }
         
         if (Input.GetMouseButton(1))
