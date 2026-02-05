@@ -1,14 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Spine.Unity;
 using UnityEngine;
 
 public class DianSkill2 : MonoBehaviour
 {
-   public Animator animator;
+   public SkeletonAnimation skeletonAnimation;
 
    private void OnEnable()
    {
-      animator.Play("NewSequenceAnim");
+      skeletonAnimation.AnimationState.SetAnimation(0, "action", true);
    }
 }

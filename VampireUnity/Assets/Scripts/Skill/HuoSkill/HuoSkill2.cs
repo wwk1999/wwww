@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class HuoSkill2 : MonoBehaviour
 {
-  public Animator animator;
+  public SkeletonAnimation skeletonAnimation;
 
   private void OnEnable()
   {
-    animator.Play("NewSequenceAnim");
+    skeletonAnimation.AnimationState.SetAnimation(0, "action", true);
   }
 }

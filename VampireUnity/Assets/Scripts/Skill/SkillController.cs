@@ -26,19 +26,36 @@ public class SkillController : XSingleton<SkillController>
     public float IceBalltime => (15f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
     public float IceBallDuration = 5;
     public float HuoSkill2Duration = 5;
+    public float DianSkill2Duration = 5;
+
     public float Dashtime => GetDashCd();
     public float DianQuantime => GetDianQuanTime();
 
 
 
     public float HuoDamage => GetHuoDamage();
+    public float DianDamage => GetDianDamage();
+
     public bool IsHuoSkill2=false;
+    public bool IsDianSkill2=false;
+
 
 
     public float GetHuoDamage()
     {
         float value = 1.0f;
         if (IsHuoSkill2)
+        {
+            value += 0.3f;
+        }
+        return value;
+    }
+    
+    
+    public float GetDianDamage()
+    {
+        float value = 1.0f;
+        if (IsDianSkill2)
         {
             value += 0.3f;
         }
@@ -137,11 +154,24 @@ public class SkillController : XSingleton<SkillController>
         IsHuoSkill2 = true;
         Invoke(nameof(StopHuoSkill2),HuoSkill2Duration);
     }
+    
+    public void DianSkill2()
+    {
+        GameController.S.gamePlayer.DianSkill2.gameObject.SetActive(true);
+        IsDianSkill2 = true;
+        Invoke(nameof(StopDianSkill2),DianSkill2Duration);
+    }
 
     public void StopHuoSkill2()
     {
         GameController.S.gamePlayer.HuoSkill2.gameObject.SetActive(false);
         IsHuoSkill2 = false;
+    }
+    
+    public void StopDianSkill2()
+    {
+        GameController.S.gamePlayer.DianSkill2.gameObject.SetActive(false);
+        IsDianSkill2 = false;
     }
     
     public void HuoSkill1()
@@ -228,17 +258,7 @@ public class SkillController : XSingleton<SkillController>
         dianquan.transform.position = worldPos;
     }
 
-    public void DianSkill2()
-    {
-        Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
-        mouseScreen.z = depth; 
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        var dianquan= GameController.S.DianSkill2Queue.Dequeue();
-        dianquan.gameObject.SetActive(true);
-        dianquan.transform.position = worldPos;
-    }
-
+    
     //释放技能
     public void ExcuteSkill(SkillType skillType)
     {
@@ -371,7 +391,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            HeiAnSkill3();
+            DianSkill2();
         }
         
         if (Input.GetMouseButton(1))
