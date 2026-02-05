@@ -391,7 +391,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            DianSkill2();
+            HeiAnSkill3();
         }
         
         if (Input.GetMouseButton(1))
