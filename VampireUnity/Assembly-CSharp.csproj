@@ -471,6 +471,7 @@
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleShoe1.cs" />
     <Compile Include="Assets\Scripts\Skill\TwoNormalAttackTrigger.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerInfoConfig.cs" />
+    <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill3.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\JuDaYaChi.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeRing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />

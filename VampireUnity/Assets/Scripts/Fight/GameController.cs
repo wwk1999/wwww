@@ -235,6 +235,7 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<DianSkill2>DianSkill2Queue = new Queue<DianSkill2>();
     [NonReorderable]public Queue<HeiAnSkill3>HeiAnSkill3Queue = new Queue<HeiAnSkill3>();
     [NonReorderable]public Queue<HeiAnSkill1>HeiAnSkill1Queue = new Queue<HeiAnSkill1>();
+    [NonReorderable]public Queue<DianSkill3>DianSkill3Queue = new Queue<DianSkill3>();
 
 
 

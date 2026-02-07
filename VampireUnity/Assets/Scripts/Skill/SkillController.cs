@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class SkillController : XSingleton<SkillController>
 {
@@ -160,6 +161,25 @@ public class SkillController : XSingleton<SkillController>
         normalAttack44.Stop();
 
         NormalAttack.Stop();
+    }
+
+    public void DianSKill3()
+    {
+        float waveOffset = Random.Range(0,30);
+        int bulletCount = 12;
+        float angleStep = 360f / bulletCount;
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            var xieZiSkill1 = GameController.S.DianSkill3Queue.Dequeue();
+            float angle = i * angleStep + waveOffset;
+            float angleRad = angle * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+            xieZiSkill1.transform.position = GameController.S.gamePlayer.transform.position;
+            xieZiSkill1.MoveDirection = direction;
+            xieZiSkill1.MoveSpeed = 10f;
+            xieZiSkill1.gameObject.SetActive(true);
+        }
     }
 
     public void HeiAnSkill1()
@@ -429,7 +449,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            HeiAnSkill1();
+            DianSKill3();
         }
         
         if (Input.GetMouseButton(1))
