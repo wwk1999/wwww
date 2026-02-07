@@ -162,6 +162,17 @@ public class SkillController : XSingleton<SkillController>
         NormalAttack.Stop();
     }
 
+    public void HeiAnSkill1()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        var dianquan= GameController.S.HeiAnSkill1Queue.Dequeue();
+        dianquan.gameObject.SetActive(true);
+        dianquan.transform.position = worldPos;
+    }
+
     public void HuoSkill2()
     {
         GameController.S.gamePlayer.HuoSkill2.gameObject.SetActive(true);
@@ -418,7 +429,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            HeiAnSkill2();
+            HeiAnSkill1();
         }
         
         if (Input.GetMouseButton(1))
