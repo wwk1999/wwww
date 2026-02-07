@@ -163,6 +163,27 @@ public class SkillController : XSingleton<SkillController>
         NormalAttack.Stop();
     }
 
+    IEnumerator HuoSkill3(int count,int redis,float time)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+
+        for (int i = 0; i < count; i++)
+        {
+            float offectX = Random.Range(0, 1.0f);
+            float offectY = Random.Range(0, 1.0f);
+            Vector3 dir = new Vector2(offectX, offectY);
+            Vector2 pos = worldPos + dir * redis;
+            var dianquan= GameController.S.HuoSkill3Queue.Dequeue();
+            dianquan.gameObject.SetActive(true);
+            dianquan.transform.position = pos;
+            dianquan._renderer.sortingOrder = 10001 + i;
+            yield return new WaitForSeconds(time);
+        }
+    }
+
     public void DianSKill3()
     {
         float waveOffset = Random.Range(0,30);
@@ -449,7 +470,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            DianSKill3();
+            StartCoroutine(HuoSkill3(5,1,0.2f));
         }
         
         if (Input.GetMouseButton(1))

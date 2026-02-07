@@ -416,6 +416,7 @@
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryHelmet.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Primary\Primary.cs" />
     <Compile Include="Assets\Scripts\Skill\TwoNormalAttack.cs" />
+    <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill3.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\HongLong2.cs" />
     <Compile Include="Assets\Scripts\Window\MainWindow1.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\BlueChiBang.cs" />
