@@ -105,6 +105,16 @@ public class Entrance : MonoBehaviour
                 GameController.S.HuoSkill3Queue.Enqueue(Monster1);            
             }
             
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/IceSkill/IceSkill1").GetComponent<IceSkill1>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.IceSkill1Queue.Enqueue(Monster1);            
+            }
+            
 
             if (LevelInfoConfig.CurrentGameLevel > 15)
             {

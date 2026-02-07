@@ -25,6 +25,42 @@ public class SkillController : XSingleton<SkillController>
     public float IceArrowtime => (3f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
     public float IceExplosiontime => (10f*(1-GlobalPlayerAttribute.Skill3CdNum/100.0f));
     public float IceBalltime => (15f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
+    public float IceSkill1Time => 8f;
+    
+    public float HuoSkill1Time => 8f;
+    public float HuoSkill2Time = 15f;
+    public float HuoSkill3Time = 15f;
+    
+    public float DianSkill1Time => 8f;
+    public float DianSkill2Time = 15f;
+    public float DianSkill3Time = 15f;
+    
+    public float HeiAnSkill1Time => 8f;
+    public float HeiAnSkill2Time = 15f;
+    public float HeiAnSkill3Time = 15f;
+    
+    
+    [NonSerialized]public float IceArrowCoolingtime = 0;
+    [NonSerialized]public float IceExplosionCoolingtime = 0f;
+    [NonSerialized]public float IceBallCoolingtime = 0f;
+    
+    [NonSerialized]public float HuoSkill1Coolingtime = 0;
+    [NonSerialized]public float HuoSkill2Coolingtime = 0f;
+    [NonSerialized]public float HuoSkill3Coolingtime = 0f;
+    
+    
+    [NonSerialized]public float DianSkill1Coolingtime = 0;
+    [NonSerialized]public float DianSkill2Coolingtime = 0f;
+    [NonSerialized]public float DianSkill3Coolingtime = 0f;
+
+    
+    
+    [NonSerialized]public float HeiAnSkill1Coolingtime = 0;
+    [NonSerialized]public float HeiAnSkill2Coolingtime = 0f;
+    [NonSerialized]public float HeiAnSkill3Coolingtime = 0f;
+
+    
+    
     public float IceBallDuration = 5;
     public float HuoSkill2Duration = 5;
     public float DianSkill2Duration = 5;
@@ -85,9 +121,6 @@ public class SkillController : XSingleton<SkillController>
 
         return (10f * (1 - GlobalPlayerAttribute.Skill1CdNum / 100.0f));
     }
-    [NonSerialized]public float IceArrowCoolingtime = 0;
-    [NonSerialized]public float IceExplosionCoolingtime = 0f;
-    [NonSerialized]public float IceBallCoolingtime = 0f;
     public float DashCoolingtime = 0;
    
 
@@ -201,6 +234,17 @@ public class SkillController : XSingleton<SkillController>
             xieZiSkill1.MoveSpeed = 10f;
             xieZiSkill1.gameObject.SetActive(true);
         }
+    }
+    
+    public void IceSkill1()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        var dianquan= GameController.S.IceSkill1Queue.Dequeue();
+        dianquan.gameObject.SetActive(true);
+        dianquan.transform.position = worldPos;
     }
 
     public void HeiAnSkill1()
@@ -470,7 +514,8 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKey(KeyCode.Alpha4))
         {
-            StartCoroutine(HuoSkill3(5,1,0.2f));
+            IceSkill1();
+            //StartCoroutine(HuoSkill3(5,1,0.2f));
         }
         
         if (Input.GetMouseButton(1))
