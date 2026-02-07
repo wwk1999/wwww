@@ -139,6 +139,114 @@ public class SkillWindow1 : MonoBehaviour
     public GameObject skill3Auto;
     public GameObject dashAuto;
 
+
+    public Button jia1;
+    public Button jia2;
+    public Button jia3;
+    public GameObject SkillYuanSuWindow;
+
+    public GameObject IceSkill1;
+    public GameObject HuoSkill1;
+    public GameObject HeiAnSkill1;
+    public GameObject DianSkill1;
+    public GameObject IceSkill2;
+    public GameObject HuoSkill2;
+    public GameObject HeiAnSkill2;
+    public GameObject DianSkill2;
+    public GameObject IceSkill3;
+    public GameObject HuoSkill3;
+    public GameObject HeiAnSkill3;
+    public GameObject DianSkill3;
+    
+    public void RefreshSkill()
+    {
+        IceSkill1.gameObject.SetActive(false);
+        HuoSkill1.gameObject.SetActive(false);
+        HeiAnSkill1.gameObject.SetActive(false);
+        DianSkill1.gameObject.SetActive(false);
+        
+        IceSkill2.gameObject.SetActive(false);
+        HuoSkill2.gameObject.SetActive(false);
+        HeiAnSkill2.gameObject.SetActive(false);
+        DianSkill2.gameObject.SetActive(false);
+        
+        IceSkill3.gameObject.SetActive(false);
+        HuoSkill3.gameObject.SetActive(false);
+        HeiAnSkill3.gameObject.SetActive(false);
+        DianSkill3.gameObject.SetActive(false);
+
+        switch (SkillJiaDian.S.skill1Type)
+        {
+            case SkillYuanSuType.Ice:
+                jia1.gameObject.SetActive(false);
+                IceSkill1.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.Huo:
+                jia1.gameObject.SetActive(false);
+                HuoSkill1.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.HeiAn:
+                jia1.gameObject.SetActive(false);
+
+                HeiAnSkill1.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.Dian:
+                jia1.gameObject.SetActive(false);
+
+                DianSkill1.gameObject.SetActive(true);
+                break;
+        }
+        
+        switch (SkillJiaDian.S.skill2Type)
+        {
+            case SkillYuanSuType.Ice:
+                jia2.gameObject.SetActive(false);
+
+                IceSkill2.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.Huo:
+                jia2.gameObject.SetActive(false);
+
+                HuoSkill2.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.HeiAn:
+                jia2.gameObject.SetActive(false);
+
+                HeiAnSkill2.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.Dian:
+                jia2.gameObject.SetActive(false);
+
+                DianSkill2.gameObject.SetActive(true);
+                break;
+        }
+        
+        switch (SkillJiaDian.S.skill3Type)
+        {
+            case SkillYuanSuType.Ice:
+                jia3.gameObject.SetActive(false);
+
+                IceSkill3.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.Huo:
+                jia3.gameObject.SetActive(false);
+
+                HuoSkill3.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.HeiAn:
+                jia3.gameObject.SetActive(false);
+
+                HeiAnSkill3.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.Dian:
+                jia3.gameObject.SetActive(false);
+
+                DianSkill3.gameObject.SetActive(true);
+                break;
+        }
+    }
+
+    
     public void SetAuto()
     {
         skill1Auto.gameObject.SetActive(SkillData.S.skill1Auto);
@@ -442,10 +550,34 @@ public class SkillWindow1 : MonoBehaviour
         SetShowLevel();
         SetAuto();
         ResfreshSkillCount();
+        RefreshSkill();
     }
-
+    
     private void Start()
     {
+        jia1.onClick.AddListener(() =>
+        {
+            SkillYuanSuWindow.gameObject.SetActive(true);
+            SkillYuanSuWindow skillYuanSuWindow = SkillYuanSuWindow.GetComponent<SkillYuanSuWindow>();
+            skillYuanSuWindow.skillType = 1;
+            skillYuanSuWindow.Refresh();
+        });
+        jia3.onClick.AddListener(() =>
+        {
+            SkillYuanSuWindow.gameObject.SetActive(true);
+            SkillYuanSuWindow skillYuanSuWindow = SkillYuanSuWindow.GetComponent<SkillYuanSuWindow>();
+            skillYuanSuWindow.skillType = 3;
+            skillYuanSuWindow.Refresh();
+        });
+        jia2.onClick.AddListener(() =>
+        {
+            SkillYuanSuWindow.gameObject.SetActive(true);
+            SkillYuanSuWindow skillYuanSuWindow = SkillYuanSuWindow.GetComponent<SkillYuanSuWindow>();
+            skillYuanSuWindow.skillType = 2;
+            skillYuanSuWindow.Refresh();
+        });
+        
+        
         exitButton.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);

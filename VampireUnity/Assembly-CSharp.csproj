@@ -296,6 +296,7 @@
     <Compile Include="Assets\Scripts\Audio\AudioController.cs" />
     <Compile Include="Assets\Scripts\Tool\BossWarning.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongBaoZha.cs" />
+    <Compile Include="Assets\Scripts\Window\SkillYuanSuWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRen.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterFlyObjectBase.cs" />
     <Compile Include="Assets\Scripts\Mysql\ExperienceController.cs" />
