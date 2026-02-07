@@ -417,7 +417,7 @@ public class StoreDefine : XSingleton<StoreDefine>
     
         public int HuoSkill3=0;
         public int HuoSkill3Cd=0;
-        public int HuoSkill3Range=0;
+        public int HuoSkill3Count=0;
         public int HuoSkill3YuanSu=0;
     
     
@@ -442,6 +442,10 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int MonsterCrit;
         public int MonsterHp;
         public int MonsterDefense;
+        
+        public SkillYuanSuType skill1Type=SkillYuanSuType.None;
+        public SkillYuanSuType skill2Type=SkillYuanSuType.None;
+        public SkillYuanSuType skill3Type=SkillYuanSuType.None;
 
         
         public void CopyFromRuntime(SkillJiaDian runtime)
@@ -456,24 +460,76 @@ public class StoreDefine : XSingleton<StoreDefine>
             MoveAddDefense=runtime.MoveAddDefense;
             DashCd=runtime.DashCd;
             Dash=runtime.Dash;
+            
             DianSkill1Damage=runtime.DianSkill1Damage;
             DianSkill1Cd=runtime.DianSkill1Cd;
             DianSkill1Range=runtime.DianSkill1Range;
             DianSkill1YuanSu=runtime.DianSkill1YuanSu;
+            
+            DianSkill2 = runtime.DianSkill2;
+            DianSkill2Cd=runtime.DianSkill2Cd;
+            DianSkill2Duration=runtime.DianSkill2Duration;
+            DianSkill2YuanSu=runtime.DianSkill2YuanSu;
+            
+            DianSkill3 = runtime.DianSkill3;
+            DianSkill3Cd=runtime.DianSkill3Cd;
+            DianSkill3Count=runtime.DianSkill3Count;
+            DianSkill3YuanSu=runtime.DianSkill3YuanSu;
+            
             IceSkill2Damage=runtime.IceSkill2Damage;
             IceSkill2Cd=runtime.IceSkill2Cd;
             IceSkill2Time=runtime.IceSkill2Time;
             IceSkill2YuanSu=runtime.IceSkill2YuanSu;
+            
+            
             IceSkill3Damage=runtime.IceSkill3Damage;
             IceSkill3Cd=runtime.IceSkill3Cd;
             IceSkill3Range=runtime.IceSkill3Range;
             IceSkill3YuanSu=runtime.IceSkill3YuanSu;
-
+            
+            HeiAnSkill2Damage = runtime.HeiAnSkill2Damage;
+            HeiAnSkill2Cd=runtime.HeiAnSkill2Cd;
+            HeiAnSkill2Time=runtime.HeiAnSkill2Time;
+            HeiAnSkill2YuanSu=runtime.HeiAnSkill2YuanSu;
+            
+            HuoSkill2 = runtime.HuoSkill2;
+            HuoSkill2Cd=runtime.HuoSkill2Cd;
+            HuoSkill2Time=runtime.HuoSkill2Time;
+            HuoSkill2YuanSu=runtime.HuoSkill2YuanSu;
+            
+            IceSkill1=runtime.IceSkill1;
+            IceSkill1Range=runtime.IceSkill1Range;
+            IceSkill1Cd=runtime.IceSkill1Cd;
+            IceSkill1YuanSu=runtime.IceSkill1YuanSu;
+            
+            HuoSkill1=runtime.HuoSkill1;
+            HuoSkill1Count=runtime.HuoSkill1Count;
+            HuoSkill1Cd=runtime.HuoSkill1Cd;
+            HuoSkill1YuanSu=runtime.HuoSkill1YuanSu;
+            
+            HuoSkill3=runtime.HuoSkill3;
+            HuoSkill3Count=runtime.HuoSkill3Count;
+            HuoSkill3Cd=runtime.HuoSkill3Cd;
+            HuoSkill3YuanSu=runtime.HuoSkill3YuanSu;
+            
+            HeiAnSkill1=runtime.HeiAnSkill1;
+            HeiAnSkill1Range=runtime.HeiAnSkill1Range;
+            HeiAnSkill1Cd=runtime.HeiAnSkill1Cd;
+            HeiAnSkill1YuanSu=runtime.HeiAnSkill1YuanSu;
+            
+            HeiAnSkill3Damage=runtime.HeiAnSkill3Damage;
+            HeiAnSkill3Range=runtime.HeiAnSkill3Range;
+            HeiAnSkill3Cd=runtime.HeiAnSkill3Cd;
+            HeiAnSkill3YuanSu=runtime.HeiAnSkill3YuanSu;
+            
             MonsterAttack = runtime.MonsterAttack;
             MonsterCrit = runtime.MonsterCrit;
             MonsterDefense = runtime.MonsterDefense;
             MonsterHp = runtime.MonsterHp;
-
+            
+            skill1Type=runtime.skill1Type;
+            skill2Type=runtime.skill2Type;
+            skill3Type=runtime.skill3Type;
         }
 
         public void ApplyToRuntime(SkillJiaDian runtime)
@@ -488,23 +544,82 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.MoveAddDefense=MoveAddDefense;
             runtime.DashCd=DashCd;
             runtime.Dash=Dash;
+            
+            
+            
             runtime.DianSkill1Damage=DianSkill1Damage;
             runtime.DianSkill1Cd=DianSkill1Cd;
             runtime.DianSkill1Range=DianSkill1Range;
             runtime.DianSkill1YuanSu=DianSkill1YuanSu;
+            
+            runtime.DianSkill2=DianSkill2;
+            runtime.DianSkill2Cd=DianSkill2Cd;
+            runtime.DianSkill2Duration=DianSkill2Duration;
+            runtime.DianSkill2YuanSu=DianSkill2YuanSu;
+            
+            runtime.DianSkill3=DianSkill3;
+            runtime.DianSkill3Cd=DianSkill3Cd;
+            runtime.DianSkill3Count=DianSkill3Count;
+            runtime.DianSkill3YuanSu=DianSkill3YuanSu;
+            
             runtime.IceSkill2Damage=IceSkill2Damage;
             runtime.IceSkill2Cd=IceSkill2Cd;
             runtime.IceSkill2Time=IceSkill2Time;
             runtime.IceSkill2YuanSu=IceSkill2YuanSu;
+            
+            
             runtime.IceSkill3Damage=IceSkill3Damage;
             runtime.IceSkill3Cd=IceSkill3Cd;
             runtime.IceSkill3Range=IceSkill3Range;
             runtime.IceSkill3YuanSu=IceSkill3YuanSu;
+            
+            runtime.HeiAnSkill2Damage=HeiAnSkill2Damage;
+            runtime.HeiAnSkill2Cd=HeiAnSkill2Cd;
+            runtime.HeiAnSkill2Time=HeiAnSkill2Time;
+            runtime.HeiAnSkill2YuanSu=HeiAnSkill2YuanSu;
+            
+            runtime.HuoSkill2=HuoSkill2;
+            runtime.HuoSkill2Cd=HuoSkill2Cd;
+            runtime.HuoSkill2Time=HuoSkill2Time;
+            runtime.HuoSkill2YuanSu=HuoSkill2YuanSu;
+            
+            runtime.IceSkill1=IceSkill1;
+            runtime.IceSkill1Range=IceSkill1Range;
+            runtime.IceSkill1Cd=IceSkill1Cd;
+            runtime.IceSkill1YuanSu=IceSkill1YuanSu;
+            
+            runtime.HuoSkill1=HuoSkill1;
+            runtime.HuoSkill1Count=HuoSkill1Count;
+            runtime.HuoSkill1Cd=HuoSkill1Cd;
+            runtime.HuoSkill1YuanSu=HuoSkill1YuanSu;
+            
+            runtime.HuoSkill3=HuoSkill3;
+            runtime.HuoSkill3Count=HuoSkill3Count;
+            runtime.HuoSkill3Cd=HuoSkill3Cd;
+            runtime.HuoSkill3YuanSu=HuoSkill3YuanSu;
+            
+            runtime.HeiAnSkill1=HeiAnSkill1;
+            runtime.HeiAnSkill1Range=HeiAnSkill1Range;
+            runtime.HeiAnSkill1Cd=HeiAnSkill1Cd;
+            runtime.HeiAnSkill1YuanSu=HeiAnSkill1YuanSu;
+            
+            runtime.HeiAnSkill3Damage=HeiAnSkill3Damage;
+            runtime.HeiAnSkill3Range=HeiAnSkill3Range;
+            runtime.HeiAnSkill3Cd=HeiAnSkill3Cd;
+            runtime.HeiAnSkill3YuanSu=HeiAnSkill3YuanSu;
 
+            
+            
+            
             runtime.MonsterAttack = MonsterAttack;
             runtime.MonsterCrit = MonsterCrit;
             runtime.MonsterDefense = MonsterDefense;
             runtime.MonsterHp = MonsterHp;
+            
+            runtime.skill1Type=skill1Type;
+            runtime.skill2Type=skill2Type;
+            runtime.skill3Type=skill3Type;
+
         }
 
     }

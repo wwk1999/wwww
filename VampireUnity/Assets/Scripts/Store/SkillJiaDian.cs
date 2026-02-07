@@ -1,3 +1,12 @@
+public enum SkillYuanSuType
+{
+    None,
+    Ice,
+    Huo,
+    Dian,
+    HeiAn
+}
+
 public class SkillJiaDian : XSingleton<SkillJiaDian>
 {
     public int CurrentSkillCount = 0;
@@ -58,7 +67,7 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     
     public int HuoSkill3=0;
     public int HuoSkill3Cd=0;
-    public int HuoSkill3Range=0;
+    public int HuoSkill3Count=0;
     public int HuoSkill3YuanSu=0;
     
     
@@ -83,6 +92,11 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public int MonsterCrit;
     public int MonsterHp;
     public int MonsterDefense;
+
+    public SkillYuanSuType skill1Type=SkillYuanSuType.None;
+    public SkillYuanSuType skill2Type=SkillYuanSuType.None;
+    public SkillYuanSuType skill3Type=SkillYuanSuType.None;
+
 
     protected override void Awake()
     {

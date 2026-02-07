@@ -2957,7 +2957,7 @@ public class GlobalPlayerAttribute
 
        if (isIceBall)
        {
-           value += Skill2AddDefenseNum / 100.0f;
+          // value += Skill2AddDefenseNum / 100.0f;
        }
 
        defense *= (1 + value);
