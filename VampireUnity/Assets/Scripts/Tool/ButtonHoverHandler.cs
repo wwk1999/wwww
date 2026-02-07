@@ -156,73 +156,73 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
             break;
 
         case SkillConfig.SkillButtonType.Skill1:
-            level.text = SkillJiaDian.S.Skill1Damage.ToString();
+            level.text = SkillJiaDian.S.DianSkill1Damage.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1Name, true, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1Desc);
             break;
 
         case SkillConfig.SkillButtonType.Skill2:
-            level.text = SkillJiaDian.S.Skill2Damage.ToString();
+            level.text = SkillJiaDian.S.IceSkill2Damage.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2Name, true, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2Desc);
             break;
 
         case SkillConfig.SkillButtonType.Skill3:
-            level.text = SkillJiaDian.S.Skill3Damage.ToString();
+            level.text = SkillJiaDian.S.IceSkill3Damage.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Name, true, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Desc);
             break;
 
         case SkillConfig.SkillButtonType.Skill1Cd:
-            level.text = SkillJiaDian.S.Skill1Cd.ToString();
+            level.text = SkillJiaDian.S.DianSkill1Cd.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1CdName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1CdDesc);
             break;
 
         case SkillConfig.SkillButtonType.Skill2Cd:
-            level.text = SkillJiaDian.S.Skill2Cd.ToString();
+            level.text = SkillJiaDian.S.IceSkill2Cd.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2Name, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2Desc);
             break;
 
         case SkillConfig.SkillButtonType.Skill3Cd:
-            level.text = SkillJiaDian.S.Skill3Cd.ToString();
+            level.text = SkillJiaDian.S.IceSkill3Cd.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Name, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Desc);
             break;
 
         case SkillConfig.SkillButtonType.Skill1Range:
-            level.text = SkillJiaDian.S.Skill1Range.ToString();
+            level.text = SkillJiaDian.S.DianSkill1Range.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1RangeName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1RangeDesc);
             break;
 
         case SkillConfig.SkillButtonType.Skill1YiDian:
-            level.text = SkillJiaDian.S.Skill1YiDian.ToString();
+            level.text = SkillJiaDian.S.DianSkill1YuanSu.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1YiDianName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1YiDianDesc);
             break;
 
         case SkillConfig.SkillButtonType.Skill2Time:
-            level.text = SkillJiaDian.S.Skill2Time.ToString();
+            level.text = SkillJiaDian.S.IceSkill2Time.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2TimeName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2TimeDesc);
             break;
 
         case SkillConfig.SkillButtonType.Skill2AddDefense:
-            level.text = SkillJiaDian.S.Skill2AddDefense.ToString();
+            level.text = SkillJiaDian.S.IceSkill2YuanSu.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2AddDefenseName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2AddDefenseDesc);
             break;
 
         case SkillConfig.SkillButtonType.Skill3Range:
-            level.text = SkillJiaDian.S.Skill3Range.ToString();
+            level.text = SkillJiaDian.S.IceSkill3Range.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Name, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Desc);
             break;
 
         case SkillConfig.SkillButtonType.Skill3JianSu:
-            level.text = SkillJiaDian.S.Skill3JianSu.ToString();
+            level.text = SkillJiaDian.S.IceSkill3YuanSu.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3JianSuName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3JianSuDesc);
             break;

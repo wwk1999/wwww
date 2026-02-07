@@ -43,6 +43,8 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public float IceArrowCoolingtime = 0;
     [NonSerialized]public float IceExplosionCoolingtime = 0f;
     [NonSerialized]public float IceBallCoolingtime = 0f;
+    [NonSerialized]public float IceSkill1Coolingtime = 0;
+
     
     [NonSerialized]public float HuoSkill1Coolingtime = 0;
     [NonSerialized]public float HuoSkill2Coolingtime = 0f;
@@ -198,27 +200,38 @@ public class SkillController : XSingleton<SkillController>
 
     IEnumerator HuoSkill3(int count,int redis,float time)
     {
+        
         Vector3 mouseScreen = Input.mousePosition;
         float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
 
-        for (int i = 0; i < count; i++)
+        if (HuoSkill3Coolingtime >= HuoSkill3Time)
         {
-            float offectX = Random.Range(0, 1.0f);
-            float offectY = Random.Range(0, 1.0f);
-            Vector3 dir = new Vector2(offectX, offectY);
-            Vector2 pos = worldPos + dir * redis;
-            var dianquan= GameController.S.HuoSkill3Queue.Dequeue();
-            dianquan.gameObject.SetActive(true);
-            dianquan.transform.position = pos;
-            dianquan._renderer.sortingOrder = 10001 + i;
-            yield return new WaitForSeconds(time);
+            HuoSkill3Coolingtime = 0;
+            for (int i = 0; i < count; i++)
+            {
+                float offectX = Random.Range(0, 1.0f);
+                float offectY = Random.Range(0, 1.0f);
+                Vector3 dir = new Vector2(offectX, offectY);
+                Vector2 pos = worldPos + dir * redis;
+                var dianquan = GameController.S.HuoSkill3Queue.Dequeue();
+                dianquan.gameObject.SetActive(true);
+                dianquan.transform.position = pos;
+                dianquan._renderer.sortingOrder = 10001 + i;
+                yield return new WaitForSeconds(time);
+            }
         }
     }
 
     public void DianSKill3()
     {
+        if (DianSkill3Coolingtime < DianSkill3Time)
+        {
+            return;
+        }
+
+        DianSkill3Coolingtime = 0;
         float waveOffset = Random.Range(0,30);
         int bulletCount = 12;
         float angleStep = 360f / bulletCount;
@@ -238,6 +251,11 @@ public class SkillController : XSingleton<SkillController>
     
     public void IceSkill1()
     {
+        if (IceSkill1Coolingtime < IceSkill1Time)
+        {
+            return;
+        }
+        IceSkill1Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
         float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
@@ -249,6 +267,12 @@ public class SkillController : XSingleton<SkillController>
 
     public void HeiAnSkill1()
     {
+        if (HeiAnSkill1Coolingtime < HeiAnSkill1Time)
+        {
+            return;
+        }
+
+        HeiAnSkill1Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
         float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
@@ -260,6 +284,12 @@ public class SkillController : XSingleton<SkillController>
 
     public void HuoSkill2()
     {
+        if (HuoSkill2Coolingtime < HuoSkill2Time)
+        {
+            return;
+        }
+
+        HuoSkill2Coolingtime = 0;
         GameController.S.gamePlayer.HuoSkill2.gameObject.SetActive(true);
         IsHuoSkill2 = true;
         Invoke(nameof(StopHuoSkill2),HuoSkill2Duration);
@@ -267,6 +297,12 @@ public class SkillController : XSingleton<SkillController>
     
     public void DianSkill2()
     {
+        if (DianSkill2Coolingtime < DianSkill2Time)
+        {
+            return;
+        }
+
+        DianSkill2Coolingtime = 0;
         GameController.S.gamePlayer.DianSkill2.gameObject.SetActive(true);
         IsDianSkill2 = true;
         Invoke(nameof(StopDianSkill2),DianSkill2Duration);
@@ -274,6 +310,11 @@ public class SkillController : XSingleton<SkillController>
     
     public void HeiAnSkill2()
     {
+        if (HeiAnSkill2Coolingtime < HeiAnSkill2Time)
+        {
+            return;
+        }
+        HeiAnSkill2Coolingtime = 0;
         GameController.S.gamePlayer.HeiAnSkill2.gameObject.SetActive(true);
         IsHeiAnSkill2 = true;
         Invoke(nameof(StopHeiAnSkill2),HeiAnSkill2Duration);
@@ -297,8 +338,29 @@ public class SkillController : XSingleton<SkillController>
         IsHeiAnSkill2 = false;
     }
     
+    public void HeiAnSkill3()
+    {
+        if (HeiAnSkill3Coolingtime < HeiAnSkill3Time)
+        {
+            return;
+        }
+        HeiAnSkill3Coolingtime = 0;
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        var dianquan= GameController.S.HeiAnSkill3Queue.Dequeue();
+        dianquan.gameObject.SetActive(true);
+        dianquan.transform.position = worldPos;
+    }
+    
     public void HuoSkill1()
     {
+        if (HuoSkill1Coolingtime < HuoSkill1Time)
+        {
+            return;
+        }
+        HuoSkill1Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
         float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
@@ -369,17 +431,7 @@ public class SkillController : XSingleton<SkillController>
                 break;
         }
     }
-
-    public void HeiAnSkill3()
-    {
-        Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
-        mouseScreen.z = depth; 
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        var dianquan= GameController.S.HeiAnSkill3Queue.Dequeue();
-        dianquan.gameObject.SetActive(true);
-        dianquan.transform.position = worldPos;
-    }
+    
 
     
     //释放技能
@@ -481,17 +533,17 @@ public class SkillController : XSingleton<SkillController>
             ExcuteSkill(SkillType.Dash);
         }
         
-        if (DianQuanCoolingtime >= DianQuantime && SkillJiaDian.S.Skill1Damage >= 1&&SkillData.S.skill1Auto)
+        if (DianQuanCoolingtime >= DianQuantime && SkillJiaDian.S.DianSkill1Damage >= 1&&SkillData.S.skill1Auto)
         {
             ExcuteSkill(SkillType.Skill1);
         }
         
-        if (IceBallCoolingtime >= IceBalltime && SkillJiaDian.S.Skill2Damage >= 1&&SkillData.S.skill2Auto)
+        if (IceBallCoolingtime >= IceBalltime && SkillJiaDian.S.IceSkill2Damage >= 1&&SkillData.S.skill2Auto)
         {
             ExcuteSkill(SkillType.Skill2);
         }
         
-        if (IceExplosionCoolingtime >= IceExplosiontime && SkillJiaDian.S.Skill3Damage >= 1&&SkillData.S.skill3Auto)
+        if (IceExplosionCoolingtime >= IceExplosiontime && SkillJiaDian.S.IceSkill3Damage >= 1&&SkillData.S.skill3Auto)
         {
             ExcuteSkill(SkillType.Skill3);
         }

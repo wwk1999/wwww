@@ -374,20 +374,69 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int Dash=0;
         public int DashCd=0;
     
-        public int Skill1Damage=0;
-        public int Skill1Cd=0;
-        public int Skill1Range=0;
-        public int Skill1YiDian=0;
+        public int DianSkill1Damage=0;
+        public int DianSkill1Cd=0;
+        public int DianSkill1Range=0;
+        public int DianSkill1YuanSu=0;
     
-        public int Skill2Damage=0;
-        public int Skill2Cd=0;
-        public int Skill2Time=0;
-        public int Skill2AddDefense=0;
+        public int DianSkill2=0;
+        public int DianSkill2Cd=0;
+        public int DianSkill2Duration=0;
+        public int DianSkill2YuanSu=0;
     
-        public int Skill3Damage=0;
-        public int Skill3Cd=0;
-        public int Skill3Range=0;
-        public int Skill3JianSu=0;
+        public int DianSkill3=0;
+        public int DianSkill3Cd=0;
+        public int DianSkill3Count=0;
+        public int DianSkill3YuanSu=0;
+    
+        public int IceSkill1=0;
+        public int IceSkill1Cd=0;
+        public int IceSkill1Range=0;
+        public int IceSkill1YuanSu=0;
+    
+        public int IceSkill2Damage=0;
+        public int IceSkill2Cd=0;
+        public int IceSkill2Time=0;
+        public int IceSkill2YuanSu=0;
+    
+        public int IceSkill3Damage=0;
+        public int IceSkill3Cd=0;
+        public int IceSkill3Range=0;
+        public int IceSkill3YuanSu=0;
+    
+    
+        public int HuoSkill1=0;
+        public int HuoSkill1Cd=0;
+        public int HuoSkill1Count=0;
+        public int HuoSkill1YuanSu=0;
+    
+        public int HuoSkill2=0;
+        public int HuoSkill2Cd=0;
+        public int HuoSkill2Time=0;
+        public int HuoSkill2YuanSu=0;
+    
+        public int HuoSkill3=0;
+        public int HuoSkill3Cd=0;
+        public int HuoSkill3Range=0;
+        public int HuoSkill3YuanSu=0;
+    
+    
+        public int HeiAnSkill1=0;
+        public int HeiAnSkill1Cd=0;
+        public int HeiAnSkill1Range=0;
+        public int HeiAnSkill1YuanSu=0;
+    
+        public int HeiAnSkill2Damage=0;
+        public int HeiAnSkill2Cd=0;
+        public int HeiAnSkill2Time=0;
+        public int HeiAnSkill2YuanSu=0;
+    
+        public int HeiAnSkill3Damage=0;
+        public int HeiAnSkill3Cd=0;
+        public int HeiAnSkill3Range=0;
+        public int HeiAnSkill3YuanSu=0;
+        
+        
         
         public int MonsterAttack;
         public int MonsterCrit;
@@ -407,18 +456,18 @@ public class StoreDefine : XSingleton<StoreDefine>
             MoveAddDefense=runtime.MoveAddDefense;
             DashCd=runtime.DashCd;
             Dash=runtime.Dash;
-            Skill1Damage=runtime.Skill1Damage;
-            Skill1Cd=runtime.Skill1Cd;
-            Skill1Range=runtime.Skill1Range;
-            Skill1YiDian=runtime.Skill1YiDian;
-            Skill2Damage=runtime.Skill2Damage;
-            Skill2Cd=runtime.Skill2Cd;
-            Skill2Time=runtime.Skill2Time;
-            Skill2AddDefense=runtime.Skill2AddDefense;
-            Skill3Damage=runtime.Skill3Damage;
-            Skill3Cd=runtime.Skill3Cd;
-            Skill3Range=runtime.Skill3Range;
-            Skill3JianSu=runtime.Skill3JianSu;
+            DianSkill1Damage=runtime.DianSkill1Damage;
+            DianSkill1Cd=runtime.DianSkill1Cd;
+            DianSkill1Range=runtime.DianSkill1Range;
+            DianSkill1YuanSu=runtime.DianSkill1YuanSu;
+            IceSkill2Damage=runtime.IceSkill2Damage;
+            IceSkill2Cd=runtime.IceSkill2Cd;
+            IceSkill2Time=runtime.IceSkill2Time;
+            IceSkill2YuanSu=runtime.IceSkill2YuanSu;
+            IceSkill3Damage=runtime.IceSkill3Damage;
+            IceSkill3Cd=runtime.IceSkill3Cd;
+            IceSkill3Range=runtime.IceSkill3Range;
+            IceSkill3YuanSu=runtime.IceSkill3YuanSu;
 
             MonsterAttack = runtime.MonsterAttack;
             MonsterCrit = runtime.MonsterCrit;
@@ -439,18 +488,18 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.MoveAddDefense=MoveAddDefense;
             runtime.DashCd=DashCd;
             runtime.Dash=Dash;
-            runtime.Skill1Damage=Skill1Damage;
-            runtime.Skill1Cd=Skill1Cd;
-            runtime.Skill1Range=Skill1Range;
-            runtime.Skill1YiDian=Skill1YiDian;
-            runtime.Skill2Damage=Skill2Damage;
-            runtime.Skill2Cd=Skill2Cd;
-            runtime.Skill2Time=Skill2Time;
-            runtime.Skill2AddDefense=Skill2AddDefense;
-            runtime.Skill3Damage=Skill3Damage;
-            runtime.Skill3Cd=Skill3Cd;
-            runtime.Skill3Range=Skill3Range;
-            runtime.Skill3JianSu=Skill3JianSu;
+            runtime.DianSkill1Damage=DianSkill1Damage;
+            runtime.DianSkill1Cd=DianSkill1Cd;
+            runtime.DianSkill1Range=DianSkill1Range;
+            runtime.DianSkill1YuanSu=DianSkill1YuanSu;
+            runtime.IceSkill2Damage=IceSkill2Damage;
+            runtime.IceSkill2Cd=IceSkill2Cd;
+            runtime.IceSkill2Time=IceSkill2Time;
+            runtime.IceSkill2YuanSu=IceSkill2YuanSu;
+            runtime.IceSkill3Damage=IceSkill3Damage;
+            runtime.IceSkill3Cd=IceSkill3Cd;
+            runtime.IceSkill3Range=IceSkill3Range;
+            runtime.IceSkill3YuanSu=IceSkill3YuanSu;
 
             runtime.MonsterAttack = MonsterAttack;
             runtime.MonsterCrit = MonsterCrit;

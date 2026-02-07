@@ -47,11 +47,11 @@ public class MouseRightListen : MonoBehaviour, IPointerClickHandler
         switch (buttonType)
         {
             case SkillType.Skill1:
-                return SkillJiaDian.S.Skill1Damage >= 1;
+                return SkillJiaDian.S.DianSkill1Damage >= 1;
             case SkillType.Skill2:
-                return SkillJiaDian.S.Skill2Damage >= 1;
+                return SkillJiaDian.S.IceSkill2Damage >= 1;
             case SkillType.Skill3:
-                return SkillJiaDian.S.Skill3Damage >= 1;
+                return SkillJiaDian.S.IceSkill3Damage >= 1;
             case SkillType.Dash:
                 return SkillJiaDian.S.Dash >= 1;
         }

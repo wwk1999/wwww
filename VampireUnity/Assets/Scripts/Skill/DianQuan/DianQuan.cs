@@ -83,10 +83,6 @@ public class DianQuan : MonoBehaviour
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
                 monster.Hurt(GameController.S.GameAttack*2f,GameController.S.GetIsCrit(),DamageFrom.Skill1);
-                if (SkillJiaDian.S.Skill1YiDian >= 1)
-                {
-                     monster.YiDianTime = 3;
-                }
                 var hit = GameController.S.DianQuanPengQueue.Dequeue();
                 hit.transform.position = monster.transform.position;
                 hit.SetActive(true);

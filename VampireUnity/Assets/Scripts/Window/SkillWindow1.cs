@@ -156,18 +156,18 @@ public class SkillWindow1 : MonoBehaviour
 
     public void SetLine()
     {
-        skill1RangeLine.SetActive(SkillJiaDian.S.Skill1Range >= 1);
-        skill1CdLine.SetActive(SkillJiaDian.S.Skill1Cd >= 1);
-        skill1YiDianLine1.SetActive(SkillJiaDian.S.Skill1YiDian >= 1);
-        skill1YiDianLine2.SetActive(SkillJiaDian.S.Skill1YiDian >= 1);
-        skill2CdLine.SetActive(SkillJiaDian.S.Skill2Cd >= 1);
-        skill2TimeLine.SetActive(SkillJiaDian.S.Skill2Time >= 1);
-        skill2DefenseLine1.SetActive(SkillJiaDian.S.Skill2AddDefense >= 1);
-        skill2DefenseLine2.SetActive(SkillJiaDian.S.Skill2AddDefense >= 1);
-        skill3RangeLine.SetActive(SkillJiaDian.S.Skill3Range >= 1);
-        skill3CdLine.SetActive(SkillJiaDian.S.Skill3Cd >= 1);
-        skill3JianSuLine1.SetActive(SkillJiaDian.S.Skill3JianSu >= 1);
-        skill3JianSuLine2.SetActive(SkillJiaDian.S.Skill3JianSu >= 1);
+        skill1RangeLine.SetActive(SkillJiaDian.S.DianSkill1Range >= 1);
+        skill1CdLine.SetActive(SkillJiaDian.S.DianSkill1Cd >= 1);
+        skill1YiDianLine1.SetActive(SkillJiaDian.S.DianSkill1YuanSu >= 1);
+        skill1YiDianLine2.SetActive(SkillJiaDian.S.DianSkill1YuanSu >= 1);
+        skill2CdLine.SetActive(SkillJiaDian.S.IceSkill2Cd >= 1);
+        skill2TimeLine.SetActive(SkillJiaDian.S.IceSkill2Time >= 1);
+        skill2DefenseLine1.SetActive(SkillJiaDian.S.IceSkill2YuanSu >= 1);
+        skill2DefenseLine2.SetActive(SkillJiaDian.S.IceSkill2YuanSu >= 1);
+        skill3RangeLine.SetActive(SkillJiaDian.S.IceSkill3Range >= 1);
+        skill3CdLine.SetActive(SkillJiaDian.S.IceSkill3Cd >= 1);
+        skill3JianSuLine1.SetActive(SkillJiaDian.S.IceSkill3YuanSu >= 1);
+        skill3JianSuLine2.SetActive(SkillJiaDian.S.IceSkill3YuanSu >= 1);
         attackSpeedLine.SetActive(SkillJiaDian.S.AttackSpeed >= 1);
         dashCdLine.SetActive(SkillJiaDian.S.DashCd >= 1);
         moveAddAttackLine.SetActive(SkillJiaDian.S.MoveAddAttack >= 1);
@@ -221,52 +221,52 @@ public class SkillWindow1 : MonoBehaviour
     moveAddAttackLevel.text = "["+SkillJiaDian.S.MoveAddAttack+"]";
     
     // Skill1 Level (Damage)
-    skill1Level.gameObject.SetActive(SkillJiaDian.S.Skill1Damage > 0);
-    skill1Level.text = "["+SkillJiaDian.S.Skill1Damage+"]";
+    skill1Level.gameObject.SetActive(SkillJiaDian.S.DianSkill1Damage > 0);
+    skill1Level.text = "["+SkillJiaDian.S.DianSkill1Damage+"]";
     
     // Skill2 Level (Damage)
-    skill2Level.gameObject.SetActive(SkillJiaDian.S.Skill2Damage > 0);
-    skill2Level.text = "["+SkillJiaDian.S.Skill2Damage+"]";
+    skill2Level.gameObject.SetActive(SkillJiaDian.S.IceSkill2Damage > 0);
+    skill2Level.text = "["+SkillJiaDian.S.IceSkill2Damage+"]";
     
     // Skill3 Level (Damage)
-    skill3Level.gameObject.SetActive(SkillJiaDian.S.Skill3Damage > 0);
-    skill3Level.text = "["+SkillJiaDian.S.Skill3Damage+"]";
+    skill3Level.gameObject.SetActive(SkillJiaDian.S.IceSkill3Damage > 0);
+    skill3Level.text = "["+SkillJiaDian.S.IceSkill3Damage+"]";
     
     // Skill1 CD
-    skill1CdLevel.gameObject.SetActive(SkillJiaDian.S.Skill1Cd > 0);
-    skill1CdLevel.text = "["+SkillJiaDian.S.Skill1Cd+"]";
+    skill1CdLevel.gameObject.SetActive(SkillJiaDian.S.DianSkill1Cd > 0);
+    skill1CdLevel.text = "["+SkillJiaDian.S.DianSkill1Cd+"]";
     
     // Skill2 CD
-    skill2CdLevel.gameObject.SetActive(SkillJiaDian.S.Skill2Cd > 0);
-    skill2CdLevel.text = "["+SkillJiaDian.S.Skill2Cd+"]";
+    skill2CdLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill2Cd > 0);
+    skill2CdLevel.text = "["+SkillJiaDian.S.IceSkill2Cd+"]";
     
     // Skill3 CD
-    skill3CdLevel.gameObject.SetActive(SkillJiaDian.S.Skill3Cd > 0);
-    skill3CdLevel.text = "["+SkillJiaDian.S.Skill3Cd+"]";
+    skill3CdLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill3Cd > 0);
+    skill3CdLevel.text = "["+SkillJiaDian.S.IceSkill3Cd+"]";
     
     // Skill1 Range
-    skill1RangeLevel.gameObject.SetActive(SkillJiaDian.S.Skill1Range > 0);
-    skill1RangeLevel.text = "["+SkillJiaDian.S.Skill1Range+"]";
+    skill1RangeLevel.gameObject.SetActive(SkillJiaDian.S.DianSkill1Range > 0);
+    skill1RangeLevel.text = "["+SkillJiaDian.S.DianSkill1Range+"]";
     
     // Skill1 YiDian
-    skill1YiDianLevel.gameObject.SetActive(SkillJiaDian.S.Skill1YiDian > 0);
-    skill1YiDianLevel.text = "["+SkillJiaDian.S.Skill1YiDian+"]";
+    skill1YiDianLevel.gameObject.SetActive(SkillJiaDian.S.DianSkill1YuanSu > 0);
+    skill1YiDianLevel.text = "["+SkillJiaDian.S.DianSkill1YuanSu+"]";
     
     // Skill2 Time
-    skill2TimeLevel.gameObject.SetActive(SkillJiaDian.S.Skill2Time > 0);
-    skill2TimeLevel.text = "["+SkillJiaDian.S.Skill2Time+"]";
+    skill2TimeLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill2Time > 0);
+    skill2TimeLevel.text = "["+SkillJiaDian.S.IceSkill2Time+"]";
     
     // Skill2 Add Defense
-    skill2AddDefenseLevel.gameObject.SetActive(SkillJiaDian.S.Skill2AddDefense > 0);
-    skill2AddDefenseLevel.text = "["+SkillJiaDian.S.Skill2AddDefense+"]";
+    skill2AddDefenseLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill2YuanSu > 0);
+    skill2AddDefenseLevel.text = "["+SkillJiaDian.S.IceSkill2YuanSu+"]";
     
     // Skill3 Range
-    skill3RangeLevel.gameObject.SetActive(SkillJiaDian.S.Skill3Range > 0);
-    skill3RangeLevel.text = "["+SkillJiaDian.S.Skill3Range+"]";
+    skill3RangeLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill3Range > 0);
+    skill3RangeLevel.text = "["+SkillJiaDian.S.IceSkill3Range+"]";
     
     // Skill3 JianSu
-    skill3JianSuLevel.gameObject.SetActive(SkillJiaDian.S.Skill3JianSu > 0);
-    skill3JianSuLevel.text = "["+SkillJiaDian.S.Skill3JianSu+"]";
+    skill3JianSuLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill3YuanSu > 0);
+    skill3JianSuLevel.text = "["+SkillJiaDian.S.IceSkill3YuanSu+"]";
     
     
     attackLevel.gameObject.SetActive(SkillJiaDian.S.MonsterAttack > 0);
@@ -294,23 +294,23 @@ public class SkillWindow1 : MonoBehaviour
         
         
         critDamageButton.interactable=SkillJiaDian.S.Crit>0;
-        skill1RangeButton.interactable=SkillJiaDian.S.Skill1Damage>0;
-        skill1CdButton.interactable=SkillJiaDian.S.Skill1Damage>0;
-        skill1YiDianButton.interactable=SkillJiaDian.S.Skill1Range>0&&SkillJiaDian.S.Skill1Cd>0;
+        skill1RangeButton.interactable=SkillJiaDian.S.DianSkill1Damage>0;
+        skill1CdButton.interactable=SkillJiaDian.S.DianSkill1Damage>0;
+        skill1YiDianButton.interactable=SkillJiaDian.S.DianSkill1Range>0&&SkillJiaDian.S.DianSkill1Cd>0;
         
-        skill2TimeButton.interactable=SkillJiaDian.S.Skill2Damage>0;
-        skill2CdButton.interactable=SkillJiaDian.S.Skill2Damage>0;
-        skill2AddDefenseButton.interactable=SkillJiaDian.S.Skill2Time>0&&SkillJiaDian.S.Skill2Cd>0;
+        skill2TimeButton.interactable=SkillJiaDian.S.IceSkill2Damage>0;
+        skill2CdButton.interactable=SkillJiaDian.S.IceSkill2Damage>0;
+        skill2AddDefenseButton.interactable=SkillJiaDian.S.IceSkill2Time>0&&SkillJiaDian.S.IceSkill2Cd>0;
         
-        skill3RangeButton.interactable=SkillJiaDian.S.Skill3Damage>0;
-        skill3CdButton.interactable=SkillJiaDian.S.Skill3Damage>0;
-        skill3JianSuButton.interactable=SkillJiaDian.S.Skill3Range>0&&SkillJiaDian.S.Skill3Cd>0;
+        skill3RangeButton.interactable=SkillJiaDian.S.IceSkill3Damage>0;
+        skill3CdButton.interactable=SkillJiaDian.S.IceSkill3Damage>0;
+        skill3JianSuButton.interactable=SkillJiaDian.S.IceSkill3Range>0&&SkillJiaDian.S.IceSkill3Cd>0;
 
     }
 
     public void SetImage()
     {
-        if (SkillJiaDian.S.Skill1Damage < 1)
+        if (SkillJiaDian.S.DianSkill1Damage < 1)
         {
              skill1RangeImage.color=new Color32(76,76, 76, 255);
         }
@@ -319,7 +319,7 @@ public class SkillWindow1 : MonoBehaviour
             skill1RangeImage.color=new Color32(255, 255, 255, 255);
         }
         
-        if (SkillJiaDian.S.Skill1Damage < 1)
+        if (SkillJiaDian.S.DianSkill1Damage < 1)
         {
             skill1CdImage.color=new Color32(76,76, 76, 255);
         }
@@ -328,7 +328,7 @@ public class SkillWindow1 : MonoBehaviour
             skill1CdImage.color=new Color32(255, 255, 255, 255);
         }
         
-        if (SkillJiaDian.S.Skill1Range < 1||SkillJiaDian.S.Skill1Cd<1)
+        if (SkillJiaDian.S.DianSkill1Range < 1||SkillJiaDian.S.DianSkill1Cd<1)
         {
             skill1YiDianImage.color=new Color32(76,76, 76, 255);
         }
@@ -339,7 +339,7 @@ public class SkillWindow1 : MonoBehaviour
         
         
         
-        if (SkillJiaDian.S.Skill2Damage < 1)
+        if (SkillJiaDian.S.IceSkill2Damage < 1)
         {
             skill2TimeImage.color=new Color32(76,76, 76, 255);
         }
@@ -348,7 +348,7 @@ public class SkillWindow1 : MonoBehaviour
             skill2TimeImage.color=new Color32(255, 255, 255, 255);
         }
         
-        if (SkillJiaDian.S.Skill2Damage < 1)
+        if (SkillJiaDian.S.IceSkill2Damage < 1)
         {
             skill2CdImage.color=new Color32(76,76, 76, 255);
         }
@@ -357,7 +357,7 @@ public class SkillWindow1 : MonoBehaviour
             skill2CdImage.color=new Color32(255, 255, 255, 255);
         }
         
-        if (SkillJiaDian.S.Skill2Time < 1||SkillJiaDian.S.Skill2Cd<1)
+        if (SkillJiaDian.S.IceSkill2Time < 1||SkillJiaDian.S.IceSkill2Cd<1)
         {
             skill2AddDefenseImage.color=new Color32(76,76, 76, 255);
         }
@@ -368,7 +368,7 @@ public class SkillWindow1 : MonoBehaviour
         
         
         
-        if (SkillJiaDian.S.Skill3Damage < 1)
+        if (SkillJiaDian.S.IceSkill3Damage < 1)
         {
             skill3RangeImage.color=new Color32(76,76, 76, 255);
         }
@@ -377,7 +377,7 @@ public class SkillWindow1 : MonoBehaviour
             skill3RangeImage.color=new Color32(255, 255, 255, 255);
         }
         
-        if (SkillJiaDian.S.Skill3Damage < 1)
+        if (SkillJiaDian.S.IceSkill3Damage < 1)
         {
             skill3CdImage.color=new Color32(76,76, 76, 255);
         }
@@ -386,7 +386,7 @@ public class SkillWindow1 : MonoBehaviour
             skill3CdImage.color=new Color32(255, 255, 255, 255);
         }
         
-        if (SkillJiaDian.S.Skill3Range < 1||SkillJiaDian.S.Skill3Cd<1)
+        if (SkillJiaDian.S.IceSkill3Range < 1||SkillJiaDian.S.IceSkill3Cd<1)
         {
             skill3JianSuImage.color=new Color32(76,76, 76, 255);
         }
@@ -664,7 +664,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill1Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1])
+            if (SkillJiaDian.S.DianSkill1Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -672,7 +672,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill1Button);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill1Damage++;
+            SkillJiaDian.S.DianSkill1Damage++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -686,7 +686,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill2Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2])
+            if (SkillJiaDian.S.IceSkill2Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -694,7 +694,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill2Button);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill2Damage++;
+            SkillJiaDian.S.IceSkill2Damage++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -708,7 +708,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill3Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3])
+            if (SkillJiaDian.S.IceSkill3Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -716,7 +716,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill3Button);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill3Damage++;
+            SkillJiaDian.S.IceSkill3Damage++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -730,7 +730,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1Cd])
+            if (SkillJiaDian.S.DianSkill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1Cd])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -738,7 +738,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill1CdButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill1Cd++;
+            SkillJiaDian.S.DianSkill1Cd++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -752,7 +752,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2Cd])
+            if (SkillJiaDian.S.IceSkill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2Cd])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -760,7 +760,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill2CdButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill2Cd++;
+            SkillJiaDian.S.IceSkill2Cd++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -774,7 +774,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3Cd])
+            if (SkillJiaDian.S.IceSkill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3Cd])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -782,7 +782,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill3CdButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill3Cd++;
+            SkillJiaDian.S.IceSkill3Cd++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -796,7 +796,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill1Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1Range])
+            if (SkillJiaDian.S.DianSkill1Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1Range])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -804,7 +804,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill1RangeButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill1Range++;
+            SkillJiaDian.S.DianSkill1Range++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -818,7 +818,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill1YiDian >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1YiDian])
+            if (SkillJiaDian.S.DianSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1YiDian])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -826,7 +826,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill1YiDianButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill1YiDian++;
+            SkillJiaDian.S.DianSkill1YuanSu++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -840,7 +840,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill2Time >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2Time])
+            if (SkillJiaDian.S.IceSkill2Time >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2Time])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -848,7 +848,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill2TimeButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill2Time++;
+            SkillJiaDian.S.IceSkill2Time++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -862,7 +862,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill2AddDefense >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2AddDefense])
+            if (SkillJiaDian.S.IceSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2AddDefense])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -870,7 +870,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill2AddDefenseButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill2AddDefense++;
+            SkillJiaDian.S.IceSkill2YuanSu++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -884,7 +884,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill3Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3Range])
+            if (SkillJiaDian.S.IceSkill3Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3Range])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -892,7 +892,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill3RangeButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill3Range++;
+            SkillJiaDian.S.IceSkill3Range++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
@@ -906,7 +906,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.Skill3JianSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3JianSu])
+            if (SkillJiaDian.S.IceSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3JianSu])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -914,7 +914,7 @@ public class SkillWindow1 : MonoBehaviour
             TriggerButtonClickAnim(skill3JianSuButton);
 
             SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Skill3JianSu++;
+            SkillJiaDian.S.IceSkill3YuanSu++;
             StoreController.S.SaveStoreData();
             ResfreshSkillCount();
             SetShowLevel();
