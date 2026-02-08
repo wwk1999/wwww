@@ -9,7 +9,16 @@ public enum SkillType
     Skill2,
     Skill3,
     Normal,
-    Dash
+    Dash,
+    IceSkill1,
+    DianSkill2,
+    DianSkill3,
+    HuoSkill1,
+    HuoSkill2,
+    HuoSkill3,
+    HeiAnSkill1,
+    HeiAnSkill2,
+    HeiAnSkill3,
 }
 
 public enum KeyCodeType
