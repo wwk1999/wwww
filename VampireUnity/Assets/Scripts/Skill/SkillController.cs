@@ -198,7 +198,7 @@ public class SkillController : XSingleton<SkillController>
         NormalAttack.Stop();
     }
 
-    IEnumerator HuoSkill3(int count,int redis,float time)
+    IEnumerator HuoSkill3(int count,float redis,float time)
     {
         
         Vector3 mouseScreen = Input.mousePosition;
@@ -224,7 +224,7 @@ public class SkillController : XSingleton<SkillController>
         }
     }
 
-    public void DianSKill3()
+    public void DianSkill3()
     {
         if (DianSkill3Coolingtime < DianSkill3Time)
         {
@@ -500,6 +500,34 @@ public class SkillController : XSingleton<SkillController>
                     }
                 }
                 break;
+            
+            case SkillType.IceSkill1:
+                IceSkill1();
+                break;
+            case SkillType.DianSkill2:
+                DianSkill2();
+                break;
+            case SkillType.DianSkill3:
+                DianSkill3();
+                break;
+            case SkillType.HuoSkill1:
+                HuoSkill1();
+                break;
+            case SkillType.HuoSkill2:
+                HuoSkill2();
+                break;
+            case SkillType.HuoSkill3:
+                StartCoroutine(HuoSkill3(5,1.3f,0.2f));
+                break;
+            case SkillType.HeiAnSkill1:
+                HeiAnSkill1();
+                break;
+            case SkillType.HeiAnSkill2:
+                HeiAnSkill2();
+                break;
+            case SkillType.HeiAnSkill3:
+                HeiAnSkill3();
+                break;
         }
     }
 
@@ -527,6 +555,16 @@ public class SkillController : XSingleton<SkillController>
         IceBallCoolingtime+= Time.deltaTime;
         DashCoolingtime+=Time.deltaTime;
         DianQuanCoolingtime+= Time.deltaTime;
+        
+        IceSkill1Coolingtime+= Time.deltaTime;
+        DianSkill3Coolingtime+= Time.deltaTime;
+        DianSkill2Coolingtime+= Time.deltaTime;
+        HuoSkill1Coolingtime+= Time.deltaTime;
+        HuoSkill2Coolingtime+= Time.deltaTime;
+        HuoSkill3Coolingtime+= Time.deltaTime;
+        HeiAnSkill1Coolingtime+= Time.deltaTime;
+        HeiAnSkill2Coolingtime+= Time.deltaTime;
+        HeiAnSkill3Coolingtime+= Time.deltaTime;
 
         if (DashCoolingtime >= Dashtime && SkillJiaDian.S.Dash >= 1&&SkillData.S.dashAuto)
         {
@@ -564,11 +602,6 @@ public class SkillController : XSingleton<SkillController>
             ExcuteSkill(LMB);
         }
         
-        if (Input.GetKey(KeyCode.Alpha4))
-        {
-            IceSkill1();
-            //StartCoroutine(HuoSkill3(5,1,0.2f));
-        }
         
         if (Input.GetMouseButton(1))
         {

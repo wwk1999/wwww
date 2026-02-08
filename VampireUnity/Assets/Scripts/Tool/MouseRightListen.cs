@@ -126,6 +126,34 @@ public class MouseRightListen : MonoBehaviour, IPointerClickHandler
                 case SkillType.Normal:
                     listen.keyCode=GetKeyCodeSkill(SkillType.Normal);
                     break;
+                case SkillType.IceSkill1:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.IceSkill1);
+                    break;
+                case SkillType.DianSkill2:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.DianSkill2);
+                    break;
+                case SkillType.DianSkill3:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.DianSkill3);
+                    break;
+                case SkillType.HuoSkill1:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.HuoSkill1);
+                    break;
+                case SkillType.HuoSkill2:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.HuoSkill2);
+                    break;
+                case SkillType.HuoSkill3:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.HuoSkill3);
+                    break;
+                case SkillType.HeiAnSkill1:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.HeiAnSkill1);
+                    break;
+                case SkillType.HeiAnSkill2:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.HeiAnSkill2);
+                    break;
+                case SkillType.HeiAnSkill3:
+                    listen.keyCode=GetKeyCodeSkill(SkillType.HeiAnSkill3);
+                    break;
+               
             }
         }
     }

@@ -164,6 +164,15 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite Skill3;
     public static Sprite NormalAttack;
     public static Sprite Dash;
+    public static Sprite IceSkill1;
+    public static Sprite DianSkill2;
+    public static Sprite DianSkill3;
+    public static Sprite HuoSkill1;
+    public static Sprite HuoSkill2;
+    public static Sprite HuoSkill3;
+    public static Sprite HeiAnSkill1;
+    public static Sprite HeiAnSkill2;
+    public static Sprite HeiAnSkill3;
 
     //关卡界面怪物icon
     public static Sprite SnotIcon;
@@ -577,6 +586,15 @@ public class ResourcesConfig : MonoBehaviour
         Skill3 = Resources.Load<Sprite>("Sprite/Skill/skill3");
         Dash = Resources.Load<Sprite>("Sprite/Skill/dash");
         NormalAttack = Resources.Load<Sprite>("Sprite/Skill/normalAttack");
+        IceSkill1= Resources.Load<Sprite>("Sprite/Skill/IceSkill1");
+        DianSkill2= Resources.Load<Sprite>("Sprite/Skill/DianSkill2");
+        DianSkill3= Resources.Load<Sprite>("Sprite/Skill/DianSkill3");
+        HuoSkill1= Resources.Load<Sprite>("Sprite/Skill/HuoSkill1");
+        HuoSkill2= Resources.Load<Sprite>("Sprite/Skill/HuoSkill2");
+        HuoSkill3= Resources.Load<Sprite>("Sprite/Skill/HuoSkill3");
+        HeiAnSkill1= Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill1");
+        HeiAnSkill2= Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill2");
+        HeiAnSkill3= Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill3");
 
 
         //道具

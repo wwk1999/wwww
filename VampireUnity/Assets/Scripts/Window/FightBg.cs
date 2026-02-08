@@ -96,6 +96,25 @@ public class FightBg : MonoBehaviour
                 return SkillController.S.IceExplosionCoolingtime / SkillController.S.IceExplosiontime;
             case SkillType.Dash:
                 return SkillController.S.DashCoolingtime / SkillController.S.Dashtime;
+            case SkillType.IceSkill1:
+                return SkillController.S.IceSkill1Coolingtime / SkillController.S.IceSkill1Time;
+            case SkillType.DianSkill2:
+                return SkillController.S.DianSkill2Coolingtime / SkillController.S.DianSkill2Time;
+            case SkillType.DianSkill3:
+                return SkillController.S.DianSkill3Coolingtime / SkillController.S.DianSkill3Time;
+            case SkillType.HuoSkill1:
+                return SkillController.S.HuoSkill1Coolingtime / SkillController.S.HuoSkill1Time;
+            case SkillType.HuoSkill2:
+                return SkillController.S.HuoSkill2Coolingtime / SkillController.S.HuoSkill2Time;
+            case SkillType.HuoSkill3:
+                return SkillController.S.HuoSkill3Coolingtime / SkillController.S.HuoSkill3Time;
+            
+            case SkillType.HeiAnSkill1:
+                return SkillController.S.HeiAnSkill1Coolingtime / SkillController.S.HeiAnSkill1Time;
+            case SkillType.HeiAnSkill2:
+                return SkillController.S.HeiAnSkill2Coolingtime / SkillController.S.HeiAnSkill2Time;
+            case SkillType.HeiAnSkill3:
+                return SkillController.S.HeiAnSkill3Coolingtime / SkillController.S.HeiAnSkill3Time;
         }
 
         return 0;
@@ -133,6 +152,9 @@ public class FightBg : MonoBehaviour
             GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
             SceneManager.LoadScene("UIScene");
         });
+        
+        
+        
         
         if (GetSkillSprite(SkillController.S.RMB) == null)
         {
@@ -194,8 +216,24 @@ public class FightBg : MonoBehaviour
                 return ResourcesConfig.Skill3;
             case SkillType.Dash:
                 return ResourcesConfig.Dash;
-            case SkillType.Normal:
-                return ResourcesConfig.NormalAttack;
+            case SkillType.IceSkill1:
+                return ResourcesConfig.IceSkill1;
+            case SkillType.DianSkill2:
+                return ResourcesConfig.DianSkill2;
+            case SkillType.DianSkill3:
+                return ResourcesConfig.DianSkill3;
+            case SkillType.HuoSkill1:
+                return ResourcesConfig.HuoSkill1;
+            case SkillType.HuoSkill2:
+                return ResourcesConfig.HuoSkill2;
+            case SkillType.HuoSkill3:
+                return ResourcesConfig.HuoSkill3;
+            case SkillType.HeiAnSkill1:
+                return ResourcesConfig.HeiAnSkill1;
+            case SkillType.HeiAnSkill2:
+                return ResourcesConfig.HeiAnSkill2;
+            case SkillType.HeiAnSkill3:
+                return ResourcesConfig.HeiAnSkill3;
         }
 
         return null;
