@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Config;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -206,145 +207,145 @@ public class SkillWindow1 : MonoBehaviour
 
 
     [Header("雷元素技能3组件")]
-    public Button DianSkill3Button;
-    public Button DianSkill3TopButton;
-    public Button DianSkill3BottomButton;
-    public Button DianSkill3RightButton;
-    public TextMeshProUGUI DianSkill3Text;
-    public TextMeshProUGUI DianSkill3TopText;
-    public TextMeshProUGUI DianSkill3BottomText;
-    public TextMeshProUGUI DianSkill3RightText;
-    public GameObject DianSkill3Top1Line;
-    public GameObject DianSkill3Bottom1Line;
-    public GameObject DianSkill3Top2Line;
-    public GameObject DianSkill3Bottom2Line;
-    public Image DianSkill3Image;
-    public Image DianSkill3TopImage;
-    public Image DianSkill3BottomImage;
-    public Image DianSkill3RightImage;
+    private Button DianSkill3Button;
+    private Button DianSkill3TopButton;
+    private Button DianSkill3BottomButton;
+    private Button DianSkill3RightButton;
+    private TextMeshProUGUI DianSkill3Text;
+    private TextMeshProUGUI DianSkill3TopText;
+    private TextMeshProUGUI DianSkill3BottomText;
+    private TextMeshProUGUI DianSkill3RightText;
+    private GameObject DianSkill3Top1Line;
+    private GameObject DianSkill3Bottom1Line;
+    private GameObject DianSkill3Top2Line;
+    private GameObject DianSkill3Bottom2Line;
+    private Image DianSkill3Image;
+    private Image DianSkill3TopImage;
+    private Image DianSkill3BottomImage;
+    private Image DianSkill3RightImage;
 
 
     [Header("火元素技能3组件")]
-    public Button HuoSkill3Button;
-    public Button HuoSkill3TopButton;
-    public Button HuoSkill3BottomButton;
-    public Button HuoSkill3RightButton;
-    public TextMeshProUGUI HuoSkill3Text;
-    public TextMeshProUGUI HuoSkill3TopText;
-    public TextMeshProUGUI HuoSkill3BottomText;
-    public TextMeshProUGUI HuoSkill3RightText;
-    public GameObject HuoSkill3Top1Line;
-    public GameObject HuoSkill3Bottom1Line;
-    public GameObject HuoSkill3Top2Line;
-    public GameObject HuoSkill3Bottom2Line;
-    public Image HuoSkill3Image;
-    public Image HuoSkill3TopImage;
-    public Image HuoSkill3BottomImage;
-    public Image HuoSkill3RightImage;
+    private Button HuoSkill3Button;
+    private Button HuoSkill3TopButton;
+    private Button HuoSkill3BottomButton;
+    private Button HuoSkill3RightButton;
+    private TextMeshProUGUI HuoSkill3Text;
+    private TextMeshProUGUI HuoSkill3TopText;
+    private TextMeshProUGUI HuoSkill3BottomText;
+    private TextMeshProUGUI HuoSkill3RightText;
+    private GameObject HuoSkill3Top1Line;
+    private GameObject HuoSkill3Bottom1Line;
+    private GameObject HuoSkill3Top2Line;
+    private GameObject HuoSkill3Bottom2Line;
+    private Image HuoSkill3Image;
+    private Image HuoSkill3TopImage;
+    private Image HuoSkill3BottomImage;
+    private Image HuoSkill3RightImage;
 
 
     [Header("火元素技能2组件")]
-    public Button HuoSkill2Button;
-    public Button HuoSkill2TopButton;
-    public Button HuoSkill2BottomButton;
-    public Button HuoSkill2RightButton;
-    public TextMeshProUGUI HuoSkill2Text;
-    public TextMeshProUGUI HuoSkill2TopText;
-    public TextMeshProUGUI HuoSkill2BottomText;
-    public TextMeshProUGUI HuoSkill2RightText;
-    public GameObject HuoSkill2Top1Line;
-    public GameObject HuoSkill2Bottom1Line;
-    public GameObject HuoSkill2Top2Line;
-    public GameObject HuoSkill2Bottom2Line;
-    public Image HuoSkill2Image;
-    public Image HuoSkill2TopImage;
-    public Image HuoSkill2BottomImage;
-    public Image HuoSkill2RightImage;
+    private Button HuoSkill2Button;
+    private Button HuoSkill2TopButton;
+    private Button HuoSkill2BottomButton;
+    private Button HuoSkill2RightButton;
+    private TextMeshProUGUI HuoSkill2Text;
+    private TextMeshProUGUI HuoSkill2TopText;
+    private TextMeshProUGUI HuoSkill2BottomText;
+    private TextMeshProUGUI HuoSkill2RightText;
+    private GameObject HuoSkill2Top1Line;
+    private GameObject HuoSkill2Bottom1Line;
+    private GameObject HuoSkill2Top2Line;
+    private GameObject HuoSkill2Bottom2Line;
+    private Image HuoSkill2Image;
+    private Image HuoSkill2TopImage;
+    private Image HuoSkill2BottomImage;
+    private Image HuoSkill2RightImage;
     
 
 
     [Header("火元素技能1组件")]
-    public Button HuoSkill1Button;
-    public Button HuoSkill1TopButton;
-    public Button HuoSkill1BottomButton;
-    public Button HuoSkill1RightButton;
-    public TextMeshProUGUI HuoSkill1Text;
-    public TextMeshProUGUI HuoSkill1TopText;
-    public TextMeshProUGUI HuoSkill1BottomText;
-    public TextMeshProUGUI HuoSkill1RightText;
-    public GameObject HuoSkill1Top1Line;
-    public GameObject HuoSkill1Bottom1Line;
-    public GameObject HuoSkill1Top2Line;
-    public GameObject HuoSkill1Bottom2Line;
-    public Image HuoSkill1Image;
-    public Image HuoSkill1TopImage;
-    public Image HuoSkill1BottomImage;
-    public Image HuoSkill1RightImage;
+    private Button HuoSkill1Button;
+    private Button HuoSkill1TopButton;
+    private Button HuoSkill1BottomButton;
+    private Button HuoSkill1RightButton;
+    private TextMeshProUGUI HuoSkill1Text;
+    private TextMeshProUGUI HuoSkill1TopText;
+    private TextMeshProUGUI HuoSkill1BottomText;
+    private TextMeshProUGUI HuoSkill1RightText;
+    private GameObject HuoSkill1Top1Line;
+    private GameObject HuoSkill1Bottom1Line;
+    private GameObject HuoSkill1Top2Line;
+    private GameObject HuoSkill1Bottom2Line;
+    private Image HuoSkill1Image;
+    private Image HuoSkill1TopImage;
+    private Image HuoSkill1BottomImage;
+    private Image HuoSkill1RightImage;
     
 
 
     [Header("黑暗元素技能1组件")]
-    public Button HeiAnSkill1Button;
-    public Button HeiAnSkill1TopButton;
-    public Button HeiAnSkill1BottomButton;
-    public Button HeiAnSkill1RightButton;
-    public TextMeshProUGUI HeiAnSkill1Text;
-    public TextMeshProUGUI HeiAnSkill1TopText;
-    public TextMeshProUGUI HeiAnSkill1BottomText;
-    public TextMeshProUGUI HeiAnSkill1RightText;
-    public GameObject HeiAnSkill1Top1Line;
-    public GameObject HeiAnSkill1Bottom1Line;
-    public GameObject HeiAnSkill1Top2Line;
-    public GameObject HeiAnSkill1Bottom2Line;
-    public Image HeiAnSkill1Image;
-    public Image HeiAnSkill1TopImage;
-    public Image HeiAnSkill1BottomImage;
-    public Image HeiAnSkill1RightImage;
+    private Button HeiAnSkill1Button;
+    private Button HeiAnSkill1TopButton;
+    private Button HeiAnSkill1BottomButton;
+    private Button HeiAnSkill1RightButton;
+    private TextMeshProUGUI HeiAnSkill1Text;
+    private TextMeshProUGUI HeiAnSkill1TopText;
+    private TextMeshProUGUI HeiAnSkill1BottomText;
+    private TextMeshProUGUI HeiAnSkill1RightText;
+    private GameObject HeiAnSkill1Top1Line;
+    private GameObject HeiAnSkill1Bottom1Line;
+    private GameObject HeiAnSkill1Top2Line;
+    private GameObject HeiAnSkill1Bottom2Line;
+    private Image HeiAnSkill1Image;
+    private Image HeiAnSkill1TopImage;
+    private Image HeiAnSkill1BottomImage;
+    private Image HeiAnSkill1RightImage;
     
     
     
     
     
-    public Button HeiAnSkill2Button;
-    public Button HeiAnSkill2TopButton;
-    public Button HeiAnSkill2BottomButton;
-    public Button HeiAnSkill2RightButton;
-    public TextMeshProUGUI HeiAnSkill2Text;
-    public TextMeshProUGUI HeiAnSkill2TopText;
-    public TextMeshProUGUI HeiAnSkill2BottomText;
-    public TextMeshProUGUI HeiAnSkill2RightText;
-    public GameObject HeiAnSkill2Top1Line;
-    public GameObject HeiAnSkill2Bottom1Line;
-    public GameObject HeiAnSkill2Top2Line;
-    public GameObject HeiAnSkill2Bottom2Line;
-    public Image HeiAnSkill2Image;
-    public Image HeiAnSkill2TopImage;
-    public Image HeiAnSkill2BottomImage;
-    public Image HeiAnSkill2RightImage;
+    private Button HeiAnSkill2Button;
+    private Button HeiAnSkill2TopButton;
+    private Button HeiAnSkill2BottomButton;
+    private Button HeiAnSkill2RightButton;
+    private TextMeshProUGUI HeiAnSkill2Text;
+    private TextMeshProUGUI HeiAnSkill2TopText;
+    private TextMeshProUGUI HeiAnSkill2BottomText;
+    private TextMeshProUGUI HeiAnSkill2RightText;
+    private GameObject HeiAnSkill2Top1Line;
+    private GameObject HeiAnSkill2Bottom1Line;
+    private GameObject HeiAnSkill2Top2Line;
+    private GameObject HeiAnSkill2Bottom2Line;
+    private Image HeiAnSkill2Image;
+    private Image HeiAnSkill2TopImage;
+    private Image HeiAnSkill2BottomImage;
+    private Image HeiAnSkill2RightImage;
     
     
     
     
     
-    public Button HeiAnSkill3Button;
-    public Button HeiAnSkill3TopButton;
-    public Button HeiAnSkill3BottomButton;
-    public Button HeiAnSkill3RightButton;
-    public TextMeshProUGUI HeiAnSkill3Text;
-    public TextMeshProUGUI HeiAnSkill3TopText;
-    public TextMeshProUGUI HeiAnSkill3BottomText;
-    public TextMeshProUGUI HeiAnSkill3RightText;
-    public GameObject HeiAnSkill3Top1Line;
-    public GameObject HeiAnSkill3Bottom1Line;
-    public GameObject HeiAnSkill3Top2Line;
-    public GameObject HeiAnSkill3Bottom2Line;
-    public Image HeiAnSkill3Image;
-    public Image HeiAnSkill3TopImage;
-    public Image HeiAnSkill3BottomImage;
-    public Image HeiAnSkill3RightImage;
-    
-    
-    
+    private Button HeiAnSkill3Button;
+    private Button HeiAnSkill3TopButton;
+    private Button HeiAnSkill3BottomButton;
+    private Button HeiAnSkill3RightButton;
+    private TextMeshProUGUI HeiAnSkill3Text;
+    private TextMeshProUGUI HeiAnSkill3TopText;
+    private TextMeshProUGUI HeiAnSkill3BottomText;
+    private TextMeshProUGUI HeiAnSkill3RightText;
+    private GameObject HeiAnSkill3Top1Line;
+    private GameObject HeiAnSkill3Bottom1Line;
+    private GameObject HeiAnSkill3Top2Line;
+    private GameObject HeiAnSkill3Bottom2Line;
+    private Image HeiAnSkill3Image;
+    private Image HeiAnSkill3TopImage;
+    private Image HeiAnSkill3BottomImage;
+    private Image HeiAnSkill3RightImage;
+
+
+   
     
     
     public void RefreshSkill()
@@ -1166,9 +1167,147 @@ public class SkillWindow1 : MonoBehaviour
         ResfreshSkillCount();
         RefreshSkill();
     }
+
+    private void Awake()
+    {
+  DianSkill3Button=transform.Find("Bg/DianSkill3/Skill3").GetComponent<Button>();
+    DianSkill3TopButton=transform.Find("Bg/DianSkill3/Range").GetComponent<Button>();
+    DianSkill3BottomButton=transform.Find("Bg/DianSkill3/CD").GetComponent<Button>();
+    DianSkill3RightButton=transform.Find("Bg/DianSkill3/YuanSu").GetComponent<Button>();
+    DianSkill3Text=transform.Find("Bg/DianSkill3/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    DianSkill3TopText=transform.Find("Bg/DianSkill3/Range/Count").GetComponent<TextMeshProUGUI>();
+    DianSkill3BottomText=transform.Find("Bg/DianSkill3/CD/Count").GetComponent<TextMeshProUGUI>();
+    DianSkill3RightText=transform.Find("Bg/DianSkill3/YuanSu/Count").GetComponent<TextMeshProUGUI>();
+    DianSkill3Top1Line=transform.Find("Bg/DianSkill3/HuangLine").GetComponent<GameObject>();
+    DianSkill3Bottom1Line=transform.Find("Bg/DianSkill3/HuangLine (1)").GetComponent<GameObject>();
+    DianSkill3Top2Line=transform.Find("Bg/DianSkill3/LanLineTop").GetComponent<GameObject>();
+    DianSkill3Bottom2Line=transform.Find("Bg/DianSkill3/LanLineDown").GetComponent<GameObject>();
+    DianSkill3Image=transform.Find("Bg/DianSkill3/Skill3/image").GetComponent<Image>();
+    DianSkill3TopImage=transform.Find("Bg/DianSkill3/Range/image").GetComponent<Image>();
+    DianSkill3BottomImage=transform.Find("Bg/DianSkill3/CD/image").GetComponent<Image>();
+    DianSkill3RightImage=transform.Find("Bg/DianSkill3/YuanSu/image").GetComponent<Image>();
+
     
+    
+    HuoSkill1Button=transform.Find("Bg/HuoSkill1/Skill3").GetComponent<Button>();
+    HuoSkill1TopButton=transform.Find("Bg/HuoSkill1/Range").GetComponent<Button>();
+    HuoSkill1BottomButton=transform.Find("Bg/HuoSkill1/CD").GetComponent<Button>();
+    HuoSkill1RightButton=transform.Find("Bg/HuoSkill1/YuanSu").GetComponent<Button>();
+    HuoSkill1Text=transform.Find("Bg/HuoSkill1/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill1TopText=transform.Find("Bg/HuoSkill1/Range/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill1BottomText=transform.Find("Bg/HuoSkill1/CD/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill1RightText=transform.Find("Bg/HuoSkill1/YuanSu/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill1Top1Line=transform.Find("Bg/HuoSkill1/HuangLine").GetComponent<GameObject>();
+    HuoSkill1Bottom1Line=transform.Find("Bg/HuoSkill1/HuangLine (1)").GetComponent<GameObject>();
+    HuoSkill1Top2Line=transform.Find("Bg/HuoSkill1/LanLineTop").GetComponent<GameObject>();
+    HuoSkill1Bottom2Line=transform.Find("Bg/HuoSkill1/LanLineDown").GetComponent<GameObject>();
+    HuoSkill1Image=transform.Find("Bg/HuoSkill1/Skill3/image").GetComponent<Image>();
+    HuoSkill1TopImage=transform.Find("Bg/HuoSkill1/Range/image").GetComponent<Image>();
+    HuoSkill1BottomImage=transform.Find("Bg/HuoSkill1/CD/image").GetComponent<Image>();
+    HuoSkill1RightImage=transform.Find("Bg/HuoSkill1/YuanSu/image").GetComponent<Image>();
+
+        
+        
+    HuoSkill2Button=transform.Find("Bg/HuoSkill2/Skill3").GetComponent<Button>();
+    HuoSkill2TopButton=transform.Find("Bg/HuoSkill2/Range").GetComponent<Button>();
+    HuoSkill2BottomButton=transform.Find("Bg/HuoSkill2/CD").GetComponent<Button>();
+    HuoSkill2RightButton=transform.Find("Bg/HuoSkill2/YuanSu").GetComponent<Button>();
+    HuoSkill2Text=transform.Find("Bg/HuoSkill2/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill2TopText=transform.Find("Bg/HuoSkill2/Range/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill2BottomText=transform.Find("Bg/HuoSkill2/CD/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill2RightText=transform.Find("Bg/HuoSkill2/YuanSu/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill2Top1Line=transform.Find("Bg/HuoSkill2/HuangLine").GetComponent<GameObject>();
+    HuoSkill2Bottom1Line=transform.Find("Bg/HuoSkill2/HuangLine (1)").GetComponent<GameObject>();
+    HuoSkill2Top2Line=transform.Find("Bg/HuoSkill2/LanLineTop").GetComponent<GameObject>();
+    HuoSkill2Bottom2Line=transform.Find("Bg/HuoSkill2/LanLineDown").GetComponent<GameObject>();
+    HuoSkill2Image=transform.Find("Bg/HuoSkill2/Skill3/image").GetComponent<Image>();
+    HuoSkill2TopImage=transform.Find("Bg/HuoSkill2/Range/image").GetComponent<Image>();
+    HuoSkill2BottomImage=transform.Find("Bg/HuoSkill2/CD/image").GetComponent<Image>();
+    HuoSkill2RightImage=transform.Find("Bg/HuoSkill2/YuanSu/image").GetComponent<Image>();
+
+    
+    
+    HuoSkill3Button=transform.Find("Bg/HuoSkill3/Skill3").GetComponent<Button>();
+    HuoSkill3TopButton=transform.Find("Bg/HuoSkill3/Range").GetComponent<Button>();
+    HuoSkill3BottomButton=transform.Find("Bg/HuoSkill3/CD").GetComponent<Button>();
+    HuoSkill3RightButton=transform.Find("Bg/HuoSkill3/YuanSu").GetComponent<Button>();
+    HuoSkill3Text=transform.Find("Bg/HuoSkill3/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill3TopText=transform.Find("Bg/HuoSkill3/Range/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill3BottomText=transform.Find("Bg/HuoSkill3/CD/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill3RightText=transform.Find("Bg/HuoSkill3/YuanSu/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill3Top1Line=transform.Find("Bg/HuoSkill3/HuangLine").GetComponent<GameObject>();
+    HuoSkill3Bottom1Line=transform.Find("Bg/HuoSkill3/HuangLine (1)").GetComponent<GameObject>();
+    HuoSkill3Top2Line=transform.Find("Bg/HuoSkill3/LanLineTop").GetComponent<GameObject>();
+    HuoSkill3Bottom2Line=transform.Find("Bg/HuoSkill3/LanLineDown").GetComponent<GameObject>();
+    HuoSkill3Image=transform.Find("Bg/HuoSkill3/Skill3/image").GetComponent<Image>();
+    HuoSkill3TopImage=transform.Find("Bg/HuoSkill3/Range/image").GetComponent<Image>();
+    HuoSkill3BottomImage=transform.Find("Bg/HuoSkill3/CD/image").GetComponent<Image>();
+    HuoSkill3RightImage=transform.Find("Bg/HuoSkill3/YuanSu/image").GetComponent<Image>();
+
+    
+    
+    
+    HeiAnSkill1Button=transform.Find("Bg/HeiAnSkill1/Skill3").GetComponent<Button>();
+    HeiAnSkill1TopButton=transform.Find("Bg/HeiAnSkill1/Range").GetComponent<Button>();
+    HeiAnSkill1BottomButton=transform.Find("Bg/HeiAnSkill1/CD").GetComponent<Button>();
+    HeiAnSkill1RightButton=transform.Find("Bg/HeiAnSkill1/YuanSu").GetComponent<Button>();
+    HeiAnSkill1Text=transform.Find("Bg/HeiAnSkill1/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill1TopText=transform.Find("Bg/HeiAnSkill1/Range/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill1BottomText=transform.Find("Bg/HeiAnSkill1/CD/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill1RightText=transform.Find("Bg/HeiAnSkill1/YuanSu/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill1Top1Line=transform.Find("Bg/HeiAnSkill1/HuangLine").GetComponent<GameObject>();
+    HeiAnSkill1Bottom1Line=transform.Find("Bg/HeiAnSkill1/HuangLine (1)").GetComponent<GameObject>();
+    HeiAnSkill1Top2Line=transform.Find("Bg/HeiAnSkill1/LanLineTop").GetComponent<GameObject>();
+    HeiAnSkill1Bottom2Line=transform.Find("Bg/HeiAnSkill1/LanLineDown").GetComponent<GameObject>();
+    HeiAnSkill1Image=transform.Find("Bg/HeiAnSkill1/Skill3/image").GetComponent<Image>();
+    HeiAnSkill1TopImage=transform.Find("Bg/HeiAnSkill1/Range/image").GetComponent<Image>();
+    HeiAnSkill1BottomImage=transform.Find("Bg/HeiAnSkill1/CD/image").GetComponent<Image>();
+    HeiAnSkill1RightImage=transform.Find("Bg/HeiAnSkill1/YuanSu/image").GetComponent<Image>();
+
+    
+    
+    
+    HeiAnSkill2Button=transform.Find("Bg/HeiAnSkill2/Skill3").GetComponent<Button>();
+    HeiAnSkill2TopButton=transform.Find("Bg/HeiAnSkill2/Range").GetComponent<Button>();
+    HeiAnSkill2BottomButton=transform.Find("Bg/HeiAnSkill2/CD").GetComponent<Button>();
+    HeiAnSkill2RightButton=transform.Find("Bg/HeiAnSkill2/YuanSu").GetComponent<Button>();
+    HeiAnSkill2Text=transform.Find("Bg/HeiAnSkill2/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill2TopText=transform.Find("Bg/HeiAnSkill2/Range/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill2BottomText=transform.Find("Bg/HeiAnSkill2/CD/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill2RightText=transform.Find("Bg/HeiAnSkill2/YuanSu/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill2Top1Line=transform.Find("Bg/HeiAnSkill2/HuangLine").GetComponent<GameObject>();
+    HeiAnSkill2Bottom1Line=transform.Find("Bg/HeiAnSkill2/HuangLine (1)").GetComponent<GameObject>();
+    HeiAnSkill2Top2Line=transform.Find("Bg/HeiAnSkill2/LanLineTop").GetComponent<GameObject>();
+    HeiAnSkill2Bottom2Line=transform.Find("Bg/HeiAnSkill2/LanLineDown").GetComponent<GameObject>();
+    HeiAnSkill2Image=transform.Find("Bg/HeiAnSkill2/Skill3/image").GetComponent<Image>();
+    HeiAnSkill2TopImage=transform.Find("Bg/HeiAnSkill2/Range/image").GetComponent<Image>();
+    HeiAnSkill2BottomImage=transform.Find("Bg/HeiAnSkill2/CD/image").GetComponent<Image>();
+    HeiAnSkill2RightImage=transform.Find("Bg/HeiAnSkill2/YuanSu/image").GetComponent<Image>();
+
+    
+    
+    
+    HeiAnSkill3Button=transform.Find("Bg/HeiAnSkill3/Skill3").GetComponent<Button>();
+    HeiAnSkill3TopButton=transform.Find("Bg/HeiAnSkill3/Range").GetComponent<Button>();
+    HeiAnSkill3BottomButton=transform.Find("Bg/HeiAnSkill3/CD").GetComponent<Button>();
+    HeiAnSkill3RightButton=transform.Find("Bg/HeiAnSkill3/YuanSu").GetComponent<Button>();
+    HeiAnSkill3Text=transform.Find("Bg/HeiAnSkill3/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill3TopText=transform.Find("Bg/HeiAnSkill3/Range/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill3BottomText=transform.Find("Bg/HeiAnSkill3/CD/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill3RightText=transform.Find("Bg/HeiAnSkill3/YuanSu/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill3Top1Line=transform.Find("Bg/HeiAnSkill3/HuangLine").GetComponent<GameObject>();
+    HeiAnSkill3Bottom1Line=transform.Find("Bg/HeiAnSkill3/HuangLine (1)").GetComponent<GameObject>();
+    HeiAnSkill3Top2Line=transform.Find("Bg/HeiAnSkill3/LanLineTop").GetComponent<GameObject>();
+    HeiAnSkill3Bottom2Line=transform.Find("Bg/HeiAnSkill3/LanLineDown").GetComponent<GameObject>();
+    HeiAnSkill3Image=transform.Find("Bg/HeiAnSkill3/Skill3/image").GetComponent<Image>();
+    HeiAnSkill3TopImage=transform.Find("Bg/HeiAnSkill3/Range/image").GetComponent<Image>();
+    HeiAnSkill3BottomImage=transform.Find("Bg/HeiAnSkill3/CD/image").GetComponent<Image>();
+    HeiAnSkill3RightImage=transform.Find("Bg/HeiAnSkill3/YuanSu/image").GetComponent<Image>();
+    }
+
     private void Start()
     {
+    
         jia1.onClick.AddListener(() =>
         {
             SkillYuanSuWindow.gameObject.SetActive(true);

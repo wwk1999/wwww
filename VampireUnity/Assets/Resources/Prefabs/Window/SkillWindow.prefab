@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 7041369977151384240}
   - component: {fileID: 9189773878164661162}
   m_Layer: 5
-  m_Name: Count
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 712651954830789089}
   - component: {fileID: 4151977246361549292}
   m_Layer: 5
-  m_Name: Cd
+  m_Name: CD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1924,7 +1924,7 @@ GameObject:
   - component: {fileID: 2157960057374552094}
   - component: {fileID: 69732219106301648}
   m_Layer: 5
-  m_Name: Skill1Cd
+  m_Name: CD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7922,118 +7922,6 @@ MonoBehaviour:
   DianSkill2TopImage: {fileID: 43336240836600795}
   DianSkill2BottomImage: {fileID: 6403502630503107063}
   DianSkill2RightImage: {fileID: 8196524870061852548}
-  DianSkill3Button: {fileID: 6815534467132572297}
-  DianSkill3TopButton: {fileID: 1215493186780794680}
-  DianSkill3BottomButton: {fileID: 3451032205430509531}
-  DianSkill3RightButton: {fileID: 2786568187283476061}
-  DianSkill3Text: {fileID: 1667725233989811706}
-  DianSkill3TopText: {fileID: 4652811487244293612}
-  DianSkill3BottomText: {fileID: 921438033712037789}
-  DianSkill3RightText: {fileID: 7940847590093292840}
-  DianSkill3Top1Line: {fileID: 5358630646758111284}
-  DianSkill3Bottom1Line: {fileID: 2837647802019515303}
-  DianSkill3Top2Line: {fileID: 6989261484502966228}
-  DianSkill3Bottom2Line: {fileID: 2920598959134905641}
-  DianSkill3Image: {fileID: 8675897668777669602}
-  DianSkill3TopImage: {fileID: 5616476868519850053}
-  DianSkill3BottomImage: {fileID: 3976984582303741717}
-  DianSkill3RightImage: {fileID: 2882666305203965057}
-  HuoSkill3Button: {fileID: 0}
-  HuoSkill3TopButton: {fileID: 0}
-  HuoSkill3BottomButton: {fileID: 0}
-  HuoSkill3RightButton: {fileID: 0}
-  HuoSkill3Text: {fileID: 0}
-  HuoSkill3TopText: {fileID: 0}
-  HuoSkill3BottomText: {fileID: 0}
-  HuoSkill3RightText: {fileID: 0}
-  HuoSkill3Top1Line: {fileID: 0}
-  HuoSkill3Bottom1Line: {fileID: 0}
-  HuoSkill3Top2Line: {fileID: 0}
-  HuoSkill3Bottom2Line: {fileID: 0}
-  HuoSkill3Image: {fileID: 0}
-  HuoSkill3TopImage: {fileID: 0}
-  HuoSkill3BottomImage: {fileID: 0}
-  HuoSkill3RightImage: {fileID: 0}
-  HuoSkill2Button: {fileID: 0}
-  HuoSkill2TopButton: {fileID: 0}
-  HuoSkill2BottomButton: {fileID: 0}
-  HuoSkill2RightButton: {fileID: 0}
-  HuoSkill2Text: {fileID: 0}
-  HuoSkill2TopText: {fileID: 0}
-  HuoSkill2BottomText: {fileID: 0}
-  HuoSkill2RightText: {fileID: 0}
-  HuoSkill2Top1Line: {fileID: 0}
-  HuoSkill2Bottom1Line: {fileID: 0}
-  HuoSkill2Top2Line: {fileID: 0}
-  HuoSkill2Bottom2Line: {fileID: 0}
-  HuoSkill2Image: {fileID: 0}
-  HuoSkill2TopImage: {fileID: 0}
-  HuoSkill2BottomImage: {fileID: 0}
-  HuoSkill2RightImage: {fileID: 0}
-  HuoSkill1Button: {fileID: 0}
-  HuoSkill1TopButton: {fileID: 0}
-  HuoSkill1BottomButton: {fileID: 0}
-  HuoSkill1RightButton: {fileID: 0}
-  HuoSkill1Text: {fileID: 0}
-  HuoSkill1TopText: {fileID: 0}
-  HuoSkill1BottomText: {fileID: 0}
-  HuoSkill1RightText: {fileID: 0}
-  HuoSkill1Top1Line: {fileID: 0}
-  HuoSkill1Bottom1Line: {fileID: 0}
-  HuoSkill1Top2Line: {fileID: 0}
-  HuoSkill1Bottom2Line: {fileID: 0}
-  HuoSkill1Image: {fileID: 0}
-  HuoSkill1TopImage: {fileID: 0}
-  HuoSkill1BottomImage: {fileID: 0}
-  HuoSkill1RightImage: {fileID: 0}
-  HeiAnSkill1Button: {fileID: 0}
-  HeiAnSkill1TopButton: {fileID: 0}
-  HeiAnSkill1BottomButton: {fileID: 0}
-  HeiAnSkill1RightButton: {fileID: 0}
-  HeiAnSkill1Text: {fileID: 0}
-  HeiAnSkill1TopText: {fileID: 0}
-  HeiAnSkill1BottomText: {fileID: 0}
-  HeiAnSkill1RightText: {fileID: 0}
-  HeiAnSkill1Top1Line: {fileID: 0}
-  HeiAnSkill1Bottom1Line: {fileID: 0}
-  HeiAnSkill1Top2Line: {fileID: 0}
-  HeiAnSkill1Bottom2Line: {fileID: 0}
-  HeiAnSkill1Image: {fileID: 0}
-  HeiAnSkill1TopImage: {fileID: 0}
-  HeiAnSkill1BottomImage: {fileID: 0}
-  HeiAnSkill1RightImage: {fileID: 0}
-  HeiAnSkill2Button: {fileID: 0}
-  HeiAnSkill2TopButton: {fileID: 0}
-  HeiAnSkill2BottomButton: {fileID: 0}
-  HeiAnSkill2RightButton: {fileID: 0}
-  HeiAnSkill2Text: {fileID: 0}
-  HeiAnSkill2TopText: {fileID: 0}
-  HeiAnSkill2BottomText: {fileID: 0}
-  HeiAnSkill2RightText: {fileID: 0}
-  HeiAnSkill2Top1Line: {fileID: 0}
-  HeiAnSkill2Bottom1Line: {fileID: 0}
-  HeiAnSkill2Top2Line: {fileID: 0}
-  HeiAnSkill2Bottom2Line: {fileID: 0}
-  HeiAnSkill2Image: {fileID: 0}
-  HeiAnSkill2TopImage: {fileID: 0}
-  HeiAnSkill2BottomImage: {fileID: 0}
-  HeiAnSkill2RightImage: {fileID: 0}
-  HeiAnSkill3Button: {fileID: 0}
-  HeiAnSkill3TopButton: {fileID: 0}
-  HeiAnSkill3BottomButton: {fileID: 0}
-  HeiAnSkill3RightButton: {fileID: 0}
-  HeiAnSkill3Text: {fileID: 0}
-  HeiAnSkill3TopText: {fileID: 0}
-  HeiAnSkill3BottomText: {fileID: 0}
-  HeiAnSkill3RightText: {fileID: 0}
-  HeiAnSkill3Top1Line: {fileID: 0}
-  HeiAnSkill3Bottom1Line: {fileID: 0}
-  HeiAnSkill3Top2Line: {fileID: 0}
-  HeiAnSkill3Bottom2Line: {fileID: 0}
-  HeiAnSkill3Image: {fileID: 0}
-  HeiAnSkill3TopImage: {fileID: 0}
-  HeiAnSkill3BottomImage: {fileID: 0}
-  HeiAnSkill3RightImage: {fileID: 0}
 --- !u!1 &1834949817926261944
 GameObject:
   m_ObjectHideFlags: 0
@@ -9018,7 +8906,7 @@ GameObject:
   - component: {fileID: 5929444371002864040}
   - component: {fileID: 2345209992900734194}
   m_Layer: 5
-  m_Name: Skill1Count
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11222,7 +11110,7 @@ GameObject:
   - component: {fileID: 801036247776120124}
   - component: {fileID: 3695318375795297276}
   m_Layer: 5
-  m_Name: Skill1Cd
+  m_Name: CD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11929,7 +11817,7 @@ GameObject:
   - component: {fileID: 4136880971723507349}
   - component: {fileID: 9103686956113378687}
   m_Layer: 5
-  m_Name: Time
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14168,7 +14056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8197212233665331477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14213,7 +14101,7 @@ GameObject:
   - component: {fileID: 8263487549272368216}
   - component: {fileID: 4801897192940397924}
   m_Layer: 5
-  m_Name: Time
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20309,7 +20197,7 @@ GameObject:
   - component: {fileID: 1056380804178300333}
   - component: {fileID: 4625340063288282518}
   m_Layer: 5
-  m_Name: Time
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23204,7 +23092,7 @@ GameObject:
   - component: {fileID: 1271037301935444093}
   - component: {fileID: 7297083998605660633}
   m_Layer: 5
-  m_Name: Cd
+  m_Name: CD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23757,7 +23645,7 @@ GameObject:
   - component: {fileID: 3330113194951428432}
   - component: {fileID: 6453105394295098456}
   m_Layer: 5
-  m_Name: Cd
+  m_Name: CD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30301,7 +30189,7 @@ GameObject:
   - component: {fileID: 7449677418732704697}
   - component: {fileID: 4982353474631939104}
   m_Layer: 5
-  m_Name: Count
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30758,7 +30646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7104817800001852532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31098,7 +30986,7 @@ GameObject:
   - component: {fileID: 7308475436179246845}
   - component: {fileID: 3907457637445829917}
   m_Layer: 5
-  m_Name: Cd
+  m_Name: CD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35510,7 +35398,7 @@ GameObject:
   - component: {fileID: 2940634008059717769}
   - component: {fileID: 7044280454224592678}
   m_Layer: 5
-  m_Name: Time
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36722,7 +36610,7 @@ GameObject:
   - component: {fileID: 1483675591108122752}
   - component: {fileID: 8972122762732441710}
   m_Layer: 5
-  m_Name: Skill1Range
+  m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
