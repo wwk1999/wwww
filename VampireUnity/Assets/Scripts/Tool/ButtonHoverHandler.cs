@@ -197,7 +197,7 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1RangeName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1RangeDesc);
             break;
 
-        case SkillConfig.SkillButtonType.Skill1YiDian:
+        case SkillConfig.SkillButtonType.Skill1YuanSu:
             level.text = SkillJiaDian.S.DianSkill1YuanSu.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1YiDianName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1YiDianDesc);
@@ -209,7 +209,7 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2TimeName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2TimeDesc);
             break;
 
-        case SkillConfig.SkillButtonType.Skill2AddDefense:
+        case SkillConfig.SkillButtonType.Skill2YuanSu:
             level.text = SkillJiaDian.S.IceSkill2YuanSu.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2AddDefenseName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2AddDefenseDesc);
@@ -221,7 +221,7 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Name, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Desc);
             break;
 
-        case SkillConfig.SkillButtonType.Skill3JianSu:
+        case SkillConfig.SkillButtonType.Skill3YuanSu:
             level.text = SkillJiaDian.S.IceSkill3YuanSu.ToString();
 
             SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3JianSuName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3JianSuDesc);

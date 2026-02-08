@@ -1189,11 +1189,11 @@ public class SkillWindow1 : MonoBehaviour
 
     
     
-    HuoSkill1Button=transform.Find("Bg/HuoSkill1/Skill3").GetComponent<Button>();
+    HuoSkill1Button=transform.Find("Bg/HuoSkill1/Skill1").GetComponent<Button>();
     HuoSkill1TopButton=transform.Find("Bg/HuoSkill1/Range").GetComponent<Button>();
     HuoSkill1BottomButton=transform.Find("Bg/HuoSkill1/CD").GetComponent<Button>();
     HuoSkill1RightButton=transform.Find("Bg/HuoSkill1/YuanSu").GetComponent<Button>();
-    HuoSkill1Text=transform.Find("Bg/HuoSkill1/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill1Text=transform.Find("Bg/HuoSkill1/Skill1/Count").GetComponent<TextMeshProUGUI>();
     HuoSkill1TopText=transform.Find("Bg/HuoSkill1/Range/Count").GetComponent<TextMeshProUGUI>();
     HuoSkill1BottomText=transform.Find("Bg/HuoSkill1/CD/Count").GetComponent<TextMeshProUGUI>();
     HuoSkill1RightText=transform.Find("Bg/HuoSkill1/YuanSu/Count").GetComponent<TextMeshProUGUI>();
@@ -1201,18 +1201,18 @@ public class SkillWindow1 : MonoBehaviour
     HuoSkill1Bottom1Line=transform.Find("Bg/HuoSkill1/HuangLine (1)").GetComponent<GameObject>();
     HuoSkill1Top2Line=transform.Find("Bg/HuoSkill1/LanLineTop").GetComponent<GameObject>();
     HuoSkill1Bottom2Line=transform.Find("Bg/HuoSkill1/LanLineDown").GetComponent<GameObject>();
-    HuoSkill1Image=transform.Find("Bg/HuoSkill1/Skill3/image").GetComponent<Image>();
+    HuoSkill1Image=transform.Find("Bg/HuoSkill1/Skill1/image").GetComponent<Image>();
     HuoSkill1TopImage=transform.Find("Bg/HuoSkill1/Range/image").GetComponent<Image>();
     HuoSkill1BottomImage=transform.Find("Bg/HuoSkill1/CD/image").GetComponent<Image>();
     HuoSkill1RightImage=transform.Find("Bg/HuoSkill1/YuanSu/image").GetComponent<Image>();
 
         
         
-    HuoSkill2Button=transform.Find("Bg/HuoSkill2/Skill3").GetComponent<Button>();
+    HuoSkill2Button=transform.Find("Bg/HuoSkill2/Skill2").GetComponent<Button>();
     HuoSkill2TopButton=transform.Find("Bg/HuoSkill2/Range").GetComponent<Button>();
     HuoSkill2BottomButton=transform.Find("Bg/HuoSkill2/CD").GetComponent<Button>();
     HuoSkill2RightButton=transform.Find("Bg/HuoSkill2/YuanSu").GetComponent<Button>();
-    HuoSkill2Text=transform.Find("Bg/HuoSkill2/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HuoSkill2Text=transform.Find("Bg/HuoSkill2/Skill2/Count").GetComponent<TextMeshProUGUI>();
     HuoSkill2TopText=transform.Find("Bg/HuoSkill2/Range/Count").GetComponent<TextMeshProUGUI>();
     HuoSkill2BottomText=transform.Find("Bg/HuoSkill2/CD/Count").GetComponent<TextMeshProUGUI>();
     HuoSkill2RightText=transform.Find("Bg/HuoSkill2/YuanSu/Count").GetComponent<TextMeshProUGUI>();
@@ -1220,7 +1220,7 @@ public class SkillWindow1 : MonoBehaviour
     HuoSkill2Bottom1Line=transform.Find("Bg/HuoSkill2/HuangLine (1)").GetComponent<GameObject>();
     HuoSkill2Top2Line=transform.Find("Bg/HuoSkill2/LanLineTop").GetComponent<GameObject>();
     HuoSkill2Bottom2Line=transform.Find("Bg/HuoSkill2/LanLineDown").GetComponent<GameObject>();
-    HuoSkill2Image=transform.Find("Bg/HuoSkill2/Skill3/image").GetComponent<Image>();
+    HuoSkill2Image=transform.Find("Bg/HuoSkill2/Skill2/image").GetComponent<Image>();
     HuoSkill2TopImage=transform.Find("Bg/HuoSkill2/Range/image").GetComponent<Image>();
     HuoSkill2BottomImage=transform.Find("Bg/HuoSkill2/CD/image").GetComponent<Image>();
     HuoSkill2RightImage=transform.Find("Bg/HuoSkill2/YuanSu/image").GetComponent<Image>();
@@ -1247,11 +1247,11 @@ public class SkillWindow1 : MonoBehaviour
     
     
     
-    HeiAnSkill1Button=transform.Find("Bg/HeiAnSkill1/Skill3").GetComponent<Button>();
+    HeiAnSkill1Button=transform.Find("Bg/HeiAnSkill1/Skill1").GetComponent<Button>();
     HeiAnSkill1TopButton=transform.Find("Bg/HeiAnSkill1/Range").GetComponent<Button>();
     HeiAnSkill1BottomButton=transform.Find("Bg/HeiAnSkill1/CD").GetComponent<Button>();
     HeiAnSkill1RightButton=transform.Find("Bg/HeiAnSkill1/YuanSu").GetComponent<Button>();
-    HeiAnSkill1Text=transform.Find("Bg/HeiAnSkill1/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill1Text=transform.Find("Bg/HeiAnSkill1/Skill1/Count").GetComponent<TextMeshProUGUI>();
     HeiAnSkill1TopText=transform.Find("Bg/HeiAnSkill1/Range/Count").GetComponent<TextMeshProUGUI>();
     HeiAnSkill1BottomText=transform.Find("Bg/HeiAnSkill1/CD/Count").GetComponent<TextMeshProUGUI>();
     HeiAnSkill1RightText=transform.Find("Bg/HeiAnSkill1/YuanSu/Count").GetComponent<TextMeshProUGUI>();
@@ -1259,7 +1259,7 @@ public class SkillWindow1 : MonoBehaviour
     HeiAnSkill1Bottom1Line=transform.Find("Bg/HeiAnSkill1/HuangLine (1)").GetComponent<GameObject>();
     HeiAnSkill1Top2Line=transform.Find("Bg/HeiAnSkill1/LanLineTop").GetComponent<GameObject>();
     HeiAnSkill1Bottom2Line=transform.Find("Bg/HeiAnSkill1/LanLineDown").GetComponent<GameObject>();
-    HeiAnSkill1Image=transform.Find("Bg/HeiAnSkill1/Skill3/image").GetComponent<Image>();
+    HeiAnSkill1Image=transform.Find("Bg/HeiAnSkill1/Skill1/image").GetComponent<Image>();
     HeiAnSkill1TopImage=transform.Find("Bg/HeiAnSkill1/Range/image").GetComponent<Image>();
     HeiAnSkill1BottomImage=transform.Find("Bg/HeiAnSkill1/CD/image").GetComponent<Image>();
     HeiAnSkill1RightImage=transform.Find("Bg/HeiAnSkill1/YuanSu/image").GetComponent<Image>();
@@ -1267,11 +1267,11 @@ public class SkillWindow1 : MonoBehaviour
     
     
     
-    HeiAnSkill2Button=transform.Find("Bg/HeiAnSkill2/Skill3").GetComponent<Button>();
+    HeiAnSkill2Button=transform.Find("Bg/HeiAnSkill2/Skill2").GetComponent<Button>();
     HeiAnSkill2TopButton=transform.Find("Bg/HeiAnSkill2/Range").GetComponent<Button>();
     HeiAnSkill2BottomButton=transform.Find("Bg/HeiAnSkill2/CD").GetComponent<Button>();
     HeiAnSkill2RightButton=transform.Find("Bg/HeiAnSkill2/YuanSu").GetComponent<Button>();
-    HeiAnSkill2Text=transform.Find("Bg/HeiAnSkill2/Skill3/Count").GetComponent<TextMeshProUGUI>();
+    HeiAnSkill2Text=transform.Find("Bg/HeiAnSkill2/Skill2/Count").GetComponent<TextMeshProUGUI>();
     HeiAnSkill2TopText=transform.Find("Bg/HeiAnSkill2/Range/Count").GetComponent<TextMeshProUGUI>();
     HeiAnSkill2BottomText=transform.Find("Bg/HeiAnSkill2/CD/Count").GetComponent<TextMeshProUGUI>();
     HeiAnSkill2RightText=transform.Find("Bg/HeiAnSkill2/YuanSu/Count").GetComponent<TextMeshProUGUI>();
@@ -1279,7 +1279,7 @@ public class SkillWindow1 : MonoBehaviour
     HeiAnSkill2Bottom1Line=transform.Find("Bg/HeiAnSkill2/HuangLine (1)").GetComponent<GameObject>();
     HeiAnSkill2Top2Line=transform.Find("Bg/HeiAnSkill2/LanLineTop").GetComponent<GameObject>();
     HeiAnSkill2Bottom2Line=transform.Find("Bg/HeiAnSkill2/LanLineDown").GetComponent<GameObject>();
-    HeiAnSkill2Image=transform.Find("Bg/HeiAnSkill2/Skill3/image").GetComponent<Image>();
+    HeiAnSkill2Image=transform.Find("Bg/HeiAnSkill2/Skill2/image").GetComponent<Image>();
     HeiAnSkill2TopImage=transform.Find("Bg/HeiAnSkill2/Range/image").GetComponent<Image>();
     HeiAnSkill2BottomImage=transform.Find("Bg/HeiAnSkill2/CD/image").GetComponent<Image>();
     HeiAnSkill2RightImage=transform.Find("Bg/HeiAnSkill2/YuanSu/image").GetComponent<Image>();
@@ -1307,7 +1307,892 @@ public class SkillWindow1 : MonoBehaviour
 
     private void Start()
     {
-    
+        IceSkill1Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.IceSkill1 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.IceSkill1])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(IceSkill1Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.IceSkill1++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        IceSkill1TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.IceSkill1Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.IceSkill1Range])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(IceSkill1TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.IceSkill1Range++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        IceSkill1BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.IceSkill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.IceSkill1CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(IceSkill1BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.IceSkill1Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        IceSkill1RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.IceSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.IceSkill1YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(IceSkill1RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.IceSkill1YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        DianSkill2Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.DianSkill2 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill2])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(DianSkill2Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DianSkill2++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        DianSkill2BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.DianSkill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill2CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(DianSkill2BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DianSkill2Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        DianSkill2TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.DianSkill2Duration >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill2Time])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(DianSkill2TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DianSkill2Duration++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        DianSkill2RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.DianSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill2YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(DianSkill2RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DianSkill2YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        DianSkill3Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.DianSkill3 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill3])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(DianSkill3Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DianSkill3++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        DianSkill3TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.DianSkill3Count >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill3Count])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(DianSkill3TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DianSkill3Count++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        DianSkill3BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.DianSkill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill3CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(DianSkill3BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DianSkill3Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        DianSkill3RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.DianSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill3YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(DianSkill3RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.DianSkill3YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill1Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill1 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill1])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill1Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill1++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill1Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill1 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill1])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill1Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill1++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill1BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill1CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill1BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill1Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill1TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill1Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill1Range])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill1TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill1Range++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill1RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill1YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill1RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill1YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill1BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill1CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill1BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill1Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill1TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill1Count >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill1Count])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill1TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill1Count++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill1RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill1YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill1RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill1YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        
+        HuoSkill2Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill2 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill2])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill2Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill2++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill2BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill2CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill2BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill2Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill2TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill2Time >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill2Time])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill2TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill2Time++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        
+        HuoSkill2RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill2YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill2RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill2YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        
+        HuoSkill3RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill3YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill3RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill3YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill3Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill3 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill3])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill3Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill3++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill3BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill3CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill3BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill3Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HuoSkill3TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HuoSkill3Count >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill3Count])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HuoSkill3TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HuoSkill3Count++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          HeiAnSkill2RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill2YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill2RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill2YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill2Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill2Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill2])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill2Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill2Damage++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill2BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill2CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill2BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill2Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill2TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill2Time >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill2Time])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill2TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill2Time++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         HeiAnSkill3RightButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill3YuanSu])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill3RightButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill3YuanSu++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill3Button.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill3Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill3])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill3Button);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill3Damage++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill3BottomButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill3CD])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill3BottomButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill3Cd++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        HeiAnSkill3TopButton.onClick.AddListener(() =>
+        {
+            if (SkillJiaDian.S.CurrentSkillCount <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
+                return;
+            }
+
+            if (SkillJiaDian.S.HeiAnSkill3Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill3Range])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
+                return;
+            }
+            
+            TriggerButtonClickAnim(HeiAnSkill3TopButton);
+            SkillJiaDian.S.CurrentSkillCount--;
+            SkillJiaDian.S.HeiAnSkill3Range++;
+            StoreController.S.SaveStoreData();
+            ResfreshSkillCount();
+            SetShowLevel();
+            SetButtonDisable();
+        });
+        
+        
+        
         jia1.onClick.AddListener(() =>
         {
             SkillYuanSuWindow.gameObject.SetActive(true);
@@ -1703,7 +2588,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.DianSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1YiDian])
+            if (SkillJiaDian.S.DianSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1YuanSu])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -1747,7 +2632,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.IceSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2AddDefense])
+            if (SkillJiaDian.S.IceSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2YuanSu])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
@@ -1791,7 +2676,7 @@ public class SkillWindow1 : MonoBehaviour
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
                 return;
             }
-            if (SkillJiaDian.S.IceSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3JianSu])
+            if (SkillJiaDian.S.IceSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3YuanSu])
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
                 return;
