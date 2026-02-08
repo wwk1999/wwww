@@ -7914,8 +7914,8 @@ MonoBehaviour:
   DianSkill2TopText: {fileID: 9082282018631613069}
   DianSkill2BottomText: {fileID: 184645877262515442}
   DianSkill2RightText: {fileID: 7229442190158408916}
-  DianSkill2Top1Line: {fileID: 4351304552091078156}
-  DianSkill2Bottom1Line: {fileID: 3898724742908544022}
+  DianSkill2Top1Line: {fileID: 3898724742908544022}
+  DianSkill2Bottom1Line: {fileID: 4351304552091078156}
   DianSkill2Top2Line: {fileID: 4003019712401638415}
   DianSkill2Bottom2Line: {fileID: 2682302132959149958}
   DianSkill2Image: {fileID: 6195414957877608594}
