@@ -8,28 +8,27 @@ using UnityEngine.UI;
 
 public class SkillWindow1 : MonoBehaviour
 {
+    [Header("基础UI组件")]
     public Button exitButton; // 退出按钮
-
     public Button maskButton;
     public GameObject skillSwitchObj;
 
+    [Header("技能计数显示")]
     public TextMeshProUGUI skillCount;
     public TextMeshProUGUI monsterCount;
 
-
+    [Header("基础技能按钮")]
     public Button normalAttackButton;
     public Button attackSpeedButton;
-
     public Button dashButton;
     public Button dashCdButton;
-
     public Button critButton;
     public Button critDamageButton;
-
     public Button moveSpeedButton;
     public Button moveAddDefenseButton;
     public Button moveAddAttackButton;
 
+    [Header("技能系统按钮")]
     public Button skill1Button;
     public Button skill2Button;
     public Button skill3Button;
@@ -42,6 +41,9 @@ public class SkillWindow1 : MonoBehaviour
     public Button skill2AddDefenseButton;
     public Button skill3RangeButton;
     public Button skill3JianSuButton;
+
+
+    [Header("攻击相关按钮")]
     public Button attackButton;
     public Button hpButton;
     public Button defenseButton;
@@ -50,7 +52,8 @@ public class SkillWindow1 : MonoBehaviour
     
     
     
-    
+
+    [Header("基础技能等级显示")]
     public TextMeshProUGUI normalAttackLevel;
     public TextMeshProUGUI attackSpeedLevel;
     
@@ -63,7 +66,8 @@ public class SkillWindow1 : MonoBehaviour
     public TextMeshProUGUI moveSpeedLevel;
     public TextMeshProUGUI moveAddDefenseLevel;
     public TextMeshProUGUI moveAddAttackLevel;
-    
+
+    [Header("技能系统等级显示")]
     public TextMeshProUGUI skill1Level;
     public TextMeshProUGUI skill2Level;
     public TextMeshProUGUI skill3Level;
@@ -77,16 +81,16 @@ public class SkillWindow1 : MonoBehaviour
     public TextMeshProUGUI skill3RangeLevel;
     public TextMeshProUGUI skill3JianSuLevel;
 
-    
-    
+    [Header("攻击相关等级显示")]
     public TextMeshProUGUI attackLevel;
     public TextMeshProUGUI hpLevel;
     public TextMeshProUGUI defenseLevel;
     public TextMeshProUGUI critMonsterLevel;
     
     
-    
-    
+
+
+    [Header("图像组件")]
     public Image attackSpeedImage;
 
     public Image dashCdImage;
@@ -105,9 +109,9 @@ public class SkillWindow1 : MonoBehaviour
     public Image skill2AddDefenseImage;
     public Image skill3RangeImage;
     public Image skill3JianSuImage;
- 
 
 
+    [Header("线条对象")]
     public GameObject skill1RangeLine;
     public GameObject skill1CdLine;
     public GameObject skill1YiDianLine1;
@@ -125,8 +129,8 @@ public class SkillWindow1 : MonoBehaviour
     public GameObject moveAddAttackLine;
     public GameObject moveAddDefenseLine;
     public GameObject critDamageLine;
-    
-    
+
+    [Header("自动技能对象")]
     public GameObject skill1Auto;
     public GameObject skill2Auto;
     public GameObject skill3Auto;
@@ -142,11 +146,13 @@ public class SkillWindow1 : MonoBehaviour
     public GameObject HeiAnSkill3Auto;
 
 
+    [Header("元素技能选择")]
     public Button jia1;
     public Button jia2;
     public Button jia3;
     public GameObject SkillYuanSuWindow;
 
+    [Header("元素技能UI对象")]
     public GameObject IceSkill1;
     public GameObject HuoSkill1;
     public GameObject HeiAnSkill1;
@@ -161,6 +167,7 @@ public class SkillWindow1 : MonoBehaviour
     public GameObject DianSkill3;
 
 
+    [Header("冰元素技能1组件")]
     public Button IceSkill1Button;
     public Button IceSkill1TopButton;
     public Button IceSkill1BottomButton;
@@ -177,9 +184,8 @@ public class SkillWindow1 : MonoBehaviour
     public Image IceSkill1TopImage;
     public Image IceSkill1BottomImage;
     public Image IceSkill1RightImage;
-    
-    
-    
+
+    [Header("雷元素技能2组件")]
     public Button DianSkill2Button;
     public Button DianSkill2TopButton;
     public Button DianSkill2BottomButton;
@@ -197,10 +203,9 @@ public class SkillWindow1 : MonoBehaviour
     public Image DianSkill2BottomImage;
     public Image DianSkill2RightImage;
     
-    
-    
-    
-    
+
+
+    [Header("雷元素技能3组件")]
     public Button DianSkill3Button;
     public Button DianSkill3TopButton;
     public Button DianSkill3BottomButton;
@@ -217,10 +222,9 @@ public class SkillWindow1 : MonoBehaviour
     public Image DianSkill3TopImage;
     public Image DianSkill3BottomImage;
     public Image DianSkill3RightImage;
-    
-    
-    
-    
+
+
+    [Header("火元素技能3组件")]
     public Button HuoSkill3Button;
     public Button HuoSkill3TopButton;
     public Button HuoSkill3BottomButton;
@@ -237,10 +241,9 @@ public class SkillWindow1 : MonoBehaviour
     public Image HuoSkill3TopImage;
     public Image HuoSkill3BottomImage;
     public Image HuoSkill3RightImage;
-    
-    
-    
-    
+
+
+    [Header("火元素技能2组件")]
     public Button HuoSkill2Button;
     public Button HuoSkill2TopButton;
     public Button HuoSkill2BottomButton;
@@ -258,10 +261,9 @@ public class SkillWindow1 : MonoBehaviour
     public Image HuoSkill2BottomImage;
     public Image HuoSkill2RightImage;
     
-    
-    
-    
-    
+
+
+    [Header("火元素技能1组件")]
     public Button HuoSkill1Button;
     public Button HuoSkill1TopButton;
     public Button HuoSkill1BottomButton;
@@ -279,10 +281,9 @@ public class SkillWindow1 : MonoBehaviour
     public Image HuoSkill1BottomImage;
     public Image HuoSkill1RightImage;
     
-    
-    
-    
-    
+
+
+    [Header("黑暗元素技能1组件")]
     public Button HeiAnSkill1Button;
     public Button HeiAnSkill1TopButton;
     public Button HeiAnSkill1BottomButton;
