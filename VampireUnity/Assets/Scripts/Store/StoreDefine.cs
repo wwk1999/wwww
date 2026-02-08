@@ -328,6 +328,16 @@ public class StoreDefine : XSingleton<StoreDefine>
         public bool skill2Auto=false;
         public bool skill3Auto=false;
         public bool dashAuto=false;
+        public bool IceSkill1Auto=false;
+        public bool DianSkill2Auto=false;
+        public bool DianSkill3Auto=false;
+        public bool HuoSkill3Auto=false;
+        public bool HuoSkill2Auto=false;
+        public bool HuoSkill1Auto=false;
+        public bool HeiAnSkill1Auto=false;
+        public bool HeiAnSkill2Auto=false;
+        public bool HeiAnSkill3Auto=false;
+
 
         public void CopyFromRuntime(SkillData runtime)
         {
@@ -340,6 +350,16 @@ public class StoreDefine : XSingleton<StoreDefine>
             skill2Auto=runtime.skill2Auto;
             skill3Auto=runtime.skill3Auto;
             dashAuto=runtime.dashAuto;
+            
+            IceSkill1Auto=runtime.IceSkill1Auto;
+            DianSkill2Auto=runtime.DianSkill2Auto;
+            DianSkill3Auto=runtime.DianSkill3Auto;
+            HuoSkill3Auto=runtime.HuoSkill3Auto;
+            HuoSkill2Auto=runtime.HuoSkill2Auto;
+            HuoSkill1Auto=runtime.HuoSkill1Auto;
+            HeiAnSkill1Auto=runtime.HeiAnSkill1Auto;
+            HeiAnSkill2Auto=runtime.HeiAnSkill2Auto;
+            HeiAnSkill3Auto=runtime.HeiAnSkill3Auto;
         }
 
         public void ApplyToRuntime(SkillData runtime)
@@ -353,6 +373,17 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.skill2Auto=skill2Auto;
             runtime.skill3Auto=skill3Auto;
             runtime.dashAuto = dashAuto;
+            
+            runtime.IceSkill1Auto=IceSkill1Auto;
+            runtime.HeiAnSkill1Auto=HeiAnSkill1Auto;
+            runtime.HeiAnSkill2Auto=HeiAnSkill2Auto;
+            runtime.HeiAnSkill3Auto=HeiAnSkill3Auto;
+            runtime.DianSkill2Auto=DianSkill2Auto;
+            runtime.DianSkill3Auto=DianSkill3Auto;
+            runtime.HuoSkill1Auto=HuoSkill1Auto;
+            runtime.HuoSkill2Auto=HuoSkill2Auto;
+            runtime.HuoSkill3Auto=HuoSkill3Auto;
+
         }
     }
     

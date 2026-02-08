@@ -35,6 +35,16 @@ public class SkillData : XSingleton<SkillData>
     public bool skill3Auto=false;
     public bool dashAuto=false;
 
+    public bool IceSkill1Auto=false;
+    public bool DianSkill2Auto=false;
+    public bool DianSkill3Auto=false;
+    public bool HuoSkill3Auto=false;
+    public bool HuoSkill2Auto=false;
+    public bool HuoSkill1Auto=false;
+    public bool HeiAnSkill1Auto=false;
+    public bool HeiAnSkill2Auto=false;
+    public bool HeiAnSkill3Auto=false;
+
     
     public SkillJiaDian JiaDian=new SkillJiaDian();
     protected override void Awake()

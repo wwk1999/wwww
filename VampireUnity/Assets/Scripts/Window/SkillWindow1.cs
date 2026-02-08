@@ -87,22 +87,15 @@ public class SkillWindow1 : MonoBehaviour
     
     
     
-    public Image normalAttackImage;
     public Image attackSpeedImage;
 
-    public Image dashImage;
     public Image dashCdImage;
 
-    public Image critImage;
     public Image critDamageImage;
 
-    public Image moveSpeedImage;
     public Image moveAddDefenseImage;
     public Image moveAddAttackImage;
-
-    public Image skill1Image;
-    public Image skill2Image;
-    public Image skill3Image;
+    
     public Image skill1CdImage;
     public Image skill2CdImage;
     public Image skill3CdImage;
@@ -138,6 +131,15 @@ public class SkillWindow1 : MonoBehaviour
     public GameObject skill2Auto;
     public GameObject skill3Auto;
     public GameObject dashAuto;
+    public GameObject IceSkill1Auto;
+    public GameObject DianSKill2Auto;
+    public GameObject DianSkill3Auto;
+    public GameObject HuoSkill1Auto;
+    public GameObject HuoSkill2Auto;
+    public GameObject HuoSkill3Auto;
+    public GameObject HeiAnSkill1Auto;
+    public GameObject HeiAnSkill2Auto;
+    public GameObject HeiAnSkill3Auto;
 
 
     public Button jia1;
@@ -157,6 +159,192 @@ public class SkillWindow1 : MonoBehaviour
     public GameObject HuoSkill3;
     public GameObject HeiAnSkill3;
     public GameObject DianSkill3;
+
+
+    public Button IceSkill1Button;
+    public Button IceSkill1TopButton;
+    public Button IceSkill1BottomButton;
+    public Button IceSkill1RightButton;
+    public TextMeshProUGUI IceSkill1Text;
+    public TextMeshProUGUI IceSkill1TopText;
+    public TextMeshProUGUI IceSkill1BottomText;
+    public TextMeshProUGUI IceSkill1RightText;
+    public GameObject IceSkill1Top1Line;
+    public GameObject IceSkill1Bottom1Line;
+    public GameObject IceSkill1Top2Line;
+    public GameObject IceSkill1Bottom2Line;
+    public Image IceSkill1Image;
+    public Image IceSkill1TopImage;
+    public Image IceSkill1BottomImage;
+    public Image IceSkill1RightImage;
+    
+    
+    
+    public Button DianSkill2Button;
+    public Button DianSkill2TopButton;
+    public Button DianSkill2BottomButton;
+    public Button DianSkill2RightButton;
+    public TextMeshProUGUI DianSkill2Text;
+    public TextMeshProUGUI DianSkill2TopText;
+    public TextMeshProUGUI DianSkill2BottomText;
+    public TextMeshProUGUI DianSkill2RightText;
+    public GameObject DianSkill2Top1Line;
+    public GameObject DianSkill2Bottom1Line;
+    public GameObject DianSkill2Top2Line;
+    public GameObject DianSkill2Bottom2Line;
+    public Image DianSkill2Image;
+    public Image DianSkill2TopImage;
+    public Image DianSkill2BottomImage;
+    public Image DianSkill2RightImage;
+    
+    
+    
+    
+    
+    public Button DianSkill3Button;
+    public Button DianSkill3TopButton;
+    public Button DianSkill3BottomButton;
+    public Button DianSkill3RightButton;
+    public TextMeshProUGUI DianSkill3Text;
+    public TextMeshProUGUI DianSkill3TopText;
+    public TextMeshProUGUI DianSkill3BottomText;
+    public TextMeshProUGUI DianSkill3RightText;
+    public GameObject DianSkill3Top1Line;
+    public GameObject DianSkill3Bottom1Line;
+    public GameObject DianSkill3Top2Line;
+    public GameObject DianSkill3Bottom2Line;
+    public Image DianSkill3Image;
+    public Image DianSkill3TopImage;
+    public Image DianSkill3BottomImage;
+    public Image DianSkill3RightImage;
+    
+    
+    
+    
+    public Button HuoSkill3Button;
+    public Button HuoSkill3TopButton;
+    public Button HuoSkill3BottomButton;
+    public Button HuoSkill3RightButton;
+    public TextMeshProUGUI HuoSkill3Text;
+    public TextMeshProUGUI HuoSkill3TopText;
+    public TextMeshProUGUI HuoSkill3BottomText;
+    public TextMeshProUGUI HuoSkill3RightText;
+    public GameObject HuoSkill3Top1Line;
+    public GameObject HuoSkill3Bottom1Line;
+    public GameObject HuoSkill3Top2Line;
+    public GameObject HuoSkill3Bottom2Line;
+    public Image HuoSkill3Image;
+    public Image HuoSkill3TopImage;
+    public Image HuoSkill3BottomImage;
+    public Image HuoSkill3RightImage;
+    
+    
+    
+    
+    public Button HuoSkill2Button;
+    public Button HuoSkill2TopButton;
+    public Button HuoSkill2BottomButton;
+    public Button HuoSkill2RightButton;
+    public TextMeshProUGUI HuoSkill2Text;
+    public TextMeshProUGUI HuoSkill2TopText;
+    public TextMeshProUGUI HuoSkill2BottomText;
+    public TextMeshProUGUI HuoSkill2RightText;
+    public GameObject HuoSkill2Top1Line;
+    public GameObject HuoSkill2Bottom1Line;
+    public GameObject HuoSkill2Top2Line;
+    public GameObject HuoSkill2Bottom2Line;
+    public Image HuoSkill2Image;
+    public Image HuoSkill2TopImage;
+    public Image HuoSkill2BottomImage;
+    public Image HuoSkill2RightImage;
+    
+    
+    
+    
+    
+    public Button HuoSkill1Button;
+    public Button HuoSkill1TopButton;
+    public Button HuoSkill1BottomButton;
+    public Button HuoSkill1RightButton;
+    public TextMeshProUGUI HuoSkill1Text;
+    public TextMeshProUGUI HuoSkill1TopText;
+    public TextMeshProUGUI HuoSkill1BottomText;
+    public TextMeshProUGUI HuoSkill1RightText;
+    public GameObject HuoSkill1Top1Line;
+    public GameObject HuoSkill1Bottom1Line;
+    public GameObject HuoSkill1Top2Line;
+    public GameObject HuoSkill1Bottom2Line;
+    public Image HuoSkill1Image;
+    public Image HuoSkill1TopImage;
+    public Image HuoSkill1BottomImage;
+    public Image HuoSkill1RightImage;
+    
+    
+    
+    
+    
+    public Button HeiAnSkill1Button;
+    public Button HeiAnSkill1TopButton;
+    public Button HeiAnSkill1BottomButton;
+    public Button HeiAnSkill1RightButton;
+    public TextMeshProUGUI HeiAnSkill1Text;
+    public TextMeshProUGUI HeiAnSkill1TopText;
+    public TextMeshProUGUI HeiAnSkill1BottomText;
+    public TextMeshProUGUI HeiAnSkill1RightText;
+    public GameObject HeiAnSkill1Top1Line;
+    public GameObject HeiAnSkill1Bottom1Line;
+    public GameObject HeiAnSkill1Top2Line;
+    public GameObject HeiAnSkill1Bottom2Line;
+    public Image HeiAnSkill1Image;
+    public Image HeiAnSkill1TopImage;
+    public Image HeiAnSkill1BottomImage;
+    public Image HeiAnSkill1RightImage;
+    
+    
+    
+    
+    
+    public Button HeiAnSkill2Button;
+    public Button HeiAnSkill2TopButton;
+    public Button HeiAnSkill2BottomButton;
+    public Button HeiAnSkill2RightButton;
+    public TextMeshProUGUI HeiAnSkill2Text;
+    public TextMeshProUGUI HeiAnSkill2TopText;
+    public TextMeshProUGUI HeiAnSkill2BottomText;
+    public TextMeshProUGUI HeiAnSkill2RightText;
+    public GameObject HeiAnSkill2Top1Line;
+    public GameObject HeiAnSkill2Bottom1Line;
+    public GameObject HeiAnSkill2Top2Line;
+    public GameObject HeiAnSkill2Bottom2Line;
+    public Image HeiAnSkill2Image;
+    public Image HeiAnSkill2TopImage;
+    public Image HeiAnSkill2BottomImage;
+    public Image HeiAnSkill2RightImage;
+    
+    
+    
+    
+    
+    public Button HeiAnSkill3Button;
+    public Button HeiAnSkill3TopButton;
+    public Button HeiAnSkill3BottomButton;
+    public Button HeiAnSkill3RightButton;
+    public TextMeshProUGUI HeiAnSkill3Text;
+    public TextMeshProUGUI HeiAnSkill3TopText;
+    public TextMeshProUGUI HeiAnSkill3BottomText;
+    public TextMeshProUGUI HeiAnSkill3RightText;
+    public GameObject HeiAnSkill3Top1Line;
+    public GameObject HeiAnSkill3Bottom1Line;
+    public GameObject HeiAnSkill3Top2Line;
+    public GameObject HeiAnSkill3Bottom2Line;
+    public Image HeiAnSkill3Image;
+    public Image HeiAnSkill3TopImage;
+    public Image HeiAnSkill3BottomImage;
+    public Image HeiAnSkill3RightImage;
+    
+    
+    
+    
     
     public void RefreshSkill()
     {
@@ -195,6 +383,10 @@ public class SkillWindow1 : MonoBehaviour
 
                 DianSkill1.gameObject.SetActive(true);
                 break;
+            case SkillYuanSuType.None:
+                jia1.gameObject.SetActive(true);
+                break;
+
         }
         
         switch (SkillJiaDian.S.skill2Type)
@@ -218,6 +410,9 @@ public class SkillWindow1 : MonoBehaviour
                 jia2.gameObject.SetActive(false);
 
                 DianSkill2.gameObject.SetActive(true);
+                break;
+            case SkillYuanSuType.None:
+                jia2.gameObject.SetActive(true);
                 break;
         }
         
@@ -243,6 +438,9 @@ public class SkillWindow1 : MonoBehaviour
 
                 DianSkill3.gameObject.SetActive(true);
                 break;
+            case SkillYuanSuType.None:
+                jia3.gameObject.SetActive(true);
+                break;
         }
     }
 
@@ -253,6 +451,18 @@ public class SkillWindow1 : MonoBehaviour
         skill2Auto.gameObject.SetActive(SkillData.S.skill2Auto);
         skill3Auto.gameObject.SetActive(SkillData.S.skill3Auto);
         dashAuto.gameObject.SetActive(SkillData.S.dashAuto);
+        IceSkill1Auto.gameObject.SetActive(SkillData.S.IceSkill1Auto);
+        
+        DianSKill2Auto.gameObject.SetActive(SkillData.S.DianSkill2Auto);
+        DianSkill3Auto.gameObject.SetActive(SkillData.S.DianSkill3Auto);
+
+        HuoSkill1Auto.gameObject.SetActive(SkillData.S.HuoSkill1Auto);
+        HuoSkill2Auto.gameObject.SetActive(SkillData.S.HuoSkill2Auto);
+        HuoSkill3Auto.gameObject.SetActive(SkillData.S.HuoSkill3Auto);
+
+        HeiAnSkill1Auto.gameObject.SetActive(SkillData.S.HeiAnSkill1Auto);
+        HeiAnSkill2Auto.gameObject.SetActive(SkillData.S.HeiAnSkill2Auto);
+        HeiAnSkill3Auto.gameObject.SetActive(SkillData.S.HeiAnSkill3Auto);
 
     }
 
@@ -281,6 +491,59 @@ public class SkillWindow1 : MonoBehaviour
         moveAddAttackLine.SetActive(SkillJiaDian.S.MoveAddAttack >= 1);
         moveAddDefenseLine.SetActive(SkillJiaDian.S.MoveAddDefense >= 1);
         critDamageLine.SetActive(SkillJiaDian.S.CritDamage >= 1);
+        
+        
+        IceSkill1Top1Line.SetActive(SkillJiaDian.S.IceSkill1Range>=1);
+        IceSkill1Bottom1Line.SetActive(SkillJiaDian.S.IceSkill1Cd>=1);
+        IceSkill1Top2Line.SetActive(SkillJiaDian.S.IceSkill1YuanSu>=1);
+        IceSkill1Bottom2Line.SetActive(SkillJiaDian.S.IceSkill1YuanSu>=1);
+        
+        
+        DianSkill2Top1Line.SetActive(SkillJiaDian.S.DianSkill2Duration>=1);
+        DianSkill2Bottom1Line.SetActive(SkillJiaDian.S.DianSkill2Cd>=1);
+        DianSkill2Top2Line.SetActive(SkillJiaDian.S.DianSkill2YuanSu>=1);
+        DianSkill2Bottom2Line.SetActive(SkillJiaDian.S.DianSkill2YuanSu>=1);
+        
+        
+        DianSkill3Top1Line.SetActive(SkillJiaDian.S.DianSkill3Count>=1);
+        DianSkill3Bottom1Line.SetActive(SkillJiaDian.S.DianSkill3Cd>=1);
+        DianSkill3Top2Line.SetActive(SkillJiaDian.S.DianSkill3YuanSu>=1);
+        DianSkill3Bottom2Line.SetActive(SkillJiaDian.S.DianSkill3YuanSu>=1);
+        
+        
+        HuoSkill1Top1Line.SetActive(SkillJiaDian.S.HuoSkill1Count>=1);
+        HuoSkill1Bottom1Line.SetActive(SkillJiaDian.S.HuoSkill1Cd>=1);
+        HuoSkill1Top2Line.SetActive(SkillJiaDian.S.HuoSkill1YuanSu>=1);
+        HuoSkill1Bottom2Line.SetActive(SkillJiaDian.S.HuoSkill1YuanSu>=1);
+        
+        
+        HuoSkill2Top1Line.SetActive(SkillJiaDian.S.HuoSkill2Time>=1);
+        HuoSkill2Bottom1Line.SetActive(SkillJiaDian.S.HuoSkill2Cd>=1);
+        HuoSkill2Top2Line.SetActive(SkillJiaDian.S.HuoSkill2YuanSu>=1);
+        HuoSkill2Bottom2Line.SetActive(SkillJiaDian.S.HuoSkill2YuanSu>=1);
+        
+        HuoSkill3Top1Line.SetActive(SkillJiaDian.S.HuoSkill3Count>=1);
+        HuoSkill3Bottom1Line.SetActive(SkillJiaDian.S.HuoSkill3Cd>=1);
+        HuoSkill3Top2Line.SetActive(SkillJiaDian.S.HuoSkill3YuanSu>=1);
+        HuoSkill3Bottom2Line.SetActive(SkillJiaDian.S.HuoSkill3YuanSu>=1);
+        
+        
+        HeiAnSkill1Top1Line.SetActive(SkillJiaDian.S.HeiAnSkill1Range>=1);
+        HeiAnSkill1Bottom1Line.SetActive(SkillJiaDian.S.HeiAnSkill1Cd>=1);
+        HeiAnSkill1Top2Line.SetActive(SkillJiaDian.S.HeiAnSkill1YuanSu>=1);
+        HeiAnSkill1Bottom2Line.SetActive(SkillJiaDian.S.HeiAnSkill1YuanSu>=1);
+        
+        
+        HeiAnSkill2Top1Line.SetActive(SkillJiaDian.S.HeiAnSkill2Time>=1);
+        HeiAnSkill2Bottom1Line.SetActive(SkillJiaDian.S.HeiAnSkill2Cd>=1);
+        HeiAnSkill2Top2Line.SetActive(SkillJiaDian.S.HeiAnSkill2YuanSu>=1);
+        HeiAnSkill2Bottom2Line.SetActive(SkillJiaDian.S.HeiAnSkill2YuanSu>=1);
+        
+        HeiAnSkill3Top1Line.SetActive(SkillJiaDian.S.HeiAnSkill3Range>=1);
+        HeiAnSkill3Bottom1Line.SetActive(SkillJiaDian.S.HeiAnSkill3Cd>=1);
+        HeiAnSkill3Top2Line.SetActive(SkillJiaDian.S.HeiAnSkill3YuanSu>=1);
+        HeiAnSkill3Bottom2Line.SetActive(SkillJiaDian.S.HeiAnSkill3YuanSu>=1);
+
     }
 
     public void ResfreshSkillCount()
@@ -388,6 +651,100 @@ public class SkillWindow1 : MonoBehaviour
     
     defenseLevel.gameObject.SetActive(SkillJiaDian.S.MonsterDefense > 0);
     defenseLevel.text = "["+SkillJiaDian.S.MonsterDefense+"]";
+    
+    IceSkill1Text.gameObject.SetActive(SkillJiaDian.S.IceSkill1>0);
+    IceSkill1Text.text = "["+SkillJiaDian.S.IceSkill1+"]";
+    IceSkill1TopText.gameObject.SetActive(SkillJiaDian.S.IceSkill1Range>0);
+    IceSkill1TopText.text = "["+SkillJiaDian.S.IceSkill1Range+"]";
+    IceSkill1BottomText.gameObject.SetActive(SkillJiaDian.S.IceSkill1Cd>0);
+    IceSkill1BottomText.text = "["+SkillJiaDian.S.IceSkill1Cd+"]";
+    IceSkill1RightText.gameObject.SetActive(SkillJiaDian.S.IceSkill1YuanSu>0);
+    IceSkill1RightText.text = "["+SkillJiaDian.S.IceSkill1YuanSu+"]";
+    
+    
+    
+    DianSkill2Text.gameObject.SetActive(SkillJiaDian.S.DianSkill2>0);
+    DianSkill2Text.text = "["+SkillJiaDian.S.DianSkill2+"]";
+    DianSkill2TopText.gameObject.SetActive(SkillJiaDian.S.DianSkill2Duration>0);
+    DianSkill2TopText.text = "["+SkillJiaDian.S.DianSkill2Duration+"]";
+    DianSkill2BottomText.gameObject.SetActive(SkillJiaDian.S.DianSkill2Cd>0);
+    DianSkill2BottomText.text = "["+SkillJiaDian.S.DianSkill2Cd+"]";
+    DianSkill2RightText.gameObject.SetActive(SkillJiaDian.S.DianSkill2YuanSu>0);
+    DianSkill2RightText.text = "["+SkillJiaDian.S.DianSkill2YuanSu+"]";
+    
+    
+    DianSkill3Text.gameObject.SetActive(SkillJiaDian.S.DianSkill3>0);
+    DianSkill3Text.text = "["+SkillJiaDian.S.DianSkill3+"]";
+    DianSkill3TopText.gameObject.SetActive(SkillJiaDian.S.DianSkill3Count>0);
+    DianSkill3TopText.text = "["+SkillJiaDian.S.DianSkill3Count+"]";
+    DianSkill3BottomText.gameObject.SetActive(SkillJiaDian.S.DianSkill3Cd>0);
+    DianSkill3BottomText.text = "["+SkillJiaDian.S.DianSkill3Cd+"]";
+    DianSkill3RightText.gameObject.SetActive(SkillJiaDian.S.DianSkill3YuanSu>0);
+    DianSkill3RightText.text = "["+SkillJiaDian.S.DianSkill3YuanSu+"]";
+    
+    
+    
+    HuoSkill1Text.gameObject.SetActive(SkillJiaDian.S.HuoSkill1>0);
+    HuoSkill1Text.text = "["+SkillJiaDian.S.HuoSkill1+"]";
+    HuoSkill1TopText.gameObject.SetActive(SkillJiaDian.S.HuoSkill1Count>0);
+    HuoSkill1TopText.text = "["+SkillJiaDian.S.HuoSkill1Count+"]";
+    HuoSkill1BottomText.gameObject.SetActive(SkillJiaDian.S.HuoSkill1Cd>0);
+    HuoSkill1BottomText.text = "["+SkillJiaDian.S.HuoSkill1Cd+"]";
+    HuoSkill1RightText.gameObject.SetActive(SkillJiaDian.S.HuoSkill1YuanSu>0);
+    HuoSkill1RightText.text = "["+SkillJiaDian.S.HuoSkill1YuanSu+"]";
+    
+    
+    
+    HuoSkill2Text.gameObject.SetActive(SkillJiaDian.S.HuoSkill2>0);
+    HuoSkill2Text.text = "["+SkillJiaDian.S.HuoSkill2+"]";
+    HuoSkill2TopText.gameObject.SetActive(SkillJiaDian.S.HuoSkill2Time>0);
+    HuoSkill2TopText.text = "["+SkillJiaDian.S.HuoSkill2Time+"]";
+    HuoSkill2BottomText.gameObject.SetActive(SkillJiaDian.S.HuoSkill2Cd>0);
+    HuoSkill2BottomText.text = "["+SkillJiaDian.S.HuoSkill2Cd+"]";
+    HuoSkill2RightText.gameObject.SetActive(SkillJiaDian.S.HuoSkill2YuanSu>0);
+    HuoSkill2RightText.text = "["+SkillJiaDian.S.HuoSkill2YuanSu+"]";
+    
+    
+    HuoSkill3Text.gameObject.SetActive(SkillJiaDian.S.HuoSkill3>0);
+    HuoSkill3Text.text = "["+SkillJiaDian.S.HuoSkill3+"]";
+    HuoSkill3TopText.gameObject.SetActive(SkillJiaDian.S.HuoSkill3Count>0);
+    HuoSkill3TopText.text = "["+SkillJiaDian.S.HuoSkill3Count+"]";
+    HuoSkill3BottomText.gameObject.SetActive(SkillJiaDian.S.HuoSkill3Cd>0);
+    HuoSkill3BottomText.text = "["+SkillJiaDian.S.HuoSkill3Cd+"]";
+    HuoSkill3RightText.gameObject.SetActive(SkillJiaDian.S.HuoSkill3YuanSu>0);
+    HuoSkill3RightText.text = "["+SkillJiaDian.S.HuoSkill3YuanSu+"]";
+    
+    
+    
+    HeiAnSkill1Text.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill1>0);
+    HeiAnSkill1Text.text = "["+SkillJiaDian.S.HeiAnSkill1+"]";
+    HeiAnSkill1TopText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill1Range>0);
+    HeiAnSkill1TopText.text = "["+SkillJiaDian.S.HeiAnSkill1Range+"]";
+    HeiAnSkill1BottomText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill1Cd>0);
+    HeiAnSkill1BottomText.text = "["+SkillJiaDian.S.HeiAnSkill1Cd+"]";
+    HeiAnSkill1RightText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill1YuanSu>0);
+    HeiAnSkill1RightText.text = "["+SkillJiaDian.S.HeiAnSkill1YuanSu+"]";
+    
+    
+    HeiAnSkill2Text.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill2Damage>0);
+    HeiAnSkill2Text.text = "["+SkillJiaDian.S.HeiAnSkill2Damage+"]";
+    HeiAnSkill2TopText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill2Time>0);
+    HeiAnSkill2TopText.text = "["+SkillJiaDian.S.HeiAnSkill2Time+"]";
+    HeiAnSkill2BottomText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill2Cd>0);
+    HeiAnSkill2BottomText.text = "["+SkillJiaDian.S.HeiAnSkill2Cd+"]";
+    HeiAnSkill2RightText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill2YuanSu>0);
+    HeiAnSkill2RightText.text = "["+SkillJiaDian.S.HeiAnSkill2YuanSu+"]";
+    
+    
+    
+    HeiAnSkill3Text.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill3Damage>0);
+    HeiAnSkill3Text.text = "["+SkillJiaDian.S.HeiAnSkill3Damage+"]";
+    HeiAnSkill3TopText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill3Range>0);
+    HeiAnSkill3TopText.text = "["+SkillJiaDian.S.HeiAnSkill3Range+"]";
+    HeiAnSkill3BottomText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill3Cd>0);
+    HeiAnSkill3BottomText.text = "["+SkillJiaDian.S.HeiAnSkill3Cd+"]";
+    HeiAnSkill3RightText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill3YuanSu>0);
+    HeiAnSkill3RightText.text = "["+SkillJiaDian.S.HeiAnSkill3YuanSu+"]";
 }
 
 
@@ -414,6 +771,49 @@ public class SkillWindow1 : MonoBehaviour
         skill3CdButton.interactable=SkillJiaDian.S.IceSkill3Damage>0;
         skill3JianSuButton.interactable=SkillJiaDian.S.IceSkill3Range>0&&SkillJiaDian.S.IceSkill3Cd>0;
 
+        IceSkill1TopButton.interactable = SkillJiaDian.S.IceSkill1 > 0;
+        IceSkill1BottomButton.interactable = SkillJiaDian.S.IceSkill1 > 0;
+        IceSkill1RightButton.interactable = SkillJiaDian.S.IceSkill1Cd > 0&&SkillJiaDian.S.IceSkill1Range > 0;
+
+        
+        DianSkill2TopButton.interactable = SkillJiaDian.S.DianSkill2 > 0;
+        DianSkill2BottomButton.interactable = SkillJiaDian.S.DianSkill2 > 0;
+        DianSkill2RightButton.interactable = SkillJiaDian.S.DianSkill2Cd > 0&&SkillJiaDian.S.DianSkill2Duration > 0;
+        
+        
+        DianSkill3TopButton.interactable = SkillJiaDian.S.DianSkill3 > 0;
+        DianSkill3BottomButton.interactable = SkillJiaDian.S.DianSkill3 > 0;
+        DianSkill3RightButton.interactable = SkillJiaDian.S.DianSkill3Cd > 0&&SkillJiaDian.S.DianSkill3Count > 0;
+        
+        
+        HuoSkill1TopButton.interactable = SkillJiaDian.S.HuoSkill1 > 0;
+        HuoSkill1BottomButton.interactable = SkillJiaDian.S.HuoSkill1 > 0;
+        HuoSkill1RightButton.interactable = SkillJiaDian.S.HuoSkill1Cd > 0&&SkillJiaDian.S.HuoSkill1Count > 0;
+        
+        
+        HuoSkill2TopButton.interactable = SkillJiaDian.S.HuoSkill2 > 0;
+        HuoSkill2BottomButton.interactable = SkillJiaDian.S.HuoSkill2 > 0;
+        HuoSkill2RightButton.interactable = SkillJiaDian.S.HuoSkill2Cd > 0&&SkillJiaDian.S.HuoSkill2Time > 0;
+        
+        
+        HuoSkill3TopButton.interactable = SkillJiaDian.S.HuoSkill3 > 0;
+        HuoSkill3BottomButton.interactable = SkillJiaDian.S.HuoSkill3 > 0;
+        HuoSkill3RightButton.interactable = SkillJiaDian.S.HuoSkill3Cd > 0&&SkillJiaDian.S.HuoSkill3Count > 0;
+        
+        
+        HeiAnSkill1TopButton.interactable = SkillJiaDian.S.HeiAnSkill1 > 0;
+        HeiAnSkill1BottomButton.interactable = SkillJiaDian.S.HeiAnSkill1 > 0;
+        HeiAnSkill1RightButton.interactable = SkillJiaDian.S.HeiAnSkill1Cd > 0&&SkillJiaDian.S.HeiAnSkill1Range > 0;
+        
+        
+        HeiAnSkill2TopButton.interactable = SkillJiaDian.S.HeiAnSkill2Damage > 0;
+        HeiAnSkill2BottomButton.interactable = SkillJiaDian.S.HeiAnSkill2Damage > 0;
+        HeiAnSkill2RightButton.interactable = SkillJiaDian.S.HeiAnSkill2Cd > 0&&SkillJiaDian.S.HeiAnSkill2Time > 0;
+        
+        
+        HeiAnSkill3TopButton.interactable = SkillJiaDian.S.HeiAnSkill3Damage > 0;
+        HeiAnSkill3BottomButton.interactable = SkillJiaDian.S.HeiAnSkill3Damage > 0;
+        HeiAnSkill3RightButton.interactable = SkillJiaDian.S.HeiAnSkill3Cd > 0&&SkillJiaDian.S.HeiAnSkill3Range > 0;
     }
 
     public void SetImage()
@@ -542,6 +942,219 @@ public class SkillWindow1 : MonoBehaviour
         {
             dashCdImage.color=new Color32(255, 255, 255, 255);
         }
+
+        if (SkillJiaDian.S.IceSkill1 < 1)
+        {
+            IceSkill1TopImage.color=new Color32(76,76, 76, 255);
+            IceSkill1BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            IceSkill1TopImage.color=new Color32(255, 255, 255, 255);
+            IceSkill1BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.IceSkill1Cd < 1 || SkillJiaDian.S.IceSkill1Range < 1)
+        {
+            IceSkill1RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            IceSkill1RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        
+        
+        if (SkillJiaDian.S.DianSkill2 < 1)
+        {
+            DianSkill2TopImage.color=new Color32(76,76, 76, 255);
+            DianSkill2BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            DianSkill2TopImage.color=new Color32(255, 255, 255, 255);
+            DianSkill2BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.DianSkill2Cd < 1 || SkillJiaDian.S.DianSkill2Duration < 1)
+        {
+            DianSkill2RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            DianSkill2RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        
+        if (SkillJiaDian.S.DianSkill3 < 1)
+        {
+            DianSkill3TopImage.color=new Color32(76,76, 76, 255);
+            DianSkill3BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            DianSkill3TopImage.color=new Color32(255, 255, 255, 255);
+            DianSkill3BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.DianSkill3Cd < 1 || SkillJiaDian.S.DianSkill3Count < 1)
+        {
+            DianSkill3RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            DianSkill3RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        
+        
+        
+        if (SkillJiaDian.S.HuoSkill1 < 1)
+        {
+            HuoSkill1TopImage.color=new Color32(76,76, 76, 255);
+            HuoSkill1BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HuoSkill1TopImage.color=new Color32(255, 255, 255, 255);
+            HuoSkill1BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.HuoSkill1Cd < 1 || SkillJiaDian.S.HuoSkill1Count < 1)
+        {
+            HuoSkill1RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HuoSkill1RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        
+        
+        if (SkillJiaDian.S.HuoSkill2 < 1)
+        {
+            HuoSkill2TopImage.color=new Color32(76,76, 76, 255);
+            HuoSkill2BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HuoSkill2TopImage.color=new Color32(255, 255, 255, 255);
+            HuoSkill2BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.HuoSkill2Cd < 1 || SkillJiaDian.S.HuoSkill2Time < 1)
+        {
+            HuoSkill2RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HuoSkill2RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        
+        
+        if (SkillJiaDian.S.HuoSkill3 < 1)
+        {
+            HuoSkill3TopImage.color=new Color32(76,76, 76, 255);
+            HuoSkill3BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HuoSkill3TopImage.color=new Color32(255, 255, 255, 255);
+            HuoSkill3BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.HuoSkill3Cd < 1 || SkillJiaDian.S.HuoSkill3Count < 1)
+        {
+            HuoSkill3RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HuoSkill3RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        
+        if (SkillJiaDian.S.HeiAnSkill1 < 1)
+        {
+            HeiAnSkill1TopImage.color=new Color32(76,76, 76, 255);
+            HeiAnSkill1BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HeiAnSkill1TopImage.color=new Color32(255, 255, 255, 255);
+            HeiAnSkill1BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.HeiAnSkill1Cd < 1 || SkillJiaDian.S.HeiAnSkill1Range < 1)
+        {
+            HeiAnSkill1RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HeiAnSkill1RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        
+        
+        if (SkillJiaDian.S.HeiAnSkill2Damage < 1)
+        {
+            HeiAnSkill2TopImage.color=new Color32(76,76, 76, 255);
+            HeiAnSkill2BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HeiAnSkill2TopImage.color=new Color32(255, 255, 255, 255);
+            HeiAnSkill2BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.HeiAnSkill2Cd < 1 || SkillJiaDian.S.HeiAnSkill2Time < 1)
+        {
+            HeiAnSkill2RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HeiAnSkill2RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
+        
+        
+        
+        if (SkillJiaDian.S.HeiAnSkill3Damage < 1)
+        {
+            HeiAnSkill3TopImage.color=new Color32(76,76, 76, 255);
+            HeiAnSkill3BottomImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HeiAnSkill3TopImage.color=new Color32(255, 255, 255, 255);
+            HeiAnSkill3BottomImage.color=new Color32(255, 255, 255, 255);
+        }
+
+        if (SkillJiaDian.S.HeiAnSkill3Cd < 1 || SkillJiaDian.S.HeiAnSkill3Range < 1)
+        {
+            HeiAnSkill3RightImage.color=new Color32(76,76, 76, 255);
+        }
+        else
+        {
+            HeiAnSkill3RightImage.color=new Color32(255, 255, 255, 255);
+        }
+        
+        
     }
 
     private void OnEnable()

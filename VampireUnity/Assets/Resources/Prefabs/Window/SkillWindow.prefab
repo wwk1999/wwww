@@ -7830,18 +7830,11 @@ MonoBehaviour:
   hpLevel: {fileID: 4879853915177021494}
   defenseLevel: {fileID: 5493246274742018703}
   critMonsterLevel: {fileID: 2570823094990780909}
-  normalAttackImage: {fileID: 5011562264732859454}
   attackSpeedImage: {fileID: 6184049279077108378}
-  dashImage: {fileID: 8572501407183042129}
   dashCdImage: {fileID: 5027908581826242340}
-  critImage: {fileID: 1487278598497953271}
   critDamageImage: {fileID: 5537677326297074077}
-  moveSpeedImage: {fileID: 2240438318027577674}
   moveAddDefenseImage: {fileID: 2315310565269021270}
   moveAddAttackImage: {fileID: 1135078001352673150}
-  skill1Image: {fileID: 250743987000664197}
-  skill2Image: {fileID: 2481405227907360505}
-  skill3Image: {fileID: 4617793850853728910}
   skill1CdImage: {fileID: 3959228626069362214}
   skill2CdImage: {fileID: 1067281426152165818}
   skill3CdImage: {fileID: 9098015144603523373}
@@ -7872,6 +7865,15 @@ MonoBehaviour:
   skill2Auto: {fileID: 4970449115881758641}
   skill3Auto: {fileID: 819343866609476432}
   dashAuto: {fileID: 5329274271706579312}
+  IceSkill1Auto: {fileID: 8657730596528932361}
+  DianSKill2Auto: {fileID: 2876199315632572232}
+  DianSkill3Auto: {fileID: 7870335072024911847}
+  HuoSkill1Auto: {fileID: 4976811875947351428}
+  HuoSkill2Auto: {fileID: 3514103683472885564}
+  HuoSkill3Auto: {fileID: 5277871771712421811}
+  HeiAnSkill1Auto: {fileID: 2641690969889493388}
+  HeiAnSkill2Auto: {fileID: 7346486811605451225}
+  HeiAnSkill3Auto: {fileID: 3000377144596744352}
   jia1: {fileID: 8893497095306642368}
   jia2: {fileID: 6863541993434254366}
   jia3: {fileID: 7864219639560111690}
@@ -7888,6 +7890,150 @@ MonoBehaviour:
   HuoSkill3: {fileID: 1104465373674058956}
   HeiAnSkill3: {fileID: 928531238370211159}
   DianSkill3: {fileID: 168432988711867340}
+  IceSkill1Button: {fileID: 9097794118538282555}
+  IceSkill1TopButton: {fileID: 3298888614138890488}
+  IceSkill1BottomButton: {fileID: 6548709864696954866}
+  IceSkill1RightButton: {fileID: 2502593271638490360}
+  IceSkill1Text: {fileID: 990786050355366806}
+  IceSkill1TopText: {fileID: 1174676872319691374}
+  IceSkill1BottomText: {fileID: 1924948189772972830}
+  IceSkill1RightText: {fileID: 1241065160658881329}
+  IceSkill1Top1Line: {fileID: 1006164809818224786}
+  IceSkill1Bottom1Line: {fileID: 7752115215267074749}
+  IceSkill1Top2Line: {fileID: 4380288775272297838}
+  IceSkill1Bottom2Line: {fileID: 6907702011979442668}
+  IceSkill1Image: {fileID: 7701235354729491409}
+  IceSkill1TopImage: {fileID: 7677255161815063798}
+  IceSkill1BottomImage: {fileID: 5525925274089699824}
+  IceSkill1RightImage: {fileID: 7022982704129999165}
+  DianSkill2Button: {fileID: 5405480641447189966}
+  DianSkill2TopButton: {fileID: 4726143745769392267}
+  DianSkill2BottomButton: {fileID: 5939539413072580729}
+  DianSkill2RightButton: {fileID: 2482556817271892109}
+  DianSkill2Text: {fileID: 6627751598834332934}
+  DianSkill2TopText: {fileID: 9082282018631613069}
+  DianSkill2BottomText: {fileID: 184645877262515442}
+  DianSkill2RightText: {fileID: 7229442190158408916}
+  DianSkill2Top1Line: {fileID: 4351304552091078156}
+  DianSkill2Bottom1Line: {fileID: 3898724742908544022}
+  DianSkill2Top2Line: {fileID: 4003019712401638415}
+  DianSkill2Bottom2Line: {fileID: 2682302132959149958}
+  DianSkill2Image: {fileID: 6195414957877608594}
+  DianSkill2TopImage: {fileID: 43336240836600795}
+  DianSkill2BottomImage: {fileID: 6403502630503107063}
+  DianSkill2RightImage: {fileID: 8196524870061852548}
+  DianSkill3Button: {fileID: 6815534467132572297}
+  DianSkill3TopButton: {fileID: 1215493186780794680}
+  DianSkill3BottomButton: {fileID: 3451032205430509531}
+  DianSkill3RightButton: {fileID: 2786568187283476061}
+  DianSkill3Text: {fileID: 1667725233989811706}
+  DianSkill3TopText: {fileID: 4652811487244293612}
+  DianSkill3BottomText: {fileID: 921438033712037789}
+  DianSkill3RightText: {fileID: 7940847590093292840}
+  DianSkill3Top1Line: {fileID: 5358630646758111284}
+  DianSkill3Bottom1Line: {fileID: 2837647802019515303}
+  DianSkill3Top2Line: {fileID: 6989261484502966228}
+  DianSkill3Bottom2Line: {fileID: 2920598959134905641}
+  DianSkill3Image: {fileID: 8675897668777669602}
+  DianSkill3TopImage: {fileID: 5616476868519850053}
+  DianSkill3BottomImage: {fileID: 3976984582303741717}
+  DianSkill3RightImage: {fileID: 2882666305203965057}
+  HuoSkill3Button: {fileID: 0}
+  HuoSkill3TopButton: {fileID: 0}
+  HuoSkill3BottomButton: {fileID: 0}
+  HuoSkill3RightButton: {fileID: 0}
+  HuoSkill3Text: {fileID: 0}
+  HuoSkill3TopText: {fileID: 0}
+  HuoSkill3BottomText: {fileID: 0}
+  HuoSkill3RightText: {fileID: 0}
+  HuoSkill3Top1Line: {fileID: 0}
+  HuoSkill3Bottom1Line: {fileID: 0}
+  HuoSkill3Top2Line: {fileID: 0}
+  HuoSkill3Bottom2Line: {fileID: 0}
+  HuoSkill3Image: {fileID: 0}
+  HuoSkill3TopImage: {fileID: 0}
+  HuoSkill3BottomImage: {fileID: 0}
+  HuoSkill3RightImage: {fileID: 0}
+  HuoSkill2Button: {fileID: 0}
+  HuoSkill2TopButton: {fileID: 0}
+  HuoSkill2BottomButton: {fileID: 0}
+  HuoSkill2RightButton: {fileID: 0}
+  HuoSkill2Text: {fileID: 0}
+  HuoSkill2TopText: {fileID: 0}
+  HuoSkill2BottomText: {fileID: 0}
+  HuoSkill2RightText: {fileID: 0}
+  HuoSkill2Top1Line: {fileID: 0}
+  HuoSkill2Bottom1Line: {fileID: 0}
+  HuoSkill2Top2Line: {fileID: 0}
+  HuoSkill2Bottom2Line: {fileID: 0}
+  HuoSkill2Image: {fileID: 0}
+  HuoSkill2TopImage: {fileID: 0}
+  HuoSkill2BottomImage: {fileID: 0}
+  HuoSkill2RightImage: {fileID: 0}
+  HuoSkill1Button: {fileID: 0}
+  HuoSkill1TopButton: {fileID: 0}
+  HuoSkill1BottomButton: {fileID: 0}
+  HuoSkill1RightButton: {fileID: 0}
+  HuoSkill1Text: {fileID: 0}
+  HuoSkill1TopText: {fileID: 0}
+  HuoSkill1BottomText: {fileID: 0}
+  HuoSkill1RightText: {fileID: 0}
+  HuoSkill1Top1Line: {fileID: 0}
+  HuoSkill1Bottom1Line: {fileID: 0}
+  HuoSkill1Top2Line: {fileID: 0}
+  HuoSkill1Bottom2Line: {fileID: 0}
+  HuoSkill1Image: {fileID: 0}
+  HuoSkill1TopImage: {fileID: 0}
+  HuoSkill1BottomImage: {fileID: 0}
+  HuoSkill1RightImage: {fileID: 0}
+  HeiAnSkill1Button: {fileID: 0}
+  HeiAnSkill1TopButton: {fileID: 0}
+  HeiAnSkill1BottomButton: {fileID: 0}
+  HeiAnSkill1RightButton: {fileID: 0}
+  HeiAnSkill1Text: {fileID: 0}
+  HeiAnSkill1TopText: {fileID: 0}
+  HeiAnSkill1BottomText: {fileID: 0}
+  HeiAnSkill1RightText: {fileID: 0}
+  HeiAnSkill1Top1Line: {fileID: 0}
+  HeiAnSkill1Bottom1Line: {fileID: 0}
+  HeiAnSkill1Top2Line: {fileID: 0}
+  HeiAnSkill1Bottom2Line: {fileID: 0}
+  HeiAnSkill1Image: {fileID: 0}
+  HeiAnSkill1TopImage: {fileID: 0}
+  HeiAnSkill1BottomImage: {fileID: 0}
+  HeiAnSkill1RightImage: {fileID: 0}
+  HeiAnSkill2Button: {fileID: 0}
+  HeiAnSkill2TopButton: {fileID: 0}
+  HeiAnSkill2BottomButton: {fileID: 0}
+  HeiAnSkill2RightButton: {fileID: 0}
+  HeiAnSkill2Text: {fileID: 0}
+  HeiAnSkill2TopText: {fileID: 0}
+  HeiAnSkill2BottomText: {fileID: 0}
+  HeiAnSkill2RightText: {fileID: 0}
+  HeiAnSkill2Top1Line: {fileID: 0}
+  HeiAnSkill2Bottom1Line: {fileID: 0}
+  HeiAnSkill2Top2Line: {fileID: 0}
+  HeiAnSkill2Bottom2Line: {fileID: 0}
+  HeiAnSkill2Image: {fileID: 0}
+  HeiAnSkill2TopImage: {fileID: 0}
+  HeiAnSkill2BottomImage: {fileID: 0}
+  HeiAnSkill2RightImage: {fileID: 0}
+  HeiAnSkill3Button: {fileID: 0}
+  HeiAnSkill3TopButton: {fileID: 0}
+  HeiAnSkill3BottomButton: {fileID: 0}
+  HeiAnSkill3RightButton: {fileID: 0}
+  HeiAnSkill3Text: {fileID: 0}
+  HeiAnSkill3TopText: {fileID: 0}
+  HeiAnSkill3BottomText: {fileID: 0}
+  HeiAnSkill3RightText: {fileID: 0}
+  HeiAnSkill3Top1Line: {fileID: 0}
+  HeiAnSkill3Bottom1Line: {fileID: 0}
+  HeiAnSkill3Top2Line: {fileID: 0}
+  HeiAnSkill3Bottom2Line: {fileID: 0}
+  HeiAnSkill3Image: {fileID: 0}
+  HeiAnSkill3TopImage: {fileID: 0}
+  HeiAnSkill3BottomImage: {fileID: 0}
+  HeiAnSkill3RightImage: {fileID: 0}
 --- !u!1 &1834949817926261944
 GameObject:
   m_ObjectHideFlags: 0
@@ -14022,7 +14168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8197212233665331477
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30612,7 +30758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7104817800001852532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39245,6 +39391,10 @@ PrefabInstance:
     - target: {fileID: 8287017816563079467, guid: 7b4e4ec4e1eadc641af990455492f0ad, type: 3}
       propertyPath: m_Name
       value: SkillYuanSuWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287017816563079467, guid: 7b4e4ec4e1eadc641af990455492f0ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
