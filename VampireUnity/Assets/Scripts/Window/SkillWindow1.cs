@@ -344,9 +344,83 @@ public class SkillWindow1 : MonoBehaviour
     private Image HeiAnSkill3BottomImage;
     private Image HeiAnSkill3RightImage;
 
+    public Button ResetButton;
 
-   
-    
+    public void Reset()
+    {
+        SkillJiaDian.S.skill1Type = SkillYuanSuType.None;
+        SkillJiaDian.S.skill2Type = SkillYuanSuType.None;
+        SkillJiaDian.S.skill3Type = SkillYuanSuType.None;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.IceSkill1;
+        SkillJiaDian.S.IceSkill1 = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.IceSkill1Cd;
+        SkillJiaDian.S.IceSkill1Cd = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.IceSkill1Range;
+        SkillJiaDian.S.IceSkill1Range = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.IceSkill1YuanSu;
+        SkillJiaDian.S.IceSkill1YuanSu = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HuoSkill1;
+        SkillJiaDian.S.HuoSkill1 = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HuoSkill1Cd;
+        SkillJiaDian.S.HuoSkill1Cd = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HuoSkill1Count;
+        SkillJiaDian.S.HuoSkill1Count = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HuoSkill1YuanSu;
+        SkillJiaDian.S.HuoSkill1YuanSu = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DianSkill1Damage;
+        SkillJiaDian.S.DianSkill1Damage = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DianSkill1Cd;
+        SkillJiaDian.S.DianSkill1Cd = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DianSkill1Range;
+        SkillJiaDian.S.DianSkill1Range = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DianSkill1YuanSu;
+        SkillJiaDian.S.DianSkill1YuanSu = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HeiAnSkill1;
+        SkillJiaDian.S.HeiAnSkill1 = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HeiAnSkill1Cd;
+        SkillJiaDian.S.HeiAnSkill1Cd = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HeiAnSkill1Range;
+        SkillJiaDian.S.HeiAnSkill1Range = 0;
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HeiAnSkill1YuanSu;
+        SkillJiaDian.S.HeiAnSkill1YuanSu = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.NormalAttack;
+        SkillJiaDian.S.NormalAttack = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.AttackSpeed;
+        SkillJiaDian.S.AttackSpeed = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DashCd;
+        SkillJiaDian.S.DashCd = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.Dash;
+        SkillJiaDian.S.Dash = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.MoveSpeed;
+        SkillJiaDian.S.MoveSpeed = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.MoveAddAttack;
+        SkillJiaDian.S.MoveAddAttack = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.MoveAddDefense;
+        SkillJiaDian.S.MoveAddDefense = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.Crit;
+        SkillJiaDian.S.Crit = 0;
+        
+        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.CritDamage;
+        SkillJiaDian.S.CritDamage = 0;
+        
+        SetButtonDisable();
+        SetShowLevel();
+        SetAuto();
+        ResfreshSkillCount();
+        RefreshSkill();
+    }
     
     public void RefreshSkill()
     {
@@ -1307,6 +1381,12 @@ public class SkillWindow1 : MonoBehaviour
 
     private void Start()
     {
+        ResetButton.onClick.AddListener(() =>
+        {
+            Reset();
+        });
+        
+        
         IceSkill1Button.onClick.AddListener(() =>
         {
             if (SkillJiaDian.S.CurrentSkillCount <= 0)
