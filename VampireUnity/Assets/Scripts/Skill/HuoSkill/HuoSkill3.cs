@@ -41,7 +41,7 @@ public class HuoSkill3 : MonoBehaviour
       if (col.CompareTag("Monster") || col.CompareTag("Boss"))
       {
         MonsterBase monster = GameController.S.MonsterColliderDic[col];
-        monster.Hurt(GameController.S.GameAttack*2.5f,GameController.S.GetIsCrit(),DamageFrom.Normal);
+        monster.Hurt(GameController.S.GameAttack*2.5f*SkillController.S.HuoYuanSuDamage,GameController.S.GetIsCrit(),DamageFrom.Normal);
         // var hit = GameController.S.HeiDongPengQueue.Dequeue();
         //hit.transform.position = monster.transform.position;
         //hit.SetActive(true);

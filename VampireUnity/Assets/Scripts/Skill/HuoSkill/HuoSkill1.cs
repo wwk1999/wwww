@@ -38,7 +38,7 @@ public class HuoSkill1 : MonoBehaviour
       //hit.transform.position = closestPoint;
       bool isCrit = GameController.S.GetIsCrit();
       //GameController.S.MonsterColliderDic[other].zhuoShaoTime = 3.1f;
-      GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack,isCrit,DamageFrom.Skill1);
+      GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Skill1);
       //hit.SetActive(true);
     }
   }

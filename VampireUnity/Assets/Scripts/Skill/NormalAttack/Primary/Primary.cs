@@ -29,7 +29,7 @@ public class Primary : MonoBehaviour
             var hit = GameController.S.PuTong3PengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack,isCrit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal);
             hit.SetActive(true);
             gameObject.SetActive(false);
             GameController.S.PrimaryQueue.Enqueue(gameObject);

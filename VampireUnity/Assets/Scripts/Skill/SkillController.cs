@@ -73,9 +73,10 @@ public class SkillController : XSingleton<SkillController>
 
 
 
-    public float HuoDamage => GetHuoDamage();
-    public float DianDamage => GetDianDamage();
-    public float HeiAnDamage => GetHeiAnDamage();
+    public float HuoYuanSuDamage => GetHuoDamage();
+    public float DianYuanSuDamage => GetDianDamage();
+    public float HeiAnYuanSuDamage => GetHeiAnDamage();
+    public float IceYuanSuDamage => GetIceDamage();
 
 
     public bool IsHuoSkill2=false;
@@ -86,7 +87,7 @@ public class SkillController : XSingleton<SkillController>
 
     public float GetHuoDamage()
     {
-        float value = 1.0f;
+        float value = GlobalPlayerAttribute.HuoYuanSuBase;
         if (IsHuoSkill2)
         {
             value += 0.3f;
@@ -97,7 +98,7 @@ public class SkillController : XSingleton<SkillController>
     
     public float GetDianDamage()
     {
-        float value = 1.0f;
+        float value = GlobalPlayerAttribute.DianYuanSuBase;
         if (IsDianSkill2)
         {
             value += 0.3f;
@@ -107,13 +108,20 @@ public class SkillController : XSingleton<SkillController>
     
     public float GetHeiAnDamage()
     {
-        float value = 1.0f;
+        float value =GlobalPlayerAttribute.HeiAnYuanSuBase;
         if (IsHeiAnSkill2)
         {
             value += 0.3f;
         }
         return value;
     }
+    
+    public float GetIceDamage()
+    {
+        float value =GlobalPlayerAttribute.IceYuanSuBase;
+        return value;
+    }
+    
     public float GetDianQuanTime()
     {
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))

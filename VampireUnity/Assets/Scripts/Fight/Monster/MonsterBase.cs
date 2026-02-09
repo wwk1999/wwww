@@ -243,11 +243,7 @@ public abstract class MonsterBase : MonoBehaviour
             yidian.gameObject.SetActive(false);
         }
         
-        if (JianSuTime > 0)
-        {
-            JianSuTime -= Time.deltaTime;
-            Speed *= (1 - GlobalPlayerAttribute.Skill3JianSuNum / 100.0f);
-        }
+       
         currentHurtTime += Time.deltaTime;
         float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
 
@@ -726,17 +722,7 @@ public abstract class MonsterBase : MonoBehaviour
                 finalDamage*=(1+(GlobalPlayerAttribute.Skill3DamageNum-100f)/100.0f);
                 break;
         }
-        if (YiDianTime>0)
-        {
-            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1YiDianDouble))
-            {
-                finalDamage*=(1+GlobalPlayerAttribute.Skill1YiDianNum/50.0f);
-            }
-            else
-            {
-                finalDamage*=(1+GlobalPlayerAttribute.Skill1YiDianNum/100.0f);
-            }
-        }
+        
 
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.JianSuAddAttack))
         {
@@ -754,10 +740,7 @@ public abstract class MonsterBase : MonoBehaviour
     {
         if (IsDead) return;
         if(MonsterState== State.Die) return;
-        if (damageFrom == DamageFrom.Skill3&&GlobalPlayerAttribute.Skill3JianSuNum>0)
-        {
-            JianSuTime = 3;
-        }
+      
         float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
         finalDamage *= (1.0f+GlobalPlayerAttribute.FinalDamage);//最终伤害
         if (damageFrom == DamageFrom.Normal)
