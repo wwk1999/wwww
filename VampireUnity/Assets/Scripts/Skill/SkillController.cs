@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Coffee.UIExtensions;
+using Config;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -22,22 +23,113 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public float IceBallSpeed = 5f;
     [NonSerialized]public GameObject IceBallGameObject;
     //技能冷却时间
-    public float IceArrowtime => (3f*(1-GlobalPlayerAttribute.Skill1CdNum/100.0f));
-    public float IceExplosiontime => (10f*(1-GlobalPlayerAttribute.Skill3CdNum/100.0f));
-    public float IceBalltime => (15f*(1-GlobalPlayerAttribute.Skill2CdNum/100.0f));
-    public float IceSkill1Time => 8f;
+    public float IceExplosiontime => GetIceSkill3Time();
+    public float IceBalltime => GetIceSkill2Time();
+    public float IceSkill1Time => GetIceSkill1Time();
     
-    public float HuoSkill1Time => 8f;
-    public float HuoSkill2Time = 15f;
-    public float HuoSkill3Time = 15f;
+    public float HuoSkill1Time => GetHuoSkill1Time();
+    public float HuoSkill2Time => GetHuoSkill2Time();
+    public float HuoSkill3Time => GetHuoSkill3Time();
     
-    public float DianSkill1Time => 8f;
-    public float DianSkill2Time = 15f;
-    public float DianSkill3Time = 15f;
+    public float DianSkill2Time => GetDianSkill2Time();
+    public float DianSkill3Time => GetDianSkill3Time();
     
-    public float HeiAnSkill1Time => 8f;
-    public float HeiAnSkill2Time = 15f;
-    public float HeiAnSkill3Time = 15f;
+    public float HeiAnSkill1Time => GetHeiAnSkill1Time();
+    public float HeiAnSkill2Time => GetHeiAnSkill2Time();
+    public float HeiAnSkill3Time => GetHeiAnSkill3Time();
+
+    public float GetIceSkill1Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.IceSkill1];
+        value*=(1.0f-GlobalPlayerAttribute.IceSkill1CDNum/100.0f);
+        return value;
+    }
+    
+    public float GetIceSkill2Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.IceSkill2];
+        value*=(1.0f-GlobalPlayerAttribute.Skill2CdNum/100.0f);
+        return value;
+    }
+    
+    public float GetIceSkill3Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.IceSkill3];
+        value*=(1.0f-GlobalPlayerAttribute.Skill3CdNum/100.0f);
+        return value;
+    }
+    
+    
+    public float GetHuoSkill1Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HuoSkill1];
+        value*=(1.0f-GlobalPlayerAttribute.HuoSkill1CDNum/100.0f);
+        return value;
+    }
+    
+    public float GetHuoSkill2Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HuoSkill2];
+        value*=(1.0f-GlobalPlayerAttribute.HuoSkill2CDNum/100.0f);
+        return value;
+    }
+    
+    public float GetHuoSkill3Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HuoSkill3];
+        value*=(1.0f-GlobalPlayerAttribute.HuoSkill3CDNum/100.0f);
+        return value;
+    }
+    
+    
+    
+    public float GetHeiAnSkill1Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HeiAnSkill1];
+        value*=(1.0f-GlobalPlayerAttribute.HeiAnSkill1CDNum/100.0f);
+        return value;
+    }
+    
+    public float GetHeiAnSkill2Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HeiAnSkill2];
+        value*=(1.0f-GlobalPlayerAttribute.HeiAnSkill2CDNum/100.0f);
+        return value;
+    }
+    
+    public float GetHeiAnSkill3Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HeiAnSkill3];
+        value*=(1.0f-GlobalPlayerAttribute.HeiAnSkill3CDNum/100.0f);
+        return value;
+    }
+    
+    
+    public float GetDianSkill1Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.DianSkill1];
+        value*=(1.0f-GlobalPlayerAttribute.Skill1CdNum/100.0f);
+        return value;
+    }
+    
+    public float GetDianSkill2Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.DianSkill2];
+        value*=(1.0f-GlobalPlayerAttribute.DianSkill2CDNum/100.0f);
+        return value;
+    }
+    
+    public float GetDianSkill3Time()
+    {
+        float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.DianSkill3];
+        value*=(1.0f-GlobalPlayerAttribute.DianSkill3CDNum/100.0f);
+        return value;
+    }
+    
+    
+    
+    
+    
     
     
     [NonSerialized]public float IceArrowCoolingtime = 0;
@@ -63,13 +155,13 @@ public class SkillController : XSingleton<SkillController>
 
     
     
-    public float IceBallDuration = 5;
-    public float HuoSkill2Duration = 5;
-    public float DianSkill2Duration = 5;
-    public float HeiAnSkill2Duration = 5;
-
+    public float IceBallDuration =>GetIceBallDuration();
+    public float HuoSkill2Duration =>GetHuoSkill2Duration();
+    public float DianSkill2Duration =>GetDianSkill2Duration();
+    public float HeiAnSkill2Duration =>GetHeiAnSkill2Duration();
+    
     public float Dashtime => GetDashCd();
-    public float DianQuantime => GetDianQuanTime();
+    public float DianQuantime =>GetDianSkill1Time();
 
 
 
@@ -84,13 +176,42 @@ public class SkillController : XSingleton<SkillController>
     public bool IsHeiAnSkill2=false;
 
 
+    public float GetIceBallDuration()
+    {
+        float value = 5f;
+        value*=(1.0f+GlobalPlayerAttribute.Skill2TimeNum/100.0f);
+        return value;
+    }
+    
+    public float GetHuoSkill2Duration()
+    {
+        float value = 5f;
+        value*=(1.0f+GlobalPlayerAttribute.HuoSkill2TimeNum/100.0f);
+        return value;
+    }
+    
+    public float GetHeiAnSkill2Duration()
+    {
+        float value = 5f;
+        value*=(1.0f+GlobalPlayerAttribute.HeiAnSkill2TimeNum/100.0f);
+        return value;
+    }
+    
+    public float GetDianSkill2Duration()
+    {
+        float value = 5f;
+        value*=(1.0f+GlobalPlayerAttribute.DianSkill2TimeNum/100.0f);
+        return value;
+    }
+    
+    
 
     public float GetHuoDamage()
     {
         float value = GlobalPlayerAttribute.HuoYuanSuBase;
         if (IsHuoSkill2)
         {
-            value += 0.3f;
+            value += (0.3f+GlobalPlayerAttribute.HuoSkill2Num/100.0f);
         }
         return value;
     }
@@ -101,7 +222,7 @@ public class SkillController : XSingleton<SkillController>
         float value = GlobalPlayerAttribute.DianYuanSuBase;
         if (IsDianSkill2)
         {
-            value += 0.3f;
+            value +=(0.3f+GlobalPlayerAttribute.DianSkill2Num/100.0f);
         }
         return value;
     }
@@ -111,7 +232,7 @@ public class SkillController : XSingleton<SkillController>
         float value =GlobalPlayerAttribute.HeiAnYuanSuBase;
         if (IsHeiAnSkill2)
         {
-            value += 0.3f;
+            value += (0.3f+GlobalPlayerAttribute.HeiAnSkill2Num/100.0f);
         }
         return value;
     }
@@ -242,6 +363,7 @@ public class SkillController : XSingleton<SkillController>
         DianSkill3Coolingtime = 0;
         float waveOffset = Random.Range(0,30);
         int bulletCount = 12;
+        bulletCount += (int)GlobalPlayerAttribute.DianSkill3CountNum / 100;
         float angleStep = 360f / bulletCount;
 
         for (int i = 0; i < bulletCount; i++)
@@ -376,8 +498,9 @@ public class SkillController : XSingleton<SkillController>
         // 原始方向
         Vector2 baseDir = (worldPos -GameController.S.gamePlayer.transform.position).normalized;
 
-        int bulletCount = 3;
+        int bulletCount = 5;
         // 两个偏移角度：+10° 和 -10°
+        bulletCount += (int)GlobalPlayerAttribute.HuoSkill1CountNum / 100;
       
         Vector2[] dirs5 =
         {
@@ -387,8 +510,53 @@ public class SkillController : XSingleton<SkillController>
             Quaternion.AngleAxis( -5f, Vector3.forward) * baseDir,
             Quaternion.AngleAxis( 5f, Vector3.forward) * baseDir,
         };
-        Vector2[] dirs=dirs5;
-       
+        Vector2[] dirs6 =
+        {
+            Quaternion.AngleAxis( -2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 6f, Vector3.forward) * baseDir,
+        };
+        Vector2[] dirs7 =
+        {
+            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -4f, Vector3.forward) * baseDir,
+        };
+        Vector2[] dirs8 =
+        {
+            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -8f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 8f, Vector3.forward) * baseDir,
+        };
+        Vector2[] dirs = null;
+        switch (bulletCount)
+        {
+            case 5:
+                dirs=dirs5;
+                break;
+            case 6:
+                dirs=dirs6;
+                break;
+            case 7:
+                dirs=dirs7;
+                break;
+            case 8:
+                dirs=dirs8;
+                break;
+        }
         foreach (Vector2 dir in dirs)
         {
             HuoSkill1 bullet = GameController.S.HuoSkill1Queue.Dequeue();
@@ -525,7 +693,9 @@ public class SkillController : XSingleton<SkillController>
                 HuoSkill2();
                 break;
             case SkillType.HuoSkill3:
-                StartCoroutine(HuoSkill3(5,1.3f,0.2f));
+                int count = 5;
+                count += (int)GlobalPlayerAttribute.HuoSkill3CountNum / 100;
+                StartCoroutine(HuoSkill3(count,1.3f,0.2f));
                 break;
             case SkillType.HeiAnSkill1:
                 HeiAnSkill1();

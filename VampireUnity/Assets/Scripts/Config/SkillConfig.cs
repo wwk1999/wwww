@@ -87,6 +87,45 @@ namespace Config
             HeiAnSkill3YuanSu,
         }
 
+        public enum ZhuDongSkillTime
+        {
+            None,
+            IceSkill1,
+            IceSkill2,
+            IceSkill3,
+            
+            DianSkill1,
+            DianSkill2,
+            DianSkill3,
+            
+            HuoSkill1,
+            HuoSkill2,
+            HuoSkill3,
+            
+            HeiAnSkill1,
+            HeiAnSkill2,
+            HeiAnSkill3,
+        }
+
+        public static Dictionary<ZhuDongSkillTime, float> SkillBaseTime = new Dictionary<ZhuDongSkillTime, float>()
+        {
+            { ZhuDongSkillTime.DianSkill1 ,8f},
+            { ZhuDongSkillTime.DianSkill2 ,15f},
+            { ZhuDongSkillTime.DianSkill3 ,12f},
+
+            { ZhuDongSkillTime.HeiAnSkill1 ,8f},
+            { ZhuDongSkillTime.HeiAnSkill2 ,15f},
+            { ZhuDongSkillTime.HeiAnSkill3 ,12f},
+            
+            { ZhuDongSkillTime.HuoSkill1 ,8f},
+            { ZhuDongSkillTime.HuoSkill2 ,15f},
+            { ZhuDongSkillTime.HuoSkill3 ,12f},
+            
+            { ZhuDongSkillTime.IceSkill1 ,8f},
+            { ZhuDongSkillTime.IceSkill2 ,15f},
+            { ZhuDongSkillTime.IceSkill3 ,12f},
+        };
+
         public static Dictionary<MonsterType, float> BaseMonsterDic = new Dictionary<MonsterType, float>()
         {
             { MonsterType.Attack, 1 },
@@ -138,7 +177,7 @@ namespace Config
             {SkillButtonType.DianSkill3YuanSu,5},
             
             {SkillButtonType.HuoSkill1,5},
-            {SkillButtonType.HuoSkill1Count,5},
+            {SkillButtonType.HuoSkill1Count,3},
             {SkillButtonType.HuoSkill1CD,5},
             {SkillButtonType.HuoSkill1YuanSu,5},
             
@@ -148,7 +187,7 @@ namespace Config
             {SkillButtonType.HuoSkill2YuanSu,5},
             
             {SkillButtonType.HuoSkill3,5},
-            {SkillButtonType.HuoSkill3Count,5},
+            {SkillButtonType.HuoSkill3Count,3},
             {SkillButtonType.HuoSkill3CD,5},
             {SkillButtonType.HuoSkill3YuanSu,5},
             
