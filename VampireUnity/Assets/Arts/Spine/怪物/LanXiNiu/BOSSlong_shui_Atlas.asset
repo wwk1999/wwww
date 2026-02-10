@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: BOSSlong_shui_Atlas
   m_EditorClassIdentifier: 
+  serializedMaterialOverrides: []
   textureLoadingMode: 0
   onDemandTextureLoader: {fileID: 0}
   atlasFile: {fileID: 4900000, guid: 2a6aec9825a2e9b4380efbb3b904e1a0, type: 3}
