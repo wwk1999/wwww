@@ -21,56 +21,56 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite HA4;
     public static Sprite HA5;
     public static Sprite HA6;
-    
+
     public static Sprite HC1;
     public static Sprite HC2;
     public static Sprite HC3;
     public static Sprite HC4;
     public static Sprite HC5;
     public static Sprite HC6;
-    
+
     public static Sprite HD1;
     public static Sprite HD2;
     public static Sprite HD3;
     public static Sprite HD4;
     public static Sprite HD5;
     public static Sprite HD6;
-    
+
     public static Sprite AA1;
     public static Sprite AA2;
     public static Sprite AA3;
     public static Sprite AA4;
     public static Sprite AA5;
     public static Sprite AA6;
-    
+
     public static Sprite AC1;
     public static Sprite AC2;
     public static Sprite AC3;
     public static Sprite AC4;
     public static Sprite AC5;
     public static Sprite AC6;
-    
+
     public static Sprite AD1;
     public static Sprite AD2;
     public static Sprite AD3;
     public static Sprite AD4;
     public static Sprite AD5;
     public static Sprite AD6;
-    
+
     public static Sprite CD1;
     public static Sprite CD2;
     public static Sprite CD3;
     public static Sprite CD4;
     public static Sprite CD5;
     public static Sprite CD6;
-    
+
     public static Sprite CC1;
     public static Sprite CC2;
     public static Sprite CC3;
     public static Sprite CC4;
     public static Sprite CC5;
     public static Sprite CC6;
-    
+
     public static Sprite DD1;
     public static Sprite DD2;
     public static Sprite DD3;
@@ -194,13 +194,13 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite BossShiRenIcon;
     public static Sprite WenZiIcon;
     public static Sprite ZhaoZeBossIcon;
-    
+
     public static Sprite ShaChongIcon;
     public static Sprite ShaNiaoIcon;
     public static Sprite XianRenZhangIcon;
     public static Sprite ShaXiYiIcon;
     public static Sprite XieZiIcon;
-    
+
     public static Sprite XueQiEIcon;
     public static Sprite XueRenIcon;
     public static Sprite XUeZhangLangIcon;
@@ -256,7 +256,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ZuiEYanZhu;
     public static Sprite JuDaYaChi;
     public static Sprite ShenHuaZhiXin;
-    
+
     //loading页
     public static Sprite Loading1;
     public static Sprite Loading2;
@@ -319,6 +319,77 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite RingFortureAddSprite;
     public static Sprite HelmetFortureAddSprite;
 
+
+
+    //宠物图片
+    public static Sprite icewhite1;
+    public static Sprite huowhite1;
+    public static Sprite dianwhite1;
+    public static Sprite heianwhite1;
+    public static Sprite heianwhite2;
+
+    public static Sprite icegreen1;
+    public static Sprite icegreen2;
+    public static Sprite icegreen3;
+    public static Sprite huogreen1;
+    public static Sprite huogreen2;
+    public static Sprite diangreen1;
+    public static Sprite diangreen2;
+    public static Sprite heiangreen1;
+    public static Sprite heiangreen2;
+    public static Sprite heiangreen3;
+
+
+    public static Sprite iceblue1;
+    public static Sprite iceblue2;
+    public static Sprite huoblue1;
+    public static Sprite huoblue2;
+    public static Sprite huoblue3;
+    public static Sprite dianblue1;
+    public static Sprite dianblue2;
+    public static Sprite heianblue1;
+    public static Sprite heianblue2;
+    public static Sprite heianblue3;
+
+
+    public static Sprite icepurple1_q;
+    public static Sprite icepurple1_h;
+    public static Sprite icepurple2_q;
+    public static Sprite icepurple2_h;
+    public static Sprite icepurple3_q;
+    public static Sprite icepurple3_h;
+
+    public static Sprite huopurple1_q;
+    public static Sprite huopurple1_h;
+    public static Sprite huopurple2_q;
+    public static Sprite huopurple2_h;
+    public static Sprite huopurple3_q;
+    public static Sprite huopurple3_h;
+
+    public static Sprite dianpurple1_q;
+    public static Sprite dianpurple1_h;
+    public static Sprite dianpurple2_q;
+    public static Sprite dianpurple2_h;
+    public static Sprite dianpurple3_q;
+    public static Sprite dianpurple3_h;
+
+    public static Sprite heianpurple1_q;
+    public static Sprite heianpurple1_h;
+    public static Sprite heianpurple2_q;
+    public static Sprite heianpurple2_h;
+    public static Sprite heianpurple3_q;
+    public static Sprite heianpurple3_h;
+
+
+    public static Sprite iceorange1_q;
+    public static Sprite iceorange1_h;
+    public static Sprite huoorange1_q;
+    public static Sprite huoorange1_h;
+    public static Sprite dianorange1_q;
+    public static Sprite dianorange1_h;
+    public static Sprite heianorange1_q;
+    public static Sprite heianorange1_h;
+
     public static Sprite GetBaoShiSprite(BaoShiInfo info)
     {
         switch (info.BaoShiType)
@@ -339,8 +410,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return AA6;
                 }
+
                 break;
-            
+
             case BaoShiType.HH:
                 switch (info.Quality)
                 {
@@ -357,8 +429,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HH6;
                 }
+
                 break;
-            
+
             case BaoShiType.HA:
                 switch (info.Quality)
                 {
@@ -375,8 +448,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HA6;
                 }
+
                 break;
-            
+
             case BaoShiType.HC:
                 switch (info.Quality)
                 {
@@ -393,8 +467,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HC6;
                 }
+
                 break;
-            
+
             case BaoShiType.HD:
                 switch (info.Quality)
                 {
@@ -411,8 +486,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HD6;
                 }
+
                 break;
-            
+
             case BaoShiType.AC:
                 switch (info.Quality)
                 {
@@ -429,8 +505,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return AC6;
                 }
+
                 break;
-            
+
             case BaoShiType.AD:
                 switch (info.Quality)
                 {
@@ -447,8 +524,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return AD6;
                 }
+
                 break;
-            
+
             case BaoShiType.CC:
                 switch (info.Quality)
                 {
@@ -465,8 +543,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return CC6;
                 }
+
                 break;
-            
+
             case BaoShiType.DD:
                 switch (info.Quality)
                 {
@@ -483,8 +562,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return DD6;
                 }
+
                 break;
-            
+
             case BaoShiType.CD:
                 switch (info.Quality)
                 {
@@ -501,100 +581,176 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return CD6;
                 }
+
                 break;
         }
+
         return null;
     }
-    
+
     public static void Init()
     {
-        //宝石
-        HH1= Resources.Load<Sprite>("Sprite/BaoShi/HH1");
-        HH2= Resources.Load<Sprite>("Sprite/BaoShi/HH2");
-        HH3= Resources.Load<Sprite>("Sprite/BaoShi/HH3");
-        HH4= Resources.Load<Sprite>("Sprite/BaoShi/HH4");
-        HH5= Resources.Load<Sprite>("Sprite/BaoShi/HH5");
-        HH6= Resources.Load<Sprite>("Sprite/BaoShi/HH6");
+        //宠物
+// White sprites
+        icewhite1 = Resources.Load<Sprite>("Sprite/ChongWu/icewhite1");
+        huowhite1 = Resources.Load<Sprite>("Sprite/ChongWu/huowhite1");
+        dianwhite1 = Resources.Load<Sprite>("Sprite/ChongWu/dianwhite1");
+        heianwhite1 = Resources.Load<Sprite>("Sprite/ChongWu/heianwhite1");
+        heianwhite2 = Resources.Load<Sprite>("Sprite/ChongWu/heianwhite2");
 
-        HA1= Resources.Load<Sprite>("Sprite/BaoShi/HA1");
-        HA2= Resources.Load<Sprite>("Sprite/BaoShi/HA2");
-        HA3= Resources.Load<Sprite>("Sprite/BaoShi/HA3");
-        HA4= Resources.Load<Sprite>("Sprite/BaoShi/HA4");
-        HA5= Resources.Load<Sprite>("Sprite/BaoShi/HA5");
-        HA6= Resources.Load<Sprite>("Sprite/BaoShi/HA6");
-        
-        HC1= Resources.Load<Sprite>("Sprite/BaoShi/HC1");
-        HC2= Resources.Load<Sprite>("Sprite/BaoShi/HC2");
-        HC3= Resources.Load<Sprite>("Sprite/BaoShi/HC3");
-        HC4= Resources.Load<Sprite>("Sprite/BaoShi/HC4");
-        HC5= Resources.Load<Sprite>("Sprite/BaoShi/HC5");
-        HC6= Resources.Load<Sprite>("Sprite/BaoShi/HC6");
-        
-        HD1= Resources.Load<Sprite>("Sprite/BaoShi/HD1");
-        HD2= Resources.Load<Sprite>("Sprite/BaoShi/HD2");
-        HD3= Resources.Load<Sprite>("Sprite/BaoShi/HD3");
-        HD4= Resources.Load<Sprite>("Sprite/BaoShi/HD4");
-        HD5= Resources.Load<Sprite>("Sprite/BaoShi/HD5");
-        HD6= Resources.Load<Sprite>("Sprite/BaoShi/HD6");
-        
-        AA1= Resources.Load<Sprite>("Sprite/BaoShi/AA1");
-        AA2= Resources.Load<Sprite>("Sprite/BaoShi/AA2");
-        AA3= Resources.Load<Sprite>("Sprite/BaoShi/AA3");
-        AA4= Resources.Load<Sprite>("Sprite/BaoShi/AA4");
-        AA5= Resources.Load<Sprite>("Sprite/BaoShi/AA5");
-        AA6= Resources.Load<Sprite>("Sprite/BaoShi/AA6");
-        
-        AC1= Resources.Load<Sprite>("Sprite/BaoShi/AC1");
-        AC2= Resources.Load<Sprite>("Sprite/BaoShi/AC2");
-        AC3= Resources.Load<Sprite>("Sprite/BaoShi/AC3");
-        AC4= Resources.Load<Sprite>("Sprite/BaoShi/AC4");
-        AC5= Resources.Load<Sprite>("Sprite/BaoShi/AC5");
-        AC6= Resources.Load<Sprite>("Sprite/BaoShi/AC6");
-        
-        AD1= Resources.Load<Sprite>("Sprite/BaoShi/AD1");
-        AD2= Resources.Load<Sprite>("Sprite/BaoShi/AD2");
-        AD3= Resources.Load<Sprite>("Sprite/BaoShi/AD3");
-        AD4= Resources.Load<Sprite>("Sprite/BaoShi/AD4");
-        AD5= Resources.Load<Sprite>("Sprite/BaoShi/AD5");
-        AD6= Resources.Load<Sprite>("Sprite/BaoShi/AD6");
-        
-        CC1= Resources.Load<Sprite>("Sprite/BaoShi/CC1");
-        CC2= Resources.Load<Sprite>("Sprite/BaoShi/CC2");
-        CC3= Resources.Load<Sprite>("Sprite/BaoShi/CC3");
-        CC4= Resources.Load<Sprite>("Sprite/BaoShi/CC4");
-        CC5= Resources.Load<Sprite>("Sprite/BaoShi/CC5");
-        CC6= Resources.Load<Sprite>("Sprite/BaoShi/CC6");
-        
-        CD1= Resources.Load<Sprite>("Sprite/BaoShi/CD1");
-        CD2= Resources.Load<Sprite>("Sprite/BaoShi/CD2");
-        CD3= Resources.Load<Sprite>("Sprite/BaoShi/CD3");
-        CD4= Resources.Load<Sprite>("Sprite/BaoShi/CD4");
-        CD5= Resources.Load<Sprite>("Sprite/BaoShi/CD5");
-        CD6= Resources.Load<Sprite>("Sprite/BaoShi/CD6");
-        
-        DD1= Resources.Load<Sprite>("Sprite/BaoShi/DD1");
-        DD2= Resources.Load<Sprite>("Sprite/BaoShi/DD2");
-        DD3= Resources.Load<Sprite>("Sprite/BaoShi/DD3");
-        DD4= Resources.Load<Sprite>("Sprite/BaoShi/DD4");
-        DD5= Resources.Load<Sprite>("Sprite/BaoShi/DD5");
-        DD6= Resources.Load<Sprite>("Sprite/BaoShi/DD6");
-        
-        
-        
+// Green sprites
+        icegreen1 = Resources.Load<Sprite>("Sprite/ChongWu/icegreen1");
+        icegreen2 = Resources.Load<Sprite>("Sprite/ChongWu/icegreen2");
+        icegreen3 = Resources.Load<Sprite>("Sprite/ChongWu/icegreen3");
+        huogreen1 = Resources.Load<Sprite>("Sprite/ChongWu/huogreen1");
+        huogreen2 = Resources.Load<Sprite>("Sprite/ChongWu/huogreen2");
+        diangreen1 = Resources.Load<Sprite>("Sprite/ChongWu/diangreen1");
+        diangreen2 = Resources.Load<Sprite>("Sprite/ChongWu/diangreen2");
+        heiangreen1 = Resources.Load<Sprite>("Sprite/ChongWu/heiangreen1");
+        heiangreen2 = Resources.Load<Sprite>("Sprite/ChongWu/heiangreen2");
+        heiangreen3 = Resources.Load<Sprite>("Sprite/ChongWu/heiangreen3");
+
+// Blue sprites
+        iceblue1 = Resources.Load<Sprite>("Sprite/ChongWu/iceblue1");
+        iceblue2 = Resources.Load<Sprite>("Sprite/ChongWu/iceblue2");
+        huoblue1 = Resources.Load<Sprite>("Sprite/ChongWu/huoblue1");
+        huoblue2 = Resources.Load<Sprite>("Sprite/ChongWu/huoblue2");
+        huoblue3 = Resources.Load<Sprite>("Sprite/ChongWu/huoblue3");
+        dianblue1 = Resources.Load<Sprite>("Sprite/ChongWu/dianblue1");
+        dianblue2 = Resources.Load<Sprite>("Sprite/ChongWu/dianblue2");
+        heianblue1 = Resources.Load<Sprite>("Sprite/ChongWu/heianblue1");
+        heianblue2 = Resources.Load<Sprite>("Sprite/ChongWu/heianblue2");
+        heianblue3 = Resources.Load<Sprite>("Sprite/ChongWu/heianblue3");
+
+// Purple sprites (q/h variants)
+        icepurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/icepurple1_q");
+        icepurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/icepurple1_h");
+        icepurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/icepurple2_q");
+        icepurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/icepurple2_h");
+        icepurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/icepurple3_q");
+        icepurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/icepurple3_h");
+
+        huopurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/huopurple1_q");
+        huopurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/huopurple1_h");
+        huopurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/huopurple2_q");
+        huopurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/huopurple2_h");
+        huopurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/huopurple3_q");
+        huopurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/huopurple3_h");
+
+        dianpurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple1_q");
+        dianpurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple1_h");
+        dianpurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple2_q");
+        dianpurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple2_h");
+        dianpurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple3_q");
+        dianpurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple3_h");
+
+        heianpurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple1_q");
+        heianpurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple1_h");
+        heianpurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple2_q");
+        heianpurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple2_h");
+        heianpurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple3_q");
+        heianpurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple3_h");
+
+// Orange sprites (q/h variants)
+        iceorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/iceorange1_q");
+        iceorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/iceorange1_h");
+        huoorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/huoorange1_q");
+        huoorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/huoorange1_h");
+        dianorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/dianorange1_q");
+        dianorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/dianorange1_h");
+        heianorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/heianorange1_q");
+        heianorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/heianorange1_h");
+
+
+
+
+        //宝石
+        HH1 = Resources.Load<Sprite>("Sprite/BaoShi/HH1");
+        HH2 = Resources.Load<Sprite>("Sprite/BaoShi/HH2");
+        HH3 = Resources.Load<Sprite>("Sprite/BaoShi/HH3");
+        HH4 = Resources.Load<Sprite>("Sprite/BaoShi/HH4");
+        HH5 = Resources.Load<Sprite>("Sprite/BaoShi/HH5");
+        HH6 = Resources.Load<Sprite>("Sprite/BaoShi/HH6");
+
+        HA1 = Resources.Load<Sprite>("Sprite/BaoShi/HA1");
+        HA2 = Resources.Load<Sprite>("Sprite/BaoShi/HA2");
+        HA3 = Resources.Load<Sprite>("Sprite/BaoShi/HA3");
+        HA4 = Resources.Load<Sprite>("Sprite/BaoShi/HA4");
+        HA5 = Resources.Load<Sprite>("Sprite/BaoShi/HA5");
+        HA6 = Resources.Load<Sprite>("Sprite/BaoShi/HA6");
+
+        HC1 = Resources.Load<Sprite>("Sprite/BaoShi/HC1");
+        HC2 = Resources.Load<Sprite>("Sprite/BaoShi/HC2");
+        HC3 = Resources.Load<Sprite>("Sprite/BaoShi/HC3");
+        HC4 = Resources.Load<Sprite>("Sprite/BaoShi/HC4");
+        HC5 = Resources.Load<Sprite>("Sprite/BaoShi/HC5");
+        HC6 = Resources.Load<Sprite>("Sprite/BaoShi/HC6");
+
+        HD1 = Resources.Load<Sprite>("Sprite/BaoShi/HD1");
+        HD2 = Resources.Load<Sprite>("Sprite/BaoShi/HD2");
+        HD3 = Resources.Load<Sprite>("Sprite/BaoShi/HD3");
+        HD4 = Resources.Load<Sprite>("Sprite/BaoShi/HD4");
+        HD5 = Resources.Load<Sprite>("Sprite/BaoShi/HD5");
+        HD6 = Resources.Load<Sprite>("Sprite/BaoShi/HD6");
+
+        AA1 = Resources.Load<Sprite>("Sprite/BaoShi/AA1");
+        AA2 = Resources.Load<Sprite>("Sprite/BaoShi/AA2");
+        AA3 = Resources.Load<Sprite>("Sprite/BaoShi/AA3");
+        AA4 = Resources.Load<Sprite>("Sprite/BaoShi/AA4");
+        AA5 = Resources.Load<Sprite>("Sprite/BaoShi/AA5");
+        AA6 = Resources.Load<Sprite>("Sprite/BaoShi/AA6");
+
+        AC1 = Resources.Load<Sprite>("Sprite/BaoShi/AC1");
+        AC2 = Resources.Load<Sprite>("Sprite/BaoShi/AC2");
+        AC3 = Resources.Load<Sprite>("Sprite/BaoShi/AC3");
+        AC4 = Resources.Load<Sprite>("Sprite/BaoShi/AC4");
+        AC5 = Resources.Load<Sprite>("Sprite/BaoShi/AC5");
+        AC6 = Resources.Load<Sprite>("Sprite/BaoShi/AC6");
+
+        AD1 = Resources.Load<Sprite>("Sprite/BaoShi/AD1");
+        AD2 = Resources.Load<Sprite>("Sprite/BaoShi/AD2");
+        AD3 = Resources.Load<Sprite>("Sprite/BaoShi/AD3");
+        AD4 = Resources.Load<Sprite>("Sprite/BaoShi/AD4");
+        AD5 = Resources.Load<Sprite>("Sprite/BaoShi/AD5");
+        AD6 = Resources.Load<Sprite>("Sprite/BaoShi/AD6");
+
+        CC1 = Resources.Load<Sprite>("Sprite/BaoShi/CC1");
+        CC2 = Resources.Load<Sprite>("Sprite/BaoShi/CC2");
+        CC3 = Resources.Load<Sprite>("Sprite/BaoShi/CC3");
+        CC4 = Resources.Load<Sprite>("Sprite/BaoShi/CC4");
+        CC5 = Resources.Load<Sprite>("Sprite/BaoShi/CC5");
+        CC6 = Resources.Load<Sprite>("Sprite/BaoShi/CC6");
+
+        CD1 = Resources.Load<Sprite>("Sprite/BaoShi/CD1");
+        CD2 = Resources.Load<Sprite>("Sprite/BaoShi/CD2");
+        CD3 = Resources.Load<Sprite>("Sprite/BaoShi/CD3");
+        CD4 = Resources.Load<Sprite>("Sprite/BaoShi/CD4");
+        CD5 = Resources.Load<Sprite>("Sprite/BaoShi/CD5");
+        CD6 = Resources.Load<Sprite>("Sprite/BaoShi/CD6");
+
+        DD1 = Resources.Load<Sprite>("Sprite/BaoShi/DD1");
+        DD2 = Resources.Load<Sprite>("Sprite/BaoShi/DD2");
+        DD3 = Resources.Load<Sprite>("Sprite/BaoShi/DD3");
+        DD4 = Resources.Load<Sprite>("Sprite/BaoShi/DD4");
+        DD5 = Resources.Load<Sprite>("Sprite/BaoShi/DD5");
+        DD6 = Resources.Load<Sprite>("Sprite/BaoShi/DD6");
+
+
+
         Skill1 = Resources.Load<Sprite>("Sprite/Skill/skill1");
         Skill2 = Resources.Load<Sprite>("Sprite/Skill/skill2");
         Skill3 = Resources.Load<Sprite>("Sprite/Skill/skill3");
         Dash = Resources.Load<Sprite>("Sprite/Skill/dash");
         NormalAttack = Resources.Load<Sprite>("Sprite/Skill/normalAttack");
-        IceSkill1= Resources.Load<Sprite>("Sprite/Skill/IceSkill1");
-        DianSkill2= Resources.Load<Sprite>("Sprite/Skill/DianSkill2");
-        DianSkill3= Resources.Load<Sprite>("Sprite/Skill/DianSkill3");
-        HuoSkill1= Resources.Load<Sprite>("Sprite/Skill/HuoSkill1");
-        HuoSkill2= Resources.Load<Sprite>("Sprite/Skill/HuoSkill2");
-        HuoSkill3= Resources.Load<Sprite>("Sprite/Skill/HuoSkill3");
-        HeiAnSkill1= Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill1");
-        HeiAnSkill2= Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill2");
-        HeiAnSkill3= Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill3");
+        IceSkill1 = Resources.Load<Sprite>("Sprite/Skill/IceSkill1");
+        DianSkill2 = Resources.Load<Sprite>("Sprite/Skill/DianSkill2");
+        DianSkill3 = Resources.Load<Sprite>("Sprite/Skill/DianSkill3");
+        HuoSkill1 = Resources.Load<Sprite>("Sprite/Skill/HuoSkill1");
+        HuoSkill2 = Resources.Load<Sprite>("Sprite/Skill/HuoSkill2");
+        HuoSkill3 = Resources.Load<Sprite>("Sprite/Skill/HuoSkill3");
+        HeiAnSkill1 = Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill1");
+        HeiAnSkill2 = Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill2");
+        HeiAnSkill3 = Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill3");
 
 
         //道具
@@ -624,15 +780,15 @@ public class ResourcesConfig : MonoBehaviour
         ZuiEYanZhu = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ZuiEYanZhu");
         JuDaYaChi = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/JuDaYaChi");
         ShenHuaZhiXin = Resources.Load<Sprite>("Sprite/Prop/ShenHuaCaiLiao/ShenHuaZhiXin");
-        
-        
+
+
         //loading页
-        Loading1= Resources.Load<Sprite>("Sprite/Loading/bg1");
-        Loading2= Resources.Load<Sprite>("Sprite/Loading/bg2");
-        Loading3= Resources.Load<Sprite>("Sprite/Loading/bg3");
-        Loading4= Resources.Load<Sprite>("Sprite/Loading/bg4");
-        Loading5= Resources.Load<Sprite>("Sprite/Loading/bg5");
-        Loading6= Resources.Load<Sprite>("Sprite/Loading/bg6");
+        Loading1 = Resources.Load<Sprite>("Sprite/Loading/bg1");
+        Loading2 = Resources.Load<Sprite>("Sprite/Loading/bg2");
+        Loading3 = Resources.Load<Sprite>("Sprite/Loading/bg3");
+        Loading4 = Resources.Load<Sprite>("Sprite/Loading/bg4");
+        Loading5 = Resources.Load<Sprite>("Sprite/Loading/bg5");
+        Loading6 = Resources.Load<Sprite>("Sprite/Loading/bg6");
 
 
 
@@ -840,19 +996,19 @@ public class ResourcesConfig : MonoBehaviour
         ShiRenHuaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenhua");
         BossShiRenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenboss");
         WenZiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/wenzi");
-        ZhaoZeBossIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhaozeboss");
-        
-        ShaChongIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shachong");
-        ShaNiaoIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaniao");
-        XianRenZhangIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xianrenzhang");
-        ShaXiYiIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaxiyi");
-        XieZiIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiezi");
+        ZhaoZeBossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhaozeboss");
 
-        XueQiEIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueqie");
-        XueRenBossIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueren");
-        XUeZhangLangIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuezhanglang");
-        YingShuIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yingshu");
-        XueRenBossIcon= Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuerenboss");
+        ShaChongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shachong");
+        ShaNiaoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaniao");
+        XianRenZhangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xianrenzhang");
+        ShaXiYiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaxiyi");
+        XieZiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiezi");
+
+        XueQiEIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueqie");
+        XueRenBossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueren");
+        XUeZhangLangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuezhanglang");
+        YingShuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yingshu");
+        XueRenBossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuerenboss");
     }
 
     public static Sprite GetLoadingBg()
@@ -861,25 +1017,27 @@ public class ResourcesConfig : MonoBehaviour
         {
             return Loading1;
         }
-        if (LevelInfoConfig.CurrentGameLevel >= 4&& LevelInfoConfig.CurrentGameLevel < 7)
+
+        if (LevelInfoConfig.CurrentGameLevel >= 4 && LevelInfoConfig.CurrentGameLevel < 7)
         {
             return Loading2;
         }
-        
-        if (LevelInfoConfig.CurrentGameLevel >= 7&& LevelInfoConfig.CurrentGameLevel < 10)
+
+        if (LevelInfoConfig.CurrentGameLevel >= 7 && LevelInfoConfig.CurrentGameLevel < 10)
         {
             return Loading3;
         }
-        
-        if (LevelInfoConfig.CurrentGameLevel >= 10&& LevelInfoConfig.CurrentGameLevel < 13)
+
+        if (LevelInfoConfig.CurrentGameLevel >= 10 && LevelInfoConfig.CurrentGameLevel < 13)
         {
             return Loading4;
         }
-        
-        if (LevelInfoConfig.CurrentGameLevel >= 13&& LevelInfoConfig.CurrentGameLevel < 16)
+
+        if (LevelInfoConfig.CurrentGameLevel >= 13 && LevelInfoConfig.CurrentGameLevel < 16)
         {
             return Loading5;
         }
+
         if (LevelInfoConfig.CurrentGameLevel >= 16)
         {
             return Loading6;
@@ -918,7 +1076,7 @@ public class ResourcesConfig : MonoBehaviour
         }
         else
         {
-            switch (propId%100)
+            switch (propId % 100)
             {
                 case 1:
                     return WhiteBg;
@@ -1119,7 +1277,7 @@ public class ResourcesConfig : MonoBehaviour
                 }
 
                 break;
-            
+
             case 7:
                 switch (equipTable.EquipType)
                 {
@@ -1159,7 +1317,7 @@ public class ResourcesConfig : MonoBehaviour
                 return OrangeWeaponFragment;
             case 106:
                 return RedWeaponFragment;
-            
+
             case 201:
                 return WhiteJingCui;
             case 202:
@@ -1172,7 +1330,7 @@ public class ResourcesConfig : MonoBehaviour
                 return OrangeJingCui;
             case 206:
                 return RedJingCui;
-            
+
             case 301:
                 return FuMoZhiGu;
             case 302:
@@ -1183,8 +1341,8 @@ public class ResourcesConfig : MonoBehaviour
                 return ZuiEYanZhu;
             case 305:
                 return ShenHuaZhiXin;
-            
-            
+
+
             case 401:
                 return WhiteChiBang;
             case 402:
@@ -1202,7 +1360,7 @@ public class ResourcesConfig : MonoBehaviour
         return null;
     }
 
-    
+
     public static Sprite GetPropSprite(PropTable propTable)
     {
         switch (propTable.PropType)
@@ -1223,6 +1381,7 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return RedWeaponFragment;
                 }
+
                 break;
             case PropConfig.PropType.JingCui:
                 switch (propTable.Quality)
@@ -1240,6 +1399,7 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return RedJingCui;
                 }
+
                 break;
             case PropConfig.PropType.ChiBang:
                 switch (propTable.Quality)
@@ -1257,8 +1417,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return RedChiBang;
                 }
+
                 break;
-            case  PropConfig.PropType.ShenHuaCaiLiao:
+            case PropConfig.PropType.ShenHuaCaiLiao:
                 switch (propTable.EquipName)
                 {
                     case "FuMoZhiGu":
@@ -1270,6 +1431,7 @@ public class ResourcesConfig : MonoBehaviour
                     case "ZuiEYanZhu":
                         return ZuiEYanZhu;
                 }
+
                 break;
             case PropConfig.PropType.AA:
                 switch (propTable.Quality)
@@ -1287,8 +1449,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return AA6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.AC:
                 switch (propTable.Quality)
                 {
@@ -1305,8 +1468,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return AC6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.AD:
                 switch (propTable.Quality)
                 {
@@ -1323,8 +1487,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return AD6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.HH:
                 switch (propTable.Quality)
                 {
@@ -1341,8 +1506,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HH6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.HA:
                 switch (propTable.Quality)
                 {
@@ -1359,8 +1525,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HA6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.HC:
                 switch (propTable.Quality)
                 {
@@ -1377,8 +1544,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HC6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.HD:
                 switch (propTable.Quality)
                 {
@@ -1395,8 +1563,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return HD6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.CC:
                 switch (propTable.Quality)
                 {
@@ -1413,8 +1582,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return CC6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.CD:
                 switch (propTable.Quality)
                 {
@@ -1431,8 +1601,9 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return CD6;
                 }
+
                 break;
-            
+
             case PropConfig.PropType.DD:
                 switch (propTable.Quality)
                 {
@@ -1449,6 +1620,7 @@ public class ResourcesConfig : MonoBehaviour
                     case 6:
                         return DD6;
                 }
+
                 break;
         }
 
