@@ -1,0 +1,11 @@
+Anima_Small_Skeleton_M6.png
+size:457,130
+filter:Linear,Linear
+pma:true
+slm4_1d
+bounds:2,2,193,126
+slm4_1s
+bounds:197,2,193,126
+slm4n
+bounds:392,56,72,63
+rotate:90

@@ -1,0 +1,12 @@
+Anima_Small_Skeleton_M5.png
+size:469,131
+filter:Linear,Linear
+pma:true
+slm3_1d
+bounds:2,2,197,127
+slm3_1s
+bounds:201,2,197,127
+slm3n
+bounds:400,34,95,67
+offsets:0,2,95,69
+rotate:90

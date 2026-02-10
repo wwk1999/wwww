@@ -1,0 +1,8 @@
+Anima_Small_Skeleton_M3.png
+size:243,140
+filter:Linear,Linear
+pma:true
+slm1_1
+bounds:2,2,208,136
+slm1_2
+bounds:212,101,29,37
