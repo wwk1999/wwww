@@ -19,6 +19,7 @@ public class WindowController : XSingleton<WindowController>
    [NonSerialized] public GameObject BagWindow;
    [NonSerialized] public GameObject SettingWindow;
    [NonSerialized] public GameObject TitleWindow;
+   [NonSerialized] public GameObject ChongWuWindow;
 
    
    public void InitPanel()
@@ -37,6 +38,7 @@ public class WindowController : XSingleton<WindowController>
       MonsterBookWindow=Instantiate(Resources.Load("Prefabs/Window/MonsterBook") as GameObject);
       SettingWindow=Instantiate(Resources.Load("Prefabs/Window/SettingWindow") as GameObject);
       TitleWindow=Instantiate(Resources.Load("Prefabs/Window/TitleWindow") as GameObject);
+      ChongWuWindow=Instantiate(Resources.Load("Prefabs/Window/ChongWuWindow") as GameObject);
 
       
       
@@ -53,6 +55,7 @@ public class WindowController : XSingleton<WindowController>
       MonsterBookWindow.gameObject.SetActive(false);
       SettingWindow.gameObject.SetActive(false);
       TitleWindow.gameObject.SetActive(false);
+      ChongWuWindow.gameObject.SetActive(false);
       Message.SetActive(false);
    }
 }

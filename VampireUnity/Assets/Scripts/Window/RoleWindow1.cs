@@ -46,6 +46,7 @@ public class RoleWindow1 : MonoBehaviour
     
     public Button duanzaoButton;
     public Button chibangButton;
+    public Button chongwuButton;
 
     public Animator whiteChiBang;
     public Animator greenChiBang;
@@ -220,6 +221,10 @@ public class RoleWindow1 : MonoBehaviour
     {
         Debug.Log("点击进入角色界面");
         InitEquip();
+        chongwuButton.onClick.AddListener(() =>
+        {
+            WindowController.S.ChongWuWindow.gameObject.SetActive(true);
+        });
         debugChongWu.onClick.AddListener(() =>
         {
             var data3 = new PropTable()
