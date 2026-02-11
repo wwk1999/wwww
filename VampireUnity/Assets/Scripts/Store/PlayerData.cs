@@ -90,6 +90,8 @@ public class PlayerData : XSingleton<PlayerData>
     public WeaponType playerWeaponType=WeaponType.Primary;
     public MJLevel mJLevel = MJLevel.White;
     public LanguageType langType=LanguageType.Chinese;
+    
+    public List<ChongWuTable> ChongWuList = new List<ChongWuTable>();
 
     protected override void Awake()
     {

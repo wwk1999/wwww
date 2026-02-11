@@ -324,6 +324,18 @@ public class ResourcesConfig : MonoBehaviour
     //宠物图片
     public static Sprite NormalChongWuDan;
     public static Sprite GaoJiChongWuDan;
+
+    public static Sprite XXLiang;
+    public static Sprite XXAn;
+    public static Sprite ChongWuQuality1;
+    public static Sprite ChongWuQuality2;
+    public static Sprite ChongWuQuality3;
+    public static Sprite ChongWuQuality4;
+    public static Sprite ChongWuQuality5;
+    public static Sprite ChongWuQuality6;
+
+    
+    
     public static Sprite icewhite1;
     public static Sprite huowhite1;
     public static Sprite dianwhite1;
@@ -391,6 +403,137 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite dianorange1_h;
     public static Sprite heianorange1_q;
     public static Sprite heianorange1_h;
+
+    public static Sprite GetChongWuSprite(ChongWuType type)
+{
+    switch (type)
+    {
+        case ChongWuType.icewhite1:
+            return icewhite1;
+        case ChongWuType.huowhite1:
+            return huowhite1;
+        case ChongWuType.dianwhite1:
+            return dianwhite1;
+        case ChongWuType.heianwhite1:
+            return heianwhite1;
+        case ChongWuType.heianwhite2:
+            return heianwhite2;
+
+        case ChongWuType.icegreen1:
+            return icegreen1;
+        case ChongWuType.icegreen2:
+            return icegreen2;
+        case ChongWuType.icegreen3:
+            return icegreen3;
+        case ChongWuType.huogreen1:
+            return huogreen1;
+        case ChongWuType.huogreen2:
+            return huogreen2;
+        case ChongWuType.diangreen1:
+            return diangreen1;
+        case ChongWuType.diangreen2:
+            return diangreen2;
+        case ChongWuType.heiangreen1:
+            return heiangreen1;
+        case ChongWuType.heiangreen2:
+            return heiangreen2;
+        case ChongWuType.heiangreen3:
+            return heiangreen3;
+
+        case ChongWuType.iceblue1:
+            return iceblue1;
+        case ChongWuType.iceblue2:
+            return iceblue2;
+        case ChongWuType.huoblue1:
+            return huoblue1;
+        case ChongWuType.huoblue2:
+            return huoblue2;
+        case ChongWuType.huoblue3:
+            return huoblue3;
+        case ChongWuType.dianblue1:
+            return dianblue1;
+        case ChongWuType.dianblue2:
+            return dianblue2;
+        case ChongWuType.heianblue1:
+            return heianblue1;
+        case ChongWuType.heianblue2:
+            return heianblue2;
+        case ChongWuType.heianblue3:
+            return heianblue3;
+
+        case ChongWuType.icepurple1_q:
+            return icepurple1_q;
+        case ChongWuType.icepurple1_h:
+            return icepurple1_h;
+        case ChongWuType.icepurple2_q:
+            return icepurple2_q;
+        case ChongWuType.icepurple2_h:
+            return icepurple2_h;
+        case ChongWuType.icepurple3_q:
+            return icepurple3_q;
+        case ChongWuType.icepurple3_h:
+            return icepurple3_h;
+
+        case ChongWuType.huopurple1_q:
+            return huopurple1_q;
+        case ChongWuType.huopurple1_h:
+            return huopurple1_h;
+        case ChongWuType.huopurple2_q:
+            return huopurple2_q;
+        case ChongWuType.huopurple2_h:
+            return huopurple2_h;
+        case ChongWuType.huopurple3_q:
+            return huopurple3_q;
+        case ChongWuType.huopurple3_h:
+            return huopurple3_h;
+
+        case ChongWuType.dianpurple1_q:
+            return dianpurple1_q;
+        case ChongWuType.dianpurple1_h:
+            return dianpurple1_h;
+        case ChongWuType.dianpurple2_q:
+            return dianpurple2_q;
+        case ChongWuType.dianpurple2_h:
+            return dianpurple2_h;
+        case ChongWuType.dianpurple3_q:
+            return dianpurple3_q;
+        case ChongWuType.dianpurple3_h:
+            return dianpurple3_h;
+
+        case ChongWuType.heianpurple1_q:
+            return heianpurple1_q;
+        case ChongWuType.heianpurple1_h:
+            return heianpurple1_h;
+        case ChongWuType.heianpurple2_q:
+            return heianpurple2_q;
+        case ChongWuType.heianpurple2_h:
+            return heianpurple2_h;
+        case ChongWuType.heianpurple3_q:
+            return heianpurple3_q;
+        case ChongWuType.heianpurple3_h:
+            return heianpurple3_h;
+
+        case ChongWuType.iceorange1_q:
+            return iceorange1_q;
+        case ChongWuType.iceorange1_h:
+            return iceorange1_h;
+        case ChongWuType.huoorange1_q:
+            return huoorange1_q;
+        case ChongWuType.huoorange1_h:
+            return huoorange1_h;
+        case ChongWuType.dianorange1_q:
+            return dianorange1_q;
+        case ChongWuType.dianorange1_h:
+            return dianorange1_h;
+        case ChongWuType.heianorange1_q:
+            return heianorange1_q;
+        case ChongWuType.heianorange1_h:
+            return heianorange1_h;
+
+        default:
+            return null; // 或者返回一个默认的 Sprite
+    }
+}
 
     public static Sprite GetBaoShiSprite(BaoShiInfo info)
     {
@@ -595,6 +738,17 @@ public class ResourcesConfig : MonoBehaviour
         //宠物
         NormalChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/NormalChongWuDan");
         GaoJiChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/GaoJiChongWuDan");
+        
+        XXAn=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/XXAn");
+        XXLiang=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/XXLiang");
+        ChongWuQuality1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality1");
+        ChongWuQuality2=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality2");
+        ChongWuQuality3=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality3");
+        ChongWuQuality4=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality4");
+        ChongWuQuality5=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality5");
+        ChongWuQuality6=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality6");
+
+
 // White sprites
         icewhite1 = Resources.Load<Sprite>("Sprite/ChongWu/icewhite1");
         huowhite1 = Resources.Load<Sprite>("Sprite/ChongWu/huowhite1");

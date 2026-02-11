@@ -93,7 +93,7 @@ public class ChongWuTable :MonoBehaviour
     public ChongWuYuanSuType ChongWuYuanSuType { get; set; }
     public int XingJi { get; set; }
     public int Level {get; set;  }
-
+    public string Name {get; set;  }
 
     public ChongWuTable(
         ChongWuType ChongWuType=ChongWuType.None,
@@ -102,7 +102,8 @@ public class ChongWuTable :MonoBehaviour
         int xuemai=0,
         ChongWuYuanSuType ChongWuYuanSuType=ChongWuYuanSuType.None,
         int xingji=1,
-        int level=0)
+        int level=0,
+        string Name="")
     {
         this.ChongWuType = ChongWuType;
         this.Quality = quality;
@@ -111,5 +112,6 @@ public class ChongWuTable :MonoBehaviour
         this.ChongWuYuanSuType=ChongWuYuanSuType;
         this.XingJi = xingji;
         this.Level = level;
+        this.name = Name;
     }
 }

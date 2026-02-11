@@ -107,6 +107,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         public WeaponType playerWeaponType=WeaponType.Primary;
         public MJLevel mJLevel = MJLevel.White;
         public LanguageType langType=LanguageType.Chinese;
+        public List<ChongWuTable> ChongWuList = new List<ChongWuTable>();
 
 
         
@@ -226,6 +227,8 @@ public class StoreDefine : XSingleton<StoreDefine>
          MonsterCount=runtime.MonsterCount;
          LinHun=runtime.LinHun;
          CurrentInstallTitle=runtime.CurrentInstallTitle;
+         
+         ChongWuList=runtime.ChongWuList;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -312,6 +315,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.LinHun=LinHun;
             
             runtime.CurrentInstallTitle=CurrentInstallTitle;
+            runtime.ChongWuList=ChongWuList;
         }
     }
     

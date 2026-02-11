@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 2859282773362880105}
   - component: {fileID: 2913150226416622755}
   - component: {fileID: 8106146047492846177}
+  - component: {fileID: 2749458119245107199}
   m_Layer: 5
   m_Name: ChongWuListItem
   m_TagString: Untagged
@@ -236,6 +237,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2749458119245107199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309154276206068760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8fe910ba8a145808a83acfe026dbe44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 6610763242611439211}
+  Level: {fileID: 3242008966310168285}
+  QualityIcon: {fileID: 1592655399254982704}
+  XX1: {fileID: 4687386221072112461}
+  XX2: {fileID: 8373487647209976438}
+  XX3: {fileID: 5827813868018684135}
+  XX4: {fileID: 2060295663353296094}
+  XX5: {fileID: 9111293371507016775}
 --- !u!1 &3070035772005997263
 GameObject:
   m_ObjectHideFlags: 0
