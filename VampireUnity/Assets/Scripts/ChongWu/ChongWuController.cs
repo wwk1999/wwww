@@ -21,7 +21,7 @@ public class ChongWuController:XSingleton<ChongWuController>
             ChongWuYuanSuType=chongWuYuanSuType,
             XingJi = 0,
             Level = 1,
-            name = Name,
+            Name = Name,
         };
         return chongWuTable;
     }

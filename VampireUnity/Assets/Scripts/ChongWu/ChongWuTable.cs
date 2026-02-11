@@ -84,7 +84,7 @@ public enum ChongWuYuanSuType
     Dian,
     HeiAn
 }
-public class ChongWuTable :MonoBehaviour
+public class ChongWuTable
 {
     public ChongWuType ChongWuType{ get; set; }
     public int Quality {get; set; }
@@ -112,6 +112,6 @@ public class ChongWuTable :MonoBehaviour
         this.ChongWuYuanSuType=ChongWuYuanSuType;
         this.XingJi = xingji;
         this.Level = level;
-        this.name = Name;
+        this.Name = Name;
     }
 }
