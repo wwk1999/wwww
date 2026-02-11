@@ -28,42 +28,42 @@ public class ChongWuWindow : MonoBehaviour
   }
 
   public void ShowChongWuPage()
-  {
-    foreach (Transform item in ChongWuList.transform)
     {
-      Destroy(item.gameObject);
-    }
-    int originIndex=(CurrentChongWuPageNum-1)*6;
-    ChongWuTable table1 = null;
-    ChongWuTable table2 = null;
-    ChongWuTable table3 = null;
-    ChongWuTable table4 = null;
-    ChongWuTable table5 = null;
-    ChongWuTable table6= null;
-    if (PlayerData.S.ChongWuList[originIndex] != null)
-    {
-      table1 = PlayerData.S.ChongWuList[originIndex];
-    }
-    if (PlayerData.S.ChongWuList[originIndex+1] != null)
-    {
-      table2 = PlayerData.S.ChongWuList[originIndex+1];
-    }
-    if (PlayerData.S.ChongWuList[originIndex+2] != null)
-    {
-      table3 = PlayerData.S.ChongWuList[originIndex+2];
-    }
-    if (PlayerData.S.ChongWuList[originIndex+3] != null)
-    {
-      table4 = PlayerData.S.ChongWuList[originIndex+3];
-    }
-    if (PlayerData.S.ChongWuList[originIndex+4] != null)
-    {
-      table5 = PlayerData.S.ChongWuList[originIndex+4];
-    }
-    if (PlayerData.S.ChongWuList[originIndex+5] != null)
-    {
-      table6 = PlayerData.S.ChongWuList[originIndex+5];
-    }
+        foreach (Transform item in ChongWuList.transform)
+        {
+            Destroy(item.gameObject);
+        }
+        int originIndex=(CurrentChongWuPageNum-1)*6;
+        ChongWuTable table1 = null;
+        ChongWuTable table2 = null;
+        ChongWuTable table3 = null;
+        ChongWuTable table4 = null;
+        ChongWuTable table5 = null;
+        ChongWuTable table6= null;
+        if (originIndex < PlayerData.S.ChongWuList.Count)
+        {
+            table1 = PlayerData.S.ChongWuList[originIndex];
+        }
+        if (originIndex+1 < PlayerData.S.ChongWuList.Count)
+        {
+            table2 = PlayerData.S.ChongWuList[originIndex+1];
+        }
+        if (originIndex+2 < PlayerData.S.ChongWuList.Count)
+        {
+            table3 = PlayerData.S.ChongWuList[originIndex+2];
+        }
+        if (originIndex+3 < PlayerData.S.ChongWuList.Count)
+        {
+            table4 = PlayerData.S.ChongWuList[originIndex+3];
+        }
+        if (originIndex+4 < PlayerData.S.ChongWuList.Count)
+        {
+            table5 = PlayerData.S.ChongWuList[originIndex+4];
+        }
+        if (originIndex+5 < PlayerData.S.ChongWuList.Count)
+        {
+            table6 = PlayerData.S.ChongWuList[originIndex+5];
+        }
 
     if (table1 != null)
     {
@@ -78,27 +78,27 @@ public class ChongWuWindow : MonoBehaviour
   }
 
   private void Start()
-  {
-    Left.onClick.AddListener(() =>
     {
-      if (CurrentChongWuPageNum <= 1)
-      {
-        return;
-      }
-      CurrentChongWuPageNum--;
-      ShowChongWuPage();
-      SetPageNum();
-    });
-    Left.onClick.AddListener(() =>
-    {
-      if (CurrentChongWuPageNum >= MaxChongWuPageNum)
-      {
-        return;
-      }
-      CurrentChongWuPageNum++;
-      ShowChongWuPage();
-      SetPageNum();
-    });
+        Left.onClick.AddListener(() =>
+        {
+            if (CurrentChongWuPageNum <= 1)
+            {
+                return;
+            }
+            CurrentChongWuPageNum--;
+            ShowChongWuPage();
+            SetPageNum();
+        });
+        Right.onClick.AddListener(() =>
+        {
+            if (CurrentChongWuPageNum >= MaxChongWuPageNum)
+            {
+                return;
+            }
+            CurrentChongWuPageNum++;
+            ShowChongWuPage();
+            SetPageNum();
+        });
     ExitButton.onClick.AddListener(() =>
     {
       gameObject.SetActive(false);

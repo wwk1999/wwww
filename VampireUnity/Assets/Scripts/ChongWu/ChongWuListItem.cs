@@ -13,11 +13,14 @@ public class ChongWuListItem:MonoBehaviour
     public Image XX3;
     public Image XX4;
     public Image XX5;
+    public AspectRatioFitter  aspectRatioFitter;
 
 
     public void SetChongWuListItem(ChongWuTable info)
     {
         Image.sprite = ResourcesConfig.GetChongWuSprite(info.ChongWuType);
+        float aspectRatio = ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.width / ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.height;
+        aspectRatioFitter.aspectRatio = aspectRatio;
         Level.text = "Lv. "+info.Level;
         switch (info.Quality)
         {
