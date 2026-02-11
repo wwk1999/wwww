@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\Config\ChiBangConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenHelmet.cs" />
+    <Compile Include="Assets\Scripts\Window\ChongWuDanSwitch.cs" />
     <Compile Include="Assets\Scripts\Store\SkillJiaDian.cs" />
     <Compile Include="Assets\Scripts\Tool\ChiBangItem.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong3.cs" />
@@ -334,6 +335,7 @@
     <Compile Include="Assets\Arts\ARPG Effects\Demo\Scripts\ARPGFXCycler.cs" />
     <Compile Include="Assets\Scripts\WeaponSourceStone\SourceStoneKong.cs" />
     <Compile Include="Assets\Scripts\Config\FriendConfig.cs" />
+    <Compile Include="Assets\Scripts\Config\ChongWuConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\EliteDaZuiMonster.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Division.cs" />
     <Compile Include="Assets\Scripts\Skill\IceExTrigger.cs" />

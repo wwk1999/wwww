@@ -33,7 +33,6 @@ public class ChongWuWindow : MonoBehaviour
     {
       Destroy(item.gameObject);
     }
-    ChongWuList chongwuList1=Instantiate(Resources.Load("Prefabs/Window/ChongWuList"),ChongWuList.transform).GameObject().GetComponent<ChongWuList>();
     int originIndex=(CurrentChongWuPageNum-1)*6;
     ChongWuTable table1 = null;
     ChongWuTable table2 = null;
@@ -65,7 +64,12 @@ public class ChongWuWindow : MonoBehaviour
     {
       table6 = PlayerData.S.ChongWuList[originIndex+5];
     }
-    chongwuList1.SetChongWuList(table1, table2, table3);
+
+    if (table1 != null)
+    {
+      ChongWuList chongwuList1=Instantiate(Resources.Load("Prefabs/Window/ChongWuList"),ChongWuList.transform).GameObject().GetComponent<ChongWuList>();
+      chongwuList1.SetChongWuList(table1, table2, table3);
+    }
     if (table4 != null)
     {
       ChongWuList chongwuList2=Instantiate(Resources.Load("Prefabs/Window/ChongWuList"),ChongWuList.transform).GameObject().GetComponent<ChongWuList>();
