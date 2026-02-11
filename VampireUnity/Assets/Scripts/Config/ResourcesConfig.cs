@@ -322,6 +322,8 @@ public class ResourcesConfig : MonoBehaviour
 
 
     //宠物图片
+    public static Sprite NormalChongWuDan;
+    public static Sprite GaoJiChongWuDan;
     public static Sprite icewhite1;
     public static Sprite huowhite1;
     public static Sprite dianwhite1;
@@ -591,6 +593,8 @@ public class ResourcesConfig : MonoBehaviour
     public static void Init()
     {
         //宠物
+        NormalChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/NormalChongWuDan");
+        GaoJiChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/GaoJiChongWuDan");
 // White sprites
         icewhite1 = Resources.Load<Sprite>("Sprite/ChongWu/icewhite1");
         huowhite1 = Resources.Load<Sprite>("Sprite/ChongWu/huowhite1");

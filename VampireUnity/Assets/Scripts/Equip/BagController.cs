@@ -991,6 +991,17 @@ public class BagController : XSingleton<BagController>
                     baoshi.Quality=list[i].Quality;
                     propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite =ResourcesConfig.GetBaoShiSprite(baoshi);
                     break;
+                case PropConfig.PropType.ChongWuDan:
+                    switch (list[i].Quality)
+                    {
+                        case 3:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.NormalChongWuDan;
+                            break;
+                        case 5:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GaoJiChongWuDan;
+                            break;
+                    }
+                    break;
             }
         }
 

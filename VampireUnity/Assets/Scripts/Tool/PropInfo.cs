@@ -11,6 +11,7 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     [Tooltip("Resources 下的路径（不含 Resources/ 前缀），例如 Prefabs/Window/Propinfo")]
     private string resourcePath = "Prefabs/Window/Propinfo";
     private string baoshiInfoPath = "Prefabs/Window/BaoShiInfo";
+    private string chongwudanInfoPath = "Prefabs/Window/ChongWuDanInfo";
 
 
     [Tooltip("相对于按钮右下角的偏移（x 向右为正，y 向上为正）。右 50、下 50 => (50, -50)")]
@@ -41,9 +42,13 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             prefab = Resources.Load<GameObject>(resourcePath);
         }
-        else
+        else if(propGrid.propType<1600)
         {
             prefab = Resources.Load<GameObject>(baoshiInfoPath);
+        }
+        else if (propGrid.propType < 1700)
+        {
+            prefab = Resources.Load<GameObject>(chongwudanInfoPath);
         }
         if (prefab == null)
         {
@@ -101,6 +106,11 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         instance.transform.Find("bg/Name/Name4").gameObject.SetActive(Name==4);
         instance.transform.Find("bg/Name/Name5").gameObject.SetActive(Name==5);
         instance.transform.Find("bg/Name/Name6").gameObject.SetActive(Name==6);
+    }
+
+    public void SetChongWuDan()
+    {
+        
     }
 
     public void SetBaoShi()
@@ -1222,7 +1232,11 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void SetInstance(int prop)
     {
-        if (prop > 500)
+        if (prop > 1600 && prop < 1700)
+        {
+            SetChongWuDan();
+        }
+        if (prop > 500&&prop<1600)
         {
             SetBaoShi();
         }
@@ -1725,6 +1739,20 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.DD6;
                 instance.transform.Find("bg/Name/Name6").GetComponent<TextMeshProUGUI>().text = PropConfig.PropNameDic[prop];
                 instance.transform.Find("bg/Desc").GetComponent<TextMeshProUGUI>().text= PropConfig.PropDescDic[prop];
+                break;
+            
+            case 1603:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.NormalChongWuDan;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = "普通宠物蛋";
+                instance.transform.Find("bg/Desc3").gameObject.SetActive(true);
+                instance.transform.Find("bg/Desc5").gameObject.SetActive(false);
+
+                break;
+            case 1605:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiChongWuDan;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = "高级宠物蛋";
+                instance.transform.Find("bg/Desc3").gameObject.SetActive(false);
+                instance.transform.Find("bg/Desc5").gameObject.SetActive(true);
                 break;
         }
     }

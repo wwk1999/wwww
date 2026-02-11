@@ -39,6 +39,7 @@ public class RoleWindow1 : MonoBehaviour
     public Button debugJingCui;
     public Button debugPlayerLevel;
     public Button debugBaoshi;
+    public Button debugChongWu;
 
 
     
@@ -219,6 +220,43 @@ public class RoleWindow1 : MonoBehaviour
     {
         Debug.Log("点击进入角色界面");
         InitEquip();
+        debugChongWu.onClick.AddListener(() =>
+        {
+            var data3 = new PropTable()
+            {
+                PropType =  PropConfig.PropType.ChongWuDan,
+                Quality = 3,
+                Desc = "",
+                Count =  100,
+                EquipName = "NormalChongWuDan",
+            };
+            if (BagController.S.PropList.ContainsKey(1603))
+            {
+                BagController.S.PropList[1603].Count+=data3.Count;
+            }
+            else
+            {
+                BagController.S.PropList.Add(1603,data3);
+            }
+            
+            
+            var data5 = new PropTable()
+            {
+                PropType =  PropConfig.PropType.ChongWuDan,
+                Quality = 5,
+                Desc = "",
+                Count =  100,
+                EquipName = "GaoJiChongWuDan",
+            };
+            if (BagController.S.PropList.ContainsKey(1605))
+            {
+                BagController.S.PropList[1605].Count+=data5.Count;
+            }
+            else
+            {
+                BagController.S.PropList.Add(1605,data5);
+            }
+        });
         TitleButton.onClick.AddListener(() =>
         {
             WindowController.S.TitleWindow.gameObject.SetActive(true);
