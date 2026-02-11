@@ -16,16 +16,17 @@ public class ChongWuDanButtonRight : MonoBehaviour, IPointerClickHandler
             {
                 return;
             }
+
+            ObserverModuleManager.S.SendEvent("ShowChongWuDanMask");
             canvasRect = GetComponentInParent<Canvas>().transform as RectTransform;
             Vector2 localPoint;
             var cam = canvasRect.GetComponentInParent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main;
-           
             if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, Input.mousePosition, cam, out localPoint))
             {
-                GameObject chongWuDanSwitch=Instantiate(Resources.Load("Prefabs/Window/ChongWuDanSwitch"),transform) as GameObject;
+                GameObject chongWuDanSwitch=Instantiate(Resources.Load("Prefabs/Window/ChongWuDanSwitch"),canvasRect) as GameObject;
                 RectTransform _chongwudanSwitch=chongWuDanSwitch.transform as RectTransform;
                 chongWuDanSwitch.gameObject.SetActive(true);
-                _chongwudanSwitch.anchoredPosition =  new Vector2(gameObject.GetComponent<RectTransform>().anchoredPosition.x+_chongwudanSwitch.sizeDelta.x/2, gameObject.GetComponent<RectTransform>().anchoredPosition.y-_chongwudanSwitch.sizeDelta.y/2);
+                _chongwudanSwitch.anchoredPosition =  new Vector2(localPoint.x+_chongwudanSwitch.sizeDelta.x/2, localPoint.y-_chongwudanSwitch.sizeDelta.y/2);
             }
         }
     }

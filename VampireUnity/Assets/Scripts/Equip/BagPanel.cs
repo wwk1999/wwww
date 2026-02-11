@@ -40,6 +40,9 @@ public class BagPanel : MonoBehaviour
     public TextMeshProUGUI FenjieNane;
     public TextMeshProUGUI ShuXin;
 
+    public GameObject ChongWuDanMask;
+    public Button ChongWuDanMaskButton;
+
     public void SwitchLanguage()
     {
         BagName.text = LanguageConfig.LanguageItems[PlayerData.S.langType].BagWindowLanguage.Bag;
@@ -55,10 +58,37 @@ public class BagPanel : MonoBehaviour
         currentBagType = 1;
     }
 
+    public void ShowChongWuDanMask(object[] obj)
+    {
+        ChongWuDanMask.SetActive(true);
+    }
+    
+    public void HideChongWuDanMask(object[] obj)
+    {
+        ChongWuDanMask.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        ObserverModuleManager.S.UnRegisterEvent("ShowChongWuDanMask",ShowChongWuDanMask);
+        ObserverModuleManager.S.UnRegisterEvent("HideChongWuDanMask",HideChongWuDanMask);    }
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
 
+        ObserverModuleManager.S.RegisterEvent("ShowChongWuDanMask",ShowChongWuDanMask);
+        ObserverModuleManager.S.RegisterEvent("HideChongWuDanMask",HideChongWuDanMask);
+
+        ChongWuDanMaskButton.onClick.AddListener(() =>
+        {
+            GameObject obj=transform.Find("ChongWuDanSwitch(Clone)").gameObject;
+            if (obj != null)
+            {
+                Destroy(obj);
+            }
+            ChongWuDanMask.SetActive(false);
+        });
         equipButton.onClick.AddListener(() =>
         { 
             if (BagController.S.PageNum == 1 && currentBagType == 1)
