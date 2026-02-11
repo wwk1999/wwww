@@ -158,6 +158,7 @@
     <Compile Include="Assets\Scripts\Window\WeaponWindowRole1.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvXuanFen.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\DuAddDuQuan.cs" />
+    <Compile Include="Assets\Scripts\Window\ChongWuDanButtonRight.cs" />
     <Compile Include="Assets\Number Themes\Scripts\ScrollItemManager.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\ReplyDeath.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Duration.cs" />
