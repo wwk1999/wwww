@@ -28,6 +28,7 @@ public class ChongWuDanButtonRight : MonoBehaviour, IPointerClickHandler
                 chongWuDanSwitch.gameObject.SetActive(true);
                 _chongwudanSwitch.anchoredPosition =  new Vector2(localPoint.x+_chongwudanSwitch.sizeDelta.x/2, localPoint.y-_chongwudanSwitch.sizeDelta.y/2);
                 chongWuDanSwitch.GetComponent<ChongWuDanSwitch>().propType=propGrid.propType;
+                chongWuDanSwitch.GetComponent<ChongWuDanSwitch>().propGrid = propGrid;
             }
         }
     }
