@@ -334,7 +334,11 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ChongWuQuality5;
     public static Sprite ChongWuQuality6;
 
-    
+    public static Sprite IceIcon;
+    public static Sprite HuoIcon;
+    public static Sprite DianIcon;
+    public static Sprite HeiAnIcon;
+
     
     public static Sprite icewhite1;
     public static Sprite huowhite1;
@@ -747,6 +751,11 @@ public class ResourcesConfig : MonoBehaviour
         ChongWuQuality4=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality4");
         ChongWuQuality5=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality5");
         ChongWuQuality6=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality6");
+
+        IceIcon=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/IceIcon");
+        HuoIcon=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/HuoIcon");
+        DianIcon=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/DianIcon");
+        HeiAnIcon=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/HeiAnIcon");
 
 
 // White sprites

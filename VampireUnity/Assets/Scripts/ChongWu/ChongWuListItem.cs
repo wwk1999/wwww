@@ -21,6 +21,7 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
     [NonSerialized]public ChongWuTable chongWuTable;
 
     public GameObject Gou;
+    public Image YuanSuIcon;
 
     public void ShowGou()
     {
@@ -58,6 +59,21 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
         float aspectRatio = ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.width / ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.height;
         aspectRatioFitter.aspectRatio = aspectRatio;
         Level.text = "Lv. "+info.Level;
+        switch (info.ChongWuYuanSuType)
+        {
+            case ChongWuYuanSuType.Ice:
+                YuanSuIcon.sprite = ResourcesConfig.IceIcon;
+                break;
+            case ChongWuYuanSuType.Huo:
+                YuanSuIcon.sprite = ResourcesConfig.HuoIcon;
+                break;
+            case ChongWuYuanSuType.Dian:
+                YuanSuIcon.sprite = ResourcesConfig.DianIcon;
+                break;
+            case ChongWuYuanSuType.HeiAn:
+                YuanSuIcon.sprite = ResourcesConfig.HeiAnIcon;
+                break;
+        }
         switch (info.Quality)
         {
             case 1:
