@@ -29,6 +29,11 @@ public class ChongWuWindow : MonoBehaviour
         PageNum.text = ChongWuController.S.CurrentChongWuPageNum.ToString();
     }
 
+    public void RefreshChongWuCurrentPage(object[] obj)
+    {
+        ShowChongWuPage();
+    }
+
     public void ShowChongWuItemMask(object[] obj)
     {
         ChongWuItemMaskButton.gameObject.SetActive(true);
@@ -185,10 +190,13 @@ public class ChongWuWindow : MonoBehaviour
     {
         ObserverModuleManager.S.UnRegisterEvent("ShowChongWuItemMask", ShowChongWuItemMask);
         ObserverModuleManager.S.UnRegisterEvent("HideChongWuItemMask", HideChongWuItemMask);
+        ObserverModuleManager.S.UnRegisterEvent("RefreshChongWuCurrentPage", RefreshChongWuCurrentPage);
+
     }
 
     private void Start()
     {
+        ObserverModuleManager.S.RegisterEvent("RefreshChongWuCurrentPage", RefreshChongWuCurrentPage);
         ObserverModuleManager.S.RegisterEvent("ShowChongWuItemMask", ShowChongWuItemMask);
         ObserverModuleManager.S.RegisterEvent("HideChongWuItemMask", HideChongWuItemMask);
 

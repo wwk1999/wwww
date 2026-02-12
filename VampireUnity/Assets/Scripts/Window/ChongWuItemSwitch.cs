@@ -12,6 +12,16 @@ public class ChongWuItemSwitch : MonoBehaviour
 
    private void Start()
    {
+      FenJieButton.onClick.AddListener(() =>
+      {
+         PlayerData.S.ChongWuJingHua += ChongWuConfig.ChongWuJingHuaDic[ClickChongWuItem.chongWuTable.Quality];
+         PlayerData.S.ChongWuList.Remove(ClickChongWuItem.chongWuTable);
+         ObserverModuleManager.S.SendEvent("RefreshChongWuCurrentPage");
+         ObserverModuleManager.S.SendEvent("HideChongWuItemMask");
+         StoreController.S.SaveStoreData();
+         Destroy(gameObject);
+      });
+      
       ChuZhangButton.onClick.AddListener(() =>
          {
             int index = (ChongWuController.S.CurrentChongWuPageNum - 1) * 6;

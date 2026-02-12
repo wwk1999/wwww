@@ -25,6 +25,16 @@ public class ChongWuConfig
         { 5, 5 },
     };
 
+    public static Dictionary<int, int> ChongWuJingHuaDic = new Dictionary<int, int>()
+    {
+        {1,10},
+        {2,20},
+        {3,50},
+        {4,100},
+        {5,500},
+        {6,1000},
+    };
+
     public static Dictionary<int, List<ChongWuType>> ChongWuQualityDic = new Dictionary<int, List<ChongWuType>>()
     {
         { 1, new List<ChongWuType>() { ChongWuType.icewhite1, ChongWuType.dianwhite1,ChongWuType.heianwhite1,ChongWuType.huowhite1,ChongWuType.heianwhite2,} },

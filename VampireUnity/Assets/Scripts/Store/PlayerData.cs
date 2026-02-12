@@ -99,6 +99,8 @@ public class PlayerData : XSingleton<PlayerData>
     public int FuChongWuId2=0;
     public int FuChongWuId3=0;
 
+    public int ChongWuJingHua = 0;
+
     protected override void Awake()
     {
         base.Awake();
