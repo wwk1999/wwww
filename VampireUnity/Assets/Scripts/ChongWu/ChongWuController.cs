@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class ChongWuController:XSingleton<ChongWuController>
 {
+    public int CurrentChongWuPageNum = 1;
+    public List<ChongWuListItem>CurrentPageItemList=new List<ChongWuListItem>();
+    //开宠物蛋
     public ChongWuTable GetOriginChongWuTable(ChongWuType chongWuType)
     {
         int quality = ChongWuConfig.GetChongWuQualityByType(chongWuType);
@@ -14,6 +17,7 @@ public class ChongWuController:XSingleton<ChongWuController>
         string Name=ChongWuConfig.ChongWuNamDic[chongWuType];
         ChongWuTable chongWuTable = new ChongWuTable()
         {
+            ChongWuId = PlayerData.S.FlagChongWuId,
             ChongWuType = chongWuType,
             Quality = quality,
             ZiZhi = zizhi,
@@ -23,6 +27,7 @@ public class ChongWuController:XSingleton<ChongWuController>
             Level = 1,
             Name = Name,
         };
+        PlayerData.S.FlagChongWuId++;
         return chongWuTable;
     }
 }

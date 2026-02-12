@@ -86,6 +86,7 @@ public enum ChongWuYuanSuType
 }
 public class ChongWuTable
 {
+    public int ChongWuId { get; set;}
     public ChongWuType ChongWuType{ get; set; }
     public int Quality {get; set; }
     public int ZiZhi {get; set; }
@@ -96,6 +97,7 @@ public class ChongWuTable
     public string Name {get; set;  }
 
     public ChongWuTable(
+        int chongWuId=0,
         ChongWuType ChongWuType=ChongWuType.None,
         int quality = 1,
         int zizhi=0,
@@ -105,6 +107,7 @@ public class ChongWuTable
         int level=0,
         string Name="")
     {
+        this.ChongWuId = chongWuId;
         this.ChongWuType = ChongWuType;
         this.Quality = quality;
         this.ZiZhi = zizhi;

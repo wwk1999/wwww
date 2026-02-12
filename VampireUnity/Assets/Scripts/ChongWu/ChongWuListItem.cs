@@ -1,9 +1,11 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class ChongWuListItem:MonoBehaviour
+public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
 {
     public Image Image;
     public TextMeshProUGUI Level;
@@ -14,10 +16,44 @@ public class ChongWuListItem:MonoBehaviour
     public Image XX4;
     public Image XX5;
     public AspectRatioFitter  aspectRatioFitter;
+    private RectTransform canvasRect; // Canvas 的 RectTransform
+
+    [NonSerialized]public ChongWuTable chongWuTable;
+
+    public GameObject Gou;
+
+    public void ShowGou()
+    {
+        Gou.SetActive(true);
+    }
+    public void HideGou()
+    {
+        Gou.SetActive(false);
+    }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            ObserverModuleManager.S.SendEvent("ShowChongWuItemMask");
+            canvasRect = GetComponentInParent<Canvas>().transform as RectTransform;
+            Vector2 localPoint;
+            var cam = canvasRect.GetComponentInParent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main;
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, Input.mousePosition, cam, out localPoint))
+            {
+                GameObject ChongWuItemSwitch=Instantiate(Resources.Load("Prefabs/Window/ChongWuItemSwitch"),canvasRect) as GameObject;
+                RectTransform _ChongWuItemSwitch=ChongWuItemSwitch.transform as RectTransform;
+                ChongWuItemSwitch.gameObject.SetActive(true);
+                _ChongWuItemSwitch.anchoredPosition =  new Vector2(localPoint.x+_ChongWuItemSwitch.sizeDelta.x/2, localPoint.y-_ChongWuItemSwitch.sizeDelta.y/2);
+                ChongWuItemSwitch.GetComponent<ChongWuItemSwitch>().ClickChongWuItem = this;
+            }
+        }
+    }
+
 
 
     public void SetChongWuListItem(ChongWuTable info)
     {
+        chongWuTable=info;
         Image.sprite = ResourcesConfig.GetChongWuSprite(info.ChongWuType);
         float aspectRatio = ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.width / ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.height;
         aspectRatioFitter.aspectRatio = aspectRatio;

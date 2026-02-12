@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,6 +7,9 @@ public class ChongWuList:MonoBehaviour
 {
     public GameObject NameList;
     public GameObject Content;
+    [NonSerialized]public ChongWuListItem ChongWuListItem1=null;
+    [NonSerialized]public ChongWuListItem ChongWuListItem2=null;
+    [NonSerialized]public ChongWuListItem ChongWuListItem3=null;
 
     public void SetChongWuList(ChongWuTable table1, ChongWuTable table2, ChongWuTable table3)
     {
@@ -20,6 +24,7 @@ public class ChongWuList:MonoBehaviour
         if (table1 != null)
         {
             ChongWuListItem ChongWuListItem=Instantiate(Resources.Load("Prefabs/Window/ChongWuListItem"),Content.transform).GameObject().GetComponent<ChongWuListItem>();
+            ChongWuListItem1 = ChongWuListItem;
             ChongWuListItem.SetChongWuListItem(table1);
             var Name=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/Name"),NameList.transform);
             switch (table1.Quality)
@@ -56,6 +61,7 @@ public class ChongWuList:MonoBehaviour
         {
             ChongWuListItem ChongWuListItem=Instantiate(Resources.Load("Prefabs/Window/ChongWuListItem"),Content.transform).GameObject().GetComponent<ChongWuListItem>();
             ChongWuListItem.SetChongWuListItem(table2);
+            ChongWuListItem2 = ChongWuListItem;
             var Name=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/Name"),NameList.transform);
             switch (table2.Quality)
             {
@@ -92,6 +98,7 @@ public class ChongWuList:MonoBehaviour
         {
             ChongWuListItem ChongWuListItem=Instantiate(Resources.Load("Prefabs/Window/ChongWuListItem"),Content.transform).GameObject().GetComponent<ChongWuListItem>();
             ChongWuListItem.SetChongWuListItem(table3);
+            ChongWuListItem3 = ChongWuListItem;
             var Name=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/Name"),NameList.transform);
             switch (table3.Quality)
             {

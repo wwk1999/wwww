@@ -13,27 +13,38 @@ public class ChongWuWindow : MonoBehaviour
   public Button Left;
   public Button Right;
   public TextMeshProUGUI PageNum;
+  public Button ChongWuItemMaskButton;
 
-  private int CurrentChongWuPageNum = 1;
   private int MaxChongWuPageNum => (int)Math.Ceiling(PlayerData.S.ChongWuList.Count / 6.0);
   private void OnEnable()
-  {
-    CurrentChongWuPageNum = 1;
+  { 
+      ChongWuController.S.CurrentChongWuPageNum = 1;
     ShowChongWuPage();
   }
 
   public void SetPageNum()
   {
-    PageNum.text=CurrentChongWuPageNum.ToString();
+    PageNum.text=ChongWuController.S.CurrentChongWuPageNum.ToString();
+  }
+
+  public void ShowChongWuItemMask(object[] obj)
+  {
+      ChongWuItemMaskButton.gameObject.SetActive(true);
+  }
+  
+  public void HideChongWuItemMask(object[] obj)
+  {
+      ChongWuItemMaskButton.gameObject.SetActive(false);
   }
 
   public void ShowChongWuPage()
     {
+        ChongWuController.S.CurrentPageItemList.Clear();
         foreach (Transform item in ChongWuList.transform)
         {
             Destroy(item.gameObject);
         }
-        int originIndex=(CurrentChongWuPageNum-1)*6;
+        int originIndex=(ChongWuController.S.CurrentChongWuPageNum-1)*6;
         ChongWuTable table1 = null;
         ChongWuTable table2 = null;
         ChongWuTable table3 = null;
@@ -69,33 +80,75 @@ public class ChongWuWindow : MonoBehaviour
     {
       ChongWuList chongwuList1=Instantiate(Resources.Load("Prefabs/Window/ChongWuList"),ChongWuList.transform).GameObject().GetComponent<ChongWuList>();
       chongwuList1.SetChongWuList(table1, table2, table3);
+      if (chongwuList1.ChongWuListItem1 != null)
+      {
+          ChongWuController.S.CurrentPageItemList.Add(chongwuList1.ChongWuListItem1);
+      }
+      if (chongwuList1.ChongWuListItem2 != null)
+      {
+          ChongWuController.S.CurrentPageItemList.Add(chongwuList1.ChongWuListItem2);
+      }
+      if (chongwuList1.ChongWuListItem3 != null)
+      {
+          ChongWuController.S.CurrentPageItemList.Add(chongwuList1.ChongWuListItem3);
+      }
     }
     if (table4 != null)
     {
       ChongWuList chongwuList2=Instantiate(Resources.Load("Prefabs/Window/ChongWuList"),ChongWuList.transform).GameObject().GetComponent<ChongWuList>();
       chongwuList2.SetChongWuList(table4, table5, table6);
+      if (chongwuList2.ChongWuListItem1 != null)
+      {
+          ChongWuController.S.CurrentPageItemList.Add(chongwuList2.ChongWuListItem1);
+      }
+      if (chongwuList2.ChongWuListItem2 != null)
+      {
+          ChongWuController.S.CurrentPageItemList.Add(chongwuList2.ChongWuListItem2);
+      }
+      if (chongwuList2.ChongWuListItem3 != null)
+      {
+          ChongWuController.S.CurrentPageItemList.Add(chongwuList2.ChongWuListItem3);
+      }
     }
+  }
+
+  private void OnDestroy()
+  {
+      ObserverModuleManager.S.UnRegisterEvent("ShowChongWuItemMask",ShowChongWuItemMask);
+      ObserverModuleManager.S.UnRegisterEvent("HideChongWuItemMask",HideChongWuItemMask);
   }
 
   private void Start()
     {
+        ObserverModuleManager.S.RegisterEvent("ShowChongWuItemMask",ShowChongWuItemMask);
+        ObserverModuleManager.S.RegisterEvent("HideChongWuItemMask",HideChongWuItemMask);
+        
+        ChongWuItemMaskButton.onClick.AddListener(() =>
+        {
+            GameObject obj=transform.Find("ChongWuItemSwitch(Clone)").gameObject;
+            if (obj != null)
+            {
+                Destroy(obj.gameObject);
+            }
+            ChongWuItemMaskButton.gameObject.SetActive(false);
+        });
         Left.onClick.AddListener(() =>
         {
-            if (CurrentChongWuPageNum <= 1)
+            if (ChongWuController.S.CurrentChongWuPageNum <= 1)
             {
                 return;
             }
-            CurrentChongWuPageNum--;
+            ChongWuController.S.CurrentChongWuPageNum--;
             ShowChongWuPage();
             SetPageNum();
         });
         Right.onClick.AddListener(() =>
         {
-            if (CurrentChongWuPageNum >= MaxChongWuPageNum)
+            if (ChongWuController.S.CurrentChongWuPageNum >= MaxChongWuPageNum)
             {
                 return;
             }
-            CurrentChongWuPageNum++;
+            ChongWuController.S.CurrentChongWuPageNum++;
             ShowChongWuPage();
             SetPageNum();
         });

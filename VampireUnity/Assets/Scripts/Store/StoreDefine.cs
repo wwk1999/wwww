@@ -144,6 +144,11 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int LinHun = 0;
 
         public TitleType CurrentInstallTitle = TitleType.None;
+        public int ChongWuId=1;
+        public int ZhuChongWuId=0;
+        public int FuChongWuId1=0;
+        public int FuChongWuId2=0;
+        public int FuChongWuId3=0;
 
 
 
@@ -229,6 +234,12 @@ public class StoreDefine : XSingleton<StoreDefine>
          CurrentInstallTitle=runtime.CurrentInstallTitle;
          
          ChongWuList=runtime.ChongWuList;
+         ChongWuId=runtime.FlagChongWuId;
+         
+         ZhuChongWuId=runtime.ZhuChongWuId;
+         FuChongWuId1=runtime.FuChongWuId1;
+         FuChongWuId2=runtime.FuChongWuId2;
+         FuChongWuId3=runtime.FuChongWuId3;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -316,6 +327,11 @@ public class StoreDefine : XSingleton<StoreDefine>
             
             runtime.CurrentInstallTitle=CurrentInstallTitle;
             runtime.ChongWuList=ChongWuList;
+            runtime.FlagChongWuId=ChongWuId;
+            runtime.ZhuChongWuId=ZhuChongWuId;
+            runtime.FuChongWuId1=FuChongWuId1;
+            runtime.FuChongWuId2=FuChongWuId2;
+            runtime.FuChongWuId3=FuChongWuId3;
         }
     }
     

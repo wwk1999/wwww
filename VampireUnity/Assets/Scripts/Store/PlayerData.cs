@@ -93,6 +93,12 @@ public class PlayerData : XSingleton<PlayerData>
     
     public List<ChongWuTable> ChongWuList = new List<ChongWuTable>();
 
+    public int FlagChongWuId=1;
+    public int ZhuChongWuId=0;
+    public int FuChongWuId1=0;
+    public int FuChongWuId2=0;
+    public int FuChongWuId3=0;
+
     protected override void Awake()
     {
         base.Awake();
