@@ -91,7 +91,7 @@ public class PlayerData : XSingleton<PlayerData>
     public MJLevel mJLevel = MJLevel.White;
     public LanguageType langType=LanguageType.Chinese;
     
-    public List<ChongWuTable> ChongWuList = new List<ChongWuTable>();
+    public Dictionary<int,ChongWuTable> ChongWuDic = new Dictionary<int,ChongWuTable>();
 
     public int FlagChongWuId=1;
     public int ZhuChongWuId=0;

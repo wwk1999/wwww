@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Spine.Unity;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,6 +18,24 @@ public class ChongWuWindow : MonoBehaviour
     public Button ChongWuItemMaskButton;
 
     public GameObject LevelInfo;
+    public TextMeshProUGUI LevelCount;
+    public TextMeshProUGUI ChongWuName;
+    public TextMeshProUGUI ChongWujingHua;
+    public GameObject Quality;
+    public GameObject ZiZhi;
+    public GameObject XueMai;
+    public GameObject Quality1;
+    public GameObject Quality2;
+    public GameObject Quality3;
+    public GameObject Quality4;
+    public GameObject Quality5;
+    public GameObject Quality6;
+
+    public TextMeshProUGUI ZiZhiCount;
+    public TextMeshProUGUI XueMaiCount;
+
+    
+    
     private GameObject IceWhite1;
     private GameObject HuoWhite1;
     private GameObject DianWhite1;
@@ -81,10 +101,341 @@ public class ChongWuWindow : MonoBehaviour
     private GameObject HeiAnOrange1_h;
 
 
-    private int MaxChongWuPageNum => (int)Math.Ceiling(PlayerData.S.ChongWuList.Count / 6.0);
+    private int MaxChongWuPageNum => (int)Math.Ceiling(PlayerData.S.ChongWuDic.Count / 6.0);
 
+    public void ShowQuality(int quality)
+    {
+        Quality1.gameObject.SetActive(false);
+        Quality2.gameObject.SetActive(false);
+        Quality3.gameObject.SetActive(false);
+        Quality4.gameObject.SetActive(false);
+        Quality5.gameObject.SetActive(false);
+        Quality6.gameObject.SetActive(false);
+        switch (quality)
+        {
+            case 1:
+                Quality1.gameObject.SetActive(true);
+                break;
+            case 2:
+                Quality2.gameObject.SetActive(true);
+                break;
+            case 3:
+                Quality3.gameObject.SetActive(true);
+                break;
+            case 4:
+                Quality4.gameObject.SetActive(true);
+                break;
+            case 5:
+                Quality5.gameObject.SetActive(true);
+                break;
+            case 6:
+                Quality6.gameObject.SetActive(true);
+                break;
+        }
+    }
+    
+    public void InitHide()
+    {
+        Quality.gameObject.SetActive(false);
+        ZiZhi.gameObject.SetActive(false);
+        XueMai.gameObject.SetActive(false);
+        LevelInfo.gameObject.SetActive(false);
+        IceWhite1.gameObject.SetActive(false);
+        HuoWhite1.gameObject.SetActive(false);
+        DianWhite1.gameObject.SetActive(false);
+        HeiAnWhite1.gameObject.SetActive(false);
+        HeiAnWhite2.gameObject.SetActive(false);
+
+        IceGreen1.gameObject.SetActive(false);
+        IceGreen2.gameObject.SetActive(false);
+        IceGreen3.gameObject.SetActive(false);
+        HuoGreen1.gameObject.SetActive(false);
+        HuoGreen2.gameObject.SetActive(false);
+        DianGreen1.gameObject.SetActive(false);
+        DianGreen2.gameObject.SetActive(false);
+        HeiAnGreen1.gameObject.SetActive(false);
+        HeiAnGreen2.gameObject.SetActive(false);
+        HeiAnGreen3.gameObject.SetActive(false);
+
+        IceBlue1.gameObject.SetActive(false);
+        IceBlue2.gameObject.SetActive(false);
+        HuoBlue1.gameObject.SetActive(false);
+        HuoBlue2.gameObject.SetActive(false);
+        HuoBlue3.gameObject.SetActive(false);
+        DianBlue1.gameObject.SetActive(false);
+        DianBlue2.gameObject.SetActive(false);
+        HeiAnBlue1.gameObject.SetActive(false);
+        HeiAnBlue2.gameObject.SetActive(false);
+        HeiAnBlue3.gameObject.SetActive(false);
+
+        IcePurple1_q.gameObject.SetActive(false);
+        IcePurple2_q.gameObject.SetActive(false);
+        IcePurple3_q.gameObject.SetActive(false);
+        HuoPurple1_q.gameObject.SetActive(false);
+        HuoPurple2_q.gameObject.SetActive(false);
+        HuoPurple3_q.gameObject.SetActive(false);
+        DianPurple1_q.gameObject.SetActive(false);
+        DianPurple2_q.gameObject.SetActive(false);
+        DianPurple3_q.gameObject.SetActive(false);
+        HeiAnPurple1_q.gameObject.SetActive(false);
+        HeiAnPurple2_q.gameObject.SetActive(false);
+        HeiAnPurple3_q.gameObject.SetActive(false);
+
+        IcePurple1_h.gameObject.SetActive(false);
+        IcePurple2_h.gameObject.SetActive(false);
+        IcePurple3_h.gameObject.SetActive(false);
+        HuoPurple1_h.gameObject.SetActive(false);
+        HuoPurple2_h.gameObject.SetActive(false);
+        HuoPurple3_h.gameObject.SetActive(false);
+        DianPurple1_h.gameObject.SetActive(false);
+        DianPurple2_h.gameObject.SetActive(false);
+        DianPurple3_h.gameObject.SetActive(false);
+        HeiAnPurple1_h.gameObject.SetActive(false);
+        HeiAnPurple2_h.gameObject.SetActive(false);
+        HeiAnPurple3_h.gameObject.SetActive(false);
+
+        IceOrange1_q.gameObject.SetActive(false);
+        HuoOrange1_q.gameObject.SetActive(false);
+        DianOrange1_q.gameObject.SetActive(false);
+        HeiAnOrange1_q.gameObject.SetActive(false);
+
+        IceOrange1_h.gameObject.SetActive(false);
+        HuoOrange1_h.gameObject.SetActive(false);
+        DianOrange1_h.gameObject.SetActive(false);
+        HeiAnOrange1_h.gameObject.SetActive(false);
+    }
+
+    public void ShowSke(ChongWuTable table)
+    {
+        switch (table.ChongWuType)
+        {
+            case ChongWuType.icewhite1:
+                IceWhite1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huowhite1:
+                HuoWhite1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianwhite1:
+                DianWhite1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianwhite1:
+                HeiAnWhite1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianwhite2:
+                HeiAnWhite2.gameObject.SetActive(true);
+                break;
+            
+            case ChongWuType.icegreen1:
+                IceGreen1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.icegreen2:
+                IceGreen2.gameObject.SetActive(true);
+                break;
+            case ChongWuType.icegreen3:
+                IceGreen3.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huogreen1:
+                HuoGreen1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huogreen2:
+                HuoGreen2.gameObject.SetActive(true);
+                break;
+            case ChongWuType.diangreen1:
+                DianGreen1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.diangreen2:
+                DianGreen2.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heiangreen1:
+                HeiAnGreen1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heiangreen2:
+                HeiAnGreen2.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heiangreen3:
+                HeiAnGreen3.gameObject.SetActive(true);
+                break;
+            
+            
+            case ChongWuType.iceblue1:
+                IceBlue1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.iceblue2:
+                IceBlue2.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huoblue1:
+                HuoBlue1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huoblue2:
+                HuoBlue2.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huoblue3:
+                HuoBlue3.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianblue1:
+                DianBlue1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianblue2:
+                DianBlue2.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianblue1:
+                HeiAnBlue1.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianblue2:
+                HeiAnBlue2.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianblue3:
+                HeiAnBlue3.gameObject.SetActive(true);
+                break;
+            
+            
+            case ChongWuType.icepurple1_q:
+                IcePurple1_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.icepurple2_q:
+                IcePurple2_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.icepurple3_q:
+                IcePurple3_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huopurple1_q:
+                HuoPurple1_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huopurple2_q:
+                HuoPurple2_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huopurple3_q:
+                HuoPurple3_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianpurple1_q:
+                DianPurple1_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianpurple2_q:
+                DianPurple2_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianpurple3_q:
+                DianPurple3_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianpurple1_q:
+                HeiAnPurple1_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianpurple2_q:
+                HeiAnPurple2_q.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianpurple3_q:
+                HeiAnPurple3_q.gameObject.SetActive(true);
+                break;
+            
+            
+            case ChongWuType.icepurple1_h:
+                IcePurple1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.icepurple2_h:
+                IcePurple2_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.icepurple3_h:
+                IcePurple3_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huopurple1_h:
+                HuoPurple1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huopurple2_h:
+                HuoPurple2_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huopurple3_h:
+                HuoPurple3_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianpurple1_h:
+                DianPurple1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianpurple2_h:
+                DianPurple2_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianpurple3_h:
+                DianPurple3_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianpurple1_h:
+                HeiAnPurple1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianpurple2_h:
+                HeiAnPurple2_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.heianpurple3_h:
+                HeiAnPurple3_h.gameObject.SetActive(true);
+                break;
+            
+            case ChongWuType.heianorange1_q:
+                HeiAnOrange1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.iceorange1_q:
+                IceOrange1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huoorange1_q:
+                HuoOrange1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianorange1_q:
+                DianOrange1_h.gameObject.SetActive(true);
+                break;
+            
+            case ChongWuType.heianorange1_h:
+                HeiAnOrange1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.iceorange1_h:
+                IceOrange1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.huoorange1_h:
+                HuoOrange1_h.gameObject.SetActive(true);
+                break;
+            case ChongWuType.dianorange1_h:
+                DianOrange1_h.gameObject.SetActive(true);
+                break;
+        }
+    }
+
+    public void ShowZhuChongWu()
+    {
+        ChongWuTable table = PlayerData.S.ChongWuDic[PlayerData.S.ZhuChongWuId];
+        ShowSke(table);
+        Quality.gameObject.SetActive(true);
+        ZiZhi.gameObject.SetActive(true);
+        XueMai.gameObject.SetActive(true);
+        LevelInfo.gameObject.SetActive(true);
+        LevelCount.text = table.Level.ToString();
+        ChongWuName.text = table.Name;
+        ChongWujingHua.text = PlayerData.S.ChongWuJingHua.ToString();
+        switch (table.Quality)
+        {
+            case 1:
+                ShowQuality(1);
+                break;
+            case 2:
+                ShowQuality(2);
+                break;
+            case 3:
+                ShowQuality(3);
+                break;
+            case 4:
+                ShowQuality(4);
+                break;
+            case 5:
+                ShowQuality(5);
+                break;
+            case 6:
+                ShowQuality(6);
+                break;
+        }
+
+        ZiZhiCount.text = table.ZiZhi.ToString();
+        XueMaiCount.text = table.XueMai.ToString();
+    }
+    
     private void OnEnable()
     {
+        InitHide();
+        if (PlayerData.S.ZhuChongWuId != 0)
+        {
+            ShowZhuChongWu();
+        }
         ChongWuController.S.CurrentChongWuPageNum = 1;
         ShowChongWuPage();
         SetPageNum();
@@ -126,34 +477,35 @@ public class ChongWuWindow : MonoBehaviour
         ChongWuTable table4 = null;
         ChongWuTable table5 = null;
         ChongWuTable table6 = null;
-        if (originIndex < PlayerData.S.ChongWuList.Count)
+        List<ChongWuTable> List = PlayerData.S.ChongWuDic.Values.ToList();
+        if (originIndex < List.Count)
         {
-            table1 = PlayerData.S.ChongWuList[originIndex];
+            table1 = List[originIndex];
         }
 
-        if (originIndex + 1 < PlayerData.S.ChongWuList.Count)
+        if (originIndex + 1 < List.Count)
         {
-            table2 = PlayerData.S.ChongWuList[originIndex + 1];
+            table2 = List[originIndex + 1];
         }
 
-        if (originIndex + 2 < PlayerData.S.ChongWuList.Count)
+        if (originIndex + 2 < List.Count)
         {
-            table3 = PlayerData.S.ChongWuList[originIndex + 2];
+            table3 = List[originIndex + 2];
         }
 
-        if (originIndex + 3 < PlayerData.S.ChongWuList.Count)
+        if (originIndex + 3 < List.Count)
         {
-            table4 = PlayerData.S.ChongWuList[originIndex + 3];
+            table4 = List[originIndex + 3];
         }
 
-        if (originIndex + 4 < PlayerData.S.ChongWuList.Count)
+        if (originIndex + 4 < List.Count)
         {
-            table5 = PlayerData.S.ChongWuList[originIndex + 4];
+            table5 = List[originIndex + 4];
         }
 
-        if (originIndex + 5 < PlayerData.S.ChongWuList.Count)
+        if (originIndex + 5 < List.Count)
         {
-            table6 = PlayerData.S.ChongWuList[originIndex + 5];
+            table6 = List[originIndex + 5];
         }
 
         if (table1 != null)
@@ -261,15 +613,9 @@ public class ChongWuWindow : MonoBehaviour
 
     }
 
-    private void Start()
+    private void Awake()
     {
-        ObserverModuleManager.S.RegisterEvent("RefreshChongWuCurrentPage", RefreshChongWuCurrentPage);
-        ObserverModuleManager.S.RegisterEvent("ShowChongWuItemMask", ShowChongWuItemMask);
-        ObserverModuleManager.S.RegisterEvent("HideChongWuItemMask", HideChongWuItemMask);
-        
-        
-        
-        IceWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰White1").gameObject;
+         IceWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰White1").gameObject;
         HuoWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火White1").gameObject;
         DianWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电White1").gameObject;
         HeiAnWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗White1").gameObject;
@@ -332,7 +678,22 @@ public class ChongWuWindow : MonoBehaviour
         HuoOrange1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火Orange1_前").gameObject;
         DianOrange1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电Orange1_前").gameObject;
         HeiAnOrange1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗Orange1_前").gameObject;
+        
+    }
 
+    public void ChongWuChuZhan(object[] obj)
+    {
+        InitHide();
+        ShowZhuChongWu();
+    }
+
+    private void Start()
+    {
+        ObserverModuleManager.S.RegisterEvent("RefreshChongWuCurrentPage", RefreshChongWuCurrentPage);
+        ObserverModuleManager.S.RegisterEvent("ShowChongWuItemMask", ShowChongWuItemMask);
+        ObserverModuleManager.S.RegisterEvent("HideChongWuItemMask", HideChongWuItemMask);
+        
+        ObserverModuleManager.S.RegisterEvent("ChongWuChuZhan", ChongWuChuZhan);
 
 
         ChongWuItemMaskButton.onClick.AddListener(() =>

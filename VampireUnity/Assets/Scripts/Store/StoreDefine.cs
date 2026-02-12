@@ -109,7 +109,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         public WeaponType playerWeaponType = WeaponType.Primary;
         public MJLevel mJLevel = MJLevel.White;
         public LanguageType langType = LanguageType.Chinese;
-        public List<ChongWuTable> ChongWuList = new List<ChongWuTable>();
+        public Dictionary<int,ChongWuTable> ChongWuDic = new Dictionary<int,ChongWuTable>();
 
 
 
@@ -236,7 +236,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             LinHun = runtime.LinHun;
             CurrentInstallTitle = runtime.CurrentInstallTitle;
 
-            ChongWuList = runtime.ChongWuList;
+            ChongWuDic = runtime.ChongWuDic;
             ChongWuId = runtime.FlagChongWuId;
 
             ZhuChongWuId = runtime.ZhuChongWuId;
@@ -331,7 +331,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.LinHun = LinHun;
 
             runtime.CurrentInstallTitle = CurrentInstallTitle;
-            runtime.ChongWuList = ChongWuList;
+            runtime.ChongWuDic = ChongWuDic;
             runtime.FlagChongWuId = ChongWuId;
             runtime.ZhuChongWuId = ZhuChongWuId;
             runtime.FuChongWuId1 = FuChongWuId1;

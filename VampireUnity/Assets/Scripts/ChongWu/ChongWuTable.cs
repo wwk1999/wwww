@@ -90,7 +90,7 @@ public class ChongWuTable
     public ChongWuType ChongWuType{ get; set; }
     public int Quality {get; set; }
     public int ZiZhi {get; set; }
-    public int XueMai {get; set; }
+    public float XueMai {get; set; }
     public ChongWuYuanSuType ChongWuYuanSuType { get; set; }
     public int XingJi { get; set; }
     public int Level {get; set;  }

@@ -12,7 +12,7 @@ public class ChongWuController:XSingleton<ChongWuController>
         ChongWuConfig.MinMax zizhiMinMax = ChongWuConfig.ChongWuZiZhiDic[quality];
         ChongWuConfig.MinMax xuemaiMinMax = ChongWuConfig.ChongWuXueMaiDic[quality];
         int zizhi = Mathf.RoundToInt(Random.Range(zizhiMinMax.min, zizhiMinMax.max));
-        int xuemai = Mathf.RoundToInt(Random.Range(xuemaiMinMax.min, xuemaiMinMax.max));
+        float xuemai = Random.Range(xuemaiMinMax.min, xuemaiMinMax.max);
         ChongWuYuanSuType chongWuYuanSuType = ChongWuConfig.GetChongWuYuanSuByType(chongWuType);
         string Name=ChongWuConfig.ChongWuNamDic[chongWuType];
         ChongWuTable chongWuTable = new ChongWuTable()

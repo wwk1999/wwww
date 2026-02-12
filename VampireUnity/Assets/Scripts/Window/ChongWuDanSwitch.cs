@@ -58,7 +58,7 @@ public class ChongWuDanSwitch : MonoBehaviour
                     }
 
                     ChongWuTable chongWuTable = ChongWuController.S.GetOriginChongWuTable(chongWuType);
-                    PlayerData.S.ChongWuList.Add(chongWuTable);
+                    PlayerData.S.ChongWuDic[chongWuTable.ChongWuId]=chongWuTable;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜获得宠物：" + chongWuTable.Name);
                 }
                 BagController.S.PropList[1603].Count=0;
@@ -115,7 +115,7 @@ public class ChongWuDanSwitch : MonoBehaviour
                     }
 
                     ChongWuTable chongWuTable = ChongWuController.S.GetOriginChongWuTable(chongWuType);
-                    PlayerData.S.ChongWuList.Add(chongWuTable);
+                    PlayerData.S.ChongWuDic[chongWuTable.ChongWuId]=chongWuTable;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜获得宠物：" + chongWuTable.Name);
                 }
                 ObserverModuleManager.S.SendEvent("HideChongWuDanMask");
@@ -163,7 +163,7 @@ public class ChongWuDanSwitch : MonoBehaviour
                         break;
                 }
                 ChongWuTable chongWuTable = ChongWuController.S.GetOriginChongWuTable(chongWuType);
-                PlayerData.S.ChongWuList.Add(chongWuTable);
+                PlayerData.S.ChongWuDic[chongWuTable.ChongWuId]=chongWuTable;
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜获得宠物："+chongWuTable.Name);
                 BagController.S.PropList[1603].Count--;
                 ObserverModuleManager.S.SendEvent("HideChongWuDanMask");
@@ -212,7 +212,7 @@ public class ChongWuDanSwitch : MonoBehaviour
                         break;
                 }
                 ChongWuTable chongWuTable = ChongWuController.S.GetOriginChongWuTable(chongWuType);
-                PlayerData.S.ChongWuList.Add(chongWuTable);
+                PlayerData.S.ChongWuDic[chongWuTable.ChongWuId]=chongWuTable;
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜获得宠物："+chongWuTable.Name);
                 BagController.S.PropList[1605].Count--;
                 ObserverModuleManager.S.SendEvent("HideChongWuDanMask");
