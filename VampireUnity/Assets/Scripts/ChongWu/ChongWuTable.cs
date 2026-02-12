@@ -101,7 +101,7 @@ public class ChongWuTable
         ChongWuType ChongWuType=ChongWuType.None,
         int quality = 1,
         int zizhi=0,
-        int xuemai=0,
+        float xuemai=0,
         ChongWuYuanSuType ChongWuYuanSuType=ChongWuYuanSuType.None,
         int xingji=1,
         int level=0,
