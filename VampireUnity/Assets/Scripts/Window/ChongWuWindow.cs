@@ -19,7 +19,13 @@ public class ChongWuWindow : MonoBehaviour
 
     public GameObject LevelInfo;
     public TextMeshProUGUI LevelCount;
-    public TextMeshProUGUI ChongWuName;
+    public TextMeshProUGUI ChongWuName1;
+    public TextMeshProUGUI ChongWuName2;
+    public TextMeshProUGUI ChongWuName3;
+    public TextMeshProUGUI ChongWuName4;
+    public TextMeshProUGUI ChongWuName5;
+    public TextMeshProUGUI ChongWuName6;
+
     public TextMeshProUGUI ChongWujingHua;
     public GameObject Quality;
     public GameObject ZiZhi;
@@ -104,6 +110,11 @@ public class ChongWuWindow : MonoBehaviour
 
     private int MaxChongWuPageNum => (int)Math.Ceiling(PlayerData.S.ChongWuDic.Count / 6.0);
 
+    public void ShowPeiYangWindowObj(object[] obj)
+    {
+        int id = (int)obj[0];
+        ShowPeiYangWindow(id);
+    }
     public void ShowPeiYangWindow(int id)
     {            
         var canvasRect = GetComponentInParent<Canvas>().transform as RectTransform;
@@ -400,8 +411,50 @@ public class ChongWuWindow : MonoBehaviour
         }
     }
 
+    public void SetName()
+    {
+        ChongWuName1.gameObject.SetActive(false);
+        ChongWuName2.gameObject.SetActive(false);
+        ChongWuName3.gameObject.SetActive(false);
+        ChongWuName4.gameObject.SetActive(false);
+        ChongWuName5.gameObject.SetActive(false);
+        ChongWuName6.gameObject.SetActive(false);
+        ChongWuTable table = PlayerData.S.ChongWuDic[PlayerData.S.ZhuChongWuId];
+        switch (table.Quality)
+        {
+            case 1:
+                ChongWuName1.gameObject.SetActive(true);
+                ChongWuName1.text=table.Name;
+                break;
+            case 2:
+                ChongWuName2.gameObject.SetActive(true);
+                ChongWuName2.text=table.Name;
+                break;
+            case 3:
+                ChongWuName3.gameObject.SetActive(true);
+                ChongWuName3.text=table.Name;
+                break;
+            case 4:
+                ChongWuName4.gameObject.SetActive(true);
+                ChongWuName4.text=table.Name;
+                break;
+            case 5:
+                ChongWuName5.gameObject.SetActive(true);
+                ChongWuName5.text=table.Name;
+                break;
+            case 6:
+                ChongWuName6.gameObject.SetActive(true);
+                ChongWuName6.text=table.Name;
+                break;
+        }
+    }
+
     public void ShowZhuChongWu()
     {
+        if (PlayerData.S.ZhuChongWuId == 0)
+        {
+            return;
+        }
         ChongWuTable table = PlayerData.S.ChongWuDic[PlayerData.S.ZhuChongWuId];
         ShowSke(table);
         Quality.gameObject.SetActive(true);
@@ -409,7 +462,7 @@ public class ChongWuWindow : MonoBehaviour
         XueMai.gameObject.SetActive(true);
         LevelInfo.gameObject.SetActive(true);
         LevelCount.text = table.Level.ToString();
-        ChongWuName.text = table.Name;
+        SetName();
         ChongWujingHua.text = PlayerData.S.ChongWuJingHua.ToString();
         switch (table.Quality)
         {
@@ -454,8 +507,12 @@ public class ChongWuWindow : MonoBehaviour
         PageNum.text = ChongWuController.S.CurrentChongWuPageNum.ToString();
     }
 
-    public void RefreshChongWuCurrentPage(object[] obj)
+    public void FenJie(object[] obj)
     {
+        if (PlayerData.S.ZhuChongWuId==0)
+        {
+            InitHide();
+        }
         ShowChongWuPage();
     }
 
@@ -471,6 +528,7 @@ public class ChongWuWindow : MonoBehaviour
 
     public void ShowChongWuPage()
     {
+        ChongWujingHua.text = PlayerData.S.ChongWuJingHua.ToString();
         ChongWuController.S.CurrentPageItemList.Clear();
         foreach (Transform item in ChongWuList.transform)
         {
@@ -617,7 +675,8 @@ public class ChongWuWindow : MonoBehaviour
     {
         ObserverModuleManager.S.UnRegisterEvent("ShowChongWuItemMask", ShowChongWuItemMask);
         ObserverModuleManager.S.UnRegisterEvent("HideChongWuItemMask", HideChongWuItemMask);
-        ObserverModuleManager.S.UnRegisterEvent("RefreshChongWuCurrentPage", RefreshChongWuCurrentPage);
+        ObserverModuleManager.S.UnRegisterEvent("FenJie", FenJie);
+        ObserverModuleManager.S.UnRegisterEvent("ShowPeiYangWindow",ShowPeiYangWindowObj);
 
     }
 
@@ -697,10 +756,10 @@ public class ChongWuWindow : MonoBehaviour
 
     private void Start()
     {
-        ObserverModuleManager.S.RegisterEvent("RefreshChongWuCurrentPage", RefreshChongWuCurrentPage);
+        ObserverModuleManager.S.RegisterEvent("FenJie", FenJie);
         ObserverModuleManager.S.RegisterEvent("ShowChongWuItemMask", ShowChongWuItemMask);
         ObserverModuleManager.S.RegisterEvent("HideChongWuItemMask", HideChongWuItemMask);
-        
+        ObserverModuleManager.S.RegisterEvent("ShowPeiYangWindow",ShowPeiYangWindowObj);
         ObserverModuleManager.S.RegisterEvent("ChongWuChuZhan", ChongWuChuZhan);
 
 

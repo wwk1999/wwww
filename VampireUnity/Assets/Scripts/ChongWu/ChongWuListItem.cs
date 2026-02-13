@@ -22,6 +22,8 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
 
     public GameObject Gou;
     public Image YuanSuIcon;
+    
+    public Button XiangQingButton;
 
     public void ShowGou()
     {
@@ -31,6 +33,15 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
     {
         Gou.SetActive(false);
     }
+
+    private void Start()
+    {
+        XiangQingButton.onClick.AddListener(() =>
+        {
+            ObserverModuleManager.S.SendEvent("ShowPeiYangWindow",chongWuTable.ChongWuId);
+        });
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)

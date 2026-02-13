@@ -9,7 +9,12 @@ public class ChongWuPeiYangWindow : MonoBehaviour
 {
     private int CurrentChongWuId;
     public TextMeshProUGUI NameLevelCount;
-    public TextMeshProUGUI Name;
+    public TextMeshProUGUI Name1;
+    public TextMeshProUGUI Name2;
+    public TextMeshProUGUI Name3;
+    public TextMeshProUGUI Name4;
+    public TextMeshProUGUI Name5;
+    public TextMeshProUGUI Name6;
     public Image QualityIcon;
     public Image YuanSuIcon;
     public Button WeiYangButton;
@@ -435,6 +440,43 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         });
     }
 
+    public void SetName(ChongWuTable table)
+    {
+        Name1.gameObject.SetActive(false);
+        Name2.gameObject.SetActive(false);
+        Name3.gameObject.SetActive(false);
+        Name4.gameObject.SetActive(false);
+        Name5.gameObject.SetActive(false);
+        Name6.gameObject.SetActive(false);
+        switch (table.Quality)
+        {
+            case 1:
+                Name1.gameObject.SetActive(true);
+                Name1.text = table.Name;
+                break;
+            case 2:
+                Name2.gameObject.SetActive(true);
+                Name2.text = table.Name;
+                break;
+            case 3:
+                Name3.gameObject.SetActive(true);
+                Name3.text = table.Name;
+                break;
+            case 4:
+                Name4.gameObject.SetActive(true);
+                Name4.text = table.Name;
+                break;
+            case 5:
+                Name5.gameObject.SetActive(true);
+                Name5.text = table.Name;
+                break;
+            case 6:
+                Name6.gameObject.SetActive(true);
+                Name6.text = table.Name;
+                break;
+        }
+    }
+
     public void SetXiangQingPage(int chongWuId)
     {
         HideSke();
@@ -479,7 +521,8 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 YuanSuIcon.sprite = ResourcesConfig.HeiAnIcon;
                 break;
         }
-        Name.text = table.Name;
+
+        SetName(table);
         ChuZhanText.gameObject.SetActive(CurrentChongWuId==PlayerData.S.ZhuChongWuId);
         LevelCount.text = table.Level.ToString();
         CurrentExp.text = table.Ex.ToString();

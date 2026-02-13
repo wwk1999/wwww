@@ -16,7 +16,11 @@ public class ChongWuItemSwitch : MonoBehaviour
       {
          PlayerData.S.ChongWuJingHua += ChongWuConfig.ChongWuJingHuaDic[ClickChongWuItem.chongWuTable.Quality];
          PlayerData.S.ChongWuDic.Remove(ClickChongWuItem.chongWuTable.ChongWuId);
-         ObserverModuleManager.S.SendEvent("RefreshChongWuCurrentPage");
+         if (ClickChongWuItem.chongWuTable.ChongWuId == PlayerData.S.ZhuChongWuId)
+         {
+            PlayerData.S.ZhuChongWuId = 0;
+         }
+         ObserverModuleManager.S.SendEvent("FenJie");
          ObserverModuleManager.S.SendEvent("HideChongWuItemMask");
          StoreController.S.SaveStoreData();
          Destroy(gameObject);
