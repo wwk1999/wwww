@@ -441,6 +441,43 @@ public class ChongWuPeiYangWindow : MonoBehaviour
 
     private void Start()
     {
+        ZhuFuButton.onClick.AddListener(() =>
+        {
+            var table = PlayerData.S.ChongWuDic[CurrentChongWuId];
+            if (table.Level < 20 && table.XingJi >= 1)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足");
+                return;
+            }
+            if (table.Level < 40 && table.XingJi >= 2)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足");
+                return;
+            }
+            if (table.Level < 60 && table.XingJi >= 3)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足");
+                return;
+            }
+            if (table.Level < 80 && table.XingJi >= 4)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足");
+                return;
+            }
+            if (table.Level < 100 && table.XingJi >= 5)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足");
+                return;
+            }
+            if (PlayerData.S.ChongWuJingHua < ChongWuConfig.XingJiDic[table.XingJi])
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"宠物精华数量不足");
+                return;
+            }
+            PlayerData.S.ChongWuJingHua-= ChongWuConfig.XingJiDic[table.XingJi];
+            table.XingJi++;
+            SetXiangQingPage(table.ChongWuId);
+        });
         ChuZhanButton.onClick.AddListener(() =>
         {
             int index = (ChongWuController.S.CurrentChongWuPageNum - 1) * 6;
