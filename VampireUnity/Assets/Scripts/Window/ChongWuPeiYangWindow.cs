@@ -45,6 +45,13 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public TextMeshProUGUI Hp;
     public TextMeshProUGUI Crit;
     public GameObject SkillContent;
+    public Button ChuZhanButton;
+    public Button ZhuFuButton;
+    
+    
+    
+    
+    
 
     
     private GameObject IceWhite1;
@@ -434,6 +441,83 @@ public class ChongWuPeiYangWindow : MonoBehaviour
 
     private void Start()
     {
+        ChuZhanButton.onClick.AddListener(() =>
+        {
+            int index = (ChongWuController.S.CurrentChongWuPageNum - 1) * 6;
+            
+            PlayerData.S.ZhuChongWuId = CurrentChongWuId;
+            ObserverModuleManager.S.SendEvent("ChongWuChuZhan");
+            ChuZhanText.gameObject.SetActive(true);
+            //取消勾
+            if (PlayerData.S.ChongWuDic.Count >= index + 1)
+            {
+                if (ChongWuController.S.CurrentPageItemList[0].chongWuTable.ChongWuId ==
+                    PlayerData.S.ZhuChongWuId)
+                {
+                    ChongWuController.S.CurrentPageItemList[0].ShowGou();
+                }
+                else
+                {
+                    ChongWuController.S.CurrentPageItemList[0].HideGou();
+                }
+            }
+            if (PlayerData.S.ChongWuDic.Count >= index + 2)
+            {
+                if (ChongWuController.S.CurrentPageItemList[1].chongWuTable.ChongWuId ==
+                    PlayerData.S.ZhuChongWuId)
+                {
+                    ChongWuController.S.CurrentPageItemList[1].ShowGou();
+                }
+                else
+                {
+                    ChongWuController.S.CurrentPageItemList[1].HideGou();
+                }            }
+            if (PlayerData.S.ChongWuDic.Count >= index + 3)
+            {
+                if (ChongWuController.S.CurrentPageItemList[2].chongWuTable.ChongWuId ==
+                    PlayerData.S.ZhuChongWuId)
+                {
+                    ChongWuController.S.CurrentPageItemList[2].ShowGou();
+                }
+                else
+                {
+                    ChongWuController.S.CurrentPageItemList[2].HideGou();
+                }            }
+            if (PlayerData.S.ChongWuDic.Count >= index + 4)
+            {
+                if (ChongWuController.S.CurrentPageItemList[3].chongWuTable.ChongWuId ==
+                    PlayerData.S.ZhuChongWuId)
+                {
+                    ChongWuController.S.CurrentPageItemList[3].ShowGou();
+                }
+                else
+                {
+                    ChongWuController.S.CurrentPageItemList[3].HideGou();
+                }            }
+            if (PlayerData.S.ChongWuDic.Count >= index + 5)
+            {
+                if (ChongWuController.S.CurrentPageItemList[4].chongWuTable.ChongWuId ==
+                    PlayerData.S.ZhuChongWuId)
+                {
+                    ChongWuController.S.CurrentPageItemList[4].ShowGou();
+                }
+                else
+                {
+                    ChongWuController.S.CurrentPageItemList[4].HideGou();
+                }            }
+            if (PlayerData.S.ChongWuDic.Count >= index + 6)
+            {
+                if (ChongWuController.S.CurrentPageItemList[5].chongWuTable.ChongWuId ==
+                    PlayerData.S.ZhuChongWuId)
+                {
+                    ChongWuController.S.CurrentPageItemList[5].ShowGou();
+                }
+                else
+                {
+                    ChongWuController.S.CurrentPageItemList[5].HideGou();
+                }            
+            }
+        });
         ExitButton.onClick.AddListener(() =>
         {
             Destroy(gameObject);
@@ -476,6 +560,8 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 break;
         }
     }
+    
+    
 
     public void SetXiangQingPage(int chongWuId)
     {
@@ -484,6 +570,7 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         ChongWuTable table=PlayerData.S.ChongWuDic[chongWuId];
         ShowSke(table);
         NameLevelCount.text = table.Level.ToString();
+        ChuZhanButton.interactable=!(chongWuId==PlayerData.S.ZhuChongWuId);
         switch (table.Quality)
         {
             case 1:

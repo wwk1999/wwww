@@ -9130,7 +9130,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 8744279296233180033}
   m_FillRect: {fileID: 6282851669109733768}
   m_HandleRect: {fileID: 7884612780846914505}
@@ -10182,7 +10182,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 7887981426663797318}
   m_FillRect: {fileID: 1899751114177841925}
   m_HandleRect: {fileID: 214696316733255599}
@@ -17881,6 +17881,8 @@ MonoBehaviour:
   Hp: {fileID: 5824848278736312994}
   Crit: {fileID: 6337869986815502664}
   SkillContent: {fileID: 6531297074181617690}
+  ChuZhanButton: {fileID: 460845670652040730}
+  ZhuFuButton: {fileID: 5471321756784331000}
 --- !u!1 &7008992733252522014
 GameObject:
   m_ObjectHideFlags: 0
