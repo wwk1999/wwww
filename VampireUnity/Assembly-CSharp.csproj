@@ -350,6 +350,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SnotMonster.cs" />
     <Compile Include="Assets\Scripts\Singleton\SingletonNameAttribute.cs" />
+    <Compile Include="Assets\Scripts\Window\ChongWuPeiYangWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Scripts\Equip\XiangQianGrid.cs" />

@@ -34,6 +34,7 @@ public class ChongWuWindow : MonoBehaviour
     public TextMeshProUGUI ZiZhiCount;
     public TextMeshProUGUI XueMaiCount;
 
+    public Button PeiYangButton;
     
     
     private GameObject IceWhite1;
@@ -103,6 +104,13 @@ public class ChongWuWindow : MonoBehaviour
 
     private int MaxChongWuPageNum => (int)Math.Ceiling(PlayerData.S.ChongWuDic.Count / 6.0);
 
+    public void ShowPeiYangWindow(int id)
+    {            
+        var canvasRect = GetComponentInParent<Canvas>().transform as RectTransform;
+        var peiyangWindow=Instantiate(Resources.Load("Prefabs/Window/ChongWuPeiYangWindow")) as GameObject;
+        peiyangWindow.GetComponent<ChongWuPeiYangWindow>().SetXiangQingPage(id);
+    }
+    
     public void ShowQuality(int quality)
     {
         Quality1.gameObject.SetActive(false);
@@ -696,6 +704,11 @@ public class ChongWuWindow : MonoBehaviour
         ObserverModuleManager.S.RegisterEvent("ChongWuChuZhan", ChongWuChuZhan);
 
 
+        PeiYangButton.onClick.AddListener(() =>
+        {
+            ShowPeiYangWindow(PlayerData.S.ZhuChongWuId);
+        });
+        
         ChongWuItemMaskButton.onClick.AddListener(() =>
         {
             GameObject obj = transform.Find("ChongWuItemSwitch(Clone)").gameObject;

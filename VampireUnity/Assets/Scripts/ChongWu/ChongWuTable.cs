@@ -84,6 +84,12 @@ public enum ChongWuYuanSuType
     Dian,
     HeiAn
 }
+
+public class ChongWuSkillItem
+{
+    public int Level {get; set;}
+    public ChongWuConfig.ChongWuSKillType SKillType {get; set;}
+}
 public class ChongWuTable
 {
     public int ChongWuId { get; set;}
@@ -94,7 +100,11 @@ public class ChongWuTable
     public ChongWuYuanSuType ChongWuYuanSuType { get; set; }
     public int XingJi { get; set; }
     public int Level {get; set;  }
+    public int Ex {get; set;  }
+
     public string Name {get; set;  }
+    public List<ChongWuSkillItem> SkillList {get; set;  }
+
 
     public ChongWuTable(
         int chongWuId=0,
@@ -105,7 +115,9 @@ public class ChongWuTable
         ChongWuYuanSuType ChongWuYuanSuType=ChongWuYuanSuType.None,
         int xingji=1,
         int level=0,
-        string Name="")
+        int ex=0,
+        string Name="",
+        List<ChongWuSkillItem> SkillList=null)
     {
         this.ChongWuId = chongWuId;
         this.ChongWuType = ChongWuType;
@@ -115,6 +127,8 @@ public class ChongWuTable
         this.ChongWuYuanSuType=ChongWuYuanSuType;
         this.XingJi = xingji;
         this.Level = level;
+        this.Ex = ex;
         this.Name = Name;
+        this.SkillList = SkillList;
     }
 }

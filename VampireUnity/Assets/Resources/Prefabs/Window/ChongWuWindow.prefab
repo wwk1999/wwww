@@ -10908,6 +10908,7 @@ MonoBehaviour:
   Quality6: {fileID: 4437982189480077755}
   ZiZhiCount: {fileID: 1499985401612819716}
   XueMaiCount: {fileID: 2434343780564322829}
+  PeiYangButton: {fileID: 6831198177896824588}
 --- !u!1 &7101167891939977788
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,33 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using NUnit.Framework;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ChongWuController:XSingleton<ChongWuController>
 {
     public int CurrentChongWuPageNum = 1;
     public List<ChongWuListItem>CurrentPageItemList=new List<ChongWuListItem>();
+    
+    public static List<int> GetUniqueRandomDigits(int count)
+    {
+        if (count < 1 || count > 6)
+            throw new System.ArgumentOutOfRangeException(nameof(count), "参数必须介于1到6之间。");
+
+        List<int> candidates = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        List<int> result = new List<int>();
+
+        for (int i = 0; i < count; i++)
+        {
+            int index = UnityEngine.Random.Range(0, candidates.Count);
+            result.Add(candidates[index]);
+            candidates.RemoveAt(index);
+        }
+
+        return result;
+    }
+    
     //开宠物蛋
     public ChongWuTable GetOriginChongWuTable(ChongWuType chongWuType)
     {
@@ -16,6 +39,30 @@ public class ChongWuController:XSingleton<ChongWuController>
         float xuemaiRounded = float.Parse(xuemai.ToString("F2"));
         ChongWuYuanSuType chongWuYuanSuType = ChongWuConfig.GetChongWuYuanSuByType(chongWuType);
         string Name=ChongWuConfig.ChongWuNamDic[chongWuType];
+        List<ChongWuConfig.ChongWuSKillType> ChongWuSkillList = null;
+        switch (chongWuYuanSuType)
+        {
+            case ChongWuYuanSuType.Ice:
+                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[ChongWuYuanSuType.Ice];
+                break;
+            case ChongWuYuanSuType.Huo:
+                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[ChongWuYuanSuType.Huo];
+                break;
+            case ChongWuYuanSuType.Dian:
+                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[ChongWuYuanSuType.Dian];
+                break;
+            case ChongWuYuanSuType.HeiAn:
+                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[ChongWuYuanSuType.HeiAn];
+                break;
+        }
+
+        List<int> skillIndexList = GetUniqueRandomDigits(quality);
+        List<ChongWuSkillItem> finalSkillList = new List<ChongWuSkillItem>();
+        foreach (var item in skillIndexList)
+        {
+            finalSkillList.Add(new ChongWuSkillItem() { Level = 1, SKillType = ChongWuSkillList[item] });
+        }
+        
         ChongWuTable chongWuTable = new ChongWuTable()
         {
             ChongWuId = PlayerData.S.FlagChongWuId,
@@ -26,7 +73,9 @@ public class ChongWuController:XSingleton<ChongWuController>
             ChongWuYuanSuType=chongWuYuanSuType,
             XingJi = 0,
             Level = 1,
+            Ex = 0,
             Name = Name,
+            SkillList = finalSkillList,
         };
         PlayerData.S.FlagChongWuId++;
         return chongWuTable;

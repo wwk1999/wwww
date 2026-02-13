@@ -318,12 +318,32 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite NecklaceFortureAddSprite;
     public static Sprite RingFortureAddSprite;
     public static Sprite HelmetFortureAddSprite;
-
+    
 
 
     //宠物图片
     public static Sprite NormalChongWuDan;
     public static Sprite GaoJiChongWuDan;
+    
+    public static Sprite AddAttack;
+    public static Sprite AddDefense;
+    public static Sprite AddCrit;
+    public static Sprite AddHp;
+    public static Sprite AddMoveSpeed;
+    public static Sprite AddAttackSpeed;
+    public static Sprite AddFinalDamage;
+    public static Sprite AddYuanSuDamage;
+    public static Sprite IceSkillCd;
+    public static Sprite HuoSkillCd;
+    public static Sprite DianSkillCd;
+    public static Sprite HeiAnSkillCd;
+    public static Sprite IceSkillDamage;
+    public static Sprite HuoSkillDamage;
+    public static Sprite DianSkillDamage;
+    public static Sprite HeiAnSkillDamage;
+
+
+
 
     public static Sprite XXLiang;
     public static Sprite XXAn;
@@ -737,11 +757,76 @@ public class ResourcesConfig : MonoBehaviour
         return null;
     }
 
+    public static Sprite GetSkillSprite(ChongWuConfig.ChongWuSKillType skill)
+    {
+        switch (skill)
+        {
+            case ChongWuConfig.ChongWuSKillType.AddAttack:
+                return AddAttack;
+            case ChongWuConfig.ChongWuSKillType.AddCrit:
+                return AddCrit;
+            case ChongWuConfig.ChongWuSKillType.AddHp:
+                return AddHp;
+            case ChongWuConfig.ChongWuSKillType.AddDefense:
+                return AddDefense;
+            case ChongWuConfig.ChongWuSKillType.AddMoveSpeed:
+                return AddMoveSpeed;
+            case ChongWuConfig.ChongWuSKillType.AddFinalDamage:
+                return AddFinalDamage;
+            case ChongWuConfig.ChongWuSKillType.AddAttackSpeed:
+                return AddAttackSpeed;
+            case ChongWuConfig.ChongWuSKillType.AddYuanSu:
+                return AddYuanSuDamage;
+            case ChongWuConfig.ChongWuSKillType.IceSkillCd:
+                return IceSkillCd;
+            case ChongWuConfig.ChongWuSKillType.IceSkillDamage:
+                return IceSkillDamage;
+            
+            case ChongWuConfig.ChongWuSKillType.HuoSkillCd:
+                return HuoSkillCd;
+            case ChongWuConfig.ChongWuSKillType.HuoSkillDamage:
+                return HuoSkillDamage;
+            
+            case ChongWuConfig.ChongWuSKillType.DianSkillCd:
+                return DianSkillCd;
+            case ChongWuConfig.ChongWuSKillType.DianSkillDamage:
+                return DianSkillDamage;
+            
+            case ChongWuConfig.ChongWuSKillType.HeiAnSkillCd:
+                return HeiAnSkillCd;
+            case ChongWuConfig.ChongWuSKillType.HeiAnSkillDamage:
+                return HeiAnSkillDamage;
+        }
+
+        return null;
+    }
+
     public static void Init()
     {
         //宠物
         NormalChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/NormalChongWuDan");
         GaoJiChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/GaoJiChongWuDan");
+        
+        AddAttack=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddAttack");
+        AddCrit=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddCrit");
+        AddHp=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddHp");
+        AddDefense=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddDefense");
+        AddMoveSpeed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddMoveSpeed");
+        AddAttackSpeed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddAttackSpeed");
+        AddFinalDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddFinalDamage");
+        AddYuanSuDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddYuanSuDamage");
+        
+        IceSkillCd=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/IceSkillCd");
+        HuoSkillCd=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HuoSkillCd");
+        DianSkillCd=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/DianSkillCd");
+        HeiAnSkillCd=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HeiAnSkillCd");
+        IceSkillDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/IceSkillDamage");
+        HuoSkillDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HuoSkillDamage");
+        DianSkillDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/DianSkillDamage");
+        HeiAnSkillDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HeiAnSkillDamage");
+
+
+
         
         XXAn=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/XXAn");
         XXLiang=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/XXLiang");
