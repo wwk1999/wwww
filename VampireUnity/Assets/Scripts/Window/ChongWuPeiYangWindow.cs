@@ -22,7 +22,10 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public Button XiangQingButton;
     public TextMeshProUGUI ChuZhanText;
     public Button ExitButton;
-
+    public GameObject XiangQingPanel;
+    public GameObject WeiYangPanel;
+    public GameObject ChongZhiPanel;
+    
     [Header("详情Panel")]
     public TextMeshProUGUI LevelCount;
     public Slider ExSlider;
@@ -185,6 +188,29 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         HeiAnOrange1_q=transform.Find("Mask/BagBG/LeftPanel/ImagePanel/ChongWuSke/黑暗Orange1_前").gameObject;
         
     }
+    
+    public void ShowXiangQingPanel()
+    {
+        XiangQingPanel.SetActive(true);
+        WeiYangPanel.SetActive(false);
+        ChongZhiPanel.SetActive(false);
+    }
+    
+    public void ShowChongZhiPanel()
+    {
+        XiangQingPanel.SetActive(false);
+        WeiYangPanel.SetActive(false);
+        ChongZhiPanel.SetActive(true);
+    }
+    
+    public void ShowWeiYangPanel()
+    {
+        XiangQingPanel.SetActive(false);
+        WeiYangPanel.SetActive(true);
+        ChongZhiPanel.SetActive(false);
+    }
+
+    
      public void ShowSke(ChongWuTable table)
     {
         switch (table.ChongWuType)
@@ -441,6 +467,21 @@ public class ChongWuPeiYangWindow : MonoBehaviour
 
     private void Start()
     {
+        ChongZhiButton.onClick.AddListener(() =>
+        {
+            ShowChongZhiPanel();
+        });
+        
+        WeiYangButton.onClick.AddListener(() =>
+        {
+            ShowWeiYangPanel();
+        });
+        
+        XiangQingButton.onClick.AddListener(() =>
+        {
+            ShowXiangQingPanel();
+        });
+        
         ZhuFuButton.onClick.AddListener(() =>
         {
             var table = PlayerData.S.ChongWuDic[CurrentChongWuId];

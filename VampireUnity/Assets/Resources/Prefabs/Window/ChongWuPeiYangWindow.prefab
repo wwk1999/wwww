@@ -17860,6 +17860,9 @@ MonoBehaviour:
   XiangQingButton: {fileID: 2773883422888942228}
   ChuZhanText: {fileID: 2506829482129994390}
   ExitButton: {fileID: 8693877430635401440}
+  XiangQingPanel: {fileID: 8506317251166571541}
+  WeiYangPanel: {fileID: 3876391004609300353}
+  ChongZhiPanel: {fileID: 3382880374256744949}
   LevelCount: {fileID: 8791018522826175065}
   ExSlider: {fileID: 2542322991508842632}
   CurrentExp: {fileID: 1445391583878577890}
