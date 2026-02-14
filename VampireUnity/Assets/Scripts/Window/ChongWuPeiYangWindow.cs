@@ -615,15 +615,15 @@ public class ChongWuPeiYangWindow : MonoBehaviour
             int originLevel = table.Level;
             while (table.Level - originLevel < 5)
             {
+                if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 &&
+                    PlayerData.S.ChongWuShiWu3 <= 0 &&
+                    PlayerData.S.ChongWuShiWu4 <= 0 && PlayerData.S.ChongWuShiWu5 <= 0 &&
+                    PlayerData.S.ChongWuShiWu6 <= 0)
+                {
+                    break;
+                }
                 while (table.Ex < ChongWuConfig.ChongWuExDic[table.Level])
                 {
-                    if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 &&
-                        PlayerData.S.ChongWuShiWu3 <= 0 &&
-                        PlayerData.S.ChongWuShiWu4 <= 0 && PlayerData.S.ChongWuShiWu5 <= 0 &&
-                        PlayerData.S.ChongWuShiWu6 <= 0)
-                    {
-                        break;
-                    }
                     if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 &&
                         PlayerData.S.ChongWuShiWu3 <= 0 &&
                         PlayerData.S.ChongWuShiWu4 <= 0 && PlayerData.S.ChongWuShiWu5 <= 0 &&
