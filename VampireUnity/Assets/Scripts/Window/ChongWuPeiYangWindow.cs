@@ -538,6 +538,11 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         SetWeiYangPanel();
     }
 
+    private void OnDestroy()
+    {
+        ObserverModuleManager.S.UnRegisterEvent("RefreshWeiYangPage",RefreshWeiYangPage);
+    }
+
     private void Start()
     {
         
@@ -601,7 +606,8 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 table.Ex -= ChongWuConfig.ChongWuExDic[table.Level];
                 table.Level++;
             }
-            ObserverModuleManager.S.SendEvent("RefreshWeiYangPage");
+            SetWeiYangPanel();
+            SetXiangQingPage(CurrentChongWuId);
         });
         
           ShenJi5.onClick.AddListener(() =>
@@ -681,8 +687,8 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                     table.Level++;
                 }
             }
-
-            ObserverModuleManager.S.SendEvent("RefreshWeiYangPage");
+            SetWeiYangPanel();
+            SetXiangQingPage(CurrentChongWuId);
         });
         
         
