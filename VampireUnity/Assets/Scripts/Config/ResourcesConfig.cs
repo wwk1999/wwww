@@ -872,74 +872,74 @@ public class ResourcesConfig : MonoBehaviour
 
 
 // White sprites
-        icewhite1 = Resources.Load<Sprite>("Sprite/ChongWu/icewhite1");
-        huowhite1 = Resources.Load<Sprite>("Sprite/ChongWu/huowhite1");
-        dianwhite1 = Resources.Load<Sprite>("Sprite/ChongWu/dianwhite1");
-        heianwhite1 = Resources.Load<Sprite>("Sprite/ChongWu/heianwhite1");
-        heianwhite2 = Resources.Load<Sprite>("Sprite/ChongWu/heianwhite2");
+        icewhite1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icewhite1");
+        huowhite1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huowhite1");
+        dianwhite1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianwhite1");
+        heianwhite1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianwhite1");
+        heianwhite2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianwhite2");
 
 // Green sprites
-        icegreen1 = Resources.Load<Sprite>("Sprite/ChongWu/icegreen1");
-        icegreen2 = Resources.Load<Sprite>("Sprite/ChongWu/icegreen2");
-        icegreen3 = Resources.Load<Sprite>("Sprite/ChongWu/icegreen3");
-        huogreen1 = Resources.Load<Sprite>("Sprite/ChongWu/huogreen1");
-        huogreen2 = Resources.Load<Sprite>("Sprite/ChongWu/huogreen2");
-        diangreen1 = Resources.Load<Sprite>("Sprite/ChongWu/diangreen1");
-        diangreen2 = Resources.Load<Sprite>("Sprite/ChongWu/diangreen2");
-        heiangreen1 = Resources.Load<Sprite>("Sprite/ChongWu/heiangreen1");
-        heiangreen2 = Resources.Load<Sprite>("Sprite/ChongWu/heiangreen2");
-        heiangreen3 = Resources.Load<Sprite>("Sprite/ChongWu/heiangreen3");
+        icegreen1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icegreen1");
+        icegreen2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icegreen2");
+        icegreen3 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icegreen3");
+        huogreen1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huogreen1");
+        huogreen2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huogreen2");
+        diangreen1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/diangreen1");
+        diangreen2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/diangreen2");
+        heiangreen1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heiangreen1");
+        heiangreen2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heiangreen2");
+        heiangreen3 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heiangreen3");
 
 // Blue sprites
-        iceblue1 = Resources.Load<Sprite>("Sprite/ChongWu/iceblue1");
-        iceblue2 = Resources.Load<Sprite>("Sprite/ChongWu/iceblue2");
-        huoblue1 = Resources.Load<Sprite>("Sprite/ChongWu/huoblue1");
-        huoblue2 = Resources.Load<Sprite>("Sprite/ChongWu/huoblue2");
-        huoblue3 = Resources.Load<Sprite>("Sprite/ChongWu/huoblue3");
-        dianblue1 = Resources.Load<Sprite>("Sprite/ChongWu/dianblue1");
-        dianblue2 = Resources.Load<Sprite>("Sprite/ChongWu/dianblue2");
-        heianblue1 = Resources.Load<Sprite>("Sprite/ChongWu/heianblue1");
-        heianblue2 = Resources.Load<Sprite>("Sprite/ChongWu/heianblue2");
-        heianblue3 = Resources.Load<Sprite>("Sprite/ChongWu/heianblue3");
+        iceblue1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/iceblue1");
+        iceblue2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/iceblue2");
+        huoblue1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huoblue1");
+        huoblue2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huoblue2");
+        huoblue3 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huoblue3");
+        dianblue1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianblue1");
+        dianblue2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianblue2");
+        heianblue1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianblue1");
+        heianblue2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianblue2");
+        heianblue3 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianblue3");
 
 // Purple sprites (q/h variants)
-        icepurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/icepurple1_q");
-        icepurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/icepurple1_h");
-        icepurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/icepurple2_q");
-        icepurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/icepurple2_h");
-        icepurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/icepurple3_q");
-        icepurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/icepurple3_h");
+        icepurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icepurple1_q");
+        icepurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icepurple1_h");
+        icepurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icepurple2_q");
+        icepurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icepurple2_h");
+        icepurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icepurple3_q");
+        icepurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/icepurple3_h");
 
-        huopurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/huopurple1_q");
-        huopurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/huopurple1_h");
-        huopurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/huopurple2_q");
-        huopurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/huopurple2_h");
-        huopurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/huopurple3_q");
-        huopurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/huopurple3_h");
+        huopurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huopurple1_q");
+        huopurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huopurple1_h");
+        huopurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huopurple2_q");
+        huopurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huopurple2_h");
+        huopurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huopurple3_q");
+        huopurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huopurple3_h");
 
-        dianpurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple1_q");
-        dianpurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple1_h");
-        dianpurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple2_q");
-        dianpurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple2_h");
-        dianpurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple3_q");
-        dianpurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/dianpurple3_h");
+        dianpurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianpurple1_q");
+        dianpurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianpurple1_h");
+        dianpurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianpurple2_q");
+        dianpurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianpurple2_h");
+        dianpurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianpurple3_q");
+        dianpurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianpurple3_h");
 
-        heianpurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple1_q");
-        heianpurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple1_h");
-        heianpurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple2_q");
-        heianpurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple2_h");
-        heianpurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple3_q");
-        heianpurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/heianpurple3_h");
+        heianpurple1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianpurple1_q");
+        heianpurple1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianpurple1_h");
+        heianpurple2_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianpurple2_q");
+        heianpurple2_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianpurple2_h");
+        heianpurple3_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianpurple3_q");
+        heianpurple3_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianpurple3_h");
 
 // Orange sprites (q/h variants)
-        iceorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/iceorange1_q");
-        iceorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/iceorange1_h");
-        huoorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/huoorange1_q");
-        huoorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/huoorange1_h");
-        dianorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/dianorange1_q");
-        dianorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/dianorange1_h");
-        heianorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/heianorange1_q");
-        heianorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/heianorange1_h");
+        iceorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/iceorange1_q");
+        iceorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/iceorange1_h");
+        huoorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huoorange1_q");
+        huoorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/huoorange1_h");
+        dianorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianorange1_q");
+        dianorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/dianorange1_h");
+        heianorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianorange1_q");
+        heianorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianorange1_h");
 
 
 
