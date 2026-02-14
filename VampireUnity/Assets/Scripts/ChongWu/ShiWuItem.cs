@@ -79,6 +79,8 @@ public class ShiWuItem : MonoBehaviour
             table.Level++;
          }
          ObserverModuleManager.S.SendEvent("RefreshWeiYangPage");
+         ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
+
       });
    }
 }

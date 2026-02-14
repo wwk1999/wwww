@@ -502,6 +502,12 @@ public class ChongWuWindow : MonoBehaviour
         SetPageNum();
     }
 
+    public void RefreshChongWuPage(object[] obj)
+    {
+        ShowZhuChongWu();
+        ShowChongWuPage();
+    }
+
     public void SetPageNum()
     {
         PageNum.text = ChongWuController.S.CurrentChongWuPageNum.ToString();
@@ -761,6 +767,7 @@ public class ChongWuWindow : MonoBehaviour
         ObserverModuleManager.S.RegisterEvent("HideChongWuItemMask", HideChongWuItemMask);
         ObserverModuleManager.S.RegisterEvent("ShowPeiYangWindow",ShowPeiYangWindowObj);
         ObserverModuleManager.S.RegisterEvent("ChongWuChuZhan", ChongWuChuZhan);
+        ObserverModuleManager.S.RegisterEvent("RefreshChongWuPage", RefreshChongWuPage);
 
 
         PeiYangButton.onClick.AddListener(() =>

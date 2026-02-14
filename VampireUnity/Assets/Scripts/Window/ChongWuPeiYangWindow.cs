@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class ChongWuPeiYangWindow : MonoBehaviour
 {
@@ -76,11 +77,11 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public Button XueMaiButton;
     public GameObject YaoShui;
     public TextMeshProUGUI CurrentYaoCount;
-    public TextMeshProUGUI NeedYaoCount;
     public Button ChongZhiButton1;
+    private bool IsZiZhiPanel = true;
 
 
-    public void SetChongZhiPanel()
+    public void SetChongZhiPanel(bool isZiZhiPanel=true)
     {
         var table = PlayerData.S.ChongWuDic[CurrentChongWuId];
         switch (table.Quality)
@@ -96,7 +97,118 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[1].max.ToString();
                 YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
                 YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-                YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
+                if (isZiZhiPanel)
+                {
+                    IsZiZhiPanel = true;
+                    CurrentYaoCount.text=BagController.S.PropList[1703].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
+                }
+                else
+                {
+                    IsZiZhiPanel = false;
+                    CurrentYaoCount.text=BagController.S.PropList[1803].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXueMaiDan;
+                }
+                break;
+            
+            case 2:
+                ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[2].max;
+                ZiZhiSlider.value = table.ZiZhi;
+                CurrentZiZhi.text=table.ZiZhi.ToString();
+                MaxZiZhi.text= ChongWuConfig.ChongWuZiZhiDic[2].max.ToString();
+                XueMaiSlider.maxValue=ChongWuConfig.ChongWuXueMaiDic[2].max;
+                XueMaiSlider.value = table.XueMai;
+                CurrentXueMai.text=table.XueMai.ToString();
+                MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[2].max.ToString();
+                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                if (isZiZhiPanel)
+                {
+                    IsZiZhiPanel = true;
+                    CurrentYaoCount.text=BagController.S.PropList[1703].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
+                }
+                else
+                {
+                    IsZiZhiPanel = false;
+                    CurrentYaoCount.text=BagController.S.PropList[1803].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXueMaiDan;
+                }
+                break;
+            
+            case 3:
+                ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[3].max;
+                ZiZhiSlider.value = table.ZiZhi;
+                CurrentZiZhi.text=table.ZiZhi.ToString();
+                MaxZiZhi.text= ChongWuConfig.ChongWuZiZhiDic[3].max.ToString();
+                XueMaiSlider.maxValue=ChongWuConfig.ChongWuXueMaiDic[3].max;
+                XueMaiSlider.value = table.XueMai;
+                CurrentXueMai.text=table.XueMai.ToString();
+                MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[3].max.ToString();
+                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                if (isZiZhiPanel)
+                {
+                    IsZiZhiPanel = true;
+                    CurrentYaoCount.text=BagController.S.PropList[1703].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
+                }
+                else
+                {
+                    IsZiZhiPanel = false;
+                    CurrentYaoCount.text=BagController.S.PropList[1803].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXueMaiDan;
+                }
+                break;
+            
+            case 4:
+                ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[4].max;
+                ZiZhiSlider.value = table.ZiZhi;
+                CurrentZiZhi.text=table.ZiZhi.ToString();
+                MaxZiZhi.text= ChongWuConfig.ChongWuZiZhiDic[4].max.ToString();
+                XueMaiSlider.maxValue=ChongWuConfig.ChongWuXueMaiDic[4].max;
+                XueMaiSlider.value = table.XueMai;
+                CurrentXueMai.text=table.XueMai.ToString();
+                MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[4].max.ToString();
+                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                if (isZiZhiPanel)
+                {
+                    IsZiZhiPanel = true;
+                    CurrentYaoCount.text=BagController.S.PropList[1705].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXiSuiYe;
+                }
+                else
+                {
+                    IsZiZhiPanel = false;
+                    CurrentYaoCount.text=BagController.S.PropList[1805].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXueMaiDan;
+                }
+                break;
+            
+            case 5:
+                ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[5].max;
+                ZiZhiSlider.value = table.ZiZhi;
+                CurrentZiZhi.text=table.ZiZhi.ToString();
+                MaxZiZhi.text= ChongWuConfig.ChongWuZiZhiDic[5].max.ToString();
+                XueMaiSlider.maxValue=ChongWuConfig.ChongWuXueMaiDic[5].max;
+                XueMaiSlider.value = table.XueMai;
+                CurrentXueMai.text=table.XueMai.ToString();
+                MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[5].max.ToString();
+                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                if (isZiZhiPanel)
+                {
+                    IsZiZhiPanel = true;
+                    CurrentYaoCount.text=BagController.S.PropList[1705].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXiSuiYe;
+                }
+                else
+                {
+                    IsZiZhiPanel = false;
+                    CurrentYaoCount.text=BagController.S.PropList[1805].Count.ToString();
+                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXueMaiDan;
+                }
                 break;
             
         }
@@ -299,6 +411,7 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         XiangQingPanel.SetActive(true);
         WeiYangPanel.SetActive(false);
         ChongZhiPanel.SetActive(false);
+        SetXiangQingPage(CurrentChongWuId);
     }
     
     public void ShowChongZhiPanel()
@@ -306,6 +419,7 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         XiangQingPanel.SetActive(false);
         WeiYangPanel.SetActive(false);
         ChongZhiPanel.SetActive(true);
+        SetChongZhiPanel();
     }
     
     public void ShowWeiYangPanel()
@@ -585,7 +699,86 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     {
         
         ObserverModuleManager.S.RegisterEvent("RefreshWeiYangPage",RefreshWeiYangPage);
-        
+        ZiZhiButton.onClick.AddListener(() =>
+        {
+            SetChongZhiPanel(true);
+        });
+        XueMaiButton.onClick.AddListener(() =>
+        {
+            SetChongZhiPanel(false);
+        });
+        ChongZhiButton1.onClick.AddListener(() =>
+        {
+            var table=PlayerData.S.ChongWuDic[CurrentChongWuId];
+            if (IsZiZhiPanel)
+            {
+                if (table.Quality <= 3)
+                {
+                    if (!BagController.S.PropList.ContainsKey(1703) || BagController.S.PropList[1703].Count < 1)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+                        return;
+                    }
+
+                    BagController.S.PropList[1703].Count--;
+                    int random = Random.Range(ChongWuConfig.ChongWuZiZhiDic[table.Quality].min,
+                        ChongWuConfig.ChongWuZiZhiDic[table.Quality].max+1);
+                    table.ZiZhi = random;
+                    SetChongZhiPanel(true);
+                    ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
+                }
+                else
+                {
+                    if (!BagController.S.PropList.ContainsKey(1705) || BagController.S.PropList[1705].Count < 1)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+                        return;
+                    }
+
+                    BagController.S.PropList[1705].Count--;
+                    int random = Random.Range(ChongWuConfig.ChongWuZiZhiDic[table.Quality].min,
+                        ChongWuConfig.ChongWuZiZhiDic[table.Quality].max+1);
+                    table.ZiZhi = random;
+                    SetChongZhiPanel(true);
+                    ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
+
+                }
+            }
+            else
+            {
+                if (table.Quality <= 3)
+                {
+                    if (!BagController.S.PropList.ContainsKey(1803) || BagController.S.PropList[1803].Count < 1)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+                        return;
+                    }
+
+                    BagController.S.PropList[1803].Count--;
+                    int random = Random.Range(ChongWuConfig.ChongWuXueMaiDic[table.Quality].min,
+                        ChongWuConfig.ChongWuXueMaiDic[table.Quality].max+1);
+                    table.XueMai = random;
+                    SetChongZhiPanel(false);
+                    ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
+
+                }
+                else
+                {
+                    if (!BagController.S.PropList.ContainsKey(1805) || BagController.S.PropList[1805].Count < 1)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足");
+                        return;
+                    }
+
+                    BagController.S.PropList[1805].Count--;
+                    int random = Random.Range(ChongWuConfig.ChongWuXueMaiDic[table.Quality].min,
+                        ChongWuConfig.ChongWuXueMaiDic[table.Quality].max+1);
+                    table.XueMai = random;
+                    SetChongZhiPanel(false);
+                    ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
+                }
+            }
+        });
         ShenJi1.onClick.AddListener(() =>
         {
             if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 && PlayerData.S.ChongWuShiWu3 <= 0 &&
@@ -646,6 +839,8 @@ public class ChongWuPeiYangWindow : MonoBehaviour
             }
             SetWeiYangPanel();
             SetXiangQingPage(CurrentChongWuId);
+            ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
+
         });
         
           ShenJi5.onClick.AddListener(() =>
@@ -727,6 +922,8 @@ public class ChongWuPeiYangWindow : MonoBehaviour
             }
             SetWeiYangPanel();
             SetXiangQingPage(CurrentChongWuId);
+            ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
+
         });
         
         

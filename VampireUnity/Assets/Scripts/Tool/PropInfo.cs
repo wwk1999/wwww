@@ -1782,9 +1782,8 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/XiSuiYeDesc5").gameObject.SetActive(false);
                 instance.transform.Find("bg/XueMaiDanDesc3").gameObject.SetActive(true);
                 instance.transform.Find("bg/XueMaiDanDesc5").gameObject.SetActive(false);
-
-
                 break;
+            
             case 1805:
                 instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXueMaiDan;
                 instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = "高级血脉丹";
