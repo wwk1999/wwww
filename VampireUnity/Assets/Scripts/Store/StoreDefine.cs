@@ -153,7 +153,12 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int FuChongWuId3 = 0;
         public int ChongWuJingHua = 0;
 
-
+        public int ChongWuShiWu1 = 0;
+        public int ChongWuShiWu2 = 0;
+        public int ChongWuShiWu3 = 0;
+        public int ChongWuShiWu4 = 0;
+        public int ChongWuShiWu5 = 0;
+        public int ChongWuShiWu6 = 0;
 
         public void CopyFromRuntime(PlayerData runtime)
         {
@@ -245,6 +250,14 @@ public class StoreDefine : XSingleton<StoreDefine>
             FuChongWuId3 = runtime.FuChongWuId3;
 
             ChongWuJingHua = runtime.ChongWuJingHua;
+            
+            ChongWuShiWu1=runtime.ChongWuShiWu1;
+            ChongWuShiWu2=runtime.ChongWuShiWu2;
+            ChongWuShiWu3=runtime.ChongWuShiWu3;
+            ChongWuShiWu4=runtime.ChongWuShiWu4;
+            ChongWuShiWu5=runtime.ChongWuShiWu5;
+            ChongWuShiWu6=runtime.ChongWuShiWu6;
+
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -339,6 +352,13 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.FuChongWuId3 = FuChongWuId3;
 
             runtime.ChongWuJingHua = ChongWuJingHua;
+            
+            runtime.ChongWuShiWu1=ChongWuShiWu1;
+            runtime.ChongWuShiWu2=ChongWuShiWu2;
+            runtime.ChongWuShiWu3=ChongWuShiWu3;
+            runtime.ChongWuShiWu4=ChongWuShiWu4;
+            runtime.ChongWuShiWu5=ChongWuShiWu5;
+            runtime.ChongWuShiWu6=ChongWuShiWu6;
         }
     }
 

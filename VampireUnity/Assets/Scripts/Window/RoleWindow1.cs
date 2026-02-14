@@ -261,6 +261,14 @@ public class RoleWindow1 : MonoBehaviour
             {
                 BagController.S.PropList.Add(1605,data5);
             }
+
+            PlayerData.S.ChongWuShiWu1 += 10;
+            PlayerData.S.ChongWuShiWu2 += 10;
+            PlayerData.S.ChongWuShiWu3 += 10;
+            PlayerData.S.ChongWuShiWu4 += 10;
+            PlayerData.S.ChongWuShiWu5 += 10;
+            PlayerData.S.ChongWuShiWu6 += 10;
+
         });
         TitleButton.onClick.AddListener(() =>
         {

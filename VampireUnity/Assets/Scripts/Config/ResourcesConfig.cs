@@ -324,6 +324,14 @@ public class ResourcesConfig : MonoBehaviour
     //宠物图片
     public static Sprite NormalChongWuDan;
     public static Sprite GaoJiChongWuDan;
+
+    public static Sprite ChongWuShiWu1;
+    public static Sprite ChongWuShiWu2;
+    public static Sprite ChongWuShiWu3;
+    public static Sprite ChongWuShiWu4;
+    public static Sprite ChongWuShiWu5;
+    public static Sprite ChongWuShiWu6;
+
     
     public static Sprite AddAttack;
     public static Sprite AddDefense;
@@ -806,6 +814,15 @@ public class ResourcesConfig : MonoBehaviour
         //宠物
         NormalChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/NormalChongWuDan");
         GaoJiChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/GaoJiChongWuDan");
+        
+        ChongWuShiWu1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu1");
+        ChongWuShiWu2=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu2");
+        ChongWuShiWu3=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu3");
+        ChongWuShiWu4=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu4");
+        ChongWuShiWu5=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu5");
+        ChongWuShiWu6=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu6");
+
+
         
         AddAttack=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddAttack");
         AddCrit=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddCrit");

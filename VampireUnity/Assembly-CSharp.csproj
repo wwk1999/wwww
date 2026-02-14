@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\雷兽\LeiShouShunYi.cs" />
     <Compile Include="Assets\Scripts\Config\SkillConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\ChiBangGrid.cs" />
+    <Compile Include="Assets\Scripts\ChongWu\ShiWuItem.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\HpReductionReplyAdd50.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />

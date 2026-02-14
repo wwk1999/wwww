@@ -101,6 +101,15 @@ public class PlayerData : XSingleton<PlayerData>
 
     public int ChongWuJingHua = 0;
 
+    public int ChongWuShiWu1 = 0;
+    public int ChongWuShiWu2 = 0;
+    public int ChongWuShiWu3 = 0;
+    public int ChongWuShiWu4 = 0;
+    public int ChongWuShiWu5 = 0;
+    public int ChongWuShiWu6 = 0;
+
+    
+    
     protected override void Awake()
     {
         base.Awake();

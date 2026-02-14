@@ -50,11 +50,78 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public GameObject SkillContent;
     public Button ChuZhanButton;
     public Button ZhuFuButton;
+
+    [Header("喂养Panel")] 
+    public TextMeshProUGUI CurrentLevel;
+    public Slider WeiYangExSlider;
+    public TextMeshProUGUI CurrentEx;
+    public TextMeshProUGUI MaxEx;
+    public GameObject ShiWu1;
+    public GameObject ShiWu2;
+    public GameObject ShiWu3;
+    public GameObject ShiWu4;
+    public GameObject ShiWu5;
+    public GameObject ShiWu6;
+    public Button ShenJi1;
+    public Button ShenJi5;
+
+    public void SetWeiYangPanel()
+    {
+        var table = PlayerData.S.ChongWuDic[CurrentChongWuId];
+        CurrentLevel.text = table.Level.ToString();
+        WeiYangExSlider.maxValue = ChongWuConfig.ChongWuExDic[table.Level];
+        WeiYangExSlider.value = table.Ex;
+        CurrentEx.text=table.Ex.ToString();
+        MaxEx.text=ChongWuConfig.ChongWuExDic[table.Level].ToString();
+
+        ShiWu1.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+        ShiWu1.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu1;
+        ShiWu1.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
+        ShiWu1.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu1.ToString();
+        ShiWu1.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
+        ShiWu1.GetComponent<ShiWuItem>().Quatity = 1;
+        
+        
+        ShiWu2.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+        ShiWu2.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu2;
+        ShiWu2.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
+        ShiWu2.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu2.ToString();
+        ShiWu2.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
+        ShiWu2.GetComponent<ShiWuItem>().Quatity = 2;
+
+        ShiWu3.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+        ShiWu3.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu3;
+        ShiWu3.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+        ShiWu3.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu3.ToString();
+        ShiWu3.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
+        ShiWu3.GetComponent<ShiWuItem>().Quatity = 3;
+        
+        
+        ShiWu4.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+        ShiWu4.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu4;
+        ShiWu4.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
+        ShiWu4.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu4.ToString();
+        ShiWu4.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
+        ShiWu4.GetComponent<ShiWuItem>().Quatity = 4;
+        
+        
+        ShiWu5.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+        ShiWu5.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu5;
+        ShiWu5.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+        ShiWu5.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu5.ToString();
+        ShiWu5.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
+        ShiWu5.GetComponent<ShiWuItem>().Quatity = 5;
+        
+        
+        ShiWu6.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+        ShiWu6.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu6;
+        ShiWu6.transform.Find("Edge").GetComponent<Animator>().Play("RedEdge");
+        ShiWu6.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu6.ToString();
+        ShiWu6.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
+        ShiWu6.GetComponent<ShiWuItem>().Quatity = 6;
+    }
     
-    
-    
-    
-    
+
 
     
     private GameObject IceWhite1;
@@ -208,6 +275,7 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         XiangQingPanel.SetActive(false);
         WeiYangPanel.SetActive(true);
         ChongZhiPanel.SetActive(false);
+        SetWeiYangPanel();
     }
 
     
@@ -465,8 +533,159 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         HeiAnOrange1_h.gameObject.SetActive(false);
     }
 
+    public void RefreshWeiYangPage(object[] obj)
+    {
+        SetWeiYangPanel();
+    }
+
     private void Start()
     {
+        
+        ObserverModuleManager.S.RegisterEvent("RefreshWeiYangPage",RefreshWeiYangPage);
+        
+        ShenJi1.onClick.AddListener(() =>
+        {
+            if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 && PlayerData.S.ChongWuShiWu3 <= 0 &&
+                PlayerData.S.ChongWuShiWu4 <= 0 && PlayerData.S.ChongWuShiWu5 <= 0 && PlayerData.S.ChongWuShiWu6 <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"没有宠物食物");
+            }
+            var table=PlayerData.S.ChongWuDic[CurrentChongWuId];
+            while (table.Ex<ChongWuConfig.ChongWuExDic[table.Level])
+            {
+                if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 && PlayerData.S.ChongWuShiWu3 <= 0 &&
+                    PlayerData.S.ChongWuShiWu4 <= 0 && PlayerData.S.ChongWuShiWu5 <= 0 && PlayerData.S.ChongWuShiWu6 <= 0)
+                {
+                    break;
+                }
+                if (PlayerData.S.ChongWuShiWu1 > 0)
+                {
+                    PlayerData.S.ChongWuShiWu1--;
+                    table.Ex += ChongWuConfig.ShiWuDic[1];
+                    continue;
+                }
+                if (PlayerData.S.ChongWuShiWu2 > 0)
+                {
+                    PlayerData.S.ChongWuShiWu2--;
+                    table.Ex += ChongWuConfig.ShiWuDic[2];
+                    continue;
+                }
+                if (PlayerData.S.ChongWuShiWu3 > 0)
+                {
+                    PlayerData.S.ChongWuShiWu3--;
+                    table.Ex += ChongWuConfig.ShiWuDic[3];
+                    continue;
+                }
+                if (PlayerData.S.ChongWuShiWu4 > 0)
+                {
+                    PlayerData.S.ChongWuShiWu4--;
+                    table.Ex += ChongWuConfig.ShiWuDic[4];
+                    continue;
+                }
+                if (PlayerData.S.ChongWuShiWu5 > 0)
+                {
+                    PlayerData.S.ChongWuShiWu5--;
+                    table.Ex += ChongWuConfig.ShiWuDic[5];
+                    continue;
+                }
+                if (PlayerData.S.ChongWuShiWu6 > 0)
+                {
+                    PlayerData.S.ChongWuShiWu6--;
+                    table.Ex += ChongWuConfig.ShiWuDic[6];
+                    continue;
+                }
+            }
+
+            while (table.Ex >= ChongWuConfig.ChongWuExDic[table.Level])
+            {
+                table.Ex -= ChongWuConfig.ChongWuExDic[table.Level];
+                table.Level++;
+            }
+            ObserverModuleManager.S.SendEvent("RefreshWeiYangPage");
+        });
+        
+          ShenJi5.onClick.AddListener(() =>
+        {
+            if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 && PlayerData.S.ChongWuShiWu3 <= 0 &&
+                PlayerData.S.ChongWuShiWu4 <= 0 && PlayerData.S.ChongWuShiWu5 <= 0 && PlayerData.S.ChongWuShiWu6 <= 0)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"没有宠物食物");
+            }
+            var table=PlayerData.S.ChongWuDic[CurrentChongWuId];
+            int originLevel = table.Level;
+            while (table.Level - originLevel < 5)
+            {
+                while (table.Ex < ChongWuConfig.ChongWuExDic[table.Level])
+                {
+                    if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 &&
+                        PlayerData.S.ChongWuShiWu3 <= 0 &&
+                        PlayerData.S.ChongWuShiWu4 <= 0 && PlayerData.S.ChongWuShiWu5 <= 0 &&
+                        PlayerData.S.ChongWuShiWu6 <= 0)
+                    {
+                        break;
+                    }
+                    if (PlayerData.S.ChongWuShiWu1 <= 0 && PlayerData.S.ChongWuShiWu2 <= 0 &&
+                        PlayerData.S.ChongWuShiWu3 <= 0 &&
+                        PlayerData.S.ChongWuShiWu4 <= 0 && PlayerData.S.ChongWuShiWu5 <= 0 &&
+                        PlayerData.S.ChongWuShiWu6 <= 0)
+                    {
+                        break;
+                    }
+
+                    if (PlayerData.S.ChongWuShiWu1 > 0)
+                    {
+                        PlayerData.S.ChongWuShiWu1--;
+                        table.Ex += ChongWuConfig.ShiWuDic[1];
+                        continue;
+                    }
+
+                    if (PlayerData.S.ChongWuShiWu2 > 0)
+                    {
+                        PlayerData.S.ChongWuShiWu2--;
+                        table.Ex += ChongWuConfig.ShiWuDic[2];
+                        continue;
+                    }
+
+                    if (PlayerData.S.ChongWuShiWu3 > 0)
+                    {
+                        PlayerData.S.ChongWuShiWu3--;
+                        table.Ex += ChongWuConfig.ShiWuDic[3];
+                        continue;
+                    }
+
+                    if (PlayerData.S.ChongWuShiWu4 > 0)
+                    {
+                        PlayerData.S.ChongWuShiWu4--;
+                        table.Ex += ChongWuConfig.ShiWuDic[4];
+                        continue;
+                    }
+
+                    if (PlayerData.S.ChongWuShiWu5 > 0)
+                    {
+                        PlayerData.S.ChongWuShiWu5--;
+                        table.Ex += ChongWuConfig.ShiWuDic[5];
+                        continue;
+                    }
+
+                    if (PlayerData.S.ChongWuShiWu6 > 0)
+                    {
+                        PlayerData.S.ChongWuShiWu6--;
+                        table.Ex += ChongWuConfig.ShiWuDic[6];
+                        continue;
+                    }
+                }
+
+                while (table.Ex >= ChongWuConfig.ChongWuExDic[table.Level])
+                {
+                    table.Ex -= ChongWuConfig.ChongWuExDic[table.Level];
+                    table.Level++;
+                }
+            }
+
+            ObserverModuleManager.S.SendEvent("RefreshWeiYangPage");
+        });
+        
+        
         ChongZhiButton.onClick.AddListener(() =>
         {
             ShowChongZhiPanel();

@@ -66,7 +66,7 @@ public class ChongWuConfig
             { ChongWuYuanSuType.Dian ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.DianSkillCd,ChongWuSKillType.DianSkillDamage}},
             { ChongWuYuanSuType.HeiAn ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.HeiAnSkillCd,ChongWuSKillType.HeiAnSkillDamage}},
         };
-
+    
 
     public static Dictionary<int, int> ChongWuExDic = new Dictionary<int, int>()
     {
