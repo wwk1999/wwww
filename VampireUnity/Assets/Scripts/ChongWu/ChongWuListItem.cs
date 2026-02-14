@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
+public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHandler 
 {
     public Image Image;
     public TextMeshProUGUI Level;
@@ -17,6 +17,7 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
     public Image XX5;
     public AspectRatioFitter  aspectRatioFitter;
     private RectTransform canvasRect; // Canvas 的 RectTransform
+    public bool isLeftMouseDown = false;
 
     [NonSerialized]public ChongWuTable chongWuTable;
 
@@ -25,6 +26,8 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
     
     public Button XiangQingButton;
 
+    private float isLeftMouseDownTime = 0;
+    private GameObject ChongWuImage=null;
     public void ShowGou()
     {
         Gou.SetActive(true);
@@ -33,6 +36,71 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler
     {
         Gou.SetActive(false);
     }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            isLeftMouseDown = true;
+        }
+    }
+    
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            isLeftMouseDown = true;
+        }
+    }
+
+  
+    
+
+    private void Update()
+    {
+        if (isLeftMouseDown)
+        {
+            isLeftMouseDownTime+=Time.deltaTime;
+        }
+
+        if (isLeftMouseDownTime >= 0.2f && ChongWuImage == null)
+        {
+            canvasRect = GetComponentInParent<Canvas>().transform as RectTransform;
+            Vector2 localPoint;
+            var cam = canvasRect.GetComponentInParent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main;
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, Input.mousePosition, cam, out localPoint))
+            {
+                ChongWuImage=Instantiate(Resources.Load("Prefabs/Window/ChongWuImage"),canvasRect) as GameObject;
+                RectTransform _ChongWuImage=ChongWuImage.transform as RectTransform;
+                ChongWuImage.gameObject.SetActive(true);
+                _ChongWuImage.anchoredPosition =  new Vector2(localPoint.x, localPoint.y);
+                _ChongWuImage.transform.Find("Image").GetComponent<Image>().sprite =
+                    ResourcesConfig.GetChongWuSprite(chongWuTable.ChongWuType);
+                ChongWuController.S.FuChongWuTable = chongWuTable;
+                ChongWuController.S.isLeftMouseDown = true;
+            }
+        }
+        
+        if (isLeftMouseDown&&ChongWuImage!=null)
+        {
+            canvasRect = GetComponentInParent<Canvas>().transform as RectTransform;
+            Vector2 localPoint;
+            var cam = canvasRect.GetComponentInParent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main;
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, Input.mousePosition, cam, out localPoint))
+            {
+                RectTransform _ChongWuImage=ChongWuImage.transform as RectTransform;
+                _ChongWuImage.anchoredPosition =  new Vector2(localPoint.x, localPoint.y);
+            }
+
+        }
+        if (isLeftMouseDown && Input.GetMouseButtonUp(0))
+        {
+            isLeftMouseDown = false;
+            isLeftMouseDownTime = 0;
+            ChongWuController.S.isLeftMouseDown = false;
+            Destroy(ChongWuImage.gameObject);
+        }
+    }
+
 
     private void Start()
     {

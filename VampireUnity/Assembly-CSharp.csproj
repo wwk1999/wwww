@@ -320,6 +320,7 @@
     <Compile Include="Assets\Number Themes\Scripts\NumberUIManager.cs" />
     <Compile Include="Assets\Scripts\Tool\ClearSaveTool.cs" />
     <Compile Include="Assets\Arts\Shaders\LcL\FadeController.cs" />
+    <Compile Include="Assets\Scripts\ChongWu\FuChongItem.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\RedWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NecklaceFortureAdd.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\AddAttackForTime.cs" />

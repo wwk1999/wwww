@@ -9,7 +9,9 @@ public class ChongWuController:XSingleton<ChongWuController>
 {
     public int CurrentChongWuPageNum = 1;
     public List<ChongWuListItem>CurrentPageItemList=new List<ChongWuListItem>();
-    
+    public bool isLeftMouseDown = false;
+    public ChongWuTable FuChongWuTable;
+
     public static List<int> GetUniqueRandomDigits(int count)
     {
         if (count < 1 || count > 6)
