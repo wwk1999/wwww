@@ -24,6 +24,8 @@ public class PropConfig : MonoBehaviour
       CD,
       DD,
       ChongWuDan,
+      XiSuiYe,
+      XueMaiDan,
    }
 
    public static Dictionary<int, string> PropNameDic = new Dictionary<int, string>()

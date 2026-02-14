@@ -268,6 +268,75 @@ public class RoleWindow1 : MonoBehaviour
             PlayerData.S.ChongWuShiWu4 += 10;
             PlayerData.S.ChongWuShiWu5 += 10;
             PlayerData.S.ChongWuShiWu6 += 10;
+            
+            var XiSuiYeData3 = new PropTable()
+            {
+                PropType =  PropConfig.PropType.XiSuiYe,
+                Quality = 3,
+                Desc = "",
+                Count =  100,
+                EquipName = "NormalXiSuiYe",
+            };
+            if (BagController.S.PropList.ContainsKey(1703))
+            {
+                BagController.S.PropList[1703].Count+=XiSuiYeData3.Count;
+            }
+            else
+            {
+                BagController.S.PropList.Add(1703,XiSuiYeData3);
+            }
+            
+            var XiSuiYeData5 = new PropTable()
+            {
+                PropType =  PropConfig.PropType.XiSuiYe,
+                Quality = 5,
+                Desc = "",
+                Count =  100,
+                EquipName = "GaoJiXiSuiYe",
+            };
+            if (BagController.S.PropList.ContainsKey(1705))
+            {
+                BagController.S.PropList[1705].Count+=XiSuiYeData5.Count;
+            }
+            else
+            {
+                BagController.S.PropList.Add(1705,XiSuiYeData5);
+            }
+            
+            
+            var XueMaiDanData3 = new PropTable()
+            {
+                PropType =  PropConfig.PropType.XueMaiDan,
+                Quality = 3,
+                Desc = "",
+                Count =  100,
+                EquipName = "NormalXueMaiDan",
+            };
+            if (BagController.S.PropList.ContainsKey(1803))
+            {
+                BagController.S.PropList[1803].Count+=XueMaiDanData3.Count;
+            }
+            else
+            {
+                BagController.S.PropList.Add(1803,XueMaiDanData3);
+            }
+            
+            var XueMaiDanData5 = new PropTable()
+            {
+                PropType =  PropConfig.PropType.XueMaiDan,
+                Quality = 5,
+                Desc = "",
+                Count =  100,
+                EquipName = "GaoJiXueMaiDan",
+            };
+            if (BagController.S.PropList.ContainsKey(1805))
+            {
+                BagController.S.PropList[1805].Count+=XueMaiDanData5.Count;
+            }
+            else
+            {
+                BagController.S.PropList.Add(1805,XueMaiDanData5);
+            }
 
         });
         TitleButton.onClick.AddListener(() =>

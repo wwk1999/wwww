@@ -330,12 +330,12 @@ public class ChongWuConfig
     
     public static Dictionary<int, MinMax> ChongWuXueMaiDic = new Dictionary<int, MinMax>()
     {
-        {1,new MinMax(){min = 0.6f,max = 1f} },
-        {2,new MinMax(){min = 0.8f,max = 1.2f} },
-        {3,new MinMax(){min = 1f,max = 1.4f} },
-        {4,new MinMax(){min = 1.2f,max = 1.6f} },
-        {5,new MinMax(){min = 1.5f,max = 2f} },
-        {6,new MinMax(){min = 2f,max = 3f} },
+        {1,new MinMax(){min = 0.5f,max = 0.8f} },
+        {2,new MinMax(){min = 0.6f,max = 1f} },
+        {3,new MinMax(){min = 0.8f,max = 1.2f} },
+        {4,new MinMax(){min = 1f,max = 1.5f} },
+        {5,new MinMax(){min = 1.3f,max = 1.8f} },
+        {6,new MinMax(){min = 1.8f,max = 2.5f} },
     };
 
     public static Dictionary<ChongWuType, string> ChongWuNamDic = new Dictionary<ChongWuType, string>()

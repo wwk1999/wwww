@@ -12,6 +12,7 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private string resourcePath = "Prefabs/Window/Propinfo";
     private string baoshiInfoPath = "Prefabs/Window/BaoShiInfo";
     private string chongwudanInfoPath = "Prefabs/Window/ChongWuDanInfo";
+    private string chongwuYaoShuiInfoPath = "Prefabs/Window/ChongWuYaoShuiInfo";
 
 
     [Tooltip("相对于按钮右下角的偏移（x 向右为正，y 向上为正）。右 50、下 50 => (50, -50)")]
@@ -49,6 +50,10 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         else if (propGrid.propType < 1700)
         {
             prefab = Resources.Load<GameObject>(chongwudanInfoPath);
+        }
+        else if (propGrid.propType < 1900)
+        {
+            prefab = Resources.Load<GameObject>(chongwuYaoShuiInfoPath);
         }
         if (prefab == null)
         {
@@ -1232,10 +1237,6 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void SetInstance(int prop)
     {
-        if (prop > 1600 && prop < 1700)
-        {
-            SetChongWuDan();
-        }
         if (prop > 500&&prop<1600)
         {
             SetBaoShi();
@@ -1753,6 +1754,44 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = "高级宠物蛋";
                 instance.transform.Find("bg/Desc3").gameObject.SetActive(false);
                 instance.transform.Find("bg/Desc5").gameObject.SetActive(true);
+                break;
+            
+            case 1703:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = "普通洗髓液";
+                instance.transform.Find("bg/XiSuiYeDesc3").gameObject.SetActive(true);
+                instance.transform.Find("bg/XiSuiYeDesc5").gameObject.SetActive(false);
+                instance.transform.Find("bg/XueMaiDanDesc3").gameObject.SetActive(false);
+                instance.transform.Find("bg/XueMaiDanDesc5").gameObject.SetActive(false);
+
+
+                break;
+            case 1705:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXiSuiYe;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = "高级洗髓液";
+                instance.transform.Find("bg/XiSuiYeDesc3").gameObject.SetActive(false);
+                instance.transform.Find("bg/XiSuiYeDesc5").gameObject.SetActive(true);
+                instance.transform.Find("bg/XueMaiDanDesc3").gameObject.SetActive(false);
+                instance.transform.Find("bg/XueMaiDanDesc5").gameObject.SetActive(false);
+                break;
+            
+            case 1803:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXueMaiDan;
+                instance.transform.Find("bg/Name/Name3").GetComponent<TextMeshProUGUI>().text = "普通血脉丹";
+                instance.transform.Find("bg/XiSuiYeDesc3").gameObject.SetActive(false);
+                instance.transform.Find("bg/XiSuiYeDesc5").gameObject.SetActive(false);
+                instance.transform.Find("bg/XueMaiDanDesc3").gameObject.SetActive(true);
+                instance.transform.Find("bg/XueMaiDanDesc5").gameObject.SetActive(false);
+
+
+                break;
+            case 1805:
+                instance.transform.Find("bg/image/Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXueMaiDan;
+                instance.transform.Find("bg/Name/Name5").GetComponent<TextMeshProUGUI>().text = "高级血脉丹";
+                instance.transform.Find("bg/XiSuiYeDesc3").gameObject.SetActive(false);
+                instance.transform.Find("bg/XiSuiYeDesc5").gameObject.SetActive(false);
+                instance.transform.Find("bg/XueMaiDanDesc3").gameObject.SetActive(false);
+                instance.transform.Find("bg/XueMaiDanDesc5").gameObject.SetActive(true);
                 break;
         }
     }

@@ -65,6 +65,44 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public Button ShenJi1;
     public Button ShenJi5;
 
+    [Header("重置Panel")] 
+    public Slider ZiZhiSlider;
+    public Slider XueMaiSlider;
+    public TextMeshProUGUI CurrentZiZhi;
+    public TextMeshProUGUI MaxZiZhi;
+    public TextMeshProUGUI CurrentXueMai;
+    public TextMeshProUGUI MaxXueMai;
+    public Button ZiZhiButton;
+    public Button XueMaiButton;
+    public GameObject YaoShui;
+    public TextMeshProUGUI CurrentYaoCount;
+    public TextMeshProUGUI NeedYaoCount;
+    public Button ChongZhiButton1;
+
+
+    public void SetChongZhiPanel()
+    {
+        var table = PlayerData.S.ChongWuDic[CurrentChongWuId];
+        switch (table.Quality)
+        {
+            case 1:
+                ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[1].max;
+                ZiZhiSlider.value = table.ZiZhi;
+                CurrentZiZhi.text=table.ZiZhi.ToString();
+                MaxZiZhi.text= ChongWuConfig.ChongWuZiZhiDic[1].max.ToString();
+                XueMaiSlider.maxValue=ChongWuConfig.ChongWuXueMaiDic[1].max;
+                XueMaiSlider.value = table.XueMai;
+                CurrentXueMai.text=table.XueMai.ToString();
+                MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[1].max.ToString();
+                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
+                break;
+            
+        }
+    }
+    
+    
     public void SetWeiYangPanel()
     {
         var table = PlayerData.S.ChongWuDic[CurrentChongWuId];

@@ -331,6 +331,11 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ChongWuShiWu4;
     public static Sprite ChongWuShiWu5;
     public static Sprite ChongWuShiWu6;
+    
+    public static Sprite NormalXiSuiYe;
+    public static Sprite GaoJiXiSuiYe;
+    public static Sprite NormalXueMaiDan;
+    public static Sprite GaoJiXueMaiDan;
 
     
     public static Sprite AddAttack;
@@ -821,6 +826,12 @@ public class ResourcesConfig : MonoBehaviour
         ChongWuShiWu4=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu4");
         ChongWuShiWu5=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu5");
         ChongWuShiWu6=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu6");
+
+        NormalXiSuiYe=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXiSuiYe");
+        GaoJiXiSuiYe=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXiSuiYe");
+        NormalXueMaiDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXueMaiDan");
+        GaoJiXueMaiDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXueMaiDan");
+
 
 
         

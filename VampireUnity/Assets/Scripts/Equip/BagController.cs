@@ -1002,6 +1002,30 @@ public class BagController : XSingleton<BagController>
                             break;
                     }
                     break;
+                
+                case PropConfig.PropType.XiSuiYe:
+                    switch (list[i].Quality)
+                    {
+                        case 3:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
+                            break;
+                        case 5:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXiSuiYe;
+                            break;
+                    }
+                    break;
+                
+                case PropConfig.PropType.XueMaiDan:
+                    switch (list[i].Quality)
+                    {
+                        case 3:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.NormalXueMaiDan;
+                            break;
+                        case 5:
+                            propGrid.transform.Find("parent/BagGridImage").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXueMaiDan;
+                            break;
+                    }
+                    break;
             }
         }
 
