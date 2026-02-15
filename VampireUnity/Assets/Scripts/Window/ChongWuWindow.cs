@@ -41,6 +41,10 @@ public class ChongWuWindow : MonoBehaviour
     public TextMeshProUGUI XueMaiCount;
 
     public Button PeiYangButton;
+
+    public FuChongItem fuChongWuItem1;
+    public FuChongItem fuChongWuItem2;
+    public FuChongItem fuChongWuItem3;
     
     
     private GameObject IceWhite1;
@@ -679,10 +683,13 @@ public class ChongWuWindow : MonoBehaviour
 
     private void OnDestroy()
     {
+        ObserverModuleManager.S.UnRegisterEvent("FenJie", FenJie);
         ObserverModuleManager.S.UnRegisterEvent("ShowChongWuItemMask", ShowChongWuItemMask);
         ObserverModuleManager.S.UnRegisterEvent("HideChongWuItemMask", HideChongWuItemMask);
-        ObserverModuleManager.S.UnRegisterEvent("FenJie", FenJie);
         ObserverModuleManager.S.UnRegisterEvent("ShowPeiYangWindow",ShowPeiYangWindowObj);
+        ObserverModuleManager.S.UnRegisterEvent("ChongWuChuZhan", ChongWuChuZhan);
+        ObserverModuleManager.S.UnRegisterEvent("RefreshChongWuPage", RefreshChongWuPage);
+        ObserverModuleManager.S.UnRegisterEvent("ResetFuChongWu", ResetFuChongWu);
 
     }
 
@@ -759,6 +766,14 @@ public class ChongWuWindow : MonoBehaviour
         InitHide();
         ShowZhuChongWu();
     }
+    
+    public void ResetFuChongWu(object[] obj)
+    {
+        fuChongWuItem1.ShowFuChong();
+        fuChongWuItem2.ShowFuChong();
+        fuChongWuItem3.ShowFuChong();
+    }
+    
 
     private void Start()
     {
@@ -768,6 +783,7 @@ public class ChongWuWindow : MonoBehaviour
         ObserverModuleManager.S.RegisterEvent("ShowPeiYangWindow",ShowPeiYangWindowObj);
         ObserverModuleManager.S.RegisterEvent("ChongWuChuZhan", ChongWuChuZhan);
         ObserverModuleManager.S.RegisterEvent("RefreshChongWuPage", RefreshChongWuPage);
+        ObserverModuleManager.S.RegisterEvent("ResetFuChongWu", ResetFuChongWu);
 
 
         PeiYangButton.onClick.AddListener(() =>

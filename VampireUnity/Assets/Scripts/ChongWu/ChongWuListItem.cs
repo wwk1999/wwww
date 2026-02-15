@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -96,9 +97,15 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
         {
             isLeftMouseDown = false;
             isLeftMouseDownTime = 0;
-            ChongWuController.S.isLeftMouseDown = false;
+            StartCoroutine(SetFlagNextFrame());
             Destroy(ChongWuImage.gameObject);
         }
+    }
+    
+    IEnumerator SetFlagNextFrame()
+    {
+        yield return null; // 等待一帧
+        ChongWuController.S.isLeftMouseDown = false;
     }
 
 

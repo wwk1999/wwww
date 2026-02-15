@@ -12,6 +12,10 @@ public class ChongWuController:XSingleton<ChongWuController>
     public bool isLeftMouseDown = false;
     public ChongWuTable FuChongWuTable;
 
+    private void Update()
+    {
+    }
+
     public static List<int> GetUniqueRandomDigits(int count)
     {
         if (count < 1 || count > 6)
