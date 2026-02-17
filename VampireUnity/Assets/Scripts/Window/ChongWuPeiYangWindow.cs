@@ -79,11 +79,17 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public TextMeshProUGUI CurrentYaoCount;
     public Button ChongZhiButton1;
     private bool IsZiZhiPanel = true;
+    public TextMeshProUGUI ZiZhiWanMei;
+    public TextMeshProUGUI XueMaiWanMei;
+    public Button JinHuaButton;
 
 
     public void SetChongZhiPanel(bool isZiZhiPanel=true)
     {
         var table = PlayerData.S.ChongWuDic[CurrentChongWuId];
+        XueMaiWanMei.gameObject.SetActive(table.XueMai==ChongWuConfig.ChongWuXueMaiDic[table.Quality].max);
+        ZiZhiWanMei.gameObject.SetActive(table.ZiZhi==ChongWuConfig.ChongWuZiZhiDic[table.Quality].max);
+
         switch (table.Quality)
         {
             case 1:
@@ -699,6 +705,29 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     {
         
         ObserverModuleManager.S.RegisterEvent("RefreshWeiYangPage",RefreshWeiYangPage);
+        
+        JinHuaButton.onClick.AddListener(() =>
+        {
+            var table=PlayerData.S.ChongWuDic[CurrentChongWuId];
+            if (table.Quality < 4)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"史诗以上宠物才可以进化");
+                return;
+            }
+
+            if (table.ZiZhi < ChongWuConfig.ChongWuZiZhiDic[table.Quality].max ||
+                table.XueMai < ChongWuConfig.ChongWuXueMaiDic[table.Quality].max)
+            {
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"资质和血脉达到完美才可以进化");
+                return;
+            }
+
+            table.ChongWuType = ChongWuConfig.ChongWuJinHuaDic[table.ChongWuType];
+            table.Quality++;
+            SetChongZhiPanel();
+            SetWeiYangPanel();
+            ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
+        });
         ZiZhiButton.onClick.AddListener(() =>
         {
             SetChongZhiPanel(true);

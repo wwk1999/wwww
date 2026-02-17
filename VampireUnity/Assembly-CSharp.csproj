@@ -146,6 +146,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong1.cs" />
     <Compile Include="Assets\Scripts\Skill\FourNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\ExAdd.cs" />
+    <Compile Include="Assets\Scripts\Window\ChongWuTuJianWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossAttack.cs" />
     <Compile Include="Assets\Scripts\Tool\MonsterSequenceTool.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZi.cs" />

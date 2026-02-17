@@ -56,6 +56,36 @@ public class FuChongItem : MonoBehaviour
                 // 检查松开时鼠标是否在当前UI物体上
                 if (IsMouseOverUIObject(bg))
                 {
+                    if (ChongWuController.S.FuChongWuTable.ChongWuId == PlayerData.S.ZhuChongWuId)
+                    {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"不能将主宠物设为副宠");
+                        return;
+                    }
+                    
+                    switch (FuChongItemIndex)
+                    {
+                        case 1:
+                            if (PlayerData.S.level < 20)
+                            {
+                                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足");
+                                return;
+                            }
+                            break;
+                        case 2:
+                            if (PlayerData.S.level < 40)
+                            {
+                                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足");
+                                return;
+                            }
+                            break;
+                        case 3:
+                            if (PlayerData.S.level < 60)
+                            {
+                                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"等级不足");
+                                return;
+                            }
+                            break;
+                    }
                     switch (FuChongItemIndex)
                     {
                         case 1:
@@ -224,13 +254,13 @@ public class FuChongItem : MonoBehaviour
         switch (FuChongItemIndex)
         {
             case 1:
-                Suo.gameObject.SetActive(PlayerData.S.level>=20);
+                Suo.gameObject.SetActive(PlayerData.S.level<20);
                 break;
             case 2:
-                Suo.gameObject.SetActive(PlayerData.S.level>=40);
+                Suo.gameObject.SetActive(PlayerData.S.level<40);
                 break;
             case 3:
-                Suo.gameObject.SetActive(PlayerData.S.level>=60);
+                Suo.gameObject.SetActive(PlayerData.S.level<60);
                 break;
         }
 

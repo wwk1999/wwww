@@ -28,6 +28,14 @@ public class ChongWuItemSwitch : MonoBehaviour
       
       ChuZhangButton.onClick.AddListener(() =>
          {
+            if (ClickChongWuItem.chongWuTable.ChongWuId == PlayerData.S.FuChongWuId1 ||
+                ClickChongWuItem.chongWuTable.ChongWuId == PlayerData.S.FuChongWuId2 ||
+                ClickChongWuItem.chongWuTable.ChongWuId == PlayerData.S.FuChongWuId3)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"不能将副宠设为主宠");
+               return;
+            }
+            
             int index = (ChongWuController.S.CurrentChongWuPageNum - 1) * 6;
             
             //取消勾

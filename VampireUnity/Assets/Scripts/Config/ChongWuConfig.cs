@@ -38,6 +38,30 @@ public class ChongWuConfig
         public float Crit;
     }
 
+    public static Dictionary<ChongWuType, ChongWuType> ChongWuJinHuaDic = new Dictionary<ChongWuType, ChongWuType>()
+    {
+        { ChongWuType.icepurple1_q, ChongWuType.icepurple1_h },
+        { ChongWuType.icepurple2_q, ChongWuType.icepurple2_h },
+        { ChongWuType.icepurple3_q, ChongWuType.icepurple3_h },
+
+        { ChongWuType.huopurple1_q, ChongWuType.huopurple1_h },
+        { ChongWuType.huopurple2_q, ChongWuType.huopurple2_h },
+        { ChongWuType.huopurple3_q, ChongWuType.huopurple3_h },
+
+        { ChongWuType.heianpurple1_q, ChongWuType.heianpurple1_h },
+        { ChongWuType.heianpurple2_q, ChongWuType.heianpurple2_h },
+        { ChongWuType.heianpurple3_q, ChongWuType.heianpurple3_h },
+
+        { ChongWuType.dianpurple1_q, ChongWuType.dianpurple1_h },
+        { ChongWuType.dianpurple2_q, ChongWuType.dianpurple2_h },
+        { ChongWuType.dianpurple3_q, ChongWuType.dianpurple3_h },
+
+        { ChongWuType.iceorange1_q, ChongWuType.iceorange1_h },
+        { ChongWuType.huoorange1_q, ChongWuType.huoorange1_h },
+        { ChongWuType.dianorange1_q, ChongWuType.dianorange1_h },
+        { ChongWuType.heianorange1_q, ChongWuType.heianorange1_h },
+    };
+
     public static Dictionary<int, int> ShiWuDic = new Dictionary<int, int>()
     {
         {1,20},
@@ -338,9 +362,98 @@ public class ChongWuConfig
         {6,new MinMax(){min = 180,max = 250} },
     };
 
+    public enum ChongWuTuJianType
+    {
+        None,
+        ShiLaiMu,
+        Dian1,
+        Huo1,
+        HeiAn1,
+        Ice1,
+        Long,
+        KongZhongBaZhu,
+        HuLi,
+        Dian2,
+        Huo2,
+        HeiAn2,
+        Ice2,
+        YuanGuShenLin,
+    }
+
+    public class CongWuTuJianAttribute
+    {
+        public float Attack=0;
+        public float Hp=0;
+        public float Huo=0;
+        public float Ice=0;
+        public float Dian=0;
+        public float HeiAn=0;
+    }
+
+    public static Dictionary<ChongWuTuJianType, CongWuTuJianAttribute> CongWuTuJianAttributeDic =
+        new Dictionary<ChongWuTuJianType, CongWuTuJianAttribute>()
+        {
+            {ChongWuTuJianType.ShiLaiMu ,new CongWuTuJianAttribute(){Attack = 10,Hp = 100}},
+            {ChongWuTuJianType.Huo1 ,new CongWuTuJianAttribute(){Attack = 100,Hp = 1000,Huo = 20}},
+            {ChongWuTuJianType.Ice1 ,new CongWuTuJianAttribute(){Attack = 100,Hp = 1000,Ice = 20}},
+            {ChongWuTuJianType.Dian1 ,new CongWuTuJianAttribute(){Attack = 100,Hp = 1000,Dian = 20}},
+            {ChongWuTuJianType.HeiAn1 ,new CongWuTuJianAttribute(){Attack = 100,Hp = 1000,HeiAn = 20}},
+            
+            {ChongWuTuJianType.Huo2 ,new CongWuTuJianAttribute(){Attack = 500,Hp = 5000,Huo = 50}},
+            {ChongWuTuJianType.Ice2 ,new CongWuTuJianAttribute(){Attack = 500,Hp = 5000,Ice = 50}},
+            {ChongWuTuJianType.Dian2 ,new CongWuTuJianAttribute(){Attack = 500,Hp = 5000,Dian = 50}},
+            {ChongWuTuJianType.HeiAn2 ,new CongWuTuJianAttribute(){Attack = 500,Hp = 5000,HeiAn = 50}},
+            
+            {ChongWuTuJianType.Long ,new CongWuTuJianAttribute(){Attack = 800,Hp = 8000,HeiAn = 50,Huo = 50,Ice = 50,Dian = 50}},
+            {ChongWuTuJianType.HuLi ,new CongWuTuJianAttribute(){Attack = 500,Hp = 5000,HeiAn = 30,Huo = 30,Ice = 30,Dian = 30}},
+            {ChongWuTuJianType.KongZhongBaZhu ,new CongWuTuJianAttribute(){Attack = 500,Hp = 5000,HeiAn = 30,Huo = 30,Ice = 30,Dian = 30}},
+            {ChongWuTuJianType.YuanGuShenLin ,new CongWuTuJianAttribute(){Attack = 1000,Hp = 10000,HeiAn = 80,Huo = 80,Ice = 80,Dian = 80}},
+        };
+
+    public static Dictionary<ChongWuTuJianType, string> TuJianDescDic = new Dictionary<ChongWuTuJianType, string>()
+    {
+        { ChongWuTuJianType.ShiLaiMu ,"生命值+100,魔力值+10"},
+        
+        { ChongWuTuJianType.Huo1 ,"生命值+1000,魔力值+100,火焰伤害+20%"},
+        { ChongWuTuJianType.Dian1 ,"生命值+1000,魔力值+100,电系伤害+20%"},
+        { ChongWuTuJianType.HeiAn1 ,"生命值+1000,魔力值+100,黑暗伤害+20%"},
+        { ChongWuTuJianType.Ice1 ,"生命值+1000,魔力值+100,冰霜伤害+20%"},
+
+        { ChongWuTuJianType.Huo2 ,"生命值+5000,魔力值+500,火焰伤害+50%"},
+        { ChongWuTuJianType.Dian2 ,"生命值+5000,魔力值+500,电系伤害+50%"},
+        { ChongWuTuJianType.HeiAn2 ,"生命值+5000,魔力值+500,黑暗伤害+50%"},
+        { ChongWuTuJianType.Ice2 ,"生命值+5000,魔力值+500,冰霜伤害+50%"},
+        
+        { ChongWuTuJianType.Long ,"生命值+8000,魔力值+800,四系元素伤害+50%"},
+        { ChongWuTuJianType.HuLi ,"生命值+5000,魔力值+500,四系元素伤害+30%"},
+        { ChongWuTuJianType.KongZhongBaZhu ,"生命值+5000,魔力值+500,四系元素伤害+30%"},
+        { ChongWuTuJianType.YuanGuShenLin ,"生命值+10000,魔力值+1000,四系元素伤害+80%"},
+    };
+
+
+    public static Dictionary<ChongWuTuJianType, List<ChongWuType>> TuJianDic =
+        new Dictionary<ChongWuTuJianType, List<ChongWuType>>()
+        {
+            { ChongWuTuJianType.ShiLaiMu ,new List<ChongWuType>(){ChongWuType.dianwhite1,ChongWuType.heianwhite2,ChongWuType.huogreen1,ChongWuType.icegreen1}},
+            { ChongWuTuJianType.Dian1 ,new List<ChongWuType>(){ChongWuType.dianblue1,ChongWuType.dianblue2,ChongWuType.diangreen1,ChongWuType.diangreen2}},
+            { ChongWuTuJianType.Huo1 ,new List<ChongWuType>(){ChongWuType.huoblue1,ChongWuType.huoblue2,ChongWuType.huogreen1,ChongWuType.huogreen2}},
+            { ChongWuTuJianType.HeiAn1 ,new List<ChongWuType>(){ChongWuType.heianblue1,ChongWuType.heianblue2,ChongWuType.heiangreen1,ChongWuType.heiangreen2}},
+            { ChongWuTuJianType.Ice1 ,new List<ChongWuType>(){ChongWuType.iceblue1,ChongWuType.iceblue2,ChongWuType.icegreen1,ChongWuType.icegreen2}},
+            
+            { ChongWuTuJianType.Dian2 ,new List<ChongWuType>(){ChongWuType.dianpurple1_q,ChongWuType.dianpurple2_q,ChongWuType.dianpurple3_q,ChongWuType.dianorange1_q}},
+            { ChongWuTuJianType.Huo2 ,new List<ChongWuType>(){ChongWuType.huopurple1_q,ChongWuType.huopurple2_q,ChongWuType.huopurple3_q,ChongWuType.huoorange1_q}},
+            { ChongWuTuJianType.HeiAn2 ,new List<ChongWuType>(){ChongWuType.heianpurple1_q,ChongWuType.heianpurple2_q,ChongWuType.heianpurple3_q,ChongWuType.heianorange1_q}},
+            { ChongWuTuJianType.Ice2 ,new List<ChongWuType>(){ChongWuType.icepurple1_q,ChongWuType.icepurple2_q,ChongWuType.icepurple3_q,ChongWuType.iceorange1_q}},
+
+            { ChongWuTuJianType.Long ,new List<ChongWuType>(){ChongWuType.heianpurple1_q,ChongWuType.heianpurple2_q,ChongWuType.iceorange1_q,ChongWuType.dianorange1_q}},
+            { ChongWuTuJianType.KongZhongBaZhu ,new List<ChongWuType>(){ChongWuType.huoblue3,ChongWuType.icepurple1_q,ChongWuType.dianpurple2_q,ChongWuType.dianorange1_q}},
+            { ChongWuTuJianType.HuLi ,new List<ChongWuType>(){ChongWuType.huogreen2,ChongWuType.huoblue2,ChongWuType.icepurple3_q,ChongWuType.huopurple3_q}},
+            { ChongWuTuJianType.YuanGuShenLin ,new List<ChongWuType>(){ChongWuType.huoorange1_q,ChongWuType.iceorange1_q,ChongWuType.heianorange1_q,ChongWuType.dianorange1_q}},
+
+        };
     public static Dictionary<ChongWuType, string> ChongWuNamDic = new Dictionary<ChongWuType, string>()
     {
-        { ChongWuType.dianwhite1,"熔电粘液怪" },
+        { ChongWuType.dianwhite1,"熔电史莱姆" },
         { ChongWuType.dianblue1,"胶电仔" },
         { ChongWuType.dianblue2,"雷葱头" },
         { ChongWuType.diangreen1,"电泡球" },

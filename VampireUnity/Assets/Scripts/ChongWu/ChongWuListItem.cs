@@ -98,7 +98,10 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
             isLeftMouseDown = false;
             isLeftMouseDownTime = 0;
             StartCoroutine(SetFlagNextFrame());
-            Destroy(ChongWuImage.gameObject);
+            if (ChongWuImage != null)
+            {
+                 Destroy(ChongWuImage.gameObject);
+            }
         }
     }
     

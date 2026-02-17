@@ -45,7 +45,30 @@ public class ChongWuWindow : MonoBehaviour
     public FuChongItem fuChongWuItem1;
     public FuChongItem fuChongWuItem2;
     public FuChongItem fuChongWuItem3;
-    
+
+    public Button FuChongButton;
+    public Button ZhuChongButton;
+    public Button TuJianButton;
+    public GameObject FuChongPanel;
+    public GameObject PingJiPanel;
+    public GameObject InfoPanel;
+
+    public void ShowFuChong()
+    {
+        FuChongButton.gameObject.SetActive(false);
+        PingJiPanel.gameObject.SetActive(false);
+        InfoPanel.gameObject.SetActive(false);
+        FuChongPanel.gameObject.SetActive(true);
+    }
+
+    public void ShowZhuChong()
+    {
+        FuChongButton.gameObject.SetActive(true);
+        PingJiPanel.gameObject.SetActive(true);
+        InfoPanel.gameObject.SetActive(true);
+        FuChongPanel.gameObject.SetActive(false);
+
+    }
     
     private GameObject IceWhite1;
     private GameObject HuoWhite1;
@@ -785,7 +808,20 @@ public class ChongWuWindow : MonoBehaviour
         ObserverModuleManager.S.RegisterEvent("RefreshChongWuPage", RefreshChongWuPage);
         ObserverModuleManager.S.RegisterEvent("ResetFuChongWu", ResetFuChongWu);
 
-
+        FuChongButton.onClick.AddListener(() =>
+        {
+            ShowFuChong();
+        });
+        ZhuChongButton.onClick.AddListener(() =>
+        {
+            ShowZhuChong();
+        });
+        
+        TuJianButton.onClick.AddListener(() =>
+        {
+            var tujian=Instantiate(Resources.Load<GameObject>("Prefabs/Window/ChongWuTuJianWindow"));
+        });
+        
         PeiYangButton.onClick.AddListener(() =>
         {
             ShowPeiYangWindow(PlayerData.S.ZhuChongWuId);

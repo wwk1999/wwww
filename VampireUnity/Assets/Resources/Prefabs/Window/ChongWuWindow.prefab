@@ -902,6 +902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2581745313078494036}
+  - component: {fileID: 3257058973434981029}
   m_Layer: 5
   m_Name: FuChong
   m_TagString: Untagged
@@ -930,6 +931,50 @@ RectTransform:
   m_AnchoredPosition: {x: -158.48175, y: -296.52637}
   m_SizeDelta: {x: 147.0363, y: 133.0527}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3257058973434981029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342083914834331242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &368846218558021295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,7 +3397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7496894172754116961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12671,6 +12716,12 @@ MonoBehaviour:
   fuChongWuItem1: {fileID: 132101041658581331}
   fuChongWuItem2: {fileID: 6961150129819177751}
   fuChongWuItem3: {fileID: 1063370077622357141}
+  FuChongButton: {fileID: 3257058973434981029}
+  ZhuChongButton: {fileID: 6000860874702574137}
+  TuJianButton: {fileID: 8926420274395532470}
+  FuChongPanel: {fileID: 1416632985271964260}
+  PingJiPanel: {fileID: 5376378973238767102}
+  InfoPanel: {fileID: 8334042037010214070}
 --- !u!1 &7101167891939977788
 GameObject:
   m_ObjectHideFlags: 0
