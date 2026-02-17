@@ -95,7 +95,7 @@ public class ChongWuTable
     public int ChongWuId { get; set;}
     public ChongWuType ChongWuType{ get; set; }
     public int Quality {get; set; }
-    public int ZiZhi {get; set; }
+    public float ZiZhi {get; set; }
     public float XueMai {get; set; }
     public ChongWuYuanSuType ChongWuYuanSuType { get; set; }
     public int XingJi { get; set; }
@@ -110,7 +110,7 @@ public class ChongWuTable
         int chongWuId=0,
         ChongWuType ChongWuType=ChongWuType.None,
         int quality = 1,
-        int zizhi=0,
+        float zizhi=0,
         float xuemai=0,
         ChongWuYuanSuType ChongWuYuanSuType=ChongWuYuanSuType.None,
         int xingji=1,

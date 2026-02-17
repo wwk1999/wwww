@@ -36,6 +36,68 @@ public class GlobalPlayerAttribute
         return ChiBangConfig.ChiBangAttributeDic[PlayerData.S.ChiBangLevel];
     }
     
+    //宠物属性
+    public static ChongWuConfig.ChongWuAttribute FinalChongWuAttribute => GetFinalChongWuAttribute();
+
+    public static ChongWuConfig.ChongWuAttribute GetFinalChongWuAttribute()
+    {
+        ChongWuConfig.ChongWuAttribute zhuchongwu =
+            ChongWuConfig.GetChongWuAttribute(PlayerData.S.ChongWuDic[PlayerData.S.ZhuChongWuId]);
+        ChongWuConfig.ChongWuAttribute fuchongwu1 = null;
+        ChongWuConfig.ChongWuAttribute fuchongwu2 = null;
+        ChongWuConfig.ChongWuAttribute fuchongwu3 = null;
+
+        if (PlayerData.S.FuChongWuId1 != 0)
+        {
+            fuchongwu1 = ChongWuConfig.GetChongWuAttribute(PlayerData.S.ChongWuDic[PlayerData.S.FuChongWuId1]);
+        }
+        if (PlayerData.S.FuChongWuId2 != 0)
+        {
+            fuchongwu2 = ChongWuConfig.GetChongWuAttribute(PlayerData.S.ChongWuDic[PlayerData.S.FuChongWuId2]);
+        }
+        if (PlayerData.S.FuChongWuId3 != 0)
+        {
+            fuchongwu3 = ChongWuConfig.GetChongWuAttribute(PlayerData.S.ChongWuDic[PlayerData.S.FuChongWuId3]);
+        }
+
+        ChongWuConfig.ChongWuAttribute finalAttributr = zhuchongwu;
+        if (fuchongwu1 != null)
+        {
+            finalAttributr.Crit += fuchongwu1.Crit * 0.3f;
+            finalAttributr.Attack += fuchongwu1.Attack * 0.3f;
+            finalAttributr.Hp += fuchongwu1.Hp * 0.3f;
+            finalAttributr.Defence += fuchongwu1.Defence * 0.3f;
+        }
+        
+        if (fuchongwu2 != null)
+        {
+            finalAttributr.Crit += fuchongwu2.Crit * 0.3f;
+            finalAttributr.Attack += fuchongwu2.Attack * 0.3f;
+            finalAttributr.Hp += fuchongwu2.Hp * 0.3f;
+            finalAttributr.Defence += fuchongwu2.Defence * 0.3f;
+        }
+        
+        if (fuchongwu3 != null)
+        {
+            finalAttributr.Crit += fuchongwu3.Crit * 0.3f;
+            finalAttributr.Attack += fuchongwu3.Attack * 0.3f;
+            finalAttributr.Hp += fuchongwu3.Hp * 0.3f;
+            finalAttributr.Defence += fuchongwu3.Defence * 0.3f;
+        }
+
+        ChongWuConfig.CongWuTuJianAttribute congWuTuJianAttribute =
+            ChongWuConfig.CongWuTuJianAttributeDic[ChongWuConfig.GetChongWuTuJianType()];
+
+        finalAttributr.Attack += congWuTuJianAttribute.Attack;
+        finalAttributr.Hp += congWuTuJianAttribute.Hp;
+        finalAttributr.HuoDamage += congWuTuJianAttribute.Huo/100.0f;
+        finalAttributr.IceDamage += congWuTuJianAttribute.Ice/100.0f;
+        finalAttributr.DianDamage += congWuTuJianAttribute.Dian/100.0f;
+        finalAttributr.HeiAnDamage += congWuTuJianAttribute.HeiAn/100.0f;
+
+        return finalAttributr;
+    }
+    
     //武器属性
     
    public static float WeaponAttack=>GetWeaponAttack();
@@ -178,6 +240,7 @@ public class GlobalPlayerAttribute
        finalDamage+=PlayerChiBangAttribute.finalDamage;
        finalDamage += AA5Count * 0.3f;
        finalDamage += TitleAttributeAll.FinalDamage;
+       finalDamage += FinalChongWuAttribute.FinalDamage;
        return finalDamage;
    }
 
@@ -2855,12 +2918,17 @@ public class GlobalPlayerAttribute
    public static float GetTotalAttackSpeed()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       return (weaponAttribute.AttackSpeed+PlayerChiBangAttribute.attackSpeed+HunQiAttackSpeed) * (1 + AttackSpeedNum/100.0f + FuJiaDamageSpeed/100.0f);
+       var value = (weaponAttribute.AttackSpeed + PlayerChiBangAttribute.attackSpeed + HunQiAttackSpeed);
+       value += FinalChongWuAttribute.AttackSpeed;
+       value *= (1 + AttackSpeedNum / 100.0f + FuJiaDamageSpeed / 100.0f);
+       return value;
    }
 
    public static float GetTotalCrit()
    {
-       float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit+TitleAttributeAll.Crit)*(1+CritNum/100.0f)*(1.0f + BaoShiCrit/100)*(1.0f+TitleAttributeAll.AllBaseAttribute);
+       float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit+TitleAttributeAll.Crit);
+       value += FinalChongWuAttribute.Crit;
+       value *= (1 + CritNum / 100.0f) * (1.0f + BaoShiCrit / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
        if (CDTeXiao5Time > 0)
        {
            value *= (1.0f + CD5Count * 0.3f);
@@ -2905,7 +2973,9 @@ public class GlobalPlayerAttribute
    
    public static float GetPlayerMoveSpeed()
    {
-       float speed=(_baseMoveSpeed+PlayerChiBangAttribute.moveSpeed+TitleAttributeAll.MoveSpeed) * (1 + MoveSpeedNum / 100f);
+       float speed=(_baseMoveSpeed+PlayerChiBangAttribute.moveSpeed+TitleAttributeAll.MoveSpeed);
+       speed += FinalChongWuAttribute.MoveSpeed;
+       speed *= (1 + MoveSpeedNum / 100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
        {
            speed*=1.25f;
@@ -2930,40 +3000,40 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp+TitleAttributeAll.Hp) * (1.0f + MaxHpPercent/100f)*(1.0f + BaoShiHp/100)*(1.0f+TitleAttributeAll.AllBaseAttribute));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp+TitleAttributeAll.Hp));
+       maxhp += FinalChongWuAttribute.Hp;
+       maxhp *= (1.0f + MaxHpPercent / 100f) * (1.0f + BaoShiHp / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            maxhp /= 2;
        }
-       return  maxhp;
+       return  Mathf.RoundToInt(maxhp);
    }
    
    public static float GetTotalDamage()
    {
-       float damage = Mathf.RoundToInt((PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack+TitleAttributeAll.Attack) * (1f + DamageAddPercent / 100f)*(1.0f + BaoShiAttack/100)*(1.0f+TitleAttributeAll.AllBaseAttribute));
+       float damage = PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack+TitleAttributeAll.Attack;
+       damage += FinalChongWuAttribute.Attack;
+       damage *= (1f + DamageAddPercent / 100f) * (1.0f + BaoShiAttack / 100) *
+                 (1.0f + TitleAttributeAll.AllBaseAttribute);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            damage *=1.3f;
        }
-       return damage;
+       return Mathf.RoundToInt(damage);
        
        
    }
    
    public static float GetTotalDefense()
    {
-       float defense=Mathf.RoundToInt((PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense+TitleAttributeAll.Defense)*(1f+MaxDefensePercent/100f)*(1.0f + BaoShiDefense/100)*(1.0f+TitleAttributeAll.AllBaseAttribute));
-       float value = 0;
-
-       if (isIceBall)
-       {
-          // value += Skill2AddDefenseNum / 100.0f;
-       }
-
-       defense *= (1 + value);
+       float defense=PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense+TitleAttributeAll.Defense;
+       defense += FinalChongWuAttribute.Defence;
+       defense *= (1.0f + MaxDefensePercent / 100f);
+       defense *= (1.0f + BaoShiDefense / 100);
+       defense *= (1.0f + TitleAttributeAll.AllBaseAttribute);
        defense += (AD5Count*TotalDamage*0.1f);
-
-       return defense;
+       return Mathf.RoundToInt(defense);
    }
    
    //附加词条属性
@@ -2997,18 +3067,21 @@ public class GlobalPlayerAttribute
    {
        float value = 1.0f;
        value += HuoSkill1YuanSuNum/100.0f + HuoSkill2YuanSuNum/100.0f + HuoSkill3YuanSuNum/100.0f;
+       value += FinalChongWuAttribute.HuoDamage;
        return value;
    }
    public static float GetHeiAnYuanSuBase()
    {
        float value = 1.0f;
        value += HeiAnSkill1YuanSuNum/100.0f + HeiAnSkill2YuanSuNum/100.0f + HeiAnSkill3YuanSuNum/100.0f;
+       value += FinalChongWuAttribute.HeiAnDamage;
        return value;
    }
    public static float GetIceYuanSuBase()
    {
        float value = 1.0f;
        value += IceSkill1YuanSuNum/100.0f + Skill2YuanSuNum/100.0f + Skill3YuanSuNum/100.0f;
+       value += FinalChongWuAttribute.IceDamage;
        return value;
    }
    
@@ -3016,6 +3089,7 @@ public class GlobalPlayerAttribute
    {
        float value = 1.0f;
        value += Skill1YuanSuNum/100.0f + DianSkill2YuanSuNum/100.0f + DianSkill3YuanSuNum/100.0f;
+       value += FinalChongWuAttribute.DianDamage;
        return value;
    }
    
