@@ -86,6 +86,8 @@ public class Player : MonoBehaviour
     public GameObject DianSkill2;
     public GameObject HeiAnSkill2;
 
+    public Rigidbody2D rg;
+
     public void ShowTitle()
     {
         Level5Title.gameObject.SetActive(false);
@@ -364,11 +366,11 @@ public class Player : MonoBehaviour
 
         if (!MouseDown)
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(horizontal, vertical).normalized * GlobalPlayerAttribute.PlayerMoveSpeed;
+            rg.velocity = new Vector2(horizontal, vertical).normalized * GlobalPlayerAttribute.PlayerMoveSpeed;
         }
         else
         {
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            rg.velocity = Vector3.zero;
         }
     }
     

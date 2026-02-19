@@ -365,7 +365,6 @@ public class RoleWindow1 : MonoBehaviour
         });
         
         BagController.S.IsInit = true;
-        ((SkeletonAnimation)playerSkeleton.Animation).AnimationState.SetAnimation(0, "idle", true);
         chibangButton.onClick.AddListener(() =>
         {
             Instantiate(Resources.Load("Prefabs/Window/ChiBangWindow"));
