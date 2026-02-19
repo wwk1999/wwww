@@ -26,6 +26,12 @@ public class PropConfig : MonoBehaviour
       ChongWuDan,
       XiSuiYe,
       XueMaiDan,
+      HpYaoShui,
+      ExYaoShui,
+      DiaoLuoYaoShui,
+
+      SkillShu,
+      DaKongShi,
    }
 
    public static Dictionary<int, string> PropNameDic = new Dictionary<int, string>()

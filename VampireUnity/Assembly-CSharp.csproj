@@ -59,6 +59,7 @@
     <Analyzer Include="D:\2022.3.62f2c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Config\ShangDianConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\JinJIeGrid.cs" />
     <Compile Include="Assets\Scripts\Fight\UI\FightExitPanel.cs" />
     <Compile Include="Assets\Scripts\Mysql\TableBase.cs" />
