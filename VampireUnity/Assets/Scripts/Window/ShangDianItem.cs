@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,6 +14,8 @@ public class ShangDianItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
    public int PropId;
    private GameObject instance;
    private Vector2 offset = new Vector2(250f, 0f);
+   public PropConfig.PropType PropType;
+   public int Quality;
 
    public void OnPointerEnter(PointerEventData eventData)
    {
@@ -27,7 +30,91 @@ public class ShangDianItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
       }
    }
    
-   
+   private bool IsMouseOverUIObject(GameObject targetObject)
+   {
+      if (targetObject == null) return false;
+        
+      // 获取EventSystem（如果没有则返回false）
+      if (EventSystem.current == null) return false;
+        
+      // 创建PointerEventData
+      PointerEventData pointerData = new PointerEventData(EventSystem.current);
+      pointerData.position = Input.mousePosition;
+        
+      // 执行射线检测
+      var raycastResults = new System.Collections.Generic.List<RaycastResult>();
+      EventSystem.current.RaycastAll(pointerData, raycastResults);
+        
+      // 遍历所有检测到的UI元素
+      foreach (var result in raycastResults)
+      {
+         // 如果检测到的物体就是目标物体
+         if (result.gameObject == targetObject)
+         {
+            return true;
+         }
+            
+         // 可选：如果要检测子物体也算（比如点击Image，但targetObject是父级Canvas）
+         // if (result.gameObject.transform.IsChildOf(targetObject.transform))
+         // {
+         //     return true;
+         // }
+      }
+        
+      return false;
+   }
+
+
+   private void Update()
+   {
+      if (Input.GetMouseButtonDown(1))
+      {
+         Debug.Log("鼠标右键按下");
+         if (IsMouseOverUIObject(bg.gameObject))
+         {
+            ShangDianConfig.ShangPingItem item=new ShangDianConfig.ShangPingItem(){type = PropType,quality = Quality};
+            int count = ShangDianConfig.ShangPingDic[item];
+            if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
+            {
+               if (GlobalPlayerAttribute.BloodEnergy < count * 10)
+               {
+                  ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"灵魂不足");
+                  return;
+               }
+               GlobalPlayerAttribute.BloodEnergy -= count * 10;
+               if (BagController.S.PropList.ContainsKey(PropId))
+               {
+                  BagController.S.PropList[PropId].Count += 10;
+               }
+               else
+               {
+                  BagController.S.PropList.Add(PropId,new PropTable(){Count = 10,Desc = "",EquipName = "",PropType = PropType,Quality =  Quality});
+               }
+            }
+            else
+            {
+               if (GlobalPlayerAttribute.BloodEnergy < count)
+               {
+                  ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"灵魂不足");
+                  return;
+               }
+               
+               GlobalPlayerAttribute.BloodEnergy -= count;
+               if (BagController.S.PropList.ContainsKey(PropId))
+               {
+                  BagController.S.PropList[PropId].Count += 1;
+               }
+               else
+               {
+                  BagController.S.PropList.Add(PropId,new PropTable(){Count = 1,Desc = "",EquipName = "",PropType = PropType,Quality =  Quality});
+               }
+            }
+            
+            StoreController.S.SaveStoreData();
+         }
+      }
+   }
+
 
    public void ShowQuality(int quality)
    {

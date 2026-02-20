@@ -65,7 +65,7 @@ public class ShangDianConfig
 
     };
 
-    public static Dictionary<ShangPingItem,int> NormalShangPingDic =
+    public static Dictionary<ShangPingItem,int> ShangPingDic =
         new Dictionary<ShangPingItem,int>()
         {
             { new ShangPingItem(){type = PropConfig.PropType.WeaponFragment,quality = 1},10 },
