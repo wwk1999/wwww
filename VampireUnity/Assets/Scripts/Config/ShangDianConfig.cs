@@ -6,6 +6,20 @@ public class ShangDianConfig
     {
         public PropConfig.PropType type;
         public int quality;
+
+        public override int GetHashCode()
+        {
+            return type.GetHashCode() ^ quality.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            ShangPingItem other = (ShangPingItem)obj;
+            return type == other.type && quality == other.quality;
+        }
     }
 
     public static List<ShangPingItem> NormalShangDian = new List<ShangPingItem>()
