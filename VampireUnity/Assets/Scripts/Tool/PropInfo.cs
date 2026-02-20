@@ -113,11 +113,6 @@ public class PropInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         instance.transform.Find("bg/Name/Name6").gameObject.SetActive(Name==6);
     }
 
-    public void SetChongWuDan()
-    {
-        
-    }
-
     public void SetBaoShi()
     {
         switch (propGrid.propType)

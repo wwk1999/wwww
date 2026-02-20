@@ -414,6 +414,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\XuKongAdd2Dan.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ShiRenHuaMonster.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanNecklace.cs" />
+    <Compile Include="Assets\Scripts\Window\ShangDianItemInfo.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManHelmet.cs" />
     <Compile Include="Assets\Scripts\WeaponSourceStone\SourceStoneWindow.cs" />
     <Compile Include="Assets\Scripts\Server\EquipServer.cs" />

@@ -1678,6 +1678,55 @@ public class ResourcesConfig : MonoBehaviour
                 return OrangeChiBang;
             case 406:
                 return RedChiBang;
+            
+            case 1603:
+                return NormalChongWuDan;
+            case 1605:
+                return GaoJiChongWuDan;
+            
+            case 1703:
+                return NormalXiSuiYe;
+            case 1705:
+                return GaoJiXiSuiYe;
+            
+            case 1803:
+                return NormalXueMaiDan;
+            case 1805:
+                return GaoJiXueMaiDan;
+            
+            case 1901:
+                return Hp1;
+            case 1902:
+                return Hp2;
+            case 1903:
+                return Hp3;
+            case 1904:
+                return Hp4;
+            case 1905:
+                return Hp5;
+            case 1906:
+                return Hp6;
+            
+            case 2005:
+                return Ex;
+            case 2105:
+                return DiaoLuo;
+            
+            case 2201:
+                return ChongWuSkill1;
+            case 2202:
+                return ChongWuSkill2;
+            case 2203:
+                return ChongWuSkill3;
+            case 2204:
+                return ChongWuSkill4;
+            case 2205:
+                return ChongWuSkill5;
+            case 2206:
+                return ChongWuSkill6;
+            
+            case 2305:
+                return DaKongShi;
         }
 
         return null;

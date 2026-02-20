@@ -64,6 +64,7 @@ public class ShangDianWindow : MonoBehaviour
       {
          var shangdianitem = Instantiate(Resources.Load("Prefabs/Window/ShangDianItem"),Content.transform);
          shangdianitem.GetComponent<ShangDianItem>().SetItem(Item);
+         shangdianitem.GetComponent<ShangDianItem>().PropId=PropConfig.GetPropId(Item.type,Item.quality);
       }
    }
 }
