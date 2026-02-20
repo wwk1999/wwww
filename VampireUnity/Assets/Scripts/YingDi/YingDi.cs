@@ -61,7 +61,8 @@ public class YingDi : MonoBehaviour
         {
             if (IsMouseOverUIObject(shangrenButton.gameObject))
             {
-                
+                GameObject shangdian=Instantiate(Resources.Load<GameObject>("Prefabs/Window/ShangDianWindow"));
+
             }
             
             if (IsMouseOverUIObject(duanzaoButton.gameObject))

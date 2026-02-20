@@ -6,7 +6,7 @@ using UnityEngine;
 public class ResourcesConfig : MonoBehaviour
 {
     public static Sprite LingHun;
-
+    
     //宝石
     public static Sprite HH1;
     public static Sprite HH2;
@@ -318,10 +318,30 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite NecklaceFortureAddSprite;
     public static Sprite RingFortureAddSprite;
     public static Sprite HelmetFortureAddSprite;
+
+    public static Sprite DaKongShi;
     
+    //药水
+    public static Sprite Hp1;
+    public static Sprite Hp2;
+    public static Sprite Hp3;
+    public static Sprite Hp4;
+    public static Sprite Hp5;
+    public static Sprite Hp6;
+    public static Sprite Ex;
+    public static Sprite DiaoLuo;
 
 
     //宠物图片
+
+    public static Sprite ChongWuSkill1;
+    public static Sprite ChongWuSkill2;
+    public static Sprite ChongWuSkill3;
+    public static Sprite ChongWuSkill4;
+    public static Sprite ChongWuSkill5;
+    public static Sprite ChongWuSkill6;
+
+    
     public static Sprite NormalChongWuDan;
     public static Sprite GaoJiChongWuDan;
 
@@ -816,7 +836,30 @@ public class ResourcesConfig : MonoBehaviour
 
     public static void Init()
     {
+        DaKongShi=Resources.Load<Sprite>("Sprite/Prop/DaKongShi");
+
+        //药水
+        Hp1=Resources.Load<Sprite>("Sprite/YaoShui/Hp1");
+        Hp2=Resources.Load<Sprite>("Sprite/YaoShui/Hp2");
+        Hp3=Resources.Load<Sprite>("Sprite/YaoShui/Hp3");
+        Hp4=Resources.Load<Sprite>("Sprite/YaoShui/Hp4");
+        Hp5=Resources.Load<Sprite>("Sprite/YaoShui/Hp5");
+        Hp6=Resources.Load<Sprite>("Sprite/YaoShui/Hp6");
+        Ex=Resources.Load<Sprite>("Sprite/YaoShui/Ex");
+        DiaoLuo=Resources.Load<Sprite>("Sprite/YaoShui/DiaoLuo");
+
+
+
+        
         //宠物
+        ChongWuSkill1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill1");
+        ChongWuSkill2=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill2");
+        ChongWuSkill3=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill3");
+        ChongWuSkill4=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill4");
+        ChongWuSkill5=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill5");
+        ChongWuSkill6=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill6");
+
+
         NormalChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/NormalChongWuDan");
         GaoJiChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/GaoJiChongWuDan");
         

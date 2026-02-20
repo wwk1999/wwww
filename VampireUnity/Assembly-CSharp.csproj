@@ -59,7 +59,6 @@
     <Analyzer Include="D:\2022.3.62f2c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Config\ShangDianConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\JinJIeGrid.cs" />
     <Compile Include="Assets\Scripts\Fight\UI\FightExitPanel.cs" />
     <Compile Include="Assets\Scripts\Mysql\TableBase.cs" />
@@ -174,6 +173,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeNecklace.cs" />
     <Compile Include="Assets\Scripts\Tool\ButtonScaleTool.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\双刀\ShuangDaoSkill2.cs" />
+    <Compile Include="Assets\Scripts\Window\ShangDianItem.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleNecklace.cs" />
     <Compile Include="Assets\Scripts\Config\RankConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PickUpController.cs" />
@@ -484,6 +484,7 @@
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Explosion.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenBossSkill1.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor1.cs" />
+    <Compile Include="Assets\Scripts\Config\ShangDianConfig.cs" />
     <Compile Include="Assets\Scripts\Skill\SkillController.cs" />
     <Compile Include="Assets\Scripts\Server\SourceStoneServer.cs" />
     <Compile Include="Assets\Scripts\Gun\Pistol.cs" />
@@ -520,6 +521,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\Skill2AddRange.cs" />
     <Compile Include="Assets\Scripts\Store\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Skill\IceArrow.cs" />
+    <Compile Include="Assets\Scripts\Window\ShangDianWindow.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuItemSwitch.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />
