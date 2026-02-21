@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f2c0c911bb2d904e96d5271ec6aad15
+guid: 8722bf23e2dbb7c45a6b51d5fbce3019
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: anniu_0
+      name: "\u5BA0\u7269\u5E95\u677F_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 477
-        height: 152
+        width: 2379
+        height: 418
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54dfe2cae1b46ea4199f7742d4ab5acc
-      internalID: -850398761
+      spriteID: b3a057abd1a7b1246a04349b3142e7b4
+      internalID: -1475535681
       vertices: []
       indices: 
       edges: []
@@ -147,14 +147,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      anniu_0: -850398761
+      "\u5BA0\u7269\u5E95\u677F_0": -1475535681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
