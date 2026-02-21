@@ -476,6 +476,29 @@ public class ChongWuWindow : MonoBehaviour
         }
     }
 
+    public string Sprite1(int i)
+    {
+        return "<sprite=" + i + ">";
+    }
+
+    public string Sprite2(int i)
+    {
+        if (i == 100)
+        {
+            return "<sprite=1><sprite=0><sprite=0>";
+        }
+        else if(i>=10)
+        {
+            string i1 = Sprite1(i / 10);
+            string i2 = Sprite1(i % 10);
+            return i1 + i2;
+        }
+        else
+        {
+            return Sprite1(i);
+        }
+    }
+
     public void ShowZhuChongWu()
     {
         if (PlayerData.S.ZhuChongWuId == 0)
@@ -488,7 +511,7 @@ public class ChongWuWindow : MonoBehaviour
         ZiZhi.gameObject.SetActive(true);
         XueMai.gameObject.SetActive(true);
         LevelInfo.gameObject.SetActive(true);
-        LevelCount.text = table.Level.ToString();
+        LevelCount.text = Sprite2(table.Level);
         SetName();
         ChongWujingHua.text = PlayerData.S.ChongWuJingHua.ToString();
         switch (table.Quality)
@@ -718,69 +741,69 @@ public class ChongWuWindow : MonoBehaviour
 
     private void Awake()
     {
-         IceWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰White1").gameObject;
-        HuoWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火White1").gameObject;
-        DianWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电White1").gameObject;
-        HeiAnWhite1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗White1").gameObject;
-        HeiAnWhite2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗White2").gameObject;
+        IceWhite1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰White1").gameObject;
+        HuoWhite1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火White1").gameObject;
+        DianWhite1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电White1").gameObject;
+        HeiAnWhite1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗White1").gameObject;
+        HeiAnWhite2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗White2").gameObject;
 
-        IceGreen1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰Green1").gameObject;
-        IceGreen2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰Green2").gameObject;
-        IceGreen3=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰Green3").gameObject;
-        HuoGreen1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火Green1").gameObject;
-        HuoGreen2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火Green2").gameObject;
-        DianGreen1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电Green1").gameObject;
-        DianGreen2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电Green2").gameObject;
-        HeiAnGreen1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗Green1").gameObject;
-        HeiAnGreen2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗Green2").gameObject;
-        HeiAnGreen3=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗Green3").gameObject;
+        IceGreen1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰Green1").gameObject;
+        IceGreen2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰Green2").gameObject;
+        IceGreen3=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰Green3").gameObject;
+        HuoGreen1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火Green1").gameObject;
+        HuoGreen2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火Green2").gameObject;
+        DianGreen1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电Green1").gameObject;
+        DianGreen2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电Green2").gameObject;
+        HeiAnGreen1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗Green1").gameObject;
+        HeiAnGreen2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗Green2").gameObject;
+        HeiAnGreen3=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗Green3").gameObject;
 
-        IceBlue1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰Blue1").gameObject;
-        IceBlue2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰Blue2").gameObject;
-        HuoBlue1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火blue1").gameObject;
-        HuoBlue2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火blue2").gameObject;
-        HuoBlue3=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火blue3").gameObject;
-        DianBlue1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电blue1").gameObject;
-        DianBlue2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电blue2").gameObject;
-        HeiAnBlue1=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗blue1").gameObject;
-        HeiAnBlue2=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗blue2").gameObject;
-        HeiAnBlue3=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗blue3").gameObject;
+        IceBlue1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰Blue1").gameObject;
+        IceBlue2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰Blue2").gameObject;
+        HuoBlue1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火blue1").gameObject;
+        HuoBlue2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火blue2").gameObject;
+        HuoBlue3=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火blue3").gameObject;
+        DianBlue1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电blue1").gameObject;
+        DianBlue2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电blue2").gameObject;
+        HeiAnBlue1=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗blue1").gameObject;
+        HeiAnBlue2=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗blue2").gameObject;
+        HeiAnBlue3=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗blue3").gameObject;
         
-        IcePurple1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰purple1_前").gameObject;
-        IcePurple2_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰purple2_前").gameObject;
-        IcePurple3_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰purple3_前").gameObject;
-        HuoPurple1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火purple1_前").gameObject;
-        HuoPurple2_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火purple2_前").gameObject;
-        HuoPurple3_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火purple3_前").gameObject;
-        DianPurple1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电purple1_前").gameObject;
-        DianPurple2_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电purple2_前").gameObject;
-        DianPurple3_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电purple3_前").gameObject;
-        HeiAnPurple1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗purple1_前").gameObject;
-        HeiAnPurple2_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗purple2_前").gameObject;
-        HeiAnPurple3_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗purple3_前").gameObject;
+        IcePurple1_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰purple1_前").gameObject;
+        IcePurple2_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰purple2_前").gameObject;
+        IcePurple3_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰purple3_前").gameObject;
+        HuoPurple1_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火purple1_前").gameObject;
+        HuoPurple2_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火purple2_前").gameObject;
+        HuoPurple3_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火purple3_前").gameObject;
+        DianPurple1_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电purple1_前").gameObject;
+        DianPurple2_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电purple2_前").gameObject;
+        DianPurple3_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电purple3_前").gameObject;
+        HeiAnPurple1_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗purple1_前").gameObject;
+        HeiAnPurple2_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗purple2_前").gameObject;
+        HeiAnPurple3_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗purple3_前").gameObject;
         
-        IcePurple1_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰purple1_后").gameObject;
-        IcePurple2_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰purple2_后").gameObject;
-        IcePurple3_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰purple3_后").gameObject;
-        HuoPurple1_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火purple1_后").gameObject;
-        HuoPurple2_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火purple2_后").gameObject;
-        HuoPurple3_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火purple3_后").gameObject;
-        DianPurple1_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电purple1_后").gameObject;
-        DianPurple2_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电purple2_后").gameObject;
-        DianPurple3_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电purple3_后").gameObject;
-        HeiAnPurple1_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗purple1_后").gameObject;
-        HeiAnPurple2_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗purple2_后").gameObject;
-        HeiAnPurple3_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗purple3_后").gameObject;
+        IcePurple1_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰purple1_后").gameObject;
+        IcePurple2_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰purple2_后").gameObject;
+        IcePurple3_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰purple3_后").gameObject;
+        HuoPurple1_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火purple1_后").gameObject;
+        HuoPurple2_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火purple2_后").gameObject;
+        HuoPurple3_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火purple3_后").gameObject;
+        DianPurple1_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电purple1_后").gameObject;
+        DianPurple2_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电purple2_后").gameObject;
+        DianPurple3_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电purple3_后").gameObject;
+        HeiAnPurple1_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗purple1_后").gameObject;
+        HeiAnPurple2_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗purple2_后").gameObject;
+        HeiAnPurple3_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗purple3_后").gameObject;
         
-        IceOrange1_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰Orange1_后").gameObject;
-        HuoOrange1_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火Orange1_后").gameObject;
-        DianOrange1_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电Orange1_后").gameObject;
-        HeiAnOrange1_h=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗Orange1_后").gameObject;
+        IceOrange1_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰Orange1_后").gameObject;
+        HuoOrange1_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火Orange1_后").gameObject;
+        DianOrange1_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电Orange1_后").gameObject;
+        HeiAnOrange1_h=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗Orange1_后").gameObject;
         
-        IceOrange1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/冰Orange1_前").gameObject;
-        HuoOrange1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/火Orange1_前").gameObject;
-        DianOrange1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/电Orange1_前").gameObject;
-        HeiAnOrange1_q=transform.Find("Mask/BagBG/InfoPanel/ImagePanel/ChongWuSke/黑暗Orange1_前").gameObject;
+        IceOrange1_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/冰Orange1_前").gameObject;
+        HuoOrange1_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/火Orange1_前").gameObject;
+        DianOrange1_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/电Orange1_前").gameObject;
+        HeiAnOrange1_q=transform.Find("Mask/BagBG/LeftPanel/InfoPanel/ImagePanel/ChongWuSke/黑暗Orange1_前").gameObject;
         
     }
 
