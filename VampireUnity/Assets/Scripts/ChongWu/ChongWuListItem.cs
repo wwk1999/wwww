@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,11 +12,10 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
     public Image Image;
     public TextMeshProUGUI Level;
     public Image QualityIcon;
-    public Image XX1;
-    public Image XX2;
-    public Image XX3;
-    public Image XX4;
-    public Image XX5;
+    public GameObject XX;
+    public GameObject XXContent;
+
+
     public AspectRatioFitter  aspectRatioFitter;
     private RectTransform canvasRect; // Canvas 的 RectTransform
     public bool isLeftMouseDown = false;
@@ -185,49 +185,15 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
                 break;
         }
 
-        if (info.XingJi >= 1)
+        foreach (Transform item in XXContent.transform)
         {
-            XX1.sprite = ResourcesConfig.XXLiang;
+            Destroy(item.gameObject);
         }
-        else
+
+        for (int i = 0; i < info.XingJi; i++)
         {
-            XX1.sprite = ResourcesConfig.XXAn;
-        }
-        
-        if (info.XingJi >= 2)
-        {
-            XX2.sprite = ResourcesConfig.XXLiang;
-        }
-        else
-        {
-            XX2.sprite = ResourcesConfig.XXAn;
+            var xx = Instantiate(XX, XXContent.transform);
         }
         
-        if (info.XingJi >= 3)
-        {
-            XX3.sprite = ResourcesConfig.XXLiang;
-        }
-        else
-        {
-            XX3.sprite = ResourcesConfig.XXAn;
-        }
-        
-        if (info.XingJi >= 4)
-        {
-            XX4.sprite = ResourcesConfig.XXLiang;
-        }
-        else
-        {
-            XX4.sprite = ResourcesConfig.XXAn;
-        }
-        
-        if (info.XingJi >= 5)
-        {
-            XX5.sprite = ResourcesConfig.XXLiang;
-        }
-        else
-        {
-            XX5.sprite = ResourcesConfig.XXAn;
-        }
     }
 }
