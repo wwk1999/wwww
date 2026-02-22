@@ -69,6 +69,7 @@ public class ChongWuItemSwitch : MonoBehaviour
             PlayerData.S.ZhuChongWuId = ClickChongWuItem.chongWuTable.ChongWuId;
             ObserverModuleManager.S.SendEvent("ChongWuChuZhan");
             ObserverModuleManager.S.SendEvent("HideChongWuItemMask");
+            ObserverModuleManager.S.SendEvent("ReFreshFuChongZhuChong");
             StoreController.S.SaveStoreData();
             Destroy(gameObject);
          }

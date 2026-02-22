@@ -800,7 +800,7 @@ RectTransform:
   m_GameObject: {fileID: 313252254344605902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.16, y: 1.16, z: 1.16}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7113629746630358071}
@@ -808,8 +808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 764, y: 394}
-  m_SizeDelta: {x: 80.5859, y: 76.3427}
+  m_AnchoredPosition: {x: 756.6886, y: 394}
+  m_SizeDelta: {x: 93.1919, y: 76.3427}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &702029083752681666
 CanvasRenderer:
@@ -12545,6 +12545,7 @@ MonoBehaviour:
   FuChongPanel: {fileID: 1416632985271964260}
   PingJiPanel: {fileID: 5376378973238767102}
   InfoPanel: {fileID: 8334042037010214070}
+  FuChongZhuChong: {fileID: 1417477503266529466}
 --- !u!1 &7101167891939977788
 GameObject:
   m_ObjectHideFlags: 0

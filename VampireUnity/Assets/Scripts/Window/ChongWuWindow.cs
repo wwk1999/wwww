@@ -52,13 +52,29 @@ public class ChongWuWindow : MonoBehaviour
     public GameObject FuChongPanel;
     public GameObject PingJiPanel;
     public GameObject InfoPanel;
+    public Image FuChongZhuChong;
 
+    public void SetFuChongZhuChongObj(object[] obj)
+    {
+        SetFuChongZhuChong();
+    }
+    
+    public void SetFuChongZhuChong()
+    {
+        if (PlayerData.S.ZhuChongWuId != 0)
+        {
+            FuChongZhuChong.sprite =
+                ResourcesConfig.GetChongWuSprite(PlayerData.S.ChongWuDic[PlayerData.S.ZhuChongWuId].ChongWuType);
+        }
+    }
+    
     public void ShowFuChong()
     {
         FuChongButton.gameObject.SetActive(false);
         PingJiPanel.gameObject.SetActive(false);
         InfoPanel.gameObject.SetActive(false);
         FuChongPanel.gameObject.SetActive(true);
+        SetFuChongZhuChong();
     }
 
     public void ShowZhuChong()
@@ -547,6 +563,8 @@ public class ChongWuWindow : MonoBehaviour
         {
             ShowZhuChongWu();
         }
+
+        SetFuChongZhuChong();
         ChongWuController.S.CurrentChongWuPageNum = 1;
         ShowChongWuPage();
         SetPageNum();
@@ -736,6 +754,7 @@ public class ChongWuWindow : MonoBehaviour
         ObserverModuleManager.S.UnRegisterEvent("ChongWuChuZhan", ChongWuChuZhan);
         ObserverModuleManager.S.UnRegisterEvent("RefreshChongWuPage", RefreshChongWuPage);
         ObserverModuleManager.S.UnRegisterEvent("ResetFuChongWu", ResetFuChongWu);
+        ObserverModuleManager.S.UnRegisterEvent("ReFreshFuChongZhuChong",SetFuChongZhuChongObj);
 
     }
 
@@ -830,6 +849,7 @@ public class ChongWuWindow : MonoBehaviour
         ObserverModuleManager.S.RegisterEvent("ChongWuChuZhan", ChongWuChuZhan);
         ObserverModuleManager.S.RegisterEvent("RefreshChongWuPage", RefreshChongWuPage);
         ObserverModuleManager.S.RegisterEvent("ResetFuChongWu", ResetFuChongWu);
+        ObserverModuleManager.S.RegisterEvent("ReFreshFuChongZhuChong",SetFuChongZhuChongObj);
 
         FuChongButton.onClick.AddListener(() =>
         {
