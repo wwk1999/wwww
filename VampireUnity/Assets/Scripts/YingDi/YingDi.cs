@@ -14,6 +14,15 @@ public class YingDi : MonoBehaviour
     public Button shangrenButton;
     public Button duanzaoButton;
     public Button chongwuButton;
+    public SpriteRenderer PenQuan;
+    public SpriteRenderer ZhangPen;
+    public SpriteRenderer Tanzi;
+    public Collider2D TanZiTri;
+    public SpriteRenderer ChongWuDian;
+    public Collider2D ChongWuDianTri;
+    
+    public SpriteRenderer shu;
+
 
     private void Start()
     {
@@ -54,9 +63,65 @@ public class YingDi : MonoBehaviour
         return false;
     }
     
+    public void CheckCollider(Collider2D collider2D,SpriteRenderer spriteRenderer)
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        collider2D.OverlapCollider(filter, results);
+    
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+                spriteRenderer.sortingOrder = 1;
+                return;
+            }
+            else
+            {
+                spriteRenderer.sortingOrder = 3;
+            }
+        }
+    }
+    
 
     private void Update()
     {
+        CheckCollider(TanZiTri,Tanzi);
+        CheckCollider(ChongWuDianTri,ChongWuDian);
+        if (player.transform.position.y > 2)
+        {
+            shu.sortingOrder = 3;
+        }
+        else
+        {
+            shu.sortingOrder = 1;
+        }
+        
+        if (player.transform.position.y > -1)
+        {
+            ZhangPen.sortingOrder = 3;
+        }
+        else
+        {
+            ZhangPen.sortingOrder = 1;
+        }
+        
+        if (player.transform.position.y > 0)
+        {
+            PenQuan.sortingOrder = 3;
+        }
+        else
+        {
+            PenQuan.sortingOrder = 1;
+        }
+        
         if (Input.GetMouseButtonDown(0))
         {
             if (IsMouseOverUIObject(shangrenButton.gameObject))
