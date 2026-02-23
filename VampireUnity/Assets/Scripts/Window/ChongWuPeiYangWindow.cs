@@ -1144,19 +1144,19 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 QualityIcon.sprite = ResourcesConfig.ChongWuQuality1;
                 break;
             case 2:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality1;
+                QualityIcon.sprite = ResourcesConfig.ChongWuQuality2;
                 break;
             case 3:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality1;
+                QualityIcon.sprite = ResourcesConfig.ChongWuQuality3;
                 break;
             case 4:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality1;
+                QualityIcon.sprite = ResourcesConfig.ChongWuQuality4;
                 break;
             case 5:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality1;
+                QualityIcon.sprite = ResourcesConfig.ChongWuQuality5;
                 break;
             case 6:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality1;
+                QualityIcon.sprite = ResourcesConfig.ChongWuQuality6;
                 break;
         }
 
