@@ -169,19 +169,14 @@ public class WeaponWindow : MonoBehaviour
    
    //魂器
 
-   public TextMeshProUGUI HunQi1Text;
    public TextMeshProUGUI HunQi1Desc;
    
-   public TextMeshProUGUI HunQi2Text;
    public TextMeshProUGUI HunQi2Desc;
    
-   public TextMeshProUGUI HunQi3Text;
    public TextMeshProUGUI HunQi3Desc;
    
-   public TextMeshProUGUI HunQi4Text;
    public TextMeshProUGUI HunQi4Desc;
    
-   public TextMeshProUGUI HunQi5Text;
    public TextMeshProUGUI HunQi5Desc;
    
    public TextMeshProUGUI AllHunQiText;
@@ -280,13 +275,7 @@ public class WeaponWindow : MonoBehaviour
          .WeaponHunQiDic[currentShowType].HunQi4;
       HunQi5Desc.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage
          .WeaponHunQiDic[currentShowType].HunQi5;
-
-      HunQi1Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "1:";
-      HunQi2Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "2:";
-      HunQi3Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "3:";
-      HunQi4Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "4:";
-      HunQi5Text.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.HunQiLevel + "5:";
-
+      
       switch (currentShowType)
       {
          case WeaponType.Primary:
