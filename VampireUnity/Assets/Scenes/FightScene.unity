@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIToast
       objectReference: {fileID: 0}
+    - target: {fileID: 306758926900689654, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1874455727043374132, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.172
@@ -328,17 +332,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2947719191659109673, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213104783963362411, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 369098751
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620058085474633250, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7478824466263541503, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
       propertyPath: m_UpdateMode
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478824466263541503, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 306758926900689654, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1532413638}
+    - targetCorrespondingSourceObject: {fileID: 2947719191659109673, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1532413641}
+    - targetCorrespondingSourceObject: {fileID: 2947719191659109673, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1532413640}
   m_SourcePrefab: {fileID: 100100000, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
 --- !u!1 &1532413635 stripped
 GameObject:
@@ -356,9 +379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1532413637 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7478824466263541503, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+--- !u!223 &1532413637 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 426745323610983957, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
   m_PrefabInstance: {fileID: 1532413634}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1532413638
@@ -374,7 +397,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1532413636}
-  animator: {fileID: 1532413637}
+  animator: {fileID: 0}
+  ToastPrefab: {fileID: 1532413639}
+  Canvas: {fileID: 1532413637}
+  Animator: {fileID: 1532413640}
+--- !u!1 &1532413639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2947719191659109673, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+  m_PrefabInstance: {fileID: 1532413634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1532413640
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532413639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1caa800e9f67bb44f89d8e1617de9b8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1532413641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532413639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1803025431297428e31b5a814caa32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2117637669
 GameObject:
   m_ObjectHideFlags: 0

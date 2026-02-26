@@ -154,7 +154,7 @@ public class Entrance : MonoBehaviour
         if (LevelInfoConfig.CurrentGameLevel > 15)
         {
 
-            if (PlayerData.S.mJLevel == MJLevel.White)
+            if (LevelInfoConfig.CurrentGameLevel == 16)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -168,7 +168,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Green)
+            if (LevelInfoConfig.CurrentGameLevel ==17)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -182,7 +182,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Blue)
+            if (LevelInfoConfig.CurrentGameLevel == 18)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -196,7 +196,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Blue)
+            if (LevelInfoConfig.CurrentGameLevel ==18)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -210,7 +210,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Blue)
+            if (LevelInfoConfig.CurrentGameLevel == 18)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -225,7 +225,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Purple)
+            if (LevelInfoConfig.CurrentGameLevel ==19)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -240,7 +240,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Orange)
+            if (LevelInfoConfig.CurrentGameLevel == 20)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -255,7 +255,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Orange)
+            if (LevelInfoConfig.CurrentGameLevel ==20)
             {
                 for (int i = 0; i < 30; i++)
                 {
@@ -275,7 +275,7 @@ public class Entrance : MonoBehaviour
         //秘境怪物
         if (LevelInfoConfig.CurrentGameLevel > 15)
         {
-            if (PlayerData.S.mJLevel == MJLevel.Blue)
+            if (LevelInfoConfig.CurrentGameLevel == 18)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -290,7 +290,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.White)
+            if (LevelInfoConfig.CurrentGameLevel == 16)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -307,7 +307,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Purple)
+            if (LevelInfoConfig.CurrentGameLevel == 19)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -325,7 +325,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Red2)
+            if (LevelInfoConfig.CurrentGameLevel == 22)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -339,7 +339,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.White)
+            if (LevelInfoConfig.CurrentGameLevel == 16)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -356,7 +356,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Purple)
+            if (LevelInfoConfig.CurrentGameLevel == 19)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -373,7 +373,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Red2)
+            if (LevelInfoConfig.CurrentGameLevel == 22)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -389,7 +389,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Green)
+            if (LevelInfoConfig.CurrentGameLevel == 17)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -407,7 +407,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Orange)
+            if (LevelInfoConfig.CurrentGameLevel == 20)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -425,7 +425,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Red3)
+            if (LevelInfoConfig.CurrentGameLevel == 23)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -440,7 +440,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Blue)
+            if (LevelInfoConfig.CurrentGameLevel == 18)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -458,7 +458,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Green)
+            if (LevelInfoConfig.CurrentGameLevel == 17)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -476,7 +476,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Orange)
+            if (LevelInfoConfig.CurrentGameLevel == 20)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -494,7 +494,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Red1)
+            if (LevelInfoConfig.CurrentGameLevel == 21)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -512,7 +512,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            if (PlayerData.S.mJLevel == MJLevel.Red1)
+            if (LevelInfoConfig.CurrentGameLevel == 21)
             {
                 for (int i = 0; i < 150; i++)
                 {
@@ -531,7 +531,7 @@ public class Entrance : MonoBehaviour
 
 
 
-            if (PlayerData.S.mJLevel == MJLevel.Red3)
+            if (LevelInfoConfig.CurrentGameLevel == 23)
             {
                 for (int i = 0; i < 150; i++)
                 {

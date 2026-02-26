@@ -710,6 +710,7 @@ public class FightBGController : XSingleton<FightBGController>
             skAnim.AnimationName = "bui_9_1";
         }
 
+        LevelInfoConfig.FaBaoShi();
 
         CheckGuanKaTitle();
         

@@ -57,6 +57,99 @@ public class BaoShiDiaoLuo
 }
 public class LevelInfoConfig
 {
+
+    public static void FaBaoShi()
+    {
+        BaoShiDiaoLuo baoShiDiaoLuo = null;
+        switch (CurrentGameLevel)
+        {
+            case 3:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[3];
+                break;
+            case 6:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[6];
+                break;
+            case 9:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[9];
+                break;
+            case 12:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[12];
+                break;
+            case 15:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[15];
+                break;
+            
+            case 16:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[16];
+                break;
+            case 17:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[17];
+                break;
+            case 18:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[18];
+                break;
+            case 19:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[19];
+                break;
+            case 20:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[20];
+                break;
+            case 21:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[21];
+                break;
+            case 22:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[22];
+                break;
+            case 23:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[23];
+                break;
+            case 24:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[24];
+                break;
+            case 25:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[25];
+                break;
+            case 26:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[26];
+                break;
+            case 27:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[27];
+                break;
+            case 28:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[28];
+                break;
+            case 29:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[29];
+                break;
+            case 30:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[30];
+                break;
+            case 31:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[31];
+                break;
+            case 32:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[32];
+                break;
+            case 33:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[33];
+                break;
+            case 34:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[34];
+                break;
+            case 35:
+                baoShiDiaoLuo = BaoShiDiaoLuoDic[35];
+                break;
+        }
+
+        for (int i = 0; i < baoShiDiaoLuo.count; i++)
+        {
+            int random = Random.Range(1, 11);
+            int code = (random + 5) * 100 + baoShiDiaoLuo.Quality;
+            BagController.S.DebugTool(code, "");
+        }
+    }
+    
+    
     public static Dictionary<int, BaoShiDiaoLuo> BaoShiDiaoLuoDic = new Dictionary<int, BaoShiDiaoLuo>()
     {
         {3,new BaoShiDiaoLuo(){Quality = 1,count = 3}},

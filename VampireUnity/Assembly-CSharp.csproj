@@ -391,6 +391,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\Du.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeNecklace.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\Skill1AddRange.cs" />
+    <Compile Include="Assets\Scripts\Tool\Toast.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\Scripts\ChongWu\ChongWuTable.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
