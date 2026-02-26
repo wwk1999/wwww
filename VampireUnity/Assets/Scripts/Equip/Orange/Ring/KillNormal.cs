@@ -17,6 +17,8 @@ public class KillNormal :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.KillNormal;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 5;
+        EquipAttributes.orangeid = 32;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

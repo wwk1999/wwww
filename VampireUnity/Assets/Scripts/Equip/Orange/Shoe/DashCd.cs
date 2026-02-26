@@ -17,6 +17,8 @@ public class DashCd :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DashCd;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 6;
+        EquipAttributes.orangeid = 37;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

@@ -17,6 +17,8 @@ public class NormalAddDamage :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.NormalAddDamage;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 4;
+        EquipAttributes.orangeid = 24;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

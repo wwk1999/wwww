@@ -16,6 +16,8 @@ public class BuWangChuXin :EquipBase
         EquipAttributes.EquipName = "BuWangChuXin";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.BuWangChuXin;
         EquipAttributes.suitid = 6;
+        EquipAttributes.orangeid = 1;
+
         EquipAttributes.equip_type_id = 1;
         //暂时写死
         EquipAttributes.Quality = 5;

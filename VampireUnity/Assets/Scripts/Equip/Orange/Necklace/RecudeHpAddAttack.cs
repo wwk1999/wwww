@@ -17,6 +17,8 @@ public class RecudeHpAddAttack :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.RecudeHpAddAttack;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 4;
+        EquipAttributes.orangeid = 26;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

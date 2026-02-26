@@ -15,6 +15,8 @@ public class AddDefenseForTime :EquipBase
         EquipAttributes.EquipName = "AddDefenseForTime";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 2;
+        EquipAttributes.orangeid = 9;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.AddDefenseForTime;
         //暂时写死
         EquipAttributes.Quality = 5;

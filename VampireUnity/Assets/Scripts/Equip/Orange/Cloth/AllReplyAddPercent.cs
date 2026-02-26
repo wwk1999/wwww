@@ -15,6 +15,8 @@ public class AllReplyAddPercent :EquipBase
         EquipAttributes.EquipName = "AllReplyAddPercent";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 2;
+        EquipAttributes.orangeid = 10;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.AllReplyAddPercent;
         //暂时写死
         EquipAttributes.Quality = 5;

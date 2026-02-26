@@ -17,6 +17,8 @@ public class CloakFortureAdd :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.CloakFortureAdd;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 1;
+        EquipAttributes.orangeid = 2;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

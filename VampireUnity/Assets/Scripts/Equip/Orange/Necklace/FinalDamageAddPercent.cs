@@ -17,6 +17,8 @@ public class FinalDamageAddPercent :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FinalDamageAddPercent;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 4;
+        EquipAttributes.orangeid = 22;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

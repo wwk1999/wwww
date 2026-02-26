@@ -15,6 +15,8 @@ public class DelayDamage :EquipBase
         EquipAttributes.EquipName = "DelayDamage";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 3;
+        EquipAttributes.orangeid = 16;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DelayDamage;
         //暂时写死
         EquipAttributes.Quality = 5;

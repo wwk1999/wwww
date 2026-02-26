@@ -15,6 +15,8 @@ public class ClothFortureAdd :EquipBase
         EquipAttributes.EquipName = "ClothFortureAdd";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 2;
+        EquipAttributes.orangeid = 11;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.ClothFortureAdd;
         //暂时写死
         EquipAttributes.Quality = 5;

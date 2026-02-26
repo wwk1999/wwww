@@ -17,6 +17,8 @@ public class Skill1YiDianDouble :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill1YiDianDouble;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 5;
+        EquipAttributes.orangeid = 34;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

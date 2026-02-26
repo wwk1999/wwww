@@ -17,6 +17,8 @@ public class AddAttackForTime :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.AddAttackForTime;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 5;
+        EquipAttributes.orangeid = 30;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

@@ -15,6 +15,8 @@ public class HpReductionAddDefense :EquipBase
         EquipAttributes.EquipName = "HpReductionAddDefense";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 3;
+        EquipAttributes.orangeid = 19;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.HpReductionAddDefense;
         //暂时写死
         EquipAttributes.Quality = 5;

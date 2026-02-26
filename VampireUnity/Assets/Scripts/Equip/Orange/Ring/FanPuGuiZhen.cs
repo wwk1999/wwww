@@ -16,6 +16,8 @@ public class FanPuGuiZhen :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FanPuGuiZhen;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 5;
+        EquipAttributes.orangeid = 31;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

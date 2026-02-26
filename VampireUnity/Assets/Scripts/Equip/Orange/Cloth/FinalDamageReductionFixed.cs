@@ -16,6 +16,8 @@ public class FinalDamageReductionFixed :EquipBase
         EquipAttributes.EquipName = "FinalDamageReductionFixed";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 2;
+        EquipAttributes.orangeid = 12;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

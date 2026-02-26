@@ -17,6 +17,8 @@ public class Skill2RotateAdd :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill2RotateAdd;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 5;
+        EquipAttributes.orangeid = 35;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

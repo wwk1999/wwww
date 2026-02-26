@@ -15,6 +15,8 @@ public class HelmetFortureAdd :EquipBase
         EquipAttributes.EquipName = "HelmetFortureAdd";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 3;
+        EquipAttributes.orangeid = 18;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.HelmetFortureAdd;
         //暂时写死
         EquipAttributes.Quality = 5;

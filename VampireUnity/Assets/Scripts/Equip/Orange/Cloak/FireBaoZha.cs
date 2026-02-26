@@ -17,6 +17,8 @@ public class FireBaoZha :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FireBaoZha;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 1;
+        EquipAttributes.orangeid = 4;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

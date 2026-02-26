@@ -17,6 +17,8 @@ public class Skill1ReplaceNormalAttack :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 4;
+        EquipAttributes.orangeid = 27;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

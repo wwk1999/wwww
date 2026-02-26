@@ -8,11 +8,14 @@ public class DiaoLuoConfig
     public int SuitId = 0;
     public int EquipType;
     public int PropId;
-    public DiaoLuoConfig(int suitid,int equipType,int prop=0)
+    public int OrangeId=0;
+
+    public DiaoLuoConfig(int suitid,int equipType,int prop=0,int  orangeid=0)
     {
         SuitId = suitid;
         EquipType = equipType;
         PropId = prop;
+        OrangeId=orangeid;
     }
 }
 
@@ -57,6 +60,50 @@ public class LevelInfoConfig
     {
         get=>PlayerData.S.maxGameLevel;
         set=>PlayerData.S.maxGameLevel=value;
+    }
+
+    public static List<DiaoLuoConfig> GetDiaoLuoList()
+    {
+        switch (CurrentGameLevel)
+        {
+            case 3:
+                return LevelDiaoLuo3;
+            case 6:
+                return LevelDiaoLuo3;
+            case 9:
+                return LevelDiaoLuo3;
+            case 12:
+                return LevelDiaoLuo3;
+            case 15:
+                return LevelDiaoLuo3;
+        }
+
+        return null;
+    }
+
+    public static  bool IsHaveDiaoLuo(List<DiaoLuoConfig> list, DiaoLuoConfig diaoluo)
+    {
+        if (list == null)
+            return false;
+        foreach (var item in list)
+        {
+            if (item.PropId == diaoluo.PropId && diaoluo.PropId != 0)
+            {
+                return true;
+            }
+
+            if (item.OrangeId == diaoluo.OrangeId && diaoluo.OrangeId != 0)
+            {
+                return true;
+            }
+
+            if (item.SuitId == diaoluo.SuitId && diaoluo.SuitId != 0)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
     public static LevelType CurrentGameLevelType = LevelType.Normal;
     public static List<DiaoLuoConfig> LevelDiaoLuo1 = new List<DiaoLuoConfig>();//关卡1掉落列表
@@ -316,7 +363,7 @@ public class LevelInfoConfig
             LevelDiaoLuo3.Add(new DiaoLuoConfig(1,5));
             LevelDiaoLuo3.Add(new DiaoLuoConfig(1,6));
             LevelDiaoLuo3.Add(new DiaoLuoConfig(1,6,prop:101));
-            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,6,prop:201));
+            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,6,prop:401));
             
             LevelDiaoLuo3.Add(new DiaoLuoConfig(2,1));
             LevelDiaoLuo3.Add(new DiaoLuoConfig(2,2));
@@ -325,7 +372,7 @@ public class LevelInfoConfig
             LevelDiaoLuo3.Add(new DiaoLuoConfig(2,5));
             LevelDiaoLuo3.Add(new DiaoLuoConfig(2,6));
             LevelDiaoLuo3.Add(new DiaoLuoConfig(1,6,prop:102));
-            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,6,prop:202));
+            LevelDiaoLuo3.Add(new DiaoLuoConfig(1,6,prop:402));
             
             LevelDiaoLuo3.Add(new DiaoLuoConfig(101,1));
             LevelDiaoLuo3.Add(new DiaoLuoConfig(101,2));
@@ -367,7 +414,7 @@ public class LevelInfoConfig
         if (IsOneGame)
         {
             LevelDiaoLuo6.Add(new DiaoLuoConfig(1,6,prop:101));
-            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,6,prop:201));
+            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,6,prop:401));
             
             LevelDiaoLuo6.Add(new DiaoLuoConfig(2,1));
             LevelDiaoLuo6.Add(new DiaoLuoConfig(2,2));
@@ -377,7 +424,7 @@ public class LevelInfoConfig
             LevelDiaoLuo6.Add(new DiaoLuoConfig(2,6));
             
             LevelDiaoLuo6.Add(new DiaoLuoConfig(1,6,prop:102));
-            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,6,prop:202));
+            LevelDiaoLuo6.Add(new DiaoLuoConfig(1,6,prop:402));
             
             LevelDiaoLuo6.Add(new DiaoLuoConfig(102,1));
             LevelDiaoLuo6.Add(new DiaoLuoConfig(102,2));
@@ -423,10 +470,10 @@ public class LevelInfoConfig
         if (IsOneGame)
         {
             LevelDiaoLuo9.Add(new DiaoLuoConfig(1,6,prop:102));
-            LevelDiaoLuo9.Add(new DiaoLuoConfig(1,6,prop:202));
+            LevelDiaoLuo9.Add(new DiaoLuoConfig(1,6,prop:402));
             
             LevelDiaoLuo9.Add(new DiaoLuoConfig(1,6,prop:103));
-            LevelDiaoLuo9.Add(new DiaoLuoConfig(1,6,prop:203));
+            LevelDiaoLuo9.Add(new DiaoLuoConfig(1,6,prop:403));
             
             LevelDiaoLuo9.Add(new DiaoLuoConfig(3,1));
             LevelDiaoLuo9.Add(new DiaoLuoConfig(3,2));
@@ -489,10 +536,10 @@ public class LevelInfoConfig
         if (IsOneGame)
         {
             LevelDiaoLuo12.Add(new DiaoLuoConfig(1,6,prop:102));
-            LevelDiaoLuo12.Add(new DiaoLuoConfig(1,6,prop:202));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(1,6,prop:402));
             
             LevelDiaoLuo12.Add(new DiaoLuoConfig(1,6,prop:103));
-            LevelDiaoLuo12.Add(new DiaoLuoConfig(1,6,prop:203));
+            LevelDiaoLuo12.Add(new DiaoLuoConfig(1,6,prop:403));
             
             LevelDiaoLuo12.Add(new DiaoLuoConfig(3,1));
             LevelDiaoLuo12.Add(new DiaoLuoConfig(3,2));
@@ -555,7 +602,7 @@ public class LevelInfoConfig
         if (IsOneGame)
         {
             LevelDiaoLuo15.Add(new DiaoLuoConfig(1,6,prop:103));
-            LevelDiaoLuo15.Add(new DiaoLuoConfig(1,6,prop:203));
+            LevelDiaoLuo15.Add(new DiaoLuoConfig(1,6,prop:403));
             
             LevelDiaoLuo15.Add(new DiaoLuoConfig(103,1));
             LevelDiaoLuo15.Add(new DiaoLuoConfig(103,2));
@@ -565,7 +612,7 @@ public class LevelInfoConfig
             LevelDiaoLuo15.Add(new DiaoLuoConfig(103,6));
             
             LevelDiaoLuo15.Add(new DiaoLuoConfig(1,6,prop:104));
-            LevelDiaoLuo15.Add(new DiaoLuoConfig(1,6,prop:204));
+            LevelDiaoLuo15.Add(new DiaoLuoConfig(1,6,prop:404));
             
             LevelDiaoLuo15.Add(new DiaoLuoConfig(4,1));
             LevelDiaoLuo15.Add(new DiaoLuoConfig(4,2));

@@ -9,6 +9,8 @@ public class EquipTable:TableBase
     public int EquipLevel { get; set; }
     public int equipid { get; set; }
     public int suitid { get; set; } // 套装ID
+    public int orangeid { get; set; } // 套装ID
+
     public int equip_type_id{ get; set; } // 装备类型ID
     public float Damage { get; set; }
     public float CRIT { get; set; }

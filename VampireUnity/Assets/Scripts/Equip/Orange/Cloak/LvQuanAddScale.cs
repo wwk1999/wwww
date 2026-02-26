@@ -17,6 +17,8 @@ public class LvQuanAddScale :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.LvQuanAddScale;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 1;
+        EquipAttributes.orangeid = 6;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

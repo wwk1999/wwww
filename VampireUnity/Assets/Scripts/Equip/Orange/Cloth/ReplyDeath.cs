@@ -15,6 +15,8 @@ public class ReplyDeath :EquipBase
         EquipAttributes.EquipName = "ReplyDeath";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 2;
+        EquipAttributes.orangeid = 14;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.ReplyDeath;
         //暂时写死
         EquipAttributes.Quality = 5;

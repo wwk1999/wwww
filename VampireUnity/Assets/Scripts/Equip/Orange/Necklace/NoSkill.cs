@@ -17,6 +17,8 @@ public class NoSkill :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.NoSkill;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 4;
+        EquipAttributes.orangeid = 25;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

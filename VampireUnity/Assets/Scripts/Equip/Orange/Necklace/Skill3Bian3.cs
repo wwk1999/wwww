@@ -17,6 +17,8 @@ public class Skill3Bian3 :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill3Bian3;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 4;
+        EquipAttributes.orangeid = 29;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

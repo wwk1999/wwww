@@ -15,6 +15,8 @@ public class Skill2AddRange :EquipBase
         EquipAttributes.EquipName = "Skill2AddRange";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 3;
+        EquipAttributes.orangeid = 21;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill2AddRange;
         //暂时写死
         EquipAttributes.Quality = 5;

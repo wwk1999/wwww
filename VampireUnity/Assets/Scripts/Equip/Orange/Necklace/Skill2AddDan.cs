@@ -17,6 +17,8 @@ public class Skill2AddDan :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill2AddDan;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 4;
+        EquipAttributes.orangeid = 28;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

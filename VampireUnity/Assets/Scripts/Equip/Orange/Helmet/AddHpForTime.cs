@@ -15,6 +15,8 @@ public class AddHpForTime :EquipBase
         EquipAttributes.EquipName = "AddHpForTime";
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 3;
+        EquipAttributes.orangeid = 15;
+
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.AddHpForTime;
         //暂时写死
         EquipAttributes.Quality = 5;

@@ -17,6 +17,8 @@ public class DuAddDuQuan :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DuAddDuQuan;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 1;
+        EquipAttributes.orangeid = 3;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

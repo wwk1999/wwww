@@ -17,6 +17,8 @@ public class MoveSpeedAdd :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.MoveSpeedAdd;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 6;
+        EquipAttributes.orangeid = 41;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

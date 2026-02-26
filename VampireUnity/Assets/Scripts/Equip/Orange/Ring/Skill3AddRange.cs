@@ -17,6 +17,8 @@ public class Skill3AddRange :EquipBase
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill3AddRange;
         EquipAttributes.suitid = 6;
         EquipAttributes.equip_type_id = 5;
+        EquipAttributes.orangeid = 36;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();
