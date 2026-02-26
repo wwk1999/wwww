@@ -35,7 +35,7 @@ public class SkillData : XSingleton<SkillData>
 {
     public SkillType LMB = SkillType.Normal;
     public SkillType RMB = SkillType.None;
-    public SkillType Alpha1 = SkillType.None;
+    public SkillType Alpha1 = SkillType.None;//当前装备的技能类型
     public SkillType Alpha2 = SkillType.None;
     public SkillType Alpha3 = SkillType.None;
     

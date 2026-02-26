@@ -34,269 +34,519 @@ public class Entrance : MonoBehaviour
             GameController.S.MaxBossEnergyNum = LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]*2;//这时小怪数量，精英不算数量，每10只普通怪出一只精英，所以正好是2倍
             GameController.S.MaxBossEnergyNum = 10;
 
-            for (int i = 0; i < 30; i++)
+            if (SkillData.S.Alpha1 == SkillType.Skill3 || SkillData.S.Alpha2 == SkillType.Skill3 ||
+                SkillData.S.Alpha3 == SkillType.Skill3)
             {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/IceExplosion").GetComponent<IceExplosion>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.IceExQueue.Enqueue(Monster1);            
-            }
-            
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill1").GetComponent<HuoSkill1>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HuoSkill1Queue.Enqueue(Monster1);            
-            }
-            
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill2").GetComponent<DianSkill2>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.DianSkill2Queue.Enqueue(Monster1);            
-            }
-            
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill3").GetComponent<HeiAnSkill3>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HeiAnSkill3Queue.Enqueue(Monster1);            
-            }
-            
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill1").GetComponent<HeiAnSkill1>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HeiAnSkill1Queue.Enqueue(Monster1);            
-            }
-            
-            
-            for (int i = 0; i < 100; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill3").GetComponent<DianSkill3>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.DianSkill3Queue.Enqueue(Monster1);            
-            }
-            
-            for (int i = 0; i < 100; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill3").GetComponent<HuoSkill3>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HuoSkill3Queue.Enqueue(Monster1);            
-            }
-            
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/IceSkill/IceSkill1").GetComponent<IceSkill1>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.IceSkill1Queue.Enqueue(Monster1);            
-            }
-            
-
-            if (LevelInfoConfig.CurrentGameLevel > 15)
-            {
-                for (int i = 0; i < 100; i++)
+                for (int i = 0; i < 30; i++)
                 {
                     var Monster1 =
                         Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LeiShou/LeiShouSkill3").GetComponent<LeiShouSkill3>(),
+                            Resources.Load<GameObject>("Prefabs/Skill/IceExplosion").GetComponent<IceExplosion>(),
                             GameController.S.transform);
                     Monster1.gameObject.SetActive(false);
-                    GameController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
-                    
-                    var Monster2 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/KuiJia/HeiXuanFen").GetComponent<HeiXuanFen>(),
-                            GameController.S.transform);
-                    Monster2.gameObject.SetActive(false);
-                    GameController.S.HeiXuanFenQueue.Enqueue(Monster2.GetComponent<HeiXuanFen>());
-                    var Monster3 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/LvZhuiZong").GetComponent<LvZhuiZong>(),
-                            GameController.S.transform);
-                    Monster3.gameObject.SetActive(false);
-                    GameController.S.LvZhuiZongQueue.Enqueue(Monster3.GetComponent<LvZhuiZong>());
-                    
-                    var Monster4 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/LvXuanFen").GetComponent<LvXuanFen>(),
-                            GameController.S.transform);
-                    Monster4.gameObject.SetActive(false);
-                    GameController.S.LvXuanFenQueue.Enqueue(Monster4.GetComponent<LvXuanFen>());
-                    
-                    var Monster5 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/BaoZiSkill2").GetComponent<BaoZiSkill2>(),
-                            GameController.S.transform);
-                    Monster5.gameObject.SetActive(false);
-                    GameController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
-                    
-                    var Monster6 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoLang/HuoLangSkill2").GetComponent<HuoLangSkill2>(),
-                            GameController.S.transform);
-                    Monster6.gameObject.SetActive(false);
-                    GameController.S.HuoLangSkill2Queue.Enqueue(Monster6.GetComponent<HuoLangSkill2>());
-                    var Monster7 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoSkill2").GetComponent<ShuangDaoSkill2>(),
-                            GameController.S.transform);
-                    Monster7.gameObject.SetActive(false);
-                    GameController.S.ShuangDaoSkill2Queue.Enqueue(Monster7.GetComponent<ShuangDaoSkill2>());
-                    
-                    var Monster8 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoSkill3").GetComponent<ShuangDaoSkill3>(),
-                            GameController.S.transform);
-                    Monster8.gameObject.SetActive(false);
-                    GameController.S.ShuangDaoSkill3Queue.Enqueue(Monster8.GetComponent<ShuangDaoSkill3>());
-                    
+                    GameController.S.IceExQueue.Enqueue(Monster1);
                 }
+            }
+
+            if (SkillData.S.Alpha1 == SkillType.HuoSkill1 || SkillData.S.Alpha2 == SkillType.HuoSkill1 ||
+                SkillData.S.Alpha3 == SkillType.HuoSkill1)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var Monster1 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill1").GetComponent<HuoSkill1>(),
+                            GameController.S.transform);
+                    Monster1.gameObject.SetActive(false);
+                    GameController.S.HuoSkill1Queue.Enqueue(Monster1);
+                }
+            }
+
+            if (SkillData.S.Alpha1 == SkillType.DianSkill2 || SkillData.S.Alpha2 == SkillType.DianSkill2 ||
+                SkillData.S.Alpha3 == SkillType.DianSkill2)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var Monster1 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill2").GetComponent<DianSkill2>(),
+                            GameController.S.transform);
+                    Monster1.gameObject.SetActive(false);
+                    GameController.S.DianSkill2Queue.Enqueue(Monster1);
+                }
+            }
+
+            if (SkillData.S.Alpha1 == SkillType.HeiAnSkill3 || SkillData.S.Alpha2 == SkillType.HeiAnSkill3 ||
+                SkillData.S.Alpha3 == SkillType.HeiAnSkill3)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var Monster1 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill3")
+                                .GetComponent<HeiAnSkill3>(),
+                            GameController.S.transform);
+                    Monster1.gameObject.SetActive(false);
+                    GameController.S.HeiAnSkill3Queue.Enqueue(Monster1);
+                }
+            }
+
+            if (SkillData.S.Alpha1 == SkillType.HeiAnSkill1 || SkillData.S.Alpha2 == SkillType.HeiAnSkill1 ||
+                SkillData.S.Alpha3 == SkillType.HeiAnSkill1)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var Monster1 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill1")
+                                .GetComponent<HeiAnSkill1>(),
+                            GameController.S.transform);
+                    Monster1.gameObject.SetActive(false);
+                    GameController.S.HeiAnSkill1Queue.Enqueue(Monster1);
+                }
+            }
+
+            if (SkillData.S.Alpha1 == SkillType.DianSkill3 || SkillData.S.Alpha2 == SkillType.DianSkill3 ||
+                SkillData.S.Alpha3 == SkillType.DianSkill3)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var Monster1 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill3").GetComponent<DianSkill3>(),
+                            GameController.S.transform);
+                    Monster1.gameObject.SetActive(false);
+                    GameController.S.DianSkill3Queue.Enqueue(Monster1);
+                }
+            }
+
+            if (SkillData.S.Alpha1 == SkillType.HuoSkill3 || SkillData.S.Alpha2 == SkillType.HuoSkill3 ||
+                SkillData.S.Alpha3 == SkillType.HuoSkill3)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var Monster1 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill3").GetComponent<HuoSkill3>(),
+                            GameController.S.transform);
+                    Monster1.gameObject.SetActive(false);
+                    GameController.S.HuoSkill3Queue.Enqueue(Monster1);
+                }
+            }
+
+            if (SkillData.S.Alpha1 == SkillType.IceSkill1 || SkillData.S.Alpha2 == SkillType.IceSkill1 ||
+                SkillData.S.Alpha3 == SkillType.IceSkill1)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var Monster1 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Skill/IceSkill/IceSkill1").GetComponent<IceSkill1>(),
+                            GameController.S.transform);
+                    Monster1.gameObject.SetActive(false);
+                    GameController.S.IceSkill1Queue.Enqueue(Monster1);
+                }
+            }
+
+
+            if (LevelInfoConfig.CurrentGameLevel > 15)
+            {
+               
+                    if (PlayerData.S.mJLevel == MJLevel.White)
+                    {
+                        for (int i = 0; i < 30; i++)
+                        {
+                            var Monster1 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LeiShou/LeiShouSkill3")
+                                        .GetComponent<LeiShouSkill3>(),
+                                    GameController.S.transform);
+                            Monster1.gameObject.SetActive(false);
+                            GameController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
+                        }
+                    }
+
+                    if (PlayerData.S.mJLevel == MJLevel.Green)
+                    {
+                        for (int i = 0; i < 30; i++)
+                        {
+                            var Monster2 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/KuiJia/HeiXuanFen")
+                                        .GetComponent<HeiXuanFen>(),
+                                    GameController.S.transform);
+                            Monster2.gameObject.SetActive(false);
+                            GameController.S.HeiXuanFenQueue.Enqueue(Monster2.GetComponent<HeiXuanFen>());
+                        }
+                    }
+
+                    if (PlayerData.S.mJLevel == MJLevel.Blue)
+                    {
+                        for (int i = 0; i < 30; i++)
+                        {
+                            var Monster3 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/LvZhuiZong")
+                                        .GetComponent<LvZhuiZong>(),
+                                    GameController.S.transform);
+                            Monster3.gameObject.SetActive(false);
+                            GameController.S.LvZhuiZongQueue.Enqueue(Monster3.GetComponent<LvZhuiZong>());
+                        }
+                    }
+
+                    if (PlayerData.S.mJLevel == MJLevel.Blue)
+                    {
+                        for (int i = 0; i < 30; i++)
+                        {
+                            var Monster4 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/LvXuanFen")
+                                        .GetComponent<LvXuanFen>(),
+                                    GameController.S.transform);
+                            Monster4.gameObject.SetActive(false);
+                            GameController.S.LvXuanFenQueue.Enqueue(Monster4.GetComponent<LvXuanFen>());
+                        }
+                    }
+
+                    if (PlayerData.S.mJLevel == MJLevel.Blue)
+                    {
+                        for (int i = 0; i < 30; i++)
+                        {
+
+                            var Monster5 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/BaoZiSkill2")
+                                        .GetComponent<BaoZiSkill2>(),
+                                    GameController.S.transform);
+                            Monster5.gameObject.SetActive(false);
+                            GameController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
+                        }
+                    }
+
+                    if (PlayerData.S.mJLevel == MJLevel.Purple)
+                    {
+                        for (int i = 0; i < 30; i++)
+                        {
+
+                            var Monster6 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoLang/HuoLangSkill2")
+                                        .GetComponent<HuoLangSkill2>(),
+                                    GameController.S.transform);
+                            Monster6.gameObject.SetActive(false);
+                            GameController.S.HuoLangSkill2Queue.Enqueue(Monster6.GetComponent<HuoLangSkill2>());
+                        }
+                    }
+
+                    if (PlayerData.S.mJLevel == MJLevel.Orange)
+                    {
+                        for (int i = 0; i < 30; i++)
+                        {
+
+                            var Monster7 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoSkill2")
+                                        .GetComponent<ShuangDaoSkill2>(),
+                                    GameController.S.transform);
+                            Monster7.gameObject.SetActive(false);
+                            GameController.S.ShuangDaoSkill2Queue.Enqueue(Monster7.GetComponent<ShuangDaoSkill2>());
+                        }
+                    }
+
+                    if (PlayerData.S.mJLevel == MJLevel.Orange)
+                    {
+                        for (int i = 0; i < 30; i++)
+                        {
+                            var Monster8 =
+                                Instantiate(
+                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoSkill3")
+                                        .GetComponent<ShuangDaoSkill3>(),
+                                    GameController.S.transform);
+                            Monster8.gameObject.SetActive(false);
+                            GameController.S.ShuangDaoSkill3Queue.Enqueue(Monster8.GetComponent<ShuangDaoSkill3>());
+                        }
+                    }
+                
             }
             
             
             //秘境怪物
-           
-                for (int i = 0; i < 200; i++)
+            if (LevelInfoConfig.CurrentGameLevel > 15)
+            {
+                if (PlayerData.S.mJLevel == MJLevel.Blue)
                 {
-                   
-                            var Monster1 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),
-                                    GameController.S.transform);
-                            Monster1.gameObject.SetActive(false);
-                            GameController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
-                            Collider2D collider2D=Monster1.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D,Monster1.GetComponent<MonsterBase>());
-                            
-                            var Monster2 =
-                                Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo1").GetComponent<EMo1>(),
-                                    GameController.S.transform);
-                            Monster2.gameObject.SetActive(false);
-                            GameController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
-                            Collider2D collider2D2=Monster2.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D2,Monster2.GetComponent<MonsterBase>());
-                            var Monster3 =
-                                Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo2").GetComponent<EMo2>(),
-                                    GameController.S.transform);
-                            Monster3.gameObject.SetActive(false);
-                            GameController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
-                            Collider2D collider2D3=Monster3.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D3,Monster3.GetComponent<MonsterBase>());
-                            var Monster4 =
-                                Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo3").GetComponent<EMo3>(),
-                                    GameController.S.transform);
-                            Monster4.gameObject.SetActive(false);
-                            GameController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
-                            Collider2D collider2D4=Monster4.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D4,Monster4.GetComponent<MonsterBase>());
-                            var Monster5 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1")
-                                        .GetComponent<HongLong1>(), GameController.S.transform);
-                            Monster5.gameObject.SetActive(false);
-                            GameController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
-                            Collider2D collider2D5=Monster5.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D5,Monster5.GetComponent<MonsterBase>());
-                            var Monster6 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2")
-                                        .GetComponent<HongLong2>(), GameController.S.transform);
-                            Monster6.gameObject.SetActive(false);
-                            GameController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
-                            Collider2D collider2D6=Monster6.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D6,Monster6.GetComponent<MonsterBase>());
-                            var Monster7 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3")
-                                        .GetComponent<HongLong3>(), GameController.S.transform);
-                            Monster7.gameObject.SetActive(false);
-                            GameController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
-                            Collider2D collider2D7=Monster7.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D7,Monster7.GetComponent<MonsterBase>());
-                            var Monster8 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong1").GetComponent<LanLong1>(),
-                                    GameController.S.transform);
-                            Monster8.gameObject.SetActive(false);
-                            GameController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
-                            Collider2D collider2D8=Monster8.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D8,Monster8.GetComponent<MonsterBase>());
-                            var Monster9 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong2").GetComponent<LanLong2>(),
-                                    GameController.S.transform);
-                            Monster9.gameObject.SetActive(false);
-                            GameController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
-                            Collider2D collider2D9=Monster9.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D9,Monster9.GetComponent<MonsterBase>());
-                            var Monster10 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),
-                                    GameController.S.transform);
-                            Monster10.gameObject.SetActive(false);
-                            GameController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
-                            Collider2D collider2D10=Monster10.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D10,Monster10.GetComponent<MonsterBase>());
-                            var Monster11 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLang").GetComponent<LvLang>(),
-                                    GameController.S.transform);
-                            Monster11.gameObject.SetActive(false);
-                            GameController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
-                            Collider2D collider2D11=Monster11.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D11,Monster11.GetComponent<MonsterBase>());
-                            var Monster12 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong1").GetComponent<LvLong1>(),
-                                    GameController.S.transform);
-                            Monster12.gameObject.SetActive(false);
-                            GameController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
-                            Collider2D collider2D12=Monster12.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D12,Monster12.GetComponent<MonsterBase>());
-                            var Monster13 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong2").GetComponent<LvLong2>(),
-                                    GameController.S.transform);
-                            Monster13.gameObject.SetActive(false);
-                            GameController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
-                            Collider2D collider2D13=Monster13.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D13,Monster13.GetComponent<MonsterBase>());
-                            var Monster14 =
-                                Instantiate(
-                                    Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),
-                                    GameController.S.transform);
-                            Monster14.gameObject.SetActive(false);
-                            GameController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
-                            Collider2D collider2D14=Monster14.transform.Find("Collider").GetComponent<Collider2D>();
-                            GameController.S.MonsterColliderDic.Add(collider2D14,Monster14.GetComponent<MonsterBase>());
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster1 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),
+                                GameController.S.transform);
+                        Monster1.gameObject.SetActive(false);
+                        GameController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
+                        Collider2D collider2D = Monster1.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D, Monster1.GetComponent<MonsterBase>());
+                    }
                 }
-            
 
-    //实例化
+                if (PlayerData.S.mJLevel == MJLevel.White)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster2 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo1").GetComponent<EMo1>(),
+                                GameController.S.transform);
+                        Monster2.gameObject.SetActive(false);
+                        GameController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
+                        Collider2D collider2D2 =
+                            Monster2.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D2,
+                            Monster2.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Purple)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+
+                        var Monster3 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo2").GetComponent<EMo2>(),
+                                GameController.S.transform);
+                        Monster3.gameObject.SetActive(false);
+                        GameController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
+                        Collider2D collider2D3 =
+                            Monster3.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D3,
+                            Monster3.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Red2)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster4 =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo3").GetComponent<EMo3>(),
+                                GameController.S.transform);
+                        Monster4.gameObject.SetActive(false);
+                        GameController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
+                        Collider2D collider2D4 = Monster4.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D4, Monster4.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.White)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster5 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1")
+                                    .GetComponent<HongLong1>(), GameController.S.transform);
+                        Monster5.gameObject.SetActive(false);
+                        GameController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
+                        Collider2D collider2D5 =
+                            Monster5.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D5,
+                            Monster5.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Purple)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster6 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2")
+                                    .GetComponent<HongLong2>(), GameController.S.transform);
+                        Monster6.gameObject.SetActive(false);
+                        GameController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
+                        Collider2D collider2D6 =
+                            Monster6.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D6,
+                            Monster6.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Red2)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+
+                        var Monster7 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3")
+                                    .GetComponent<HongLong3>(), GameController.S.transform);
+                        Monster7.gameObject.SetActive(false);
+                        GameController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
+                        Collider2D collider2D7 = Monster7.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D7, Monster7.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Green)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster8 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong1")
+                                    .GetComponent<LanLong1>(),
+                                GameController.S.transform);
+                        Monster8.gameObject.SetActive(false);
+                        GameController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
+                        Collider2D collider2D8 =
+                            Monster8.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D8,
+                            Monster8.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Orange)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster9 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong2")
+                                    .GetComponent<LanLong2>(),
+                                GameController.S.transform);
+                        Monster9.gameObject.SetActive(false);
+                        GameController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
+                        Collider2D collider2D9 =
+                            Monster9.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D9,
+                            Monster9.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Red3)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster10 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),
+                                GameController.S.transform);
+                        Monster10.gameObject.SetActive(false);
+                        GameController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
+                        Collider2D collider2D10 = Monster10.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D10, Monster10.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Blue)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster11 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLang")
+                                    .GetComponent<LvLang>(),
+                                GameController.S.transform);
+                        Monster11.gameObject.SetActive(false);
+                        GameController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
+                        Collider2D collider2D11 =
+                            Monster11.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D11,
+                            Monster11.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Green)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster12 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong1")
+                                    .GetComponent<LvLong1>(),
+                                GameController.S.transform);
+                        Monster12.gameObject.SetActive(false);
+                        GameController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
+                        Collider2D collider2D12 =
+                            Monster12.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D12,
+                            Monster12.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Orange)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster13 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong2")
+                                    .GetComponent<LvLong2>(),
+                                GameController.S.transform);
+                        Monster13.gameObject.SetActive(false);
+                        GameController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
+                        Collider2D collider2D13 =
+                            Monster13.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D13,
+                            Monster13.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Red1)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var huangshu =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangShuMonster")
+                                    .GetComponent<HuangShu>(),
+                                GameController.S.transform);
+                        huangshu.gameObject.SetActive(false);
+                        GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
+                        
+                        Collider2D Huangshucollider2D = huangshu.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(Huangshucollider2D,
+                            huangshu.GetComponent<MonsterBase>());
+                    }
+                }
+
+                if (PlayerData.S.mJLevel == MJLevel.Red1)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+
+                        var Huangzhu =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangZhuMonster")
+                                    .GetComponent<Huangzhu>(),
+                                GameController.S.transform);
+                        Huangzhu.gameObject.SetActive(false);
+                        GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
+                        Collider2D Huangzhucollider2D=Huangzhu.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(Huangzhucollider2D,Huangzhu.GetComponent<MonsterBase>());
+                    }
+                }
+
+
+
+                if (PlayerData.S.mJLevel == MJLevel.Red3)
+                {
+                    for (int i = 0; i < 150; i++)
+                    {
+                        var Monster14 =
+                            Instantiate(
+                                Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),
+                                GameController.S.transform);
+                        Monster14.gameObject.SetActive(false);
+                        GameController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
+                        Collider2D collider2D14 = Monster14.transform.Find("Collider").GetComponent<Collider2D>();
+                        GameController.S.MonsterColliderDic.Add(collider2D14, Monster14.GetComponent<MonsterBase>());
+                    }
+                }
+
+            }
+
+            //实例化
         //FightBGController
         
         //Boss攻击对象池
@@ -1087,20 +1337,6 @@ public class Entrance : MonoBehaviour
         {
             for (int i = 0; i < 100; i++)
             {
-                var huangshu =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangShuMonster").GetComponent<HuangShu>(),
-                        GameController.S.transform);
-                huangshu.gameObject.SetActive(false);
-                GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
-                
-                Collider2D Huangshucollider2D=huangshu.transform.Find("Collider").GetComponent<Collider2D>();
-                GameController.S.MonsterColliderDic.Add(Huangshucollider2D,huangshu.GetComponent<MonsterBase>());
-                
-                var Huangzhu =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangZhuMonster").GetComponent<Huangzhu>(),
-                        GameController.S.transform);
-                Huangzhu.gameObject.SetActive(false);
-                GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
                 
                 var chongziMonster =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Monster/Level2/ChongZiMonster").GetComponent<ChongZiMonster>(),
@@ -1127,8 +1363,6 @@ public class Entrance : MonoBehaviour
                 dundiMonster.gameObject.SetActive(false);
                 GameController.S.DunDiMonsterQueue.Enqueue(dundiMonster.GetComponent<DunDiMonster>());
                 
-                Collider2D Huangzhucollider2D=Huangzhu.transform.Find("Collider").GetComponent<Collider2D>();
-                GameController.S.MonsterColliderDic.Add(Huangzhucollider2D,Huangzhu.GetComponent<MonsterBase>());
                 
                 Collider2D chongzicollider2D=chongziMonster.transform.Find("Collider").GetComponent<Collider2D>();
                 GameController.S.MonsterColliderDic.Add(chongzicollider2D,chongziMonster.GetComponent<MonsterBase>());
