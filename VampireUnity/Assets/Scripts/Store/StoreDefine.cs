@@ -159,6 +159,10 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int ChongWuShiWu4 = 0;
         public int ChongWuShiWu5 = 0;
         public int ChongWuShiWu6 = 0;
+        
+        public int RateX=1920;
+        public int RateY=1080;
+        public bool IsQuanPing=false;
 
         public void CopyFromRuntime(PlayerData runtime)
         {
@@ -257,6 +261,10 @@ public class StoreDefine : XSingleton<StoreDefine>
             ChongWuShiWu4=runtime.ChongWuShiWu4;
             ChongWuShiWu5=runtime.ChongWuShiWu5;
             ChongWuShiWu6=runtime.ChongWuShiWu6;
+            
+            RateX=runtime.RateX;
+            RateY=runtime.RateY;
+            IsQuanPing=runtime.IsQuanPing;
 
         }
 
@@ -359,6 +367,11 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.ChongWuShiWu4=ChongWuShiWu4;
             runtime.ChongWuShiWu5=ChongWuShiWu5;
             runtime.ChongWuShiWu6=ChongWuShiWu6;
+            
+            
+            runtime.RateX=RateX;
+            runtime.RateY=RateY;
+            runtime.IsQuanPing=IsQuanPing;
         }
     }
 

@@ -24,5 +24,6 @@ public class MainWindowController : MonoBehaviour
         AudioController.S.BGAudioSource.Play(); 
         LevelInfoConfig.InitGameLevel();
         StoreController.S.LoadStoreData();
+        Screen.SetResolution(PlayerData.S.RateX, PlayerData.S.RateY, PlayerData.S.IsQuanPing);
     }
 }

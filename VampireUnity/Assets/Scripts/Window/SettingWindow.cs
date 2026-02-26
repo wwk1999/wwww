@@ -12,6 +12,9 @@ public class SettingWindow : MonoBehaviour
    public TextMeshProUGUI Language;
    public TextMeshProUGUI Audio;
    public TMP_Dropdown LanguageDropdown;
+   public TMP_Dropdown RateDropdown;
+   public TMP_Dropdown MoShiDropdown;
+
 
    private void Start()
    {
@@ -20,6 +23,9 @@ public class SettingWindow : MonoBehaviour
          gameObject.SetActive(false);
       });
       LanguageDropdown.onValueChanged.AddListener(OnLanguageChanged);
+      RateDropdown.onValueChanged.AddListener(OnRateChanged);
+      MoShiDropdown.onValueChanged.AddListener(OnMoShiChanged);
+
       ObserverModuleManager.S.RegisterEvent(ConstKeys.SwitchLanguage, SwitchLanguageObj);
    }
 
@@ -93,6 +99,52 @@ public class SettingWindow : MonoBehaviour
       }
    }
    
+   private void OnMoShiChanged(int selectedIndex)
+   {
+      switch (selectedIndex)
+      {
+         case 0:
+            Screen.SetResolution(PlayerData.S.RateX, PlayerData.S.RateY, false);
+            PlayerData.S.IsQuanPing = false;
+            break;
+         case 1:
+            Screen.SetResolution(PlayerData.S.RateX, PlayerData.S.RateY, true);
+            PlayerData.S.IsQuanPing = true;
+            break;
+      }
+      StoreController.S.SaveStoreData();
+   }
+
+   private void OnRateChanged(int selectedIndex)
+   {
+      switch (selectedIndex)
+      {
+         case 0:
+            Screen.SetResolution(1280, 720, false);
+            PlayerData.S.RateX = 1280;
+            PlayerData.S.RateY = 720;
+            break;
+         case 1:
+            Screen.SetResolution(1600, 900, false);
+            PlayerData.S.RateX = 1600;
+            PlayerData.S.RateY = 900;
+            break;
+         case 2:
+            Screen.SetResolution(1920, 1080, false);
+            PlayerData.S.RateX = 1920;
+            PlayerData.S.RateY = 1080;
+            break;
+         case 3:
+            Screen.SetResolution(2560, 1440, false);
+            PlayerData.S.RateX = 2560;
+            PlayerData.S.RateY = 1440;
+            break;
+      }
+      StoreController.S.SaveStoreData();
+
+   }
+
+   
    private void OnLanguageChanged(int selectedIndex)
    {
       // selectedIndex 是当前选中的选项索引（从0开始）
@@ -140,6 +192,8 @@ public class SettingWindow : MonoBehaviour
    // 可选：在销毁时移除事件监听（防止内存泄漏）
    private void OnDestroy()
    {
+      RateDropdown.onValueChanged.RemoveListener(OnRateChanged);
+      MoShiDropdown.onValueChanged.RemoveListener(OnMoShiChanged);
       LanguageDropdown.onValueChanged.RemoveListener(OnLanguageChanged);
    }
 }

@@ -108,7 +108,10 @@ public class PlayerData : XSingleton<PlayerData>
     public int ChongWuShiWu5 = 0;
     public int ChongWuShiWu6 = 0;
 
-    
+    public int RateX=1920;
+    public int RateY=1080;
+    public bool IsQuanPing=false;
+
     
     protected override void Awake()
     {
