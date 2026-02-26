@@ -165,6 +165,9 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Start()
     {
+
+        transform.localScale = new Vector3(transform.localScale.x * 0.7f, transform.localScale.y * 0.7f,
+            transform.localScale.z * 0.7f);
         baseSpeed = Speed;
         du.gameObject.SetActive(false);
         jiansu.gameObject.SetActive(false);

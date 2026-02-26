@@ -17,7 +17,7 @@ public class SnotMonster : MonsterBase
         base.Start();
         monsterSkeletonAnimation.timeScale = 1.5f;
 
-        size = 0.6f;
+        size = 0.45f;
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
