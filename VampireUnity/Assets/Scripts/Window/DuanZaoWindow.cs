@@ -110,7 +110,7 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI baseAttribute1Value;
     public TextMeshProUGUI baseAttribute2Value;
     public GameObject fuJiaContent;
-    public Text pageNumText;
+    public TextMeshProUGUI pageNumText;
     public Button right;
     public Button left;
     private int PageNum = 1;
@@ -158,7 +158,7 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI JingCui;
     public TextMeshProUGUI ShenHuaZhiXinCaiLiao;
     public TextMeshProUGUI JinJieButton;
-    public Text jinJiePageNumText;
+    public TextMeshProUGUI jinJiePageNumText;
     public Button jinJieRight;
     public Button jinJieLeft;
     public Image jinJieEquipImage;
@@ -182,7 +182,7 @@ public class DuanZaoWindow : MonoBehaviour
     public Image XiangQianEquipImage;
     public Animator XiangQianEdge;
     public Image XiangQianEquipBg;
-    public Text XiangQianPageNumText;
+    public TextMeshProUGUI XiangQianPageNumText;
     public Button XiangQian;
     public Button XiangQianQuXiaButton;
 

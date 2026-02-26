@@ -49,8 +49,50 @@ public enum MonsterTypeByName
     ShiRenBoss,
     QingWa
 }
-public class LevelInfoConfig 
+
+public class BaoShiDiaoLuo
 {
+    public int Quality;
+    public int count;
+}
+public class LevelInfoConfig
+{
+    public static Dictionary<int, BaoShiDiaoLuo> BaoShiDiaoLuoDic = new Dictionary<int, BaoShiDiaoLuo>()
+    {
+        {3,new BaoShiDiaoLuo(){Quality = 1,count = 3}},
+        {6,new BaoShiDiaoLuo(){Quality = 1,count = 5}},
+        {9,new BaoShiDiaoLuo(){Quality = 1,count = 10}},
+        {12,new BaoShiDiaoLuo(){Quality = 2,count = 5}},
+        {15,new BaoShiDiaoLuo(){Quality = 2,count = 10}},
+        
+        {16,new BaoShiDiaoLuo(){Quality = 3,count = 5}},
+        {17,new BaoShiDiaoLuo(){Quality = 3,count = 7}},
+        {18,new BaoShiDiaoLuo(){Quality = 3,count = 9}},
+        
+        {19,new BaoShiDiaoLuo(){Quality = 3,count = 12}},
+        {20,new BaoShiDiaoLuo(){Quality = 3,count = 15}},
+        {21,new BaoShiDiaoLuo(){Quality = 4,count = 5}},
+        {22,new BaoShiDiaoLuo(){Quality = 4,count = 7}},
+        {23,new BaoShiDiaoLuo(){Quality = 4,count = 9}},
+        {24,new BaoShiDiaoLuo(){Quality = 4,count = 12}},
+        {25,new BaoShiDiaoLuo(){Quality = 4,count = 15}},
+
+        {26,new BaoShiDiaoLuo(){Quality = 5,count = 4}},
+        {27,new BaoShiDiaoLuo(){Quality = 5,count = 6}},
+        {28,new BaoShiDiaoLuo(){Quality = 5,count = 8}},
+        {29,new BaoShiDiaoLuo(){Quality = 5,count = 10}},
+        {30,new BaoShiDiaoLuo(){Quality = 5,count = 12}},
+        {31,new BaoShiDiaoLuo(){Quality = 5,count = 15}},
+        {32,new BaoShiDiaoLuo(){Quality = 6,count =3}},
+        {33,new BaoShiDiaoLuo(){Quality = 6,count = 5}},
+        {34,new BaoShiDiaoLuo(){Quality = 6,count = 7}},
+        {35,new BaoShiDiaoLuo(){Quality = 6,count = 10}},
+
+
+    };
+    
+    
+    
     public static bool IsOneGame = true; //第一次游戏
     public static int CurrentGameLevel = 1; // 当前游戏关卡
     public static int CurrentMJLevel = 1; // 当前秘境关卡
@@ -61,50 +103,7 @@ public class LevelInfoConfig
         get=>PlayerData.S.maxGameLevel;
         set=>PlayerData.S.maxGameLevel=value;
     }
-
-    public static List<DiaoLuoConfig> GetDiaoLuoList()
-    {
-        switch (CurrentGameLevel)
-        {
-            case 3:
-                return LevelDiaoLuo3;
-            case 6:
-                return LevelDiaoLuo3;
-            case 9:
-                return LevelDiaoLuo3;
-            case 12:
-                return LevelDiaoLuo3;
-            case 15:
-                return LevelDiaoLuo3;
-        }
-
-        return null;
-    }
-
-    public static  bool IsHaveDiaoLuo(List<DiaoLuoConfig> list, DiaoLuoConfig diaoluo)
-    {
-        if (list == null)
-            return false;
-        foreach (var item in list)
-        {
-            if (item.PropId == diaoluo.PropId && diaoluo.PropId != 0)
-            {
-                return true;
-            }
-
-            if (item.OrangeId == diaoluo.OrangeId && diaoluo.OrangeId != 0)
-            {
-                return true;
-            }
-
-            if (item.SuitId == diaoluo.SuitId && diaoluo.SuitId != 0)
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
+    
     public static LevelType CurrentGameLevelType = LevelType.Normal;
     public static List<DiaoLuoConfig> LevelDiaoLuo1 = new List<DiaoLuoConfig>();//关卡1掉落列表
     public static List<DiaoLuoConfig> LevelDiaoLuo2 = new List<DiaoLuoConfig>();//关卡1掉落列表
@@ -123,6 +122,7 @@ public class LevelInfoConfig
     public static List<DiaoLuoConfig> LevelDiaoLuo15 = new List<DiaoLuoConfig>();//关卡1掉落列表
 
 
+    
     
 
     public static int[] LevelMonsterCount= new int[100];//关卡敌人数量
@@ -868,5 +868,49 @@ public class LevelInfoConfig
             LevelInfoItem9.LevelInfoDir = false;
             LevelInfoItem9.LevelInfoPos = new Vector2(886, -501);
         }
+    }
+    
+    public static List<DiaoLuoConfig> GetDiaoLuoList()
+    {
+        switch (CurrentGameLevel)
+        {
+            case 3:
+                return LevelDiaoLuo3;
+            case 6:
+                return LevelDiaoLuo3;
+            case 9:
+                return LevelDiaoLuo3;
+            case 12:
+                return LevelDiaoLuo3;
+            case 15:
+                return LevelDiaoLuo3;
+        }
+
+        return null;
+    }
+
+    public static  bool IsHaveDiaoLuo(List<DiaoLuoConfig> list, DiaoLuoConfig diaoluo)
+    {
+        if (list == null)
+            return false;
+        foreach (var item in list)
+        {
+            if (item.PropId == diaoluo.PropId && diaoluo.PropId != 0)
+            {
+                return true;
+            }
+
+            if (item.OrangeId == diaoluo.OrangeId && diaoluo.OrangeId != 0)
+            {
+                return true;
+            }
+
+            if (item.SuitId == diaoluo.SuitId && diaoluo.SuitId != 0)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
