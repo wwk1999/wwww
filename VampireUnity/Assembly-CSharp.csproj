@@ -378,6 +378,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongPro.cs" />
     <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill1.cs" />
     <Compile Include="Assets\Scripts\Tool\ToastInfo.cs" />
+    <Compile Include="Assets\Scripts\Tool\ChuanSong.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManDiLie.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
     <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill3.cs" />

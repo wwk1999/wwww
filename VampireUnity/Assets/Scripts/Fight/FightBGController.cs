@@ -714,9 +714,9 @@ public class FightBGController : XSingleton<FightBGController>
         CheckGuanKaTitle();
         
         StartCoroutine(DelayPlaySuccessAnim(skeletonGraphic));
-        if (LevelInfoConfig.CurrentGameLevel + 1 > LevelInfoConfig.MaxGameLevel)
+        if (LevelInfoConfig.CurrentGameLevel + 3 > LevelInfoConfig.MaxGameLevel)
         {
-            LevelInfoConfig.MaxGameLevel= LevelInfoConfig.CurrentGameLevel + 1;
+            LevelInfoConfig.MaxGameLevel= LevelInfoConfig.CurrentGameLevel + 3;
             StoreController.S.SaveStoreData();
         }
 

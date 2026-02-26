@@ -41,6 +41,11 @@ public class GlobalPlayerAttribute
 
     public static ChongWuConfig.ChongWuAttribute GetFinalChongWuAttribute()
     {
+        if (PlayerData.S.ZhuChongWuId == 0)
+        {
+            ChongWuConfig.ChongWuAttribute finalAttributr1 = new ChongWuConfig.ChongWuAttribute();
+            return finalAttributr1;
+        }
         ChongWuConfig.ChongWuAttribute zhuchongwu =
             ChongWuConfig.GetChongWuAttribute(PlayerData.S.ChongWuDic[PlayerData.S.ZhuChongWuId]);
         ChongWuConfig.ChongWuAttribute fuchongwu1 = null;

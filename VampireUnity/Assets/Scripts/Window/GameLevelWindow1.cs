@@ -30,21 +30,10 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     
     public GameObject levelInfo;
     
-    public GameObject level1TanHao;
-    public GameObject level2TanHao;
     public GameObject level3TanHao;
-    public GameObject level4TanHao;
-    public GameObject level5TanHao;
     public GameObject level6TanHao;
-    public GameObject level7TanHao;
-    public GameObject level8TanHao;
     public GameObject level9TanHao;
-    public GameObject level10TanHao;
-    public GameObject level11TanHao;
     public GameObject level12TanHao;
-    public GameObject level13TanHao;
-    public GameObject level14TanHao;
-    public GameObject level15TanHao;
    
     
     
@@ -93,17 +82,9 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
 
     public void SetTanHao()
     {
-        level1TanHao.SetActive(LevelInfoConfig.MaxGameLevel==1);
-        level2TanHao.SetActive(LevelInfoConfig.MaxGameLevel==2);
         level3TanHao.SetActive(LevelInfoConfig.MaxGameLevel==3);
-        level4TanHao.SetActive(LevelInfoConfig.MaxGameLevel==4);
-        level5TanHao.SetActive(LevelInfoConfig.MaxGameLevel==5);
         level6TanHao.SetActive(LevelInfoConfig.MaxGameLevel==6);
-        level7TanHao.SetActive(LevelInfoConfig.MaxGameLevel==7);
-        level8TanHao.SetActive(LevelInfoConfig.MaxGameLevel==8);
         level9TanHao.SetActive(LevelInfoConfig.MaxGameLevel==9);
-        level10TanHao.SetActive(LevelInfoConfig.MaxGameLevel==10);
-        level11TanHao.SetActive(LevelInfoConfig.MaxGameLevel==11);
         level12TanHao.SetActive(LevelInfoConfig.MaxGameLevel==12);
         /*
         level13TanHao.SetActive(LevelInfoConfig.MaxGameLevel==13);
@@ -114,20 +95,10 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
 
     public void ShowGameLevelButton()
     {
-        level1Button.gameObject.SetActive(true);
-        level2Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=2);
         level3Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=3);
-        level4Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=4);
-        level5Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=5);
         level6Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=6);
-        level7Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=7);
-        level8Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=8);
         level9Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=9);
-        level10Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=10);
-        level11Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=11);
         level12Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=12);
-        level13Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=13);
-        level14Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=14);
         level15Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=15);
         MjGameObject.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=16);
     }
