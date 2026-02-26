@@ -141,7 +141,7 @@ namespace Fight.Monster.秘境.豹子
             GeneralDie();
             GetEx();
             ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
-            CreateBloodEnergy();
+            //CreateBloodEnergy();
             CreateEquip();
             CreateProp();
             FightBGController.S.PlaySuccessAnim();

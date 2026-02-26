@@ -194,7 +194,7 @@ public class TreeManBoss : MonsterBase
     {
         GeneralDie();
         GetEx();
-        CreateBloodEnergy();
+        //CreateBloodEnergy();
         CreateEquip();
         FightBGController.S.PlaySuccessAnim();
         CreateProp();

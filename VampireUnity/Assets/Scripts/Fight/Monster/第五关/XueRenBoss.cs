@@ -190,7 +190,7 @@ public class XueRenBoss : MonsterBase
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
-        CreateBloodEnergy();
+        //CreateBloodEnergy();
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();

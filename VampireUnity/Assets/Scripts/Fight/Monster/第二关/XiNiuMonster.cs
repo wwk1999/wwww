@@ -40,7 +40,7 @@ public class XiNiuMonster : MonsterBase
         GeneralDie();
         GetEx();
         ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy,1);
-        CreateBloodEnergy();
+        //CreateBloodEnergy();
         CreateEquip();
         
         // gameObject.SetActive(false);

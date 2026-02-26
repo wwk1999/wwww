@@ -145,7 +145,7 @@ namespace Fight.Monster.秘境.盔甲boss
             GeneralDie();
             GetEx();
             ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
-            CreateBloodEnergy();
+            //CreateBloodEnergy();
             CreateEquip();
             CreateProp();
             FightBGController.S.PlaySuccessAnim();

@@ -145,8 +145,10 @@ public class LevelInfoConfig
         {
             int random = Random.Range(1, 11);
             int code = (random + 5) * 100 + baoShiDiaoLuo.Quality;
-            BagController.S.DebugTool(code, "");
+            BagController.S.DebugTool1(code, "");
         }
+        
+        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已获取通关奖励");
     }
     
     

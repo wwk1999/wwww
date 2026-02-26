@@ -81,7 +81,7 @@ public class ZhaoZeBoss : MonsterBase
         AudioController.S.PlaySnotDie();
         GeneralDie();
         GetEx();
-        CreateBloodEnergy();
+        //CreateBloodEnergy();
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();

@@ -282,6 +282,18 @@ public class BagController : XSingleton<BagController>
         }
     }
     
+    public void DebugTool1(int code,string Name)
+    {
+        if (PropList.ContainsKey(code))
+        {
+            PropList[code].Count += 1;
+        }
+        else
+        {
+            PropList.Add(code,new PropTable(){PropType = (PropConfig.PropType)(code/100),Count = 1,Desc = "",EquipName = Name,Quality = code%100});
+        }
+    }
+    
     
     public void WeaponFragmentDebug()
     {

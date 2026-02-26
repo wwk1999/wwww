@@ -150,7 +150,7 @@ public class HuoShanBoss : MonsterBase
     {
         GeneralDie();
         GetEx();
-        CreateBloodEnergy();
+        //CreateBloodEnergy();
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();

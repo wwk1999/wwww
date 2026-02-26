@@ -16,7 +16,7 @@ public class VacantEye : MonsterBase
          GeneralDie();
          GetEx();
          ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy);
-         CreateBloodEnergy();
+         //CreateBloodEnergy();
          CreateEquip();
          CreateProp();
      }
