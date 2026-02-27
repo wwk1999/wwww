@@ -1,0 +1,3264 @@
+fileFormatVersion: 2
+guid: 70b3d505b93b05948b24e009d8ace9c7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NewAtlas_000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a811dcf89ff7905b0800000000000000
+      internalID: -5401645568218033782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85762edfe5ef8a4e0800000000000000
+      internalID: -1970045153034737832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_002
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5927824bd7cbc310800000000000000
+      internalID: 1426453451520813406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_003
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a94a25c674122a0800000000000000
+      internalID: -6764046634765215201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_004
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c2b0a12a6879600800000000000000
+      internalID: 474996316490640466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_005
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6540
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d64510d87789e6620800000000000000
+      internalID: 2769318460113638509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_006
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7848
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0e7dbde40d08ff0800000000000000
+      internalID: -35799759904579409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_007
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9156
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918aa0a53b7241830800000000000000
+      internalID: 4040898416921454617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_008
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10464
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb042d753285a140800000000000000
+      internalID: 4730330149866965954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_009
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11772
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7934d1665809620800000000000000
+      internalID: 2778867643711723501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_010
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13080
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588a90fba782ac590800000000000000
+      internalID: -7653260109106534267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_011
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14388
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf297af210a86e20800000000000000
+      internalID: 3344098726694694828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_012
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f66b97f119c35f40800000000000000
+      internalID: 5716133431069075191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_013
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3ab76fbcbfb36e0800000000000000
+      internalID: -1856613567927966815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_014
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298d5ed86e91deb70800000000000000
+      internalID: 8929822114159384722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_015
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc064a4cd58aeed0800000000000000
+      internalID: -2383945871553852170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_016
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4530ee5f84641e7b0800000000000000
+      internalID: -5196795215831235756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_017
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47db04a07170e4c80800000000000000
+      internalID: -8336718064678552204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_018
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcd1fcd2af934540800000000000000
+      internalID: 4991008333896998109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_019
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5d0d679bf77e680800000000000000
+      internalID: -8725865318467971670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_020
+      rect:
+        serializedVersion: 2
+        x: 8019
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7039b4e2cf1f7d0800000000000000
+      internalID: -2886248610401155130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_021
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aabb4edf47235890800000000000000
+      internalID: -7470584132892116314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_022
+      rect:
+        serializedVersion: 2
+        x: 9801
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a444021dd9c594100800000000000000
+      internalID: 92707100225979466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_023
+      rect:
+        serializedVersion: 2
+        x: 10692
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3079913fc65b5960800000000000000
+      internalID: 7591757044753461307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_024
+      rect:
+        serializedVersion: 2
+        x: 11583
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fde64d25d10a0f0800000000000000
+      internalID: -1107853266744582316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_025
+      rect:
+        serializedVersion: 2
+        x: 12474
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf17495f9cd93580800000000000000
+      internalID: -8846797416036884562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_026
+      rect:
+        serializedVersion: 2
+        x: 13365
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f3b7d557286a7270800000000000000
+      internalID: 8249020185635697652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_027
+      rect:
+        serializedVersion: 2
+        x: 14256
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 870c00c3af35be1d0800000000000000
+      internalID: -3320467966041997192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_028
+      rect:
+        serializedVersion: 2
+        x: 15147
+        y: 0
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d14370cf8b28360800000000000000
+      internalID: 7170496949319376242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_029
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7b55944070cbd40800000000000000
+      internalID: 5601359751533672439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_030
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c6afc7a147c2ad0800000000000000
+      internalID: -2725676017351234544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_031
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2666fa01fe18fa510800000000000000
+      internalID: 1562610459497948770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_032
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f51cda93978b2090800000000000000
+      internalID: -8058198040221313545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_033
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 6540
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033b6e622029fd310800000000000000
+      internalID: 1432023744467350320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_034
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 7848
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba34ec21de94c5dd0800000000000000
+      internalID: -2496038810898512981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_035
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 9156
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ce6df1b7c27ae20800000000000000
+      internalID: 3361704554182143051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_036
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 10464
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666ae29d3352dc560800000000000000
+      internalID: 7335560272673678950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_037
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 11772
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d66a840c3fc28a40800000000000000
+      internalID: 5369081562460219090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_038
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 13080
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30106f0631058bcc0800000000000000
+      internalID: -3695115450096156413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_039
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 14388
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ddae1cdb4cccd290800000000000000
+      internalID: -7864186223108117036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_040
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ed2d976ddb645c0800000000000000
+      internalID: -4231486071003488650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_041
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c0f2242940e23b0800000000000000
+      internalID: -5535481865769645024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_042
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec560f7f6435ba20800000000000000
+      internalID: 3077423573854739686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_043
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f788a5a83eefbd640800000000000000
+      internalID: 5105954855786809471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_044
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d14cb5c17c03610800000000000000
+      internalID: 1598996792329117015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_045
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e65461d94da3ad0800000000000000
+      internalID: -2721629253643440572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_046
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb59cf4667a8bac90800000000000000
+      internalID: -7157474941670222401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_047
+      rect:
+        serializedVersion: 2
+        x: 8019
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f7d41053d0a3bf0800000000000000
+      internalID: -343947900234137743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_048
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef61637bda3939c0800000000000000
+      internalID: -3947058884205514769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_049
+      rect:
+        serializedVersion: 2
+        x: 9801
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f1cba1f6e574f00800000000000000
+      internalID: 1100952465198292826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_050
+      rect:
+        serializedVersion: 2
+        x: 10692
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c260b0000a56fd8a0800000000000000
+      internalID: -6278187617661286868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_051
+      rect:
+        serializedVersion: 2
+        x: 11583
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2a9d13ec16c2f40800000000000000
+      internalID: 5705042366199079615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_052
+      rect:
+        serializedVersion: 2
+        x: 12474
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b0db358aa14bbbf0800000000000000
+      internalID: -307579948909211464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_053
+      rect:
+        serializedVersion: 2
+        x: 13365
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f691a37eed317760800000000000000
+      internalID: 7453806952626362103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_054
+      rect:
+        serializedVersion: 2
+        x: 14256
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137c8f0b04f9c9be0800000000000000
+      internalID: -1469124278233807055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_055
+      rect:
+        serializedVersion: 2
+        x: 15147
+        y: 1308
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4809eaa9b628170800000000000000
+      internalID: 8179218185356084457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_056
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13d8885bc2fa72a0800000000000000
+      internalID: -6738806937228881124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_057
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12714e04e4d7b45e0800000000000000
+      internalID: -1924306640721144031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_058
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fb2377d2b01e110800000000000000
+      internalID: 1288323258305920815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_059
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 6540
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6703cf8bcd7232500800000000000000
+      internalID: 370183423324336246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_060
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 7848
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f7a9ba3ed215610800000000000000
+      internalID: 1608116997807832858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_061
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 9156
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd21c03ab9cccc950800000000000000
+      internalID: 6470771733452034783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_062
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 10464
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a5f863eb8ff78a0800000000000000
+      internalID: -6305047457452565918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_063
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 11772
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37d8779464877b380800000000000000
+      internalID: -8955557090727326349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_064
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 13080
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed1558953b8ed4d70800000000000000
+      internalID: 9029128684946411998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_065
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 14388
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 621d8741167edc8a0800000000000000
+      internalID: -6283111500970667738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_066
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876a428384a3232a0800000000000000
+      internalID: -6759276008875710856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_067
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d66bf0cdcf4523180800000000000000
+      internalID: -9137147248980806035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_068
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c04d6af2be74cf60800000000000000
+      internalID: 8053701340816031938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_069
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 6540
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb14aa3e5e79f3a0800000000000000
+      internalID: -6631130033150485579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_070
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 7848
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af785872ac020a430800000000000000
+      internalID: 3792066938864502778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_071
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 9156
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d023b025ffe15a0800000000000000
+      internalID: -6548516080309891704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_072
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 10464
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cfbcdb638d3ba0d0800000000000000
+      internalID: -3410564658143379513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_073
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 11772
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d685ea4bbd49ccd0800000000000000
+      internalID: -2537411448235784496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_074
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 13080
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00b597a83b3d6720800000000000000
+      internalID: 2840992054456463375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_075
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 14388
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe66051cae2555800800000000000000
+      internalID: 600477293542926063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_076
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c2854f74da63d8d0800000000000000
+      internalID: -2822795080530296126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_077
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b1b8beef5bd3b20800000000000000
+      internalID: 3115846623688334165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_078
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f357b7e86f5a210800000000000000
+      internalID: 1343751155657031479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_079
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fa26acc21ef82a0800000000000000
+      internalID: -6732915335405326570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_080
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6e51982d5f1fbc0800000000000000
+      internalID: -3750946730031061291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_081
+      rect:
+        serializedVersion: 2
+        x: 8019
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ce5ddc332b554c0800000000000000
+      internalID: -4299334333688845230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_082
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3ae1db7618b3540800000000000000
+      internalID: 4988723294797472746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_083
+      rect:
+        serializedVersion: 2
+        x: 9801
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041522ea63b410940800000000000000
+      internalID: 5260568537967251776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_084
+      rect:
+        serializedVersion: 2
+        x: 10692
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17d2b97385cbdf70800000000000000
+      internalID: 9213174631189632797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_085
+      rect:
+        serializedVersion: 2
+        x: 11583
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab6283054ed3a2a0800000000000000
+      internalID: -6727289030368400474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_086
+      rect:
+        serializedVersion: 2
+        x: 12474
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed85690d2a5cd630800000000000000
+      internalID: 3953133722402131432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_087
+      rect:
+        serializedVersion: 2
+        x: 13365
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cc80393dfe36d40800000000000000
+      internalID: 5576564455598771275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_088
+      rect:
+        serializedVersion: 2
+        x: 14256
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca587122541bdd70800000000000000
+      internalID: 9068864617622035140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_089
+      rect:
+        serializedVersion: 2
+        x: 15147
+        y: 2616
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b2dc8b7106f4f90800000000000000
+      internalID: -6967244443517899990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_090
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff57e396f375201f0800000000000000
+      internalID: -1080205030755240449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_091
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3519dea2faa2a1280800000000000000
+      internalID: -9071891567556587181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_092
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 6540
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31d2815cbde9fcb0800000000000000
+      internalID: -4829567732300984002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_093
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 7848
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0209b8e9a0e9c0470800000000000000
+      internalID: 8362232376566976544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_094
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 9156
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b35b073d790ee80800000000000000
+      internalID: -8151348391155778693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_095
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 10464
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3ceb54ed6c955b0800000000000000
+      internalID: -5379049621962177571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_096
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 11772
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5bc2e7606ebaf490800000000000000
+      internalID: -7711642090649498789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_097
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 13080
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 271dab4d1a04cbfb0800000000000000
+      internalID: -4630755253040787086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_098
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 14388
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f74743f8a3597eb0800000000000000
+      internalID: -4721650749220108296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_099
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b0797f84e96825b0800000000000000
+      internalID: -5392944123395608397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_100
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf8525af10b8c940800000000000000
+      internalID: 5316693010072047547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_101
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928ac8b84cb60ed80800000000000000
+      internalID: -8223454427679512535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_102
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2fce10527b6ad40800000000000000
+      internalID: 5595360956628398778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_103
+      rect:
+        serializedVersion: 2
+        x: 8019
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1709d2cad94daa270800000000000000
+      internalID: 8262650240028217457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_104
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a49f38cf7953c0550800000000000000
+      internalID: 6128332119837243722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_105
+      rect:
+        serializedVersion: 2
+        x: 9801
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182012a81c1f91100800000000000000
+      internalID: 79360282004095617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_106
+      rect:
+        serializedVersion: 2
+        x: 10692
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87461bda5beb03c0800000000000000
+      internalID: -4392158236114532465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_107
+      rect:
+        serializedVersion: 2
+        x: 11583
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efb6aa2045ea2430800000000000000
+      internalID: 3759068902750339042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_108
+      rect:
+        serializedVersion: 2
+        x: 12474
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ff06a3386122710800000000000000
+      internalID: 1666919564956466960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_109
+      rect:
+        serializedVersion: 2
+        x: 13365
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ad86c512d2ca4c0800000000000000
+      internalID: -4274992324973897077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_110
+      rect:
+        serializedVersion: 2
+        x: 14256
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f35567099bff3130800000000000000
+      internalID: 3548831666063889395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_111
+      rect:
+        serializedVersion: 2
+        x: 15147
+        y: 3924
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 191931bf689e38670800000000000000
+      internalID: 8539926084371845521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_112
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0aaa8bde68b1ac0800000000000000
+      internalID: -3883361898113359627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_113
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 6540
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07e12e00658656c0800000000000000
+      internalID: -4154986958602246390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_114
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 7848
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eef32eda65c1d8d0800000000000000
+      internalID: -2823258428600484124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_115
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 9156
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d6b5c714521b620800000000000000
+      internalID: 2788050607508516148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_116
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 10464
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1026969c07c4d50800000000000000
+      internalID: 6722872354116076025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_117
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 11772
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b747f4479e46215f0800000000000000
+      internalID: -787456030994893701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_118
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 13080
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c647db8fb42c1ae20800000000000000
+      internalID: 3360180428546602092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_119
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 14388
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814b2916e4d7e75b0800000000000000
+      internalID: -5368715930181127144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_120
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d4c8ba2aa932d60800000000000000
+      internalID: 7864299397772496270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_121
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 6540
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c1226d5b5d08f60800000000000000
+      internalID: 8034656712187321451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_122
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 7848
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f39103f8005ae00800000000000000
+      internalID: 1055250302675533695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_123
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 9156
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f677090b9d3e220800000000000000
+      internalID: 2514092369364086553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_124
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 10464
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014efbe15959b45d0800000000000000
+      internalID: -3077201452679044080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_125
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 11772
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6832ba811228d60b0800000000000000
+      internalID: -5733783671913372794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_126
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 13080
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce651476142657390800000000000000
+      internalID: -7821237144814266644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_127
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 14388
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68fe937d6d1482bb0800000000000000
+      internalID: -4960642598558896250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_128
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9dbb015cefe1970800000000000000
+      internalID: 8727693250233358828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_129
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2e230ec67d003d0800000000000000
+      internalID: -3242354869088886093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_130
+      rect:
+        serializedVersion: 2
+        x: 8019
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c108436be9b7b40800000000000000
+      internalID: 5439115480382053457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_131
+      rect:
+        serializedVersion: 2
+        x: 8910
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30017640dec939fb0800000000000000
+      internalID: -4642194249093804029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_132
+      rect:
+        serializedVersion: 2
+        x: 9801
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076b25d50a70349c0800000000000000
+      internalID: -3944300463304558992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_133
+      rect:
+        serializedVersion: 2
+        x: 10692
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1b21e0f08eed1a0800000000000000
+      internalID: -6782728837415128648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_134
+      rect:
+        serializedVersion: 2
+        x: 11583
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14938e16613b9f90800000000000000
+      internalID: -6945903685620493285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_135
+      rect:
+        serializedVersion: 2
+        x: 12474
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae49e16d99d0c100800000000000000
+      internalID: 126340059542146732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_136
+      rect:
+        serializedVersion: 2
+        x: 13365
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b35190f7a669dc30800000000000000
+      internalID: 4384648583703516085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_137
+      rect:
+        serializedVersion: 2
+        x: 14256
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368df11e23d39de70800000000000000
+      internalID: 9140404207459752035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_138
+      rect:
+        serializedVersion: 2
+        x: 15147
+        y: 5232
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b9f18bc71a2f2e0800000000000000
+      internalID: -2093433319736763506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_139
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 6540
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8c51c07d79ce520800000000000000
+      internalID: 2732726023783565483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_140
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 7848
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7182d43f827f9c240800000000000000
+      internalID: 4812649432074758167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NewAtlas_141
+      rect:
+        serializedVersion: 2
+        x: 6237
+        y: 9156
+        width: 891
+        height: 1308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a1bb15c22df31a00800000000000000
+      internalID: 726202290714423719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      NewAtlas_000: -5401645568218033782
+      NewAtlas_001: -1970045153034737832
+      NewAtlas_002: 1426453451520813406
+      NewAtlas_003: -6764046634765215201
+      NewAtlas_004: 474996316490640466
+      NewAtlas_005: 2769318460113638509
+      NewAtlas_006: -35799759904579409
+      NewAtlas_007: 4040898416921454617
+      NewAtlas_008: 4730330149866965954
+      NewAtlas_009: 2778867643711723501
+      NewAtlas_010: -7653260109106534267
+      NewAtlas_011: 3344098726694694828
+      NewAtlas_012: 5716133431069075191
+      NewAtlas_013: -1856613567927966815
+      NewAtlas_014: 8929822114159384722
+      NewAtlas_015: -2383945871553852170
+      NewAtlas_016: -5196795215831235756
+      NewAtlas_017: -8336718064678552204
+      NewAtlas_018: 4991008333896998109
+      NewAtlas_019: -8725865318467971670
+      NewAtlas_020: -2886248610401155130
+      NewAtlas_021: -7470584132892116314
+      NewAtlas_022: 92707100225979466
+      NewAtlas_023: 7591757044753461307
+      NewAtlas_024: -1107853266744582316
+      NewAtlas_025: -8846797416036884562
+      NewAtlas_026: 8249020185635697652
+      NewAtlas_027: -3320467966041997192
+      NewAtlas_028: 7170496949319376242
+      NewAtlas_029: 5601359751533672439
+      NewAtlas_030: -2725676017351234544
+      NewAtlas_031: 1562610459497948770
+      NewAtlas_032: -8058198040221313545
+      NewAtlas_033: 1432023744467350320
+      NewAtlas_034: -2496038810898512981
+      NewAtlas_035: 3361704554182143051
+      NewAtlas_036: 7335560272673678950
+      NewAtlas_037: 5369081562460219090
+      NewAtlas_038: -3695115450096156413
+      NewAtlas_039: -7864186223108117036
+      NewAtlas_040: -4231486071003488650
+      NewAtlas_041: -5535481865769645024
+      NewAtlas_042: 3077423573854739686
+      NewAtlas_043: 5105954855786809471
+      NewAtlas_044: 1598996792329117015
+      NewAtlas_045: -2721629253643440572
+      NewAtlas_046: -7157474941670222401
+      NewAtlas_047: -343947900234137743
+      NewAtlas_048: -3947058884205514769
+      NewAtlas_049: 1100952465198292826
+      NewAtlas_050: -6278187617661286868
+      NewAtlas_051: 5705042366199079615
+      NewAtlas_052: -307579948909211464
+      NewAtlas_053: 7453806952626362103
+      NewAtlas_054: -1469124278233807055
+      NewAtlas_055: 8179218185356084457
+      NewAtlas_056: -6738806937228881124
+      NewAtlas_057: -1924306640721144031
+      NewAtlas_058: 1288323258305920815
+      NewAtlas_059: 370183423324336246
+      NewAtlas_060: 1608116997807832858
+      NewAtlas_061: 6470771733452034783
+      NewAtlas_062: -6305047457452565918
+      NewAtlas_063: -8955557090727326349
+      NewAtlas_064: 9029128684946411998
+      NewAtlas_065: -6283111500970667738
+      NewAtlas_066: -6759276008875710856
+      NewAtlas_067: -9137147248980806035
+      NewAtlas_068: 8053701340816031938
+      NewAtlas_069: -6631130033150485579
+      NewAtlas_070: 3792066938864502778
+      NewAtlas_071: -6548516080309891704
+      NewAtlas_072: -3410564658143379513
+      NewAtlas_073: -2537411448235784496
+      NewAtlas_074: 2840992054456463375
+      NewAtlas_075: 600477293542926063
+      NewAtlas_076: -2822795080530296126
+      NewAtlas_077: 3115846623688334165
+      NewAtlas_078: 1343751155657031479
+      NewAtlas_079: -6732915335405326570
+      NewAtlas_080: -3750946730031061291
+      NewAtlas_081: -4299334333688845230
+      NewAtlas_082: 4988723294797472746
+      NewAtlas_083: 5260568537967251776
+      NewAtlas_084: 9213174631189632797
+      NewAtlas_085: -6727289030368400474
+      NewAtlas_086: 3953133722402131432
+      NewAtlas_087: 5576564455598771275
+      NewAtlas_088: 9068864617622035140
+      NewAtlas_089: -6967244443517899990
+      NewAtlas_090: -1080205030755240449
+      NewAtlas_091: -9071891567556587181
+      NewAtlas_092: -4829567732300984002
+      NewAtlas_093: 8362232376566976544
+      NewAtlas_094: -8151348391155778693
+      NewAtlas_095: -5379049621962177571
+      NewAtlas_096: -7711642090649498789
+      NewAtlas_097: -4630755253040787086
+      NewAtlas_098: -4721650749220108296
+      NewAtlas_099: -5392944123395608397
+      NewAtlas_100: 5316693010072047547
+      NewAtlas_101: -8223454427679512535
+      NewAtlas_102: 5595360956628398778
+      NewAtlas_103: 8262650240028217457
+      NewAtlas_104: 6128332119837243722
+      NewAtlas_105: 79360282004095617
+      NewAtlas_106: -4392158236114532465
+      NewAtlas_107: 3759068902750339042
+      NewAtlas_108: 1666919564956466960
+      NewAtlas_109: -4274992324973897077
+      NewAtlas_110: 3548831666063889395
+      NewAtlas_111: 8539926084371845521
+      NewAtlas_112: -3883361898113359627
+      NewAtlas_113: -4154986958602246390
+      NewAtlas_114: -2823258428600484124
+      NewAtlas_115: 2788050607508516148
+      NewAtlas_116: 6722872354116076025
+      NewAtlas_117: -787456030994893701
+      NewAtlas_118: 3360180428546602092
+      NewAtlas_119: -5368715930181127144
+      NewAtlas_120: 7864299397772496270
+      NewAtlas_121: 8034656712187321451
+      NewAtlas_122: 1055250302675533695
+      NewAtlas_123: 2514092369364086553
+      NewAtlas_124: -3077201452679044080
+      NewAtlas_125: -5733783671913372794
+      NewAtlas_126: -7821237144814266644
+      NewAtlas_127: -4960642598558896250
+      NewAtlas_128: 8727693250233358828
+      NewAtlas_129: -3242354869088886093
+      NewAtlas_130: 5439115480382053457
+      NewAtlas_131: -4642194249093804029
+      NewAtlas_132: -3944300463304558992
+      NewAtlas_133: -6782728837415128648
+      NewAtlas_134: -6945903685620493285
+      NewAtlas_135: 126340059542146732
+      NewAtlas_136: 4384648583703516085
+      NewAtlas_137: 9140404207459752035
+      NewAtlas_138: -2093433319736763506
+      NewAtlas_139: 2732726023783565483
+      NewAtlas_140: 4812649432074758167
+      NewAtlas_141: 726202290714423719
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

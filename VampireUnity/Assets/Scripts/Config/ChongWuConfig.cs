@@ -419,6 +419,7 @@ public class ChongWuConfig
     public static Dictionary<ChongWuTuJianType, CongWuTuJianAttribute> CongWuTuJianAttributeDic =
         new Dictionary<ChongWuTuJianType, CongWuTuJianAttribute>()
         {
+            {ChongWuTuJianType.None ,new CongWuTuJianAttribute(){}},
             {ChongWuTuJianType.ShiLaiMu ,new CongWuTuJianAttribute(){Attack = 10,Hp = 100}},
             {ChongWuTuJianType.Huo1 ,new CongWuTuJianAttribute(){Attack = 100,Hp = 1000,Huo = 20}},
             {ChongWuTuJianType.Ice1 ,new CongWuTuJianAttribute(){Attack = 100,Hp = 1000,Ice = 20}},
