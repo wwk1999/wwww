@@ -20,10 +20,16 @@ public class WindowController : XSingleton<WindowController>
    [NonSerialized] public GameObject SettingWindow;
    [NonSerialized] public GameObject TitleWindow;
    [NonSerialized] public GameObject ChongWuWindow;
+   [NonSerialized] public GameObject ShangDianWindow;
+   [NonSerialized] public GameObject DuanZaoWindow;
+
+
 
    
    public void InitPanel()
-   {
+   { 
+       DuanZaoWindow=Instantiate(Resources.Load<GameObject>("Prefabs/Window/DuanZaoWindow"));
+       ShangDianWindow=Instantiate(Resources.Load<GameObject>("Prefabs/Window/ShangDianWindow"));
       GameLevelWindow=Instantiate(Resources.Load("Prefabs/Window/GameLevel") as GameObject);
       SceneLoadingWindow=Instantiate(Resources.Load("Prefabs/Window/SceneLoading") as GameObject);
       LoginWindow=Instantiate(Resources.Load("Prefabs/Window/LoginWindow") as GameObject);
@@ -56,6 +62,8 @@ public class WindowController : XSingleton<WindowController>
       SettingWindow.gameObject.SetActive(false);
       TitleWindow.gameObject.SetActive(false);
       ChongWuWindow.gameObject.SetActive(false);
+      ShangDianWindow.gameObject.SetActive(false);
       Message.SetActive(false);
+      DuanZaoWindow.gameObject.SetActive(false);
    }
 }

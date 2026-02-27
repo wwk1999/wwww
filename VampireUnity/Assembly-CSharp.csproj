@@ -575,6 +575,7 @@
     <None Include="Assets\Arts\Spine\宠物\Green\黑暗green1\Anima_Small_Skeleton_M11.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Arts\Spine\技能\ZiDan\action.atlas.txt" />
+    <None Include="Assets\Arts\Shaders\Outline 1.shader" />
     <None Include="Assets\Arts\Spine\第四关\ShaChong\shamochong.json" />
     <None Include="Assets\Arts\Spine\宠物\Green\黑暗green2\Anima_Small_Skeleton_M11-7.json" />
     <None Include="Assets\Arts\PngAnim\火skill2\action.json" />
@@ -1810,6 +1811,10 @@
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{ec0aabb3-551f-733f-695d-7e87f33d78dc}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AllIn1SpriteShaderAssembly.csproj">
+      <Project>{8cbe6764-da41-d05e-ffd2-25164dc703ee}</Project>
+      <Name>AllIn1SpriteShaderAssembly</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{b254195c-77b0-da71-0bfc-ee01ecb6f61e}</Project>

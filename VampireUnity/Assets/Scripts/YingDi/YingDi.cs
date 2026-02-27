@@ -5,24 +5,44 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+public enum JiaoHuType
+{
+    None,
+    ShangRen,
+    TieJiang,
+    ChongWu,
+    ShiZhuangDaShi,
+}
 public class YingDi : MonoBehaviour
 {
     public GameObject player;
-    public GameObject shangren;
-    public GameObject duanzao;
-    public GameObject chongwu;
-    public Button shangrenButton;
-    public Button duanzaoButton;
-    public Button chongwuButton;
     public SpriteRenderer PenQuan;
     public SpriteRenderer ZhangPen;
     public SpriteRenderer Tanzi;
     public Collider2D TanZiTri;
     public SpriteRenderer ChongWuDian;
     public Collider2D ChongWuDianTri;
-    
     public SpriteRenderer shu;
+    public SpriteRenderer shu1;
 
+
+    public GameObject TieJiang;
+    public GameObject ChongWuShi;
+    public GameObject ShiZhuangDaShi;
+    public GameObject ShangRen;
+
+    public GameObject TieJiangJiaoHu;
+    public GameObject ChongWuShiJiaoHu;
+    public GameObject ShiZhuangDaShiJiaoHu;
+    public GameObject ShangRenJiaoHu;
+    
+    public SpriteRenderer shizhuang;
+
+    public Collider2D ZhangPenTri;
+
+    public SpriteRenderer ChongWuDaShi;
+
+    private JiaoHuType jiaoHuType;
 
     private void Start()
     {
@@ -80,132 +100,123 @@ public class YingDi : MonoBehaviour
         
             if (col.CompareTag("Player"))
             {
-                spriteRenderer.sortingOrder = 1;
+                spriteRenderer.sortingOrder = 2;
                 return;
             }
             else
             {
-                spriteRenderer.sortingOrder = 3;
+                spriteRenderer.sortingOrder = 5;
             }
         }
     }
     
+    public void CheckCollider1(Collider2D collider2D)
+    {
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
+    
+        collider2D.OverlapCollider(filter, results);
+    
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
+        {
+            if (col.gameObject == gameObject) continue;
+        
+            if (col.CompareTag("Player"))
+            {
+                ZhangPen.sortingOrder = 5;
+                shizhuang.sortingOrder = 6;
+                return;
+            }
+        }
+    }
+
+    
 
     private void Update()
     {
-        CheckCollider(TanZiTri,Tanzi);
-        CheckCollider(ChongWuDianTri,ChongWuDian);
-        if (player.transform.position.y > 2)
+        if (Vector2.Distance(ShangRen.transform.position, player.transform.position) < 1)
         {
-            shu.sortingOrder = 3;
+            jiaoHuType=JiaoHuType.ShangRen;
+        }else if (Vector2.Distance(ChongWuShi.transform.position, player.transform.position) < 1)
+        {
+            jiaoHuType=JiaoHuType.ChongWu;
+        }else if (Vector2.Distance(ShiZhuangDaShi.transform.position, player.transform.position) < 1)
+        {
+            jiaoHuType=JiaoHuType.ShiZhuangDaShi;
+        }else if (Vector2.Distance(TieJiang.transform.position, player.transform.position) < 1)
+        {
+            jiaoHuType=JiaoHuType.TieJiang;
         }
         else
         {
-            shu.sortingOrder = 1;
+            jiaoHuType=JiaoHuType.None;
+        }
+
+        ZhangPen.sortingOrder = 2;
+        shizhuang.sortingOrder = 3;
+        CheckCollider1(ZhangPenTri);
+
+        TieJiangJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.TieJiang);
+        ChongWuShiJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ChongWu);
+        ShiZhuangDaShiJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ShiZhuangDaShi);
+        ShangRenJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ShangRen);
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            switch (jiaoHuType)
+            {
+                case  JiaoHuType.TieJiang:
+                    WindowController.S.DuanZaoWindow.gameObject.SetActive(true);
+                    break;
+                case  JiaoHuType.ShiZhuangDaShi:
+                    break;
+                case  JiaoHuType.ShangRen:
+                    WindowController.S.ShangDianWindow.gameObject.SetActive(true);
+                    break;
+                case  JiaoHuType.ChongWu:
+                    WindowController.S.ChongWuWindow.gameObject.SetActive(true);
+                    break;
+            }
         }
         
-        if (player.transform.position.y > -1)
+        CheckCollider(TanZiTri,Tanzi);
+        CheckCollider(ChongWuDianTri,ChongWuDian);
+        ChongWuDaShi.sortingOrder=ChongWuDian.sortingOrder+1;
+        if (player.transform.position.y > -3)
         {
-            ZhangPen.sortingOrder = 3;
+            shu1.sortingOrder = 5;
         }
         else
         {
-            ZhangPen.sortingOrder = 1;
+            shu1.sortingOrder = 3;
+        }
+        
+        if (player.transform.position.y > 2)
+        {
+            shu.sortingOrder = 5;
+        }
+        else
+        {
+            shu.sortingOrder = 3;
         }
         
         if (player.transform.position.y > 0)
         {
-            PenQuan.sortingOrder = 3;
+            PenQuan.sortingOrder = 5;
         }
         else
         {
-            PenQuan.sortingOrder = 1;
+            PenQuan.sortingOrder = 3;
         }
         
         if (Input.GetMouseButtonDown(0))
         {
-            if (IsMouseOverUIObject(shangrenButton.gameObject))
-            {
-                GameObject shangdian=Instantiate(Resources.Load<GameObject>("Prefabs/Window/ShangDianWindow"));
-
-            }
-            
-            if (IsMouseOverUIObject(duanzaoButton.gameObject))
-            {
-                GameObject duanzao=Instantiate(Resources.Load<GameObject>("Prefabs/Window/DuanZaoWindow"));
-            }
-            
-            if (IsMouseOverUIObject(chongwuButton.gameObject))
-            {
-                WindowController.S.ChongWuWindow.gameObject.SetActive(true);
-            }
-        }
-
-        if (IsMouseOverUIObject(shangrenButton.gameObject))
-        {
-            ColorBlock colors = shangrenButton.colors;
-            colors.normalColor = new Color(0.8f, 0.8f, 0.8f);
-            shangrenButton.colors = colors;        
-        }
-        else
-        {
-            ColorBlock colors = shangrenButton.colors;
-            colors.normalColor = new Color(1f, 1f, 1f);
-            shangrenButton.colors = colors;      
+           
         }
         
-        if (IsMouseOverUIObject(duanzaoButton.gameObject))
-        {
-            ColorBlock colors = duanzaoButton.colors;
-            colors.normalColor = new Color(0.8f, 0.8f, 0.8f);
-            duanzaoButton.colors = colors;        
-        }
-        else
-        {
-            ColorBlock colors = duanzaoButton.colors;
-            colors.normalColor = new Color(1f, 1f, 1f);
-            duanzaoButton.colors = colors;      
-        }
-        
-        if (IsMouseOverUIObject(chongwuButton.gameObject))
-        {
-            ColorBlock colors = chongwuButton.colors;
-            colors.normalColor = new Color(0.8f, 0.8f, 0.8f);
-            chongwuButton.colors = colors;        
-        }
-        else
-        {
-            ColorBlock colors = chongwuButton.colors;
-            colors.normalColor = new Color(1f, 1f, 1f);
-            chongwuButton.colors = colors;      
-        }
-        
-        
-        if (Vector2.Distance(player.transform.position, shangren.transform.position) > 1)
-        {
-            shangrenButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            shangrenButton.gameObject.SetActive(true);
-        }
-        
-        if (Vector2.Distance(player.transform.position, duanzao.transform.position) > 1)
-        {
-            duanzaoButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            duanzaoButton.gameObject.SetActive(true);
-        }
-        
-        if (Vector2.Distance(player.transform.position, chongwu.transform.position) > 1)
-        {
-            chongwuButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            chongwuButton.gameObject.SetActive(true);
-        }
     }
 }

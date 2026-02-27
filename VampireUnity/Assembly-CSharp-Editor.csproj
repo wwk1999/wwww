@@ -912,6 +912,10 @@
       <Project>{ec0aabb3-551f-733f-695d-7e87f33d78dc}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="AllIn1SpriteShaderAssembly.csproj">
+      <Project>{8cbe6764-da41-d05e-ffd2-25164dc703ee}</Project>
+      <Name>AllIn1SpriteShaderAssembly</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{b254195c-77b0-da71-0bfc-ee01ecb6f61e}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
