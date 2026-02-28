@@ -325,7 +325,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            NealMoveSpeed = GlobalPlayerAttribute.PlayerMoveSpeed/2;
+            NealMoveSpeed = GlobalPlayerAttribute.PlayerMoveSpeed*0.3f;
         }
         rg.velocity = new Vector2(horizontal, vertical).normalized * NealMoveSpeed;
 
