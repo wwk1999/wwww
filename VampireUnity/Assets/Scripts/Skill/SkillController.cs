@@ -588,39 +588,39 @@ public class SkillController : XSingleton<SkillController>
     
 
     //普通攻击发射子弹
-    public void ShotBulletInvoke()
+    public void ShotBulletInvoke(Vector3 attackTrans)
     {
         switch (PlayerData.S.playerWeaponType)
         {
             case WeaponType.Primary:
-                GameController.S.gamePlayer.currentGun.PrimaryShot();
+                GameController.S.gamePlayer.currentGun.PrimaryShot(attackTrans);
                 break;
             case WeaponType.LanBao:
-                GameController.S.gamePlayer.currentGun.LanBaoShot();
+                GameController.S.gamePlayer.currentGun.LanBaoShot(attackTrans);
                 break;
             case WeaponType.Fire:
-                GameController.S.gamePlayer.currentGun.FireShot();
+                GameController.S.gamePlayer.currentGun.FireShot(attackTrans);
                 break;
             case WeaponType.XuKong:
-                GameController.S.gamePlayer.currentGun.XuKongShot();
+                GameController.S.gamePlayer.currentGun.XuKongShot(attackTrans);
                 break;
             case WeaponType.LvQuan:
-                GameController.S.gamePlayer.currentGun.LvQuanShot();
+                GameController.S.gamePlayer.currentGun.LvQuanShot(attackTrans);
                 break;
             case WeaponType.HeiDong:
-                GameController.S.gamePlayer.currentGun.HeiDongShot();
+                GameController.S.gamePlayer.currentGun.HeiDongShot(attackTrans);
                 break;
             case WeaponType.Du:
-                GameController.S.gamePlayer.currentGun.DuShot();
+                GameController.S.gamePlayer.currentGun.DuShot(attackTrans);
                 break;
             case WeaponType.LuoLei:
-                GameController.S.gamePlayer.currentGun.LuoLeiShot();
+                GameController.S.gamePlayer.currentGun.LuoLeiShot(attackTrans);
                 break;
             case WeaponType.PuTong3:
-                GameController.S.gamePlayer.currentGun.PuTong3Shot();
+                GameController.S.gamePlayer.currentGun.PuTong3Shot(attackTrans);
                 break;
             case WeaponType.JianQi:
-                GameController.S.gamePlayer.currentGun.JianQiShot();
+                GameController.S.gamePlayer.currentGun.JianQiShot(attackTrans);
                 break;
         }
     }

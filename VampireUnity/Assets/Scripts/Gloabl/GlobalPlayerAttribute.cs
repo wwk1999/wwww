@@ -2874,7 +2874,7 @@ public class GlobalPlayerAttribute
        get => PlayerInfoConfig.GetPlayerAttack();
    }
    
-   private static float _baseMoveSpeed = 3f;
+   public static float _baseMoveSpeed = 2.5f;
 
    public static float PlayerMoveSpeed
    {

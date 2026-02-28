@@ -27,6 +27,9 @@ public enum WeaponType
 }
 public class Player : MonoBehaviour
 {
+    private float AttackTime = 0.5f/GlobalPlayerAttribute.TotalAttackSpeed;
+    private float CurrentAttackTime = 0;
+    private float NealMoveSpeed = GlobalPlayerAttribute.PlayerMoveSpeed;
     public GameObject arrow;
     public GunBase currentGun;
     private float _gunDistance = 0.3f;
@@ -87,6 +90,11 @@ public class Player : MonoBehaviour
     public GameObject HeiAnSkill2;
 
     public Rigidbody2D rg;
+
+    public GameObject parent;
+    public GameObject Bodyparent;
+    public GameObject Shouparent;
+    public GameObject fasheTrans;
 
     public void ShowTitle()
     {
@@ -213,6 +221,7 @@ public class Player : MonoBehaviour
     public ParticleSystem LevelUpParticle;
     private void Awake()
     {
+        playerSkeleton.AnimationState.SetAnimation(0, "idea", true);
         currentGun = Instantiate(Resources.Load<GameObject>("Prefabs/Gun/Pistol").GetComponent<GunBase>(),transform);
         playerSkeleton.AnimationState.Complete += OnAnimationComplete;
         playerSkeleton.AnimationState.Event += OnSpineEvent;
@@ -222,10 +231,7 @@ public class Player : MonoBehaviour
     
     private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "attack"&&GlobalPlayerAttribute.TotalAttackSpeed<3)
-        {
-            SkillController.S.ShotBulletInvoke();
-        }
+       
     }
 
     private void OnDestroy()
@@ -260,80 +266,33 @@ public class Player : MonoBehaviour
 
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
-
-        if (trackEntry.Animation.Name == "attack" &&GlobalPlayerAttribute.TotalAttackSpeed>=3)
-        {
-            SkillController.S.ShotBulletInvoke();
-        }
-        if (MouseDown)
-        {
-            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
-            {
-                return;
-            }
-            playerSkeleton.timeScale = GlobalPlayerAttribute.TotalAttackSpeed;
-            playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
-        }
-        else if(MoveJian)
-        {
-            playerSkeleton.timeScale = 1;
-            playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
-        }
-        else
-        {
-            playerSkeleton.timeScale = 1;
-            playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
-        }
-       
+        
     }
+
     /// <summary>
     /// 主角动画
     /// </summary>
-    public void SetBianLiang()
-    {
-        //获得输入
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        if (horizontal == 0 && vertical == 0)
-        {
-            if (MoveJian&& MouseDown == false)
-            {
-                playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
-            }
-            MoveJian = false;
-        }
-        else
-        {
-            if (MoveJian == false && MouseDown == false)
-            {
-                playerSkeleton.timeScale = 1;
-                playerSkeleton.AnimationState.SetAnimation(0, "walk", false);
-            }
-            MoveJian = true;
-        }
-
-        if (Input.GetMouseButton(0))
-        {
-            MouseDown = true;
-        }
-        else
-        {
-            MouseDown = false;
-        }
-    }
-    
     /// <summary>
     /// 主角移动
     /// </summary>
     public void PlayerMove()
     {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 10f; // 距离相机的距离
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+
+        Vector2 direction = Bodyparent.transform.position - worldPosition;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Bodyparent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
         //获得输入
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        
+
         // 判断是否在移动（考虑键盘和摇杆输入）
         bool isMoving = !(horizontal == 0 && vertical == 0);
-        
+
         // 处理移动状态变化时的攻击力加成
         if (isMoving && !isMoveBonusApplied)
         {
@@ -353,28 +312,44 @@ public class Player : MonoBehaviour
                 isMoveBonusApplied = false;
             }
         }
-        
-        Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
-        mouseScreen.z = depth; 
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        
+
         // 使用 ScaleX 的正负来表示翻转（新版 Spine runtime 移除了 FlipX 属性）
         float currentScaleX = playerSkeleton.Skeleton.ScaleX;
         float absScaleX = Mathf.Abs(currentScaleX);
-        playerSkeleton.Skeleton.ScaleX = (worldPos.x > transform.position.x) ? absScaleX : -absScaleX;
+        parent.transform.localScale = new Vector3((worldPosition.x > transform.position.x) ? -absScaleX : absScaleX,
+            parent.transform.localScale.y, parent.transform.localScale.z);
 
         if (!MouseDown)
         {
-            rg.velocity = new Vector2(horizontal, vertical).normalized * GlobalPlayerAttribute.PlayerMoveSpeed;
+            NealMoveSpeed = GlobalPlayerAttribute.PlayerMoveSpeed;
         }
         else
         {
-            rg.velocity = Vector3.zero;
+            NealMoveSpeed = GlobalPlayerAttribute.PlayerMoveSpeed/2;
+        }
+        rg.velocity = new Vector2(horizontal, vertical).normalized * NealMoveSpeed;
+
+
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ||
+            Input.GetKey(KeyCode.W))
+        {
+            if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "move")
+            {
+                playerSkeleton.AnimationState.TimeScale = NealMoveSpeed / GlobalPlayerAttribute._baseMoveSpeed;
+                playerSkeleton.AnimationState.SetAnimation(0, "move", true);
+            }
+        }
+        else 
+        {
+            if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idea")
+            {
+                playerSkeleton.AnimationState.TimeScale = 1;
+                playerSkeleton.AnimationState.SetAnimation(0, "idea", true);
+            }
         }
     }
-    
-    
+
+
     public void SetGunRotate(Vector3 nearMonsterPosition)
     {
         //主角朝最近怪物的方向
@@ -679,22 +654,26 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        CurrentAttackTime+=Time.deltaTime;
         Vector2 dir = (Vector2.zero - new Vector2(transform.position.x, transform.position.y)).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         //主角操作
-        PlayerMove();
-        if (Input.GetMouseButtonDown(0))
+        MouseDown=false;
+        if (Input.GetMouseButton(0))
         {
             if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
             {
                 return;
             }
-            MouseDown = true;
-            playerSkeleton.timeScale = GlobalPlayerAttribute.TotalAttackSpeed;
-            playerSkeleton.AnimationState.SetAnimation(0, "attack", false);
+            if (CurrentAttackTime >= AttackTime)
+            {
+                CurrentAttackTime = 0;
+                SkillController.S.ShotBulletInvoke(fasheTrans.transform.position);
+            }
+            MouseDown=true;
         }
-        SetBianLiang();
+        PlayerMove();
         SetGunRotate(GameController.S.nearMonsterPosition);
     }
 }

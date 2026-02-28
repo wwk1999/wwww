@@ -954,6 +954,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\主角受伤\1209112.json" />
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple3——后\mon_cosmo_03.json" />
     <None Include="Assets\Arts\Spine\宠物\Orange\黑暗orange1——后\mon_hell_fire_04.atlas.txt" />
+    <None Include="Assets\Arts\Spine\主角动画\主角动画\参考2.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通Peng\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\json4\skeleton.json" />
@@ -1020,6 +1021,7 @@
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple3——前\mon_cosmo_02.json" />
     <None Include="Assets\Arts\Shaders\Rage.shader" />
     <None Include="Assets\Arts\Spine\技能\1225\json18\action.json" />
+    <None Include="Assets\Arts\Spine\主角动画\主角动画\参考2.json" />
     <None Include="Assets\Arts\Spine\怪物\双刀\Enemy_Boss_robot.json" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\LvLong\green_dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Green\冰green2\Anima_Small_Skeleton_M11-6.json" />
