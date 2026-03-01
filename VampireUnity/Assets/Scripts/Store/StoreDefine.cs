@@ -163,6 +163,9 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int RateX=1920;
         public int RateY=1080;
         public bool IsQuanPing=false;
+        
+        public int GameTime = 0;
+
 
         public void CopyFromRuntime(PlayerData runtime)
         {
@@ -266,6 +269,7 @@ public class StoreDefine : XSingleton<StoreDefine>
             RateY=runtime.RateY;
             IsQuanPing=runtime.IsQuanPing;
 
+            GameTime=runtime.GameTime;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -372,6 +376,8 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.RateX=RateX;
             runtime.RateY=RateY;
             runtime.IsQuanPing=IsQuanPing;
+            
+            runtime.GameTime=GameTime;
         }
     }
 

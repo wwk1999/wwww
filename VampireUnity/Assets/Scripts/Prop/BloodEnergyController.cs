@@ -21,7 +21,6 @@ public class BloodEnergyController : MonoBehaviour
         if (distance < 0.2f)
         {
             GlobalPlayerAttribute.BloodEnergy++; // 增加元灵数量
-            StoreController.S.SaveStoreData();
             gameObject.SetActive(false);
             GameController.S.BloodEnergyQueue.Enqueue(gameObject);
         }

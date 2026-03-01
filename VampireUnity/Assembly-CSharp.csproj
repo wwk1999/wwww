@@ -452,6 +452,7 @@
     <Compile Include="Assets\Scripts\Tool\BossQuan.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NoSkill.cs" />
+    <Compile Include="Assets\Scripts\Window\StoreWindow.cs" />
     <Compile Include="Assets\Scripts\ChongWu\ChongWuList.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenBoss.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvZhuiZong.cs" />
@@ -553,6 +554,7 @@
     <None Include="Assets\Arts\Spine\第四关\ShaXiYi\shamoxiyi.json" />
     <None Include="Assets\Arts\Spine\第三关\石头BOSS\shitouBOSS.json" />
     <None Include="Assets\Arts\Spine\第二关\大嘴\dazuiguai.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\鬼火\9005_zhizhu_attacka.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\package.json" />
     <None Include="Assets\Arts\Spine\第五关\XueQiE\Enemy_Snowman.json" />
@@ -579,6 +581,7 @@
     <None Include="Assets\Arts\Spine\第四关\ShaChong\shamochong.json" />
     <None Include="Assets\Arts\Spine\宠物\Green\黑暗green2\Anima_Small_Skeleton_M11-7.json" />
     <None Include="Assets\Arts\PngAnim\火skill2\action.json" />
+    <None Include="Assets\Arts\Spine\技能\黑暗peng\9005_zhizhu_effectb.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\宠物\White\火White1\pet_9203.json" />
     <None Include="Assets\Arts\Spine\怪物\雪山抱死\Enemy_Boss_ogre.json" />
@@ -630,6 +633,7 @@
     <None Include="Assets\Arts\Spine\宠物\White\黑暗white2\Anima_Small_Skeleton_M7.json" />
     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\宠物\Orange\电orange1——后\mon_wind_dragon_03.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\鬼火\9005_zhizhu_attacka.json" />
     <None Include="Assets\Arts\Spine\宠物\Blue\电blue2\pet_9303.atlas.txt" />
     <None Include="Assets\Arts\Spine\fly\2\fly2.atlas.txt" />
     <None Include="Assets\Arts\PngAnim\冰peng\eff_holylances.json" />
@@ -769,6 +773,7 @@
     <None Include="Assets\Arts\Spine\技能\火山boss技能\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\剑气\skeleton.json" />
     <None Include="Assets\Arts\Spine\第五关\XueRen\xueren.atlas.txt" />
+    <None Include="Assets\Arts\Spine\主角动画\主角动画\主角动画\参考2.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\LanLong\blue_dragon.atlas.txt" />
     <None Include="Assets\Arts\Shaders\Shield.shader" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\火焰peng\action.atlas.txt" />
@@ -934,6 +939,7 @@
     <None Include="Assets\Arts\Spine\宠物\Blue\黑暗blue2\pet_9213.atlas.txt" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\wenzi.json" />
     <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\技能\黑暗peng1\9005_zhizhu_effecta.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\IceEx\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\HongLong\red_dragon.json" />
     <None Include="Assets\Arts\Spine\怪物\LanXiNiu\BOSSlong_shui.atlas.txt" />
@@ -950,11 +956,11 @@
     <None Include="Assets\Arts\Spine\技能\DianPeng\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple2——后\mon_killer_bird_03.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\White\电white1\Anima_Small_Skeleton_M5.json" />
+    <None Include="Assets\Arts\Spine\技能\黑暗peng\9005_zhizhu_effectb.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\主角受伤\1209112.json" />
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple3——后\mon_cosmo_03.json" />
     <None Include="Assets\Arts\Spine\宠物\Orange\黑暗orange1——后\mon_hell_fire_04.atlas.txt" />
-    <None Include="Assets\Arts\Spine\主角动画\主角动画\参考2.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通Peng\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\json4\skeleton.json" />
@@ -1021,7 +1027,6 @@
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple3——前\mon_cosmo_02.json" />
     <None Include="Assets\Arts\Shaders\Rage.shader" />
     <None Include="Assets\Arts\Spine\技能\1225\json18\action.json" />
-    <None Include="Assets\Arts\Spine\主角动画\主角动画\参考2.json" />
     <None Include="Assets\Arts\Spine\怪物\双刀\Enemy_Boss_robot.json" />
     <None Include="Assets\Arts\Spine\怪物\MiJing\LvLong\green_dragon.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Green\冰green2\Anima_Small_Skeleton_M11-6.json" />
@@ -1050,6 +1055,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Arts\Spine\宠物\Purple\冰pruple2——前\pet_9207.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\DALONG打包\dragon.atlas.txt" />
+    <None Include="Assets\Arts\Spine\主角动画\主角动画\主角动画\参考2.json" />
     <None Include="Assets\Arts\Spine\技能\1225\主角受伤\1209112.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\喷黑火打包\skeleton.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
@@ -1058,6 +1064,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple2——前\mon_killer_bird_02.atlas.txt" />
     <None Include="Assets\Arts\PngAnim\黑暗skill3\action.json" />
+    <None Include="Assets\Arts\Spine\技能\黑暗peng1\9005_zhizhu_effecta.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\Boss出现\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通Peng\action.json" />
     <None Include="Assets\Arts\Spine\怪物\KuLou\Enemy_Skeleton_warrior.atlas.txt" />

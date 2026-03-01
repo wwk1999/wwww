@@ -19,11 +19,6 @@ public class MainWindowController : MonoBehaviour
                 WindowController.S.SceneLoadingWindow.SetActive(true);
                 break;
         }
-       
-        LevelInfoConfig.init();
         AudioController.S.BGAudioSource.Play(); 
-        LevelInfoConfig.InitGameLevel();
-        StoreController.S.LoadStoreData();
-        Screen.SetResolution(PlayerData.S.RateX, PlayerData.S.RateY, PlayerData.S.IsQuanPing);
     }
 }

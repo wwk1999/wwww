@@ -287,7 +287,7 @@ namespace AllIn1SpriteShader
             SetSceneDirty();
         }
 
-        private void SetKeyword(string keyword, bool state = false)
+        public void SetKeyword(string keyword, bool state = false)
         {
             if (destroyed) return;
             if (currMaterial == null)

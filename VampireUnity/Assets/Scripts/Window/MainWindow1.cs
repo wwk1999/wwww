@@ -35,8 +35,7 @@ public class MainWindow1 : MonoBehaviour
       startButton.onClick.AddListener(async () =>
       {
           _isgameStart = true;
-          gameObject.SetActive(false);
-          WindowController.S.RoleWindow.SetActive(true);       
+          WindowController.S.StoreWindow.SetActive(true);       
           Debug.Log("点击进入末世");
       });
    }

@@ -112,6 +112,8 @@ public class PlayerData : XSingleton<PlayerData>
     public int RateY=1080;
     public bool IsQuanPing=false;
 
+    public int GameTime = 0;
+
     
     protected override void Awake()
     {

@@ -24,7 +24,6 @@ public class YingDiPlayer : MonoBehaviour
       mousePos.z = 10f; // 距离相机的距离
       Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         
-      Debug.Log("2D 世界位置: " + worldPosition);
       Vector2 direction = bodyparent.transform.position - worldPosition;
       
       float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

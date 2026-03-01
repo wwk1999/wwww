@@ -139,6 +139,7 @@ public class BagController : XSingleton<BagController>
     [NonSerialized] public BagGrid PlayerShoeGrid = new BagGrid();
     [NonSerialized] public BagGrid PlayerHelmetGrid = new BagGrid();
 
+    public float time = 0;
 
     public void JingCuiDebug()
     {
@@ -485,6 +486,16 @@ public class BagController : XSingleton<BagController>
     //      GlobalMaxEquipId.MaxOrangeClothId= EquipController.S.MaxClothID(5);
     //
     // }
+
+    private void Update()
+    {
+        time+=Time.deltaTime;
+        if (time >= 60)
+        {
+            time = 0;
+            PlayerData.S.GameTime++;
+        }
+    }
 
 
     public void InitEquipidSpriteConfig()

@@ -55,7 +55,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a50ab80f571073f4d85b69341ecde335, type: 2}
+  - {fileID: 2100000, guid: 623bb9e07e00df245af68df62a4fdc7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: e27993590d981514aa0e01680d2c2ff1, type: 2}
-  initialSkinName: 
+  skeletonDataAsset: {fileID: 11400000, guid: cbfcc181a58f6644d9f00f616802b6d5, type: 2}
+  initialSkinName: yuan
   initialFlipX: 0
   initialFlipY: 0
   meshSettings:
@@ -270,7 +270,7 @@ Transform:
   m_GameObject: {fileID: 4010446921060963220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25700003, y: 0.0040000007, z: 0}
+  m_LocalPosition: {x: -0.229, y: -0.001, z: 0}
   m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -337,7 +337,7 @@ Transform:
   m_GameObject: {fileID: 7641595704049271156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -2.01, y: -0.01, z: 0}
+  m_LocalPosition: {x: -1.81, y: 0.34, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -384,7 +384,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ada71ac424ce4d47b8e4376bb648b7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac9c505426446ab41be6d62e8164ed8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

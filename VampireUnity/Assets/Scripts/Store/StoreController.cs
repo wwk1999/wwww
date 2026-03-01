@@ -11,13 +11,30 @@ public class StoreController : XSingleton<StoreController>
     public StoreDefine.StoreData StoreData;
     private float currentTime = 0;
     private float saveTime = 10;
+    public int CurrentSaveSlot = 1;
+    public bool IsGame = false;
 
-    private string SavePath => Path.Combine(Application.persistentDataPath, "store.json");
+    private string SavePath => GetSavePath();
 
+
+    public string GetSavePath()
+    {
+        switch (CurrentSaveSlot)
+        {
+            case 1:
+                return Path.Combine(Application.persistentDataPath, "store1.json");
+            case 2:
+                return Path.Combine(Application.persistentDataPath, "store2.json");
+            case 3:
+                return Path.Combine(Application.persistentDataPath, "store3.json");
+        }
+
+        return "";
+    }
     private void Update()
     {
         currentTime += Time.deltaTime;
-        if (currentTime > saveTime)
+        if (currentTime > saveTime&&IsGame)
         {
             SaveStoreData();
             currentTime = 0;
@@ -66,6 +83,47 @@ public class StoreController : XSingleton<StoreController>
             Debug.Log($"SkillData.S 存在: {SkillData.S != null}");
             Debug.Log($"SkillJiaDian.S 存在: {SkillJiaDian.S != null}");
         }
+    }
+
+    public bool GetStoreIsEmpty(int slot)
+    {
+        switch (slot)
+        {
+            case 1:
+                var path1 = Path.Combine(Application.persistentDataPath, "store1.json");
+                return !File.Exists(path1);
+            case 2:
+                var path2 = Path.Combine(Application.persistentDataPath, "store2.json");
+                return !File.Exists(path2);
+            case 3:
+                var path3 = Path.Combine(Application.persistentDataPath, "store3.json");
+                return !File.Exists(path3);
+        }
+        return true;
+    }
+
+    public StoreDefine.StoreData GetStoreData(int slot)
+    {
+        switch (slot)
+        {
+            case 1:
+                var path1 = Path.Combine(Application.persistentDataPath, "store1.json");
+                var json1 = File.ReadAllText(path1);
+                StoreData = JsonConvert.DeserializeObject<StoreDefine.StoreData>(json1);
+                return StoreData;
+            case 2:
+                var path2 = Path.Combine(Application.persistentDataPath, "store2.json");
+                var json2 = File.ReadAllText(path2);
+                StoreData = JsonConvert.DeserializeObject<StoreDefine.StoreData>(json2);
+                return StoreData;
+            case 3:
+                var path3 = Path.Combine(Application.persistentDataPath, "store3.json");
+                var json3 = File.ReadAllText(path3);
+                StoreData = JsonConvert.DeserializeObject<StoreDefine.StoreData>(json3);
+                return StoreData;
+        }
+
+        return null;
     }
 
     public void LoadStoreData()
