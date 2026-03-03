@@ -29,7 +29,7 @@ public class IceExplosion : MonoBehaviour
    private void OnEnable()
    {
       animator.Play("IceEx",1,0);
-      transform.localScale=new Vector3(transform.localScale.x*(1.0f+GlobalPlayerAttribute.Skill3RangeNum/100.0f),transform.localScale.y*(1.0f+GlobalPlayerAttribute.Skill3RangeNum/100.0f),transform.localScale.z);
+      transform.localScale=new Vector3(transform.localScale.x*(1.0f),transform.localScale.y*(1.0f),transform.localScale.z);
       skeletonAnimation.AnimationState.SetAnimation(0, "animation", false);
    }
    
@@ -38,11 +38,7 @@ public class IceExplosion : MonoBehaviour
       if (other.CompareTag("Monster")||other.CompareTag("Boss"))
       {
          bool isCrit = GameController.S.GetIsCrit();
-         GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*5f*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f+GlobalPlayerAttribute.Skill3DamageNum/100.0f),isCrit,DamageFrom.Skill3);
-         if (SkillJiaDian.S.IceSkill3YuanSu >= 1)
-         {
-            GameController.S.MonsterColliderDic[other].jiansuTime = 3f;
-         }
+         GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*5f*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),isCrit,DamageFrom.Skill3);
       }
    }
 }

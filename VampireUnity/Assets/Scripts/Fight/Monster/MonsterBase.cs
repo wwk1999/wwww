@@ -713,16 +713,16 @@ public abstract class MonsterBase : MonoBehaviour
         switch (damageFrom)
         {
             case DamageFrom.Normal:
-                finalDamage*=(1+GlobalPlayerAttribute.NormalAttackNum/100.0f);
+                finalDamage*=(1);
                 break;
             case DamageFrom.Skill1:
-                finalDamage*=(1+(GlobalPlayerAttribute.Skill1DamageNum-100f)/100.0f);
+                finalDamage*=(1);
                 break;
             case DamageFrom.Skill2:
-                finalDamage*=(1+(GlobalPlayerAttribute.Skill2DamageNum-100f)/100.0f);
+                finalDamage*=(1);
                 break;
             case DamageFrom.Skill3:
-                finalDamage*=(1+(GlobalPlayerAttribute.Skill3DamageNum-100f)/100.0f);
+                finalDamage*=(1);
                 break;
         }
         

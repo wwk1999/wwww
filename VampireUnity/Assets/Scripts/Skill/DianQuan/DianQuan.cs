@@ -42,7 +42,7 @@ public class DianQuan : MonoBehaviour
         {
             transform.localScale = new Vector3(transform.localScale.x*1.2f,transform.localScale.y*1.2f,transform.localScale.z*1.2f);
         }
-        transform.localScale=new Vector3(transform.localScale.x*(1.0f+GlobalPlayerAttribute.Skill1RangeNum/100.0f),transform.localScale.y*(1.0f+GlobalPlayerAttribute.Skill1RangeNum/100.0f),transform.localScale.z);
+        transform.localScale=new Vector3(transform.localScale.x*(1.0f),transform.localScale.y*(1.0f),transform.localScale.z);
 
         isAttacking = false;
         skeletonAnimation.AnimationState.SetAnimation(0,"action",false);
@@ -84,7 +84,7 @@ public class DianQuan : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GameController.S.GameAttack*2f*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f)*(1.0f+GlobalPlayerAttribute.Skill1DamageNum/100.0f),GameController.S.GetIsCrit(),DamageFrom.Skill1);
+                monster.Hurt(GameController.S.GameAttack*2f*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill1);
                 var hit = GameController.S.DianQuanPengQueue.Dequeue();
                 hit.transform.position = monster.transform.position;
                 hit.SetActive(true);

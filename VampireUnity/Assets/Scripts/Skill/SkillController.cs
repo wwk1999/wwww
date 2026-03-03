@@ -43,7 +43,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetIceSkill1Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.IceSkill1];
-        value*=(1.0f-GlobalPlayerAttribute.IceSkill1CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillCd);
         return value;
     }
@@ -51,7 +51,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetIceSkill2Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.IceSkill2];
-        value*=(1.0f-GlobalPlayerAttribute.Skill2CdNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillCd);
         return value;
     }
@@ -59,7 +59,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetIceSkill3Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.IceSkill3];
-        value*=(1.0f-GlobalPlayerAttribute.Skill3CdNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillCd);
         return value;
     }
@@ -68,7 +68,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetHuoSkill1Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HuoSkill1];
-        value*=(1.0f-GlobalPlayerAttribute.HuoSkill1CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillCd);
         return value;
     }
@@ -76,7 +76,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetHuoSkill2Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HuoSkill2];
-        value*=(1.0f-GlobalPlayerAttribute.HuoSkill2CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillCd);
         return value;
     }
@@ -84,7 +84,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetHuoSkill3Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HuoSkill3];
-        value*=(1.0f-GlobalPlayerAttribute.HuoSkill3CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillCd);
         return value;
     }
@@ -94,7 +94,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetHeiAnSkill1Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HeiAnSkill1];
-        value*=(1.0f-GlobalPlayerAttribute.HeiAnSkill1CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillCd);
 
         return value;
@@ -103,7 +103,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetHeiAnSkill2Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HeiAnSkill2];
-        value*=(1.0f-GlobalPlayerAttribute.HeiAnSkill2CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillCd);
 
         return value;
@@ -112,7 +112,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetHeiAnSkill3Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.HeiAnSkill3];
-        value*=(1.0f-GlobalPlayerAttribute.HeiAnSkill3CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillCd);
 
         return value;
@@ -122,7 +122,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetDianSkill1Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.DianSkill1];
-        value*=(1.0f-GlobalPlayerAttribute.Skill1CdNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillCd);
 
         return value;
@@ -131,7 +131,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetDianSkill2Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.DianSkill2];
-        value*=(1.0f-GlobalPlayerAttribute.DianSkill2CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillCd);
         return value;
     }
@@ -139,7 +139,7 @@ public class SkillController : XSingleton<SkillController>
     public float GetDianSkill3Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillConfig.ZhuDongSkillTime.DianSkill3];
-        value*=(1.0f-GlobalPlayerAttribute.DianSkill3CDNum/100.0f);
+        value*=(1.0f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillCd);
         return value;
     }
@@ -196,28 +196,28 @@ public class SkillController : XSingleton<SkillController>
     public float GetIceBallDuration()
     {
         float value = 5f;
-        value*=(1.0f+GlobalPlayerAttribute.Skill2TimeNum/100.0f);
+        value*=(1.0f);
         return value;
     }
     
     public float GetHuoSkill2Duration()
     {
         float value = 5f;
-        value*=(1.0f+GlobalPlayerAttribute.HuoSkill2TimeNum/100.0f);
+        value*=(1.0f);
         return value;
     }
     
     public float GetHeiAnSkill2Duration()
     {
         float value = 5f;
-        value*=(1.0f+GlobalPlayerAttribute.HeiAnSkill2TimeNum/100.0f);
+        value*=(1.0f);
         return value;
     }
     
     public float GetDianSkill2Duration()
     {
         float value = 5f;
-        value*=(1.0f+GlobalPlayerAttribute.DianSkill2TimeNum/100.0f);
+        value*=(1.0f);
         return value;
     }
     
@@ -228,7 +228,7 @@ public class SkillController : XSingleton<SkillController>
         float value = GlobalPlayerAttribute.HuoYuanSuBase;
         if (IsHuoSkill2)
         {
-            value += (0.3f+GlobalPlayerAttribute.HuoSkill2Num/100.0f);
+            value += (0.3f);
         }
         return value;
     }
@@ -239,7 +239,7 @@ public class SkillController : XSingleton<SkillController>
         float value = GlobalPlayerAttribute.DianYuanSuBase;
         if (IsDianSkill2)
         {
-            value +=(0.3f+GlobalPlayerAttribute.DianSkill2Num/100.0f);
+            value +=(0.3f);
         }
         return value;
     }
@@ -249,7 +249,7 @@ public class SkillController : XSingleton<SkillController>
         float value =GlobalPlayerAttribute.HeiAnYuanSuBase;
         if (IsHeiAnSkill2)
         {
-            value += (0.3f+GlobalPlayerAttribute.HeiAnSkill2Num/100.0f);
+            value += (0.3f);
         }
         return value;
     }
@@ -264,10 +264,10 @@ public class SkillController : XSingleton<SkillController>
     {
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
         {
-            return (10f * (1 - GlobalPlayerAttribute.Skill1CdNum / 100.0f)) * 0.5f;
+            return (10f * (1 )) * 0.5f;
         }
 
-        return (10f * (1 - GlobalPlayerAttribute.Skill1CdNum / 100.0f));
+        return (10f * (1 ));
     }
     public float DashCoolingtime = 0;
    
@@ -303,7 +303,7 @@ public class SkillController : XSingleton<SkillController>
 
     public float GetDashCd()
     {
-        float cd = (10f * (1 - GlobalPlayerAttribute.DashCdNum / 100.0f));
+        float cd = (10f * (1));
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DashCd))
         {
             cd *= 0.7f;
@@ -380,7 +380,6 @@ public class SkillController : XSingleton<SkillController>
         DianSkill3Coolingtime = 0;
         float waveOffset = Random.Range(0,30);
         int bulletCount = 12;
-        bulletCount += (int)GlobalPlayerAttribute.DianSkill3CountNum / 100;
         float angleStep = 360f / bulletCount;
 
         for (int i = 0; i < bulletCount; i++)
@@ -517,7 +516,6 @@ public class SkillController : XSingleton<SkillController>
 
         int bulletCount = 5;
         // 两个偏移角度：+10° 和 -10°
-        bulletCount += (int)GlobalPlayerAttribute.HuoSkill1CountNum / 100;
       
         Vector2[] dirs5 =
         {
@@ -652,7 +650,7 @@ public class SkillController : XSingleton<SkillController>
                     DianQuanCoolingtime = 0;
                     var dianquan= GameController.S.DianQuanQueue.Dequeue();
                     dianquan.gameObject.SetActive(true);
-                    dianquan.transform.localScale=new Vector3(dianquan.transform.localScale.x*(1+GlobalPlayerAttribute.Skill1RangeNum/100.0f),dianquan.transform.localScale.y*(1+GlobalPlayerAttribute.Skill1RangeNum/100.0f),1);
+                    dianquan.transform.localScale=new Vector3(dianquan.transform.localScale.x*(1),dianquan.transform.localScale.y*(1),1);
                     dianquan.transform.position = worldPos;
                 }
                 break;
@@ -711,7 +709,6 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case SkillType.HuoSkill3:
                 int count = 5;
-                count += (int)GlobalPlayerAttribute.HuoSkill3CountNum / 100;
                 StartCoroutine(HuoSkill3(count,1.3f,0.2f));
                 break;
             case SkillType.HeiAnSkill1:
@@ -761,22 +758,22 @@ public class SkillController : XSingleton<SkillController>
         HeiAnSkill2Coolingtime+= Time.deltaTime;
         HeiAnSkill3Coolingtime+= Time.deltaTime;
 
-        if (DashCoolingtime >= Dashtime && SkillJiaDian.S.Dash >= 1&&SkillData.S.dashAuto)
+        if (DashCoolingtime >= Dashtime &&SkillData.S.dashAuto)
         {
             ExcuteSkill(SkillType.Dash);
         }
         
-        if (DianQuanCoolingtime >= DianQuantime && SkillJiaDian.S.DianSkill1Damage >= 1&&SkillData.S.skill1Auto)
+        if (DianQuanCoolingtime >= DianQuantime && SkillJiaDian.S.Dian1 >= 1&&SkillData.S.skill1Auto)
         {
             ExcuteSkill(SkillType.Skill1);
         }
         
-        if (IceBallCoolingtime >= IceBalltime && SkillJiaDian.S.IceSkill2Damage >= 1&&SkillData.S.skill2Auto)
+        if (IceBallCoolingtime >= IceBalltime && SkillJiaDian.S.Ice2 >= 1&&SkillData.S.skill2Auto)
         {
             ExcuteSkill(SkillType.Skill2);
         }
         
-        if (IceExplosionCoolingtime >= IceExplosiontime && SkillJiaDian.S.IceSkill3Damage >= 1&&SkillData.S.skill3Auto)
+        if (IceExplosionCoolingtime >= IceExplosiontime && SkillJiaDian.S.Ice3 >= 1&&SkillData.S.skill3Auto)
         {
             ExcuteSkill(SkillType.Skill3);
         }

@@ -18,2825 +18,958 @@ public class SkillWindow1 : MonoBehaviour
     public TextMeshProUGUI skillCount;
     public TextMeshProUGUI monsterCount;
 
-    [Header("基础技能按钮")]
-    public Button normalAttackButton;
-    public Button attackSpeedButton;
-    public Button dashButton;
-    public Button dashCdButton;
-    public Button critButton;
-    public Button critDamageButton;
-    public Button moveSpeedButton;
-    public Button moveAddDefenseButton;
-    public Button moveAddAttackButton;
+    private GameObject IcePanel;
+    private GameObject HuoPanel;
+    private GameObject DianPanel;
+    private GameObject HeiAnPanel;
+    private GameObject ZJPanel;
+ 
+    
+    private Button IceButton;
+    private Button HuoButton;
+    private Button DianButton;
+    private Button HeiAnButton;
+    private Button ZJButton;
 
-    [Header("技能系统按钮")]
-    public Button skill1Button;
-    public Button skill2Button;
-    public Button skill3Button;
-    public Button skill1CdButton;
-    public Button skill2CdButton;
-    public Button skill3CdButton;
-    public Button skill1RangeButton;
-    public Button skill1YiDianButton;
-    public Button skill2TimeButton;
-    public Button skill2AddDefenseButton;
-    public Button skill3RangeButton;
-    public Button skill3JianSuButton;
+    public void Start()
+    {
+     IcePanel=transform.Find("Bg/Panel/IcePanel").gameObject;
+     HuoPanel=transform.Find("Bg/Panel/HuoPanel").gameObject;
+     DianPanel=transform.Find("Bg/Panel/DianPanel").gameObject;
+     HeiAnPanel=transform.Find("Bg/Panel/HeiAnPanel").gameObject;
+     ZJPanel=transform.Find("Bg/Panel/ZJPanel").gameObject;
 
+     IceButton = transform.Find("YuanSuButtonPanel/Ice").GetComponent<Button>();
+     HuoButton = transform.Find("YuanSuButtonPanel/Huo").GetComponent<Button>();
+     DianButton = transform.Find("YuanSuButtonPanel/Dian").GetComponent<Button>();
+     HeiAnButton = transform.Find("YuanSuButtonPanel/HeiAn").GetComponent<Button>();
+     ZJButton = transform.Find("YuanSuButtonPanel/ZhuanJing").GetComponent<Button>();
 
-    [Header("攻击相关按钮")]
-    public Button attackButton;
-    public Button hpButton;
-    public Button defenseButton;
-    public Button critMonsterButton;
+     IceMainBg=transform.Find("Bg/Panel/IcePanel/Main/bg").GetComponent<Image>();
+     IceMainIcon=transform.Find("Bg/Panel/IcePanel/Main/icon").GetComponent<Image>();
+     IceMainLevelBg=transform.Find("Bg/Panel/IcePanel/Main/Level/bg").GetComponent<Image>();
+     IceMainLevelCount=transform.Find("Bg/Panel/IcePanel/Main/Level/level").GetComponent<TextMeshProUGUI>();
+     IceMainXuanZhong=transform.Find("Bg/Panel/IcePanel/Main/xuanzhong").GetComponent<Image>();
+     
+     
+     IceBei1Bg=transform.Find("Bg/Panel/IcePanel/Bei1/bg").GetComponent<Image>();
+     IceBei1Icon=transform.Find("Bg/Panel/IcePanel/Bei1/icon").GetComponent<Image>();
+     IceBei1LevelBg=transform.Find("Bg/Panel/IcePanel/Bei1/Level/bg").GetComponent<Image>();
+     IceBei1LevelCount=transform.Find("Bg/Panel/IcePanel/Bei1/Level/level").GetComponent<TextMeshProUGUI>();
+     IceBei1XuanZhong=transform.Find("Bg/Panel/IcePanel/Bei1/xuanzhong").GetComponent<Image>();
+     
+     
+     IceBei2Bg=transform.Find("Bg/Panel/IcePanel/Bei2/bg").GetComponent<Image>();
+     IceBei2Icon=transform.Find("Bg/Panel/IcePanel/Bei2/icon").GetComponent<Image>();
+     IceBei2LevelBg=transform.Find("Bg/Panel/IcePanel/Bei2/Level/bg").GetComponent<Image>();
+     IceBei2LevelCount=transform.Find("Bg/Panel/IcePanel/Bei2/Level/level").GetComponent<TextMeshProUGUI>();
+     IceBei2XuanZhong=transform.Find("Bg/Panel/IcePanel/Bei2/xuanzhong").GetComponent<Image>();
+     
+     IceBei3Bg=transform.Find("Bg/Panel/IcePanel/Bei3/bg").GetComponent<Image>();
+     IceBei3Icon=transform.Find("Bg/Panel/IcePanel/Bei3/icon").GetComponent<Image>();
+     IceBei3LevelBg=transform.Find("Bg/Panel/IcePanel/Bei3/Level/bg").GetComponent<Image>();
+     IceBei3LevelCount=transform.Find("Bg/Panel/IcePanel/Bei3/Level/level").GetComponent<TextMeshProUGUI>();
+     IceBei3XuanZhong=transform.Find("Bg/Panel/IcePanel/Bei3/xuanzhong").GetComponent<Image>();
+     
+     IceBei4Bg=transform.Find("Bg/Panel/IcePanel/Bei4/bg").GetComponent<Image>();
+     IceBei4Icon=transform.Find("Bg/Panel/IcePanel/Bei4/icon").GetComponent<Image>();
+     IceBei4LevelBg=transform.Find("Bg/Panel/IcePanel/Bei4/Level/bg").GetComponent<Image>();
+     IceBei4LevelCount=transform.Find("Bg/Panel/IcePanel/Bei4/Level/level").GetComponent<TextMeshProUGUI>();
+     IceBei4XuanZhong=transform.Find("Bg/Panel/IcePanel/Bei4/xuanzhong").GetComponent<Image>();
+     
+     
+     
+     Ice1Bg=transform.Find("Bg/Panel/IcePanel/Ice1/ice/bg").GetComponent<Image>();
+     Ice1Icon=transform.Find("Bg/Panel/IcePanel/Ice1/ice/icon").GetComponent<Image>();
+     Ice1XuanZhong=transform.Find("Bg/Panel/IcePanel/Ice1/ice/xuanzhong").GetComponent<Image>();
+     Ice1LevelBg=transform.Find("Bg/Panel/IcePanel/Ice1/ice/Level/bg").GetComponent<Image>();
+     Ice1LevelCount=transform.Find("Bg/Panel/IcePanel/Ice1/ice/Level/icon").GetComponent<TextMeshProUGUI>();
+     Ice1AutoBg=transform.Find("Bg/Panel/IcePanel/Ice1/ice/Auto/bg").GetComponent<Image>();
+     Ice1AutoCount=transform.Find("Bg/Panel/IcePanel/Ice1/ice/Auto/icon").GetComponent<TextMeshProUGUI>();
+     Ice1KeyBg=transform.Find("Bg/Panel/IcePanel/Ice1/ice/key/bg").GetComponent<Image>();
+     Ice1KeyCount=transform.Find("Bg/Panel/IcePanel/Ice1/ice/key/icon").GetComponent<TextMeshProUGUI>();
+
+     
+     Ice1_1Bg=transform.Find("Bg/Panel/IcePanel/Ice1/ice1/bg").GetComponent<Image>();
+     Ice1_1Icon=transform.Find("Bg/Panel/IcePanel/Ice1/ice1/icon").GetComponent<Image>();
+     Ice1_1LevelBg=transform.Find("Bg/Panel/IcePanel/Ice1/ice1/Level/bg").GetComponent<Image>();
+     Ice1_1LevelCount=transform.Find("Bg/Panel/IcePanel/Ice1/ice1/Level/level").GetComponent<TextMeshProUGUI>();
+     Ice1_1XuanZhong=transform.Find("Bg/Panel/IcePanel/Ice1/ice1/xuanzhong").GetComponent<Image>();
+     
+     Ice1_2Bg=transform.Find("Bg/Panel/IcePanel/Ice1/ice2/bg").GetComponent<Image>();
+     Ice1_2Icon=transform.Find("Bg/Panel/IcePanel/Ice1/ice2/icon").GetComponent<Image>();
+     Ice1_2LevelBg=transform.Find("Bg/Panel/IcePanel/Ice1/ice2/Level/bg").GetComponent<Image>();
+     Ice1_2LevelCount=transform.Find("Bg/Panel/IcePanel/Ice1/ice2/Level/level").GetComponent<TextMeshProUGUI>();
+     Ice1_2XuanZhong=transform.Find("Bg/Panel/IcePanel/Ice1/ice2/xuanzhong").GetComponent<Image>();
+     
+     
+     
+     
+     Ice2Bg=transform.Find("Bg/Panel/IcePanel/Ice2/ice/bg").GetComponent<Image>();
+     Ice2Icon=transform.Find("Bg/Panel/IcePanel/Ice2/ice/icon").GetComponent<Image>();
+     Ice2XuanZhong=transform.Find("Bg/Panel/IcePanel/Ice2/ice/xuanzhong").GetComponent<Image>();
+     Ice2LevelBg=transform.Find("Bg/Panel/IcePanel/Ice2/ice/Level/bg").GetComponent<Image>();
+     Ice2LevelCount=transform.Find("Bg/Panel/IcePanel/Ice2/ice/Level/icon").GetComponent<TextMeshProUGUI>();
+     Ice2AutoBg=transform.Find("Bg/Panel/IcePanel/Ice2/ice/Auto/bg").GetComponent<Image>();
+     Ice2AutoCount=transform.Find("Bg/Panel/IcePanel/Ice2/ice/Auto/icon").GetComponent<TextMeshProUGUI>();
+     Ice2KeyBg=transform.Find("Bg/Panel/IcePanel/Ice2/ice/key/bg").GetComponent<Image>();
+     Ice2KeyCount=transform.Find("Bg/Panel/IcePanel/Ice2/ice/key/icon").GetComponent<TextMeshProUGUI>();
+
+     
+     Ice2_1Bg=transform.Find("Bg/Panel/IcePanel/Ice2/ice1/bg").GetComponent<Image>();
+     Ice2_1Icon=transform.Find("Bg/Panel/IcePanel/Ice2/ice1/icon").GetComponent<Image>();
+     Ice2_1LevelBg=transform.Find("Bg/Panel/IcePanel/Ice2/ice1/Level/bg").GetComponent<Image>();
+     Ice2_1LevelCount=transform.Find("Bg/Panel/IcePanel/Ice2/ice1/Level/level").GetComponent<TextMeshProUGUI>();
+     Ice2_1XuanZhong=transform.Find("Bg/Panel/IcePanel/Ice2/ice1/xuanzhong").GetComponent<Image>();
+     
+     Ice2_2Bg=transform.Find("Bg/Panel/IcePanel/Ice2/ice2/bg").GetComponent<Image>();
+     Ice2_2Icon=transform.Find("Bg/Panel/IcePanel/Ice2/ice2/icon").GetComponent<Image>();
+     Ice2_2LevelBg=transform.Find("Bg/Panel/IcePanel/Ice2/ice2/Level/bg").GetComponent<Image>();
+     Ice2_2LevelCount=transform.Find("Bg/Panel/IcePanel/Ice2/ice2/Level/level").GetComponent<TextMeshProUGUI>();
+     Ice2_2XuanZhong=transform.Find("Bg/Panel/IcePanel/Ice2/ice2/xuanzhong").GetComponent<Image>();
+     
+    }
+    
+    [Header("IcePanel")]
+    public Image IceMainBg;
+    public Image IceMainIcon;
+    public TextMeshProUGUI IceMainLevelCount;
+    public Image IceMainLevelBg;
+    public Image IceMainXuanZhong;
+
+    public Image IceBei1Bg;
+    public Image IceBei1Icon;
+    public TextMeshProUGUI IceBei1LevelCount;
+    public Image IceBei1LevelBg;
+    public Image IceBei1XuanZhong;
+
+    public Image IceBei2Bg;
+    public Image IceBei2Icon;
+    public TextMeshProUGUI IceBei2LevelCount;
+    public Image IceBei2LevelBg;
+    public Image IceBei2XuanZhong;
+    
+    public Image IceBei3Bg;
+    public Image IceBei3Icon;
+    public TextMeshProUGUI IceBei3LevelCount;
+    public Image IceBei3LevelBg;
+    public Image IceBei3XuanZhong;
+    
+    public Image IceBei4Bg;
+    public Image IceBei4Icon;
+    public TextMeshProUGUI IceBei4LevelCount;
+    public Image IceBei4LevelBg;
+    public Image IceBei4XuanZhong;
+    
+    
+    public Image Ice1Bg;
+    public Image Ice1Icon;
+    public TextMeshProUGUI Ice1LevelCount;
+    public Image Ice1LevelBg;
+    public Image Ice1XuanZhong;
+    public TextMeshProUGUI Ice1AutoCount;
+    public Image Ice1AutoBg;
+    public TextMeshProUGUI Ice1KeyCount;
+    public Image Ice1KeyBg;
+    
+    
+    public Image Ice1_1Bg;
+    public Image Ice1_1Icon;
+    public TextMeshProUGUI Ice1_1LevelCount;
+    public Image Ice1_1LevelBg;
+    public Image Ice1_1XuanZhong;
+    
+    public Image Ice1_2Bg;
+    public Image Ice1_2Icon;
+    public TextMeshProUGUI Ice1_2LevelCount;
+    public Image Ice1_2LevelBg;
+    public Image Ice1_2XuanZhong;
+    
+    
+    public Image Ice2Bg;
+    public Image Ice2Icon;
+    public TextMeshProUGUI Ice2LevelCount;
+    public Image Ice2LevelBg;
+    public Image Ice2XuanZhong;
+    public TextMeshProUGUI Ice2AutoCount;
+    public Image Ice2AutoBg;
+    public TextMeshProUGUI Ice2KeyCount;
+    public Image Ice2KeyBg;
+    
+    
+    public Image Ice2_1Bg;
+    public Image Ice2_1Icon;
+    public TextMeshProUGUI Ice2_1LevelCount;
+    public Image Ice2_1LevelBg;
+    public Image Ice2_1XuanZhong;
+    
+    public Image Ice2_2Bg;
+    public Image Ice2_2Icon;
+    public TextMeshProUGUI Ice2_2LevelCount;
+    public Image Ice2_2LevelBg;
+    public Image Ice2_2XuanZhong;
     
     
     
     
-
-    [Header("基础技能等级显示")]
-    public TextMeshProUGUI normalAttackLevel;
-    public TextMeshProUGUI attackSpeedLevel;
-    
-    public TextMeshProUGUI dashLevel;
-    public TextMeshProUGUI dashCdLevel;
-    
-    public TextMeshProUGUI critLevel;
-    public TextMeshProUGUI critDamageLevel;
-    
-    public TextMeshProUGUI moveSpeedLevel;
-    public TextMeshProUGUI moveAddDefenseLevel;
-    public TextMeshProUGUI moveAddAttackLevel;
-
-    [Header("技能系统等级显示")]
-    public TextMeshProUGUI skill1Level;
-    public TextMeshProUGUI skill2Level;
-    public TextMeshProUGUI skill3Level;
-    public TextMeshProUGUI skill1CdLevel;
-    public TextMeshProUGUI skill2CdLevel;
-    public TextMeshProUGUI skill3CdLevel;
-    public TextMeshProUGUI skill1RangeLevel;
-    public TextMeshProUGUI skill1YiDianLevel;
-    public TextMeshProUGUI skill2TimeLevel;
-    public TextMeshProUGUI skill2AddDefenseLevel;
-    public TextMeshProUGUI skill3RangeLevel;
-    public TextMeshProUGUI skill3JianSuLevel;
-
-    [Header("攻击相关等级显示")]
-    public TextMeshProUGUI attackLevel;
-    public TextMeshProUGUI hpLevel;
-    public TextMeshProUGUI defenseLevel;
-    public TextMeshProUGUI critMonsterLevel;
+    public Image Ice3Bg;
+    public Image Ice3Icon;
+    public TextMeshProUGUI Ice3LevelCount;
+    public Image Ice3LevelBg;
+    public Image Ice3XuanZhong;
+    public TextMeshProUGUI Ice3AutoCount;
+    public Image Ice3AutoBg;
+    public TextMeshProUGUI Ice3KeyCount;
+    public Image Ice3KeyBg;
     
     
-
-
-    [Header("图像组件")]
-    public Image attackSpeedImage;
-
-    public Image dashCdImage;
-
-    public Image critDamageImage;
-
-    public Image moveAddDefenseImage;
-    public Image moveAddAttackImage;
+    public Image Ice3_1Bg;
+    public Image Ice3_1Icon;
+    public TextMeshProUGUI Ice3_1LevelCount;
+    public Image Ice3_1LevelBg;
+    public Image Ice3_1XuanZhong;
     
-    public Image skill1CdImage;
-    public Image skill2CdImage;
-    public Image skill3CdImage;
-    public Image skill1RangeImage;
-    public Image skill1YiDianImage;
-    public Image skill2TimeImage;
-    public Image skill2AddDefenseImage;
-    public Image skill3RangeImage;
-    public Image skill3JianSuImage;
-
-
-    [Header("线条对象")]
-    public GameObject skill1RangeLine;
-    public GameObject skill1CdLine;
-    public GameObject skill1YiDianLine1;
-    public GameObject skill1YiDianLine2;
-    public GameObject skill2CdLine;
-    public GameObject skill2TimeLine;
-    public GameObject skill2DefenseLine1;
-    public GameObject skill2DefenseLine2;
-    public GameObject skill3CdLine;
-    public GameObject skill3RangeLine;
-    public GameObject skill3JianSuLine1;
-    public GameObject skill3JianSuLine2;
-    public GameObject attackSpeedLine;
-    public GameObject dashCdLine;
-    public GameObject moveAddAttackLine;
-    public GameObject moveAddDefenseLine;
-    public GameObject critDamageLine;
-
-    [Header("自动技能对象")]
-    public GameObject skill1Auto;
-    public GameObject skill2Auto;
-    public GameObject skill3Auto;
-    public GameObject dashAuto;
-    public GameObject IceSkill1Auto;
-    public GameObject DianSKill2Auto;
-    public GameObject DianSkill3Auto;
-    public GameObject HuoSkill1Auto;
-    public GameObject HuoSkill2Auto;
-    public GameObject HuoSkill3Auto;
-    public GameObject HeiAnSkill1Auto;
-    public GameObject HeiAnSkill2Auto;
-    public GameObject HeiAnSkill3Auto;
-
-
-    [Header("元素技能选择")]
-    public Button jia1;
-    public Button jia2;
-    public Button jia3;
-    public GameObject SkillYuanSuWindow;
-
-    [Header("元素技能UI对象")]
-    public GameObject IceSkill1;
-    public GameObject HuoSkill1;
-    public GameObject HeiAnSkill1;
-    public GameObject DianSkill1;
-    public GameObject IceSkill2;
-    public GameObject HuoSkill2;
-    public GameObject HeiAnSkill2;
-    public GameObject DianSkill2;
-    public GameObject IceSkill3;
-    public GameObject HuoSkill3;
-    public GameObject HeiAnSkill3;
-    public GameObject DianSkill3;
-
-
-    [Header("冰元素技能1组件")]
-    public Button IceSkill1Button;
-    public Button IceSkill1TopButton;
-    public Button IceSkill1BottomButton;
-    public Button IceSkill1RightButton;
-    public TextMeshProUGUI IceSkill1Text;
-    public TextMeshProUGUI IceSkill1TopText;
-    public TextMeshProUGUI IceSkill1BottomText;
-    public TextMeshProUGUI IceSkill1RightText;
-    public GameObject IceSkill1Top1Line;
-    public GameObject IceSkill1Bottom1Line;
-    public GameObject IceSkill1Top2Line;
-    public GameObject IceSkill1Bottom2Line;
-    public Image IceSkill1Image;
-    public Image IceSkill1TopImage;
-    public Image IceSkill1BottomImage;
-    public Image IceSkill1RightImage;
-
-    [Header("雷元素技能2组件")]
-    public Button DianSkill2Button;
-    public Button DianSkill2TopButton;
-    public Button DianSkill2BottomButton;
-    public Button DianSkill2RightButton;
-    public TextMeshProUGUI DianSkill2Text;
-    public TextMeshProUGUI DianSkill2TopText;
-    public TextMeshProUGUI DianSkill2BottomText;
-    public TextMeshProUGUI DianSkill2RightText;
-    public GameObject DianSkill2Top1Line;
-    public GameObject DianSkill2Bottom1Line;
-    public GameObject DianSkill2Top2Line;
-    public GameObject DianSkill2Bottom2Line;
-    public Image DianSkill2Image;
-    public Image DianSkill2TopImage;
-    public Image DianSkill2BottomImage;
-    public Image DianSkill2RightImage;
-    
-
-
-    [Header("雷元素技能3组件")]
-    private Button DianSkill3Button;
-    private Button DianSkill3TopButton;
-    private Button DianSkill3BottomButton;
-    private Button DianSkill3RightButton;
-    private TextMeshProUGUI DianSkill3Text;
-    private TextMeshProUGUI DianSkill3TopText;
-    private TextMeshProUGUI DianSkill3BottomText;
-    private TextMeshProUGUI DianSkill3RightText;
-    private GameObject DianSkill3Top1Line;
-    private GameObject DianSkill3Bottom1Line;
-    private GameObject DianSkill3Top2Line;
-    private GameObject DianSkill3Bottom2Line;
-    private Image DianSkill3Image;
-    private Image DianSkill3TopImage;
-    private Image DianSkill3BottomImage;
-    private Image DianSkill3RightImage;
-
-
-    [Header("火元素技能3组件")]
-    private Button HuoSkill3Button;
-    private Button HuoSkill3TopButton;
-    private Button HuoSkill3BottomButton;
-    private Button HuoSkill3RightButton;
-    private TextMeshProUGUI HuoSkill3Text;
-    private TextMeshProUGUI HuoSkill3TopText;
-    private TextMeshProUGUI HuoSkill3BottomText;
-    private TextMeshProUGUI HuoSkill3RightText;
-    private GameObject HuoSkill3Top1Line;
-    private GameObject HuoSkill3Bottom1Line;
-    private GameObject HuoSkill3Top2Line;
-    private GameObject HuoSkill3Bottom2Line;
-    private Image HuoSkill3Image;
-    private Image HuoSkill3TopImage;
-    private Image HuoSkill3BottomImage;
-    private Image HuoSkill3RightImage;
-
-
-    [Header("火元素技能2组件")]
-    private Button HuoSkill2Button;
-    private Button HuoSkill2TopButton;
-    private Button HuoSkill2BottomButton;
-    private Button HuoSkill2RightButton;
-    private TextMeshProUGUI HuoSkill2Text;
-    private TextMeshProUGUI HuoSkill2TopText;
-    private TextMeshProUGUI HuoSkill2BottomText;
-    private TextMeshProUGUI HuoSkill2RightText;
-    private GameObject HuoSkill2Top1Line;
-    private GameObject HuoSkill2Bottom1Line;
-    private GameObject HuoSkill2Top2Line;
-    private GameObject HuoSkill2Bottom2Line;
-    private Image HuoSkill2Image;
-    private Image HuoSkill2TopImage;
-    private Image HuoSkill2BottomImage;
-    private Image HuoSkill2RightImage;
-    
-
-
-    [Header("火元素技能1组件")]
-    private Button HuoSkill1Button;
-    private Button HuoSkill1TopButton;
-    private Button HuoSkill1BottomButton;
-    private Button HuoSkill1RightButton;
-    private TextMeshProUGUI HuoSkill1Text;
-    private TextMeshProUGUI HuoSkill1TopText;
-    private TextMeshProUGUI HuoSkill1BottomText;
-    private TextMeshProUGUI HuoSkill1RightText;
-    private GameObject HuoSkill1Top1Line;
-    private GameObject HuoSkill1Bottom1Line;
-    private GameObject HuoSkill1Top2Line;
-    private GameObject HuoSkill1Bottom2Line;
-    private Image HuoSkill1Image;
-    private Image HuoSkill1TopImage;
-    private Image HuoSkill1BottomImage;
-    private Image HuoSkill1RightImage;
-    
-
-
-    [Header("黑暗元素技能1组件")]
-    private Button HeiAnSkill1Button;
-    private Button HeiAnSkill1TopButton;
-    private Button HeiAnSkill1BottomButton;
-    private Button HeiAnSkill1RightButton;
-    private TextMeshProUGUI HeiAnSkill1Text;
-    private TextMeshProUGUI HeiAnSkill1TopText;
-    private TextMeshProUGUI HeiAnSkill1BottomText;
-    private TextMeshProUGUI HeiAnSkill1RightText;
-    private GameObject HeiAnSkill1Top1Line;
-    private GameObject HeiAnSkill1Bottom1Line;
-    private GameObject HeiAnSkill1Top2Line;
-    private GameObject HeiAnSkill1Bottom2Line;
-    private Image HeiAnSkill1Image;
-    private Image HeiAnSkill1TopImage;
-    private Image HeiAnSkill1BottomImage;
-    private Image HeiAnSkill1RightImage;
+    public Image Ice3_2Bg;
+    public Image Ice3_2Icon;
+    public TextMeshProUGUI Ice3_2LevelCount;
+    public Image Ice3_2LevelBg;
+    public Image Ice3_2XuanZhong;
     
     
     
     
     
-    private Button HeiAnSkill2Button;
-    private Button HeiAnSkill2TopButton;
-    private Button HeiAnSkill2BottomButton;
-    private Button HeiAnSkill2RightButton;
-    private TextMeshProUGUI HeiAnSkill2Text;
-    private TextMeshProUGUI HeiAnSkill2TopText;
-    private TextMeshProUGUI HeiAnSkill2BottomText;
-    private TextMeshProUGUI HeiAnSkill2RightText;
-    private GameObject HeiAnSkill2Top1Line;
-    private GameObject HeiAnSkill2Bottom1Line;
-    private GameObject HeiAnSkill2Top2Line;
-    private GameObject HeiAnSkill2Bottom2Line;
-    private Image HeiAnSkill2Image;
-    private Image HeiAnSkill2TopImage;
-    private Image HeiAnSkill2BottomImage;
-    private Image HeiAnSkill2RightImage;
+    public Image Ice4Bg;
+    public Image Ice4Icon;
+    public TextMeshProUGUI Ice4LevelCount;
+    public Image Ice4LevelBg;
+    public Image Ice4XuanZhong;
+    public TextMeshProUGUI Ice4AutoCount;
+    public Image Ice4AutoBg;
+    public TextMeshProUGUI Ice4KeyCount;
+    public Image Ice4KeyBg;
+    
+    
+    public Image Ice4_1Bg;
+    public Image Ice4_1Icon;
+    public TextMeshProUGUI Ice4_1LevelCount;
+    public Image Ice4_1LevelBg;
+    public Image Ice4_1XuanZhong;
+    
+    public Image Ice4_2Bg;
+    public Image Ice4_2Icon;
+    public TextMeshProUGUI Ice4_2LevelCount;
+    public Image Ice4_2LevelBg;
+    public Image Ice4_2XuanZhong;
+    
+    
+    
+    public Image Ice5Bg;
+    public Image Ice5Icon;
+    public TextMeshProUGUI Ice5LevelCount;
+    public Image Ice5LevelBg;
+    public Image Ice5XuanZhong;
+    public TextMeshProUGUI Ice5AutoCount;
+    public Image Ice5AutoBg;
+    public TextMeshProUGUI Ice5KeyCount;
+    public Image Ice5KeyBg;
+    
+    
+    public Image Ice5_1Bg;
+    public Image Ice5_1Icon;
+    public TextMeshProUGUI Ice5_1LevelCount;
+    public Image Ice5_1LevelBg;
+    public Image Ice5_1XuanZhong;
+    
+    public Image Ice5_2Bg;
+    public Image Ice5_2Icon;
+    public TextMeshProUGUI Ice5_2LevelCount;
+    public Image Ice5_2LevelBg;
+    public Image Ice5_2XuanZhong;
     
     
     
     
     
-    private Button HeiAnSkill3Button;
-    private Button HeiAnSkill3TopButton;
-    private Button HeiAnSkill3BottomButton;
-    private Button HeiAnSkill3RightButton;
-    private TextMeshProUGUI HeiAnSkill3Text;
-    private TextMeshProUGUI HeiAnSkill3TopText;
-    private TextMeshProUGUI HeiAnSkill3BottomText;
-    private TextMeshProUGUI HeiAnSkill3RightText;
-    private GameObject HeiAnSkill3Top1Line;
-    private GameObject HeiAnSkill3Bottom1Line;
-    private GameObject HeiAnSkill3Top2Line;
-    private GameObject HeiAnSkill3Bottom2Line;
-    private Image HeiAnSkill3Image;
-    private Image HeiAnSkill3TopImage;
-    private Image HeiAnSkill3BottomImage;
-    private Image HeiAnSkill3RightImage;
+     [Header("HuoPanel")]
+    public Image HuoMainBg;
+    public Image HuoMainIcon;
+    public TextMeshProUGUI HuoMainLevelCount;
+    public Image HuoMainLevelBg;
+    public Image HuoMainXuanZhong;
+
+    public Image HuoBei1Bg;
+    public Image HuoBei1Icon;
+    public TextMeshProUGUI HuoBei1LevelCount;
+    public Image HuoBei1LevelBg;
+    public Image HuoBei1XuanZhong;
+
+    public Image HuoBei2Bg;
+    public Image HuoBei2Icon;
+    public TextMeshProUGUI HuoBei2LevelCount;
+    public Image HuoBei2LevelBg;
+    public Image HuoBei2XuanZhong;
+    
+    public Image HuoBei3Bg;
+    public Image HuoBei3Icon;
+    public TextMeshProUGUI HuoBei3LevelCount;
+    public Image HuoBei3LevelBg;
+    public Image HuoBei3XuanZhong;
+    
+    public Image HuoBei4Bg;
+    public Image HuoBei4Icon;
+    public TextMeshProUGUI HuoBei4LevelCount;
+    public Image HuoBei4LevelBg;
+    public Image HuoBei4XuanZhong;
+    
+    
+    public Image Huo1Bg;
+    public Image Huo1Icon;
+    public TextMeshProUGUI Huo1LevelCount;
+    public Image Huo1LevelBg;
+    public Image Huo1XuanZhong;
+    public TextMeshProUGUI Huo1AutoCount;
+    public Image Huo1AutoBg;
+    public TextMeshProUGUI Huo1KeyCount;
+    public Image Huo1KeyBg;
+    
+    
+    public Image Huo1_1Bg;
+    public Image Huo1_1Icon;
+    public TextMeshProUGUI Huo1_1LevelCount;
+    public Image Huo1_1LevelBg;
+    public Image Huo1_1XuanZhong;
+    
+    public Image Huo1_2Bg;
+    public Image Huo1_2Icon;
+    public TextMeshProUGUI Huo1_2LevelCount;
+    public Image Huo1_2LevelBg;
+    public Image Huo1_2XuanZhong;
+    
+    
+    public Image Huo2Bg;
+    public Image Huo2Icon;
+    public TextMeshProUGUI Huo2LevelCount;
+    public Image Huo2LevelBg;
+    public Image Huo2XuanZhong;
+    public TextMeshProUGUI Huo2AutoCount;
+    public Image Huo2AutoBg;
+    public TextMeshProUGUI Huo2KeyCount;
+    public Image Huo2KeyBg;
+    
+    
+    public Image Huo2_1Bg;
+    public Image Huo2_1Icon;
+    public TextMeshProUGUI Huo2_1LevelCount;
+    public Image Huo2_1LevelBg;
+    public Image Huo2_1XuanZhong;
+    
+    public Image Huo2_2Bg;
+    public Image Huo2_2Icon;
+    public TextMeshProUGUI Huo2_2LevelCount;
+    public Image Huo2_2LevelBg;
+    public Image Huo2_2XuanZhong;
+    
+    
+    
+    
+    public Image Huo3Bg;
+    public Image Huo3Icon;
+    public TextMeshProUGUI Huo3LevelCount;
+    public Image Huo3LevelBg;
+    public Image Huo3XuanZhong;
+    public TextMeshProUGUI Huo3AutoCount;
+    public Image Huo3AutoBg;
+    public TextMeshProUGUI Huo3KeyCount;
+    public Image Huo3KeyBg;
+    
+    
+    public Image Huo3_1Bg;
+    public Image Huo3_1Icon;
+    public TextMeshProUGUI Huo3_1LevelCount;
+    public Image Huo3_1LevelBg;
+    public Image Huo3_1XuanZhong;
+    
+    public Image Huo3_2Bg;
+    public Image Huo3_2Icon;
+    public TextMeshProUGUI Huo3_2LevelCount;
+    public Image Huo3_2LevelBg;
+    public Image Huo3_2XuanZhong;
+    
+    
+    
+    
+    
+    public Image Huo4Bg;
+    public Image Huo4Icon;
+    public TextMeshProUGUI Huo4LevelCount;
+    public Image Huo4LevelBg;
+    public Image Huo4XuanZhong;
+    public TextMeshProUGUI Huo4AutoCount;
+    public Image Huo4AutoBg;
+    public TextMeshProUGUI Huo4KeyCount;
+    public Image Huo4KeyBg;
+    
+    
+    public Image Huo4_1Bg;
+    public Image Huo4_1Icon;
+    public TextMeshProUGUI Huo4_1LevelCount;
+    public Image Huo4_1LevelBg;
+    public Image Huo4_1XuanZhong;
+    
+    public Image Huo4_2Bg;
+    public Image Huo4_2Icon;
+    public TextMeshProUGUI Huo4_2LevelCount;
+    public Image Huo4_2LevelBg;
+    public Image Huo4_2XuanZhong;
+    
+    
+    
+    public Image Huo5Bg;
+    public Image Huo5Icon;
+    public TextMeshProUGUI Huo5LevelCount;
+    public Image Huo5LevelBg;
+    public Image Huo5XuanZhong;
+    public TextMeshProUGUI Huo5AutoCount;
+    public Image Huo5AutoBg;
+    public TextMeshProUGUI Huo5KeyCount;
+    public Image Huo5KeyBg;
+    
+    
+    public Image Huo5_1Bg;
+    public Image Huo5_1Icon;
+    public TextMeshProUGUI Huo5_1LevelCount;
+    public Image Huo5_1LevelBg;
+    public Image Huo5_1XuanZhong;
+    
+    public Image Huo5_2Bg;
+    public Image Huo5_2Icon;
+    public TextMeshProUGUI Huo5_2LevelCount;
+    public Image Huo5_2LevelBg;
+    public Image Huo5_2XuanZhong;
+    
+    
+    
+    
+     [Header("DianPanel")]
+    public Image DianMainBg;
+    public Image DianMainIcon;
+    public TextMeshProUGUI DianMainLevelCount;
+    public Image DianMainLevelBg;
+    public Image DianMainXuanZhong;
+
+    public Image DianBei1Bg;
+    public Image DianBei1Icon;
+    public TextMeshProUGUI DianBei1LevelCount;
+    public Image DianBei1LevelBg;
+    public Image DianBei1XuanZhong;
+
+    public Image DianBei2Bg;
+    public Image DianBei2Icon;
+    public TextMeshProUGUI DianBei2LevelCount;
+    public Image DianBei2LevelBg;
+    public Image DianBei2XuanZhong;
+    
+    public Image DianBei3Bg;
+    public Image DianBei3Icon;
+    public TextMeshProUGUI DianBei3LevelCount;
+    public Image DianBei3LevelBg;
+    public Image DianBei3XuanZhong;
+    
+    public Image DianBei4Bg;
+    public Image DianBei4Icon;
+    public TextMeshProUGUI DianBei4LevelCount;
+    public Image DianBei4LevelBg;
+    public Image DianBei4XuanZhong;
+    
+    
+    public Image Dian1Bg;
+    public Image Dian1Icon;
+    public TextMeshProUGUI Dian1LevelCount;
+    public Image Dian1LevelBg;
+    public Image Dian1XuanZhong;
+    public TextMeshProUGUI Dian1AutoCount;
+    public Image Dian1AutoBg;
+    public TextMeshProUGUI Dian1KeyCount;
+    public Image Dian1KeyBg;
+    
+    
+    public Image Dian1_1Bg;
+    public Image Dian1_1Icon;
+    public TextMeshProUGUI Dian1_1LevelCount;
+    public Image Dian1_1LevelBg;
+    public Image Dian1_1XuanZhong;
+    
+    public Image Dian1_2Bg;
+    public Image Dian1_2Icon;
+    public TextMeshProUGUI Dian1_2LevelCount;
+    public Image Dian1_2LevelBg;
+    public Image Dian1_2XuanZhong;
+    
+    
+    public Image Dian2Bg;
+    public Image Dian2Icon;
+    public TextMeshProUGUI Dian2LevelCount;
+    public Image Dian2LevelBg;
+    public Image Dian2XuanZhong;
+    public TextMeshProUGUI Dian2AutoCount;
+    public Image Dian2AutoBg;
+    public TextMeshProUGUI Dian2KeyCount;
+    public Image Dian2KeyBg;
+    
+    
+    public Image Dian2_1Bg;
+    public Image Dian2_1Icon;
+    public TextMeshProUGUI Dian2_1LevelCount;
+    public Image Dian2_1LevelBg;
+    public Image Dian2_1XuanZhong;
+    
+    public Image Dian2_2Bg;
+    public Image Dian2_2Icon;
+    public TextMeshProUGUI Dian2_2LevelCount;
+    public Image Dian2_2LevelBg;
+    public Image Dian2_2XuanZhong;
+    
+    
+    
+    
+    public Image Dian3Bg;
+    public Image Dian3Icon;
+    public TextMeshProUGUI Dian3LevelCount;
+    public Image Dian3LevelBg;
+    public Image Dian3XuanZhong;
+    public TextMeshProUGUI Dian3AutoCount;
+    public Image Dian3AutoBg;
+    public TextMeshProUGUI Dian3KeyCount;
+    public Image Dian3KeyBg;
+    
+    
+    public Image Dian3_1Bg;
+    public Image Dian3_1Icon;
+    public TextMeshProUGUI Dian3_1LevelCount;
+    public Image Dian3_1LevelBg;
+    public Image Dian3_1XuanZhong;
+    
+    public Image Dian3_2Bg;
+    public Image Dian3_2Icon;
+    public TextMeshProUGUI Dian3_2LevelCount;
+    public Image Dian3_2LevelBg;
+    public Image Dian3_2XuanZhong;
+    
+    
+    
+    
+    
+    public Image Dian4Bg;
+    public Image Dian4Icon;
+    public TextMeshProUGUI Dian4LevelCount;
+    public Image Dian4LevelBg;
+    public Image Dian4XuanZhong;
+    public TextMeshProUGUI Dian4AutoCount;
+    public Image Dian4AutoBg;
+    public TextMeshProUGUI Dian4KeyCount;
+    public Image Dian4KeyBg;
+    
+    
+    public Image Dian4_1Bg;
+    public Image Dian4_1Icon;
+    public TextMeshProUGUI Dian4_1LevelCount;
+    public Image Dian4_1LevelBg;
+    public Image Dian4_1XuanZhong;
+    
+    public Image Dian4_2Bg;
+    public Image Dian4_2Icon;
+    public TextMeshProUGUI Dian4_2LevelCount;
+    public Image Dian4_2LevelBg;
+    public Image Dian4_2XuanZhong;
+    
+    
+    
+    public Image Dian5Bg;
+    public Image Dian5Icon;
+    public TextMeshProUGUI Dian5LevelCount;
+    public Image Dian5LevelBg;
+    public Image Dian5XuanZhong;
+    public TextMeshProUGUI Dian5AutoCount;
+    public Image Dian5AutoBg;
+    public TextMeshProUGUI Dian5KeyCount;
+    public Image Dian5KeyBg;
+    
+    
+    public Image Dian5_1Bg;
+    public Image Dian5_1Icon;
+    public TextMeshProUGUI Dian5_1LevelCount;
+    public Image Dian5_1LevelBg;
+    public Image Dian5_1XuanZhong;
+    
+    public Image Dian5_2Bg;
+    public Image Dian5_2Icon;
+    public TextMeshProUGUI Dian5_2LevelCount;
+    public Image Dian5_2LevelBg;
+    public Image Dian5_2XuanZhong;
+    
+    
+    
+     [Header("HeiAnPanel")]
+    public Image HeiAnMainBg;
+    public Image HeiAnMainIcon;
+    public TextMeshProUGUI HeiAnMainLevelCount;
+    public Image HeiAnMainLevelBg;
+    public Image HeiAnMainXuanZhong;
+
+    public Image HeiAnBei1Bg;
+    public Image HeiAnBei1Icon;
+    public TextMeshProUGUI HeiAnBei1LevelCount;
+    public Image HeiAnBei1LevelBg;
+    public Image HeiAnBei1XuanZhong;
+
+    public Image HeiAnBei2Bg;
+    public Image HeiAnBei2Icon;
+    public TextMeshProUGUI HeiAnBei2LevelCount;
+    public Image HeiAnBei2LevelBg;
+    public Image HeiAnBei2XuanZhong;
+    
+    public Image HeiAnBei3Bg;
+    public Image HeiAnBei3Icon;
+    public TextMeshProUGUI HeiAnBei3LevelCount;
+    public Image HeiAnBei3LevelBg;
+    public Image HeiAnBei3XuanZhong;
+    
+    public Image HeiAnBei4Bg;
+    public Image HeiAnBei4Icon;
+    public TextMeshProUGUI HeiAnBei4LevelCount;
+    public Image HeiAnBei4LevelBg;
+    public Image HeiAnBei4XuanZhong;
+    
+    
+    public Image HeiAn1Bg;
+    public Image HeiAn1Icon;
+    public TextMeshProUGUI HeiAn1LevelCount;
+    public Image HeiAn1LevelBg;
+    public Image HeiAn1XuanZhong;
+    public TextMeshProUGUI HeiAn1AutoCount;
+    public Image HeiAn1AutoBg;
+    public TextMeshProUGUI HeiAn1KeyCount;
+    public Image HeiAn1KeyBg;
+    
+    
+    public Image HeiAn1_1Bg;
+    public Image HeiAn1_1Icon;
+    public TextMeshProUGUI HeiAn1_1LevelCount;
+    public Image HeiAn1_1LevelBg;
+    public Image HeiAn1_1XuanZhong;
+    
+    public Image HeiAn1_2Bg;
+    public Image HeiAn1_2Icon;
+    public TextMeshProUGUI HeiAn1_2LevelCount;
+    public Image HeiAn1_2LevelBg;
+    public Image HeiAn1_2XuanZhong;
+    
+    
+    public Image HeiAn2Bg;
+    public Image HeiAn2Icon;
+    public TextMeshProUGUI HeiAn2LevelCount;
+    public Image HeiAn2LevelBg;
+    public Image HeiAn2XuanZhong;
+    public TextMeshProUGUI HeiAn2AutoCount;
+    public Image HeiAn2AutoBg;
+    public TextMeshProUGUI HeiAn2KeyCount;
+    public Image HeiAn2KeyBg;
+    
+    
+    public Image HeiAn2_1Bg;
+    public Image HeiAn2_1Icon;
+    public TextMeshProUGUI HeiAn2_1LevelCount;
+    public Image HeiAn2_1LevelBg;
+    public Image HeiAn2_1XuanZhong;
+    
+    public Image HeiAn2_2Bg;
+    public Image HeiAn2_2Icon;
+    public TextMeshProUGUI HeiAn2_2LevelCount;
+    public Image HeiAn2_2LevelBg;
+    public Image HeiAn2_2XuanZhong;
+    
+    
+    
+    
+    public Image HeiAn3Bg;
+    public Image HeiAn3Icon;
+    public TextMeshProUGUI HeiAn3LevelCount;
+    public Image HeiAn3LevelBg;
+    public Image HeiAn3XuanZhong;
+    public TextMeshProUGUI HeiAn3AutoCount;
+    public Image HeiAn3AutoBg;
+    public TextMeshProUGUI HeiAn3KeyCount;
+    public Image HeiAn3KeyBg;
+    
+    
+    public Image HeiAn3_1Bg;
+    public Image HeiAn3_1Icon;
+    public TextMeshProUGUI HeiAn3_1LevelCount;
+    public Image HeiAn3_1LevelBg;
+    public Image HeiAn3_1XuanZhong;
+    
+    public Image HeiAn3_2Bg;
+    public Image HeiAn3_2Icon;
+    public TextMeshProUGUI HeiAn3_2LevelCount;
+    public Image HeiAn3_2LevelBg;
+    public Image HeiAn3_2XuanZhong;
+    
+    
+    
+    
+    
+    public Image HeiAn4Bg;
+    public Image HeiAn4Icon;
+    public TextMeshProUGUI HeiAn4LevelCount;
+    public Image HeiAn4LevelBg;
+    public Image HeiAn4XuanZhong;
+    public TextMeshProUGUI HeiAn4AutoCount;
+    public Image HeiAn4AutoBg;
+    public TextMeshProUGUI HeiAn4KeyCount;
+    public Image HeiAn4KeyBg;
+    
+    
+    public Image HeiAn4_1Bg;
+    public Image HeiAn4_1Icon;
+    public TextMeshProUGUI HeiAn4_1LevelCount;
+    public Image HeiAn4_1LevelBg;
+    public Image HeiAn4_1XuanZhong;
+    
+    public Image HeiAn4_2Bg;
+    public Image HeiAn4_2Icon;
+    public TextMeshProUGUI HeiAn4_2LevelCount;
+    public Image HeiAn4_2LevelBg;
+    public Image HeiAn4_2XuanZhong;
+    
+    
+    
+    public Image HeiAn5Bg;
+    public Image HeiAn5Icon;
+    public TextMeshProUGUI HeiAn5LevelCount;
+    public Image HeiAn5LevelBg;
+    public Image HeiAn5XuanZhong;
+    public TextMeshProUGUI HeiAn5AutoCount;
+    public Image HeiAn5AutoBg;
+    public TextMeshProUGUI HeiAn5KeyCount;
+    public Image HeiAn5KeyBg;
+    
+    
+    public Image HeiAn5_1Bg;
+    public Image HeiAn5_1Icon;
+    public TextMeshProUGUI HeiAn5_1LevelCount;
+    public Image HeiAn5_1LevelBg;
+    public Image HeiAn5_1XuanZhong;
+    
+    public Image HeiAn5_2Bg;
+    public Image HeiAn5_2Icon;
+    public TextMeshProUGUI HeiAn5_2LevelCount;
+    public Image HeiAn5_2LevelBg;
+    public Image HeiAn5_2XuanZhong;
+    
+    
+    
+    [Header("ZJPanel")]
+    public Image IceZJ1Bg;
+    public Image IceZJ1Icon;
+    public TextMeshProUGUI IceZJ1LevelCount;
+    public Image IceZJ1LevelBg;
+    public Image IceZJ1XuanZhong;
+    
+    
+    public Image IceZJ2Bg;
+    public Image IceZJ2Icon;
+    public TextMeshProUGUI IceZJ2LevelCount;
+    public Image IceZJ2LevelBg;
+    public Image IceZJ2XuanZhong;
+    
+    public Image IceZJ3Bg;
+    public Image IceZJ3Icon;
+    public TextMeshProUGUI IceZJ3LevelCount;
+    public Image IceZJ3LevelBg;
+    public Image IceZJ3XuanZhong;
+    
+    public Image IceZJ4Bg;
+    public Image IceZJ4Icon;
+    public TextMeshProUGUI IceZJ4LevelCount;
+    public Image IceZJ4LevelBg;
+    public Image IceZJ4XuanZhong;
+    
+    public Image IceZJ5Bg;
+    public Image IceZJ5Icon;
+    public TextMeshProUGUI IceZJ5LevelCount;
+    public Image IceZJ5LevelBg;
+    public Image IceZJ5XuanZhong;
+    
+    
+    public Image IceZJ6Bg;
+    public Image IceZJ6Icon;
+    public TextMeshProUGUI IceZJ6LevelCount;
+    public Image IceZJ6LevelBg;
+    public Image IceZJ6XuanZhong;
+    
+    
+    
+    
+    public Image HuoZJ1Bg;
+    public Image HuoZJ1Icon;
+    public TextMeshProUGUI HuoZJ1LevelCount;
+    public Image HuoZJ1LevelBg;
+    public Image HuoZJ1XuanZhong;
+    
+    
+    public Image HuoZJ2Bg;
+    public Image HuoZJ2Icon;
+    public TextMeshProUGUI HuoZJ2LevelCount;
+    public Image HuoZJ2LevelBg;
+    public Image HuoZJ2XuanZhong;
+    
+    public Image HuoZJ3Bg;
+    public Image HuoZJ3Icon;
+    public TextMeshProUGUI HuoZJ3LevelCount;
+    public Image HuoZJ3LevelBg;
+    public Image HuoZJ3XuanZhong;
+    
+    public Image HuoZJ4Bg;
+    public Image HuoZJ4Icon;
+    public TextMeshProUGUI HuoZJ4LevelCount;
+    public Image HuoZJ4LevelBg;
+    public Image HuoZJ4XuanZhong;
+    
+    public Image HuoZJ5Bg;
+    public Image HuoZJ5Icon;
+    public TextMeshProUGUI HuoZJ5LevelCount;
+    public Image HuoZJ5LevelBg;
+    public Image HuoZJ5XuanZhong;
+    
+    
+    public Image HuoZJ6Bg;
+    public Image HuoZJ6Icon;
+    public TextMeshProUGUI HuoZJ6LevelCount;
+    public Image HuoZJ6LevelBg;
+    public Image HuoZJ6XuanZhong;
+    
+    
+    
+    public Image DianZJ1Bg;
+    public Image DianZJ1Icon;
+    public TextMeshProUGUI DianZJ1LevelCount;
+    public Image DianZJ1LevelBg;
+    public Image DianZJ1XuanZhong;
+    
+    
+    public Image DianZJ2Bg;
+    public Image DianZJ2Icon;
+    public TextMeshProUGUI DianZJ2LevelCount;
+    public Image DianZJ2LevelBg;
+    public Image DianZJ2XuanZhong;
+    
+    public Image DianZJ3Bg;
+    public Image DianZJ3Icon;
+    public TextMeshProUGUI DianZJ3LevelCount;
+    public Image DianZJ3LevelBg;
+    public Image DianZJ3XuanZhong;
+    
+    public Image DianZJ4Bg;
+    public Image DianZJ4Icon;
+    public TextMeshProUGUI DianZJ4LevelCount;
+    public Image DianZJ4LevelBg;
+    public Image DianZJ4XuanZhong;
+    
+    public Image DianZJ5Bg;
+    public Image DianZJ5Icon;
+    public TextMeshProUGUI DianZJ5LevelCount;
+    public Image DianZJ5LevelBg;
+    public Image DianZJ5XuanZhong;
+    
+    
+    public Image DianZJ6Bg;
+    public Image DianZJ6Icon;
+    public TextMeshProUGUI DianZJ6LevelCount;
+    public Image DianZJ6LevelBg;
+    public Image DianZJ6XuanZhong;
+    
+    
+    
+    public Image HeiAnZJ1Bg;
+    public Image HeiAnZJ1Icon;
+    public TextMeshProUGUI HeiAnZJ1LevelCount;
+    public Image HeiAnZJ1LevelBg;
+    public Image HeiAnZJ1XuanZhong;
+    
+    
+    public Image HeiAnZJ2Bg;
+    public Image HeiAnZJ2Icon;
+    public TextMeshProUGUI HeiAnZJ2LevelCount;
+    public Image HeiAnZJ2LevelBg;
+    public Image HeiAnZJ2XuanZhong;
+    
+    public Image HeiAnZJ3Bg;
+    public Image HeiAnZJ3Icon;
+    public TextMeshProUGUI HeiAnZJ3LevelCount;
+    public Image HeiAnZJ3LevelBg;
+    public Image HeiAnZJ3XuanZhong;
+    
+    public Image HeiAnZJ4Bg;
+    public Image HeiAnZJ4Icon;
+    public TextMeshProUGUI HeiAnZJ4LevelCount;
+    public Image HeiAnZJ4LevelBg;
+    public Image HeiAnZJ4XuanZhong;
+    
+    public Image HeiAnZJ5Bg;
+    public Image HeiAnZJ5Icon;
+    public TextMeshProUGUI HeiAnZJ5LevelCount;
+    public Image HeiAnZJ5LevelBg;
+    public Image HeiAnZJ5XuanZhong;
+    
+    
+    public Image HeiAnZJ6Bg;
+    public Image HeiAnZJ6Icon;
+    public TextMeshProUGUI HeiAnZJ6LevelCount;
+    public Image HeiAnZJ6LevelBg;
+    public Image HeiAnZJ6XuanZhong;
+    
+    
+    
+    public Image ZhiYeZJ1Bg;
+    public Image ZhiYeZJ1Icon;
+    public TextMeshProUGUI ZhiYeZJ1LevelCount;
+    public Image ZhiYeZJ1LevelBg;
+    public Image ZhiYeZJ1XuanZhong;
+    
+    
+    public Image ZhiYeZJ2Bg;
+    public Image ZhiYeZJ2Icon;
+    public TextMeshProUGUI ZhiYeZJ2LevelCount;
+    public Image ZhiYeZJ2LevelBg;
+    public Image ZhiYeZJ2XuanZhong;
+    
+    public Image ZhiYeZJ3Bg;
+    public Image ZhiYeZJ3Icon;
+    public TextMeshProUGUI ZhiYeZJ3LevelCount;
+    public Image ZhiYeZJ3LevelBg;
+    public Image ZhiYeZJ3XuanZhong;
+    
+    public Image ZhiYeZJ4Bg;
+    public Image ZhiYeZJ4Icon;
+    public TextMeshProUGUI ZhiYeZJ4LevelCount;
+    public Image ZhiYeZJ4LevelBg;
+    public Image ZhiYeZJ4XuanZhong;
+    
+    public Image ZhiYeZJ5Bg;
+    public Image ZhiYeZJ5Icon;
+    public TextMeshProUGUI ZhiYeZJ5LevelCount;
+    public Image ZhiYeZJ5LevelBg;
+    public Image ZhiYeZJ5XuanZhong;
+    
+    
+    public Image ZhiYeZJ6Bg;
+    public Image ZhiYeZJ6Icon;
+    public TextMeshProUGUI ZhiYeZJ6LevelCount;
+    public Image ZhiYeZJ6LevelBg;
+    public Image ZhiYeZJ6XuanZhong;
 
     public Button ResetButton;
 
-    public void Reset()
-    {
-        SkillJiaDian.S.skill1Type = SkillYuanSuType.None;
-        SkillJiaDian.S.skill2Type = SkillYuanSuType.None;
-        SkillJiaDian.S.skill3Type = SkillYuanSuType.None;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.IceSkill1;
-        SkillJiaDian.S.IceSkill1 = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.IceSkill1Cd;
-        SkillJiaDian.S.IceSkill1Cd = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.IceSkill1Range;
-        SkillJiaDian.S.IceSkill1Range = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.IceSkill1YuanSu;
-        SkillJiaDian.S.IceSkill1YuanSu = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HuoSkill1;
-        SkillJiaDian.S.HuoSkill1 = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HuoSkill1Cd;
-        SkillJiaDian.S.HuoSkill1Cd = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HuoSkill1Count;
-        SkillJiaDian.S.HuoSkill1Count = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HuoSkill1YuanSu;
-        SkillJiaDian.S.HuoSkill1YuanSu = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DianSkill1Damage;
-        SkillJiaDian.S.DianSkill1Damage = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DianSkill1Cd;
-        SkillJiaDian.S.DianSkill1Cd = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DianSkill1Range;
-        SkillJiaDian.S.DianSkill1Range = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DianSkill1YuanSu;
-        SkillJiaDian.S.DianSkill1YuanSu = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HeiAnSkill1;
-        SkillJiaDian.S.HeiAnSkill1 = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HeiAnSkill1Cd;
-        SkillJiaDian.S.HeiAnSkill1Cd = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HeiAnSkill1Range;
-        SkillJiaDian.S.HeiAnSkill1Range = 0;
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.HeiAnSkill1YuanSu;
-        SkillJiaDian.S.HeiAnSkill1YuanSu = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.NormalAttack;
-        SkillJiaDian.S.NormalAttack = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.AttackSpeed;
-        SkillJiaDian.S.AttackSpeed = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.DashCd;
-        SkillJiaDian.S.DashCd = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.Dash;
-        SkillJiaDian.S.Dash = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.MoveSpeed;
-        SkillJiaDian.S.MoveSpeed = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.MoveAddAttack;
-        SkillJiaDian.S.MoveAddAttack = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.MoveAddDefense;
-        SkillJiaDian.S.MoveAddDefense = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.Crit;
-        SkillJiaDian.S.Crit = 0;
-        
-        SkillJiaDian.S.CurrentSkillCount+=SkillJiaDian.S.CritDamage;
-        SkillJiaDian.S.CritDamage = 0;
-        
-        SetButtonDisable();
-        SetShowLevel();
-        SetAuto();
-        ResfreshSkillCount();
-        RefreshSkill();
-    }
-    
-    public void RefreshSkill()
-    {
-        IceSkill1.gameObject.SetActive(false);
-        HuoSkill1.gameObject.SetActive(false);
-        HeiAnSkill1.gameObject.SetActive(false);
-        DianSkill1.gameObject.SetActive(false);
-        
-        IceSkill2.gameObject.SetActive(false);
-        HuoSkill2.gameObject.SetActive(false);
-        HeiAnSkill2.gameObject.SetActive(false);
-        DianSkill2.gameObject.SetActive(false);
-        
-        IceSkill3.gameObject.SetActive(false);
-        HuoSkill3.gameObject.SetActive(false);
-        HeiAnSkill3.gameObject.SetActive(false);
-        DianSkill3.gameObject.SetActive(false);
-
-        switch (SkillJiaDian.S.skill1Type)
-        {
-            case SkillYuanSuType.Ice:
-                jia1.gameObject.SetActive(false);
-                IceSkill1.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.Huo:
-                jia1.gameObject.SetActive(false);
-                HuoSkill1.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.HeiAn:
-                jia1.gameObject.SetActive(false);
-
-                HeiAnSkill1.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.Dian:
-                jia1.gameObject.SetActive(false);
-
-                DianSkill1.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.None:
-                jia1.gameObject.SetActive(true);
-                break;
-
-        }
-        
-        switch (SkillJiaDian.S.skill2Type)
-        {
-            case SkillYuanSuType.Ice:
-                jia2.gameObject.SetActive(false);
-
-                IceSkill2.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.Huo:
-                jia2.gameObject.SetActive(false);
-
-                HuoSkill2.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.HeiAn:
-                jia2.gameObject.SetActive(false);
-
-                HeiAnSkill2.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.Dian:
-                jia2.gameObject.SetActive(false);
-
-                DianSkill2.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.None:
-                jia2.gameObject.SetActive(true);
-                break;
-        }
-        
-        switch (SkillJiaDian.S.skill3Type)
-        {
-            case SkillYuanSuType.Ice:
-                jia3.gameObject.SetActive(false);
-
-                IceSkill3.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.Huo:
-                jia3.gameObject.SetActive(false);
-
-                HuoSkill3.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.HeiAn:
-                jia3.gameObject.SetActive(false);
-
-                HeiAnSkill3.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.Dian:
-                jia3.gameObject.SetActive(false);
-
-                DianSkill3.gameObject.SetActive(true);
-                break;
-            case SkillYuanSuType.None:
-                jia3.gameObject.SetActive(true);
-                break;
-        }
-    }
-
-    
-    public void SetAuto()
-    {
-        skill1Auto.gameObject.SetActive(SkillData.S.skill1Auto);
-        skill2Auto.gameObject.SetActive(SkillData.S.skill2Auto);
-        skill3Auto.gameObject.SetActive(SkillData.S.skill3Auto);
-        dashAuto.gameObject.SetActive(SkillData.S.dashAuto);
-        IceSkill1Auto.gameObject.SetActive(SkillData.S.IceSkill1Auto);
-        
-        DianSKill2Auto.gameObject.SetActive(SkillData.S.DianSkill2Auto);
-        DianSkill3Auto.gameObject.SetActive(SkillData.S.DianSkill3Auto);
-
-        HuoSkill1Auto.gameObject.SetActive(SkillData.S.HuoSkill1Auto);
-        HuoSkill2Auto.gameObject.SetActive(SkillData.S.HuoSkill2Auto);
-        HuoSkill3Auto.gameObject.SetActive(SkillData.S.HuoSkill3Auto);
-
-        HeiAnSkill1Auto.gameObject.SetActive(SkillData.S.HeiAnSkill1Auto);
-        HeiAnSkill2Auto.gameObject.SetActive(SkillData.S.HeiAnSkill2Auto);
-        HeiAnSkill3Auto.gameObject.SetActive(SkillData.S.HeiAnSkill3Auto);
-
-    }
-
-    private void TriggerButtonClickAnim(Button btn)
-    {
-        var anim = btn.gameObject.GetComponent<Animator>();
-        anim.Play("SkillClick",0,0);
-    }
-
-    public void SetLine()
-    {
-        skill1RangeLine.SetActive(SkillJiaDian.S.DianSkill1Range >= 1);
-        skill1CdLine.SetActive(SkillJiaDian.S.DianSkill1Cd >= 1);
-        skill1YiDianLine1.SetActive(SkillJiaDian.S.DianSkill1YuanSu >= 1);
-        skill1YiDianLine2.SetActive(SkillJiaDian.S.DianSkill1YuanSu >= 1);
-        skill2CdLine.SetActive(SkillJiaDian.S.IceSkill2Cd >= 1);
-        skill2TimeLine.SetActive(SkillJiaDian.S.IceSkill2Time >= 1);
-        skill2DefenseLine1.SetActive(SkillJiaDian.S.IceSkill2YuanSu >= 1);
-        skill2DefenseLine2.SetActive(SkillJiaDian.S.IceSkill2YuanSu >= 1);
-        skill3RangeLine.SetActive(SkillJiaDian.S.IceSkill3Range >= 1);
-        skill3CdLine.SetActive(SkillJiaDian.S.IceSkill3Cd >= 1);
-        skill3JianSuLine1.SetActive(SkillJiaDian.S.IceSkill3YuanSu >= 1);
-        skill3JianSuLine2.SetActive(SkillJiaDian.S.IceSkill3YuanSu >= 1);
-        attackSpeedLine.SetActive(SkillJiaDian.S.AttackSpeed >= 1);
-        dashCdLine.SetActive(SkillJiaDian.S.DashCd >= 1);
-        moveAddAttackLine.SetActive(SkillJiaDian.S.MoveAddAttack >= 1);
-        moveAddDefenseLine.SetActive(SkillJiaDian.S.MoveAddDefense >= 1);
-        critDamageLine.SetActive(SkillJiaDian.S.CritDamage >= 1);
-        
-        
-        IceSkill1Top1Line.SetActive(SkillJiaDian.S.IceSkill1Range>=1);
-        IceSkill1Bottom1Line.SetActive(SkillJiaDian.S.IceSkill1Cd>=1);
-        IceSkill1Top2Line.SetActive(SkillJiaDian.S.IceSkill1YuanSu>=1);
-        IceSkill1Bottom2Line.SetActive(SkillJiaDian.S.IceSkill1YuanSu>=1);
-        
-        
-        DianSkill2Top1Line.SetActive(SkillJiaDian.S.DianSkill2Duration>=1);
-        DianSkill2Bottom1Line.SetActive(SkillJiaDian.S.DianSkill2Cd>=1);
-        DianSkill2Top2Line.SetActive(SkillJiaDian.S.DianSkill2YuanSu>=1);
-        DianSkill2Bottom2Line.SetActive(SkillJiaDian.S.DianSkill2YuanSu>=1);
-        
-        
-        DianSkill3Top1Line.SetActive(SkillJiaDian.S.DianSkill3Count>=1);
-        DianSkill3Bottom1Line.SetActive(SkillJiaDian.S.DianSkill3Cd>=1);
-        DianSkill3Top2Line.SetActive(SkillJiaDian.S.DianSkill3YuanSu>=1);
-        DianSkill3Bottom2Line.SetActive(SkillJiaDian.S.DianSkill3YuanSu>=1);
-        
-        
-        HuoSkill1Top1Line.SetActive(SkillJiaDian.S.HuoSkill1Count>=1);
-        HuoSkill1Bottom1Line.SetActive(SkillJiaDian.S.HuoSkill1Cd>=1);
-        HuoSkill1Top2Line.SetActive(SkillJiaDian.S.HuoSkill1YuanSu>=1);
-        HuoSkill1Bottom2Line.SetActive(SkillJiaDian.S.HuoSkill1YuanSu>=1);
-        
-        
-        HuoSkill2Top1Line.SetActive(SkillJiaDian.S.HuoSkill2Time>=1);
-        HuoSkill2Bottom1Line.SetActive(SkillJiaDian.S.HuoSkill2Cd>=1);
-        HuoSkill2Top2Line.SetActive(SkillJiaDian.S.HuoSkill2YuanSu>=1);
-        HuoSkill2Bottom2Line.SetActive(SkillJiaDian.S.HuoSkill2YuanSu>=1);
-        
-        HuoSkill3Top1Line.SetActive(SkillJiaDian.S.HuoSkill3Count>=1);
-        HuoSkill3Bottom1Line.SetActive(SkillJiaDian.S.HuoSkill3Cd>=1);
-        HuoSkill3Top2Line.SetActive(SkillJiaDian.S.HuoSkill3YuanSu>=1);
-        HuoSkill3Bottom2Line.SetActive(SkillJiaDian.S.HuoSkill3YuanSu>=1);
-        
-        
-        HeiAnSkill1Top1Line.SetActive(SkillJiaDian.S.HeiAnSkill1Range>=1);
-        HeiAnSkill1Bottom1Line.SetActive(SkillJiaDian.S.HeiAnSkill1Cd>=1);
-        HeiAnSkill1Top2Line.SetActive(SkillJiaDian.S.HeiAnSkill1YuanSu>=1);
-        HeiAnSkill1Bottom2Line.SetActive(SkillJiaDian.S.HeiAnSkill1YuanSu>=1);
-        
-        
-        HeiAnSkill2Top1Line.SetActive(SkillJiaDian.S.HeiAnSkill2Time>=1);
-        HeiAnSkill2Bottom1Line.SetActive(SkillJiaDian.S.HeiAnSkill2Cd>=1);
-        HeiAnSkill2Top2Line.SetActive(SkillJiaDian.S.HeiAnSkill2YuanSu>=1);
-        HeiAnSkill2Bottom2Line.SetActive(SkillJiaDian.S.HeiAnSkill2YuanSu>=1);
-        
-        HeiAnSkill3Top1Line.SetActive(SkillJiaDian.S.HeiAnSkill3Range>=1);
-        HeiAnSkill3Bottom1Line.SetActive(SkillJiaDian.S.HeiAnSkill3Cd>=1);
-        HeiAnSkill3Top2Line.SetActive(SkillJiaDian.S.HeiAnSkill3YuanSu>=1);
-        HeiAnSkill3Bottom2Line.SetActive(SkillJiaDian.S.HeiAnSkill3YuanSu>=1);
-
-    }
-
-    public void ResfreshSkillCount()
-    {
-        skillCount.text = SkillJiaDian.S.CurrentSkillCount.ToString();
-        monsterCount.text=PlayerData.S.zhuanjinCount.ToString();
-    }
-
-
-   public void SetShowLevel()
-{
-    // Normal Attack
-    normalAttackLevel.gameObject.SetActive(SkillJiaDian.S.NormalAttack > 0);
-    normalAttackLevel.text = "["+SkillJiaDian.S.NormalAttack+"]";
-    
-    // Attack Speed
-    attackSpeedLevel.gameObject.SetActive(SkillJiaDian.S.AttackSpeed > 0);
-    attackSpeedLevel.text = "["+SkillJiaDian.S.AttackSpeed+"]";
-    
-    // Dash
-    dashLevel.gameObject.SetActive(SkillJiaDian.S.Dash > 0);
-    dashLevel.text = "["+SkillJiaDian.S.Dash+"]";
-    
-    // Dash CD
-    dashCdLevel.gameObject.SetActive(SkillJiaDian.S.DashCd > 0);
-    dashCdLevel.text = "["+SkillJiaDian.S.DashCd+"]";
-    
-    // Crit
-    critLevel.gameObject.SetActive(SkillJiaDian.S.Crit > 0);
-    critLevel.text = "["+SkillJiaDian.S.Crit+"]";
-    
-    // Crit Damage
-    critDamageLevel.gameObject.SetActive(SkillJiaDian.S.CritDamage > 0);
-    critDamageLevel.text = "["+SkillJiaDian.S.CritDamage+"]";
-    
-    // Move Speed
-    moveSpeedLevel.gameObject.SetActive(SkillJiaDian.S.MoveSpeed > 0);
-    moveSpeedLevel.text = "["+SkillJiaDian.S.MoveSpeed+"]";
-    
-    // Move Add Defense
-    moveAddDefenseLevel.gameObject.SetActive(SkillJiaDian.S.MoveAddDefense > 0);
-    moveAddDefenseLevel.text = "["+SkillJiaDian.S.MoveAddDefense+"]";
-    
-    // Move Add Attack
-    moveAddAttackLevel.gameObject.SetActive(SkillJiaDian.S.MoveAddAttack > 0);
-    moveAddAttackLevel.text = "["+SkillJiaDian.S.MoveAddAttack+"]";
-    
-    // Skill1 Level (Damage)
-    skill1Level.gameObject.SetActive(SkillJiaDian.S.DianSkill1Damage > 0);
-    skill1Level.text = "["+SkillJiaDian.S.DianSkill1Damage+"]";
-    
-    // Skill2 Level (Damage)
-    skill2Level.gameObject.SetActive(SkillJiaDian.S.IceSkill2Damage > 0);
-    skill2Level.text = "["+SkillJiaDian.S.IceSkill2Damage+"]";
-    
-    // Skill3 Level (Damage)
-    skill3Level.gameObject.SetActive(SkillJiaDian.S.IceSkill3Damage > 0);
-    skill3Level.text = "["+SkillJiaDian.S.IceSkill3Damage+"]";
-    
-    // Skill1 CD
-    skill1CdLevel.gameObject.SetActive(SkillJiaDian.S.DianSkill1Cd > 0);
-    skill1CdLevel.text = "["+SkillJiaDian.S.DianSkill1Cd+"]";
-    
-    // Skill2 CD
-    skill2CdLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill2Cd > 0);
-    skill2CdLevel.text = "["+SkillJiaDian.S.IceSkill2Cd+"]";
-    
-    // Skill3 CD
-    skill3CdLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill3Cd > 0);
-    skill3CdLevel.text = "["+SkillJiaDian.S.IceSkill3Cd+"]";
-    
-    // Skill1 Range
-    skill1RangeLevel.gameObject.SetActive(SkillJiaDian.S.DianSkill1Range > 0);
-    skill1RangeLevel.text = "["+SkillJiaDian.S.DianSkill1Range+"]";
-    
-    // Skill1 YiDian
-    skill1YiDianLevel.gameObject.SetActive(SkillJiaDian.S.DianSkill1YuanSu > 0);
-    skill1YiDianLevel.text = "["+SkillJiaDian.S.DianSkill1YuanSu+"]";
-    
-    // Skill2 Time
-    skill2TimeLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill2Time > 0);
-    skill2TimeLevel.text = "["+SkillJiaDian.S.IceSkill2Time+"]";
-    
-    // Skill2 Add Defense
-    skill2AddDefenseLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill2YuanSu > 0);
-    skill2AddDefenseLevel.text = "["+SkillJiaDian.S.IceSkill2YuanSu+"]";
-    
-    // Skill3 Range
-    skill3RangeLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill3Range > 0);
-    skill3RangeLevel.text = "["+SkillJiaDian.S.IceSkill3Range+"]";
-    
-    // Skill3 JianSu
-    skill3JianSuLevel.gameObject.SetActive(SkillJiaDian.S.IceSkill3YuanSu > 0);
-    skill3JianSuLevel.text = "["+SkillJiaDian.S.IceSkill3YuanSu+"]";
-    
-    
-    attackLevel.gameObject.SetActive(SkillJiaDian.S.MonsterAttack > 0);
-    attackLevel.text = "["+SkillJiaDian.S.MonsterAttack+"]";
-    
-    critMonsterLevel.gameObject.SetActive(SkillJiaDian.S.MonsterCrit > 0);
-    critMonsterLevel.text = "["+SkillJiaDian.S.MonsterCrit+"]";
-    
-    hpLevel.gameObject.SetActive(SkillJiaDian.S.MonsterHp > 0);
-    hpLevel.text = "["+SkillJiaDian.S.MonsterHp+"]";
-    
-    defenseLevel.gameObject.SetActive(SkillJiaDian.S.MonsterDefense > 0);
-    defenseLevel.text = "["+SkillJiaDian.S.MonsterDefense+"]";
-    
-    IceSkill1Text.gameObject.SetActive(SkillJiaDian.S.IceSkill1>0);
-    IceSkill1Text.text = "["+SkillJiaDian.S.IceSkill1+"]";
-    IceSkill1TopText.gameObject.SetActive(SkillJiaDian.S.IceSkill1Range>0);
-    IceSkill1TopText.text = "["+SkillJiaDian.S.IceSkill1Range+"]";
-    IceSkill1BottomText.gameObject.SetActive(SkillJiaDian.S.IceSkill1Cd>0);
-    IceSkill1BottomText.text = "["+SkillJiaDian.S.IceSkill1Cd+"]";
-    IceSkill1RightText.gameObject.SetActive(SkillJiaDian.S.IceSkill1YuanSu>0);
-    IceSkill1RightText.text = "["+SkillJiaDian.S.IceSkill1YuanSu+"]";
-    
-    
-    
-    DianSkill2Text.gameObject.SetActive(SkillJiaDian.S.DianSkill2>0);
-    DianSkill2Text.text = "["+SkillJiaDian.S.DianSkill2+"]";
-    DianSkill2TopText.gameObject.SetActive(SkillJiaDian.S.DianSkill2Duration>0);
-    DianSkill2TopText.text = "["+SkillJiaDian.S.DianSkill2Duration+"]";
-    DianSkill2BottomText.gameObject.SetActive(SkillJiaDian.S.DianSkill2Cd>0);
-    DianSkill2BottomText.text = "["+SkillJiaDian.S.DianSkill2Cd+"]";
-    DianSkill2RightText.gameObject.SetActive(SkillJiaDian.S.DianSkill2YuanSu>0);
-    DianSkill2RightText.text = "["+SkillJiaDian.S.DianSkill2YuanSu+"]";
-    
-    
-    DianSkill3Text.gameObject.SetActive(SkillJiaDian.S.DianSkill3>0);
-    DianSkill3Text.text = "["+SkillJiaDian.S.DianSkill3+"]";
-    DianSkill3TopText.gameObject.SetActive(SkillJiaDian.S.DianSkill3Count>0);
-    DianSkill3TopText.text = "["+SkillJiaDian.S.DianSkill3Count+"]";
-    DianSkill3BottomText.gameObject.SetActive(SkillJiaDian.S.DianSkill3Cd>0);
-    DianSkill3BottomText.text = "["+SkillJiaDian.S.DianSkill3Cd+"]";
-    DianSkill3RightText.gameObject.SetActive(SkillJiaDian.S.DianSkill3YuanSu>0);
-    DianSkill3RightText.text = "["+SkillJiaDian.S.DianSkill3YuanSu+"]";
-    
-    
-    
-    HuoSkill1Text.gameObject.SetActive(SkillJiaDian.S.HuoSkill1>0);
-    HuoSkill1Text.text = "["+SkillJiaDian.S.HuoSkill1+"]";
-    HuoSkill1TopText.gameObject.SetActive(SkillJiaDian.S.HuoSkill1Count>0);
-    HuoSkill1TopText.text = "["+SkillJiaDian.S.HuoSkill1Count+"]";
-    HuoSkill1BottomText.gameObject.SetActive(SkillJiaDian.S.HuoSkill1Cd>0);
-    HuoSkill1BottomText.text = "["+SkillJiaDian.S.HuoSkill1Cd+"]";
-    HuoSkill1RightText.gameObject.SetActive(SkillJiaDian.S.HuoSkill1YuanSu>0);
-    HuoSkill1RightText.text = "["+SkillJiaDian.S.HuoSkill1YuanSu+"]";
-    
-    
-    
-    HuoSkill2Text.gameObject.SetActive(SkillJiaDian.S.HuoSkill2>0);
-    HuoSkill2Text.text = "["+SkillJiaDian.S.HuoSkill2+"]";
-    HuoSkill2TopText.gameObject.SetActive(SkillJiaDian.S.HuoSkill2Time>0);
-    HuoSkill2TopText.text = "["+SkillJiaDian.S.HuoSkill2Time+"]";
-    HuoSkill2BottomText.gameObject.SetActive(SkillJiaDian.S.HuoSkill2Cd>0);
-    HuoSkill2BottomText.text = "["+SkillJiaDian.S.HuoSkill2Cd+"]";
-    HuoSkill2RightText.gameObject.SetActive(SkillJiaDian.S.HuoSkill2YuanSu>0);
-    HuoSkill2RightText.text = "["+SkillJiaDian.S.HuoSkill2YuanSu+"]";
-    
-    
-    HuoSkill3Text.gameObject.SetActive(SkillJiaDian.S.HuoSkill3>0);
-    HuoSkill3Text.text = "["+SkillJiaDian.S.HuoSkill3+"]";
-    HuoSkill3TopText.gameObject.SetActive(SkillJiaDian.S.HuoSkill3Count>0);
-    HuoSkill3TopText.text = "["+SkillJiaDian.S.HuoSkill3Count+"]";
-    HuoSkill3BottomText.gameObject.SetActive(SkillJiaDian.S.HuoSkill3Cd>0);
-    HuoSkill3BottomText.text = "["+SkillJiaDian.S.HuoSkill3Cd+"]";
-    HuoSkill3RightText.gameObject.SetActive(SkillJiaDian.S.HuoSkill3YuanSu>0);
-    HuoSkill3RightText.text = "["+SkillJiaDian.S.HuoSkill3YuanSu+"]";
-    
-    
-    
-    HeiAnSkill1Text.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill1>0);
-    HeiAnSkill1Text.text = "["+SkillJiaDian.S.HeiAnSkill1+"]";
-    HeiAnSkill1TopText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill1Range>0);
-    HeiAnSkill1TopText.text = "["+SkillJiaDian.S.HeiAnSkill1Range+"]";
-    HeiAnSkill1BottomText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill1Cd>0);
-    HeiAnSkill1BottomText.text = "["+SkillJiaDian.S.HeiAnSkill1Cd+"]";
-    HeiAnSkill1RightText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill1YuanSu>0);
-    HeiAnSkill1RightText.text = "["+SkillJiaDian.S.HeiAnSkill1YuanSu+"]";
-    
-    
-    HeiAnSkill2Text.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill2Damage>0);
-    HeiAnSkill2Text.text = "["+SkillJiaDian.S.HeiAnSkill2Damage+"]";
-    HeiAnSkill2TopText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill2Time>0);
-    HeiAnSkill2TopText.text = "["+SkillJiaDian.S.HeiAnSkill2Time+"]";
-    HeiAnSkill2BottomText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill2Cd>0);
-    HeiAnSkill2BottomText.text = "["+SkillJiaDian.S.HeiAnSkill2Cd+"]";
-    HeiAnSkill2RightText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill2YuanSu>0);
-    HeiAnSkill2RightText.text = "["+SkillJiaDian.S.HeiAnSkill2YuanSu+"]";
-    
-    
-    
-    HeiAnSkill3Text.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill3Damage>0);
-    HeiAnSkill3Text.text = "["+SkillJiaDian.S.HeiAnSkill3Damage+"]";
-    HeiAnSkill3TopText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill3Range>0);
-    HeiAnSkill3TopText.text = "["+SkillJiaDian.S.HeiAnSkill3Range+"]";
-    HeiAnSkill3BottomText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill3Cd>0);
-    HeiAnSkill3BottomText.text = "["+SkillJiaDian.S.HeiAnSkill3Cd+"]";
-    HeiAnSkill3RightText.gameObject.SetActive(SkillJiaDian.S.HeiAnSkill3YuanSu>0);
-    HeiAnSkill3RightText.text = "["+SkillJiaDian.S.HeiAnSkill3YuanSu+"]";
-}
-
-
-    public void SetButtonDisable()
-    {
-        SetImage();
-        SetLine();
-        attackSpeedButton.interactable = SkillJiaDian.S.NormalAttack>0;
-        dashCdButton.interactable = SkillJiaDian.S.Dash>0;
-        moveAddAttackButton.interactable=SkillJiaDian.S.MoveSpeed>0;
-        moveAddDefenseButton.interactable=SkillJiaDian.S.MoveSpeed>0;
-        
-        
-        critDamageButton.interactable=SkillJiaDian.S.Crit>0;
-        skill1RangeButton.interactable=SkillJiaDian.S.DianSkill1Damage>0;
-        skill1CdButton.interactable=SkillJiaDian.S.DianSkill1Damage>0;
-        skill1YiDianButton.interactable=SkillJiaDian.S.DianSkill1Range>0&&SkillJiaDian.S.DianSkill1Cd>0;
-        
-        skill2TimeButton.interactable=SkillJiaDian.S.IceSkill2Damage>0;
-        skill2CdButton.interactable=SkillJiaDian.S.IceSkill2Damage>0;
-        skill2AddDefenseButton.interactable=SkillJiaDian.S.IceSkill2Time>0&&SkillJiaDian.S.IceSkill2Cd>0;
-        
-        skill3RangeButton.interactable=SkillJiaDian.S.IceSkill3Damage>0;
-        skill3CdButton.interactable=SkillJiaDian.S.IceSkill3Damage>0;
-        skill3JianSuButton.interactable=SkillJiaDian.S.IceSkill3Range>0&&SkillJiaDian.S.IceSkill3Cd>0;
-
-        IceSkill1TopButton.interactable = SkillJiaDian.S.IceSkill1 > 0;
-        IceSkill1BottomButton.interactable = SkillJiaDian.S.IceSkill1 > 0;
-        IceSkill1RightButton.interactable = SkillJiaDian.S.IceSkill1Cd > 0&&SkillJiaDian.S.IceSkill1Range > 0;
-
-        
-        DianSkill2TopButton.interactable = SkillJiaDian.S.DianSkill2 > 0;
-        DianSkill2BottomButton.interactable = SkillJiaDian.S.DianSkill2 > 0;
-        DianSkill2RightButton.interactable = SkillJiaDian.S.DianSkill2Cd > 0&&SkillJiaDian.S.DianSkill2Duration > 0;
-        
-        
-        DianSkill3TopButton.interactable = SkillJiaDian.S.DianSkill3 > 0;
-        DianSkill3BottomButton.interactable = SkillJiaDian.S.DianSkill3 > 0;
-        DianSkill3RightButton.interactable = SkillJiaDian.S.DianSkill3Cd > 0&&SkillJiaDian.S.DianSkill3Count > 0;
-        
-        
-        HuoSkill1TopButton.interactable = SkillJiaDian.S.HuoSkill1 > 0;
-        HuoSkill1BottomButton.interactable = SkillJiaDian.S.HuoSkill1 > 0;
-        HuoSkill1RightButton.interactable = SkillJiaDian.S.HuoSkill1Cd > 0&&SkillJiaDian.S.HuoSkill1Count > 0;
-        
-        
-        HuoSkill2TopButton.interactable = SkillJiaDian.S.HuoSkill2 > 0;
-        HuoSkill2BottomButton.interactable = SkillJiaDian.S.HuoSkill2 > 0;
-        HuoSkill2RightButton.interactable = SkillJiaDian.S.HuoSkill2Cd > 0&&SkillJiaDian.S.HuoSkill2Time > 0;
-        
-        
-        HuoSkill3TopButton.interactable = SkillJiaDian.S.HuoSkill3 > 0;
-        HuoSkill3BottomButton.interactable = SkillJiaDian.S.HuoSkill3 > 0;
-        HuoSkill3RightButton.interactable = SkillJiaDian.S.HuoSkill3Cd > 0&&SkillJiaDian.S.HuoSkill3Count > 0;
-        
-        
-        HeiAnSkill1TopButton.interactable = SkillJiaDian.S.HeiAnSkill1 > 0;
-        HeiAnSkill1BottomButton.interactable = SkillJiaDian.S.HeiAnSkill1 > 0;
-        HeiAnSkill1RightButton.interactable = SkillJiaDian.S.HeiAnSkill1Cd > 0&&SkillJiaDian.S.HeiAnSkill1Range > 0;
-        
-        
-        HeiAnSkill2TopButton.interactable = SkillJiaDian.S.HeiAnSkill2Damage > 0;
-        HeiAnSkill2BottomButton.interactable = SkillJiaDian.S.HeiAnSkill2Damage > 0;
-        HeiAnSkill2RightButton.interactable = SkillJiaDian.S.HeiAnSkill2Cd > 0&&SkillJiaDian.S.HeiAnSkill2Time > 0;
-        
-        
-        HeiAnSkill3TopButton.interactable = SkillJiaDian.S.HeiAnSkill3Damage > 0;
-        HeiAnSkill3BottomButton.interactable = SkillJiaDian.S.HeiAnSkill3Damage > 0;
-        HeiAnSkill3RightButton.interactable = SkillJiaDian.S.HeiAnSkill3Cd > 0&&SkillJiaDian.S.HeiAnSkill3Range > 0;
-    }
-
-    public void SetImage()
-    {
-        if (SkillJiaDian.S.DianSkill1Damage < 1)
-        {
-             skill1RangeImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill1RangeImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        if (SkillJiaDian.S.DianSkill1Damage < 1)
-        {
-            skill1CdImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill1CdImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        if (SkillJiaDian.S.DianSkill1Range < 1||SkillJiaDian.S.DianSkill1Cd<1)
-        {
-            skill1YiDianImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill1YiDianImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        if (SkillJiaDian.S.IceSkill2Damage < 1)
-        {
-            skill2TimeImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill2TimeImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        if (SkillJiaDian.S.IceSkill2Damage < 1)
-        {
-            skill2CdImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill2CdImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        if (SkillJiaDian.S.IceSkill2Time < 1||SkillJiaDian.S.IceSkill2Cd<1)
-        {
-            skill2AddDefenseImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill2AddDefenseImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        if (SkillJiaDian.S.IceSkill3Damage < 1)
-        {
-            skill3RangeImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill3RangeImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        if (SkillJiaDian.S.IceSkill3Damage < 1)
-        {
-            skill3CdImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill3CdImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        if (SkillJiaDian.S.IceSkill3Range < 1||SkillJiaDian.S.IceSkill3Cd<1)
-        {
-            skill3JianSuImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            skill3JianSuImage.color=new Color32(255, 255, 255, 255);
-        }
-
-
-        if (SkillJiaDian.S.NormalAttack < 1)
-        {
-            attackSpeedImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            attackSpeedImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        if(SkillJiaDian.S.MoveSpeed<1)
-        {
-            moveAddAttackImage.color=new Color32(76,76, 76, 255);
-            moveAddDefenseImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            moveAddAttackImage.color=new Color32(255, 255, 255, 255);
-            moveAddDefenseImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.Crit < 1)
-        {
-            critDamageImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            critDamageImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        if (SkillJiaDian.S.Dash < 1)
-        {
-            dashCdImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            dashCdImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.IceSkill1 < 1)
-        {
-            IceSkill1TopImage.color=new Color32(76,76, 76, 255);
-            IceSkill1BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            IceSkill1TopImage.color=new Color32(255, 255, 255, 255);
-            IceSkill1BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.IceSkill1Cd < 1 || SkillJiaDian.S.IceSkill1Range < 1)
-        {
-            IceSkill1RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            IceSkill1RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        
-        
-        if (SkillJiaDian.S.DianSkill2 < 1)
-        {
-            DianSkill2TopImage.color=new Color32(76,76, 76, 255);
-            DianSkill2BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            DianSkill2TopImage.color=new Color32(255, 255, 255, 255);
-            DianSkill2BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.DianSkill2Cd < 1 || SkillJiaDian.S.DianSkill2Duration < 1)
-        {
-            DianSkill2RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            DianSkill2RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        
-        if (SkillJiaDian.S.DianSkill3 < 1)
-        {
-            DianSkill3TopImage.color=new Color32(76,76, 76, 255);
-            DianSkill3BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            DianSkill3TopImage.color=new Color32(255, 255, 255, 255);
-            DianSkill3BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.DianSkill3Cd < 1 || SkillJiaDian.S.DianSkill3Count < 1)
-        {
-            DianSkill3RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            DianSkill3RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        
-        
-        
-        if (SkillJiaDian.S.HuoSkill1 < 1)
-        {
-            HuoSkill1TopImage.color=new Color32(76,76, 76, 255);
-            HuoSkill1BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HuoSkill1TopImage.color=new Color32(255, 255, 255, 255);
-            HuoSkill1BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.HuoSkill1Cd < 1 || SkillJiaDian.S.HuoSkill1Count < 1)
-        {
-            HuoSkill1RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HuoSkill1RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        
-        
-        if (SkillJiaDian.S.HuoSkill2 < 1)
-        {
-            HuoSkill2TopImage.color=new Color32(76,76, 76, 255);
-            HuoSkill2BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HuoSkill2TopImage.color=new Color32(255, 255, 255, 255);
-            HuoSkill2BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.HuoSkill2Cd < 1 || SkillJiaDian.S.HuoSkill2Time < 1)
-        {
-            HuoSkill2RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HuoSkill2RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        
-        
-        if (SkillJiaDian.S.HuoSkill3 < 1)
-        {
-            HuoSkill3TopImage.color=new Color32(76,76, 76, 255);
-            HuoSkill3BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HuoSkill3TopImage.color=new Color32(255, 255, 255, 255);
-            HuoSkill3BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.HuoSkill3Cd < 1 || SkillJiaDian.S.HuoSkill3Count < 1)
-        {
-            HuoSkill3RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HuoSkill3RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        
-        if (SkillJiaDian.S.HeiAnSkill1 < 1)
-        {
-            HeiAnSkill1TopImage.color=new Color32(76,76, 76, 255);
-            HeiAnSkill1BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HeiAnSkill1TopImage.color=new Color32(255, 255, 255, 255);
-            HeiAnSkill1BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.HeiAnSkill1Cd < 1 || SkillJiaDian.S.HeiAnSkill1Range < 1)
-        {
-            HeiAnSkill1RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HeiAnSkill1RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        
-        
-        if (SkillJiaDian.S.HeiAnSkill2Damage < 1)
-        {
-            HeiAnSkill2TopImage.color=new Color32(76,76, 76, 255);
-            HeiAnSkill2BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HeiAnSkill2TopImage.color=new Color32(255, 255, 255, 255);
-            HeiAnSkill2BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.HeiAnSkill2Cd < 1 || SkillJiaDian.S.HeiAnSkill2Time < 1)
-        {
-            HeiAnSkill2RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HeiAnSkill2RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-        
-        
-        
-        if (SkillJiaDian.S.HeiAnSkill3Damage < 1)
-        {
-            HeiAnSkill3TopImage.color=new Color32(76,76, 76, 255);
-            HeiAnSkill3BottomImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HeiAnSkill3TopImage.color=new Color32(255, 255, 255, 255);
-            HeiAnSkill3BottomImage.color=new Color32(255, 255, 255, 255);
-        }
-
-        if (SkillJiaDian.S.HeiAnSkill3Cd < 1 || SkillJiaDian.S.HeiAnSkill3Range < 1)
-        {
-            HeiAnSkill3RightImage.color=new Color32(76,76, 76, 255);
-        }
-        else
-        {
-            HeiAnSkill3RightImage.color=new Color32(255, 255, 255, 255);
-        }
-        
-        
-    }
-
-    private void OnEnable()
-    {
-        SetButtonDisable();
-        SetShowLevel();
-        SetAuto();
-        ResfreshSkillCount();
-        RefreshSkill();
-    }
-
-    private void Awake()
-    {
-  DianSkill3Button=transform.Find("Bg/DianSkill3/Skill3").GetComponent<Button>();
-    DianSkill3TopButton=transform.Find("Bg/DianSkill3/Range").GetComponent<Button>();
-    DianSkill3BottomButton=transform.Find("Bg/DianSkill3/CD").GetComponent<Button>();
-    DianSkill3RightButton=transform.Find("Bg/DianSkill3/YuanSu").GetComponent<Button>();
-    DianSkill3Text=transform.Find("Bg/DianSkill3/Skill3/Count").GetComponent<TextMeshProUGUI>();
-    DianSkill3TopText=transform.Find("Bg/DianSkill3/Range/Count").GetComponent<TextMeshProUGUI>();
-    DianSkill3BottomText=transform.Find("Bg/DianSkill3/CD/Count").GetComponent<TextMeshProUGUI>();
-    DianSkill3RightText=transform.Find("Bg/DianSkill3/YuanSu/Count").GetComponent<TextMeshProUGUI>();
-    DianSkill3Top1Line=transform.Find("Bg/DianSkill3/HuangLine (1)").gameObject;
-    DianSkill3Bottom1Line=transform.Find("Bg/DianSkill3/HuangLine").gameObject;
-    DianSkill3Top2Line=transform.Find("Bg/DianSkill3/LanLineTop").gameObject;
-    DianSkill3Bottom2Line=transform.Find("Bg/DianSkill3/LanLineDown").gameObject;
-    DianSkill3Image=transform.Find("Bg/DianSkill3/Skill3/image").GetComponent<Image>();
-    DianSkill3TopImage=transform.Find("Bg/DianSkill3/Range/image").GetComponent<Image>();
-    DianSkill3BottomImage=transform.Find("Bg/DianSkill3/CD/image").GetComponent<Image>();
-    DianSkill3RightImage=transform.Find("Bg/DianSkill3/YuanSu/image").GetComponent<Image>();
-
-    
-    
-    HuoSkill1Button=transform.Find("Bg/HuoSkill1/Skill1").GetComponent<Button>();
-    HuoSkill1TopButton=transform.Find("Bg/HuoSkill1/Range").GetComponent<Button>();
-    HuoSkill1BottomButton=transform.Find("Bg/HuoSkill1/CD").GetComponent<Button>();
-    HuoSkill1RightButton=transform.Find("Bg/HuoSkill1/YuanSu").GetComponent<Button>();
-    HuoSkill1Text=transform.Find("Bg/HuoSkill1/Skill1/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill1TopText=transform.Find("Bg/HuoSkill1/Range/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill1BottomText=transform.Find("Bg/HuoSkill1/CD/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill1RightText=transform.Find("Bg/HuoSkill1/YuanSu/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill1Top1Line=transform.Find("Bg/HuoSkill1/HuangLine (1)").gameObject;
-    HuoSkill1Bottom1Line=transform.Find("Bg/HuoSkill1/HuangLine").gameObject;
-    HuoSkill1Top2Line=transform.Find("Bg/HuoSkill1/LanLineTop").gameObject;
-    HuoSkill1Bottom2Line=transform.Find("Bg/HuoSkill1/LanLineDown").gameObject;
-    HuoSkill1Image=transform.Find("Bg/HuoSkill1/Skill1/image").GetComponent<Image>();
-    HuoSkill1TopImage=transform.Find("Bg/HuoSkill1/Range/image").GetComponent<Image>();
-    HuoSkill1BottomImage=transform.Find("Bg/HuoSkill1/CD/image").GetComponent<Image>();
-    HuoSkill1RightImage=transform.Find("Bg/HuoSkill1/YuanSu/image").GetComponent<Image>();
-
-        
-        
-    HuoSkill2Button=transform.Find("Bg/HuoSkill2/Skill2").GetComponent<Button>();
-    HuoSkill2TopButton=transform.Find("Bg/HuoSkill2/Range").GetComponent<Button>();
-    HuoSkill2BottomButton=transform.Find("Bg/HuoSkill2/CD").GetComponent<Button>();
-    HuoSkill2RightButton=transform.Find("Bg/HuoSkill2/YuanSu").GetComponent<Button>();
-    HuoSkill2Text=transform.Find("Bg/HuoSkill2/Skill2/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill2TopText=transform.Find("Bg/HuoSkill2/Range/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill2BottomText=transform.Find("Bg/HuoSkill2/CD/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill2RightText=transform.Find("Bg/HuoSkill2/YuanSu/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill2Top1Line=transform.Find("Bg/HuoSkill2/HuangLine (1)").gameObject;
-    HuoSkill2Bottom1Line=transform.Find("Bg/HuoSkill2/HuangLine").gameObject;
-    HuoSkill2Top2Line=transform.Find("Bg/HuoSkill2/LanLineTop").gameObject;
-    HuoSkill2Bottom2Line=transform.Find("Bg/HuoSkill2/LanLineDown").gameObject;
-    HuoSkill2Image=transform.Find("Bg/HuoSkill2/Skill2/image").GetComponent<Image>();
-    HuoSkill2TopImage=transform.Find("Bg/HuoSkill2/Range/image").GetComponent<Image>();
-    HuoSkill2BottomImage=transform.Find("Bg/HuoSkill2/CD/image").GetComponent<Image>();
-    HuoSkill2RightImage=transform.Find("Bg/HuoSkill2/YuanSu/image").GetComponent<Image>();
-
-    
-    
-    HuoSkill3Button=transform.Find("Bg/HuoSkill3/Skill3").GetComponent<Button>();
-    HuoSkill3TopButton=transform.Find("Bg/HuoSkill3/Range").GetComponent<Button>();
-    HuoSkill3BottomButton=transform.Find("Bg/HuoSkill3/CD").GetComponent<Button>();
-    HuoSkill3RightButton=transform.Find("Bg/HuoSkill3/YuanSu").GetComponent<Button>();
-    HuoSkill3Text=transform.Find("Bg/HuoSkill3/Skill3/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill3TopText=transform.Find("Bg/HuoSkill3/Range/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill3BottomText=transform.Find("Bg/HuoSkill3/CD/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill3RightText=transform.Find("Bg/HuoSkill3/YuanSu/Count").GetComponent<TextMeshProUGUI>();
-    HuoSkill3Top1Line=transform.Find("Bg/HuoSkill3/HuangLine (1)").gameObject;
-    HuoSkill3Bottom1Line=transform.Find("Bg/HuoSkill3/HuangLine").gameObject;
-    HuoSkill3Top2Line=transform.Find("Bg/HuoSkill3/LanLineTop").gameObject;
-    HuoSkill3Bottom2Line=transform.Find("Bg/HuoSkill3/LanLineDown").gameObject;
-    HuoSkill3Image=transform.Find("Bg/HuoSkill3/Skill3/image").GetComponent<Image>();
-    HuoSkill3TopImage=transform.Find("Bg/HuoSkill3/Range/image").GetComponent<Image>();
-    HuoSkill3BottomImage=transform.Find("Bg/HuoSkill3/CD/image").GetComponent<Image>();
-    HuoSkill3RightImage=transform.Find("Bg/HuoSkill3/YuanSu/image").GetComponent<Image>();
-
-    
-    
-    
-    HeiAnSkill1Button=transform.Find("Bg/HeiAnSkill1/Skill1").GetComponent<Button>();
-    HeiAnSkill1TopButton=transform.Find("Bg/HeiAnSkill1/Range").GetComponent<Button>();
-    HeiAnSkill1BottomButton=transform.Find("Bg/HeiAnSkill1/CD").GetComponent<Button>();
-    HeiAnSkill1RightButton=transform.Find("Bg/HeiAnSkill1/YuanSu").GetComponent<Button>();
-    HeiAnSkill1Text=transform.Find("Bg/HeiAnSkill1/Skill1/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill1TopText=transform.Find("Bg/HeiAnSkill1/Range/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill1BottomText=transform.Find("Bg/HeiAnSkill1/CD/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill1RightText=transform.Find("Bg/HeiAnSkill1/YuanSu/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill1Top1Line=transform.Find("Bg/HeiAnSkill1/HuangLine (1)").gameObject;
-    HeiAnSkill1Bottom1Line=transform.Find("Bg/HeiAnSkill1/HuangLine").gameObject;
-    HeiAnSkill1Top2Line=transform.Find("Bg/HeiAnSkill1/LanLineTop").gameObject;
-    HeiAnSkill1Bottom2Line=transform.Find("Bg/HeiAnSkill1/LanLineDown").gameObject;
-    HeiAnSkill1Image=transform.Find("Bg/HeiAnSkill1/Skill1/image").GetComponent<Image>();
-    HeiAnSkill1TopImage=transform.Find("Bg/HeiAnSkill1/Range/image").GetComponent<Image>();
-    HeiAnSkill1BottomImage=transform.Find("Bg/HeiAnSkill1/CD/image").GetComponent<Image>();
-    HeiAnSkill1RightImage=transform.Find("Bg/HeiAnSkill1/YuanSu/image").GetComponent<Image>();
-
-    
-    
-    
-    HeiAnSkill2Button=transform.Find("Bg/HeiAnSkill2/Skill2").GetComponent<Button>();
-    HeiAnSkill2TopButton=transform.Find("Bg/HeiAnSkill2/Range").GetComponent<Button>();
-    HeiAnSkill2BottomButton=transform.Find("Bg/HeiAnSkill2/CD").GetComponent<Button>();
-    HeiAnSkill2RightButton=transform.Find("Bg/HeiAnSkill2/YuanSu").GetComponent<Button>();
-    HeiAnSkill2Text=transform.Find("Bg/HeiAnSkill2/Skill2/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill2TopText=transform.Find("Bg/HeiAnSkill2/Range/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill2BottomText=transform.Find("Bg/HeiAnSkill2/CD/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill2RightText=transform.Find("Bg/HeiAnSkill2/YuanSu/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill2Top1Line=transform.Find("Bg/HeiAnSkill2/HuangLine (1)").gameObject;
-    HeiAnSkill2Bottom1Line=transform.Find("Bg/HeiAnSkill2/HuangLine").gameObject;
-    HeiAnSkill2Top2Line=transform.Find("Bg/HeiAnSkill2/LanLineTop").gameObject;
-    HeiAnSkill2Bottom2Line=transform.Find("Bg/HeiAnSkill2/LanLineDown").gameObject;
-    HeiAnSkill2Image=transform.Find("Bg/HeiAnSkill2/Skill2/image").GetComponent<Image>();
-    HeiAnSkill2TopImage=transform.Find("Bg/HeiAnSkill2/Range/image").GetComponent<Image>();
-    HeiAnSkill2BottomImage=transform.Find("Bg/HeiAnSkill2/CD/image").GetComponent<Image>();
-    HeiAnSkill2RightImage=transform.Find("Bg/HeiAnSkill2/YuanSu/image").GetComponent<Image>();
-
-    
-    
-    
-    HeiAnSkill3Button=transform.Find("Bg/HeiAnSkill3/Skill3").GetComponent<Button>();
-    HeiAnSkill3TopButton=transform.Find("Bg/HeiAnSkill3/Range").GetComponent<Button>();
-    HeiAnSkill3BottomButton=transform.Find("Bg/HeiAnSkill3/CD").GetComponent<Button>();
-    HeiAnSkill3RightButton=transform.Find("Bg/HeiAnSkill3/YuanSu").GetComponent<Button>();
-    HeiAnSkill3Text=transform.Find("Bg/HeiAnSkill3/Skill3/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill3TopText=transform.Find("Bg/HeiAnSkill3/Range/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill3BottomText=transform.Find("Bg/HeiAnSkill3/CD/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill3RightText=transform.Find("Bg/HeiAnSkill3/YuanSu/Count").GetComponent<TextMeshProUGUI>();
-    HeiAnSkill3Top1Line=transform.Find("Bg/HeiAnSkill3/HuangLine (1)").gameObject;
-    HeiAnSkill3Bottom1Line=transform.Find("Bg/HeiAnSkill3/HuangLine").gameObject;
-    HeiAnSkill3Top2Line=transform.Find("Bg/HeiAnSkill3/LanLineTop").gameObject;
-    HeiAnSkill3Bottom2Line=transform.Find("Bg/HeiAnSkill3/LanLineDown").gameObject;
-    HeiAnSkill3Image=transform.Find("Bg/HeiAnSkill3/Skill3/image").GetComponent<Image>();
-    HeiAnSkill3TopImage=transform.Find("Bg/HeiAnSkill3/Range/image").GetComponent<Image>();
-    HeiAnSkill3BottomImage=transform.Find("Bg/HeiAnSkill3/CD/image").GetComponent<Image>();
-    HeiAnSkill3RightImage=transform.Find("Bg/HeiAnSkill3/YuanSu/image").GetComponent<Image>();
-    }
-
-    private void Start()
-    {
-        ResetButton.onClick.AddListener(() =>
-        {
-            Reset();
-        });
-        
-        
-        IceSkill1Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.IceSkill1 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.IceSkill1])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(IceSkill1Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill1++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        IceSkill1TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.IceSkill1Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.IceSkill1Range])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(IceSkill1TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill1Range++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        IceSkill1BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.IceSkill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.IceSkill1CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(IceSkill1BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill1Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        IceSkill1RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.IceSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.IceSkill1YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(IceSkill1RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill1YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        DianSkill2Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.DianSkill2 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill2])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(DianSkill2Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill2++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        DianSkill2BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.DianSkill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill2CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(DianSkill2BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill2Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        DianSkill2TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.DianSkill2Duration >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill2Time])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(DianSkill2TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill2Duration++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        DianSkill2RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.DianSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill2YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(DianSkill2RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill2YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        DianSkill3Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.DianSkill3 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill3])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(DianSkill3Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill3++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        DianSkill3TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.DianSkill3Count >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill3Count])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(DianSkill3TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill3Count++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        DianSkill3BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.DianSkill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill3CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(DianSkill3BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill3Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        DianSkill3RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.DianSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DianSkill3YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(DianSkill3RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill3YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill1Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill1 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill1])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill1Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill1++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill1Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill1 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill1])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill1Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill1++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill1BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill1CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill1BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill1Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill1TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill1Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill1Range])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill1TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill1Range++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill1RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill1YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill1RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill1YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill1BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill1CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill1BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill1Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill1TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill1Count >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill1Count])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill1TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill1Count++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill1RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill1YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill1RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill1YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        
-        HuoSkill2Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill2 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill2])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill2Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill2++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill2BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill2CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill2BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill2Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill2TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill2Time >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill2Time])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill2TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill2Time++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        
-        HuoSkill2RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill2YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill2RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill2YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        
-        HuoSkill3RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill3YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill3RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill3YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill3Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill3 >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill3])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill3Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill3++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill3BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill3CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill3BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill3Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HuoSkill3TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HuoSkill3Count >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HuoSkill3Count])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HuoSkill3TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HuoSkill3Count++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          HeiAnSkill2RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill2YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill2RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill2YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill2Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill2Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill2])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill2Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill2Damage++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill2BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill2CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill2BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill2Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill2TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill2Time >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill2Time])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill2TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill2Time++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-         HeiAnSkill3RightButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill3YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill3RightButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill3YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill3Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill3Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill3])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill3Button);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill3Damage++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill3BottomButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill3CD])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill3BottomButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill3Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        HeiAnSkill3TopButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.HeiAnSkill3Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.HeiAnSkill3Range])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(HeiAnSkill3TopButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.HeiAnSkill3Range++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        
-        
-        jia1.onClick.AddListener(() =>
-        {
-            SkillYuanSuWindow.gameObject.SetActive(true);
-            SkillYuanSuWindow skillYuanSuWindow = SkillYuanSuWindow.GetComponent<SkillYuanSuWindow>();
-            skillYuanSuWindow.skillType = 1;
-            skillYuanSuWindow.Refresh();
-        });
-        jia3.onClick.AddListener(() =>
-        {
-            SkillYuanSuWindow.gameObject.SetActive(true);
-            SkillYuanSuWindow skillYuanSuWindow = SkillYuanSuWindow.GetComponent<SkillYuanSuWindow>();
-            skillYuanSuWindow.skillType = 3;
-            skillYuanSuWindow.Refresh();
-        });
-        jia2.onClick.AddListener(() =>
-        {
-            SkillYuanSuWindow.gameObject.SetActive(true);
-            SkillYuanSuWindow skillYuanSuWindow = SkillYuanSuWindow.GetComponent<SkillYuanSuWindow>();
-            skillYuanSuWindow.skillType = 2;
-            skillYuanSuWindow.Refresh();
-        });
-        
-        
-        exitButton.onClick.AddListener(() =>
-        {
-            gameObject.SetActive(false);
-            Debug.Log("任务界面退出");
-            WindowController.S.RoleWindow.SetActive(true);
-        });
-        maskButton.onClick.AddListener(() =>
-        {
-            skillSwitchObj.SetActive(false);
-        });
-        
-        
-        normalAttackButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-
-            if (SkillJiaDian.S.NormalAttack >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.NormalAttack])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            
-            TriggerButtonClickAnim(normalAttackButton);
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.NormalAttack++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        attackSpeedButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.AttackSpeed >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.AttackSpeed])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(attackSpeedButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.AttackSpeed++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        dashButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.Dash >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Dash])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(dashButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Dash++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        dashCdButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.DashCd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.DashCd])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(dashCdButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DashCd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        critButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.Crit >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Crit])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(critButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.Crit++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        critDamageButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.CritDamage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.CritDamage])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(critDamageButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.CritDamage++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        moveSpeedButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.MoveSpeed >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.MoveSpeed])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(moveSpeedButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.MoveSpeed++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        moveAddDefenseButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.MoveAddDefense >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.MoveAddDefense])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(moveAddDefenseButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.MoveAddDefense++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        moveAddAttackButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.MoveAddAttack >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.MoveAddAttack])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(moveAddAttackButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.MoveAddAttack++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill1Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.DianSkill1Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill1Button);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill1Damage++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill2Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.IceSkill2Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill2Button);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill2Damage++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill3Button.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.IceSkill3Damage >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill3Button);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill3Damage++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill1CdButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.DianSkill1Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1Cd])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill1CdButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill1Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill2CdButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.IceSkill2Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2Cd])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill2CdButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill2Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill3CdButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.IceSkill3Cd >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3Cd])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill3CdButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill3Cd++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill1RangeButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.DianSkill1Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1Range])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill1RangeButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill1Range++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill1YiDianButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.DianSkill1YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill1YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill1YiDianButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.DianSkill1YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill2TimeButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.IceSkill2Time >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2Time])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill2TimeButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill2Time++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill2AddDefenseButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.IceSkill2YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill2YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill2AddDefenseButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill2YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill3RangeButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.IceSkill3Range >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3Range])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill3RangeButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill3Range++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        skill3JianSuButton.onClick.AddListener(() =>
-        {
-            if (SkillJiaDian.S.CurrentSkillCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前技能点数不足");
-                return;
-            }
-            if (SkillJiaDian.S.IceSkill3YuanSu >= SkillConfig.MaxSkillLevel[SkillConfig.SkillButtonType.Skill3YuanSu])
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"已达最大等级");
-                return;
-            }
-            TriggerButtonClickAnim(skill3JianSuButton);
-
-            SkillJiaDian.S.CurrentSkillCount--;
-            SkillJiaDian.S.IceSkill3YuanSu++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-            SetButtonDisable();
-        });
-        
-        attackButton.onClick.AddListener(() =>
-        {
-            if (PlayerData.S.zhuanjinCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前专精点数不足");
-                return;
-            }
-          
-            TriggerButtonClickAnim(attackButton);
-
-            PlayerData.S.zhuanjinCount--;
-            SkillJiaDian.S.MonsterAttack++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-        });
-        
-        hpButton.onClick.AddListener(() =>
-        {
-            if (PlayerData.S.zhuanjinCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前专精点数不足");
-                return;
-            }
-          
-            TriggerButtonClickAnim(attackButton);
-
-            PlayerData.S.zhuanjinCount--;
-            SkillJiaDian.S.MonsterHp++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-        });
-        
-        defenseButton.onClick.AddListener(() =>
-        {
-            if (PlayerData.S.zhuanjinCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前专精点数不足");
-                return;
-            }
-          
-            TriggerButtonClickAnim(attackButton);
-
-            PlayerData.S.zhuanjinCount--;
-            SkillJiaDian.S.MonsterDefense++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-        });
-        
-        critMonsterButton.onClick.AddListener(() =>
-        {
-            if (PlayerData.S.zhuanjinCount <= 0)
-            {
-                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"当前专精点数不足");
-                return;
-            }
-          
-            TriggerButtonClickAnim(attackButton);
-
-            PlayerData.S.zhuanjinCount--;
-            SkillJiaDian.S.MonsterCrit++;
-            StoreController.S.SaveStoreData();
-            ResfreshSkillCount();
-            SetShowLevel();
-        });
-    }
+ 
 }

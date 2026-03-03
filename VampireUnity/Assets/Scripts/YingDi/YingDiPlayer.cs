@@ -15,7 +15,7 @@ public class YingDiPlayer : MonoBehaviour
 
    private void Start()
    {
-      playerSkeleton.AnimationState.SetAnimation(0, "idea",true);
+      playerSkeleton.AnimationState.SetAnimation(0, "idle",true);
    }
 
    public void SetWuQiRotation()
@@ -47,9 +47,9 @@ public class YingDiPlayer : MonoBehaviour
       float vertical = Input.GetAxisRaw("Vertical");
       if (horizontal == 0&&vertical==0)
       {
-         if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idea")
+         if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idle")
          {
-             playerSkeleton.AnimationState.SetAnimation(0, "idea",true);
+             playerSkeleton.AnimationState.SetAnimation(0, "idle",true);
          }
       }
       else

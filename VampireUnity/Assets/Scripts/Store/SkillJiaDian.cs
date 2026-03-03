@@ -10,92 +10,131 @@ public enum SkillYuanSuType
 public class SkillJiaDian : XSingleton<SkillJiaDian>
 {
     public int CurrentSkillCount = 0;
-    
-    public int NormalAttack=0;
-    public int AttackSpeed=0;
-    
-    public int Crit=0;
-    public int CritDamage=0;
-    
-    public int MoveSpeed=0;
-    public int MoveAddAttack=0;
-    public int MoveAddDefense=0;
-    
-    public int Dash=0;
-    public int DashCd=0;
-    
-    public int DianSkill1Damage=0;
-    public int DianSkill1Cd=0;
-    public int DianSkill1Range=0;
-    public int DianSkill1YuanSu=0;
-    
-    public int DianSkill2=0;
-    public int DianSkill2Cd=0;
-    public int DianSkill2Duration=0;
-    public int DianSkill2YuanSu=0;
-    
-    public int DianSkill3=0;
-    public int DianSkill3Cd=0;
-    public int DianSkill3Count=0;
-    public int DianSkill3YuanSu=0;
-    
-    public int IceSkill1=0;
-    public int IceSkill1Cd=0;
-    public int IceSkill1Range=0;
-    public int IceSkill1YuanSu=0;
-    
-    public int IceSkill2Damage=0;
-    public int IceSkill2Cd=0;
-    public int IceSkill2Time=0;
-    public int IceSkill2YuanSu=0;
-    
-    public int IceSkill3Damage=0;
-    public int IceSkill3Cd=0;
-    public int IceSkill3Range=0;
-    public int IceSkill3YuanSu=0;
-    
-    
-    public int HuoSkill1=0;
-    public int HuoSkill1Cd=0;
-    public int HuoSkill1Count=0;
-    public int HuoSkill1YuanSu=0;
-    
-    public int HuoSkill2=0;
-    public int HuoSkill2Cd=0;
-    public int HuoSkill2Time=0;
-    public int HuoSkill2YuanSu=0;
-    
-    public int HuoSkill3=0;
-    public int HuoSkill3Cd=0;
-    public int HuoSkill3Count=0;
-    public int HuoSkill3YuanSu=0;
-    
-    
-    public int HeiAnSkill1=0;
-    public int HeiAnSkill1Cd=0;
-    public int HeiAnSkill1Range=0;
-    public int HeiAnSkill1YuanSu=0;
-    
-    public int HeiAnSkill2Damage=0;
-    public int HeiAnSkill2Cd=0;
-    public int HeiAnSkill2Time=0;
-    public int HeiAnSkill2YuanSu=0;
-    
-    public int HeiAnSkill3Damage=0;
-    public int HeiAnSkill3Cd=0;
-    public int HeiAnSkill3Range=0;
-    public int HeiAnSkill3YuanSu=0;
-    
-    
 
-    public int MonsterAttack;
-    public int MonsterCrit;
-    public int MonsterHp;
-    public int MonsterDefense;
+    public int IceBei1;
+    public int IceBei2;
+    public int IceBei3;
+    public int IceBei4;
+    
+    public int Ice1;
+    public int Ice1_1;
+    public int Ice1_2;
+    public int Ice2;
+    public int Ice2_1;
+    public int Ice2_2;
+    public int Ice3;
+    public int Ice3_1;
+    public int Ice3_2;
+    public int Ice4;
+    public int Ice4_1;
+    public int Ice4_2;
+    public int Ice5;
+    public int Ice5_1;
+    public int Ice5_2;
 
+    
+    public int HuoBei1;
+    public int HuoBei2;
+    public int HuoBei3;
+    public int HuoBei4;
+    
+    public int Huo1;
+    public int Huo1_1;
+    public int Huo1_2;
+    public int Huo2;
+    public int Huo2_1;
+    public int Huo2_2;
+    public int Huo3;
+    public int Huo3_1;
+    public int Huo3_2;
+    public int Huo4;
+    public int Huo4_1;
+    public int Huo4_2;
+    public int Huo5;
+    public int Huo5_1;
+    public int Huo5_2;
+    
+    
+    
+    public int HeiAnBei1;
+    public int HeiAnBei2;
+    public int HeiAnBei3;
+    public int HeiAnBei4;
+    
+    public int HeiAn1;
+    public int HeiAn1_1;
+    public int HeiAn1_2;
+    public int HeiAn2;
+    public int HeiAn2_1;
+    public int HeiAn2_2;
+    public int HeiAn3;
+    public int HeiAn3_1;
+    public int HeiAn3_2;
+    public int HeiAn4;
+    public int HeiAn4_1;
+    public int HeiAn4_2;
+    public int HeiAn5;
+    public int HeiAn5_1;
+    public int HeiAn5_2;
+    
+    
+    public int DianBei1;
+    public int DianBei2;
+    public int DianBei3;
+    public int DianBei4;
+    
+    public int Dian1;
+    public int Dian1_1;
+    public int Dian1_2;
+    public int Dian2;
+    public int Dian2_1;
+    public int Dian2_2;
+    public int Dian3;
+    public int Dian3_1;
+    public int Dian3_2;
+    public int Dian4;
+    public int Dian4_1;
+    public int Dian4_2;
+    public int Dian5;
+    public int Dian5_1;
+    public int Dian5_2;
+
+
+
+    public int IceZJ1;
+    public int IceZJ2;
+    public int IceZJ3;
+    public int IceZJ4;
+    public int IceZJ5;
+    public int IceZJ6;
+    
+    public int HuoZJ1;
+    public int HuoZJ2;
+    public int HuoZJ3;
+    public int HuoZJ4;
+    public int HuoZJ5;
+    public int HuoZJ6;
+    
+    public int DianZJ1;
+    public int DianZJ2;
+    public int DianZJ3;
+    public int DianZJ4;
+    public int DianZJ5;
+    public int DianZJ6;
+    
+    public int HeiAnZJ1;
+    public int HeiAnZJ2;
+    public int HeiAnZJ3;
+    public int HeiAnZJ4;
+    public int HeiAnZJ5;
+    public int HeiAnZJ6;
+
+    
     public SkillYuanSuType skill1Type=SkillYuanSuType.None;
     public SkillYuanSuType skill2Type=SkillYuanSuType.None;
     public SkillYuanSuType skill3Type=SkillYuanSuType.None;
+    public SkillYuanSuType skill4Type=SkillYuanSuType.None;
+    public SkillYuanSuType skill5Type=SkillYuanSuType.None;
 
 
     protected override void Awake()

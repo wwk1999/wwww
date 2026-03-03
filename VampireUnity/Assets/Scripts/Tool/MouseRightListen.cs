@@ -23,10 +23,6 @@ public class MouseRightListen : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
-            if (!CheckSkillLevel())
-            {
-                return;
-            }
            Vector2 localPoint;
            var cam = canvasRect.GetComponentInParent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main;
            
@@ -42,41 +38,7 @@ public class MouseRightListen : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public bool CheckSkillLevel()
-    {
-        switch (buttonType)
-        {
-            case SkillType.Skill1:
-                return SkillJiaDian.S.DianSkill1Damage >= 1;
-            case SkillType.Skill2:
-                return SkillJiaDian.S.IceSkill2Damage >= 1;
-            case SkillType.Skill3:
-                return SkillJiaDian.S.IceSkill3Damage >= 1;
-            case SkillType.Dash:
-                return SkillJiaDian.S.Dash >= 1;
-            case SkillType.IceSkill1:
-                return SkillJiaDian.S.IceSkill1 >= 1;
-            
-            case SkillType.DianSkill2:
-                return SkillJiaDian.S.DianSkill2 >= 1;
-            
-            case SkillType.DianSkill3:
-                return SkillJiaDian.S.DianSkill3 >= 1;
-            case SkillType.HuoSkill1:
-                return SkillJiaDian.S.HuoSkill1 >= 1;
-            case SkillType.HuoSkill2:
-                return SkillJiaDian.S.HuoSkill2 >= 1;
-            case SkillType.HuoSkill3:
-                return SkillJiaDian.S.HuoSkill3 >= 1;
-            case SkillType.HeiAnSkill1:
-                return SkillJiaDian.S.HeiAnSkill1 >= 1;
-            case SkillType.HeiAnSkill2:
-                return SkillJiaDian.S.HeiAnSkill2Damage >= 1;
-            case SkillType.HeiAnSkill3:
-                return SkillJiaDian.S.HeiAnSkill3Damage >= 1;
-        }
-        return false;
-    }
+   
 
     public KeyCodeType GetKeyCodeSkill(SkillType skillType)
     {

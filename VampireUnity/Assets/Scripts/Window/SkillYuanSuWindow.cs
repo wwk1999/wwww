@@ -32,15 +32,12 @@ public class SkillYuanSuWindow : MonoBehaviour
             {
                 case 1:
                     SkillJiaDian.S.skill1Type = SkillYuanSuType.Ice;
-                    skillWindow1.RefreshSkill();
                     break;
                 case 2:
                     SkillJiaDian.S.skill2Type = SkillYuanSuType.Ice;
-                    skillWindow1.RefreshSkill();
                     break;
                 case 3:
                     SkillJiaDian.S.skill3Type = SkillYuanSuType.Ice;
-                    skillWindow1.RefreshSkill();
                     break;
             }
             gameObject.SetActive(false);
@@ -54,15 +51,12 @@ public class SkillYuanSuWindow : MonoBehaviour
             {
                 case 1:
                     SkillJiaDian.S.skill1Type = SkillYuanSuType.HeiAn;
-                    skillWindow1.RefreshSkill();
                     break;
                 case 2:
                     SkillJiaDian.S.skill2Type = SkillYuanSuType.HeiAn;
-                    skillWindow1.RefreshSkill();
                     break;
                 case 3:
                     SkillJiaDian.S.skill3Type = SkillYuanSuType.HeiAn;
-                    skillWindow1.RefreshSkill();
                     break;
             }
             gameObject.SetActive(false);
@@ -77,15 +71,12 @@ public class SkillYuanSuWindow : MonoBehaviour
             {
                 case 1:
                     SkillJiaDian.S.skill1Type = SkillYuanSuType.Huo;
-                    skillWindow1.RefreshSkill();
                     break;
                 case 2:
                     SkillJiaDian.S.skill2Type = SkillYuanSuType.Huo;
-                    skillWindow1.RefreshSkill();
                     break;
                 case 3:
                     SkillJiaDian.S.skill3Type = SkillYuanSuType.Huo;
-                    skillWindow1.RefreshSkill();
                     break;
             }
             gameObject.SetActive(false);
@@ -100,15 +91,12 @@ public class SkillYuanSuWindow : MonoBehaviour
             {
                 case 1:
                     SkillJiaDian.S.skill1Type = SkillYuanSuType.Dian;
-                    skillWindow1.RefreshSkill();
                     break;
                 case 2:
                     SkillJiaDian.S.skill2Type = SkillYuanSuType.Dian;
-                    skillWindow1.RefreshSkill();
                     break;
                 case 3:
                     SkillJiaDian.S.skill3Type = SkillYuanSuType.Dian;
-                    skillWindow1.RefreshSkill();
                     break;
             }
             gameObject.SetActive(false);

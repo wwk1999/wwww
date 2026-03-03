@@ -109,7 +109,7 @@ public class StoreDefine : XSingleton<StoreDefine>
         public WeaponType playerWeaponType = WeaponType.Primary;
         public MJLevel mJLevel = MJLevel.White;
         public LanguageType langType = LanguageType.Chinese;
-        public Dictionary<int,ChongWuTable> ChongWuDic = new Dictionary<int,ChongWuTable>();
+        public Dictionary<int, ChongWuTable> ChongWuDic = new Dictionary<int, ChongWuTable>();
 
 
 
@@ -159,11 +159,11 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int ChongWuShiWu4 = 0;
         public int ChongWuShiWu5 = 0;
         public int ChongWuShiWu6 = 0;
-        
-        public int RateX=1920;
-        public int RateY=1080;
-        public bool IsQuanPing=false;
-        
+
+        public int RateX = 1920;
+        public int RateY = 1080;
+        public bool IsQuanPing = false;
+
         public int GameTime = 0;
 
 
@@ -257,19 +257,19 @@ public class StoreDefine : XSingleton<StoreDefine>
             FuChongWuId3 = runtime.FuChongWuId3;
 
             ChongWuJingHua = runtime.ChongWuJingHua;
-            
-            ChongWuShiWu1=runtime.ChongWuShiWu1;
-            ChongWuShiWu2=runtime.ChongWuShiWu2;
-            ChongWuShiWu3=runtime.ChongWuShiWu3;
-            ChongWuShiWu4=runtime.ChongWuShiWu4;
-            ChongWuShiWu5=runtime.ChongWuShiWu5;
-            ChongWuShiWu6=runtime.ChongWuShiWu6;
-            
-            RateX=runtime.RateX;
-            RateY=runtime.RateY;
-            IsQuanPing=runtime.IsQuanPing;
 
-            GameTime=runtime.GameTime;
+            ChongWuShiWu1 = runtime.ChongWuShiWu1;
+            ChongWuShiWu2 = runtime.ChongWuShiWu2;
+            ChongWuShiWu3 = runtime.ChongWuShiWu3;
+            ChongWuShiWu4 = runtime.ChongWuShiWu4;
+            ChongWuShiWu5 = runtime.ChongWuShiWu5;
+            ChongWuShiWu6 = runtime.ChongWuShiWu6;
+
+            RateX = runtime.RateX;
+            RateY = runtime.RateY;
+            IsQuanPing = runtime.IsQuanPing;
+
+            GameTime = runtime.GameTime;
         }
 
         public void ApplyToRuntime(PlayerData runtime)
@@ -364,20 +364,20 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.FuChongWuId3 = FuChongWuId3;
 
             runtime.ChongWuJingHua = ChongWuJingHua;
-            
-            runtime.ChongWuShiWu1=ChongWuShiWu1;
-            runtime.ChongWuShiWu2=ChongWuShiWu2;
-            runtime.ChongWuShiWu3=ChongWuShiWu3;
-            runtime.ChongWuShiWu4=ChongWuShiWu4;
-            runtime.ChongWuShiWu5=ChongWuShiWu5;
-            runtime.ChongWuShiWu6=ChongWuShiWu6;
-            
-            
-            runtime.RateX=RateX;
-            runtime.RateY=RateY;
-            runtime.IsQuanPing=IsQuanPing;
-            
-            runtime.GameTime=GameTime;
+
+            runtime.ChongWuShiWu1 = ChongWuShiWu1;
+            runtime.ChongWuShiWu2 = ChongWuShiWu2;
+            runtime.ChongWuShiWu3 = ChongWuShiWu3;
+            runtime.ChongWuShiWu4 = ChongWuShiWu4;
+            runtime.ChongWuShiWu5 = ChongWuShiWu5;
+            runtime.ChongWuShiWu6 = ChongWuShiWu6;
+
+
+            runtime.RateX = RateX;
+            runtime.RateY = RateY;
+            runtime.IsQuanPing = IsQuanPing;
+
+            runtime.GameTime = GameTime;
         }
     }
 
@@ -458,266 +458,393 @@ public class StoreDefine : XSingleton<StoreDefine>
     {
         public int CurrentSkillCount = 0;
 
-        public int NormalAttack = 0;
-        public int AttackSpeed = 0;
+        public int IceBei1;
+        public int IceBei2;
+        public int IceBei3;
+        public int IceBei4;
 
-        public int Crit = 0;
-        public int CritDamage = 0;
-
-        public int MoveSpeed = 0;
-        public int MoveAddAttack = 0;
-        public int MoveAddDefense = 0;
-
-        public int Dash = 0;
-        public int DashCd = 0;
-
-        public int DianSkill1Damage = 0;
-        public int DianSkill1Cd = 0;
-        public int DianSkill1Range = 0;
-        public int DianSkill1YuanSu = 0;
-
-        public int DianSkill2 = 0;
-        public int DianSkill2Cd = 0;
-        public int DianSkill2Duration = 0;
-        public int DianSkill2YuanSu = 0;
-
-        public int DianSkill3 = 0;
-        public int DianSkill3Cd = 0;
-        public int DianSkill3Count = 0;
-        public int DianSkill3YuanSu = 0;
-
-        public int IceSkill1 = 0;
-        public int IceSkill1Cd = 0;
-        public int IceSkill1Range = 0;
-        public int IceSkill1YuanSu = 0;
-
-        public int IceSkill2Damage = 0;
-        public int IceSkill2Cd = 0;
-        public int IceSkill2Time = 0;
-        public int IceSkill2YuanSu = 0;
-
-        public int IceSkill3Damage = 0;
-        public int IceSkill3Cd = 0;
-        public int IceSkill3Range = 0;
-        public int IceSkill3YuanSu = 0;
+        public int Ice1;
+        public int Ice1_1;
+        public int Ice1_2;
+        public int Ice2;
+        public int Ice2_1;
+        public int Ice2_2;
+        public int Ice3;
+        public int Ice3_1;
+        public int Ice3_2;
+        public int Ice4;
+        public int Ice4_1;
+        public int Ice4_2;
+        public int Ice5;
+        public int Ice5_1;
+        public int Ice5_2;
 
 
-        public int HuoSkill1 = 0;
-        public int HuoSkill1Cd = 0;
-        public int HuoSkill1Count = 0;
-        public int HuoSkill1YuanSu = 0;
+        public int HuoBei1;
+        public int HuoBei2;
+        public int HuoBei3;
+        public int HuoBei4;
 
-        public int HuoSkill2 = 0;
-        public int HuoSkill2Cd = 0;
-        public int HuoSkill2Time = 0;
-        public int HuoSkill2YuanSu = 0;
-
-        public int HuoSkill3 = 0;
-        public int HuoSkill3Cd = 0;
-        public int HuoSkill3Count = 0;
-        public int HuoSkill3YuanSu = 0;
-
-
-        public int HeiAnSkill1 = 0;
-        public int HeiAnSkill1Cd = 0;
-        public int HeiAnSkill1Range = 0;
-        public int HeiAnSkill1YuanSu = 0;
-
-        public int HeiAnSkill2Damage = 0;
-        public int HeiAnSkill2Cd = 0;
-        public int HeiAnSkill2Time = 0;
-        public int HeiAnSkill2YuanSu = 0;
-
-        public int HeiAnSkill3Damage = 0;
-        public int HeiAnSkill3Cd = 0;
-        public int HeiAnSkill3Range = 0;
-        public int HeiAnSkill3YuanSu = 0;
+        public int Huo1;
+        public int Huo1_1;
+        public int Huo1_2;
+        public int Huo2;
+        public int Huo2_1;
+        public int Huo2_2;
+        public int Huo3;
+        public int Huo3_1;
+        public int Huo3_2;
+        public int Huo4;
+        public int Huo4_1;
+        public int Huo4_2;
+        public int Huo5;
+        public int Huo5_1;
+        public int Huo5_2;
 
 
 
-        public int MonsterAttack;
-        public int MonsterCrit;
-        public int MonsterHp;
-        public int MonsterDefense;
+        public int HeiAnBei1;
+        public int HeiAnBei2;
+        public int HeiAnBei3;
+        public int HeiAnBei4;
 
-        public SkillYuanSuType skill1Type = SkillYuanSuType.None;
-        public SkillYuanSuType skill2Type = SkillYuanSuType.None;
-        public SkillYuanSuType skill3Type = SkillYuanSuType.None;
+        public int HeiAn1;
+        public int HeiAn1_1;
+        public int HeiAn1_2;
+        public int HeiAn2;
+        public int HeiAn2_1;
+        public int HeiAn2_2;
+        public int HeiAn3;
+        public int HeiAn3_1;
+        public int HeiAn3_2;
+        public int HeiAn4;
+        public int HeiAn4_1;
+        public int HeiAn4_2;
+        public int HeiAn5;
+        public int HeiAn5_1;
+        public int HeiAn5_2;
+
+
+        public int DianBei1;
+        public int DianBei2;
+        public int DianBei3;
+        public int DianBei4;
+
+        public int Dian1;
+        public int Dian1_1;
+        public int Dian1_2;
+        public int Dian2;
+        public int Dian2_1;
+        public int Dian2_2;
+        public int Dian3;
+        public int Dian3_1;
+        public int Dian3_2;
+        public int Dian4;
+        public int Dian4_1;
+        public int Dian4_2;
+        public int Dian5;
+        public int Dian5_1;
+        public int Dian5_2;
+        
+        
+        public int IceZJ1;
+        public int IceZJ2;
+        public int IceZJ3;
+        public int IceZJ4;
+        public int IceZJ5;
+        public int IceZJ6;
+    
+        public int HuoZJ1;
+        public int HuoZJ2;
+        public int HuoZJ3;
+        public int HuoZJ4;
+        public int HuoZJ5;
+        public int HuoZJ6;
+    
+        public int DianZJ1;
+        public int DianZJ2;
+        public int DianZJ3;
+        public int DianZJ4;
+        public int DianZJ5;
+        public int DianZJ6;
+    
+        public int HeiAnZJ1;
+        public int HeiAnZJ2;
+        public int HeiAnZJ3;
+        public int HeiAnZJ4;
+        public int HeiAnZJ5;
+        public int HeiAnZJ6;
+
+
+        public SkillYuanSuType skill1Type=SkillYuanSuType.None;
+        public SkillYuanSuType skill2Type=SkillYuanSuType.None;
+        public SkillYuanSuType skill3Type=SkillYuanSuType.None;
+        public SkillYuanSuType skill4Type=SkillYuanSuType.None;
+        public SkillYuanSuType skill5Type=SkillYuanSuType.None;
 
 
         public void CopyFromRuntime(SkillJiaDian runtime)
         {
             CurrentSkillCount = runtime.CurrentSkillCount;
-            NormalAttack = runtime.NormalAttack;
-            AttackSpeed = runtime.AttackSpeed;
-            Crit = runtime.Crit;
-            CritDamage = runtime.CritDamage;
-            MoveSpeed = runtime.MoveSpeed;
-            MoveAddAttack = runtime.MoveAddAttack;
-            MoveAddDefense = runtime.MoveAddDefense;
-            DashCd = runtime.DashCd;
-            Dash = runtime.Dash;
 
-            DianSkill1Damage = runtime.DianSkill1Damage;
-            DianSkill1Cd = runtime.DianSkill1Cd;
-            DianSkill1Range = runtime.DianSkill1Range;
-            DianSkill1YuanSu = runtime.DianSkill1YuanSu;
+            // 复制冰系技能点
+            IceBei1 = runtime.IceBei1;
+            IceBei2 = runtime.IceBei2;
+            IceBei3 = runtime.IceBei3;
+            IceBei4 = runtime.IceBei4;
 
-            DianSkill2 = runtime.DianSkill2;
-            DianSkill2Cd = runtime.DianSkill2Cd;
-            DianSkill2Duration = runtime.DianSkill2Duration;
-            DianSkill2YuanSu = runtime.DianSkill2YuanSu;
+            Ice1 = runtime.Ice1;
+            Ice1_1 = runtime.Ice1_1;
+            Ice1_2 = runtime.Ice1_2;
+            Ice2 = runtime.Ice2;
+            Ice2_1 = runtime.Ice2_1;
+            Ice2_2 = runtime.Ice2_2;
+            Ice3 = runtime.Ice3;
+            Ice3_1 = runtime.Ice3_1;
+            Ice3_2 = runtime.Ice3_2;
+            Ice4 = runtime.Ice4;
+            Ice4_1 = runtime.Ice4_1;
+            Ice4_2 = runtime.Ice4_2;
+            Ice5 = runtime.Ice5;
+            Ice5_1 = runtime.Ice5_1;
+            Ice5_2 = runtime.Ice5_2;
 
-            DianSkill3 = runtime.DianSkill3;
-            DianSkill3Cd = runtime.DianSkill3Cd;
-            DianSkill3Count = runtime.DianSkill3Count;
-            DianSkill3YuanSu = runtime.DianSkill3YuanSu;
+            // 复制火系技能点
+            HuoBei1 = runtime.HuoBei1;
+            HuoBei2 = runtime.HuoBei2;
+            HuoBei3 = runtime.HuoBei3;
+            HuoBei4 = runtime.HuoBei4;
 
-            IceSkill2Damage = runtime.IceSkill2Damage;
-            IceSkill2Cd = runtime.IceSkill2Cd;
-            IceSkill2Time = runtime.IceSkill2Time;
-            IceSkill2YuanSu = runtime.IceSkill2YuanSu;
+            Huo1 = runtime.Huo1;
+            Huo1_1 = runtime.Huo1_1;
+            Huo1_2 = runtime.Huo1_2;
+            Huo2 = runtime.Huo2;
+            Huo2_1 = runtime.Huo2_1;
+            Huo2_2 = runtime.Huo2_2;
+            Huo3 = runtime.Huo3;
+            Huo3_1 = runtime.Huo3_1;
+            Huo3_2 = runtime.Huo3_2;
+            Huo4 = runtime.Huo4;
+            Huo4_1 = runtime.Huo4_1;
+            Huo4_2 = runtime.Huo4_2;
+            Huo5 = runtime.Huo5;
+            Huo5_1 = runtime.Huo5_1;
+            Huo5_2 = runtime.Huo5_2;
 
+            // 复制黑暗系技能点
+            HeiAnBei1 = runtime.HeiAnBei1;
+            HeiAnBei2 = runtime.HeiAnBei2;
+            HeiAnBei3 = runtime.HeiAnBei3;
+            HeiAnBei4 = runtime.HeiAnBei4;
 
-            IceSkill3Damage = runtime.IceSkill3Damage;
-            IceSkill3Cd = runtime.IceSkill3Cd;
-            IceSkill3Range = runtime.IceSkill3Range;
-            IceSkill3YuanSu = runtime.IceSkill3YuanSu;
+            HeiAn1 = runtime.HeiAn1;
+            HeiAn1_1 = runtime.HeiAn1_1;
+            HeiAn1_2 = runtime.HeiAn1_2;
+            HeiAn2 = runtime.HeiAn2;
+            HeiAn2_1 = runtime.HeiAn2_1;
+            HeiAn2_2 = runtime.HeiAn2_2;
+            HeiAn3 = runtime.HeiAn3;
+            HeiAn3_1 = runtime.HeiAn3_1;
+            HeiAn3_2 = runtime.HeiAn3_2;
+            HeiAn4 = runtime.HeiAn4;
+            HeiAn4_1 = runtime.HeiAn4_1;
+            HeiAn4_2 = runtime.HeiAn4_2;
+            HeiAn5 = runtime.HeiAn5;
+            HeiAn5_1 = runtime.HeiAn5_1;
+            HeiAn5_2 = runtime.HeiAn5_2;
 
-            HeiAnSkill2Damage = runtime.HeiAnSkill2Damage;
-            HeiAnSkill2Cd = runtime.HeiAnSkill2Cd;
-            HeiAnSkill2Time = runtime.HeiAnSkill2Time;
-            HeiAnSkill2YuanSu = runtime.HeiAnSkill2YuanSu;
+            // 复制电系技能点
+            DianBei1 = runtime.DianBei1;
+            DianBei2 = runtime.DianBei2;
+            DianBei3 = runtime.DianBei3;
+            DianBei4 = runtime.DianBei4;
 
-            HuoSkill2 = runtime.HuoSkill2;
-            HuoSkill2Cd = runtime.HuoSkill2Cd;
-            HuoSkill2Time = runtime.HuoSkill2Time;
-            HuoSkill2YuanSu = runtime.HuoSkill2YuanSu;
+            Dian1 = runtime.Dian1;
+            Dian1_1 = runtime.Dian1_1;
+            Dian1_2 = runtime.Dian1_2;
+            Dian2 = runtime.Dian2;
+            Dian2_1 = runtime.Dian2_1;
+            Dian2_2 = runtime.Dian2_2;
+            Dian3 = runtime.Dian3;
+            Dian3_1 = runtime.Dian3_1;
+            Dian3_2 = runtime.Dian3_2;
+            Dian4 = runtime.Dian4;
+            Dian4_1 = runtime.Dian4_1;
+            Dian4_2 = runtime.Dian4_2;
+            Dian5 = runtime.Dian5;
+            Dian5_1 = runtime.Dian5_1;
+            Dian5_2 = runtime.Dian5_2;
 
-            IceSkill1 = runtime.IceSkill1;
-            IceSkill1Range = runtime.IceSkill1Range;
-            IceSkill1Cd = runtime.IceSkill1Cd;
-            IceSkill1YuanSu = runtime.IceSkill1YuanSu;
-
-            HuoSkill1 = runtime.HuoSkill1;
-            HuoSkill1Count = runtime.HuoSkill1Count;
-            HuoSkill1Cd = runtime.HuoSkill1Cd;
-            HuoSkill1YuanSu = runtime.HuoSkill1YuanSu;
-
-            HuoSkill3 = runtime.HuoSkill3;
-            HuoSkill3Count = runtime.HuoSkill3Count;
-            HuoSkill3Cd = runtime.HuoSkill3Cd;
-            HuoSkill3YuanSu = runtime.HuoSkill3YuanSu;
-
-            HeiAnSkill1 = runtime.HeiAnSkill1;
-            HeiAnSkill1Range = runtime.HeiAnSkill1Range;
-            HeiAnSkill1Cd = runtime.HeiAnSkill1Cd;
-            HeiAnSkill1YuanSu = runtime.HeiAnSkill1YuanSu;
-
-            HeiAnSkill3Damage = runtime.HeiAnSkill3Damage;
-            HeiAnSkill3Range = runtime.HeiAnSkill3Range;
-            HeiAnSkill3Cd = runtime.HeiAnSkill3Cd;
-            HeiAnSkill3YuanSu = runtime.HeiAnSkill3YuanSu;
-
-            MonsterAttack = runtime.MonsterAttack;
-            MonsterCrit = runtime.MonsterCrit;
-            MonsterDefense = runtime.MonsterDefense;
-            MonsterHp = runtime.MonsterHp;
-
+            // 复制技能类型
             skill1Type = runtime.skill1Type;
             skill2Type = runtime.skill2Type;
             skill3Type = runtime.skill3Type;
+            skill4Type = runtime.skill4Type;
+            skill5Type = runtime.skill5Type;
+            
+            // 复制冰系进阶技能点
+            IceZJ1 = runtime.IceZJ1;
+            IceZJ2 = runtime.IceZJ2;
+            IceZJ3 = runtime.IceZJ3;
+            IceZJ4 = runtime.IceZJ4;
+            IceZJ5 = runtime.IceZJ5;
+            IceZJ6 = runtime.IceZJ6;
+    
+            // 复制火系进阶技能点
+            HuoZJ1 = runtime.HuoZJ1;
+            HuoZJ2 = runtime.HuoZJ2;
+            HuoZJ3 = runtime.HuoZJ3;
+            HuoZJ4 = runtime.HuoZJ4;
+            HuoZJ5 = runtime.HuoZJ5;
+            HuoZJ6 = runtime.HuoZJ6;
+    
+            // 复制电系进阶技能点
+            DianZJ1 = runtime.DianZJ1;
+            DianZJ2 = runtime.DianZJ2;
+            DianZJ3 = runtime.DianZJ3;
+            DianZJ4 = runtime.DianZJ4;
+            DianZJ5 = runtime.DianZJ5;
+            DianZJ6 = runtime.DianZJ6;
+    
+            // 复制黑暗系进阶技能点
+            HeiAnZJ1 = runtime.HeiAnZJ1;
+            HeiAnZJ2 = runtime.HeiAnZJ2;
+            HeiAnZJ3 = runtime.HeiAnZJ3;
+            HeiAnZJ4 = runtime.HeiAnZJ4;
+            HeiAnZJ5 = runtime.HeiAnZJ5;
+            HeiAnZJ6 = runtime.HeiAnZJ6;
         }
 
         public void ApplyToRuntime(SkillJiaDian runtime)
         {
             runtime.CurrentSkillCount = CurrentSkillCount;
-            runtime.NormalAttack = NormalAttack;
-            runtime.AttackSpeed = AttackSpeed;
-            runtime.Crit = Crit;
-            runtime.CritDamage = CritDamage;
-            runtime.MoveSpeed = MoveSpeed;
-            runtime.MoveAddAttack = MoveAddAttack;
-            runtime.MoveAddDefense = MoveAddDefense;
-            runtime.DashCd = DashCd;
-            runtime.Dash = Dash;
 
+            // 应用冰系技能点
+            runtime.IceBei1 = IceBei1;
+            runtime.IceBei2 = IceBei2;
+            runtime.IceBei3 = IceBei3;
+            runtime.IceBei4 = IceBei4;
 
+            runtime.Ice1 = Ice1;
+            runtime.Ice1_1 = Ice1_1;
+            runtime.Ice1_2 = Ice1_2;
+            runtime.Ice2 = Ice2;
+            runtime.Ice2_1 = Ice2_1;
+            runtime.Ice2_2 = Ice2_2;
+            runtime.Ice3 = Ice3;
+            runtime.Ice3_1 = Ice3_1;
+            runtime.Ice3_2 = Ice3_2;
+            runtime.Ice4 = Ice4;
+            runtime.Ice4_1 = Ice4_1;
+            runtime.Ice4_2 = Ice4_2;
+            runtime.Ice5 = Ice5;
+            runtime.Ice5_1 = Ice5_1;
+            runtime.Ice5_2 = Ice5_2;
 
-            runtime.DianSkill1Damage = DianSkill1Damage;
-            runtime.DianSkill1Cd = DianSkill1Cd;
-            runtime.DianSkill1Range = DianSkill1Range;
-            runtime.DianSkill1YuanSu = DianSkill1YuanSu;
+            // 应用火系技能点
+            runtime.HuoBei1 = HuoBei1;
+            runtime.HuoBei2 = HuoBei2;
+            runtime.HuoBei3 = HuoBei3;
+            runtime.HuoBei4 = HuoBei4;
 
-            runtime.DianSkill2 = DianSkill2;
-            runtime.DianSkill2Cd = DianSkill2Cd;
-            runtime.DianSkill2Duration = DianSkill2Duration;
-            runtime.DianSkill2YuanSu = DianSkill2YuanSu;
+            runtime.Huo1 = Huo1;
+            runtime.Huo1_1 = Huo1_1;
+            runtime.Huo1_2 = Huo1_2;
+            runtime.Huo2 = Huo2;
+            runtime.Huo2_1 = Huo2_1;
+            runtime.Huo2_2 = Huo2_2;
+            runtime.Huo3 = Huo3;
+            runtime.Huo3_1 = Huo3_1;
+            runtime.Huo3_2 = Huo3_2;
+            runtime.Huo4 = Huo4;
+            runtime.Huo4_1 = Huo4_1;
+            runtime.Huo4_2 = Huo4_2;
+            runtime.Huo5 = Huo5;
+            runtime.Huo5_1 = Huo5_1;
+            runtime.Huo5_2 = Huo5_2;
 
-            runtime.DianSkill3 = DianSkill3;
-            runtime.DianSkill3Cd = DianSkill3Cd;
-            runtime.DianSkill3Count = DianSkill3Count;
-            runtime.DianSkill3YuanSu = DianSkill3YuanSu;
+            // 应用黑暗系技能点
+            runtime.HeiAnBei1 = HeiAnBei1;
+            runtime.HeiAnBei2 = HeiAnBei2;
+            runtime.HeiAnBei3 = HeiAnBei3;
+            runtime.HeiAnBei4 = HeiAnBei4;
 
-            runtime.IceSkill2Damage = IceSkill2Damage;
-            runtime.IceSkill2Cd = IceSkill2Cd;
-            runtime.IceSkill2Time = IceSkill2Time;
-            runtime.IceSkill2YuanSu = IceSkill2YuanSu;
+            runtime.HeiAn1 = HeiAn1;
+            runtime.HeiAn1_1 = HeiAn1_1;
+            runtime.HeiAn1_2 = HeiAn1_2;
+            runtime.HeiAn2 = HeiAn2;
+            runtime.HeiAn2_1 = HeiAn2_1;
+            runtime.HeiAn2_2 = HeiAn2_2;
+            runtime.HeiAn3 = HeiAn3;
+            runtime.HeiAn3_1 = HeiAn3_1;
+            runtime.HeiAn3_2 = HeiAn3_2;
+            runtime.HeiAn4 = HeiAn4;
+            runtime.HeiAn4_1 = HeiAn4_1;
+            runtime.HeiAn4_2 = HeiAn4_2;
+            runtime.HeiAn5 = HeiAn5;
+            runtime.HeiAn5_1 = HeiAn5_1;
+            runtime.HeiAn5_2 = HeiAn5_2;
 
+            // 应用电系技能点
+            runtime.DianBei1 = DianBei1;
+            runtime.DianBei2 = DianBei2;
+            runtime.DianBei3 = DianBei3;
+            runtime.DianBei4 = DianBei4;
 
-            runtime.IceSkill3Damage = IceSkill3Damage;
-            runtime.IceSkill3Cd = IceSkill3Cd;
-            runtime.IceSkill3Range = IceSkill3Range;
-            runtime.IceSkill3YuanSu = IceSkill3YuanSu;
+            runtime.Dian1 = Dian1;
+            runtime.Dian1_1 = Dian1_1;
+            runtime.Dian1_2 = Dian1_2;
+            runtime.Dian2 = Dian2;
+            runtime.Dian2_1 = Dian2_1;
+            runtime.Dian2_2 = Dian2_2;
+            runtime.Dian3 = Dian3;
+            runtime.Dian3_1 = Dian3_1;
+            runtime.Dian3_2 = Dian3_2;
+            runtime.Dian4 = Dian4;
+            runtime.Dian4_1 = Dian4_1;
+            runtime.Dian4_2 = Dian4_2;
+            runtime.Dian5 = Dian5;
+            runtime.Dian5_1 = Dian5_1;
+            runtime.Dian5_2 = Dian5_2;
+            
+            // 应用冰系进阶技能点
+            runtime.IceZJ1 = IceZJ1;
+            runtime.IceZJ2 = IceZJ2;
+            runtime.IceZJ3 = IceZJ3;
+            runtime.IceZJ4 = IceZJ4;
+            runtime.IceZJ5 = IceZJ5;
+            runtime.IceZJ6 = IceZJ6;
+    
+            // 应用火系进阶技能点
+            runtime.HuoZJ1 = HuoZJ1;
+            runtime.HuoZJ2 = HuoZJ2;
+            runtime.HuoZJ3 = HuoZJ3;
+            runtime.HuoZJ4 = HuoZJ4;
+            runtime.HuoZJ5 = HuoZJ5;
+            runtime.HuoZJ6 = HuoZJ6;
+    
+            // 应用电系进阶技能点
+            runtime.DianZJ1 = DianZJ1;
+            runtime.DianZJ2 = DianZJ2;
+            runtime.DianZJ3 = DianZJ3;
+            runtime.DianZJ4 = DianZJ4;
+            runtime.DianZJ5 = DianZJ5;
+            runtime.DianZJ6 = DianZJ6;
+    
+            // 应用黑暗系进阶技能点
+            runtime.HeiAnZJ1 = HeiAnZJ1;
+            runtime.HeiAnZJ2 = HeiAnZJ2;
+            runtime.HeiAnZJ3 = HeiAnZJ3;
+            runtime.HeiAnZJ4 = HeiAnZJ4;
+            runtime.HeiAnZJ5 = HeiAnZJ5;
+            runtime.HeiAnZJ6 = HeiAnZJ6;
 
-            runtime.HeiAnSkill2Damage = HeiAnSkill2Damage;
-            runtime.HeiAnSkill2Cd = HeiAnSkill2Cd;
-            runtime.HeiAnSkill2Time = HeiAnSkill2Time;
-            runtime.HeiAnSkill2YuanSu = HeiAnSkill2YuanSu;
-
-            runtime.HuoSkill2 = HuoSkill2;
-            runtime.HuoSkill2Cd = HuoSkill2Cd;
-            runtime.HuoSkill2Time = HuoSkill2Time;
-            runtime.HuoSkill2YuanSu = HuoSkill2YuanSu;
-
-            runtime.IceSkill1 = IceSkill1;
-            runtime.IceSkill1Range = IceSkill1Range;
-            runtime.IceSkill1Cd = IceSkill1Cd;
-            runtime.IceSkill1YuanSu = IceSkill1YuanSu;
-
-            runtime.HuoSkill1 = HuoSkill1;
-            runtime.HuoSkill1Count = HuoSkill1Count;
-            runtime.HuoSkill1Cd = HuoSkill1Cd;
-            runtime.HuoSkill1YuanSu = HuoSkill1YuanSu;
-
-            runtime.HuoSkill3 = HuoSkill3;
-            runtime.HuoSkill3Count = HuoSkill3Count;
-            runtime.HuoSkill3Cd = HuoSkill3Cd;
-            runtime.HuoSkill3YuanSu = HuoSkill3YuanSu;
-
-            runtime.HeiAnSkill1 = HeiAnSkill1;
-            runtime.HeiAnSkill1Range = HeiAnSkill1Range;
-            runtime.HeiAnSkill1Cd = HeiAnSkill1Cd;
-            runtime.HeiAnSkill1YuanSu = HeiAnSkill1YuanSu;
-
-            runtime.HeiAnSkill3Damage = HeiAnSkill3Damage;
-            runtime.HeiAnSkill3Range = HeiAnSkill3Range;
-            runtime.HeiAnSkill3Cd = HeiAnSkill3Cd;
-            runtime.HeiAnSkill3YuanSu = HeiAnSkill3YuanSu;
-
-
-
-
-            runtime.MonsterAttack = MonsterAttack;
-            runtime.MonsterCrit = MonsterCrit;
-            runtime.MonsterDefense = MonsterDefense;
-            runtime.MonsterHp = MonsterHp;
-
+            // 应用技能类型
             runtime.skill1Type = skill1Type;
             runtime.skill2Type = skill2Type;
             runtime.skill3Type = skill3Type;
-
+            runtime.skill4Type = skill4Type;
+            runtime.skill5Type = skill5Type;
         }
-
     }
 }

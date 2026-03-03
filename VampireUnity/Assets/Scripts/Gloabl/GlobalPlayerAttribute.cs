@@ -2547,22 +2547,22 @@ public class GlobalPlayerAttribute
    
    public static float GetMonsterAttack()
    {
-       return SkillJiaDian.S.MonsterAttack * SkillConfig.BaseMonsterDic[Config.MonsterType.Attack];
+       return 0;
    }
    
    public static float GetMonsterDefense()
    {
-       return SkillJiaDian.S.MonsterDefense * SkillConfig.BaseMonsterDic[Config.MonsterType.Defense];
+       return 0;
    }
    
    public static float GetMonsterHp()
    {
-       return SkillJiaDian.S.MonsterHp * SkillConfig.BaseMonsterDic[Config.MonsterType.Hp];
+       return 0;
    }
    
    public static float GetMonsterCrit()
    {
-       return SkillJiaDian.S.MonsterCrit * SkillConfig.BaseMonsterDic[Config.MonsterType.Crit];
+       return 0;
    }
    public static float GetWeaponAttack()
    {
@@ -2925,7 +2925,7 @@ public class GlobalPlayerAttribute
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
        var value = (weaponAttribute.AttackSpeed + PlayerChiBangAttribute.attackSpeed + HunQiAttackSpeed);
        value += FinalChongWuAttribute.AttackSpeed;
-       value *= (1 + AttackSpeedNum / 100.0f + FuJiaDamageSpeed / 100.0f);
+       value *= (1  + FuJiaDamageSpeed / 100.0f);
        return value;
    }
 
@@ -2933,7 +2933,7 @@ public class GlobalPlayerAttribute
    {
        float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit+TitleAttributeAll.Crit);
        value += FinalChongWuAttribute.Crit;
-       value *= (1 + CritNum / 100.0f) * (1.0f + BaoShiCrit / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
+       value *= (1 ) * (1.0f + BaoShiCrit / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
        if (CDTeXiao5Time > 0)
        {
            value *= (1.0f + CD5Count * 0.3f);
@@ -2980,7 +2980,7 @@ public class GlobalPlayerAttribute
    {
        float speed=(_baseMoveSpeed+PlayerChiBangAttribute.moveSpeed+TitleAttributeAll.MoveSpeed);
        speed += FinalChongWuAttribute.MoveSpeed;
-       speed *= (1 + MoveSpeedNum / 100f);
+       speed *= (1 );
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
        {
            speed*=1.25f;
@@ -2994,7 +2994,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCritDamage()
    {
-       float value= CRITDamage+CritDamageNum+PlayerChiBangAttribute.critDamage;
+       float value= CRITDamage+PlayerChiBangAttribute.critDamage;
        value += (CC5Count * 50f);
        if (CDTeXiao5Time > 0)
        {
@@ -3071,21 +3071,18 @@ public class GlobalPlayerAttribute
    public static float GetHuoYuanSuBase()
    {
        float value = 1.0f;
-       value += HuoSkill1YuanSuNum/100.0f + HuoSkill2YuanSuNum/100.0f + HuoSkill3YuanSuNum/100.0f;
        value += FinalChongWuAttribute.HuoDamage;
        return value;
    }
    public static float GetHeiAnYuanSuBase()
    {
        float value = 1.0f;
-       value += HeiAnSkill1YuanSuNum/100.0f + HeiAnSkill2YuanSuNum/100.0f + HeiAnSkill3YuanSuNum/100.0f;
        value += FinalChongWuAttribute.HeiAnDamage;
        return value;
    }
    public static float GetIceYuanSuBase()
    {
        float value = 1.0f;
-       value += IceSkill1YuanSuNum/100.0f + Skill2YuanSuNum/100.0f + Skill3YuanSuNum/100.0f;
        value += FinalChongWuAttribute.IceDamage;
        return value;
    }
@@ -3093,7 +3090,6 @@ public class GlobalPlayerAttribute
    public static float GetDianYuanSuBase()
    {
        float value = 1.0f;
-       value += Skill1YuanSuNum/100.0f + DianSkill2YuanSuNum/100.0f + DianSkill3YuanSuNum/100.0f;
        value += FinalChongWuAttribute.DianDamage;
        return value;
    }
@@ -3102,78 +3098,7 @@ public class GlobalPlayerAttribute
 
    
    //技能面板
-
-   public static float NormalAttackNum => SkillJiaDian.S.NormalAttack * 5;
-   public static float AttackSpeedNum=> SkillJiaDian.S.AttackSpeed * 5;
-    
-   public static float CritNum=> SkillJiaDian.S.Crit * 5;//百分比
-   public static float CritDamageNum=> SkillJiaDian.S.CritDamage * 5;
-    
-   public static float MoveSpeedNum=> SkillJiaDian.S.MoveSpeed * 30;
-   public static float MoveAddAttackNum=> SkillJiaDian.S.MoveAddAttack * 5;
-   public static float MoveAddDefenseNum=> SkillJiaDian.S.MoveAddDefense * 5;
-   public static float DashCdNum=> SkillJiaDian.S.DashCd * 5;
-    
-   public static float Skill1DamageNum=> SkillJiaDian.S.DianSkill1Damage* 5;
-   public static float Skill1CdNum=> SkillJiaDian.S.DianSkill1Cd * 5;
-   public static float Skill1RangeNum=> SkillJiaDian.S.DianSkill1Range * 5;
-   public static float Skill1YuanSuNum=> SkillJiaDian.S.DianSkill1YuanSu * 5;
-    
-   public static float Skill2DamageNum=> SkillJiaDian.S.IceSkill2Damage * 5;
-   public static float Skill2CdNum=> SkillJiaDian.S.IceSkill2Cd * 5;
-   public static float Skill2TimeNum=> SkillJiaDian.S.IceSkill2Time * 5;//增加基础持续时候
-   public static float Skill2YuanSuNum=> SkillJiaDian.S.IceSkill2YuanSu * 5;
-    
-   public static float Skill3DamageNum=> 100+(SkillJiaDian.S.IceSkill3Damage-1) * 5;
-   public static float Skill3CdNum=> SkillJiaDian.S.IceSkill3Cd * 5;
-   public static float Skill3RangeNum=> SkillJiaDian.S.IceSkill3Range * 5;
-   public static float Skill3YuanSuNum=> SkillJiaDian.S.IceSkill3YuanSu * 5;
-
-   public static float IceSkill1Num = SkillJiaDian.S.IceSkill1 * 5;
-   public static float IceSkill1CDNum = SkillJiaDian.S.IceSkill1Cd * 5;
-   public static float IceSkill1RangeNum = SkillJiaDian.S.IceSkill1Range * 5;
-   public static float IceSkill1YuanSuNum = SkillJiaDian.S.IceSkill1YuanSu * 5;
-
-   public static float DianSkill2Num = SkillJiaDian.S.DianSkill2 * 5;
-   public static float DianSkill2CDNum = SkillJiaDian.S.DianSkill2Cd * 5;
-   public static float DianSkill2TimeNum = SkillJiaDian.S.DianSkill2Duration * 5;
-   public static float DianSkill2YuanSuNum = SkillJiaDian.S.DianSkill2YuanSu * 5;
-
-   public static float DianSkill3Num = SkillJiaDian.S.DianSkill3 * 5;
-   public static float DianSkill3CDNum = SkillJiaDian.S.DianSkill3Cd * 5;
-   public static float DianSkill3CountNum = SkillJiaDian.S.DianSkill3Count * 100;
-   public static float DianSkill3YuanSuNum = SkillJiaDian.S.DianSkill3YuanSu * 5;
    
-   public static float HuoSkill1Num = SkillJiaDian.S.HuoSkill1 * 5;
-   public static float HuoSkill1CDNum = SkillJiaDian.S.HuoSkill1Cd * 5;
-   public static float HuoSkill1CountNum = SkillJiaDian.S.HuoSkill1Count * 100;
-   public static float HuoSkill1YuanSuNum = SkillJiaDian.S.HuoSkill1YuanSu * 5;
-   
-   public static float HuoSkill2Num = SkillJiaDian.S.HuoSkill2 * 5;
-   public static float HuoSkill2CDNum = SkillJiaDian.S.HuoSkill2Cd * 5;
-   public static float HuoSkill2TimeNum = SkillJiaDian.S.HuoSkill2Time * 5;
-   public static float HuoSkill2YuanSuNum = SkillJiaDian.S.HuoSkill2YuanSu * 5;
-   
-   public static float HuoSkill3Num = SkillJiaDian.S.HuoSkill3 * 5;
-   public static float HuoSkill3CDNum = SkillJiaDian.S.HuoSkill3Cd * 5;
-   public static float HuoSkill3CountNum = SkillJiaDian.S.HuoSkill3Count * 100;
-   public static float HuoSkill3YuanSuNum = SkillJiaDian.S.HuoSkill3YuanSu * 5;
-   
-   
-   public static float HeiAnSkill1Num = SkillJiaDian.S.HeiAnSkill1 * 5;
-   public static float HeiAnSkill1CDNum = SkillJiaDian.S.HeiAnSkill1Cd * 5;
-   public static float HeiAnSkill1RangeNum = SkillJiaDian.S.HeiAnSkill1Range * 5;
-   public static float HeiAnSkill1YuanSuNum = SkillJiaDian.S.HeiAnSkill1YuanSu * 5;
-   
-   public static float HeiAnSkill2Num = SkillJiaDian.S.HeiAnSkill2Damage * 5;
-   public static float HeiAnSkill2CDNum = SkillJiaDian.S.HeiAnSkill2Cd * 5;
-   public static float HeiAnSkill2TimeNum = SkillJiaDian.S.HeiAnSkill2Time * 5;
-   public static float HeiAnSkill2YuanSuNum = SkillJiaDian.S.HeiAnSkill2YuanSu * 5;
-   
-   public static float HeiAnSkill3Num = SkillJiaDian.S.HeiAnSkill3Damage * 5;
-   public static float HeiAnSkill3CDNum = SkillJiaDian.S.HeiAnSkill3Cd * 5;
-   public static float HeiAnSkill3RangeNum = SkillJiaDian.S.HeiAnSkill3Range * 5;
-   public static float HeiAnSkill3YuanSuNum = SkillJiaDian.S.HeiAnSkill3YuanSu * 5;
    
    
    

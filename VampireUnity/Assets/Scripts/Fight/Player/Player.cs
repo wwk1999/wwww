@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
     [NonSerialized] public bool IsWuDi = false;//红闪的时候无敌
     
     // 移动攻击力加成标志位
-    [NonSerialized] private bool isMoveBonusApplied = false;
     
     // 延迟伤害相关变量
     [NonSerialized] private Queue<DelayedDamageInfo> delayedDamageQueue = new Queue<DelayedDamageInfo>();
@@ -221,7 +220,7 @@ public class Player : MonoBehaviour
     public ParticleSystem LevelUpParticle;
     private void Awake()
     {
-        playerSkeleton.AnimationState.SetAnimation(0, "idea", true);
+        playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
         currentGun = Instantiate(Resources.Load<GameObject>("Prefabs/Gun/Pistol").GetComponent<GunBase>(),transform);
         playerSkeleton.AnimationState.Complete += OnAnimationComplete;
         playerSkeleton.AnimationState.Event += OnSpineEvent;
@@ -294,24 +293,6 @@ public class Player : MonoBehaviour
         bool isMoving = !(horizontal == 0 && vertical == 0);
 
         // 处理移动状态变化时的攻击力加成
-        if (isMoving && !isMoveBonusApplied)
-        {
-            // 从静止变为移动：应用加成
-            if (GlobalPlayerAttribute.MoveAddAttackNum > 0)
-            {
-                GameController.S.MoveAddAttackCount = 1;
-                isMoveBonusApplied = true;
-            }
-        }
-        else if (!isMoving && isMoveBonusApplied)
-        {
-            // 从移动变为静止：移除加成
-            if (GlobalPlayerAttribute.MoveAddAttackNum > 0)
-            {
-                GameController.S.MoveAddAttackCount = 0;
-                isMoveBonusApplied = false;
-            }
-        }
 
         // 使用 ScaleX 的正负来表示翻转（新版 Spine runtime 移除了 FlipX 属性）
         float currentScaleX = playerSkeleton.Skeleton.ScaleX;
@@ -341,10 +322,10 @@ public class Player : MonoBehaviour
         }
         else 
         {
-            if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idea")
+            if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idle")
             {
                 playerSkeleton.AnimationState.TimeScale = 1;
-                playerSkeleton.AnimationState.SetAnimation(0, "idea", true);
+                playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
             }
         }
     }

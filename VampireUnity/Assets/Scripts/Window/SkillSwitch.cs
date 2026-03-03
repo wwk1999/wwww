@@ -183,7 +183,6 @@ public class SkillSwitch : MonoBehaviour
                     SkillData.S.dashAuto=!SkillData.S.dashAuto;
                     break;
             }
-            skillWindow1.SetAuto();
             StoreController.S.SaveStoreData();
             gameObject.SetActive(false);
             mask.SetActive(false);

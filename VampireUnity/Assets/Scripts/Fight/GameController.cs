@@ -42,7 +42,7 @@ public class GameController : XSingleton<GameController>
     {
         float value = GlobalPlayerAttribute.TotalDefense;
         value += (GlobalPlayerAttribute.TotalDefense * 0.03f * HitCount * GlobalPlayerAttribute.DD5Count);
-        value += GlobalPlayerAttribute.TotalDefense * (GlobalPlayerAttribute.MoveAddDefenseNum / 100f) * MoveAddAttackCount;
+        value += GlobalPlayerAttribute.TotalDefense  * MoveAddAttackCount;
         value += GlobalPlayerAttribute.TotalDefense*(AddDefenseForTimeCount * 0.02f );
 
         return value;
@@ -53,7 +53,7 @@ public class GameController : XSingleton<GameController>
         float value = GlobalPlayerAttribute.TotalDamage;
         value += GlobalPlayerAttribute.TotalDamage*(CritCount * 0.03f * GlobalPlayerAttribute.AC5Count);
         value += GlobalPlayerAttribute.TotalDamage*(AddAttackForTimeCount * 0.03f );
-        value += GlobalPlayerAttribute.TotalDamage*(GlobalPlayerAttribute.MoveAddAttackNum / 100f)*MoveAddAttackCount;
+        value += GlobalPlayerAttribute.TotalDamage*MoveAddAttackCount;
 
         return value;
     }
