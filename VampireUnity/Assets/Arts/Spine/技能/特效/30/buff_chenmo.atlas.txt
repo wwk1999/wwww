@@ -1,0 +1,15 @@
+buff_chenmo.png
+size:165,115
+filter:Linear,Linear
+_0
+bounds:143,93,20,20
+offsets:1,1,22,22
+_1
+bounds:143,93,20,20
+offsets:1,1,22,22
+_2
+bounds:143,93,20,20
+offsets:1,1,22,22
+_3
+bounds:2,2,139,111
+offsets:2,5,145,119

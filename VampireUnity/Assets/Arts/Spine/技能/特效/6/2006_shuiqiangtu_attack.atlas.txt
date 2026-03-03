@@ -1,0 +1,242 @@
+2006_shuiqiangtu_attack.png
+size:2033,631
+filter:Linear,Linear
+52e7c1b6ef861d63cd8b7fb361670f2_000
+bounds:1083,397,199,34
+offsets:13,2,256,128
+52e7c1b6ef861d63cd8b7fb361670f2_001
+bounds:1348,500,229,40
+offsets:9,5,256,128
+52e7c1b6ef861d63cd8b7fb361670f2_002
+bounds:2,2,239,72
+offsets:5,5,256,128
+52e7c1b6ef861d63cd8b7fb361670f2_003
+bounds:1348,542,244,87
+offsets:2,8,256,128
+52e7c1b6ef861d63cd8b7fb361670f2_004
+bounds:638,526,246,103
+offsets:1,9,256,128
+52e7c1b6ef861d63cd8b7fb361670f2_005
+bounds:391,518,245,111
+offsets:3,12,256,128
+52e7c1b6ef861d63cd8b7fb361670f2_006
+bounds:391,429,227,87
+offsets:12,22,256,128
+52e7c1b6ef861d63cd8b7fb361670f2_007
+bounds:1083,433,220,79
+offsets:12,26,256,128
+ctl_waterburst01_000
+bounds:535,220,96,207
+offsets:21,43,128,256
+ctl_waterburst01_001
+bounds:638,427,97,224
+offsets:11,20,128,256
+rotate:90
+ctl_waterburst01_002
+bounds:1594,464,104,226
+offsets:9,24,128,256
+rotate:90
+ctl_waterburst01_003
+bounds:886,524,105,229
+offsets:11,14,128,256
+rotate:90
+ctl_waterburst01_004
+bounds:1117,514,115,229
+offsets:4,11,128,256
+rotate:90
+ctl_waterburst01_005
+bounds:864,410,112,217
+offsets:8,11,128,256
+rotate:90
+ctl_waterburst01_006
+bounds:1822,458,110,209
+offsets:10,11,128,256
+rotate:90
+ctl_waterburst01_007
+bounds:1204,238,105,157
+offsets:13,53,128,256
+dsf (1)
+bounds:326,2,120,181
+offsets:89,26,300,231
+rotate:90
+dsf (10)
+bounds:1013,113,182,143
+offsets:56,31,300,231
+dsf (11)
+bounds:633,127,189,146
+offsets:50,30,300,231
+dsf (12)
+bounds:633,275,190,150
+offsets:47,28,300,231
+dsf (13)
+bounds:2,264,195,177
+offsets:43,26,300,231
+dsf (14)
+bounds:2,443,196,186
+offsets:43,27,300,231
+dsf (15)
+bounds:200,448,181,189
+offsets:44,27,300,231
+rotate:90
+dsf (16)
+bounds:2,76,181,186
+offsets:45,27,300,231
+dsf (17)
+bounds:350,268,159,183
+offsets:67,28,300,231
+rotate:90
+dsf (18)
+bounds:824,125,142,187
+offsets:68,31,300,231
+rotate:90
+dsf (19)
+bounds:825,269,139,191
+offsets:69,29,300,231
+rotate:90
+dsf (2)
+bounds:1197,61,127,175
+offsets:89,27,300,231
+dsf (20)
+bounds:185,76,139,186
+offsets:69,29,300,231
+dsf (3)
+bounds:1326,93,142,152
+offsets:78,26,300,231
+dsf (4)
+bounds:1775,301,157,155
+offsets:73,27,300,231
+dsf (5)
+bounds:1311,344,170,154
+offsets:64,27,300,231
+dsf (6)
+bounds:199,264,177,149
+offsets:59,28,300,231
+rotate:90
+dsf (7)
+bounds:1592,321,181,141
+offsets:56,31,300,231
+dsf (8)
+bounds:1018,258,184,137
+offsets:55,29,300,231
+dsf (9)
+bounds:350,124,183,142
+offsets:56,31,300,231
+qiu
+bounds:1270,25,34,34
+offsets:3,2,38,38
+seq_lcy_39_000
+bounds:1779,10,60,69
+offsets:2,10,85,85
+seq_lcy_39_001
+bounds:1637,2,56,77
+offsets:20,4,85,85
+seq_lcy_39_002
+bounds:1860,221,56,78
+offsets:21,3,85,85
+seq_lcy_39_003
+bounds:1852,571,58,82
+offsets:27,0,85,85
+rotate:90
+seq_lcy_39_004
+bounds:1186,2,57,82
+offsets:28,0,85,85
+rotate:90
+seq_lcy_39_005
+bounds:1936,575,54,80
+offsets:31,2,85,85
+rotate:90
+seq_lcy_39_006
+bounds:243,20,54,81
+offsets:31,1,85,85
+rotate:90
+seq_lcy_39_007
+bounds:1841,27,51,82
+offsets:32,2,85,85
+rotate:90
+seq_lcy_39_008
+bounds:1695,27,52,82
+offsets:32,2,85,85
+rotate:90
+shui3
+bounds:1594,570,256,59
+offsets:0,0,256,64
+shuitou2_00000 (00007)_00000
+bounds:1592,208,132,111
+offsets:19,37,178,161
+shuitou2_00000 (00007)_00001
+bounds:1590,95,132,111
+offsets:19,37,178,161
+shuitou2_00000 (00007)_00002
+bounds:633,7,151,118
+offsets:12,37,178,161
+shuitou2_00000 (00007)_00003
+bounds:786,5,151,118
+offsets:12,37,178,161
+shuitou2_00000 (00007)_00004
+bounds:1470,96,151,118
+offsets:12,37,178,161
+rotate:90
+shuitou2_00000 (00007)_00005
+bounds:939,17,135,94
+offsets:37,37,178,161
+shuitou2_00000 (00007)_00006
+bounds:1311,247,135,95
+offsets:37,37,178,161
+shuitou2_00000 (00007)_00007
+bounds:1934,251,135,95
+offsets:37,37,178,161
+rotate:90
+shuitou2_00000 (00007)_00008
+bounds:535,83,135,96
+offsets:37,36,178,161
+rotate:90
+shuitou2_00000 (00007)_00009
+bounds:1483,357,141,107
+offsets:35,36,178,161
+rotate:90
+shuitou2_00000 (00007)_00010
+bounds:1483,357,141,107
+offsets:35,36,178,161
+rotate:90
+shuitou2_00000 (00007)_00011
+bounds:1726,188,132,111
+offsets:19,37,178,161
+shuitou_00000_00000
+bounds:1076,9,102,108
+offsets:28,0,164,118
+rotate:90
+shuitou_00000_00001
+bounds:1923,80,101,78
+offsets:28,30,164,118
+shuitou_00000_00002
+bounds:509,2,106,79
+offsets:28,28,164,118
+shuitou_00000_00003
+bounds:1724,81,106,105
+offsets:28,2,164,118
+shuitou_00000_00004
+bounds:1483,249,106,107
+offsets:28,0,164,118
+rotate:90
+shuitou_00000_00005
+bounds:1923,160,101,89
+offsets:34,16,164,118
+shuitou_00000_00006
+bounds:1326,2,102,89
+offsets:33,16,164,118
+shuitou_00000_00007
+bounds:1430,2,102,89
+offsets:33,16,164,118
+shuitou_00000_00008
+bounds:1832,84,102,89
+offsets:33,16,164,118
+rotate:90
+shuitou_00000_00009
+bounds:1934,388,97,68
+offsets:31,38,164,118
+shuitou_00000_00010
+bounds:1934,388,97,68
+offsets:31,38,164,118
+shuitou_00000_00011
+bounds:1534,2,101,77
+offsets:28,31,164,118
