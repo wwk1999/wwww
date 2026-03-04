@@ -403,7 +403,7 @@ public class StoreDefine : XSingleton<StoreDefine>
     public int IceBei3;
     public int IceBei4;
     
-    public int Ice1;
+    public int Ice1=2;
     public int Ice1_1;
     public int Ice1_2;
     public int Ice2;

@@ -1150,7 +1150,7 @@ public class SkillWindow1 : MonoBehaviour
     {
      if (SkillJiaDian.S.IceBei1 < 1)
      {
-      IceBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      IceBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceBei2Icon.GetComponent<Button>().interactable = false;
       IceBeiLine1Liang.gameObject.SetActive(false);
       IceBeiLine1An.gameObject.SetActive(true);
@@ -1165,7 +1165,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.IceBei3 < 1)
      {
-      IceBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      IceBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceBei4Icon.GetComponent<Button>().interactable = false;
       IceBeiLine2Liang.gameObject.SetActive(false);
       IceBeiLine2An.gameObject.SetActive(true);
@@ -1349,7 +1349,7 @@ public class SkillWindow1 : MonoBehaviour
     {
      if (SkillJiaDian.S.HuoBei1 < 1)
      {
-      HuoBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HuoBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoBei2Icon.GetComponent<Button>().interactable = false;
       HuoBeiLine1Liang.gameObject.SetActive(false);
       HuoBeiLine1An.gameObject.SetActive(true);
@@ -1364,7 +1364,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.HuoBei3 < 1)
      {
-      HuoBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HuoBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoBei4Icon.GetComponent<Button>().interactable = false;
       HuoBeiLine2Liang.gameObject.SetActive(false);
       HuoBeiLine2An.gameObject.SetActive(true);
@@ -1548,7 +1548,7 @@ public class SkillWindow1 : MonoBehaviour
     {
      if (SkillJiaDian.S.DianBei1 < 1)
      {
-      DianBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      DianBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianBei2Icon.GetComponent<Button>().interactable = false;
       DianBeiLine1Liang.gameObject.SetActive(false);
       DianBeiLine1An.gameObject.SetActive(true);
@@ -1563,7 +1563,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.DianBei3 < 1)
      {
-      DianBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      DianBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianBei4Icon.GetComponent<Button>().interactable = false;
       DianBeiLine2Liang.gameObject.SetActive(false);
       DianBeiLine2An.gameObject.SetActive(true);
@@ -1746,7 +1746,7 @@ public class SkillWindow1 : MonoBehaviour
     {
      if (SkillJiaDian.S.HeiAnBei1 < 1)
      {
-      HeiAnBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HeiAnBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnBei2Icon.GetComponent<Button>().interactable = false;
       HeiAnBeiLine1Liang.gameObject.SetActive(false);
       HeiAnBeiLine1An.gameObject.SetActive(true);
@@ -1761,7 +1761,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.HeiAnBei3 < 1)
      {
-      HeiAnBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HeiAnBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnBei4Icon.GetComponent<Button>().interactable = false;
       HeiAnBeiLine2Liang.gameObject.SetActive(false);
       HeiAnBeiLine2An.gameObject.SetActive(true);
@@ -1945,7 +1945,7 @@ public class SkillWindow1 : MonoBehaviour
     {
      if (SkillJiaDian.S.IceZJ1 < 1)
      {
-      IceZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      IceZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceZJ2Icon.GetComponent<Button>().interactable = false;
       IceZJLine1Liang.gameObject.SetActive(false);
       IceZJLine1An.gameObject.SetActive(true);
@@ -1960,7 +1960,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.IceZJ2 < 1)
      {
-      IceZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      IceZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceZJ3Icon.GetComponent<Button>().interactable = false;
       IceZJLine2Liang.gameObject.SetActive(false);
       IceZJLine2An.gameObject.SetActive(true);
@@ -1975,7 +1975,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.IceZJ3 < 1)
      {
-      IceZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      IceZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceZJ4Icon.GetComponent<Button>().interactable = false;
       IceZJLine3Liang.gameObject.SetActive(false);
       IceZJLine3An.gameObject.SetActive(true);
@@ -1991,7 +1991,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.IceZJ4 < 1)
      {
-      IceZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      IceZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceZJ5Icon.GetComponent<Button>().interactable = false;
       IceZJLine4Liang.gameObject.SetActive(false);
       IceZJLine4An.gameObject.SetActive(true);
@@ -2006,7 +2006,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.IceZJ5 < 1)
      {
-      IceZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      IceZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceZJ6Icon.GetComponent<Button>().interactable = false;
       IceZJLine5Liang.gameObject.SetActive(false);
       IceZJLine5An.gameObject.SetActive(true);
@@ -2025,7 +2025,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.HuoZJ1 < 1)
      {
-      HuoZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HuoZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoZJ2Icon.GetComponent<Button>().interactable = false;
       HuoZJLine1Liang.gameObject.SetActive(false);
       HuoZJLine1An.gameObject.SetActive(true);
@@ -2040,7 +2040,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.HuoZJ2 < 1)
      {
-      HuoZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HuoZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoZJ3Icon.GetComponent<Button>().interactable = false;
       HuoZJLine2Liang.gameObject.SetActive(false);
       HuoZJLine2An.gameObject.SetActive(true);
@@ -2055,7 +2055,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.HuoZJ3 < 1)
      {
-      HuoZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HuoZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoZJ4Icon.GetComponent<Button>().interactable = false;
       HuoZJLine3Liang.gameObject.SetActive(false);
       HuoZJLine3An.gameObject.SetActive(true);
@@ -2071,7 +2071,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.HuoZJ4 < 1)
      {
-      HuoZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HuoZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoZJ5Icon.GetComponent<Button>().interactable = false;
       HuoZJLine4Liang.gameObject.SetActive(false);
       HuoZJLine4An.gameObject.SetActive(true);
@@ -2086,7 +2086,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.HuoZJ5 < 1)
      {
-      HuoZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HuoZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoZJ6Icon.GetComponent<Button>().interactable = false;
       HuoZJLine5Liang.gameObject.SetActive(false);
       HuoZJLine5An.gameObject.SetActive(true);
@@ -2104,7 +2104,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.DianZJ1 < 1)
      {
-      DianZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      DianZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianZJ2Icon.GetComponent<Button>().interactable = false;
       DianZJLine1Liang.gameObject.SetActive(false);
       DianZJLine1An.gameObject.SetActive(true);
@@ -2119,7 +2119,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.DianZJ2 < 1)
      {
-      DianZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      DianZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianZJ3Icon.GetComponent<Button>().interactable = false;
       DianZJLine2Liang.gameObject.SetActive(false);
       DianZJLine2An.gameObject.SetActive(true);
@@ -2134,7 +2134,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.DianZJ3 < 1)
      {
-      DianZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      DianZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianZJ4Icon.GetComponent<Button>().interactable = false;
       DianZJLine3Liang.gameObject.SetActive(false);
       DianZJLine3An.gameObject.SetActive(true);
@@ -2150,7 +2150,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.DianZJ4 < 1)
      {
-      DianZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      DianZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianZJ5Icon.GetComponent<Button>().interactable = false;
       DianZJLine4Liang.gameObject.SetActive(false);
       DianZJLine4An.gameObject.SetActive(true);
@@ -2165,7 +2165,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.DianZJ5 < 1)
      {
-      DianZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      DianZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianZJ6Icon.GetComponent<Button>().interactable = false;
       DianZJLine5Liang.gameObject.SetActive(false);
       DianZJLine5An.gameObject.SetActive(true);
@@ -2183,7 +2183,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.HeiAnZJ1 < 1)
      {
-      HeiAnZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HeiAnZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnZJ2Icon.GetComponent<Button>().interactable = false;
       HeiAnZJLine1Liang.gameObject.SetActive(false);
       HeiAnZJLine1An.gameObject.SetActive(true);
@@ -2198,7 +2198,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.HeiAnZJ2 < 1)
      {
-      HeiAnZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HeiAnZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnZJ3Icon.GetComponent<Button>().interactable = false;
       HeiAnZJLine2Liang.gameObject.SetActive(false);
       HeiAnZJLine2An.gameObject.SetActive(true);
@@ -2213,7 +2213,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.HeiAnZJ3 < 1)
      {
-      HeiAnZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HeiAnZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnZJ4Icon.GetComponent<Button>().interactable = false;
       HeiAnZJLine3Liang.gameObject.SetActive(false);
       HeiAnZJLine3An.gameObject.SetActive(true);
@@ -2229,7 +2229,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.HeiAnZJ4 < 1)
      {
-      HeiAnZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HeiAnZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnZJ5Icon.GetComponent<Button>().interactable = false;
       HeiAnZJLine4Liang.gameObject.SetActive(false);
       HeiAnZJLine4An.gameObject.SetActive(true);
@@ -2244,7 +2244,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.HeiAnZJ5 < 1)
      {
-      HeiAnZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      HeiAnZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnZJ6Icon.GetComponent<Button>().interactable = false;
       HeiAnZJLine5Liang.gameObject.SetActive(false);
       HeiAnZJLine5An.gameObject.SetActive(true);
@@ -2262,7 +2262,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.ZhiYeZJ1 < 1)
      {
-      ZhiYeZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      ZhiYeZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       ZhiYeZJ2Icon.GetComponent<Button>().interactable = false;
       ZhiYeZJLine1Liang.gameObject.SetActive(false);
       ZhiYeZJLine1An.gameObject.SetActive(true);
@@ -2277,7 +2277,7 @@ public class SkillWindow1 : MonoBehaviour
 
      if (SkillJiaDian.S.ZhiYeZJ2 < 1)
      {
-      ZhiYeZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      ZhiYeZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       ZhiYeZJ3Icon.GetComponent<Button>().interactable = false;
       ZhiYeZJLine2Liang.gameObject.SetActive(false);
       ZhiYeZJLine2An.gameObject.SetActive(true);
@@ -2292,7 +2292,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.ZhiYeZJ3 < 1)
      {
-      ZhiYeZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      ZhiYeZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       ZhiYeZJ4Icon.GetComponent<Button>().interactable = false;
       ZhiYeZJLine3Liang.gameObject.SetActive(false);
       ZhiYeZJLine3An.gameObject.SetActive(true);
@@ -2308,7 +2308,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.ZhiYeZJ4 < 1)
      {
-      ZhiYeZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      ZhiYeZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       ZhiYeZJ5Icon.GetComponent<Button>().interactable = false;
       ZhiYeZJLine4Liang.gameObject.SetActive(false);
       ZhiYeZJLine4An.gameObject.SetActive(true);
@@ -2323,7 +2323,7 @@ public class SkillWindow1 : MonoBehaviour
      
      if (SkillJiaDian.S.ZhiYeZJ5 < 1)
      {
-      ZhiYeZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f);
+      ZhiYeZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       ZhiYeZJ6Icon.GetComponent<Button>().interactable = false;
       ZhiYeZJLine5Liang.gameObject.SetActive(false);
       ZhiYeZJLine5An.gameObject.SetActive(true);

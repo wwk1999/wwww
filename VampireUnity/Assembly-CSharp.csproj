@@ -886,7 +886,7 @@
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\lib\netstandard2.1\Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
     <None Include="Assets\Arts\Spine\怪物\json 3\Enemy_Boss_serpent.json" />
     <None Include="Assets\Arts\Spine\技能\1225\json13\skeleton.atlas.txt" />
-    <None Include="Assets\Arts\Spine\技能\特效\6\2006_shuiqiangtu_attack.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\特效\冰魔法弹\2006_shuiqiangtu_attack.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaNiao\shamoniao.json" />
     <None Include="Assets\Arts\Spine\宠物\Green\黑暗green2\Anima_Small_Skeleton_M11-7.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\火purple3——前\mon_9tails_fox_02.json" />
@@ -1028,7 +1028,7 @@
     <None Include="Assets\Arts\Spine\技能\1225\黄电圈\action.json" />
     <None Include="Assets\Arts\Spine\第一关\树人BOSS\json\shurenBOSS.json" />
     <None Include="Assets\Arts\Shaders\LcL\Shadow.shader" />
-    <None Include="Assets\Arts\Spine\技能\特效\6\2006_shuiqiangtu_attack.json" />
+    <None Include="Assets\Arts\Spine\技能\特效\冰魔法弹\2006_shuiqiangtu_attack.json" />
     <None Include="Assets\Arts\Spine\技能\特效\29\buff_bingdong.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
     <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.atlas.txt" />
