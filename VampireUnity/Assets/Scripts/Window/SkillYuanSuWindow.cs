@@ -26,83 +26,13 @@ public class SkillYuanSuWindow : MonoBehaviour
         {
             gameObject.SetActive(false);
         });
-        iceButton.onClick.AddListener(() =>
-        {
-            switch (skillType)
-            {
-                case 1:
-                    SkillJiaDian.S.skill1Type = SkillYuanSuType.Ice;
-                    break;
-                case 2:
-                    SkillJiaDian.S.skill2Type = SkillYuanSuType.Ice;
-                    break;
-                case 3:
-                    SkillJiaDian.S.skill3Type = SkillYuanSuType.Ice;
-                    break;
-            }
-            gameObject.SetActive(false);
-            StoreController.S.SaveStoreData();
-
-        });
+       
         
-        heianButton.onClick.AddListener(() =>
-        {
-            switch (skillType)
-            {
-                case 1:
-                    SkillJiaDian.S.skill1Type = SkillYuanSuType.HeiAn;
-                    break;
-                case 2:
-                    SkillJiaDian.S.skill2Type = SkillYuanSuType.HeiAn;
-                    break;
-                case 3:
-                    SkillJiaDian.S.skill3Type = SkillYuanSuType.HeiAn;
-                    break;
-            }
-            gameObject.SetActive(false);
-
-            StoreController.S.SaveStoreData();
-
-        });
+       
         
-        huoButton.onClick.AddListener(() =>
-        {
-            switch (skillType)
-            {
-                case 1:
-                    SkillJiaDian.S.skill1Type = SkillYuanSuType.Huo;
-                    break;
-                case 2:
-                    SkillJiaDian.S.skill2Type = SkillYuanSuType.Huo;
-                    break;
-                case 3:
-                    SkillJiaDian.S.skill3Type = SkillYuanSuType.Huo;
-                    break;
-            }
-            gameObject.SetActive(false);
-
-            StoreController.S.SaveStoreData();
-
-        });
+       
         
-        dianButton.onClick.AddListener(() =>
-        {
-            switch (skillType)
-            {
-                case 1:
-                    SkillJiaDian.S.skill1Type = SkillYuanSuType.Dian;
-                    break;
-                case 2:
-                    SkillJiaDian.S.skill2Type = SkillYuanSuType.Dian;
-                    break;
-                case 3:
-                    SkillJiaDian.S.skill3Type = SkillYuanSuType.Dian;
-                    break;
-            }
-            gameObject.SetActive(false);
-
-            StoreController.S.SaveStoreData();
-        });
+       
     }
 
     public void Refresh()

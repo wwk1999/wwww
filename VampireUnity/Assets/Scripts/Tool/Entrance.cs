@@ -36,8 +36,8 @@ public class Entrance : MonoBehaviour
             2; //这时小怪数量，精英不算数量，每10只普通怪出一只精英，所以正好是2倍
         GameController.S.MaxBossEnergyNum = 10;
 
-        if (SkillData.S.Alpha1 == SkillType.Skill3 || SkillData.S.Alpha2 == SkillType.Skill3 ||
-            SkillData.S.Alpha3 == SkillType.Skill3)
+        if (SkillJiaDian.S.Alpha1 == SkillType.Ice3 || SkillJiaDian.S.Alpha2 == SkillType.Ice3 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Ice3 || SkillJiaDian.S.Alpha4 == SkillType.Ice3 || SkillJiaDian.S.Alpha5 == SkillType.Ice3)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -50,8 +50,8 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (SkillData.S.Alpha1 == SkillType.HuoSkill1 || SkillData.S.Alpha2 == SkillType.HuoSkill1 ||
-            SkillData.S.Alpha3 == SkillType.HuoSkill1)
+        if (SkillJiaDian.S.Alpha1 == SkillType.Huo1 || SkillJiaDian.S.Alpha2 == SkillType.Huo1 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Huo1|| SkillJiaDian.S.Alpha4 == SkillType.Huo1|| SkillJiaDian.S.Alpha5 == SkillType.Huo1)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -64,8 +64,8 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (SkillData.S.Alpha1 == SkillType.DianSkill2 || SkillData.S.Alpha2 == SkillType.DianSkill2 ||
-            SkillData.S.Alpha3 == SkillType.DianSkill2)
+        if (SkillJiaDian.S.Alpha1 == SkillType.Dian2 || SkillJiaDian.S.Alpha2 == SkillType.Dian2 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Dian2|| SkillJiaDian.S.Alpha4 == SkillType.Dian2|| SkillJiaDian.S.Alpha5 == SkillType.Dian2)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -78,8 +78,8 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (SkillData.S.Alpha1 == SkillType.HeiAnSkill3 || SkillData.S.Alpha2 == SkillType.HeiAnSkill3 ||
-            SkillData.S.Alpha3 == SkillType.HeiAnSkill3)
+        if (SkillJiaDian.S.Alpha1 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn3 ||
+            SkillJiaDian.S.Alpha3 == SkillType.HeiAn3|| SkillJiaDian.S.Alpha4 == SkillType.HeiAn3|| SkillJiaDian.S.Alpha5 == SkillType.HeiAn3)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -93,8 +93,8 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (SkillData.S.Alpha1 == SkillType.HeiAnSkill1 || SkillData.S.Alpha2 == SkillType.HeiAnSkill1 ||
-            SkillData.S.Alpha3 == SkillType.HeiAnSkill1)
+        if (SkillJiaDian.S.Alpha1 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn1 ||
+            SkillJiaDian.S.Alpha3 == SkillType.HeiAn1|| SkillJiaDian.S.Alpha4 == SkillType.HeiAn1|| SkillJiaDian.S.Alpha5 == SkillType.HeiAn1)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -108,8 +108,8 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (SkillData.S.Alpha1 == SkillType.DianSkill3 || SkillData.S.Alpha2 == SkillType.DianSkill3 ||
-            SkillData.S.Alpha3 == SkillType.DianSkill3)
+        if (SkillJiaDian.S.Alpha1 == SkillType.Dian3 || SkillJiaDian.S.Alpha2 == SkillType.Dian3 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Dian3|| SkillJiaDian.S.Alpha4 == SkillType.Dian3|| SkillJiaDian.S.Alpha5 == SkillType.Dian3)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -122,8 +122,8 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (SkillData.S.Alpha1 == SkillType.HuoSkill3 || SkillData.S.Alpha2 == SkillType.HuoSkill3 ||
-            SkillData.S.Alpha3 == SkillType.HuoSkill3)
+        if (SkillJiaDian.S.Alpha1 == SkillType.Huo3 || SkillJiaDian.S.Alpha2 == SkillType.Huo3 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Huo3|| SkillJiaDian.S.Alpha4 == SkillType.Huo3|| SkillJiaDian.S.Alpha5 == SkillType.Huo3)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -136,8 +136,8 @@ public class Entrance : MonoBehaviour
             }
         }
 
-        if (SkillData.S.Alpha1 == SkillType.IceSkill1 || SkillData.S.Alpha2 == SkillType.IceSkill1 ||
-            SkillData.S.Alpha3 == SkillType.IceSkill1)
+        if (SkillJiaDian.S.Alpha1 == SkillType.Ice1 || SkillJiaDian.S.Alpha2 == SkillType.Ice1 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Ice1|| SkillJiaDian.S.Alpha4 == SkillType.Ice1|| SkillJiaDian.S.Alpha5 == SkillType.Ice1)
         {
             for (int i = 0; i < 30; i++)
             {
@@ -1353,8 +1353,8 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
             }
 
-            if (SkillData.S.Alpha1 == SkillType.Skill1 || SkillData.S.Alpha2 == SkillType.Skill1 ||
-                SkillData.S.Alpha3 == SkillType.Skill1)
+            if (SkillJiaDian.S.Alpha1 == SkillType.Dian1 || SkillJiaDian.S.Alpha2 == SkillType.Dian1 ||
+                SkillJiaDian.S.Alpha3 == SkillType.Dian1|| SkillJiaDian.S.Alpha4 == SkillType.Dian1|| SkillJiaDian.S.Alpha5 == SkillType.Dian1)
             {
                 for (int i = 0; i < 10; i++)
                 {

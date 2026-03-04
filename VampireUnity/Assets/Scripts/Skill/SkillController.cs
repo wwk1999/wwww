@@ -276,28 +276,40 @@ public class SkillController : XSingleton<SkillController>
     
     public SkillType LMB
     {
-        get => SkillData.S.LMB;
-        set => SkillData.S.LMB = value;
+        get => SkillJiaDian.S.LMB;
+        set => SkillJiaDian.S.LMB = value;
     }
     public SkillType RMB
     {
-        get => SkillData.S.RMB;
-        set => SkillData.S.RMB = value;
+        get => SkillJiaDian.S.RMB;
+        set => SkillJiaDian.S.RMB = value;
     }
     public SkillType Alpha1
     {
-        get => SkillData.S.Alpha1;
-        set => SkillData.S.Alpha1 = value;
+        get => SkillJiaDian.S.Alpha1;
+        set => SkillJiaDian.S.Alpha1 = value;
     }
     public SkillType Alpha2
     {
-        get => SkillData.S.Alpha2;
-        set => SkillData.S.Alpha2 = value;
+        get => SkillJiaDian.S.Alpha2;
+        set => SkillJiaDian.S.Alpha2 = value;
     }
     public SkillType Alpha3
     {
-        get => SkillData.S.Alpha3;
-        set => SkillData.S.Alpha3 = value;
+        get => SkillJiaDian.S.Alpha3;
+        set => SkillJiaDian.S.Alpha3 = value;
+    }
+    
+    public SkillType Alpha4
+    {
+        get => SkillJiaDian.S.Alpha4;
+        set => SkillJiaDian.S.Alpha4 = value;
+    }
+    
+    public SkillType Alpha5
+    {
+        get => SkillJiaDian.S.Alpha5;
+        set => SkillJiaDian.S.Alpha5 = value;
     }
 
 
@@ -639,7 +651,7 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case SkillType.Normal:
                 break;
-            case SkillType.Skill1:
+            case SkillType.Dian1:
                 if (DianQuanCoolingtime>=DianQuantime)
                 {
                     Vector3 mouseScreen = Input.mousePosition;
@@ -654,7 +666,7 @@ public class SkillController : XSingleton<SkillController>
                     dianquan.transform.position = worldPos;
                 }
                 break;
-            case SkillType.Skill2:
+            case SkillType.Ice2:
                 if (IceBallCoolingtime >= IceBalltime)
                 {
                     AudioController.S.PlayIceBall();
@@ -669,7 +681,7 @@ public class SkillController : XSingleton<SkillController>
                     }
                 }
                 break;
-            case SkillType.Skill3:
+            case SkillType.Ice3:
                 if (IceExplosionCoolingtime >= IceExplosiontime)
                 {
                     AudioController.S.PlayIceEx();
@@ -692,32 +704,32 @@ public class SkillController : XSingleton<SkillController>
                 }
                 break;
             
-            case SkillType.IceSkill1:
+            case SkillType.Ice1:
                 IceSkill1();
                 break;
-            case SkillType.DianSkill2:
+            case SkillType.Dian2:
                 DianSkill2();
                 break;
-            case SkillType.DianSkill3:
+            case SkillType.Dian3:
                 DianSkill3();
                 break;
-            case SkillType.HuoSkill1:
+            case SkillType.Huo1:
                 HuoSkill1();
                 break;
-            case SkillType.HuoSkill2:
+            case SkillType.Huo2:
                 HuoSkill2();
                 break;
-            case SkillType.HuoSkill3:
+            case SkillType.Huo3:
                 int count = 5;
                 StartCoroutine(HuoSkill3(count,1.3f,0.2f));
                 break;
-            case SkillType.HeiAnSkill1:
+            case SkillType.HeiAn1:
                 HeiAnSkill1();
                 break;
-            case SkillType.HeiAnSkill2:
+            case SkillType.HeiAn2:
                 HeiAnSkill2();
                 break;
-            case SkillType.HeiAnSkill3:
+            case SkillType.HeiAn3:
                 HeiAnSkill3();
                 break;
         }
@@ -757,25 +769,20 @@ public class SkillController : XSingleton<SkillController>
         HeiAnSkill1Coolingtime+= Time.deltaTime;
         HeiAnSkill2Coolingtime+= Time.deltaTime;
         HeiAnSkill3Coolingtime+= Time.deltaTime;
-
-        if (DashCoolingtime >= Dashtime &&SkillData.S.dashAuto)
+        
+        if (DianQuanCoolingtime >= DianQuantime && SkillJiaDian.S.Dian1 >= 1&&SkillJiaDian.S.Dian1Auto)
         {
-            ExcuteSkill(SkillType.Dash);
+            ExcuteSkill(SkillType.Dian1);
         }
         
-        if (DianQuanCoolingtime >= DianQuantime && SkillJiaDian.S.Dian1 >= 1&&SkillData.S.skill1Auto)
+        if (IceBallCoolingtime >= IceBalltime && SkillJiaDian.S.Ice2 >= 1&&SkillJiaDian.S.Ice2Auto)
         {
-            ExcuteSkill(SkillType.Skill1);
+            ExcuteSkill(SkillType.Ice2);
         }
         
-        if (IceBallCoolingtime >= IceBalltime && SkillJiaDian.S.Ice2 >= 1&&SkillData.S.skill2Auto)
+        if (IceExplosionCoolingtime >= IceExplosiontime && SkillJiaDian.S.Ice3 >= 1&&SkillJiaDian.S.Ice3Auto)
         {
-            ExcuteSkill(SkillType.Skill2);
-        }
-        
-        if (IceExplosionCoolingtime >= IceExplosiontime && SkillJiaDian.S.Ice3 >= 1&&SkillData.S.skill3Auto)
-        {
-            ExcuteSkill(SkillType.Skill3);
+            ExcuteSkill(SkillType.Ice3);
         }
         
         

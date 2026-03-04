@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class MouseRightListen : MonoBehaviour, IPointerClickHandler
 {
     public SkillType buttonType = 0;
-    public KeyCodeType keyCode = KeyCodeType.None;
     public RectTransform canvasRect; // Canvas 的 RectTransform
     public RectTransform _skillSwitch;
     
@@ -38,119 +37,12 @@ public class MouseRightListen : MonoBehaviour, IPointerClickHandler
         }
     }
 
+    
+
    
-
-    public KeyCodeType GetKeyCodeSkill(SkillType skillType)
-    {
-
-        if (SkillData.S.LMB == skillType)
-        {
-            return KeyCodeType.LMB;
-        }
-
-        if (SkillData.S.RMB == skillType)
-        {
-            return KeyCodeType.RMB;
-        }
-        if (SkillData.S.Alpha1 == skillType)
-        {
-            return KeyCodeType.Alpha1;
-        }
-        if (SkillData.S.Alpha2 == skillType)
-        {
-            return KeyCodeType.Alpha2;
-        }
-        if (SkillData.S.Alpha3 == skillType)
-        {
-            return KeyCodeType.Alpha3;
-        }
-        return KeyCodeType.None;
-    }
-
-    public void LoadSkillKeyCode()
-    {
-        foreach (MouseRightListen listen in mouseRightListens)
-        {
-            switch (listen.buttonType)
-            {
-                case SkillType.Skill1:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.Skill1);
-                    break;
-                case SkillType.Skill2:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.Skill2);
-                    break;
-                case SkillType.Skill3:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.Skill3);
-                    break;
-                case SkillType.Dash:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.Dash);
-                    break;
-                case SkillType.Normal:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.Normal);
-                    break;
-                case SkillType.IceSkill1:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.IceSkill1);
-                    break;
-                case SkillType.DianSkill2:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.DianSkill2);
-                    break;
-                case SkillType.DianSkill3:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.DianSkill3);
-                    break;
-                case SkillType.HuoSkill1:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.HuoSkill1);
-                    break;
-                case SkillType.HuoSkill2:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.HuoSkill2);
-                    break;
-                case SkillType.HuoSkill3:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.HuoSkill3);
-                    break;
-                case SkillType.HeiAnSkill1:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.HeiAnSkill1);
-                    break;
-                case SkillType.HeiAnSkill2:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.HeiAnSkill2);
-                    break;
-                case SkillType.HeiAnSkill3:
-                    listen.keyCode=GetKeyCodeSkill(SkillType.HeiAnSkill3);
-                    break;
-               
-            }
-        }
-    }
-
     private void Start()
     {
-        LoadSkillKeyCode();
-        SetKeyCodeText();
     }
 
-    public void SetKeyCodeText()
-    {
-        foreach (MouseRightListen listen in mouseRightListens)
-        {
-            switch (listen.keyCode)
-            {
-                case KeyCodeType.LMB:
-                    listen.keyCodeText.text = "LMB";
-                    break;
-                case KeyCodeType.RMB:
-                    listen.keyCodeText.text = "RMB";
-                    break;
-                case KeyCodeType.Alpha1:
-                    listen.keyCodeText.text = "[1]";
-                    break;
-                case KeyCodeType.Alpha2:
-                    listen.keyCodeText.text = "[2]";
-                    break;
-                case KeyCodeType.Alpha3:
-                    listen.keyCodeText.text = "[3]";
-                    break;
-                case KeyCodeType.None:
-                    listen.keyCodeText.text = "";
-                    break;
-            }
-        }
-    }
+    
 }
