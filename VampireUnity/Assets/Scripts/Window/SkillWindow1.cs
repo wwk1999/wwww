@@ -211,6 +211,42 @@ public class SkillWindow1 : MonoBehaviour
 
 
      //IcePanel
+      HuoMainBg = transform.Find("Bg/Panel/HuoPanel/Main/bg").GetComponent<Image>();
+     HuoMainIcon = transform.Find("Bg/Panel/HuoPanel/Main/icon").GetComponent<Image>();
+     HuoMainLevelBg = transform.Find("Bg/Panel/HuoPanel/Main/Level/bg").GetComponent<Image>();
+     HuoMainLevelCount = transform.Find("Bg/Panel/HuoPanel/Main/Level/level").GetComponent<TextMeshProUGUI>();
+     HuoMainXuanZhong = transform.Find("Bg/Panel/HuoPanel/Main/xuanzhong").GetComponent<Image>();
+
+
+     HuoBei1Bg = transform.Find("Bg/Panel/HuoPanel/Bei1/bg").GetComponent<Image>();
+     HuoBei1Icon = transform.Find("Bg/Panel/HuoPanel/Bei1/icon").GetComponent<Image>();
+     HuoBei1LevelBg = transform.Find("Bg/Panel/HuoPanel/Bei1/Level/bg").GetComponent<Image>();
+     HuoBei1LevelCount = transform.Find("Bg/Panel/HuoPanel/Bei1/Level/level").GetComponent<TextMeshProUGUI>();
+     HuoBei1XuanZhong = transform.Find("Bg/Panel/HuoPanel/Bei1/xuanzhong").GetComponent<Image>();
+
+
+     HuoBei2Bg = transform.Find("Bg/Panel/HuoPanel/Bei2/bg").GetComponent<Image>();
+     HuoBei2Icon = transform.Find("Bg/Panel/HuoPanel/Bei2/icon").GetComponent<Image>();
+     HuoBei2LevelBg = transform.Find("Bg/Panel/HuoPanel/Bei2/Level/bg").GetComponent<Image>();
+     HuoBei2LevelCount = transform.Find("Bg/Panel/HuoPanel/Bei2/Level/level").GetComponent<TextMeshProUGUI>();
+     HuoBei2XuanZhong = transform.Find("Bg/Panel/HuoPanel/Bei2/xuanzhong").GetComponent<Image>();
+
+     HuoBei3Bg = transform.Find("Bg/Panel/HuoPanel/Bei3/bg").GetComponent<Image>();
+     HuoBei3Icon = transform.Find("Bg/Panel/HuoPanel/Bei3/icon").GetComponent<Image>();
+     HuoBei3LevelBg = transform.Find("Bg/Panel/HuoPanel/Bei3/Level/bg").GetComponent<Image>();
+     HuoBei3LevelCount = transform.Find("Bg/Panel/HuoPanel/Bei3/Level/level").GetComponent<TextMeshProUGUI>();
+     HuoBei3XuanZhong = transform.Find("Bg/Panel/HuoPanel/Bei3/xuanzhong").GetComponent<Image>();
+
+     HuoBei4Bg = transform.Find("Bg/Panel/HuoPanel/Bei4/bg").GetComponent<Image>();
+     HuoBei4Icon = transform.Find("Bg/Panel/HuoPanel/Bei4/icon").GetComponent<Image>();
+     HuoBei4LevelBg = transform.Find("Bg/Panel/HuoPanel/Bei4/Level/bg").GetComponent<Image>();
+     HuoBei4LevelCount = transform.Find("Bg/Panel/HuoPanel/Bei4/Level/level").GetComponent<TextMeshProUGUI>();
+     HuoBei4XuanZhong = transform.Find("Bg/Panel/HuoPanel/Bei4/xuanzhong").GetComponent<Image>();
+
+     
+     
+     
+     
      Huo1Bg = transform.Find("Bg/Panel/HuoPanel/Ice1/ice/bg").GetComponent<Image>();
      Huo1Icon = transform.Find("Bg/Panel/HuoPanel/Ice1/ice/icon").GetComponent<Image>();
      Huo1XuanZhong = transform.Find("Bg/Panel/HuoPanel/Ice1/ice/xuanzhong").GetComponent<Image>();
@@ -340,6 +376,40 @@ public class SkillWindow1 : MonoBehaviour
 
 
 
+     
+      DianMainBg = transform.Find("Bg/Panel/DianPanel/Main/bg").GetComponent<Image>();
+     DianMainIcon = transform.Find("Bg/Panel/DianPanel/Main/icon").GetComponent<Image>();
+     DianMainLevelBg = transform.Find("Bg/Panel/DianPanel/Main/Level/bg").GetComponent<Image>();
+     DianMainLevelCount = transform.Find("Bg/Panel/DianPanel/Main/Level/level").GetComponent<TextMeshProUGUI>();
+     DianMainXuanZhong = transform.Find("Bg/Panel/DianPanel/Main/xuanzhong").GetComponent<Image>();
+
+
+     DianBei1Bg = transform.Find("Bg/Panel/DianPanel/Bei1/bg").GetComponent<Image>();
+     DianBei1Icon = transform.Find("Bg/Panel/DianPanel/Bei1/icon").GetComponent<Image>();
+     DianBei1LevelBg = transform.Find("Bg/Panel/DianPanel/Bei1/Level/bg").GetComponent<Image>();
+     DianBei1LevelCount = transform.Find("Bg/Panel/DianPanel/Bei1/Level/level").GetComponent<TextMeshProUGUI>();
+     DianBei1XuanZhong = transform.Find("Bg/Panel/DianPanel/Bei1/xuanzhong").GetComponent<Image>();
+
+
+     DianBei2Bg = transform.Find("Bg/Panel/DianPanel/Bei2/bg").GetComponent<Image>();
+     DianBei2Icon = transform.Find("Bg/Panel/DianPanel/Bei2/icon").GetComponent<Image>();
+     DianBei2LevelBg = transform.Find("Bg/Panel/DianPanel/Bei2/Level/bg").GetComponent<Image>();
+     DianBei2LevelCount = transform.Find("Bg/Panel/DianPanel/Bei2/Level/level").GetComponent<TextMeshProUGUI>();
+     DianBei2XuanZhong = transform.Find("Bg/Panel/DianPanel/Bei2/xuanzhong").GetComponent<Image>();
+
+     DianBei3Bg = transform.Find("Bg/Panel/DianPanel/Bei3/bg").GetComponent<Image>();
+     DianBei3Icon = transform.Find("Bg/Panel/DianPanel/Bei3/icon").GetComponent<Image>();
+     DianBei3LevelBg = transform.Find("Bg/Panel/DianPanel/Bei3/Level/bg").GetComponent<Image>();
+     DianBei3LevelCount = transform.Find("Bg/Panel/DianPanel/Bei3/Level/level").GetComponent<TextMeshProUGUI>();
+     DianBei3XuanZhong = transform.Find("Bg/Panel/DianPanel/Bei3/xuanzhong").GetComponent<Image>();
+
+     DianBei4Bg = transform.Find("Bg/Panel/DianPanel/Bei4/bg").GetComponent<Image>();
+     DianBei4Icon = transform.Find("Bg/Panel/DianPanel/Bei4/icon").GetComponent<Image>();
+     DianBei4LevelBg = transform.Find("Bg/Panel/DianPanel/Bei4/Level/bg").GetComponent<Image>();
+     DianBei4LevelCount = transform.Find("Bg/Panel/DianPanel/Bei4/Level/level").GetComponent<TextMeshProUGUI>();
+     DianBei4XuanZhong = transform.Find("Bg/Panel/DianPanel/Bei4/xuanzhong").GetComponent<Image>();
+
+     
 
      Dian1Bg = transform.Find("Bg/Panel/DianPanel/Ice1/ice/bg").GetComponent<Image>();
      Dian1Icon = transform.Find("Bg/Panel/DianPanel/Ice1/ice/icon").GetComponent<Image>();
@@ -495,6 +565,43 @@ public class SkillWindow1 : MonoBehaviour
 
 
 
+     
+     
+     
+      HeiAnMainBg = transform.Find("Bg/Panel/HeiAnPanel/Main/bg").GetComponent<Image>();
+     HeiAnMainIcon = transform.Find("Bg/Panel/HeiAnPanel/Main/icon").GetComponent<Image>();
+     HeiAnMainLevelBg = transform.Find("Bg/Panel/HeiAnPanel/Main/Level/bg").GetComponent<Image>();
+     HeiAnMainLevelCount = transform.Find("Bg/Panel/HeiAnPanel/Main/Level/level").GetComponent<TextMeshProUGUI>();
+     HeiAnMainXuanZhong = transform.Find("Bg/Panel/HeiAnPanel/Main/xuanzhong").GetComponent<Image>();
+
+
+     HeiAnBei1Bg = transform.Find("Bg/Panel/HeiAnPanel/Bei1/bg").GetComponent<Image>();
+     HeiAnBei1Icon = transform.Find("Bg/Panel/HeiAnPanel/Bei1/icon").GetComponent<Image>();
+     HeiAnBei1LevelBg = transform.Find("Bg/Panel/HeiAnPanel/Bei1/Level/bg").GetComponent<Image>();
+     HeiAnBei1LevelCount = transform.Find("Bg/Panel/HeiAnPanel/Bei1/Level/level").GetComponent<TextMeshProUGUI>();
+     HeiAnBei1XuanZhong = transform.Find("Bg/Panel/HeiAnPanel/Bei1/xuanzhong").GetComponent<Image>();
+
+
+     HeiAnBei2Bg = transform.Find("Bg/Panel/HeiAnPanel/Bei2/bg").GetComponent<Image>();
+     HeiAnBei2Icon = transform.Find("Bg/Panel/HeiAnPanel/Bei2/icon").GetComponent<Image>();
+     HeiAnBei2LevelBg = transform.Find("Bg/Panel/HeiAnPanel/Bei2/Level/bg").GetComponent<Image>();
+     HeiAnBei2LevelCount = transform.Find("Bg/Panel/HeiAnPanel/Bei2/Level/level").GetComponent<TextMeshProUGUI>();
+     HeiAnBei2XuanZhong = transform.Find("Bg/Panel/HeiAnPanel/Bei2/xuanzhong").GetComponent<Image>();
+
+     HeiAnBei3Bg = transform.Find("Bg/Panel/HeiAnPanel/Bei3/bg").GetComponent<Image>();
+     HeiAnBei3Icon = transform.Find("Bg/Panel/HeiAnPanel/Bei3/icon").GetComponent<Image>();
+     HeiAnBei3LevelBg = transform.Find("Bg/Panel/HeiAnPanel/Bei3/Level/bg").GetComponent<Image>();
+     HeiAnBei3LevelCount = transform.Find("Bg/Panel/HeiAnPanel/Bei3/Level/level").GetComponent<TextMeshProUGUI>();
+     HeiAnBei3XuanZhong = transform.Find("Bg/Panel/HeiAnPanel/Bei3/xuanzhong").GetComponent<Image>();
+
+     HeiAnBei4Bg = transform.Find("Bg/Panel/HeiAnPanel/Bei4/bg").GetComponent<Image>();
+     HeiAnBei4Icon = transform.Find("Bg/Panel/HeiAnPanel/Bei4/icon").GetComponent<Image>();
+     HeiAnBei4LevelBg = transform.Find("Bg/Panel/HeiAnPanel/Bei4/Level/bg").GetComponent<Image>();
+     HeiAnBei4LevelCount = transform.Find("Bg/Panel/HeiAnPanel/Bei4/Level/level").GetComponent<TextMeshProUGUI>();
+     HeiAnBei4XuanZhong = transform.Find("Bg/Panel/HeiAnPanel/Bei4/xuanzhong").GetComponent<Image>();
+
+     
+     
      HeiAn2Bg = transform.Find("Bg/Panel/HeiAnPanel/Ice2/ice/bg").GetComponent<Image>();
      HeiAn2Icon = transform.Find("Bg/Panel/HeiAnPanel/Ice2/ice/icon").GetComponent<Image>();
      HeiAn2XuanZhong = transform.Find("Bg/Panel/HeiAnPanel/Ice2/ice/xuanzhong").GetComponent<Image>();
@@ -806,178 +913,178 @@ public class SkillWindow1 : MonoBehaviour
      HeiAnZJMainXuanZhong = transform.Find("Bg/Panel/ZJPanel/HeiAn/Main/xuanzhong").GetComponent<Image>();
 
 
-     IceBeiLine1Liang = transform.Find("Bg/Panel/IcePanel/BeiLine1/liang").GetComponent<GameObject>();
-     IceBeiLine1An = transform.Find("Bg/Panel/IcePanel/BeiLine1/An").GetComponent<GameObject>();
-     IceBeiLine2Liang = transform.Find("Bg/Panel/IcePanel/BeiLine2/liang").GetComponent<GameObject>();
-     IceBeiLine2An = transform.Find("Bg/Panel/IcePanel/BeiLine2/An").GetComponent<GameObject>();
+     IceBeiLine1Liang = transform.Find("Bg/Panel/IcePanel/BeiLine1/liang").gameObject;
+     IceBeiLine1An = transform.Find("Bg/Panel/IcePanel/BeiLine1/An").gameObject;
+     IceBeiLine2Liang = transform.Find("Bg/Panel/IcePanel/BeiLine2/liang").gameObject;
+     IceBeiLine2An = transform.Find("Bg/Panel/IcePanel/BeiLine2/An").gameObject;
 
-     Ice1Line1An = transform.Find("Bg/Panel/IcePanel/Ice1/Line1/An").GetComponent<GameObject>();
-     Ice1Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice1/Line1/liang").GetComponent<GameObject>();
-     Ice1Line2An = transform.Find("Bg/Panel/IcePanel/Ice1/Line2/An").GetComponent<GameObject>();
-     Ice1Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice1/Line2/liang").GetComponent<GameObject>();
+     Ice1Line1An = transform.Find("Bg/Panel/IcePanel/Ice1/Line1/An").gameObject;
+     Ice1Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice1/Line1/liang").gameObject;
+     Ice1Line2An = transform.Find("Bg/Panel/IcePanel/Ice1/Line2/An").gameObject;
+     Ice1Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice1/Line2/liang").gameObject;
 
-     Ice2Line1An = transform.Find("Bg/Panel/IcePanel/Ice2/Line1/An").GetComponent<GameObject>();
-     Ice2Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice2/Line1/liang").GetComponent<GameObject>();
-     Ice2Line2An = transform.Find("Bg/Panel/IcePanel/Ice2/Line2/An").GetComponent<GameObject>();
-     Ice2Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice2/Line2/liang").GetComponent<GameObject>();
+     Ice2Line1An = transform.Find("Bg/Panel/IcePanel/Ice2/Line1/An").gameObject;
+     Ice2Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice2/Line1/liang").gameObject;
+     Ice2Line2An = transform.Find("Bg/Panel/IcePanel/Ice2/Line2/An").gameObject;
+     Ice2Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice2/Line2/liang").gameObject;
 
-     Ice3Line1An = transform.Find("Bg/Panel/IcePanel/Ice3/Line1/An").GetComponent<GameObject>();
-     Ice3Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice3/Line1/liang").GetComponent<GameObject>();
-     Ice3Line2An = transform.Find("Bg/Panel/IcePanel/Ice3/Line2/An").GetComponent<GameObject>();
-     Ice3Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice3/Line2/liang").GetComponent<GameObject>();
+     Ice3Line1An = transform.Find("Bg/Panel/IcePanel/Ice3/Line1/An").gameObject;
+     Ice3Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice3/Line1/liang").gameObject;
+     Ice3Line2An = transform.Find("Bg/Panel/IcePanel/Ice3/Line2/An").gameObject;
+     Ice3Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice3/Line2/liang").gameObject;
 
-     Ice4Line1An = transform.Find("Bg/Panel/IcePanel/Ice4/Line1/An").GetComponent<GameObject>();
-     Ice4Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice4/Line1/liang").GetComponent<GameObject>();
-     Ice4Line2An = transform.Find("Bg/Panel/IcePanel/Ice4/Line2/An").GetComponent<GameObject>();
-     Ice4Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice4/Line2/liang").GetComponent<GameObject>();
+     Ice4Line1An = transform.Find("Bg/Panel/IcePanel/Ice4/Line1/An").gameObject;
+     Ice4Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice4/Line1/liang").gameObject;
+     Ice4Line2An = transform.Find("Bg/Panel/IcePanel/Ice4/Line2/An").gameObject;
+     Ice4Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice4/Line2/liang").gameObject;
 
-     Ice5Line1An = transform.Find("Bg/Panel/IcePanel/Ice5/Line1/An").GetComponent<GameObject>();
-     Ice5Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice5/Line1/liang").GetComponent<GameObject>();
-     Ice5Line2An = transform.Find("Bg/Panel/IcePanel/Ice5/Line2/An").GetComponent<GameObject>();
-     Ice5Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice5/Line2/liang").GetComponent<GameObject>();
+     Ice5Line1An = transform.Find("Bg/Panel/IcePanel/Ice5/Line1/An").gameObject;
+     Ice5Line1Liang = transform.Find("Bg/Panel/IcePanel/Ice5/Line1/liang").gameObject;
+     Ice5Line2An = transform.Find("Bg/Panel/IcePanel/Ice5/Line2/An").gameObject;
+     Ice5Line2Liang = transform.Find("Bg/Panel/IcePanel/Ice5/Line2/liang").gameObject;
 
-     HuoBeiLine1Liang = transform.Find("Bg/Panel/HuoPanel/BeiLine1/liang").GetComponent<GameObject>();
-     HuoBeiLine1An = transform.Find("Bg/Panel/HuoPanel/BeiLine1/An").GetComponent<GameObject>();
-     HuoBeiLine2Liang = transform.Find("Bg/Panel/HuoPanel/BeiLine2/liang").GetComponent<GameObject>();
-     HuoBeiLine2An = transform.Find("Bg/Panel/HuoPanel/BeiLine2/An").GetComponent<GameObject>();
+     HuoBeiLine1Liang = transform.Find("Bg/Panel/HuoPanel/BeiLine1/liang").gameObject;
+     HuoBeiLine1An = transform.Find("Bg/Panel/HuoPanel/BeiLine1/An").gameObject;
+     HuoBeiLine2Liang = transform.Find("Bg/Panel/HuoPanel/BeiLine2/liang").gameObject;
+     HuoBeiLine2An = transform.Find("Bg/Panel/HuoPanel/BeiLine2/An").gameObject;
 
-     Huo1Line1An = transform.Find("Bg/Panel/HuoPanel/Ice1/Line1/An").GetComponent<GameObject>();
-     Huo1Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice1/Line1/liang").GetComponent<GameObject>();
-     Huo1Line2An = transform.Find("Bg/Panel/HuoPanel/Ice1/Line2/An").GetComponent<GameObject>();
-     Huo1Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice1/Line2/liang").GetComponent<GameObject>();
+     Huo1Line1An = transform.Find("Bg/Panel/HuoPanel/Ice1/Line1/An").gameObject;
+     Huo1Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice1/Line1/liang").gameObject;
+     Huo1Line2An = transform.Find("Bg/Panel/HuoPanel/Ice1/Line2/An").gameObject;
+     Huo1Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice1/Line2/liang").gameObject;
 
-     Huo2Line1An = transform.Find("Bg/Panel/HuoPanel/Ice2/Line1/An").GetComponent<GameObject>();
-     Huo2Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice2/Line1/liang").GetComponent<GameObject>();
-     Huo2Line2An = transform.Find("Bg/Panel/HuoPanel/Ice2/Line2/An").GetComponent<GameObject>();
-     Huo2Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice2/Line2/liang").GetComponent<GameObject>();
+     Huo2Line1An = transform.Find("Bg/Panel/HuoPanel/Ice2/Line1/An").gameObject;
+     Huo2Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice2/Line1/liang").gameObject;
+     Huo2Line2An = transform.Find("Bg/Panel/HuoPanel/Ice2/Line2/An").gameObject;
+     Huo2Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice2/Line2/liang").gameObject;
 
-     Huo3Line1An = transform.Find("Bg/Panel/HuoPanel/Ice3/Line1/An").GetComponent<GameObject>();
-     Huo3Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice3/Line1/liang").GetComponent<GameObject>();
-     Huo3Line2An = transform.Find("Bg/Panel/HuoPanel/Ice3/Line2/An").GetComponent<GameObject>();
-     Huo3Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice3/Line2/liang").GetComponent<GameObject>();
+     Huo3Line1An = transform.Find("Bg/Panel/HuoPanel/Ice3/Line1/An").gameObject;
+     Huo3Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice3/Line1/liang").gameObject;
+     Huo3Line2An = transform.Find("Bg/Panel/HuoPanel/Ice3/Line2/An").gameObject;
+     Huo3Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice3/Line2/liang").gameObject;
 
-     Huo4Line1An = transform.Find("Bg/Panel/HuoPanel/Ice4/Line1/An").GetComponent<GameObject>();
-     Huo4Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice4/Line1/liang").GetComponent<GameObject>();
-     Huo4Line2An = transform.Find("Bg/Panel/HuoPanel/Ice4/Line2/An").GetComponent<GameObject>();
-     Huo4Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice4/Line2/liang").GetComponent<GameObject>();
+     Huo4Line1An = transform.Find("Bg/Panel/HuoPanel/Ice4/Line1/An").gameObject;
+     Huo4Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice4/Line1/liang").gameObject;
+     Huo4Line2An = transform.Find("Bg/Panel/HuoPanel/Ice4/Line2/An").gameObject;
+     Huo4Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice4/Line2/liang").gameObject;
 
-     Huo5Line1An = transform.Find("Bg/Panel/HuoPanel/Ice5/Line1/An").GetComponent<GameObject>();
-     Huo5Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice5/Line1/liang").GetComponent<GameObject>();
-     Huo5Line2An = transform.Find("Bg/Panel/HuoPanel/Ice5/Line2/An").GetComponent<GameObject>();
-     Huo5Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice5/Line2/liang").GetComponent<GameObject>();
-
-
-
-     DianBeiLine1Liang = transform.Find("Bg/Panel/DianPanel/BeiLine1/liang").GetComponent<GameObject>();
-     DianBeiLine1An = transform.Find("Bg/Panel/DianPanel/BeiLine1/An").GetComponent<GameObject>();
-     DianBeiLine2Liang = transform.Find("Bg/Panel/DianPanel/BeiLine2/liang").GetComponent<GameObject>();
-     DianBeiLine2An = transform.Find("Bg/Panel/DianPanel/BeiLine2/An").GetComponent<GameObject>();
-
-     Dian1Line1An = transform.Find("Bg/Panel/DianPanel/Ice1/Line1/An").GetComponent<GameObject>();
-     Dian1Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice1/Line1/liang").GetComponent<GameObject>();
-     Dian1Line2An = transform.Find("Bg/Panel/DianPanel/Ice1/Line2/An").GetComponent<GameObject>();
-     Dian1Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice1/Line2/liang").GetComponent<GameObject>();
-
-     Dian2Line1An = transform.Find("Bg/Panel/DianPanel/Ice2/Line1/An").GetComponent<GameObject>();
-     Dian2Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice2/Line1/liang").GetComponent<GameObject>();
-     Dian2Line2An = transform.Find("Bg/Panel/DianPanel/Ice2/Line2/An").GetComponent<GameObject>();
-     Dian2Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice2/Line2/liang").GetComponent<GameObject>();
-
-     Dian3Line1An = transform.Find("Bg/Panel/DianPanel/Ice3/Line1/An").GetComponent<GameObject>();
-     Dian3Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice3/Line1/liang").GetComponent<GameObject>();
-     Dian3Line2An = transform.Find("Bg/Panel/DianPanel/Ice3/Line2/An").GetComponent<GameObject>();
-     Dian3Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice3/Line2/liang").GetComponent<GameObject>();
-
-     Dian4Line1An = transform.Find("Bg/Panel/DianPanel/Ice4/Line1/An").GetComponent<GameObject>();
-     Dian4Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice4/Line1/liang").GetComponent<GameObject>();
-     Dian4Line2An = transform.Find("Bg/Panel/DianPanel/Ice4/Line2/An").GetComponent<GameObject>();
-     Dian4Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice4/Line2/liang").GetComponent<GameObject>();
-
-     Dian5Line1An = transform.Find("Bg/Panel/DianPanel/Ice5/Line1/An").GetComponent<GameObject>();
-     Dian5Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice5/Line1/liang").GetComponent<GameObject>();
-     Dian5Line2An = transform.Find("Bg/Panel/DianPanel/Ice5/Line2/An").GetComponent<GameObject>();
-     Dian5Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice5/Line2/liang").GetComponent<GameObject>();
+     Huo5Line1An = transform.Find("Bg/Panel/HuoPanel/Ice5/Line1/An").gameObject;
+     Huo5Line1Liang = transform.Find("Bg/Panel/HuoPanel/Ice5/Line1/liang").gameObject;
+     Huo5Line2An = transform.Find("Bg/Panel/HuoPanel/Ice5/Line2/An").gameObject;
+     Huo5Line2Liang = transform.Find("Bg/Panel/HuoPanel/Ice5/Line2/liang").gameObject;
 
 
-     HeiAnBeiLine1Liang = transform.Find("Bg/Panel/HeiAnPanel/BeiLine1/liang").GetComponent<GameObject>();
-     HeiAnBeiLine1An = transform.Find("Bg/Panel/HeiAnPanel/BeiLine1/An").GetComponent<GameObject>();
-     HeiAnBeiLine2Liang = transform.Find("Bg/Panel/HeiAnPanel/BeiLine2/liang").GetComponent<GameObject>();
-     HeiAnBeiLine2An = transform.Find("Bg/Panel/HeiAnPanel/BeiLine2/An").GetComponent<GameObject>();
 
-     HeiAn1Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice1/Line1/An").GetComponent<GameObject>();
-     HeiAn1Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice1/Line1/liang").GetComponent<GameObject>();
-     HeiAn1Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice1/Line2/An").GetComponent<GameObject>();
-     HeiAn1Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice1/Line2/liang").GetComponent<GameObject>();
+     DianBeiLine1Liang = transform.Find("Bg/Panel/DianPanel/BeiLine1/liang").gameObject;
+     DianBeiLine1An = transform.Find("Bg/Panel/DianPanel/BeiLine1/An").gameObject;
+     DianBeiLine2Liang = transform.Find("Bg/Panel/DianPanel/BeiLine2/liang").gameObject;
+     DianBeiLine2An = transform.Find("Bg/Panel/DianPanel/BeiLine2/An").gameObject;
 
-     HeiAn2Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice2/Line1/An").GetComponent<GameObject>();
-     HeiAn2Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice2/Line1/liang").GetComponent<GameObject>();
-     HeiAn2Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice2/Line2/An").GetComponent<GameObject>();
-     HeiAn2Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice2/Line2/liang").GetComponent<GameObject>();
+     Dian1Line1An = transform.Find("Bg/Panel/DianPanel/Ice1/Line1/An").gameObject;
+     Dian1Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice1/Line1/liang").gameObject;
+     Dian1Line2An = transform.Find("Bg/Panel/DianPanel/Ice1/Line2/An").gameObject;
+     Dian1Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice1/Line2/liang").gameObject;
 
-     HeiAn3Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice3/Line1/An").GetComponent<GameObject>();
-     HeiAn3Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice3/Line1/liang").GetComponent<GameObject>();
-     HeiAn3Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice3/Line2/An").GetComponent<GameObject>();
-     HeiAn3Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice3/Line2/liang").GetComponent<GameObject>();
+     Dian2Line1An = transform.Find("Bg/Panel/DianPanel/Ice2/Line1/An").gameObject;
+     Dian2Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice2/Line1/liang").gameObject;
+     Dian2Line2An = transform.Find("Bg/Panel/DianPanel/Ice2/Line2/An").gameObject;
+     Dian2Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice2/Line2/liang").gameObject;
 
-     HeiAn4Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice4/Line1/An").GetComponent<GameObject>();
-     HeiAn4Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice4/Line1/liang").GetComponent<GameObject>();
-     HeiAn4Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice4/Line2/An").GetComponent<GameObject>();
-     HeiAn4Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice4/Line2/liang").GetComponent<GameObject>();
+     Dian3Line1An = transform.Find("Bg/Panel/DianPanel/Ice3/Line1/An").gameObject;
+     Dian3Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice3/Line1/liang").gameObject;
+     Dian3Line2An = transform.Find("Bg/Panel/DianPanel/Ice3/Line2/An").gameObject;
+     Dian3Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice3/Line2/liang").gameObject;
 
-     HeiAn5Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line1/An").GetComponent<GameObject>();
-     HeiAn5Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line1/liang").GetComponent<GameObject>();
-     HeiAn5Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line2/An").GetComponent<GameObject>();
-     HeiAn5Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line2/liang").GetComponent<GameObject>();
+     Dian4Line1An = transform.Find("Bg/Panel/DianPanel/Ice4/Line1/An").gameObject;
+     Dian4Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice4/Line1/liang").gameObject;
+     Dian4Line2An = transform.Find("Bg/Panel/DianPanel/Ice4/Line2/An").gameObject;
+     Dian4Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice4/Line2/liang").gameObject;
+
+     Dian5Line1An = transform.Find("Bg/Panel/DianPanel/Ice5/Line1/An").gameObject;
+     Dian5Line1Liang = transform.Find("Bg/Panel/DianPanel/Ice5/Line1/liang").gameObject;
+     Dian5Line2An = transform.Find("Bg/Panel/DianPanel/Ice5/Line2/An").gameObject;
+     Dian5Line2Liang = transform.Find("Bg/Panel/DianPanel/Ice5/Line2/liang").gameObject;
 
 
-     IceZJLine1An = transform.Find("Bg/Panel/ZJPanel/Ice/Line1/An").GetComponent<GameObject>();
-     IceZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line1/liang").GetComponent<GameObject>();
-     IceZJLine2An = transform.Find("Bg/Panel/ZJPanel/Ice/Line2/An").GetComponent<GameObject>();
-     IceZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line2/liang").GetComponent<GameObject>();
-     IceZJLine3An = transform.Find("Bg/Panel/ZJPanel/Ice/Line3/An").GetComponent<GameObject>();
-     IceZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line3/liang").GetComponent<GameObject>();
-     IceZJLine4An = transform.Find("Bg/Panel/ZJPanel/Ice/Line4/An").GetComponent<GameObject>();
-     IceZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line4/liang").GetComponent<GameObject>();
-     IceZJLine5An = transform.Find("Bg/Panel/ZJPanel/Ice/Line5/An").GetComponent<GameObject>();
-     IceZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line5/liang").GetComponent<GameObject>();
+     HeiAnBeiLine1Liang = transform.Find("Bg/Panel/HeiAnPanel/BeiLine1/liang").gameObject;
+     HeiAnBeiLine1An = transform.Find("Bg/Panel/HeiAnPanel/BeiLine1/An").gameObject;
+     HeiAnBeiLine2Liang = transform.Find("Bg/Panel/HeiAnPanel/BeiLine2/liang").gameObject;
+     HeiAnBeiLine2An = transform.Find("Bg/Panel/HeiAnPanel/BeiLine2/An").gameObject;
+
+     HeiAn1Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice1/Line1/An").gameObject;
+     HeiAn1Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice1/Line1/liang").gameObject;
+     HeiAn1Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice1/Line2/An").gameObject;
+     HeiAn1Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice1/Line2/liang").gameObject;
+
+     HeiAn2Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice2/Line1/An").gameObject;
+     HeiAn2Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice2/Line1/liang").gameObject;
+     HeiAn2Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice2/Line2/An").gameObject;
+     HeiAn2Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice2/Line2/liang").gameObject;
+
+     HeiAn3Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice3/Line1/An").gameObject;
+     HeiAn3Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice3/Line1/liang").gameObject;
+     HeiAn3Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice3/Line2/An").gameObject;
+     HeiAn3Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice3/Line2/liang").gameObject;
+
+     HeiAn4Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice4/Line1/An").gameObject;
+     HeiAn4Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice4/Line1/liang").gameObject;
+     HeiAn4Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice4/Line2/An").gameObject;
+     HeiAn4Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice4/Line2/liang").gameObject;
+
+     HeiAn5Line1An = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line1/An").gameObject;
+     HeiAn5Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line1/liang").gameObject;
+     HeiAn5Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line2/An").gameObject;
+     HeiAn5Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line2/liang").gameObject;
+
+
+     IceZJLine1An = transform.Find("Bg/Panel/ZJPanel/Ice/Line1/An").gameObject;
+     IceZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line1/liang").gameObject;
+     IceZJLine2An = transform.Find("Bg/Panel/ZJPanel/Ice/Line2/An").gameObject;
+     IceZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line2/liang").gameObject;
+     IceZJLine3An = transform.Find("Bg/Panel/ZJPanel/Ice/Line3/An").gameObject;
+     IceZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line3/liang").gameObject;
+     IceZJLine4An = transform.Find("Bg/Panel/ZJPanel/Ice/Line4/An").gameObject;
+     IceZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line4/liang").gameObject;
+     IceZJLine5An = transform.Find("Bg/Panel/ZJPanel/Ice/Line5/An").gameObject;
+     IceZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line5/liang").gameObject;
      
      
      
-     HuoZJLine1An = transform.Find("Bg/Panel/ZJPanel/Huo/Line1/An").GetComponent<GameObject>();
-     HuoZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line1/liang").GetComponent<GameObject>();
-     HuoZJLine2An = transform.Find("Bg/Panel/ZJPanel/Huo/Line2/An").GetComponent<GameObject>();
-     HuoZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line2/liang").GetComponent<GameObject>();
-     HuoZJLine3An = transform.Find("Bg/Panel/ZJPanel/Huo/Line3/An").GetComponent<GameObject>();
-     HuoZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line3/liang").GetComponent<GameObject>();
-     HuoZJLine4An = transform.Find("Bg/Panel/ZJPanel/Huo/Line4/An").GetComponent<GameObject>();
-     HuoZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line4/liang").GetComponent<GameObject>();
-     HuoZJLine5An = transform.Find("Bg/Panel/ZJPanel/Huo/Line5/An").GetComponent<GameObject>();
-     HuoZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line5/liang").GetComponent<GameObject>();
+     HuoZJLine1An = transform.Find("Bg/Panel/ZJPanel/Huo/Line1/An").gameObject;
+     HuoZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line1/liang").gameObject;
+     HuoZJLine2An = transform.Find("Bg/Panel/ZJPanel/Huo/Line2/An").gameObject;
+     HuoZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line2/liang").gameObject;
+     HuoZJLine3An = transform.Find("Bg/Panel/ZJPanel/Huo/Line3/An").gameObject;
+     HuoZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line3/liang").gameObject;
+     HuoZJLine4An = transform.Find("Bg/Panel/ZJPanel/Huo/Line4/An").gameObject;
+     HuoZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line4/liang").gameObject;
+     HuoZJLine5An = transform.Find("Bg/Panel/ZJPanel/Huo/Line5/An").gameObject;
+     HuoZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line5/liang").gameObject;
      
      
-     DianZJLine1An = transform.Find("Bg/Panel/ZJPanel/Dian/Line1/An").GetComponent<GameObject>();
-     DianZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line1/liang").GetComponent<GameObject>();
-     DianZJLine2An = transform.Find("Bg/Panel/ZJPanel/Dian/Line2/An").GetComponent<GameObject>();
-     DianZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line2/liang").GetComponent<GameObject>();
-     DianZJLine3An = transform.Find("Bg/Panel/ZJPanel/Dian/Line3/An").GetComponent<GameObject>();
-     DianZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line3/liang").GetComponent<GameObject>();
-     DianZJLine4An = transform.Find("Bg/Panel/ZJPanel/Dian/Line4/An").GetComponent<GameObject>();
-     DianZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line4/liang").GetComponent<GameObject>();
-     DianZJLine5An = transform.Find("Bg/Panel/ZJPanel/Dian/Line5/An").GetComponent<GameObject>();
-     DianZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line5/liang").GetComponent<GameObject>();
+     DianZJLine1An = transform.Find("Bg/Panel/ZJPanel/Dian/Line1/An").gameObject;
+     DianZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line1/liang").gameObject;
+     DianZJLine2An = transform.Find("Bg/Panel/ZJPanel/Dian/Line2/An").gameObject;
+     DianZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line2/liang").gameObject;
+     DianZJLine3An = transform.Find("Bg/Panel/ZJPanel/Dian/Line3/An").gameObject;
+     DianZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line3/liang").gameObject;
+     DianZJLine4An = transform.Find("Bg/Panel/ZJPanel/Dian/Line4/An").gameObject;
+     DianZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line4/liang").gameObject;
+     DianZJLine5An = transform.Find("Bg/Panel/ZJPanel/Dian/Line5/An").gameObject;
+     DianZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line5/liang").gameObject;
      
      
      
-     HeiAnZJLine1An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line1/An").GetComponent<GameObject>();
-     HeiAnZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line1/liang").GetComponent<GameObject>();
-     HeiAnZJLine2An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line2/An").GetComponent<GameObject>();
-     HeiAnZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line2/liang").GetComponent<GameObject>();
-     HeiAnZJLine3An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line3/An").GetComponent<GameObject>();
-     HeiAnZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line3/liang").GetComponent<GameObject>();
-     HeiAnZJLine4An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line4/An").GetComponent<GameObject>();
-     HeiAnZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line4/liang").GetComponent<GameObject>();
-     HeiAnZJLine5An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line5/An").GetComponent<GameObject>();
-     HeiAnZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line5/liang").GetComponent<GameObject>();
+     HeiAnZJLine1An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line1/An").gameObject;
+     HeiAnZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line1/liang").gameObject;
+     HeiAnZJLine2An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line2/An").gameObject;
+     HeiAnZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line2/liang").gameObject;
+     HeiAnZJLine3An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line3/An").gameObject;
+     HeiAnZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line3/liang").gameObject;
+     HeiAnZJLine4An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line4/An").gameObject;
+     HeiAnZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line4/liang").gameObject;
+     HeiAnZJLine5An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line5/An").gameObject;
+     HeiAnZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line5/liang").gameObject;
      
      
      ZhiYeZJMainBg= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Main/bg").GetComponent<Image>();
@@ -1021,6 +1128,22 @@ public class SkillWindow1 : MonoBehaviour
      ZhiYeZJ6LevelCount= transform.Find("Bg/Panel/ZJPanel/ZhiYe/6/Level/level").GetComponent<TextMeshProUGUI>();
      ZhiYeZJ6LevelBg= transform.Find("Bg/Panel/ZJPanel/ZhiYe/6/Level/bg").GetComponent<Image>();
      ZhiYeZJ6XuanZhong= transform.Find("Bg/Panel/ZJPanel/ZhiYe/6/xuanzhong").GetComponent<Image>();
+     
+     ZhiYeZJLine1Liang= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line1/liang").gameObject;
+     ZhiYeZJLine1An= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line1/An").gameObject;
+     
+     ZhiYeZJLine2Liang= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line2/liang").gameObject;
+     ZhiYeZJLine2An= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line2/An").gameObject;
+     
+     ZhiYeZJLine3Liang= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line3/liang").gameObject;
+     ZhiYeZJLine3An= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line3/An").gameObject;
+     
+     ZhiYeZJLine4Liang= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line4/liang").gameObject;
+     ZhiYeZJLine4An= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line4/An").gameObject;
+     
+     ZhiYeZJLine5Liang= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line5/liang").gameObject;
+     ZhiYeZJLine5An= transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line5/An").gameObject;
+
     }
 
     public void SetIcePanelImageColorAndJiaoHuAndLine()
