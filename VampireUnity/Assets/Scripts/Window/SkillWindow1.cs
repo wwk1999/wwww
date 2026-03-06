@@ -1154,6 +1154,8 @@ public class SkillWindow1 : MonoBehaviour
       IceBeiLine1Liang.gameObject.SetActive(false);
       IceBeiLine1An.gameObject.SetActive(true);
       IceBei2Icon.GetComponent<Button>().interactable = false;
+      IceBei2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
@@ -1161,6 +1163,8 @@ public class SkillWindow1 : MonoBehaviour
       IceBeiLine1Liang.gameObject.SetActive(true);
       IceBeiLine1An.gameObject.SetActive(false);
       IceBei2Icon.GetComponent<Button>().interactable = true;
+      IceBei2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
 
      if (SkillJiaDian.S.IceBei3 < 1)
@@ -1168,12 +1172,16 @@ public class SkillWindow1 : MonoBehaviour
       IceBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceBeiLine2Liang.gameObject.SetActive(false);
       IceBeiLine2An.gameObject.SetActive(true);
+      IceBei4Icon.GetComponent<Button>().interactable = false;
+      IceBei4Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
       IceBei4Icon.color = new Color(1, 1, 1);
       IceBeiLine2Liang.gameObject.SetActive(true);
       IceBeiLine2An.gameObject.SetActive(false);
+      IceBei4Icon.GetComponent<Button>().interactable = true;
+      IceBei4Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1182,12 +1190,17 @@ public class SkillWindow1 : MonoBehaviour
       Ice1_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice1Line1Liang.gameObject.SetActive(false);
       Ice1Line1An.gameObject.SetActive(true);
+      Ice1_1Icon.GetComponent<Button>().interactable = false;
+      Ice1_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
       Ice1_1Icon.color = new Color(1,1,1);
       Ice1Line1Liang.gameObject.SetActive(true);
       Ice1Line1An.gameObject.SetActive(false);
+      Ice1_1Icon.GetComponent<Button>().interactable = true;
+      Ice1_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1196,12 +1209,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice1_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice1Line2Liang.gameObject.SetActive(false);
       Ice1Line2An.gameObject.SetActive(true);
+      Ice1_2Icon.GetComponent<Button>().interactable = false;
+      Ice1_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice1_2Icon.color = new Color(1,1,1);
       Ice1Line2Liang.gameObject.SetActive(true);
       Ice1Line2An.gameObject.SetActive(false);
+      Ice1_2Icon.GetComponent<Button>().interactable = true;
+      Ice1_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1211,12 +1230,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice2_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice2Line1Liang.gameObject.SetActive(false);
       Ice2Line1An.gameObject.SetActive(true);
+      Ice2_1Icon.GetComponent<Button>().interactable = false;
+      Ice2_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice2_1Icon.color = new Color(1,1,1); 
       Ice2Line1Liang.gameObject.SetActive(true);
       Ice2Line1An.gameObject.SetActive(false);
+      Ice2_1Icon.GetComponent<Button>().interactable = true;
+      Ice2_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1225,12 +1250,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice2_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice2Line2Liang.gameObject.SetActive(false);
       Ice2Line2An.gameObject.SetActive(true);
+      Ice2_2Icon.GetComponent<Button>().interactable = false;
+      Ice2_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice2_2Icon.color = new Color(1,1,1);
       Ice2Line2Liang.gameObject.SetActive(true);
       Ice2Line2An.gameObject.SetActive(false);
+      Ice2_2Icon.GetComponent<Button>().interactable = true;
+      Ice2_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1240,12 +1271,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice3_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice3Line1Liang.gameObject.SetActive(false);
       Ice3Line1An.gameObject.SetActive(true);
+      Ice3_1Icon.GetComponent<Button>().interactable = false;
+      Ice3_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice3_1Icon.color = new Color(1,1,1);
       Ice3Line1Liang.gameObject.SetActive(true);
       Ice3Line1An.gameObject.SetActive(false);
+      Ice3_1Icon.GetComponent<Button>().interactable = true;
+      Ice3_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1254,12 +1291,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice3_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice3Line2Liang.gameObject.SetActive(false);
       Ice3Line2An.gameObject.SetActive(true);
+      Ice3_2Icon.GetComponent<Button>().interactable = false;
+      Ice3_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice3_2Icon.color = new Color(1,1,1);
       Ice3Line2Liang.gameObject.SetActive(true);
       Ice3Line2An.gameObject.SetActive(false);
+      Ice3_2Icon.GetComponent<Button>().interactable = true;
+      Ice3_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1269,12 +1312,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice4_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice4Line1Liang.gameObject.SetActive(false);
       Ice4Line1An.gameObject.SetActive(true);
+      Ice4_1Icon.GetComponent<Button>().interactable = false;
+      Ice4_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice4_1Icon.color = new Color(1,1,1);
       Ice4Line1Liang.gameObject.SetActive(true);
       Ice4Line1An.gameObject.SetActive(false);
+      Ice4_1Icon.GetComponent<Button>().interactable = true;
+      Ice4_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1283,12 +1332,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice4_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice4Line2Liang.gameObject.SetActive(false);
       Ice4Line2An.gameObject.SetActive(true);
+      Ice4_2Icon.GetComponent<Button>().interactable = false;
+      Ice4_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice4_2Icon.color = new Color(1,1,1);
       Ice4Line2Liang.gameObject.SetActive(true);
       Ice4Line2An.gameObject.SetActive(false);
+      Ice4_2Icon.GetComponent<Button>().interactable = true;
+      Ice4_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1298,12 +1353,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice5_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice5Line1Liang.gameObject.SetActive(false);
       Ice5Line1An.gameObject.SetActive(true);
+      Ice5_1Icon.GetComponent<Button>().interactable = false;
+      Ice5_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice5_1Icon.color = new Color(1,1,1);
       Ice5Line1Liang.gameObject.SetActive(true);
       Ice5Line1An.gameObject.SetActive(false);
+      Ice5_1Icon.GetComponent<Button>().interactable = true;
+      Ice5_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
      
      
@@ -1312,12 +1373,18 @@ public class SkillWindow1 : MonoBehaviour
       Ice5_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Ice5Line2Liang.gameObject.SetActive(false);
       Ice5Line2An.gameObject.SetActive(true);
+      Ice5_2Icon.GetComponent<Button>().interactable = false;
+      Ice5_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+
      }
      else
      {
       Ice5_2Icon.color = new Color(1,1,1);
       Ice5Line2Liang.gameObject.SetActive(true);
       Ice5Line2An.gameObject.SetActive(false);
+      Ice5_2Icon.GetComponent<Button>().interactable = true;
+      Ice5_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+
      }
 
     }
@@ -1330,12 +1397,14 @@ public class SkillWindow1 : MonoBehaviour
       HuoBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoBeiLine1Liang.gameObject.SetActive(false);
       HuoBeiLine1An.gameObject.SetActive(true);
+      HuoBei2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HuoBei2Icon.color = new Color(1, 1, 1);
       HuoBeiLine1Liang.gameObject.SetActive(true);
       HuoBeiLine1An.gameObject.SetActive(false);
+      HuoBei2Icon.GetComponent<Button>().interactable = true;
      }
 
      if (SkillJiaDian.S.HuoBei3 < 1)
@@ -1343,12 +1412,14 @@ public class SkillWindow1 : MonoBehaviour
       HuoBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HuoBeiLine2Liang.gameObject.SetActive(false);
       HuoBeiLine2An.gameObject.SetActive(true);
+      HuoBei4Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HuoBei4Icon.color = new Color(1, 1, 1);
       HuoBeiLine2Liang.gameObject.SetActive(true);
       HuoBeiLine2An.gameObject.SetActive(false);
+      HuoBei4Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1357,12 +1428,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo1_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo1Line1Liang.gameObject.SetActive(false);
       Huo1Line1An.gameObject.SetActive(true);
+      Huo1_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo1_1Icon.color = new Color(1,1,1);
       Huo1Line1Liang.gameObject.SetActive(true);
       Huo1Line1An.gameObject.SetActive(false);
+      Huo1_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1371,12 +1444,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo1_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo1Line2Liang.gameObject.SetActive(false);
       Huo1Line2An.gameObject.SetActive(true);
+      Huo1_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo1_2Icon.color = new Color(1,1,1);
       Huo1Line2Liang.gameObject.SetActive(true);
       Huo1Line2An.gameObject.SetActive(false);
+      Huo1_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1386,12 +1461,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo2_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo2Line1Liang.gameObject.SetActive(false);
       Huo2Line1An.gameObject.SetActive(true);
+      Huo2_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo2_1Icon.color = new Color(1,1,1);
       Huo2Line1Liang.gameObject.SetActive(true);
       Huo2Line1An.gameObject.SetActive(false);
+      Huo2_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1400,12 +1477,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo2_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo2Line2Liang.gameObject.SetActive(false);
       Huo2Line2An.gameObject.SetActive(true);
+      Huo2_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo2_2Icon.color = new Color(1,1,1);
       Huo2Line2Liang.gameObject.SetActive(true);
       Huo2Line2An.gameObject.SetActive(false);
+      Huo2_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1415,12 +1494,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo3_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo3Line1Liang.gameObject.SetActive(false);
       Huo3Line1An.gameObject.SetActive(true);
+      Huo3_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo3_1Icon.color = new Color(1,1,1);
       Huo3Line1Liang.gameObject.SetActive(true);
       Huo3Line1An.gameObject.SetActive(false);
+      Huo3_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1429,12 +1510,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo3_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo3Line2Liang.gameObject.SetActive(false);
       Huo3Line2An.gameObject.SetActive(true);
+      Huo3_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo3_2Icon.color = new Color(1,1,1);
       Huo3Line2Liang.gameObject.SetActive(true);
       Huo3Line2An.gameObject.SetActive(false);
+      Huo3_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1444,12 +1527,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo4_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo4Line1Liang.gameObject.SetActive(false);
       Huo4Line1An.gameObject.SetActive(true);
+      Huo4_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo4_1Icon.color = new Color(1,1,1);
       Huo4Line1Liang.gameObject.SetActive(true);
       Huo4Line1An.gameObject.SetActive(false);
+      Huo4_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1458,12 +1543,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo4_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo4Line2Liang.gameObject.SetActive(false);
       Huo4Line2An.gameObject.SetActive(true);
+      Huo4_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo4_2Icon.color = new Color(1,1,1);
       Huo4Line2Liang.gameObject.SetActive(true);
       Huo4Line2An.gameObject.SetActive(false);
+      Huo4_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1473,12 +1560,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo5_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo5Line1Liang.gameObject.SetActive(false);
       Huo5Line1An.gameObject.SetActive(true);
+      Huo5_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo5_1Icon.color = new Color(1,1,1);
       Huo5Line1Liang.gameObject.SetActive(true);
       Huo5Line1An.gameObject.SetActive(false);
+      Huo5_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1487,12 +1576,14 @@ public class SkillWindow1 : MonoBehaviour
       Huo5_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Huo5Line2Liang.gameObject.SetActive(false);
       Huo5Line2An.gameObject.SetActive(true);
+      Huo5_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Huo5_2Icon.color = new Color(1,1,1);
       Huo5Line2Liang.gameObject.SetActive(true);
       Huo5Line2An.gameObject.SetActive(false);
+      Huo5_2Icon.GetComponent<Button>().interactable = true;
      }
 
     }
@@ -1505,12 +1596,14 @@ public class SkillWindow1 : MonoBehaviour
       DianBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianBeiLine1Liang.gameObject.SetActive(false);
       DianBeiLine1An.gameObject.SetActive(true);
+      DianBei2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       DianBei2Icon.color = new Color(1, 1, 1);
       DianBeiLine1Liang.gameObject.SetActive(true);
       DianBeiLine1An.gameObject.SetActive(false);
+      DianBei2Icon.GetComponent<Button>().interactable = true;
      }
 
      if (SkillJiaDian.S.DianBei3 < 1)
@@ -1518,12 +1611,14 @@ public class SkillWindow1 : MonoBehaviour
       DianBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       DianBeiLine2Liang.gameObject.SetActive(false);
       DianBeiLine2An.gameObject.SetActive(true);
+      DianBei4Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       DianBei4Icon.color = new Color(1, 1, 1);
       DianBeiLine2Liang.gameObject.SetActive(true);
       DianBeiLine2An.gameObject.SetActive(false);
+      DianBei4Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1532,12 +1627,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian1_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian1Line1Liang.gameObject.SetActive(false);
       Dian1Line1An.gameObject.SetActive(true);
+      Dian1_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian1_1Icon.color = new Color(1,1,1);
       Dian1Line1Liang.gameObject.SetActive(true);
       Dian1Line1An.gameObject.SetActive(false);
+      Dian1_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1546,12 +1643,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian1_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian1Line2Liang.gameObject.SetActive(false);
       Dian1Line2An.gameObject.SetActive(true);
+      Dian1_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian1_2Icon.color = new Color(1,1,1);
       Dian1Line2Liang.gameObject.SetActive(true);
       Dian1Line2An.gameObject.SetActive(false);
+      Dian1_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1561,12 +1660,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian2_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian2Line1Liang.gameObject.SetActive(false);
       Dian2Line1An.gameObject.SetActive(true);
+      Dian2_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian2_1Icon.color = new Color(1,1,1);
       Dian2Line1Liang.gameObject.SetActive(true);
       Dian2Line1An.gameObject.SetActive(false);
+      Dian2_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1575,12 +1676,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian2_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian2Line2Liang.gameObject.SetActive(false);
       Dian2Line2An.gameObject.SetActive(true);
+      Dian2_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian2_2Icon.color = new Color(1,1,1);
       Dian2Line2Liang.gameObject.SetActive(true);
       Dian2Line2An.gameObject.SetActive(false);
+      Dian2_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1590,12 +1693,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian3_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian3Line1Liang.gameObject.SetActive(false);
       Dian3Line1An.gameObject.SetActive(true);
+      Dian3_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian3_1Icon.color = new Color(1,1,1);
       Dian3Line1Liang.gameObject.SetActive(true);
       Dian3Line1An.gameObject.SetActive(false);
+      Dian3_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1604,12 +1709,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian3_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian3Line2Liang.gameObject.SetActive(false);
       Dian3Line2An.gameObject.SetActive(true);
+      Dian3_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian3_2Icon.color = new Color(1,1,1);
       Dian3Line2Liang.gameObject.SetActive(true);
       Dian3Line2An.gameObject.SetActive(false);
+      Dian3_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1619,12 +1726,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian4_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian4Line1Liang.gameObject.SetActive(false);
       Dian4Line1An.gameObject.SetActive(true);
+      Dian4_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian4_1Icon.color = new Color(1,1,1);
       Dian4Line1Liang.gameObject.SetActive(true);
       Dian4Line1An.gameObject.SetActive(false);
+      Dian4_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1633,12 +1742,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian4_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian4Line2Liang.gameObject.SetActive(false);
       Dian4Line2An.gameObject.SetActive(true);
+      Dian4_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian4_2Icon.color = new Color(1,1,1);
       Dian4Line2Liang.gameObject.SetActive(true);
       Dian4Line2An.gameObject.SetActive(false);
+      Dian4_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1648,12 +1759,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian5_1Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian5Line1Liang.gameObject.SetActive(false);
       Dian5Line1An.gameObject.SetActive(true);
+      Dian5_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian5_1Icon.color = new Color(1,1,1);
       Dian5Line1Liang.gameObject.SetActive(true);
       Dian5Line1An.gameObject.SetActive(false);
+      Dian5_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1662,12 +1775,14 @@ public class SkillWindow1 : MonoBehaviour
       Dian5_2Icon.color = new Color(93/255f,79/255f,79/255f);
       Dian5Line2Liang.gameObject.SetActive(false);
       Dian5Line2An.gameObject.SetActive(true);
+      Dian5_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       Dian5_2Icon.color = new Color(1,1,1);
       Dian5Line2Liang.gameObject.SetActive(true);
       Dian5Line2An.gameObject.SetActive(false);
+      Dian5_2Icon.GetComponent<Button>().interactable = true;
      }
 
     }
@@ -1679,12 +1794,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAnBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnBeiLine1Liang.gameObject.SetActive(false);
       HeiAnBeiLine1An.gameObject.SetActive(true);
+      HeiAnBei2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAnBei2Icon.color = new Color(1, 1, 1);
       HeiAnBeiLine1Liang.gameObject.SetActive(true);
       HeiAnBeiLine1An.gameObject.SetActive(false);
+      HeiAnBei2Icon.GetComponent<Button>().interactable = true;
      }
 
      if (SkillJiaDian.S.HeiAnBei3 < 1)
@@ -1692,12 +1809,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAnBei4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       HeiAnBeiLine2Liang.gameObject.SetActive(false);
       HeiAnBeiLine2An.gameObject.SetActive(true);
+      HeiAnBei4Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAnBei4Icon.color = new Color(1, 1, 1);
       HeiAnBeiLine2Liang.gameObject.SetActive(true);
       HeiAnBeiLine2An.gameObject.SetActive(false);
+      HeiAnBei4Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1706,12 +1825,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn1_1Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn1Line1Liang.gameObject.SetActive(false);
       HeiAn1Line1An.gameObject.SetActive(true);
+      HeiAn1_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn1_1Icon.color = new Color(1,1,1);
       HeiAn1Line1Liang.gameObject.SetActive(true);
       HeiAn1Line1An.gameObject.SetActive(false);
+      HeiAn1_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1720,12 +1841,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn1_2Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn1Line2Liang.gameObject.SetActive(false);
       HeiAn1Line2An.gameObject.SetActive(true);
+      HeiAn1_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn1_2Icon.color = new Color(1,1,1);
       HeiAn1Line2Liang.gameObject.SetActive(true);
       HeiAn1Line2An.gameObject.SetActive(false);
+      HeiAn1_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1735,12 +1858,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn2_1Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn2Line1Liang.gameObject.SetActive(false);
       HeiAn2Line1An.gameObject.SetActive(true);
+      HeiAn2_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn2_1Icon.color = new Color(1,1,1);
       HeiAn2Line1Liang.gameObject.SetActive(true);
       HeiAn2Line1An.gameObject.SetActive(false);
+      HeiAn2_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1749,12 +1874,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn2_2Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn2Line2Liang.gameObject.SetActive(false);
       HeiAn2Line2An.gameObject.SetActive(true);
+      HeiAn2_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn2_2Icon.color = new Color(1,1,1);
       HeiAn2Line2Liang.gameObject.SetActive(true);
       HeiAn2Line2An.gameObject.SetActive(false);
+      HeiAn2_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1764,12 +1891,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn3_1Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn3Line1Liang.gameObject.SetActive(false);
       HeiAn3Line1An.gameObject.SetActive(true);
+      HeiAn3_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn3_1Icon.color = new Color(1,1,1);
       HeiAn3Line1Liang.gameObject.SetActive(true);
       HeiAn3Line1An.gameObject.SetActive(false);
+      HeiAn3_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1778,12 +1907,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn3_2Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn3Line2Liang.gameObject.SetActive(false);
       HeiAn3Line2An.gameObject.SetActive(true);
+      HeiAn3_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn3_2Icon.color = new Color(1,1,1);
       HeiAn3Line2Liang.gameObject.SetActive(true);
       HeiAn3Line2An.gameObject.SetActive(false);
+      HeiAn3_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1793,12 +1924,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn4_1Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn4Line1Liang.gameObject.SetActive(false);
       HeiAn4Line1An.gameObject.SetActive(true);
+      HeiAn4_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn4_1Icon.color = new Color(1,1,1);
       HeiAn4Line1Liang.gameObject.SetActive(true);
       HeiAn4Line1An.gameObject.SetActive(false);
+      HeiAn4_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1807,12 +1940,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn4_2Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn4Line2Liang.gameObject.SetActive(false);
       HeiAn4Line2An.gameObject.SetActive(true);
+      HeiAn4_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn4_2Icon.color = new Color(1,1,1);
       HeiAn4Line2Liang.gameObject.SetActive(true);
       HeiAn4Line2An.gameObject.SetActive(false);
+      HeiAn4_2Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1822,12 +1957,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn5_1Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn5Line1Liang.gameObject.SetActive(false);
       HeiAn5Line1An.gameObject.SetActive(true);
+      HeiAn5_1Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn5_1Icon.color = new Color(1,1,1);
       HeiAn5Line1Liang.gameObject.SetActive(true);
       HeiAn5Line1An.gameObject.SetActive(false);
+      HeiAn5_1Icon.GetComponent<Button>().interactable = true;
      }
      
      
@@ -1836,12 +1973,14 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn5_2Icon.color = new Color(93/255f,79/255f,79/255f);
       HeiAn5Line2Liang.gameObject.SetActive(false);
       HeiAn5Line2An.gameObject.SetActive(true);
+      HeiAn5_2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       HeiAn5_2Icon.color = new Color(1,1,1);
       HeiAn5Line2Liang.gameObject.SetActive(true);
       HeiAn5Line2An.gameObject.SetActive(false);
+      HeiAn5_2Icon.GetComponent<Button>().interactable = true;
      }
 
     }
