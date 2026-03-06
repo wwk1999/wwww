@@ -870,6 +870,7 @@
     <None Include="Assets\Arts\Spine\宠物\Green\电green1\Anima_Small_Skeleton_M11-4.json" />
     <None Include="Assets\Arts\Spine\技能\特效\24\2066_niumowang_1_skill.json" />
     <None Include="Assets\Arts\Spine\技能\1225\出场\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\火skill5\Enemy_Demon_goat_skill1_BD.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\LanShui\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\HuangShu\Enemy_Mouse_patrol.json" />
@@ -1123,6 +1124,7 @@
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\PackageConversionData_Assets.json" />
     <None Include="Assets\Arts\Spine\技能\特效\31\buff_chudian.json" />
     <None Include="Assets\Arts\Spine\普通攻击\虚空\虚空peng\action.json" />
+    <None Include="Assets\Arts\Spine\技能\火skill5\Enemy_Demon_goat_skill1_BD.json" />
     <None Include="Assets\Arts\Spine\第三关\食人花\shirenhua.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple2——前\mon_killer_bird_02.atlas.txt" />
