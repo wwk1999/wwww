@@ -10,11 +10,11 @@ using UnityEngine.UI;
 public class SkillWindow1 : MonoBehaviour
 {
  [Header("基础UI组件")] public Button exitButton; // 退出按钮
- public Button maskButton;
- public GameObject skillSwitchObj;
+ private Button maskButton;
+ private GameObject skillSwitchObj;
 
- [Header("技能计数显示")] public TextMeshProUGUI skillCount;
- public TextMeshProUGUI monsterCount;
+ [Header("技能计数显示")] private TextMeshProUGUI skillCount;
+ private TextMeshProUGUI monsterCount;
 
  private GameObject IcePanel;
  private GameObject HuoPanel;
@@ -28,8 +28,8 @@ public class SkillWindow1 : MonoBehaviour
  private Button DianButton;
  private Button HeiAnButton;
  private Button ZJButton;
-
- public void Awake()
+ 
+ private void Awake()
  {
   IcePanel = transform.Find("Bg/Panel/IcePanel").gameObject;
   HuoPanel = transform.Find("Bg/Panel/HuoPanel").gameObject;
@@ -1144,7 +1144,7 @@ public class SkillWindow1 : MonoBehaviour
 
  }
 
- public void SetIcePanelImageColorAndJiaoHuAndLine()
+ private void SetIcePanelImageColorAndJiaoHuAndLine()
  {
   if (SkillJiaDian.S.IceBei1 < 1)
   {
@@ -1388,7 +1388,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void SetHuoPanelImageColorAndJiaoHuAndLine()
+ private void SetHuoPanelImageColorAndJiaoHuAndLine()
  {
   if (SkillJiaDian.S.HuoBei1 < 1)
   {
@@ -1611,7 +1611,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void SetDianPanelImageColorAndJiaoHuAndLine()
+ private void SetDianPanelImageColorAndJiaoHuAndLine()
  {
   if (SkillJiaDian.S.DianBei1 < 1)
   {
@@ -1833,7 +1833,7 @@ public class SkillWindow1 : MonoBehaviour
 
  }
 
- public void SetHeiAnPanelImageColorAndJiaoHuAndLine()
+ private void SetHeiAnPanelImageColorAndJiaoHuAndLine()
  {
   if (SkillJiaDian.S.HeiAnBei1 < 1)
   {
@@ -2056,7 +2056,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void SetZJPanelImageColorAndJiaoHuAndLine()
+ private void SetZJPanelImageColorAndJiaoHuAndLine()
  {
   if (SkillJiaDian.S.IceZJ1 < 1)
   {
@@ -2403,7 +2403,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void SetIcePanelLevel()
+ private void SetIcePanelLevel()
  {
   IceMainLevelCount.text = SkillJiaDian.S.IceAll.ToString();
   IceBei1LevelCount.text = SkillJiaDian.S.IceBei1.ToString();
@@ -2431,7 +2431,7 @@ public class SkillWindow1 : MonoBehaviour
   Ice5_2LevelCount.text = SkillJiaDian.S.Ice5_2.ToString();
  }
 
- public void SetHuoPanelLevel()
+ private void SetHuoPanelLevel()
  {
   HuoMainLevelCount.text = SkillJiaDian.S.HuoAll.ToString();
   HuoBei1LevelCount.text = SkillJiaDian.S.HuoBei1.ToString();
@@ -2459,7 +2459,7 @@ public class SkillWindow1 : MonoBehaviour
   Huo5_2LevelCount.text = SkillJiaDian.S.Huo5_2.ToString();
  }
 
- public void SetDianPanelLevel()
+ private void SetDianPanelLevel()
  {
   DianMainLevelCount.text = SkillJiaDian.S.DianAll.ToString();
   DianBei1LevelCount.text = SkillJiaDian.S.DianBei1.ToString();
@@ -2489,7 +2489,7 @@ public class SkillWindow1 : MonoBehaviour
 
 
 
- public void SetHeiAnPanelLevel()
+ private void SetHeiAnPanelLevel()
  {
   HeiAnMainLevelCount.text = SkillJiaDian.S.HeiAnAll.ToString();
   HeiAnBei1LevelCount.text = SkillJiaDian.S.HeiAnBei1.ToString();
@@ -2518,7 +2518,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void SetZJPanelLevel()
+ private void SetZJPanelLevel()
  {
   IceZJ1LevelCount.text = SkillJiaDian.S.IceZJ1.ToString();
   IceZJ2LevelCount.text = SkillJiaDian.S.IceZJ2.ToString();
@@ -2563,7 +2563,7 @@ public class SkillWindow1 : MonoBehaviour
 
 
 
- public int GetKey(SkillType skillType)
+ private int GetKey(SkillType skillType)
  {
   if (SkillJiaDian.S.Alpha1 == skillType)
   {
@@ -2593,13 +2593,18 @@ public class SkillWindow1 : MonoBehaviour
   return 0;
  }
 
- public void SetIcePanelAutoAndKey()
+ private void SetIcePanelAutoAndKey()
  {
   Ice1AutoCount.gameObject.SetActive(SkillJiaDian.S.Ice1Auto);
   Ice2AutoCount.gameObject.SetActive(SkillJiaDian.S.Ice2Auto);
   Ice3AutoCount.gameObject.SetActive(SkillJiaDian.S.Ice3Auto);
   Ice4AutoCount.gameObject.SetActive(SkillJiaDian.S.Ice4Auto);
   Ice5AutoCount.gameObject.SetActive(SkillJiaDian.S.Ice5Auto);
+  Ice1AutoBg.gameObject.SetActive(SkillJiaDian.S.Ice1Auto);
+  Ice2AutoBg.gameObject.SetActive(SkillJiaDian.S.Ice2Auto);
+  Ice3AutoBg.gameObject.SetActive(SkillJiaDian.S.Ice3Auto);
+  Ice4AutoBg.gameObject.SetActive(SkillJiaDian.S.Ice4Auto);
+  Ice5AutoBg.gameObject.SetActive(SkillJiaDian.S.Ice5Auto);
 
   Ice1KeyCount.gameObject.SetActive(GetKey(SkillType.Ice1) != 0);
   if (GetKey(SkillType.Ice1) != 0)
@@ -2634,7 +2639,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void SetHuoPanelAutoAndKey()
+ private void SetHuoPanelAutoAndKey()
  {
   Huo1AutoCount.gameObject.SetActive(SkillJiaDian.S.Huo1Auto);
   Huo2AutoCount.gameObject.SetActive(SkillJiaDian.S.Huo2Auto);
@@ -2675,7 +2680,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void SetDianPanelAutoAndKey()
+ private void SetDianPanelAutoAndKey()
  {
   Dian1AutoCount.gameObject.SetActive(SkillJiaDian.S.Dian1Auto);
   Dian2AutoCount.gameObject.SetActive(SkillJiaDian.S.Dian2Auto);
@@ -2717,7 +2722,7 @@ public class SkillWindow1 : MonoBehaviour
 
 
 
- public void SetHeiAnPanelAutoAndKey()
+ private void SetHeiAnPanelAutoAndKey()
  {
   HeiAn1AutoCount.gameObject.SetActive(SkillJiaDian.S.HeiAn1Auto);
   HeiAn2AutoCount.gameObject.SetActive(SkillJiaDian.S.HeiAn2Auto);
@@ -2757,7 +2762,7 @@ public class SkillWindow1 : MonoBehaviour
 
  }
 
- public void ShowPanel()
+ private void ShowPanel()
  {
   switch (PanelType)
   {
@@ -2776,7 +2781,7 @@ public class SkillWindow1 : MonoBehaviour
   }
  }
 
- public void ShowIcePanel()
+ private void ShowIcePanel()
  {
   IcePanel.SetActive(true);
   HuoPanel.SetActive(false);
@@ -2788,7 +2793,7 @@ public class SkillWindow1 : MonoBehaviour
   SetIcePanelAutoAndKey();
  }
 
- public void ShowHuoPanel()
+ private void ShowHuoPanel()
  {
   IcePanel.SetActive(false);
   HuoPanel.SetActive(true);
@@ -2800,7 +2805,7 @@ public class SkillWindow1 : MonoBehaviour
   SetHuoPanelAutoAndKey();
  }
 
- public void ShowDianPanel()
+ private void ShowDianPanel()
  {
   IcePanel.SetActive(false);
   HuoPanel.SetActive(false);
@@ -2813,7 +2818,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void ShowHeiAnPanel()
+ private void ShowHeiAnPanel()
  {
   IcePanel.SetActive(false);
   HuoPanel.SetActive(false);
@@ -2826,7 +2831,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- public void ShowZJPanel()
+ private void ShowZJPanel()
  {
   IcePanel.SetActive(false);
   HuoPanel.SetActive(false);
@@ -3037,1056 +3042,1056 @@ private void UpdateSkillUI(string skillName, int newLevel)
 
 
 [Header("IcePanel")] private int PanelType = 1;
- public Image IceMainBg;
- public Image IceMainIcon;
- public TextMeshProUGUI IceMainLevelCount;
- public Image IceMainLevelBg;
- public Image IceMainXuanZhong;
-
- public Image IceBei1Bg;
- public Image IceBei1Icon;
- public TextMeshProUGUI IceBei1LevelCount;
- public Image IceBei1LevelBg;
- public Image IceBei1XuanZhong;
-
- public Image IceBei2Bg;
- public Image IceBei2Icon;
- public TextMeshProUGUI IceBei2LevelCount;
- public Image IceBei2LevelBg;
- public Image IceBei2XuanZhong;
-
- public Image IceBei3Bg;
- public Image IceBei3Icon;
- public TextMeshProUGUI IceBei3LevelCount;
- public Image IceBei3LevelBg;
- public Image IceBei3XuanZhong;
-
- public Image IceBei4Bg;
- public Image IceBei4Icon;
- public TextMeshProUGUI IceBei4LevelCount;
- public Image IceBei4LevelBg;
- public Image IceBei4XuanZhong;
-
-
- public Image Ice1Bg;
- public Image Ice1Icon;
- public TextMeshProUGUI Ice1LevelCount;
- public Image Ice1LevelBg;
- public Image Ice1XuanZhong;
- public TextMeshProUGUI Ice1AutoCount;
- public Image Ice1AutoBg;
- public TextMeshProUGUI Ice1KeyCount;
- public Image Ice1KeyBg;
-
-
- public Image Ice1_1Bg;
- public Image Ice1_1Icon;
- public TextMeshProUGUI Ice1_1LevelCount;
- public Image Ice1_1LevelBg;
- public Image Ice1_1XuanZhong;
-
- public Image Ice1_2Bg;
- public Image Ice1_2Icon;
- public TextMeshProUGUI Ice1_2LevelCount;
- public Image Ice1_2LevelBg;
- public Image Ice1_2XuanZhong;
-
-
- public Image Ice2Bg;
- public Image Ice2Icon;
- public TextMeshProUGUI Ice2LevelCount;
- public Image Ice2LevelBg;
- public Image Ice2XuanZhong;
- public TextMeshProUGUI Ice2AutoCount;
- public Image Ice2AutoBg;
- public TextMeshProUGUI Ice2KeyCount;
- public Image Ice2KeyBg;
-
-
- public Image Ice2_1Bg;
- public Image Ice2_1Icon;
- public TextMeshProUGUI Ice2_1LevelCount;
- public Image Ice2_1LevelBg;
- public Image Ice2_1XuanZhong;
-
- public Image Ice2_2Bg;
- public Image Ice2_2Icon;
- public TextMeshProUGUI Ice2_2LevelCount;
- public Image Ice2_2LevelBg;
- public Image Ice2_2XuanZhong;
-
-
-
-
- public Image Ice3Bg;
- public Image Ice3Icon;
- public TextMeshProUGUI Ice3LevelCount;
- public Image Ice3LevelBg;
- public Image Ice3XuanZhong;
- public TextMeshProUGUI Ice3AutoCount;
- public Image Ice3AutoBg;
- public TextMeshProUGUI Ice3KeyCount;
- public Image Ice3KeyBg;
-
-
- public Image Ice3_1Bg;
- public Image Ice3_1Icon;
- public TextMeshProUGUI Ice3_1LevelCount;
- public Image Ice3_1LevelBg;
- public Image Ice3_1XuanZhong;
-
- public Image Ice3_2Bg;
- public Image Ice3_2Icon;
- public TextMeshProUGUI Ice3_2LevelCount;
- public Image Ice3_2LevelBg;
- public Image Ice3_2XuanZhong;
-
-
-
-
-
- public Image Ice4Bg;
- public Image Ice4Icon;
- public TextMeshProUGUI Ice4LevelCount;
- public Image Ice4LevelBg;
- public Image Ice4XuanZhong;
- public TextMeshProUGUI Ice4AutoCount;
- public Image Ice4AutoBg;
- public TextMeshProUGUI Ice4KeyCount;
- public Image Ice4KeyBg;
-
-
- public Image Ice4_1Bg;
- public Image Ice4_1Icon;
- public TextMeshProUGUI Ice4_1LevelCount;
- public Image Ice4_1LevelBg;
- public Image Ice4_1XuanZhong;
-
- public Image Ice4_2Bg;
- public Image Ice4_2Icon;
- public TextMeshProUGUI Ice4_2LevelCount;
- public Image Ice4_2LevelBg;
- public Image Ice4_2XuanZhong;
-
-
-
- public Image Ice5Bg;
- public Image Ice5Icon;
- public TextMeshProUGUI Ice5LevelCount;
- public Image Ice5LevelBg;
- public Image Ice5XuanZhong;
- public TextMeshProUGUI Ice5AutoCount;
- public Image Ice5AutoBg;
- public TextMeshProUGUI Ice5KeyCount;
- public Image Ice5KeyBg;
-
-
- public Image Ice5_1Bg;
- public Image Ice5_1Icon;
- public TextMeshProUGUI Ice5_1LevelCount;
- public Image Ice5_1LevelBg;
- public Image Ice5_1XuanZhong;
-
- public Image Ice5_2Bg;
- public Image Ice5_2Icon;
- public TextMeshProUGUI Ice5_2LevelCount;
- public Image Ice5_2LevelBg;
- public Image Ice5_2XuanZhong;
-
- public GameObject IceBeiLine1Liang;
- public GameObject IceBeiLine1An;
- public GameObject IceBeiLine2Liang;
- public GameObject IceBeiLine2An;
- public GameObject Ice1Line1Liang;
- public GameObject Ice1Line1An;
- public GameObject Ice1Line2Liang;
- public GameObject Ice1Line2An;
-
- public GameObject Ice2Line1Liang;
- public GameObject Ice2Line1An;
- public GameObject Ice2Line2Liang;
- public GameObject Ice2Line2An;
-
- public GameObject Ice3Line1Liang;
- public GameObject Ice3Line1An;
- public GameObject Ice3Line2Liang;
- public GameObject Ice3Line2An;
-
- public GameObject Ice4Line1Liang;
- public GameObject Ice4Line1An;
- public GameObject Ice4Line2Liang;
- public GameObject Ice4Line2An;
-
- public GameObject Ice5Line1Liang;
- public GameObject Ice5Line1An;
- public GameObject Ice5Line2Liang;
- public GameObject Ice5Line2An;
-
- [Header("HuoPanel")] public Image HuoMainBg;
- public Image HuoMainIcon;
- public TextMeshProUGUI HuoMainLevelCount;
- public Image HuoMainLevelBg;
- public Image HuoMainXuanZhong;
-
- public Image HuoBei1Bg;
- public Image HuoBei1Icon;
- public TextMeshProUGUI HuoBei1LevelCount;
- public Image HuoBei1LevelBg;
- public Image HuoBei1XuanZhong;
-
- public Image HuoBei2Bg;
- public Image HuoBei2Icon;
- public TextMeshProUGUI HuoBei2LevelCount;
- public Image HuoBei2LevelBg;
- public Image HuoBei2XuanZhong;
-
- public Image HuoBei3Bg;
- public Image HuoBei3Icon;
- public TextMeshProUGUI HuoBei3LevelCount;
- public Image HuoBei3LevelBg;
- public Image HuoBei3XuanZhong;
-
- public Image HuoBei4Bg;
- public Image HuoBei4Icon;
- public TextMeshProUGUI HuoBei4LevelCount;
- public Image HuoBei4LevelBg;
- public Image HuoBei4XuanZhong;
-
-
- public Image Huo1Bg;
- public Image Huo1Icon;
- public TextMeshProUGUI Huo1LevelCount;
- public Image Huo1LevelBg;
- public Image Huo1XuanZhong;
- public TextMeshProUGUI Huo1AutoCount;
- public Image Huo1AutoBg;
- public TextMeshProUGUI Huo1KeyCount;
- public Image Huo1KeyBg;
-
-
- public Image Huo1_1Bg;
- public Image Huo1_1Icon;
- public TextMeshProUGUI Huo1_1LevelCount;
- public Image Huo1_1LevelBg;
- public Image Huo1_1XuanZhong;
-
- public Image Huo1_2Bg;
- public Image Huo1_2Icon;
- public TextMeshProUGUI Huo1_2LevelCount;
- public Image Huo1_2LevelBg;
- public Image Huo1_2XuanZhong;
-
-
- public Image Huo2Bg;
- public Image Huo2Icon;
- public TextMeshProUGUI Huo2LevelCount;
- public Image Huo2LevelBg;
- public Image Huo2XuanZhong;
- public TextMeshProUGUI Huo2AutoCount;
- public Image Huo2AutoBg;
- public TextMeshProUGUI Huo2KeyCount;
- public Image Huo2KeyBg;
-
-
- public Image Huo2_1Bg;
- public Image Huo2_1Icon;
- public TextMeshProUGUI Huo2_1LevelCount;
- public Image Huo2_1LevelBg;
- public Image Huo2_1XuanZhong;
-
- public Image Huo2_2Bg;
- public Image Huo2_2Icon;
- public TextMeshProUGUI Huo2_2LevelCount;
- public Image Huo2_2LevelBg;
- public Image Huo2_2XuanZhong;
-
-
-
-
- public Image Huo3Bg;
- public Image Huo3Icon;
- public TextMeshProUGUI Huo3LevelCount;
- public Image Huo3LevelBg;
- public Image Huo3XuanZhong;
- public TextMeshProUGUI Huo3AutoCount;
- public Image Huo3AutoBg;
- public TextMeshProUGUI Huo3KeyCount;
- public Image Huo3KeyBg;
-
-
- public Image Huo3_1Bg;
- public Image Huo3_1Icon;
- public TextMeshProUGUI Huo3_1LevelCount;
- public Image Huo3_1LevelBg;
- public Image Huo3_1XuanZhong;
-
- public Image Huo3_2Bg;
- public Image Huo3_2Icon;
- public TextMeshProUGUI Huo3_2LevelCount;
- public Image Huo3_2LevelBg;
- public Image Huo3_2XuanZhong;
-
-
-
-
-
- public Image Huo4Bg;
- public Image Huo4Icon;
- public TextMeshProUGUI Huo4LevelCount;
- public Image Huo4LevelBg;
- public Image Huo4XuanZhong;
- public TextMeshProUGUI Huo4AutoCount;
- public Image Huo4AutoBg;
- public TextMeshProUGUI Huo4KeyCount;
- public Image Huo4KeyBg;
-
-
- public Image Huo4_1Bg;
- public Image Huo4_1Icon;
- public TextMeshProUGUI Huo4_1LevelCount;
- public Image Huo4_1LevelBg;
- public Image Huo4_1XuanZhong;
-
- public Image Huo4_2Bg;
- public Image Huo4_2Icon;
- public TextMeshProUGUI Huo4_2LevelCount;
- public Image Huo4_2LevelBg;
- public Image Huo4_2XuanZhong;
-
-
-
- public Image Huo5Bg;
- public Image Huo5Icon;
- public TextMeshProUGUI Huo5LevelCount;
- public Image Huo5LevelBg;
- public Image Huo5XuanZhong;
- public TextMeshProUGUI Huo5AutoCount;
- public Image Huo5AutoBg;
- public TextMeshProUGUI Huo5KeyCount;
- public Image Huo5KeyBg;
-
-
- public Image Huo5_1Bg;
- public Image Huo5_1Icon;
- public TextMeshProUGUI Huo5_1LevelCount;
- public Image Huo5_1LevelBg;
- public Image Huo5_1XuanZhong;
-
- public Image Huo5_2Bg;
- public Image Huo5_2Icon;
- public TextMeshProUGUI Huo5_2LevelCount;
- public Image Huo5_2LevelBg;
- public Image Huo5_2XuanZhong;
-
- public GameObject HuoBeiLine1Liang;
- public GameObject HuoBeiLine1An;
- public GameObject HuoBeiLine2Liang;
- public GameObject HuoBeiLine2An;
- public GameObject Huo1Line1Liang;
- public GameObject Huo1Line1An;
- public GameObject Huo1Line2Liang;
- public GameObject Huo1Line2An;
-
- public GameObject Huo2Line1Liang;
- public GameObject Huo2Line1An;
- public GameObject Huo2Line2Liang;
- public GameObject Huo2Line2An;
-
- public GameObject Huo3Line1Liang;
- public GameObject Huo3Line1An;
- public GameObject Huo3Line2Liang;
- public GameObject Huo3Line2An;
-
- public GameObject Huo4Line1Liang;
- public GameObject Huo4Line1An;
- public GameObject Huo4Line2Liang;
- public GameObject Huo4Line2An;
-
- public GameObject Huo5Line1Liang;
- public GameObject Huo5Line1An;
- public GameObject Huo5Line2Liang;
- public GameObject Huo5Line2An;
-
-
-
-
-
- [Header("DianPanel")] public Image DianMainBg;
- public Image DianMainIcon;
- public TextMeshProUGUI DianMainLevelCount;
- public Image DianMainLevelBg;
- public Image DianMainXuanZhong;
-
- public Image DianBei1Bg;
- public Image DianBei1Icon;
- public TextMeshProUGUI DianBei1LevelCount;
- public Image DianBei1LevelBg;
- public Image DianBei1XuanZhong;
-
- public Image DianBei2Bg;
- public Image DianBei2Icon;
- public TextMeshProUGUI DianBei2LevelCount;
- public Image DianBei2LevelBg;
- public Image DianBei2XuanZhong;
-
- public Image DianBei3Bg;
- public Image DianBei3Icon;
- public TextMeshProUGUI DianBei3LevelCount;
- public Image DianBei3LevelBg;
- public Image DianBei3XuanZhong;
-
- public Image DianBei4Bg;
- public Image DianBei4Icon;
- public TextMeshProUGUI DianBei4LevelCount;
- public Image DianBei4LevelBg;
- public Image DianBei4XuanZhong;
-
-
- public Image Dian1Bg;
- public Image Dian1Icon;
- public TextMeshProUGUI Dian1LevelCount;
- public Image Dian1LevelBg;
- public Image Dian1XuanZhong;
- public TextMeshProUGUI Dian1AutoCount;
- public Image Dian1AutoBg;
- public TextMeshProUGUI Dian1KeyCount;
- public Image Dian1KeyBg;
-
-
- public Image Dian1_1Bg;
- public Image Dian1_1Icon;
- public TextMeshProUGUI Dian1_1LevelCount;
- public Image Dian1_1LevelBg;
- public Image Dian1_1XuanZhong;
-
- public Image Dian1_2Bg;
- public Image Dian1_2Icon;
- public TextMeshProUGUI Dian1_2LevelCount;
- public Image Dian1_2LevelBg;
- public Image Dian1_2XuanZhong;
-
-
- public Image Dian2Bg;
- public Image Dian2Icon;
- public TextMeshProUGUI Dian2LevelCount;
- public Image Dian2LevelBg;
- public Image Dian2XuanZhong;
- public TextMeshProUGUI Dian2AutoCount;
- public Image Dian2AutoBg;
- public TextMeshProUGUI Dian2KeyCount;
- public Image Dian2KeyBg;
-
-
- public Image Dian2_1Bg;
- public Image Dian2_1Icon;
- public TextMeshProUGUI Dian2_1LevelCount;
- public Image Dian2_1LevelBg;
- public Image Dian2_1XuanZhong;
-
- public Image Dian2_2Bg;
- public Image Dian2_2Icon;
- public TextMeshProUGUI Dian2_2LevelCount;
- public Image Dian2_2LevelBg;
- public Image Dian2_2XuanZhong;
-
-
-
-
- public Image Dian3Bg;
- public Image Dian3Icon;
- public TextMeshProUGUI Dian3LevelCount;
- public Image Dian3LevelBg;
- public Image Dian3XuanZhong;
- public TextMeshProUGUI Dian3AutoCount;
- public Image Dian3AutoBg;
- public TextMeshProUGUI Dian3KeyCount;
- public Image Dian3KeyBg;
-
-
- public Image Dian3_1Bg;
- public Image Dian3_1Icon;
- public TextMeshProUGUI Dian3_1LevelCount;
- public Image Dian3_1LevelBg;
- public Image Dian3_1XuanZhong;
-
- public Image Dian3_2Bg;
- public Image Dian3_2Icon;
- public TextMeshProUGUI Dian3_2LevelCount;
- public Image Dian3_2LevelBg;
- public Image Dian3_2XuanZhong;
-
-
-
-
-
- public Image Dian4Bg;
- public Image Dian4Icon;
- public TextMeshProUGUI Dian4LevelCount;
- public Image Dian4LevelBg;
- public Image Dian4XuanZhong;
- public TextMeshProUGUI Dian4AutoCount;
- public Image Dian4AutoBg;
- public TextMeshProUGUI Dian4KeyCount;
- public Image Dian4KeyBg;
-
-
- public Image Dian4_1Bg;
- public Image Dian4_1Icon;
- public TextMeshProUGUI Dian4_1LevelCount;
- public Image Dian4_1LevelBg;
- public Image Dian4_1XuanZhong;
-
- public Image Dian4_2Bg;
- public Image Dian4_2Icon;
- public TextMeshProUGUI Dian4_2LevelCount;
- public Image Dian4_2LevelBg;
- public Image Dian4_2XuanZhong;
-
-
-
- public Image Dian5Bg;
- public Image Dian5Icon;
- public TextMeshProUGUI Dian5LevelCount;
- public Image Dian5LevelBg;
- public Image Dian5XuanZhong;
- public TextMeshProUGUI Dian5AutoCount;
- public Image Dian5AutoBg;
- public TextMeshProUGUI Dian5KeyCount;
- public Image Dian5KeyBg;
-
-
- public Image Dian5_1Bg;
- public Image Dian5_1Icon;
- public TextMeshProUGUI Dian5_1LevelCount;
- public Image Dian5_1LevelBg;
- public Image Dian5_1XuanZhong;
-
- public Image Dian5_2Bg;
- public Image Dian5_2Icon;
- public TextMeshProUGUI Dian5_2LevelCount;
- public Image Dian5_2LevelBg;
- public Image Dian5_2XuanZhong;
-
-
- public GameObject DianBeiLine1Liang;
- public GameObject DianBeiLine1An;
- public GameObject DianBeiLine2Liang;
- public GameObject DianBeiLine2An;
- public GameObject Dian1Line1Liang;
- public GameObject Dian1Line1An;
- public GameObject Dian1Line2Liang;
- public GameObject Dian1Line2An;
-
- public GameObject Dian2Line1Liang;
- public GameObject Dian2Line1An;
- public GameObject Dian2Line2Liang;
- public GameObject Dian2Line2An;
-
- public GameObject Dian3Line1Liang;
- public GameObject Dian3Line1An;
- public GameObject Dian3Line2Liang;
- public GameObject Dian3Line2An;
-
- public GameObject Dian4Line1Liang;
- public GameObject Dian4Line1An;
- public GameObject Dian4Line2Liang;
- public GameObject Dian4Line2An;
-
- public GameObject Dian5Line1Liang;
- public GameObject Dian5Line1An;
- public GameObject Dian5Line2Liang;
- public GameObject Dian5Line2An;
-
-
- [Header("HeiAnPanel")] public Image HeiAnMainBg;
- public Image HeiAnMainIcon;
- public TextMeshProUGUI HeiAnMainLevelCount;
- public Image HeiAnMainLevelBg;
- public Image HeiAnMainXuanZhong;
-
- public Image HeiAnBei1Bg;
- public Image HeiAnBei1Icon;
- public TextMeshProUGUI HeiAnBei1LevelCount;
- public Image HeiAnBei1LevelBg;
- public Image HeiAnBei1XuanZhong;
-
- public Image HeiAnBei2Bg;
- public Image HeiAnBei2Icon;
- public TextMeshProUGUI HeiAnBei2LevelCount;
- public Image HeiAnBei2LevelBg;
- public Image HeiAnBei2XuanZhong;
-
- public Image HeiAnBei3Bg;
- public Image HeiAnBei3Icon;
- public TextMeshProUGUI HeiAnBei3LevelCount;
- public Image HeiAnBei3LevelBg;
- public Image HeiAnBei3XuanZhong;
-
- public Image HeiAnBei4Bg;
- public Image HeiAnBei4Icon;
- public TextMeshProUGUI HeiAnBei4LevelCount;
- public Image HeiAnBei4LevelBg;
- public Image HeiAnBei4XuanZhong;
-
-
- public Image HeiAn1Bg;
- public Image HeiAn1Icon;
- public TextMeshProUGUI HeiAn1LevelCount;
- public Image HeiAn1LevelBg;
- public Image HeiAn1XuanZhong;
- public TextMeshProUGUI HeiAn1AutoCount;
- public Image HeiAn1AutoBg;
- public TextMeshProUGUI HeiAn1KeyCount;
- public Image HeiAn1KeyBg;
-
-
- public Image HeiAn1_1Bg;
- public Image HeiAn1_1Icon;
- public TextMeshProUGUI HeiAn1_1LevelCount;
- public Image HeiAn1_1LevelBg;
- public Image HeiAn1_1XuanZhong;
-
- public Image HeiAn1_2Bg;
- public Image HeiAn1_2Icon;
- public TextMeshProUGUI HeiAn1_2LevelCount;
- public Image HeiAn1_2LevelBg;
- public Image HeiAn1_2XuanZhong;
-
-
- public Image HeiAn2Bg;
- public Image HeiAn2Icon;
- public TextMeshProUGUI HeiAn2LevelCount;
- public Image HeiAn2LevelBg;
- public Image HeiAn2XuanZhong;
- public TextMeshProUGUI HeiAn2AutoCount;
- public Image HeiAn2AutoBg;
- public TextMeshProUGUI HeiAn2KeyCount;
- public Image HeiAn2KeyBg;
-
-
- public Image HeiAn2_1Bg;
- public Image HeiAn2_1Icon;
- public TextMeshProUGUI HeiAn2_1LevelCount;
- public Image HeiAn2_1LevelBg;
- public Image HeiAn2_1XuanZhong;
-
- public Image HeiAn2_2Bg;
- public Image HeiAn2_2Icon;
- public TextMeshProUGUI HeiAn2_2LevelCount;
- public Image HeiAn2_2LevelBg;
- public Image HeiAn2_2XuanZhong;
-
-
-
-
- public Image HeiAn3Bg;
- public Image HeiAn3Icon;
- public TextMeshProUGUI HeiAn3LevelCount;
- public Image HeiAn3LevelBg;
- public Image HeiAn3XuanZhong;
- public TextMeshProUGUI HeiAn3AutoCount;
- public Image HeiAn3AutoBg;
- public TextMeshProUGUI HeiAn3KeyCount;
- public Image HeiAn3KeyBg;
-
-
- public Image HeiAn3_1Bg;
- public Image HeiAn3_1Icon;
- public TextMeshProUGUI HeiAn3_1LevelCount;
- public Image HeiAn3_1LevelBg;
- public Image HeiAn3_1XuanZhong;
-
- public Image HeiAn3_2Bg;
- public Image HeiAn3_2Icon;
- public TextMeshProUGUI HeiAn3_2LevelCount;
- public Image HeiAn3_2LevelBg;
- public Image HeiAn3_2XuanZhong;
-
-
-
-
-
- public Image HeiAn4Bg;
- public Image HeiAn4Icon;
- public TextMeshProUGUI HeiAn4LevelCount;
- public Image HeiAn4LevelBg;
- public Image HeiAn4XuanZhong;
- public TextMeshProUGUI HeiAn4AutoCount;
- public Image HeiAn4AutoBg;
- public TextMeshProUGUI HeiAn4KeyCount;
- public Image HeiAn4KeyBg;
-
-
- public Image HeiAn4_1Bg;
- public Image HeiAn4_1Icon;
- public TextMeshProUGUI HeiAn4_1LevelCount;
- public Image HeiAn4_1LevelBg;
- public Image HeiAn4_1XuanZhong;
-
- public Image HeiAn4_2Bg;
- public Image HeiAn4_2Icon;
- public TextMeshProUGUI HeiAn4_2LevelCount;
- public Image HeiAn4_2LevelBg;
- public Image HeiAn4_2XuanZhong;
-
-
-
- public Image HeiAn5Bg;
- public Image HeiAn5Icon;
- public TextMeshProUGUI HeiAn5LevelCount;
- public Image HeiAn5LevelBg;
- public Image HeiAn5XuanZhong;
- public TextMeshProUGUI HeiAn5AutoCount;
- public Image HeiAn5AutoBg;
- public TextMeshProUGUI HeiAn5KeyCount;
- public Image HeiAn5KeyBg;
-
-
- public Image HeiAn5_1Bg;
- public Image HeiAn5_1Icon;
- public TextMeshProUGUI HeiAn5_1LevelCount;
- public Image HeiAn5_1LevelBg;
- public Image HeiAn5_1XuanZhong;
-
- public Image HeiAn5_2Bg;
- public Image HeiAn5_2Icon;
- public TextMeshProUGUI HeiAn5_2LevelCount;
- public Image HeiAn5_2LevelBg;
- public Image HeiAn5_2XuanZhong;
-
-
- public GameObject HeiAnBeiLine1Liang;
- public GameObject HeiAnBeiLine1An;
- public GameObject HeiAnBeiLine2Liang;
- public GameObject HeiAnBeiLine2An;
- public GameObject HeiAn1Line1Liang;
- public GameObject HeiAn1Line1An;
- public GameObject HeiAn1Line2Liang;
- public GameObject HeiAn1Line2An;
-
- public GameObject HeiAn2Line1Liang;
- public GameObject HeiAn2Line1An;
- public GameObject HeiAn2Line2Liang;
- public GameObject HeiAn2Line2An;
-
- public GameObject HeiAn3Line1Liang;
- public GameObject HeiAn3Line1An;
- public GameObject HeiAn3Line2Liang;
- public GameObject HeiAn3Line2An;
-
- public GameObject HeiAn4Line1Liang;
- public GameObject HeiAn4Line1An;
- public GameObject HeiAn4Line2Liang;
- public GameObject HeiAn4Line2An;
-
- public GameObject HeiAn5Line1Liang;
- public GameObject HeiAn5Line1An;
- public GameObject HeiAn5Line2Liang;
- public GameObject HeiAn5Line2An;
-
-
- [Header("ZJPanel")] public Image IceZJMainBg;
- public Image IceZJMainIcon;
- public TextMeshProUGUI IceZJMainLevelCount;
- public Image IceZJMainLevelBg;
- public Image IceZJMainXuanZhong;
-
-
- public Image IceZJ1Bg;
- public Image IceZJ1Icon;
- public TextMeshProUGUI IceZJ1LevelCount;
- public Image IceZJ1LevelBg;
- public Image IceZJ1XuanZhong;
-
-
- public Image IceZJ2Bg;
- public Image IceZJ2Icon;
- public TextMeshProUGUI IceZJ2LevelCount;
- public Image IceZJ2LevelBg;
- public Image IceZJ2XuanZhong;
-
- public Image IceZJ3Bg;
- public Image IceZJ3Icon;
- public TextMeshProUGUI IceZJ3LevelCount;
- public Image IceZJ3LevelBg;
- public Image IceZJ3XuanZhong;
-
- public Image IceZJ4Bg;
- public Image IceZJ4Icon;
- public TextMeshProUGUI IceZJ4LevelCount;
- public Image IceZJ4LevelBg;
- public Image IceZJ4XuanZhong;
-
- public Image IceZJ5Bg;
- public Image IceZJ5Icon;
- public TextMeshProUGUI IceZJ5LevelCount;
- public Image IceZJ5LevelBg;
- public Image IceZJ5XuanZhong;
-
-
- public Image IceZJ6Bg;
- public Image IceZJ6Icon;
- public TextMeshProUGUI IceZJ6LevelCount;
- public Image IceZJ6LevelBg;
- public Image IceZJ6XuanZhong;
-
-
- public GameObject IceZJLine1Liang;
- public GameObject IceZJLine1An;
- public GameObject IceZJLine2Liang;
- public GameObject IceZJLine2An;
- public GameObject IceZJLine3Liang;
- public GameObject IceZJLine3An;
- public GameObject IceZJLine4Liang;
- public GameObject IceZJLine4An;
- public GameObject IceZJLine5Liang;
- public GameObject IceZJLine5An;
-
-
-
- public Image HuoZJMainBg;
- public Image HuoZJMainIcon;
- public TextMeshProUGUI HuoZJMainLevelCount;
- public Image HuoZJMainLevelBg;
- public Image HuoZJMainXuanZhong;
-
-
-
- public Image HuoZJ1Bg;
- public Image HuoZJ1Icon;
- public TextMeshProUGUI HuoZJ1LevelCount;
- public Image HuoZJ1LevelBg;
- public Image HuoZJ1XuanZhong;
-
-
- public Image HuoZJ2Bg;
- public Image HuoZJ2Icon;
- public TextMeshProUGUI HuoZJ2LevelCount;
- public Image HuoZJ2LevelBg;
- public Image HuoZJ2XuanZhong;
-
- public Image HuoZJ3Bg;
- public Image HuoZJ3Icon;
- public TextMeshProUGUI HuoZJ3LevelCount;
- public Image HuoZJ3LevelBg;
- public Image HuoZJ3XuanZhong;
-
- public Image HuoZJ4Bg;
- public Image HuoZJ4Icon;
- public TextMeshProUGUI HuoZJ4LevelCount;
- public Image HuoZJ4LevelBg;
- public Image HuoZJ4XuanZhong;
-
- public Image HuoZJ5Bg;
- public Image HuoZJ5Icon;
- public TextMeshProUGUI HuoZJ5LevelCount;
- public Image HuoZJ5LevelBg;
- public Image HuoZJ5XuanZhong;
-
-
- public Image HuoZJ6Bg;
- public Image HuoZJ6Icon;
- public TextMeshProUGUI HuoZJ6LevelCount;
- public Image HuoZJ6LevelBg;
- public Image HuoZJ6XuanZhong;
-
- public GameObject HuoZJLine1Liang;
- public GameObject HuoZJLine1An;
- public GameObject HuoZJLine2Liang;
- public GameObject HuoZJLine2An;
- public GameObject HuoZJLine3Liang;
- public GameObject HuoZJLine3An;
- public GameObject HuoZJLine4Liang;
- public GameObject HuoZJLine4An;
- public GameObject HuoZJLine5Liang;
- public GameObject HuoZJLine5An;
-
-
-
-
-
-
- public Image DianZJMainBg;
- public Image DianZJMainIcon;
- public TextMeshProUGUI DianZJMainLevelCount;
- public Image DianZJMainLevelBg;
- public Image DianZJMainXuanZhong;
-
-
- public Image DianZJ1Bg;
- public Image DianZJ1Icon;
- public TextMeshProUGUI DianZJ1LevelCount;
- public Image DianZJ1LevelBg;
- public Image DianZJ1XuanZhong;
-
-
- public Image DianZJ2Bg;
- public Image DianZJ2Icon;
- public TextMeshProUGUI DianZJ2LevelCount;
- public Image DianZJ2LevelBg;
- public Image DianZJ2XuanZhong;
-
- public Image DianZJ3Bg;
- public Image DianZJ3Icon;
- public TextMeshProUGUI DianZJ3LevelCount;
- public Image DianZJ3LevelBg;
- public Image DianZJ3XuanZhong;
-
- public Image DianZJ4Bg;
- public Image DianZJ4Icon;
- public TextMeshProUGUI DianZJ4LevelCount;
- public Image DianZJ4LevelBg;
- public Image DianZJ4XuanZhong;
-
- public Image DianZJ5Bg;
- public Image DianZJ5Icon;
- public TextMeshProUGUI DianZJ5LevelCount;
- public Image DianZJ5LevelBg;
- public Image DianZJ5XuanZhong;
-
-
- public Image DianZJ6Bg;
- public Image DianZJ6Icon;
- public TextMeshProUGUI DianZJ6LevelCount;
- public Image DianZJ6LevelBg;
- public Image DianZJ6XuanZhong;
-
- public GameObject DianZJLine1Liang;
- public GameObject DianZJLine1An;
- public GameObject DianZJLine2Liang;
- public GameObject DianZJLine2An;
- public GameObject DianZJLine3Liang;
- public GameObject DianZJLine3An;
- public GameObject DianZJLine4Liang;
- public GameObject DianZJLine4An;
- public GameObject DianZJLine5Liang;
- public GameObject DianZJLine5An;
-
-
-
-
-
- public Image HeiAnZJMainBg;
- public Image HeiAnZJMainIcon;
- public TextMeshProUGUI HeiAnZJMainLevelCount;
- public Image HeiAnZJMainLevelBg;
- public Image HeiAnZJMainXuanZhong;
-
-
- public Image HeiAnZJ1Bg;
- public Image HeiAnZJ1Icon;
- public TextMeshProUGUI HeiAnZJ1LevelCount;
- public Image HeiAnZJ1LevelBg;
- public Image HeiAnZJ1XuanZhong;
-
-
- public Image HeiAnZJ2Bg;
- public Image HeiAnZJ2Icon;
- public TextMeshProUGUI HeiAnZJ2LevelCount;
- public Image HeiAnZJ2LevelBg;
- public Image HeiAnZJ2XuanZhong;
-
- public Image HeiAnZJ3Bg;
- public Image HeiAnZJ3Icon;
- public TextMeshProUGUI HeiAnZJ3LevelCount;
- public Image HeiAnZJ3LevelBg;
- public Image HeiAnZJ3XuanZhong;
-
- public Image HeiAnZJ4Bg;
- public Image HeiAnZJ4Icon;
- public TextMeshProUGUI HeiAnZJ4LevelCount;
- public Image HeiAnZJ4LevelBg;
- public Image HeiAnZJ4XuanZhong;
-
- public Image HeiAnZJ5Bg;
- public Image HeiAnZJ5Icon;
- public TextMeshProUGUI HeiAnZJ5LevelCount;
- public Image HeiAnZJ5LevelBg;
- public Image HeiAnZJ5XuanZhong;
-
-
- public Image HeiAnZJ6Bg;
- public Image HeiAnZJ6Icon;
- public TextMeshProUGUI HeiAnZJ6LevelCount;
- public Image HeiAnZJ6LevelBg;
- public Image HeiAnZJ6XuanZhong;
-
- public GameObject HeiAnZJLine1Liang;
- public GameObject HeiAnZJLine1An;
- public GameObject HeiAnZJLine2Liang;
- public GameObject HeiAnZJLine2An;
- public GameObject HeiAnZJLine3Liang;
- public GameObject HeiAnZJLine3An;
- public GameObject HeiAnZJLine4Liang;
- public GameObject HeiAnZJLine4An;
- public GameObject HeiAnZJLine5Liang;
- public GameObject HeiAnZJLine5An;
-
-
-
-
-
-
-
- public Image ZhiYeZJMainBg;
- public Image ZhiYeZJMainIcon;
- public TextMeshProUGUI ZhiYeZJMainLevelCount;
- public Image ZhiYeZJMainLevelBg;
- public Image ZhiYeZJMainXuanZhong;
-
-
- public Image ZhiYeZJ1Bg;
- public Image ZhiYeZJ1Icon;
- public TextMeshProUGUI ZhiYeZJ1LevelCount;
- public Image ZhiYeZJ1LevelBg;
- public Image ZhiYeZJ1XuanZhong;
-
-
- public Image ZhiYeZJ2Bg;
- public Image ZhiYeZJ2Icon;
- public TextMeshProUGUI ZhiYeZJ2LevelCount;
- public Image ZhiYeZJ2LevelBg;
- public Image ZhiYeZJ2XuanZhong;
-
- public Image ZhiYeZJ3Bg;
- public Image ZhiYeZJ3Icon;
- public TextMeshProUGUI ZhiYeZJ3LevelCount;
- public Image ZhiYeZJ3LevelBg;
- public Image ZhiYeZJ3XuanZhong;
-
- public Image ZhiYeZJ4Bg;
- public Image ZhiYeZJ4Icon;
- public TextMeshProUGUI ZhiYeZJ4LevelCount;
- public Image ZhiYeZJ4LevelBg;
- public Image ZhiYeZJ4XuanZhong;
-
- public Image ZhiYeZJ5Bg;
- public Image ZhiYeZJ5Icon;
- public TextMeshProUGUI ZhiYeZJ5LevelCount;
- public Image ZhiYeZJ5LevelBg;
- public Image ZhiYeZJ5XuanZhong;
-
-
- public Image ZhiYeZJ6Bg;
- public Image ZhiYeZJ6Icon;
- public TextMeshProUGUI ZhiYeZJ6LevelCount;
- public Image ZhiYeZJ6LevelBg;
- public Image ZhiYeZJ6XuanZhong;
-
- public GameObject ZhiYeZJLine1Liang;
- public GameObject ZhiYeZJLine1An;
- public GameObject ZhiYeZJLine2Liang;
- public GameObject ZhiYeZJLine2An;
- public GameObject ZhiYeZJLine3Liang;
- public GameObject ZhiYeZJLine3An;
- public GameObject ZhiYeZJLine4Liang;
- public GameObject ZhiYeZJLine4An;
- public GameObject ZhiYeZJLine5Liang;
- public GameObject ZhiYeZJLine5An;
-
-
-
- public Button ResetButton;
+ private Image IceMainBg;
+ private Image IceMainIcon;
+ private TextMeshProUGUI IceMainLevelCount;
+ private Image IceMainLevelBg;
+ private Image IceMainXuanZhong;
+
+ private Image IceBei1Bg;
+ private Image IceBei1Icon;
+ private TextMeshProUGUI IceBei1LevelCount;
+ private Image IceBei1LevelBg;
+ private Image IceBei1XuanZhong;
+
+ private Image IceBei2Bg;
+ private Image IceBei2Icon;
+ private TextMeshProUGUI IceBei2LevelCount;
+ private Image IceBei2LevelBg;
+ private Image IceBei2XuanZhong;
+
+ private Image IceBei3Bg;
+ private Image IceBei3Icon;
+ private TextMeshProUGUI IceBei3LevelCount;
+ private Image IceBei3LevelBg;
+ private Image IceBei3XuanZhong;
+
+ private Image IceBei4Bg;
+ private Image IceBei4Icon;
+ private TextMeshProUGUI IceBei4LevelCount;
+ private Image IceBei4LevelBg;
+ private Image IceBei4XuanZhong;
+
+
+ private Image Ice1Bg;
+ private Image Ice1Icon;
+ private TextMeshProUGUI Ice1LevelCount;
+ private Image Ice1LevelBg;
+ private Image Ice1XuanZhong;
+ private TextMeshProUGUI Ice1AutoCount;
+ private Image Ice1AutoBg;
+ private TextMeshProUGUI Ice1KeyCount;
+ private Image Ice1KeyBg;
+
+
+ private Image Ice1_1Bg;
+ private Image Ice1_1Icon;
+ private TextMeshProUGUI Ice1_1LevelCount;
+ private Image Ice1_1LevelBg;
+ private Image Ice1_1XuanZhong;
+
+ private Image Ice1_2Bg;
+ private Image Ice1_2Icon;
+ private TextMeshProUGUI Ice1_2LevelCount;
+ private Image Ice1_2LevelBg;
+ private Image Ice1_2XuanZhong;
+
+
+ private Image Ice2Bg;
+ private Image Ice2Icon;
+ private TextMeshProUGUI Ice2LevelCount;
+ private Image Ice2LevelBg;
+ private Image Ice2XuanZhong;
+ private TextMeshProUGUI Ice2AutoCount;
+ private Image Ice2AutoBg;
+ private TextMeshProUGUI Ice2KeyCount;
+ private Image Ice2KeyBg;
+
+
+ private Image Ice2_1Bg;
+ private Image Ice2_1Icon;
+ private TextMeshProUGUI Ice2_1LevelCount;
+ private Image Ice2_1LevelBg;
+ private Image Ice2_1XuanZhong;
+
+ private Image Ice2_2Bg;
+ private Image Ice2_2Icon;
+ private TextMeshProUGUI Ice2_2LevelCount;
+ private Image Ice2_2LevelBg;
+ private Image Ice2_2XuanZhong;
+
+
+
+
+ private Image Ice3Bg;
+ private Image Ice3Icon;
+ private TextMeshProUGUI Ice3LevelCount;
+ private Image Ice3LevelBg;
+ private Image Ice3XuanZhong;
+ private TextMeshProUGUI Ice3AutoCount;
+ private Image Ice3AutoBg;
+ private TextMeshProUGUI Ice3KeyCount;
+ private Image Ice3KeyBg;
+
+
+ private Image Ice3_1Bg;
+ private Image Ice3_1Icon;
+ private TextMeshProUGUI Ice3_1LevelCount;
+ private Image Ice3_1LevelBg;
+ private Image Ice3_1XuanZhong;
+
+ private Image Ice3_2Bg;
+ private Image Ice3_2Icon;
+ private TextMeshProUGUI Ice3_2LevelCount;
+ private Image Ice3_2LevelBg;
+ private Image Ice3_2XuanZhong;
+
+
+
+
+
+ private Image Ice4Bg;
+ private Image Ice4Icon;
+ private TextMeshProUGUI Ice4LevelCount;
+ private Image Ice4LevelBg;
+ private Image Ice4XuanZhong;
+ private TextMeshProUGUI Ice4AutoCount;
+ private Image Ice4AutoBg;
+ private TextMeshProUGUI Ice4KeyCount;
+ private Image Ice4KeyBg;
+
+
+ private Image Ice4_1Bg;
+ private Image Ice4_1Icon;
+ private TextMeshProUGUI Ice4_1LevelCount;
+ private Image Ice4_1LevelBg;
+ private Image Ice4_1XuanZhong;
+
+ private Image Ice4_2Bg;
+ private Image Ice4_2Icon;
+ private TextMeshProUGUI Ice4_2LevelCount;
+ private Image Ice4_2LevelBg;
+ private Image Ice4_2XuanZhong;
+
+
+
+ private Image Ice5Bg;
+ private Image Ice5Icon;
+ private TextMeshProUGUI Ice5LevelCount;
+ private Image Ice5LevelBg;
+ private Image Ice5XuanZhong;
+ private TextMeshProUGUI Ice5AutoCount;
+ private Image Ice5AutoBg;
+ private TextMeshProUGUI Ice5KeyCount;
+ private Image Ice5KeyBg;
+
+
+ private Image Ice5_1Bg;
+ private Image Ice5_1Icon;
+ private TextMeshProUGUI Ice5_1LevelCount;
+ private Image Ice5_1LevelBg;
+ private Image Ice5_1XuanZhong;
+
+ private Image Ice5_2Bg;
+ private Image Ice5_2Icon;
+ private TextMeshProUGUI Ice5_2LevelCount;
+ private Image Ice5_2LevelBg;
+ private Image Ice5_2XuanZhong;
+
+ private GameObject IceBeiLine1Liang;
+ private GameObject IceBeiLine1An;
+ private GameObject IceBeiLine2Liang;
+ private GameObject IceBeiLine2An;
+ private GameObject Ice1Line1Liang;
+ private GameObject Ice1Line1An;
+ private GameObject Ice1Line2Liang;
+ private GameObject Ice1Line2An;
+
+ private GameObject Ice2Line1Liang;
+ private GameObject Ice2Line1An;
+ private GameObject Ice2Line2Liang;
+ private GameObject Ice2Line2An;
+
+ private GameObject Ice3Line1Liang;
+ private GameObject Ice3Line1An;
+ private GameObject Ice3Line2Liang;
+ private GameObject Ice3Line2An;
+
+ private GameObject Ice4Line1Liang;
+ private GameObject Ice4Line1An;
+ private GameObject Ice4Line2Liang;
+ private GameObject Ice4Line2An;
+
+ private GameObject Ice5Line1Liang;
+ private GameObject Ice5Line1An;
+ private GameObject Ice5Line2Liang;
+ private GameObject Ice5Line2An;
+
+ [Header("HuoPanel")] private Image HuoMainBg;
+ private Image HuoMainIcon;
+ private TextMeshProUGUI HuoMainLevelCount;
+ private Image HuoMainLevelBg;
+ private Image HuoMainXuanZhong;
+
+ private Image HuoBei1Bg;
+ private Image HuoBei1Icon;
+ private TextMeshProUGUI HuoBei1LevelCount;
+ private Image HuoBei1LevelBg;
+ private Image HuoBei1XuanZhong;
+
+ private Image HuoBei2Bg;
+ private Image HuoBei2Icon;
+ private TextMeshProUGUI HuoBei2LevelCount;
+ private Image HuoBei2LevelBg;
+ private Image HuoBei2XuanZhong;
+
+ private Image HuoBei3Bg;
+ private Image HuoBei3Icon;
+ private TextMeshProUGUI HuoBei3LevelCount;
+ private Image HuoBei3LevelBg;
+ private Image HuoBei3XuanZhong;
+
+ private Image HuoBei4Bg;
+ private Image HuoBei4Icon;
+ private TextMeshProUGUI HuoBei4LevelCount;
+ private Image HuoBei4LevelBg;
+ private Image HuoBei4XuanZhong;
+
+
+ private Image Huo1Bg;
+ private Image Huo1Icon;
+ private TextMeshProUGUI Huo1LevelCount;
+ private Image Huo1LevelBg;
+ private Image Huo1XuanZhong;
+ private TextMeshProUGUI Huo1AutoCount;
+ private Image Huo1AutoBg;
+ private TextMeshProUGUI Huo1KeyCount;
+ private Image Huo1KeyBg;
+
+
+ private Image Huo1_1Bg;
+ private Image Huo1_1Icon;
+ private TextMeshProUGUI Huo1_1LevelCount;
+ private Image Huo1_1LevelBg;
+ private Image Huo1_1XuanZhong;
+
+ private Image Huo1_2Bg;
+ private Image Huo1_2Icon;
+ private TextMeshProUGUI Huo1_2LevelCount;
+ private Image Huo1_2LevelBg;
+ private Image Huo1_2XuanZhong;
+
+
+ private Image Huo2Bg;
+ private Image Huo2Icon;
+ private TextMeshProUGUI Huo2LevelCount;
+ private Image Huo2LevelBg;
+ private Image Huo2XuanZhong;
+ private TextMeshProUGUI Huo2AutoCount;
+ private Image Huo2AutoBg;
+ private TextMeshProUGUI Huo2KeyCount;
+ private Image Huo2KeyBg;
+
+
+ private Image Huo2_1Bg;
+ private Image Huo2_1Icon;
+ private TextMeshProUGUI Huo2_1LevelCount;
+ private Image Huo2_1LevelBg;
+ private Image Huo2_1XuanZhong;
+
+ private Image Huo2_2Bg;
+ private Image Huo2_2Icon;
+ private TextMeshProUGUI Huo2_2LevelCount;
+ private Image Huo2_2LevelBg;
+ private Image Huo2_2XuanZhong;
+
+
+
+
+ private Image Huo3Bg;
+ private Image Huo3Icon;
+ private TextMeshProUGUI Huo3LevelCount;
+ private Image Huo3LevelBg;
+ private Image Huo3XuanZhong;
+ private TextMeshProUGUI Huo3AutoCount;
+ private Image Huo3AutoBg;
+ private TextMeshProUGUI Huo3KeyCount;
+ private Image Huo3KeyBg;
+
+
+ private Image Huo3_1Bg;
+ private Image Huo3_1Icon;
+ private TextMeshProUGUI Huo3_1LevelCount;
+ private Image Huo3_1LevelBg;
+ private Image Huo3_1XuanZhong;
+
+ private Image Huo3_2Bg;
+ private Image Huo3_2Icon;
+ private TextMeshProUGUI Huo3_2LevelCount;
+ private Image Huo3_2LevelBg;
+ private Image Huo3_2XuanZhong;
+
+
+
+
+
+ private Image Huo4Bg;
+ private Image Huo4Icon;
+ private TextMeshProUGUI Huo4LevelCount;
+ private Image Huo4LevelBg;
+ private Image Huo4XuanZhong;
+ private TextMeshProUGUI Huo4AutoCount;
+ private Image Huo4AutoBg;
+ private TextMeshProUGUI Huo4KeyCount;
+ private Image Huo4KeyBg;
+
+
+ private Image Huo4_1Bg;
+ private Image Huo4_1Icon;
+ private TextMeshProUGUI Huo4_1LevelCount;
+ private Image Huo4_1LevelBg;
+ private Image Huo4_1XuanZhong;
+
+ private Image Huo4_2Bg;
+ private Image Huo4_2Icon;
+ private TextMeshProUGUI Huo4_2LevelCount;
+ private Image Huo4_2LevelBg;
+ private Image Huo4_2XuanZhong;
+
+
+
+ private Image Huo5Bg;
+ private Image Huo5Icon;
+ private TextMeshProUGUI Huo5LevelCount;
+ private Image Huo5LevelBg;
+ private Image Huo5XuanZhong;
+ private TextMeshProUGUI Huo5AutoCount;
+ private Image Huo5AutoBg;
+ private TextMeshProUGUI Huo5KeyCount;
+ private Image Huo5KeyBg;
+
+
+ private Image Huo5_1Bg;
+ private Image Huo5_1Icon;
+ private TextMeshProUGUI Huo5_1LevelCount;
+ private Image Huo5_1LevelBg;
+ private Image Huo5_1XuanZhong;
+
+ private Image Huo5_2Bg;
+ private Image Huo5_2Icon;
+ private TextMeshProUGUI Huo5_2LevelCount;
+ private Image Huo5_2LevelBg;
+ private Image Huo5_2XuanZhong;
+
+ private GameObject HuoBeiLine1Liang;
+ private GameObject HuoBeiLine1An;
+ private GameObject HuoBeiLine2Liang;
+ private GameObject HuoBeiLine2An;
+ private GameObject Huo1Line1Liang;
+ private GameObject Huo1Line1An;
+ private GameObject Huo1Line2Liang;
+ private GameObject Huo1Line2An;
+
+ private GameObject Huo2Line1Liang;
+ private GameObject Huo2Line1An;
+ private GameObject Huo2Line2Liang;
+ private GameObject Huo2Line2An;
+
+ private GameObject Huo3Line1Liang;
+ private GameObject Huo3Line1An;
+ private GameObject Huo3Line2Liang;
+ private GameObject Huo3Line2An;
+
+ private GameObject Huo4Line1Liang;
+ private GameObject Huo4Line1An;
+ private GameObject Huo4Line2Liang;
+ private GameObject Huo4Line2An;
+
+ private GameObject Huo5Line1Liang;
+ private GameObject Huo5Line1An;
+ private GameObject Huo5Line2Liang;
+ private GameObject Huo5Line2An;
+
+
+
+
+
+ [Header("DianPanel")] private Image DianMainBg;
+ private Image DianMainIcon;
+ private TextMeshProUGUI DianMainLevelCount;
+ private Image DianMainLevelBg;
+ private Image DianMainXuanZhong;
+
+ private Image DianBei1Bg;
+ private Image DianBei1Icon;
+ private TextMeshProUGUI DianBei1LevelCount;
+ private Image DianBei1LevelBg;
+ private Image DianBei1XuanZhong;
+
+ private Image DianBei2Bg;
+ private Image DianBei2Icon;
+ private TextMeshProUGUI DianBei2LevelCount;
+ private Image DianBei2LevelBg;
+ private Image DianBei2XuanZhong;
+
+ private Image DianBei3Bg;
+ private Image DianBei3Icon;
+ private TextMeshProUGUI DianBei3LevelCount;
+ private Image DianBei3LevelBg;
+ private Image DianBei3XuanZhong;
+
+ private Image DianBei4Bg;
+ private Image DianBei4Icon;
+ private TextMeshProUGUI DianBei4LevelCount;
+ private Image DianBei4LevelBg;
+ private Image DianBei4XuanZhong;
+
+
+ private Image Dian1Bg;
+ private Image Dian1Icon;
+ private TextMeshProUGUI Dian1LevelCount;
+ private Image Dian1LevelBg;
+ private Image Dian1XuanZhong;
+ private TextMeshProUGUI Dian1AutoCount;
+ private Image Dian1AutoBg;
+ private TextMeshProUGUI Dian1KeyCount;
+ private Image Dian1KeyBg;
+
+
+ private Image Dian1_1Bg;
+ private Image Dian1_1Icon;
+ private TextMeshProUGUI Dian1_1LevelCount;
+ private Image Dian1_1LevelBg;
+ private Image Dian1_1XuanZhong;
+
+ private Image Dian1_2Bg;
+ private Image Dian1_2Icon;
+ private TextMeshProUGUI Dian1_2LevelCount;
+ private Image Dian1_2LevelBg;
+ private Image Dian1_2XuanZhong;
+
+
+ private Image Dian2Bg;
+ private Image Dian2Icon;
+ private TextMeshProUGUI Dian2LevelCount;
+ private Image Dian2LevelBg;
+ private Image Dian2XuanZhong;
+ private TextMeshProUGUI Dian2AutoCount;
+ private Image Dian2AutoBg;
+ private TextMeshProUGUI Dian2KeyCount;
+ private Image Dian2KeyBg;
+
+
+ private Image Dian2_1Bg;
+ private Image Dian2_1Icon;
+ private TextMeshProUGUI Dian2_1LevelCount;
+ private Image Dian2_1LevelBg;
+ private Image Dian2_1XuanZhong;
+
+ private Image Dian2_2Bg;
+ private Image Dian2_2Icon;
+ private TextMeshProUGUI Dian2_2LevelCount;
+ private Image Dian2_2LevelBg;
+ private Image Dian2_2XuanZhong;
+
+
+
+
+ private Image Dian3Bg;
+ private Image Dian3Icon;
+ private TextMeshProUGUI Dian3LevelCount;
+ private Image Dian3LevelBg;
+ private Image Dian3XuanZhong;
+ private TextMeshProUGUI Dian3AutoCount;
+ private Image Dian3AutoBg;
+ private TextMeshProUGUI Dian3KeyCount;
+ private Image Dian3KeyBg;
+
+
+ private Image Dian3_1Bg;
+ private Image Dian3_1Icon;
+ private TextMeshProUGUI Dian3_1LevelCount;
+ private Image Dian3_1LevelBg;
+ private Image Dian3_1XuanZhong;
+
+ private Image Dian3_2Bg;
+ private Image Dian3_2Icon;
+ private TextMeshProUGUI Dian3_2LevelCount;
+ private Image Dian3_2LevelBg;
+ private Image Dian3_2XuanZhong;
+
+
+
+
+
+ private Image Dian4Bg;
+ private Image Dian4Icon;
+ private TextMeshProUGUI Dian4LevelCount;
+ private Image Dian4LevelBg;
+ private Image Dian4XuanZhong;
+ private TextMeshProUGUI Dian4AutoCount;
+ private Image Dian4AutoBg;
+ private TextMeshProUGUI Dian4KeyCount;
+ private Image Dian4KeyBg;
+
+
+ private Image Dian4_1Bg;
+ private Image Dian4_1Icon;
+ private TextMeshProUGUI Dian4_1LevelCount;
+ private Image Dian4_1LevelBg;
+ private Image Dian4_1XuanZhong;
+
+ private Image Dian4_2Bg;
+ private Image Dian4_2Icon;
+ private TextMeshProUGUI Dian4_2LevelCount;
+ private Image Dian4_2LevelBg;
+ private Image Dian4_2XuanZhong;
+
+
+
+ private Image Dian5Bg;
+ private Image Dian5Icon;
+ private TextMeshProUGUI Dian5LevelCount;
+ private Image Dian5LevelBg;
+ private Image Dian5XuanZhong;
+ private TextMeshProUGUI Dian5AutoCount;
+ private Image Dian5AutoBg;
+ private TextMeshProUGUI Dian5KeyCount;
+ private Image Dian5KeyBg;
+
+
+ private Image Dian5_1Bg;
+ private Image Dian5_1Icon;
+ private TextMeshProUGUI Dian5_1LevelCount;
+ private Image Dian5_1LevelBg;
+ private Image Dian5_1XuanZhong;
+
+ private Image Dian5_2Bg;
+ private Image Dian5_2Icon;
+ private TextMeshProUGUI Dian5_2LevelCount;
+ private Image Dian5_2LevelBg;
+ private Image Dian5_2XuanZhong;
+
+
+ private GameObject DianBeiLine1Liang;
+ private GameObject DianBeiLine1An;
+ private GameObject DianBeiLine2Liang;
+ private GameObject DianBeiLine2An;
+ private GameObject Dian1Line1Liang;
+ private GameObject Dian1Line1An;
+ private GameObject Dian1Line2Liang;
+ private GameObject Dian1Line2An;
+
+ private GameObject Dian2Line1Liang;
+ private GameObject Dian2Line1An;
+ private GameObject Dian2Line2Liang;
+ private GameObject Dian2Line2An;
+
+ private GameObject Dian3Line1Liang;
+ private GameObject Dian3Line1An;
+ private GameObject Dian3Line2Liang;
+ private GameObject Dian3Line2An;
+
+ private GameObject Dian4Line1Liang;
+ private GameObject Dian4Line1An;
+ private GameObject Dian4Line2Liang;
+ private GameObject Dian4Line2An;
+
+ private GameObject Dian5Line1Liang;
+ private GameObject Dian5Line1An;
+ private GameObject Dian5Line2Liang;
+ private GameObject Dian5Line2An;
+
+
+ [Header("HeiAnPanel")] private Image HeiAnMainBg;
+ private Image HeiAnMainIcon;
+ private TextMeshProUGUI HeiAnMainLevelCount;
+ private Image HeiAnMainLevelBg;
+ private Image HeiAnMainXuanZhong;
+
+ private Image HeiAnBei1Bg;
+ private Image HeiAnBei1Icon;
+ private TextMeshProUGUI HeiAnBei1LevelCount;
+ private Image HeiAnBei1LevelBg;
+ private Image HeiAnBei1XuanZhong;
+
+ private Image HeiAnBei2Bg;
+ private Image HeiAnBei2Icon;
+ private TextMeshProUGUI HeiAnBei2LevelCount;
+ private Image HeiAnBei2LevelBg;
+ private Image HeiAnBei2XuanZhong;
+
+ private Image HeiAnBei3Bg;
+ private Image HeiAnBei3Icon;
+ private TextMeshProUGUI HeiAnBei3LevelCount;
+ private Image HeiAnBei3LevelBg;
+ private Image HeiAnBei3XuanZhong;
+
+ private Image HeiAnBei4Bg;
+ private Image HeiAnBei4Icon;
+ private TextMeshProUGUI HeiAnBei4LevelCount;
+ private Image HeiAnBei4LevelBg;
+ private Image HeiAnBei4XuanZhong;
+
+
+ private Image HeiAn1Bg;
+ private Image HeiAn1Icon;
+ private TextMeshProUGUI HeiAn1LevelCount;
+ private Image HeiAn1LevelBg;
+ private Image HeiAn1XuanZhong;
+ private TextMeshProUGUI HeiAn1AutoCount;
+ private Image HeiAn1AutoBg;
+ private TextMeshProUGUI HeiAn1KeyCount;
+ private Image HeiAn1KeyBg;
+
+
+ private Image HeiAn1_1Bg;
+ private Image HeiAn1_1Icon;
+ private TextMeshProUGUI HeiAn1_1LevelCount;
+ private Image HeiAn1_1LevelBg;
+ private Image HeiAn1_1XuanZhong;
+
+ private Image HeiAn1_2Bg;
+ private Image HeiAn1_2Icon;
+ private TextMeshProUGUI HeiAn1_2LevelCount;
+ private Image HeiAn1_2LevelBg;
+ private Image HeiAn1_2XuanZhong;
+
+
+ private Image HeiAn2Bg;
+ private Image HeiAn2Icon;
+ private TextMeshProUGUI HeiAn2LevelCount;
+ private Image HeiAn2LevelBg;
+ private Image HeiAn2XuanZhong;
+ private TextMeshProUGUI HeiAn2AutoCount;
+ private Image HeiAn2AutoBg;
+ private TextMeshProUGUI HeiAn2KeyCount;
+ private Image HeiAn2KeyBg;
+
+
+ private Image HeiAn2_1Bg;
+ private Image HeiAn2_1Icon;
+ private TextMeshProUGUI HeiAn2_1LevelCount;
+ private Image HeiAn2_1LevelBg;
+ private Image HeiAn2_1XuanZhong;
+
+ private Image HeiAn2_2Bg;
+ private Image HeiAn2_2Icon;
+ private TextMeshProUGUI HeiAn2_2LevelCount;
+ private Image HeiAn2_2LevelBg;
+ private Image HeiAn2_2XuanZhong;
+
+
+
+
+ private Image HeiAn3Bg;
+ private Image HeiAn3Icon;
+ private TextMeshProUGUI HeiAn3LevelCount;
+ private Image HeiAn3LevelBg;
+ private Image HeiAn3XuanZhong;
+ private TextMeshProUGUI HeiAn3AutoCount;
+ private Image HeiAn3AutoBg;
+ private TextMeshProUGUI HeiAn3KeyCount;
+ private Image HeiAn3KeyBg;
+
+
+ private Image HeiAn3_1Bg;
+ private Image HeiAn3_1Icon;
+ private TextMeshProUGUI HeiAn3_1LevelCount;
+ private Image HeiAn3_1LevelBg;
+ private Image HeiAn3_1XuanZhong;
+
+ private Image HeiAn3_2Bg;
+ private Image HeiAn3_2Icon;
+ private TextMeshProUGUI HeiAn3_2LevelCount;
+ private Image HeiAn3_2LevelBg;
+ private Image HeiAn3_2XuanZhong;
+
+
+
+
+
+ private Image HeiAn4Bg;
+ private Image HeiAn4Icon;
+ private TextMeshProUGUI HeiAn4LevelCount;
+ private Image HeiAn4LevelBg;
+ private Image HeiAn4XuanZhong;
+ private TextMeshProUGUI HeiAn4AutoCount;
+ private Image HeiAn4AutoBg;
+ private TextMeshProUGUI HeiAn4KeyCount;
+ private Image HeiAn4KeyBg;
+
+
+ private Image HeiAn4_1Bg;
+ private Image HeiAn4_1Icon;
+ private TextMeshProUGUI HeiAn4_1LevelCount;
+ private Image HeiAn4_1LevelBg;
+ private Image HeiAn4_1XuanZhong;
+
+ private Image HeiAn4_2Bg;
+ private Image HeiAn4_2Icon;
+ private TextMeshProUGUI HeiAn4_2LevelCount;
+ private Image HeiAn4_2LevelBg;
+ private Image HeiAn4_2XuanZhong;
+
+
+
+ private Image HeiAn5Bg;
+ private Image HeiAn5Icon;
+ private TextMeshProUGUI HeiAn5LevelCount;
+ private Image HeiAn5LevelBg;
+ private Image HeiAn5XuanZhong;
+ private TextMeshProUGUI HeiAn5AutoCount;
+ private Image HeiAn5AutoBg;
+ private TextMeshProUGUI HeiAn5KeyCount;
+ private Image HeiAn5KeyBg;
+
+
+ private Image HeiAn5_1Bg;
+ private Image HeiAn5_1Icon;
+ private TextMeshProUGUI HeiAn5_1LevelCount;
+ private Image HeiAn5_1LevelBg;
+ private Image HeiAn5_1XuanZhong;
+
+ private Image HeiAn5_2Bg;
+ private Image HeiAn5_2Icon;
+ private TextMeshProUGUI HeiAn5_2LevelCount;
+ private Image HeiAn5_2LevelBg;
+ private Image HeiAn5_2XuanZhong;
+
+
+ private GameObject HeiAnBeiLine1Liang;
+ private GameObject HeiAnBeiLine1An;
+ private GameObject HeiAnBeiLine2Liang;
+ private GameObject HeiAnBeiLine2An;
+ private GameObject HeiAn1Line1Liang;
+ private GameObject HeiAn1Line1An;
+ private GameObject HeiAn1Line2Liang;
+ private GameObject HeiAn1Line2An;
+
+ private GameObject HeiAn2Line1Liang;
+ private GameObject HeiAn2Line1An;
+ private GameObject HeiAn2Line2Liang;
+ private GameObject HeiAn2Line2An;
+
+ private GameObject HeiAn3Line1Liang;
+ private GameObject HeiAn3Line1An;
+ private GameObject HeiAn3Line2Liang;
+ private GameObject HeiAn3Line2An;
+
+ private GameObject HeiAn4Line1Liang;
+ private GameObject HeiAn4Line1An;
+ private GameObject HeiAn4Line2Liang;
+ private GameObject HeiAn4Line2An;
+
+ private GameObject HeiAn5Line1Liang;
+ private GameObject HeiAn5Line1An;
+ private GameObject HeiAn5Line2Liang;
+ private GameObject HeiAn5Line2An;
+
+
+ [Header("ZJPanel")] private Image IceZJMainBg;
+ private Image IceZJMainIcon;
+ private TextMeshProUGUI IceZJMainLevelCount;
+ private Image IceZJMainLevelBg;
+ private Image IceZJMainXuanZhong;
+
+
+ private Image IceZJ1Bg;
+ private Image IceZJ1Icon;
+ private TextMeshProUGUI IceZJ1LevelCount;
+ private Image IceZJ1LevelBg;
+ private Image IceZJ1XuanZhong;
+
+
+ private Image IceZJ2Bg;
+ private Image IceZJ2Icon;
+ private TextMeshProUGUI IceZJ2LevelCount;
+ private Image IceZJ2LevelBg;
+ private Image IceZJ2XuanZhong;
+
+ private Image IceZJ3Bg;
+ private Image IceZJ3Icon;
+ private TextMeshProUGUI IceZJ3LevelCount;
+ private Image IceZJ3LevelBg;
+ private Image IceZJ3XuanZhong;
+
+ private Image IceZJ4Bg;
+ private Image IceZJ4Icon;
+ private TextMeshProUGUI IceZJ4LevelCount;
+ private Image IceZJ4LevelBg;
+ private Image IceZJ4XuanZhong;
+
+ private Image IceZJ5Bg;
+ private Image IceZJ5Icon;
+ private TextMeshProUGUI IceZJ5LevelCount;
+ private Image IceZJ5LevelBg;
+ private Image IceZJ5XuanZhong;
+
+
+ private Image IceZJ6Bg;
+ private Image IceZJ6Icon;
+ private TextMeshProUGUI IceZJ6LevelCount;
+ private Image IceZJ6LevelBg;
+ private Image IceZJ6XuanZhong;
+
+
+ private GameObject IceZJLine1Liang;
+ private GameObject IceZJLine1An;
+ private GameObject IceZJLine2Liang;
+ private GameObject IceZJLine2An;
+ private GameObject IceZJLine3Liang;
+ private GameObject IceZJLine3An;
+ private GameObject IceZJLine4Liang;
+ private GameObject IceZJLine4An;
+ private GameObject IceZJLine5Liang;
+ private GameObject IceZJLine5An;
+
+
+
+ private Image HuoZJMainBg;
+ private Image HuoZJMainIcon;
+ private TextMeshProUGUI HuoZJMainLevelCount;
+ private Image HuoZJMainLevelBg;
+ private Image HuoZJMainXuanZhong;
+
+
+
+ private Image HuoZJ1Bg;
+ private Image HuoZJ1Icon;
+ private TextMeshProUGUI HuoZJ1LevelCount;
+ private Image HuoZJ1LevelBg;
+ private Image HuoZJ1XuanZhong;
+
+
+ private Image HuoZJ2Bg;
+ private Image HuoZJ2Icon;
+ private TextMeshProUGUI HuoZJ2LevelCount;
+ private Image HuoZJ2LevelBg;
+ private Image HuoZJ2XuanZhong;
+
+ private Image HuoZJ3Bg;
+ private Image HuoZJ3Icon;
+ private TextMeshProUGUI HuoZJ3LevelCount;
+ private Image HuoZJ3LevelBg;
+ private Image HuoZJ3XuanZhong;
+
+ private Image HuoZJ4Bg;
+ private Image HuoZJ4Icon;
+ private TextMeshProUGUI HuoZJ4LevelCount;
+ private Image HuoZJ4LevelBg;
+ private Image HuoZJ4XuanZhong;
+
+ private Image HuoZJ5Bg;
+ private Image HuoZJ5Icon;
+ private TextMeshProUGUI HuoZJ5LevelCount;
+ private Image HuoZJ5LevelBg;
+ private Image HuoZJ5XuanZhong;
+
+
+ private Image HuoZJ6Bg;
+ private Image HuoZJ6Icon;
+ private TextMeshProUGUI HuoZJ6LevelCount;
+ private Image HuoZJ6LevelBg;
+ private Image HuoZJ6XuanZhong;
+
+ private GameObject HuoZJLine1Liang;
+ private GameObject HuoZJLine1An;
+ private GameObject HuoZJLine2Liang;
+ private GameObject HuoZJLine2An;
+ private GameObject HuoZJLine3Liang;
+ private GameObject HuoZJLine3An;
+ private GameObject HuoZJLine4Liang;
+ private GameObject HuoZJLine4An;
+ private GameObject HuoZJLine5Liang;
+ private GameObject HuoZJLine5An;
+
+
+
+
+
+
+ private Image DianZJMainBg;
+ private Image DianZJMainIcon;
+ private TextMeshProUGUI DianZJMainLevelCount;
+ private Image DianZJMainLevelBg;
+ private Image DianZJMainXuanZhong;
+
+
+ private Image DianZJ1Bg;
+ private Image DianZJ1Icon;
+ private TextMeshProUGUI DianZJ1LevelCount;
+ private Image DianZJ1LevelBg;
+ private Image DianZJ1XuanZhong;
+
+
+ private Image DianZJ2Bg;
+ private Image DianZJ2Icon;
+ private TextMeshProUGUI DianZJ2LevelCount;
+ private Image DianZJ2LevelBg;
+ private Image DianZJ2XuanZhong;
+
+ private Image DianZJ3Bg;
+ private Image DianZJ3Icon;
+ private TextMeshProUGUI DianZJ3LevelCount;
+ private Image DianZJ3LevelBg;
+ private Image DianZJ3XuanZhong;
+
+ private Image DianZJ4Bg;
+ private Image DianZJ4Icon;
+ private TextMeshProUGUI DianZJ4LevelCount;
+ private Image DianZJ4LevelBg;
+ private Image DianZJ4XuanZhong;
+
+ private Image DianZJ5Bg;
+ private Image DianZJ5Icon;
+ private TextMeshProUGUI DianZJ5LevelCount;
+ private Image DianZJ5LevelBg;
+ private Image DianZJ5XuanZhong;
+
+
+ private Image DianZJ6Bg;
+ private Image DianZJ6Icon;
+ private TextMeshProUGUI DianZJ6LevelCount;
+ private Image DianZJ6LevelBg;
+ private Image DianZJ6XuanZhong;
+
+ private GameObject DianZJLine1Liang;
+ private GameObject DianZJLine1An;
+ private GameObject DianZJLine2Liang;
+ private GameObject DianZJLine2An;
+ private GameObject DianZJLine3Liang;
+ private GameObject DianZJLine3An;
+ private GameObject DianZJLine4Liang;
+ private GameObject DianZJLine4An;
+ private GameObject DianZJLine5Liang;
+ private GameObject DianZJLine5An;
+
+
+
+
+
+ private Image HeiAnZJMainBg;
+ private Image HeiAnZJMainIcon;
+ private TextMeshProUGUI HeiAnZJMainLevelCount;
+ private Image HeiAnZJMainLevelBg;
+ private Image HeiAnZJMainXuanZhong;
+
+
+ private Image HeiAnZJ1Bg;
+ private Image HeiAnZJ1Icon;
+ private TextMeshProUGUI HeiAnZJ1LevelCount;
+ private Image HeiAnZJ1LevelBg;
+ private Image HeiAnZJ1XuanZhong;
+
+
+ private Image HeiAnZJ2Bg;
+ private Image HeiAnZJ2Icon;
+ private TextMeshProUGUI HeiAnZJ2LevelCount;
+ private Image HeiAnZJ2LevelBg;
+ private Image HeiAnZJ2XuanZhong;
+
+ private Image HeiAnZJ3Bg;
+ private Image HeiAnZJ3Icon;
+ private TextMeshProUGUI HeiAnZJ3LevelCount;
+ private Image HeiAnZJ3LevelBg;
+ private Image HeiAnZJ3XuanZhong;
+
+ private Image HeiAnZJ4Bg;
+ private Image HeiAnZJ4Icon;
+ private TextMeshProUGUI HeiAnZJ4LevelCount;
+ private Image HeiAnZJ4LevelBg;
+ private Image HeiAnZJ4XuanZhong;
+
+ private Image HeiAnZJ5Bg;
+ private Image HeiAnZJ5Icon;
+ private TextMeshProUGUI HeiAnZJ5LevelCount;
+ private Image HeiAnZJ5LevelBg;
+ private Image HeiAnZJ5XuanZhong;
+
+
+ private Image HeiAnZJ6Bg;
+ private Image HeiAnZJ6Icon;
+ private TextMeshProUGUI HeiAnZJ6LevelCount;
+ private Image HeiAnZJ6LevelBg;
+ private Image HeiAnZJ6XuanZhong;
+
+ private GameObject HeiAnZJLine1Liang;
+ private GameObject HeiAnZJLine1An;
+ private GameObject HeiAnZJLine2Liang;
+ private GameObject HeiAnZJLine2An;
+ private GameObject HeiAnZJLine3Liang;
+ private GameObject HeiAnZJLine3An;
+ private GameObject HeiAnZJLine4Liang;
+ private GameObject HeiAnZJLine4An;
+ private GameObject HeiAnZJLine5Liang;
+ private GameObject HeiAnZJLine5An;
+
+
+
+
+
+
+
+ private Image ZhiYeZJMainBg;
+ private Image ZhiYeZJMainIcon;
+ private TextMeshProUGUI ZhiYeZJMainLevelCount;
+ private Image ZhiYeZJMainLevelBg;
+ private Image ZhiYeZJMainXuanZhong;
+
+
+ private Image ZhiYeZJ1Bg;
+ private Image ZhiYeZJ1Icon;
+ private TextMeshProUGUI ZhiYeZJ1LevelCount;
+ private Image ZhiYeZJ1LevelBg;
+ private Image ZhiYeZJ1XuanZhong;
+
+
+ private Image ZhiYeZJ2Bg;
+ private Image ZhiYeZJ2Icon;
+ private TextMeshProUGUI ZhiYeZJ2LevelCount;
+ private Image ZhiYeZJ2LevelBg;
+ private Image ZhiYeZJ2XuanZhong;
+
+ private Image ZhiYeZJ3Bg;
+ private Image ZhiYeZJ3Icon;
+ private TextMeshProUGUI ZhiYeZJ3LevelCount;
+ private Image ZhiYeZJ3LevelBg;
+ private Image ZhiYeZJ3XuanZhong;
+
+ private Image ZhiYeZJ4Bg;
+ private Image ZhiYeZJ4Icon;
+ private TextMeshProUGUI ZhiYeZJ4LevelCount;
+ private Image ZhiYeZJ4LevelBg;
+ private Image ZhiYeZJ4XuanZhong;
+
+ private Image ZhiYeZJ5Bg;
+ private Image ZhiYeZJ5Icon;
+ private TextMeshProUGUI ZhiYeZJ5LevelCount;
+ private Image ZhiYeZJ5LevelBg;
+ private Image ZhiYeZJ5XuanZhong;
+
+
+ private Image ZhiYeZJ6Bg;
+ private Image ZhiYeZJ6Icon;
+ private TextMeshProUGUI ZhiYeZJ6LevelCount;
+ private Image ZhiYeZJ6LevelBg;
+ private Image ZhiYeZJ6XuanZhong;
+
+ private GameObject ZhiYeZJLine1Liang;
+ private GameObject ZhiYeZJLine1An;
+ private GameObject ZhiYeZJLine2Liang;
+ private GameObject ZhiYeZJLine2An;
+ private GameObject ZhiYeZJLine3Liang;
+ private GameObject ZhiYeZJLine3An;
+ private GameObject ZhiYeZJLine4Liang;
+ private GameObject ZhiYeZJLine4An;
+ private GameObject ZhiYeZJLine5Liang;
+ private GameObject ZhiYeZJLine5An;
+
+
+
+ private Button ResetButton;
 
 
 }
