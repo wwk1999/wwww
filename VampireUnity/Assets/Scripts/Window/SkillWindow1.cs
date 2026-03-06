@@ -1153,12 +1153,14 @@ public class SkillWindow1 : MonoBehaviour
       IceBei2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f,1f);
       IceBeiLine1Liang.gameObject.SetActive(false);
       IceBeiLine1An.gameObject.SetActive(true);
+      IceBei2Icon.GetComponent<Button>().interactable = false;
      }
      else
      {
       IceBei2Icon.color = new Color(1, 1, 1);
       IceBeiLine1Liang.gameObject.SetActive(true);
       IceBeiLine1An.gameObject.SetActive(false);
+      IceBei2Icon.GetComponent<Button>().interactable = true;
      }
 
      if (SkillJiaDian.S.IceBei3 < 1)
