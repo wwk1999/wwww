@@ -1154,7 +1154,7 @@ public class SkillWindow1 : MonoBehaviour
       IceBeiLine1Liang.gameObject.SetActive(false);
       IceBeiLine1An.gameObject.SetActive(true);
       IceBei2Icon.GetComponent<Button>().interactable = false;
-      IceBei2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      IceBei2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1163,7 +1163,7 @@ public class SkillWindow1 : MonoBehaviour
       IceBeiLine1Liang.gameObject.SetActive(true);
       IceBeiLine1An.gameObject.SetActive(false);
       IceBei2Icon.GetComponent<Button>().interactable = true;
-      IceBei2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      IceBei2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
 
@@ -1173,7 +1173,7 @@ public class SkillWindow1 : MonoBehaviour
       IceBeiLine2Liang.gameObject.SetActive(false);
       IceBeiLine2An.gameObject.SetActive(true);
       IceBei4Icon.GetComponent<Button>().interactable = false;
-      IceBei4Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      IceBei4Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1181,7 +1181,7 @@ public class SkillWindow1 : MonoBehaviour
       IceBeiLine2Liang.gameObject.SetActive(true);
       IceBeiLine2An.gameObject.SetActive(false);
       IceBei4Icon.GetComponent<Button>().interactable = true;
-      IceBei4Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      IceBei4Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1191,7 +1191,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice1Line1Liang.gameObject.SetActive(false);
       Ice1Line1An.gameObject.SetActive(true);
       Ice1_1Icon.GetComponent<Button>().interactable = false;
-      Ice1_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice1_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1199,7 +1199,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice1Line1Liang.gameObject.SetActive(true);
       Ice1Line1An.gameObject.SetActive(false);
       Ice1_1Icon.GetComponent<Button>().interactable = true;
-      Ice1_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice1_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1210,7 +1210,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice1Line2Liang.gameObject.SetActive(false);
       Ice1Line2An.gameObject.SetActive(true);
       Ice1_2Icon.GetComponent<Button>().interactable = false;
-      Ice1_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice1_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1219,7 +1219,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice1Line2Liang.gameObject.SetActive(true);
       Ice1Line2An.gameObject.SetActive(false);
       Ice1_2Icon.GetComponent<Button>().interactable = true;
-      Ice1_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice1_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1231,7 +1231,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice2Line1Liang.gameObject.SetActive(false);
       Ice2Line1An.gameObject.SetActive(true);
       Ice2_1Icon.GetComponent<Button>().interactable = false;
-      Ice2_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice2_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1240,7 +1240,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice2Line1Liang.gameObject.SetActive(true);
       Ice2Line1An.gameObject.SetActive(false);
       Ice2_1Icon.GetComponent<Button>().interactable = true;
-      Ice2_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice2_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1251,7 +1251,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice2Line2Liang.gameObject.SetActive(false);
       Ice2Line2An.gameObject.SetActive(true);
       Ice2_2Icon.GetComponent<Button>().interactable = false;
-      Ice2_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice2_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1260,7 +1260,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice2Line2Liang.gameObject.SetActive(true);
       Ice2Line2An.gameObject.SetActive(false);
       Ice2_2Icon.GetComponent<Button>().interactable = true;
-      Ice2_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice2_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1272,7 +1272,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice3Line1Liang.gameObject.SetActive(false);
       Ice3Line1An.gameObject.SetActive(true);
       Ice3_1Icon.GetComponent<Button>().interactable = false;
-      Ice3_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice3_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1281,7 +1281,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice3Line1Liang.gameObject.SetActive(true);
       Ice3Line1An.gameObject.SetActive(false);
       Ice3_1Icon.GetComponent<Button>().interactable = true;
-      Ice3_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice3_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1292,7 +1292,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice3Line2Liang.gameObject.SetActive(false);
       Ice3Line2An.gameObject.SetActive(true);
       Ice3_2Icon.GetComponent<Button>().interactable = false;
-      Ice3_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice3_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1301,7 +1301,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice3Line2Liang.gameObject.SetActive(true);
       Ice3Line2An.gameObject.SetActive(false);
       Ice3_2Icon.GetComponent<Button>().interactable = true;
-      Ice3_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice3_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1313,7 +1313,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice4Line1Liang.gameObject.SetActive(false);
       Ice4Line1An.gameObject.SetActive(true);
       Ice4_1Icon.GetComponent<Button>().interactable = false;
-      Ice4_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice4_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1322,7 +1322,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice4Line1Liang.gameObject.SetActive(true);
       Ice4Line1An.gameObject.SetActive(false);
       Ice4_1Icon.GetComponent<Button>().interactable = true;
-      Ice4_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice4_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1333,7 +1333,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice4Line2Liang.gameObject.SetActive(false);
       Ice4Line2An.gameObject.SetActive(true);
       Ice4_2Icon.GetComponent<Button>().interactable = false;
-      Ice4_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice4_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1342,7 +1342,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice4Line2Liang.gameObject.SetActive(true);
       Ice4Line2An.gameObject.SetActive(false);
       Ice4_2Icon.GetComponent<Button>().interactable = true;
-      Ice4_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice4_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1354,7 +1354,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice5Line1Liang.gameObject.SetActive(false);
       Ice5Line1An.gameObject.SetActive(true);
       Ice5_1Icon.GetComponent<Button>().interactable = false;
-      Ice5_1Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice5_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1363,7 +1363,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice5Line1Liang.gameObject.SetActive(true);
       Ice5Line1An.gameObject.SetActive(false);
       Ice5_1Icon.GetComponent<Button>().interactable = true;
-      Ice5_1Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice5_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
      
@@ -1374,7 +1374,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice5Line2Liang.gameObject.SetActive(false);
       Ice5Line2An.gameObject.SetActive(true);
       Ice5_2Icon.GetComponent<Button>().interactable = false;
-      Ice5_2Icon.GetComponent<UISmoothScaleEffect1>().Active = false;
+      Ice5_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
 
      }
      else
@@ -1383,7 +1383,7 @@ public class SkillWindow1 : MonoBehaviour
       Ice5Line2Liang.gameObject.SetActive(true);
       Ice5Line2An.gameObject.SetActive(false);
       Ice5_2Icon.GetComponent<Button>().interactable = true;
-      Ice5_2Icon.GetComponent<UISmoothScaleEffect1>().Active = true;
+      Ice5_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
 
      }
 
@@ -1398,6 +1398,7 @@ public class SkillWindow1 : MonoBehaviour
       HuoBeiLine1Liang.gameObject.SetActive(false);
       HuoBeiLine1An.gameObject.SetActive(true);
       HuoBei2Icon.GetComponent<Button>().interactable = false;
+      HuoBei2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1405,6 +1406,7 @@ public class SkillWindow1 : MonoBehaviour
       HuoBeiLine1Liang.gameObject.SetActive(true);
       HuoBeiLine1An.gameObject.SetActive(false);
       HuoBei2Icon.GetComponent<Button>().interactable = true;
+      HuoBei2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
 
      if (SkillJiaDian.S.HuoBei3 < 1)
@@ -1413,6 +1415,7 @@ public class SkillWindow1 : MonoBehaviour
       HuoBeiLine2Liang.gameObject.SetActive(false);
       HuoBeiLine2An.gameObject.SetActive(true);
       HuoBei4Icon.GetComponent<Button>().interactable = false;
+      HuoBei4Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1420,6 +1423,7 @@ public class SkillWindow1 : MonoBehaviour
       HuoBeiLine2Liang.gameObject.SetActive(true);
       HuoBeiLine2An.gameObject.SetActive(false);
       HuoBei4Icon.GetComponent<Button>().interactable = true;
+      HuoBei4Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1429,6 +1433,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo1Line1Liang.gameObject.SetActive(false);
       Huo1Line1An.gameObject.SetActive(true);
       Huo1_1Icon.GetComponent<Button>().interactable = false;
+      Huo1_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1436,6 +1441,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo1Line1Liang.gameObject.SetActive(true);
       Huo1Line1An.gameObject.SetActive(false);
       Huo1_1Icon.GetComponent<Button>().interactable = true;
+      Huo1_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1445,6 +1451,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo1Line2Liang.gameObject.SetActive(false);
       Huo1Line2An.gameObject.SetActive(true);
       Huo1_2Icon.GetComponent<Button>().interactable = false;
+      Huo1_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1452,6 +1459,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo1Line2Liang.gameObject.SetActive(true);
       Huo1Line2An.gameObject.SetActive(false);
       Huo1_2Icon.GetComponent<Button>().interactable = true;
+      Huo1_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1462,6 +1470,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo2Line1Liang.gameObject.SetActive(false);
       Huo2Line1An.gameObject.SetActive(true);
       Huo2_1Icon.GetComponent<Button>().interactable = false;
+      Huo2_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1469,6 +1478,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo2Line1Liang.gameObject.SetActive(true);
       Huo2Line1An.gameObject.SetActive(false);
       Huo2_1Icon.GetComponent<Button>().interactable = true;
+      Huo2_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1478,6 +1488,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo2Line2Liang.gameObject.SetActive(false);
       Huo2Line2An.gameObject.SetActive(true);
       Huo2_2Icon.GetComponent<Button>().interactable = false;
+      Huo2_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1485,6 +1496,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo2Line2Liang.gameObject.SetActive(true);
       Huo2Line2An.gameObject.SetActive(false);
       Huo2_2Icon.GetComponent<Button>().interactable = true;
+      Huo2_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1495,6 +1507,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo3Line1Liang.gameObject.SetActive(false);
       Huo3Line1An.gameObject.SetActive(true);
       Huo3_1Icon.GetComponent<Button>().interactable = false;
+      Huo3_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1502,6 +1515,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo3Line1Liang.gameObject.SetActive(true);
       Huo3Line1An.gameObject.SetActive(false);
       Huo3_1Icon.GetComponent<Button>().interactable = true;
+      Huo3_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1511,6 +1525,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo3Line2Liang.gameObject.SetActive(false);
       Huo3Line2An.gameObject.SetActive(true);
       Huo3_2Icon.GetComponent<Button>().interactable = false;
+      Huo3_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1518,6 +1533,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo3Line2Liang.gameObject.SetActive(true);
       Huo3Line2An.gameObject.SetActive(false);
       Huo3_2Icon.GetComponent<Button>().interactable = true;
+      Huo3_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1528,6 +1544,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo4Line1Liang.gameObject.SetActive(false);
       Huo4Line1An.gameObject.SetActive(true);
       Huo4_1Icon.GetComponent<Button>().interactable = false;
+      Huo4_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1535,6 +1552,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo4Line1Liang.gameObject.SetActive(true);
       Huo4Line1An.gameObject.SetActive(false);
       Huo4_1Icon.GetComponent<Button>().interactable = true;
+      Huo4_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1544,6 +1562,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo4Line2Liang.gameObject.SetActive(false);
       Huo4Line2An.gameObject.SetActive(true);
       Huo4_2Icon.GetComponent<Button>().interactable = false;
+      Huo4_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1551,6 +1570,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo4Line2Liang.gameObject.SetActive(true);
       Huo4Line2An.gameObject.SetActive(false);
       Huo4_2Icon.GetComponent<Button>().interactable = true;
+      Huo4_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1561,6 +1581,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo5Line1Liang.gameObject.SetActive(false);
       Huo5Line1An.gameObject.SetActive(true);
       Huo5_1Icon.GetComponent<Button>().interactable = false;
+      Huo5_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1568,6 +1589,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo5Line1Liang.gameObject.SetActive(true);
       Huo5Line1An.gameObject.SetActive(false);
       Huo5_1Icon.GetComponent<Button>().interactable = true;
+      Huo5_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1577,6 +1599,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo5Line2Liang.gameObject.SetActive(false);
       Huo5Line2An.gameObject.SetActive(true);
       Huo5_2Icon.GetComponent<Button>().interactable = false;
+      Huo5_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1584,6 +1607,7 @@ public class SkillWindow1 : MonoBehaviour
       Huo5Line2Liang.gameObject.SetActive(true);
       Huo5Line2An.gameObject.SetActive(false);
       Huo5_2Icon.GetComponent<Button>().interactable = true;
+      Huo5_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
 
     }
@@ -1597,6 +1621,7 @@ public class SkillWindow1 : MonoBehaviour
       DianBeiLine1Liang.gameObject.SetActive(false);
       DianBeiLine1An.gameObject.SetActive(true);
       DianBei2Icon.GetComponent<Button>().interactable = false;
+      DianBei2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1604,6 +1629,7 @@ public class SkillWindow1 : MonoBehaviour
       DianBeiLine1Liang.gameObject.SetActive(true);
       DianBeiLine1An.gameObject.SetActive(false);
       DianBei2Icon.GetComponent<Button>().interactable = true;
+      DianBei2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
 
      if (SkillJiaDian.S.DianBei3 < 1)
@@ -1612,6 +1638,7 @@ public class SkillWindow1 : MonoBehaviour
       DianBeiLine2Liang.gameObject.SetActive(false);
       DianBeiLine2An.gameObject.SetActive(true);
       DianBei4Icon.GetComponent<Button>().interactable = false;
+      DianBei4Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1619,6 +1646,7 @@ public class SkillWindow1 : MonoBehaviour
       DianBeiLine2Liang.gameObject.SetActive(true);
       DianBeiLine2An.gameObject.SetActive(false);
       DianBei4Icon.GetComponent<Button>().interactable = true;
+      DianBei4Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1628,6 +1656,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian1Line1Liang.gameObject.SetActive(false);
       Dian1Line1An.gameObject.SetActive(true);
       Dian1_1Icon.GetComponent<Button>().interactable = false;
+      Dian1_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1635,6 +1664,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian1Line1Liang.gameObject.SetActive(true);
       Dian1Line1An.gameObject.SetActive(false);
       Dian1_1Icon.GetComponent<Button>().interactable = true;
+      Dian1_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1644,6 +1674,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian1Line2Liang.gameObject.SetActive(false);
       Dian1Line2An.gameObject.SetActive(true);
       Dian1_2Icon.GetComponent<Button>().interactable = false;
+      Dian1_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1651,6 +1682,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian1Line2Liang.gameObject.SetActive(true);
       Dian1Line2An.gameObject.SetActive(false);
       Dian1_2Icon.GetComponent<Button>().interactable = true;
+      Dian1_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1661,6 +1693,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian2Line1Liang.gameObject.SetActive(false);
       Dian2Line1An.gameObject.SetActive(true);
       Dian2_1Icon.GetComponent<Button>().interactable = false;
+      Dian2_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1668,6 +1701,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian2Line1Liang.gameObject.SetActive(true);
       Dian2Line1An.gameObject.SetActive(false);
       Dian2_1Icon.GetComponent<Button>().interactable = true;
+      Dian2_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1677,6 +1711,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian2Line2Liang.gameObject.SetActive(false);
       Dian2Line2An.gameObject.SetActive(true);
       Dian2_2Icon.GetComponent<Button>().interactable = false;
+      Dian2_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1684,6 +1719,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian2Line2Liang.gameObject.SetActive(true);
       Dian2Line2An.gameObject.SetActive(false);
       Dian2_2Icon.GetComponent<Button>().interactable = true;
+      Dian2_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1694,6 +1730,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian3Line1Liang.gameObject.SetActive(false);
       Dian3Line1An.gameObject.SetActive(true);
       Dian3_1Icon.GetComponent<Button>().interactable = false;
+      Dian3_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1701,6 +1738,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian3Line1Liang.gameObject.SetActive(true);
       Dian3Line1An.gameObject.SetActive(false);
       Dian3_1Icon.GetComponent<Button>().interactable = true;
+      Dian3_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1710,6 +1748,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian3Line2Liang.gameObject.SetActive(false);
       Dian3Line2An.gameObject.SetActive(true);
       Dian3_2Icon.GetComponent<Button>().interactable = false;
+      Dian3_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1717,6 +1756,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian3Line2Liang.gameObject.SetActive(true);
       Dian3Line2An.gameObject.SetActive(false);
       Dian3_2Icon.GetComponent<Button>().interactable = true;
+      Dian3_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1727,6 +1767,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian4Line1Liang.gameObject.SetActive(false);
       Dian4Line1An.gameObject.SetActive(true);
       Dian4_1Icon.GetComponent<Button>().interactable = false;
+      Dian4_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1734,6 +1775,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian4Line1Liang.gameObject.SetActive(true);
       Dian4Line1An.gameObject.SetActive(false);
       Dian4_1Icon.GetComponent<Button>().interactable = true;
+      Dian4_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1743,6 +1785,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian4Line2Liang.gameObject.SetActive(false);
       Dian4Line2An.gameObject.SetActive(true);
       Dian4_2Icon.GetComponent<Button>().interactable = false;
+      Dian4_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1750,6 +1793,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian4Line2Liang.gameObject.SetActive(true);
       Dian4Line2An.gameObject.SetActive(false);
       Dian4_2Icon.GetComponent<Button>().interactable = true;
+      Dian4_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1760,6 +1804,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian5Line1Liang.gameObject.SetActive(false);
       Dian5Line1An.gameObject.SetActive(true);
       Dian5_1Icon.GetComponent<Button>().interactable = false;
+      Dian5_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1767,6 +1812,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian5Line1Liang.gameObject.SetActive(true);
       Dian5Line1An.gameObject.SetActive(false);
       Dian5_1Icon.GetComponent<Button>().interactable = true;
+      Dian5_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1776,6 +1822,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian5Line2Liang.gameObject.SetActive(false);
       Dian5Line2An.gameObject.SetActive(true);
       Dian5_2Icon.GetComponent<Button>().interactable = false;
+      Dian5_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1783,6 +1830,7 @@ public class SkillWindow1 : MonoBehaviour
       Dian5Line2Liang.gameObject.SetActive(true);
       Dian5Line2An.gameObject.SetActive(false);
       Dian5_2Icon.GetComponent<Button>().interactable = true;
+      Dian5_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
 
     }
@@ -1795,6 +1843,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAnBeiLine1Liang.gameObject.SetActive(false);
       HeiAnBeiLine1An.gameObject.SetActive(true);
       HeiAnBei2Icon.GetComponent<Button>().interactable = false;
+      HeiAnBei2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1802,6 +1851,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAnBeiLine1Liang.gameObject.SetActive(true);
       HeiAnBeiLine1An.gameObject.SetActive(false);
       HeiAnBei2Icon.GetComponent<Button>().interactable = true;
+      HeiAnBei2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
 
      if (SkillJiaDian.S.HeiAnBei3 < 1)
@@ -1810,6 +1860,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAnBeiLine2Liang.gameObject.SetActive(false);
       HeiAnBeiLine2An.gameObject.SetActive(true);
       HeiAnBei4Icon.GetComponent<Button>().interactable = false;
+      HeiAnBei4Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1817,6 +1868,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAnBeiLine2Liang.gameObject.SetActive(true);
       HeiAnBeiLine2An.gameObject.SetActive(false);
       HeiAnBei4Icon.GetComponent<Button>().interactable = true;
+      HeiAnBei4Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1826,6 +1878,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn1Line1Liang.gameObject.SetActive(false);
       HeiAn1Line1An.gameObject.SetActive(true);
       HeiAn1_1Icon.GetComponent<Button>().interactable = false;
+      HeiAn1_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1833,6 +1886,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn1Line1Liang.gameObject.SetActive(true);
       HeiAn1Line1An.gameObject.SetActive(false);
       HeiAn1_1Icon.GetComponent<Button>().interactable = true;
+      HeiAn1_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1842,6 +1896,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn1Line2Liang.gameObject.SetActive(false);
       HeiAn1Line2An.gameObject.SetActive(true);
       HeiAn1_2Icon.GetComponent<Button>().interactable = false;
+      HeiAn1_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1849,6 +1904,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn1Line2Liang.gameObject.SetActive(true);
       HeiAn1Line2An.gameObject.SetActive(false);
       HeiAn1_2Icon.GetComponent<Button>().interactable = true;
+      HeiAn1_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1859,6 +1915,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn2Line1Liang.gameObject.SetActive(false);
       HeiAn2Line1An.gameObject.SetActive(true);
       HeiAn2_1Icon.GetComponent<Button>().interactable = false;
+      HeiAn2_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1866,6 +1923,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn2Line1Liang.gameObject.SetActive(true);
       HeiAn2Line1An.gameObject.SetActive(false);
       HeiAn2_1Icon.GetComponent<Button>().interactable = true;
+      HeiAn2_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1875,6 +1933,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn2Line2Liang.gameObject.SetActive(false);
       HeiAn2Line2An.gameObject.SetActive(true);
       HeiAn2_2Icon.GetComponent<Button>().interactable = false;
+      HeiAn2_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1882,6 +1941,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn2Line2Liang.gameObject.SetActive(true);
       HeiAn2Line2An.gameObject.SetActive(false);
       HeiAn2_2Icon.GetComponent<Button>().interactable = true;
+      HeiAn2_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1892,6 +1952,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn3Line1Liang.gameObject.SetActive(false);
       HeiAn3Line1An.gameObject.SetActive(true);
       HeiAn3_1Icon.GetComponent<Button>().interactable = false;
+      HeiAn3_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1899,6 +1960,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn3Line1Liang.gameObject.SetActive(true);
       HeiAn3Line1An.gameObject.SetActive(false);
       HeiAn3_1Icon.GetComponent<Button>().interactable = true;
+      HeiAn3_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1908,6 +1970,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn3Line2Liang.gameObject.SetActive(false);
       HeiAn3Line2An.gameObject.SetActive(true);
       HeiAn3_2Icon.GetComponent<Button>().interactable = false;
+      HeiAn3_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1915,6 +1978,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn3Line2Liang.gameObject.SetActive(true);
       HeiAn3Line2An.gameObject.SetActive(false);
       HeiAn3_2Icon.GetComponent<Button>().interactable = true;
+      HeiAn3_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1925,6 +1989,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn4Line1Liang.gameObject.SetActive(false);
       HeiAn4Line1An.gameObject.SetActive(true);
       HeiAn4_1Icon.GetComponent<Button>().interactable = false;
+      HeiAn4_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1932,6 +1997,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn4Line1Liang.gameObject.SetActive(true);
       HeiAn4Line1An.gameObject.SetActive(false);
       HeiAn4_1Icon.GetComponent<Button>().interactable = true;
+      HeiAn4_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1941,6 +2007,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn4Line2Liang.gameObject.SetActive(false);
       HeiAn4Line2An.gameObject.SetActive(true);
       HeiAn4_2Icon.GetComponent<Button>().interactable = false;
+      HeiAn4_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1948,6 +2015,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn4Line2Liang.gameObject.SetActive(true);
       HeiAn4Line2An.gameObject.SetActive(false);
       HeiAn4_2Icon.GetComponent<Button>().interactable = true;
+      HeiAn4_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1958,6 +2026,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn5Line1Liang.gameObject.SetActive(false);
       HeiAn5Line1An.gameObject.SetActive(true);
       HeiAn5_1Icon.GetComponent<Button>().interactable = false;
+      HeiAn5_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1965,6 +2034,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn5Line1Liang.gameObject.SetActive(true);
       HeiAn5Line1An.gameObject.SetActive(false);
       HeiAn5_1Icon.GetComponent<Button>().interactable = true;
+      HeiAn5_1Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
      
      
@@ -1974,6 +2044,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn5Line2Liang.gameObject.SetActive(false);
       HeiAn5Line2An.gameObject.SetActive(true);
       HeiAn5_2Icon.GetComponent<Button>().interactable = false;
+      HeiAn5_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = false;
      }
      else
      {
@@ -1981,6 +2052,7 @@ public class SkillWindow1 : MonoBehaviour
       HeiAn5Line2Liang.gameObject.SetActive(true);
       HeiAn5Line2An.gameObject.SetActive(false);
       HeiAn5_2Icon.GetComponent<Button>().interactable = true;
+      HeiAn5_2Icon.transform.parent.GetComponent<UISmoothScaleEffect1>().Active = true;
      }
 
     }
