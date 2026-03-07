@@ -154,7 +154,7 @@ public class FightBg : MonoBehaviour
         });
         
         
-        
+        /*
         
         if (GetSkillSprite(SkillController.S.RMB) == null)
         {
@@ -199,44 +199,9 @@ public class FightBg : MonoBehaviour
         {
             skill3.sprite=GetSkillSprite(SkillController.S.Alpha3);
             skill3Bg.sprite=GetSkillSprite(SkillController.S.Alpha3);
-
         }
+        */
         
-    }
-
-    public Sprite GetSkillSprite(SkillType skillType)
-    {
-        switch (skillType)
-        {
-            case SkillType.Dian1:
-                return ResourcesConfig.Skill1;
-            case SkillType.Ice2:
-                return ResourcesConfig.Skill2;
-            case SkillType.Ice3:
-                return ResourcesConfig.Skill3;
-            case SkillType.Dash:
-                return ResourcesConfig.Dash;
-            case SkillType.Ice1:
-                return ResourcesConfig.IceSkill1;
-            case SkillType.Dian2:
-                return ResourcesConfig.DianSkill2;
-            case SkillType.Dian3:
-                return ResourcesConfig.DianSkill3;
-            case SkillType.Huo1:
-                return ResourcesConfig.HuoSkill1;
-            case SkillType.Huo2:
-                return ResourcesConfig.HuoSkill2;
-            case SkillType.Huo3:
-                return ResourcesConfig.HuoSkill3;
-            case SkillType.HeiAn1:
-                return ResourcesConfig.HeiAnSkill1;
-            case SkillType.HeiAn2:
-                return ResourcesConfig.HeiAnSkill2;
-            case SkillType.HeiAn3:
-                return ResourcesConfig.HeiAnSkill3;
-        }
-
-        return null;
     }
     
     private void OnDestroy()

@@ -107,6 +107,60 @@ namespace Config
             HeiAnSkill3,
         }
 
+        public static Dictionary<SkillType, int> SkillBaseDamageDic = new Dictionary<SkillType, int>()
+        {
+            { SkillType.Ice1,300},
+            { SkillType.Ice2,200},
+            { SkillType.Ice3,300},
+            { SkillType.Ice4,250},
+            { SkillType.Ice5,250},
+            
+            { SkillType.Huo1,200},
+            { SkillType.Huo2,20},
+            { SkillType.Huo3,250},
+            { SkillType.Huo4,250},
+            { SkillType.Huo5,250},
+            
+            { SkillType.Dian1,200},
+            { SkillType.Dian2,20},
+            { SkillType.Dian3,250},
+            { SkillType.Dian4,200},
+            { SkillType.Dian5,250},
+            
+            { SkillType.HeiAn1,300},
+            { SkillType.HeiAn2,20},
+            { SkillType.HeiAn3,200},
+            { SkillType.HeiAn4,200},
+            { SkillType.HeiAn5,200},
+        };
+
+        public static Dictionary<SkillType, int> SkillUpDamageDic = new Dictionary<SkillType, int>()
+        {
+            { SkillType.Ice1,30},
+            { SkillType.Ice2,20},
+            { SkillType.Ice3,30},
+            { SkillType.Ice4,25},
+            { SkillType.Ice5,25},
+            
+            { SkillType.Huo1,20},
+            { SkillType.Huo2,2},
+            { SkillType.Huo3,25},
+            { SkillType.Huo4,25},
+            { SkillType.Huo5,25},
+            
+            { SkillType.Dian1,20},
+            { SkillType.Dian2,2},
+            { SkillType.Dian3,25},
+            { SkillType.Dian4,20},
+            { SkillType.Dian5,25},
+            
+            { SkillType.HeiAn1,30},
+            { SkillType.HeiAn2,2},
+            { SkillType.HeiAn3,20},
+            { SkillType.HeiAn4,20},
+            { SkillType.HeiAn5,20},
+        };
+
         public static Dictionary<ZhuDongSkillTime, float> SkillBaseTime = new Dictionary<ZhuDongSkillTime, float>()
         {
             { ZhuDongSkillTime.DianSkill1 ,8f},

@@ -820,6 +820,7 @@ GameObject:
   - component: {fileID: 1489943945661634704}
   - component: {fileID: 243101778013404686}
   - component: {fileID: 5899885653802246435}
+  - component: {fileID: 7629327312082455440}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -928,6 +929,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7629327312082455440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76879199626828854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 13
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &85466168985723252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ffb21436c2e78d243b34c8dfe51d6406, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a472313a37ffb7448bd5bc1404c75ec5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9764,6 +9782,7 @@ GameObject:
   - component: {fileID: 5787350059539336420}
   - component: {fileID: 460080740224360587}
   - component: {fileID: 4032192719407962460}
+  - component: {fileID: 9210716655271194078}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -9828,6 +9847,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9210716655271194078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823201635624374214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 20
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &836660229679724302
 GameObject:
   m_ObjectHideFlags: 0
@@ -15270,6 +15306,7 @@ GameObject:
   - component: {fileID: 7766558025209658025}
   - component: {fileID: 5982578516822326867}
   - component: {fileID: 4895837092339214434}
+  - component: {fileID: 7099514509569063118}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -15378,6 +15415,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7099514509569063118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254470633324209960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 14
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &1266613060744225211
 GameObject:
   m_ObjectHideFlags: 0
@@ -18780,6 +18834,7 @@ GameObject:
   - component: {fileID: 3412241609533762853}
   - component: {fileID: 4822391808601843840}
   - component: {fileID: 2305934258819592935}
+  - component: {fileID: 5570842961475191623}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -18888,6 +18943,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5570842961475191623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608410376045482831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 10
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &1610790855085030911
 GameObject:
   m_ObjectHideFlags: 0
@@ -19737,6 +19809,7 @@ GameObject:
   - component: {fileID: 6471628655088954365}
   - component: {fileID: 66503654791662984}
   - component: {fileID: 6081108867762272247}
+  - component: {fileID: 4136778421979337748}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -19845,6 +19918,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4136778421979337748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636618099061838092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 8
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &1640305070895280950
 GameObject:
   m_ObjectHideFlags: 0
@@ -20758,6 +20848,7 @@ GameObject:
   - component: {fileID: 5343637274302252562}
   - component: {fileID: 715515442780137659}
   - component: {fileID: 4226682639804668024}
+  - component: {fileID: 2387059318029928114}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -20866,6 +20957,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2387059318029928114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715760845452583388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 9
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &1724586642421324338
 GameObject:
   m_ObjectHideFlags: 0
@@ -20878,6 +20986,7 @@ GameObject:
   - component: {fileID: 2512231886417926772}
   - component: {fileID: 4957655905548754788}
   - component: {fileID: 2224478285365686154}
+  - component: {fileID: 3810086049973328445}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -20986,6 +21095,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3810086049973328445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724586642421324338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 15
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &1725131032733398870
 GameObject:
   m_ObjectHideFlags: 0
@@ -26449,7 +26575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -27848,6 +27974,7 @@ GameObject:
   - component: {fileID: 4734089216483357632}
   - component: {fileID: 340208250666256999}
   - component: {fileID: 2786612344207786842}
+  - component: {fileID: 8231502290504221853}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -27956,6 +28083,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8231502290504221853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2492698046411233568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 17
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &2496597345604744607
 GameObject:
   m_ObjectHideFlags: 0
@@ -31129,6 +31273,7 @@ GameObject:
   - component: {fileID: 4300232433624824374}
   - component: {fileID: 1501897140550572103}
   - component: {fileID: 6478295642752041502}
+  - component: {fileID: 4743393703581279663}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -31253,6 +31398,23 @@ MonoBehaviour:
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   skillSwitchObj: {fileID: 1907914395548908629}
+--- !u!114 &4743393703581279663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864129839525125921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 5
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &2866130548648726031
 GameObject:
   m_ObjectHideFlags: 0
@@ -31704,6 +31866,7 @@ GameObject:
   - component: {fileID: 1362866505939204153}
   - component: {fileID: 4446494840312862230}
   - component: {fileID: 2116989520190658308}
+  - component: {fileID: 8445894063859814971}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -31812,6 +31975,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8445894063859814971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2915428987727291573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 7
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &2916576707703396844
 GameObject:
   m_ObjectHideFlags: 0
@@ -42858,6 +43038,7 @@ GameObject:
   - component: {fileID: 1748092056016949621}
   - component: {fileID: 1034238102857264981}
   - component: {fileID: 3714237544714972790}
+  - component: {fileID: 5518137738836919374}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -42966,6 +43147,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5518137738836919374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887989808647402424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 11
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &3890721486894097455
 GameObject:
   m_ObjectHideFlags: 0
@@ -47736,6 +47934,7 @@ GameObject:
   - component: {fileID: 7546630449364021924}
   - component: {fileID: 723582678586913421}
   - component: {fileID: 6417506461828490911}
+  - component: {fileID: 2685027410313229914}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -47844,6 +48043,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2685027410313229914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366267021277432879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 18
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &4381351980601353604
 GameObject:
   m_ObjectHideFlags: 0
@@ -51173,6 +51389,7 @@ GameObject:
   - component: {fileID: 8874430293138066452}
   - component: {fileID: 4701642167181809867}
   - component: {fileID: 8046815250226526954}
+  - component: {fileID: 4042747526563673990}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -51281,6 +51498,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4042747526563673990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707349151752740024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 19
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &4723347856216647303
 GameObject:
   m_ObjectHideFlags: 0
@@ -51657,6 +51891,7 @@ GameObject:
   - component: {fileID: 6628021003665725268}
   - component: {fileID: 194663302517872841}
   - component: {fileID: 481760524217173168}
+  - component: {fileID: 73307317503056897}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -51781,6 +52016,23 @@ MonoBehaviour:
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   skillSwitchObj: {fileID: 1907914395548908629}
+--- !u!114 &73307317503056897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4775307832590484194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 1
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &4775531854997093359
 GameObject:
   m_ObjectHideFlags: 0
@@ -75388,6 +75640,7 @@ GameObject:
   - component: {fileID: 365367656624236217}
   - component: {fileID: 3964636982625906478}
   - component: {fileID: 653624788342793652}
+  - component: {fileID: 470636101471979738}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -75496,6 +75749,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &470636101471979738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273475044841151083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 6
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &7285224518611218293
 GameObject:
   m_ObjectHideFlags: 0
@@ -80205,6 +80475,7 @@ GameObject:
   - component: {fileID: 2311207228454860548}
   - component: {fileID: 3845976267917128538}
   - component: {fileID: 2315166559710296491}
+  - component: {fileID: 5232021544458847788}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -80329,6 +80600,23 @@ MonoBehaviour:
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   skillSwitchObj: {fileID: 1907914395548908629}
+--- !u!114 &5232021544458847788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752979818904730608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 4
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &7760397085012969457
 GameObject:
   m_ObjectHideFlags: 0
@@ -81862,6 +82150,7 @@ GameObject:
   - component: {fileID: 7936008560180068414}
   - component: {fileID: 6343531867548558573}
   - component: {fileID: 5020359619677113016}
+  - component: {fileID: 8842520911791162508}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -81986,6 +82275,23 @@ MonoBehaviour:
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   skillSwitchObj: {fileID: 1907914395548908629}
+--- !u!114 &8842520911791162508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7915637491780463328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 3
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &7916239068946426970
 GameObject:
   m_ObjectHideFlags: 0
@@ -82305,6 +82611,7 @@ GameObject:
   - component: {fileID: 7794687867869395227}
   - component: {fileID: 2587813765604795368}
   - component: {fileID: 7687817187898869059}
+  - component: {fileID: 9031680124546587262}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -82413,6 +82720,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9031680124546587262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7942886056383855261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 16
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &7943520478667688251
 GameObject:
   m_ObjectHideFlags: 0
@@ -91050,6 +91374,7 @@ GameObject:
   - component: {fileID: 4506538387257216744}
   - component: {fileID: 6677946798300877968}
   - component: {fileID: 5154981451183870176}
+  - component: {fileID: 543421478568689871}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -91158,6 +91483,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &543421478568689871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8718835735139931670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 12
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &8734319109557499697
 GameObject:
   m_ObjectHideFlags: 0
@@ -96052,6 +96394,7 @@ GameObject:
   - component: {fileID: 2423783356971213241}
   - component: {fileID: 2346372515120484030}
   - component: {fileID: 3099199729142826370}
+  - component: {fileID: 5119411061621501343}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -96176,6 +96519,23 @@ MonoBehaviour:
   canvasRect: {fileID: 3311344604755121102}
   _skillSwitch: {fileID: 2497931552839264880}
   skillSwitchObj: {fileID: 1907914395548908629}
+--- !u!114 &5119411061621501343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158734957440234303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd42768a104b2a448a09f9cfc9ea17d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 2
+  canvasRect: {fileID: 3311344604755121102}
+  skillInfoPrefabPath: Prefabs/Window/SkillInfo
+  MainskillInfoPrefabPath: Prefabs/Window/MainSkillInfo
+  scaleDuration: 0.2
 --- !u!1 &9163015073773867066
 GameObject:
   m_ObjectHideFlags: 0

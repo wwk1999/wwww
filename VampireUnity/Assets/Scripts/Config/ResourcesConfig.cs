@@ -159,20 +159,88 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite WhiteScale;
 
     //技能
-    public static Sprite Skill1;
-    public static Sprite Skill2;
-    public static Sprite Skill3;
-    public static Sprite NormalAttack;
-    public static Sprite Dash;
-    public static Sprite IceSkill1;
-    public static Sprite DianSkill2;
-    public static Sprite DianSkill3;
-    public static Sprite HuoSkill1;
-    public static Sprite HuoSkill2;
-    public static Sprite HuoSkill3;
-    public static Sprite HeiAnSkill1;
-    public static Sprite HeiAnSkill2;
-    public static Sprite HeiAnSkill3;
+    public static Sprite Ice1;
+    public static Sprite Ice2;
+    public static Sprite Ice3;
+    public static Sprite Ice4;
+    public static Sprite Ice5;
+
+    public static Sprite IceCd;
+    
+    public static Sprite Ice1_2;
+    public static Sprite Ice2_2;
+    public static Sprite Ice3_2;
+    public static Sprite Ice4_2;
+    public static Sprite Ice5_2;
+    
+    public static Sprite IceBei1;
+    public static Sprite IceBei2;
+    public static Sprite IceBei3;
+    public static Sprite IceBei4;
+    public static Sprite IceMain;
+    
+    
+    public static Sprite Huo1;
+    public static Sprite Huo2;
+    public static Sprite Huo3;
+    public static Sprite Huo4;
+    public static Sprite Huo5;
+
+    public static Sprite HuoCd;
+    
+    public static Sprite Huo1_2;
+    public static Sprite Huo2_2;
+    public static Sprite Huo3_2;
+    public static Sprite Huo4_2;
+    public static Sprite Huo5_2;
+    
+    public static Sprite HuoBei1;
+    public static Sprite HuoBei2;
+    public static Sprite HuoBei3;
+    public static Sprite HuoBei4;
+    public static Sprite HuoMain;
+    
+    
+    public static Sprite Dian1;
+    public static Sprite Dian2;
+    public static Sprite Dian3;
+    public static Sprite Dian4;
+    public static Sprite Dian5;
+
+    public static Sprite DianCd;
+    
+    public static Sprite Dian1_2;
+    public static Sprite Dian2_2;
+    public static Sprite Dian3_2;
+    public static Sprite Dian4_2;
+    public static Sprite Dian5_2;
+    
+    public static Sprite DianBei1;
+    public static Sprite DianBei2;
+    public static Sprite DianBei3;
+    public static Sprite DianBei4;
+    public static Sprite DianMain;
+    
+    
+    public static Sprite HeiAn1;
+    public static Sprite HeiAn2;
+    public static Sprite HeiAn3;
+    public static Sprite HeiAn4;
+    public static Sprite HeiAn5;
+
+    public static Sprite HeiAnCd;
+    
+    public static Sprite HeiAn1_2;
+    public static Sprite HeiAn2_2;
+    public static Sprite HeiAn3_2;
+    public static Sprite HeiAn4_2;
+    public static Sprite HeiAn5_2;
+    
+    public static Sprite HeiAnBei1;
+    public static Sprite HeiAnBei2;
+    public static Sprite HeiAnBei3;
+    public static Sprite HeiAnBei4;
+    public static Sprite HeiAnMain;
 
     //关卡界面怪物icon
     public static Sprite SnotIcon;
@@ -790,7 +858,7 @@ public class ResourcesConfig : MonoBehaviour
         return null;
     }
 
-    public static Sprite GetSkillSprite(ChongWuConfig.ChongWuSKillType skill)
+    public static Sprite GetChongWuSkillSprite(ChongWuConfig.ChongWuSKillType skill)
     {
         switch (skill)
         {
@@ -831,6 +899,201 @@ public class ResourcesConfig : MonoBehaviour
                 return HeiAnSkillDamage;
         }
 
+        return null;
+    }
+    public static Sprite GetSkillSprite(SkillInfoType type)
+    {
+        switch (type)
+        {
+            case  SkillInfoType.Ice1:
+                return Ice1;
+            case  SkillInfoType.Ice2:
+                return Ice2;
+            case  SkillInfoType.Ice3:
+                return Ice3;
+            case  SkillInfoType.Ice4:
+                return Ice4;
+            case  SkillInfoType.Ice5:
+                return Ice5;
+            
+            case  SkillInfoType.IceBei1:
+                return IceBei1;
+            case  SkillInfoType.IceBei2:
+                return IceBei2;
+            case  SkillInfoType.IceBei3:
+                return IceBei3;
+            case  SkillInfoType.IceBei4:
+                return IceBei4;
+            
+            case  SkillInfoType.Ice1_1:
+            case  SkillInfoType.Ice2_1:
+            case  SkillInfoType.Ice3_1:
+            case  SkillInfoType.Ice4_1:
+            case  SkillInfoType.Ice5_1:
+                return IceCd;
+            
+            case  SkillInfoType.Ice1_2:
+                return Ice1_2;
+            case  SkillInfoType.Ice2_2:
+                return Ice2_2;
+            case  SkillInfoType.Ice3_2:
+                return Ice3_2;
+            case  SkillInfoType.Ice4_2:
+                return Ice4_2;
+            case  SkillInfoType.Ice5_2:
+                return Ice5_2;
+            
+            case  SkillInfoType.IceMain:
+                return IceMain;
+            
+            
+            
+            
+            
+            
+            
+            case  SkillInfoType.Huo1:
+                return Huo1;
+            case  SkillInfoType.Huo2:
+                return Huo2;
+            case  SkillInfoType.Huo3:
+                return Huo3;
+            case  SkillInfoType.Huo4:
+                return Huo4;
+            case  SkillInfoType.Huo5:
+                return Huo5;
+            
+            case  SkillInfoType.HuoBei1:
+                return HuoBei1;
+            case  SkillInfoType.HuoBei2:
+                return HuoBei2;
+            case  SkillInfoType.HuoBei3:
+                return HuoBei3;
+            case  SkillInfoType.HuoBei4:
+                return HuoBei4;
+            
+            case  SkillInfoType.Huo1_1:
+            case  SkillInfoType.Huo2_1:
+            case  SkillInfoType.Huo3_1:
+            case  SkillInfoType.Huo4_1:
+            case  SkillInfoType.Huo5_1:
+                return HuoCd;
+            
+            case  SkillInfoType.Huo1_2:
+                return Huo1_2;
+            case  SkillInfoType.Huo2_2:
+                return Huo2_2;
+            case  SkillInfoType.Huo3_2:
+                return Huo3_2;
+            case  SkillInfoType.Huo4_2:
+                return Huo4_2;
+            case  SkillInfoType.Huo5_2:
+                return Huo5_2;
+            
+            case  SkillInfoType.HuoMain:
+                return HuoMain;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            case  SkillInfoType.Dian1:
+                return Dian1;
+            case  SkillInfoType.Dian2:
+                return Dian2;
+            case  SkillInfoType.Dian3:
+                return Dian3;
+            case  SkillInfoType.Dian4:
+                return Dian4;
+            case  SkillInfoType.Dian5:
+                return Dian5;
+            
+            case  SkillInfoType.DianBei1:
+                return DianBei1;
+            case  SkillInfoType.DianBei2:
+                return DianBei2;
+            case  SkillInfoType.DianBei3:
+                return DianBei3;
+            case  SkillInfoType.DianBei4:
+                return DianBei4;
+            
+            case  SkillInfoType.Dian1_1:
+            case  SkillInfoType.Dian2_1:
+            case  SkillInfoType.Dian3_1:
+            case  SkillInfoType.Dian4_1:
+            case  SkillInfoType.Dian5_1:
+                return DianCd;
+            
+            case  SkillInfoType.Dian1_2:
+                return Dian1_2;
+            case  SkillInfoType.Dian2_2:
+                return Dian2_2;
+            case  SkillInfoType.Dian3_2:
+                return Dian3_2;
+            case  SkillInfoType.Dian4_2:
+                return Dian4_2;
+            case  SkillInfoType.Dian5_2:
+                return Dian5_2;
+            
+            case  SkillInfoType.DianMain:
+                return DianMain;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            case  SkillInfoType.HeiAn1:
+                return HeiAn1;
+            case  SkillInfoType.HeiAn2:
+                return HeiAn2;
+            case  SkillInfoType.HeiAn3:
+                return HeiAn3;
+            case  SkillInfoType.HeiAn4:
+                return HeiAn4;
+            case  SkillInfoType.HeiAn5:
+                return HeiAn5;
+            
+            case  SkillInfoType.HeiAnBei1:
+                return HeiAnBei1;
+            case  SkillInfoType.HeiAnBei2:
+                return HeiAnBei2;
+            case  SkillInfoType.HeiAnBei3:
+                return HeiAnBei3;
+            case  SkillInfoType.HeiAnBei4:
+                return HeiAnBei4;
+            
+            case  SkillInfoType.HeiAn1_1:
+            case  SkillInfoType.HeiAn2_1:
+            case  SkillInfoType.HeiAn3_1:
+            case  SkillInfoType.HeiAn4_1:
+            case  SkillInfoType.HeiAn5_1:
+                return HeiAnCd;
+            
+            case  SkillInfoType.HeiAn1_2:
+                return HeiAn1_2;
+            case  SkillInfoType.HeiAn2_2:
+                return HeiAn2_2;
+            case  SkillInfoType.HeiAn3_2:
+                return HeiAn3_2;
+            case  SkillInfoType.HeiAn4_2:
+                return HeiAn4_2;
+            case  SkillInfoType.HeiAn5_2:
+                return HeiAn5_2;
+            
+            case  SkillInfoType.HeiAnMain:
+                return HeiAnMain;
+
+
+
+        }
         return null;
     }
 
@@ -1058,22 +1321,83 @@ public class ResourcesConfig : MonoBehaviour
         DD5 = Resources.Load<Sprite>("Sprite/BaoShi/DD5");
         DD6 = Resources.Load<Sprite>("Sprite/BaoShi/DD6");
 
+       
+
+        //技能icon
+        Ice1 = Resources.Load<Sprite>("Sprite/Skill/Ice1");
+        Ice2 = Resources.LoadAll<Sprite>("Sprite/Skill/IceAll")[0];
+        Ice3 = Resources.LoadAll<Sprite>("Sprite/Skill/IceAll")[1];
+        Ice4 = Resources.LoadAll<Sprite>("Sprite/Skill/IceAll")[2];
+        Ice5 = Resources.LoadAll<Sprite>("Sprite/Skill/IceAll")[3];
+        IceCd=Resources.Load<Sprite>("Sprite/Skill/IceCd");
+        Ice1_2 = Resources.Load<Sprite>("Sprite/Skill/Ice1_2");
+        Ice2_2 = Resources.Load<Sprite>("Sprite/Skill/Ice2_2");
+        Ice3_2 = Resources.Load<Sprite>("Sprite/Skill/Ice3_2");
+        Ice4_2 = Resources.Load<Sprite>("Sprite/Skill/Ice4_2");
+        Ice5_2 = Resources.Load<Sprite>("Sprite/Skill/Ice5_2");
+        IceMain= Resources.Load<Sprite>("Sprite/Skill/IceMain");
+        IceBei1= Resources.Load<Sprite>("Sprite/Skill/IceBei1");
+        IceBei2= Resources.Load<Sprite>("Sprite/Skill/IceBei2");
+        IceBei3= Resources.Load<Sprite>("Sprite/Skill/IceBei3");
+        IceBei4= Resources.Load<Sprite>("Sprite/Skill/IceBei4");
+        
+        
+        Huo1 = Resources.Load<Sprite>("Sprite/Skill/Huo1");
+        Huo2 = Resources.Load<Sprite>("Sprite/Skill/Huo2");
+        Huo3 = Resources.Load<Sprite>("Sprite/Skill/Huo3");
+        Huo4 = Resources.Load<Sprite>("Sprite/Skill/Huo4");
+        Huo5 = Resources.Load<Sprite>("Sprite/Skill/Huo5");
+        HuoCd=Resources.Load<Sprite>("Sprite/Skill/HuoCd");
+        Huo1_2 = Resources.Load<Sprite>("Sprite/Skill/Huo1_2");
+        Huo2_2 = Resources.Load<Sprite>("Sprite/Skill/Huo2_2");
+        Huo3_2 = Resources.Load<Sprite>("Sprite/Skill/Huo3_2");
+        Huo4_2 = Resources.Load<Sprite>("Sprite/Skill/Huo4_2");
+        Huo5_2 = Resources.Load<Sprite>("Sprite/Skill/Huo5_2");
+        HuoMain= Resources.Load<Sprite>("Sprite/Skill/HuoMain");
+        HuoBei1= Resources.Load<Sprite>("Sprite/Skill/HuoBei1");
+        HuoBei2= Resources.Load<Sprite>("Sprite/Skill/HuoBei2");
+        HuoBei3= Resources.Load<Sprite>("Sprite/Skill/HuoBei3");
+        HuoBei4= Resources.Load<Sprite>("Sprite/Skill/HuoBei4");
+
+        
+        Dian1 = Resources.Load<Sprite>("Sprite/Skill/Dian1");
+        Dian2 = Resources.Load<Sprite>("Sprite/Skill/Dian2");
+        Dian3 = Resources.Load<Sprite>("Sprite/Skill/Dian3");
+        Dian4 = Resources.Load<Sprite>("Sprite/Skill/Dian4");
+        Dian5 = Resources.Load<Sprite>("Sprite/Skill/Dian5");
+        DianCd=Resources.Load<Sprite>("Sprite/Skill/DianCd");
+        Dian1_2 = Resources.Load<Sprite>("Sprite/Skill/Dian1_2");
+        Dian2_2 = Resources.Load<Sprite>("Sprite/Skill/Dian2_2");
+        Dian3_2 = Resources.Load<Sprite>("Sprite/Skill/Dian3_2");
+        Dian4_2 = Resources.Load<Sprite>("Sprite/Skill/Dian4_2");
+        Dian5_2 = Resources.Load<Sprite>("Sprite/Skill/Dian5_2");
+        DianMain= Resources.Load<Sprite>("Sprite/Skill/DianMain");
+        DianBei1= Resources.Load<Sprite>("Sprite/Skill/DianBei1");
+        DianBei2= Resources.Load<Sprite>("Sprite/Skill/DianBei2");
+        DianBei3= Resources.Load<Sprite>("Sprite/Skill/DianBei3");
+        DianBei4= Resources.Load<Sprite>("Sprite/Skill/DianBei4");
+        
+        
+        HeiAn1 = Resources.Load<Sprite>("Sprite/Skill/HeiAn1");
+        HeiAn2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn2");
+        HeiAn3 = Resources.Load<Sprite>("Sprite/Skill/HeiAn3");
+        HeiAn4 = Resources.Load<Sprite>("Sprite/Skill/HeiAn4");
+        HeiAn5 = Resources.Load<Sprite>("Sprite/Skill/HeiAn5");
+        HeiAnCd=Resources.Load<Sprite>("Sprite/Skill/HeiAnCd");
+        HeiAn1_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn1_2");
+        HeiAn2_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn2_2");
+        HeiAn3_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn3_2");
+        HeiAn4_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn4_2");
+        HeiAn5_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn5_2");
+        HeiAnMain= Resources.Load<Sprite>("Sprite/Skill/HeiAnMain");
+        HeiAnBei1= Resources.Load<Sprite>("Sprite/Skill/HeiAnBei1");
+        HeiAnBei2= Resources.Load<Sprite>("Sprite/Skill/HeiAnBei2");
+        HeiAnBei3= Resources.Load<Sprite>("Sprite/Skill/HeiAnBei3");
+        HeiAnBei4= Resources.Load<Sprite>("Sprite/Skill/HeiAnBei4");
+
+        
 
 
-        Skill1 = Resources.Load<Sprite>("Sprite/Skill/skill1");
-        Skill2 = Resources.Load<Sprite>("Sprite/Skill/skill2");
-        Skill3 = Resources.Load<Sprite>("Sprite/Skill/skill3");
-        Dash = Resources.Load<Sprite>("Sprite/Skill/dash");
-        NormalAttack = Resources.Load<Sprite>("Sprite/Skill/normalAttack");
-        IceSkill1 = Resources.Load<Sprite>("Sprite/Skill/IceSkill1");
-        DianSkill2 = Resources.Load<Sprite>("Sprite/Skill/DianSkill2");
-        DianSkill3 = Resources.Load<Sprite>("Sprite/Skill/DianSkill3");
-        HuoSkill1 = Resources.Load<Sprite>("Sprite/Skill/HuoSkill1");
-        HuoSkill2 = Resources.Load<Sprite>("Sprite/Skill/HuoSkill2");
-        HuoSkill3 = Resources.Load<Sprite>("Sprite/Skill/HuoSkill3");
-        HeiAnSkill1 = Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill1");
-        HeiAnSkill2 = Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill2");
-        HeiAnSkill3 = Resources.Load<Sprite>("Sprite/Skill/HeiAnSkill3");
 
 
         //道具

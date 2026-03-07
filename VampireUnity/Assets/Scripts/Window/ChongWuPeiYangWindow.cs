@@ -1238,7 +1238,7 @@ public class ChongWuPeiYangWindow : MonoBehaviour
             }
 
             skillItem.transform.Find("Image").GetComponent<Image>().sprite =
-                ResourcesConfig.GetSkillSprite(item.SKillType);
+                ResourcesConfig.GetChongWuSkillSprite(item.SKillType);
         }
 
     }

@@ -28,6 +28,111 @@ public enum SkillType
     HeiAn5,
 }
 
+public enum SkillInfoType
+{
+    None,
+    Ice1,
+    Ice2,
+    Ice3,
+    Ice4,
+    Ice5,
+    
+    Ice1_1,
+    Ice2_1,
+    Ice3_1,
+    Ice4_1,
+    Ice5_1,
+    
+    Ice1_2,
+    Ice2_2,
+    Ice3_2,
+    Ice4_2,
+    Ice5_2,
+    
+    IceBei1,
+    IceBei2,
+    IceBei3,
+    IceBei4,
+    IceMain,
+  
+    Huo1,
+    Huo2,
+    Huo3,
+    Huo4,
+    Huo5,
+    
+    Huo1_1,
+    Huo2_1,
+    Huo3_1,
+    Huo4_1,
+    Huo5_1,
+    
+    Huo1_2,
+    Huo2_2,
+    Huo3_2,
+    Huo4_2,
+    Huo5_2,
+    
+    HuoBei1,
+    HuoBei2,
+    HuoBei3,
+    HuoBei4,
+    HuoMain,
+    
+    
+    
+    Dian1,
+    Dian2,
+    Dian3,
+    Dian4,
+    Dian5,
+    
+    Dian1_1,
+    Dian2_1,
+    Dian3_1,
+    Dian4_1,
+    Dian5_1,
+    
+    Dian1_2,
+    Dian2_2,
+    Dian3_2,
+    Dian4_2,
+    Dian5_2,
+    
+    DianBei1,
+    DianBei2,
+    DianBei3,
+    DianBei4,
+    DianMain,
+    
+    
+    
+    
+    HeiAn1,
+    HeiAn2,
+    HeiAn3,
+    HeiAn4,
+    HeiAn5,
+    
+    HeiAn1_1,
+    HeiAn2_1,
+    HeiAn3_1,
+    HeiAn4_1,
+    HeiAn5_1,
+    
+    HeiAn1_2,
+    HeiAn2_2,
+    HeiAn3_2,
+    HeiAn4_2,
+    HeiAn5_2,
+    
+    HeiAnBei1,
+    HeiAnBei2,
+    HeiAnBei3,
+    HeiAnBei4,
+    HeiAnMain,
+}
+
 public class SkillJiaDian : XSingleton<SkillJiaDian>
 {
     public int CurrentSkillCount = 0;

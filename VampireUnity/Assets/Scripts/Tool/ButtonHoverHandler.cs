@@ -8,10 +8,13 @@ using UnityEngine.UI;
 public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("按钮类型")]
-    public SkillConfig.SkillButtonType buttonType = SkillConfig.SkillButtonType.None;
+    public SkillInfoType buttonType = SkillInfoType.None;
+
+    public RectTransform canvasRect;
 
     [Header("SkillInfo预制体路径")]
     public string skillInfoPrefabPath = "Prefabs/Window/SkillInfo";
+    public string MainskillInfoPrefabPath = "Prefabs/Window/MainSkillInfo";
 
     [Header("位置偏移")]
     private Vector2 positionOffset = new Vector2(60, 60);
@@ -66,207 +69,93 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
         if (skillInfoInstance != null)
             return;
 
-        GameObject prefab = Resources.Load<GameObject>(skillInfoPrefabPath);
+        GameObject prefab = null;
+        if (buttonType == SkillInfoType.IceMain || buttonType == SkillInfoType.HuoMain ||
+            buttonType == SkillInfoType.DianMain || buttonType == SkillInfoType.HeiAnMain)
+        {
+             prefab = Resources.Load<GameObject>(MainskillInfoPrefabPath);
+        }
+        else
+        {
+            prefab = Resources.Load<GameObject>(skillInfoPrefabPath);
+        }
+       
         if (prefab == null)
         {
             Debug.LogError($"无法加载SkillInfo预制体: {skillInfoPrefabPath}");
             return;
         }
+        Vector2 localPoint;
+        var cam = canvasRect.GetComponentInParent<Canvas>().renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main;
 
         Transform parent = parentCanvas != null ? parentCanvas.transform : (GameObject.Find("UIRoot")?.transform);
         skillInfoInstance = Instantiate(prefab, parent);
-        skillInfoInstance.name = "SkillInfo_Hover";
         skillInfoRectTransform = skillInfoInstance.GetComponent<RectTransform>();
-        skillInfoRectTransform.pivot = new Vector2(0, 1);
-
-        SkillSwitch skillSwitch = skillInfoInstance.GetComponentInChildren<SkillSwitch>();
-        if (skillSwitch != null) skillSwitch.enabled = false;
-
         CanvasGroup cg = skillInfoInstance.GetComponent<CanvasGroup>();
         if (cg == null) cg = skillInfoInstance.AddComponent<CanvasGroup>();
         cg.blocksRaycasts = false;
         cg.interactable = false;
+        if (buttonType == SkillInfoType.IceMain || buttonType == SkillInfoType.HuoMain ||
+            buttonType == SkillInfoType.DianMain || buttonType == SkillInfoType.HeiAnMain)
+        {
+            skillInfoInstance.GetComponent<MainSkillInfo>().type = buttonType;
+            skillInfoInstance.GetComponent<MainSkillInfo>().SetMainSkillInfo();
+        }
+        else
+        {
+            skillInfoInstance.GetComponent<SkillInfo>().SkillType = buttonType;
+            skillInfoInstance.GetComponent<SkillInfo>().SetSkillInfo();
+        }
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, Input.mousePosition, cam, out localPoint))
+        {
+            RectTransform skillInforect = skillInfoInstance.GetComponent<RectTransform>();
+            switch (buttonType)
+            {
+                case SkillInfoType.Ice1:
+                case SkillInfoType.Ice1_1:
+                case SkillInfoType.Ice1_2:
+                case SkillInfoType.Ice2:
+                case SkillInfoType.Ice2_1:
+                case SkillInfoType.Ice3:
+                case SkillInfoType.Ice3_1:
+                case SkillInfoType.IceBei1:
+                case SkillInfoType.IceBei2:
+                    skillInforect.anchoredPosition =  new Vector2(localPoint.x+skillInforect.sizeDelta.x/2, localPoint.y-skillInforect.sizeDelta.y/2);
+                    break;
+                case SkillInfoType.Ice2_2:
+                case SkillInfoType.IceBei3:
+                case SkillInfoType.IceBei4:
+                    skillInforect.anchoredPosition =  new Vector2(localPoint.x+skillInforect.sizeDelta.x/2+25, localPoint.y);
+                    break;
+                case SkillInfoType.Ice3_2:
+                case SkillInfoType.Ice5:
+                case SkillInfoType.Ice5_1:
+                case SkillInfoType.Ice5_2:
+                    skillInforect.anchoredPosition =  new Vector2(localPoint.x-skillInforect.sizeDelta.x/2-25, localPoint.y);
+                    break;
+                case SkillInfoType.Ice4:
+                case SkillInfoType.Ice4_1:
+                case SkillInfoType.Ice4_2:
+                    skillInforect.anchoredPosition =  new Vector2(localPoint.x, localPoint.y+skillInforect.sizeDelta.y/2+25);
+                    break;
+                case SkillInfoType.IceMain:
+                case SkillInfoType.HuoMain:
+                case SkillInfoType.DianMain:
+                case SkillInfoType.HeiAnMain:
+                    skillInforect.anchoredPosition =  new Vector2(localPoint.x+skillInforect.sizeDelta.x/2, localPoint.y-skillInforect.sizeDelta.y/2);
+                    break;
 
-        UpdateSkillInfoContent(buttonType);
+                
+            }
+        }
 
         // 确保布局更新后再读取尺寸
         Canvas.ForceUpdateCanvases();
-        PositionSkillInfoFixed();
-
         skillInfoInstance.transform.SetAsLastSibling();
+        
+        
     }
-
-    private void UpdateSkillInfoContent(SkillConfig.SkillButtonType type)
-{
-    if (skillInfoInstance == null) return;
-    var level = skillInfoInstance.transform.Find("bg/SkillLevelCount").GetComponent<TextMeshProUGUI>();
-    switch (type)
-    {
-        case SkillConfig.SkillButtonType.NormalAttack:
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.NormalAttackName, true, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.NormalAttackDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.AttackSpeed:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.AttackSpeedName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.AttackSpeedDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Dash:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.DashName, true, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.DashDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.DashCd:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.DashCdDesc, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.DashCdDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Crit:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.CritName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.CritDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.CritDamage:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.CritDamageName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.CritDamageDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.MoveSpeed:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.MoveSpeedName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.MoveSpeedDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.MoveAddDefense:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.MoveAddDefenseName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.MoveAddDefenseDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.MoveAddAttack:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.MoveAddAttackName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.MoveAddAttackDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill1:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1Name, true, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1Desc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill2:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2Name, true, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2Desc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill3:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Name, true, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Desc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill1Cd:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1CdName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1CdDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill2Cd:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2Name, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2Desc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill3Cd:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Name, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Desc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill1Range:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1RangeName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1RangeDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill1YuanSu:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1YiDianName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill1YiDianDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill2Time:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2TimeName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2TimeDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill2YuanSu:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2AddDefenseName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill2AddDefenseDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill3Range:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Name, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3Desc);
-            break;
-
-        case SkillConfig.SkillButtonType.Skill3YuanSu:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3JianSuName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Skill3JianSuDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Attack:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.AttackName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.AttackDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Hp:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.HpName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.HpDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.Defense:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.DefenseName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.DefenseDesc);
-            break;
-
-        case SkillConfig.SkillButtonType.CritMonster:
-
-            SetSkillInfoContent(LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.CritName, false, LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.CritDesc);
-            break;
-
-        default:
-            SetSkillInfoContent("未知", false, "未定义的技能类型");
-            break;
-    }
-}
-
-    private void SetSkillInfoContent(string skillName, bool isZhuDong, string skillDescription)
-    {
-        if (skillInfoInstance == null) return;
-
-        var img = transform.Find("image")?.GetComponent<Image>();
-        var dstImg = skillInfoInstance.transform.Find("bg/Image")?.GetComponent<Image>();
-        if (img != null && dstImg != null) dstImg.sprite = img.sprite;
-
-        var nameText = skillInfoInstance.transform.Find("bg/SkillName")?.GetComponent<TextMeshProUGUI>();
-        var typeText = skillInfoInstance.transform.Find("bg/SkillType")?.GetComponent<TextMeshProUGUI>();
-        var infoText = skillInfoInstance.transform.Find("bg/SkillInfo")?.GetComponent<TextMeshProUGUI>();
-        var level = skillInfoInstance.transform.Find("bg/SkillLevel")?.GetComponent<TextMeshProUGUI>();
-
-        level.text = LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.Level;
-        if (nameText != null) nameText.text = skillName;
-        if (typeText != null) typeText.text = isZhuDong ? LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.ZhuDongSkill : LanguageConfig.LanguageItems[PlayerData.S.langType].SkillWindowLanguage.BeiDongSkill;
-        if (infoText != null) infoText.text = skillDescription;
-    }
-
-    private void PositionSkillInfoFixed()
-    {
-        if (skillInfoRectTransform == null || parentCanvas == null || buttonRectTransform == null)
-            return;
-
-        RectTransform canvasRect = parentCanvas.GetComponent<RectTransform>();
-        Camera cam = parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : parentCanvas.worldCamera;
-
-        Vector2 buttonScreenPos = RectTransformUtility.WorldToScreenPoint(cam, buttonRectTransform.position);
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, buttonScreenPos, cam, out Vector2 buttonLocalPoint))
-        {
-            Vector2 anchored = buttonLocalPoint + new Vector2(positionOffset.x, positionOffset.y);
-            skillInfoRectTransform.anchoredPosition = anchored;
-        }
-    }
-
+    
     private void DestroySkillInfo()
     {
         if (skillInfoInstance != null)
