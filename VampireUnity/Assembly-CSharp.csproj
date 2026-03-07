@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Tool\ConstKeys.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\Skill\SkillInfo.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\MoveSpeedAdd.cs" />
     <Compile Include="Assets\Scripts\Server\ServerConnect.cs" />
     <Compile Include="Assets\Scripts\Config\LanguageConfig.cs" />
