@@ -488,6 +488,68 @@ public class SkillController : XSingleton<SkillController>
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
     }
+
+
+    public void HeiAnSkill4(int count)
+    {
+        switch (count)
+        {
+            case 4:
+                GameController.S.gamePlayer.HeiAnSkill4_4.gameObject.SetActive(true);
+                Invoke(nameof(HideHeiAnSkill4_4),5f);
+                break;
+            case 5:
+                GameController.S.gamePlayer.HeiAnSkill4_5.gameObject.SetActive(true);
+                Invoke(nameof(HideHeiAnSkill4_5),5f);
+                break;
+            case 6:
+                GameController.S.gamePlayer.HeiAnSkill4_6.gameObject.SetActive(true);
+                Invoke(nameof(HideHeiAnSkill4_6),5f);
+                break;
+            case 7:
+                GameController.S.gamePlayer.HeiAnSkill4_7.gameObject.SetActive(true);
+                Invoke(nameof(HideHeiAnSkill4_7),5f);
+                break;
+            case 8:
+                GameController.S.gamePlayer.HeiAnSkill4_8.gameObject.SetActive(true);
+                Invoke(nameof(HideHeiAnSkill4_8),5f);
+                break;
+            case 9:
+                GameController.S.gamePlayer.HeiAnSkill4_9.gameObject.SetActive(true);
+                Invoke(nameof(HideHeiAnSkill4_9),5f);
+                break;
+        }
+    }
+
+    public void HideHeiAnSkill4_4()
+    {
+        GameController.S.gamePlayer.HeiAnSkill4_4.gameObject.SetActive(false);
+    }
+    
+    public void HideHeiAnSkill4_5()
+    {
+        GameController.S.gamePlayer.HeiAnSkill4_5.gameObject.SetActive(false);
+    }
+    
+    public void HideHeiAnSkill4_6()
+    {
+        GameController.S.gamePlayer.HeiAnSkill4_6.gameObject.SetActive(false);
+    }
+    
+    public void HideHeiAnSkill4_7()
+    {
+        GameController.S.gamePlayer.HeiAnSkill4_7.gameObject.SetActive(false);
+    }
+    
+    public void HideHeiAnSkill4_8()
+    {
+        GameController.S.gamePlayer.HeiAnSkill4_8.gameObject.SetActive(false);
+    }
+    
+    public void HideHeiAnSkill4_9()
+    {
+        GameController.S.gamePlayer.HeiAnSkill4_9.gameObject.SetActive(false);
+    }
     
     
     public void DianSkill4()
@@ -856,7 +918,7 @@ public class SkillController : XSingleton<SkillController>
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            DianSkill4();
+            HeiAnSkill4(7);
         }
         
         if (Input.GetKeyDown(KeyCode.K))

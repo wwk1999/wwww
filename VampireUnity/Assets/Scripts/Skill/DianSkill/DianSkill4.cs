@@ -50,7 +50,7 @@ public class DianSkill4 : MonoBehaviour
 
    private void OnEnable()
    {
-      time = 0;
+      time = 1;
       animator.Play("DianSkill4Enter");
       skeleton.AnimationState.SetAnimation(0, "play",true);
       Invoke(nameof(Hide),2f);

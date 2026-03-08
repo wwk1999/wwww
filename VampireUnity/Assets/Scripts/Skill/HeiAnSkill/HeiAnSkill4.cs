@@ -1,18 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HeiAnSkill4 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameController.S.gamePlayer.HeiAnSkill4_4.Rotate(0, 0, 5);
+        GameController.S.gamePlayer.HeiAnSkill4_5.Rotate(0, 0, 5);
+        GameController.S.gamePlayer.HeiAnSkill4_6.Rotate(0, 0, 5);
+        GameController.S.gamePlayer.HeiAnSkill4_7.Rotate(0, 0, 5);
+        GameController.S.gamePlayer.HeiAnSkill4_8.Rotate(0, 0, 5);
+        GameController.S.gamePlayer.HeiAnSkill4_9.Rotate(0, 0, 5);
     }
 }

@@ -206,6 +206,7 @@
     <Compile Include="Assets\Scripts\Equip\XiangQianBaoShiGrid.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryNecklace.cs" />
+    <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill4Item.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipBase.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NormalAddDamage.cs" />
     <Compile Include="Assets\Scripts\Equip\XiLianGrid.cs" />

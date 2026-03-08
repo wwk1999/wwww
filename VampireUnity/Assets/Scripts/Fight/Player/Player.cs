@@ -95,6 +95,14 @@ public class Player : MonoBehaviour
     public GameObject Shouparent;
     public GameObject fasheTrans;
 
+    public Transform HeiAnSkill4_4;
+    public Transform HeiAnSkill4_5;
+    public Transform HeiAnSkill4_6;
+    public Transform HeiAnSkill4_7;
+    public Transform HeiAnSkill4_8;
+    public Transform HeiAnSkill4_9;
+
+
     public void ShowTitle()
     {
         Level5Title.gameObject.SetActive(false);
