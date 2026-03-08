@@ -1,16 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Spine.Unity;
 using UnityEngine;
 
-public class DianSkill4 : MonoBehaviour
+public class DianSkill5Anim : MonoBehaviour
 {
-   public Animator animator;
-   public SkeletonAnimation skeleton;
+   public DianSkill5 DianSkill5;
    public Collider2D collider;
-   private float time = 0;
-
+   public void Hide()
+   {
+      GameController.S.DianSkill5Queue.Enqueue(DianSkill5);
+      gameObject.SetActive(false);
+   }
+   
    
    public void CheckCollisionWithMonsters()
    {
@@ -37,29 +38,4 @@ public class DianSkill4 : MonoBehaviour
          }
       }
    }
-
-   private void Update()
-   {
-      time+= Time.deltaTime;
-      if (time > 0.4f)
-      {
-         time = 0;
-         CheckCollisionWithMonsters();
-      }
-   }
-
-   private void OnEnable()
-   {
-      time = 0;
-      animator.Play("DianSkill4Enter");
-      skeleton.AnimationState.SetAnimation(0, "play",true);
-      Invoke(nameof(Hide),2f);
-   }
-
-   public void Hide()
-   {
-      GameController.S.DianSkill4Queue.Enqueue(this);
-      gameObject.SetActive(false);
-   }
-   
 }

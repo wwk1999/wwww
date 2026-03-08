@@ -490,6 +490,28 @@ public class SkillController : XSingleton<SkillController>
     }
     
     
+    public void DianSkill4()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        var dianquan= GameController.S.DianSkill4Queue.Dequeue();
+        dianquan.gameObject.SetActive(true);
+        dianquan.transform.position = worldPos;
+    }
+    
+    public void DianSkill5()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        var dianquan= GameController.S.DianSkill5Queue.Dequeue();
+        dianquan.gameObject.SetActive(true);
+        dianquan.transform.position = worldPos;
+    }
+    
     public void HuoSkill4()
     {
         Vector3 mouseScreen = Input.mousePosition;
@@ -834,12 +856,12 @@ public class SkillController : XSingleton<SkillController>
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            StartCoroutine(HuoSkill5(4, 1, 0.5f));
+            DianSkill4();
         }
         
         if (Input.GetKeyDown(KeyCode.K))
         {
-            HuoSkill4();
+            DianSkill5();
         }
         //技能冷却时间
         IceArrowCoolingtime+= Time.deltaTime;

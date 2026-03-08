@@ -376,67 +376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &471179490
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2090302942267864252, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2663989231689075867, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8145781265778266244, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
-      propertyPath: m_Name
-      value: HuoSkill5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dff652e01f5859448a693f2533f2d5e4, type: 3}
 --- !u!1001 &483109324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -814,7 +753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &603407128
 Transform:
   m_ObjectHideFlags: 0
@@ -1439,6 +1378,134 @@ MonoBehaviour:
   ToastPrefab: {fileID: 1326982872}
   Canvas: {fileID: 752690719}
   Animator: {fileID: 1326982874}
+--- !u!1 &1889938804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1889938806}
+  - component: {fileID: 1889938805}
+  m_Layer: 0
+  m_Name: PlayerData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1889938805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889938804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d96c05da3d84f4f90c5e3a415460ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  exp: 0
+  bloodEnergy: 0
+  maxGameLevel: 3
+  ChiBangLevel: 0
+  ChiBangEx: 0
+  clothid: 0
+  cloakid: 0
+  helmetid: 0
+  ringid: 0
+  shoeid: 0
+  necklaceid: 0
+  primaryWeaponLevel: 1
+  duWeaponLevel: 0
+  puTong3WeaponLevel: 0
+  xuKongWeaponLevel: 0
+  lvQuanWeaponLevel: 0
+  fireWeaponLevel: 0
+  heiDongWeaponLevel: 0
+  jianQiWeaponLevel: 0
+  primaryHunQiLevel: 0
+  duHunQiLevel: 0
+  puTong3HunQiLevel: 0
+  xuKongHunQiLevel: 0
+  lvQuanHunQiLevel: 0
+  fireHunQiLevel: 0
+  heiDongHunQiLevel: 0
+  jianQiHunQiLevel: 0
+  primaryHunQiEx: 0
+  duHunQiEx: 0
+  puTong3HunQiEx: 0
+  xuKongHunQiEx: 0
+  lvQuanHunQiEx: 0
+  fireHunQiEx: 0
+  heiDongHunQiEx: 0
+  jianQiHunQiEx: 0
+  zhuanjinCount: 0
+  Level5: 0
+  Level15: 0
+  Level30: 0
+  Level50: 0
+  Level75: 0
+  Level100: 0
+  MonsterCount1: 0
+  MonsterCount2: 0
+  MonsterCount3: 0
+  MonsterCount4: 0
+  MonsterCount5: 0
+  MonsterCount6: 0
+  LingHun: 0
+  BaoShi: 0
+  GuanKa3: 0
+  GuanKa4: 0
+  GuanKa5: 0
+  HunQi3: 0
+  HunQi4: 0
+  HunQi5: 0
+  ChiBang4: 0
+  ChiBang5: 0
+  DiaoLuo: 0
+  MonsterCount: 0
+  LinHun: 0
+  HunQiCount: 0
+  OrangeCount: 0
+  CurrentInstallTitle: 0
+  playerWeaponType: 1
+  mJLevel: 1
+  langType: 2
+  FlagChongWuId: 1
+  ZhuChongWuId: 0
+  FuChongWuId1: 0
+  FuChongWuId2: 0
+  FuChongWuId3: 0
+  ChongWuJingHua: 0
+  ChongWuShiWu1: 0
+  ChongWuShiWu2: 0
+  ChongWuShiWu3: 0
+  ChongWuShiWu4: 0
+  ChongWuShiWu5: 0
+  ChongWuShiWu6: 0
+  RateX: 1920
+  RateY: 1080
+  IsQuanPing: 0
+  GameTime: 0
+--- !u!4 &1889938806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889938804}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1926308096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517824174327813180, guid: e13bb9786ab6e604a9d806e9c53b9103, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 796855577133783928, guid: e13bb9786ab6e604a9d806e9c53b9103, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1950,4 +2017,4 @@ SceneRoots:
   - {fileID: 3247783185740804478}
   - {fileID: 1926308098}
   - {fileID: 1787364254}
-  - {fileID: 471179490}
+  - {fileID: 1889938806}
