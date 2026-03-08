@@ -8,9 +8,13 @@ public class HeiAnSkill4Item : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
 
+    private void Update()
+    {
+        transform.localPosition = Vector3.zero;
+    }
+
     private void OnEnable()
     {
-        skeletonAnimation.AnimationState.SetAnimation(0, "play", true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

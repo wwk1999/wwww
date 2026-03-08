@@ -27,9 +27,10 @@ public class StoreController : XSingleton<StoreController>
                 return Path.Combine(Application.persistentDataPath, "store2.json");
             case 3:
                 return Path.Combine(Application.persistentDataPath, "store3.json");
+            default:
+                // 默认返回存档槽1的路径，避免空路径导致的错误
+                return Path.Combine(Application.persistentDataPath, "store1.json");
         }
-
-        return "";
     }
     private void Update()
     {

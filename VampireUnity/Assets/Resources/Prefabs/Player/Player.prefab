@@ -10529,7 +10529,7 @@ Transform:
   m_GameObject: {fileID: 9145328470554279404}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalPosition: {x: -0.24, y: 0, z: -0.1}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -11410,6 +11410,14 @@ PrefabInstance:
       propertyPath: skeletonAnimation
       value: 
       objectReference: {fileID: 1877635967770463565}
+    - target: {fileID: 142024256963553219, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 950233298589942732, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1238127619877772082, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11429,8 +11437,16 @@ PrefabInstance:
     - target: {fileID: 1774498423143742182, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 3989167909239784965, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819901843284532258, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1853580403421563036, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021464291523507478, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
@@ -11458,6 +11474,10 @@ PrefabInstance:
       propertyPath: skeletonAnimation
       value: 
       objectReference: {fileID: 8065866527155522252}
+    - target: {fileID: 2548265694622426552, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2579468738196721796, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -11465,7 +11485,7 @@ PrefabInstance:
     - target: {fileID: 2582599316057883831, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -1659072529484241423, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3108581749240920903, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11477,7 +11497,7 @@ PrefabInstance:
     - target: {fileID: 3189164385197239451, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7349098717955191691, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3286078046648138120, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11513,7 +11533,7 @@ PrefabInstance:
     - target: {fileID: 3895849001628317138, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -7336802084844667541, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4213771627331477335, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11526,10 +11546,14 @@ PrefabInstance:
       propertyPath: skeletonAnimation
       value: 
       objectReference: {fileID: 6136953175330447418}
+    - target: {fileID: 4891551238555111558, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5053674279986366755, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7757148945799251048, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5333718209767120792, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11537,7 +11561,7 @@ PrefabInstance:
     - target: {fileID: 5578066942787055754, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -7869556644972339330, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5663164400915290508, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11610,6 +11634,10 @@ PrefabInstance:
       propertyPath: skeletonAnimation
       value: 
       objectReference: {fileID: 4553092433283173030}
+    - target: {fileID: 6457995234867556038, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6574103604374874360, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11626,6 +11654,18 @@ PrefabInstance:
       propertyPath: skeletonAnimation
       value: 
       objectReference: {fileID: 5094364001529433980}
+    - target: {fileID: 6968104730141266161, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98893833
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968104730141266161, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.14832728
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968104730141266161, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -17.06
+      objectReference: {fileID: 0}
     - target: {fileID: 7045822457476694551, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11637,7 +11677,7 @@ PrefabInstance:
     - target: {fileID: 7184664517776935002, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 5865161177546842056, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7308991818897806354, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11649,11 +11689,11 @@ PrefabInstance:
     - target: {fileID: 7526739930722154358, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -7475980299231315954, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7582493653499683646, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -6328313937983075260, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7606856193001577869, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11661,7 +11701,7 @@ PrefabInstance:
     - target: {fileID: 7634149658037081341, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4290686651453477182, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7960561365242039196, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11673,7 +11713,7 @@ PrefabInstance:
     - target: {fileID: 8122024624692253756, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -2028531037427915792, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8291543567694929458, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11690,6 +11730,10 @@ PrefabInstance:
       propertyPath: skeletonAnimation
       value: 
       objectReference: {fileID: 7727551661718515852}
+    - target: {fileID: 8975564244001710117, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9021134960724380064, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
       propertyPath: skeletonAnimation
       value: 
@@ -11884,7 +11928,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!114 &302030199644947747 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1066447607964920151, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
@@ -11927,7 +11971,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!114 &565324020080902861 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 947340989142167225, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
@@ -12061,7 +12105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!1 &1412613312030682214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1830523022705213458, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
@@ -12093,7 +12137,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!114 &1422389571541857109 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1819622922536328993, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
@@ -12610,7 +12654,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!1 &5068433488821925927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5524649867856303187, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
@@ -12974,7 +13018,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!1 &6666690658124133625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6231039578970527885, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
@@ -13043,7 +13087,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 3
 --- !u!1 &7191404800231092087 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7579784944399368963, guid: e5d1eba387c57a842aa26a5eb4fbdf2b, type: 3}
