@@ -69,6 +69,32 @@ public class GameController : XSingleton<GameController>
     //碰撞字典
     [NonSerialized] public Dictionary<Collider2D, MonsterBase> MonsterColliderDic = new Dictionary<Collider2D, MonsterBase>();
 
+    public Vector2 GetRandomMonsterPos()
+    {
+        List<MonsterBase> monsters = new List<MonsterBase>(MonsterColliderDic.Values);
+        
+        int n = monsters.Count;
+        for (int i = n - 1; i > 0; i--)
+        {
+            int j = UnityEngine.Random.Range(0, i + 1);
+            // 交换元素
+            (monsters[j], monsters[i]) = (monsters[i], monsters[j]);
+        }
+
+        foreach (var item in monsters)
+        {
+            if (item.gameObject.activeSelf &&
+                Vector2.Distance(gamePlayer.transform.position, item.transform.position) < 6)
+            {
+                return item.transform.position;
+            }
+        }
+
+        float x = Random.Range(-0.5f, 0.5f);
+        float y = Random.Range(-0.5f, 0.5f);
+        Vector3 dir = new Vector3(x, y,0);
+        return gamePlayer.transform.position+dir * 6;
+    }
     
     //怪物数量排行榜相关
     [NonSerialized] public int NormalCount = 0;

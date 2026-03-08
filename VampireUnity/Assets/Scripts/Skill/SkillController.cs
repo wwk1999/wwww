@@ -562,6 +562,16 @@ public class SkillController : XSingleton<SkillController>
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
     }
+
+    public void HeiAnSkill5(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            var heianSkill5=GameController.S.HeiAnSkill5Queue.Dequeue();
+            heianSkill5.transform.position = GameController.S.GetRandomMonsterPos();
+            heianSkill5.gameObject.SetActive(true);
+        }
+    }
     
     public void DianSkill5()
     {
@@ -923,7 +933,7 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKeyDown(KeyCode.K))
         {
-            DianSkill5();
+            HeiAnSkill5(5);
         }
         //技能冷却时间
         IceArrowCoolingtime+= Time.deltaTime;
