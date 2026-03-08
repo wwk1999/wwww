@@ -3062,7 +3062,7 @@ public class GlobalPlayerAttribute
    
    //元素伤害
    public static float HuoYuanSuBase=>GetHuoYuanSuBase();
-   public static float HeiAnYuanSuBase=>GetHuoYuanSuBase();
+   public static float HeiAnYuanSuBase=>GetHeiAnYuanSuBase();
    public static float IceYuanSuBase=>GetIceYuanSuBase();
    public static float DianYuanSuBase=>GetDianYuanSuBase();
 
@@ -3072,18 +3072,21 @@ public class GlobalPlayerAttribute
    {
        float value = 1.0f;
        value += FinalChongWuAttribute.HuoDamage;
+       value += SkillJiaDian.S.HuoAll / 100f;
        return value;
    }
    public static float GetHeiAnYuanSuBase()
    {
        float value = 1.0f;
        value += FinalChongWuAttribute.HeiAnDamage;
+       value += SkillJiaDian.S.HeiAnAll / 100f;
        return value;
    }
    public static float GetIceYuanSuBase()
    {
        float value = 1.0f;
        value += FinalChongWuAttribute.IceDamage;
+       value += SkillJiaDian.S.IceAll / 100f;
        return value;
    }
    
@@ -3091,6 +3094,7 @@ public class GlobalPlayerAttribute
    {
        float value = 1.0f;
        value += FinalChongWuAttribute.DianDamage;
+       value += SkillJiaDian.S.DianAll / 100f;
        return value;
    }
    

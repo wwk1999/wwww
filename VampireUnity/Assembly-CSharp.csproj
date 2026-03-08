@@ -359,6 +359,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SnotMonster.cs" />
     <Compile Include="Assets\Scripts\Singleton\SingletonNameAttribute.cs" />
+    <Compile Include="Assets\Scripts\Skill\IceSkill\IceSkill4.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuPeiYangWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\MonsterBase.cs" />
     <Compile Include="Assets\Scripts\Tool\SkillMouseXuanFu.cs" />
@@ -385,6 +386,7 @@
     <Compile Include="Assets\Scripts\Tool\ToastInfo.cs" />
     <Compile Include="Assets\Scripts\Tool\ChuanSong.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManDiLie.cs" />
+    <Compile Include="Assets\Scripts\Skill\IceSkill\IceSkill4Anim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\DaZuiFire.cs" />
     <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill3.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XianRenZhang.cs" />
@@ -542,6 +544,7 @@
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Penetrate.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleCloth1.cs" />
     <Compile Include="Assets\Scripts\YingDi\YingDi.cs" />
+    <Compile Include="Assets\Scripts\Skill\IceSkill\IceSkill5.cs" />
     <Compile Include="Assets\Scripts\Tool\EquipName.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\Skill3AddRange.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleCloak.cs" />

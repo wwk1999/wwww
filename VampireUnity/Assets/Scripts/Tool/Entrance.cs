@@ -149,6 +149,35 @@ public class Entrance : MonoBehaviour
                 GameController.S.IceSkill1Queue.Enqueue(Monster1);
             }
         }
+        
+        if (SkillJiaDian.S.Alpha1 != SkillType.Ice4 || SkillJiaDian.S.Alpha2 == SkillType.Ice4 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Ice4|| SkillJiaDian.S.Alpha4 == SkillType.Ice4|| SkillJiaDian.S.Alpha5 == SkillType.Ice4)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/IceSkill/IceSkill4").GetComponent<IceSkill4>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.IceSkill4Queue.Enqueue(Monster1);
+            }
+        }
+        
+        
+        if (SkillJiaDian.S.Alpha1 != SkillType.Ice5 || SkillJiaDian.S.Alpha2 == SkillType.Ice5 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Ice5|| SkillJiaDian.S.Alpha4 == SkillType.Ice5|| SkillJiaDian.S.Alpha5 == SkillType.Ice5)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/IceSkill/IceSkill5").GetComponent<IceSkill5>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.IceSkill5Queue.Enqueue(Monster1);
+            }
+        }
 
 
         if (LevelInfoConfig.CurrentGameLevel > 15)

@@ -58,7 +58,8 @@ public class IceSkill1 : MonoBehaviour
 
     public void Complete(TrackEntry trackEntry)
     {
-        gameObject.SetActive(false);
         GameController.S.IceSkill1Queue.Enqueue(this);
+        gameObject.SetActive(false);
+        
     }
 }

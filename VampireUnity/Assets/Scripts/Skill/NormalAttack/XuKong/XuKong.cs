@@ -24,7 +24,7 @@ public class XuKong : MonoBehaviour
     
     IEnumerator DelayHide(GameObject obj)
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
         GameController.S.XuKongQueue.Enqueue(obj);
     }

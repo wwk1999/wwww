@@ -369,8 +369,8 @@ public class SkillController : XSingleton<SkillController>
             HuoSkill3Coolingtime = 0;
             for (int i = 0; i < count; i++)
             {
-                float offectX = Random.Range(0, 1.0f);
-                float offectY = Random.Range(0, 1.0f);
+                float offectX = Random.Range(-0.5f, 0.5f);
+                float offectY = Random.Range(-0.5f, 0.5f);
                 Vector3 dir = new Vector2(offectX, offectY);
                 Vector2 pos = worldPos + dir * redis;
                 var dianquan = GameController.S.HuoSkill3Queue.Dequeue();
@@ -381,6 +381,30 @@ public class SkillController : XSingleton<SkillController>
             }
         }
     }
+
+
+    IEnumerator IceSkill4(int count, float redis, float time)
+    {
+
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        for (int i = 0; i < count; i++)
+        {
+            float offectX = Random.Range(-0.5f, 0.5f);
+            float offectY = Random.Range(-0.5f, 0.5f);
+            Vector3 dir = new Vector2(offectX, offectY);
+            Vector2 pos = worldPos + dir * redis;
+            var dianquan = GameController.S.IceSkill4Queue.Dequeue();
+            dianquan.gameObject.SetActive(true);
+            dianquan.transform.position = pos;
+            dianquan.render.sortingOrder = 10001 + i;
+            yield return new WaitForSeconds(time);
+        }
+
+    }
+
 
     public void DianSkill3()
     {
@@ -397,6 +421,26 @@ public class SkillController : XSingleton<SkillController>
         for (int i = 0; i < bulletCount; i++)
         {
             var xieZiSkill1 = GameController.S.DianSkill3Queue.Dequeue();
+            float angle = i * angleStep + waveOffset;
+            float angleRad = angle * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+            xieZiSkill1.transform.position = GameController.S.gamePlayer.transform.position;
+            xieZiSkill1.MoveDirection = direction;
+            xieZiSkill1.MoveSpeed = 10f;
+            xieZiSkill1.gameObject.SetActive(true);
+        }
+    }
+    
+    
+    public void IceSkill5()
+    {
+        float waveOffset = Random.Range(0,30);
+        int bulletCount = 12;
+        float angleStep = 360f / bulletCount;
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            var xieZiSkill1 = GameController.S.IceSkill5Queue.Dequeue();
             float angle = i * angleStep + waveOffset;
             float angleRad = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
@@ -753,6 +797,16 @@ public class SkillController : XSingleton<SkillController>
     }
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            StartCoroutine(IceSkill4(4, 1, 0.5f));
+        }
+        
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            IceSkill5();
+        }
         //技能冷却时间
         IceArrowCoolingtime+= Time.deltaTime;
         IceExplosionCoolingtime+=Time.deltaTime;
