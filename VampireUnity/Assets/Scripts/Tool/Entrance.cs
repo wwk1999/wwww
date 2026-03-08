@@ -178,6 +178,102 @@ public class Entrance : MonoBehaviour
                 GameController.S.IceSkill5Queue.Enqueue(Monster1);
             }
         }
+        
+        
+        
+        if (SkillJiaDian.S.Alpha1 != SkillType.Huo4 || SkillJiaDian.S.Alpha2 == SkillType.Huo4 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Huo4|| SkillJiaDian.S.Alpha4 == SkillType.Huo4|| SkillJiaDian.S.Alpha5 == SkillType.Huo4)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill4").GetComponent<HuoSkill4>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.HuoSkill4Queue.Enqueue(Monster1);
+            }
+        }
+        
+        
+        
+        if (SkillJiaDian.S.Alpha1 != SkillType.Huo5 || SkillJiaDian.S.Alpha2 == SkillType.Huo5 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Huo5|| SkillJiaDian.S.Alpha4 == SkillType.Huo5|| SkillJiaDian.S.Alpha5 == SkillType.Huo5)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill5").GetComponent<HuoSkill5>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.HuoSkill5Queue.Enqueue(Monster1);
+            }
+        }
+        
+        
+        
+        if (SkillJiaDian.S.Alpha1 != SkillType.Dian4 || SkillJiaDian.S.Alpha2 == SkillType.Dian4 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Dian4|| SkillJiaDian.S.Alpha4 == SkillType.Dian4|| SkillJiaDian.S.Alpha5 == SkillType.Dian4)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill4").GetComponent<DianSkill4>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.DianSkill4Queue.Enqueue(Monster1);
+            }
+        }
+        
+        
+        
+        if (SkillJiaDian.S.Alpha1 != SkillType.Dian5 || SkillJiaDian.S.Alpha2 == SkillType.Dian5 ||
+            SkillJiaDian.S.Alpha3 == SkillType.Dian5|| SkillJiaDian.S.Alpha4 == SkillType.Dian5|| SkillJiaDian.S.Alpha5 == SkillType.Dian5)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill5").GetComponent<DianSkill5>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.DianSkill5Queue.Enqueue(Monster1);
+            }
+        }
+        
+        
+        
+        if (SkillJiaDian.S.Alpha1 != SkillType.HeiAn4 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn4 ||
+            SkillJiaDian.S.Alpha3 == SkillType.HeiAn4|| SkillJiaDian.S.Alpha4 == SkillType.HeiAn4|| SkillJiaDian.S.Alpha5 == SkillType.HeiAn4)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill4").GetComponent<HeiAnSkill4>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.HeiAnSkill4Queue.Enqueue(Monster1);
+            }
+        }
+        
+        
+        
+        if (SkillJiaDian.S.Alpha1 != SkillType.HeiAn5 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn5 ||
+            SkillJiaDian.S.Alpha3 == SkillType.HeiAn5|| SkillJiaDian.S.Alpha4 == SkillType.HeiAn5|| SkillJiaDian.S.Alpha5 == SkillType.HeiAn5)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var Monster1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill5").GetComponent<HeiAnSkill5>(),
+                        GameController.S.transform);
+                Monster1.gameObject.SetActive(false);
+                GameController.S.HeiAnSkill5Queue.Enqueue(Monster1);
+            }
+        }
 
 
         if (LevelInfoConfig.CurrentGameLevel > 15)

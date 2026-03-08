@@ -382,6 +382,28 @@ public class SkillController : XSingleton<SkillController>
         }
     }
 
+    IEnumerator HuoSkill5(int count, float redis, float time)
+    {
+
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        HuoSkill3Coolingtime = 0;
+        for (int i = 0; i < count; i++)
+        {
+            float offectX = Random.Range(-0.5f, 0.5f);
+            float offectY = Random.Range(-0.5f, 0.5f);
+            Vector3 dir = new Vector2(offectX, offectY);
+            Vector2 pos = worldPos + dir * redis;
+            var dianquan = GameController.S.HuoSkill5Queue.Dequeue();
+            dianquan.gameObject.SetActive(true);
+            dianquan.transform.position = pos;
+            dianquan._renderer.sortingOrder = 10001 + i;
+            yield return new WaitForSeconds(time);
+        }
+    }
+
 
     IEnumerator IceSkill4(int count, float redis, float time)
     {
@@ -463,6 +485,18 @@ public class SkillController : XSingleton<SkillController>
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         var dianquan= GameController.S.IceSkill1Queue.Dequeue();
+        dianquan.gameObject.SetActive(true);
+        dianquan.transform.position = worldPos;
+    }
+    
+    
+    public void HuoSkill4()
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        var dianquan= GameController.S.HuoSkill4Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
     }
@@ -800,12 +834,12 @@ public class SkillController : XSingleton<SkillController>
 
         if (Input.GetKeyDown(KeyCode.V))
         {
-            StartCoroutine(IceSkill4(4, 1, 0.5f));
+            StartCoroutine(HuoSkill5(4, 1, 0.5f));
         }
         
         if (Input.GetKeyDown(KeyCode.K))
         {
-            IceSkill5();
+            HuoSkill4();
         }
         //技能冷却时间
         IceArrowCoolingtime+= Time.deltaTime;

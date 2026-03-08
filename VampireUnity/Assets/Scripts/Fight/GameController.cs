@@ -240,7 +240,12 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<IceSkill1>IceSkill1Queue = new Queue<IceSkill1>();
     [NonReorderable]public Queue<IceSkill4>IceSkill4Queue = new Queue<IceSkill4>();
     [NonReorderable]public Queue<IceSkill5>IceSkill5Queue = new Queue<IceSkill5>();
-
+    [NonReorderable]public Queue<HuoSkill4>HuoSkill4Queue = new Queue<HuoSkill4>();
+    [NonReorderable]public Queue<HuoSkill5>HuoSkill5Queue = new Queue<HuoSkill5>();
+    [NonReorderable]public Queue<DianSkill4>DianSkill4Queue = new Queue<DianSkill4>();
+    [NonReorderable]public Queue<DianSkill5>DianSkill5Queue = new Queue<DianSkill5>();
+    [NonReorderable]public Queue<HeiAnSkill4>HeiAnSkill4Queue = new Queue<HeiAnSkill4>();
+    [NonReorderable]public Queue<HeiAnSkill5>HeiAnSkill5Queue = new Queue<HeiAnSkill5>();
 
 
 

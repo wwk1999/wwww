@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\HpReductionReplyAdd50.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonster.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill4.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenNecklace.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo2.cs" />
     <Compile Include="Assets\Scripts\Fight\FightBGController.cs" />
@@ -165,6 +166,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\DuAddDuQuan.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuDanButtonRight.cs" />
     <Compile Include="Assets\Number Themes\Scripts\ScrollItemManager.cs" />
+    <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill5.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\ReplyDeath.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Duration.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
@@ -181,6 +183,7 @@
     <Compile Include="Assets\Scripts\Prop\BaoShi\BaoShi.cs" />
     <Compile Include="Assets\Scripts\Tool\ImageCropTool.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\Skill2AddDan.cs" />
+    <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill4.cs" />
     <Compile Include="Assets\Scripts\Window\RankWindow.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Fire\FireBaoZha1.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\WhiteWeaponFragment.cs" />
@@ -245,6 +248,7 @@
     <Compile Include="Assets\Scripts\Common\DamageFrom.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\DashRange.cs" />
+    <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill4.cs" />
     <Compile Include="Assets\Scripts\Equip\MonsterEquip.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleShoe.cs" />
     <Compile Include="Assets\Scripts\Skill\DashShadow.cs" />
@@ -464,6 +468,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvZhuiZong.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalPlayerAttribute.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBallItem.cs" />
+    <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill5.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\Tool\UIToast.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\RedChiBang.cs" />
@@ -516,6 +521,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeRing.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZiSkill1.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloth.cs" />
+    <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill5.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanRing.cs" />
     <Compile Include="Assets\Scripts\Tool\BagEquipAttributeInfo.cs" />
     <Compile Include="Assets\Scripts\Skill\DianQuan\DianPeng.cs" />
@@ -531,6 +537,7 @@
     <Compile Include="Assets\Scripts\Window\MaskMouseRight.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\Skill2AddRange.cs" />
     <Compile Include="Assets\Scripts\Store\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill4Anim.cs" />
     <Compile Include="Assets\Scripts\Skill\IceArrow.cs" />
     <Compile Include="Assets\Scripts\Window\ShangDianWindow.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
