@@ -120,22 +120,88 @@ public class ButtonHoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
                 case SkillInfoType.Ice3_1:
                 case SkillInfoType.IceBei1:
                 case SkillInfoType.IceBei2:
+                case SkillInfoType.Huo1:
+                case SkillInfoType.Huo1_1:
+                case SkillInfoType.Huo1_2:
+                case SkillInfoType.Huo2:
+                case SkillInfoType.Huo2_1:
+                case SkillInfoType.Huo3:
+                case SkillInfoType.Huo3_1:
+                case SkillInfoType.HuoBei1:
+                case SkillInfoType.HuoBei2:
+                case SkillInfoType.Dian1:
+                case SkillInfoType.Dian1_1:
+                case SkillInfoType.Dian1_2:
+                case SkillInfoType.Dian2:
+                case SkillInfoType.Dian2_1:
+                case SkillInfoType.Dian3:
+                case SkillInfoType.Dian3_1:
+                case SkillInfoType.DianBei1:
+                case SkillInfoType.DianBei2:
+                case SkillInfoType.HeiAn1:
+                case SkillInfoType.HeiAn1_1:
+                case SkillInfoType.HeiAn1_2:
+                case SkillInfoType.HeiAn2:
+                case SkillInfoType.HeiAn2_1:
+                case SkillInfoType.HeiAn3:
+                case SkillInfoType.HeiAn3_1:
+                case SkillInfoType.HeiAnBei1:
+                case SkillInfoType.HeiAnBei2:
                     skillInforect.anchoredPosition =  new Vector2(localPoint.x+skillInforect.sizeDelta.x/2, localPoint.y-skillInforect.sizeDelta.y/2);
                     break;
                 case SkillInfoType.Ice2_2:
                 case SkillInfoType.IceBei3:
                 case SkillInfoType.IceBei4:
+                    
+                case SkillInfoType.HeiAn2_2:
+                case SkillInfoType.HeiAnBei3:
+                case SkillInfoType.HeiAnBei4:
+                    
+                case SkillInfoType.Dian2_2:
+                case SkillInfoType.DianBei3:
+                case SkillInfoType.DianBei4:
+                    
+                case SkillInfoType.Huo2_2:
+                case SkillInfoType.HuoBei3:
+                case SkillInfoType.HuoBei4:
                     skillInforect.anchoredPosition =  new Vector2(localPoint.x+skillInforect.sizeDelta.x/2+25, localPoint.y);
                     break;
                 case SkillInfoType.Ice3_2:
                 case SkillInfoType.Ice5:
                 case SkillInfoType.Ice5_1:
                 case SkillInfoType.Ice5_2:
+                    
+                case SkillInfoType.Huo3_2:
+                case SkillInfoType.Huo5:
+                case SkillInfoType.Huo5_1:
+                case SkillInfoType.Huo5_2:
+                    
+                case SkillInfoType.Dian3_2:
+                case SkillInfoType.Dian5:
+                case SkillInfoType.Dian5_1:
+                case SkillInfoType.Dian5_2:
+                    
+                case SkillInfoType.HeiAn3_2:
+                case SkillInfoType.HeiAn5:
+                case SkillInfoType.HeiAn5_1:
+                case SkillInfoType.HeiAn5_2:
                     skillInforect.anchoredPosition =  new Vector2(localPoint.x-skillInforect.sizeDelta.x/2-25, localPoint.y);
                     break;
                 case SkillInfoType.Ice4:
                 case SkillInfoType.Ice4_1:
                 case SkillInfoType.Ice4_2:
+                    
+                case SkillInfoType.HeiAn4:
+                case SkillInfoType.HeiAn4_1:
+                case SkillInfoType.HeiAn4_2:
+                    
+                case SkillInfoType.Dian4:
+                case SkillInfoType.Dian4_1:
+                case SkillInfoType.Dian4_2:
+                    
+                case SkillInfoType.Huo4:
+                case SkillInfoType.Huo4_1:
+                case SkillInfoType.Huo4_2:
                     skillInforect.anchoredPosition =  new Vector2(localPoint.x, localPoint.y+skillInforect.sizeDelta.y/2+25);
                     break;
                 case SkillInfoType.IceMain:
