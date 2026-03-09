@@ -901,6 +901,61 @@ public class ResourcesConfig : MonoBehaviour
 
         return null;
     }
+
+    public static Sprite GetZhuDongSkillSprite(SkillType type)
+    {
+        switch (type)
+        {
+            case  SkillType.Ice1:
+                return Ice1;
+            case  SkillType.Ice2:
+                return Ice2;
+            case  SkillType.Ice3:
+                return Ice3;
+            case  SkillType.Ice4:
+                return Ice4;
+            case  SkillType.Ice5:
+                return Ice5;
+            
+            case  SkillType.Huo1:
+                return Huo1;
+            case  SkillType.Huo2:
+                return Huo2;
+            case  SkillType.Huo3:
+                return Huo3;
+            case  SkillType.Huo4:
+                return Huo4;
+            case  SkillType.Huo5:
+                return Huo5;
+            
+            
+            case  SkillType.Dian1:
+                return Dian1;
+            case  SkillType.Dian2:
+                return Dian2;
+            case  SkillType.Dian3:
+                return Dian3;
+            case  SkillType.Dian4:
+                return Dian4;
+            case  SkillType.Dian5:
+                return Dian5;
+            
+            
+            case  SkillType.HeiAn1:
+                return HeiAn1;
+            case  SkillType.HeiAn2:
+                return HeiAn2;
+            case  SkillType.HeiAn3:
+                return HeiAn3;
+            case  SkillType.HeiAn4:
+                return HeiAn4;
+            case  SkillType.HeiAn5:
+                return HeiAn5;
+        }
+
+        return null;
+    }
+ 
     public static Sprite GetSkillSprite(SkillInfoType type)
     {
         switch (type)

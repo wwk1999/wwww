@@ -43,15 +43,12 @@ public class FightBg : MonoBehaviour
     public Button againButton;
     public Button returnButton;
     
-    public Image RMBBg;
     public Image RMB;
-    public Image skill1Bg;
     public Image skill1;
-    public Image skill2Bg;
     public Image skill2;
-    public Image skill3Bg;
     public Image skill3;
-
+    public Image skill4;
+    public Image skill5;
     public GameObject ChuanSongZhen;
     public Animator ChuanSongZhenAnimator;
 
@@ -82,32 +79,50 @@ public class FightBg : MonoBehaviour
         skill1.fillAmount = GetFillAmout(SkillJiaDian.S.Alpha1);
         skill2.fillAmount = GetFillAmout(SkillJiaDian.S.Alpha2);
         skill3.fillAmount = GetFillAmout(SkillJiaDian.S.Alpha3);
+        skill4.fillAmount = GetFillAmout(SkillJiaDian.S.Alpha4);
+        skill5.fillAmount = GetFillAmout(SkillJiaDian.S.Alpha5);
+
     }
 
     public float GetFillAmout(SkillType skillType)
     {
         switch (skillType)
         {
-            case SkillType.Dian1:
-                return SkillController.S.DianQuanCoolingtime / SkillController.S.DianQuantime;
+            case SkillType.Dash:
+                return SkillController.S.DashCoolingtime / SkillController.S.Dashtime;
+            
+             case SkillType.Ice1:
+                 return SkillController.S.IceSkill1Coolingtime / SkillController.S.IceSkill1Time;
             case SkillType.Ice2:
                 return SkillController.S.IceBallCoolingtime / SkillController.S.IceBalltime;
             case SkillType.Ice3:
                 return SkillController.S.IceExplosionCoolingtime / SkillController.S.IceExplosiontime;
-            case SkillType.Dash:
-                return SkillController.S.DashCoolingtime / SkillController.S.Dashtime;
-            case SkillType.Ice1:
-                return SkillController.S.IceSkill1Coolingtime / SkillController.S.IceSkill1Time;
+            case SkillType.Ice4:
+                return SkillController.S.IceSkill4Coolingtime / SkillController.S.IceSkill4Time;
+            case SkillType.Ice5:
+                return SkillController.S.IceSkill5Coolingtime / SkillController.S.IceSkill5Time;
+            
+            case SkillType.Dian1:
+                return SkillController.S.DianQuanCoolingtime / SkillController.S.DianQuantime;
             case SkillType.Dian2:
                 return SkillController.S.DianSkill2Coolingtime / SkillController.S.DianSkill2Time;
             case SkillType.Dian3:
                 return SkillController.S.DianSkill3Coolingtime / SkillController.S.DianSkill3Time;
+            case SkillType.Dian4:
+                return SkillController.S.DianSkill4Coolingtime / SkillController.S.DianSkill4Time;
+            case SkillType.Dian5:
+                return SkillController.S.DianSkill5Coolingtime / SkillController.S.DianSkill5Time;
+            
             case SkillType.Huo1:
                 return SkillController.S.HuoSkill1Coolingtime / SkillController.S.HuoSkill1Time;
             case SkillType.Huo2:
                 return SkillController.S.HuoSkill2Coolingtime / SkillController.S.HuoSkill2Time;
             case SkillType.Huo3:
                 return SkillController.S.HuoSkill3Coolingtime / SkillController.S.HuoSkill3Time;
+            case SkillType.Huo4:
+                return SkillController.S.HuoSkill4Coolingtime / SkillController.S.HuoSkill4Time;
+            case SkillType.Huo5:
+                return SkillController.S.HuoSkill5Coolingtime / SkillController.S.HuoSkill5Time;
             
             case SkillType.HeiAn1:
                 return SkillController.S.HeiAnSkill1Coolingtime / SkillController.S.HeiAnSkill1Time;
@@ -115,6 +130,10 @@ public class FightBg : MonoBehaviour
                 return SkillController.S.HeiAnSkill2Coolingtime / SkillController.S.HeiAnSkill2Time;
             case SkillType.HeiAn3:
                 return SkillController.S.HeiAnSkill3Coolingtime / SkillController.S.HeiAnSkill3Time;
+            case SkillType.HeiAn4:
+                return SkillController.S.HeiAnSkill4Coolingtime / SkillController.S.HeiAnSkill4Time;
+            case SkillType.HeiAn5:
+                return SkillController.S.HeiAnSkill5Coolingtime / SkillController.S.HeiAnSkill5Time;
         }
 
         return 0;
@@ -154,53 +173,52 @@ public class FightBg : MonoBehaviour
         });
         
         
-        /*
-        
-        if (GetSkillSprite(SkillController.S.RMB) == null)
-        {
-            RMB.gameObject.SetActive(false);
-            RMBBg.gameObject.SetActive(false);
-        }
-        else
-        {
-            RMB.sprite=GetSkillSprite(SkillController.S.RMB);
-            RMBBg.sprite=GetSkillSprite(SkillController.S.RMB);
-        }
-        
-        if (GetSkillSprite(SkillController.S.Alpha1) == null)
+        if (SkillController.S.Alpha1 == SkillType.None)
         {
             skill1.gameObject.SetActive(false);
-            skill1Bg.gameObject.SetActive(false);
         }
         else
         {
-            skill1Bg.sprite=GetSkillSprite(SkillController.S.Alpha1);
-            skill1.sprite=GetSkillSprite(SkillController.S.Alpha1);
+            skill1.sprite=ResourcesConfig.GetZhuDongSkillSprite(SkillController.S.Alpha1);
         }
         
-        if (GetSkillSprite(SkillController.S.Alpha2) == null)
+        if (SkillController.S.Alpha2 == SkillType.None)
         {
             skill2.gameObject.SetActive(false);
-            skill2Bg.gameObject.SetActive(false);
         }
         else
         {
-            skill2.sprite=GetSkillSprite(SkillController.S.Alpha2);
-            skill2Bg.sprite=GetSkillSprite(SkillController.S.Alpha2);
-
+            skill2.sprite=ResourcesConfig.GetZhuDongSkillSprite(SkillController.S.Alpha2);
         }
         
-        if (GetSkillSprite(SkillController.S.Alpha3) == null)
+        
+        if (SkillController.S.Alpha3== SkillType.None)
         {
             skill3.gameObject.SetActive(false);
-            skill3Bg.gameObject.SetActive(false);
         }
         else
         {
-            skill3.sprite=GetSkillSprite(SkillController.S.Alpha3);
-            skill3Bg.sprite=GetSkillSprite(SkillController.S.Alpha3);
+            skill3.sprite=ResourcesConfig.GetZhuDongSkillSprite(SkillController.S.Alpha3);
         }
-        */
+        
+        
+        if (SkillController.S.Alpha4 == SkillType.None)
+        {
+            skill4.gameObject.SetActive(false);
+        }
+        else
+        {
+            skill4.sprite=ResourcesConfig.GetZhuDongSkillSprite(SkillController.S.Alpha4);
+        }
+        
+        if (SkillController.S.Alpha5 == SkillType.None)
+        {
+            skill5.gameObject.SetActive(false);
+        }
+        else
+        {
+            skill5.sprite=ResourcesConfig.GetZhuDongSkillSprite(SkillController.S.Alpha5);
+        }
         
     }
     

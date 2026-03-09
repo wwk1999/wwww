@@ -93,18 +93,26 @@ namespace Config
             IceSkill1,
             IceSkill2,
             IceSkill3,
+            IceSkill4,
+            IceSkill5,
             
             DianSkill1,
             DianSkill2,
             DianSkill3,
+            HuoSkill4,
+            HuoSkill5,
             
             HuoSkill1,
             HuoSkill2,
             HuoSkill3,
+            DianSkill4,
+            DianSkill5,
             
             HeiAnSkill1,
             HeiAnSkill2,
             HeiAnSkill3,
+            HeiAnSkill4,
+            HeiAnSkill5,
         }
 
         public static Dictionary<SkillType, int> SkillBaseDamageDic = new Dictionary<SkillType, int>()
@@ -166,18 +174,28 @@ namespace Config
             { ZhuDongSkillTime.DianSkill1 ,8f},
             { ZhuDongSkillTime.DianSkill2 ,15f},
             { ZhuDongSkillTime.DianSkill3 ,12f},
+            { ZhuDongSkillTime.DianSkill4 ,12f},
+            { ZhuDongSkillTime.DianSkill5 ,12f},
+
 
             { ZhuDongSkillTime.HeiAnSkill1 ,8f},
             { ZhuDongSkillTime.HeiAnSkill2 ,15f},
             { ZhuDongSkillTime.HeiAnSkill3 ,12f},
+            { ZhuDongSkillTime.HeiAnSkill4 ,15f},
+            { ZhuDongSkillTime.HeiAnSkill5 ,15f},
             
             { ZhuDongSkillTime.HuoSkill1 ,8f},
             { ZhuDongSkillTime.HuoSkill2 ,15f},
             { ZhuDongSkillTime.HuoSkill3 ,12f},
+            { ZhuDongSkillTime.HuoSkill4 ,12f},
+            { ZhuDongSkillTime.HuoSkill5 ,15f},
             
             { ZhuDongSkillTime.IceSkill1 ,8f},
             { ZhuDongSkillTime.IceSkill2 ,15f},
             { ZhuDongSkillTime.IceSkill3 ,12f},
+            { ZhuDongSkillTime.IceSkill4 ,12f},
+            { ZhuDongSkillTime.IceSkill5 ,12f},
+
         };
 
         public static Dictionary<MonsterType, float> BaseMonsterDic = new Dictionary<MonsterType, float>()
