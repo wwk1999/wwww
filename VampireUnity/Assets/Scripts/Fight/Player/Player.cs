@@ -55,6 +55,10 @@ public class Player : MonoBehaviour
 
     public GameObject IceBall4;
     public GameObject IceBall5;
+    public GameObject IceBall6;
+    public GameObject IceBall7;
+    public GameObject IceBall8;
+    public GameObject IceBall9;
 
     
     
