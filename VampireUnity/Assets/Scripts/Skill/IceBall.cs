@@ -15,7 +15,7 @@ public class IceBall : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*2f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Skill2);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.Ice2Damage*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Skill2);
         }
     }
 }

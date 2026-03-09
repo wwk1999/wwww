@@ -36,7 +36,7 @@ public class IceSkill5 : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.DianYuanSuDamage,isCrit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.Ice5Damage*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Normal);
         }
     }
 }

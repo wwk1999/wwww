@@ -40,7 +40,7 @@ public class IceSkill1 : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GameController.S.GameAttack*3f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal);
+                monster.Hurt(GameController.S.GameAttack*SkillController.S.Ice1Damage*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal);
                 // var hit = GameController.S.HeiDongPengQueue.Dequeue();
                 //hit.transform.position = monster.transform.position;
                 //hit.SetActive(true);

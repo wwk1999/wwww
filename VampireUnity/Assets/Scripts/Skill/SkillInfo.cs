@@ -34,8 +34,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice1]}%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damageValue1 = SkillConfig.SkillBaseDamageDic[global::SkillType.Ice1] + MathF.Max(0,
-                    (SkillJiaDian.S.Ice1 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Ice1]);
+                float damageValue1 = SkillController.S.Ice1Damage;
                 CurrentText.text = $"召唤一条冰龙砸向地面，造成<color=green>{damageValue1}%</color>的冰霜伤害";
                 YouJian.gameObject.SetActive(true);
                 LevelLimit.gameObject.SetActive(false);
@@ -49,8 +48,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice2]}%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damageValue2 = SkillConfig.SkillBaseDamageDic[global::SkillType.Ice2] + MathF.Max(0,
-                    (SkillJiaDian.S.Ice2 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Ice2]);
+                float damageValue2 = SkillController.S.Ice2Damage;
                 CurrentText.text = $"召唤4个星轮围绕自身，每次造成<color=green>{damageValue2}%</color>的冰霜伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 5)
@@ -73,8 +71,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice3]}%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage3 = (SkillConfig.SkillBaseDamageDic[global::SkillType.Ice3] + MathF.Max(0,
-                    (SkillJiaDian.S.Ice3 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Ice3]));
+                float damage3 = SkillController.S.Ice3Damage;
                 CurrentText.text = $"以自身为中心释放极寒风暴，造成<color=green>{damage3}%</color>的冰霜伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 10)
@@ -97,8 +94,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice4]}%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage4 = (SkillConfig.SkillBaseDamageDic[global::SkillType.Ice4] + MathF.Max(0,
-                    (SkillJiaDian.S.Ice4 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Ice4]));
+                float damage4 = SkillController.S.Ice4Damage;
                 CurrentText.text = $"召唤4个冰锥砸向地面，每个造成<color=green>{damage4}%</color>";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 15)
@@ -121,8 +117,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice5]}%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage5 = SkillConfig.SkillBaseDamageDic[global::SkillType.Ice5] + MathF.Max(0,
-                    (SkillJiaDian.S.Ice5 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Ice5]);
+                float damage5 = SkillController.S.Ice5Damage;
                 CurrentText.text = $"召唤12个冰晶向四周扩散，每个造成<color=green>{damage5}%</color>的冰霜伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 20)
@@ -337,8 +332,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo1]}%</color> 火焰伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damageValue11 = SkillConfig.SkillBaseDamageDic[global::SkillType.Huo1] + MathF.Max(0,
-                    (SkillJiaDian.S.Huo1 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Huo1]);
+                float damageValue11 = SkillController.S.Huo1Damage;
                 CurrentText.text = $"向前方发射3枚爆裂弹，造成<color=green>{damageValue11}%</color>的火焰伤害";
                 YouJian.gameObject.SetActive(true);
                 LevelLimit.gameObject.SetActive(false);
@@ -352,8 +346,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo2]}%</color> 火焰元素伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damageValue21 = SkillConfig.SkillBaseDamageDic[global::SkillType.Huo2] + MathF.Max(0,
-                    (SkillJiaDian.S.Huo2 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Huo2]);
+                float damageValue21 = SkillController.S.Huo2Damage;
                 CurrentText.text = $"进入烈焰掌控状态，提升<color=green>{damageValue21}%</color>的火焰元素伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 5)
@@ -376,8 +369,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo3]}%</color> 火焰伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage31 = (SkillConfig.SkillBaseDamageDic[global::SkillType.Huo3] + MathF.Max(0,
-                    (SkillJiaDian.S.Huo3 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Huo3]));
+                float damage31 =SkillController.S.Huo3Damage;
                 CurrentText.text = $"在目标位置释放4个火焰流星砸向地面，造成<color=green>{damage31}%</color>的火焰伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 10)
@@ -400,8 +392,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo4]}%</color> 火焰伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage41 = (SkillConfig.SkillBaseDamageDic[global::SkillType.Huo4] + MathF.Max(0,
-                    (SkillJiaDian.S.Huo4 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Huo4]));
+                float damage41 =SkillController.S.Huo4Damage;
                 CurrentText.text = $"在指定位置召唤烈焰喷柱，每次造成<color=green>{damage41}%</color>的火焰伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 15)
@@ -424,8 +415,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo5]}%</color> 火焰伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage51 = SkillConfig.SkillBaseDamageDic[global::SkillType.Huo5] + MathF.Max(0,
-                    (SkillJiaDian.S.Huo5 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Huo5]);
+                float damage51 =SkillController.S.Huo5Damage;
                 CurrentText.text = $"召唤4个陨石砸向地面，每个造成<color=green>{damage51}%</color>的火焰伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 20)
@@ -639,8 +629,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian1]}%</color> 雷电伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damageValue1122 = SkillConfig.SkillBaseDamageDic[global::SkillType.Dian1] + MathF.Max(0,
-                    (SkillJiaDian.S.Dian1 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Dian1]);
+                float damageValue1122 =SkillController.S.Dian1Damage;
                 CurrentText.text = $"在指定位置释放电圈，造成<color=green>{damageValue1122}%</color>的雷电伤害";
                 YouJian.gameObject.SetActive(true);
                 LevelLimit.gameObject.SetActive(false);
@@ -654,8 +643,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian2]}%</color> 雷电元素伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damageValue2122 = SkillConfig.SkillBaseDamageDic[global::SkillType.Dian2] + MathF.Max(0,
-                    (SkillJiaDian.S.Dian2 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Dian2]);
+                float damageValue2122 =SkillController.S.Dian2Damage;
                 CurrentText.text = $"进入雷电掌控状态，提升<color=green>{damageValue2122}%</color>的雷电元素伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 5)
@@ -678,8 +666,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian3]}%</color> 雷电伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage3122 = (SkillConfig.SkillBaseDamageDic[global::SkillType.Dian3] + MathF.Max(0,
-                    (SkillJiaDian.S.Dian3 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Dian3]));
+                float damage3122 =SkillController.S.Dian3Damage;
                 CurrentText.text = $"向周围发射12枚闪电，每个造成<color=green>{damage3122}%</color>的雷电伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 10)
@@ -702,8 +689,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian4]}%</color> 雷电伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage4122 = (SkillConfig.SkillBaseDamageDic[global::SkillType.Dian4] + MathF.Max(0,
-                    (SkillJiaDian.S.Dian4 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Dian4]));
+                float damage4122 =SkillController.S.Dian4Damage;
                 CurrentText.text = $"在指定位置召唤雷电领域，每次造成<color=green>{damage4122}%</color>的雷电伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 15)
@@ -726,8 +712,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian5]}%</color> 雷电伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage5122 = SkillConfig.SkillBaseDamageDic[global::SkillType.Dian5] + MathF.Max(0,
-                    (SkillJiaDian.S.Dian5 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.Dian5]);
+                float damage5122 =SkillController.S.Dian5Damage;
                 CurrentText.text = $"在指定位置召唤灭世雷劫，每次造成<color=green>{damage5122}%</color>的雷电伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 20)
@@ -942,8 +927,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn1]}%</color> 黑暗伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damageValue114 = SkillConfig.SkillBaseDamageDic[global::SkillType.HeiAn1] + MathF.Max(0,
-                    (SkillJiaDian.S.HeiAn1 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn1]);
+                float damageValue114 =SkillController.S.HeiAn1Damage;
                 CurrentText.text = $"在指定位置召唤地狱黑暗灵魂吞噬一切，造成<color=green>{damageValue114}%</color>的黑暗伤害";
                 YouJian.gameObject.SetActive(true);
                 LevelLimit.gameObject.SetActive(false);
@@ -957,8 +941,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn2]}%</color> 黑暗元素伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damageValue214 = SkillConfig.SkillBaseDamageDic[global::SkillType.HeiAn2] + MathF.Max(0,
-                    (SkillJiaDian.S.HeiAn2 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn2]);
+                float damageValue214 =SkillController.S.HeiAn2Damage;
                 CurrentText.text = $"进入黑暗掌控状态，提升<color=green>{damageValue214}%</color>的黑暗元素伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 5)
@@ -981,8 +964,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn3]}%</color> 黑暗伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage314 = (SkillConfig.SkillBaseDamageDic[global::SkillType.HeiAn3] + MathF.Max(0,
-                    (SkillJiaDian.S.HeiAn3 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn3]));
+                float damage314 =SkillController.S.HeiAn3Damage;
                 CurrentText.text = $"在目标位置形成黑暗侵蚀领域，每次造成<color=green>{damage314}%</color>的黑暗伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 10)
@@ -1005,8 +987,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn4]}%</color> 黑暗伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage414 = (SkillConfig.SkillBaseDamageDic[global::SkillType.HeiAn4] + MathF.Max(0,
-                    (SkillJiaDian.S.HeiAn4 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn4]));
+                float damage414 =SkillController.S.HeiAn4Damage;
                 CurrentText.text = $"召唤4个恶意灵魂围绕自身，每次造成<color=green>{damage414}%</color>的黑暗伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 15)
@@ -1029,8 +1010,7 @@ public class SkillInfo : MonoBehaviour
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn5]}%</color> 黑暗伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float damage514 = SkillConfig.SkillBaseDamageDic[global::SkillType.HeiAn5] + MathF.Max(0,
-                    (SkillJiaDian.S.HeiAn5 - 1) * SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn5]);
+                float damage514 =SkillController.S.HeiAn5Damage;
                 CurrentText.text = $"在随机位置召唤4个黑暗漩涡，每次造成<color=green>{damage514}%</color>的黑暗伤害";
                 YouJian.gameObject.SetActive(true);
                 if (PlayerData.S.level < 20)
