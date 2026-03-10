@@ -1160,18 +1160,18 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 break;
         }
 
-        switch (table.ChongWuYuanSuType)
+        switch (table.YuanSuType)
         {
-            case ChongWuYuanSuType.Ice:
+            case YuanSuType.Ice:
                 YuanSuIcon.sprite = ResourcesConfig.IceIcon;
                 break;
-            case ChongWuYuanSuType.Huo:
+            case YuanSuType.Huo:
                 YuanSuIcon.sprite = ResourcesConfig.HuoIcon;
                 break;
-            case ChongWuYuanSuType.Dian:
+            case YuanSuType.Dian:
                 YuanSuIcon.sprite = ResourcesConfig.DianIcon;
                 break;
-            case ChongWuYuanSuType.HeiAn:
+            case YuanSuType.HeiAn:
                 YuanSuIcon.sprite = ResourcesConfig.HeiAnIcon;
                 break;
         }

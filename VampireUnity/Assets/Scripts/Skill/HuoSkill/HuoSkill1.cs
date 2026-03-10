@@ -34,12 +34,11 @@ public class HuoSkill1 : MonoBehaviour
     Debug.Log("碰撞点世界坐标: " + closestPoint);
     if (other.CompareTag("Monster")||other.CompareTag("Boss"))
     {
-      //var hit = GameController.S.DuPengQueue.Dequeue();
-      //hit.transform.position = closestPoint;
+      var hit = GameController.S.DuPengQueue.Dequeue();
+      hit.transform.position = closestPoint;
       bool isCrit = GameController.S.GetIsCrit();
-      //GameController.S.MonsterColliderDic[other].zhuoShaoTime = 3.1f;
       GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.Huo1Damage*(GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillDamage+1.0f)*SkillController.S.HuoYuanSuDamage*(1.0f),isCrit,DamageFrom.Skill1);
-      //hit.SetActive(true);
+      hit.SetActive(true);
     }
   }
   

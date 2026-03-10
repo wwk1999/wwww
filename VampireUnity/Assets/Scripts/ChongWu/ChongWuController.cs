@@ -43,22 +43,22 @@ public class ChongWuController:XSingleton<ChongWuController>
         int zizhi = Mathf.RoundToInt(Random.Range(zizhiMinMax.min, zizhiMinMax.max));
         float xuemai = Random.Range(xuemaiMinMax.min, xuemaiMinMax.max);
         float xuemaiRounded = float.Parse(xuemai.ToString("F2"));
-        ChongWuYuanSuType chongWuYuanSuType = ChongWuConfig.GetChongWuYuanSuByType(chongWuType);
+        YuanSuType yuanSuType = ChongWuConfig.GetChongWuYuanSuByType(chongWuType);
         string Name=ChongWuConfig.ChongWuNamDic[chongWuType];
         List<ChongWuConfig.ChongWuSKillType> ChongWuSkillList = null;
-        switch (chongWuYuanSuType)
+        switch (yuanSuType)
         {
-            case ChongWuYuanSuType.Ice:
-                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[ChongWuYuanSuType.Ice];
+            case YuanSuType.Ice:
+                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[YuanSuType.Ice];
                 break;
-            case ChongWuYuanSuType.Huo:
-                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[ChongWuYuanSuType.Huo];
+            case YuanSuType.Huo:
+                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[YuanSuType.Huo];
                 break;
-            case ChongWuYuanSuType.Dian:
-                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[ChongWuYuanSuType.Dian];
+            case YuanSuType.Dian:
+                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[YuanSuType.Dian];
                 break;
-            case ChongWuYuanSuType.HeiAn:
-                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[ChongWuYuanSuType.HeiAn];
+            case YuanSuType.HeiAn:
+                ChongWuSkillList = ChongWuConfig.ChongWuSkillDic[YuanSuType.HeiAn];
                 break;
         }
 
@@ -76,7 +76,7 @@ public class ChongWuController:XSingleton<ChongWuController>
             Quality = quality,
             ZiZhi = zizhi,
             XueMai = xuemaiRounded,
-            ChongWuYuanSuType=chongWuYuanSuType,
+            YuanSuType=yuanSuType,
             XingJi = 0,
             Level = 1,
             Ex = 0,

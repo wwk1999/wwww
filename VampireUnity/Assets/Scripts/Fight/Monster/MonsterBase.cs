@@ -605,20 +605,6 @@ public abstract class MonsterBase : MonoBehaviour
         PlayerData.S.LinHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun));
 
         AddHunQiEx();
-        //怪物数量排行榜
-        switch (MonsterType)
-        {
-            case MonsterType.Normal:
-                GameController.S.NormalCount++;
-                break;
-            case MonsterType.Elite:
-
-                GameController.S.EliteCount++;
-                break;
-            case MonsterType.Boss:
-                GameController.S.BossCount++;
-                break;
-        }
         GlobalPlayerAttribute.BloodEnergy+=BloodEnergy;
         GameController.S.KillMonsterCount++;
         //胜利

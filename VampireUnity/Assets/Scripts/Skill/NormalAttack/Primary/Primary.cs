@@ -21,18 +21,16 @@ public class Primary : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 获取两个碰撞器之间的最近点（世界坐标）
-        Vector2 closestPoint = other.ClosestPoint(transform.position);
-        Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.PuTong3PengQueue.Dequeue();
-            hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal);
-            hit.SetActive(true);
             gameObject.SetActive(false);
             GameController.S.PrimaryQueue.Enqueue(gameObject);
+            Vector2 closestPoint = other.ClosestPoint(transform.position);
+            var hit = GameController.S.IcePengQueue.Dequeue();
+            hit.transform.position = closestPoint;
+            hit.SetActive(true);
         }
     }
 }

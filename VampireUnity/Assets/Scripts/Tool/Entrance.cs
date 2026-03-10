@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Config;
 using Mysql;
 using Prop.BaoShi;
 using Unity.VisualScripting;
@@ -1669,6 +1670,35 @@ public class Entrance : MonoBehaviour
 
                 }
             }
+
+            if (WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType] == YuanSuType.Ice ||
+                SkillJiaDian.S.Alpha1 == SkillType.Ice1 || SkillJiaDian.S.Alpha1 == SkillType.Ice2 ||
+                SkillJiaDian.S.Alpha1 == SkillType.Ice3 || SkillJiaDian.S.Alpha1 == SkillType.Ice4 ||
+                SkillJiaDian.S.Alpha1 == SkillType.Ice5
+                || SkillJiaDian.S.Alpha2 == SkillType.Ice1 || SkillJiaDian.S.Alpha2 == SkillType.Ice2 ||
+                SkillJiaDian.S.Alpha2 == SkillType.Ice3 || SkillJiaDian.S.Alpha2 == SkillType.Ice4 ||
+                SkillJiaDian.S.Alpha2 == SkillType.Ice5
+                || SkillJiaDian.S.Alpha3 == SkillType.Ice1 || SkillJiaDian.S.Alpha3 == SkillType.Ice2 ||
+                SkillJiaDian.S.Alpha3 == SkillType.Ice3 || SkillJiaDian.S.Alpha3 == SkillType.Ice4 ||
+                SkillJiaDian.S.Alpha3 == SkillType.Ice5
+                || SkillJiaDian.S.Alpha4 == SkillType.Ice1 || SkillJiaDian.S.Alpha4 == SkillType.Ice2 ||
+                SkillJiaDian.S.Alpha4 == SkillType.Ice3 || SkillJiaDian.S.Alpha4 == SkillType.Ice4 ||
+                SkillJiaDian.S.Alpha4 == SkillType.Ice5
+                || SkillJiaDian.S.Alpha5 == SkillType.Ice1 || SkillJiaDian.S.Alpha5 == SkillType.Ice2 ||
+                SkillJiaDian.S.Alpha5 == SkillType.Ice3 || SkillJiaDian.S.Alpha5 == SkillType.Ice4 ||
+                SkillJiaDian.S.Alpha5 == SkillType.Ice5)
+            {
+                for (int i = 0; i < 200; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/Peng/IcePeng"));
+                    IcePeng.SetActive(false);
+                    GameController.S.IcePengQueue.Enqueue(IcePeng);
+                }
+            }
+            
+            
+            
+            
 
             FightBGController.S.DiLie = Instantiate(Resources.Load("Prefabs/Skill/BossGroundFissure"),
                 new Vector3(0, 0, 0), Quaternion.identity) as GameObject;

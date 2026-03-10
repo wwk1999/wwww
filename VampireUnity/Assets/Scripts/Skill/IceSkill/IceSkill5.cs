@@ -32,11 +32,14 @@ public class IceSkill5 : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Vector2 closestPoint = other.ClosestPoint(transform.position);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.Ice5Damage*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Normal);
+            Vector2 closestPoint = other.ClosestPoint(transform.position);
+            var hit = GameController.S.IcePengQueue.Dequeue();
+            hit.transform.position = closestPoint;
+            hit.SetActive(true);
         }
     }
 }

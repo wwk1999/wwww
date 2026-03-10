@@ -25,6 +25,10 @@ public class IceSkill4Anim : MonoBehaviour
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
                 monster.Hurt(GameController.S.GameAttack*SkillController.S.Ice4Damage*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal);
+                Vector2 closestPoint = col.ClosestPoint(transform.position);
+                var hit = GameController.S.IcePengQueue.Dequeue();
+                hit.transform.position = closestPoint;
+                hit.SetActive(true);
             }
         }
         

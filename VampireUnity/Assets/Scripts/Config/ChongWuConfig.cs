@@ -108,13 +108,13 @@ public class ChongWuConfig
         {5,10000},
     };
 
-    public static Dictionary<ChongWuYuanSuType, List<ChongWuSKillType>> ChongWuSkillDic =
-        new Dictionary<ChongWuYuanSuType, List<ChongWuSKillType>>()
+    public static Dictionary<YuanSuType, List<ChongWuSKillType>> ChongWuSkillDic =
+        new Dictionary<YuanSuType, List<ChongWuSKillType>>()
         {
-            { ChongWuYuanSuType.Ice ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.IceSkillCd,ChongWuSKillType.IceSkillDamage}},
-            { ChongWuYuanSuType.Huo ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.HuoSkillCd,ChongWuSKillType.HuoSkillDamage}},
-            { ChongWuYuanSuType.Dian ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.DianSkillCd,ChongWuSKillType.DianSkillDamage}},
-            { ChongWuYuanSuType.HeiAn ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.HeiAnSkillCd,ChongWuSKillType.HeiAnSkillDamage}},
+            { YuanSuType.Ice ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.IceSkillCd,ChongWuSKillType.IceSkillDamage}},
+            { YuanSuType.Huo ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.HuoSkillCd,ChongWuSKillType.HuoSkillDamage}},
+            { YuanSuType.Dian ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.DianSkillCd,ChongWuSKillType.DianSkillDamage}},
+            { YuanSuType.HeiAn ,new List<ChongWuSKillType>() { ChongWuSKillType.AddAttack , ChongWuSKillType.AddCrit , ChongWuSKillType.AddHp , ChongWuSKillType.AddDefense , ChongWuSKillType.AddAttackSpeed , ChongWuSKillType.AddFinalDamage , ChongWuSKillType.AddYuanSu , ChongWuSKillType.AddMoveSpeed ,ChongWuSKillType.HeiAnSkillCd,ChongWuSKillType.HeiAnSkillDamage}},
         };
     
 
@@ -747,19 +747,19 @@ public class ChongWuConfig
         chongwuattribute.Defence *= (1.0f + table.XingJi * 0.2f);
         chongwuattribute.Crit *= (1.0f + table.XingJi * 0.2f);
 
-        if (table.ChongWuYuanSuType == ChongWuYuanSuType.Huo)
+        if (table.YuanSuType == YuanSuType.Huo)
         {
             chongwuattribute.HuoDamage = table.XueMai / 100.0f * table.Level;
         }
-        if (table.ChongWuYuanSuType == ChongWuYuanSuType.Ice)
+        if (table.YuanSuType == YuanSuType.Ice)
         {
             chongwuattribute.IceDamage = table.XueMai / 100.0f * table.Level;
         }
-        if (table.ChongWuYuanSuType == ChongWuYuanSuType.Dian)
+        if (table.YuanSuType == YuanSuType.Dian)
         {
             chongwuattribute.DianDamage = table.XueMai / 100.0f * table.Level;
         }
-        if (table.ChongWuYuanSuType == ChongWuYuanSuType.HeiAn)
+        if (table.YuanSuType == YuanSuType.HeiAn)
         {
             chongwuattribute.HeiAnDamage = table.XueMai / 100.0f * table.Level;
         }
@@ -829,7 +829,7 @@ public class ChongWuConfig
         return chongwuattribute;
     }
 
-    public static ChongWuYuanSuType GetChongWuYuanSuByType(ChongWuType chongWuType)
+    public static YuanSuType GetChongWuYuanSuByType(ChongWuType chongWuType)
     {
         switch (chongWuType)
         {
@@ -847,7 +847,7 @@ public class ChongWuConfig
             case  ChongWuType.icegreen3:
             case  ChongWuType.iceblue1:
             case  ChongWuType.iceblue2:
-                return ChongWuYuanSuType.Ice;
+                return YuanSuType.Ice;
             
             case  ChongWuType.huopurple1_q:
             case  ChongWuType.huopurple1_h:
@@ -863,7 +863,7 @@ public class ChongWuConfig
             case  ChongWuType.huoblue1:
             case  ChongWuType.huoblue2:
             case  ChongWuType.huoblue3:
-                return ChongWuYuanSuType.Huo;
+                return YuanSuType.Huo;
             
             case  ChongWuType.dianpurple1_q:
             case  ChongWuType.dianpurple1_h:
@@ -878,7 +878,7 @@ public class ChongWuConfig
             case  ChongWuType.diangreen2:
             case  ChongWuType.dianblue1:
             case  ChongWuType.dianblue2:
-                return ChongWuYuanSuType.Dian;
+                return YuanSuType.Dian;
 
             
             case  ChongWuType.heianpurple1_q:
@@ -897,9 +897,9 @@ public class ChongWuConfig
             case  ChongWuType.heianblue1:
             case  ChongWuType.heianblue2:
             case  ChongWuType.heianblue3:
-                return ChongWuYuanSuType.HeiAn;
+                return YuanSuType.HeiAn;
         }
-        return ChongWuYuanSuType.None;
+        return YuanSuType.None;
     }
 
     public static ChongWuType GetChongWuType(int Quality)

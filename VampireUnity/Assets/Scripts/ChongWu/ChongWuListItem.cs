@@ -148,18 +148,18 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
         float aspectRatio = ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.width / ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.height;
         aspectRatioFitter.aspectRatio = aspectRatio;
         Level.text = "Lv. "+info.Level;
-        switch (info.ChongWuYuanSuType)
+        switch (info.YuanSuType)
         {
-            case ChongWuYuanSuType.Ice:
+            case YuanSuType.Ice:
                 YuanSuIcon.sprite = ResourcesConfig.IceIcon;
                 break;
-            case ChongWuYuanSuType.Huo:
+            case YuanSuType.Huo:
                 YuanSuIcon.sprite = ResourcesConfig.HuoIcon;
                 break;
-            case ChongWuYuanSuType.Dian:
+            case YuanSuType.Dian:
                 YuanSuIcon.sprite = ResourcesConfig.DianIcon;
                 break;
-            case ChongWuYuanSuType.HeiAn:
+            case YuanSuType.HeiAn:
                 YuanSuIcon.sprite = ResourcesConfig.HeiAnIcon;
                 break;
         }

@@ -96,25 +96,12 @@ public class GameController : XSingleton<GameController>
         return gamePlayer.transform.position+dir * 6;
     }
     
-    //怪物数量排行榜相关
-    [NonSerialized] public int NormalCount = 0;
-    [NonSerialized] public int EliteCount = 0;
-    [NonSerialized] public int BossCount = 0;
-    
-    
-    
     
     [NonSerialized]public Player gamePlayer;
-    [NonSerialized]public GameObject MonsterBirthPoint1;
-    [NonSerialized]public GameObject MonsterBirthPoint2;
-    [NonSerialized]public GameObject MonsterBirthPoint3;
-    [NonSerialized]public GameObject PlayerBirthPoint1;
-    [NonSerialized]public GameObject PlayerBirthPoint2;
     //怪物相关
     public SnotMonster snotMonster;
     public BatMonster batMonster;
     public SpiderMonster spiderMonster;
-    public EliteBeeMonster elitebeeMonster;
     
     [NonSerialized] public Queue<PlayerHurt> PlayerHurtQueue = new Queue<PlayerHurt>();
     
@@ -249,6 +236,7 @@ public class GameController : XSingleton<GameController>
     
     [NonReorderable]public Queue<PlayerJianQi>PlayerJianQiQueue = new Queue<PlayerJianQi>();
     [NonReorderable]public Queue<GameObject>ZiBaoZhaQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>IcePengQueue = new Queue<GameObject>();
 
 
     

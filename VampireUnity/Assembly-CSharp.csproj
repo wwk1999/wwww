@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueRing.cs" />
     <Compile Include="Assets\Scripts\Equip\PropGrid.cs" />
+    <Compile Include="Assets\Scripts\Skill\Peng\IcePengAnim.cs" />
     <Compile Include="Assets\Scripts\Tool\BagEquipAttributeTool.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Demo\Scripts\ARPGSceneSelect.cs" />
     <Compile Include="Assets\Scripts\Tool\ScrollIndexCallback2.cs" />
@@ -472,6 +473,7 @@
     <Compile Include="Assets\Scripts\Skill\IceBallItem.cs" />
     <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill5.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Scripts\Skill\Peng\Peng.cs" />
     <Compile Include="Assets\Scripts\Tool\UIToast.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\RedChiBang.cs" />
     <Compile Include="Assets\Scripts\Window\RoleWindow1.cs" />

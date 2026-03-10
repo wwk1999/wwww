@@ -34,15 +34,15 @@ public class PuTong3 : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Vector2 closestPoint = other.ClosestPoint(transform.position);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.PuTong3PengQueue.Dequeue();
-            hit.SetActive(true);
-            hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal);
             gameObject.SetActive(false);
+            Vector2 closestPoint = other.ClosestPoint(transform.position);
+            var hit = GameController.S.IcePengQueue.Dequeue();
+            hit.transform.position = closestPoint;
+            hit.SetActive(true);
         }
     }
 }

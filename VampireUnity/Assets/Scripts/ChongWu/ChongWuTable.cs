@@ -76,7 +76,7 @@ public enum ChongWuType
     heianorange1_h,
 }
 
-public enum ChongWuYuanSuType
+public enum YuanSuType
 {
     None,
     Ice,
@@ -97,7 +97,7 @@ public class ChongWuTable
     public int Quality {get; set; }
     public float ZiZhi {get; set; }
     public float XueMai {get; set; }
-    public ChongWuYuanSuType ChongWuYuanSuType { get; set; }
+    public YuanSuType YuanSuType { get; set; }
     public int XingJi { get; set; }
     public int Level {get; set;  }
     public int Ex {get; set;  }
@@ -112,7 +112,7 @@ public class ChongWuTable
         int quality = 1,
         float zizhi=0,
         float xuemai=0,
-        ChongWuYuanSuType ChongWuYuanSuType=ChongWuYuanSuType.None,
+        YuanSuType yuanSuType=YuanSuType.None,
         int xingji=1,
         int level=0,
         int ex=0,
@@ -124,7 +124,7 @@ public class ChongWuTable
         this.Quality = quality;
         this.ZiZhi = zizhi;
         this.XueMai = xuemai;
-        this.ChongWuYuanSuType=ChongWuYuanSuType;
+        this.YuanSuType=yuanSuType;
         this.XingJi = xingji;
         this.Level = level;
         this.Ex = ex;

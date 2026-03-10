@@ -77,6 +77,18 @@ namespace Config
                 { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1000,Defense = 150,AttackSpeed = 0.7f}},
                 { WeaponType.JianQi ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
             };
+
+        public static Dictionary<WeaponType, YuanSuType> WeaponYuanSuTypeDic = new Dictionary<WeaponType, YuanSuType>()
+        {
+            {WeaponType.Primary,YuanSuType.Ice},
+            {WeaponType.Du,YuanSuType.Huo},
+            {WeaponType.PuTong3,YuanSuType.Ice},
+            {WeaponType.XuKong,YuanSuType.Dian},
+            {WeaponType.Fire,YuanSuType.Dian},
+            {WeaponType.LvQuan,YuanSuType.HeiAn},
+            {WeaponType.HeiDong,YuanSuType.HeiAn},
+            {WeaponType.JianQi,YuanSuType.Huo},
+        };
         
         
         
