@@ -416,7 +416,6 @@ public class Entrance : MonoBehaviour
                 }
             }
             
-            Debug.LogError(11111);
 
 
             if (LevelInfoConfig.CurrentGameLevel == 16)
@@ -436,7 +435,6 @@ public class Entrance : MonoBehaviour
                 }
             }
             
-            Debug.LogError(222222);
 
 
             if (LevelInfoConfig.CurrentGameLevel == 19)
@@ -457,7 +455,6 @@ public class Entrance : MonoBehaviour
                 }
             }
             
-            Debug.LogError(33333);
 
 
             if (LevelInfoConfig.CurrentGameLevel == 22)
@@ -474,7 +471,6 @@ public class Entrance : MonoBehaviour
                 }
             }
             
-            Debug.LogError(4444);
 
 
             if (LevelInfoConfig.CurrentGameLevel == 16)
@@ -494,7 +490,6 @@ public class Entrance : MonoBehaviour
                 }
             }
             
-            Debug.LogError(55555);
 
 
             if (LevelInfoConfig.CurrentGameLevel == 19)
@@ -514,7 +509,6 @@ public class Entrance : MonoBehaviour
                 }
             }
             
-            Debug.LogError(666666);
 
 
             if (LevelInfoConfig.CurrentGameLevel == 22)
@@ -532,7 +526,6 @@ public class Entrance : MonoBehaviour
                     GameController.S.MonsterColliderDic.Add(collider2D7, Monster7.GetComponent<MonsterBase>());
                 }
             }
-            Debug.LogError(777777);
 
             
 
@@ -695,7 +688,6 @@ public class Entrance : MonoBehaviour
             }
             
             
-            Debug.LogError(8888888);
 
 
         }
@@ -770,7 +762,6 @@ public class Entrance : MonoBehaviour
                 GameController.S.PurpleChiBang.Enqueue(PurpleChiBang);
             }
         }
-        Debug.LogError("aaaaaaa");
 
         if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
                 new DiaoLuoConfig(0, 0, prop: 405)))
@@ -910,14 +901,12 @@ public class Entrance : MonoBehaviour
         }
 
         
-        Debug.LogError("bbbbbbbb");
 
 
 
 
         if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(1, equipType: 1)))
         {
-            Debug.LogError("lllll");
             for (int i = 0; i < 20; i++)
             {
                 GameObject primaryCloakFight =
@@ -953,7 +942,6 @@ public class Entrance : MonoBehaviour
             }
             
             
-            Debug.LogError("eeeeee");
 
             if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(2, equipType: 1)))
             {
@@ -993,7 +981,6 @@ public class Entrance : MonoBehaviour
                 }
             }
             
-            Debug.LogError("ffffff");
 
             if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(3, equipType: 1)))
             {
@@ -1032,7 +1019,6 @@ public class Entrance : MonoBehaviour
 
                 }
             }
-            Debug.LogError("gggggg");
 
             if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(6, equipType: 1)))
             {
@@ -1073,7 +1059,6 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            Debug.LogError("hhhhhh");
 
 
 
@@ -1118,7 +1103,6 @@ public class Entrance : MonoBehaviour
 
 
 
-            Debug.LogError("cccccccc");
 
 
             if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(101, equipType: 1)))
@@ -1498,7 +1482,6 @@ public class Entrance : MonoBehaviour
                 }
             }
 
-            Debug.LogError(9999999);
 
 
 
@@ -1799,7 +1782,6 @@ public class Entrance : MonoBehaviour
             }
 
 
-            Debug.LogError("aaaaaaa");
 
 
             if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 ||
@@ -2105,8 +2087,6 @@ public class Entrance : MonoBehaviour
 
             }
             
-            Debug.LogError("bbbbbbb");
-
 
             if (LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15)
             {

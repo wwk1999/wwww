@@ -215,6 +215,7 @@ public class LevelInfoConfig
     public static List<DiaoLuoConfig> LevelDiaoLuo13 = new List<DiaoLuoConfig>();//关卡1掉落列表
     public static List<DiaoLuoConfig> LevelDiaoLuo14 = new List<DiaoLuoConfig>();//关卡1掉落列表
     public static List<DiaoLuoConfig> LevelDiaoLuo15 = new List<DiaoLuoConfig>();//关卡1掉落列表
+    public static List<DiaoLuoConfig> MJDiaoLuo = new List<DiaoLuoConfig>();//关卡1掉落列表
 
 
     
@@ -723,6 +724,12 @@ public class LevelInfoConfig
             LevelDiaoLuo15.Add(new DiaoLuoConfig(7,5));
             LevelDiaoLuo15.Add(new DiaoLuoConfig(7,6));
         }
+        
+        
+        if (IsOneGame)
+        {
+            MJDiaoLuo.Add(new DiaoLuoConfig(1,6,prop:103));
+        }
     }
    public static LevelInfoItem LevelInfoItem1= new LevelInfoItem
    {
@@ -972,13 +979,15 @@ public class LevelInfoConfig
             case 3:
                 return LevelDiaoLuo3;
             case 6:
-                return LevelDiaoLuo3;
+                return LevelDiaoLuo6;
             case 9:
-                return LevelDiaoLuo3;
+                return LevelDiaoLuo9;
             case 12:
-                return LevelDiaoLuo3;
+                return LevelDiaoLuo12;
             case 15:
-                return LevelDiaoLuo3;
+                return LevelDiaoLuo15;
+            default:
+                return MJDiaoLuo;
         }
 
         return null;
