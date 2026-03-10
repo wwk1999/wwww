@@ -1259,7 +1259,7 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 453220666297556707}
   hpSlider: {fileID: 1128351686178558827}
-  collider2D: {fileID: 0}
+  collider2D: {fileID: 2915378575808316345}
   rigidbody2D: {fileID: 1550242213392908826}
   attackTrans: {fileID: 5189471751596021331}
 --- !u!1 &8827929175875591702

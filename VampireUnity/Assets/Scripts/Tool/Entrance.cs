@@ -400,6 +400,7 @@ public class Entrance : MonoBehaviour
         //秘境怪物
         if (LevelInfoConfig.CurrentGameLevel > 15)
         {
+
             if (LevelInfoConfig.CurrentGameLevel == 18)
             {
                 for (int i = 0; i < 150; i++)
@@ -410,10 +411,13 @@ public class Entrance : MonoBehaviour
                             GameController.S.transform);
                     Monster1.gameObject.SetActive(false);
                     GameController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
-                    Collider2D collider2D = Monster1.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D collider2D = Monster1.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D, Monster1.GetComponent<MonsterBase>());
                 }
             }
+            
+            Debug.LogError(11111);
+
 
             if (LevelInfoConfig.CurrentGameLevel == 16)
             {
@@ -426,11 +430,14 @@ public class Entrance : MonoBehaviour
                     Monster2.gameObject.SetActive(false);
                     GameController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
                     Collider2D collider2D2 =
-                        Monster2.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster2.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D2,
                         Monster2.GetComponent<MonsterBase>());
                 }
             }
+            
+            Debug.LogError(222222);
+
 
             if (LevelInfoConfig.CurrentGameLevel == 19)
             {
@@ -444,11 +451,14 @@ public class Entrance : MonoBehaviour
                     Monster3.gameObject.SetActive(false);
                     GameController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
                     Collider2D collider2D3 =
-                        Monster3.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster3.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D3,
                         Monster3.GetComponent<MonsterBase>());
                 }
             }
+            
+            Debug.LogError(33333);
+
 
             if (LevelInfoConfig.CurrentGameLevel == 22)
             {
@@ -459,10 +469,13 @@ public class Entrance : MonoBehaviour
                             GameController.S.transform);
                     Monster4.gameObject.SetActive(false);
                     GameController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
-                    Collider2D collider2D4 = Monster4.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D collider2D4 = Monster4.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D4, Monster4.GetComponent<MonsterBase>());
                 }
             }
+            
+            Debug.LogError(4444);
+
 
             if (LevelInfoConfig.CurrentGameLevel == 16)
             {
@@ -475,11 +488,14 @@ public class Entrance : MonoBehaviour
                     Monster5.gameObject.SetActive(false);
                     GameController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
                     Collider2D collider2D5 =
-                        Monster5.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster5.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D5,
                         Monster5.GetComponent<MonsterBase>());
                 }
             }
+            
+            Debug.LogError(55555);
+
 
             if (LevelInfoConfig.CurrentGameLevel == 19)
             {
@@ -492,11 +508,14 @@ public class Entrance : MonoBehaviour
                     Monster6.gameObject.SetActive(false);
                     GameController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
                     Collider2D collider2D6 =
-                        Monster6.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster6.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D6,
                         Monster6.GetComponent<MonsterBase>());
                 }
             }
+            
+            Debug.LogError(666666);
+
 
             if (LevelInfoConfig.CurrentGameLevel == 22)
             {
@@ -509,10 +528,14 @@ public class Entrance : MonoBehaviour
                                 .GetComponent<HongLong3>(), GameController.S.transform);
                     Monster7.gameObject.SetActive(false);
                     GameController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
-                    Collider2D collider2D7 = Monster7.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D collider2D7 = Monster7.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D7, Monster7.GetComponent<MonsterBase>());
                 }
             }
+            Debug.LogError(777777);
+
+            
+
 
             if (LevelInfoConfig.CurrentGameLevel == 17)
             {
@@ -526,7 +549,7 @@ public class Entrance : MonoBehaviour
                     Monster8.gameObject.SetActive(false);
                     GameController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
                     Collider2D collider2D8 =
-                        Monster8.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster8.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D8,
                         Monster8.GetComponent<MonsterBase>());
                 }
@@ -544,7 +567,7 @@ public class Entrance : MonoBehaviour
                     Monster9.gameObject.SetActive(false);
                     GameController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
                     Collider2D collider2D9 =
-                        Monster9.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster9.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D9,
                         Monster9.GetComponent<MonsterBase>());
                 }
@@ -560,7 +583,7 @@ public class Entrance : MonoBehaviour
                             GameController.S.transform);
                     Monster10.gameObject.SetActive(false);
                     GameController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
-                    Collider2D collider2D10 = Monster10.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D collider2D10 = Monster10.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D10, Monster10.GetComponent<MonsterBase>());
                 }
             }
@@ -577,7 +600,7 @@ public class Entrance : MonoBehaviour
                     Monster11.gameObject.SetActive(false);
                     GameController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
                     Collider2D collider2D11 =
-                        Monster11.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster11.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D11,
                         Monster11.GetComponent<MonsterBase>());
                 }
@@ -595,7 +618,7 @@ public class Entrance : MonoBehaviour
                     Monster12.gameObject.SetActive(false);
                     GameController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
                     Collider2D collider2D12 =
-                        Monster12.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster12.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D12,
                         Monster12.GetComponent<MonsterBase>());
                 }
@@ -613,7 +636,7 @@ public class Entrance : MonoBehaviour
                     Monster13.gameObject.SetActive(false);
                     GameController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
                     Collider2D collider2D13 =
-                        Monster13.transform.Find("Collider").GetComponent<Collider2D>();
+                        Monster13.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D13,
                         Monster13.GetComponent<MonsterBase>());
                 }
@@ -631,7 +654,7 @@ public class Entrance : MonoBehaviour
                     huangshu.gameObject.SetActive(false);
                     GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
 
-                    Collider2D Huangshucollider2D = huangshu.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D Huangshucollider2D = huangshu.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(Huangshucollider2D,
                         huangshu.GetComponent<MonsterBase>());
                 }
@@ -649,7 +672,7 @@ public class Entrance : MonoBehaviour
                             GameController.S.transform);
                     Huangzhu.gameObject.SetActive(false);
                     GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
-                    Collider2D Huangzhucollider2D = Huangzhu.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D Huangzhucollider2D = Huangzhu.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(Huangzhucollider2D, Huangzhu.GetComponent<MonsterBase>());
                 }
             }
@@ -666,10 +689,14 @@ public class Entrance : MonoBehaviour
                             GameController.S.transform);
                     Monster14.gameObject.SetActive(false);
                     GameController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
-                    Collider2D collider2D14 = Monster14.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D collider2D14 = Monster14.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(collider2D14, Monster14.GetComponent<MonsterBase>());
                 }
             }
+            
+            
+            Debug.LogError(8888888);
+
 
         }
 
@@ -743,6 +770,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.PurpleChiBang.Enqueue(PurpleChiBang);
             }
         }
+        Debug.LogError("aaaaaaa");
 
         if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
                 new DiaoLuoConfig(0, 0, prop: 405)))
@@ -881,12 +909,15 @@ public class Entrance : MonoBehaviour
             }
         }
 
+        
+        Debug.LogError("bbbbbbbb");
 
 
 
 
         if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(1, equipType: 1)))
         {
+            Debug.LogError("lllll");
             for (int i = 0; i < 20; i++)
             {
                 GameObject primaryCloakFight =
@@ -920,6 +951,9 @@ public class Entrance : MonoBehaviour
                 GameController.S.PrimaryHelmetQueue.Enqueue(primaryHelmetFight);
 
             }
+            
+            
+            Debug.LogError("eeeeee");
 
             if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(2, equipType: 1)))
             {
@@ -958,6 +992,8 @@ public class Entrance : MonoBehaviour
 
                 }
             }
+            
+            Debug.LogError("ffffff");
 
             if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(3, equipType: 1)))
             {
@@ -996,6 +1032,7 @@ public class Entrance : MonoBehaviour
 
                 }
             }
+            Debug.LogError("gggggg");
 
             if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(6, equipType: 1)))
             {
@@ -1036,6 +1073,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
+            Debug.LogError("hhhhhh");
 
 
 
@@ -1080,7 +1118,7 @@ public class Entrance : MonoBehaviour
 
 
 
-
+            Debug.LogError("cccccccc");
 
 
             if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(101, equipType: 1)))
@@ -1238,6 +1276,7 @@ public class Entrance : MonoBehaviour
                     GameController.S.OrangeHelmetQueue.Enqueue(OrangeHelmetFight);
                 }
             }
+            
 
             if (LevelInfoConfig.CurrentGameLevel > 15)
             {
@@ -1459,6 +1498,7 @@ public class Entrance : MonoBehaviour
                 }
             }
 
+            Debug.LogError(9999999);
 
 
 
@@ -1759,6 +1799,7 @@ public class Entrance : MonoBehaviour
             }
 
 
+            Debug.LogError("aaaaaaa");
 
 
             if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 ||
@@ -2063,6 +2104,9 @@ public class Entrance : MonoBehaviour
                 }
 
             }
+            
+            Debug.LogError("bbbbbbb");
+
 
             if (LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15)
             {
