@@ -25,9 +25,12 @@ public enum WeaponType
     PuTong3,
     JianQi,
     HeiAnBaoZha,
+    DianSanShe,
 }
 public class Player : MonoBehaviour
 {
+    public GameObject DianSanShe;
+    public Animator DianSanSheAnim;
     private float AttackTime = 0.5f/GlobalPlayerAttribute.TotalAttackSpeed;
     private float CurrentAttackTime = 0;
     private float NealMoveSpeed = GlobalPlayerAttribute.PlayerMoveSpeed;
@@ -664,13 +667,26 @@ public class Player : MonoBehaviour
         arrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         //主角操作
         MouseDown=false;
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (PlayerData.S.playerWeaponType==WeaponType.DianSanShe)
+            {
+                DianSanShe.gameObject.SetActive(false);
+            }
+        }
         if (Input.GetMouseButton(0))
         {
             if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
             {
                 return;
             }
-            if (CurrentAttackTime >= AttackTime)
+
+            if (PlayerData.S.playerWeaponType==WeaponType.DianSanShe)
+            {
+                DianSanShe.gameObject.SetActive(true);
+                DianSanSheAnim.Play("NewSequenceAnim");
+            }
+            else if (CurrentAttackTime >= AttackTime)
             {
                 CurrentAttackTime = 0;
                 SkillController.S.ShotBulletInvoke(fasheTrans.transform.position);

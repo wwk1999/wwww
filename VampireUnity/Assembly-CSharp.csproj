@@ -459,6 +459,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\KuLou.cs" />
     <Compile Include="Assets\Scripts\Config\EntryConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\AddDefenseForTime.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\DianSanShe\DianSanSheAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\StoneBoss.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\DaLong.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuWindow.cs" />

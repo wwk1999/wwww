@@ -74,6 +74,7 @@ namespace Config
                 { WeaponType.XuKong ,new WeaponAttribute(){Attack = 60,Crit = 60,Hp = 150,Defense = 30,AttackSpeed = 1}},
                 { WeaponType.Fire ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1}},
                 { WeaponType.LvQuan ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 0.7f}},
+                { WeaponType.DianSanShe ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
                 { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1000,Defense = 150,AttackSpeed = 0.7f}},
                 { WeaponType.JianQi ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
             };
@@ -88,6 +89,8 @@ namespace Config
             {WeaponType.LvQuan,YuanSuType.HeiAn},
             {WeaponType.HeiDong,YuanSuType.HeiAn},
             {WeaponType.JianQi,YuanSuType.Huo},
+            {WeaponType.DianSanShe,YuanSuType.Dian},
+
         };
         
         
