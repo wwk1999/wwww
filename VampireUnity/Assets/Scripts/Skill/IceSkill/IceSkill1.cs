@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class IceSkill1 : MonoBehaviour
 {
@@ -45,6 +47,12 @@ public class IceSkill1 : MonoBehaviour
                 var hit = GameController.S.IcePengQueue.Dequeue();
                 hit.transform.position = closestPoint;
                 hit.SetActive(true);
+                var random = Random.Range(0f, 100f);
+                if (random <= GlobalPlayerAttribute.BingDongRate)
+                {
+                    monster.isBingDong=true;
+                    GameController.S.StartCoroutine(GameController.S.DelayJieDong(monster));
+                }
             }
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Config;
@@ -56,6 +57,12 @@ public class GameController : XSingleton<GameController>
         value += GlobalPlayerAttribute.TotalDamage*MoveAddAttackCount;
 
         return value;
+    }
+    
+    public IEnumerator DelayJieDong(MonsterBase monster)
+    {
+        yield return new WaitForSeconds(GlobalPlayerAttribute.BingDongTime);
+        monster.isBingDong = false;
     }
     
     

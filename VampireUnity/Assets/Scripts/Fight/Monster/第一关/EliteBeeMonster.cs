@@ -104,6 +104,10 @@ public class EliteBeeMonster : MonsterBase
             //SpriteFlipX(false);
         }
 
+        if (isBingDong)
+        {
+            rigidbody2D.velocity = Vector2.zero;
+        }
         if (!IsDead && Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)>8f)
         {
              MonsterMove();

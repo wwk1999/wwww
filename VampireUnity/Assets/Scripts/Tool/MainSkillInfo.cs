@@ -19,7 +19,7 @@ public class MainSkillInfo : MonoBehaviour
          case SkillInfoType.IceMain:
             image.sprite=ResourcesConfig.GetSkillSprite(SkillInfoType.IceMain);
             skillName.text = "冰霜专精";
-            text.text = $"每一个冰系技能点可增加<color=green>1%</color>的冰霜元素伤害，并且冰霜伤害有概率冻结敌人<color=green>1</color>s，冰霜元素伤害越高，概率越大（当前概率<color=green>{((GlobalPlayerAttribute.IceYuanSuBase/(7+GlobalPlayerAttribute.IceYuanSuBase))*100f).ToString("F2")}%</color>）";
+            text.text = $"每一个冰系技能点可增加<color=green>1%</color>的冰霜元素伤害，并且冰霜伤害有概率冻结敌人<color=green>1</color>s，冰霜元素伤害越高，概率越大（当前概率<color=green>{(GlobalPlayerAttribute.BingDongRate).ToString("F2")}%</color>）";
             break;
          
          case SkillInfoType.HuoMain:
@@ -31,13 +31,13 @@ public class MainSkillInfo : MonoBehaviour
          case SkillInfoType.DianMain:
             image.sprite=ResourcesConfig.GetSkillSprite(SkillInfoType.DianMain);
             skillName.text = "雷电专精";
-            text.text = $"每一个电系技能点可增加<color=green>1%</color>的雷电元素伤害，并且雷电伤害有释放落雷，雷电元素伤害越高，概率越大（当前概率<color=green>{((GlobalPlayerAttribute.DianYuanSuBase/(10f+GlobalPlayerAttribute.DianYuanSuBase))*100).ToString("F2")}%</color>）";
+            text.text = $"每一个电系技能点可增加<color=green>1%</color>的雷电元素伤害，并且雷电伤害有释放落雷，雷电元素伤害越高，概率越大（当前概率<color=green>{(GlobalPlayerAttribute.LuoLeiRate).ToString("F2")}%</color>）";
             break;
          
          case SkillInfoType.HeiAnMain:
             image.sprite=ResourcesConfig.GetSkillSprite(SkillInfoType.HeiAnMain);
             skillName.text = "黑暗专精";
-            text.text = $"每一个黑暗系技能点可增加<color=green>1%</color>的黑暗元素伤害，并且黑暗伤害击杀敌人有概率收割灵魂，每个灵魂增加1%的魔力和生命值（当前概率<color=green>{((GlobalPlayerAttribute.HeiAnYuanSuBase/(8f+GlobalPlayerAttribute.HeiAnYuanSuBase))*100).ToString("F2")}%</color>）";
+            text.text = $"每一个黑暗系技能点可增加<color=green>1%</color>的黑暗元素伤害，并且黑暗伤害击杀敌人有概率收割灵魂，每个灵魂增加1%的魔力和生命值（当前概率<color=green>{(GlobalPlayerAttribute.LingHunRate).ToString("F2")}%</color>）";
             break;
       }
    }

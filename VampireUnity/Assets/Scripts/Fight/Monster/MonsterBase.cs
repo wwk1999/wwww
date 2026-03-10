@@ -135,7 +135,7 @@ public abstract class MonsterBase : MonoBehaviour
     public Rigidbody2D rigidbody2D;
 
     
-    private bool isBingDong=false;
+    [NonSerialized]public bool isBingDong=false;
 
 
 
@@ -206,8 +206,15 @@ public abstract class MonsterBase : MonoBehaviour
         zhuoShaoCurrentTime = 0;
     }
 
+    public void SetBingKuai()
+    {
+        bingkuai.gameObject.SetActive(isBingDong);
+        monsterSkeletonAnimation.gameObject.SetActive(!isBingDong);
+    }
+
     public void Update()
     {
+        SetBingKuai();
         SetOrder();
         if (zhuoShaoTime > 0)
         {
@@ -466,11 +473,9 @@ public abstract class MonsterBase : MonoBehaviour
         if (isBingDong)
         {
             rigidbody2D.velocity = direction.normalized * 0; 
-            monsterSkeletonAnimation.gameObject.SetActive(false);
         }
         else
         {
-            monsterSkeletonAnimation.gameObject.SetActive(true);
             if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName ||
                 IsDash || monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name ==
                 MonsterSpineName.HitName)
