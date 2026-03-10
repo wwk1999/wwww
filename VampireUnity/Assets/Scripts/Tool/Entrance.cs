@@ -1698,6 +1698,48 @@ public class Entrance : MonoBehaviour
             
             
             
+            if (WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType] == YuanSuType.HeiAn ||
+                SkillJiaDian.S.Alpha1 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha1 == SkillType.HeiAn2 ||
+                SkillJiaDian.S.Alpha1 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha1 == SkillType.HeiAn4 ||
+                SkillJiaDian.S.Alpha1 == SkillType.HeiAn5
+                || SkillJiaDian.S.Alpha2 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn2 ||
+                SkillJiaDian.S.Alpha2 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn4 ||
+                SkillJiaDian.S.Alpha2 == SkillType.HeiAn5
+                || SkillJiaDian.S.Alpha3 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha3 == SkillType.HeiAn2 ||
+                SkillJiaDian.S.Alpha3 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha3 == SkillType.HeiAn4 ||
+                SkillJiaDian.S.Alpha3 == SkillType.HeiAn5
+                || SkillJiaDian.S.Alpha4 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha4 == SkillType.HeiAn2 ||
+                SkillJiaDian.S.Alpha4 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha4 == SkillType.HeiAn4 ||
+                SkillJiaDian.S.Alpha4 == SkillType.HeiAn5
+                || SkillJiaDian.S.Alpha5 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha5 == SkillType.HeiAn2 ||
+                SkillJiaDian.S.Alpha5 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha5 == SkillType.HeiAn4 ||
+                SkillJiaDian.S.Alpha5 == SkillType.HeiAn5)
+            {
+                for (int i = 0; i < 200; i++)
+                {
+                    var HeiAnPeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/Peng/HeiAnPeng"));
+                    HeiAnPeng.SetActive(false);
+                    GameController.S.HeiAnPengQueue.Enqueue(HeiAnPeng);
+                }
+            }
+
+
+            if (PlayerData.S.playerWeaponType == WeaponType.HeiAnBaoZha)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnBaoZha"));
+                    IcePeng.SetActive(false);
+                    GameController.S.HeiAnBaoZhaQueue.Enqueue(IcePeng);
+                    var IcePeng1 =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnBaoZhaNext"));
+                    IcePeng1.SetActive(false);
+                    GameController.S.HeiAnBaoZhaNextQueue.Enqueue(IcePeng1);
+                }
+            }
+            
+            
+            
             
 
             FightBGController.S.DiLie = Instantiate(Resources.Load("Prefabs/Skill/BossGroundFissure"),

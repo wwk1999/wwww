@@ -981,7 +981,7 @@ public class SkillController : XSingleton<SkillController>
         switch (PlayerData.S.playerWeaponType)
         {
             case WeaponType.Primary:
-                GameController.S.gamePlayer.currentGun.PrimaryShot(attackTrans);
+                GameController.S.gamePlayer.currentGun.HeiAnBaoZhaShot(attackTrans);
                 break;
             case WeaponType.LanBao:
                 GameController.S.gamePlayer.currentGun.LanBaoShot(attackTrans);

@@ -275,44 +275,46 @@ public class SkillInfo : MonoBehaviour
                 LevelLimit.gameObject.SetActive(false);
                 break;
 
-            case SkillInfoType.IceBei2:
-                image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei2);
+            case SkillInfoType.IceBei3:
+                image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei3);
                 skillName.text = "冰系专精2";
                 skillType.text = "被动技能";
                 LevelUpText.text = $"每级当前增加冻结时间：<color=green>5%</color>";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float value12 = (SkillJiaDian.S.IceBei2 * 5);
+                float value12 = (SkillJiaDian.S.IceBei3 * 5);
                 CurrentText.text = $"当前增加<color=green>{value12}%</color>的冰冻时间";
                 YouJian.gameObject.SetActive(false);
                 LevelLimit.gameObject.SetActive(false);
                 break;
 
-            case SkillInfoType.IceBei3:
-                image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei3);
+            case SkillInfoType.IceBei2:
+                image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei2);
                 skillName.text = "冰系专精3";
                 skillType.text = "被动技能";
                 LevelUpText.text = $"每级对冰冻敌人增加：<color=green>5%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float value13 = (SkillJiaDian.S.IceBei3 * 5);
+                float value13 = (SkillJiaDian.S.IceBei2 * 5);
                 CurrentText.text = $"当前增加<color=green>{value13}%</color>的冰霜伤害";
                 YouJian.gameObject.SetActive(false);
                 LevelLimit.gameObject.SetActive(false);
                 break;
-
+            
             case SkillInfoType.IceBei4:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei4);
-                skillName.text = "冰系专精4";
+                skillName.text = "冰系专精3";
                 skillType.text = "被动技能";
-                LevelUpText.text = $"每级提升：<color=green>5%</color> 概率";
+                LevelUpText.text = $"每级对冰冻敌人增加：<color=green>5%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
-                float value14 = (SkillJiaDian.S.IceBei4 * 5);
-                CurrentText.text = $"击杀冰冻中的敌人有<color=green>{value14}%</color>造成冰爆";
+                float value131 = (SkillJiaDian.S.IceBei4 * 5);
+                CurrentText.text = $"当前增加<color=green>{value131}%</color>的冰霜伤害";
                 YouJian.gameObject.SetActive(false);
                 LevelLimit.gameObject.SetActive(false);
                 break;
+
+           
             
             
             

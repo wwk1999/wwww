@@ -23,7 +23,8 @@ public enum WeaponType
     Du,
     LuoLei,
     PuTong3,
-    JianQi
+    JianQi,
+    HeiAnBaoZha,
 }
 public class Player : MonoBehaviour
 {
