@@ -1712,14 +1712,14 @@ public class Entrance : MonoBehaviour
                     spiderMonster.gameObject.SetActive(false);
                     GameController.S.SpiderMonsterQueue.Enqueue(spiderMonster.GetComponent<SpiderMonster>());
 
-                    Collider2D spidercollider2D = spiderMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D spidercollider2D = spiderMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(spidercollider2D,
                         spiderMonster.GetComponent<MonsterBase>());
 
-                    Collider2D batcollider2D = batMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D batcollider2D = batMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(batcollider2D, batMonster.GetComponent<MonsterBase>());
 
-                    Collider2D snotcollider2D = snotMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D snotcollider2D = snotMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(snotcollider2D, snotMonster.GetComponent<MonsterBase>());
                 }
             }
@@ -1823,18 +1823,18 @@ public class Entrance : MonoBehaviour
                     GameController.S.DunDiMonsterQueue.Enqueue(dundiMonster.GetComponent<DunDiMonster>());
 
 
-                    Collider2D chongzicollider2D = chongziMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D chongzicollider2D = chongziMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(chongzicollider2D,
                         chongziMonster.GetComponent<MonsterBase>());
 
-                    Collider2D xiaohuocollider2D = xiaohuoMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D xiaohuocollider2D = xiaohuoMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(xiaohuocollider2D,
                         xiaohuoMonster.GetComponent<MonsterBase>());
 
-                    Collider2D XiNiucollider2D = XiNiuMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D XiNiucollider2D = XiNiuMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(XiNiucollider2D, XiNiuMonster.GetComponent<MonsterBase>());
 
-                    Collider2D dundicollider2D = dundiMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D dundicollider2D = dundiMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(dundicollider2D, dundiMonster.GetComponent<MonsterBase>());
 
                 }
@@ -1873,14 +1873,14 @@ public class Entrance : MonoBehaviour
 
 
                     Collider2D jiachongcollider2D =
-                        jiachongMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                        jiachongMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(jiachongcollider2D,
                         jiachongMonster.GetComponent<MonsterBase>());
 
-                    Collider2D wenzicollider2D = wenziMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D wenzicollider2D = wenziMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(wenzicollider2D, wenziMonster.GetComponent<MonsterBase>());
 
-                    Collider2D qingwacollider2D = qingwaMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D qingwacollider2D = qingwaMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(qingwacollider2D,
                         qingwaMonster.GetComponent<MonsterBase>());
                 }
@@ -1919,17 +1919,17 @@ public class Entrance : MonoBehaviour
                     XianRenZhang.gameObject.SetActive(false);
                     GameController.S.XianRenZhangQueue.Enqueue(XianRenZhang.GetComponent<XianRenZhang>());
 
-                    Collider2D KuLoucollider2D = KuLou.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D KuLoucollider2D =KuLou.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(KuLoucollider2D, KuLou.GetComponent<MonsterBase>());
 
-                    Collider2D ShaChongcollider2D = ShaChong.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D ShaChongcollider2D = ShaChong.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(ShaChongcollider2D, ShaChong.GetComponent<MonsterBase>());
 
-                    Collider2D ShaNiaocollider2D = ShaNiao.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D ShaNiaocollider2D = ShaNiao.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(ShaNiaocollider2D, ShaNiao.GetComponent<MonsterBase>());
 
                     Collider2D XianRenZhangcollider2D =
-                        XianRenZhang.transform.Find("Collider").GetComponent<Collider2D>();
+                        XianRenZhang.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(XianRenZhangcollider2D,
                         XianRenZhang.GetComponent<MonsterBase>());
                 }
@@ -1948,7 +1948,7 @@ public class Entrance : MonoBehaviour
                     GameController.S.XueQiEQueue.Enqueue(XueQiE.GetComponent<XueQiE>());
 
 
-                    Collider2D XueQiEcollider2D = XueQiE.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D XueQiEcollider2D = XueQiE.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(XueQiEcollider2D, XueQiE.GetComponent<MonsterBase>());
 
 
@@ -1961,7 +1961,7 @@ public class Entrance : MonoBehaviour
 
 
                     Collider2D XueZhangLangcollider2D =
-                        XueZhangLang.transform.Find("Collider").GetComponent<Collider2D>();
+                        XueZhangLang.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(XueZhangLangcollider2D,
                         XueZhangLang.GetComponent<MonsterBase>());
 
@@ -1971,7 +1971,7 @@ public class Entrance : MonoBehaviour
                     XueRen.gameObject.SetActive(false);
                     GameController.S.XueRenQueue.Enqueue(XueRen.GetComponent<XueRen>());
 
-                    Collider2D XueRencollider2D = XueRen.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D XueRencollider2D = XueRen.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(XueRencollider2D, XueRen.GetComponent<MonsterBase>());
 
 
@@ -2010,7 +2010,7 @@ public class Entrance : MonoBehaviour
                     GameController.S.EliteBeeMonsterQueue.Enqueue(eliteBeeMonster.GetComponent<EliteBeeMonster>());
 
                     Collider2D eliteBeeMonstercollider2D =
-                        eliteBeeMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                        eliteBeeMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(eliteBeeMonstercollider2D,
                         eliteBeeMonster.GetComponent<MonsterBase>());
 
@@ -2033,7 +2033,7 @@ public class Entrance : MonoBehaviour
                         .GetComponent<EliteDaZuiMonster>());
 
                     Collider2D elitedazuiMonstercollider2D =
-                        elitedazuiMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                        elitedazuiMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(elitedazuiMonstercollider2D,
                         elitedazuiMonster.GetComponent<MonsterBase>());
                 }
@@ -2052,7 +2052,7 @@ public class Entrance : MonoBehaviour
                         .GetComponent<ShiRenHuaMonster>());
 
                     Collider2D shirenhuaMonstercollider2D =
-                        shirenhuaMonster.transform.Find("Collider").GetComponent<Collider2D>();
+                        shirenhuaMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(shirenhuaMonstercollider2D,
                         shirenhuaMonster.GetComponent<MonsterBase>());
                 }
@@ -2077,11 +2077,11 @@ public class Entrance : MonoBehaviour
                     ShaXiYi.gameObject.SetActive(false);
                     GameController.S.ShaXiYiQueue.Enqueue(ShaXiYi.GetComponent<ShaXiYi>());
 
-                    Collider2D shamoElitecollider2D = shamoElite.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D shamoElitecollider2D = shamoElite.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(shamoElitecollider2D,
                         shamoElite.GetComponent<MonsterBase>());
 
-                    Collider2D ShaXiYicollider2D = ShaXiYi.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D ShaXiYicollider2D = ShaXiYi.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(ShaXiYicollider2D, ShaXiYi.GetComponent<MonsterBase>());
                 }
 
@@ -2099,7 +2099,7 @@ public class Entrance : MonoBehaviour
                     YingShu.gameObject.SetActive(false);
                     GameController.S.YingShuQueue.Enqueue(YingShu.GetComponent<YingShu>());
 
-                    Collider2D Yingshucollider2D = YingShu.transform.Find("Collider").GetComponent<Collider2D>();
+                    Collider2D Yingshucollider2D = YingShu.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(Yingshucollider2D, YingShu.GetComponent<MonsterBase>());
                 }
 
