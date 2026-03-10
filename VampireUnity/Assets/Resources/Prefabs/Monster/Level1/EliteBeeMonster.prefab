@@ -979,6 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330c9da15742447209972d0b3071ccf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bingkuai: {fileID: 8675870377896007493}
   du: {fileID: 8293225370378798}
   jiansu: {fileID: 2591204664393655808}
   yidian: {fileID: 4393886865659371439}

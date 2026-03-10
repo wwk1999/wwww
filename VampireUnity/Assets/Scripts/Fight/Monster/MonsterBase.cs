@@ -66,6 +66,7 @@ public class MonsterSpineName
 }
 public abstract class MonsterBase : MonoBehaviour
 {
+    public GameObject bingkuai;
     public GameObject du;
     public GameObject jiansu;
     public GameObject yidian;
@@ -90,11 +91,6 @@ public abstract class MonsterBase : MonoBehaviour
    
     [NonSerialized] public MonsterSpineName MonsterSpineName=new MonsterSpineName();
     public GameObject parent;
-
-    public void SetOrder()
-    {
-        meshRenderer.sortingOrder = (int)((15f - transform.position.y) * 100f);
-    }
     
     
     [NonSerialized]public MonsterType MonsterType;//怪物类型
@@ -138,6 +134,9 @@ public abstract class MonsterBase : MonoBehaviour
     public Collider2D collider2D;
     public Rigidbody2D rigidbody2D;
 
+    
+    private bool isBingDong=false;
+
 
 
     //构造方法
@@ -165,6 +164,12 @@ public abstract class MonsterBase : MonoBehaviour
         {
             hpSlider.gameObject.SetActive(false);
         }
+    }
+    
+    
+    public void SetOrder()
+    {
+        meshRenderer.sortingOrder = (int)((15f - transform.position.y) * 100f);
     }
 
     public void Start()
@@ -458,13 +463,24 @@ public abstract class MonsterBase : MonoBehaviour
     public void MonsterMove()
     {
         Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName||IsDash||monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name==MonsterSpineName.HitName)
+        if (isBingDong)
         {
-            GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
+            rigidbody2D.velocity = direction.normalized * 0; 
+            monsterSkeletonAnimation.gameObject.SetActive(false);
         }
         else
         {
-            GetComponent<Rigidbody2D>().velocity = direction.normalized * 0; 
+            monsterSkeletonAnimation.gameObject.SetActive(true);
+            if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName ||
+                IsDash || monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name ==
+                MonsterSpineName.HitName)
+            {
+                rigidbody2D.velocity = direction.normalized * Speed;
+            }
+            else
+            {
+                rigidbody2D.velocity = direction.normalized * 0;
+            }
         }
     }
     
