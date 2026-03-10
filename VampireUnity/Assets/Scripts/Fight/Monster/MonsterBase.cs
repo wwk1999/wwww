@@ -91,6 +91,10 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized] public MonsterSpineName MonsterSpineName=new MonsterSpineName();
     public GameObject parent;
 
+    public void SetOrder()
+    {
+        meshRenderer.sortingOrder = (int)((15f - transform.position.y) * 100f);
+    }
     
     
     [NonSerialized]public MonsterType MonsterType;//怪物类型
@@ -199,6 +203,7 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Update()
     {
+        SetOrder();
         if (zhuoShaoTime > 0)
         {
             zhuoShaoTime -= Time.deltaTime;

@@ -37,6 +37,9 @@ public class Player : MonoBehaviour
     public float size = 0.28f;
     [NonSerialized] public bool IsWuDi = false;//红闪的时候无敌
     
+    public MeshRenderer  meshRenderer;
+    public SpriteRenderer SpriteRenderer;
+    
     // 移动攻击力加成标志位
     
     // 延迟伤害相关变量
@@ -644,9 +647,16 @@ public class Player : MonoBehaviour
     {
         arrow.SetActive(false);
     }
+    
+    public void SetOrder()
+    {
+        meshRenderer.sortingOrder = (int)((15f - transform.position.y) * 100f);
+        SpriteRenderer.sortingOrder = (int)((15f - transform.position.y) * 100f);
+    }
 
     private void Update()
     {
+        SetOrder();
         CurrentAttackTime+=Time.deltaTime;
         Vector2 dir = (Vector2.zero - new Vector2(transform.position.x, transform.position.y)).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;

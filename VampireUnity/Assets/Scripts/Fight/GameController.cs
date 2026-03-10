@@ -1437,7 +1437,6 @@ public class GameController : XSingleton<GameController>
              treeManBoss.IsSkill = true;
              sk.AnimationState.SetAnimation(0,"Exit",false);
              treeManBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-             treeManBoss.meshRenderer.sortingOrder = 3000;
              MonsterColliderDic.Add(treeManBoss.collider2D,treeManBoss);
         }
         if (LevelInfoConfig.CurrentGameLevel == 6)
@@ -1450,7 +1449,6 @@ public class GameController : XSingleton<GameController>
             sk.AnimationState.SetAnimation(0,"Exit",false);
             huoShanBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(huoShanBoss.collider2D,huoShanBoss);
-            huoShanBoss.meshRenderer.sortingOrder = 3000;
         }
         if (LevelInfoConfig.CurrentGameLevel == 9)
         {
@@ -1462,7 +1460,6 @@ public class GameController : XSingleton<GameController>
             sk.AnimationState.SetAnimation(0,"appear",false);
             ZhaoZeboss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(ZhaoZeboss.collider2D,ZhaoZeboss);
-            ZhaoZeboss.meshRenderer.sortingOrder = 3000;
         }
         
         if (LevelInfoConfig.CurrentGameLevel == 12)
@@ -1475,7 +1472,6 @@ public class GameController : XSingleton<GameController>
             sk.AnimationState.SetAnimation(0,"chuchang",false);
             xieZiboss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(xieZiboss.collider2D,xieZiboss);
-            xieZiboss.meshRenderer.sortingOrder = 3000;
 
         }
         
@@ -1489,7 +1485,6 @@ public class GameController : XSingleton<GameController>
             sk.AnimationState.SetAnimation(0,"appear",false);
             XueRenBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             MonsterColliderDic.Add(XueRenBoss.collider2D,XueRenBoss);
-            XueRenBoss.meshRenderer.sortingOrder = 3000;
         }
 
         if (LevelInfoConfig.CurrentGameLevel > 15)
@@ -1506,7 +1501,6 @@ public class GameController : XSingleton<GameController>
                     sk.AnimationState.SetAnimation(0,"skill2",false);
                     LeiShouBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     MonsterColliderDic.Add(LeiShouBoss.collider2D,LeiShouBoss);
-                    LeiShouBoss.meshRenderer.sortingOrder = 3000;
                     break;
                 case MJLevel.Green:
                     KuiJiaBoss KuiJiaBoss = Instantiate(Resources.Load<KuiJiaBoss>("Prefabs/Monster/MJ/KuiJia/KuiJiaBoss"));
@@ -1518,7 +1512,6 @@ public class GameController : XSingleton<GameController>
                     KuiJiaBoss.KuiJiaSkillType = KuiJiaSkillType.ChuChang;
                     KuiJiaBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     MonsterColliderDic.Add(KuiJiaBoss.collider2D,KuiJiaBoss);
-                    KuiJiaBoss.meshRenderer.sortingOrder = 3000;
                     break;
                 
                 case MJLevel.Blue:
@@ -1531,7 +1524,6 @@ public class GameController : XSingleton<GameController>
                     BaoZiBoss.BaoZiSkillType = BaoZiSkillType.ChuChang;
                     BaoZiBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     MonsterColliderDic.Add(BaoZiBoss.collider2D,BaoZiBoss);
-                    BaoZiBoss.meshRenderer.sortingOrder = 3000;
                     break;
                 
                 case MJLevel.Purple:
@@ -1544,7 +1536,6 @@ public class GameController : XSingleton<GameController>
                     HuoLangBoss.HuoLangSkill2Type = HuoLangSkill2Type.ChuChang;
                     HuoLangBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     MonsterColliderDic.Add(HuoLangBoss.collider2D,HuoLangBoss);
-                    HuoLangBoss.meshRenderer.sortingOrder = 3000;
                     break;
                 
                 case MJLevel.Orange:
@@ -1556,7 +1547,6 @@ public class GameController : XSingleton<GameController>
                     sk4.AnimationState.SetAnimation(0,"chuchang",false);
                     ShuangDaoBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     MonsterColliderDic.Add(ShuangDaoBoss.collider2D,ShuangDaoBoss);
-                    ShuangDaoBoss.meshRenderer.sortingOrder = 3000;
                     break;
             }
         }
@@ -1711,7 +1701,6 @@ public class GameController : XSingleton<GameController>
         eliteMonster.CurrentHp = eliteMonster.MaxHp;
         eliteMonster.transform.position = monsterRandomPoint;
         eliteMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, eliteMonster.MonsterSpineName.MoveName, true);
-        eliteMonster.meshRenderer.sortingOrder = 2000+EliteMonsterCount;
         eliteMonster.hpSliderCanvas.sortingOrder = 2000+EliteMonsterCount;
         TotalMonsterCount++;
         EliteMonsterCount++;
@@ -1960,7 +1949,6 @@ public class GameController : XSingleton<GameController>
         monsterBase.gameObject.SetActive(true);
         monsterBase.transform.position = monsterRandomPoint;
         monsterBase.CurrentHp = monsterBase.MaxHp;
-        monsterBase.meshRenderer.sortingOrder = 1000+NormalMonsterCount;
         monsterBase.hpSliderCanvas.sortingOrder = 1000+NormalMonsterCount;
         if (monsterBase.monsterSkeletonAnimation != null)
         {
