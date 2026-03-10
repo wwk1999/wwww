@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 312101007484580068}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 0.473, z: 0}
+  m_LocalPosition: {x: 0.409, y: 0.395, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -151,7 +151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7865651308373920788}
-  - component: {fileID: 1119371393336926460}
+  - component: {fileID: 1449281758309757954}
   m_Layer: 16
   m_Name: Collider
   m_TagString: Monster
@@ -174,8 +174,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6653453527178096557}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1119371393336926460
-CircleCollider2D:
+--- !u!60 &1449281758309757954
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -206,9 +206,24 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.11963435}
-  serializedVersion: 2
-  m_Radius: 0.42656815
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.21929058, y: 0.680201}
+      - {x: -0.43480986, y: 0.07145196}
+      - {x: -0.25428078, y: -0.35672998}
+      - {x: 0.14920413, y: -0.19683051}
+      - {x: 0.38455582, y: 0.28160578}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3095981439122409261
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 4, y: -16}
   m_SizeDelta: {x: 141.02, y: 20.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8518212361908229511
@@ -879,8 +894,8 @@ Transform:
   m_GameObject: {fileID: 6793329967274426686}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.063, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: -0.206, y: 0.04, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5540045886298109953}
@@ -905,7 +920,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91de3559785cb9a4e89026aa4495a9eb, type: 2}
+  - {fileID: 2100000, guid: 68d9ee788dcedd14bbaaeb64fe5125b5, type: 2}
+  - {fileID: 2100000, guid: 646b09315b6eb2846a065dcd1eaad3be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -941,7 +957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: walking
+  animationName: run
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -984,8 +1000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 8f24a76458226c344831f0a489620462, type: 2}
-  initialSkinName: p1
+  skeletonDataAsset: {fileID: 11400000, guid: 5fef84466f77dda43a58f0dad14b3970, type: 2}
+  initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
   meshSettings:
@@ -1408,7 +1424,7 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 453220666297556707}
   hpSlider: {fileID: 1128351686178558827}
-  collider2D: {fileID: 1119371393336926460}
+  collider2D: {fileID: 0}
   rigidbody2D: {fileID: 1550242213392908826}
   attackTrans: {fileID: 5189471751596021331}
 --- !u!1 &8827929175875591702

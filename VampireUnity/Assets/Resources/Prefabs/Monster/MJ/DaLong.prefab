@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 19.4, y: -38.3}
   m_SizeDelta: {x: 141.02, y: 20.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2082819454027753513
@@ -137,7 +137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -5.519985, y: 0}
+  m_AnchoredPosition: {x: -5.519991, y: 0}
   m_SizeDelta: {x: -5.28, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7098737825676969544
@@ -235,7 +235,7 @@ Transform:
   m_GameObject: {fileID: 3057518905349641799}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.437, y: 0.437, z: 0}
+  m_LocalPosition: {x: 0.306, y: 0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -535,8 +535,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.6, y: 0}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 0.555, y: 0}
+  m_SizeDelta: {x: 139.91, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074492890855978428
 MonoBehaviour:
@@ -1193,8 +1193,8 @@ Transform:
   m_GameObject: {fileID: 7933746585691288741}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalPosition: {x: 0.087, y: 0.276, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3513581276056492122}
@@ -1219,7 +1219,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3ba8cdf0a994ca240abc03b50cf3caa8, type: 2}
+  - {fileID: 2100000, guid: bb51118f52480a644be9cf25e4dea27c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: dragon_attack
+  animationName: run
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: e79308991a76d5946bd9ddddc0ada07d, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 20797447461ae704dabff7720703041a, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -1416,7 +1416,7 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 3870296039807233969}
   hpSlider: {fileID: 2074492890855978428}
-  collider2D: {fileID: 6201582373311861976}
+  collider2D: {fileID: 0}
   rigidbody2D: {fileID: 2690737692614556746}
   attackTrans: {fileID: 6792827757565431818}
 --- !u!1 &9052110104996585242
@@ -1428,7 +1428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4901446383656986736}
-  - component: {fileID: 6201582373311861976}
+  - component: {fileID: 557412528840359208}
   m_Layer: 16
   m_Name: Collider
   m_TagString: Monster
@@ -1451,7 +1451,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1723408340001758766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &6201582373311861976
+--- !u!60 &557412528840359208
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1495,12 +1495,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.15020266, y: 0.45551533}
-      - {x: -0.5728678, y: 0.19636497}
-      - {x: -0.21764296, y: 0.019779682}
-      - {x: 0.19350326, y: 0.02514422}
-      - {x: 0.30007362, y: 0.23177856}
-      - {x: 0.5403723, y: 0.19268501}
-      - {x: 0.6007052, y: 0.25516486}
-      - {x: 0.42802948, y: 0.52895665}
+    - - {x: 0.0343616, y: 0.4865973}
+      - {x: -0.09201652, y: 0.4666761}
+      - {x: -0.14923048, y: 0.1912483}
+      - {x: 0.014059521, y: 0.116153255}
+      - {x: 0.11900395, y: 0.40513873}
   m_UseDelaunayMesh: 0

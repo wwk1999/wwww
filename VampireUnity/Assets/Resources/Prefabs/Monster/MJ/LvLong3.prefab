@@ -282,8 +282,8 @@ Transform:
   m_GameObject: {fileID: 1942262813846973471}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.063, z: 0}
-  m_LocalScale: {x: 0.120000005, y: 0.120000005, z: 0.120000005}
+  m_LocalPosition: {x: -0.047, y: 0.276, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1082412932901631938}
@@ -308,7 +308,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0635f5a229ddcb44d8aac7b62898ad62, type: 2}
+  - {fileID: 2100000, guid: e281f6f2e85559f4b84926c68b45ff08, type: 2}
+  - {fileID: 2100000, guid: 9a2043ed1c3aa7c43b74a4f5bd1ac4e7, type: 2}
+  - {fileID: 2100000, guid: e281f6f2e85559f4b84926c68b45ff08, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -344,7 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: dragon_atk_1
+  animationName: run
   loop: 1
   timeScale: 1.3
   unscaledTime: 0
@@ -387,8 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: b16f27ce7b321c041a39ca1e856bee06, type: 2}
-  initialSkinName: skin_3
+  skeletonDataAsset: {fileID: 11400000, guid: 3e6c936b54539f64c82dd7853040d579, type: 2}
+  initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
   meshSettings:
@@ -565,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.6, y: -70.8}
   m_SizeDelta: {x: 141.02, y: 20.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1777314599336903
@@ -1182,13 +1184,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.059347898, y: 0.020673573}
-      - {x: -0.32957825, y: 0.08210915}
-      - {x: -0.56911546, y: -0.023641475}
-      - {x: -0.28592852, y: -0.27922773}
-      - {x: 0.15964186, y: -0.10981837}
-      - {x: 0.44488007, y: 0.14118576}
-      - {x: 0.21797647, y: 0.38294122}
+    - - {x: -0.21705195, y: -0.059561923}
+      - {x: -0.2825437, y: -0.15306363}
+      - {x: -0.39481097, y: -0.21731329}
+      - {x: -0.3274296, y: -0.51163375}
+      - {x: -0.017429322, y: -0.52482903}
+      - {x: -0.03929913, y: -0.08845356}
+      - {x: -0.08636479, y: -0.05420348}
   m_UseDelaunayMesh: 0
 --- !u!1 &5723489463484747722
 GameObject:
@@ -1215,7 +1217,7 @@ Transform:
   m_GameObject: {fileID: 5723489463484747722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.518, y: 0.385, z: 0}
+  m_LocalPosition: {x: 0.266, y: 0.498, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

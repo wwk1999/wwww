@@ -22,9 +22,9 @@ public class HongLong3 : MonsterBase
         BloodEnergy/= 100;
         base.Awake();
         MonsterSpineName.AttackName = "attack";
-        MonsterSpineName.HitName = "hit";
-        MonsterSpineName.MoveName = "walk";
-        MonsterSpineName.DieName = "die";
+        MonsterSpineName.HitName = "hurt";
+        MonsterSpineName.MoveName = "run";
+        MonsterSpineName.DieName = "death";
 
     }
     public override void AddMonsterEquip()

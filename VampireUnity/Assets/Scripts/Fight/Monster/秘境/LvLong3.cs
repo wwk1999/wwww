@@ -21,9 +21,9 @@ public class LvLong3 : MonsterBase
         Exp/= 100;
         BloodEnergy/= 100;
         base.Awake();
-        MonsterSpineName.AttackName = "dragon_atk_1";
-        MonsterSpineName.HitName = "hit";
-        MonsterSpineName.MoveName = "dragon_walk";
+        MonsterSpineName.AttackName = "attack2";
+        MonsterSpineName.HitName = "hurt";
+        MonsterSpineName.MoveName = "run";
         MonsterSpineName.DieName = "die";
     }
     public override void AddMonsterEquip()
@@ -69,7 +69,7 @@ public class LvLong3 : MonsterBase
     {
         base.Start();
         isBeatback = false;
-        size = 0.5f;
+        size = 0.7f;
         AddMonsterEquip();
         AddMonsterProp();
 

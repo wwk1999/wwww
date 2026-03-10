@@ -21,10 +21,10 @@ public class LanLong2 : MonsterBase
         Exp/= 100;
         BloodEnergy/= 100;
         base.Awake();
-        MonsterSpineName.AttackName = "dragon_Spatk_1";
-        MonsterSpineName.HitName = "hit";
-        MonsterSpineName.MoveName = "dragon_walk";
-        MonsterSpineName.DieName = "die";
+        MonsterSpineName.AttackName = "attack1";
+        MonsterSpineName.HitName = "hurt0";
+        MonsterSpineName.MoveName = "run";
+        MonsterSpineName.DieName = "death";
     }
     public override void AddMonsterEquip()
     {
@@ -109,7 +109,7 @@ public class LanLong2 : MonsterBase
         if (!IsDead)
         {
             MonsterMove();
-            SpriteFlipX(true);
+            SpriteFlipX(false);
         }
     }
 }

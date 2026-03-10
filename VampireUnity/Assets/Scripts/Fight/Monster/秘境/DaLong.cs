@@ -21,10 +21,10 @@ public class DaLong : MonsterBase
         Exp/= 100;
         BloodEnergy/= 100;
         base.Awake();
-        MonsterSpineName.AttackName = "dragon_attack";
+        MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "hit";
-        MonsterSpineName.MoveName = "dragon_walk";
-        MonsterSpineName.DieName = "dragon_death";
+        MonsterSpineName.MoveName = "run";
+        MonsterSpineName.DieName = "death";
     }
     public override void AddMonsterEquip()
     {

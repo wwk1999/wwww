@@ -22,9 +22,9 @@ public class LvLang : MonsterBase
         BloodEnergy/= 100;
         base.Awake();
         MonsterSpineName.AttackName = "attack1";
-        MonsterSpineName.HitName = "injured";
-        MonsterSpineName.MoveName = "move";
-        MonsterSpineName.DieName = "fail";
+        MonsterSpineName.HitName = "hurt";
+        MonsterSpineName.MoveName = "run";
+        MonsterSpineName.DieName = "death";
 
     }
     public override void AddMonsterEquip()
