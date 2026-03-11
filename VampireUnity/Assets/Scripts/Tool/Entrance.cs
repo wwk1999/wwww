@@ -1722,6 +1722,34 @@ public class Entrance : MonoBehaviour
                     GameController.S.HeiAnPengQueue.Enqueue(HeiAnPeng);
                 }
             }
+            
+            
+            
+            if (WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType] == YuanSuType.Huo ||
+                SkillJiaDian.S.Alpha1 == SkillType.Huo1 || SkillJiaDian.S.Alpha1 == SkillType.Huo2 ||
+                SkillJiaDian.S.Alpha1 == SkillType.Huo3 || SkillJiaDian.S.Alpha1 == SkillType.Huo4 ||
+                SkillJiaDian.S.Alpha1 == SkillType.Huo5
+                || SkillJiaDian.S.Alpha2 == SkillType.Huo1 || SkillJiaDian.S.Alpha2 == SkillType.Huo2 ||
+                SkillJiaDian.S.Alpha2 == SkillType.Huo3 || SkillJiaDian.S.Alpha2 == SkillType.Huo4 ||
+                SkillJiaDian.S.Alpha2 == SkillType.Huo5
+                || SkillJiaDian.S.Alpha3 == SkillType.Huo1 || SkillJiaDian.S.Alpha3 == SkillType.Huo2 ||
+                SkillJiaDian.S.Alpha3 == SkillType.Huo3 || SkillJiaDian.S.Alpha3 == SkillType.Huo4 ||
+                SkillJiaDian.S.Alpha3 == SkillType.Huo5
+                || SkillJiaDian.S.Alpha4 == SkillType.Huo1 || SkillJiaDian.S.Alpha4 == SkillType.Huo2 ||
+                SkillJiaDian.S.Alpha4 == SkillType.Huo3 || SkillJiaDian.S.Alpha4 == SkillType.Huo4 ||
+                SkillJiaDian.S.Alpha4 == SkillType.Huo5
+                || SkillJiaDian.S.Alpha5 == SkillType.Huo1 || SkillJiaDian.S.Alpha5 == SkillType.Huo2 ||
+                SkillJiaDian.S.Alpha5 == SkillType.Huo3 || SkillJiaDian.S.Alpha5 == SkillType.Huo4 ||
+                SkillJiaDian.S.Alpha5 == SkillType.Huo5)
+            {
+                for (int i = 0; i < 200; i++)
+                {
+                    var HuoPeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/Peng/HuoPeng"));
+                    HuoPeng.SetActive(false);
+                    GameController.S.HuoPengQueue.Enqueue(HuoPeng);
+                }
+            }
+            
 
 
             if (PlayerData.S.playerWeaponType == WeaponType.HeiAnBaoZha)
@@ -1735,6 +1763,32 @@ public class Entrance : MonoBehaviour
                         Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnBaoZhaNext"));
                     IcePeng1.SetActive(false);
                     GameController.S.HeiAnBaoZhaNextQueue.Enqueue(IcePeng1);
+                }
+            }
+            
+            if (PlayerData.S.playerWeaponType == WeaponType.Huo7)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Huo7Item"));
+                    IcePeng.SetActive(false);
+                    GameController.S.Huo7Queue.Enqueue(IcePeng);
+                }
+            }
+            
+            if (PlayerData.S.playerWeaponType == WeaponType.HuoFenLie)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLie"));
+                    IcePeng.SetActive(false);
+                    GameController.S.HuoFenLieQueue.Enqueue(IcePeng);
+                    var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieDan"));
+                    IcePeng1.SetActive(false);
+                    GameController.S.HuoFenLieDanQueue.Enqueue(IcePeng1);
+                    var IcePeng2 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieBaoZha"));
+                    IcePeng2.SetActive(false);
+                    GameController.S.HuoFenLieBaoZhaQueue.Enqueue(IcePeng2);
                 }
             }
             

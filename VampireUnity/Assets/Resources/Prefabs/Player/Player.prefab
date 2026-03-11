@@ -876,7 +876,14 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 623bb9e07e00df245af68df62a4fdc7a, type: 2}
+  - {fileID: 2100000, guid: 1a658ec7b83303e418c3ea0175115b9c, type: 2}
+  - {fileID: 2100000, guid: 8a737fad19a5dd24dbb697bf3d393897, type: 2}
+  - {fileID: 2100000, guid: 1a658ec7b83303e418c3ea0175115b9c, type: 2}
+  - {fileID: 2100000, guid: 8a737fad19a5dd24dbb697bf3d393897, type: 2}
+  - {fileID: 2100000, guid: a0d578441b98d574abde66a1c6ec85c1, type: 2}
+  - {fileID: 2100000, guid: 1a658ec7b83303e418c3ea0175115b9c, type: 2}
+  - {fileID: 2100000, guid: 8a737fad19a5dd24dbb697bf3d393897, type: 2}
+  - {fileID: 2100000, guid: 1a658ec7b83303e418c3ea0175115b9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -955,8 +962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: cbfcc181a58f6644d9f00f616802b6d5, type: 2}
-  initialSkinName: yuan
+  skeletonDataAsset: {fileID: 11400000, guid: e748efb6f723f0849ad65ff7e5849eef, type: 2}
+  initialSkinName: purpleheian
   initialFlipX: 0
   initialFlipY: 0
   meshSettings:

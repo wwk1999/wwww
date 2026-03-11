@@ -26,6 +26,8 @@ public enum WeaponType
     JianQi,
     HeiAnBaoZha,
     DianSanShe,
+    Huo7,
+    HuoFenLie,
 }
 public class Player : MonoBehaviour
 {
@@ -685,6 +687,7 @@ public class Player : MonoBehaviour
             {
                 DianSanShe.gameObject.SetActive(true);
                 DianSanSheAnim.Play("NewSequenceAnim");
+                DianSanSheAnim.speed = GlobalPlayerAttribute.TotalAttackSpeed;
             }
             else if (CurrentAttackTime >= AttackTime)
             {

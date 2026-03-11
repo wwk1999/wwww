@@ -126,6 +126,20 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
     
+    public void HuoFenLieShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        HuoFenLie bullet = GameController.S.HuoFenLieQueue.Dequeue().GetComponent<HuoFenLie>();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
+    
     public void PuTong3Shot(Vector3 attackTrans)
     {
         Vector3 mouseScreen = Input.mousePosition;
@@ -171,6 +185,46 @@ public class GunBase : MonoBehaviour
         }
         
     }
+    
+    
+    public void Huo7Shot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        // 原始方向
+        Vector2 baseDir = (worldPos -attackTrans).normalized;
+
+        // 两个偏移角度：+10° 和 -10°
+        Vector2[] dirs7 =
+        {
+            Quaternion.AngleAxis( 5f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 3f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -3f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis(-5f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis(-7f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis(7f, Vector3.forward) * baseDir,
+
+        };
+        
+        // 连发两颗
+        foreach (Vector2 dir in dirs7)
+        {
+            GameObject bullet = GameController.S.Huo7Queue.Dequeue();
+            bullet.transform.position = attackTrans;
+
+            var attack = bullet.GetComponent<Huo7Item>();
+            attack.MoveDirection = dir;
+            attack.MoveSpeed = 10f;
+            bullet.SetActive(true);
+        }
+        
+    }
+    
+    
+    
     
     public void LuoLeiShot(Vector3 attackTrans)
     {

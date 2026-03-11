@@ -981,7 +981,7 @@ public class SkillController : XSingleton<SkillController>
         switch (PlayerData.S.playerWeaponType)
         {
             case WeaponType.Primary:
-                GameController.S.gamePlayer.currentGun.HeiAnBaoZhaShot(attackTrans);
+                GameController.S.gamePlayer.currentGun.PrimaryShot(attackTrans);
                 break;
             case WeaponType.LanBao:
                 GameController.S.gamePlayer.currentGun.LanBaoShot(attackTrans);
@@ -1009,6 +1009,15 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case WeaponType.JianQi:
                 GameController.S.gamePlayer.currentGun.JianQiShot(attackTrans);
+                break;
+            case WeaponType.HeiAnBaoZha:
+                GameController.S.gamePlayer.currentGun.HeiAnBaoZhaShot(attackTrans);
+                break;
+            case WeaponType.Huo7:
+                GameController.S.gamePlayer.currentGun.Huo7Shot(attackTrans);
+                break;
+            case WeaponType.HuoFenLie:
+                GameController.S.gamePlayer.currentGun.HuoFenLieShot(attackTrans);
                 break;
         }
     }
