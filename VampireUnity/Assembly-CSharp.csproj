@@ -154,10 +154,10 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\ExAdd.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuTuJianWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossAttack.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoFenLie\HuoFenLieDan.cs" />
     <Compile Include="Assets\Scripts\Tool\MonsterSequenceTool.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZi.cs" />
     <Compile Include="Assets\Scripts\Config\ChiBangConfig.cs" />
-    <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoFenLie\HuoFenLieDan.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenHelmet.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuDanSwitch.cs" />
@@ -260,6 +260,7 @@
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleShoe.cs" />
     <Compile Include="Assets\Scripts\Skill\DashShadow.cs" />
     <Compile Include="Assets\Scripts\Fight\UI\BagButtonFight.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Ice4BaoZha\Ice4BaoZha.cs" />
     <Compile Include="Assets\Scripts\Equip\BagSell.cs" />
     <Compile Include="Assets\Scripts\Store\StoreController.cs" />
     <Compile Include="Assets\Scripts\Tool\ButtonInteractionHandler.cs" />
@@ -344,6 +345,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\AddAttackForTime.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXLightFade.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeShoe.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\Ice4BaoZha\Ice4BaoZhaItem.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo3.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SpiderMonster.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\WenZiMonster.cs" />
@@ -373,8 +375,8 @@
     <Compile Include="Assets\Scripts\Singleton\SingletonNameAttribute.cs" />
     <Compile Include="Assets\Scripts\Skill\IceSkill\IceSkill4.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuPeiYangWindow.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\MonsterBase.cs" />
     <Compile Include="Assets\Scripts\Tool\SkillMouseXuanFu.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\MonsterBase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Scripts\Equip\XiangQianGrid.cs" />
     <Compile Include="Assets\Scripts\Tool\UpgradeButton.cs" />

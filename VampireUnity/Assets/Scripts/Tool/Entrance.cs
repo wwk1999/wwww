@@ -1789,6 +1789,21 @@ public class Entrance : MonoBehaviour
                     var IcePeng2 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieBaoZha").GetComponent<HuoFenLieBaoZha>());
                     IcePeng2.gameObject.SetActive(false);
                     GameController.S.HuoFenLieBaoZhaQueue.Enqueue(IcePeng2);
+
+                }
+            }
+            
+            
+            if (PlayerData.S.playerWeaponType == WeaponType.Ice4BaoZha)
+            {
+                for (int i = 0; i < 50; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Ice4BaoZha").GetComponent<Ice4BaoZha>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.Ice4BaoZhaQueue.Enqueue(IcePeng);
+                    var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Ice4BaoZhaItem").GetComponent<Ice4BaoZhaItem>());
+                    IcePeng1.gameObject.SetActive(false);
+                    GameController.S.Ice4BaoZhaItemQueue.Enqueue(IcePeng1);
                 }
             }
             

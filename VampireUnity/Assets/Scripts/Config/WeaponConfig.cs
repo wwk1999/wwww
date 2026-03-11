@@ -78,6 +78,7 @@ namespace Config
                 { WeaponType.DianSanShe ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
                 { WeaponType.HuoFenLie ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
                 { WeaponType.Huo7 ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
+                { WeaponType.Ice4BaoZha ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
                 { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1000,Defense = 150,AttackSpeed = 0.7f}},
                 { WeaponType.JianQi ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
             };
@@ -96,6 +97,7 @@ namespace Config
             {WeaponType.HeiAnBaoZha,YuanSuType.HeiAn},
             {WeaponType.Huo7,YuanSuType.Huo},
             {WeaponType.HuoFenLie,YuanSuType.Huo},
+            {WeaponType.Ice4BaoZha,YuanSuType.Ice},
 
 
         };

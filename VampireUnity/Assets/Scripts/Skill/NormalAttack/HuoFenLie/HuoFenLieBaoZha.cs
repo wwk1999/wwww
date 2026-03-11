@@ -11,4 +11,9 @@ public class HuoFenLieBaoZha : MonoBehaviour
    {
       animator.Play("NewSequenceAnim");
    }
+
+   private void Start()
+   {
+      transform.position = new Vector3(10f, 10f, 0);
+   }
 }

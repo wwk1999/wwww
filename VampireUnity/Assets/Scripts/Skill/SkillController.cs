@@ -1019,6 +1019,9 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.HuoFenLie:
                 GameController.S.gamePlayer.currentGun.HuoFenLieShot(attackTrans);
                 break;
+            case WeaponType.Ice4BaoZha:
+                GameController.S.gamePlayer.currentGun.Ice4BaoZhaShot(attackTrans);
+                break;
         }
     }
     

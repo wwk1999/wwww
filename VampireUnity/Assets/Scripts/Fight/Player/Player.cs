@@ -28,6 +28,7 @@ public enum WeaponType
     DianSanShe,
     Huo7,
     HuoFenLie,
+    Ice4BaoZha,
 }
 public class Player : MonoBehaviour
 {
