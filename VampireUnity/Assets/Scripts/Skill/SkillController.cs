@@ -1025,6 +1025,9 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.Ice7:
                 GameController.S.gamePlayer.currentGun.Ice7Shot(attackTrans);
                 break;
+            case WeaponType.IcePen:
+                GameController.S.gamePlayer.currentGun.IcePenShot(attackTrans);
+                break;
         }
     }
     

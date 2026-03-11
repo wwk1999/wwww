@@ -6,10 +6,11 @@ public class HeiAnBaoZhaNextAnim : MonoBehaviour
 {
 
     public Collider2D collider2D;
+    public GameObject HeiAnBaoZhaNext;
     public void Hide()
     {
-        GameController.S.HeiAnBaoZhaNextQueue.Enqueue(gameObject);
-        gameObject.SetActive(false);
+        GameController.S.HeiAnBaoZhaNextQueue.Enqueue(HeiAnBaoZhaNext);
+        HeiAnBaoZhaNext.SetActive(false);
     }
     
     

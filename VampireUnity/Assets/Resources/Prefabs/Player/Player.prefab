@@ -16798,6 +16798,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DianSanShe
       objectReference: {fileID: 0}
+    - target: {fileID: 8015906752226551060, guid: 4ac391861e6991249abea6e8a36de735, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

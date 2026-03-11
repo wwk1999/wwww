@@ -477,6 +477,7 @@
     <Compile Include="Assets\Scripts\Tool\BossQuan.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NoSkill.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\IcePen\IcePenAnim.cs" />
     <Compile Include="Assets\Scripts\Window\StoreWindow.cs" />
     <Compile Include="Assets\Scripts\ChongWu\ChongWuList.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Huo7\Huo7Item.cs" />
@@ -558,6 +559,7 @@
     <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill4Anim.cs" />
     <Compile Include="Assets\Scripts\Skill\IceArrow.cs" />
     <Compile Include="Assets\Scripts\Window\ShangDianWindow.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\IcePen\IcePen.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuItemSwitch.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />

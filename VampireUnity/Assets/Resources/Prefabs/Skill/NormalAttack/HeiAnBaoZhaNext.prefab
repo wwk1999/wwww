@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2D: {fileID: 5456721360272006269}
+  HeiAnBaoZhaNext: {fileID: 4655864962206284182}
 --- !u!1 &4655864962206284182
 GameObject:
   m_ObjectHideFlags: 0

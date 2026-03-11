@@ -179,6 +179,32 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
     
+    public void IcePenShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos - attackTrans).normalized;
+        IcePen bullet = GameController.S.IcePenQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+    
+        // 同时设置X轴和Z轴的旋转
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+    
+        if (direction.x < 0)
+        {
+            bullet.transform.rotation = Quaternion.Euler(180, 0, -angle);
+        }
+        else
+        {
+            bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
+    
+        bullet.gameObject.SetActive(true);
+    }
+    
+    
     public void PuTong3Shot(Vector3 attackTrans)
     {
         Vector3 mouseScreen = Input.mousePosition;

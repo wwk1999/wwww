@@ -250,6 +250,8 @@ public class GameController : XSingleton<GameController>
 
     [NonReorderable]public Queue<Huo7Item>Huo7Queue = new Queue<Huo7Item>();
     [NonReorderable]public Queue<Ice7Item>Ice7Queue = new Queue<Ice7Item>();
+    [NonReorderable]public Queue<IcePen>IcePenQueue = new Queue<IcePen>();
+
 
     [NonReorderable]public Queue<HuoFenLie>HuoFenLieQueue = new Queue<HuoFenLie>();
     [NonReorderable]public Queue<HuoFenLieDan>HuoFenLieDanQueue = new Queue<HuoFenLieDan>();
