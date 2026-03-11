@@ -22,7 +22,7 @@ public class HuoFenLie : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.HuoFenLieQueue.Enqueue(gameObject);
+        GameController.S.HuoFenLieQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -38,23 +38,23 @@ public class HuoFenLie : MonoBehaviour
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal);
             hit.SetActive(true);
-            GameController.S.HuoFenLieQueue.Enqueue(gameObject);
-            var dan1 = GameController.S.HuoFenLieDanQueue.Dequeue();
-            dan1.GetComponent<HuoFenLieDan>().dir = 1;
+            GameController.S.HuoFenLieQueue.Enqueue(this);
+            HuoFenLieDan dan1 = GameController.S.HuoFenLieDanQueue.Dequeue();
+            dan1.dir = 1;
             dan1.transform.position = closestPoint;
             dan1.gameObject.SetActive(true);
-            var dan2 = GameController.S.HuoFenLieDanQueue.Dequeue();
-            dan2.GetComponent<HuoFenLieDan>().dir = 2;
+            HuoFenLieDan dan2 = GameController.S.HuoFenLieDanQueue.Dequeue();
+            dan2.dir = 2;
             dan2.transform.position = closestPoint;
             dan2.gameObject.SetActive(true);
             
-            var dan3 = GameController.S.HuoFenLieDanQueue.Dequeue();
-            dan3.GetComponent<HuoFenLieDan>().dir = 3;
+            HuoFenLieDan dan3 = GameController.S.HuoFenLieDanQueue.Dequeue();
+            dan3.dir = 3;
             dan3.transform.position = closestPoint;
             dan3.gameObject.SetActive(true);
             
-            var dan4 = GameController.S.HuoFenLieDanQueue.Dequeue();
-            dan4.GetComponent<HuoFenLieDan>().dir = 4;
+            HuoFenLieDan dan4 = GameController.S.HuoFenLieDanQueue.Dequeue();
+            dan4.dir = 4;
             dan4.transform.position = closestPoint;
             dan4.gameObject.SetActive(true);
             gameObject.SetActive(false);

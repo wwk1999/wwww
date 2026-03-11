@@ -34,10 +34,10 @@ public class HuoFenLieDan : MonoBehaviour
 
     public void BaoZha()
     {
-        var baozha = GameController.S.HuoFenLieBaoZhaQueue.Dequeue();
+        var baozha = GameController.S.HuoFenLieBaoZhaQueue.Dequeue().gameObject;
         baozha.transform.position = transform.position;
         baozha.gameObject.SetActive(true);
-        GameController.S.HuoFenLieDanQueue.Enqueue(gameObject);
+        GameController.S.HuoFenLieDanQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
 }

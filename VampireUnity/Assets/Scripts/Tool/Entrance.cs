@@ -1770,8 +1770,8 @@ public class Entrance : MonoBehaviour
             {
                 for (int i = 0; i < 100; i++)
                 {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Huo7Item"));
-                    IcePeng.SetActive(false);
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Huo7Item").GetComponent<Huo7Item>());
+                    IcePeng.gameObject.SetActive(false);
                     GameController.S.Huo7Queue.Enqueue(IcePeng);
                 }
             }
@@ -1780,14 +1780,14 @@ public class Entrance : MonoBehaviour
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLie"));
-                    IcePeng.SetActive(false);
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLie").GetComponent<HuoFenLie>());
+                    IcePeng.gameObject.SetActive(false);
                     GameController.S.HuoFenLieQueue.Enqueue(IcePeng);
-                    var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieDan"));
-                    IcePeng1.SetActive(false);
+                    var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieDan").GetComponent<HuoFenLieDan>());
+                    IcePeng1.gameObject.SetActive(false);
                     GameController.S.HuoFenLieDanQueue.Enqueue(IcePeng1);
-                    var IcePeng2 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieBaoZha"));
-                    IcePeng2.SetActive(false);
+                    var IcePeng2 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieBaoZha").GetComponent<HuoFenLieBaoZha>());
+                    IcePeng2.gameObject.SetActive(false);
                     GameController.S.HuoFenLieBaoZhaQueue.Enqueue(IcePeng2);
                 }
             }

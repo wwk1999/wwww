@@ -133,7 +133,7 @@ public class GunBase : MonoBehaviour
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         Vector2 direction = (worldPos- attackTrans).normalized;
-        HuoFenLie bullet = GameController.S.HuoFenLieQueue.Dequeue().GetComponent<HuoFenLie>();
+        HuoFenLie bullet = GameController.S.HuoFenLieQueue.Dequeue();
         bullet.transform.position = attackTrans;
         bullet.MoveDirection = direction;
         bullet.MoveSpeed = 10f;
@@ -212,13 +212,11 @@ public class GunBase : MonoBehaviour
         // 连发两颗
         foreach (Vector2 dir in dirs7)
         {
-            GameObject bullet = GameController.S.Huo7Queue.Dequeue();
+            Huo7Item bullet = GameController.S.Huo7Queue.Dequeue();
             bullet.transform.position = attackTrans;
-
-            var attack = bullet.GetComponent<Huo7Item>();
-            attack.MoveDirection = dir;
-            attack.MoveSpeed = 10f;
-            bullet.SetActive(true);
+            bullet.MoveDirection = dir;
+            bullet.MoveSpeed = 10f;
+            bullet.gameObject.SetActive(true);
         }
         
     }

@@ -22,7 +22,7 @@ public class Huo7Item : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.Huo7Queue.Enqueue(gameObject);
+        GameController.S.Huo7Queue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -38,7 +38,7 @@ public class Huo7Item : MonoBehaviour
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal);
             hit.SetActive(true);
-            GameController.S.Huo7Queue.Enqueue(gameObject);
+            GameController.S.Huo7Queue.Enqueue(this);
             gameObject.SetActive(false);
         }
     }

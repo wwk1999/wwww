@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Collider2D: {fileID: 7290819294987955058}
+  HuoFenLieBaoZha: {fileID: 3983582995099151827}
 --- !u!1 &3679047260628526833
 GameObject:
   m_ObjectHideFlags: 0

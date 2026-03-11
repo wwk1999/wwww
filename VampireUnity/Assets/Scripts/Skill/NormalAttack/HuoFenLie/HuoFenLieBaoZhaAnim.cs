@@ -5,10 +5,11 @@ using UnityEngine;
 public class HuoFenLieBaoZhaAnim : MonoBehaviour
 {
     public Collider2D Collider2D;
+    public HuoFenLieBaoZha HuoFenLieBaoZha;
     public void Hide()
     {
-        GameController.S.HuoFenLieBaoZhaQueue.Enqueue(gameObject);
-        gameObject.SetActive(false);
+        GameController.S.HuoFenLieBaoZhaQueue.Enqueue(HuoFenLieBaoZha);
+        HuoFenLieBaoZha.gameObject.SetActive(false);
     }
     
     public void CheckCollider()
