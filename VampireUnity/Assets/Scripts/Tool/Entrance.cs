@@ -1776,6 +1776,16 @@ public class Entrance : MonoBehaviour
                 }
             }
             
+            if (PlayerData.S.playerWeaponType == WeaponType.Ice7)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Ice7Item").GetComponent<Ice7Item>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.Ice7Queue.Enqueue(IcePeng);
+                }
+            }
+            
             if (PlayerData.S.playerWeaponType == WeaponType.HuoFenLie)
             {
                 for (int i = 0; i < 30; i++)

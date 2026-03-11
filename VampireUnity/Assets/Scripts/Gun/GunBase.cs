@@ -140,6 +140,30 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
     
+    public void Ice7Shot(Vector3 attackTrans)
+    {
+        // 方法1：直接使用鼠标世界坐标（适用于正交相机）
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // 保持Z轴与攻击点一致
+        mouseWorldPos.z = attackTrans.z;
+    
+        // 基础方向
+        Vector2 baseDir = (mouseWorldPos - attackTrans).normalized;
+    
+        // 子弹散射角度（对称分布）
+        float[] scatterAngles = { -7f, -5f, -3f, 0f, 3f, 5f, 7f };
+    
+        // 连发七颗子弹
+        foreach (float angle in scatterAngles)
+        {
+            Ice7Item bullet = GameController.S.Ice7Queue.Dequeue();
+            bullet.transform.position = attackTrans;
+            bullet.MoveDirection = Quaternion.AngleAxis(angle, Vector3.forward) * baseDir;
+            bullet.MoveSpeed = 10f;
+            bullet.gameObject.SetActive(true);
+        }
+    }
+    
     
     public void Ice4BaoZhaShot(Vector3 attackTrans)
     {
@@ -204,38 +228,27 @@ public class GunBase : MonoBehaviour
     
     public void Huo7Shot(Vector3 attackTrans)
     {
-        Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
-        mouseScreen.z = depth; 
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        // 原始方向
-        Vector2 baseDir = (worldPos -attackTrans).normalized;
-
-        // 两个偏移角度：+10° 和 -10°
-        Vector2[] dirs7 =
-        {
-            Quaternion.AngleAxis( 5f, Vector3.forward) * baseDir,
-            Quaternion.AngleAxis( 3f, Vector3.forward) * baseDir,
-            Quaternion.AngleAxis( -3f, Vector3.forward) * baseDir,
-            Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
-            Quaternion.AngleAxis(-5f, Vector3.forward) * baseDir,
-            Quaternion.AngleAxis(-7f, Vector3.forward) * baseDir,
-            Quaternion.AngleAxis(7f, Vector3.forward) * baseDir,
-
-        };
-        
-        // 连发两颗
-        foreach (Vector2 dir in dirs7)
+        // 方法1：直接使用鼠标世界坐标（适用于正交相机）
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // 保持Z轴与攻击点一致
+        mouseWorldPos.z = attackTrans.z;
+    
+        // 基础方向
+        Vector2 baseDir = (mouseWorldPos - attackTrans).normalized;
+    
+        // 子弹散射角度（对称分布）
+        float[] scatterAngles = { -7f, -5f, -3f, 0f, 3f, 5f, 7f };
+    
+        // 连发七颗子弹
+        foreach (float angle in scatterAngles)
         {
             Huo7Item bullet = GameController.S.Huo7Queue.Dequeue();
             bullet.transform.position = attackTrans;
-            bullet.MoveDirection = dir;
+            bullet.MoveDirection = Quaternion.AngleAxis(angle, Vector3.forward) * baseDir;
             bullet.MoveSpeed = 10f;
             bullet.gameObject.SetActive(true);
         }
-        
     }
-    
     
     
     
