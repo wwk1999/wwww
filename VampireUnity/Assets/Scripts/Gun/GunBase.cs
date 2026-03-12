@@ -140,9 +140,16 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
 
-    public Vector2 GetRandomPoint(Vector3 start,float r)
+    public Vector2 GetRandomPoint(Vector3 start,float r,bool isRight)
     {
-        return new Vector2(start.x+Random.Range(-r,r),start.y+Random.Range(-r,r));
+        if (isRight)
+        {
+            return new Vector2(start.x + Random.Range(0, r), start.y + Random.Range(-r, r));
+        }
+        else
+        {
+            return new Vector2(start.x + Random.Range(-r, 0), start.y + Random.Range(-r, r));
+        }
     }
     public void HuoQuXianShot(Vector3 attackTrans)
     {
@@ -150,13 +157,26 @@ public class GunBase : MonoBehaviour
         float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        Vector2 direction = (worldPos- attackTrans).normalized;
+        Vector2 direction = (worldPos - attackTrans).normalized;
+    
+        // 从对象池获取子弹
         HuoQuXian bullet = GameController.S.HuoQuXianQueue.Dequeue();
-        bullet.transform.position = attackTrans;
-        StartCoroutine(bullet.Move(new Vector2(attackTrans.x, attackTrans.y), GetRandomPoint(attackTrans, 2),
-            new Vector2(worldPos.x, worldPos.y)));
-        bullet.speed = 10f;
+    
+        // 先激活游戏对象
         bullet.gameObject.SetActive(true);
+    
+        // 设置速度
+        bullet.speed = 5f;
+        Vector2 point = Vector2.zero;
+        if (worldPos.x > attackTrans.x)
+        {
+            point = GetRandomPoint(attackTrans, Vector2.Distance(attackTrans, new Vector2(worldPos.x, worldPos.y))/2,true);
+        }
+        else
+        {
+            point = GetRandomPoint(attackTrans, Vector2.Distance(attackTrans, new Vector2(worldPos.x, worldPos.y))/2,false);
+        }
+        bullet.StartMove(new Vector2(attackTrans.x, attackTrans.y), point, new Vector2(worldPos.x, worldPos.y));
     }
     
     public void Ice7Shot(Vector3 attackTrans)
