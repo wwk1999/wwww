@@ -26,8 +26,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3830634377737330414}
   - {fileID: 7123345513207005625}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5050491817979974952}
   - component: {fileID: 969528429536479034}
   m_Layer: 0
-  m_Name: HuoQuXian
+  m_Name: HeiAnQuXian
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,6 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34504178b0f72b419f3cebbac8a85d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trailRenderer: {fileID: 514762964489048911}
+  spriteRenderer: {fileID: 1356845266067158198}
 --- !u!1 &2065296834907812506
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 2065296834907812506}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.225, y: -0.003, z: 0}
+  m_LocalPosition: {x: 0.104, y: -0.003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -181,7 +183,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3000
-  m_Sprite: {fileID: 21300000, guid: eef947964972fa049ad828d622b430b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6723d0a0a31b524e9bb2e5f98a491e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -202,7 +204,7 @@ Animator:
   m_GameObject: {fileID: 2065296834907812506}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e7917f204090cca42b84f6a9a147ac11, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0ffcd70e051546041a128a65879175fe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -255,17 +257,17 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.3
+  m_Time: 0.25
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.2
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.73585117
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -321,7 +323,7 @@ TrailRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 0
   m_MaskInteraction: 0
   m_Autodestruct: 0
   m_Emitting: 1
@@ -352,7 +354,7 @@ Transform:
   m_GameObject: {fileID: 6733421754867162037}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.228, y: 0.007, z: 0}
+  m_LocalPosition: {x: 0.10699971, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -390,6 +392,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.31387043, y: 0}
+  m_Offset: {x: 0.29482758, y: -0.008331537}
   serializedVersion: 2
-  m_Radius: 0.1113081
+  m_Radius: 0.13868248

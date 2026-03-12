@@ -140,16 +140,12 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
 
-    public Vector2 GetRandomPoint(Vector3 start,float r,bool isRight)
+    public Vector2 GetRandomPoint(Vector2 start,float r,Vector2 worldPos)
     {
-        if (isRight)
-        {
-            return new Vector2(start.x + Random.Range(0, r), start.y + Random.Range(-r, r));
-        }
-        else
-        {
-            return new Vector2(start.x + Random.Range(-r, 0), start.y + Random.Range(-r, r));
-        }
+        Vector2 basedir = (worldPos - start).normalized;
+        var angle = Random.Range(-60, 60);
+        Vector2 dir1=Quaternion.AngleAxis(angle, Vector3.forward) * basedir;
+        return (start + dir1*r);
     }
     public void HuoQuXianShot(Vector3 attackTrans)
     {
@@ -160,7 +156,7 @@ public class GunBase : MonoBehaviour
         Vector2 direction = (worldPos - attackTrans).normalized;
     
         // 从对象池获取子弹
-        HuoQuXian bullet = GameController.S.HuoQuXianQueue.Dequeue();
+        HuoQuXian bullet = GameController.S.HeiAnQuXianQueue.Dequeue();
     
         // 先激活游戏对象
         bullet.gameObject.SetActive(true);
@@ -168,14 +164,8 @@ public class GunBase : MonoBehaviour
         // 设置速度
         bullet.speed = 5f;
         Vector2 point = Vector2.zero;
-        if (worldPos.x > attackTrans.x)
-        {
-            point = GetRandomPoint(attackTrans, Vector2.Distance(attackTrans, new Vector2(worldPos.x, worldPos.y))/2,true);
-        }
-        else
-        {
-            point = GetRandomPoint(attackTrans, Vector2.Distance(attackTrans, new Vector2(worldPos.x, worldPos.y))/2,false);
-        }
+        point = GetRandomPoint(attackTrans, Vector2.Distance(attackTrans, new Vector2(worldPos.x, worldPos.y))/2,worldPos);
+       
         bullet.StartMove(new Vector2(attackTrans.x, attackTrans.y), point, new Vector2(worldPos.x, worldPos.y));
     }
     

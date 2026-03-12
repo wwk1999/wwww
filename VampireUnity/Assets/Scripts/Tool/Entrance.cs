@@ -1887,9 +1887,9 @@ public class Entrance : MonoBehaviour
             {
                 for (int i = 0; i < 50; i++)
                 {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoQuXian").GetComponent<HuoQuXian>());
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnQuXian").GetComponent<HuoQuXian>());
                     IcePeng.gameObject.SetActive(false);
-                    GameController.S.HuoQuXianQueue.Enqueue(IcePeng);
+                    GameController.S.HeiAnQuXianQueue.Enqueue(IcePeng);
                 }
             }
 

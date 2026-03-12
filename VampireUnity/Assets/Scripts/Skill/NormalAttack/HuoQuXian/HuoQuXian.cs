@@ -2,10 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class HuoQuXian : MonoBehaviour
 {
     [NonSerialized] public float speed;
+    public TrailRenderer trailRenderer;
+    public SpriteRenderer spriteRenderer;
+
+
     
     // 飞行状态
     private enum FlyState
@@ -146,6 +151,7 @@ public class HuoQuXian : MonoBehaviour
     
     private void OnEnable()
     {
+        spriteRenderer.sortingOrder = 3000 + Random.Range(0, 1000);
         // 确保speed有默认值
         if (speed <= 0)
         {
@@ -176,7 +182,7 @@ public class HuoQuXian : MonoBehaviour
         // 确保对象被正确回收
         if (GameController.S != null)
         {
-            GameController.S.HuoQuXianQueue.Enqueue(this);
+            GameController.S.HeiAnQuXianQueue.Enqueue(this);
         }
         
         gameObject.SetActive(false);
@@ -187,20 +193,29 @@ public class HuoQuXian : MonoBehaviour
     {
         // 先停止所有正在运行的协程
         StopAllCoroutines();
-        
+    
+        // 先设置初始位置（重要！）
+        transform.position = start;
+    
+        // 重置Trail Renderer - 现在是在新位置清除
+        if (trailRenderer != null)
+        {
+            trailRenderer.Clear(); // 清除拖尾历史
+            // 强制重置拖尾
+            trailRenderer.enabled = false;
+            trailRenderer.enabled = true;
+        }
+    
         // 重置状态
         isMoving = true;
-        
-        // 设置初始位置
-        transform.position = start;
-        
+    
         // 立即设置初始方向（指向控制点）
         Vector2 initialDirection = (mid - start).normalized;
         if (initialDirection.magnitude > 0.01f)
         {
             SetRotationFromDirection(initialDirection);
         }
-        
+    
         // 启动新的协程
         moveCoroutine = StartCoroutine(Move(start, mid, target));
     }
