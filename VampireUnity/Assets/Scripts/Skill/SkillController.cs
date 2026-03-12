@@ -1031,6 +1031,9 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.DianLuoLei5:
                 GameController.S.gamePlayer.currentGun.DianLuoLeiShot(attackTrans);
                 break;
+            case WeaponType.DianJiSu:
+                GameController.S.gamePlayer.currentGun.DianJiSuShot(attackTrans);
+                break;
         }
     }
     

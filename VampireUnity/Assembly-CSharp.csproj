@@ -473,6 +473,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\StoneBoss.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\DaLong.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuWindow.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\DianJiSu\DianJiSu.cs" />
     <Compile Include="Assets\Scripts\Tool\SequenceFrameAnimationGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Title\TitleItem.cs" />
@@ -1013,7 +1014,7 @@
     <None Include="Assets\Arts\Spine\主角动画\主角动画\zhujue.json" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaBoss\XieZi\xiezi.atlas.txt" />
-    <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹 已用\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\White\电white1\Anima_Small_Skeleton_M5.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\绿魔法弹\2052_qingshe_attack.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\8\2017_liandaolang_effecta.atlas.txt" />
@@ -1113,7 +1114,7 @@
     <None Include="Assets\Arts\Spine\宠物\Purple\冰purple1——后\pet_9306.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_Properties.cginc" />
     <None Include="Assets\Arts\Spine\技能\1225\bee技能\action.json" />
-    <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹\action.json" />
+    <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹 已用\action.json" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\AOT\Newtonsoft.Json.xml" />
     <None Include="Assets\Arts\Spine\宠物\White\火White1\pet_9203.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\出场\action.json" />

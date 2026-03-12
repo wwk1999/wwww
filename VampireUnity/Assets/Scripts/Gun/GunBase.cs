@@ -179,6 +179,32 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
     
+    public void DianJiSuShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos - attackTrans).normalized;
+    
+        // 添加随机偏移（-15度到15度）
+        float randomAngle = Random.Range(-12f, 12f) * Mathf.Deg2Rad; // 转换为弧度
+        float cos = Mathf.Cos(randomAngle);
+        float sin = Mathf.Sin(randomAngle);
+    
+        // 旋转方向向量
+        Vector2 rotatedDirection = new Vector2(
+            direction.x * cos - direction.y * sin,
+            direction.x * sin + direction.y * cos
+        );
+    
+        DianJiSu bullet = GameController.S.DianJiSuQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = rotatedDirection; // 使用旋转后的方向
+        bullet.MoveSpeed = 15f;
+        bullet.gameObject.SetActive(true);
+    }
+    
     public void DianLuoLeiShot(Vector3 attackTrans)
     {
         Vector3 mouseScreen = Input.mousePosition;

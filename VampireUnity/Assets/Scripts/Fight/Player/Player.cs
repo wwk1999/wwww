@@ -32,6 +32,7 @@ public enum WeaponType
     Ice7,
     IcePen,
     DianLuoLei5,
+    DianJiSu,
 }
 public class Player : MonoBehaviour
 {

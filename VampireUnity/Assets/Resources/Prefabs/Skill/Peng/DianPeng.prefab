@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6869430066285785559}
   - component: {fileID: 5140385783971646365}
   m_Layer: 10
-  m_Name: LuoLeiPeng
+  m_Name: DianPeng
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

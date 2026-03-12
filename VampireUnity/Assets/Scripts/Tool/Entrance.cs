@@ -1600,11 +1600,6 @@ public class Entrance : MonoBehaviour
                             new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
                         LuoLei.SetActive(false);
                         GameController.S.LuoLeiQueue.Enqueue(LuoLei);
-
-                        var LuoLeiPeng = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/LuoLeiPeng"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        LuoLeiPeng.SetActive(false);
-                        GameController.S.LuoLeiPengQueue.Enqueue(LuoLeiPeng);
                         break;
 
                     case WeaponType.PuTong3:
@@ -1750,6 +1745,32 @@ public class Entrance : MonoBehaviour
                 }
             }
             
+            
+            if (WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType] == YuanSuType.Dian ||
+                SkillJiaDian.S.Alpha1 == SkillType.Dian1 || SkillJiaDian.S.Alpha1 == SkillType.Dian2 ||
+                SkillJiaDian.S.Alpha1 == SkillType.Dian3 || SkillJiaDian.S.Alpha1 == SkillType.Dian4 ||
+                SkillJiaDian.S.Alpha1 == SkillType.Dian5
+                || SkillJiaDian.S.Alpha2 == SkillType.Dian1 || SkillJiaDian.S.Alpha2 == SkillType.Dian2 ||
+                SkillJiaDian.S.Alpha2 == SkillType.Dian3 || SkillJiaDian.S.Alpha2 == SkillType.Dian4 ||
+                SkillJiaDian.S.Alpha2 == SkillType.Dian5
+                || SkillJiaDian.S.Alpha3 == SkillType.Dian1 || SkillJiaDian.S.Alpha3 == SkillType.Dian2 ||
+                SkillJiaDian.S.Alpha3 == SkillType.Dian3 || SkillJiaDian.S.Alpha3 == SkillType.Dian4 ||
+                SkillJiaDian.S.Alpha3 == SkillType.Dian5
+                || SkillJiaDian.S.Alpha4 == SkillType.Dian1 || SkillJiaDian.S.Alpha4 == SkillType.Dian2 ||
+                SkillJiaDian.S.Alpha4 == SkillType.Dian3 || SkillJiaDian.S.Alpha4 == SkillType.Dian4 ||
+                SkillJiaDian.S.Alpha4 == SkillType.Dian5
+                || SkillJiaDian.S.Alpha5 == SkillType.Dian1 || SkillJiaDian.S.Alpha5 == SkillType.Dian2 ||
+                SkillJiaDian.S.Alpha5 == SkillType.Dian3 || SkillJiaDian.S.Alpha5 == SkillType.Dian4 ||
+                SkillJiaDian.S.Alpha5 == SkillType.Dian5)
+            {
+                for (int i = 0; i < 200; i++)
+                {
+                    var DianPeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/Peng/DianPeng"));
+                    DianPeng.SetActive(false);
+                    GameController.S.DianPengQueue.Enqueue(DianPeng);
+                }
+            }
+            
 
 
             if (PlayerData.S.playerWeaponType == WeaponType.HeiAnBaoZha)
@@ -1838,6 +1859,17 @@ public class Entrance : MonoBehaviour
                     var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Ice4BaoZhaItem").GetComponent<Ice4BaoZhaItem>());
                     IcePeng1.gameObject.SetActive(false);
                     GameController.S.Ice4BaoZhaItemQueue.Enqueue(IcePeng1);
+                }
+            }
+            
+            
+            if (PlayerData.S.playerWeaponType == WeaponType.DianJiSu)
+            {
+                for (int i = 0; i < 50; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/DianJiSu").GetComponent<DianJiSu>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.DianJiSuQueue.Enqueue(IcePeng);
                 }
             }
             

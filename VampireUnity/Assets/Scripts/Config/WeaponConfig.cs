@@ -80,6 +80,8 @@ namespace Config
                 { WeaponType.Huo7 ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
                 { WeaponType.Ice4BaoZha ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
                 { WeaponType.Ice7 ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
+                { WeaponType.DianJiSu ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
+
                 { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1000,Defense = 150,AttackSpeed = 0.7f}},
                 { WeaponType.JianQi ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
                 { WeaponType.IcePen ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
@@ -105,7 +107,7 @@ namespace Config
             {WeaponType.Ice7,YuanSuType.Ice},
             {WeaponType.IcePen,YuanSuType.Ice},
             {WeaponType.DianLuoLei5,YuanSuType.Dian},
-
+            {WeaponType.DianJiSu,YuanSuType.Dian},
         };
         
         
