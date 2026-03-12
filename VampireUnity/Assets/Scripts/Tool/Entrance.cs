@@ -1873,7 +1873,16 @@ public class Entrance : MonoBehaviour
                 }
             }
             
-            
+            if (PlayerData.S.playerWeaponType == WeaponType.HeiAnHuiXuan)
+            {
+                for (int i = 0; i < 50; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnHuiXuan").GetComponent<HeiAnHuiXuan>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.HeiAnHuiXuanQueue.Enqueue(IcePeng);
+                }
+            }
+
             
             
 

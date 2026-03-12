@@ -86,7 +86,7 @@ namespace Config
                 { WeaponType.JianQi ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
                 { WeaponType.IcePen ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
                 { WeaponType.DianLuoLei5 ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
-
+                { WeaponType.HeiAnHuiXuan ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
             };
 
         public static Dictionary<WeaponType, YuanSuType> WeaponYuanSuTypeDic = new Dictionary<WeaponType, YuanSuType>()
@@ -108,6 +108,8 @@ namespace Config
             {WeaponType.IcePen,YuanSuType.Ice},
             {WeaponType.DianLuoLei5,YuanSuType.Dian},
             {WeaponType.DianJiSu,YuanSuType.Dian},
+            {WeaponType.HeiAnHuiXuan,YuanSuType.HeiAn},
+
         };
         
         

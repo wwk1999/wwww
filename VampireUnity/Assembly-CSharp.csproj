@@ -312,6 +312,7 @@
     <Compile Include="Assets\Scripts\UIFrameWork\BasePanel.cs" />
     <Compile Include="Assets\Scripts\Tool\UISmoothScaleEffect1.cs" />
     <Compile Include="Assets\Scripts\Tool\FolderToAtlasTool.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiAnHuiXuan\HeiAnHuiXuan.cs" />
     <Compile Include="Assets\Scripts\Window\TaskWindow1.cs" />
     <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill1.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerEquipConfig.cs" />

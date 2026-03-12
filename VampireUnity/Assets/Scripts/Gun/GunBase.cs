@@ -164,6 +164,31 @@ public class GunBase : MonoBehaviour
         }
     }
     
+    public void HeiAnHuiXuanShot(Vector3 attackTrans)
+    {
+        // 方法1：直接使用鼠标世界坐标（适用于正交相机）
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // 保持Z轴与攻击点一致
+        mouseWorldPos.z = attackTrans.z;
+    
+        // 基础方向
+        Vector2 baseDir = (mouseWorldPos - attackTrans).normalized;
+    
+        // 子弹散射角度（对称分布）
+        float[] scatterAngles = {  -10f, -5f, 0f, 5f, 10f };
+    
+        // 连发七颗子弹
+        foreach (float angle in scatterAngles)
+        {
+            HeiAnHuiXuan bullet = GameController.S.HeiAnHuiXuanQueue.Dequeue();
+            bullet.transform.position = attackTrans;
+            bullet.MoveDirection = Quaternion.AngleAxis(angle, Vector3.forward) * baseDir;
+            bullet.MoveSpeed = 10f;
+            bullet.gameObject.SetActive(true);
+        }
+    }
+    
+    
     
     public void Ice4BaoZhaShot(Vector3 attackTrans)
     {

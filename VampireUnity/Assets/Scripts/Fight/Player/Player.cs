@@ -33,6 +33,7 @@ public enum WeaponType
     IcePen,
     DianLuoLei5,
     DianJiSu,
+    HeiAnHuiXuan,
 }
 public class Player : MonoBehaviour
 {
