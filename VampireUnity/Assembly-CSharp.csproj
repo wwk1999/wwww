@@ -316,6 +316,7 @@
     <Compile Include="Assets\Scripts\Window\TaskWindow1.cs" />
     <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill1.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerEquipConfig.cs" />
+    <Compile Include="Assets\Scripts\Tool\QuXian.cs" />
     <Compile Include="Assets\Scripts\Window\AttributePanel.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaChong.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\HpReductionAddDefense.cs" />
@@ -567,6 +568,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuItemSwitch.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoQuXian\HuoQuXian.cs" />
     <Compile Include="Assets\Scripts\Config\MJConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\BagObjectBase.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\ZuiEYanZhu.cs" />

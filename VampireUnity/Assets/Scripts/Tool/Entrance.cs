@@ -1882,6 +1882,16 @@ public class Entrance : MonoBehaviour
                     GameController.S.HeiAnHuiXuanQueue.Enqueue(IcePeng);
                 }
             }
+            
+            if (PlayerData.S.playerWeaponType == WeaponType.HuoQuXian)
+            {
+                for (int i = 0; i < 50; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoQuXian").GetComponent<HuoQuXian>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.HuoQuXianQueue.Enqueue(IcePeng);
+                }
+            }
 
             
             

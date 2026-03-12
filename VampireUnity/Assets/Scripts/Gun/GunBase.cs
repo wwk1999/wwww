@@ -139,6 +139,25 @@ public class GunBase : MonoBehaviour
         bullet.MoveSpeed = 10f;
         bullet.gameObject.SetActive(true);
     }
+
+    public Vector2 GetRandomPoint(Vector3 start,float r)
+    {
+        return new Vector2(start.x+Random.Range(-r,r),start.y+Random.Range(-r,r));
+    }
+    public void HuoQuXianShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        HuoQuXian bullet = GameController.S.HuoQuXianQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        StartCoroutine(bullet.Move(new Vector2(attackTrans.x, attackTrans.y), GetRandomPoint(attackTrans, 2),
+            new Vector2(worldPos.x, worldPos.y)));
+        bullet.speed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
     
     public void Ice7Shot(Vector3 attackTrans)
     {

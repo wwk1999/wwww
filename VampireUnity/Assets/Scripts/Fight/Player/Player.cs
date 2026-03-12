@@ -34,6 +34,7 @@ public enum WeaponType
     DianLuoLei5,
     DianJiSu,
     HeiAnHuiXuan,
+    HuoQuXian,
 }
 public class Player : MonoBehaviour
 {
@@ -695,7 +696,7 @@ public class Player : MonoBehaviour
                 DianSanSheAnim.Play("NewSequenceAnim");
                 DianSanSheAnim.speed = GlobalPlayerAttribute.TotalAttackSpeed;
             }
-            else if (CurrentAttackTime >= AttackTime)
+            else if (CurrentAttackTime >= AttackTime/5)
             {
                 CurrentAttackTime = 0;
                 SkillController.S.ShotBulletInvoke(fasheTrans.transform.position);
