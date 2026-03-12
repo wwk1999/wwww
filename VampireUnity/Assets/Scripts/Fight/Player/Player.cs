@@ -14,16 +14,16 @@ using Random = UnityEngine.Random;
 public enum WeaponType
 {
     None,
-    Primary,
+    Primary,//ice
     LanBao,
-    Fire,
-    XuKong,
-    LvQuan,
-    HeiDong,
-    Du,
+    Fire,//dian
+    XuKong,//dian
+    LvQuan,//heian
+    HeiDong,//heian
+    Du,//huo
     LuoLei,
-    PuTong3,
-    JianQi,
+    PuTong3,//ice
+    JianQi,//huo
     HeiAnBaoZha,
     DianSanShe,
     Huo7,
@@ -34,7 +34,8 @@ public enum WeaponType
     DianLuoLei5,
     DianJiSu,
     HeiAnHuiXuan,
-    HuoQuXian,
+    HeiAnQuXian,
+    HuoDiPen,
 }
 public class Player : MonoBehaviour
 {

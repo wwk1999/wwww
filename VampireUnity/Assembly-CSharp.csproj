@@ -206,6 +206,7 @@
     <Compile Include="Assets\Scripts\Mysql\UserController.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill3Anim.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoDiPen\HuoDiPen.cs" />
     <Compile Include="Assets\Scripts\Prop\BloodEnergyController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\SpiderWeb.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\VacantEyeBullet.cs" />
@@ -575,6 +576,7 @@
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloak.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong3.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Penetrate.cs" />
+    <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoDiPen\HuoDiPenAnim.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleCloth1.cs" />
     <Compile Include="Assets\Scripts\YingDi\YingDi.cs" />
     <Compile Include="Assets\Scripts\Skill\IceSkill\IceSkill5.cs" />

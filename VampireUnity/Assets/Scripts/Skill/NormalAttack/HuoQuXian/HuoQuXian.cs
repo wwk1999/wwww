@@ -230,13 +230,9 @@ public class HuoQuXian : MonoBehaviour
         
         if (other.CompareTag("Monster") || other.CompareTag("Boss"))
         {
-            // 安全检查
-            if (GameController.S == null || GameController.S.HuoPengQueue == null) return;
-            
-            // 确保队列不为空
-            if (GameController.S.HuoPengQueue.Count > 0)
+            if (GameController.S.HeiAnPengQueue.Count > 0)
             {
-                var hit = GameController.S.HuoPengQueue.Dequeue();
+                var hit = GameController.S.HeiAnPengQueue.Dequeue();
                 hit.transform.position = closestPoint;
                 
                 bool isCrit = GameController.S.GetIsCrit();
@@ -256,29 +252,6 @@ public class HuoQuXian : MonoBehaviour
             
             // 立即隐藏当前魔法弹
             Hide();
-        }
-    }
-    
-    // 添加调试方法
-    void OnDrawGizmosSelected()
-    {
-        // 可以在编辑器中看到路径
-        if (Application.isPlaying)
-        {
-            Gizmos.color = currentState == FlyState.Curved ? Color.red : Color.blue;
-            Gizmos.DrawSphere(transform.position, 0.1f);
-            
-            // 绘制飞行方向（使用物体的前向方向）
-            Gizmos.color = Color.green;
-            Vector3 forward = transform.right; // 2D中通常用right表示前向
-            Gizmos.DrawRay(transform.position, forward * 2f);
-            
-            // 如果是直线阶段，也绘制直线方向
-            if (currentState == FlyState.Straight && straightDirection != Vector2.zero)
-            {
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawRay(transform.position, straightDirection * 2f);
-            }
         }
     }
     

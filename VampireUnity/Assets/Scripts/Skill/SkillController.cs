@@ -1037,8 +1037,11 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.HeiAnHuiXuan:
                 GameController.S.gamePlayer.currentGun.HeiAnHuiXuanShot(attackTrans);
                 break;
-            case WeaponType.HuoQuXian:
+            case WeaponType.HeiAnQuXian:
                 GameController.S.gamePlayer.currentGun.HuoQuXianShot(attackTrans);
+                break;
+            case WeaponType.HuoDiPen:
+                GameController.S.gamePlayer.currentGun.HuoDiPenShot(attackTrans);
                 break;
         }
     }

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -231,6 +232,48 @@ public class GunBase : MonoBehaviour
         bullet.MoveDirection = direction;
         bullet.MoveSpeed = 10f;
         bullet.gameObject.SetActive(true);
+    }
+    
+    
+    public void HuoDiPenShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 basedir = (worldPos - attackTrans).normalized;
+        Vector2 dir1=Quaternion.AngleAxis(25, Vector3.forward) * basedir;
+        List<int>order1 = new List<int>(){3008,3007,3006};
+        List<int>order2 = new List<int>(){3003,3004,3005};
+        List<int>order3 = new List<int>(){3000,3001,3002};
+
+        Vector2 dir2=Quaternion.AngleAxis(0, Vector3.forward) * basedir;
+        Vector2 dir3=Quaternion.AngleAxis(-25, Vector3.forward) * basedir;
+        StartCoroutine(ShowDiPen(3, 1.3f, dir1, attackTrans,order1));
+        StartCoroutine(ShowDiPen(3, 1.3f, dir2, attackTrans,order2));
+        StartCoroutine(ShowDiPen(3, 1.3f, dir3, attackTrans,order3));
+    }
+
+
+    IEnumerator ShowDiPen(int count, float dis,Vector2 dir,Vector2 startPos,List<int> orderList)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            var dipen = GameController.S.HuoDiPenQueue.Dequeue();
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            dipen.transform.position = startPos + (dir * (i+1) * dis);
+            if (dipen.transform.position.x > startPos.x)
+            {
+                dipen.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            }
+            else
+            {
+                dipen.transform.rotation = Quaternion.Euler(new Vector3(180, 0, -angle));
+            }
+            dipen.gameObject.SetActive(true);
+            dipen.spriteRenderer.sortingOrder = orderList[i];
+            yield return new  WaitForSeconds(0.1f);
+        }
     }
     
     public void DianJiSuShot(Vector3 attackTrans)
