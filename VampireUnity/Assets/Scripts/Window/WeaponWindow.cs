@@ -1325,7 +1325,7 @@ public class WeaponWindow : MonoBehaviour
 
 
 
-      primaryInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.IcePen; StoreController.S.SaveStoreData();RefreshEquipIcon();});
+      primaryInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.DianLuoLei5; StoreController.S.SaveStoreData();RefreshEquipIcon();});
       fireInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Fire; StoreController.S.SaveStoreData();RefreshEquipIcon();});
       xukongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.XuKong; StoreController.S.SaveStoreData();RefreshEquipIcon();});
 

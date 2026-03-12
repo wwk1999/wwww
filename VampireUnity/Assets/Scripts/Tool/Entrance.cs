@@ -1786,6 +1786,20 @@ public class Entrance : MonoBehaviour
                 }
             }
             
+            if (PlayerData.S.playerWeaponType == WeaponType.DianLuoLei5)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/DianLuoLei").GetComponent<DianLuoLei>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.DianLuoLeiQueue.Enqueue(IcePeng);
+                    
+                    var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/DianLuoLeiNext").GetComponent<DianLuoLeiNext>());
+                    IcePeng1.gameObject.SetActive(false);
+                    GameController.S.DianLuoLeiNextQueue.Enqueue(IcePeng1);
+                }
+            }
+            
             if (PlayerData.S.playerWeaponType == WeaponType.IcePen)
             {
                 for (int i = 0; i < 30; i++)

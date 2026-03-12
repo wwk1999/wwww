@@ -179,6 +179,20 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
     
+    public void DianLuoLeiShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        DianLuoLei bullet = GameController.S.DianLuoLeiQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
+    
     public void IcePenShot(Vector3 attackTrans)
     {
         Vector3 mouseScreen = Input.mousePosition;

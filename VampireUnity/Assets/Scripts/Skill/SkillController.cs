@@ -1028,6 +1028,9 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.IcePen:
                 GameController.S.gamePlayer.currentGun.IcePenShot(attackTrans);
                 break;
+            case WeaponType.DianLuoLei5:
+                GameController.S.gamePlayer.currentGun.DianLuoLeiShot(attackTrans);
+                break;
         }
     }
     
