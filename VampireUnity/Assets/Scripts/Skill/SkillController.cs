@@ -1043,6 +1043,15 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.HuoDiPen:
                 GameController.S.gamePlayer.currentGun.HuoDiPenShot(attackTrans);
                 break;
+            case WeaponType.PrimaryDian:
+                GameController.S.gamePlayer.currentGun.PrimaryDianShot(attackTrans);
+                break;
+            case WeaponType.PrimaryHeiAn:
+                GameController.S.gamePlayer.currentGun.PrimaryHeiAnShot(attackTrans);
+                break;
+            case WeaponType.PrimaryHuo:
+                GameController.S.gamePlayer.currentGun.PrimaryHuoShot(attackTrans);
+                break;
         }
     }
     

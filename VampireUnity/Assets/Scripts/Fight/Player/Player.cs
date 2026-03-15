@@ -15,6 +15,9 @@ public enum WeaponType
 {
     None,
     Primary,//ice
+    PrimaryDian,
+    PrimaryHeiAn,
+    PrimaryHuo,
     LanBao,
     Fire,//dian
     XuKong,//dian

@@ -1319,6 +1319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIToast
       objectReference: {fileID: 0}
+    - target: {fileID: 306758926900689654, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1874455727043374132, guid: ead5f0eb5a9a0f748989c347a9af404c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.172

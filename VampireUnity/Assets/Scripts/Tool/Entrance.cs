@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Config;
 using Mysql;
 using Prop.BaoShi;
+using Skill.NormalAttack.Primary;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -1820,6 +1821,39 @@ public class Entrance : MonoBehaviour
                     GameController.S.DianLuoLeiNextQueue.Enqueue(IcePeng1);
                 }
             }
+            
+            if (PlayerData.S.playerWeaponType == WeaponType.PrimaryDian)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/PrimaryDian").GetComponent<PrimaryDian>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.PrimaryDianQueue.Enqueue(IcePeng);
+                }
+            }
+            
+            if (PlayerData.S.playerWeaponType == WeaponType.PrimaryHuo)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/PrimaryHuo").GetComponent<PrimaryHuo>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.PrimaryHuoQueue.Enqueue(IcePeng);
+                }
+            }
+            
+            if (PlayerData.S.playerWeaponType == WeaponType.PrimaryHeiAn)
+            {
+                for (int i = 0; i < 30; i++)
+                {
+                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/PrimaryHeiAn").GetComponent<PrimaryHeiAn>());
+                    IcePeng.gameObject.SetActive(false);
+                    GameController.S.PrimaryHeiAnQueue.Enqueue(IcePeng);
+                }
+            }
+            
+            
+            
             
             if (PlayerData.S.playerWeaponType == WeaponType.IcePen)
             {

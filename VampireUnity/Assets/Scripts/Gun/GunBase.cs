@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Skill.NormalAttack.Primary;
 using UnityEditor;
 using UnityEngine;
 
@@ -228,6 +229,48 @@ public class GunBase : MonoBehaviour
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         Vector2 direction = (worldPos- attackTrans).normalized;
         Ice4BaoZha bullet = GameController.S.Ice4BaoZhaQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
+    
+    public void PrimaryDianShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        PrimaryDian bullet = GameController.S.PrimaryDianQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
+    
+    public void PrimaryHeiAnShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        PrimaryHeiAn bullet = GameController.S.PrimaryHeiAnQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
+    
+    public void PrimaryHuoShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        PrimaryHuo bullet = GameController.S.PrimaryHuoQueue.Dequeue();
         bullet.transform.position = attackTrans;
         bullet.MoveDirection = direction;
         bullet.MoveSpeed = 10f;

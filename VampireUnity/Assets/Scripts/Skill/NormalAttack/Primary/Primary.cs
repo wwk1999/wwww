@@ -14,10 +14,18 @@ public class Primary : MonoBehaviour
     public GameObject bullet;
     private void OnEnable()
     {
+        CancelInvoke();
         ske.AnimationState.SetAnimation(0, "fly_10", true);
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         rg.velocity = MoveDirection * MoveSpeed;
+        Invoke(nameof(Hide),2f);
+    }
+
+    public void Hide()
+    {
+        GameController.S.PrimaryQueue.Enqueue(gameObject);
+        gameObject.SetActive(false);
     }
     
     private void OnTriggerEnter2D(Collider2D other)

@@ -7,6 +7,30 @@ public class ResourcesConfig : MonoBehaviour
 {
     public static Sprite LingHun;
     
+    //武器图片
+    public static Sprite Primary;//ice
+    public static Sprite Fire;//dian
+    public static Sprite XuKong;//dian
+    public static Sprite LvQuan;//heian
+    public static Sprite HeiDong;//heian
+    public static Sprite Du;//huo
+    public static Sprite PuTong3;//ice
+    public static Sprite JianQi;//huo
+    public static Sprite HeiAnBaoZha;
+    public static Sprite DianSanShe;
+    public static Sprite Huo7;
+    public static Sprite HuoFenLie;
+    public static Sprite Ice4BaoZha;
+    public static Sprite Ice7;
+    public static Sprite IcePen;
+    public static Sprite DianLuoLei5;
+    public static Sprite DianJiSu;
+    public static Sprite HeiAnHuiXuan;
+    public static Sprite HeiAnQuXian;
+    public static Sprite HuoDiPen;
+    
+    
+    
     //宝石
     public static Sprite HH1;
     public static Sprite HH2;
@@ -1302,6 +1326,28 @@ public class ResourcesConfig : MonoBehaviour
         heianorange1_q = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianorange1_q");
         heianorange1_h = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSprite/heianorange1_h");
 
+
+        //武器
+        Primary = Resources.Load<Sprite>("Sprite/Weapon/Primary");
+        DianJiSu = Resources.Load<Sprite>("Sprite/Weapon/DianJiSu");
+        DianLuoLei5 = Resources.Load<Sprite>("Sprite/Weapon/DianLuoLei5");
+        DianSanShe = Resources.Load<Sprite>("Sprite/Weapon/DianSanShe");
+        Du = Resources.Load<Sprite>("Sprite/Weapon/Du");
+        Fire = Resources.Load<Sprite>("Sprite/Weapon/Fire");
+        HeiAnBaoZha = Resources.Load<Sprite>("Sprite/Weapon/HeiAnBaoZha");
+        HeiAnHuiXuan = Resources.Load<Sprite>("Sprite/Weapon/HeiAnHuiXuan");
+        HeiAnQuXian = Resources.Load<Sprite>("Sprite/Weapon/HeiAnQuXian");
+        HeiDong = Resources.Load<Sprite>("Sprite/Weapon/HeiDong");
+        Huo7 = Resources.Load<Sprite>("Sprite/Weapon/Huo7");
+        HuoDiPen = Resources.Load<Sprite>("Sprite/Weapon/HuoDiPen");
+        HuoFenLie = Resources.Load<Sprite>("Sprite/Weapon/HuoFenLie");
+        Ice4BaoZha = Resources.Load<Sprite>("Sprite/Weapon/Ice4BaoZha");
+        Ice7 = Resources.Load<Sprite>("Sprite/Weapon/Ice7");
+        IcePen = Resources.Load<Sprite>("Sprite/Weapon/IcePen");
+        JianQi = Resources.Load<Sprite>("Sprite/Weapon/JianQi");
+        LvQuan = Resources.Load<Sprite>("Sprite/Weapon/LvQuan");
+        PuTong3 = Resources.Load<Sprite>("Sprite/Weapon/PuTong3");
+        XuKong = Resources.Load<Sprite>("Sprite/Weapon/XuKong");
 
 
 

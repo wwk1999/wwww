@@ -1,5 +1,13 @@
 using System.Collections.Generic;
 
+public enum WeaponTeXiao
+{
+    None,
+    FenLie,
+    BaoZha,
+    JiSu,
+    FanWei,
+}
 namespace Config
 {
     public class WeaponCaiLiao
@@ -49,6 +57,81 @@ namespace Config
             { WeaponType.LvQuan,new HunQiEx(){Level1 = 150,Level2 = 220,Level3 = 300,Level4 = 400,Level5 = 550}},
             { WeaponType.HeiDong,new HunQiEx(){Level1 = 200,Level2 = 300,Level3 = 400,Level4 = 550,Level5 = 700}},
             { WeaponType.JianQi,new HunQiEx(){Level1 = 200,Level2 = 300,Level3 = 400,Level4 = 550,Level5 = 700}},
+        };
+
+        public static Dictionary<WeaponType, List<int>> WeaponDamageDic = new Dictionary<WeaponType, List<int>>()
+        {
+            { WeaponType.Primary, new List<int>(){100} },
+            { WeaponType.Du, new List<int>(){120} },
+            { WeaponType.HeiAnBaoZha, new List<int>(){100,120}},
+            { WeaponType.XuKong, new List<int>(){120} },
+            { WeaponType.PuTong3, new List<int>(){120} },
+            { WeaponType.Fire, new List<int>(){100,120} },
+            { WeaponType.LvQuan, new List<int>(){120} },
+            { WeaponType.DianJiSu, new List<int>(){150} },
+            { WeaponType.DianSanShe, new List<int>(){150} },
+            { WeaponType.Huo7, new List<int>(){150} },
+            { WeaponType.HuoFenLie, new List<int>(){120,150} },
+            { WeaponType.HeiAnHuiXuan, new List<int>(){120} },
+            { WeaponType.HeiAnQuXian, new List<int>(){150} },
+            { WeaponType.Ice7, new List<int>(){150} },
+            { WeaponType.Ice4BaoZha, new List<int>(){120,150} },
+            { WeaponType.JianQi, new List<int>(){150} },
+            { WeaponType.HuoDiPen, new List<int>(){200} },
+            { WeaponType.IcePen, new List<int>(){200}},
+            { WeaponType.HeiDong, new List<int>(){150,200} },
+            { WeaponType.DianLuoLei5, new List<int>(){150,180} },
+        };
+
+
+        public static Dictionary<WeaponType, int> WeaponQualityDic = new Dictionary<WeaponType, int>()
+        {
+            { WeaponType.Primary, 1 },
+            { WeaponType.Du, 2 },
+            { WeaponType.HeiAnBaoZha, 3 },
+            { WeaponType.XuKong, 3 },
+            { WeaponType.PuTong3, 3 },
+            { WeaponType.Fire, 3 },
+            { WeaponType.LvQuan, 3 },
+            { WeaponType.DianJiSu, 4 },
+            { WeaponType.DianSanShe, 4 },
+            { WeaponType.Huo7, 4 },
+            { WeaponType.HuoFenLie, 4 },
+            { WeaponType.HeiAnHuiXuan, 4 },
+            { WeaponType.HeiAnQuXian, 4 },
+            { WeaponType.Ice7, 4 },
+            { WeaponType.Ice4BaoZha, 4 },
+            { WeaponType.JianQi, 4 },
+            { WeaponType.HuoDiPen, 5 },
+            { WeaponType.IcePen, 5 },
+            { WeaponType.HeiDong, 5 },
+            { WeaponType.DianLuoLei5, 5 },
+        };
+
+
+        public static Dictionary<WeaponType, string> WeaponNameDic = new Dictionary<WeaponType, string>()
+        {
+            { WeaponType.Primary,"原木杖"},
+            { WeaponType.DianJiSu,"电光四射"},
+            { WeaponType.DianLuoLei5,"五雷杖"},
+            { WeaponType.DianSanShe,"镭射杖"},
+            { WeaponType.HuoDiPen,"熔岩杖"},
+            { WeaponType.Huo7,"散炎杖"},
+            { WeaponType.HuoFenLie,"爆炎杖"},
+            { WeaponType.HeiAnHuiXuan,"魔力回旋"},
+            { WeaponType.HeiAnQuXian,"魔曲杖"},
+            { WeaponType.HeiAnBaoZha,"魔爆杖"},
+            { WeaponType.Ice7,"散冰杖"},
+            { WeaponType.Ice4BaoZha,"四象冰杖"},
+            { WeaponType.IcePen,"万里冰封"},
+            { WeaponType.JianQi,"刀光剑影"},
+            { WeaponType.XuKong,"电光杖"},
+            { WeaponType.PuTong3,"三叉冰杖"},
+            { WeaponType.Fire,"落雷杖"},
+            { WeaponType.Du,"火球杖"},
+            { WeaponType.HeiDong,"黑洞坍塌"},
+            { WeaponType.LvQuan,"源极杖"},
+
         };
 
         public static Dictionary<WeaponType, WeaponHunQiDesc> WeaponHunQiDic =

@@ -9,6 +9,7 @@ using Fight.Monster.秘境.豹子;
 using Fight.Monster.秘境.雷兽;
 using Mysql;
 using Prop.BaoShi;
+using Skill.NormalAttack.Primary;
 using Spine.Unity;
 using Unity.Mathematics;
 using Unity.VisualScripting;
@@ -250,6 +251,10 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<Huo7Item>Huo7Queue = new Queue<Huo7Item>();
     [NonReorderable]public Queue<Ice7Item>Ice7Queue = new Queue<Ice7Item>();
     [NonReorderable]public Queue<IcePen>IcePenQueue = new Queue<IcePen>();
+    [NonReorderable]public Queue<PrimaryDian>PrimaryDianQueue = new Queue<PrimaryDian>();
+    [NonReorderable]public Queue<PrimaryHuo>PrimaryHuoQueue = new Queue<PrimaryHuo>();
+    [NonReorderable]public Queue<PrimaryHeiAn>PrimaryHeiAnQueue = new Queue<PrimaryHeiAn>();
+
 
     [NonReorderable]public Queue<DianLuoLei>DianLuoLeiQueue = new Queue<DianLuoLei>();
     [NonReorderable]public Queue<DianLuoLeiNext>DianLuoLeiNextQueue = new Queue<DianLuoLeiNext>();

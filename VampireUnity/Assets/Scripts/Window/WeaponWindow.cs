@@ -5,6 +5,7 @@ using Gloabl;
 using Mysql;
 using Spine.Unity;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,46 +13,9 @@ using UnityEngine.UI;
 
 public class WeaponWindow : MonoBehaviour
 {
-   public Button primaryInstallButton; // 初始武器安装按钮
-   public Button duInstallButton; //毒武器安装按钮
-   public Button puTong3InstallButton; //普通3安装按钮
-   public Button xukongInstallButton; //虚空武器安装按钮
-   public Button fireInstallButton; // fire爆炸武器安装按钮
-   public Button lvQuanInstallButton; // 绿圈武器安装按钮
-   public Button heiDongInstallButton; // 黑洞武器安装按钮
-   public Button jianQiInstallButton; // 剑气武器安装按钮
+
+   public GameObject WeaponListContent;
    public Button exitButton; // 退出按钮
-
-
-   public Button primaryJieSuoButton; // 初始武器解锁按钮
-   public Button duJieSuoButton; //毒武器解锁按钮
-   public Button puTong3JieSuoButton; //普通3解锁按钮
-   public Button xukongJieSuoButton; //虚空武器解锁按钮
-   public Button fireJieSuoButton; // fire爆炸武器解锁按钮
-   public Button lvQuanJieSuoButton; // 绿圈武器解锁按钮
-   public Button heiDongJieSuoButton; // 黑洞武器解锁按钮
-   public Button jianQiJieSuoButton; // 剑气武器解锁按钮
-
-   public Button primaryShowButton;
-   public Button duShowButton;
-   public Button puTong3ShowButton;
-   public Button xukongShowButton;
-   public Button fireShowButton;
-   public Button lvQuanShowButton;
-   public Button heiDongShowButton;
-   public Button jianQiShowButton;
-
-
-   public Image primaryMask; //初始武器mask
-   public Image duMask; //毒武器mask
-   public Image puTong3Mask; //普通3mask
-   public Image xukongMask; //虚空武器mask
-   public Image fireMask; // fire爆炸武器mask
-   public Image lvQuanMask; // 绿圈武器mask
-   public Image heiDongMask; // 黑洞武器mask
-   public Image jianQiMask; // 剑气武器mask
-
-
 
    public GameObject InfoPanel;
    public GameObject UpPanel;
@@ -59,7 +23,6 @@ public class WeaponWindow : MonoBehaviour
    public GameObject AttributePanel;
 
 
-   public Image weaponImage;
    public TextMeshProUGUI desc1;
    public TextMeshProUGUI desc2;
    public TextMeshProUGUI desc3;
@@ -98,16 +61,7 @@ public class WeaponWindow : MonoBehaviour
    public GameObject AttributeContent;
 
    public ShenJiCaiLiao ShenJiCaiLiao;
-
-   public GameObject PrimaryEquipIcon;
-   public GameObject DuEquipIcon;
-   public GameObject PuTong3EquipIcon;
-   public GameObject XuKongEquipIcon;
-   public GameObject FireEquipIcon;
-   public GameObject LvQuanEquipIcon;
-   public GameObject HeiDongEquipIcon;
-   public GameObject JianQiEquipIcon;
-
+   
 
    public TextMeshProUGUI WeaponName1;
    public TextMeshProUGUI WeaponName2;
@@ -515,42 +469,7 @@ public class WeaponWindow : MonoBehaviour
 
    public void RefreshEquipIcon()
    {
-      PrimaryEquipIcon.gameObject.SetActive(false);
-      DuEquipIcon.gameObject.SetActive(false);
-      PuTong3EquipIcon.gameObject.SetActive(false);
-      XuKongEquipIcon.gameObject.SetActive(false);
-      FireEquipIcon.gameObject.SetActive(false);
-      LvQuanEquipIcon.gameObject.SetActive(false);
-      HeiDongEquipIcon.gameObject.SetActive(false);
-      JianQiEquipIcon.gameObject.SetActive(false);
-
-      switch (PlayerData.S.playerWeaponType)
-      {
-         case WeaponType.Primary:
-            PrimaryEquipIcon.gameObject.SetActive(true);
-            break;
-         case WeaponType.Du:
-            DuEquipIcon.gameObject.SetActive(true);
-            break;
-         case WeaponType.PuTong3:
-            PuTong3EquipIcon.gameObject.SetActive(true);
-            break;
-         case WeaponType.XuKong:
-            XuKongEquipIcon.gameObject.SetActive(true);
-            break;
-         case WeaponType.Fire:
-            FireEquipIcon.gameObject.SetActive(true);
-            break;
-         case WeaponType.LvQuan:
-            LvQuanEquipIcon.gameObject.SetActive(true);
-            break;
-         case WeaponType.HeiDong:
-            HeiDongEquipIcon.gameObject.SetActive(true);
-            break;
-         case WeaponType.JianQi:
-            JianQiEquipIcon.gameObject.SetActive(true);
-            break;
-      }
+      
    }
    
    public void HideNameAndDesc()
@@ -933,97 +852,25 @@ public class WeaponWindow : MonoBehaviour
    {
       InfoPanel.SetActive(false);
       UpPanel.SetActive(false);
-      if (PlayerData.S.primaryWeaponLevel >= 1)
-      {
-         primaryJieSuoButton.gameObject.SetActive(false);
-         primaryMask.gameObject.SetActive(false);
-      }
-      else
-      {
-         primaryJieSuoButton.gameObject.SetActive(true);
-         primaryMask.gameObject.SetActive(true);
-      }
+   }
 
-      if (PlayerData.S.duWeaponLevel >= 1)
+   public void ShowWeaponList()
+   {
+      foreach (Transform item in WeaponListContent.transform)
       {
-         duJieSuoButton.gameObject.SetActive(false);
-         duMask.gameObject.SetActive(false);
+         Destroy(item.gameObject);
       }
-      else
+      foreach (var item in WeaponConfig.WeaponQualityDic)
       {
-         duJieSuoButton.gameObject.SetActive(true);
-         duMask.gameObject.SetActive(true);
-      }
-
-      if (PlayerData.S.puTong3WeaponLevel >= 1)
-      {
-         puTong3JieSuoButton.gameObject.SetActive(false);
-         puTong3Mask.gameObject.SetActive(false);
-      }
-      else
-      {
-         puTong3JieSuoButton.gameObject.SetActive(true);
-         puTong3Mask.gameObject.SetActive(true);
-      }
-
-      if (PlayerData.S.xuKongWeaponLevel >= 1)
-      {
-         xukongJieSuoButton.gameObject.SetActive(false);
-         xukongMask.gameObject.SetActive(false);
-      }
-      else
-      {
-         xukongJieSuoButton.gameObject.SetActive(true);
-         xukongMask.gameObject.SetActive(true);
-      }
-
-      if (PlayerData.S.lvQuanWeaponLevel >= 1)
-      {
-         lvQuanJieSuoButton.gameObject.SetActive(false);
-         lvQuanMask.gameObject.SetActive(false);
-      }
-      else
-      {
-         lvQuanJieSuoButton.gameObject.SetActive(true);
-         lvQuanMask.gameObject.SetActive(true);
-      }
-
-      if (PlayerData.S.fireWeaponLevel >= 1)
-      {
-         fireJieSuoButton.gameObject.SetActive(false);
-         fireMask.gameObject.SetActive(false);
-      }
-      else
-      {
-         fireJieSuoButton.gameObject.SetActive(true);
-         fireMask.gameObject.SetActive(true);
-      }
-
-      if (PlayerData.S.heiDongWeaponLevel >= 1)
-      {
-         heiDongJieSuoButton.gameObject.SetActive(false);
-         heiDongMask.gameObject.SetActive(false);
-      }
-      else
-      {
-         heiDongJieSuoButton.gameObject.SetActive(true);
-         heiDongMask.gameObject.SetActive(true);
-      }
-      
-      if (PlayerData.S.jianQiWeaponLevel >= 1)
-      {
-         jianQiJieSuoButton.gameObject.SetActive(false);
-         jianQiMask.gameObject.SetActive(false);
-      }
-      else
-      {
-         jianQiJieSuoButton.gameObject.SetActive(true);
-         jianQiMask.gameObject.SetActive(true);
+         var weaponItem = Instantiate(Resources.Load("Prefabs/Weapon/WeaponItem"),WeaponListContent.transform).GetComponent<WeaponItem>();
+         weaponItem.type = item.Key;
+         weaponItem.SetWeapon();
       }
    }
 
    private void OnEnable()
    {
+      ShowWeaponList();
       RefreshWeaponList();
       RefreshEquipIcon();
       SwitchLanguage();
@@ -1158,88 +1005,287 @@ public class WeaponWindow : MonoBehaviour
       }
    }
 
+   public void SuoButtonClick(object[] obj)
+   {
+      WeaponType type = (WeaponType)obj[0];
+
+      switch (type)
+      {
+         case WeaponType.Du:
+            currentJieSuoType = WeaponType.Du;
+            ShowJieSuo(WeaponType.Du);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.PuTong3:
+            currentJieSuoType = WeaponType.PuTong3;
+            ShowJieSuo(WeaponType.PuTong3);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.LvQuan:
+            currentJieSuoType = WeaponType.LvQuan;
+            ShowJieSuo(WeaponType.LvQuan);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.XuKong:
+            currentJieSuoType = WeaponType.XuKong;
+            ShowJieSuo(WeaponType.XuKong);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.Fire:
+            currentJieSuoType = WeaponType.Fire;
+            ShowJieSuo(WeaponType.Fire);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.HeiDong:
+            currentJieSuoType = WeaponType.HeiDong;
+            ShowJieSuo(WeaponType.HeiDong);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.JianQi:
+            currentJieSuoType = WeaponType.JianQi;
+            ShowJieSuo(WeaponType.JianQi);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.IcePen:
+            currentJieSuoType = WeaponType.IcePen;
+            ShowJieSuo(WeaponType.IcePen);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.Ice7:
+            currentJieSuoType = WeaponType.Ice7;
+            ShowJieSuo(WeaponType.Ice7);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.Ice4BaoZha:
+            currentJieSuoType = WeaponType.Ice4BaoZha;
+            ShowJieSuo(WeaponType.Ice4BaoZha);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.Huo7:
+            currentJieSuoType = WeaponType.Huo7;
+            ShowJieSuo(WeaponType.Huo7);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.HuoFenLie:
+            currentJieSuoType = WeaponType.HuoFenLie;
+            ShowJieSuo(WeaponType.HuoFenLie);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.HuoDiPen:
+            currentJieSuoType = WeaponType.HuoDiPen;
+            ShowJieSuo(WeaponType.HuoDiPen);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.HeiAnQuXian:
+            currentJieSuoType = WeaponType.HeiAnQuXian;
+            ShowJieSuo(WeaponType.HeiAnQuXian);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.HeiAnHuiXuan:
+            currentJieSuoType = WeaponType.HeiAnHuiXuan;
+            ShowJieSuo(WeaponType.HeiAnHuiXuan);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.HeiAnBaoZha:
+            currentJieSuoType = WeaponType.HeiAnBaoZha;
+            ShowJieSuo(WeaponType.HeiAnBaoZha);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.DianLuoLei5:
+            currentJieSuoType = WeaponType.DianLuoLei5;
+            ShowJieSuo(WeaponType.DianLuoLei5);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.DianSanShe:
+            currentJieSuoType = WeaponType.DianSanShe;
+            ShowJieSuo(WeaponType.DianSanShe);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.DianJiSu:
+            currentJieSuoType = WeaponType.DianJiSu;
+            ShowJieSuo(WeaponType.DianJiSu);
+            AttributeButton.gameObject.SetActive(false);
+            HunQiButton.gameObject.SetActive(false);
+            AttributePanel.gameObject.SetActive(false);
+            HunQiPanel.gameObject.SetActive(false);
+            break;
+      }
+   }
+
+   public void ClealYiZhuangBei(object[] obj)
+   {
+      foreach (Transform item in WeaponListContent.transform)
+      {
+         WeaponItem weaponItem = item.gameObject.GetComponent<WeaponItem>();
+         weaponItem.yiZhuangBeiIcon.gameObject.SetActive(false);
+      }
+   }
+
+
+   public void BgButtonClick(object[] obj)
+   {
+      WeaponType type = (WeaponType)obj[0];
+      switch (type)
+      {
+         case WeaponType.Primary:
+            currentShowType = WeaponType.Primary;
+            ShenJiCaiLiao.showType = WeaponType.Primary;
+            AttributeButton.gameObject.SetActive(true);
+            HunQiButton.gameObject.SetActive(true);
+            SetHunQiPanel();
+            ShowAttribute(WeaponType.Primary);
+            break;
+         
+         case WeaponType.Du:
+            currentShowType = WeaponType.Du;
+            ShenJiCaiLiao.showType = WeaponType.Du;
+            AttributeButton.gameObject.SetActive(true);
+            HunQiButton.gameObject.SetActive(true);
+            SetHunQiPanel();
+            ShowAttribute(WeaponType.Du);
+            break;
+         
+         case WeaponType.LvQuan:
+            currentShowType = WeaponType.LvQuan;
+            ShenJiCaiLiao.showType = WeaponType.LvQuan;
+            AttributeButton.gameObject.SetActive(true);
+            HunQiButton.gameObject.SetActive(true);
+            SetHunQiPanel();
+            ShowAttribute(WeaponType.LvQuan);
+            break;
+         
+         
+         case WeaponType.XuKong:
+            currentShowType = WeaponType.XuKong;
+            ShenJiCaiLiao.showType = WeaponType.XuKong;
+            AttributeButton.gameObject.SetActive(true);
+            HunQiButton.gameObject.SetActive(true);
+            SetHunQiPanel();
+            ShowAttribute(WeaponType.XuKong);
+            break;
+         
+         case WeaponType.PuTong3:
+            currentShowType = WeaponType.PuTong3;
+            ShenJiCaiLiao.showType = WeaponType.PuTong3;
+            AttributeButton.gameObject.SetActive(true);
+            HunQiButton.gameObject.SetActive(true);
+            SetHunQiPanel();
+            ShowAttribute(WeaponType.PuTong3);
+            break;
+         
+         case WeaponType.Fire:
+            currentShowType = WeaponType.Fire;
+            ShenJiCaiLiao.showType = WeaponType.Fire;
+            AttributeButton.gameObject.SetActive(true);
+            HunQiButton.gameObject.SetActive(true);
+            SetHunQiPanel();
+            ShowAttribute(WeaponType.Fire);
+            break;
+         
+         case WeaponType.JianQi:
+            currentShowType = WeaponType.JianQi;
+            ShenJiCaiLiao.showType = WeaponType.JianQi;
+            AttributeButton.gameObject.SetActive(true);
+            HunQiButton.gameObject.SetActive(true);
+            SetHunQiPanel();
+            ShowAttribute(WeaponType.JianQi);
+            break;
+         
+         case WeaponType.HeiDong:
+            currentShowType = WeaponType.HeiDong;
+            ShenJiCaiLiao.showType = WeaponType.HeiDong;
+            AttributeButton.gameObject.SetActive(true);
+            HunQiButton.gameObject.SetActive(true);
+            SetHunQiPanel();
+            ShowAttribute(WeaponType.HeiDong);
+            break;
+      }
+   }
+
+   private void OnDestroy()
+   {
+      ObserverModuleManager.S.UnRegisterEvent("BgButtonClick",BgButtonClick);
+      ObserverModuleManager.S.UnRegisterEvent("SuoButtonClick",SuoButtonClick);
+      ObserverModuleManager.S.UnRegisterEvent("ClealYiZhuangBei",ClealYiZhuangBei);
+   }
+
    private void Awake()
    {
-      primaryShowButton.onClick.AddListener(() =>
-      {
-         currentShowType = WeaponType.Primary;
-         ShenJiCaiLiao.showType = WeaponType.Primary;
-         AttributeButton.gameObject.SetActive(true);
-         HunQiButton.gameObject.SetActive(true);
-         SetHunQiPanel();
-         ShowAttribute(WeaponType.Primary);
-      });
-
-      duShowButton.onClick.AddListener(() =>
-      {
-         currentShowType = WeaponType.Du;
-         ShenJiCaiLiao.showType = WeaponType.Du;
-         AttributeButton.gameObject.SetActive(true);
-         HunQiButton.gameObject.SetActive(true);
-         SetHunQiPanel();
-         ShowAttribute(WeaponType.Du);
-      });
-
-      puTong3ShowButton.onClick.AddListener(() =>
-      {
-         currentShowType = WeaponType.PuTong3;
-         ShenJiCaiLiao.showType = WeaponType.PuTong3; 
-         AttributeButton.gameObject.SetActive(true);
-         HunQiButton.gameObject.SetActive(true);
-         SetHunQiPanel();
-         ShowAttribute(WeaponType.PuTong3);
-      });
-
-      xukongShowButton.onClick.AddListener(() =>
-      {
-         currentShowType = WeaponType.XuKong;
-         ShenJiCaiLiao.showType = WeaponType.XuKong;
-         AttributeButton.gameObject.SetActive(true);
-         HunQiButton.gameObject.SetActive(true);
-         SetHunQiPanel();
-         ShowAttribute(WeaponType.XuKong);
-      });
-
-      fireShowButton.onClick.AddListener(() =>
-      {
-         currentShowType = WeaponType.Fire;
-         ShenJiCaiLiao.showType = WeaponType.Fire;
-         AttributeButton.gameObject.SetActive(true);
-         HunQiButton.gameObject.SetActive(true);
-         SetHunQiPanel();
-         ShowAttribute(WeaponType.Fire);
-      });
-
-      lvQuanShowButton.onClick.AddListener(() =>
-      {
-         currentShowType = WeaponType.LvQuan;
-         ShenJiCaiLiao.showType = WeaponType.LvQuan;
-         AttributeButton.gameObject.SetActive(true);
-         HunQiButton.gameObject.SetActive(true);
-         SetHunQiPanel();
-         ShowAttribute(WeaponType.LvQuan);
-      });
-
-      heiDongShowButton.onClick.AddListener(() =>
-      {
-         currentShowType = WeaponType.HeiDong;
-         ShenJiCaiLiao.showType = WeaponType.HeiDong;
-         AttributeButton.gameObject.SetActive(true);
-         HunQiButton.gameObject.SetActive(true);
-         SetHunQiPanel();
-         ShowAttribute(WeaponType.HeiDong);
-      });
-      
-      jianQiShowButton.onClick.AddListener(() =>
-      {
-         currentShowType = WeaponType.JianQi;
-         ShenJiCaiLiao.showType = WeaponType.JianQi;
-         AttributeButton.gameObject.SetActive(true);
-         HunQiButton.gameObject.SetActive(true);
-         SetHunQiPanel();
-         ShowAttribute(WeaponType.JianQi);
-      });
-      
+      ObserverModuleManager.S.RegisterEvent("ClealYiZhuangBei",ClealYiZhuangBei);
+      ObserverModuleManager.S.RegisterEvent("BgButtonClick",BgButtonClick);
+      ObserverModuleManager.S.RegisterEvent("SuoButtonClick",SuoButtonClick);
 
 
       AttributeButton.onClick.AddListener(() =>
@@ -1253,91 +1299,8 @@ public class WeaponWindow : MonoBehaviour
          AttributePanel.gameObject.SetActive(false);
          HunQiPanel.gameObject.SetActive(true);
       });
-
-
-
-
       JieSuoButton.onClick.AddListener(() => { JieSuo(); });
-      duJieSuoButton.onClick.AddListener(() =>
-      {
-         currentJieSuoType = WeaponType.Du;
-         ShowJieSuo(WeaponType.Du);
-         AttributeButton.gameObject.SetActive(false);
-         HunQiButton.gameObject.SetActive(false);
-         AttributePanel.gameObject.SetActive(false);
-         HunQiPanel.gameObject.SetActive(false);
-      });
-      puTong3JieSuoButton.onClick.AddListener(() =>
-      {
-         currentJieSuoType = WeaponType.PuTong3;
-         ShowJieSuo(WeaponType.PuTong3);
-         AttributeButton.gameObject.SetActive(false);
-         HunQiButton.gameObject.SetActive(false);
-         AttributePanel.gameObject.SetActive(false);
-         HunQiPanel.gameObject.SetActive(false);
-      });
-      xukongJieSuoButton.onClick.AddListener(() =>
-      {
-         currentJieSuoType = WeaponType.XuKong;
-         ShowJieSuo(WeaponType.XuKong);
-         AttributeButton.gameObject.SetActive(false);
-         HunQiButton.gameObject.SetActive(false);
-         AttributePanel.gameObject.SetActive(false);
-         HunQiPanel.gameObject.SetActive(false);
-      });
-      fireJieSuoButton.onClick.AddListener(() =>
-      {
-         currentJieSuoType = WeaponType.Fire;
-         ShowJieSuo(WeaponType.Fire);
-         AttributeButton.gameObject.SetActive(false);
-         HunQiButton.gameObject.SetActive(false);
-         AttributePanel.gameObject.SetActive(false);
-         HunQiPanel.gameObject.SetActive(false);
-      });
-      lvQuanJieSuoButton.onClick.AddListener(() =>
-      {
-         currentJieSuoType = WeaponType.LvQuan;
-         ShowJieSuo(WeaponType.LvQuan);
-         AttributeButton.gameObject.SetActive(false);
-         HunQiButton.gameObject.SetActive(false);
-         AttributePanel.gameObject.SetActive(false);
-         HunQiPanel.gameObject.SetActive(false);
-      });
-      heiDongJieSuoButton.onClick.AddListener(() =>
-      {
-         currentJieSuoType = WeaponType.HeiDong;
-         ShowJieSuo(WeaponType.HeiDong);
-         AttributeButton.gameObject.SetActive(false);
-         HunQiButton.gameObject.SetActive(false);
-         AttributePanel.gameObject.SetActive(false);
-         HunQiPanel.gameObject.SetActive(false);
-      });
       
-      jianQiJieSuoButton.onClick.AddListener(() =>
-      {
-         currentJieSuoType = WeaponType.JianQi;
-         ShowJieSuo(WeaponType.JianQi);
-         AttributeButton.gameObject.SetActive(false);
-         HunQiButton.gameObject.SetActive(false);
-         AttributePanel.gameObject.SetActive(false);
-         HunQiPanel.gameObject.SetActive(false);
-      });
-
-
-
-      primaryInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.HuoDiPen; StoreController.S.SaveStoreData();RefreshEquipIcon();});
-      fireInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.Fire; StoreController.S.SaveStoreData();RefreshEquipIcon();});
-      xukongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.XuKong; StoreController.S.SaveStoreData();RefreshEquipIcon();});
-
-      lvQuanInstallButton.onClick.AddListener(() => {PlayerData.S.playerWeaponType = WeaponType.LvQuan; StoreController.S.SaveStoreData();RefreshEquipIcon();});
-
-      heiDongInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.HeiDong;StoreController.S.SaveStoreData(); RefreshEquipIcon();});
-      jianQiInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.JianQi;StoreController.S.SaveStoreData(); RefreshEquipIcon();});
-
-      duInstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType= WeaponType.Du; StoreController.S.SaveStoreData();RefreshEquipIcon();});
-
-      puTong3InstallButton.onClick.AddListener(() => { PlayerData.S.playerWeaponType = WeaponType.PuTong3; StoreController.S.SaveStoreData();RefreshEquipIcon();});
-
       exitButton.onClick.AddListener(() =>
       {
          gameObject.SetActive(false);
