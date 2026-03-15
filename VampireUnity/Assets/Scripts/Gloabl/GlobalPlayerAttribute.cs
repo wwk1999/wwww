@@ -554,7 +554,7 @@ public class GlobalPlayerAttribute
        switch (PlayerData.S.playerWeaponType)
        {
            case WeaponType.Primary:
-           case WeaponType.Du:
+           case WeaponType.HuoBaoZha:
            case WeaponType.XuKong:
            case WeaponType.Fire:
            case WeaponType.LvQuan:
@@ -612,7 +612,7 @@ public class GlobalPlayerAttribute
        switch (PlayerData.S.playerWeaponType)
        {
            case WeaponType.Primary:
-           case WeaponType.Du:
+           case WeaponType.HuoBaoZha:
            case WeaponType.XuKong:
            case WeaponType.Fire:
            case WeaponType.LvQuan:
@@ -2583,7 +2583,7 @@ public class GlobalPlayerAttribute
            case WeaponType.Primary:
                level = PlayerData.S.primaryWeaponLevel;
                break;
-           case WeaponType.Du:
+           case WeaponType.HuoBaoZha:
                level = PlayerData.S.duWeaponLevel;
                break;
            case WeaponType.PuTong3:
@@ -2618,7 +2618,7 @@ public class GlobalPlayerAttribute
            case WeaponType.Primary:
                level = PlayerData.S.primaryWeaponLevel;
                break;
-           case WeaponType.Du:
+           case WeaponType.HuoBaoZha:
                level = PlayerData.S.duWeaponLevel;
                break;
            case WeaponType.PuTong3:
@@ -2653,7 +2653,7 @@ public class GlobalPlayerAttribute
            case WeaponType.Primary:
                level = PlayerData.S.primaryWeaponLevel;
                break;
-           case WeaponType.Du:
+           case WeaponType.HuoBaoZha:
                level = PlayerData.S.duWeaponLevel;
                break;
            case WeaponType.PuTong3:
@@ -2688,7 +2688,7 @@ public class GlobalPlayerAttribute
            case WeaponType.Primary:
                level = PlayerData.S.primaryWeaponLevel;
                break;
-           case WeaponType.Du:
+           case WeaponType.HuoBaoZha:
                level = PlayerData.S.duWeaponLevel;
                break;
            case WeaponType.PuTong3:

@@ -998,7 +998,7 @@ public class SkillController : XSingleton<SkillController>
             case WeaponType.HeiDong:
                 GameController.S.gamePlayer.currentGun.HeiDongShot(attackTrans);
                 break;
-            case WeaponType.Du:
+            case WeaponType.HuoBaoZha:
                 GameController.S.gamePlayer.currentGun.DuShot(attackTrans);
                 break;
             case WeaponType.LuoLei:

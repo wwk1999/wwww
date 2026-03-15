@@ -569,7 +569,7 @@ public abstract class MonsterBase : MonoBehaviour
             case WeaponType.Primary:
                 PlayerData.S.primaryHunQiEx++;
                 break;
-            case WeaponType.Du:
+            case WeaponType.HuoBaoZha:
                 PlayerData.S.primaryHunQiEx++;
                 break;
             case WeaponType.PuTong3:

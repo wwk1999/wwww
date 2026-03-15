@@ -261,31 +261,31 @@ public class WeaponWindow : MonoBehaviour
             }
             break;
          
-         case WeaponType.Du:
+         case WeaponType.HuoBaoZha:
             HunQiLevel.text="Lv "+PlayerData.S.duHunQiLevel;
             HunQiExSlider.value = PlayerData.S.duHunQiEx;
             HunQiCurrentEx.text = PlayerData.S.duHunQiEx.ToString();
             switch (PlayerData.S.duHunQiLevel)
             {
                case 0:
-                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level1;
-                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level1.ToString();
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level1;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level1.ToString();
                   break;
                case 1:
-                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level2;
-                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level2.ToString();
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level2;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level2.ToString();
                   break;
                case 2:
-                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level3;
-                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level3.ToString();
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level3;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level3.ToString();
                   break;
                case 3:
-                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level4;
-                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level4.ToString();
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level4;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level4.ToString();
                   break;
                case 4:
-                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.Du].Level5;
-                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.Du].Level5.ToString();
+                  HunQiExSlider.maxValue = WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level5;
+                  HunQiMaxEx.text =WeaponConfig.HunQiExDic[WeaponType.HuoBaoZha].Level5.ToString();
                   break;
             }
             break;
@@ -531,7 +531,7 @@ public class WeaponWindow : MonoBehaviour
                weaponName1.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1+"+"+level;
             }
             break;
-         case WeaponType.Du:
+         case WeaponType.HuoBaoZha:
             desc2.gameObject.SetActive(true);
             weaponName2.gameObject.SetActive(true);
             texiao2.gameObject.SetActive(true);
@@ -644,7 +644,7 @@ public class WeaponWindow : MonoBehaviour
          case WeaponType.Primary:
             level1 = PlayerData.S.primaryWeaponLevel;
             break;
-         case WeaponType.Du:
+         case WeaponType.HuoBaoZha:
             level1 = PlayerData.S.duWeaponLevel;
             break;
          case WeaponType.PuTong3:
@@ -705,7 +705,7 @@ public class WeaponWindow : MonoBehaviour
             weaponName1.gameObject.SetActive(true);
             texiao1.gameObject.SetActive(true);
             break;
-         case WeaponType.Du:
+         case WeaponType.HuoBaoZha:
             desc2.gameObject.SetActive(true);
             weaponName2.gameObject.SetActive(true);
             texiao2.gameObject.SetActive(true);
@@ -885,7 +885,7 @@ public class WeaponWindow : MonoBehaviour
    {
       switch (currentJieSuoType)
       {
-         case WeaponType.Du:
+         case WeaponType.HuoBaoZha:
             if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
                 BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
                 BagController.S.PropList[102].Count < 3)
@@ -1011,9 +1011,9 @@ public class WeaponWindow : MonoBehaviour
 
       switch (type)
       {
-         case WeaponType.Du:
-            currentJieSuoType = WeaponType.Du;
-            ShowJieSuo(WeaponType.Du);
+         case WeaponType.HuoBaoZha:
+            currentJieSuoType = WeaponType.HuoBaoZha;
+            ShowJieSuo(WeaponType.HuoBaoZha);
             AttributeButton.gameObject.SetActive(false);
             HunQiButton.gameObject.SetActive(false);
             AttributePanel.gameObject.SetActive(false);
@@ -1208,13 +1208,13 @@ public class WeaponWindow : MonoBehaviour
             ShowAttribute(WeaponType.Primary);
             break;
          
-         case WeaponType.Du:
-            currentShowType = WeaponType.Du;
-            ShenJiCaiLiao.showType = WeaponType.Du;
+         case WeaponType.HuoBaoZha:
+            currentShowType = WeaponType.HuoBaoZha;
+            ShenJiCaiLiao.showType = WeaponType.HuoBaoZha;
             AttributeButton.gameObject.SetActive(true);
             HunQiButton.gameObject.SetActive(true);
             SetHunQiPanel();
-            ShowAttribute(WeaponType.Du);
+            ShowAttribute(WeaponType.HuoBaoZha);
             break;
          
          case WeaponType.LvQuan:
@@ -1509,7 +1509,7 @@ public class WeaponWindow : MonoBehaviour
          case WeaponType.Primary:
             PlayerData.S.primaryWeaponLevel++;
             break;
-         case WeaponType.Du:
+         case WeaponType.HuoBaoZha:
             PlayerData.S.duWeaponLevel++;
             break;
          case WeaponType.PuTong3:

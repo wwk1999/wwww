@@ -1584,16 +1584,35 @@ public class Entrance : MonoBehaviour
                         GameController.S.HeiDongPengQueue.Enqueue(HeiDongPeng);
                         break;
 
-                    case WeaponType.Du:
-                        var Du = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/Du"), new Vector3(0, 0, 0),
-                            Quaternion.identity) as GameObject;
-                        Du.SetActive(false);
-                        GameController.S.DuQueue.Enqueue(Du);
+                    case WeaponType.HuoBaoZha:
+                        var Du = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/HuoBaoZha")).GetComponent<HuoBaoZha>();
+                        Du.gameObject.SetActive(false);
+                        GameController.S.HuoBaoZhaQueue.Enqueue(Du);
 
-                        var DuPeng = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/DuPeng"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        DuPeng.SetActive(false);
-                        GameController.S.DuPengQueue.Enqueue(DuPeng);
+                        var DuPeng = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/HuoBaoZhaNext")).GetComponent<HuoYanBaoZhaNext>();
+                        DuPeng.gameObject.SetActive(false);
+                        GameController.S.HuoYanBaoZhaNextQueue.Enqueue(DuPeng);
+                        break;
+                    
+                    
+                    case WeaponType.IceBaoZha:
+                        var Du1 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/IceBaoZha")).GetComponent<IceBaoZha>();
+                        Du1.gameObject.SetActive(false);
+                        GameController.S.IceBaoZhaQueue.Enqueue(Du1);
+
+                        var DuPeng1 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/IceBaoZhaNext")).GetComponent<IceBaoZhaNext>();
+                        DuPeng1.gameObject.SetActive(false);
+                        GameController.S.IceBaoZhaNextQueue.Enqueue(DuPeng1);
+                        break;
+                    
+                    case WeaponType.DianBaoZha:
+                        var Du2 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/DianBaoZha")).GetComponent<DianBaoZha>();
+                        Du2.gameObject.SetActive(false);
+                        GameController.S.DianBaoZhaQueue.Enqueue(Du2);
+
+                        var DuPeng2 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/DianBaoZhaNext")).GetComponent<DianBaoZhaNext>();
+                        DuPeng2.gameObject.SetActive(false);
+                        GameController.S.DianBaoZhaNextQueue.Enqueue(DuPeng2);
                         break;
 
                     case WeaponType.LuoLei:

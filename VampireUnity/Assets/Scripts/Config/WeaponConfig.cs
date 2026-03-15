@@ -50,7 +50,7 @@ namespace Config
         public static Dictionary<WeaponType, HunQiEx> HunQiExDic = new Dictionary<WeaponType, HunQiEx>()
         {
             { WeaponType.Primary,new HunQiEx(){Level1 = 30,Level2 = 50,Level3 = 80,Level4 = 120,Level5 = 180}},
-            { WeaponType.Du,new HunQiEx(){Level1 = 50,Level2 = 80,Level3 = 120,Level4 = 180,Level5 = 250}},
+            { WeaponType.HuoBaoZha,new HunQiEx(){Level1 = 50,Level2 = 80,Level3 = 120,Level4 = 180,Level5 = 250}},
             { WeaponType.PuTong3,new HunQiEx(){Level1 = 100,Level2 = 150,Level3 = 200,Level4 = 280,Level5 = 400}},
             { WeaponType.XuKong,new HunQiEx(){Level1 = 100,Level2 = 150,Level3 = 200,Level4 = 280,Level5 = 400}},
             { WeaponType.Fire,new HunQiEx(){Level1 = 150,Level2 = 220,Level3 = 300,Level4 = 400,Level5 = 550}},
@@ -62,33 +62,33 @@ namespace Config
         public static Dictionary<WeaponType, List<int>> WeaponDamageDic = new Dictionary<WeaponType, List<int>>()
         {
             { WeaponType.Primary, new List<int>(){100} },
-            { WeaponType.Du, new List<int>(){120} },
+            { WeaponType.HuoBaoZha, new List<int>(){100,120} },
             { WeaponType.HeiAnBaoZha, new List<int>(){100,120}},
-            { WeaponType.XuKong, new List<int>(){120} },
-            { WeaponType.PuTong3, new List<int>(){120} },
-            { WeaponType.Fire, new List<int>(){100,120} },
-            { WeaponType.LvQuan, new List<int>(){120} },
-            { WeaponType.DianJiSu, new List<int>(){150} },
-            { WeaponType.DianSanShe, new List<int>(){150} },
-            { WeaponType.Huo7, new List<int>(){150} },
-            { WeaponType.HuoFenLie, new List<int>(){120,150} },
-            { WeaponType.HeiAnHuiXuan, new List<int>(){120} },
-            { WeaponType.HeiAnQuXian, new List<int>(){150} },
-            { WeaponType.Ice7, new List<int>(){150} },
-            { WeaponType.Ice4BaoZha, new List<int>(){120,150} },
-            { WeaponType.JianQi, new List<int>(){150} },
-            { WeaponType.HuoDiPen, new List<int>(){200} },
-            { WeaponType.IcePen, new List<int>(){200}},
-            { WeaponType.HeiDong, new List<int>(){150,200} },
-            { WeaponType.DianLuoLei5, new List<int>(){150,180} },
+            { WeaponType.XuKong, new List<int>(){150} },
+            { WeaponType.PuTong3, new List<int>(){150} },
+            { WeaponType.Fire, new List<int>(){100,150} },
+            { WeaponType.LvQuan, new List<int>(){150} },
+            { WeaponType.DianJiSu, new List<int>(){20} },
+            { WeaponType.DianSanShe, new List<int>(){20} },
+            { WeaponType.Huo7, new List<int>(){200} },
+            { WeaponType.HuoFenLie, new List<int>(){150,200} },
+            { WeaponType.HeiAnHuiXuan, new List<int>(){200} },
+            { WeaponType.HeiAnQuXian, new List<int>(){200} },
+            { WeaponType.Ice7, new List<int>(){200} },
+            { WeaponType.Ice4BaoZha, new List<int>(){150,200} },
+            { WeaponType.JianQi, new List<int>(){200} },
+            { WeaponType.HuoDiPen, new List<int>(){300} },
+            { WeaponType.IcePen, new List<int>(){300}},
+            { WeaponType.HeiDong, new List<int>(){150,300} },
+            { WeaponType.DianLuoLei5, new List<int>(){150,260} },
         };
 
 
         public static Dictionary<WeaponType, int> WeaponQualityDic = new Dictionary<WeaponType, int>()
         {
             { WeaponType.Primary, 1 },
-            { WeaponType.Du, 2 },
-            { WeaponType.HeiAnBaoZha, 3 },
+            { WeaponType.HuoBaoZha, 2 },
+            { WeaponType.HeiAnBaoZha, 2 },
             { WeaponType.XuKong, 3 },
             { WeaponType.PuTong3, 3 },
             { WeaponType.Fire, 3 },
@@ -128,7 +128,7 @@ namespace Config
             { WeaponType.XuKong,"电光杖"},
             { WeaponType.PuTong3,"三叉冰杖"},
             { WeaponType.Fire,"落雷杖"},
-            { WeaponType.Du,"火球杖"},
+            { WeaponType.HuoBaoZha,"火球杖"},
             { WeaponType.HeiDong,"黑洞坍塌"},
             { WeaponType.LvQuan,"源极杖"},
 
@@ -138,7 +138,7 @@ namespace Config
             new Dictionary<WeaponType, WeaponHunQiDesc>()
             {
                 { WeaponType.Primary ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:魔法弹数量+1",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:魔法弹数量+1"} },
-                { WeaponType.Du ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:中毒伤害翻倍",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:击中生成毒液圈"} },
+                { WeaponType.HuoBaoZha ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:中毒伤害翻倍",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:击中生成毒液圈"} },
                 { WeaponType.PuTong3 ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:武器伤害+20%",HunQi4 = "Lv.4:基础攻击速度+0.2",HunQi5 = "Lv.5:魔法弹数量+2"} },
                 { WeaponType.XuKong ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:魔法弹数量+1",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:魔法弹数量+1"} },
                 { WeaponType.Fire ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:爆炸造成灼烧效果",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:爆炸范围扩大"} },
@@ -152,7 +152,7 @@ namespace Config
             new Dictionary<WeaponType, WeaponAttribute>()
             {
                 { WeaponType.Primary ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
-                { WeaponType.Du ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 10,AttackSpeed = 1}},
+                { WeaponType.HuoBaoZha ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 10,AttackSpeed = 1}},
                 { WeaponType.PuTong3 ,new WeaponAttribute(){Attack = 40,Crit = 40,Hp = 100,Defense = 20,AttackSpeed = 1}},
                 { WeaponType.XuKong ,new WeaponAttribute(){Attack = 60,Crit = 60,Hp = 150,Defense = 30,AttackSpeed = 1}},
                 { WeaponType.HeiAnBaoZha ,new WeaponAttribute(){Attack = 60,Crit = 60,Hp = 150,Defense = 30,AttackSpeed = 1f}},
@@ -177,7 +177,7 @@ namespace Config
         public static Dictionary<WeaponType, YuanSuType> WeaponYuanSuTypeDic = new Dictionary<WeaponType, YuanSuType>()
         {
             {WeaponType.Primary,YuanSuType.Ice},
-            {WeaponType.Du,YuanSuType.Huo},
+            {WeaponType.HuoBaoZha,YuanSuType.Huo},
             {WeaponType.PuTong3,YuanSuType.Ice},
             {WeaponType.XuKong,YuanSuType.Dian},
             {WeaponType.Fire,YuanSuType.Dian},
@@ -206,7 +206,7 @@ namespace Config
             = new Dictionary<WeaponType, List<WeaponCaiLiao>>()
             {
                 { 
-                    WeaponType.Du, 
+                    WeaponType.HuoBaoZha, 
                     new List<WeaponCaiLiao>()
                     {
                         new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 300  },
@@ -296,7 +296,7 @@ namespace Config
                     } 
                 },
                 { 
-                    WeaponType.Du, 
+                    WeaponType.HuoBaoZha, 
                     new List<WeaponCaiLiao>()
                     {
                         new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 200  },

@@ -84,10 +84,10 @@ public class WeaponItem : MonoBehaviour
             });
             break;
          
-         case WeaponType.Du:
-            yiZhuangBeiIcon.gameObject.SetActive(PlayerData.S.playerWeaponType==WeaponType.Du);
+         case WeaponType.HuoBaoZha:
+            yiZhuangBeiIcon.gameObject.SetActive(PlayerData.S.playerWeaponType==WeaponType.HuoBaoZha);
 
-            SetName(WeaponConfig.WeaponQualityDic[WeaponType.Du], WeaponConfig.WeaponNameDic[WeaponType.Du]);
+            SetName(WeaponConfig.WeaponQualityDic[WeaponType.HuoBaoZha], WeaponConfig.WeaponNameDic[WeaponType.HuoBaoZha]);
 
             if (PlayerData.S.duWeaponLevel < 1)
             {
@@ -104,18 +104,18 @@ public class WeaponItem : MonoBehaviour
             {
                ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
-               PlayerData.S.playerWeaponType = WeaponType.Du;
+               PlayerData.S.playerWeaponType = WeaponType.HuoBaoZha;
             });
             weaponImage.sprite = ResourcesConfig.Du;
             bgButton.onClick.RemoveAllListeners();
             bgButton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("BgButtonClick",WeaponType.Du);
+               ObserverModuleManager.S.SendEvent("BgButtonClick",WeaponType.HuoBaoZha);
             });
             suoButton.onClick.RemoveAllListeners();
             suoButton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("SuoButtonClick",WeaponType.Du);
+               ObserverModuleManager.S.SendEvent("SuoButtonClick",WeaponType.HuoBaoZha);
             });
             break;
          

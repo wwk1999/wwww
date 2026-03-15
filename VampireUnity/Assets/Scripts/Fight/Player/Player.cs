@@ -18,12 +18,14 @@ public enum WeaponType
     PrimaryDian,
     PrimaryHeiAn,
     PrimaryHuo,
+    IceBaoZha,
+    DianBaoZha,
     LanBao,
     Fire,//dian
     XuKong,//dian
     LvQuan,//heian
     HeiDong,//heian
-    Du,//huo
+    HuoBaoZha,//huo
     LuoLei,
     PuTong3,//ice
     JianQi,//huo

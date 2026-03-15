@@ -501,7 +501,7 @@ namespace Config
                                     }
                                 },
                                 {
-                                    WeaponType.Du,
+                                    WeaponType.HuoBaoZha,
                                     new WeaponHunQiDesc()
                                     {
                                         HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "中毒伤害翻倍",
@@ -885,7 +885,7 @@ namespace Config
                                     }
                                 },
                                 {
-                                    WeaponType.Du,
+                                    WeaponType.HuoBaoZha,
                                     new WeaponHunQiDesc()
                                     {
                                         HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
@@ -1274,7 +1274,7 @@ namespace Config
                                     }
                                 },
                                 {
-                                    WeaponType.Du,
+                                    WeaponType.HuoBaoZha,
                                     new WeaponHunQiDesc()
                                     {
                                         HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "중독 피해 2배",
@@ -1648,7 +1648,7 @@ namespace Config
                                     }
                                 },
                                 {
-                                    WeaponType.Du,
+                                    WeaponType.HuoBaoZha,
                                     new WeaponHunQiDesc()
                                     {
                                         HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "毒ダメージ2倍",
