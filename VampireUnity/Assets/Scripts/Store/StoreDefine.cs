@@ -103,25 +103,33 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int DianLuoLei5WeaponLevel;
         public int DianJiSuWeaponLevel;
 
-        public int primaryHunQiLevel = 0;
-        public int duHunQiLevel = 0;
-        public int puTong3HunQiLevel = 0;
-        public int xuKongHunQiLevel = 0;
-        public int lvQuanHunQiLevel = 0;
-        public int fireHunQiLevel = 0;
-        public int heiDongHunQiLevel = 0;
-        public int jianQiHunQiLevel = 0;
-
-
-        public int primaryHunQiEx = 0;
-        public int duHunQiEx = 0;
-        public int puTong3HunQiEx = 0;
-        public int xuKongHunQiEx = 0;
-        public int lvQuanHunQiEx = 0;
-        public int fireHunQiEx = 0;
-        public int heiDongHunQiEx = 0;
-        public int jianQiHunQiEx = 0;
-
+        public int primaryWeaponExp;
+        public int primaryDianExp;
+        public int primaryHuoExp;
+        public int primaryHeiAnExp;
+        public int dianBaoZhaExp;
+        public int iceBaoZhaExp;
+        public int duWeaponExp;
+        public int puTong3WeaponExp;
+        public int xuKongWeaponExp;
+        public int lvQuanWeaponExp;
+        public int fireWeaponExp;
+        public int heiDongWeaponExp;
+        public int jianQiWeaponExp;
+        public int Huo7WeaponExp;
+        public int IcePenWeaponExp;
+        public int Ice7WeaponExp;
+        public int Ice4BaoZhaWeaponExp;
+        public int HuoFenLieWeaponExp;
+        public int HuoDiPenWeaponExp;
+        public int HeiAnQuXianWeaponExp;
+        public int HeiAnHuiXuanWeaponExp;
+        public int HeiAnBaoZhaWeaponExp;
+        public int DianSanSheWeaponExp;
+        public int DianLuoLei5WeaponExp;
+        public int DianJiSuWeaponExp;
+        
+        
         public int zhuanjinCount = 0;
 
 
@@ -230,25 +238,32 @@ public class StoreDefine : XSingleton<StoreDefine>
         DianLuoLei5WeaponLevel=runtime.DianLuoLei5WeaponLevel;
         DianJiSuWeaponLevel=runtime.DianJiSuWeaponLevel;
 
-
-            primaryHunQiLevel = runtime.primaryHunQiLevel;
-            duHunQiLevel = runtime.duHunQiLevel;
-            puTong3HunQiLevel = runtime.puTong3HunQiLevel;
-            xuKongHunQiLevel = runtime.xuKongHunQiLevel;
-            lvQuanHunQiLevel = runtime.lvQuanHunQiLevel;
-            fireHunQiLevel = runtime.fireHunQiLevel;
-            heiDongHunQiLevel = runtime.heiDongHunQiLevel;
-            jianQiHunQiLevel = runtime.jianQiHunQiLevel;
-
-
-            primaryHunQiEx = runtime.primaryHunQiEx;
-            duHunQiEx = runtime.duHunQiEx;
-            puTong3HunQiEx = runtime.puTong3HunQiEx;
-            xuKongHunQiEx = runtime.xuKongHunQiEx;
-            lvQuanHunQiEx = runtime.lvQuanHunQiEx;
-            fireHunQiEx = runtime.fireHunQiEx;
-            heiDongHunQiEx = runtime.heiDongHunQiEx;
-            jianQiHunQiEx = runtime.jianQiHunQiEx;
+        primaryWeaponExp=runtime.primaryWeaponExp;
+        primaryDianExp=runtime.primaryDianExp;
+        primaryHuoExp=runtime.primaryHuoExp;
+        primaryHeiAnExp=runtime.primaryHeiAnExp;
+        dianBaoZhaExp=runtime.dianBaoZhaExp;
+        iceBaoZhaExp=runtime.iceBaoZhaExp;
+        duWeaponExp=runtime.HuoBaoZhaExp;
+        puTong3WeaponExp=runtime.puTong3WeaponExp;
+        xuKongWeaponExp=runtime.xuKongWeaponExp;
+        lvQuanWeaponExp=runtime.lvQuanWeaponExp;
+        fireWeaponExp=runtime.fireWeaponExp;
+        heiDongWeaponExp=runtime.heiDongWeaponExp;
+        jianQiWeaponExp=runtime.jianQiWeaponExp;
+        Huo7WeaponExp=runtime.Huo7WeaponExp;
+        IcePenWeaponExp=runtime.IcePenWeaponExp;
+        Ice7WeaponExp=runtime.Ice7WeaponExp;
+        Ice4BaoZhaWeaponExp=runtime.Ice4BaoZhaWeaponExp;
+        HuoFenLieWeaponExp=runtime.HuoFenLieWeaponExp;
+        HuoDiPenWeaponExp=runtime.HuoDiPenWeaponExp;
+        HeiAnQuXianWeaponExp=runtime.HeiAnQuXianWeaponExp;
+        HeiAnHuiXuanWeaponExp=runtime.HeiAnHuiXuanWeaponExp;
+        HeiAnBaoZhaWeaponExp=runtime.HeiAnBaoZhaWeaponExp;
+        DianSanSheWeaponExp=runtime.DianSanSheWeaponExp;
+        DianLuoLei5WeaponExp=runtime.DianLuoLei5WeaponExp;
+        DianJiSuWeaponExp=runtime.DianJiSuWeaponExp;
+           
 
 
             playerWeaponType = runtime.playerWeaponType;
@@ -329,10 +344,10 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.primaryDianLevel=primaryWeaponLevel;
             runtime.primaryHuoLevel=primaryWeaponLevel;
             runtime.primaryHeiAnLevel=primaryWeaponLevel;
-            runtime.dianBaoZha=primaryWeaponLevel;
-            runtime.iceBaoZha=primaryWeaponLevel;
+            runtime.dianBaoZhaLevel=primaryWeaponLevel;
+            runtime.iceBaoZhaLevel=primaryWeaponLevel;
 
-            runtime.duWeaponLevel=primaryWeaponLevel;
+            runtime.HuoBaoZhaWeaponLevel=primaryWeaponLevel;
             runtime.puTong3WeaponLevel=puTong3WeaponLevel;
             runtime.xuKongWeaponLevel=xuKongWeaponLevel;
             runtime.lvQuanWeaponLevel=lvQuanWeaponLevel;
@@ -353,25 +368,31 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.DianLuoLei5WeaponLevel=DianLuoLei5WeaponLevel;
             runtime.DianJiSuWeaponLevel=DianJiSuWeaponLevel;
 
-            runtime.primaryHunQiLevel = primaryHunQiLevel;
-            runtime.duHunQiLevel = duHunQiLevel;
-            runtime.puTong3HunQiLevel = puTong3HunQiLevel;
-            runtime.xuKongHunQiLevel = xuKongHunQiLevel;
-            runtime.lvQuanHunQiLevel = lvQuanHunQiLevel;
-            runtime.fireHunQiLevel = fireHunQiLevel;
-            runtime.heiDongHunQiLevel = heiDongHunQiLevel;
-            runtime.jianQiHunQiLevel = jianQiHunQiLevel;
-
-
-            runtime.primaryHunQiEx = primaryHunQiEx;
-            runtime.duHunQiEx = duHunQiEx;
-            runtime.puTong3HunQiEx = puTong3HunQiEx;
-            runtime.xuKongHunQiEx = xuKongHunQiEx;
-            runtime.lvQuanHunQiEx = lvQuanHunQiEx;
-            runtime.fireHunQiEx = fireHunQiEx;
-            runtime.heiDongHunQiEx = heiDongHunQiEx;
-            runtime.jianQiHunQiEx = jianQiHunQiEx;
-
+            runtime.primaryWeaponExp=primaryWeaponExp;
+            runtime.primaryDianExp=primaryDianExp;
+            runtime.primaryHuoExp=primaryHuoExp;
+            runtime.primaryHeiAnExp=primaryHeiAnExp;
+            runtime.dianBaoZhaExp=dianBaoZhaExp;
+            runtime.iceBaoZhaExp=iceBaoZhaExp;
+            runtime.HuoBaoZhaExp=duWeaponExp;
+            runtime.puTong3WeaponExp=puTong3WeaponExp;
+            runtime.xuKongWeaponExp=xuKongWeaponExp;
+            runtime.lvQuanWeaponExp=lvQuanWeaponExp;
+            runtime.fireWeaponExp=fireWeaponExp;
+            runtime.heiDongWeaponExp=heiDongWeaponExp;
+            runtime.jianQiWeaponExp=jianQiWeaponExp;
+            runtime.Huo7WeaponExp=Huo7WeaponExp;
+            runtime.IcePenWeaponExp=IcePenWeaponExp;
+            runtime.Ice7WeaponExp=Ice7WeaponExp;
+            runtime.Ice4BaoZhaWeaponExp=Ice4BaoZhaWeaponExp;
+            runtime.HuoFenLieWeaponExp=HuoFenLieWeaponExp;
+            runtime.HuoDiPenWeaponExp=HuoDiPenWeaponExp;
+            runtime.HeiAnQuXianWeaponExp=HeiAnQuXianWeaponExp;
+            runtime.HeiAnHuiXuanWeaponExp=HeiAnHuiXuanWeaponExp;
+            runtime.HeiAnBaoZhaWeaponExp=HeiAnBaoZhaWeaponExp;
+            runtime.DianSanSheWeaponExp=DianSanSheWeaponExp;
+            runtime.DianLuoLei5WeaponExp=DianLuoLei5WeaponExp;
+            runtime.DianJiSuWeaponExp=DianJiSuWeaponExp;
 
             runtime.zhuanjinCount = zhuanjinCount;
 

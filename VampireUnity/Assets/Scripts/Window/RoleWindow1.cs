@@ -232,10 +232,10 @@ public class RoleWindow1 : MonoBehaviour
     PlayerData.S.primaryDianLevel++;
     PlayerData.S.primaryHuoLevel++;
     PlayerData.S.primaryHeiAnLevel++;
-    PlayerData.S.dianBaoZha++;
-    PlayerData.S.iceBaoZha++;
+    PlayerData.S.dianBaoZhaLevel++;
+    PlayerData.S.iceBaoZhaLevel++;
 
-    PlayerData.S.duWeaponLevel++;
+    PlayerData.S.HuoBaoZhaWeaponLevel++;
     PlayerData.S.puTong3WeaponLevel++;
     PlayerData.S.xuKongWeaponLevel++;
     PlayerData.S.lvQuanWeaponLevel++;

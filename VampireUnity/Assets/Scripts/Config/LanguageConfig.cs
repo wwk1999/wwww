@@ -143,9 +143,6 @@ namespace Config
         public string AllHunQiLevel;
         public string HunQi;
         public string Attribute;
-
-        public Dictionary<WeaponType, WeaponHunQiDesc> WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
-            { };
     }
 
 
@@ -490,73 +487,6 @@ namespace Config
                             AllHunQiLevel = "总魂器等级",
                             HunQi = "魂器",
                             Attribute = "属性",
-                            WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
-                            {
-                                {
-                                    WeaponType.Primary,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "魔法弹数量+1",
-                                        HunQi4 = "武器伤害+20%", HunQi5 = "魔法弹数量+1"
-                                    }
-                                },
-                                {
-                                    WeaponType.HuoBaoZha,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "中毒伤害翻倍",
-                                        HunQi4 = "武器伤害+20%", HunQi5 = "击中生成毒液圈"
-                                    }
-                                },
-                                {
-                                    WeaponType.PuTong3,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "武器伤害+20%",
-                                        HunQi4 = "基础攻击速度+0.2", HunQi5 = "魔法弹可以穿透"
-                                    }
-                                },
-                                {
-                                    WeaponType.XuKong,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "魔法弹数量+1",
-                                        HunQi4 = "武器伤害+20%", HunQi5 = "魔法弹数量+1"
-                                    }
-                                },
-                                {
-                                    WeaponType.Fire,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "爆炸造成灼烧效果",
-                                        HunQi4 = "武器伤害+20%", HunQi5 = "爆炸范围扩大"
-                                    }
-                                },
-                                {
-                                    WeaponType.LvQuan,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "魔法弹大小+20%",
-                                        HunQi4 = "武器伤害+20%", HunQi5 = "魔法弹数量+1"
-                                    }
-                                },
-                                {
-                                    WeaponType.HeiDong,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.2", HunQi3 = "爆炸范围增加20%",
-                                        HunQi4 = "武器伤害+20%", HunQi5 = "魔法弹数量+1"
-                                    }
-                                },
-                                {
-                                    WeaponType.JianQi,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器伤害+10%", HunQi2 = "基础攻击速度+0.3", HunQi3 = "剑气数量+1",
-                                        HunQi4 = "武器伤害+20%", HunQi5 = "剑气数量+1"
-                                    }
-                                },
-                            },
                         },
                         SkillWindowLanguage = new SkillWindowLanguage()
                         {
@@ -873,81 +803,6 @@ namespace Config
                             AllHunQiLevel = "Total HunQi Level",
                             HunQi = "HunQi",
                             Attribute = "Attribute",
-                            WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
-                            {
-                                {
-                                    WeaponType.Primary,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
-                                        HunQi3 = "Magic Projectile Count +1", HunQi4 = "Weapon Damage +20%",
-                                        HunQi5 = "Magic Projectile Count +1"
-                                    }
-                                },
-                                {
-                                    WeaponType.HuoBaoZha,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
-                                        HunQi3 = "Poison Damage Doubled", HunQi4 = "Weapon Damage +20%",
-                                        HunQi5 = "Creates Poison Pool on Hit"
-                                    }
-                                },
-                                {
-                                    WeaponType.PuTong3,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
-                                        HunQi3 = "Weapon Damage +20%", HunQi4 = "Base Attack Speed +0.2",
-                                        HunQi5 = "Magic Projectiles Can Pierce"
-                                    }
-                                },
-                                {
-                                    WeaponType.XuKong,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
-                                        HunQi3 = "Magic Projectile Count +1", HunQi4 = "Weapon Damage +20%",
-                                        HunQi5 = "Magic Projectile Count +1"
-                                    }
-                                },
-                                {
-                                    WeaponType.Fire,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
-                                        HunQi3 = "Explosion Causes Burn Effect", HunQi4 = "Weapon Damage +20%",
-                                        HunQi5 = "Explosion Radius Increased"
-                                    }
-                                },
-                                {
-                                    WeaponType.LvQuan,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
-                                        HunQi3 = "Magic Projectile Size +20%", HunQi4 = "Weapon Damage +20%",
-                                        HunQi5 = "Magic Projectile Count +1"
-                                    }
-                                },
-                                {
-                                    WeaponType.HeiDong,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.2",
-                                        HunQi3 = "Explosion Radius +20%", HunQi4 = "Weapon Damage +20%",
-                                        HunQi5 = "Magic Projectile Count +1"
-                                    }
-                                },
-                                {
-                                    WeaponType.JianQi,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "Weapon Damage +10%", HunQi2 = "Base Attack Speed +0.3",
-                                        HunQi3 = "Sword Qi Count +1", HunQi4 = "Weapon Damage +20%",
-                                        HunQi5 = "Sword Qi Count +1"
-                                    }
-                                },
-                            }
                         },
                         SkillWindowLanguage = new SkillWindowLanguage()
                         {
@@ -1263,73 +1118,6 @@ namespace Config
                             AllHunQiLevel = "전체 혼기 레벨",
                             HunQi = "혼기",
                             Attribute = "속성",
-                            WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
-                            {
-                                {
-                                    WeaponType.Primary,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 수 +1",
-                                        HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1"
-                                    }
-                                },
-                                {
-                                    WeaponType.HuoBaoZha,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "중독 피해 2배",
-                                        HunQi4 = "무기 피해 +20%", HunQi5 = "적중 시 독액 풀 생성"
-                                    }
-                                },
-                                {
-                                    WeaponType.PuTong3,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "무기 피해 +20%",
-                                        HunQi4 = "기본 공격 속도 +0.2", HunQi5 = "마법탄 관통 가능"
-                                    }
-                                },
-                                {
-                                    WeaponType.XuKong,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 수 +1",
-                                        HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1"
-                                    }
-                                },
-                                {
-                                    WeaponType.Fire,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "폭발 시 화상 효과",
-                                        HunQi4 = "무기 피해 +20%", HunQi5 = "폭발 범위 증가"
-                                    }
-                                },
-                                {
-                                    WeaponType.LvQuan,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "마법탄 크기 +20%",
-                                        HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1"
-                                    }
-                                },
-                                {
-                                    WeaponType.HeiDong,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.2", HunQi3 = "폭발 범위 +20%",
-                                        HunQi4 = "무기 피해 +20%", HunQi5 = "마법탄 수 +1"
-                                    }
-                                },
-                                {
-                                    WeaponType.JianQi,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "무기 피해 +10%", HunQi2 = "기본 공격 속도 +0.3", HunQi3 = "검기 수 +1",
-                                        HunQi4 = "무기 피해 +20%", HunQi5 = "검기 수 +1"
-                                    }
-                                },
-                            }
                         },
                         SkillWindowLanguage = new SkillWindowLanguage()
                         {
@@ -1637,73 +1425,6 @@ namespace Config
                             AllHunQiLevel = "総魂器レベル",
                             HunQi = "魂器",
                             Attribute = "属性",
-                            WeaponHunQiDic = new Dictionary<WeaponType, WeaponHunQiDesc>()
-                            {
-                                {
-                                    WeaponType.Primary,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾数+1",
-                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1"
-                                    }
-                                },
-                                {
-                                    WeaponType.HuoBaoZha,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "毒ダメージ2倍",
-                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "命中時に毒液プール生成"
-                                    }
-                                },
-                                {
-                                    WeaponType.PuTong3,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "武器ダメージ+20%",
-                                        HunQi4 = "基本攻撃速度+0.2", HunQi5 = "魔法弾貫通可能"
-                                    }
-                                },
-                                {
-                                    WeaponType.XuKong,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾数+1",
-                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1"
-                                    }
-                                },
-                                {
-                                    WeaponType.Fire,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "爆発で燃焼効果",
-                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "爆発範囲拡大"
-                                    }
-                                },
-                                {
-                                    WeaponType.LvQuan,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "魔法弾サイズ+20%",
-                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1"
-                                    }
-                                },
-                                {
-                                    WeaponType.HeiDong,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.2", HunQi3 = "爆発範囲+20%",
-                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "魔法弾数+1"
-                                    }
-                                },
-                                {
-                                    WeaponType.JianQi,
-                                    new WeaponHunQiDesc()
-                                    {
-                                        HunQi1 = "武器ダメージ+10%", HunQi2 = "基本攻撃速度+0.3", HunQi3 = "剣気数+1",
-                                        HunQi4 = "武器ダメージ+20%", HunQi5 = "剣気数+1"
-                                    }
-                                },
-                            }
                         },
                         SkillWindowLanguage = new SkillWindowLanguage()
                         {

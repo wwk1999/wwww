@@ -26,17 +26,15 @@ public class PlayerData : XSingleton<PlayerData>
     public int primaryDianLevel=1;
     public int primaryHuoLevel=1;
     public int primaryHeiAnLevel=1;
-    public int dianBaoZha;
-    public int iceBaoZha;
-
-    public int duWeaponLevel;
+    public int dianBaoZhaLevel;
+    public int iceBaoZhaLevel;
+    public int HuoBaoZhaWeaponLevel;
     public int puTong3WeaponLevel;
     public int xuKongWeaponLevel;
     public int lvQuanWeaponLevel;
     public int fireWeaponLevel;
     public int heiDongWeaponLevel;
     public int jianQiWeaponLevel;
-    
     public int Huo7WeaponLevel;
     public int IcePenWeaponLevel;
     public int Ice7WeaponLevel;
@@ -51,25 +49,33 @@ public class PlayerData : XSingleton<PlayerData>
     public int DianJiSuWeaponLevel;
 
     
+    public int primaryWeaponExp;
+    public int primaryDianExp;
+    public int primaryHuoExp;
+    public int primaryHeiAnExp;
+    public int dianBaoZhaExp;
+    public int iceBaoZhaExp;
+    public int HuoBaoZhaExp;
+    public int puTong3WeaponExp;
+    public int xuKongWeaponExp;
+    public int lvQuanWeaponExp;
+    public int fireWeaponExp;
+    public int heiDongWeaponExp;
+    public int jianQiWeaponExp;
+    public int Huo7WeaponExp;
+    public int IcePenWeaponExp;
+    public int Ice7WeaponExp;
+    public int Ice4BaoZhaWeaponExp;
+    public int HuoFenLieWeaponExp;
+    public int HuoDiPenWeaponExp;
+    public int HeiAnQuXianWeaponExp;
+    public int HeiAnHuiXuanWeaponExp;
+    public int HeiAnBaoZhaWeaponExp;
+    public int DianSanSheWeaponExp;
+    public int DianLuoLei5WeaponExp;
+    public int DianJiSuWeaponExp;
+
     
-    
-    public int primaryHunQiLevel=0;
-    public int duHunQiLevel=0;
-    public int puTong3HunQiLevel=0;
-    public int xuKongHunQiLevel=0;
-    public int lvQuanHunQiLevel=0;
-    public int fireHunQiLevel=0;
-    public int heiDongHunQiLevel=0;
-    public int jianQiHunQiLevel=0;
-    
-    public int primaryHunQiEx=0;
-    public int duHunQiEx=0;
-    public int puTong3HunQiEx=0;
-    public int xuKongHunQiEx=0;
-    public int lvQuanHunQiEx=0;
-    public int fireHunQiEx=0;
-    public int heiDongHunQiEx=0;
-    public int jianQiHunQiEx=0;
 
     public int zhuanjinCount = 0;
     

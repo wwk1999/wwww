@@ -551,57 +551,6 @@ public class GlobalPlayerAttribute
    public static float GetHunQiDamage()
    {
        float value = 0;
-       switch (PlayerData.S.playerWeaponType)
-       {
-           case WeaponType.Primary:
-           case WeaponType.HuoBaoZha:
-           case WeaponType.XuKong:
-           case WeaponType.Fire:
-           case WeaponType.LvQuan:
-           case WeaponType.HeiDong:
-           case WeaponType.JianQi:
-               switch (PlayerData.S.primaryHunQiLevel)
-               {
-                   case 0:
-                       break;
-                   case 1:
-                   case 2:
-                   case 3:
-                       value += 0.1f;
-                       break;
-                   case 4:
-                   case 5:
-                       value += 0.3f;
-                       break;
-               }
-               break;
-           case WeaponType.PuTong3:
-               switch (PlayerData.S.primaryHunQiLevel)
-               {
-                   case 0:
-                       break;
-                   case 1:
-                   case 2:
-                       value += 0.1f;
-                       break;
-                   case 3:
-                   case 4:
-                   case 5:
-                       value += 0.3f;
-                       break;
-               }
-               break;
-       }
-
-       value += PlayerData.S.primaryHunQiLevel / 100f;
-       value += PlayerData.S.duHunQiLevel / 100f;
-       value += PlayerData.S.puTong3HunQiLevel / 100f;
-       value += PlayerData.S.fireHunQiLevel / 100f;
-       value += PlayerData.S.xuKongHunQiLevel / 100f;
-       value += PlayerData.S.lvQuanHunQiLevel / 100f;
-       value += PlayerData.S.heiDongHunQiLevel / 100f;
-       value += PlayerData.S.jianQiHunQiLevel / 100f;
-
        value += TitleAttributeAll.NormalAttackDamage;
        return 0;
    }
@@ -609,43 +558,6 @@ public class GlobalPlayerAttribute
    
    public static float GetHunQiAttackSpeed()
    {
-       switch (PlayerData.S.playerWeaponType)
-       {
-           case WeaponType.Primary:
-           case WeaponType.HuoBaoZha:
-           case WeaponType.XuKong:
-           case WeaponType.Fire:
-           case WeaponType.LvQuan:
-           case WeaponType.HeiDong:
-           case WeaponType.JianQi:
-               switch (PlayerData.S.primaryHunQiLevel)
-               {
-                   case 0:
-                   case 1:
-                       return 0;
-                   case 2:
-                   case 3:
-                   case 4:
-                   case 5:
-                       return 0.2f;
-               }
-               break;
-           case WeaponType.PuTong3:
-               switch (PlayerData.S.primaryHunQiLevel)
-               {
-                   case 0:
-                   case 1:
-                       return 0;
-                   case 2:
-                   case 3:
-                       return 0.2f;
-                   case 4:
-                   case 5:
-                       return 0.4f;
-               }
-               break;
-       }
-
        return 0;
    }
 
@@ -2584,7 +2496,7 @@ public class GlobalPlayerAttribute
                level = PlayerData.S.primaryWeaponLevel;
                break;
            case WeaponType.HuoBaoZha:
-               level = PlayerData.S.duWeaponLevel;
+               level = PlayerData.S.HuoBaoZhaWeaponLevel;
                break;
            case WeaponType.PuTong3:
                level = PlayerData.S.puTong3WeaponLevel;
@@ -2619,7 +2531,7 @@ public class GlobalPlayerAttribute
                level = PlayerData.S.primaryWeaponLevel;
                break;
            case WeaponType.HuoBaoZha:
-               level = PlayerData.S.duWeaponLevel;
+               level = PlayerData.S.HuoBaoZhaWeaponLevel;
                break;
            case WeaponType.PuTong3:
                level = PlayerData.S.puTong3WeaponLevel;
@@ -2654,7 +2566,7 @@ public class GlobalPlayerAttribute
                level = PlayerData.S.primaryWeaponLevel;
                break;
            case WeaponType.HuoBaoZha:
-               level = PlayerData.S.duWeaponLevel;
+               level = PlayerData.S.HuoBaoZhaWeaponLevel;
                break;
            case WeaponType.PuTong3:
                level = PlayerData.S.puTong3WeaponLevel;
@@ -2689,7 +2601,7 @@ public class GlobalPlayerAttribute
                level = PlayerData.S.primaryWeaponLevel;
                break;
            case WeaponType.HuoBaoZha:
-               level = PlayerData.S.duWeaponLevel;
+               level = PlayerData.S.HuoBaoZhaWeaponLevel;
                break;
            case WeaponType.PuTong3:
                level = PlayerData.S.puTong3WeaponLevel;
@@ -2863,6 +2775,61 @@ public class GlobalPlayerAttribute
          {48,60000 },
          {49,65000 },
          {50,70000 },
+         
+         {51,75000 },
+         {52,80000 },
+         {53,85000 },
+         {54,90000 },
+         {55,95000 },
+         {56,100000 },
+         {57,110000 },
+         {58,120000 },
+         {59,130000 },
+         {60,140000 },
+         
+         {61,150000 },
+         {62,160000 },
+         {63,170000 },
+         {64,180000 },
+         {65,190000 },
+         {66,200000 },
+         {67,210000 },
+         {68,220000 },
+         {69,230000 },
+         {70,240000 },
+         
+         {71,250000 },
+         {72,260000 },
+         {73,270000 },
+         {74,280000 },
+         {75,290000 },
+         {76,300000 },
+         {77,320000 },
+         {78,340000 },
+         {79,360000 },
+         {80,380000 },
+         
+         {81,400000 },
+         {82,420000 },
+         {83,440000 },
+         {84,460000 },
+         {85,480000 },
+         {86,500000 },
+         {87,520000 },
+         {88,540000 },
+         {89,560000 },
+         {90,580000 },
+         
+         {91,600000 },
+         {92,650000 },
+         {93,700000 },
+         {94,750000 },
+         {95,800000 },
+         {96,850000 },
+         {97,900000 },
+         {98,950000 },
+         {99,1000000 },
+         {100,1000000 },
    };
 
    public static int GameLevel

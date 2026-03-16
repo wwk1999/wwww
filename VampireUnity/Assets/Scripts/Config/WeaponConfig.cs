@@ -47,21 +47,14 @@ namespace Config
     public class WeaponConfig
     {
 
-        public static Dictionary<WeaponType, HunQiEx> HunQiExDic = new Dictionary<WeaponType, HunQiEx>()
-        {
-            { WeaponType.Primary,new HunQiEx(){Level1 = 30,Level2 = 50,Level3 = 80,Level4 = 120,Level5 = 180}},
-            { WeaponType.HuoBaoZha,new HunQiEx(){Level1 = 50,Level2 = 80,Level3 = 120,Level4 = 180,Level5 = 250}},
-            { WeaponType.PuTong3,new HunQiEx(){Level1 = 100,Level2 = 150,Level3 = 200,Level4 = 280,Level5 = 400}},
-            { WeaponType.XuKong,new HunQiEx(){Level1 = 100,Level2 = 150,Level3 = 200,Level4 = 280,Level5 = 400}},
-            { WeaponType.Fire,new HunQiEx(){Level1 = 150,Level2 = 220,Level3 = 300,Level4 = 400,Level5 = 550}},
-            { WeaponType.LvQuan,new HunQiEx(){Level1 = 150,Level2 = 220,Level3 = 300,Level4 = 400,Level5 = 550}},
-            { WeaponType.HeiDong,new HunQiEx(){Level1 = 200,Level2 = 300,Level3 = 400,Level4 = 550,Level5 = 700}},
-            { WeaponType.JianQi,new HunQiEx(){Level1 = 200,Level2 = 300,Level3 = 400,Level4 = 550,Level5 = 700}},
-        };
-
         public static Dictionary<WeaponType, List<int>> WeaponDamageDic = new Dictionary<WeaponType, List<int>>()
         {
             { WeaponType.Primary, new List<int>(){100} },
+            { WeaponType.PrimaryHuo, new List<int>(){100} },
+            { WeaponType.PrimaryDian, new List<int>(){100} },
+            { WeaponType.PrimaryHeiAn, new List<int>(){100} },
+            { WeaponType.IceBaoZha, new List<int>(){100,120} },
+            { WeaponType.DianBaoZha, new List<int>(){100,120} },
             { WeaponType.HuoBaoZha, new List<int>(){100,120} },
             { WeaponType.HeiAnBaoZha, new List<int>(){100,120}},
             { WeaponType.XuKong, new List<int>(){150} },
@@ -146,20 +139,121 @@ namespace Config
 
         };
 
-        public static Dictionary<WeaponType, WeaponHunQiDesc> WeaponHunQiDic =
-            new Dictionary<WeaponType, WeaponHunQiDesc>()
-            {
-                { WeaponType.Primary ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:魔法弹数量+1",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:魔法弹数量+1"} },
-                { WeaponType.HuoBaoZha ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:中毒伤害翻倍",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:击中生成毒液圈"} },
-                { WeaponType.PuTong3 ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:武器伤害+20%",HunQi4 = "Lv.4:基础攻击速度+0.2",HunQi5 = "Lv.5:魔法弹数量+2"} },
-                { WeaponType.XuKong ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:魔法弹数量+1",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:魔法弹数量+1"} },
-                { WeaponType.Fire ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:爆炸造成灼烧效果",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:爆炸范围扩大"} },
-                { WeaponType.LvQuan ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:魔法弹大小+20%",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:魔法弹数量+1"} },
-                { WeaponType.HeiDong ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:爆炸范围增加20%",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:魔法弹数量+1"} },
-                { WeaponType.JianQi ,new WeaponHunQiDesc(){HunQi1 = "Lv.1:武器伤害+10%",HunQi2 = "Lv.2:基础攻击速度+0.2",HunQi3 = "Lv.3:剑气数量+1",HunQi4 = "Lv.4:武器伤害+20%",HunQi5 = "Lv.5:剑气数量+1"} }
-            };
-        
-        
+        public static Dictionary<int, float> WeaponLevelAttributeDic = new Dictionary<int, float>()
+        {
+           {1,1.0f },
+         {2,1.1f },
+         {3,1.2f },
+         {4,1.3f },
+         {5,1.4f },
+         {6,1.5f },
+         {7,1.6f },
+         {8,1.7f },
+         {9,1.8f },
+         {10,1.9f },
+         
+         
+         {11,2.0f },
+         {12,2.15f },
+         {13,2.3f },
+         {14,2.45f },
+         {15,2.6f },
+         {16,2.75f },
+         {17,2.9f },
+         {18,3.05f },
+         {19,3.2f },
+         {20,3.35f },
+         
+         
+         {21,3.5f },
+         {22,3.65f },
+         {23,3.8f },
+         {24,3.95f },
+         {25,4.05f },
+         {26,4.15f },
+         {27,4.3f },
+         {28,4.45f },
+         {29,4.6f },
+         {30,4.75f },
+         
+         
+         {31,4.9f },
+         {32,5.05f },
+         {33,5.2f },
+         {34,5.35f },
+         {35,5.5f },
+         {36,5.65f },
+         {37,5.8f },
+         {38,5.95f },
+         {39,6.05f },
+         {40,6.2f },
+         
+         {41,6.35f },
+         {42,6.5f },
+         {43,6.65f },
+         {44,6.8f },
+         {45,6.95f },
+         {46,7.05f },
+         {47,7.15f },
+         {48,7.3f },
+         {49,7.45f },
+         {50,7.65f },
+         
+         {51,7.8f },
+         {52,8f },
+         {53,8.2f },
+         {54,8.4f },
+         {55,8.6f },
+         {56,8.8f },
+         {57,9f },
+         {58,9.2f },
+         {59,9.4f },
+         {60,9.6f },
+         
+         {61,9.8f },
+         {62,10f },
+         {63,10.2f },
+         {64,10.4f },
+         {65,10.6f },
+         {66,10.8f },
+         {67,11f },
+         {68,11.2f },
+         {69,11.4f },
+         {70,11.6f },
+         
+         {71,11.8f },
+         {72,12f },
+         {73,12.2f },
+         {74,12.4f },
+         {75,12.6f },
+         {76,12.8f },
+         {77,13f },
+         {78,13.2f },
+         {79,13.4f },
+         {80,13.6f },
+         
+         {81,13.9f },
+         {82,14.2f },
+         {83,14.5f },
+         {84,14.8f },
+         {85,15.1f },
+         {86,15.4f },
+         {87,15.7f },
+         {88,16f },
+         {89,16.4f },
+         {90,16.8f },
+         
+         {91,17.2f },
+         {92,17.6f },
+         {93,18f },
+         {94,18.4f },
+         {95,18.8f },
+         {96,19.2f },
+         {97,19.6f },
+         {98,20f },
+         {99,21f },
+         {100,22f },
+        };
         public static Dictionary<WeaponType, WeaponAttribute> WeaponBaseAttributeDic =
             new Dictionary<WeaponType, WeaponAttribute>()
             {

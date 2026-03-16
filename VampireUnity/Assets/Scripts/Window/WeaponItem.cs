@@ -22,6 +22,65 @@ public class WeaponItem : MonoBehaviour
    public TextMeshProUGUI Name5;
    public TextMeshProUGUI Name6;
 
+
+   public int GetWeaponLevel(WeaponType type)
+   {
+      switch (type)
+      {
+         case WeaponType.Primary:
+            return PlayerData.S.primaryWeaponLevel;
+         case WeaponType.PrimaryHuo:
+   return PlayerData.S.primaryHuoLevel;
+         case WeaponType.PrimaryDian:
+            return PlayerData.S.primaryDianLevel;
+         case WeaponType.PrimaryHeiAn:
+            return PlayerData.S.primaryHeiAnLevel;
+         case WeaponType.IceBaoZha:
+            return PlayerData.S.iceBaoZhaLevel;
+         case WeaponType.DianBaoZha:
+            return PlayerData.S.dianBaoZhaLevel;
+         case WeaponType.HuoBaoZha:
+            return PlayerData.S.HuoBaoZhaWeaponLevel;
+         case WeaponType.HeiAnBaoZha:
+            return PlayerData.S.HeiAnBaoZhaWeaponLevel;
+         case WeaponType.XuKong:
+            return PlayerData.S.xuKongWeaponLevel;
+         case WeaponType.PuTong3:
+            return PlayerData.S.puTong3WeaponLevel;
+         case WeaponType.Fire:
+            return PlayerData.S.fireWeaponLevel;
+         case WeaponType.LvQuan:
+            return PlayerData.S.lvQuanWeaponLevel;
+         case WeaponType.DianJiSu:
+            return PlayerData.S.DianJiSuWeaponLevel;
+         case WeaponType.DianSanShe:
+            return PlayerData.S.DianSanSheWeaponLevel;
+         case WeaponType.Huo7:
+            return PlayerData.S.Huo7WeaponLevel;
+         case WeaponType.HuoFenLie:
+            return PlayerData.S.HuoFenLieWeaponLevel;
+         case WeaponType.HeiAnHuiXuan:
+            return PlayerData.S.HeiAnHuiXuanWeaponLevel;
+         case WeaponType.HeiAnQuXian:
+            return PlayerData.S.HeiAnQuXianWeaponLevel;
+         case WeaponType.Ice7:
+            return PlayerData.S.Ice7WeaponLevel;
+         case WeaponType.Ice4BaoZha:
+            return PlayerData.S.Ice4BaoZhaWeaponLevel;
+         case WeaponType.JianQi:
+            return PlayerData.S.jianQiWeaponLevel;
+         case WeaponType.HuoDiPen:
+            return PlayerData.S.HuoDiPenWeaponLevel;
+         case WeaponType.IcePen:
+            return PlayerData.S.IcePenWeaponLevel;
+         case WeaponType.HeiDong:
+            return PlayerData.S.heiDongWeaponLevel;
+         case WeaponType.DianLuoLei5:
+            return PlayerData.S.DianLuoLei5WeaponLevel;
+      }
+
+      return 0;
+   }
    public void SetName(int quality, string name)
    {
       Name1.gameObject.SetActive(false);
@@ -35,27 +94,27 @@ public class WeaponItem : MonoBehaviour
       {
          case 1:
             Name1.gameObject.SetActive(true);
-            Name1.text = name;
+            Name1.text = name+" Lv."+GetWeaponLevel(type);
             break;
          case 2:
             Name2.gameObject.SetActive(true);
-            Name2.text = name;
+            Name2.text = name+" Lv."+GetWeaponLevel(type);
             break;
          case 3:
             Name3.gameObject.SetActive(true);
-            Name3.text = name;
+            Name3.text = name+" Lv."+GetWeaponLevel(type);
             break;
          case 4:
             Name4.gameObject.SetActive(true);
-            Name4.text = name;
+            Name4.text = name+" Lv."+GetWeaponLevel(type);
             break;
          case 5:
             Name5.gameObject.SetActive(true);
-            Name5.text = name;
+            Name5.text = name+" Lv."+GetWeaponLevel(type);
             break;
          case 6:
             Name6.gameObject.SetActive(true);
-            Name6.text = name;
+            Name6.text = name+" Lv."+GetWeaponLevel(type);
             break;
       }
    }
@@ -146,7 +205,7 @@ public class WeaponItem : MonoBehaviour
 
             SetName(WeaponConfig.WeaponQualityDic[WeaponType.HuoBaoZha], WeaponConfig.WeaponNameDic[WeaponType.HuoBaoZha]);
 
-            if (PlayerData.S.duWeaponLevel < 1)
+            if (PlayerData.S.HuoBaoZhaWeaponLevel < 1)
             {
                suo.gameObject.SetActive(true);
                mask.SetActive(true);
@@ -182,7 +241,7 @@ public class WeaponItem : MonoBehaviour
 
             SetName(WeaponConfig.WeaponQualityDic[WeaponType.DianBaoZha], WeaponConfig.WeaponNameDic[WeaponType.DianBaoZha]);
 
-            if (PlayerData.S.dianBaoZha < 1)
+            if (PlayerData.S.dianBaoZhaLevel < 1)
             {
                suo.gameObject.SetActive(true);
                mask.SetActive(true);
@@ -218,7 +277,7 @@ public class WeaponItem : MonoBehaviour
 
             SetName(WeaponConfig.WeaponQualityDic[WeaponType.IceBaoZha], WeaponConfig.WeaponNameDic[WeaponType.IceBaoZha]);
 
-            if (PlayerData.S.iceBaoZha < 1)
+            if (PlayerData.S.iceBaoZhaLevel < 1)
             {
                suo.gameObject.SetActive(true);
                mask.SetActive(true);
