@@ -9,6 +9,12 @@ public class ResourcesConfig : MonoBehaviour
     
     //武器图片
     public static Sprite Primary;//ice
+    public static Sprite PrimaryDian;//ice
+    public static Sprite PrimaryHuo;//ice
+    public static Sprite PrimaryHeiAn;//ice
+    public static Sprite DianBaoZha;//ice
+    public static Sprite IceBaoZha;//ice
+
     public static Sprite Fire;//dian
     public static Sprite XuKong;//dian
     public static Sprite LvQuan;//heian
@@ -1329,6 +1335,12 @@ public class ResourcesConfig : MonoBehaviour
 
         //武器
         Primary = Resources.Load<Sprite>("Sprite/Weapon/Primary");
+        PrimaryDian = Resources.Load<Sprite>("Sprite/Weapon/PrimaryDian");
+        PrimaryHuo = Resources.Load<Sprite>("Sprite/Weapon/PrimaryHuo");
+        PrimaryHeiAn = Resources.Load<Sprite>("Sprite/Weapon/PrimaryHeiAn");
+        DianBaoZha = Resources.Load<Sprite>("Sprite/Weapon/DianBaoZha");
+        IceBaoZha = Resources.Load<Sprite>("Sprite/Weapon/IceBaoZha");
+
         DianJiSu = Resources.Load<Sprite>("Sprite/Weapon/DianJiSu");
         DianLuoLei5 = Resources.Load<Sprite>("Sprite/Weapon/DianLuoLei5");
         DianSanShe = Resources.Load<Sprite>("Sprite/Weapon/DianSanShe");

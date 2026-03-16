@@ -23,6 +23,12 @@ public class PlayerData : XSingleton<PlayerData>
 
 
     public int primaryWeaponLevel=1;
+    public int primaryDianLevel=1;
+    public int primaryHuoLevel=1;
+    public int primaryHeiAnLevel=1;
+    public int dianBaoZha;
+    public int iceBaoZha;
+
     public int duWeaponLevel;
     public int puTong3WeaponLevel;
     public int xuKongWeaponLevel;

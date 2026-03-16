@@ -75,7 +75,13 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int shoeid;
         public int necklaceid;
 
-        public int primaryWeaponLevel = 1;
+        public int primaryWeaponLevel=1;
+        public int primaryDianLevel=1;
+        public int primaryHuoLevel=1;
+        public int primaryHeiAnLevel=1;
+        public int dianBaoZha;
+        public int iceBaoZha;
+
         public int duWeaponLevel;
         public int puTong3WeaponLevel;
         public int xuKongWeaponLevel;
@@ -83,6 +89,19 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int fireWeaponLevel;
         public int heiDongWeaponLevel;
         public int jianQiWeaponLevel;
+    
+        public int Huo7WeaponLevel;
+        public int IcePenWeaponLevel;
+        public int Ice7WeaponLevel;
+        public int Ice4BaoZhaWeaponLevel;
+        public int HuoFenLieWeaponLevel;
+        public int HuoDiPenWeaponLevel;
+        public int HeiAnQuXianWeaponLevel;
+        public int HeiAnHuiXuanWeaponLevel;
+        public int HeiAnBaoZhaWeaponLevel;
+        public int DianSanSheWeaponLevel;
+        public int DianLuoLei5WeaponLevel;
+        public int DianJiSuWeaponLevel;
 
         public int primaryHunQiLevel = 0;
         public int duHunQiLevel = 0;
@@ -183,15 +202,33 @@ public class StoreDefine : XSingleton<StoreDefine>
             shoeid = runtime.shoeid;
             necklaceid = runtime.necklaceid;
 
-            primaryWeaponLevel = runtime.primaryWeaponLevel;
-            duWeaponLevel = runtime.duWeaponLevel;
-            puTong3WeaponLevel = runtime.puTong3WeaponLevel;
-            xuKongWeaponLevel = runtime.xuKongWeaponLevel;
-            lvQuanWeaponLevel = runtime.lvQuanWeaponLevel;
-            fireWeaponLevel = runtime.fireWeaponLevel;
-            heiDongWeaponLevel = runtime.heiDongWeaponLevel;
-            jianQiWeaponLevel = runtime.jianQiWeaponLevel;
-            zhuanjinCount = runtime.zhuanjinCount;
+        primaryWeaponLevel=runtime.primaryWeaponLevel;
+        primaryDianLevel=runtime.primaryWeaponLevel;
+        primaryHuoLevel=runtime.primaryWeaponLevel;
+        primaryHeiAnLevel=runtime.primaryWeaponLevel;
+        dianBaoZha=runtime.primaryWeaponLevel;
+        iceBaoZha=runtime.primaryWeaponLevel;
+
+        duWeaponLevel=runtime.primaryWeaponLevel;
+        puTong3WeaponLevel=runtime.puTong3WeaponLevel;
+        xuKongWeaponLevel=runtime.xuKongWeaponLevel;
+        lvQuanWeaponLevel=runtime.lvQuanWeaponLevel;
+        fireWeaponLevel=runtime.fireWeaponLevel;
+        heiDongWeaponLevel=runtime.heiDongWeaponLevel;
+        jianQiWeaponLevel=runtime.jianQiWeaponLevel;
+    
+        Huo7WeaponLevel=runtime.Huo7WeaponLevel;
+        IcePenWeaponLevel=runtime.IcePenWeaponLevel;
+        Ice7WeaponLevel=runtime.Ice7WeaponLevel;
+        Ice4BaoZhaWeaponLevel=runtime.Ice4BaoZhaWeaponLevel;
+        HuoFenLieWeaponLevel=runtime.HuoFenLieWeaponLevel;
+        HuoDiPenWeaponLevel=runtime.HuoDiPenWeaponLevel;
+        HeiAnQuXianWeaponLevel=runtime.HeiAnQuXianWeaponLevel;
+        HeiAnHuiXuanWeaponLevel=runtime.HeiAnHuiXuanWeaponLevel;
+        HeiAnBaoZhaWeaponLevel=runtime.HeiAnBaoZhaWeaponLevel;
+        DianSanSheWeaponLevel=runtime.DianSanSheWeaponLevel;
+        DianLuoLei5WeaponLevel=runtime.DianLuoLei5WeaponLevel;
+        DianJiSuWeaponLevel=runtime.DianJiSuWeaponLevel;
 
 
             primaryHunQiLevel = runtime.primaryHunQiLevel;
@@ -288,14 +325,33 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.shoeid = shoeid;
             runtime.necklaceid = necklaceid;
 
-            runtime.primaryWeaponLevel = primaryWeaponLevel;
-            runtime.duWeaponLevel = duWeaponLevel;
-            runtime.puTong3WeaponLevel = puTong3WeaponLevel;
-            runtime.xuKongWeaponLevel = xuKongWeaponLevel;
-            runtime.lvQuanWeaponLevel = lvQuanWeaponLevel;
-            runtime.fireWeaponLevel = fireWeaponLevel;
-            runtime.heiDongWeaponLevel = heiDongWeaponLevel;
-            runtime.jianQiWeaponLevel = jianQiWeaponLevel;
+            runtime.primaryWeaponLevel=primaryWeaponLevel;
+            runtime.primaryDianLevel=primaryWeaponLevel;
+            runtime.primaryHuoLevel=primaryWeaponLevel;
+            runtime.primaryHeiAnLevel=primaryWeaponLevel;
+            runtime.dianBaoZha=primaryWeaponLevel;
+            runtime.iceBaoZha=primaryWeaponLevel;
+
+            runtime.duWeaponLevel=primaryWeaponLevel;
+            runtime.puTong3WeaponLevel=puTong3WeaponLevel;
+            runtime.xuKongWeaponLevel=xuKongWeaponLevel;
+            runtime.lvQuanWeaponLevel=lvQuanWeaponLevel;
+            runtime.fireWeaponLevel=fireWeaponLevel;
+            runtime.heiDongWeaponLevel=heiDongWeaponLevel;
+            runtime.jianQiWeaponLevel=jianQiWeaponLevel;
+    
+            runtime.Huo7WeaponLevel=Huo7WeaponLevel;
+            runtime.IcePenWeaponLevel=IcePenWeaponLevel;
+            runtime.Ice7WeaponLevel=Ice7WeaponLevel;
+            runtime.Ice4BaoZhaWeaponLevel=Ice4BaoZhaWeaponLevel;
+            runtime.HuoFenLieWeaponLevel=HuoFenLieWeaponLevel;
+            runtime.HuoDiPenWeaponLevel=HuoDiPenWeaponLevel;
+            runtime.HeiAnQuXianWeaponLevel=HeiAnQuXianWeaponLevel;
+            runtime.HeiAnHuiXuanWeaponLevel=HeiAnHuiXuanWeaponLevel;
+            runtime.HeiAnBaoZhaWeaponLevel=HeiAnBaoZhaWeaponLevel;
+            runtime.DianSanSheWeaponLevel=DianSanSheWeaponLevel;
+            runtime.DianLuoLei5WeaponLevel=DianLuoLei5WeaponLevel;
+            runtime.DianJiSuWeaponLevel=DianJiSuWeaponLevel;
 
             runtime.primaryHunQiLevel = primaryHunQiLevel;
             runtime.duHunQiLevel = duHunQiLevel;

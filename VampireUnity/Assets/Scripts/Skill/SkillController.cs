@@ -999,7 +999,7 @@ public class SkillController : XSingleton<SkillController>
                 GameController.S.gamePlayer.currentGun.HeiDongShot(attackTrans);
                 break;
             case WeaponType.HuoBaoZha:
-                GameController.S.gamePlayer.currentGun.DuShot(attackTrans);
+                GameController.S.gamePlayer.currentGun.HuoBaoZhaShot(attackTrans);
                 break;
             case WeaponType.LuoLei:
                 GameController.S.gamePlayer.currentGun.LuoLeiShot(attackTrans);
@@ -1051,6 +1051,12 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case WeaponType.PrimaryHuo:
                 GameController.S.gamePlayer.currentGun.PrimaryHuoShot(attackTrans);
+                break;
+            case WeaponType.DianBaoZha:
+                GameController.S.gamePlayer.currentGun.DianBaoZhaShot(attackTrans);
+                break;
+            case WeaponType.IceBaoZha:
+                GameController.S.gamePlayer.currentGun.IceBaoZhaShot(attackTrans);
                 break;
         }
     }

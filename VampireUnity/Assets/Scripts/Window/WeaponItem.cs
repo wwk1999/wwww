@@ -83,6 +83,63 @@ public class WeaponItem : MonoBehaviour
                ObserverModuleManager.S.SendEvent("BgButtonClick",WeaponType.Primary);
             });
             break;
+         case WeaponType.PrimaryHuo:
+            yiZhuangBeiIcon.gameObject.SetActive(PlayerData.S.playerWeaponType==WeaponType.PrimaryHuo);
+            SetName(WeaponConfig.WeaponQualityDic[WeaponType.PrimaryHuo], WeaponConfig.WeaponNameDic[WeaponType.PrimaryHuo]);
+            suo.gameObject.SetActive(false);
+            mask.SetActive(false);
+            intallbutton.onClick.RemoveAllListeners();
+            intallbutton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               yiZhuangBeiIcon.gameObject.SetActive(true);
+               PlayerData.S.playerWeaponType = WeaponType.PrimaryHuo;
+            });
+            weaponImage.sprite = ResourcesConfig.PrimaryHuo;
+            bgButton.onClick.RemoveAllListeners();
+            bgButton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("BgButtonClick",WeaponType.PrimaryHuo);
+            });
+            break;
+         case WeaponType.PrimaryDian:
+            yiZhuangBeiIcon.gameObject.SetActive(PlayerData.S.playerWeaponType==WeaponType.PrimaryDian);
+            SetName(WeaponConfig.WeaponQualityDic[WeaponType.PrimaryDian], WeaponConfig.WeaponNameDic[WeaponType.PrimaryDian]);
+            suo.gameObject.SetActive(false);
+            mask.SetActive(false);
+            intallbutton.onClick.RemoveAllListeners();
+            intallbutton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               yiZhuangBeiIcon.gameObject.SetActive(true);
+               PlayerData.S.playerWeaponType = WeaponType.PrimaryDian;
+            });
+            weaponImage.sprite = ResourcesConfig.PrimaryDian;
+            bgButton.onClick.RemoveAllListeners();
+            bgButton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("BgButtonClick",WeaponType.PrimaryDian);
+            });
+            break;
+         case WeaponType.PrimaryHeiAn:
+            yiZhuangBeiIcon.gameObject.SetActive(PlayerData.S.playerWeaponType==WeaponType.PrimaryHeiAn);
+            SetName(WeaponConfig.WeaponQualityDic[WeaponType.PrimaryHeiAn], WeaponConfig.WeaponNameDic[WeaponType.PrimaryHeiAn]);
+            suo.gameObject.SetActive(false);
+            mask.SetActive(false);
+            intallbutton.onClick.RemoveAllListeners();
+            intallbutton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               yiZhuangBeiIcon.gameObject.SetActive(true);
+               PlayerData.S.playerWeaponType = WeaponType.PrimaryHeiAn;
+            });
+            weaponImage.sprite = ResourcesConfig.PrimaryHeiAn;
+            bgButton.onClick.RemoveAllListeners();
+            bgButton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("BgButtonClick",WeaponType.PrimaryHeiAn);
+            });
+            break;
          
          case WeaponType.HuoBaoZha:
             yiZhuangBeiIcon.gameObject.SetActive(PlayerData.S.playerWeaponType==WeaponType.HuoBaoZha);
@@ -116,6 +173,78 @@ public class WeaponItem : MonoBehaviour
             suoButton.onClick.AddListener(() =>
             {
                ObserverModuleManager.S.SendEvent("SuoButtonClick",WeaponType.HuoBaoZha);
+            });
+            break;
+         
+         
+         case WeaponType.DianBaoZha:
+            yiZhuangBeiIcon.gameObject.SetActive(PlayerData.S.playerWeaponType==WeaponType.DianBaoZha);
+
+            SetName(WeaponConfig.WeaponQualityDic[WeaponType.DianBaoZha], WeaponConfig.WeaponNameDic[WeaponType.DianBaoZha]);
+
+            if (PlayerData.S.dianBaoZha < 1)
+            {
+               suo.gameObject.SetActive(true);
+               mask.SetActive(true);
+            }
+            else
+            {
+               suo.gameObject.SetActive(false);
+               mask.SetActive(false);
+            }
+            intallbutton.onClick.RemoveAllListeners();
+            intallbutton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               yiZhuangBeiIcon.gameObject.SetActive(true);
+               PlayerData.S.playerWeaponType = WeaponType.DianBaoZha;
+            });
+            weaponImage.sprite = ResourcesConfig.DianBaoZha;
+            bgButton.onClick.RemoveAllListeners();
+            bgButton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("BgButtonClick",WeaponType.DianBaoZha);
+            });
+            suoButton.onClick.RemoveAllListeners();
+            suoButton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("SuoButtonClick",WeaponType.DianBaoZha);
+            });
+            break;
+         
+         
+         case WeaponType.IceBaoZha:
+            yiZhuangBeiIcon.gameObject.SetActive(PlayerData.S.playerWeaponType==WeaponType.IceBaoZha);
+
+            SetName(WeaponConfig.WeaponQualityDic[WeaponType.IceBaoZha], WeaponConfig.WeaponNameDic[WeaponType.IceBaoZha]);
+
+            if (PlayerData.S.iceBaoZha < 1)
+            {
+               suo.gameObject.SetActive(true);
+               mask.SetActive(true);
+            }
+            else
+            {
+               suo.gameObject.SetActive(false);
+               mask.SetActive(false);
+            }
+            intallbutton.onClick.RemoveAllListeners();
+            intallbutton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               yiZhuangBeiIcon.gameObject.SetActive(true);
+               PlayerData.S.playerWeaponType = WeaponType.IceBaoZha;
+            });
+            weaponImage.sprite = ResourcesConfig.IceBaoZha;
+            bgButton.onClick.RemoveAllListeners();
+            bgButton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("BgButtonClick",WeaponType.IceBaoZha);
+            });
+            suoButton.onClick.RemoveAllListeners();
+            suoButton.onClick.AddListener(() =>
+            {
+               ObserverModuleManager.S.SendEvent("SuoButtonClick",WeaponType.IceBaoZha);
             });
             break;
          

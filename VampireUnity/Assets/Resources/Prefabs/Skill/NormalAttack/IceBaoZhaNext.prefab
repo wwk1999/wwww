@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2736197756767350751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.55, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2467209073254463043}
   - component: {fileID: 4918740514494562596}
   - component: {fileID: 4394606971080114163}
-  - component: {fileID: 9060595736167514403}
+  - component: {fileID: 1320283200299802320}
   m_Layer: 0
   m_Name: NewSequenceAnim
   m_TagString: Untagged
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3000
   m_Sprite: {fileID: 474996316490640466, guid: d7f94b15deb60ff45b3901733f5e49d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,7 +140,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9060595736167514403
+--- !u!114 &1320283200299802320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,11 +149,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8198547955935180381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efef7d3fa7df6e4496fff1f2d6e0003, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d3e0bbe1926765469b05d1b6206c34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collider2D: {fileID: 2794682318927716752}
-  DianBaoZhaNext: {fileID: 78215448949560662}
+  IceBaoZhaNext: {fileID: 7558691009027260415}
 --- !u!1 &8734459179255902314
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8070717934516925118}
-  - component: {fileID: 78215448949560662}
+  - component: {fileID: 7558691009027260415}
   m_Layer: 0
   m_Name: IceBaoZhaNext
   m_TagString: Untagged
@@ -262,14 +262,14 @@ Transform:
   m_GameObject: {fileID: 8944571792450577880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.33, y: -2.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8208106177879841498}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &78215448949560662
+--- !u!114 &7558691009027260415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,7 +278,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8944571792450577880}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44ce7b9fcd94877459830f7f786fac26, type: 3}
+  m_Script: {fileID: 11500000, guid: 362a73241bc138b4da054f46a2003235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4394606971080114163}
+  parent: {fileID: 8944571792450577880}

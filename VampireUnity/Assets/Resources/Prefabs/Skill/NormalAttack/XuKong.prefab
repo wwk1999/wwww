@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4773886759100711590}
@@ -94,7 +94,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.607244, y: -0.07616782}
+  m_Offset: {x: 7.101477, y: -0.012130737}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -105,7 +105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.3978453, y: 1.6238391}
+  m_Size: {x: 8.386312, y: 4.2280703}
   m_EdgeRadius: 0
 --- !u!114 &4523523828232418400
 MonoBehaviour:
@@ -146,14 +146,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3463387001401245623}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -3.8, y: -0, z: 0}
   m_LocalScale: {x: 0.7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2886247810944648151}
   m_Father: {fileID: 6869430066285785559}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &6082106253990964562
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,8 +182,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6082106253990964562}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.66, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.02, y: 16.48, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -217,7 +217,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a13bee4d82dc2fb4e9721bab15c694ff, type: 2}
+  - {fileID: 2100000, guid: bfca5bcbd7581b84fa5c5fb4d8234be7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: d1bcd630face1fe44a3d420fc346307a, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 7905bd7976a755140b23696ea89bb36a, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: fly_5
+  animationName: play
   loop: 1
   timeScale: 1
   unscaledTime: 0

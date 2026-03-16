@@ -32,6 +32,8 @@ public class DianBaoZha : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             Vector2 closestPoint = other.ClosestPoint(transform.position);
+            bool isCrit = GameController.S.GetIsCrit();
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal);
             var baozha = GameController.S.DianBaoZhaNextQueue.Dequeue();
             baozha.transform.position = closestPoint;
             baozha.gameObject.SetActive(true);

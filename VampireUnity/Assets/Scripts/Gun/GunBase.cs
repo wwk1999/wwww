@@ -277,6 +277,48 @@ public class GunBase : MonoBehaviour
         bullet.gameObject.SetActive(true);
     }
     
+    public void HuoBaoZhaShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        HuoBaoZha bullet = GameController.S.HuoBaoZhaQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
+    
+    
+    public void IceBaoZhaShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        IceBaoZha bullet = GameController.S.IceBaoZhaQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
+    
+    public void DianBaoZhaShot(Vector3 attackTrans)
+    {
+        Vector3 mouseScreen = Input.mousePosition;
+        float depth = Mathf.Abs(Camera.main.transform.position.z - attackTrans.z);
+        mouseScreen.z = depth; 
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 direction = (worldPos- attackTrans).normalized;
+        DianBaoZha bullet = GameController.S.DianBaoZhaQueue.Dequeue();
+        bullet.transform.position = attackTrans;
+        bullet.MoveDirection = direction;
+        bullet.MoveSpeed = 10f;
+        bullet.gameObject.SetActive(true);
+    }
     
     public void HuoDiPenShot(Vector3 attackTrans)
     {

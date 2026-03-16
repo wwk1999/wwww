@@ -87,12 +87,17 @@ namespace Config
         public static Dictionary<WeaponType, int> WeaponQualityDic = new Dictionary<WeaponType, int>()
         {
             { WeaponType.Primary, 1 },
+            { WeaponType.PrimaryDian, 1 },
+            { WeaponType.PrimaryHuo, 1 },
+            { WeaponType.PrimaryHeiAn, 1 },
+            { WeaponType.DianBaoZha, 2 },
+            { WeaponType.IceBaoZha, 2 },
             { WeaponType.HuoBaoZha, 2 },
             { WeaponType.HeiAnBaoZha, 2 },
-            { WeaponType.XuKong, 3 },
-            { WeaponType.PuTong3, 3 },
-            { WeaponType.Fire, 3 },
-            { WeaponType.LvQuan, 3 },
+            { WeaponType.XuKong, 3 },//黑暗
+            { WeaponType.PuTong3, 3 },//冰
+            { WeaponType.Fire, 3 },//电
+            { WeaponType.LvQuan, 3 },//火
             { WeaponType.DianJiSu, 4 },
             { WeaponType.DianSanShe, 4 },
             { WeaponType.Huo7, 4 },
@@ -111,7 +116,15 @@ namespace Config
 
         public static Dictionary<WeaponType, string> WeaponNameDic = new Dictionary<WeaponType, string>()
         {
-            { WeaponType.Primary,"原木杖"},
+            { WeaponType.Primary,"冰原木杖"},
+            { WeaponType.PrimaryDian,"电原木杖"},
+            { WeaponType.PrimaryHuo,"火原木杖"},
+            { WeaponType.PrimaryHeiAn,"黑暗原木杖"},
+            
+            { WeaponType.HuoBaoZha,"火爆杖"},
+            { WeaponType.DianBaoZha,"电爆杖"},
+            { WeaponType.IceBaoZha,"冰爆杖"},
+            
             { WeaponType.DianJiSu,"电光四射"},
             { WeaponType.DianLuoLei5,"五雷杖"},
             { WeaponType.DianSanShe,"镭射杖"},
@@ -125,10 +138,9 @@ namespace Config
             { WeaponType.Ice4BaoZha,"四象冰杖"},
             { WeaponType.IcePen,"万里冰封"},
             { WeaponType.JianQi,"刀光剑影"},
-            { WeaponType.XuKong,"电光杖"},
+            { WeaponType.XuKong,"虚空杖"},
             { WeaponType.PuTong3,"三叉冰杖"},
             { WeaponType.Fire,"落雷杖"},
-            { WeaponType.HuoBaoZha,"火球杖"},
             { WeaponType.HeiDong,"黑洞坍塌"},
             { WeaponType.LvQuan,"源极杖"},
 
@@ -152,6 +164,11 @@ namespace Config
             new Dictionary<WeaponType, WeaponAttribute>()
             {
                 { WeaponType.Primary ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
+                { WeaponType.PrimaryDian ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
+                { WeaponType.PrimaryHuo ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
+                { WeaponType.PrimaryHeiAn ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
+                { WeaponType.DianBaoZha ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
+                { WeaponType.IceBaoZha ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
                 { WeaponType.HuoBaoZha ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 10,AttackSpeed = 1}},
                 { WeaponType.PuTong3 ,new WeaponAttribute(){Attack = 40,Crit = 40,Hp = 100,Defense = 20,AttackSpeed = 1}},
                 { WeaponType.XuKong ,new WeaponAttribute(){Attack = 60,Crit = 60,Hp = 150,Defense = 30,AttackSpeed = 1}},
@@ -177,6 +194,11 @@ namespace Config
         public static Dictionary<WeaponType, YuanSuType> WeaponYuanSuTypeDic = new Dictionary<WeaponType, YuanSuType>()
         {
             {WeaponType.Primary,YuanSuType.Ice},
+            {WeaponType.PrimaryDian,YuanSuType.Dian},
+            {WeaponType.PrimaryHuo,YuanSuType.Huo},
+            {WeaponType.PrimaryHeiAn,YuanSuType.HeiAn},
+            {WeaponType.DianBaoZha,YuanSuType.Dian},
+            {WeaponType.IceBaoZha,YuanSuType.Ice},
             {WeaponType.HuoBaoZha,YuanSuType.Huo},
             {WeaponType.PuTong3,YuanSuType.Ice},
             {WeaponType.XuKong,YuanSuType.Dian},

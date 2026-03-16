@@ -40,6 +40,7 @@ public class RoleWindow1 : MonoBehaviour
     public Button debugPlayerLevel;
     public Button debugBaoshi;
     public Button debugChongWu;
+    public Button debugWuQi;
 
 
     
@@ -225,6 +226,37 @@ public class RoleWindow1 : MonoBehaviour
         {
             WindowController.S.ChongWuWindow.gameObject.SetActive(true);
         });
+        debugWuQi.onClick.AddListener(() =>
+        {
+    PlayerData.S.primaryWeaponLevel++;
+    PlayerData.S.primaryDianLevel++;
+    PlayerData.S.primaryHuoLevel++;
+    PlayerData.S.primaryHeiAnLevel++;
+    PlayerData.S.dianBaoZha++;
+    PlayerData.S.iceBaoZha++;
+
+    PlayerData.S.duWeaponLevel++;
+    PlayerData.S.puTong3WeaponLevel++;
+    PlayerData.S.xuKongWeaponLevel++;
+    PlayerData.S.lvQuanWeaponLevel++;
+    PlayerData.S.fireWeaponLevel++;
+    PlayerData.S.heiDongWeaponLevel++;
+    PlayerData.S.jianQiWeaponLevel++;
+    
+    PlayerData.S.Huo7WeaponLevel++;
+    PlayerData.S.IcePenWeaponLevel++;
+    PlayerData.S.Ice7WeaponLevel++;
+    PlayerData.S.Ice4BaoZhaWeaponLevel++;
+    PlayerData.S.HuoFenLieWeaponLevel++;
+    PlayerData.S.HuoDiPenWeaponLevel++;
+    PlayerData.S.HeiAnQuXianWeaponLevel++;
+    PlayerData.S.HeiAnHuiXuanWeaponLevel++;
+    PlayerData.S.HeiAnBaoZhaWeaponLevel++;
+    PlayerData.S.DianSanSheWeaponLevel++;
+    PlayerData.S.DianLuoLei5WeaponLevel++;
+    PlayerData.S.DianJiSuWeaponLevel++;
+        });
+
         debugChongWu.onClick.AddListener(() =>
         {
             var data3 = new PropTable()
