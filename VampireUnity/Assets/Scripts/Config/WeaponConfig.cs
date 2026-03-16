@@ -23,6 +23,20 @@ namespace Config
     {
         public YuanSuType YuanSuType;
         public int quality;
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            WeaponJieSuoDesc other = (WeaponJieSuoDesc)obj;
+            return YuanSuType == other.YuanSuType && quality == other.quality;
+        }
+
+        public override int GetHashCode()
+        {
+            return System.HashCode.Combine(YuanSuType, quality);
+        }
     }
 
     public class WeaponAttribute
@@ -176,7 +190,37 @@ namespace Config
             { WeaponType.DianLuoLei5, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 10000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =5,count = 30},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 5,count = 30}} },//冰
         };
         
-        
+        public static Dictionary<WeaponType, string> WeaponTeXiaoDic = new Dictionary<WeaponType, string>()
+        {
+            { WeaponType.Primary, $"释放冰魔法弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Primary][0]}%</color>的冰霜伤害" },    
+            { WeaponType.PrimaryHuo, $"释放火魔法弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.PrimaryHuo][0]}%</color>的火焰伤害" },           
+            { WeaponType.PrimaryDian, $"释放电魔法弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.PrimaryDian][0]}%</color>的雷电伤害" },          
+            { WeaponType.PrimaryHeiAn, $"释放冰魔法弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.PrimaryHeiAn][0]}%</color>的黑暗伤害" },            
+            
+            { WeaponType.HuoBaoZha,$"释放火焰爆弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.HuoBaoZha][0]}%</color>的火焰伤害,随后产生小范围爆炸造成<color=green>{WeaponDamageDic[WeaponType.HuoBaoZha][1]}%</color>的火焰伤害"},
+            { WeaponType.DianBaoZha,$"释放雷电爆弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.DianBaoZha][0]}%</color>的雷电伤害,随后产生小范围爆炸造成<color=green>{WeaponDamageDic[WeaponType.DianBaoZha][1]}%</color>的雷电伤害"},
+            { WeaponType.IceBaoZha,$"释放冰霜爆弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.IceBaoZha][0]}%</color>的冰霜伤害,随后产生小范围爆炸造成<color=green>{WeaponDamageDic[WeaponType.IceBaoZha][1]}%</color>的冰霜伤害"},
+            { WeaponType.HeiAnBaoZha,$"释放黑暗爆弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.HeiAnBaoZha][0]}%</color>的黑暗伤害,随后产生小范围爆炸造成<color=green>{WeaponDamageDic[WeaponType.HeiAnBaoZha][1]}%</color>的黑暗伤害"},
+            
+            { WeaponType.DianJiSu,$"急速释放电光弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.DianJiSu][0]}%</color>的雷电伤害"},
+            { WeaponType.DianLuoLei5,$"释放五雷弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.DianLuoLei5][0]}%</color>的雷电伤害，随后召唤5道落雷造成{WeaponDamageDic[WeaponType.DianLuoLei5][1]}%</color>的雷电伤害"},
+            { WeaponType.DianSanShe,$"持续施放镭射光线，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.DianSanShe][0]}%</color>的雷电伤害"},
+            { WeaponType.HuoDiPen,$"召唤火焰炎晶，造成大范围的<color=green>{WeaponDamageDic[WeaponType.HuoDiPen][0]}%</color>的火焰伤害"},
+            { WeaponType.Huo7,$"释放七颗炎弹，对命中的敌人造成<color=green>{WeaponDamageDic[WeaponType.Huo7][0]}%</color>的火焰伤害"},
+            { WeaponType.HuoFenLie,$"释放爆炎弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.HuoFenLie][0]}%</color>的火焰伤害，随后分裂4个炎弹爆炸造成<color=green>{WeaponDamageDic[WeaponType.HuoFenLie][1]}%</color>的火焰伤害"},
+            { WeaponType.HeiAnHuiXuan,$"释放七颗魔力弹穿透敌人造成<color=green>{WeaponDamageDic[WeaponType.HeiAnHuiXuan][0]}%</color>的黑暗伤害，随后回归，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.HeiAnHuiXuan][1]}%</color>的黑暗伤害"},
+            { WeaponType.HeiAnQuXian,$"急速释放魔曲弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.HeiAnQuXian][0]}%</color>的黑暗伤害"},
+            { WeaponType.Ice7,$"释放七颗冰弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Ice7][0]}%</color>的冰霜伤害"},
+            { WeaponType.Ice4BaoZha,$"释放四象冰弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Ice4BaoZha][0]}%</color>的冰霜伤害，随后召唤四道冰锥对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Ice4BaoZha][1]}%</color>的冰霜伤害"},
+            { WeaponType.IcePen,$"召唤万里冰霜，造成大范围的<color=green>{WeaponDamageDic[WeaponType.IcePen][0]}%</color>的冰霜伤害"},
+            { WeaponType.JianQi,$"急速释放火焰剑气穿透敌人，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.JianQi][0]}%</color>的火焰伤害"},
+            { WeaponType.XuKong,$"释放虚空弹穿透敌人，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.XuKong][0]}%</color>的黑暗伤害"},
+            { WeaponType.PuTong3,$"释放三颗冰弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Ice7][0]}%</color>的冰霜伤害"},
+            { WeaponType.Fire,$"释放落雷弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Fire][0]}%</color>的雷电伤害"},
+            { WeaponType.HeiDong,$"释放黑洞缓慢前行，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.HeiDong][0]}%</color>的黑暗伤害，随后坍塌造成<color=green>{WeaponDamageDic[WeaponType.HeiDong][1]}%</color>的黑暗伤害"},
+            { WeaponType.LvQuan,$"释放源火球缓慢前行，对命中的敌人造成<color=green>{WeaponDamageDic[WeaponType.LvQuan][0]}%</color>的火焰伤害"},
+
+        };
         
 
 
