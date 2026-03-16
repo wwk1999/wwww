@@ -48,6 +48,10 @@ public class WeaponWindow : MonoBehaviour
    public TextMeshProUGUI AllHunQiText;
 
    public TextMeshProUGUI JieSuoDesc;
+   
+   public TextMeshProUGUI InfoDesc;
+   public GameObject CiTiaoContent;
+
 
    public void SwitchLanguage()
    {
@@ -88,6 +92,33 @@ public class WeaponWindow : MonoBehaviour
       AttributePanel.gameObject.SetActive(true);
       InfoPanel.SetActive(true);
       UpPanel.SetActive(true);
+      InfoDesc.text = "攻击特效：" + WeaponConfig.WeaponTeXiaoDic[weaponType];
+      foreach (Transform item in CiTiaoContent.transform)
+      {
+         Destroy(item.gameObject);
+      }
+
+      foreach (var item in WeaponConfig.WeaponCiTiaoDic[weaponType])
+      {
+         switch (item)
+         {
+            case WeaponCiTiao.FanWei:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/FanWeiCiTiao"), CiTiaoContent.transform);
+               break;
+            case WeaponCiTiao.BaoZha:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/BaoZhaCiTiao"), CiTiaoContent.transform);
+               break;
+            case WeaponCiTiao.ChuanTou:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/ChuanTouCiTiao"), CiTiaoContent.transform);
+               break;
+            case WeaponCiTiao.JiSu:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/JiSuCiTiao"), CiTiaoContent.transform);
+               break;
+            case WeaponCiTiao.SanShe:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/SanSheCiTiao"), CiTiaoContent.transform);
+               break;
+         }
+      }
       switch (WeaponConfig.WeaponQualityDic[weaponType])
       {
          case 1:
@@ -181,6 +212,33 @@ public class WeaponWindow : MonoBehaviour
       AttributePanel.gameObject.SetActive(false);
       InfoPanel.SetActive(true);
       UpPanel.SetActive(true);
+      InfoDesc.text = "攻击特效：" + WeaponConfig.WeaponTeXiaoDic[weaponType];
+      foreach (Transform item in CiTiaoContent.transform)
+      {
+         Destroy(item.gameObject);
+      }
+
+      foreach (var item in WeaponConfig.WeaponCiTiaoDic[weaponType])
+      {
+         switch (item)
+         {
+            case WeaponCiTiao.FanWei:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/FanWeiCiTiao"), CiTiaoContent.transform);
+               break;
+            case WeaponCiTiao.BaoZha:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/BaoZhaCiTiao"), CiTiaoContent.transform);
+               break;
+            case WeaponCiTiao.ChuanTou:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/ChuanTouCiTiao"), CiTiaoContent.transform);
+               break;
+            case WeaponCiTiao.JiSu:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/JiSuCiTiao"), CiTiaoContent.transform);
+               break;
+            case WeaponCiTiao.SanShe:
+               Instantiate(Resources.Load<GameObject>("Prefabs/Weapon/SanSheCiTiao"), CiTiaoContent.transform);
+               break;
+         }
+      }
       string desc = WeaponConfig.WeaponJieSuoDescDic[
          new WeaponJieSuoDesc()
          {
