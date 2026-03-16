@@ -52,6 +52,10 @@ public class WeaponWindow : MonoBehaviour
    public TextMeshProUGUI InfoDesc;
    public GameObject CiTiaoContent;
 
+   public TextMeshProUGUI LevelText;
+   public Slider LevelSlider;
+
+
 
    public void SwitchLanguage()
    {
@@ -147,62 +151,153 @@ public class WeaponWindow : MonoBehaviour
             break;
       }
 
+      LevelText.text = "Lv." + GetWeaponLevel(weaponType);
+      LevelSlider.maxValue = GlobalPlayerAttribute.ExpDic[GetWeaponLevel(weaponType)];
+      LevelSlider.value = GetWeaponExp(weaponType);
+
       foreach (Transform item in AttributeContent.transform)
       {
          Destroy(item.gameObject);
       }
 
-      var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[weaponType];
-      int level1 = 0;
-      switch (weaponType)
+      var weaponBaseAttribute = WeaponConfig.WeaponBaseAttributeDic[weaponType];
+      var weaponAttribute = new WeaponAttribute
+         { Attack = weaponBaseAttribute.Attack * WeaponConfig.WeaponLevelAttributeDic[GetWeaponLevel(weaponType)], Defense = weaponBaseAttribute.Defense * WeaponConfig.WeaponLevelAttributeDic[GetWeaponLevel(weaponType)],Hp = weaponBaseAttribute.Hp * WeaponConfig.WeaponLevelAttributeDic[GetWeaponLevel(weaponType)],Crit = weaponBaseAttribute.Crit * WeaponConfig.WeaponLevelAttributeDic[GetWeaponLevel(weaponType)],AttackSpeed = weaponBaseAttribute.AttackSpeed};
+      var attack = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
+      attack.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Attack,(int)weaponAttribute.Attack);
+      
+      var defense = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
+      defense.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Defense,(int)weaponAttribute.Defense);
+
+      var hp = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
+      hp.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Hp,(int)weaponAttribute.Attack);
+
+      
+      var crit = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
+      crit.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Crit,(int)weaponAttribute.Attack);
+
+      var attackSpeed = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
+      attackSpeed.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.AttackSpeed,(int)weaponAttribute.Attack);
+
+   }
+   
+   public int GetWeaponExp(WeaponType type)
+   {
+      switch (type)
       {
          case WeaponType.Primary:
-            level1 = PlayerData.S.primaryWeaponLevel;
-            break;
+            return PlayerData.S.primaryWeaponExp;
+         case WeaponType.PrimaryHuo:
+   return PlayerData.S.primaryHuoExp;
+         case WeaponType.PrimaryDian:
+            return PlayerData.S.primaryDianExp;
+         case WeaponType.PrimaryHeiAn:
+            return PlayerData.S.primaryHeiAnExp;
+         case WeaponType.IceBaoZha:
+            return PlayerData.S.iceBaoZhaExp;
+         case WeaponType.DianBaoZha:
+            return PlayerData.S.dianBaoZhaExp;
          case WeaponType.HuoBaoZha:
-            level1 = PlayerData.S.HuoBaoZhaWeaponLevel;
-            break;
-         case WeaponType.PuTong3:
-            level1 = PlayerData.S.puTong3WeaponLevel;
-            break;
+            return PlayerData.S.HuoBaoZhaExp;
+         case WeaponType.HeiAnBaoZha:
+            return PlayerData.S.HeiAnBaoZhaWeaponExp;
          case WeaponType.XuKong:
-            level1 = PlayerData.S.xuKongWeaponLevel;
-            break;
+            return PlayerData.S.xuKongWeaponExp;
+         case WeaponType.PuTong3:
+            return PlayerData.S.puTong3WeaponExp;
          case WeaponType.Fire:
-            level1 = PlayerData.S.fireWeaponLevel;
-            break;
+            return PlayerData.S.fireWeaponExp;
          case WeaponType.LvQuan:
-            level1 = PlayerData.S.lvQuanWeaponLevel;
-            break;
+            return PlayerData.S.lvQuanWeaponExp;
+         case WeaponType.DianJiSu:
+            return PlayerData.S.DianJiSuWeaponExp;
+         case WeaponType.DianSanShe:
+            return PlayerData.S.DianSanSheWeaponExp;
+         case WeaponType.Huo7:
+            return PlayerData.S.Huo7WeaponExp;
+         case WeaponType.HuoFenLie:
+            return PlayerData.S.HuoFenLieWeaponExp;
+         case WeaponType.HeiAnHuiXuan:
+            return PlayerData.S.HeiAnHuiXuanWeaponExp;
+         case WeaponType.HeiAnQuXian:
+            return PlayerData.S.HeiAnQuXianWeaponExp;
+         case WeaponType.Ice7:
+            return PlayerData.S.Ice7WeaponExp;
+         case WeaponType.Ice4BaoZha:
+            return PlayerData.S.Ice4BaoZhaWeaponExp;
+         case WeaponType.JianQi:
+            return PlayerData.S.jianQiWeaponExp;
+         case WeaponType.HuoDiPen:
+            return PlayerData.S.HuoDiPenWeaponExp;
+         case WeaponType.IcePen:
+            return PlayerData.S.IcePenWeaponExp;
          case WeaponType.HeiDong:
-            level1 = PlayerData.S.heiDongWeaponLevel;
-            break;
+            return PlayerData.S.heiDongWeaponExp;
+         case WeaponType.DianLuoLei5:
+            return PlayerData.S.DianLuoLei5WeaponExp;
       }
-      GameObject attack =
-         Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      attack.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack+" :";
-      attack.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(weaponAttribute.Attack*(1+(level1-1)*GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
 
-      GameObject defense =
-         Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      defense.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense+" :";
-      defense.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
-         Mathf.RoundToInt(weaponAttribute.Defense * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
+      return 0;
+   }
+   
+   
+   public int GetWeaponLevel(WeaponType type)
+   {
+      switch (type)
+      {
+         case WeaponType.Primary:
+            return PlayerData.S.primaryWeaponLevel;
+         case WeaponType.PrimaryHuo:
+   return PlayerData.S.primaryHuoLevel;
+         case WeaponType.PrimaryDian:
+            return PlayerData.S.primaryDianLevel;
+         case WeaponType.PrimaryHeiAn:
+            return PlayerData.S.primaryHeiAnLevel;
+         case WeaponType.IceBaoZha:
+            return PlayerData.S.iceBaoZhaLevel;
+         case WeaponType.DianBaoZha:
+            return PlayerData.S.dianBaoZhaLevel;
+         case WeaponType.HuoBaoZha:
+            return PlayerData.S.HuoBaoZhaWeaponLevel;
+         case WeaponType.HeiAnBaoZha:
+            return PlayerData.S.HeiAnBaoZhaWeaponLevel;
+         case WeaponType.XuKong:
+            return PlayerData.S.xuKongWeaponLevel;
+         case WeaponType.PuTong3:
+            return PlayerData.S.puTong3WeaponLevel;
+         case WeaponType.Fire:
+            return PlayerData.S.fireWeaponLevel;
+         case WeaponType.LvQuan:
+            return PlayerData.S.lvQuanWeaponLevel;
+         case WeaponType.DianJiSu:
+            return PlayerData.S.DianJiSuWeaponLevel;
+         case WeaponType.DianSanShe:
+            return PlayerData.S.DianSanSheWeaponLevel;
+         case WeaponType.Huo7:
+            return PlayerData.S.Huo7WeaponLevel;
+         case WeaponType.HuoFenLie:
+            return PlayerData.S.HuoFenLieWeaponLevel;
+         case WeaponType.HeiAnHuiXuan:
+            return PlayerData.S.HeiAnHuiXuanWeaponLevel;
+         case WeaponType.HeiAnQuXian:
+            return PlayerData.S.HeiAnQuXianWeaponLevel;
+         case WeaponType.Ice7:
+            return PlayerData.S.Ice7WeaponLevel;
+         case WeaponType.Ice4BaoZha:
+            return PlayerData.S.Ice4BaoZhaWeaponLevel;
+         case WeaponType.JianQi:
+            return PlayerData.S.jianQiWeaponLevel;
+         case WeaponType.HuoDiPen:
+            return PlayerData.S.HuoDiPenWeaponLevel;
+         case WeaponType.IcePen:
+            return PlayerData.S.IcePenWeaponLevel;
+         case WeaponType.HeiDong:
+            return PlayerData.S.heiDongWeaponLevel;
+         case WeaponType.DianLuoLei5:
+            return PlayerData.S.DianLuoLei5WeaponLevel;
+      }
 
-      GameObject crit = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      crit.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit+" :";
-      crit.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
-         Mathf.RoundToInt(weaponAttribute.Crit * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
-
-      GameObject hp = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      hp.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp+" :";
-      hp.transform.Find("Count").GetComponent<TextMeshProUGUI>().text =
-         Mathf.RoundToInt(weaponAttribute.Hp * (1 + (level1 - 1) * GlobalPlayerAttribute.WeaponShenJiPercent)).ToString();
-
-      GameObject attackspeed =
-         Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
-      attackspeed.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack+" :";
-      attackspeed.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = weaponAttribute.AttackSpeed.ToString();
+      return 0;
    }
 
    public void ShowJieSuo(WeaponType weaponType)
@@ -902,9 +997,34 @@ public class WeaponWindow : MonoBehaviour
             ShowAttribute(WeaponType.Primary);
             break;
          
+         case WeaponType.PrimaryDian:
+            currentShowType = WeaponType.PrimaryDian;
+            ShowAttribute(WeaponType.PrimaryDian);
+            break;
+         
+         case WeaponType.PrimaryHuo:
+            currentShowType = WeaponType.PrimaryHuo;
+            ShowAttribute(WeaponType.PrimaryHuo);
+            break;
+         
+         case WeaponType.PrimaryHeiAn:
+            currentShowType = WeaponType.PrimaryHeiAn;
+            ShowAttribute(WeaponType.PrimaryHeiAn);
+            break;
+         
          case WeaponType.HuoBaoZha:
             currentShowType = WeaponType.HuoBaoZha;
             ShowAttribute(WeaponType.HuoBaoZha);
+            break;
+         
+         case WeaponType.DianBaoZha:
+            currentShowType = WeaponType.DianBaoZha;
+            ShowAttribute(WeaponType.DianBaoZha);
+            break;
+         
+         case WeaponType.IceBaoZha:
+            currentShowType = WeaponType.IceBaoZha;
+            ShowAttribute(WeaponType.IceBaoZha);
             break;
          
          case WeaponType.LvQuan:

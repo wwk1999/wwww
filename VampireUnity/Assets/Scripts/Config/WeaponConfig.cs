@@ -94,7 +94,7 @@ namespace Config
             { WeaponType.DianSanShe, new List<int>(){20} },
             { WeaponType.Huo7, new List<int>(){200} },
             { WeaponType.HuoFenLie, new List<int>(){150,200} },
-            { WeaponType.HeiAnHuiXuan, new List<int>(){200} },
+            { WeaponType.HeiAnHuiXuan, new List<int>(){200, 200} },
             { WeaponType.HeiAnQuXian, new List<int>(){200} },
             { WeaponType.Ice7, new List<int>(){200} },
             { WeaponType.Ice4BaoZha, new List<int>(){150,200} },
@@ -203,7 +203,7 @@ namespace Config
             { WeaponType.HeiAnBaoZha,$"释放黑暗爆弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.HeiAnBaoZha][0]}%</color>的黑暗伤害,随后产生小范围爆炸造成<color=green>{WeaponDamageDic[WeaponType.HeiAnBaoZha][1]}%</color>的黑暗伤害"},
             
             { WeaponType.DianJiSu,$"急速释放电光弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.DianJiSu][0]}%</color>的雷电伤害"},
-            { WeaponType.DianLuoLei5,$"释放五雷弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.DianLuoLei5][0]}%</color>的雷电伤害，随后召唤5道落雷造成{WeaponDamageDic[WeaponType.DianLuoLei5][1]}%</color>的雷电伤害"},
+            { WeaponType.DianLuoLei5,$"释放五雷弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.DianLuoLei5][0]}%</color>的雷电伤害，随后召唤5道落雷造成<color=green>{WeaponDamageDic[WeaponType.DianLuoLei5][1]}%</color>的雷电伤害"},
             { WeaponType.DianSanShe,$"持续施放镭射光线，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.DianSanShe][0]}%</color>的雷电伤害"},
             { WeaponType.HuoDiPen,$"召唤火焰炎晶，造成大范围的<color=green>{WeaponDamageDic[WeaponType.HuoDiPen][0]}%</color>的火焰伤害"},
             { WeaponType.Huo7,$"释放七颗炎弹，对命中的敌人造成<color=green>{WeaponDamageDic[WeaponType.Huo7][0]}%</color>的火焰伤害"},
