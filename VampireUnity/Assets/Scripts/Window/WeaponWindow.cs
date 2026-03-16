@@ -45,8 +45,9 @@ public class WeaponWindow : MonoBehaviour
    
    public TextMeshProUGUI JieSuoText;
    
-   //魂器
    public TextMeshProUGUI AllHunQiText;
+
+   public TextMeshProUGUI JieSuoDesc;
 
    public void SwitchLanguage()
    {
@@ -180,6 +181,13 @@ public class WeaponWindow : MonoBehaviour
       AttributePanel.gameObject.SetActive(false);
       InfoPanel.SetActive(true);
       UpPanel.SetActive(true);
+      string desc = WeaponConfig.WeaponJieSuoDescDic[
+         new WeaponJieSuoDesc()
+         {
+            YuanSuType = WeaponConfig.WeaponYuanSuTypeDic[weaponType],
+            quality = WeaponConfig.WeaponQualityDic[weaponType]
+         }];
+      JieSuoDesc.text = desc;
       switch (WeaponConfig.WeaponQualityDic[weaponType])
       {
          case 1:

@@ -19,6 +19,12 @@ namespace Config
         public int Count;
     }
 
+    public class WeaponJieSuoDesc
+    {
+        public YuanSuType YuanSuType;
+        public int quality;
+    }
+
     public class WeaponAttribute
     {
         public float Attack;
@@ -206,6 +212,30 @@ namespace Config
 
         };
 
+        public static Dictionary<WeaponJieSuoDesc, string> WeaponJieSuoDescDic =
+            new Dictionary<WeaponJieSuoDesc, string>()
+            {
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Ice,quality = 2},$"{WeaponNameDic[WeaponType.Primary]}的等级>5"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Huo,quality = 2},$"{WeaponNameDic[WeaponType.PrimaryHuo]}的等级>5"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Dian,quality = 2},$"{WeaponNameDic[WeaponType.PrimaryDian]}的等级>5"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.HeiAn,quality = 2},$"{WeaponNameDic[WeaponType.PrimaryHeiAn]}的等级>5"},
+                
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Ice,quality = 3},$"{WeaponNameDic[WeaponType.IceBaoZha]}的等级>10"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Huo,quality = 3},$"{WeaponNameDic[WeaponType.HuoBaoZha]}的等级>5"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Dian,quality = 3},$"{WeaponNameDic[WeaponType.DianBaoZha]}的等级>5"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.HeiAn,quality = 3},$"{WeaponNameDic[WeaponType.HeiAnBaoZha]}的等级>5"},
+                
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Ice,quality = 4},"冰系法杖的总等级>30"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Huo,quality = 4},"火系法杖的总等级>30"}, 
+                 {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Dian,quality = 4},"电系法杖的总等级>30"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.HeiAn,quality = 4},"黑暗系法杖的总等级>30"},
+                
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Ice,quality = 5},"冰系法杖的总等级>100"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Huo,quality = 5},"火系法杖的总等级>100"}, 
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Dian,quality = 5},"电系法杖的总等级>100"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.HeiAn,quality = 5},"黑暗系法杖的总等级>100"}
+            };
+
         public static Dictionary<int, float> WeaponLevelAttributeDic = new Dictionary<int, float>()
         {
            {1,1.0f },
@@ -354,8 +384,8 @@ namespace Config
         public static Dictionary<WeaponType, YuanSuType> WeaponYuanSuTypeDic = new Dictionary<WeaponType, YuanSuType>()
         {
             {WeaponType.Primary,YuanSuType.Ice},
-            {WeaponType.PrimaryDian,YuanSuType.Dian},
             {WeaponType.PrimaryHuo,YuanSuType.Huo},
+            {WeaponType.PrimaryDian,YuanSuType.Dian},
             {WeaponType.PrimaryHeiAn,YuanSuType.HeiAn},
             {WeaponType.DianBaoZha,YuanSuType.Dian},
             {WeaponType.IceBaoZha,YuanSuType.Ice},
