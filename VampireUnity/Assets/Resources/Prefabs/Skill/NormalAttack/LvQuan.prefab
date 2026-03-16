@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6508781003083147660}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.979, y: -0.148, z: 0}
+  m_LocalPosition: {x: 0.161, y: -0.006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64,9 +64,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12902606, y: -0.06115055}
+  m_Offset: {x: -0.1357893, y: -0.06115055}
   serializedVersion: 2
-  m_Radius: 0.28425562
+  m_Radius: 0.30792752
 --- !u!1 &7594397100888385654
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,8 +96,8 @@ Transform:
   m_GameObject: {fileID: 7594397100888385654}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.433, y: -0.556, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalPosition: {x: 0.02, y: -0.066, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6982123777041045447}
@@ -122,7 +122,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 59cb10de94bdd444e8d25a500dc9d015, type: 2}
+  - {fileID: 2100000, guid: f0cd4ca91f4d4cc488023ffd91c8e45c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: fly_32
+  animationName: play
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 60ca4865608b5d6419c9322450a2cbc1, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 67f323217b977d14ebedce1290d8cd27, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -335,7 +335,7 @@ Transform:
   m_GameObject: {fileID: 8384156165022048264}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.049, y: 0.282, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

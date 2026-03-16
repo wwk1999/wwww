@@ -618,9 +618,9 @@ public class WeaponWindow : MonoBehaviour
          case WeaponType.HuoBaoZha:
             if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
                 BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
-                BagController.S.PropList[102].Count < 3)
+                BagController.S.PropList[102].Count < 3||PlayerData.S.primaryHuoLevel<5)
             {
-               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
 
@@ -631,19 +631,70 @@ public class WeaponWindow : MonoBehaviour
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
             break;
-
-         case WeaponType.PuTong3:
-            if (GlobalPlayerAttribute.BloodEnergy < 500 || !BagController.S.PropList.ContainsKey(203) ||
-                BagController.S.PropList[203].Count < 3 || !BagController.S.PropList.ContainsKey(103) ||
-                BagController.S.PropList[103].Count < 3)
+         
+         case WeaponType.IceBaoZha:
+            if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
+                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
+                BagController.S.PropList[102].Count < 3||PlayerData.S.primaryWeaponLevel<5)
             {
-               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
 
-            GlobalPlayerAttribute.BloodEnergy -= 500;
-            BagController.S.PropList[203].Count -= 3;
-            BagController.S.PropList[103].Count -= 3;
+            GlobalPlayerAttribute.BloodEnergy -= 300;
+            BagController.S.PropList[202].Count -= 3;
+            BagController.S.PropList[102].Count -= 3;
+            PlayerData.S.iceBaoZhaLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.DianBaoZha:
+            if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
+                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
+                BagController.S.PropList[102].Count < 3||PlayerData.S.primaryDianLevel<5)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 300;
+            BagController.S.PropList[202].Count -= 3;
+            BagController.S.PropList[102].Count -= 3;
+            PlayerData.S.dianBaoZhaLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.HeiAnBaoZha:
+            if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
+                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
+                BagController.S.PropList[102].Count < 3||PlayerData.S.primaryHeiAnLevel<5)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 300;
+            BagController.S.PropList[202].Count -= 3;
+            BagController.S.PropList[102].Count -= 3;
+            PlayerData.S.HeiAnBaoZhaWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+
+         case WeaponType.PuTong3:
+            if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
+                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
+                BagController.S.PropList[103].Count < 5||PlayerData.S.iceBaoZhaLevel<10)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 800;
+            BagController.S.PropList[203].Count -= 5;
+            BagController.S.PropList[103].Count -= 5;
             PlayerData.S.puTong3WeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
@@ -652,9 +703,9 @@ public class WeaponWindow : MonoBehaviour
          case WeaponType.XuKong:
             if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
                 BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
-                BagController.S.PropList[103].Count < 5)
+                BagController.S.PropList[103].Count < 5||PlayerData.S.HeiAnBaoZhaWeaponLevel<10)
             {
-               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
 
@@ -666,73 +717,263 @@ public class WeaponWindow : MonoBehaviour
             RefreshWeaponList();
             break;
          case WeaponType.Fire:
-            if (GlobalPlayerAttribute.BloodEnergy < 1500 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 5 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 5)
+            if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
+                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
+                BagController.S.PropList[103].Count < 5||PlayerData.S.dianBaoZhaLevel<10)
             {
-               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
 
-            GlobalPlayerAttribute.BloodEnergy -= 1500;
-            BagController.S.PropList[204].Count -= 5;
-            BagController.S.PropList[104].Count -= 5;
+            GlobalPlayerAttribute.BloodEnergy -= 800;
+            BagController.S.PropList[203].Count -= 5;
+            BagController.S.PropList[103].Count -= 5;
             PlayerData.S.fireWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
             break;
 
          case WeaponType.LvQuan:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 5 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 5)
+            if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
+                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
+                BagController.S.PropList[103].Count < 5||PlayerData.S.HuoBaoZhaWeaponLevel<10)
             {
-               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
 
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 5;
-            BagController.S.PropList[104].Count -= 5;
+            GlobalPlayerAttribute.BloodEnergy -= 800;
+            BagController.S.PropList[203].Count -= 5;
+            BagController.S.PropList[103].Count -= 5;
             PlayerData.S.lvQuanWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
             break;
-
-         case WeaponType.HeiDong:
-            if (GlobalPlayerAttribute.BloodEnergy < 3000 || !BagController.S.PropList.ContainsKey(205) ||
-                BagController.S.PropList[205].Count < 5 || !BagController.S.PropList.ContainsKey(105) ||
-                BagController.S.PropList[105].Count < 5)
+         
+         case WeaponType.Ice7:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.IceAllLevel<30)
             {
-               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
 
-            GlobalPlayerAttribute.BloodEnergy -= 3000;
-            BagController.S.PropList[205].Count -= 5;
-            BagController.S.PropList[105].Count -= 5;
-            PlayerData.S.heiDongWeaponLevel = 1;
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
+            PlayerData.S.Ice7WeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.Huo7:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.HuoAllLevel<30)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
+            PlayerData.S.Huo7WeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.DianJiSu:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.DianAllLevel<30)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
+            PlayerData.S.DianJiSuWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.DianSanShe:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.DianAllLevel<10)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
+            PlayerData.S.DianSanSheWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.HuoFenLie:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.HuoAllLevel<30)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
+            PlayerData.S.HuoFenLieWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
             break;
          
          case WeaponType.JianQi:
-            if (GlobalPlayerAttribute.BloodEnergy < 3000 || !BagController.S.PropList.ContainsKey(205) ||
-                BagController.S.PropList[205].Count < 5 || !BagController.S.PropList.ContainsKey(105) ||
-                BagController.S.PropList[105].Count < 5)
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.HuoAllLevel <30)
             {
-               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足");
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
 
-            GlobalPlayerAttribute.BloodEnergy -= 3000;
-            BagController.S.PropList[205].Count -= 5;
-            BagController.S.PropList[105].Count -= 5;
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.jianQiWeaponLevel = 1;
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
             RefreshWeaponList();
             break;
+         
+         case WeaponType.HeiAnQuXian:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.HeiAnAllLevel<30)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
+            PlayerData.S.HeiAnQuXianWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.HeiAnHuiXuan:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.HeiAnHuiXuanWeaponLevel<30)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
+            PlayerData.S.HeiAnHuiXuanWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.Ice4BaoZha:
+            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
+                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
+                BagController.S.PropList[104].Count < 10||PlayerData.S.IceAllLevel<30)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 2000;
+            BagController.S.PropList[204].Count -= 10;
+            BagController.S.PropList[104].Count -= 10;
+            PlayerData.S.Ice4BaoZhaWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+
+         case WeaponType.HeiDong:
+            if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(205) ||
+                BagController.S.PropList[205].Count < 25 || !BagController.S.PropList.ContainsKey(105) ||
+                BagController.S.PropList[105].Count < 25||PlayerData.S.HeiAnAllLevel<100)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 10000;
+            BagController.S.PropList[205].Count -= 25;
+            BagController.S.PropList[105].Count -= 25;
+            PlayerData.S.heiDongWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         
+         case WeaponType.IcePen:
+            if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(205) ||
+                BagController.S.PropList[205].Count < 25 || !BagController.S.PropList.ContainsKey(105) ||
+                BagController.S.PropList[105].Count < 25||PlayerData.S.IceAllLevel<100)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 10000;
+            BagController.S.PropList[205].Count -= 25;
+            BagController.S.PropList[105].Count -= 25;
+            PlayerData.S.IcePenWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         case WeaponType.HuoDiPen:
+            if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(205) ||
+                BagController.S.PropList[205].Count < 5 || !BagController.S.PropList.ContainsKey(105) ||
+                BagController.S.PropList[105].Count < 5||PlayerData.S.HuoAllLevel<100)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 10000;
+            BagController.S.PropList[205].Count -= 25;
+            BagController.S.PropList[105].Count -= 25;
+            PlayerData.S.HuoDiPenWeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
+         
+         
+         case WeaponType.DianLuoLei5:
+            if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(205) ||
+                BagController.S.PropList[205].Count < 25 || !BagController.S.PropList.ContainsKey(105) ||
+                BagController.S.PropList[105].Count < 25||PlayerData.S.DianAllLevel<100)
+            {
+               ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+               return;
+            }
+
+            GlobalPlayerAttribute.BloodEnergy -= 10000;
+            BagController.S.PropList[205].Count -= 25;
+            BagController.S.PropList[105].Count -= 25;
+            PlayerData.S.DianLuoLei5WeaponLevel = 1;
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+            RefreshWeaponList();
+            break;
       }
+      
    }
 
    public void SuoButtonClick(object[] obj)

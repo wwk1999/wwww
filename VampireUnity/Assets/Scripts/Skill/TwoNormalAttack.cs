@@ -20,7 +20,7 @@ public class TwoNormalAttack : MonoBehaviour
         rg.velocity = MoveDirection * MoveSpeed;
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-        skeleton.AnimationState.SetAnimation(0, "fly_32", true);
+        skeleton.AnimationState.SetAnimation(0, "play", true);
         skeleton.timeScale = 2f;
         StartCoroutine(DelayHide(rg.gameObject));
     }

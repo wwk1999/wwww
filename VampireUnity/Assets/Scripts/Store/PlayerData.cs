@@ -48,6 +48,17 @@ public class PlayerData : XSingleton<PlayerData>
     public int DianLuoLei5WeaponLevel;
     public int DianJiSuWeaponLevel;
 
+    public int IceAllLevel => primaryWeaponLevel + iceBaoZhaLevel + puTong3WeaponLevel + Ice7WeaponLevel +
+                              Ice4BaoZhaWeaponLevel + IcePenWeaponLevel;
+    
+    public int HuoAllLevel => primaryHuoLevel + HuoBaoZhaWeaponLevel + lvQuanWeaponLevel + Huo7WeaponLevel +
+                              HuoFenLieWeaponLevel + jianQiWeaponLevel+HuoDiPenWeaponLevel;
+
+    public int DianAllLevel => primaryDianLevel + dianBaoZhaLevel + fireWeaponLevel + DianJiSuWeaponLevel +
+                              DianSanSheWeaponLevel + DianLuoLei5WeaponLevel;
+    
+    public int HeiAnAllLevel => primaryHeiAnLevel + HeiAnBaoZhaWeaponLevel + xuKongWeaponLevel + HeiAnQuXianWeaponLevel +
+                              HeiAnHuiXuanWeaponLevel + heiDongWeaponLevel;
     
     public int primaryWeaponExp;
     public int primaryDianExp;

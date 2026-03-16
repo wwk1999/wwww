@@ -10,6 +10,7 @@ public enum WeaponTeXiao
 }
 namespace Config
 {
+    
     public class WeaponCaiLiao
     {
         public PropConfig.PropType PropType;
@@ -79,31 +80,31 @@ namespace Config
 
         public static Dictionary<WeaponType, int> WeaponQualityDic = new Dictionary<WeaponType, int>()
         {
-            { WeaponType.Primary, 1 },
-            { WeaponType.PrimaryDian, 1 },
-            { WeaponType.PrimaryHuo, 1 },
-            { WeaponType.PrimaryHeiAn, 1 },
-            { WeaponType.DianBaoZha, 2 },
-            { WeaponType.IceBaoZha, 2 },
-            { WeaponType.HuoBaoZha, 2 },
-            { WeaponType.HeiAnBaoZha, 2 },
+            { WeaponType.Primary, 1 },//冰
+            { WeaponType.PrimaryDian, 1 },//电
+            { WeaponType.PrimaryHuo, 1 },//火
+            { WeaponType.PrimaryHeiAn, 1 },//黑暗
+            { WeaponType.DianBaoZha, 2 },//电
+            { WeaponType.IceBaoZha, 2 },//冰
+            { WeaponType.HuoBaoZha, 2 },//火
+            { WeaponType.HeiAnBaoZha, 2 },//黑暗
             { WeaponType.XuKong, 3 },//黑暗
             { WeaponType.PuTong3, 3 },//冰
             { WeaponType.Fire, 3 },//电
             { WeaponType.LvQuan, 3 },//火
-            { WeaponType.DianJiSu, 4 },
-            { WeaponType.DianSanShe, 4 },
-            { WeaponType.Huo7, 4 },
-            { WeaponType.HuoFenLie, 4 },
-            { WeaponType.HeiAnHuiXuan, 4 },
-            { WeaponType.HeiAnQuXian, 4 },
-            { WeaponType.Ice7, 4 },
-            { WeaponType.Ice4BaoZha, 4 },
-            { WeaponType.JianQi, 4 },
-            { WeaponType.HuoDiPen, 5 },
-            { WeaponType.IcePen, 5 },
-            { WeaponType.HeiDong, 5 },
-            { WeaponType.DianLuoLei5, 5 },
+            { WeaponType.DianJiSu, 4 },//电
+            { WeaponType.DianSanShe, 4 },//电
+            { WeaponType.Huo7, 4 },//火
+            { WeaponType.HuoFenLie, 4 },//火
+            { WeaponType.HeiAnHuiXuan, 4 },//黑暗
+            { WeaponType.HeiAnQuXian, 4 },//黑暗
+            { WeaponType.Ice7, 4 },//冰
+            { WeaponType.Ice4BaoZha, 4 },//冰
+            { WeaponType.JianQi, 4 },//火
+            { WeaponType.HuoDiPen, 5 },//火
+            { WeaponType.IcePen, 5 },//冰
+            { WeaponType.HeiDong, 5 },//黑暗
+            { WeaponType.DianLuoLei5, 5 },//电
         };
 
 
