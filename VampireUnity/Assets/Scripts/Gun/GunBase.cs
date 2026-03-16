@@ -454,10 +454,6 @@ public class GunBase : MonoBehaviour
         };
         int bulletCount = 3;
         Vector2[] dirs = dirs3;
-        if (PlayerData.S.puTong3HunQiLevel >= 5)
-        {
-            dirs = dirs5;
-        }
 
         // 连发两颗
         foreach (Vector2 dir in dirs)
@@ -530,14 +526,6 @@ public class GunBase : MonoBehaviour
         Vector2 baseDir = (worldPos -attackTrans).normalized;
 
         int bulletCount = 1;
-        if (PlayerData.S.primaryHunQiLevel >= 3)
-        {
-            bulletCount++;
-        }
-        if (PlayerData.S.primaryHunQiLevel >= 5)
-        {
-            bulletCount++;
-        }
 
         // 两个偏移角度：+10° 和 -10°
         Vector2[] dirs1 =

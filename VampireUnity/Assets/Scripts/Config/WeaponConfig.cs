@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 
-public enum WeaponTeXiao
+public enum WeaponCiTiao
 {
     None,
-    FenLie,
+    SanShe,
     BaoZha,
     JiSu,
     FanWei,
+    ChuanTou,
 }
 namespace Config
 {
@@ -35,6 +36,13 @@ namespace Config
         public string HunQi3;
         public string HunQi4;
         public string HunQi5;
+    }
+
+    public class WeaponJieSuoItem
+    {
+        public  PropConfig.PropType _propType;
+        public int quality;
+        public int count;
     }
 
     public class HunQiEx
@@ -76,6 +84,36 @@ namespace Config
             { WeaponType.HeiDong, new List<int>(){150,300} },
             { WeaponType.DianLuoLei5, new List<int>(){150,260} },
         };
+        
+        
+        public static Dictionary<WeaponType, List<WeaponCiTiao>> WeaponCiTiaoDic = new Dictionary<WeaponType, List<WeaponCiTiao>>()
+        {
+            { WeaponType.Primary, new List<WeaponCiTiao>() { WeaponCiTiao.None } },//冰
+            { WeaponType.PrimaryDian, new List<WeaponCiTiao>() { WeaponCiTiao.None } },//冰
+            { WeaponType.PrimaryHuo, new List<WeaponCiTiao>() { WeaponCiTiao.None } },//冰
+            { WeaponType.PrimaryHeiAn, new List<WeaponCiTiao>() { WeaponCiTiao.None } },//冰
+            { WeaponType.DianBaoZha, new List<WeaponCiTiao>() { WeaponCiTiao.BaoZha } },//冰
+            { WeaponType.HuoBaoZha, new List<WeaponCiTiao>() { WeaponCiTiao.BaoZha } },//冰
+            { WeaponType.HeiAnBaoZha, new List<WeaponCiTiao>() { WeaponCiTiao.BaoZha } },//冰
+            { WeaponType.IceBaoZha, new List<WeaponCiTiao>() { WeaponCiTiao.BaoZha } },//冰
+            { WeaponType.XuKong, new List<WeaponCiTiao>() { WeaponCiTiao.ChuanTou } },//冰
+            { WeaponType.PuTong3, new List<WeaponCiTiao>() { WeaponCiTiao.SanShe } },//冰
+            { WeaponType.Fire, new List<WeaponCiTiao>() { WeaponCiTiao.BaoZha} },//冰
+            { WeaponType.LvQuan, new List<WeaponCiTiao>() { WeaponCiTiao.ChuanTou } },//冰
+            { WeaponType.DianJiSu, new List<WeaponCiTiao>() { WeaponCiTiao.JiSu } },//冰
+            { WeaponType.DianSanShe, new List<WeaponCiTiao>() { WeaponCiTiao.FanWei } },//冰
+            { WeaponType.Huo7, new List<WeaponCiTiao>() { WeaponCiTiao.SanShe } },//冰
+            { WeaponType.HuoFenLie, new List<WeaponCiTiao>() { WeaponCiTiao.BaoZha,WeaponCiTiao.FanWei } },//冰
+            { WeaponType.HeiAnHuiXuan, new List<WeaponCiTiao>() { WeaponCiTiao.ChuanTou ,WeaponCiTiao.SanShe} },//冰
+            { WeaponType.HeiAnQuXian, new List<WeaponCiTiao>() { WeaponCiTiao.JiSu } },//冰
+            { WeaponType.Ice7, new List<WeaponCiTiao>() { WeaponCiTiao.SanShe } },//冰
+            { WeaponType.Ice4BaoZha, new List<WeaponCiTiao>() { WeaponCiTiao.BaoZha,WeaponCiTiao.FanWei } },//冰
+            { WeaponType.JianQi, new List<WeaponCiTiao>() { WeaponCiTiao.JiSu,WeaponCiTiao.ChuanTou } },//冰
+            { WeaponType.HuoDiPen, new List<WeaponCiTiao>() { WeaponCiTiao.FanWei } },//冰
+            { WeaponType.IcePen, new List<WeaponCiTiao>() { WeaponCiTiao.FanWei } },//冰
+            { WeaponType.HeiDong, new List<WeaponCiTiao>() { WeaponCiTiao.ChuanTou,WeaponCiTiao.FanWei,WeaponCiTiao.BaoZha } },//冰
+            { WeaponType.DianLuoLei5, new List<WeaponCiTiao>() { WeaponCiTiao.BaoZha,WeaponCiTiao.FanWei } },//冰
+        };
 
 
         public static Dictionary<WeaponType, int> WeaponQualityDic = new Dictionary<WeaponType, int>()
@@ -106,6 +144,34 @@ namespace Config
             { WeaponType.HeiDong, 5 },//黑暗
             { WeaponType.DianLuoLei5, 5 },//电
         };
+        
+        public static Dictionary<WeaponType, List<WeaponJieSuoItem>> WeaponJieSuoDic = new Dictionary<WeaponType, List<WeaponJieSuoItem>>()
+        {
+            { WeaponType.HuoBaoZha, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 300},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =2,count = 3},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 2,count = 3}} },//冰
+            { WeaponType.IceBaoZha, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 300},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =2,count = 3},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 2,count = 3}} },//冰
+            { WeaponType.DianBaoZha, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 300},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =2,count = 3},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 2,count = 3}} },//冰
+            { WeaponType.HeiAnBaoZha, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 300},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =2,count = 3},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 2,count = 3}} },//冰
+            { WeaponType.XuKong, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 800},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =3,count = 8},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 3,count = 8}} },//冰
+            { WeaponType.Fire, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 800},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =3,count = 8},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 3,count = 8}} },//冰
+            { WeaponType.PuTong3, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 800},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =3,count = 8},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 3,count = 8}} },//冰
+            { WeaponType.LvQuan, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 800},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =3,count = 8},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 3,count = 8}} },//冰
+            { WeaponType.DianJiSu, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.DianSanShe, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.Huo7, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.HuoFenLie, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.HeiAnHuiXuan, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.HeiAnQuXian, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.Ice7, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.Ice4BaoZha, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.JianQi, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 2000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =4,count = 15},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 4,count = 15}} },//冰
+            { WeaponType.HuoDiPen, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 10000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =5,count = 30},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 5,count = 30}} },//冰
+            { WeaponType.IcePen, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 10000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =5,count = 30},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 5,count = 30}} },//冰
+            { WeaponType.HeiDong, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 10000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =5,count = 30},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 5,count = 30}} },//冰
+            { WeaponType.DianLuoLei5, new List<WeaponJieSuoItem>(){new WeaponJieSuoItem(){_propType = PropConfig.PropType.LingHun,count = 10000},new WeaponJieSuoItem(){_propType = PropConfig.PropType.WeaponFragment,quality =5,count = 30},new WeaponJieSuoItem(){_propType = PropConfig.PropType.JingCui,quality = 5,count = 30}} },//冰
+        };
+        
+        
+        
 
 
         public static Dictionary<WeaponType, string> WeaponNameDic = new Dictionary<WeaponType, string>()
@@ -278,7 +344,6 @@ namespace Config
                 { WeaponType.DianJiSu ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
                 { WeaponType.HeiAnQuXian ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
                 { WeaponType.HuoDiPen ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-
                 { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1000,Defense = 150,AttackSpeed = 0.7f}},
                 { WeaponType.JianQi ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
                 { WeaponType.IcePen ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
@@ -314,174 +379,5 @@ namespace Config
             {WeaponType.HeiAnQuXian,YuanSuType.HeiAn},
             {WeaponType.HuoDiPen,YuanSuType.Huo},
         };
-        
-        
-        
-        
-        
-        public static Dictionary<WeaponType, List<WeaponCaiLiao>> JieSuoCaiLiaoDic 
-            = new Dictionary<WeaponType, List<WeaponCaiLiao>>()
-            {
-                { 
-                    WeaponType.HuoBaoZha, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 300  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 2,  Count = 3 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 2,  Count = 3 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.PuTong3, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 500  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 3,  Count = 3 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 3,  Count = 3 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.XuKong, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 800  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 3,  Count = 5 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 3,  Count = 5 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.Fire, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 1500  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 4,  Count = 5 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 4,  Count = 5 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.LvQuan, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 1500  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 4,  Count = 5 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 4,  Count = 5 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.HeiDong, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 3000  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 5,  Count = 5 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 5,  Count = 5 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.JianQi, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 3000  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 5,  Count = 5 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 5,  Count = 5 }
-                    } 
-                },
-            };
-        
-        
-        
-        
-        
-        
-        
-        
-         public static Dictionary<WeaponType, List<WeaponCaiLiao>> ShenJiCaiLiaoDic 
-            = new Dictionary<WeaponType, List<WeaponCaiLiao>>()
-            {
-                { 
-                    WeaponType.Primary, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 100  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 1,  Count = 3 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 1,  Count = 3 }
-                    } 
-                },
-                { 
-                    WeaponType.HuoBaoZha, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 200  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 2,  Count = 2 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 2,  Count = 2 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.PuTong3, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 300  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 3,  Count = 2 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 3,  Count = 2 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.XuKong, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 500  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 3,  Count = 3 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 3,  Count = 3 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.Fire, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 800  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 4,  Count = 3 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 4,  Count = 3 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.LvQuan, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 1000  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 4,  Count = 5 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 4,  Count = 5 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.HeiDong, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 1500  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 5,  Count = 3 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 5,  Count = 3 }
-                    } 
-                },
-                
-                { 
-                    WeaponType.JianQi, 
-                    new List<WeaponCaiLiao>()
-                    {
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.LingHun, Quality = 1,  Count = 1500  },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.JingCui, Quality = 5,  Count = 3 },
-                        new WeaponCaiLiao() { PropType = PropConfig.PropType.WeaponFragment, Quality = 5,  Count = 3 }
-                    } 
-                },
-            };
-        
     }
 }

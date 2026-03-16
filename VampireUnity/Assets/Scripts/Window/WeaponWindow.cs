@@ -21,38 +21,14 @@ public class WeaponWindow : MonoBehaviour
    public GameObject UpPanel;
    public GameObject JieSuoPanel;
    public GameObject AttributePanel;
-
-
-   public TextMeshProUGUI desc1;
-   public TextMeshProUGUI desc2;
-   public TextMeshProUGUI desc3;
-   public TextMeshProUGUI desc4;
-   public TextMeshProUGUI desc5;
-   public TextMeshProUGUI desc6;
-   public TextMeshProUGUI desc7;
-   public TextMeshProUGUI desc8;
-
-
-   public TextMeshProUGUI texiao1;
-   public TextMeshProUGUI texiao2;
-   public TextMeshProUGUI texiao3;
-   public TextMeshProUGUI texiao4;
-   public TextMeshProUGUI texiao5;
-   public TextMeshProUGUI texiao6;
-   public TextMeshProUGUI texiao7;
-   public TextMeshProUGUI texiao8;
-
-
-   public Button upButton;
-
+   
+   
    public TextMeshProUGUI weaponName1;
    public TextMeshProUGUI weaponName2;
    public TextMeshProUGUI weaponName3;
    public TextMeshProUGUI weaponName4;
    public TextMeshProUGUI weaponName5;
    public TextMeshProUGUI weaponName6;
-   public TextMeshProUGUI weaponName7;
-   public TextMeshProUGUI weaponName8;
 
 
    public GameObject jieSuoContent;
@@ -60,80 +36,17 @@ public class WeaponWindow : MonoBehaviour
 
    public GameObject AttributeContent;
 
-   public ShenJiCaiLiao ShenJiCaiLiao;
-   
-
    public TextMeshProUGUI WeaponName1;
    public TextMeshProUGUI WeaponName2;
    public TextMeshProUGUI WeaponName3;
    public TextMeshProUGUI WeaponName4;
    public TextMeshProUGUI WeaponName5;
    public TextMeshProUGUI WeaponName6;
-   public TextMeshProUGUI WeaponName7;
-   public TextMeshProUGUI WeaponName8;
-
    
-   public TextMeshProUGUI Desc1;
-   public TextMeshProUGUI Desc2;
-   public TextMeshProUGUI Desc3;
-   public TextMeshProUGUI Desc4;
-   public TextMeshProUGUI Desc5;
-   public TextMeshProUGUI Desc6;
-   public TextMeshProUGUI Desc7;
-   public TextMeshProUGUI Desc8;
-
-   
-   public TextMeshProUGUI TeXiao1;
-   public TextMeshProUGUI TeXiao2;
-   public TextMeshProUGUI TeXiao3;
-   public TextMeshProUGUI TeXiao4;
-   public TextMeshProUGUI TeXiao5;
-   public TextMeshProUGUI TeXiao6;
-   public TextMeshProUGUI TeXiao7;
-   public TextMeshProUGUI TeXiao8;
-   
-   public TextMeshProUGUI Equip1;
-   public TextMeshProUGUI Equip2;
-   public TextMeshProUGUI Equip3;
-   public TextMeshProUGUI Equip4;
-   public TextMeshProUGUI Equip5;
-   public TextMeshProUGUI Equip6;
-   public TextMeshProUGUI Equip7;
-   public TextMeshProUGUI Equip8;
-   
-   public TextMeshProUGUI YiEquip1;
-   public TextMeshProUGUI YiEquip2;
-   public TextMeshProUGUI YiEquip3;
-   public TextMeshProUGUI YiEquip4;
-   public TextMeshProUGUI YiEquip5;
-   public TextMeshProUGUI YiEquip6;
-   public TextMeshProUGUI YiEquip7;
-   public TextMeshProUGUI YiEquip8;
-   
-   public TextMeshProUGUI ShenJiText;
    public TextMeshProUGUI JieSuoText;
-   public  TextMeshProUGUI WeaponInfoName1;
-   public  TextMeshProUGUI WeaponInfoName2;
-   public  TextMeshProUGUI WeaponInfoName3;
-   public  TextMeshProUGUI WeaponInfoName4;
-   public  TextMeshProUGUI WeaponInfoName5;
-   public  TextMeshProUGUI WeaponInfoName6;
-   public  TextMeshProUGUI WeaponInfoName7;
-   public  TextMeshProUGUI WeaponInfoName8;
    
    //魂器
    public TextMeshProUGUI AllHunQiText;
-   public TextMeshProUGUI AllHunQiLevel;
-   
-   public TextMeshProUGUI AttributeButtonText;
-   public TextMeshProUGUI HunQiButtonText;
-   
-   public Slider HunQiExSlider;
-   public TextMeshProUGUI HunQiCurrentEx;
-   public TextMeshProUGUI HunQiMaxEx;
-   public TextMeshProUGUI HunQiLevel;
-
-
 
    public void SwitchLanguage()
    {
@@ -143,55 +56,8 @@ public class WeaponWindow : MonoBehaviour
             WeaponName4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName4;
             WeaponName5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName5;
             WeaponName6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName6;
-            WeaponName7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7;
-            WeaponName8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8;
-            
-            Desc1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc1;
-            Desc2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc2;
-            Desc3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc3;
-            Desc4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc4;
-            Desc5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc5;
-            Desc6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc6;
-            Desc7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc7;
-            Desc8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Desc8;
-            
-            TeXiao1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao1;
-            TeXiao2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao2;
-            TeXiao3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao3;
-            TeXiao4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao4;
-            TeXiao5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao5;
-            TeXiao6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao6;
-            TeXiao7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao7;
-            TeXiao8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.TeXiao8;
-            
-            Equip1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
-            Equip2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
-            Equip3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
-            Equip4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
-            Equip5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
-            Equip6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
-            Equip7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
-            Equip8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.Install;
-            
-            YiEquip1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
-            YiEquip2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
-            YiEquip3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
-            YiEquip4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
-            YiEquip5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
-            YiEquip6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
-            YiEquip7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
-            YiEquip8.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.YiInstall;
-            
-            ShenJiText.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.ShenJi;
+          
             JieSuoText.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.JieSuo;
-            WeaponInfoName1.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1;
-            WeaponInfoName2.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName2;
-            WeaponInfoName3.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName3;
-            WeaponInfoName4.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName4;
-            WeaponInfoName5.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName5;
-            WeaponInfoName6.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName6;
-            WeaponInfoName7.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7;
-            WeaponInfoName8.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8;
       
    }
 
@@ -205,163 +71,47 @@ public class WeaponWindow : MonoBehaviour
       
    }
    
-   public void HideNameAndDesc()
+   public void HideName()
    {
-      desc1.gameObject.SetActive(false);
-      desc2.gameObject.SetActive(false);
-      desc3.gameObject.SetActive(false);
-      desc4.gameObject.SetActive(false);
-      desc5.gameObject.SetActive(false);
-      desc6.gameObject.SetActive(false);
-      desc7.gameObject.SetActive(false);
-      desc8.gameObject.SetActive(false);
-
-
       weaponName1.gameObject.SetActive(false);
       weaponName2.gameObject.SetActive(false);
       weaponName3.gameObject.SetActive(false);
       weaponName4.gameObject.SetActive(false);
       weaponName5.gameObject.SetActive(false);
-      weaponName6.gameObject.SetActive(false);
-      weaponName7.gameObject.SetActive(false);
-      weaponName8.gameObject.SetActive(false);
-
-
-      texiao1.gameObject.SetActive(false);
-      texiao2.gameObject.SetActive(false);
-      texiao3.gameObject.SetActive(false);
-      texiao4.gameObject.SetActive(false);
-      texiao5.gameObject.SetActive(false);
-      texiao6.gameObject.SetActive(false);
-      texiao7.gameObject.SetActive(false);
-      texiao8.gameObject.SetActive(false);
-
-
    }
 
    public void ShowAttribute(WeaponType weaponType)
    {
-      HideNameAndDesc();
-      upButton.gameObject.SetActive(true);
+      HideName();
       JieSuoPanel.gameObject.SetActive(false);
       AttributePanel.gameObject.SetActive(true);
       InfoPanel.SetActive(true);
       UpPanel.SetActive(true);
-
-      switch (weaponType)
+      switch (WeaponConfig.WeaponQualityDic[weaponType])
       {
-         case WeaponType.Primary:
-            desc1.gameObject.SetActive(true);
-            weaponName1.gameObject.SetActive(true);  
-            texiao1.gameObject.SetActive(true);
-            if (PlayerData.S.primaryWeaponLevel < 2)
-            {
-               weaponName1.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1;;
-            }
-            else
-            {
-               var level = PlayerData.S.primaryWeaponLevel - 1;
-               weaponName1.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1+"+"+level;
-            }
+         case 1:
+            weaponName1.gameObject.SetActive(true);
+            weaponName1.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.HuoBaoZha:
-            desc2.gameObject.SetActive(true);
+         case 2:
             weaponName2.gameObject.SetActive(true);
-            texiao2.gameObject.SetActive(true);
-            if (PlayerData.S.HuoBaoZhaWeaponLevel < 2)
-            {
-               weaponName2.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName2;;
-            }
-            else
-            {
-               var level = PlayerData.S.HuoBaoZhaWeaponLevel - 1;
-               weaponName2.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName1+"+"+level;
-            }
+            weaponName2.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.PuTong3:
-            desc3.gameObject.SetActive(true);
+         case 3:
             weaponName3.gameObject.SetActive(true);
-            texiao3.gameObject.SetActive(true);
-            if (PlayerData.S.puTong3WeaponLevel < 2)
-            {
-               weaponName3.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName3;
-            }
-            else
-            {
-               var level = PlayerData.S.puTong3WeaponLevel - 1;
-               weaponName3.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName3+"+"+level;
-            }
+            weaponName3.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.XuKong:
-            desc4.gameObject.SetActive(true);
+         case 4:
             weaponName4.gameObject.SetActive(true);
-            texiao4.gameObject.SetActive(true);
-            if (PlayerData.S.xuKongWeaponLevel < 2)
-            {
-               weaponName4.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName4;
-            }
-            else
-            {
-               var level = PlayerData.S.xuKongWeaponLevel - 1;
-               weaponName4.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName4+"+"+level;
-            }
+            weaponName4.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.Fire:
-            desc5.gameObject.SetActive(true);
+         case 5:
             weaponName5.gameObject.SetActive(true);
-            texiao5.gameObject.SetActive(true);
-            if (PlayerData.S.fireWeaponLevel < 2)
-            {
-               weaponName5.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName5;
-            }
-            else
-            {
-               var level = PlayerData.S.fireWeaponLevel - 1;
-               weaponName5.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName5+"+"+level;
-            }
+            weaponName5.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.LvQuan:
-            desc6.gameObject.SetActive(true);
+         case 6:
             weaponName6.gameObject.SetActive(true);
-            texiao6.gameObject.SetActive(true);
-            if (PlayerData.S.lvQuanWeaponLevel < 2)
-            {
-               weaponName6.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName6;
-            }
-            else
-            {
-               var level = PlayerData.S.lvQuanWeaponLevel - 1;
-               weaponName6.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName6+"+"+level;
-            }
-            break;
-         case WeaponType.HeiDong:
-            desc7.gameObject.SetActive(true);
-            weaponName7.gameObject.SetActive(true);
-            texiao7.gameObject.SetActive(true);
-            if (PlayerData.S.heiDongWeaponLevel < 2)
-            {
-               weaponName7.text =LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7;
-            }
-            else
-            {
-               var level = PlayerData.S.heiDongWeaponLevel - 1;
-               weaponName7.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName7+"+"+level;
-            }
-            break;
-         
-         case WeaponType.JianQi:
-            desc8.gameObject.SetActive(true);
-            weaponName8.gameObject.SetActive(true);
-            texiao8.gameObject.SetActive(true);
-            if (PlayerData.S.heiDongWeaponLevel < 2)
-            {
-               weaponName7.text = LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8;
-            }
-            else
-            {
-               var level = PlayerData.S.jianQiWeaponLevel - 1;
-               weaponName7.text=LanguageConfig.LanguageItems[PlayerData.S.langType].WeaponWindowLanguage.WeaponName8+"+"+level;
-            }
+            weaponName6.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
       }
 
@@ -425,75 +175,57 @@ public class WeaponWindow : MonoBehaviour
 
    public void ShowJieSuo(WeaponType weaponType)
    {
-      HideNameAndDesc();
-      upButton.gameObject.SetActive(false);
+      HideName();
       JieSuoPanel.gameObject.SetActive(true);
       AttributePanel.gameObject.SetActive(false);
       InfoPanel.SetActive(true);
       UpPanel.SetActive(true);
-      switch (weaponType)
+      switch (WeaponConfig.WeaponQualityDic[weaponType])
       {
-         case WeaponType.Primary:
-            desc1.gameObject.SetActive(true);
+         case 1:
             weaponName1.gameObject.SetActive(true);
-            texiao1.gameObject.SetActive(true);
+            weaponName1.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.HuoBaoZha:
-            desc2.gameObject.SetActive(true);
+         case 2:
             weaponName2.gameObject.SetActive(true);
-            texiao2.gameObject.SetActive(true);
+            weaponName2.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.PuTong3:
-            desc3.gameObject.SetActive(true);
+         case 3:
             weaponName3.gameObject.SetActive(true);
-            texiao3.gameObject.SetActive(true);
+            weaponName3.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.XuKong:
-            desc4.gameObject.SetActive(true);
+         case 4:
             weaponName4.gameObject.SetActive(true);
-            texiao4.gameObject.SetActive(true);
+            weaponName4.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.Fire:
-            desc5.gameObject.SetActive(true);
+         case 5:
             weaponName5.gameObject.SetActive(true);
-            texiao5.gameObject.SetActive(true);
+            weaponName5.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
-         case WeaponType.LvQuan:
-            desc6.gameObject.SetActive(true);
+         case 6:
             weaponName6.gameObject.SetActive(true);
-            texiao6.gameObject.SetActive(true);
-            break;
-         case WeaponType.HeiDong:
-            desc7.gameObject.SetActive(true);
-            weaponName7.gameObject.SetActive(true);
-            texiao7.gameObject.SetActive(true);
-            break;
-         case WeaponType.JianQi:
-            desc8.gameObject.SetActive(true);
-            weaponName8.gameObject.SetActive(true);
-            texiao8.gameObject.SetActive(true);
+            weaponName6.text = WeaponConfig.WeaponNameDic[weaponType];
             break;
       }
-
       foreach (Transform child in jieSuoContent.transform)
       {
          Destroy(child.gameObject);
       }
 
-      var cailiao = WeaponConfig.JieSuoCaiLiaoDic[weaponType];
+      var cailiao = WeaponConfig.WeaponJieSuoDic[weaponType];
       foreach (var item in cailiao)
       {
          var weaponItem = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/CaiLiaoItem"), jieSuoContent.transform);
-         switch (item.PropType)
+         switch (item._propType)
          {
             case PropConfig.PropType.LingHun:
                weaponItem.transform.Find("prop/ImageBg").gameObject.SetActive(false);
                weaponItem.transform.Find("prop/Edge").gameObject.SetActive(false);
                weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.LingHun;
-               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.Count.ToString();
+               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.count.ToString();
                break;
             case PropConfig.PropType.JingCui:
-               switch (item.Quality)
+               switch (item.quality)
                {
                   case 1:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
@@ -531,10 +263,10 @@ public class WeaponWindow : MonoBehaviour
                      break;
                }
 
-               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.Count.ToString();
+               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.count.ToString();
                break;
             case PropConfig.PropType.WeaponFragment:
-               switch (item.Quality)
+               switch (item.quality)
                {
                   case 1:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
@@ -574,7 +306,7 @@ public class WeaponWindow : MonoBehaviour
                      break;
                }
 
-               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.Count.ToString();
+               weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.count.ToString();
                break;
          }
       }
@@ -613,366 +345,340 @@ public class WeaponWindow : MonoBehaviour
 
    public void JieSuo()
    {
+      List<WeaponJieSuoItem> items = WeaponConfig.WeaponJieSuoDic[currentJieSuoType];
+      foreach (var item in items)
+      {
+         switch (item._propType)
+         {
+            case PropConfig.PropType.LingHun:
+               if (GlobalPlayerAttribute.BloodEnergy < item.count)
+               {
+                  ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                  return;
+               }
+               break;
+            case PropConfig.PropType.WeaponFragment:
+               switch (item.quality)
+               {
+                  case 2:
+                     if (!BagController.S.PropList.ContainsKey(102) || BagController.S.PropList[102].Count < item.count)
+                     {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                     }
+                     break;
+                  case 3:
+                     if (!BagController.S.PropList.ContainsKey(103) || BagController.S.PropList[103].Count < item.count)
+                     {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                     }
+                     break;
+                  case 4:
+                     if (!BagController.S.PropList.ContainsKey(104) || BagController.S.PropList[104].Count < item.count)
+                     {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                     }
+                     break;
+                  case 5:
+                     if (!BagController.S.PropList.ContainsKey(105) || BagController.S.PropList[105].Count < item.count)
+                     {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                     }
+                     break;
+               }
+               break;
+            
+            
+            case PropConfig.PropType.JingCui:
+               switch (item.quality)
+               {
+                  case 2:
+                     if (!BagController.S.PropList.ContainsKey(202) || BagController.S.PropList[202].Count < item.count)
+                     {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                     }
+                     break;
+                  case 3:
+                     if (!BagController.S.PropList.ContainsKey(203) || BagController.S.PropList[203].Count < item.count)
+                     {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                     }
+                     break;
+                  case 4:
+                     if (!BagController.S.PropList.ContainsKey(204) || BagController.S.PropList[204].Count < item.count)
+                     {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                     }
+                     break;
+                  case 5:
+                     if (!BagController.S.PropList.ContainsKey(205) || BagController.S.PropList[205].Count < item.count)
+                     {
+                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                     }
+                     break;
+               }
+               break;
+         }
+      }
       switch (currentJieSuoType)
       {
          case WeaponType.HuoBaoZha:
-            if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
-                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
-                BagController.S.PropList[102].Count < 3||PlayerData.S.primaryHuoLevel<5)
+            if (PlayerData.S.primaryHuoLevel<5)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 300;
-            BagController.S.PropList[202].Count -= 3;
-            BagController.S.PropList[102].Count -= 3;
             PlayerData.S.HuoBaoZhaWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.IceBaoZha:
-            if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
-                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
-                BagController.S.PropList[102].Count < 3||PlayerData.S.primaryWeaponLevel<5)
+            if (PlayerData.S.primaryWeaponLevel<5)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 300;
-            BagController.S.PropList[202].Count -= 3;
-            BagController.S.PropList[102].Count -= 3;
             PlayerData.S.iceBaoZhaLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.DianBaoZha:
-            if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
-                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
-                BagController.S.PropList[102].Count < 3||PlayerData.S.primaryDianLevel<5)
+            if (PlayerData.S.primaryDianLevel<5)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 300;
-            BagController.S.PropList[202].Count -= 3;
-            BagController.S.PropList[102].Count -= 3;
             PlayerData.S.dianBaoZhaLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.HeiAnBaoZha:
-            if (GlobalPlayerAttribute.BloodEnergy < 300 || !BagController.S.PropList.ContainsKey(202) ||
-                BagController.S.PropList[202].Count < 3 || !BagController.S.PropList.ContainsKey(102) ||
-                BagController.S.PropList[102].Count < 3||PlayerData.S.primaryHeiAnLevel<5)
+            if (PlayerData.S.primaryHeiAnLevel<5)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 300;
-            BagController.S.PropList[202].Count -= 3;
-            BagController.S.PropList[102].Count -= 3;
             PlayerData.S.HeiAnBaoZhaWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
 
          case WeaponType.PuTong3:
-            if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
-                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
-                BagController.S.PropList[103].Count < 5||PlayerData.S.iceBaoZhaLevel<10)
+            if (PlayerData.S.iceBaoZhaLevel<10)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 800;
-            BagController.S.PropList[203].Count -= 5;
-            BagController.S.PropList[103].Count -= 5;
             PlayerData.S.puTong3WeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
 
          case WeaponType.XuKong:
-            if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
-                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
-                BagController.S.PropList[103].Count < 5||PlayerData.S.HeiAnBaoZhaWeaponLevel<10)
+            if (PlayerData.S.HeiAnBaoZhaWeaponLevel<10)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 800;
-            BagController.S.PropList[203].Count -= 5;
-            BagController.S.PropList[103].Count -= 5;
             PlayerData.S.xuKongWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          case WeaponType.Fire:
-            if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
-                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
-                BagController.S.PropList[103].Count < 5||PlayerData.S.dianBaoZhaLevel<10)
+            if (PlayerData.S.dianBaoZhaLevel<10)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 800;
-            BagController.S.PropList[203].Count -= 5;
-            BagController.S.PropList[103].Count -= 5;
             PlayerData.S.fireWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
 
          case WeaponType.LvQuan:
-            if (GlobalPlayerAttribute.BloodEnergy < 800 || !BagController.S.PropList.ContainsKey(203) ||
-                BagController.S.PropList[203].Count < 5 || !BagController.S.PropList.ContainsKey(103) ||
-                BagController.S.PropList[103].Count < 5||PlayerData.S.HuoBaoZhaWeaponLevel<10)
+            if (PlayerData.S.HuoBaoZhaWeaponLevel<10)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 800;
-            BagController.S.PropList[203].Count -= 5;
-            BagController.S.PropList[103].Count -= 5;
             PlayerData.S.lvQuanWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.Ice7:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.IceAllLevel<30)
+            if (PlayerData.S.IceAllLevel<30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.Ice7WeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.Huo7:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.HuoAllLevel<30)
+            if (PlayerData.S.HuoAllLevel<30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.Huo7WeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.DianJiSu:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.DianAllLevel<30)
+            if (PlayerData.S.DianAllLevel<30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.DianJiSuWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.DianSanShe:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.DianAllLevel<10)
+            if (PlayerData.S.DianAllLevel<10)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.DianSanSheWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.HuoFenLie:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.HuoAllLevel<30)
+            if (PlayerData.S.HuoAllLevel<30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.HuoFenLieWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.JianQi:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.HuoAllLevel <30)
+            if (PlayerData.S.HuoAllLevel <30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.jianQiWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.HeiAnQuXian:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.HeiAnAllLevel<30)
+            if (PlayerData.S.HeiAnAllLevel<30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.HeiAnQuXianWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.HeiAnHuiXuan:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.HeiAnHuiXuanWeaponLevel<30)
+            if (PlayerData.S.HeiAnHuiXuanWeaponLevel<30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.HeiAnHuiXuanWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.Ice4BaoZha:
-            if (GlobalPlayerAttribute.BloodEnergy < 2000 || !BagController.S.PropList.ContainsKey(204) ||
-                BagController.S.PropList[204].Count < 10 || !BagController.S.PropList.ContainsKey(104) ||
-                BagController.S.PropList[104].Count < 10||PlayerData.S.IceAllLevel<30)
+            if (PlayerData.S.IceAllLevel<30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 2000;
-            BagController.S.PropList[204].Count -= 10;
-            BagController.S.PropList[104].Count -= 10;
             PlayerData.S.Ice4BaoZhaWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
 
          case WeaponType.HeiDong:
-            if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(205) ||
-                BagController.S.PropList[205].Count < 25 || !BagController.S.PropList.ContainsKey(105) ||
-                BagController.S.PropList[105].Count < 25||PlayerData.S.HeiAnAllLevel<100)
+            if (PlayerData.S.HeiAnAllLevel<100)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 10000;
-            BagController.S.PropList[205].Count -= 25;
-            BagController.S.PropList[105].Count -= 25;
             PlayerData.S.heiDongWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          
          case WeaponType.IcePen:
-            if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(205) ||
-                BagController.S.PropList[205].Count < 25 || !BagController.S.PropList.ContainsKey(105) ||
-                BagController.S.PropList[105].Count < 25||PlayerData.S.IceAllLevel<100)
+            if (PlayerData.S.IceAllLevel<100)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 10000;
-            BagController.S.PropList[205].Count -= 25;
-            BagController.S.PropList[105].Count -= 25;
             PlayerData.S.IcePenWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          case WeaponType.HuoDiPen:
-            if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(205) ||
-                BagController.S.PropList[205].Count < 5 || !BagController.S.PropList.ContainsKey(105) ||
-                BagController.S.PropList[105].Count < 5||PlayerData.S.HuoAllLevel<100)
+            if (PlayerData.S.HuoAllLevel<100)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 10000;
-            BagController.S.PropList[205].Count -= 25;
-            BagController.S.PropList[105].Count -= 25;
             PlayerData.S.HuoDiPenWeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
+
             break;
          
          
          case WeaponType.DianLuoLei5:
-            if (GlobalPlayerAttribute.BloodEnergy < 10000 || !BagController.S.PropList.ContainsKey(205) ||
-                BagController.S.PropList[205].Count < 25 || !BagController.S.PropList.ContainsKey(105) ||
-                BagController.S.PropList[105].Count < 25||PlayerData.S.DianAllLevel<100)
+            if (PlayerData.S.DianAllLevel<100)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
             }
-
-            GlobalPlayerAttribute.BloodEnergy -= 10000;
-            BagController.S.PropList[205].Count -= 25;
-            BagController.S.PropList[105].Count -= 25;
             PlayerData.S.DianLuoLei5WeaponLevel = 1;
-            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
-            RefreshWeaponList();
             break;
       }
+
+      foreach (var item in items)
+      {
+         switch (item._propType)
+         {
+            case PropConfig.PropType.LingHun:
+               GlobalPlayerAttribute.BloodEnergy -= item.count;
+               break;
+            case PropConfig.PropType.WeaponFragment:
+               switch (item.quality)
+               {
+                  case 2:
+                     BagController.S.PropList[102].Count -= item.count;
+                     break;
+                  case 3:
+                     BagController.S.PropList[103].Count -= item.count;
+                     break;
+                  case 4:
+                     BagController.S.PropList[104].Count -= item.count;
+                     break;
+                  case 5:
+                     BagController.S.PropList[105].Count -= item.count;
+                     break;
+               }
+
+               break;
+
+            case PropConfig.PropType.JingCui:
+               switch (item.quality)
+               {
+                  case 2:
+                     BagController.S.PropList[202].Count -= item.count;
+                     break;
+                  case 3:
+                     BagController.S.PropList[203].Count -= item.count;
+                     break;
+                  case 4:
+                     BagController.S.PropList[204].Count -= item.count;
+                     break;
+                  case 5:
+                     BagController.S.PropList[205].Count -= item.count;
+                     break;
+               }
+               break;
+         }
+      }
+      ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜成功解锁新武器！");
+      RefreshWeaponList();
       
    }
 
@@ -985,6 +691,18 @@ public class WeaponWindow : MonoBehaviour
          case WeaponType.HuoBaoZha:
             currentJieSuoType = WeaponType.HuoBaoZha;
             ShowJieSuo(WeaponType.HuoBaoZha);
+            AttributePanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.DianBaoZha:
+            currentJieSuoType = WeaponType.DianBaoZha;
+            ShowJieSuo(WeaponType.DianBaoZha);
+            AttributePanel.gameObject.SetActive(false);
+            break;
+         
+         case WeaponType.IceBaoZha:
+            currentJieSuoType = WeaponType.IceBaoZha;
+            ShowJieSuo(WeaponType.IceBaoZha);
             AttributePanel.gameObject.SetActive(false);
             break;
          
@@ -1115,50 +833,42 @@ public class WeaponWindow : MonoBehaviour
       {
          case WeaponType.Primary:
             currentShowType = WeaponType.Primary;
-            ShenJiCaiLiao.showType = WeaponType.Primary;
             ShowAttribute(WeaponType.Primary);
             break;
          
          case WeaponType.HuoBaoZha:
             currentShowType = WeaponType.HuoBaoZha;
-            ShenJiCaiLiao.showType = WeaponType.HuoBaoZha;
             ShowAttribute(WeaponType.HuoBaoZha);
             break;
          
          case WeaponType.LvQuan:
             currentShowType = WeaponType.LvQuan;
-            ShenJiCaiLiao.showType = WeaponType.LvQuan;
             ShowAttribute(WeaponType.LvQuan);
             break;
          
          
          case WeaponType.XuKong:
             currentShowType = WeaponType.XuKong;
-            ShenJiCaiLiao.showType = WeaponType.XuKong;
             ShowAttribute(WeaponType.XuKong);
             break;
          
          case WeaponType.PuTong3:
             currentShowType = WeaponType.PuTong3;
-            ShenJiCaiLiao.showType = WeaponType.PuTong3;
             ShowAttribute(WeaponType.PuTong3);
             break;
          
          case WeaponType.Fire:
             currentShowType = WeaponType.Fire;
-            ShenJiCaiLiao.showType = WeaponType.Fire;
             ShowAttribute(WeaponType.Fire);
             break;
          
          case WeaponType.JianQi:
             currentShowType = WeaponType.JianQi;
-            ShenJiCaiLiao.showType = WeaponType.JianQi;
             ShowAttribute(WeaponType.JianQi);
             break;
          
          case WeaponType.HeiDong:
             currentShowType = WeaponType.HeiDong;
-            ShenJiCaiLiao.showType = WeaponType.HeiDong;
             ShowAttribute(WeaponType.HeiDong);
             break;
       }
@@ -1185,229 +895,5 @@ public class WeaponWindow : MonoBehaviour
          gameObject.SetActive(false);
          WindowController.S.RoleWindow.SetActive(true);
       });
-      upButton.onClick.AddListener(() =>
-      {
-         ShenJi();
-      });
-   }
-
-
-   public void ShenJi()
-   {
-      var cailiaoList = WeaponConfig.ShenJiCaiLiaoDic[currentShowType];
-
-
-      foreach (var cailiao in cailiaoList)
-      {
-         switch (cailiao.PropType)
-         {
-            case PropConfig.PropType.LingHun:
-               if (GlobalPlayerAttribute.BloodEnergy < cailiao.Count)
-               {
-                  ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足！");
-                  return;
-               }
-               break;
-            case PropConfig.PropType.JingCui:
-               switch (cailiao.Quality)
-               {
-                  case 1:
-                     if (!BagController.S.PropList.ContainsKey(201) ||
-                         BagController.S.PropList[201].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足！");
-                        return;
-                     }
-
-                     break;
-                  case 2:
-                     if (!BagController.S.PropList.ContainsKey(202) ||
-                         BagController.S.PropList[202].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足！");
-                        return;
-                     }
-
-                     break;
-                  case 3:
-                     if (!BagController.S.PropList.ContainsKey(203) ||
-                         BagController.S.PropList[203].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足！");
-                        return;
-                     }
-
-                     break;
-                  case 4:
-                     if (!BagController.S.PropList.ContainsKey(204) ||
-                         BagController.S.PropList[204].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足！");
-                        return;
-                     }
-
-                     break;
-                  case 5:
-                     if (!BagController.S.PropList.ContainsKey(205) ||
-                         BagController.S.PropList[205].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足！");
-                        return;
-                     }
-
-                     break;
-                  case 6:
-                     if (!BagController.S.PropList.ContainsKey(206) ||
-                         BagController.S.PropList[206].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "材料不足！");
-                        return;
-                     }
-                     break;
-               }
-
-               break;
-
-            case PropConfig.PropType.WeaponFragment:
-               switch (cailiao.Quality)
-               {
-                  case 1:
-                     if (!BagController.S.PropList.ContainsKey(101) ||
-                         BagController.S.PropList[101].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足！");
-                        return;
-                     }
-                     break;
-                  case 2:
-                     if (!BagController.S.PropList.ContainsKey(102) ||
-                         BagController.S.PropList[102].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足！");
-                        return;
-                     }
-                     break;
-                  case 3:
-                     if (!BagController.S.PropList.ContainsKey(103) ||
-                         BagController.S.PropList[103].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足！");
-                        return;
-                     }
-                     break;
-                  case 4:
-                     if (!BagController.S.PropList.ContainsKey(104) ||
-                         BagController.S.PropList[104].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足！");
-                        return;
-                     }
-                     break;
-                  case 5:
-                     if (!BagController.S.PropList.ContainsKey(105) ||
-                         BagController.S.PropList[105].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足！");
-                        return;
-                     }
-                     break;
-                  case 6:
-                     if (!BagController.S.PropList.ContainsKey(106) ||
-                         BagController.S.PropList[106].Count < cailiao.Count)
-                     {
-                        ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"材料不足！");
-                        return;
-                     }
-                     break;
-               }
-               
-               break;
-         }
-      }
-
-
-      foreach (var cailiao in cailiaoList)
-      {
-         switch (cailiao.PropType)
-         {
-            case PropConfig.PropType.LingHun:
-               GlobalPlayerAttribute.BloodEnergy -= cailiao.Count;
-               break;
-            case PropConfig.PropType.JingCui:
-               switch (cailiao.Quality)
-               {
-                  case 1:
-                     BagController.S.PropList[201].Count -= cailiao.Count;
-                     break;
-                  case 2:
-                     BagController.S.PropList[202].Count -= cailiao.Count;
-                     break;
-                  case 3:
-                     BagController.S.PropList[203].Count -= cailiao.Count;
-                     break;
-                  case 4:
-                     BagController.S.PropList[204].Count -= cailiao.Count;
-                     break;
-                  case 5:
-                     BagController.S.PropList[205].Count -= cailiao.Count;
-                     break;
-                  case 6:
-                     BagController.S.PropList[206].Count -= cailiao.Count;
-                     break;
-               }
-               break;
-
-            case PropConfig.PropType.WeaponFragment:
-               switch (cailiao.Quality)
-               {
-                  case 1:
-                     BagController.S.PropList[101].Count -= cailiao.Count;
-                     break;
-                  case 2:
-                     BagController.S.PropList[102].Count -= cailiao.Count;
-                     break;
-                  case 3:
-                     BagController.S.PropList[103].Count -= cailiao.Count;
-                     break;
-                  case 4:
-                     BagController.S.PropList[104].Count -= cailiao.Count;
-                     break;
-                  case 5:
-                     BagController.S.PropList[105].Count -= cailiao.Count;
-                     break;
-                  case 6:
-                     BagController.S.PropList[106].Count -= cailiao.Count;
-                     break;
-               }
-               break;
-         }
-      }
-
-      switch (currentShowType)
-      {
-         case WeaponType.Primary:
-            PlayerData.S.primaryWeaponLevel++;
-            break;
-         case WeaponType.HuoBaoZha:
-            PlayerData.S.HuoBaoZhaWeaponLevel++;
-            break;
-         case WeaponType.PuTong3:
-            PlayerData.S.puTong3WeaponLevel++;
-            break;
-         case WeaponType.XuKong:
-            PlayerData.S.xuKongWeaponLevel++;
-            break;
-         case WeaponType.Fire:
-            PlayerData.S.fireWeaponLevel++;
-            break;
-         case WeaponType.LvQuan:
-            PlayerData.S.lvQuanWeaponLevel++;
-            break;
-         case WeaponType.HeiDong:
-            PlayerData.S.heiDongWeaponLevel++;
-            break;
-      }
-      ShowAttribute(currentShowType);
-      StoreController.S.SaveStoreData();
    }
 }
