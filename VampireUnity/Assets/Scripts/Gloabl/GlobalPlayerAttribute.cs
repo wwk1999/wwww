@@ -2481,6 +2481,64 @@ public class GlobalPlayerAttribute
    {
        return 0;
    }
+   public static int GetWeaponLevel(WeaponType type)
+   {
+      switch (type)
+      {
+         case WeaponType.Primary:
+            return PlayerData.S.primaryWeaponLevel;
+         case WeaponType.PrimaryHuo:
+   return PlayerData.S.primaryHuoLevel;
+         case WeaponType.PrimaryDian:
+            return PlayerData.S.primaryDianLevel;
+         case WeaponType.PrimaryHeiAn:
+            return PlayerData.S.primaryHeiAnLevel;
+         case WeaponType.IceBaoZha:
+            return PlayerData.S.iceBaoZhaLevel;
+         case WeaponType.DianBaoZha:
+            return PlayerData.S.dianBaoZhaLevel;
+         case WeaponType.HuoBaoZha:
+            return PlayerData.S.HuoBaoZhaWeaponLevel;
+         case WeaponType.HeiAnBaoZha:
+            return PlayerData.S.HeiAnBaoZhaWeaponLevel;
+         case WeaponType.XuKong:
+            return PlayerData.S.xuKongWeaponLevel;
+         case WeaponType.PuTong3:
+            return PlayerData.S.puTong3WeaponLevel;
+         case WeaponType.Fire:
+            return PlayerData.S.fireWeaponLevel;
+         case WeaponType.LvQuan:
+            return PlayerData.S.lvQuanWeaponLevel;
+         case WeaponType.DianJiSu:
+            return PlayerData.S.DianJiSuWeaponLevel;
+         case WeaponType.DianSanShe:
+            return PlayerData.S.DianSanSheWeaponLevel;
+         case WeaponType.Huo7:
+            return PlayerData.S.Huo7WeaponLevel;
+         case WeaponType.HuoFenLie:
+            return PlayerData.S.HuoFenLieWeaponLevel;
+         case WeaponType.HeiAnHuiXuan:
+            return PlayerData.S.HeiAnHuiXuanWeaponLevel;
+         case WeaponType.HeiAnQuXian:
+            return PlayerData.S.HeiAnQuXianWeaponLevel;
+         case WeaponType.Ice7:
+            return PlayerData.S.Ice7WeaponLevel;
+         case WeaponType.Ice4BaoZha:
+            return PlayerData.S.Ice4BaoZhaWeaponLevel;
+         case WeaponType.JianQi:
+            return PlayerData.S.jianQiWeaponLevel;
+         case WeaponType.HuoDiPen:
+            return PlayerData.S.HuoDiPenWeaponLevel;
+         case WeaponType.IcePen:
+            return PlayerData.S.IcePenWeaponLevel;
+         case WeaponType.HeiDong:
+            return PlayerData.S.heiDongWeaponLevel;
+         case WeaponType.DianLuoLei5:
+            return PlayerData.S.DianLuoLei5WeaponLevel;
+      }
+
+      return 0;
+   }
    
    public static float GetMonsterCrit()
    {
@@ -2489,141 +2547,29 @@ public class GlobalPlayerAttribute
    public static float GetWeaponAttack()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       int level = 0;
-       switch (PlayerData.S.playerWeaponType)
-       {
-           case WeaponType.Primary:
-               level = PlayerData.S.primaryWeaponLevel;
-               break;
-           case WeaponType.HuoBaoZha:
-               level = PlayerData.S.HuoBaoZhaWeaponLevel;
-               break;
-           case WeaponType.PuTong3:
-               level = PlayerData.S.puTong3WeaponLevel;
-               break;
-           case WeaponType.XuKong:
-               level = PlayerData.S.xuKongWeaponLevel;
-               break;
-           case WeaponType.Fire:
-               level = PlayerData.S.fireWeaponLevel;
-               break;
-           case WeaponType.LvQuan:
-               level = PlayerData.S.lvQuanWeaponLevel;
-               break;
-           case WeaponType.HeiDong:
-               level = PlayerData.S.heiDongWeaponLevel;
-               break;
-           case WeaponType.JianQi:
-               level = PlayerData.S.jianQiWeaponLevel;
-               break;
-       }
-
-       return weaponAttribute.Attack * (1 + (level - 1) * WeaponShenJiPercent);
+       int level = GetWeaponLevel(PlayerData.S.playerWeaponType);
+       return weaponAttribute.Attack * WeaponConfig.WeaponLevelAttributeDic[level];
    }
    
    public static float GetWeaponDefense()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       int level = 0;
-       switch (PlayerData.S.playerWeaponType)
-       {
-           case WeaponType.Primary:
-               level = PlayerData.S.primaryWeaponLevel;
-               break;
-           case WeaponType.HuoBaoZha:
-               level = PlayerData.S.HuoBaoZhaWeaponLevel;
-               break;
-           case WeaponType.PuTong3:
-               level = PlayerData.S.puTong3WeaponLevel;
-               break;
-           case WeaponType.XuKong:
-               level = PlayerData.S.xuKongWeaponLevel;
-               break;
-           case WeaponType.Fire:
-               level = PlayerData.S.fireWeaponLevel;
-               break;
-           case WeaponType.LvQuan:
-               level = PlayerData.S.lvQuanWeaponLevel;
-               break;
-           case WeaponType.HeiDong:
-               level = PlayerData.S.heiDongWeaponLevel;
-               break;
-           case WeaponType.JianQi:
-               level = PlayerData.S.jianQiWeaponLevel;
-               break;
-       }
-
-       return weaponAttribute.Defense * (1 + (level - 1) * WeaponShenJiPercent);
+       int level = GetWeaponLevel(PlayerData.S.playerWeaponType);
+       return weaponAttribute.Defense * WeaponConfig.WeaponLevelAttributeDic[level];
    }
    
    public static float GetWeaponCrit()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       int level = 0;
-       switch (PlayerData.S.playerWeaponType)
-       {
-           case WeaponType.Primary:
-               level = PlayerData.S.primaryWeaponLevel;
-               break;
-           case WeaponType.HuoBaoZha:
-               level = PlayerData.S.HuoBaoZhaWeaponLevel;
-               break;
-           case WeaponType.PuTong3:
-               level = PlayerData.S.puTong3WeaponLevel;
-               break;
-           case WeaponType.XuKong:
-               level = PlayerData.S.xuKongWeaponLevel;
-               break;
-           case WeaponType.Fire:
-               level = PlayerData.S.fireWeaponLevel;
-               break;
-           case WeaponType.LvQuan:
-               level = PlayerData.S.lvQuanWeaponLevel;
-               break;
-           case WeaponType.HeiDong:
-               level = PlayerData.S.heiDongWeaponLevel;
-               break;
-           case WeaponType.JianQi:
-               level = PlayerData.S.jianQiWeaponLevel;
-               break;
-       }
-
-       return weaponAttribute.Crit * (1 + (level - 1) * WeaponShenJiPercent);
+       int level = GetWeaponLevel(PlayerData.S.playerWeaponType);
+       return weaponAttribute.Crit * WeaponConfig.WeaponLevelAttributeDic[level];
    }
    
    public static float GetWeaponHp()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       int level = 0;
-       switch (PlayerData.S.playerWeaponType)
-       {
-           case WeaponType.Primary:
-               level = PlayerData.S.primaryWeaponLevel;
-               break;
-           case WeaponType.HuoBaoZha:
-               level = PlayerData.S.HuoBaoZhaWeaponLevel;
-               break;
-           case WeaponType.PuTong3:
-               level = PlayerData.S.puTong3WeaponLevel;
-               break;
-           case WeaponType.XuKong:
-               level = PlayerData.S.xuKongWeaponLevel;
-               break;
-           case WeaponType.Fire:
-               level = PlayerData.S.fireWeaponLevel;
-               break;
-           case WeaponType.LvQuan:
-               level = PlayerData.S.lvQuanWeaponLevel;
-               break;
-           case WeaponType.HeiDong:
-               level = PlayerData.S.heiDongWeaponLevel;
-               break;
-           case WeaponType.JianQi:
-               level = PlayerData.S.jianQiWeaponLevel;
-               break;
-       }
-
-       return weaponAttribute.Hp * (1 + (level - 1) * WeaponShenJiPercent);
+       int level = GetWeaponLevel(PlayerData.S.playerWeaponType);
+       return weaponAttribute.Hp * WeaponConfig.WeaponLevelAttributeDic[level];
    }
    
    public static float GetWeaponAttackSpeed()

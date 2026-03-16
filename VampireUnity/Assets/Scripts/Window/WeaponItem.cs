@@ -131,7 +131,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.Primary;
             });
@@ -150,7 +150,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.PrimaryHuo;
             });
@@ -169,7 +169,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.PrimaryDian;
             });
@@ -188,7 +188,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.PrimaryHeiAn;
             });
@@ -218,7 +218,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.HuoBaoZha;
             });
@@ -254,7 +254,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.DianBaoZha;
             });
@@ -290,7 +290,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.IceBaoZha;
             });
@@ -326,7 +326,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.HeiDong;
             });
@@ -361,7 +361,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.LvQuan;
             });
@@ -396,7 +396,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.Fire;
             });
@@ -431,7 +431,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.XuKong;
             });
@@ -466,7 +466,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.JianQi;
             });
@@ -503,7 +503,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.PuTong3;
             });
@@ -539,7 +539,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.IcePen;
             });
@@ -575,7 +575,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.Ice7;
             });
@@ -611,7 +611,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.Ice4BaoZha;
             });
@@ -647,7 +647,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.HuoFenLie;
             });
@@ -683,7 +683,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.HuoDiPen;
             });
@@ -720,7 +720,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.Huo7;
             });
@@ -756,7 +756,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.HeiAnQuXian;
             });
@@ -792,7 +792,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.HeiAnHuiXuan;
             });
@@ -828,7 +828,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.HeiAnBaoZha;
             });
@@ -864,7 +864,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.DianSanShe;
             });
@@ -900,7 +900,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("CleakYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.DianLuoLei5;
             });
@@ -936,7 +936,7 @@ public class WeaponItem : MonoBehaviour
             intallbutton.onClick.RemoveAllListeners();
             intallbutton.onClick.AddListener(() =>
             {
-               ObserverModuleManager.S.SendEvent("ClealYiZhuangBei");
+               ObserverModuleManager.S.SendEvent("ClearYiZhuangBei");
                yiZhuangBeiIcon.gameObject.SetActive(true);
                PlayerData.S.playerWeaponType = WeaponType.DianJiSu;
             });

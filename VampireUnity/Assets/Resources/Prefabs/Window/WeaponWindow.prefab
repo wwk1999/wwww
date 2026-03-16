@@ -7833,6 +7833,8 @@ MonoBehaviour:
   CiTiaoContent: {fileID: 7213289596082296459}
   LevelText: {fileID: 6396652680539044238}
   LevelSlider: {fileID: 6398658783824066536}
+  CurrentExp: {fileID: 541315603084404491}
+  MaxExp: {fileID: 63006468967652209}
 --- !u!1 &8795949962635115324
 GameObject:
   m_ObjectHideFlags: 0

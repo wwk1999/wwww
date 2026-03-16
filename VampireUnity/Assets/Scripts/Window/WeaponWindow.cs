@@ -54,6 +54,9 @@ public class WeaponWindow : MonoBehaviour
 
    public TextMeshProUGUI LevelText;
    public Slider LevelSlider;
+   public TextMeshProUGUI CurrentExp;
+   public TextMeshProUGUI MaxExp;
+
 
 
 
@@ -153,6 +156,8 @@ public class WeaponWindow : MonoBehaviour
 
       LevelText.text = "Lv." + GetWeaponLevel(weaponType);
       LevelSlider.maxValue = GlobalPlayerAttribute.ExpDic[GetWeaponLevel(weaponType)];
+      MaxExp.text=GlobalPlayerAttribute.ExpDic[GetWeaponLevel(weaponType)].ToString();
+      CurrentExp.text=GetWeaponExp(weaponType).ToString();
       LevelSlider.value = GetWeaponExp(weaponType);
 
       foreach (Transform item in AttributeContent.transform)
@@ -163,21 +168,21 @@ public class WeaponWindow : MonoBehaviour
       var weaponBaseAttribute = WeaponConfig.WeaponBaseAttributeDic[weaponType];
       var weaponAttribute = new WeaponAttribute
          { Attack = weaponBaseAttribute.Attack * WeaponConfig.WeaponLevelAttributeDic[GetWeaponLevel(weaponType)], Defense = weaponBaseAttribute.Defense * WeaponConfig.WeaponLevelAttributeDic[GetWeaponLevel(weaponType)],Hp = weaponBaseAttribute.Hp * WeaponConfig.WeaponLevelAttributeDic[GetWeaponLevel(weaponType)],Crit = weaponBaseAttribute.Crit * WeaponConfig.WeaponLevelAttributeDic[GetWeaponLevel(weaponType)],AttackSpeed = weaponBaseAttribute.AttackSpeed};
-      var attack = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
+      var attack = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
       attack.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Attack,(int)weaponAttribute.Attack);
       
-      var defense = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
+      var defense = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
       defense.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Defense,(int)weaponAttribute.Defense);
 
-      var hp = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
-      hp.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Hp,(int)weaponAttribute.Attack);
+      var hp = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
+      hp.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Hp,(int)weaponAttribute.Hp);
 
       
-      var crit = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
-      crit.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Crit,(int)weaponAttribute.Attack);
+      var crit = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
+      crit.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.Crit,(int)weaponAttribute.Crit);
 
-      var attackSpeed = Instantiate(Resources.Load<GameObject>("Prefabs/Tool"), AttributeContent.transform);
-      attackSpeed.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.AttackSpeed,(int)weaponAttribute.Attack);
+      var attackSpeed = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/WeaponItem"), AttributeContent.transform);
+      attackSpeed.GetComponent<WeaponItem1>().SetWeaponItem(AttributeType.AttackSpeed,(int)weaponAttribute.AttackSpeed);
 
    }
    
@@ -1064,12 +1069,12 @@ public class WeaponWindow : MonoBehaviour
    {
       ObserverModuleManager.S.UnRegisterEvent("BgButtonClick",BgButtonClick);
       ObserverModuleManager.S.UnRegisterEvent("SuoButtonClick",SuoButtonClick);
-      ObserverModuleManager.S.UnRegisterEvent("ClealYiZhuangBei",ClealYiZhuangBei);
+      ObserverModuleManager.S.UnRegisterEvent("ClearYiZhuangBei",ClealYiZhuangBei);
    }
 
    private void Awake()
    {
-      ObserverModuleManager.S.RegisterEvent("ClealYiZhuangBei",ClealYiZhuangBei);
+      ObserverModuleManager.S.RegisterEvent("ClearYiZhuangBei",ClealYiZhuangBei);
       ObserverModuleManager.S.RegisterEvent("BgButtonClick",BgButtonClick);
       ObserverModuleManager.S.RegisterEvent("SuoButtonClick",SuoButtonClick);
 
