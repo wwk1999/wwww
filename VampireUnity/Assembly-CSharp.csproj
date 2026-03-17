@@ -947,7 +947,6 @@
     <None Include="Assets\Arts\Spine\技能\LanShui\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\HuangShu\Enemy_Mouse_patrol.json" />
     <None Include="Assets\Arts\Spine\技能\特效\黑暗魔法弹1\2025_nongyaoxiong_attack.json" />
-    <None Include="Assets\Arts\Spine\主角动画\主角动画\zhujue.atlas.txt" />
     <None Include="Assets\Arts\Shaders\LcL\Pixel.shader" />
     <None Include="Assets\Arts\Spine\第四关\ShaBoss\XieZi\xiezi.json" />
     <None Include="Assets\Arts\Spine\宠物\Blue\黑暗blue2\pet_9213.json" />
@@ -1015,6 +1014,7 @@
     <None Include="Assets\Arts\Spine\宠物\Orange\火orange1——后\mon_vitality_spirits_03.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\黑暗purple3——后\pet_9310.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\黄电圈\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\主角动画\主角动画(8)\主角动画\zhujue.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Orange\冰orange1——前\mon_icicle_dragon_02.json" />
     <None Include="Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\package.json" />
     <None Include="Assets\Arts\Spine\怪物\PenHuoYu\Enemy_Inferiordevil.atlas.txt" />
@@ -1030,7 +1030,6 @@
     <None Include="Assets\Arts\Spine\技能\特效\27\9002_shijianshuo_boom.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\PuTong3\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\Arts\Spine\主角动画\主角动画\zhujue.json" />
     <None Include="Assets\Arts\Spine\普通攻击\火焰\火焰1\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\第四关\ShaBoss\XieZi\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹 已用\action.atlas.txt" />
@@ -1258,6 +1257,7 @@
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\火狼\Enemy_Boss_firewolf.json" />
     <None Include="Assets\Arts\Spine\技能\DiLie\1605122.json" />
+    <None Include="Assets\Arts\Spine\主角动画\主角动画(8)\主角动画\zhujue.json" />
     <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\第二关\boss\huoshanboss.json" />
     <None Include="Assets\Arts\Spine\技能\1225\黄散射\action.json" />
