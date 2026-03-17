@@ -254,6 +254,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\DianBaoZha\DianBaoZha.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\IceBaoZha\IceBaoZha.cs" />
     <Compile Include="Assets\Scripts\Tool\MainSkillInfo.cs" />
+    <Compile Include="Assets\Scripts\ShiZhuang\ShiZhuangWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\MonsterDetetor3.cs" />
     <Compile Include="Assets\Scripts\UIFrameWork\PanelManager.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\CloakFortureAdd.cs" />
@@ -293,6 +294,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong1.cs" />
     <Compile Include="Assets\Scripts\Tool\ClickFx.cs" />
     <Compile Include="Assets\Scripts\Window\SettingWindow.cs" />
+    <Compile Include="Assets\Scripts\Config\ShiZhuangConfig.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiDong\HeiDongNext.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\GreenWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Skill\FireTrigger.cs" />
@@ -363,6 +365,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkill2.cs" />
     <Compile Include="Assets\Scripts\WeaponSourceStone\SourceStoneItem.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleCloak1.cs" />
+    <Compile Include="Assets\Scripts\ShiZhuang\ShiZhuangItem.cs" />
     <Compile Include="Assets\Number Themes\Scripts\FloatingTextManager.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\DuPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueNecklace.cs" />

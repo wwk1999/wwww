@@ -173,6 +173,7 @@ public class YingDi : MonoBehaviour
                     WindowController.S.DuanZaoWindow.gameObject.SetActive(true);
                     break;
                 case  JiaoHuType.ShiZhuangDaShi:
+                    WindowController.S.ShiZhuangWindow.gameObject.SetActive(true);
                     break;
                 case  JiaoHuType.ShangRen:
                     WindowController.S.ShangDianWindow.gameObject.SetActive(true);

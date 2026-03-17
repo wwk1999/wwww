@@ -1317,6 +1317,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5254207400887733754}
   - {fileID: 7393176022292947972}
   m_Father: {fileID: 3220113976693643346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2623,8 +2624,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5254207400887733754}
+  m_Children: []
   m_Father: {fileID: 6022847175904121354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3302,11 +3302,11 @@ RectTransform:
   - {fileID: 1497133899153486228}
   - {fileID: 1535563201467058648}
   - {fileID: 1958599349983898224}
-  m_Father: {fileID: 7393176022292947972}
+  m_Father: {fileID: 6022847175904121354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -411, y: -78}
+  m_AnchoredPosition: {x: -411, y: -339}
   m_SizeDelta: {x: 3973.7922, y: 2072.647}
   m_Pivot: {x: -0.42618734, y: -0.44214955}
 --- !u!222 &8917200337776699676
@@ -7506,7 +7506,7 @@ GameObject:
   - component: {fileID: 9140858924922175253}
   - component: {fileID: 5229168999683781768}
   - component: {fileID: 5766337732733923807}
-  - component: {fileID: 5367333245123136607}
+  - component: {fileID: 4097216109058621808}
   m_Layer: 5
   m_Name: ShiZhuangWindow
   m_TagString: Untagged
@@ -7597,7 +7597,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5367333245123136607
+--- !u!114 &4097216109058621808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7606,32 +7606,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6997200507944021627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a42c31a20cbf8c41a73c7d69f33b5d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ccaff1ed8b15794a8a5553cb7ff8ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShiLaiMuButton: {fileID: 0}
-  Dian1Button: {fileID: 0}
-  Huo1Button: {fileID: 0}
-  HeiAn1Button: {fileID: 0}
-  Ice1Button: {fileID: 0}
-  LongButton: {fileID: 0}
-  KongButton: {fileID: 0}
-  HuLiButton: {fileID: 0}
-  Huo2Button: {fileID: 0}
-  HeiAn2Button: {fileID: 0}
-  Ice2Button: {fileID: 0}
-  Dian2Button: {fileID: 0}
-  YuanGuShenLinButton: {fileID: 0}
-  Desc: {fileID: 0}
-  Name1: {fileID: 0}
-  Name2: {fileID: 0}
-  Name3: {fileID: 0}
-  Name4: {fileID: 0}
-  Image1: {fileID: 0}
-  Image2: {fileID: 0}
-  Image3: {fileID: 0}
-  Image4: {fileID: 0}
-  ExitButton: {fileID: 0}
+  ske: {fileID: 2438105167899795942}
+  ListContent: {fileID: 7487707344713761493}
+  JieSuoContent: {fileID: 6124111910239927070}
+  AttributeContent: {fileID: 6000630936098116641}
+  ExitButton: {fileID: 5422418841604437926}
 --- !u!1 &7036731253948212667
 GameObject:
   m_ObjectHideFlags: 0
