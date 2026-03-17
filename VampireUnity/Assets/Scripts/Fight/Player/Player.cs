@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using Config;
 using Spine;
 using Spine.Unity;
 using TMPro;
@@ -252,6 +253,49 @@ public class Player : MonoBehaviour
 
     public GameObject LevelUp;
     public ParticleSystem LevelUpParticle;
+    
+    public string GetSkinNameByType(ShiZhuangType shiZhuangType)
+    {
+        switch (shiZhuangType)
+        {
+            case ShiZhuangType.GreenDian:
+                return "greendian";
+            case ShiZhuangType.GreenHuo:
+                return "greenhuo";
+            case ShiZhuangType.GreenIce:
+                return "greenbing";
+            case ShiZhuangType.GreenHeiAn:
+                return "greenheian";
+      
+            case ShiZhuangType.BlueDian:
+                return "bluedian";
+            case ShiZhuangType.BlueHuo:
+                return "bluehuo";
+            case ShiZhuangType.BlueIce:
+                return "bluebing";
+            case ShiZhuangType.BlueHeiAn:
+                return "blueheian";
+      
+            case ShiZhuangType.PurpleDian:
+                return "purpledian";
+            case ShiZhuangType.PurpleHuo:
+                return "purplehuo";
+            case ShiZhuangType.PurpleIce:
+                return "purplebing";
+            case ShiZhuangType.PurpleHeiAn:
+                return "purpleheian";
+      
+            case ShiZhuangType.OrangeDian:
+                return "orangedian";
+            case ShiZhuangType.OrangeHuo:
+                return "orangehuo";
+            case ShiZhuangType.OrangeIce:
+                return "orangebing";
+            case ShiZhuangType.OrangeHeiAn:
+                return "orangeheian";
+        }
+        return null;
+    }
     private void Awake()
     {
         playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
@@ -260,6 +304,15 @@ public class Player : MonoBehaviour
         playerSkeleton.AnimationState.Event += OnSpineEvent;
         ObserverModuleManager.S.RegisterEvent(ConstKeys.LevelUpAnim, PlayLevelUpAnim);
         ShowTitle();
+        Skeleton skeleton = playerSkeleton.Skeleton;
+        string skinName = GetSkinNameByType(PlayerData.S.shiZhuangType);
+        Skin skin = skeleton.Data.FindSkin(skinName);
+        if (skin != null)
+        {
+            skeleton.SetSkin(skin);
+            skeleton.SetupPoseSlots();
+            playerSkeleton.LateUpdate();
+        }
     }
     
     private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Config;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShiZhuangItem : MonoBehaviour
 {
@@ -13,8 +14,18 @@ public class ShiZhuangItem : MonoBehaviour
    public TextMeshProUGUI Name4;
    public TextMeshProUGUI Name5;
    public TextMeshProUGUI Name6;
+   public Button bgButton;
 
    [NonSerialized]public ShiZhuangType Type;
+
+   private void Start()
+   {
+      bgButton.onClick.AddListener(() =>
+      {
+         ObserverModuleManager.S.SendEvent("ShowShiZhuang",Type);
+      });
+   }
+   
 
    public void SetShiZhuangItem()
    {

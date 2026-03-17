@@ -46,6 +46,8 @@ namespace Config
         public static Dictionary<ShiZhuangType, ShiZhuangAttributeItem> ShiZhuangAttributeDic =
             new Dictionary<ShiZhuangType, ShiZhuangAttributeItem>()
             {
+                { ShiZhuangType.None ,new ShiZhuangAttributeItem(){Attack = 0,Hp = 0,MoveSpeed = 0,AttackSpeed = 0}},
+
                 { ShiZhuangType.GreenHuo ,new ShiZhuangAttributeItem(){Attack = 5,Hp = 8,MoveSpeed = 5,AttackSpeed = 5}},
                 { ShiZhuangType.GreenDian ,new ShiZhuangAttributeItem(){Attack = 5,Hp = 8,MoveSpeed = 5,AttackSpeed = 5}},
                 { ShiZhuangType.GreenIce ,new ShiZhuangAttributeItem(){Attack = 5,Hp = 8,MoveSpeed = 5,AttackSpeed = 5}},

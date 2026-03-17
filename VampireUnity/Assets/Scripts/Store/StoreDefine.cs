@@ -192,10 +192,14 @@ public class StoreDefine : XSingleton<StoreDefine>
         public bool IsQuanPing = false;
 
         public int GameTime = 0;
+        
+        public ShiZhuangType shiZhuangType = ShiZhuangType.None;
+
 
 
         public void CopyFromRuntime(PlayerData runtime)
         {
+            shiZhuangType = runtime.shiZhuangType;
             level = runtime.level;
             exp = runtime.exp;
             bloodEnergy = runtime.bloodEnergy;
@@ -326,6 +330,7 @@ public class StoreDefine : XSingleton<StoreDefine>
 
         public void ApplyToRuntime(PlayerData runtime)
         {
+            runtime.shiZhuangType = shiZhuangType;
             runtime.level = level;
             runtime.exp = exp;
             runtime.bloodEnergy = bloodEnergy;

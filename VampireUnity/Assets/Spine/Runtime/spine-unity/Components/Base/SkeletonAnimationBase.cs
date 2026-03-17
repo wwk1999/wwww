@@ -360,7 +360,7 @@ namespace Spine.Unity {
 			UpdateOncePerFrame(DeltaTime);
 		}
 
-		protected virtual void LateUpdate () {
+		public virtual void LateUpdate () {
 #if USE_THREADED_ANIMATION_UPDATE
 			if (isUpdatedExternally) return;
 #endif

@@ -152,6 +152,9 @@ public class PlayerData : XSingleton<PlayerData>
     public bool IsQuanPing=false;
 
     public int GameTime = 0;
+    
+    
+    public ShiZhuangType shiZhuangType = ShiZhuangType.None;
 
     
     protected override void Awake()

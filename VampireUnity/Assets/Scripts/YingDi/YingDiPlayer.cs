@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,10 +12,69 @@ public class YingDiPlayer : MonoBehaviour
    public Rigidbody2D rg;
    public GameObject parent;
    public GameObject bodyparent;
+   public string GetSkinNameByType(ShiZhuangType shiZhuangType)
+   {
+      switch (shiZhuangType)
+      {
+         case ShiZhuangType.GreenDian:
+            return "greendian";
+         case ShiZhuangType.GreenHuo:
+            return "greenhuo";
+         case ShiZhuangType.GreenIce:
+            return "greenbing";
+         case ShiZhuangType.GreenHeiAn:
+            return "greenheian";
+      
+         case ShiZhuangType.BlueDian:
+            return "bluedian";
+         case ShiZhuangType.BlueHuo:
+            return "bluehuo";
+         case ShiZhuangType.BlueIce:
+            return "bluebing";
+         case ShiZhuangType.BlueHeiAn:
+            return "blueheian";
+      
+         case ShiZhuangType.PurpleDian:
+            return "purpledian";
+         case ShiZhuangType.PurpleHuo:
+            return "purplehuo";
+         case ShiZhuangType.PurpleIce:
+            return "purplebing";
+         case ShiZhuangType.PurpleHeiAn:
+            return "purpleheian";
+      
+         case ShiZhuangType.OrangeDian:
+            return "orangedian";
+         case ShiZhuangType.OrangeHuo:
+            return "orangehuo";
+         case ShiZhuangType.OrangeIce:
+            return "orangebing";
+         case ShiZhuangType.OrangeHeiAn:
+            return "orangeheian";
+      }
+      return null;
+   }
+   public void PlayerHuanZhuang(object[] obj)
+   {
+      Spine.Skeleton skeleton = playerSkeleton.Skeleton;
+      string skinName = GetSkinNameByType(PlayerData.S.shiZhuangType);
+      Spine.Skin skin = skeleton.Data.FindSkin(skinName);
+      if (skin != null)
+      {
+         skeleton.SetSkin(skin);
+         skeleton.SetupPoseSlots();
+         playerSkeleton.LateUpdate();
+      }
+   }
 
+   private void OnDestroy()
+   {
+      ObserverModuleManager.S.UnRegisterEvent("PlayerHuanZhuang",PlayerHuanZhuang);
+   }
 
    private void Start()
    {
+      ObserverModuleManager.S.RegisterEvent("PlayerHuanZhuang",PlayerHuanZhuang);
       playerSkeleton.AnimationState.SetAnimation(0, "idle",true);
    }
 

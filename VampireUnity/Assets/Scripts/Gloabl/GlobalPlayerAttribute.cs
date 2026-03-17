@@ -2849,6 +2849,7 @@ public class GlobalPlayerAttribute
        var value = (weaponAttribute.AttackSpeed + PlayerChiBangAttribute.attackSpeed + HunQiAttackSpeed);
        value += FinalChongWuAttribute.AttackSpeed;
        value *= (1  + FuJiaDamageSpeed / 100.0f);
+       value *= (1  + ShiZhuangAttackSpeed / 100.0f);
        return value;
    }
 
@@ -2903,7 +2904,7 @@ public class GlobalPlayerAttribute
    {
        float speed=(_baseMoveSpeed+PlayerChiBangAttribute.moveSpeed+TitleAttributeAll.MoveSpeed);
        speed += FinalChongWuAttribute.MoveSpeed;
-       speed *= (1 );
+       speed *= (1+ShiZhuangMoveSpeed/100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
        {
            speed*=1.25f;
@@ -2931,6 +2932,7 @@ public class GlobalPlayerAttribute
        float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp+TitleAttributeAll.Hp));
        maxhp += FinalChongWuAttribute.Hp;
        maxhp *= (1.0f + MaxHpPercent / 100f) * (1.0f + BaoShiHp / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
+       maxhp *= (1.0f + ShiZhuangAttack / 100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            maxhp /= 2;
@@ -2944,6 +2946,7 @@ public class GlobalPlayerAttribute
        damage += FinalChongWuAttribute.Attack;
        damage *= (1f + DamageAddPercent / 100f) * (1.0f + BaoShiAttack / 100) *
                  (1.0f + TitleAttributeAll.AllBaseAttribute);
+       damage *= (1.0f + ShiZhuangHp / 100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
        {
            damage *=1.3f;
@@ -3022,14 +3025,44 @@ public class GlobalPlayerAttribute
    }
    
 
+   //时装属性
+   public static float ShiZhuangAttack => GetShiZhuangAttack();
+   public static float ShiZhuangHp => GetShiZhuangHp();
+   public static float ShiZhuangMoveSpeed => GetShiZhuangMoveSpeed();
+   public static float ShiZhuangAttackSpeed => GetShiZhuangAttackSpeed();
+
+
+   public static float GetShiZhuangAttack()
+   {
+       ShiZhuangAttributeItem shiZhuangAttributeItem =
+           ShiZhuangConfig.ShiZhuangAttributeDic[PlayerData.S.shiZhuangType];
+       return shiZhuangAttributeItem.Attack;
+   }
+   
+   public static float GetShiZhuangHp()
+   {
+       ShiZhuangAttributeItem shiZhuangAttributeItem =
+           ShiZhuangConfig.ShiZhuangAttributeDic[PlayerData.S.shiZhuangType];
+       return shiZhuangAttributeItem.Hp;
+   }
+   
+   public static float GetShiZhuangMoveSpeed()
+   {
+       ShiZhuangAttributeItem shiZhuangAttributeItem =
+           ShiZhuangConfig.ShiZhuangAttributeDic[PlayerData.S.shiZhuangType];
+       return shiZhuangAttributeItem.MoveSpeed;
+   }
+   
+   public static float GetShiZhuangAttackSpeed()
+   {
+       ShiZhuangAttributeItem shiZhuangAttributeItem =
+           ShiZhuangConfig.ShiZhuangAttributeDic[PlayerData.S.shiZhuangType];
+       return shiZhuangAttributeItem.AttackSpeed;
+   }
+   
 
    
    //技能面板
-   
-   
-   
-   
-   
    public static void ResetFuJiaAttribute()
    {
     KillReplyHpPercent=0;
