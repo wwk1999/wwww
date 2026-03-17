@@ -115,6 +115,29 @@ namespace Config
             { ShiZhuangType.OrangeIce , "湮灭零度" },
             { ShiZhuangType.OrangeDian , "原初闪电" },
             { ShiZhuangType.OrangeHeiAn , "终末之暗" },
+        };
+        
+        public static Dictionary<ShiZhuangType, int> ShiZhuangQualityDic = new Dictionary<ShiZhuangType, int>()
+        {
+            { ShiZhuangType.GreenHuo , 2 },
+            { ShiZhuangType.GreenIce , 2 },
+            { ShiZhuangType.GreenDian , 2 },
+            { ShiZhuangType.GreenHeiAn , 2 },
+            
+            { ShiZhuangType.BlueHuo , 3 },
+            { ShiZhuangType.BlueIce , 3 },
+            { ShiZhuangType.BlueDian , 3 },
+            { ShiZhuangType.BlueHeiAn , 3},
+            
+            { ShiZhuangType.PurpleHuo , 4},
+            { ShiZhuangType.PurpleIce , 4 },
+            { ShiZhuangType.PurpleDian , 4},
+            { ShiZhuangType.PurpleHeiAn , 4 },
+            
+            { ShiZhuangType.OrangeHuo , 5},
+            { ShiZhuangType.OrangeIce , 5},
+            { ShiZhuangType.OrangeDian , 5},
+            { ShiZhuangType.OrangeHeiAn , 5},
 
         };
     }
