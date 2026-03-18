@@ -1,0 +1,115 @@
+{
+"skeleton": { "images": "images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "图层20", "bone": "root", "attachment": "图层20", "color": "ffffff9c" },
+	{ "name": "图层22", "bone": "root", "attachment": "图层22" },
+	{ "name": "图层19", "bone": "root", "attachment": "图层19" },
+	{ "name": "纸底板", "bone": "root", "attachment": "纸底板" },
+	{ "name": "关卡解锁进度条框", "bone": "root", "attachment": "关卡解锁进度条框" },
+	{ "name": "关卡解锁进度条", "bone": "root", "attachment": "关卡解锁进度条" },
+	{ "name": "ui文字框（关卡选项地图）", "bone": "root", "attachment": "ui文字框（关卡选项地图）" },
+	{ "name": "异界", "bone": "root", "attachment": "异界" },
+	{ "name": "沙漠", "bone": "root", "attachment": "沙漠" },
+	{ "name": "沼泽", "bone": "root", "attachment": "沼泽" },
+	{ "name": "雪山", "bone": "root", "attachment": "雪山" },
+	{ "name": "火山", "bone": "root", "attachment": "火山" },
+	{ "name": "森林", "bone": "root", "attachment": "森林" },
+	{ "name": "异界文字框", "bone": "root", "attachment": "异界文字框" },
+	{ "name": "沙漠文字框", "bone": "root", "attachment": "沙漠文字框" },
+	{ "name": "沼泽文字框", "bone": "root", "attachment": "沼泽文字框" },
+	{ "name": "雪山文字框", "bone": "root", "attachment": "雪山文字框" },
+	{ "name": "火山文字框", "bone": "root", "attachment": "火山文字框" },
+	{ "name": "森林文字框", "bone": "root", "attachment": "森林文字框" },
+	{ "name": "雪山关卡按钮", "bone": "root", "attachment": "雪山关卡按钮" },
+	{ "name": "火山关卡按钮", "bone": "root", "attachment": "火山关卡按钮" },
+	{ "name": "沼泽关卡按钮", "bone": "root", "attachment": "沼泽关卡按钮" },
+	{ "name": "沙漠关卡按钮", "bone": "root", "attachment": "沙漠关卡按钮" },
+	{ "name": "森林关卡按钮", "bone": "root", "attachment": "森林关卡按钮" },
+	{ "name": "翅膀关卡按钮", "bone": "root", "attachment": "翅膀关卡按钮" }
+],
+"skins": {
+	"default": {
+		"翅膀关卡按钮": {
+			"翅膀关卡按钮": {"x": 1597,"y": 511.5,"width": 102,"height": 109 }
+		},
+		"森林关卡按钮": {
+			"森林关卡按钮": {"x": 789.5,"y": 881,"width": 109,"height": 108 }
+		},
+		"沙漠关卡按钮": {
+			"沙漠关卡按钮": {"x": 1588.5,"y": 672.5,"width": 125,"height": 123 }
+		},
+		"沼泽关卡按钮": {
+			"沼泽关卡按钮": {"x": 920,"y": 496.5,"width": 134,"height": 89 }
+		},
+		"火山关卡按钮": {
+			"火山关卡按钮": {"x": 1315,"y": 847,"width": 110,"height": 100 }
+		},
+		"雪山关卡按钮": {
+			"雪山关卡按钮": {"x": 2022,"y": 937,"width": 106,"height": 108 }
+		},
+		"森林文字框": {
+			"森林文字框": {"x": 726.5,"y": 1189,"width": 265,"height": 110 }
+		},
+		"火山文字框": {
+			"火山文字框": {"x": 1460.5,"y": 1187,"width": 229,"height": 120 }
+		},
+		"雪山文字框": {
+			"雪山文字框": {"x": 2132.5,"y": 1188.5,"width": 277,"height": 117 }
+		},
+		"沼泽文字框": {
+			"沼泽文字框": {"x": 719,"y": 369.5,"width": 222,"height": 101 }
+		},
+		"沙漠文字框": {
+			"沙漠文字框": {"x": 1569,"y": 368,"width": 222,"height": 96 }
+		},
+		"异界文字框": {
+			"异界文字框": {"x": 2138,"y": 334.5,"width": 264,"height": 95 }
+		},
+		"森林": {
+			"森林": {"x": 753,"y": 930.5,"width": 556,"height": 499 }
+		},
+		"火山": {
+			"火山": {"x": 1302.5,"y": 989,"width": 625,"height": 540 }
+		},
+		"雪山": {
+			"雪山": {"x": 1891.5,"y": 981.5,"width": 701,"height": 503 }
+		},
+		"沼泽": {
+			"沼泽": {"x": 972.5,"y": 593,"width": 667,"height": 498 }
+		},
+		"沙漠": {
+			"沙漠": {"x": 1576.5,"y": 607.5,"width": 673,"height": 507 }
+		},
+		"异界": {
+			"异界": {"x": 2083,"y": 593,"width": 506,"height": 516 }
+		},
+		"ui文字框（关卡选项地图）": {
+			"ui文字框（关卡选项地图）": {"x": 1381,"y": 1386,"width": 900,"height": 238 }
+		},
+		"关卡解锁进度条": {
+			"关卡解锁进度条": {"x": 1185,"y": 245.5,"width": 106,"height": 49 }
+		},
+		"关卡解锁进度条框": {
+			"关卡解锁进度条框": {"x": 1376.5,"y": 245.5,"width": 513,"height": 81 }
+		},
+		"纸底板": {
+			"纸底板": {"x": 1387.5,"y": 766.5,"width": 2093,"height": 1181 }
+		},
+		"图层19": {
+			"图层19": {"x": 1081.5,"y": 390.5,"width": 1947,"height": 783 }
+		},
+		"图层22": {
+			"图层22": {"x": 1381.5,"y": 775,"width": 2641,"height": 1524 }
+		},
+		"图层20": {
+			"图层20": {"x": 1365,"y": 768,"width": 2732,"height": 1538 }
+		}
+	}
+},
+"animations":{
+	"animation": {}
+}
+}

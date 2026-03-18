@@ -1087,6 +1087,7 @@
     <None Include="Assets\Arts\Spine\技能\DianPeng\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\死亡\hero_siwang.json" />
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple2——后\mon_killer_bird_03.atlas.txt" />
+    <None Include="Assets\Arts\Texture\新界面\地图\关卡信息\关卡信息.json" />
     <None Include="Assets\Arts\Spine\宠物\White\电white1\Anima_Small_Skeleton_M5.json" />
     <None Include="Assets\Arts\Spine\技能\黑暗peng\9005_zhizhu_effectb.atlas.txt" />
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通\action.atlas.txt" />
@@ -1115,8 +1116,10 @@
     <None Include="Assets\Arts\Spine\技能\特效\29\buff_bingdong.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.9\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
     <None Include="Assets\Arts\Spine\技能\playerhurt\skeleton.atlas.txt" />
+    <None Include="Assets\Arts\Texture\新界面\地图\地图UI\选关UI.json" />
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\SuccessSpine\bui_9.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹2\action.json" />
+    <None Include="Assets\Arts\Texture\新界面\地图\异界难度选择UI\异界关卡.json" />
     <None Include="Assets\Arts\Spine\第三关\蚊子\wenzi.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.7.1\ValidationConfig.json" />
     <None Include="Assets\Arts\Spine\怪物\TreeMan1\Enemy_Boss_arbor.json" />

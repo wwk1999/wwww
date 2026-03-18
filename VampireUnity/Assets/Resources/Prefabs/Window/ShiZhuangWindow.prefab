@@ -3816,6 +3816,7 @@ MonoBehaviour:
   JieSuoContent: {fileID: 6124111910239927070}
   AttributeContent: {fileID: 6000630936098116641}
   ExitButton: {fileID: 5422418841604437926}
+  HuanZhuangButton: {fileID: 3610940576668580379}
 --- !u!1 &7207596322394246240
 GameObject:
   m_ObjectHideFlags: 0

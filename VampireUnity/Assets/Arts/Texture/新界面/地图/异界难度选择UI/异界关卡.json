@@ -1,0 +1,59 @@
+{
+"skeleton": { "images": "images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "收黑", "bone": "root", "attachment": "收黑", "color": "ffffff80" },
+	{ "name": "底图", "bone": "root", "attachment": "底图" },
+	{ "name": "版面一", "bone": "root", "attachment": "版面一" },
+	{ "name": "版面二", "bone": "root", "attachment": "版面二" },
+	{ "name": "开始关卡", "bone": "root", "attachment": "开始关卡" },
+	{ "name": "开始关卡选中", "bone": "root", "attachment": "开始关卡选中" },
+	{ "name": "叉叉", "bone": "root", "attachment": "叉叉" },
+	{ "name": "左", "bone": "root", "attachment": "左" },
+	{ "name": "左（选中）", "bone": "root", "attachment": "左（选中）" },
+	{ "name": "右", "bone": "root", "attachment": "右" },
+	{ "name": "右（选中）", "bone": "root", "attachment": "右（选中）" }
+],
+"skins": {
+	"default": {
+		"右（选中）": {
+			"右（选中）": {"x": 1705,"y": 1098.5,"width": 190,"height": 137 }
+		},
+		"右": {
+			"右": {"x": 1707.5,"y": 1091.5,"width": 131,"height": 81 }
+		},
+		"左（选中）": {
+			"左（选中）": {"x": 1091.5,"y": 1096.5,"width": 183,"height": 138 }
+		},
+		"左": {
+			"左": {"x": 1091.5,"y": 1091.5,"width": 127,"height": 81 }
+		},
+		"叉叉": {
+			"叉叉": {"x": 2554.5,"y": 1266.5,"width": 125,"height": 123 }
+		},
+		"开始关卡选中": {
+			"开始关卡选中": {"x": 2345.5,"y": 211.5,"width": 399,"height": 187 }
+		},
+		"开始关卡": {
+			"开始关卡": {"x": 2345.5,"y": 208,"width": 327,"height": 116 }
+		},
+		"版面二": {
+			"版面二": {"x": 1826.5,"y": 599.5,"width": 705,"height": 749 }
+		},
+		"版面一": {
+			"版面一": {"x": 966,"y": 599.5,"width": 704,"height": 749 }
+		},
+		"底图": {
+			"底图": {"x": 1427,"y": 692,"width": 2328,"height": 1214 }
+		},
+		"收黑": {
+			"收黑": {"x": 1371,"y": 784,"width": 2744,"height": 1570 }
+		}
+	}
+},
+"animations":{
+	"animation": {}
+}
+}

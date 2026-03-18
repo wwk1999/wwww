@@ -1,0 +1,35 @@
+{
+"skeleton": { "images": "images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "收黑", "bone": "root", "attachment": "收黑", "color": "ffffff80" },
+	{ "name": "底图", "bone": "root", "attachment": "底图" },
+	{ "name": "开始关卡", "bone": "root", "attachment": "开始关卡" },
+	{ "name": "开始关卡选中", "bone": "root", "attachment": "开始关卡选中" },
+	{ "name": "叉叉", "bone": "root", "attachment": "叉叉" }
+],
+"skins": {
+	"default": {
+		"叉叉": {
+			"叉叉": {"x": 2554.5,"y": 1096.5,"width": 125,"height": 123 }
+		},
+		"开始关卡选中": {
+			"开始关卡选中": {"x": 2345.5,"y": 501.5,"width": 399,"height": 187 }
+		},
+		"开始关卡": {
+			"开始关卡": {"x": 2344.5,"y": 495,"width": 327,"height": 116 }
+		},
+		"底图": {
+			"底图": {"x": 1427,"y": 760,"width": 2328,"height": 740 }
+		},
+		"收黑": {
+			"收黑": {"x": 1371,"y": 784,"width": 2744,"height": 1570 }
+		}
+	}
+},
+"animations":{
+	"animation": {}
+}
+}
