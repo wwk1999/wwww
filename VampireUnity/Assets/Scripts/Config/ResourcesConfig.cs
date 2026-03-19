@@ -6,6 +6,37 @@ using UnityEngine;
 public class ResourcesConfig : MonoBehaviour
 {
     public static Sprite LingHun;
+
+    //地图
+    public static Sprite Level1Liang;
+    public static Sprite Level1An;
+    public static Sprite Level2Liang;
+    public static Sprite Level2An;
+    public static Sprite Level3Liang;
+    public static Sprite Level3An;
+    public static Sprite Level4Liang;
+    public static Sprite Level4An;
+    public static Sprite Level5Liang;
+    public static Sprite Level5An;
+    public static Sprite Level6Liang;
+    public static Sprite Level6An;
+    public static Sprite Level6XuanZhong;
+
+    public static Sprite Level1ButtonLiang;
+    public static Sprite Level1ButtonAn;
+    public static Sprite Level2ButtonLiang;
+    public static Sprite Level2ButtonAn;
+    public static Sprite Level3ButtonLiang;
+    public static Sprite Level3ButtonAn;
+    public static Sprite Level4ButtonLiang;
+    public static Sprite Level4ButtonAn;
+    public static Sprite Level5ButtonLiang;
+    public static Sprite Level5ButtonAn;
+    
+    public static Sprite ChongWuButtonLiang;
+    public static Sprite ChongWuButtonAn;
+    public static Sprite ChiBangButtonLiang;
+    public static Sprite ChiBangButtonAn;
     
     //武器图片
     public static Sprite Primary;//ice
@@ -1186,6 +1217,37 @@ public class ResourcesConfig : MonoBehaviour
     {
         DaKongShi=Resources.Load<Sprite>("Sprite/Prop/DaKongShi");
 
+        
+        //地图
+        Level1Liang=Resources.Load<Sprite>("Sprite/DiTu/Level1Liang");
+        Level1An=Resources.Load<Sprite>("Sprite/DiTu/Level1An");
+        Level2Liang=Resources.Load<Sprite>("Sprite/DiTu/Level2Liang");
+        Level2An=Resources.Load<Sprite>("Sprite/DiTu/Level2An");
+        Level3Liang=Resources.Load<Sprite>("Sprite/DiTu/Level3Liang");
+        Level3An=Resources.Load<Sprite>("Sprite/DiTu/Level3An");
+        Level4Liang=Resources.Load<Sprite>("Sprite/DiTu/Level4Liang");
+        Level4An=Resources.Load<Sprite>("Sprite/DiTu/Level4Liang");
+        Level5Liang=Resources.Load<Sprite>("Sprite/DiTu/Level5Liang");
+        Level5An=Resources.Load<Sprite>("Sprite/DiTu/Level5Liang");
+        Level6Liang=Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
+        Level6An=Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
+        Level6XuanZhong=Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
+
+        Level1ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level1ButtonLiang");
+        Level1ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level1ButtonAn");
+        Level2ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level2ButtonLiang");
+        Level2ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level2ButtonAn");
+        Level3ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level3ButtonLiang");
+        Level3ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level3ButtonAn");
+        Level4ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level4ButtonLiang");
+        Level4ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level4ButtonAn");
+        Level5ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level5ButtonLiang");
+        Level5ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level5ButtonAn");
+    
+        ChongWuButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/ChongWuButtonLiang");
+        ChongWuButtonAn=Resources.Load<Sprite>("Sprite/DiTu/ChongWuButtonAn");
+        ChiBangButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/ChiBangButtonLiang");
+        ChiBangButtonAn=Resources.Load<Sprite>("Sprite/DiTu/ChiBangButtonAn");
         //药水
         Hp1=Resources.Load<Sprite>("Sprite/YaoShui/Hp1");
         Hp2=Resources.Load<Sprite>("Sprite/YaoShui/Hp2");
