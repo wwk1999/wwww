@@ -1226,11 +1226,11 @@ public class ResourcesConfig : MonoBehaviour
         Level3Liang=Resources.Load<Sprite>("Sprite/DiTu/Level3Liang");
         Level3An=Resources.Load<Sprite>("Sprite/DiTu/Level3An");
         Level4Liang=Resources.Load<Sprite>("Sprite/DiTu/Level4Liang");
-        Level4An=Resources.Load<Sprite>("Sprite/DiTu/Level4Liang");
+        Level4An=Resources.Load<Sprite>("Sprite/DiTu/Level4An");
         Level5Liang=Resources.Load<Sprite>("Sprite/DiTu/Level5Liang");
-        Level5An=Resources.Load<Sprite>("Sprite/DiTu/Level5Liang");
+        Level5An=Resources.Load<Sprite>("Sprite/DiTu/Level5An");
         Level6Liang=Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
-        Level6An=Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
+        Level6An=Resources.Load<Sprite>("Sprite/DiTu/Level6An");
         Level6XuanZhong=Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
 
         Level1ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level1ButtonLiang");

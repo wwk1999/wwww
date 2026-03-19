@@ -202,6 +202,7 @@
     <Compile Include="Assets\Scripts\Fight\CameraContraller.cs" />
     <Compile Include="Assets\Scripts\UIFrameWork\UITool.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenCloth.cs" />
+    <Compile Include="Assets\Scripts\Tool\GameLevelButtonTool.cs" />
     <Compile Include="Assets\Scripts\Store\EquipIDData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />

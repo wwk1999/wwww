@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler
+public class GameLevelWindow1 : MonoBehaviour
 {
     //public GameObject loopScrollRect;
     public Button exitButton;
@@ -16,274 +16,108 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     public Button level9Button;
     public Button level12Button;
     public Button level15Button;
-
-
     public GameObject levelInfo;
-
-
     public GameObject MJInfo;
     public Button MJButton;
     public GameObject MjGameObject;
 
-
+    public Image Level2Image;
+    public Image Level3Image;
+    public Image Level4Image;
+    public Image Level5Image;
+    public Image Level6Image;
     
-    public RectTransform rectTransform; // 当前UI的RectTransform
-    private Vector2 lastMousePosition;   // 上次鼠标位置
-    
-    // 地图尺寸常量
-    private const float MAP_WIDTH = 3840f;
-    private const float MAP_HEIGHT = 2160f;
-    
-    // 边界限制变量
-    private float maxXBound;
-    private float minXBound;
-    private float maxYBound;
-    private float minYBound;
-    
-    // 回弹边界变量
-    private float snapMaxX;
-    private float snapMinX;
-    private float snapMaxY;
-    private float snapMinY;
-
-    public void ShowGameLevelButton()
-    {
-        level3Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=3);
-        level6Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=6);
-        level9Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=9);
-        level12Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=12);
-        level15Button.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=15);
-        MjGameObject.gameObject.SetActive(LevelInfoConfig.MaxGameLevel>=16);
-    }
-    // 开始拖动时
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        Debug.Log("开始拖动");
-        lastMousePosition = eventData.position; // 记录开始拖拽位置
-    }
-
-    // 拖动中
-    public void OnDrag(PointerEventData eventData)
-    {
-        Vector2 currentMousePosition = eventData.position; // 当前鼠标位置
-        Vector2 delta = currentMousePosition - lastMousePosition;  // 鼠标移动的差值
-
-        // 改变地图位置
-        rectTransform.anchoredPosition += delta;
-        
-        // 应用边界限制（带阻尼效果）
-        Vector3 currentPos = rectTransform.transform.localPosition;
-        Vector3 clampedPos = currentPos;
-        
-        // 水平边界限制
-        if (currentPos.x > maxXBound) 
-        {
-            float overshoot = currentPos.x - maxXBound;
-            float damping = Mathf.Clamp01(1f - overshoot / 100f); // 阻尼系数
-            clampedPos.x = maxXBound + overshoot * damping * 0.3f;
-        }
-        else if (currentPos.x < minXBound) 
-        {
-            float overshoot = minXBound - currentPos.x;
-            float damping = Mathf.Clamp01(1f - overshoot / 100f); // 阻尼系数
-            clampedPos.x = minXBound - overshoot * damping * 0.3f;
-        }
-        
-        // 垂直边界限制
-        if (currentPos.y > maxYBound) 
-        {
-            float overshoot = currentPos.y - maxYBound;
-            float damping = Mathf.Clamp01(1f - overshoot / 100f); // 阻尼系数
-            clampedPos.y = maxYBound + overshoot * damping * 0.3f;
-        }
-        else if (currentPos.y < minYBound) 
-        {
-            float overshoot = minYBound - currentPos.y;
-            float damping = Mathf.Clamp01(1f - overshoot / 100f); // 阻尼系数
-            clampedPos.y = minYBound - overshoot * damping * 0.3f;
-        }
-        
-        rectTransform.transform.localPosition = clampedPos;
-
-        // 记录最新的鼠标位置
-        lastMousePosition = currentMousePosition;
-    }
-    
-    // 结束拖动时（不必须要实现，可以为空）
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        Vector3 targetPosition = rectTransform.transform.localPosition;
-        Debug.Log("结束拖动");
-        
-        // 应用回弹边界
-        if (rectTransform.transform.localPosition.x > snapMaxX)
-        {
-            targetPosition.x = snapMaxX;
-        }
-        if (rectTransform.transform.localPosition.x < snapMinX)
-        {
-            targetPosition.x = snapMinX;
-        }
-        if (rectTransform.transform.localPosition.y > snapMaxY)
-        {
-            targetPosition.y = snapMaxY;
-        }
-        if (rectTransform.transform.localPosition.y < snapMinY)
-        {
-            targetPosition.y = snapMinY;
-        }
-        StartCoroutine(SnapToPosition(targetPosition));
-    }
-    
-    private IEnumerator SnapToPosition(Vector3 targetPosition)
-    {
-        float duration = 0.3f; // 回弹持续时间
-        Vector3 startPosition = rectTransform.transform.localPosition;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsedTime / duration);
-            
-            // 使用缓动函数使动画更自然
-            float easeOut = 1f - Mathf.Pow(1f - t, 3f); // 缓出效果
-            rectTransform.transform.localPosition = Vector3.Lerp(startPosition, targetPosition, easeOut);
-            yield return null;
-        }
-        
-        rectTransform.transform.localPosition = targetPosition; // 确保最终位置准确
-    }
-    
-    // 计算边界限制
-    private void CalculateBounds()
-    {
-        // 获取当前屏幕分辨率
-        float screenWidth = Screen.width;
-        float screenHeight = Screen.height;
-        
-        // 获取Canvas的缩放模式
-        Canvas canvas = GetComponentInParent<Canvas>();
-        CanvasScaler scaler = canvas?.GetComponent<CanvasScaler>();
-        
-        // 计算实际的可视区域尺寸
-        float viewportWidth = screenWidth;
-        float viewportHeight = screenHeight;
-        
-        if (scaler != null)
-        {
-            // 根据Canvas Scaler的缩放模式调整
-            switch (scaler.uiScaleMode)
-            {
-                case CanvasScaler.ScaleMode.ScaleWithScreenSize:
-                    // 使用参考分辨率
-                    viewportWidth = scaler.referenceResolution.x;
-                    viewportHeight = scaler.referenceResolution.y;
-                    break;
-                case CanvasScaler.ScaleMode.ConstantPixelSize:
-                    // 像素大小不变，直接使用屏幕分辨率
-                    break;
-                case CanvasScaler.ScaleMode.ConstantPhysicalSize:
-                    // 物理大小不变，需要考虑DPI
-                    viewportWidth = screenWidth / Screen.dpi * 96f; // 96 DPI作为参考
-                    viewportHeight = screenHeight / Screen.dpi * 96f;
-                    break;
-            }
-        }
-        
-        // 计算地图在屏幕上的显示尺寸
-        float mapDisplayWidth = MAP_WIDTH;
-        float mapDisplayHeight = MAP_HEIGHT;
-        
-        // 计算边界限制（地图边缘不能超出屏幕）
-        maxXBound = (mapDisplayWidth - viewportWidth) / 2f;
-        minXBound = -(mapDisplayWidth - viewportWidth) / 2f;
-        maxYBound = (mapDisplayHeight - viewportHeight) / 2f;
-        minYBound = -(mapDisplayHeight - viewportHeight) / 2f;
-        
-        // 计算回弹边界（稍微宽松一些，提供更好的用户体验）
-        float snapMargin = Mathf.Min(160f, Mathf.Min(viewportWidth, viewportHeight) * 0.1f); // 动态计算回弹边距
-        snapMaxX = maxXBound - snapMargin;
-        snapMinX = minXBound + snapMargin;
-        snapMaxY = maxYBound - snapMargin;
-        snapMinY = minYBound + snapMargin;
-        
-        // 确保边界值合理
-        if (maxXBound < 0) maxXBound = 0;
-        if (minXBound > 0) minXBound = 0;
-        if (maxYBound < 0) maxYBound = 0;
-        if (minYBound > 0) minYBound = 0;
-        if (snapMaxX < 0) snapMaxX = 0;
-        if (snapMinX > 0) snapMinX = 0;
-        if (snapMaxY < 0) snapMaxY = 0;
-        if (snapMinY > 0) snapMinY = 0;
-        
-        Debug.Log($"屏幕分辨率: {screenWidth}x{screenHeight}, 视口: {viewportWidth:F0}x{viewportHeight:F0}, 边界: X({minXBound:F0}, {maxXBound:F0}), Y({minYBound:F0}, {maxYBound:F0}), 回弹边距: {snapMargin:F0}");
-    }
-    
-    // 当窗口大小改变时重新计算边界
-    void OnApplicationFocus(bool hasFocus)
-    {
-        if (hasFocus)
-        {
-            CalculateBounds();
-        }
-    }
-    
-    // 当屏幕方向改变时重新计算边界
-    void OnRectTransformDimensionsChange()
-    {
-        // 延迟一帧执行，确保屏幕尺寸已经更新
-        StartCoroutine(DelayedCalculateBounds());
-    }
-    
-    private IEnumerator DelayedCalculateBounds()
-    {
-        yield return null; // 等待一帧
-        CalculateBounds();
-    }
-    
-    // 添加一个公共方法，供外部调用重新计算边界
-    public void RefreshBounds()
-    {
-        CalculateBounds();
-    }
-    
-    // 初始化地图位置到中心
-    private void InitializeMapPosition()
-    {
-        if (rectTransform != null)
-        {
-            // 将地图居中显示
-            Vector3 centerPosition = Vector3.zero;
-            
-            // 如果地图比屏幕大，则居中显示
-            if (MAP_WIDTH > Screen.width || MAP_HEIGHT > Screen.height)
-            {
-                centerPosition = Vector3.zero; // 默认居中
-            }
-            
-            rectTransform.transform.localPosition = centerPosition;
-        }
-    }
+    public GameObject Level2Suo;
+    public GameObject Level3Suo;
+    public GameObject Level4Suo;
+    public GameObject Level5Suo;
+    public GameObject Level6Suo;
 
     public void HideLevelInfo()
     {
         levelInfo.SetActive(false);
     }
 
+    public void ShowDiTu()
+    {
+        if (PlayerData.S.maxGameLevel >= 6)
+        {
+            Level2Image.sprite = ResourcesConfig.Level2Liang;
+            Level2Suo.gameObject.SetActive(false);
+            level6Button.gameObject.SetActive(true);
+        }
+        else
+        {
+            Level2Image.sprite = ResourcesConfig.Level2An;
+            Level2Suo.gameObject.SetActive(true);
+            level6Button.gameObject.SetActive(false);
+
+        }
+        
+        if (PlayerData.S.maxGameLevel >= 9)
+        {
+            Level3Image.sprite = ResourcesConfig.Level3Liang;
+            Level3Suo.gameObject.SetActive(false);
+            level9Button.gameObject.SetActive(true);
+
+        }
+        else
+        {
+            Level3Image.sprite = ResourcesConfig.Level3An;
+            Level3Suo.gameObject.SetActive(true);
+            level9Button.gameObject.SetActive(false);
+
+        }
+        
+        if (PlayerData.S.maxGameLevel >= 12)
+        {
+            Level4Image.sprite = ResourcesConfig.Level4Liang;
+            Level4Suo.gameObject.SetActive(false);
+            level12Button.gameObject.SetActive(true);
+
+        }
+        else
+        {
+            Level4Image.sprite = ResourcesConfig.Level4An;
+            Level4Suo.gameObject.SetActive(true);
+            level12Button.gameObject.SetActive(false);
+
+        }
+        
+        
+        if (PlayerData.S.maxGameLevel >= 15)
+        {
+            Level5Image.sprite = ResourcesConfig.Level5Liang;
+            Level5Suo.gameObject.SetActive(false);
+            level15Button.gameObject.SetActive(true);
+        }
+        else
+        {
+            Level5Image.sprite = ResourcesConfig.Level5An;
+            Level5Suo.gameObject.SetActive(true);
+            level15Button.gameObject.SetActive(false);
+        }
+        
+        if (PlayerData.S.maxGameLevel > 15)
+        {
+            Level6Image.sprite = ResourcesConfig.Level6Liang;
+            Level6Suo.gameObject.SetActive(false);
+
+        }
+        else
+        {
+            Level6Image.sprite = ResourcesConfig.Level6An;
+            Level6Suo.gameObject.SetActive(true);
+        }
+    }
+
     private void OnEnable()
     {
-        ShowGameLevelButton();
+        ShowDiTu();
     }
 
     void Start()
     {
-        // 计算边界限制
-        CalculateBounds();
-        
-        // 初始化地图位置到中心
-        InitializeMapPosition();
         
         MJButton.onClick.AddListener(() =>
         {
@@ -298,7 +132,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
         });
         breakButton.onClick.AddListener(() =>
         {
-            //loopScrollRect.SetActive(false);
             WindowController.S.Message.SetActive(false);
             HideLevelInfo();
         });
@@ -310,7 +143,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 3;
-           HideLevelInfo();
            levelInfo.SetActive(true);
            levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 3;
            levelInfo.GetComponent<GameLevelInfo>().Show(); 
@@ -322,7 +154,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 6;
-           HideLevelInfo();
            levelInfo.SetActive(true);
            levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 6;
            levelInfo.GetComponent<GameLevelInfo>().Show(); 
@@ -334,7 +165,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 9;
-           HideLevelInfo();
            levelInfo.SetActive(true);
            levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 9;
            levelInfo.GetComponent<GameLevelInfo>().Show(); 
@@ -346,7 +176,6 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 12;
-           HideLevelInfo();
            levelInfo.SetActive(true);
            levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 12;
            levelInfo.GetComponent<GameLevelInfo>().Show(); 
@@ -357,17 +186,11 @@ public class GameLevelWindow1 : MonoBehaviour,IBeginDragHandler, IDragHandler, I
            LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 15;
-           HideLevelInfo();
            levelInfo.SetActive(true);
            levelInfo.GetComponent<GameLevelInfo>().CurrentClickLevel = 15;
            levelInfo.GetComponent<GameLevelInfo>().Show(); 
         });
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
