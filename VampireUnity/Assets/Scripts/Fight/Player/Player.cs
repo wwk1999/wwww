@@ -294,7 +294,7 @@ public class Player : MonoBehaviour
             case ShiZhuangType.OrangeHeiAn:
                 return "orangeheian";
         }
-        return null;
+        return "yuan";
     }
     private void Awake()
     {
