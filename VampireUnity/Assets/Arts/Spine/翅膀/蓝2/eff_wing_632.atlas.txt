@@ -1,0 +1,189 @@
+eff_wing_632.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	pma: true
+chibang
+	bounds: 2, 645, 393, 377
+chibang_0
+	bounds: 788, 266, 233, 215
+chibang_1
+	bounds: 156, 286, 233, 215
+	rotate: 180
+chibang_2
+	bounds: 593, 321, 233, 215
+chibang_3
+	bounds: 391, 367, 233, 215
+chibang_4
+	bounds: 2, 429, 233, 215
+chibang_5
+	bounds: 789, 483, 233, 215
+	rotate: 180
+chibang_6
+	bounds: 277, 558, 233, 215
+chibang_7
+	bounds: 544, 577, 233, 215
+chibang_8
+	bounds: 789, 697, 233, 215
+chibang_9
+	bounds: 614, 789, 233, 215
+	rotate: 90
+chibang_glow
+	bounds: 394, 747, 275, 218
+	rotate: 90
+jinshuD
+	bounds: 2, 209, 102, 261
+	rotate: 90
+jinshuD_0
+	bounds: 169, 168, 51, 131
+	rotate: 270
+jinshuD_1
+	bounds: 853, 171, 51, 131
+	rotate: 270
+jinshuD_2
+	bounds: 28, 182, 51, 131
+	rotate: 270
+jinshuD_3
+	bounds: 729, 193, 51, 131
+	rotate: 90
+jinshuD_4
+	bounds: 971, 200, 51, 131
+jinshuD_5
+	bounds: 612, 207, 51, 131
+	rotate: 90
+jinshuD_6
+	bounds: 813, 216, 51, 131
+	rotate: 90
+jinshuD_7
+	bounds: 300, 508, 51, 131
+	rotate: 90
+jinshuD_8
+	bounds: 66, 296, 51, 131
+jinshuD_9
+	bounds: 110, 303, 51, 131
+jinshuT
+	bounds: 612, 245, 72, 204
+	rotate: 90
+jinshuT_0
+	bounds: 426, 329, 36, 102
+	rotate: 270
+jinshuT_1
+	bounds: 2, 169, 36, 102
+	rotate: 180
+jinshuT_2
+	bounds: 624, 466, 36, 102
+	rotate: 180
+jinshuT_3
+	bounds: 718, 173, 36, 102
+	rotate: 90
+jinshuT_4
+	bounds: 612, 181, 36, 102
+	rotate: 90
+jinshuT_5
+	bounds: 655, 289, 36, 102
+	rotate: 90
+jinshuT_6
+	bounds: 340, 331, 36, 102
+	rotate: 90
+jinshuT_7
+	bounds: 489, 342, 36, 102
+	rotate: 90
+jinshuT_8
+	bounds: 638, 552, 36, 102
+	rotate: 90
+jinshuT_9
+	bounds: 230, 503, 36, 102
+qiu_D
+	bounds: 910, 949, 70, 73
+	offsets: 1, 2, 72, 76
+qiu_D_0
+	bounds: 946, 928, 33, 19
+	offsets: 2, 18, 36, 38
+qiu_D_1
+	bounds: 910, 919, 34, 28
+	offsets: 1, 9, 36, 38
+qiu_D_2
+	bounds: 49, 829, 34, 35
+	offsets: 1, 2, 36, 38
+qiu_D_3
+	bounds: 516, 986, 34, 36
+	offsets: 1, 1, 36, 38
+qiu_D_4
+	bounds: 511, 671, 33, 36
+	offsets: 1, 1, 36, 38
+qiu_D_5
+	bounds: 989, 702, 33, 36
+	offsets: 1, 1, 36, 38
+qiu_D_6
+	bounds: 360, 986, 31, 36
+	offsets: 1, 1, 36, 38
+qiu_D_7
+	bounds: 360, 949, 28, 35
+	offsets: 1, 1, 36, 38
+qiu_D_8
+	bounds: 611, 798, 33, 36
+	offsets: 2, 1, 36, 38
+qiu_D_9
+	bounds: 144, 944, 23, 35
+	offsets: 12, 1, 36, 38
+qiu_T
+	bounds: 2, 866, 92, 156
+	offsets: 0, 1, 93, 157
+qiu_T_0
+	bounds: 977, 479, 45, 74
+	offsets: 0, 1, 46, 77
+qiu_T_1
+	bounds: 265, 215, 45, 69
+	offsets: 0, 1, 46, 77
+qiu_T_2
+	bounds: 765, 965, 46, 57
+	offsets: 0, 1, 46, 77
+qiu_T_3
+	bounds: 230, 607, 45, 76
+	offsets: 0, 1, 46, 77
+qiu_T_4
+	bounds: 552, 946, 46, 76
+	offsets: 0, 1, 46, 77
+qiu_T_5
+	bounds: 2, 788, 45, 76
+	offsets: 0, 1, 46, 77
+qiu_T_6
+	bounds: 2, 354, 45, 73
+	offsets: 0, 4, 46, 77
+qiu_T_7
+	bounds: 8, 576, 45, 69
+	offsets: 0, 8, 46, 77
+qiu_T_8
+	bounds: 742, 540, 45, 75
+	offsets: 0, 2, 46, 77
+qiu_T_9
+	bounds: 96, 942, 46, 75
+	offsets: 0, 1, 46, 77
+qiu_bg
+	bounds: 830, 944, 78, 78
+qiu_bg_0
+	bounds: 2, 748, 39, 38
+qiu_bg_1
+	bounds: 376, 783, 39, 38
+qiu_bg_2
+	bounds: 96, 902, 39, 38
+qiu_bg_3
+	bounds: 981, 904, 39, 38
+qiu_bg_4
+	bounds: 982, 944, 39, 38
+qiu_bg_5
+	bounds: 507, 709, 39, 37
+	offsets: 0, 0, 39, 38
+qiu_bg_6
+	bounds: 779, 660, 37, 38
+	offsets: 1, 0, 39, 38
+qiu_bg_7
+	bounds: 505, 609, 37, 37
+	offsets: 2, 1, 39, 38
+qiu_bg_8
+	bounds: 982, 984, 39, 38
+qiu_bg_9
+	bounds: 319, 984, 39, 38
+qiu_glow
+	bounds: 336, 200, 123, 274
+	offsets: 6, 7, 134, 288
+	rotate: 90

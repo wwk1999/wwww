@@ -1,0 +1,102 @@
+eff_byhls_fbcb.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	pma: true
+35
+	bounds: 267, 893, 113, 129
+	offsets: 3, 10, 116, 139
+37
+	bounds: 380, 851, 144, 171
+	rotate: 180
+44
+	bounds: 2, 771, 263, 251
+tx/35_00
+	bounds: 2, 755, 55, 64
+	offsets: 3, 6, 58, 70
+	rotate: 90
+tx/35_01
+	bounds: 2, 696, 55, 57
+	offsets: 3, 13, 58, 70
+tx/35_02
+	bounds: 519, 735, 56, 58
+	offsets: 2, 11, 58, 70
+tx/35_03
+	bounds: 350, 739, 57, 57
+	offsets: 1, 13, 58, 70
+tx/35_04
+	bounds: 289, 739, 57, 59
+	offsets: 1, 11, 58, 70
+	rotate: 90
+tx/35_05
+	bounds: 758, 768, 56, 63
+	offsets: 2, 7, 58, 70
+	rotate: 90
+tx/35_06
+	bounds: 2, 812, 57, 64
+	offsets: 1, 6, 58, 70
+tx/35_07
+	bounds: 157, 770, 56, 65
+	offsets: 2, 5, 58, 70
+	rotate: 90
+tx/35_08
+	bounds: 343, 798, 56, 65
+	offsets: 2, 5, 58, 70
+tx/35_09
+	bounds: 620, 769, 56, 64
+	offsets: 2, 6, 58, 70
+	rotate: 90
+tx/37_00
+	bounds: 760, 694, 72, 86
+	rotate: 270
+tx/37_01
+	bounds: 858, 694, 72, 86
+	rotate: 180
+tx/37_02
+	bounds: 187, 704, 72, 86
+	rotate: 90
+tx/37_03
+	bounds: 577, 704, 72, 86
+	rotate: 270
+tx/37_04
+	bounds: 692, 719, 72, 86
+	rotate: 180
+tx/37_05
+	bounds: 950, 719, 72, 86
+	rotate: 180
+tx/37_06
+	bounds: 84, 722, 72, 86
+	rotate: 180
+tx/37_07
+	bounds: 409, 725, 72, 86
+	rotate: 270
+tx/37_08
+	bounds: 823, 730, 72, 86
+	rotate: 180
+tx/37_09
+	bounds: 2, 936, 72, 86
+tx/44_00
+	bounds: 883, 772, 132, 126
+	rotate: 180
+tx/44_01
+	bounds: 209, 765, 132, 126
+tx/44_02
+	bounds: 431, 778, 132, 126
+	rotate: 180
+tx/44_03
+	bounds: 659, 772, 132, 126
+tx/44_04
+	bounds: 793, 789, 132, 126
+tx/44_05
+	bounds: 536, 789, 132, 126
+tx/44_06
+	bounds: 856, 890, 132, 126
+	rotate: 90
+tx/44_07
+	bounds: 728, 890, 132, 126
+	rotate: 90
+tx/44_08
+	bounds: 600, 890, 132, 126
+	rotate: 90
+tx/44_09
+	bounds: 508, 890, 132, 126
+	rotate: 270

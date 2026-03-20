@@ -1,0 +1,416 @@
+eff_spine_cb_rhty.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	pma: true
+Fire_fd
+	bounds: 778, 12, 128, 128
+baoshi
+	bounds: 690, 190, 27, 28
+	offsets: 13, 13, 54, 54
+cb_cx1/cb_cx1_48
+	bounds: 908, 17, 123, 106
+	offsets: 0, 0, 127, 106
+	rotate: 90
+cb_cx1/cb_cx1_51
+	bounds: 356, 13, 121, 96
+	offsets: 1, 0, 127, 106
+	rotate: 90
+cb_idle/cb_idle_01
+	bounds: 456, 8, 190, 132
+	offsets: 32, 20, 254, 212
+cb_idle/cb_idle_04
+	bounds: 497, 351, 233, 207
+	offsets: 0, 5, 254, 212
+cb_idle/cb_idle_05
+	bounds: 260, 554, 235, 212
+	offsets: 0, 0, 254, 212
+cb_idle/cb_idle_06
+	bounds: 515, 560, 237, 211
+	offsets: 0, 0, 254, 212
+cb_idle/cb_idle_07
+	bounds: 2, 554, 233, 210
+	offsets: 0, 0, 254, 212
+cb_idle/cb_idle_08
+	bounds: 732, 142, 224, 208
+	offsets: 2, 0, 254, 212
+cb_idle/cb_idle_13
+	bounds: 229, 136, 225, 206
+	offsets: 0, 0, 254, 212
+cb_idle/cb_idle_14
+	bounds: 2, 136, 225, 207
+	offsets: 0, 0, 254, 212
+cb_idle/cb_idle_15
+	bounds: 234, 344, 227, 208
+	offsets: 1, 1, 254, 212
+cb_idle/cb_idle_22
+	bounds: 463, 142, 225, 207
+	offsets: 0, 0, 254, 212
+cb_idle/cb_idle_23
+	bounds: 754, 352, 231, 210
+	offsets: 0, 0, 254, 212
+cb_idle/cb_idle_24
+	bounds: 766, 564, 237, 211
+	offsets: 0, 0, 254, 212
+cb_idle/cb_idle_25
+	bounds: 2, 345, 230, 207
+	offsets: 3, 0, 254, 212
+eff_star02
+	bounds: 121, 18, 116, 116
+	offsets: 6, 6, 128, 128
+fangshe_001
+	bounds: 260, 768, 253, 254
+	offsets: 0, 1, 256, 256
+fangsheguang
+	bounds: 2, 766, 256, 256
+glow_1a
+	bounds: 239, 19, 115, 115
+	offsets: 6, 7, 128, 128
+glow_blend
+	bounds: 648, 12, 128, 128
+guangmang1
+	bounds: 2, 16, 117, 118
+hutou_sg00
+	bounds: 998, 970, 16, 23
+	offsets: 0, 37, 47, 61
+hutou_sg01
+	bounds: 998, 995, 20, 27
+	offsets: 0, 34, 47, 61
+hutou_sg02
+	bounds: 690, 220, 25, 30
+	offsets: 0, 31, 47, 61
+hutou_sg03
+	bounds: 690, 252, 27, 34
+	offsets: 0, 27, 47, 61
+hutou_sg04
+	bounds: 463, 352, 28, 43
+	offsets: 0, 18, 47, 61
+hutou_sg05
+	bounds: 463, 498, 31, 54
+	offsets: 0, 7, 47, 61
+hutou_sg06
+	bounds: 987, 387, 34, 58
+	offsets: 0, 3, 47, 61
+hutou_sg07
+	bounds: 690, 288, 39, 61
+	offsets: 1, 0, 47, 61
+hutou_sg14
+	bounds: 463, 446, 30, 50
+	offsets: 17, 5, 47, 61
+hutou_sg15
+	bounds: 463, 397, 26, 47
+	offsets: 21, 6, 47, 61
+hutou_sg16
+	bounds: 1016, 987, 5, 6
+	offsets: 24, 6, 47, 61
+quanquan_00
+	bounds: 515, 773, 249, 249
+	offsets: 3, 4, 256, 256
+sxtd_00
+	bounds: 987, 447, 115, 34
+	offsets: 14, 5, 150, 40
+	rotate: 90
+tiger_00
+	bounds: 766, 777, 245, 230
+	offsets: 11, 18, 270, 250
+	rotate: 90
+ym1
+	bounds: 966, 276, 93, 56
+	offsets: 0, 2, 93, 58
+	rotate: 90
+zgj
+	bounds: 962, 159, 60, 116
+	offsets: 29, 58, 119, 232
+
+eff_spine_cb_rhty_2.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	pma: true
+Form/Form_00
+	bounds: 807, 210, 217, 165
+	offsets: 16, 9, 240, 180
+	rotate: 90
+Form/Form_07
+	bounds: 167, 97, 211, 167
+	offsets: 21, 9, 240, 180
+Form/Form_08
+	bounds: 172, 266, 217, 170
+	offsets: 18, 9, 240, 180
+Form/Form_09
+	bounds: 2, 164, 217, 163
+	offsets: 17, 10, 240, 180
+	rotate: 90
+cb_cx1/cb_cx1_38
+	bounds: 127, 4, 114, 91
+	offsets: 5, 2, 127, 106
+cb_cx1/cb_cx1_39
+	bounds: 243, 4, 113, 91
+	offsets: 5, 2, 127, 106
+cb_cx1/cb_cx1_44
+	bounds: 868, 532, 121, 106
+	offsets: 0, 0, 127, 106
+	rotate: 90
+cb_cx1/cb_cx1_45
+	bounds: 868, 655, 121, 106
+	offsets: 0, 0, 127, 106
+	rotate: 90
+cb_cx1/cb_cx1_46
+	bounds: 878, 778, 121, 106
+	offsets: 0, 0, 127, 106
+	rotate: 90
+cb_cx1/cb_cx1_47
+	bounds: 878, 901, 121, 106
+	offsets: 0, 0, 127, 106
+	rotate: 90
+cb_cx1/cb_cx1_49
+	bounds: 2, 58, 123, 104
+	offsets: 0, 0, 127, 106
+cb_cx1/cb_cx1_50
+	bounds: 858, 432, 121, 98
+	offsets: 1, 0, 127, 106
+cb_idle/cb_idle_03
+	bounds: 224, 618, 213, 199
+	offsets: 5, 10, 254, 212
+cb_idle/cb_idle_09
+	bounds: 2, 614, 200, 199
+	offsets: 25, 10, 254, 212
+cb_idle/cb_idle_10
+	bounds: 651, 429, 205, 192
+	offsets: 20, 18, 254, 212
+cb_idle/cb_idle_11
+	bounds: 657, 623, 209, 203
+	offsets: 15, 8, 254, 212
+cb_idle/cb_idle_12
+	bounds: 224, 819, 216, 203
+	offsets: 7, 6, 254, 212
+cb_idle/cb_idle_16
+	bounds: 2, 815, 220, 207
+	offsets: 7, 5, 254, 212
+cb_idle/cb_idle_17
+	bounds: 442, 819, 213, 203
+	offsets: 13, 7, 254, 212
+cb_idle/cb_idle_18
+	bounds: 439, 617, 210, 200
+	offsets: 13, 9, 254, 212
+cb_idle/cb_idle_19
+	bounds: 391, 249, 207, 178
+	offsets: 13, 9, 254, 212
+cb_idle/cb_idle_20
+	bounds: 423, 429, 207, 186
+	offsets: 11, 8, 254, 212
+cb_idle/cb_idle_21
+	bounds: 657, 828, 219, 194
+	offsets: 6, 5, 254, 212
+cb_idle/cb_idle_26
+	bounds: 600, 250, 205, 177
+	offsets: 20, 3, 254, 212
+cbzk_00
+	bounds: 600, 64, 189, 184
+	offsets: 24, 7, 221, 196
+hutou_sg08
+	bounds: 976, 715, 42, 61
+	offsets: 0, 0, 47, 61
+hutou_sg09
+	bounds: 976, 657, 45, 56
+	offsets: 2, 0, 47, 61
+hutou_sg10
+	bounds: 974, 376, 47, 54
+	offsets: 0, 0, 47, 61
+hutou_sg11
+	bounds: 976, 599, 44, 56
+	offsets: 3, 0, 47, 61
+hutou_sg12
+	bounds: 976, 543, 43, 54
+	offsets: 4, 0, 47, 61
+hutou_sg13
+	bounds: 981, 486, 41, 55
+	offsets: 6, 0, 47, 61
+lighting2/lighting2_00
+	bounds: 380, 71, 176, 195
+	offsets: 10, 27, 250, 250
+	rotate: 90
+lighting2/lighting2_01
+	bounds: 2, 383, 229, 168
+	offsets: 3, 37, 250, 250
+	rotate: 90
+lighting2/lighting2_02
+	bounds: 204, 438, 217, 178
+	offsets: 17, 48, 250, 250
+lighting2/lighting2_03
+	bounds: 791, 33, 196, 175
+	offsets: 14, 43, 250, 250
+lizi
+	bounds: 358, 16, 54, 53
+	offsets: 5, 5, 64, 64
+ym10
+	bounds: 2, 2, 54, 78
+	rotate: 90
+ym11
+	bounds: 652, 5, 57, 90
+	rotate: 90
+ym15
+	bounds: 468, 5, 132, 67
+	rotate: 180
+ym4
+	bounds: 974, 312, 40, 62
+ym5
+	bounds: 403, 3, 77, 65
+	rotate: 180
+ym8
+	bounds: 602, 3, 59, 90
+	offsets: 2, 0, 61, 90
+	rotate: 90
+
+eff_spine_cb_rhty_3.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	pma: true
+Form/Form_01
+	bounds: 2, 858, 209, 164
+	offsets: 17, 11, 240, 180
+Form/Form_02
+	bounds: 213, 858, 207, 164
+	offsets: 18, 13, 240, 180
+Form/Form_03
+	bounds: 630, 698, 201, 161
+	offsets: 22, 14, 240, 180
+Form/Form_04
+	bounds: 632, 861, 206, 161
+	offsets: 20, 14, 240, 180
+Form/Form_05
+	bounds: 422, 700, 206, 160
+	offsets: 21, 13, 240, 180
+Form/Form_06
+	bounds: 422, 862, 208, 160
+	offsets: 19, 13, 240, 180
+cb_cx1/cb_cx1_20
+	bounds: 2, 380, 103, 99
+	offsets: 15, 5, 127, 106
+cb_cx1/cb_cx1_21
+	bounds: 361, 388, 109, 98
+	offsets: 8, 5, 127, 106
+cb_cx1/cb_cx1_22
+	bounds: 715, 396, 111, 101
+	offsets: 6, 4, 127, 106
+cb_cx1/cb_cx1_23
+	bounds: 243, 478, 116, 100
+	offsets: 1, 4, 127, 106
+cb_cx1/cb_cx1_24
+	bounds: 363, 488, 117, 103
+	offsets: 2, 1, 127, 106
+cb_cx1/cb_cx1_25
+	bounds: 858, 501, 118, 104
+	offsets: 1, 0, 127, 106
+cb_cx1/cb_cx1_26
+	bounds: 2, 587, 119, 106
+	offsets: 0, 0, 127, 106
+cb_cx1/cb_cx1_27
+	bounds: 833, 607, 120, 106
+	offsets: 0, 0, 127, 106
+cb_cx1/cb_cx1_28
+	bounds: 619, 590, 119, 106
+	offsets: 0, 0, 127, 106
+cb_cx1/cb_cx1_29
+	bounds: 123, 579, 118, 106
+	offsets: 0, 0, 127, 106
+cb_cx1/cb_cx1_30
+	bounds: 498, 592, 119, 106
+	offsets: 0, 0, 127, 106
+cb_cx1/cb_cx1_31
+	bounds: 833, 715, 120, 106
+	offsets: 0, 0, 127, 106
+cb_cx1/cb_cx1_32
+	bounds: 375, 593, 121, 105
+	offsets: 0, 1, 127, 106
+cb_cx1/cb_cx1_33
+	bounds: 740, 499, 116, 106
+	offsets: 2, 0, 127, 106
+cb_cx1/cb_cx1_34
+	bounds: 2, 481, 112, 104
+	offsets: 5, 2, 127, 106
+cb_cx1/cb_cx1_35
+	bounds: 116, 474, 111, 103
+	offsets: 7, 3, 127, 106
+cb_cx1/cb_cx1_36
+	bounds: 601, 484, 112, 104
+	offsets: 6, 2, 127, 106
+cb_cx1/cb_cx1_37
+	bounds: 229, 385, 112, 91
+	offsets: 7, 3, 127, 106
+cb_cx1/cb_cx1_40
+	bounds: 591, 387, 112, 95
+	offsets: 5, 3, 127, 106
+cb_cx1/cb_cx1_41
+	bounds: 858, 399, 114, 100
+	offsets: 3, 2, 127, 106
+cb_cx1/cb_cx1_42
+	bounds: 482, 489, 117, 101
+	offsets: 2, 0, 127, 106
+cb_cx1/cb_cx1_43
+	bounds: 243, 580, 118, 105
+	offsets: 0, 0, 127, 106
+cb_cx1/cb_cx1_52
+	bounds: 828, 307, 110, 90
+	offsets: 9, 0, 127, 106
+cb_cx1/cb_cx1_53
+	bounds: 2, 303, 109, 75
+	offsets: 10, 2, 127, 106
+cb_cx2/cb_cx2_46
+	bounds: 705, 310, 84, 116
+	offsets: 80, 1, 200, 175
+	rotate: 90
+cb_cx2/cb_cx2_47
+	bounds: 343, 300, 86, 108
+	offsets: 83, 0, 200, 175
+	rotate: 90
+cb_cx2/cb_cx2_48
+	bounds: 113, 297, 81, 99
+	offsets: 83, 3, 200, 175
+	rotate: 90
+cb_cx2/cb_cx2_49
+	bounds: 453, 299, 86, 107
+	offsets: 77, 0, 200, 175
+	rotate: 90
+cb_cx2/cb_cx2_50
+	bounds: 562, 298, 87, 96
+	offsets: 76, 7, 200, 175
+	rotate: 90
+cb_cx2/cb_cx2_51
+	bounds: 482, 387, 107, 100
+	offsets: 64, 9, 200, 175
+cb_cx2/cb_cx2_52
+	bounds: 107, 380, 108, 92
+	offsets: 63, 13, 200, 175
+cb_idle/cb_idle_00
+	bounds: 840, 823, 199, 166
+	offsets: 27, 6, 254, 212
+	rotate: 90
+cb_idle/cb_idle_02
+	bounds: 2, 695, 199, 161
+	offsets: 19, 14, 254, 212
+hutou
+	bounds: 595, 221, 94, 122
+	rotate: 270
+ice_spark
+	bounds: 203, 687, 170, 169
+	offsets: 43, 44, 256, 256
+shadow
+	bounds: 217, 302, 81, 103
+	offsets: 0, 2, 84, 108
+	rotate: 90
+ym12
+	bounds: 968, 677, 54, 68
+ym13
+	bounds: 740, 634, 69, 62
+ym14
+	bounds: 385, 220, 96, 78
+ym2
+	bounds: 2, 231, 134, 70
+ym3
+	bounds: 265, 227, 118, 81
+	rotate: 180
+ym6
+	bounds: 711, 232, 137, 76
+ym7
+	bounds: 923, 244, 99, 97
+ym9
+	bounds: 955, 742, 53, 79

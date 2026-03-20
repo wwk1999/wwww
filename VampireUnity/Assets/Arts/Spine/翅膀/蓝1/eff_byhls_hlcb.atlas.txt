@@ -1,0 +1,281 @@
+eff_byhls_hlcb.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	pma: true
+chi_1
+	bounds: 818, 318, 204, 167
+	rotate: 180
+chi_2
+	bounds: 2, 691, 434, 331
+eff/chi_2_00
+	bounds: 48, 339, 235, 180
+eff/chi_2_01
+	bounds: 255, 348, 235, 180
+	rotate: 180
+eff/chi_2_02
+	bounds: 729, 439, 235, 180
+eff/chi_2_03
+	bounds: 492, 453, 235, 180
+	rotate: 180
+eff/chi_2_04
+	bounds: 110, 520, 235, 180
+	rotate: 180
+eff/chi_2_05
+	bounds: 720, 621, 235, 180
+	rotate: 180
+eff/chi_2_06
+	bounds: 347, 625, 235, 180
+	rotate: 180
+eff/chi_2_07
+	bounds: 802, 787, 235, 180
+	rotate: 90
+eff/chi_2_08
+	bounds: 620, 787, 235, 180
+	rotate: 90
+eff/chi_2_09
+	bounds: 438, 787, 235, 180
+	rotate: 90
+eff/chi_3_00
+	bounds: 897, 203, 125, 103
+eff/chi_3_01
+	bounds: 790, 213, 125, 103
+eff/chi_3_02
+	bounds: 554, 226, 125, 103
+eff/chi_3_03
+	bounds: 441, 226, 125, 103
+eff/chi_3_04
+	bounds: 339, 243, 125, 103
+eff/chi_3_05
+	bounds: 226, 243, 125, 103
+eff/chi_3_06
+	bounds: 128, 244, 125, 103
+	rotate: 180
+eff/chi_3_07
+	bounds: 2, 245, 125, 103
+	rotate: 90
+eff/chi_3_08
+	bounds: 706, 275, 125, 103
+eff/chi_3_09
+	bounds: 2, 586, 125, 103
+eff/jia_1_00
+	bounds: 670, 192, 69, 118
+	offsets: 7, 30, 90, 171
+	rotate: 90
+eff/jia_1_01
+	bounds: 347, 554, 69, 118
+	offsets: 7, 30, 90, 171
+	rotate: 90
+eff/jia_1_02
+	bounds: 357, 156, 68, 110
+	offsets: 10, 38, 90, 171
+	rotate: 90
+eff/jia_1_03
+	bounds: 895, 142, 59, 101
+	offsets: 22, 47, 90, 171
+	rotate: 90
+eff/jia_1_04
+	bounds: 2, 521, 63, 98
+	offsets: 17, 44, 90, 171
+	rotate: 90
+eff/jia_1_05
+	bounds: 790, 147, 64, 103
+	offsets: 15, 39, 90, 171
+	rotate: 90
+eff/jia_1_06
+	bounds: 469, 158, 66, 111
+	offsets: 13, 33, 90, 171
+	rotate: 90
+eff/jia_1_07
+	bounds: 241, 175, 66, 114
+	offsets: 11, 30, 90, 171
+	rotate: 90
+eff/jia_1_08
+	bounds: 123, 173, 68, 116
+	offsets: 10, 29, 90, 171
+	rotate: 90
+eff/jia_1_09
+	bounds: 2, 176, 67, 119
+	offsets: 9, 30, 90, 171
+	rotate: 90
+eff/jia_2_00
+	bounds: 983, 799, 37, 61
+	offsets: 16, 24, 60, 127
+eff/jia_2_01
+	bounds: 74, 145, 26, 68
+	offsets: 25, 25, 60, 127
+	rotate: 90
+eff/jia_2_02
+	bounds: 341, 992, 30, 69
+	offsets: 19, 26, 60, 127
+	rotate: 90
+eff/jia_2_03
+	bounds: 2, 653, 28, 65
+	offsets: 18, 30, 60, 127
+eff/jia_2_04
+	bounds: 2, 857, 30, 60
+	offsets: 16, 34, 60, 127
+	rotate: 90
+eff/jia_2_05
+	bounds: 961, 348, 35, 61
+	offsets: 15, 32, 60, 127
+	rotate: 90
+eff/jia_2_06
+	bounds: 748, 129, 35, 61
+	offsets: 15, 32, 60, 127
+eff/jia_2_07
+	bounds: 406, 818, 39, 63
+	offsets: 13, 29, 60, 127
+eff/jia_2_08
+	bounds: 467, 564, 41, 59
+	offsets: 12, 29, 60, 127
+eff/jia_2_09
+	bounds: 984, 862, 37, 61
+	offsets: 15, 26, 60, 127
+eff/jia_3_00
+	bounds: 664, 146, 82, 44
+	offsets: 14, 14, 105, 71
+eff/jia_3_01
+	bounds: 241, 127, 71, 46
+	offsets: 16, 15, 105, 71
+eff/jia_3_02
+	bounds: 2, 127, 70, 47
+	offsets: 25, 15, 105, 71
+eff/jia_3_03
+	bounds: 949, 503, 73, 52
+	offsets: 22, 13, 105, 71
+eff/jia_3_04
+	bounds: 582, 172, 80, 52
+	offsets: 16, 13, 105, 71
+eff/jia_3_05
+	bounds: 584, 639, 85, 52
+	offsets: 11, 13, 105, 71
+eff/jia_3_06
+	bounds: 70, 969, 86, 53
+	offsets: 10, 11, 105, 71
+eff/jia_3_07
+	bounds: 2, 803, 86, 52
+	offsets: 10, 11, 105, 71
+eff/jia_3_08
+	bounds: 724, 386, 86, 51
+	offsets: 10, 12, 105, 71
+eff/jia_3_09
+	bounds: 966, 578, 83, 50
+	offsets: 13, 11, 105, 71
+	rotate: 90
+eff/jia_4_00
+	bounds: 992, 112, 30, 28
+	offsets: 14, 6, 60, 51
+eff/jia_4_01
+	bounds: 412, 998, 17, 24
+	offsets: 11, 6, 60, 51
+eff/jia_4_02
+	bounds: 33, 999, 26, 23
+	offsets: 12, 6, 60, 51
+eff/jia_4_03
+	bounds: 432, 119, 35, 32
+	offsets: 10, 6, 60, 51
+	rotate: 90
+eff/jia_4_04
+	bounds: 619, 794, 39, 32
+	offsets: 9, 7, 60, 51
+eff/jia_4_05
+	bounds: 2, 374, 36, 33
+	offsets: 10, 8, 60, 51
+eff/jia_4_06
+	bounds: 961, 109, 29, 31
+	offsets: 19, 10, 60, 51
+eff/jia_4_07
+	bounds: 925, 109, 31, 34
+	offsets: 17, 7, 60, 51
+	rotate: 90
+eff/jia_4_08
+	bounds: 683, 112, 34, 32
+	offsets: 16, 6, 60, 51
+eff/jia_4_09
+	bounds: 111, 113, 30, 30
+	offsets: 14, 6, 60, 51
+eff/jia_5_00
+	bounds: 74, 112, 35, 31
+	offsets: 20, 1, 75, 34
+eff/jia_5_01
+	bounds: 889, 109, 34, 31
+	offsets: 17, 0, 75, 34
+eff/jia_5_02
+	bounds: 576, 112, 32, 27
+	offsets: 14, 2, 75, 34
+eff/jia_5_03
+	bounds: 842, 119, 45, 26
+	offsets: 12, 3, 75, 34
+eff/jia_5_04
+	bounds: 2, 472, 47, 31
+	offsets: 12, 2, 75, 34
+	rotate: 90
+eff/jia_5_05
+	bounds: 671, 658, 51, 33
+	offsets: 10, 0, 75, 34
+eff/jia_5_06
+	bounds: 144, 139, 53, 32
+	offsets: 10, 1, 75, 34
+eff/jia_5_07
+	bounds: 321, 699, 47, 32
+	offsets: 13, 1, 75, 34
+eff/jia_5_08
+	bounds: 467, 529, 45, 33
+	offsets: 13, 1, 75, 34
+eff/jia_5_09
+	bounds: 199, 140, 38, 31
+	offsets: 18, 2, 75, 34
+eff/jia_6_00
+	bounds: 641, 115, 40, 29
+	offsets: 18, 1, 75, 30
+eff/jia_6_01
+	bounds: 801, 798, 37, 30
+	offsets: 17, 0, 75, 30
+	rotate: 90
+eff/jia_6_02
+	bounds: 524, 126, 50, 30
+	offsets: 13, 0, 75, 30
+eff/jia_6_03
+	bounds: 469, 126, 53, 30
+	offsets: 13, 0, 75, 30
+eff/jia_6_04
+	bounds: 582, 141, 57, 29
+	offsets: 11, 0, 75, 30
+eff/jia_6_05
+	bounds: 314, 129, 60, 25
+	offsets: 8, 1, 75, 30
+eff/jia_6_06
+	bounds: 681, 272, 57, 23
+	offsets: 8, 3, 75, 30
+	rotate: 90
+eff/jia_6_07
+	bounds: 785, 121, 55, 24
+	offsets: 8, 5, 75, 30
+eff/jia_6_08
+	bounds: 376, 127, 54, 27
+	offsets: 8, 3, 75, 30
+eff/jia_6_09
+	bounds: 994, 394, 51, 28
+	offsets: 10, 2, 75, 30
+	rotate: 90
+jia_1
+	bounds: 492, 331, 120, 230
+	offsets: 1, 1, 122, 232
+	rotate: 90
+jia_2
+	bounds: 957, 663, 58, 122
+	offsets: 1, 1, 60, 127
+jia_3
+	bounds: 584, 693, 147, 92
+	offsets: 7, 4, 158, 107
+jia_4
+	bounds: 2, 409, 59, 50
+	offsets: 1, 1, 61, 52
+	rotate: 90
+jia_5
+	bounds: 213, 988, 78, 34
+	offsets: 1, 1, 80, 36
+jia_6
+	bounds: 984, 925, 97, 37
+	offsets: 1, 1, 99, 39
+	rotate: 90

@@ -1,0 +1,193 @@
+eff_spine_byyxw_fy.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	pma: true
+b2/y_yi3_00000
+	bounds: 195, 407, 98, 68
+	offsets: 0, 7, 104, 75
+b2/y_yi3_00001
+	bounds: 105, 411, 98, 68
+	offsets: 0, 7, 104, 75
+	rotate: 180
+b2/y_yi3_00002
+	bounds: 924, 418, 98, 68
+	offsets: 0, 7, 104, 75
+	rotate: 180
+b2/y_yi3_00003
+	bounds: 697, 418, 98, 68
+	offsets: 0, 7, 104, 75
+	rotate: 180
+b2/y_yi3_00004
+	bounds: 579, 421, 98, 68
+	offsets: 0, 7, 104, 75
+b2/y_yi3_00005
+	bounds: 47, 425, 98, 68
+	offsets: 0, 7, 104, 75
+	rotate: 180
+b2/y_yi3_00006
+	bounds: 827, 427, 98, 68
+	offsets: 0, 7, 104, 75
+b2/y_yi3_00007
+	bounds: 457, 430, 98, 68
+	offsets: 0, 7, 104, 75
+	rotate: 180
+b2/y_yi3_00010
+	bounds: 664, 439, 98, 68
+	offsets: 0, 7, 104, 75
+b2/y_yi3_00011
+	bounds: 405, 449, 98, 68
+	offsets: 0, 7, 104, 75
+	rotate: 180
+b2/y_yi3_00012
+	bounds: 2, 455, 98, 68
+	offsets: 0, 7, 104, 75
+	rotate: 270
+b2/y_yi3_00013
+	bounds: 684, 807, 98, 68
+	offsets: 0, 7, 104, 75
+	rotate: 90
+b2/y_yi3_00014
+	bounds: 924, 467, 98, 68
+	offsets: 0, 7, 104, 75
+b3/y_yi1_00000
+	bounds: 408, 548, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00001
+	bounds: 202, 583, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00002
+	bounds: 628, 583, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00003
+	bounds: 2, 588, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00004
+	bounds: 808, 598, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00005
+	bounds: 383, 624, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00006
+	bounds: 918, 705, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 90
+b3/y_yi1_00007
+	bounds: 202, 651, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00008
+	bounds: 618, 655, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00009
+	bounds: 2, 656, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00010
+	bounds: 423, 678, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00011
+	bounds: 712, 694, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00012
+	bounds: 2, 725, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00013
+	bounds: 178, 728, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b3/y_yi1_00014
+	bounds: 413, 750, 204, 104
+	offsets: 0, 0, 242, 127
+	rotate: 180
+b4/y_yi2_00000
+	bounds: 251, 459, 153, 57
+	offsets: 0, 2, 167, 64
+	rotate: 180
+b4/y_yi2_00001
+	bounds: 126, 470, 153, 57
+	offsets: 0, 2, 167, 64
+b4/y_yi2_00002
+	bounds: 738, 477, 153, 57
+	offsets: 0, 2, 167, 64
+	rotate: 180
+b4/y_yi2_00003
+	bounds: 504, 483, 153, 57
+	offsets: 0, 2, 167, 64
+b4/y_yi2_00004
+	bounds: 311, 496, 153, 57
+	offsets: 0, 2, 167, 64
+	rotate: 180
+b4/y_yi2_00005
+	bounds: 605, 504, 153, 57
+	offsets: 0, 2, 167, 64
+b4/y_yi2_00006
+	bounds: 2, 507, 153, 57
+	offsets: 0, 2, 167, 64
+	rotate: 180
+b4/y_yi2_00007
+	bounds: 820, 512, 153, 57
+	offsets: 0, 2, 167, 64
+	rotate: 180
+b4/y_yi2_00008
+	bounds: 150, 515, 153, 57
+	offsets: 0, 2, 167, 64
+b4/y_yi2_00009
+	bounds: 373, 529, 153, 57
+	offsets: 0, 2, 167, 64
+b4/y_yi2_00010
+	bounds: 698, 529, 153, 57
+	offsets: 0, 2, 167, 64
+b4/y_yi2_00011
+	bounds: 207, 548, 153, 57
+	offsets: 0, 2, 167, 64
+	rotate: 180
+b4/y_yi2_00012
+	bounds: 955, 869, 153, 57
+	offsets: 0, 2, 167, 64
+	rotate: 90
+b4/y_yi2_00013
+	bounds: 2, 553, 153, 57
+	offsets: 0, 2, 167, 64
+b4/y_yi2_00014
+	bounds: 833, 555, 153, 57
+	offsets: 0, 2, 167, 64
+y123
+	bounds: 521, 907, 318, 115
+	rotate: 180
+y_y78
+	bounds: 290, 741, 420, 281
+	offsets: 20, 31, 440, 361
+y_y79
+	bounds: 2, 741, 420, 281
+	offsets: 20, 31, 440, 361
+y_y888
+	bounds: 787, 744, 177, 120
+	rotate: 90
+y_y889
+	bounds: 833, 845, 177, 120
+	rotate: 270
+y_yi1
+	bounds: 2, 785, 204, 104
+	offsets: 0, 0, 242, 127
+y_yi2
+	bounds: 574, 577, 153, 57
+	offsets: 0, 2, 167, 64
+y_yi3
+	bounds: 924, 673, 98, 68
+	offsets: 0, 7, 104, 75
+ym_01
+	bounds: 184, 1003, 18, 19
+	offsets: 5, 6, 29, 30
+ym_03
+	bounds: 204, 1004, 18, 18
+	offsets: 3, 3, 23, 23

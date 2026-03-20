@@ -1,0 +1,13 @@
+wing_611.png
+size:396,175
+filter:Linear,Linear
+pma:true
+chibang
+bounds:186,2,133,75
+chibang2
+bounds:186,79,149,94
+chibang3
+bounds:2,9,182,164
+jinshu
+bounds:337,75,57,98
+offsets:0,0,57,99
