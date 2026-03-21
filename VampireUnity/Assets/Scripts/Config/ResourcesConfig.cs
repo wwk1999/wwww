@@ -7,6 +7,37 @@ public class ResourcesConfig : MonoBehaviour
 {
     public static Sprite LingHun;
 
+    //翅膀
+    public static Sprite Blue1;
+    public static Sprite Blue2;
+    public static Sprite Blue3;
+    public static Sprite Blue4;
+    public static Sprite Blue5;
+    public static Sprite Blue6;
+    public static Sprite Blue7;
+    public static Sprite Blue8;
+
+    public static Sprite Green1;
+    public static Sprite Green2;
+    public static Sprite Green3;
+    public static Sprite Green4;
+    public static Sprite Green5;
+    public static Sprite Green6;
+    
+    public static Sprite Purple1;
+    public static Sprite Purple2;
+    public static Sprite Purple3;
+    public static Sprite Purple4;
+    public static Sprite Purple5;
+    public static Sprite Purple6;
+    public static Sprite Purple7;
+    
+    public static Sprite Orange1;
+    public static Sprite Orange2;
+    public static Sprite Orange3;
+    
+    public static Sprite Red1;
+
     //地图
     public static Sprite Level1Liang;
     public static Sprite Level1An;
@@ -1217,6 +1248,36 @@ public class ResourcesConfig : MonoBehaviour
     {
         DaKongShi=Resources.Load<Sprite>("Sprite/Prop/DaKongShi");
 
+        //翅膀
+        Blue1=Resources.Load<Sprite>("Sprite/ChiBang/Blue1");
+        Blue2=Resources.Load<Sprite>("Sprite/ChiBang/Blue2");
+        Blue3=Resources.Load<Sprite>("Sprite/ChiBang/Blue3");
+        Blue4=Resources.Load<Sprite>("Sprite/ChiBang/Blue4");
+        Blue5=Resources.Load<Sprite>("Sprite/ChiBang/Blue5");
+        Blue6=Resources.Load<Sprite>("Sprite/ChiBang/Blue6");
+        Blue7=Resources.Load<Sprite>("Sprite/ChiBang/Blue7");
+        Blue8=Resources.Load<Sprite>("Sprite/ChiBang/Blue8");
+
+        Green1=Resources.Load<Sprite>("Sprite/ChiBang/Green1");
+        Green2=Resources.Load<Sprite>("Sprite/ChiBang/Green2");
+        Green3=Resources.Load<Sprite>("Sprite/ChiBang/Green3");
+        Green4=Resources.Load<Sprite>("Sprite/ChiBang/Green4");
+        Green5=Resources.Load<Sprite>("Sprite/ChiBang/Green5");
+        Green6=Resources.Load<Sprite>("Sprite/ChiBang/Green6");
+    
+        Purple1=Resources.Load<Sprite>("Sprite/ChiBang/Purple1");
+        Purple2=Resources.Load<Sprite>("Sprite/ChiBang/Purple2");
+        Purple3=Resources.Load<Sprite>("Sprite/ChiBang/Purple3");
+        Purple4=Resources.Load<Sprite>("Sprite/ChiBang/Purple4");
+        Purple5=Resources.Load<Sprite>("Sprite/ChiBang/Purple5");
+        Purple6=Resources.Load<Sprite>("Sprite/ChiBang/Purple6");
+        Purple7=Resources.Load<Sprite>("Sprite/ChiBang/Purple7");
+    
+        Orange1=Resources.Load<Sprite>("Sprite/ChiBang/Orange1");
+        Orange2=Resources.Load<Sprite>("Sprite/ChiBang/Orange2");
+        Orange3=Resources.Load<Sprite>("Sprite/ChiBang/Orange3");
+    
+        Red1=Resources.Load<Sprite>("Sprite/ChiBang/Red1");
         
         //地图
         Level1Liang=Resources.Load<Sprite>("Sprite/DiTu/Level1Liang");

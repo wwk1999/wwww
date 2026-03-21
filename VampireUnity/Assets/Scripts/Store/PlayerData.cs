@@ -7,6 +7,11 @@ using UnityEngine.Serialization;
 
 public class PlayerData : XSingleton<PlayerData>
 {
+    public Dictionary<ChiBangType,ChiBangInfo> ChiBangList = new Dictionary<ChiBangType,ChiBangInfo>();
+    public int AllChiBangLevel=>GetAllChiBangLevel();
+    public int AllChiBangLevelEx=>GetAllChiBangLevelEx();
+
+    
     public  int level=1;
     public int exp=0;
     public int bloodEnergy=0;
@@ -156,6 +161,269 @@ public class PlayerData : XSingleton<PlayerData>
     
     public ShiZhuangType shiZhuangType = ShiZhuangType.None;
 
+    public int GetAllChiBangLevel()
+    {
+        int value = 0;
+        foreach (var item in ChiBangList)
+        {
+            switch (ChiBangConfig.GetChiBangQuality(item.Key))
+            {
+                case 2:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 10;
+                            break;
+                        case 1:
+                            value += 20;
+                            break;
+                        case 2:
+                            value += 30;
+                            break;
+                        case 3:
+                            value += 50;
+                            break;
+                        case 4:
+                            value += 70;
+                            break;
+                        case 5:
+                            value += 100;
+                            break;
+                    }
+                    break;
+                
+                case 3:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 20;
+                            break;
+                        case 1:
+                            value += 40;
+                            break;
+                        case 2:
+                            value += 60;
+                            break;
+                        case 3:
+                            value += 100;
+                            break;
+                        case 4:
+                            value += 140;
+                            break;
+                        case 5:
+                            value += 200;
+                            break;
+                    }
+                    break;
+                
+                case 4:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 40;
+                            break;
+                        case 1:
+                            value += 80;
+                            break;
+                        case 2:
+                            value += 120;
+                            break;
+                        case 3:
+                            value += 200;
+                            break;
+                        case 4:
+                            value += 280;
+                            break;
+                        case 5:
+                            value += 400;
+                            break;
+                    }
+                    break;
+                
+                case 5:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 80;
+                            break;
+                        case 1:
+                            value += 160;
+                            break;
+                        case 2:
+                            value += 240;
+                            break;
+                        case 3:
+                            value += 400;
+                            break;
+                        case 4:
+                            value += 560;
+                            break;
+                        case 5:
+                            value += 800;
+                            break;
+                    }
+                    break;
+                
+                case 6:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 150;
+                            break;
+                        case 1:
+                            value += 300;
+                            break;
+                        case 2:
+                            value += 450;
+                            break;
+                        case 3:
+                            value += 700;
+                            break;
+                        case 4:
+                            value += 1000;
+                            break;
+                        case 5:
+                            value += 1500;
+                            break;
+                    }
+                    break;
+            }
+        }
+        return value/100;
+    }
+    
+    
+    
+    public int GetAllChiBangLevelEx()
+    {
+        int value = 0;
+        foreach (var item in ChiBangList)
+        {
+            switch (ChiBangConfig.GetChiBangQuality(item.Key))
+            {
+                case 2:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 10;
+                            break;
+                        case 1:
+                            value += 20;
+                            break;
+                        case 2:
+                            value += 30;
+                            break;
+                        case 3:
+                            value += 50;
+                            break;
+                        case 4:
+                            value += 70;
+                            break;
+                        case 5:
+                            value += 100;
+                            break;
+                    }
+                    break;
+                
+                case 3:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 20;
+                            break;
+                        case 1:
+                            value += 40;
+                            break;
+                        case 2:
+                            value += 60;
+                            break;
+                        case 3:
+                            value += 100;
+                            break;
+                        case 4:
+                            value += 140;
+                            break;
+                        case 5:
+                            value += 200;
+                            break;
+                    }
+                    break;
+                
+                case 4:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 40;
+                            break;
+                        case 1:
+                            value += 80;
+                            break;
+                        case 2:
+                            value += 120;
+                            break;
+                        case 3:
+                            value += 200;
+                            break;
+                        case 4:
+                            value += 280;
+                            break;
+                        case 5:
+                            value += 400;
+                            break;
+                    }
+                    break;
+                
+                case 5:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 80;
+                            break;
+                        case 1:
+                            value += 160;
+                            break;
+                        case 2:
+                            value += 240;
+                            break;
+                        case 3:
+                            value += 400;
+                            break;
+                        case 4:
+                            value += 560;
+                            break;
+                        case 5:
+                            value += 800;
+                            break;
+                    }
+                    break;
+                
+                case 6:
+                    switch (item.Value.Xj)
+                    {
+                        case 0:
+                            value += 150;
+                            break;
+                        case 1:
+                            value += 300;
+                            break;
+                        case 2:
+                            value += 450;
+                            break;
+                        case 3:
+                            value += 700;
+                            break;
+                        case 4:
+                            value += 1000;
+                            break;
+                        case 5:
+                            value += 1500;
+                            break;
+                    }
+                    break;
+            }
+        }
+        return value%100;
+    }
     
     protected override void Awake()
     {
