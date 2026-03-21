@@ -33,7 +33,7 @@ public class GlobalPlayerAttribute
 
     public static ChiBangAttribute GetPlayerChiBang()
     {
-        return ChiBangConfig.ChiBangAttributeDic[PlayerData.S.ChiBangLevel];
+        return null;
     }
 
 
@@ -252,7 +252,6 @@ public class GlobalPlayerAttribute
        {
            finalDamage+=0.5f;
        }
-       finalDamage+=PlayerChiBangAttribute.finalDamage;
        finalDamage += AA5Count * 0.3f;
        finalDamage += TitleAttributeAll.FinalDamage;
        finalDamage += FinalChongWuAttribute.FinalDamage;
@@ -2846,7 +2845,7 @@ public class GlobalPlayerAttribute
    public static float GetTotalAttackSpeed()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       var value = (weaponAttribute.AttackSpeed + PlayerChiBangAttribute.attackSpeed + HunQiAttackSpeed);
+       var value = (weaponAttribute.AttackSpeed  + HunQiAttackSpeed);
        value += FinalChongWuAttribute.AttackSpeed;
        value *= (1  + FuJiaDamageSpeed / 100.0f);
        value *= (1  + ShiZhuangAttackSpeed / 100.0f);
@@ -2894,7 +2893,6 @@ public class GlobalPlayerAttribute
            forture += 0.3f;
        }
 
-       forture += PlayerChiBangAttribute.forture;
        forture += HD5Count*0.3f;
        forture += TitleAttributeAll.DiaoLuo;
        return forture;
@@ -2902,7 +2900,7 @@ public class GlobalPlayerAttribute
    
    public static float GetPlayerMoveSpeed()
    {
-       float speed=(_baseMoveSpeed+PlayerChiBangAttribute.moveSpeed+TitleAttributeAll.MoveSpeed);
+       float speed=(_baseMoveSpeed+TitleAttributeAll.MoveSpeed);
        speed += FinalChongWuAttribute.MoveSpeed;
        speed *= (1+ShiZhuangMoveSpeed/100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
@@ -2918,7 +2916,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCritDamage()
    {
-       float value= CRITDamage+PlayerChiBangAttribute.critDamage;
+       float value= CRITDamage;
        value += (CC5Count * 50f);
        if (CDTeXiao5Time > 0)
        {

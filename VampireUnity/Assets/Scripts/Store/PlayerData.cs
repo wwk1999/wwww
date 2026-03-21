@@ -10,14 +10,17 @@ public class PlayerData : XSingleton<PlayerData>
     public Dictionary<ChiBangType,ChiBangInfo> ChiBangList = new Dictionary<ChiBangType,ChiBangInfo>();
     public int AllChiBangLevel=>GetAllChiBangLevel();
     public int AllChiBangLevelEx=>GetAllChiBangLevelEx();
+    public ChiBangType playerChiBangType;
+    public float ChiBangAttack => GetChiBangAttack();
+    public float ChiBangDefense => GetChiBangDefense();
+    public float ChiBangHp => GetChiBangHp();
+    public float ChiBangCrit => GetChiBangCrit();
 
     
     public  int level=1;
     public int exp=0;
     public int bloodEnergy=0;
     public int maxGameLevel=3;
-    public int ChiBangLevel=0;
-    public int ChiBangEx=0;
     
     public int clothid;
     public int cloakid;
@@ -161,6 +164,42 @@ public class PlayerData : XSingleton<PlayerData>
     
     public ShiZhuangType shiZhuangType = ShiZhuangType.None;
 
+    public float GetChiBangAttack()
+    {
+        ChiBangInfo chiBangInfo=ChiBangList[playerChiBangType];
+        ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
+        float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
+        float attack = chiBangAttribute.attack * scale;
+        return attack;
+    }
+    
+    public float GetChiBangDefense()
+    {
+        ChiBangInfo chiBangInfo=ChiBangList[playerChiBangType];
+        ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
+        float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
+        float attack = chiBangAttribute.defense * scale;
+        return attack;
+    }
+    
+    public float GetChiBangCrit()
+    {
+        ChiBangInfo chiBangInfo=ChiBangList[playerChiBangType];
+        ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
+        float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
+        float attack = chiBangAttribute.Crit * scale;
+        return attack;
+    }
+    
+    public float GetChiBangHp()
+    {
+        ChiBangInfo chiBangInfo=ChiBangList[playerChiBangType];
+        ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
+        float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
+        float attack = chiBangAttribute.maxHp * scale;
+        return attack;
+    }
+    
     public int GetAllChiBangLevel()
     {
         int value = 0;
@@ -171,23 +210,20 @@ public class PlayerData : XSingleton<PlayerData>
                 case 2:
                     switch (item.Value.Xj)
                     {
-                        case 0:
+                        case 1:
                             value += 10;
                             break;
-                        case 1:
+                        case 2:
                             value += 20;
                             break;
-                        case 2:
-                            value += 30;
-                            break;
                         case 3:
-                            value += 50;
+                            value += 40;
                             break;
                         case 4:
-                            value += 70;
+                            value += 80;
                             break;
                         case 5:
-                            value += 100;
+                            value += 150;
                             break;
                     }
                     break;
@@ -195,23 +231,20 @@ public class PlayerData : XSingleton<PlayerData>
                 case 3:
                     switch (item.Value.Xj)
                     {
-                        case 0:
+                        case 1:
                             value += 20;
                             break;
-                        case 1:
+                        case 2:
                             value += 40;
                             break;
-                        case 2:
-                            value += 60;
-                            break;
                         case 3:
-                            value += 100;
+                            value += 80;
                             break;
                         case 4:
-                            value += 140;
+                            value += 160;
                             break;
                         case 5:
-                            value += 200;
+                            value += 300;
                             break;
                     }
                     break;
@@ -219,23 +252,20 @@ public class PlayerData : XSingleton<PlayerData>
                 case 4:
                     switch (item.Value.Xj)
                     {
-                        case 0:
+                        case 1:
                             value += 40;
                             break;
-                        case 1:
+                        case 2:
                             value += 80;
                             break;
-                        case 2:
-                            value += 120;
-                            break;
                         case 3:
-                            value += 200;
+                            value += 160;
                             break;
                         case 4:
-                            value += 280;
+                            value += 320;
                             break;
                         case 5:
-                            value += 400;
+                            value += 600;
                             break;
                     }
                     break;
@@ -243,23 +273,21 @@ public class PlayerData : XSingleton<PlayerData>
                 case 5:
                     switch (item.Value.Xj)
                     {
-                        case 0:
+                       
+                        case 1:
                             value += 80;
                             break;
-                        case 1:
+                        case 2:
                             value += 160;
                             break;
-                        case 2:
-                            value += 240;
-                            break;
                         case 3:
-                            value += 400;
+                            value += 320;
                             break;
                         case 4:
-                            value += 560;
+                            value += 640;
                             break;
                         case 5:
-                            value += 800;
+                            value += 1200;
                             break;
                     }
                     break;
@@ -267,23 +295,20 @@ public class PlayerData : XSingleton<PlayerData>
                 case 6:
                     switch (item.Value.Xj)
                     {
-                        case 0:
-                            value += 150;
-                            break;
                         case 1:
-                            value += 300;
+                            value += 160;
                             break;
                         case 2:
-                            value += 450;
+                            value += 320;
                             break;
                         case 3:
-                            value += 700;
+                            value += 640;
                             break;
                         case 4:
-                            value += 1000;
+                            value += 1280;
                             break;
                         case 5:
-                            value += 1500;
+                            value += 2400;
                             break;
                     }
                     break;
@@ -304,23 +329,20 @@ public class PlayerData : XSingleton<PlayerData>
                 case 2:
                     switch (item.Value.Xj)
                     {
-                        case 0:
+                        case 1:
                             value += 10;
                             break;
-                        case 1:
+                        case 2:
                             value += 20;
                             break;
-                        case 2:
-                            value += 30;
-                            break;
                         case 3:
-                            value += 50;
+                            value += 40;
                             break;
                         case 4:
-                            value += 70;
+                            value += 80;
                             break;
                         case 5:
-                            value += 100;
+                            value += 150;
                             break;
                     }
                     break;
@@ -328,23 +350,20 @@ public class PlayerData : XSingleton<PlayerData>
                 case 3:
                     switch (item.Value.Xj)
                     {
-                        case 0:
+                        case 1:
                             value += 20;
                             break;
-                        case 1:
+                        case 2:
                             value += 40;
                             break;
-                        case 2:
-                            value += 60;
-                            break;
                         case 3:
-                            value += 100;
+                            value += 80;
                             break;
                         case 4:
-                            value += 140;
+                            value += 160;
                             break;
                         case 5:
-                            value += 200;
+                            value += 300;
                             break;
                     }
                     break;
@@ -352,23 +371,20 @@ public class PlayerData : XSingleton<PlayerData>
                 case 4:
                     switch (item.Value.Xj)
                     {
-                        case 0:
+                        case 1:
                             value += 40;
                             break;
-                        case 1:
+                        case 2:
                             value += 80;
                             break;
-                        case 2:
-                            value += 120;
-                            break;
                         case 3:
-                            value += 200;
+                            value += 160;
                             break;
                         case 4:
-                            value += 280;
+                            value += 320;
                             break;
                         case 5:
-                            value += 400;
+                            value += 600;
                             break;
                     }
                     break;
@@ -376,23 +392,21 @@ public class PlayerData : XSingleton<PlayerData>
                 case 5:
                     switch (item.Value.Xj)
                     {
-                        case 0:
+                       
+                        case 1:
                             value += 80;
                             break;
-                        case 1:
+                        case 2:
                             value += 160;
                             break;
-                        case 2:
-                            value += 240;
-                            break;
                         case 3:
-                            value += 400;
+                            value += 320;
                             break;
                         case 4:
-                            value += 560;
+                            value += 640;
                             break;
                         case 5:
-                            value += 800;
+                            value += 1200;
                             break;
                     }
                     break;
@@ -400,23 +414,20 @@ public class PlayerData : XSingleton<PlayerData>
                 case 6:
                     switch (item.Value.Xj)
                     {
-                        case 0:
-                            value += 150;
-                            break;
                         case 1:
-                            value += 300;
+                            value += 160;
                             break;
                         case 2:
-                            value += 450;
+                            value += 320;
                             break;
                         case 3:
-                            value += 700;
+                            value += 640;
                             break;
                         case 4:
-                            value += 1000;
+                            value += 1280;
                             break;
                         case 5:
-                            value += 1500;
+                            value += 2400;
                             break;
                     }
                     break;

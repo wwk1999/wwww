@@ -17,6 +17,7 @@ public class AddUserSourceStoneData
 }
 public class RoleWindow1 : MonoBehaviour
 {
+    public Button DebugChiBang;
     public SkeletonGraphic playerSkeleton;
     public Text yuanLinText;
     public Text yuanNengText;
@@ -155,51 +156,12 @@ public class RoleWindow1 : MonoBehaviour
 
     public void UpdateRoleWindow()
     {
-        ShowChiBang();
         yuanLinText.text = GlobalPlayerAttribute.BloodEnergy.ToString();// 元灵数量text
         levelText.text= GlobalPlayerAttribute.Level.ToString();
         expSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
         expSlider.value=GlobalPlayerAttribute.Exp ;
     }
-
-    public void ShowChiBang()
-    {
-        whiteChiBang.gameObject.SetActive(false);
-        greenChiBang.gameObject.SetActive(false);
-        blueChiBang.gameObject.SetActive(false);
-        purpleChiBang.gameObject.SetActive(false);
-        orangeChiBang.gameObject.SetActive(false);
-        redChiBang.gameObject.SetActive(false);
-
-        switch (PlayerData.S.ChiBangLevel)
-        {
-            case 1:
-                whiteChiBang.gameObject.SetActive(true);
-                whiteChiBang.Play("ChiBangWhite");
-                break;
-            case 2:
-                greenChiBang.gameObject.SetActive(true);
-                greenChiBang.Play("ChiBangGreen");
-                break;
-            case 3:
-                blueChiBang.gameObject.SetActive(true);
-                blueChiBang.Play("ChiBangBlue");
-                break;
-            case 4:
-                purpleChiBang.gameObject.SetActive(true);
-                purpleChiBang.Play("ChiBangPurple");
-                break;
-            case 5:
-                orangeChiBang.gameObject.SetActive(true);
-                orangeChiBang.Play("ChiBangOrange");
-                break;
-            case 6:
-                redChiBang.gameObject.SetActive(true);
-                redChiBang.Play("ChiBangRed");
-                break;
-        }
-    }
-
+    
     private void OnEnable()
     {
         UpdateRoleWindow();
@@ -220,6 +182,41 @@ public class RoleWindow1 : MonoBehaviour
     
     private void Start()
     {
+        DebugChiBang.onClick.AddListener(() =>
+        {
+            if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue1))
+            {
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue1, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue1});
+            }
+            if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue2))
+            {
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue2, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue2});
+            }
+            if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue3))
+            {
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue3, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue3});
+            }
+            if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue4))
+            {
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue4, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue4});
+            }
+            if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue5))
+            {
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue5, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue5});
+            }
+            if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue6))
+            {
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue6, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue6});
+            }
+            if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue7))
+            {
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue7, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue7});
+            }
+            if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue8))
+            {
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue8, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue8});
+            }
+        });
         Debug.Log("点击进入角色界面");
         InitEquip();
         chongwuButton.onClick.AddListener(() =>

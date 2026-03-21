@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public enum ChiBangType
 {
     None,
@@ -40,11 +39,11 @@ namespace Config
 
     public class ChiBangInfo
     {
-        public ChiBangType ChiBangType;
-        public int Level;
-        public int LevelEx;
-        public int Xj;
-        public int XjEx;
+        public ChiBangType ChiBangType=ChiBangType.None;
+        public int Level=1;
+        public int LevelEx=0;
+        public int Xj=1;
+        public int XjEx=0;
     }
     
     public class ChiBangAttribute
@@ -52,14 +51,43 @@ namespace Config
         public float maxHp;
         public float attack;
         public float defense;
-        public float critDamage;
-        public float attackSpeed;
-        public float moveSpeed;
-        public float forture;
-        public float finalDamage;
+        public float Crit;
     }
+    
     public class ChiBangConfig
     {
+        public static Dictionary<ChiBangType, string> ChiBangCiTiaoDic = new Dictionary<ChiBangType, string>()
+        {
+            { ChiBangType.Green1 ,"移动速度+5%"},
+            { ChiBangType.Green2 ,"黑暗元素伤害+5%"},
+            { ChiBangType.Green3 ,"冰霜元素伤害+5%"},
+            { ChiBangType.Green4 ,"火焰元素伤害+5%"},
+            { ChiBangType.Green5 ,"治疗药剂效果+10%"},
+            { ChiBangType.Green6 ,"最终伤害+5%"},
+            
+            { ChiBangType.Blue1 ,"雷电元素伤害+10%"},
+            { ChiBangType.Blue2 ,"攻击速度+10%"},
+            { ChiBangType.Blue3 ,"火焰元素伤害+10%"},
+            { ChiBangType.Blue4 ,"冰霜元素伤害+10%"},
+            { ChiBangType.Blue5 ,"移动速度+10%"},
+            { ChiBangType.Blue6 ,"最终伤害+10%"},
+            { ChiBangType.Blue7 ,"最终伤害+10%"},
+            { ChiBangType.Blue8 ,"黑暗元素伤害+10%"},
+
+            { ChiBangType.Purple1 ,"雷电,火焰元素伤害+10%"},
+            { ChiBangType.Purple2 ,"火焰元素伤害+15%"},
+            { ChiBangType.Purple3 ,"火焰,黑暗元素伤害+10%"},
+            { ChiBangType.Purple4 ,"火焰元素伤害+15%"},
+            { ChiBangType.Purple5 ,"最终伤害+15%"},
+            { ChiBangType.Purple6 ,"黑暗元素伤害+15%"},
+            { ChiBangType.Purple7 ,"冰霜元素伤害+15%"},
+            
+            { ChiBangType.Orange1 ,"火焰,雷电元素伤害+20%"},
+            { ChiBangType.Orange2 ,"黑暗,冰霜元素伤害+20%"},
+            { ChiBangType.Orange3 ,"最终伤害+20%"},
+            
+            { ChiBangType.Red1 ,"所有元素伤害+25%"},
+        };
         public static string GetChiBangName(ChiBangType chiBangType)
         {
             switch (chiBangType)
@@ -123,6 +151,14 @@ namespace Config
                     return "未知翅膀";
             }
         }
+
+        public static Dictionary<int, int> ChiBangXjDic = new Dictionary<int, int>()
+        {
+            {1,1},
+            {2,2},
+            {3,4},
+            {4,10},
+        };
         
         public static Sprite GetChiBangSprite(ChiBangType chiBangType)
         {
@@ -234,26 +270,253 @@ namespace Config
             return 0;
         }
         
-        public static Dictionary<int, int> ChiBangExDic = new Dictionary<int, int>()
+        public static Dictionary<int, int> YuMaoExDic = new Dictionary<int, int>()
         {
-            {0,10},
-            {1,100},
-            {2,500},
-            {3,3000},
-            {4,20000},
-            {5,100000},
-            {6,1000000},
+            {1,30},
+            {2,100},
+            {3,500},
+            {4,2000},
+            {5,10000},
+            {6,100000},
+        };
+        
+         public static Dictionary<int, float> ChiBangLevelAttributeDic = new Dictionary<int, float>()
+        {
+           {1,1.0f },
+         {2,1.1f },
+         {3,1.2f },
+         {4,1.3f },
+         {5,1.4f },
+         {6,1.5f },
+         {7,1.6f },
+         {8,1.7f },
+         {9,1.8f },
+         {10,1.9f },
+         
+         
+         {11,2.0f },
+         {12,2.15f },
+         {13,2.3f },
+         {14,2.45f },
+         {15,2.6f },
+         {16,2.75f },
+         {17,2.9f },
+         {18,3.05f },
+         {19,3.2f },
+         {20,3.35f },
+         
+         
+         {21,3.5f },
+         {22,3.65f },
+         {23,3.8f },
+         {24,3.95f },
+         {25,4.05f },
+         {26,4.15f },
+         {27,4.3f },
+         {28,4.45f },
+         {29,4.6f },
+         {30,4.75f },
+         
+         
+         {31,4.9f },
+         {32,5.05f },
+         {33,5.2f },
+         {34,5.35f },
+         {35,5.5f },
+         {36,5.65f },
+         {37,5.8f },
+         {38,5.95f },
+         {39,6.05f },
+         {40,6.2f },
+         
+         {41,6.35f },
+         {42,6.5f },
+         {43,6.65f },
+         {44,6.8f },
+         {45,6.95f },
+         {46,7.05f },
+         {47,7.15f },
+         {48,7.3f },
+         {49,7.45f },
+         {50,7.65f },
+         
+         {51,7.8f },
+         {52,8f },
+         {53,8.2f },
+         {54,8.4f },
+         {55,8.6f },
+         {56,8.8f },
+         {57,9f },
+         {58,9.2f },
+         {59,9.4f },
+         {60,9.6f },
+         
+         {61,9.8f },
+         {62,10f },
+         {63,10.2f },
+         {64,10.4f },
+         {65,10.6f },
+         {66,10.8f },
+         {67,11f },
+         {68,11.2f },
+         {69,11.4f },
+         {70,11.6f },
+         
+         {71,11.8f },
+         {72,12f },
+         {73,12.2f },
+         {74,12.4f },
+         {75,12.6f },
+         {76,12.8f },
+         {77,13f },
+         {78,13.2f },
+         {79,13.4f },
+         {80,13.6f },
+         
+         {81,13.9f },
+         {82,14.2f },
+         {83,14.5f },
+         {84,14.8f },
+         {85,15.1f },
+         {86,15.4f },
+         {87,15.7f },
+         {88,16f },
+         {89,16.4f },
+         {90,16.8f },
+         
+         {91,17.2f },
+         {92,17.6f },
+         {93,18f },
+         {94,18.4f },
+         {95,18.8f },
+         {96,19.2f },
+         {97,19.6f },
+         {98,20f },
+         {99,21f },
+         {100,22f },
         };
 
-        public static Dictionary<int, ChiBangAttribute> ChiBangAttributeDic = new Dictionary<int, ChiBangAttribute>()
+        public static Dictionary<int, ChiBangAttribute> ChiBangBaseAttributeDic =
+            new Dictionary<int, ChiBangAttribute>()
+            {
+                { 2, new ChiBangAttribute() { attack = 10, defense = 10, maxHp = 50, Crit = 50 } },
+                { 3, new ChiBangAttribute() { attack = 20, defense = 20, maxHp = 100, Crit = 100 } },
+                { 4, new ChiBangAttribute() { attack = 40, defense = 40, maxHp = 200, Crit = 200 } },
+                { 5, new ChiBangAttribute() { attack = 100, defense = 100, maxHp = 500, Crit = 500 } },
+                { 6, new ChiBangAttribute() { attack = 200, defense = 200, maxHp = 1000, Crit = 1000 } },
+            };
+
+        public static Dictionary<int, int> ChiBangExDic = new Dictionary<int, int>()
         {
-            { 0, new ChiBangAttribute { maxHp = 0, attack = 0, defense = 0 } },
-            { 1, new ChiBangAttribute { maxHp = 100, attack = 30, defense = 10 } },
-            { 2, new ChiBangAttribute { maxHp = 300, attack = 50, defense = 20,critDamage = 10 } },
-            { 3, new ChiBangAttribute { maxHp = 800, attack = 120, defense = 40 ,critDamage = 20 ,attackSpeed = 0.1f} },
-            { 4, new ChiBangAttribute { maxHp = 2000, attack = 300, defense = 100 ,critDamage = 30 ,attackSpeed = 0.15f,moveSpeed = 0.3f } },
-            { 5, new ChiBangAttribute { maxHp = 5000, attack = 800, defense = 300 ,critDamage = 40 ,attackSpeed = 0.2f,moveSpeed = 0.6f,forture = 0.5f } },
-            { 6, new ChiBangAttribute { maxHp = 20000, attack = 3000, defense = 1200 ,critDamage = 50 ,attackSpeed = 0.3f,moveSpeed = 1f,forture = 1f,finalDamage = 1} },
+            {1,50},
+            {2,100},
+            {3,200},
+            {4,300},
+            {5,400},
+            {6,500},
+            {7,600},
+            {8,700},
+            {9,800},
+            {10,1000},
+            
+            {11,1200},
+            {12,1400},
+            {13,1600},
+            {14,1800},
+            {15,2000},
+            {16,2200},
+            {17,2400},
+            {18,2600},
+            {19,2800},
+            {20,3000},
+            
+            {21,3200},
+            {22,3400},
+            {23,3600},
+            {24,3800},
+            {25,4000},
+            {26,4200},
+            {27,4400},
+            {28,4600},
+            {29,4800},
+            {30,5000},
+            
+            {31,5500},
+            {32,6000},
+            {33,6500},
+            {34,7000},
+            {35,7500},
+            {36,8000},
+            {37,8500},
+            {38,9000},
+            {39,9500},
+            {40,10000},
+            
+            {41,11000},
+            {42,12000},
+            {43,13000},
+            {44,14000},
+            {45,15000},
+            {46,16000},
+            {47,17000},
+            {48,18000},
+            {49,19000},
+            {50,20000},
+            
+            {51,22000},
+            {52,24000},
+            {53,26000},
+            {54,28000},
+            {55,30000},
+            {56,32000},
+            {57,34000},
+            {58,36000},
+            {59,38000},
+            {60,40000},
+            
+            {61,42000},
+            {62,44000},
+            {63,46000},
+            {64,48000},
+            {65,50000},
+            {66,54000},
+            {67,58000},
+            {68,62000},
+            {69,66000},
+            {70,70000},
+            
+            {71,75000},
+            {72,80000},
+            {73,85000},
+            {74,90000},
+            {75,95000},
+            {76,100000},
+            {77,110000},
+            {78,120000},
+            {79,130000},
+            {80,140000},
+            
+            {81,150000},
+            {82,160000},
+            {83,170000},
+            {84,180000},
+            {85,190000},
+            {86,200000},
+            {87,220000},
+            {88,240000},
+            {89,260000},
+            {90,280000},
+            
+            {91,300000},
+            {92,330000},
+            {93,360000},
+            {94,390000},
+            {95,420000},
+            {96,450000},
+            {97,500000},
+            {98,550000},
+            {99,600000},
+            {100,700000},
         };
     }
 }

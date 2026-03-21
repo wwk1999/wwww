@@ -17,12 +17,22 @@ public class ChiBangItem1 : MonoBehaviour
   public TextMeshProUGUI Name4;
   public TextMeshProUGUI Name5;
   public TextMeshProUGUI Name6;
+  public Button button;
   
   
   public void SetChiBang()
   {
+    button.onClick.RemoveAllListeners();
+    button.onClick.AddListener(() =>
+    {
+      ObserverModuleManager.S.SendEvent("ChiBangClick", ChiBangInfo);
+    });
     ChiBangImage.sprite = ChiBangConfig.GetChiBangSprite(ChiBangInfo.ChiBangType);
     Level.text="Lv."+ChiBangInfo.Level;
+    foreach (Transform item in XjContent.transform)
+    {
+      Destroy(item.gameObject);
+    }
     for (int i = 0; i < ChiBangInfo.Xj; i++)
     {
       var xx = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/XX"),XjContent.transform);

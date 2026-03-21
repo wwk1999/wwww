@@ -61,13 +61,12 @@ public class StoreDefine : XSingleton<StoreDefine>
     [System.Serializable]
     public class PlayData
     {
+        public ChiBangType playerChiBangType;
         public Dictionary<ChiBangType,ChiBangInfo> ChiBangList = new Dictionary<ChiBangType,ChiBangInfo>();
         public int level;
         public int exp;
         public int bloodEnergy;
         public int gameLevel;
-        public int ChiBangLevel;
-        public int ChiBangEx;
 
         public int clothid;
         public int cloakid;
@@ -200,6 +199,7 @@ public class StoreDefine : XSingleton<StoreDefine>
 
         public void CopyFromRuntime(PlayerData runtime)
         {
+            playerChiBangType = runtime.playerChiBangType;
             ChiBangList.Clear();
             foreach (var item in runtime.ChiBangList)
             {
@@ -210,8 +210,6 @@ public class StoreDefine : XSingleton<StoreDefine>
             exp = runtime.exp;
             bloodEnergy = runtime.bloodEnergy;
             gameLevel = runtime.maxGameLevel;
-            ChiBangLevel = runtime.ChiBangLevel;
-            ChiBangEx = runtime.ChiBangEx;
 
             clothid = runtime.clothid;
             cloakid = runtime.cloakid;
@@ -336,6 +334,8 @@ public class StoreDefine : XSingleton<StoreDefine>
 
         public void ApplyToRuntime(PlayerData runtime)
         {
+            runtime.playerChiBangType = playerChiBangType;
+
             runtime.ChiBangList.Clear();
             foreach (var item in ChiBangList)
             {
@@ -346,8 +346,6 @@ public class StoreDefine : XSingleton<StoreDefine>
             runtime.exp = exp;
             runtime.bloodEnergy = bloodEnergy;
             runtime.maxGameLevel = gameLevel;
-            runtime.ChiBangLevel = ChiBangLevel;
-            runtime.ChiBangEx = ChiBangEx;
 
             runtime.clothid = clothid;
             runtime.cloakid = cloakid;

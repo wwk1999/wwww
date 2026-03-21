@@ -477,7 +477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3869988436271160839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -881,7 +881,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1751329148623604246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: animation
+  animationName: standby
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -1191,7 +1191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3569537125721937831
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1361,7 +1361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7049135981296887197
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2959,7 +2959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4437097451122786123
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3435,7 +3435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2763312571831510928
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4347,7 +4347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2134523175428104310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4454,7 +4454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: 
+  animationName: idle
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -5253,7 +5253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7026952749197109770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5614,7 +5614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lv.333\uFF1A"
+  m_text: 'Lv.1:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
   m_sharedMaterial: {fileID: 9058287321538325952, guid: 7533cd15f53d60a44a04dee89dc3674b, type: 2}
@@ -5766,7 +5766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3134874204745508640
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6001,7 +6001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6428808929712910892
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6130,7 +6130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: animation
+  animationName: standby
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -7693,7 +7693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2512763941071110577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8501,7 +8501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2013963781332447637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8608,7 +8608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: 
+  animationName: wings
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -8983,7 +8983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4281346799012374589
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10691,7 +10691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5999010777597475685
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12369,7 +12369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &761133324457534666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12867,7 +12867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6563681581993930052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12996,7 +12996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: animation
+  animationName: animation_ui
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -15975,7 +15975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5686308294220444940
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16084,7 +16084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: animation
+  animationName: idle
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -17511,7 +17511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1211788633996409886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17620,7 +17620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: animation_ui
+  animationName: animation
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -17981,7 +17981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6321484272602058253
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18131,7 +18131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7473740670830410157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18238,7 +18238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: 
+  animationName: dj
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -18497,7 +18497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4272037617425593624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18846,7 +18846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7474948925706486677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19478,7 +19478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1316553053203779705
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19607,7 +19607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: animation
+  animationName: animation_ui
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -20451,7 +20451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2847317664753675293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20558,7 +20558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: 
+  animationName: dj
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -20973,6 +20973,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -21238,6 +21242,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -21502,6 +21510,10 @@ PrefabInstance:
     - target: {fileID: 3268095470207179220, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -21870,6 +21882,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22135,6 +22151,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -22399,6 +22419,10 @@ PrefabInstance:
     - target: {fileID: 3268095470207179220, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -22869,6 +22893,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -23133,6 +23161,10 @@ PrefabInstance:
     - target: {fileID: 3268095470207179220, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -23704,6 +23736,10 @@ PrefabInstance:
     - target: {fileID: 3268095470207179220, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006536662342467576, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
+      propertyPath: button
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6006303421740249554, guid: c5bf039b2a5513c4e9fb85045df88c2c, type: 3}
       propertyPath: m_AnchorMax.y
