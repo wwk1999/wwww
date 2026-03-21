@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Animations;
-using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// 在 Unity 顶部菜单 Tool/生成序列帧动画
@@ -20,6 +20,7 @@ public class SequenceFrameAnimationGenerator : EditorWindow
     private Texture2D atlasTexture; // 选择的图集贴图（Multiple Sprite）
     private string animationName = "NewSequenceAnim";
     private float frameRate = 12f;
+    private bool useImage = false; // 是否使用Image组件而非SpriteRenderer
 
     [MenuItem("Tool/生成序列帧动画")]
     private static void OpenWindow()
@@ -39,6 +40,7 @@ public class SequenceFrameAnimationGenerator : EditorWindow
         EditorGUILayout.Space();
         animationName = EditorGUILayout.TextField("动画名 / 物体名", animationName);
         frameRate = EditorGUILayout.FloatField("帧率 (FPS)", frameRate);
+        useImage = EditorGUILayout.Toggle("使用 Image 组件 (UI)", useImage);
 
         EditorGUILayout.Space();
         if (GUILayout.Button("生成序列帧动画", GUILayout.Height(30)))
@@ -120,8 +122,23 @@ public class SequenceFrameAnimationGenerator : EditorWindow
 
         // 在场景中创建 GameObject
         GameObject go = new GameObject(animationName);
-        var spriteRenderer = go.AddComponent<SpriteRenderer>();
-        spriteRenderer.sprite = sprites[0];
+        
+        if (useImage)
+        {
+            // 添加Canvas
+            Canvas canvas = go.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            
+            // 添加Image组件
+            var image = go.AddComponent<UnityEngine.UI.Image>();
+            image.sprite = sprites[0];
+        }
+        else
+        {
+            // 添加SpriteRenderer组件
+            var spriteRenderer = go.AddComponent<SpriteRenderer>();
+            spriteRenderer.sprite = sprites[0];
+        }
 
         var animator = go.AddComponent<Animator>();
         animator.runtimeAnimatorController = controller;
@@ -130,10 +147,12 @@ public class SequenceFrameAnimationGenerator : EditorWindow
         Selection.activeGameObject = go;
         SceneView.lastActiveSceneView?.FrameSelected();
 
-        EditorUtility.DisplayDialog("完成", "序列帧动画和带 Animator 的 SpriteRenderer 已生成。", "确定");
+        string message = useImage ? "序列帧动画和带 Animator 的 Image 已生成。" : "序列帧动画和带 Animator 的 SpriteRenderer 已生成。";
+        EditorUtility.DisplayDialog("完成", message, "确定");
+
     }
 
-    private static AnimationClip CreateAnimationClip(string folderPath, string animName, List<Sprite> sprites, float fps)
+    private AnimationClip CreateAnimationClip(string folderPath, string animName, List<Sprite> sprites, float fps)
     {
         string clipPath = Path.Combine(folderPath, animName + ".anim").Replace("\\", "/");
 
@@ -154,9 +173,9 @@ public class SequenceFrameAnimationGenerator : EditorWindow
 
         var binding = new EditorCurveBinding
         {
-            type = typeof(SpriteRenderer),
+            type = useImage ? typeof(UnityEngine.UI.Image) : typeof(SpriteRenderer),
             path = "",
-            propertyName = "m_Sprite"
+            propertyName = useImage ? "m_Sprite" : "m_Sprite"
         };
 
         AnimationUtility.SetObjectReferenceCurve(clip, binding, keyframes);
