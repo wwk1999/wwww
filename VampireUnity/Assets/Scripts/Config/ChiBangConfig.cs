@@ -56,23 +56,31 @@ namespace Config
     
     public class ChiBangConfig
     {
+        public static Dictionary<int, float> ChiBangXjAttributeDic = new Dictionary<int, float>()
+        {
+            {1,1f},
+            {2,1.1f},
+            {3,1.3f},
+            {4,1.6f},
+            {5,2f},
+        };
         public static Dictionary<ChiBangType, string> ChiBangCiTiaoDic = new Dictionary<ChiBangType, string>()
         {
-            { ChiBangType.Green1 ,"移动速度+5%"},
-            { ChiBangType.Green2 ,"黑暗元素伤害+5%"},
+            { ChiBangType.Green1 ,"移动速度+5%"},//1111
+            { ChiBangType.Green2 ,"黑暗元素伤害+5%"},//1111
             { ChiBangType.Green3 ,"冰霜元素伤害+5%"},
             { ChiBangType.Green4 ,"火焰元素伤害+5%"},
-            { ChiBangType.Green5 ,"治疗药剂效果+10%"},
+            { ChiBangType.Green5 ,"掉宝率+10%"},
             { ChiBangType.Green6 ,"最终伤害+5%"},
             
             { ChiBangType.Blue1 ,"雷电元素伤害+10%"},
             { ChiBangType.Blue2 ,"攻击速度+10%"},
             { ChiBangType.Blue3 ,"火焰元素伤害+10%"},
             { ChiBangType.Blue4 ,"冰霜元素伤害+10%"},
-            { ChiBangType.Blue5 ,"移动速度+10%"},
+            { ChiBangType.Blue5 ,"移动速度+10%"},//1111
             { ChiBangType.Blue6 ,"最终伤害+10%"},
-            { ChiBangType.Blue7 ,"最终伤害+10%"},
-            { ChiBangType.Blue8 ,"黑暗元素伤害+10%"},
+            { ChiBangType.Blue7 ,"掉宝率+15%"},
+            { ChiBangType.Blue8 ,"黑暗元素伤害+10%"},//1111
 
             { ChiBangType.Purple1 ,"雷电,火焰元素伤害+10%"},
             { ChiBangType.Purple2 ,"火焰元素伤害+15%"},
@@ -399,11 +407,11 @@ namespace Config
         public static Dictionary<int, ChiBangAttribute> ChiBangBaseAttributeDic =
             new Dictionary<int, ChiBangAttribute>()
             {
-                { 2, new ChiBangAttribute() { attack = 10, defense = 10, maxHp = 50, Crit = 50 } },
-                { 3, new ChiBangAttribute() { attack = 20, defense = 20, maxHp = 100, Crit = 100 } },
-                { 4, new ChiBangAttribute() { attack = 40, defense = 40, maxHp = 200, Crit = 200 } },
-                { 5, new ChiBangAttribute() { attack = 100, defense = 100, maxHp = 500, Crit = 500 } },
-                { 6, new ChiBangAttribute() { attack = 200, defense = 200, maxHp = 1000, Crit = 1000 } },
+                { 6, new ChiBangAttribute() { attack = 500, defense = 500, maxHp = 2500, Crit = 2500 } },
+                { 2, new ChiBangAttribute() { attack = 20, defense = 20, maxHp = 100, Crit = 100 } },
+                { 3, new ChiBangAttribute() { attack = 40, defense = 40, maxHp = 200, Crit = 200 } },
+                { 4, new ChiBangAttribute() { attack = 100, defense = 100, maxHp = 500, Crit = 500 } },
+                { 5, new ChiBangAttribute() { attack = 200, defense = 200, maxHp = 1000, Crit = 1000 } },
             };
 
         public static Dictionary<int, int> ChiBangExDic = new Dictionary<int, int>()

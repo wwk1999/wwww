@@ -18,10 +18,12 @@ public class ChiBangItem1 : MonoBehaviour
   public TextMeshProUGUI Name5;
   public TextMeshProUGUI Name6;
   public Button button;
+  public GameObject E;
   
   
   public void SetChiBang()
   {
+    E.gameObject.SetActive(PlayerData.S.playerChiBangType==ChiBangInfo.ChiBangType);
     button.onClick.RemoveAllListeners();
     button.onClick.AddListener(() =>
     {

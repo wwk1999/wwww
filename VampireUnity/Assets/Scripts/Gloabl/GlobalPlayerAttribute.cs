@@ -255,6 +255,27 @@ public class GlobalPlayerAttribute
        finalDamage += AA5Count * 0.3f;
        finalDamage += TitleAttributeAll.FinalDamage;
        finalDamage += FinalChongWuAttribute.FinalDamage;
+       
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Green5)
+       {
+           finalDamage *= (1.05f);
+       }
+       if (PlayerData.S.playerChiBangType == ChiBangType.Blue6)
+       {
+           finalDamage *= (1.1f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Purple5)
+       {
+           finalDamage *= (1.15f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Orange3)
+       {
+           finalDamage *= (1.2f);
+       }
+       
        return finalDamage;
    }
 
@@ -2854,7 +2875,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalCrit()
    {
-       float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit+TitleAttributeAll.Crit);
+       float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit+TitleAttributeAll.Crit+PlayerData.S.ChiBangCrit);
        value += FinalChongWuAttribute.Crit;
        value *= (1 ) * (1.0f + BaoShiCrit / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
        if (CDTeXiao5Time > 0)
@@ -2895,6 +2916,16 @@ public class GlobalPlayerAttribute
 
        forture += HD5Count*0.3f;
        forture += TitleAttributeAll.DiaoLuo;
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Green5)
+       {
+           forture *= (1.1f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Blue7)
+       {
+           forture *= (1.15f);
+       }
        return forture;
    }
    
@@ -2909,6 +2940,14 @@ public class GlobalPlayerAttribute
        }
 
        speed *= (1.0f + HA5Count * 0.3f);
+       if (PlayerData.S.playerChiBangType == ChiBangType.Green1)
+       {
+           speed *= (1.05f);
+       }
+       if (PlayerData.S.playerChiBangType == ChiBangType.Blue5)
+       {
+           speed *= (1.1f);
+       }
        return speed;
    }
    [NonSerialized]public static float CDTeXiao5Time = 0;
@@ -2927,7 +2966,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp+TitleAttributeAll.Hp));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp+TitleAttributeAll.Hp+PlayerData.S.ChiBangHp));
        maxhp += FinalChongWuAttribute.Hp;
        maxhp *= (1.0f + MaxHpPercent / 100f) * (1.0f + BaoShiHp / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
        maxhp *= (1.0f + ShiZhuangAttack / 100f);
@@ -2940,7 +2979,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDamage()
    {
-       float damage = PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack+TitleAttributeAll.Attack;
+       float damage = PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack+TitleAttributeAll.Attack+PlayerData.S.ChiBangAttack;
        damage += FinalChongWuAttribute.Attack;
        damage *= (1f + DamageAddPercent / 100f) * (1.0f + BaoShiAttack / 100) *
                  (1.0f + TitleAttributeAll.AllBaseAttribute);
@@ -2956,7 +2995,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDefense()
    {
-       float defense=PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense+TitleAttributeAll.Defense;
+       float defense=PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense+TitleAttributeAll.Defense+PlayerData.S.ChiBangDefense;
        defense += FinalChongWuAttribute.Defence;
        defense *= (1.0f + MaxDefensePercent / 100f);
        defense *= (1.0f + BaoShiDefense / 100);
@@ -2997,6 +3036,37 @@ public class GlobalPlayerAttribute
        float value = 1.0f;
        value += FinalChongWuAttribute.HuoDamage;
        value += SkillJiaDian.S.HuoAll / 100f;
+       
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Green4)
+       {
+           value *= (1.05f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Blue3)
+       {
+           value *= (1.1f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Purple2||PlayerData.S.playerChiBangType == ChiBangType.Purple4)
+       {
+           value *= (1.15f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Purple3)
+       {
+           value *= (1.1f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Orange1)
+       {
+           value *= (1.2f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Red1)
+       {
+           value *= (1.25f);
+       }
        return value;
    }
    public static float GetHeiAnYuanSuBase()
@@ -3004,6 +3074,31 @@ public class GlobalPlayerAttribute
        float value = 1.0f;
        value += FinalChongWuAttribute.HeiAnDamage;
        value += SkillJiaDian.S.HeiAnAll / 100f;
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Green2)
+       {
+           value *= (1.05f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Blue8||PlayerData.S.playerChiBangType == ChiBangType.Purple3)
+       {
+           value *= (1.1f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Purple6)
+       {
+           value *= (1.15f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Orange2)
+       {
+           value *= (1.2f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Red1)
+       {
+           value *= (1.25f);
+       }
        return value;
    }
    public static float GetIceYuanSuBase()
@@ -3011,6 +3106,31 @@ public class GlobalPlayerAttribute
        float value = 1.0f;
        value += FinalChongWuAttribute.IceDamage;
        value += SkillJiaDian.S.IceAll / 100f;
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Green3)
+       {
+           value *= (1.05f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Blue4)
+       {
+           value *= (1.1f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Purple7)
+       {
+           value *= (1.15f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Orange2)
+       {
+           value *= (1.2f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Red1)
+       {
+           value *= (1.25f);
+       }
        return value;
    }
    
@@ -3019,6 +3139,26 @@ public class GlobalPlayerAttribute
        float value = 1.0f;
        value += FinalChongWuAttribute.DianDamage;
        value += SkillJiaDian.S.DianAll / 100f;
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Blue1)
+       {
+           value *= (1.1f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Purple1)
+       {
+           value *= (1.1f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Orange1)
+       {
+           value *= (1.2f);
+       }
+       
+       if (PlayerData.S.playerChiBangType == ChiBangType.Red1)
+       {
+           value *= (1.25f);
+       }
        return value;
    }
    

@@ -101,7 +101,6 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\双刀\ShuangDaoSkill2Anim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\雷兽\LeiShouShunYi.cs" />
     <Compile Include="Assets\Scripts\Config\SkillConfig.cs" />
-    <Compile Include="Assets\Scripts\Equip\ChiBangGrid.cs" />
     <Compile Include="Assets\Scripts\ChongWu\ShiWuItem.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\HpReductionReplyAdd50.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonster.cs" />

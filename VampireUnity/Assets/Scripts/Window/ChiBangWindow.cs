@@ -70,15 +70,8 @@ public class ChiBangWindow : MonoBehaviour
    public Button ExitButton;
 
 
-   private void OnEnable()
+   public void ShowChiBangList()
    {
-      CurrentClickChiBangType=ChiBangType.None;
-      AllLevel.text = "Lv." + PlayerData.S.AllChiBangLevel;
-      AllLevelSlider.maxValue = 100;
-      AllLevelSlider.value = PlayerData.S.AllChiBangLevelEx;
-      
-      AllLevelLeftText.text = PlayerData.S.AllChiBangLevelEx.ToString();
-      AllLevelRightText.text = "100";
       foreach (Transform item in ChiBangContent.transform)
       {
          Destroy(item.gameObject);
@@ -90,6 +83,17 @@ public class ChiBangWindow : MonoBehaviour
          chiBangInfo.ChiBangInfo = item.Value;
          chiBangInfo.SetChiBang();
       }
+   }
+   private void OnEnable()
+   {
+      CurrentClickChiBangType=ChiBangType.None;
+      AllLevel.text = "Lv." + PlayerData.S.AllChiBangLevel;
+      AllLevelSlider.maxValue = 100;
+      AllLevelSlider.value = PlayerData.S.AllChiBangLevelEx;
+      ShowChiBangList();
+      AllLevelLeftText.text = PlayerData.S.AllChiBangLevelEx.ToString();
+      AllLevelRightText.text = "100";
+     
       RightContent.SetActive(false);
    }
 
@@ -306,16 +310,23 @@ public class ChiBangWindow : MonoBehaviour
       LevelSlider.value=chiBangInfo.LevelEx;
       LevelLeftText.text=chiBangInfo.LevelEx.ToString();
       LevelRightText.text=ChiBangConfig.ChiBangExDic[chiBangInfo.Level].ToString();
-      AttackText.text=Mathf.RoundToInt(PlayerData.S.ChiBangAttack).ToString();
-      DefenseText.text=Mathf.RoundToInt(PlayerData.S.ChiBangDefense).ToString();
-      CritText.text=Mathf.RoundToInt(PlayerData.S.ChiBangCrit).ToString();
-      HpText.text=Mathf.RoundToInt(PlayerData.S.ChiBangHp).ToString();
+      ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
+      float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
+      float attack = chiBangAttribute.attack * scale;
+      float defense = chiBangAttribute.defense * scale;
+      float hp = chiBangAttribute.maxHp * scale;
+      float crit = chiBangAttribute.Crit * scale;
+      AttackText.text=Mathf.RoundToInt(attack).ToString();
+      DefenseText.text=Mathf.RoundToInt(defense).ToString();
+      CritText.text=Mathf.RoundToInt(crit).ToString();
+      HpText.text=Mathf.RoundToInt(hp).ToString();
       CiTiaoText.text=ChiBangConfig.ChiBangCiTiaoDic[chiBangInfo.ChiBangType];
    }
 
    public void ChiBangClick(object[] obj)
    {
       ChiBangInfo chiBangInfo=obj[0] as ChiBangInfo;
+      CurrentClickChiBangType=chiBangInfo.ChiBangType;
       ShowChiBangInfo(chiBangInfo);
    }
 
@@ -351,6 +362,7 @@ public class ChiBangWindow : MonoBehaviour
       InstallButton.onClick.AddListener(() =>
       {
          PlayerData.S.playerChiBangType = CurrentClickChiBangType;
+         ShowChiBangList();
       });
    }
 }

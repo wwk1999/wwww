@@ -216,6 +216,39 @@ public class RoleWindow1 : MonoBehaviour
             {
                 PlayerData.S.ChiBangList.Add(ChiBangType.Blue8, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue8});
             }
+            
+            
+
+            if (!BagController.S.PropList.ContainsKey(401))
+            {
+                BagController.S.PropList.Add(401,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:1));
+            }
+            
+            if (!BagController.S.PropList.ContainsKey(402))
+            {
+                BagController.S.PropList.Add(402,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:2));
+            }
+            
+            if (!BagController.S.PropList.ContainsKey(403))
+            {
+                BagController.S.PropList.Add(403,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:3));
+            }
+            
+            if (!BagController.S.PropList.ContainsKey(404))
+            {
+                BagController.S.PropList.Add(404,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:4));
+            }
+            
+            if (!BagController.S.PropList.ContainsKey(405))
+            {
+                BagController.S.PropList.Add(405,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:5));
+            }
+            
+            if (!BagController.S.PropList.ContainsKey(406))
+            {
+                BagController.S.PropList.Add(406,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:6));
+            }
+           
         });
         Debug.Log("点击进入角色界面");
         InitEquip();

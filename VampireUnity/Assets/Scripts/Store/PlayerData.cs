@@ -166,37 +166,53 @@ public class PlayerData : XSingleton<PlayerData>
 
     public float GetChiBangAttack()
     {
+        if (playerChiBangType == ChiBangType.None)
+        {
+            return 0;
+        }
         ChiBangInfo chiBangInfo=ChiBangList[playerChiBangType];
         ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
         float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
-        float attack = chiBangAttribute.attack * scale;
+        float attack = chiBangAttribute.attack * scale*ChiBangConfig.ChiBangXjAttributeDic[chiBangInfo.Xj];
         return attack;
     }
     
     public float GetChiBangDefense()
     {
+        if (playerChiBangType == ChiBangType.None)
+        {
+            return 0;
+        }
         ChiBangInfo chiBangInfo=ChiBangList[playerChiBangType];
         ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
         float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
-        float attack = chiBangAttribute.defense * scale;
+        float attack = chiBangAttribute.defense * scale*ChiBangConfig.ChiBangXjAttributeDic[chiBangInfo.Xj];
         return attack;
     }
     
     public float GetChiBangCrit()
     {
+        if (playerChiBangType == ChiBangType.None)
+        {
+            return 0;
+        }
         ChiBangInfo chiBangInfo=ChiBangList[playerChiBangType];
         ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
         float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
-        float attack = chiBangAttribute.Crit * scale;
+        float attack = chiBangAttribute.Crit * scale*ChiBangConfig.ChiBangXjAttributeDic[chiBangInfo.Xj];
         return attack;
     }
     
     public float GetChiBangHp()
     {
+        if (playerChiBangType == ChiBangType.None)
+        {
+            return 0;
+        }
         ChiBangInfo chiBangInfo=ChiBangList[playerChiBangType];
         ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
         float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
-        float attack = chiBangAttribute.maxHp * scale;
+        float attack = chiBangAttribute.maxHp * scale*ChiBangConfig.ChiBangXjAttributeDic[chiBangInfo.Xj];
         return attack;
     }
     

@@ -1654,33 +1654,7 @@ public class GameController : XSingleton<GameController>
         gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player"),transform).GetComponent<Player>();
         gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
         gamePlayer.transform.position = Vector2.zero;
-        switch (PlayerData.S.ChiBangLevel)
-        {
-            case 1:
-                gamePlayer.whiteChiBang.gameObject.SetActive(true);
-                gamePlayer.whiteChiBang.Play("NewSequenceAnim");
-                break;
-            case 2:
-                gamePlayer.greenChiBang.gameObject.SetActive(true);
-                gamePlayer.greenChiBang.Play("NewSequenceAnim");
-                break;
-            case 3:
-                gamePlayer.blueChiBang.gameObject.SetActive(true);
-                gamePlayer.blueChiBang.Play("NewSequenceAnim");
-                break;
-            case 4:
-                gamePlayer.purpleChiBang.gameObject.SetActive(true);
-                gamePlayer.purpleChiBang.Play("NewSequenceAnim");
-                break;
-            case 5:
-                gamePlayer.orangeChiBang.gameObject.SetActive(true);
-                gamePlayer.orangeChiBang.Play("NewSequenceAnim");
-                break;
-            case 6:
-                gamePlayer.redChiBang.gameObject.SetActive(true);
-                gamePlayer.redChiBang.Play("NewSequenceAnim");
-                break;
-        }
+        
     }
 
     // 获取距离玩家10单位的圆周上随机一点
