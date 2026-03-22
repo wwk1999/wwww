@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public enum WeaponCiTiao
 {
@@ -255,6 +256,69 @@ namespace Config
             { WeaponType.LvQuan,"源极杖"},
 
         };
+
+        public static Sprite GetWeaponSprite(WeaponType type)
+        {
+            switch (type)
+            {
+                case WeaponType.Primary:
+                    return ResourcesConfig.Primary;
+                case WeaponType.PrimaryDian:
+                    return ResourcesConfig.PrimaryDian;
+                case WeaponType.PrimaryHuo:
+                    return ResourcesConfig.PrimaryHuo;
+                case WeaponType.PrimaryHeiAn:
+                    return ResourcesConfig.PrimaryHeiAn;
+                
+                case WeaponType.HuoBaoZha:
+                    return ResourcesConfig.Du;
+                case WeaponType.DianBaoZha:
+                    return ResourcesConfig.DianBaoZha;
+                case WeaponType.HeiAnBaoZha:
+                    return ResourcesConfig.HeiAnBaoZha;
+                case WeaponType.IceBaoZha:
+                    return ResourcesConfig.IceBaoZha;
+                
+                case WeaponType.LuoLei:
+                    return ResourcesConfig.Fire;
+                case WeaponType.XuKong:
+                    return ResourcesConfig.XuKong;
+                case WeaponType.LvQuan:
+                    return ResourcesConfig.LvQuan;
+                case WeaponType.PuTong3:
+                    return ResourcesConfig.PuTong3;
+                
+                case WeaponType.Huo7:
+                    return ResourcesConfig.Huo7;
+                case WeaponType.HuoFenLie:
+                    return ResourcesConfig.HuoFenLie;
+                case WeaponType.JianQi:
+                    return ResourcesConfig.JianQi;
+                case WeaponType.HeiAnHuiXuan:
+                    return ResourcesConfig.HeiAnHuiXuan;
+                case WeaponType.HeiAnQuXian:
+                    return ResourcesConfig.HeiAnQuXian;
+                case WeaponType.Ice4BaoZha:
+                    return ResourcesConfig.Ice4BaoZha;
+                case WeaponType.Ice7:
+                    return ResourcesConfig.Ice7;
+                case WeaponType.DianJiSu:
+                    return ResourcesConfig.DianJiSu;
+                case WeaponType.DianSanShe:
+                    return ResourcesConfig.DianSanShe;
+                
+                case WeaponType.HuoDiPen:
+                    return ResourcesConfig.HuoDiPen;
+                case WeaponType.HeiDong:
+                    return ResourcesConfig.HeiDong;
+                case WeaponType.IcePen:
+                    return ResourcesConfig.IcePen;
+                case WeaponType.DianLuoLei5:
+                    return ResourcesConfig.DianLuoLei5;
+            }
+
+            return null;
+        }
 
         public static Dictionary<WeaponJieSuoDesc, string> WeaponJieSuoDescDic =
             new Dictionary<WeaponJieSuoDesc, string>()

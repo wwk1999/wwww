@@ -14,6 +14,7 @@ using UnityEngine.UI;
 public class WeaponWindow : MonoBehaviour
 {
 
+   public Image WeaponImage;
    public GameObject WeaponListContent;
    public Button exitButton; // 退出按钮
 
@@ -308,6 +309,7 @@ public class WeaponWindow : MonoBehaviour
    public void ShowJieSuo(WeaponType weaponType)
    {
       HideName();
+      WeaponImage.sprite = WeaponConfig.GetWeaponSprite(weaponType);
       JieSuoPanel.gameObject.SetActive(true);
       AttributePanel.gameObject.SetActive(false);
       InfoPanel.SetActive(true);
@@ -995,6 +997,7 @@ public class WeaponWindow : MonoBehaviour
    public void BgButtonClick(object[] obj)
    {
       WeaponType type = (WeaponType)obj[0];
+      WeaponImage.sprite=WeaponConfig.GetWeaponSprite(type);
       switch (type)
       {
          case WeaponType.Primary:
