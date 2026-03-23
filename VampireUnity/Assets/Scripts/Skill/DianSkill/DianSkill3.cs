@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Spine.Unity;
 using UnityEngine;
 
@@ -38,7 +39,7 @@ public class DianSkill3 : MonoBehaviour
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].zhuoShaoTime = 3.1f;
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.Dian3Damage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f)*SkillController.S.DianYuanSuDamage*(1.0f),isCrit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Dian3Damage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f)*SkillController.S.DianYuanSuDamage*(1.0f),isCrit,DamageFrom.Normal);
             hit.SetActive(true);
         }
     }

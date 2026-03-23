@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Spine.Unity;
 using UnityEngine;
 
@@ -23,7 +24,7 @@ public class HeiAnSkill4Item : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HeiAn4Damage*
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.HeiAn4Damage*
                                                             (GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillDamage+1.0f),isCrit,DamageFrom.Normal);
         }
     }

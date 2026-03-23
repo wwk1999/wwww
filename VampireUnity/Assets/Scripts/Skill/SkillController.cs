@@ -285,54 +285,6 @@ public class SkillController : XSingleton<SkillController>
     public float IceYuanSuDamage => GetIceDamage();
 
 
-    public float Ice1Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice1] + MathF.Max(0,
-        (SkillJiaDian.S.Ice1 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice1]);
-    public float Ice2Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice2] + MathF.Max(0,
-        (SkillJiaDian.S.Ice2 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice2]);
-    public float Ice3Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice3] + MathF.Max(0,
-        (SkillJiaDian.S.Ice3 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice3]);
-    public float Ice4Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice4] + MathF.Max(0,
-        (SkillJiaDian.S.Ice4 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice4]);
-    public float Ice5Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice5] + MathF.Max(0,
-        (SkillJiaDian.S.Ice5 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice5]);
-    
-    
-    public float Dian1Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian1] + MathF.Max(0,
-        (SkillJiaDian.S.Dian1 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian1]);
-    public float Dian2Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian2] + MathF.Max(0,
-        (SkillJiaDian.S.Dian2 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian2]);
-    public float Dian3Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian3] + MathF.Max(0,
-        (SkillJiaDian.S.Dian3 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian3]);
-    public float Dian4Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian4] + MathF.Max(0,
-        (SkillJiaDian.S.Dian4 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian4]);
-    public float Dian5Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian5] + MathF.Max(0,
-        (SkillJiaDian.S.Dian5 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian5]);
-    
-    
-    public float HeiAn1Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn1] + MathF.Max(0,
-        (SkillJiaDian.S.HeiAn1 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn1]);
-    public float HeiAn2Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn2] + MathF.Max(0,
-        (SkillJiaDian.S.HeiAn2 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn2]);
-    public float HeiAn3Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn3] + MathF.Max(0,
-        (SkillJiaDian.S.HeiAn3 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn3]);
-    public float HeiAn4Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn4] + MathF.Max(0,
-        (SkillJiaDian.S.HeiAn4 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn4]);
-    public float HeiAn5Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn5] + MathF.Max(0,
-        (SkillJiaDian.S.HeiAn5 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn5]);
-    
-    
-    public float Huo1Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo1] + MathF.Max(0,
-        (SkillJiaDian.S.Huo1 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo1]);
-    public float Huo2Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo2] + MathF.Max(0,
-        (SkillJiaDian.S.Huo2 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo2]);
-    public float Huo3Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo3] + MathF.Max(0,
-        (SkillJiaDian.S.Huo3 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo3]);
-    public float Huo4Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo4] + MathF.Max(0,
-        (SkillJiaDian.S.Huo4 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo4]);
-    public float Huo5Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo5] + MathF.Max(0,
-        (SkillJiaDian.S.Huo5 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo5]);
-
-
     public bool IsHuoSkill2=false;
     public bool IsDianSkill2=false;
     public bool IsHeiAnSkill2=false;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
@@ -42,7 +43,7 @@ public class HeiAnSkill3 : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GameController.S.GameAttack*SkillController.S.HeiAn3Damage*SkillController.S.HeiAnYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal);
+                monster.Hurt(GameController.S.GameAttack*SkillConfig.HeiAn3Damage*SkillController.S.HeiAnYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal);
                 // var hit = GameController.S.HeiDongPengQueue.Dequeue();
                 //hit.transform.position = monster.transform.position;
                 //hit.SetActive(true);

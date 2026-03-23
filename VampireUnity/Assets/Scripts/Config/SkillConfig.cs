@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Config
@@ -115,6 +116,52 @@ namespace Config
             HeiAnSkill5,
         }
 
+        public static float Ice1Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice1] + MathF.Max(0,
+        (SkillJiaDian.S.Ice1 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice1]);
+    public  static float Ice2Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice2] + MathF.Max(0,
+        (SkillJiaDian.S.Ice2 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice2]);
+    public  static float Ice3Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice3] + MathF.Max(0,
+        (SkillJiaDian.S.Ice3 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice3]);
+    public  static float Ice4Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice4] + MathF.Max(0,
+        (SkillJiaDian.S.Ice4 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice4]);
+    public  static float Ice5Damage => SkillConfig.SkillBaseDamageDic[SkillType.Ice5] + MathF.Max(0,
+        (SkillJiaDian.S.Ice5 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Ice5]);
+    
+    
+    public  static float Dian1Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian1] + MathF.Max(0,
+        (SkillJiaDian.S.Dian1 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian1]);
+    public  static float Dian2Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian2] + MathF.Max(0,
+        (SkillJiaDian.S.Dian2 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian2]);
+    public  static float Dian3Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian3] + MathF.Max(0,
+        (SkillJiaDian.S.Dian3 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian3]);
+    public  static float Dian4Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian4] + MathF.Max(0,
+        (SkillJiaDian.S.Dian4 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian4]);
+    public  static float Dian5Damage => SkillConfig.SkillBaseDamageDic[SkillType.Dian5] + MathF.Max(0,
+        (SkillJiaDian.S.Dian5 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Dian5]);
+    
+    
+    public  static float HeiAn1Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn1] + MathF.Max(0,
+        (SkillJiaDian.S.HeiAn1 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn1]);
+    public  static float HeiAn2Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn2] + MathF.Max(0,
+        (SkillJiaDian.S.HeiAn2 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn2]);
+    public  static float HeiAn3Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn3] + MathF.Max(0,
+        (SkillJiaDian.S.HeiAn3 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn3]);
+    public  static float HeiAn4Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn4] + MathF.Max(0,
+        (SkillJiaDian.S.HeiAn4 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn4]);
+    public  static float HeiAn5Damage => SkillConfig.SkillBaseDamageDic[SkillType.HeiAn5] + MathF.Max(0,
+        (SkillJiaDian.S.HeiAn5 - 1) * SkillConfig.SkillUpDamageDic[SkillType.HeiAn5]);
+    
+    
+    public  static float Huo1Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo1] + MathF.Max(0,
+        (SkillJiaDian.S.Huo1 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo1]);
+    public  static float Huo2Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo2] + MathF.Max(0,
+        (SkillJiaDian.S.Huo2 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo2]);
+    public  static float Huo3Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo3] + MathF.Max(0,
+        (SkillJiaDian.S.Huo3 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo3]);
+    public  static float Huo4Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo4] + MathF.Max(0,
+        (SkillJiaDian.S.Huo4 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo4]);
+    public  static float Huo5Damage => SkillConfig.SkillBaseDamageDic[SkillType.Huo5] + MathF.Max(0,
+        (SkillJiaDian.S.Huo5 - 1) * SkillConfig.SkillUpDamageDic[SkillType.Huo5]);
         public static Dictionary<SkillType, int> SkillBaseDamageDic = new Dictionary<SkillType, int>()
         {
             { SkillType.Ice1,300},

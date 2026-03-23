@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
@@ -79,7 +80,7 @@ public class DianQuan : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GameController.S.GameAttack*SkillController.S.Dian1Damage*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill1);
+                monster.Hurt(GameController.S.GameAttack*SkillConfig.Dian1Damage*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill1);
                 var hit = GameController.S.DianQuanPengQueue.Dequeue();
                 hit.transform.position = monster.transform.position;
                 hit.SetActive(true);

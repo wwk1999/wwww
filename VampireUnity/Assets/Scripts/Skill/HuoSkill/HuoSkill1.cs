@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Spine.Unity;
 using UnityEngine;
 
@@ -37,7 +38,7 @@ public class HuoSkill1 : MonoBehaviour
       var hit = GameController.S.DuPengQueue.Dequeue();
       hit.transform.position = closestPoint;
       bool isCrit = GameController.S.GetIsCrit();
-      GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.Huo1Damage*(GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillDamage+1.0f)*SkillController.S.HuoYuanSuDamage*(1.0f),isCrit,DamageFrom.Skill1);
+      GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Huo1Damage*(GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillDamage+1.0f)*SkillController.S.HuoYuanSuDamage*(1.0f),isCrit,DamageFrom.Skill1);
       hit.SetActive(true);
     }
   }

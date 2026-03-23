@@ -217,7 +217,7 @@ namespace Config
             { WeaponType.JianQi,$"急速释放火焰剑气穿透敌人，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.JianQi][0]}%</color>的火焰伤害"},
             { WeaponType.XuKong,$"释放虚空弹穿透敌人，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.XuKong][0]}%</color>的黑暗伤害"},
             { WeaponType.PuTong3,$"释放三颗冰弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Ice7][0]}%</color>的冰霜伤害"},
-            { WeaponType.Fire,$"释放落雷弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Fire][0]}%</color>的雷电伤害"},
+            { WeaponType.Fire,$"释放落雷弹，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.Fire][0]}%</color>的雷电伤害,随后召唤一道落雷造成<color=green>{WeaponDamageDic[WeaponType.Fire][1]}%</color>的雷电伤害"},
             { WeaponType.HeiDong,$"释放黑洞缓慢前行，对命中敌人造成<color=green>{WeaponDamageDic[WeaponType.HeiDong][0]}%</color>的黑暗伤害，随后坍塌造成<color=green>{WeaponDamageDic[WeaponType.HeiDong][1]}%</color>的黑暗伤害"},
             { WeaponType.LvQuan,$"释放源火球缓慢前行，对命中的敌人造成<color=green>{WeaponDamageDic[WeaponType.LvQuan][0]}%</color>的火焰伤害"},
 
