@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class StoreWindow : MonoBehaviour
 {
+   public Animator animator;
    public Button exitButton;
    public GameObject ShanChuMask;
    public Button YesButton;
@@ -189,6 +190,7 @@ public class StoreWindow : MonoBehaviour
    {
       StoreController.S.CurrentSaveSlot = 0;
       ShanChuMask.SetActive(false);
+      animator.Play("StoreAnim");
      Show();
    }
    

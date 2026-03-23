@@ -287,6 +287,8 @@ namespace Config
                     return ResourcesConfig.LvQuan;
                 case WeaponType.PuTong3:
                     return ResourcesConfig.PuTong3;
+                case WeaponType.Fire:
+                    return ResourcesConfig.Fire;
                 
                 case WeaponType.Huo7:
                     return ResourcesConfig.Huo7;
