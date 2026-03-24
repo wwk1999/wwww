@@ -493,6 +493,21 @@ public class ResourcesConfig : MonoBehaviour
 
 
     //宠物图片
+    
+    public static Sprite ChongWuItemBgWhite;
+    public static Sprite ChongWuItemBgGreen;
+    public static Sprite ChongWuItemBgBlue;
+    public static Sprite ChongWuItemBgPurple;
+    public static Sprite ChongWuItemBgOrange;
+    public static Sprite ChongWuItemBgRed;
+    
+    public static Sprite ChongWuQualityBgWhite;
+    public static Sprite ChongWuQualityBgGreen;
+    public static Sprite ChongWuQualityBgBlue;
+    public static Sprite ChongWuQualityBgPurple;
+    public static Sprite ChongWuQualityBgOrange;
+    public static Sprite ChongWuQualityBgRed;
+
 
     public static Sprite ChongWuSkill1;
     public static Sprite ChongWuSkill2;
@@ -1323,6 +1338,21 @@ public class ResourcesConfig : MonoBehaviour
 
         
         //宠物
+        ChongWuQualityBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框白");
+        ChongWuQualityBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框绿");
+        ChongWuQualityBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框蓝");
+        ChongWuQualityBgPurple=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框紫");
+        ChongWuQualityBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框橙");
+        ChongWuQualityBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框红");
+
+        ChongWuItemBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框白");
+        ChongWuItemBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框绿");
+        ChongWuItemBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框蓝");
+        ChongWuItemBgPurple=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框紫");
+        ChongWuItemBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框橙");
+        ChongWuItemBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框红");
+
+        
         ChongWuSkill1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill1");
         ChongWuSkill2=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill2");
         ChongWuSkill3=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill3");

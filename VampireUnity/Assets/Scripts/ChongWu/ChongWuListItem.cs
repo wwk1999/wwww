@@ -9,9 +9,16 @@ using UnityEngine.UI;
 
 public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHandler 
 {
+    public Image bg;
+    public TextMeshProUGUI name1;
+    public TextMeshProUGUI name2;
+    public TextMeshProUGUI name3;
+    public TextMeshProUGUI name4;
+    public TextMeshProUGUI name5;
+    public TextMeshProUGUI name6;
+
     public Image Image;
     public TextMeshProUGUI Level;
-    public Image QualityIcon;
     public GameObject XX;
     public GameObject XXContent;
 
@@ -148,6 +155,46 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
         float aspectRatio = ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.width / ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.height;
         aspectRatioFitter.aspectRatio = aspectRatio;
         Level.text = "Lv. "+info.Level;
+        name1.gameObject.SetActive(false);
+        name2.gameObject.SetActive(false);
+        name3.gameObject.SetActive(false);
+        name4.gameObject.SetActive(false);
+        name5.gameObject.SetActive(false);
+        name6.gameObject.SetActive(false);
+
+        switch (info.Quality)
+        {
+            case 1:
+                name1.gameObject.SetActive(true);
+                name1.text = info.Name;
+                bg.sprite = ResourcesConfig.ChongWuItemBgWhite;
+                break;
+            case 2:
+                name2.gameObject.SetActive(true);
+                name2.text = info.Name;
+                bg.sprite = ResourcesConfig.ChongWuItemBgGreen;
+                break;
+            case 3:
+                name3.gameObject.SetActive(true);
+                name3.text = info.Name;
+                bg.sprite = ResourcesConfig.ChongWuItemBgBlue;
+                break;
+            case 4:
+                name4.gameObject.SetActive(true);
+                name4.text = info.Name;
+                bg.sprite = ResourcesConfig.ChongWuItemBgPurple;
+                break;
+            case 5:
+                name5.gameObject.SetActive(true);
+                name5.text = info.Name;
+                bg.sprite = ResourcesConfig.ChongWuItemBgOrange;
+                break;
+            case 6:
+                name6.gameObject.SetActive(true);
+                name6.text = info.Name;
+                bg.sprite = ResourcesConfig.ChongWuItemBgRed;
+                break;
+        }
         switch (info.YuanSuType)
         {
             case YuanSuType.Ice:
@@ -163,28 +210,6 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
                 YuanSuIcon.sprite = ResourcesConfig.HeiAnIcon;
                 break;
         }
-        switch (info.Quality)
-        {
-            case 1:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality1;
-                break;
-            case 2:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality2;
-                break;
-            case 3:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality3;
-                break;
-            case 4:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality4;
-                break;
-            case 5:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality5;
-                break;
-            case 6:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality6;
-                break;
-        }
-
         foreach (Transform item in XXContent.transform)
         {
             Destroy(item.gameObject);
