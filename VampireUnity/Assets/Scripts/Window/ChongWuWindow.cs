@@ -714,6 +714,7 @@ public class ChongWuWindow : MonoBehaviour
     {
         InitHide();
         ShowZhuChongWu();
+        ShowChongWuPage();
     }
     
     public void ResetFuChongWu(object[] obj)

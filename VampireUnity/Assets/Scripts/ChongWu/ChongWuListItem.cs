@@ -36,14 +36,6 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
 
     private float isLeftMouseDownTime = 0;
     private GameObject ChongWuImage=null;
-    public void ShowGou()
-    {
-        Gou.SetActive(true);
-    }
-    public void HideGou()
-    {
-        Gou.SetActive(false);
-    }
     public void OnPointerDown(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -151,6 +143,7 @@ public class ChongWuListItem:MonoBehaviour, IPointerClickHandler,IPointerDownHan
     public void SetChongWuListItem(ChongWuTable info)
     {
         chongWuTable=info;
+        Gou.gameObject.SetActive(info.ChongWuId==PlayerData.S.ZhuChongWuId);
         Image.sprite = ResourcesConfig.GetChongWuSprite(info.ChongWuType);
         float aspectRatio = ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.width / ResourcesConfig.GetChongWuSprite(info.ChongWuType).rect.height;
         aspectRatioFitter.aspectRatio = aspectRatio;

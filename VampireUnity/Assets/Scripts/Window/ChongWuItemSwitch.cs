@@ -36,36 +36,6 @@ public class ChongWuItemSwitch : MonoBehaviour
                return;
             }
             
-            int index = (ChongWuController.S.CurrentChongWuPageNum - 1) * 6;
-            
-            //取消勾
-            if (PlayerData.S.ChongWuDic.Count >= index + 1)
-            {
-               ChongWuController.S.CurrentPageItemList[0].HideGou();
-            }
-            if (PlayerData.S.ChongWuDic.Count >= index + 2)
-            {
-               ChongWuController.S.CurrentPageItemList[1].HideGou();
-            }
-            if (PlayerData.S.ChongWuDic.Count >= index + 3)
-            {
-               ChongWuController.S.CurrentPageItemList[2].HideGou();
-            }
-            if (PlayerData.S.ChongWuDic.Count >= index + 4)
-            {
-               ChongWuController.S.CurrentPageItemList[3].HideGou();
-            }
-            if (PlayerData.S.ChongWuDic.Count >= index + 5)
-            {
-               ChongWuController.S.CurrentPageItemList[4].HideGou();
-            }
-            if (PlayerData.S.ChongWuDic.Count >= index + 6)
-            {
-               ChongWuController.S.CurrentPageItemList[5].HideGou();
-            }
-            
-            //勾选勾
-            ClickChongWuItem.ShowGou();
             PlayerData.S.ZhuChongWuId = ClickChongWuItem.chongWuTable.ChongWuId;
             ObserverModuleManager.S.SendEvent("ChongWuChuZhan");
             ObserverModuleManager.S.SendEvent("HideChongWuItemMask");

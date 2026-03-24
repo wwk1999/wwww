@@ -311,6 +311,7 @@
     <Compile Include="Assets\Scripts\Equip\EquipAttributePanel.cs" />
     <Compile Include="Assets\Scripts\Window\SceneLoading1.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaMoElite.cs" />
+    <Compile Include="Assets\Scripts\Tool\UIMouseClickDetector.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeCloak.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBall.cs" />
     <Compile Include="Assets\Scripts\Tool\AutoWidthByCharacterCount.cs" />
