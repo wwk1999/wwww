@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class FuChongItem : MonoBehaviour
     public int FuChongItemIndex;
     public GameObject Suo;
     public GameObject bg;
+    public TextMeshProUGUI text;
 
     private bool IsMouseOverUIObject(GameObject targetObject)
     {
@@ -143,8 +145,6 @@ public class FuChongItem : MonoBehaviour
                 else
                 {
                     transform.Find("Image").gameObject.SetActive(false);
-                    transform.Find("colorbg").gameObject.SetActive(false);
-                    transform.Find("Edge").gameObject.SetActive(false);
                 }
                 break;
             
@@ -156,8 +156,7 @@ public class FuChongItem : MonoBehaviour
                 else
                 {
                     transform.Find("Image").gameObject.SetActive(false);
-                    transform.Find("colorbg").gameObject.SetActive(false);
-                    transform.Find("Edge").gameObject.SetActive(false);                }
+                }
                 break;
             
             case 3:
@@ -168,43 +167,13 @@ public class FuChongItem : MonoBehaviour
                 else
                 {
                     transform.Find("Image").gameObject.SetActive(false);
-                    transform.Find("colorbg").gameObject.SetActive(false);
-                    transform.Find("Edge").gameObject.SetActive(false);                }
+                }
                 break;
         }
 
         if (table != null)
         {
             transform.Find("Image").gameObject.SetActive(true);
-            transform.Find("colorbg").gameObject.SetActive(true);
-            transform.Find("Edge").gameObject.SetActive(true);
-            switch (table.Quality)
-            {
-                case 1:
-                    transform.Find("colorbg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-                    transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
-                    break;
-                case 2:
-                    transform.Find("colorbg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
-                    transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
-                    break;
-                case 3:
-                    transform.Find("colorbg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
-                    transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-                    break;
-                case 4:
-                    transform.Find("colorbg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
-                    transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
-                    break;
-                case 5:
-                    transform.Find("colorbg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
-                    transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
-                    break;
-                case 6:
-                    transform.Find("colorbg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
-                    transform.Find("Edge").GetComponent<Animator>().Play("RedEdge");
-                    break;
-            }
             switch (FuChongItemIndex)
             {
                 case 1:
@@ -255,12 +224,15 @@ public class FuChongItem : MonoBehaviour
         {
             case 1:
                 Suo.gameObject.SetActive(PlayerData.S.level<20);
+                text.gameObject.SetActive(PlayerData.S.level<20);
                 break;
             case 2:
                 Suo.gameObject.SetActive(PlayerData.S.level<40);
+                text.gameObject.SetActive(PlayerData.S.level<40);
                 break;
             case 3:
                 Suo.gameObject.SetActive(PlayerData.S.level<60);
+                text.gameObject.SetActive(PlayerData.S.level<60);
                 break;
         }
 
