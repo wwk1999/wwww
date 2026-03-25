@@ -232,7 +232,9 @@ public class ChongWuWindow : MonoBehaviour
     {            
         var canvasRect = GetComponentInParent<Canvas>().transform as RectTransform;
         var peiyangWindow=Instantiate(Resources.Load("Prefabs/Window/ChongWuPeiYangWindow")) as GameObject;
-        peiyangWindow.GetComponent<ChongWuPeiYangWindow>().SetXiangQingPage(id);
+        ChongWuPeiYangWindow chongWuPeiYangWindow = peiyangWindow.GetComponent<ChongWuPeiYangWindow>();
+        chongWuPeiYangWindow.CurrentChongWuId = id;
+        peiyangWindow.GetComponent<ChongWuPeiYangWindow>().SetWeiYangPanel();
     }
     
     public void ShowQuality(int quality)

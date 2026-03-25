@@ -64,6 +64,16 @@ public class ChongWuConfig
         public float Crit;
     }
 
+    public static Dictionary<int, string> ChongWuShiWuNameDic = new Dictionary<int, string>()
+    {
+        {1,"生肉块"},
+        {2,"风干肉条"},
+        {3,"冰魄冻肉"},
+        {4,"深渊肉块"},
+        {5,"龙炙肉块"},
+        {6,"神陨之肉"},
+    };
+
     public static Dictionary<ChongWuType, ChongWuType> ChongWuJinHuaDic = new Dictionary<ChongWuType, ChongWuType>()
     {
         { ChongWuType.icepurple1_q, ChongWuType.icepurple1_h },

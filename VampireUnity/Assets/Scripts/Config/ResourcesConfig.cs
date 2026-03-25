@@ -507,6 +507,13 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ChongWuQualityBgPurple;
     public static Sprite ChongWuQualityBgOrange;
     public static Sprite ChongWuQualityBgRed;
+    
+    public static Sprite ChongWuShiWuBgWhite;
+    public static Sprite ChongWuShiWuBgGreen;
+    public static Sprite ChongWuShiWuBgBlue;
+    public static Sprite ChongWuShiWuBgPurple;
+    public static Sprite ChongWuShiWuBgOrange;
+    public static Sprite ChongWuShiWuBgRed;
 
 
     public static Sprite ChongWuSkill1;
@@ -520,12 +527,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite NormalChongWuDan;
     public static Sprite GaoJiChongWuDan;
 
-    public static Sprite ChongWuShiWu1;
-    public static Sprite ChongWuShiWu2;
-    public static Sprite ChongWuShiWu3;
-    public static Sprite ChongWuShiWu4;
-    public static Sprite ChongWuShiWu5;
-    public static Sprite ChongWuShiWu6;
+   
     
     public static Sprite NormalXiSuiYe;
     public static Sprite GaoJiXiSuiYe;
@@ -1338,6 +1340,15 @@ public class ResourcesConfig : MonoBehaviour
 
         
         //宠物
+        ChongWuShiWuBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物白");
+        ChongWuShiWuBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物绿");
+        ChongWuShiWuBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物蓝");
+        ChongWuShiWuBgPurple=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物紫");
+        ChongWuShiWuBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物橙");
+        ChongWuShiWuBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物红");
+
+        
+        
         ChongWuQualityBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框白");
         ChongWuQualityBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框绿");
         ChongWuQualityBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框蓝");
@@ -1364,13 +1375,6 @@ public class ResourcesConfig : MonoBehaviour
         NormalChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/NormalChongWuDan");
         GaoJiChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/GaoJiChongWuDan");
         
-        ChongWuShiWu1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu1");
-        ChongWuShiWu2=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu2");
-        ChongWuShiWu3=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu3");
-        ChongWuShiWu4=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu4");
-        ChongWuShiWu5=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu5");
-        ChongWuShiWu6=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/ChongWuShiWu6");
-
         NormalXiSuiYe=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXiSuiYe");
         GaoJiXiSuiYe=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXiSuiYe");
         NormalXueMaiDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXueMaiDan");

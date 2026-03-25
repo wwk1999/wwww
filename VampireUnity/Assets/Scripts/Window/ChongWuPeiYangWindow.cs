@@ -8,7 +8,18 @@ using Random = UnityEngine.Random;
 
 public class ChongWuPeiYangWindow : MonoBehaviour
 {
-    private int CurrentChongWuId;
+    public TextMeshProUGUI title;
+    public GameObject Quality1;
+    public GameObject Quality2;
+    public GameObject Quality3;
+    public GameObject Quality4;
+    public GameObject Quality5;
+    public GameObject Quality6;
+    public TextMeshProUGUI ZiZhiCount;
+    public TextMeshProUGUI LeftXueMaiCount;
+
+
+    public int CurrentChongWuId;
     public TextMeshProUGUI NameLevelCount;
     public TextMeshProUGUI Name1;
     public TextMeshProUGUI Name2;
@@ -16,12 +27,11 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public TextMeshProUGUI Name4;
     public TextMeshProUGUI Name5;
     public TextMeshProUGUI Name6;
-    public Image QualityIcon;
     public Image YuanSuIcon;
     public Button WeiYangButton;
     public Button ChongZhiButton;
     public Button XiangQingButton;
-    public TextMeshProUGUI ChuZhanText;
+    public GameObject ChuZhanText;
     public Button ExitButton;
     public GameObject XiangQingPanel;
     public GameObject WeiYangPanel;
@@ -57,12 +67,7 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public Slider WeiYangExSlider;
     public TextMeshProUGUI CurrentEx;
     public TextMeshProUGUI MaxEx;
-    public GameObject ShiWu1;
-    public GameObject ShiWu2;
-    public GameObject ShiWu3;
-    public GameObject ShiWu4;
-    public GameObject ShiWu5;
-    public GameObject ShiWu6;
+    public GameObject ShiWuContent;
     public Button ShenJi1;
     public Button ShenJi5;
 
@@ -224,57 +229,24 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public void SetWeiYangPanel()
     {
         var table = PlayerData.S.ChongWuDic[CurrentChongWuId];
-        CurrentLevel.text = table.Level.ToString();
+        CurrentLevel.text = "Lv "+table.Level;
         WeiYangExSlider.maxValue = ChongWuConfig.ChongWuExDic[table.Level];
         WeiYangExSlider.value = table.Ex;
         CurrentEx.text=table.Ex.ToString();
         MaxEx.text=ChongWuConfig.ChongWuExDic[table.Level].ToString();
+        title.text = "喂养";
 
-        ShiWu1.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-        ShiWu1.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu1;
-        ShiWu1.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
-        ShiWu1.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu1.ToString();
-        ShiWu1.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
-        ShiWu1.GetComponent<ShiWuItem>().Quatity = 1;
-        
-        
-        ShiWu2.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-        ShiWu2.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu2;
-        ShiWu2.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
-        ShiWu2.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu2.ToString();
-        ShiWu2.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
-        ShiWu2.GetComponent<ShiWuItem>().Quatity = 2;
-
-        ShiWu3.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-        ShiWu3.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu3;
-        ShiWu3.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-        ShiWu3.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu3.ToString();
-        ShiWu3.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
-        ShiWu3.GetComponent<ShiWuItem>().Quatity = 3;
-        
-        
-        ShiWu4.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-        ShiWu4.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu4;
-        ShiWu4.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
-        ShiWu4.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu4.ToString();
-        ShiWu4.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
-        ShiWu4.GetComponent<ShiWuItem>().Quatity = 4;
-        
-        
-        ShiWu5.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-        ShiWu5.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu5;
-        ShiWu5.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
-        ShiWu5.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu5.ToString();
-        ShiWu5.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
-        ShiWu5.GetComponent<ShiWuItem>().Quatity = 5;
-        
-        
-        ShiWu6.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-        ShiWu6.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.ChongWuShiWu6;
-        ShiWu6.transform.Find("Edge").GetComponent<Animator>().Play("RedEdge");
-        ShiWu6.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = PlayerData.S.ChongWuShiWu6.ToString();
-        ShiWu6.GetComponent<ShiWuItem>().ChongWuId = CurrentChongWuId;
-        ShiWu6.GetComponent<ShiWuItem>().Quatity = 6;
+        foreach (Transform item in ShiWuContent.transform)
+        {
+            Destroy(item.gameObject);
+        }
+        for (int i = 0; i<6; i++)
+        {
+            ShiWuItem shiwu=Instantiate(Resources.Load<GameObject>("Prefabs/Window/ShiWuItem"),ShiWuContent.transform).GetComponent<ShiWuItem>();
+            shiwu.Quatity = i + 1;
+            shiwu.ChongWuId = CurrentChongWuId;
+            shiwu.SetShiWuItem();
+        }
     }
     
 
@@ -703,9 +675,6 @@ public class ChongWuPeiYangWindow : MonoBehaviour
 
     private void Start()
     {
-        
-        ObserverModuleManager.S.RegisterEvent("RefreshWeiYangPage",RefreshWeiYangPage);
-        
         JinHuaButton.onClick.AddListener(() =>
         {
             var table=PlayerData.S.ChongWuDic[CurrentChongWuId];
@@ -1059,37 +1028,14 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         }
     }
     
-    
 
-    public void SetXiangQingPage(int chongWuId)
+    public void RefreshChongWuInfo(int chongWuId)
     {
         HideSke();
         CurrentChongWuId=chongWuId;
         ChongWuTable table=PlayerData.S.ChongWuDic[chongWuId];
-        ShowSke(table);
+        ShowSke(table);    
         NameLevelCount.text = table.Level.ToString();
-        ChuZhanButton.interactable=!(chongWuId==PlayerData.S.ZhuChongWuId);
-        switch (table.Quality)
-        {
-            case 1:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality1;
-                break;
-            case 2:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality2;
-                break;
-            case 3:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality3;
-                break;
-            case 4:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality4;
-                break;
-            case 5:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality5;
-                break;
-            case 6:
-                QualityIcon.sprite = ResourcesConfig.ChongWuQuality6;
-                break;
-        }
 
         switch (table.YuanSuType)
         {
@@ -1106,9 +1052,51 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 YuanSuIcon.sprite = ResourcesConfig.HeiAnIcon;
                 break;
         }
-
-        SetName(table);
+        SetName(table);    
         ChuZhanText.gameObject.SetActive(CurrentChongWuId==PlayerData.S.ZhuChongWuId);
+        Quality1.gameObject.SetActive(false);
+        Quality2.gameObject.SetActive(false);
+        Quality3.gameObject.SetActive(false);
+        Quality4.gameObject.SetActive(false);
+        Quality5.gameObject.SetActive(false);
+        Quality6.gameObject.SetActive(false);
+
+        switch (table.Quality)
+        {
+            case 1:
+                Quality1.gameObject.SetActive(true);
+                break;
+            case 2:
+                Quality2.gameObject.SetActive(true);
+                break;
+            case 3:
+                Quality3.gameObject.SetActive(true);
+                break;
+            case 4:
+                Quality4.gameObject.SetActive(true);
+                break;
+            case 5:
+                Quality5.gameObject.SetActive(true);
+                break;
+            case 6:
+                Quality6.gameObject.SetActive(true);
+                break;
+        }
+
+        ZiZhiCount.text = table.ZiZhi.ToString();
+        LeftXueMaiCount.text = table.XueMai.ToString();
+    }
+
+    public void SetXiangQingPage(int chongWuId)
+    {
+        
+        CurrentChongWuId=chongWuId;
+        ChongWuTable table=PlayerData.S.ChongWuDic[chongWuId];
+        RefreshChongWuInfo(chongWuId);
+        
+        ChuZhanButton.interactable=!(chongWuId==PlayerData.S.ZhuChongWuId);
+
+        
         LevelCount.text = table.Level.ToString();
         CurrentExp.text = table.Ex.ToString();
         MaxExp.text = ChongWuConfig.ChongWuExDic[table.Level].ToString();
