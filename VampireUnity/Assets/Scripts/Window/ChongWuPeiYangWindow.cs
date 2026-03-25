@@ -1034,7 +1034,7 @@ public class ChongWuPeiYangWindow : MonoBehaviour
 
     public void SetXiangQingPage(int chongWuId)
     {
-        
+        title.text = "详情";
         CurrentChongWuId=chongWuId;
         ChongWuTable table=PlayerData.S.ChongWuDic[chongWuId];
         RefreshChongWuInfo(chongWuId);
@@ -1076,28 +1076,22 @@ public class ChongWuPeiYangWindow : MonoBehaviour
             switch (item.Level)
             {
                 case 1:
-                    skillItem.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
-                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
+                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.ChongWuSkillBgWhite;
                     break;
                 case 2:
-                    skillItem.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
-                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
+                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.ChongWuSkillBgGreen;
                     break;
                 case 3:
-                    skillItem.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
+                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.ChongWuSkillBgBlue;
                     break;
                 case 4:
-                    skillItem.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
-                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
+                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.ChongWuSkillBgPurple;
                     break;
                 case 5:
-                    skillItem.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
-                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
+                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.ChongWuSkillBgOrange;
                     break;
                 case 6:
-                    skillItem.transform.Find("Edge").GetComponent<Animator>().Play("RedEdge");
-                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
+                    skillItem.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.ChongWuSkillBgRed;
                     break;
             }
 

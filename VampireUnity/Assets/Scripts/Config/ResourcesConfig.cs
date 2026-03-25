@@ -514,6 +514,13 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ChongWuShiWuBgPurple;
     public static Sprite ChongWuShiWuBgOrange;
     public static Sprite ChongWuShiWuBgRed;
+    
+    public static Sprite ChongWuSkillBgWhite;
+    public static Sprite ChongWuSkillBgGreen;
+    public static Sprite ChongWuSkillBgBlue;
+    public static Sprite ChongWuSkillBgPurple;
+    public static Sprite ChongWuSkillBgOrange;
+    public static Sprite ChongWuSkillBgRed;
 
 
     public static Sprite ChongWuSkill1;
@@ -1347,6 +1354,13 @@ public class ResourcesConfig : MonoBehaviour
         ChongWuShiWuBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物橙");
         ChongWuShiWuBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物红");
 
+        
+        ChongWuSkillBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框白");
+        ChongWuSkillBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框绿");
+        ChongWuSkillBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框蓝");
+        ChongWuSkillBgPurple=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框紫");
+        ChongWuSkillBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框橙");
+        ChongWuSkillBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框红");
         
         
         ChongWuQualityBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框白");
