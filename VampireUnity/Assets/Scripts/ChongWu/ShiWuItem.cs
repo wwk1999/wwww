@@ -90,7 +90,6 @@ public class ShiWuItem : MonoBehaviour
          }
          ObserverModuleManager.S.SendEvent("RefreshWeiYangPage");
          ObserverModuleManager.S.SendEvent("RefreshChongWuPage");
-
       });
       
       

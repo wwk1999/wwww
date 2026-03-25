@@ -80,14 +80,24 @@ public class ChongWuPeiYangWindow : MonoBehaviour
     public TextMeshProUGUI MaxXueMai;
     public Button ZiZhiButton;
     public Button XueMaiButton;
-    public GameObject YaoShui;
+    public Image YaoShuibg;
+    public TextMeshProUGUI YaoShuiName3;
+    public TextMeshProUGUI YaoShuiName5;
     public TextMeshProUGUI CurrentYaoCount;
     public Button ChongZhiButton1;
     private bool IsZiZhiPanel = true;
-    public TextMeshProUGUI ZiZhiWanMei;
-    public TextMeshProUGUI XueMaiWanMei;
+    public GameObject ZiZhiWanMei;
+    public GameObject XueMaiWanMei;
     public Button JinHuaButton;
 
+    private void OnEnable()
+    {
+        if (CurrentChongWuId != 0)
+        {
+            ShowWeiYangPanel();
+            RefreshChongWuInfo(CurrentChongWuId);
+        }
+    }
 
     public void SetChongZhiPanel(bool isZiZhiPanel=true)
     {
@@ -95,58 +105,11 @@ public class ChongWuPeiYangWindow : MonoBehaviour
         XueMaiWanMei.gameObject.SetActive(table.XueMai==ChongWuConfig.ChongWuXueMaiDic[table.Quality].max);
         ZiZhiWanMei.gameObject.SetActive(table.ZiZhi==ChongWuConfig.ChongWuZiZhiDic[table.Quality].max);
 
+        title.text = "重置";
         switch (table.Quality)
         {
             case 1:
-                ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[1].max;
-                ZiZhiSlider.value = table.ZiZhi;
-                CurrentZiZhi.text=table.ZiZhi.ToString();
-                MaxZiZhi.text= ChongWuConfig.ChongWuZiZhiDic[1].max.ToString();
-                XueMaiSlider.maxValue=ChongWuConfig.ChongWuXueMaiDic[1].max;
-                XueMaiSlider.value = table.XueMai;
-                CurrentXueMai.text=table.XueMai.ToString();
-                MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[1].max.ToString();
-                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
-                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-                if (isZiZhiPanel)
-                {
-                    IsZiZhiPanel = true;
-                    CurrentYaoCount.text=BagController.S.PropList[1703].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
-                }
-                else
-                {
-                    IsZiZhiPanel = false;
-                    CurrentYaoCount.text=BagController.S.PropList[1803].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXueMaiDan;
-                }
-                break;
-            
             case 2:
-                ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[2].max;
-                ZiZhiSlider.value = table.ZiZhi;
-                CurrentZiZhi.text=table.ZiZhi.ToString();
-                MaxZiZhi.text= ChongWuConfig.ChongWuZiZhiDic[2].max.ToString();
-                XueMaiSlider.maxValue=ChongWuConfig.ChongWuXueMaiDic[2].max;
-                XueMaiSlider.value = table.XueMai;
-                CurrentXueMai.text=table.XueMai.ToString();
-                MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[2].max.ToString();
-                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
-                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-                if (isZiZhiPanel)
-                {
-                    IsZiZhiPanel = true;
-                    CurrentYaoCount.text=BagController.S.PropList[1703].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
-                }
-                else
-                {
-                    IsZiZhiPanel = false;
-                    CurrentYaoCount.text=BagController.S.PropList[1803].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXueMaiDan;
-                }
-                break;
-            
             case 3:
                 ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[3].max;
                 ZiZhiSlider.value = table.ZiZhi;
@@ -156,47 +119,25 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 XueMaiSlider.value = table.XueMai;
                 CurrentXueMai.text=table.XueMai.ToString();
                 MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[3].max.ToString();
-                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
-                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
+                YaoShuiName3.gameObject.SetActive(true);
+                YaoShuiName5.gameObject.SetActive(false);
                 if (isZiZhiPanel)
                 {
                     IsZiZhiPanel = true;
                     CurrentYaoCount.text=BagController.S.PropList[1703].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXiSuiYe;
+                    YaoShuibg.sprite = ResourcesConfig.NormalXiSuiYe;
+                    YaoShuiName3.text = PropConfig.PropNameDic[1703];
                 }
                 else
                 {
                     IsZiZhiPanel = false;
                     CurrentYaoCount.text=BagController.S.PropList[1803].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.NormalXueMaiDan;
+                    YaoShuibg.sprite = ResourcesConfig.NormalXueMaiDan;
+                    YaoShuiName3.text = PropConfig.PropNameDic[1803];
                 }
                 break;
-            
             case 4:
-                ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[4].max;
-                ZiZhiSlider.value = table.ZiZhi;
-                CurrentZiZhi.text=table.ZiZhi.ToString();
-                MaxZiZhi.text= ChongWuConfig.ChongWuZiZhiDic[4].max.ToString();
-                XueMaiSlider.maxValue=ChongWuConfig.ChongWuXueMaiDic[4].max;
-                XueMaiSlider.value = table.XueMai;
-                CurrentXueMai.text=table.XueMai.ToString();
-                MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[4].max.ToString();
-                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
-                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
-                if (isZiZhiPanel)
-                {
-                    IsZiZhiPanel = true;
-                    CurrentYaoCount.text=BagController.S.PropList[1705].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXiSuiYe;
-                }
-                else
-                {
-                    IsZiZhiPanel = false;
-                    CurrentYaoCount.text=BagController.S.PropList[1805].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXueMaiDan;
-                }
-                break;
-            
+            case 6:
             case 5:
                 ZiZhiSlider.maxValue = ChongWuConfig.ChongWuZiZhiDic[5].max;
                 ZiZhiSlider.value = table.ZiZhi;
@@ -206,19 +147,21 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 XueMaiSlider.value = table.XueMai;
                 CurrentXueMai.text=table.XueMai.ToString();
                 MaxXueMai.text= ChongWuConfig.ChongWuXueMaiDic[5].max.ToString();
-                YaoShui.transform.Find("bg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
-                YaoShui.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
+                YaoShuiName3.gameObject.SetActive(false);
+                YaoShuiName5.gameObject.SetActive(true);
                 if (isZiZhiPanel)
                 {
                     IsZiZhiPanel = true;
                     CurrentYaoCount.text=BagController.S.PropList[1705].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXiSuiYe;
+                    YaoShuibg.sprite = ResourcesConfig.GaoJiXiSuiYe;
+                    YaoShuiName5.text = PropConfig.PropNameDic[1705];
                 }
                 else
                 {
                     IsZiZhiPanel = false;
                     CurrentYaoCount.text=BagController.S.PropList[1805].Count.ToString();
-                    YaoShui.transform.Find("Image").GetComponent<Image>().sprite = ResourcesConfig.GaoJiXueMaiDan;
+                    YaoShuibg.sprite = ResourcesConfig.GaoJiXueMaiDan;
+                    YaoShuiName5.text = PropConfig.PropNameDic[1805];
                 }
                 break;
             
@@ -675,6 +618,8 @@ public class ChongWuPeiYangWindow : MonoBehaviour
 
     private void Start()
     {
+        ObserverModuleManager.S.RegisterEvent("RefreshWeiYangPage",RefreshWeiYangPage);
+
         JinHuaButton.onClick.AddListener(() =>
         {
             var table=PlayerData.S.ChongWuDic[CurrentChongWuId];

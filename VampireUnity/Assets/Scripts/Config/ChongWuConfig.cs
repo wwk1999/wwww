@@ -67,8 +67,8 @@ public class ChongWuConfig
     public static Dictionary<int, string> ChongWuShiWuNameDic = new Dictionary<int, string>()
     {
         {1,"生肉块"},
-        {2,"风干肉条"},
-        {3,"冰魄冻肉"},
+        {2,"风干肉块"},
+        {3,"冰霜冻肉"},
         {4,"深渊肉块"},
         {5,"龙炙肉块"},
         {6,"神陨之肉"},
@@ -265,82 +265,93 @@ public class ChongWuConfig
     {19, new ChongWuBaseAttribute(){Attack = 36, Defence = 32, Crit = 59, Hp = 64} },  // 35*0.9=31.5→32
     {20, new ChongWuBaseAttribute(){Attack = 38, Defence = 34, Crit = 62, Hp = 67} },  // 37*0.9=33.3→34
     
-    {31, new ChongWuBaseAttribute(){Attack = 40, Defence = 36, Crit = 65, Hp = 70} },  // 39*0.9=35.1→36
-    {32, new ChongWuBaseAttribute(){Attack = 45, Defence = 42, Crit = 70, Hp = 73} },  // 46*0.9=41.4→42
-    {33, new ChongWuBaseAttribute(){Attack = 50, Defence = 48, Crit = 75, Hp = 76} },  // 53*0.9=47.7→48
-    {34, new ChongWuBaseAttribute(){Attack = 55, Defence = 50, Crit = 80, Hp = 79} },  // 55*0.9=49.5→50
-    {35, new ChongWuBaseAttribute(){Attack = 60, Defence = 52, Crit = 85, Hp = 86} },  // 57*0.9=51.3→52
-    {36, new ChongWuBaseAttribute(){Attack = 65, Defence = 55, Crit = 90, Hp = 95} },  // 61*0.9=54.9→55
-    {37, new ChongWuBaseAttribute(){Attack = 70, Defence = 62, Crit = 95, Hp = 98} },  // 68*0.9=61.2→62
-    {38, new ChongWuBaseAttribute(){Attack = 75, Defence = 66, Crit = 100, Hp = 101} }, // 73*0.9=65.7→66
-    {39, new ChongWuBaseAttribute(){Attack = 80, Defence = 70, Crit = 105, Hp = 104} }, // 77*0.9=69.3→70
-    {40, new ChongWuBaseAttribute(){Attack = 85, Defence = 74, Crit = 110, Hp = 107} }, // 82*0.9=73.8→74
+    {21, new ChongWuBaseAttribute(){Attack = 40, Defence = 36, Crit = 65, Hp = 70} },  // 39*0.9=35.1→36
+    {22, new ChongWuBaseAttribute(){Attack = 45, Defence = 42, Crit = 70, Hp = 73} },  // 46*0.9=41.4→42
+    {23, new ChongWuBaseAttribute(){Attack = 50, Defence = 48, Crit = 75, Hp = 76} },  // 53*0.9=47.7→48
+    {24, new ChongWuBaseAttribute(){Attack = 55, Defence = 50, Crit = 80, Hp = 79} },  // 55*0.9=49.5→50
+    {25, new ChongWuBaseAttribute(){Attack = 60, Defence = 52, Crit = 85, Hp = 86} },  // 57*0.9=51.3→52
+    {26, new ChongWuBaseAttribute(){Attack = 65, Defence = 55, Crit = 90, Hp = 95} },  // 61*0.9=54.9→55
+    {27, new ChongWuBaseAttribute(){Attack = 70, Defence = 62, Crit = 95, Hp = 98} },  // 68*0.9=61.2→62
+    {28, new ChongWuBaseAttribute(){Attack = 75, Defence = 66, Crit = 100, Hp = 101} }, // 73*0.9=65.7→66
+    {29, new ChongWuBaseAttribute(){Attack = 80, Defence = 70, Crit = 105, Hp = 104} }, // 77*0.9=69.3→70
+    {30, new ChongWuBaseAttribute(){Attack = 85, Defence = 74, Crit = 110, Hp = 107} }, // 82*0.9=73.8→74
     
-    {41, new ChongWuBaseAttribute(){Attack = 90, Defence = 80, Crit = 115, Hp = 112} }, // 88*0.9=79.2→80
-    {42, new ChongWuBaseAttribute(){Attack = 95, Defence = 83, Crit = 120, Hp = 124} }, // 92*0.9=82.8→83
-    {43, new ChongWuBaseAttribute(){Attack = 100, Defence = 88, Crit = 125, Hp = 130} }, // 97*0.9=87.3→88
-    {44, new ChongWuBaseAttribute(){Attack = 105, Defence = 92, Crit = 130, Hp = 135} }, // 102*0.9=91.8→92
-    {45, new ChongWuBaseAttribute(){Attack = 110, Defence = 97, Crit = 135, Hp = 140} }, // 107*0.9=96.3→97
-    {46, new ChongWuBaseAttribute(){Attack = 115, Defence = 100, Crit = 140, Hp = 143} }, // 111*0.9=99.9→100
-    {47, new ChongWuBaseAttribute(){Attack = 120, Defence = 107, Crit = 150, Hp = 151} }, // 118*0.9=106.2→107
-    {48, new ChongWuBaseAttribute(){Attack = 125, Defence = 112, Crit = 160, Hp = 163} }, // 124*0.9=111.6→112
-    {49, new ChongWuBaseAttribute(){Attack = 130, Defence = 115, Crit = 170, Hp = 172} }, // 127*0.9=114.3→115
-    {50, new ChongWuBaseAttribute(){Attack = 135, Defence = 119, Crit = 180, Hp = 186} }, // 132*0.9=118.8→119
+    {31, new ChongWuBaseAttribute(){Attack = 90, Defence = 80, Crit = 115, Hp = 112} }, // 88*0.9=79.2→80
+    {32, new ChongWuBaseAttribute(){Attack = 95, Defence = 83, Crit = 120, Hp = 124} }, // 92*0.9=82.8→83
+    {33, new ChongWuBaseAttribute(){Attack = 100, Defence = 88, Crit = 125, Hp = 130} }, // 97*0.9=87.3→88
+    {34, new ChongWuBaseAttribute(){Attack = 105, Defence = 92, Crit = 130, Hp = 135} }, // 102*0.9=91.8→92
+    {35, new ChongWuBaseAttribute(){Attack = 110, Defence = 97, Crit = 135, Hp = 140} }, // 107*0.9=96.3→97
+    {36, new ChongWuBaseAttribute(){Attack = 115, Defence = 100, Crit = 140, Hp = 143} }, // 111*0.9=99.9→100
+    {37, new ChongWuBaseAttribute(){Attack = 120, Defence = 107, Crit = 150, Hp = 151} }, // 118*0.9=106.2→107
+    {38, new ChongWuBaseAttribute(){Attack = 125, Defence = 112, Crit = 160, Hp = 163} }, // 124*0.9=111.6→112
+    {39, new ChongWuBaseAttribute(){Attack = 130, Defence = 115, Crit = 170, Hp = 172} }, // 127*0.9=114.3→115
+    {40, new ChongWuBaseAttribute(){Attack = 135, Defence = 119, Crit = 180, Hp = 186} }, // 132*0.9=118.8→119
     
-    {51, new ChongWuBaseAttribute(){Attack = 140, Defence = 127, Crit = 190, Hp = 192} }, // 141*0.9=126.9→127
-    {52, new ChongWuBaseAttribute(){Attack = 145, Defence = 132, Crit = 200, Hp = 205} }, // 146*0.9=131.4→132
-    {53, new ChongWuBaseAttribute(){Attack = 150, Defence = 137, Crit = 210, Hp = 220} }, // 152*0.9=136.8→137
-    {54, new ChongWuBaseAttribute(){Attack = 155, Defence = 141, Crit = 220, Hp = 225} }, // 156*0.9=140.4→141
-    {55, new ChongWuBaseAttribute(){Attack = 160, Defence = 145, Crit = 230, Hp = 233} }, // 161*0.9=144.9→145
-    {56, new ChongWuBaseAttribute(){Attack = 165, Defence = 150, Crit = 240, Hp = 243} }, // 166*0.9=149.4→150
-    {57, new ChongWuBaseAttribute(){Attack = 170, Defence = 154, Crit = 250, Hp = 251} }, // 171*0.9=153.9→154
-    {58, new ChongWuBaseAttribute(){Attack = 175, Defence = 161, Crit = 260, Hp = 263} }, // 178*0.9=160.2→161
-    {59, new ChongWuBaseAttribute(){Attack = 180, Defence = 164, Crit = 270, Hp = 272} }, // 182*0.9=163.8→164
-    {60, new ChongWuBaseAttribute(){Attack = 185, Defence = 169, Crit = 280, Hp = 286} }, // 187*0.9=168.3→169
+    {41, new ChongWuBaseAttribute(){Attack = 140, Defence = 127, Crit = 190, Hp = 192} }, // 141*0.9=126.9→127
+    {42, new ChongWuBaseAttribute(){Attack = 145, Defence = 132, Crit = 200, Hp = 205} }, // 146*0.9=131.4→132
+    {43, new ChongWuBaseAttribute(){Attack = 150, Defence = 137, Crit = 210, Hp = 220} }, // 152*0.9=136.8→137
+    {44, new ChongWuBaseAttribute(){Attack = 155, Defence = 141, Crit = 220, Hp = 225} }, // 156*0.9=140.4→141
+    {45, new ChongWuBaseAttribute(){Attack = 160, Defence = 145, Crit = 230, Hp = 233} }, // 161*0.9=144.9→145
+    {46, new ChongWuBaseAttribute(){Attack = 165, Defence = 150, Crit = 240, Hp = 243} }, // 166*0.9=149.4→150
+    {47, new ChongWuBaseAttribute(){Attack = 170, Defence = 154, Crit = 250, Hp = 251} }, // 171*0.9=153.9→154
+    {48, new ChongWuBaseAttribute(){Attack = 175, Defence = 161, Crit = 260, Hp = 263} }, // 178*0.9=160.2→161
+    {49, new ChongWuBaseAttribute(){Attack = 180, Defence = 164, Crit = 270, Hp = 272} }, // 182*0.9=163.8→164
+    {50, new ChongWuBaseAttribute(){Attack = 185, Defence = 169, Crit = 280, Hp = 286} }, // 187*0.9=168.3→169
     
-    {61, new ChongWuBaseAttribute(){Attack = 195, Defence = 172, Crit = 290, Hp = 292} }, // 191*0.9=171.9→172
-    {62, new ChongWuBaseAttribute(){Attack = 205, Defence = 186, Crit = 300, Hp = 306} }, // 206*0.9=185.4→186
-    {63, new ChongWuBaseAttribute(){Attack = 215, Defence = 191, Crit = 310, Hp = 310} }, // 212*0.9=190.8→191
-    {64, new ChongWuBaseAttribute(){Attack = 225, Defence = 204, Crit = 320, Hp = 326} }, // 226*0.9=203.4→204
-    {65, new ChongWuBaseAttribute(){Attack = 235, Defence = 208, Crit = 330, Hp = 333} }, // 231*0.9=207.9→208
-    {66, new ChongWuBaseAttribute(){Attack = 245, Defence = 222, Crit = 350, Hp = 353} }, // 246*0.9=221.4→222
-    {67, new ChongWuBaseAttribute(){Attack = 255, Defence = 226, Crit = 370, Hp = 371} }, // 251*0.9=225.9→226
-    {68, new ChongWuBaseAttribute(){Attack = 265, Defence = 242, Crit = 390, Hp = 393} }, // 268*0.9=241.2→242
-    {69, new ChongWuBaseAttribute(){Attack = 275, Defence = 245, Crit = 410, Hp = 412} }, // 272*0.9=244.8→245
-    {70, new ChongWuBaseAttribute(){Attack = 285, Defence = 259, Crit = 430, Hp = 436} }, // 287*0.9=258.3→259
+    {51, new ChongWuBaseAttribute(){Attack = 195, Defence = 172, Crit = 290, Hp = 292} }, // 191*0.9=171.9→172
+    {52, new ChongWuBaseAttribute(){Attack = 205, Defence = 186, Crit = 300, Hp = 306} }, // 206*0.9=185.4→186
+    {53, new ChongWuBaseAttribute(){Attack = 215, Defence = 191, Crit = 310, Hp = 310} }, // 212*0.9=190.8→191
+    {54, new ChongWuBaseAttribute(){Attack = 225, Defence = 204, Crit = 320, Hp = 326} }, // 226*0.9=203.4→204
+    {55, new ChongWuBaseAttribute(){Attack = 235, Defence = 208, Crit = 330, Hp = 333} }, // 231*0.9=207.9→208
+    {56, new ChongWuBaseAttribute(){Attack = 245, Defence = 222, Crit = 350, Hp = 353} }, // 246*0.9=221.4→222
+    {57, new ChongWuBaseAttribute(){Attack = 255, Defence = 226, Crit = 370, Hp = 371} }, // 251*0.9=225.9→226
+    {58, new ChongWuBaseAttribute(){Attack = 265, Defence = 242, Crit = 390, Hp = 393} }, // 268*0.9=241.2→242
+    {59, new ChongWuBaseAttribute(){Attack = 275, Defence = 245, Crit = 410, Hp = 412} }, // 272*0.9=244.8→245
+    {60, new ChongWuBaseAttribute(){Attack = 285, Defence = 259, Crit = 430, Hp = 436} }, // 287*0.9=258.3→259
     
-    {71, new ChongWuBaseAttribute(){Attack = 295, Defence = 262, Crit = 450, Hp = 452} }, // 291*0.9=261.9→262
-    {72, new ChongWuBaseAttribute(){Attack = 305, Defence = 277, Crit = 470, Hp = 477} }, // 307*0.9=276.3→277
-    {73, new ChongWuBaseAttribute(){Attack = 315, Defence = 281, Crit = 490, Hp = 490} }, // 312*0.9=280.8→281
-    {74, new ChongWuBaseAttribute(){Attack = 325, Defence = 295, Crit = 510, Hp = 517} }, // 327*0.9=294.3→295
-    {75, new ChongWuBaseAttribute(){Attack = 335, Defence = 298, Crit = 530, Hp = 533} }, // 331*0.9=297.9→298
-    {76, new ChongWuBaseAttribute(){Attack = 345, Defence = 313, Crit = 550, Hp = 553} }, // 347*0.9=312.3→313
-    {77, new ChongWuBaseAttribute(){Attack = 355, Defence = 316, Crit = 570, Hp = 571} }, // 351*0.9=315.9→316
-    {78, new ChongWuBaseAttribute(){Attack = 365, Defence = 323, Crit = 590, Hp = 593} }, // 358*0.9=322.2→323
-    {79, new ChongWuBaseAttribute(){Attack = 275, Defence = 335, Crit = 610, Hp = 612} }, // 372*0.9=334.8→335
-    {80, new ChongWuBaseAttribute(){Attack = 385, Defence = 349, Crit = 630, Hp = 637} }, // 387*0.9=348.3→349
+    {61, new ChongWuBaseAttribute(){Attack = 295, Defence = 262, Crit = 450, Hp = 452} }, // 291*0.9=261.9→262
+    {62, new ChongWuBaseAttribute(){Attack = 305, Defence = 277, Crit = 470, Hp = 477} }, // 307*0.9=276.3→277
+    {63, new ChongWuBaseAttribute(){Attack = 315, Defence = 281, Crit = 490, Hp = 490} }, // 312*0.9=280.8→281
+    {64, new ChongWuBaseAttribute(){Attack = 325, Defence = 295, Crit = 510, Hp = 517} }, // 327*0.9=294.3→295
+    {65, new ChongWuBaseAttribute(){Attack = 335, Defence = 298, Crit = 530, Hp = 533} }, // 331*0.9=297.9→298
+    {66, new ChongWuBaseAttribute(){Attack = 345, Defence = 313, Crit = 550, Hp = 553} }, // 347*0.9=312.3→313
+    {67, new ChongWuBaseAttribute(){Attack = 355, Defence = 316, Crit = 570, Hp = 571} }, // 351*0.9=315.9→316
+    {68, new ChongWuBaseAttribute(){Attack = 365, Defence = 323, Crit = 590, Hp = 593} }, // 358*0.9=322.2→323
+    {69, new ChongWuBaseAttribute(){Attack = 275, Defence = 335, Crit = 610, Hp = 612} }, // 372*0.9=334.8→335
+    {70, new ChongWuBaseAttribute(){Attack = 385, Defence = 349, Crit = 630, Hp = 637} }, // 387*0.9=348.3→349
     
-    {81, new ChongWuBaseAttribute(){Attack = 395, Defence = 352, Crit = 650, Hp = 652} }, // 391*0.9=351.9→352
-    {82, new ChongWuBaseAttribute(){Attack = 405, Defence = 368, Crit = 670, Hp = 678} }, // 408*0.9=367.2→368
-    {83, new ChongWuBaseAttribute(){Attack = 415, Defence = 371, Crit = 690, Hp = 690} }, // 412*0.9=370.8→371
-    {84, new ChongWuBaseAttribute(){Attack = 425, Defence = 386, Crit = 710, Hp = 718} }, // 428*0.9=385.2→386
-    {85, new ChongWuBaseAttribute(){Attack = 435, Defence = 388, Crit = 730, Hp = 733} }, // 431*0.9=387.9→388
-    {86, new ChongWuBaseAttribute(){Attack = 445, Defence = 404, Crit = 750, Hp = 753} }, // 448*0.9=403.2→404
-    {87, new ChongWuBaseAttribute(){Attack = 455, Defence = 406, Crit = 770, Hp = 771} }, // 451*0.9=405.9→406
-    {88, new ChongWuBaseAttribute(){Attack = 465, Defence = 422, Crit = 790, Hp = 793} }, // 468*0.9=421.2→422
-    {89, new ChongWuBaseAttribute(){Attack = 475, Defence = 425, Crit = 810, Hp = 812} }, // 472*0.9=424.8→425
-    {90, new ChongWuBaseAttribute(){Attack = 485, Defence = 440, Crit = 830, Hp = 838} }, // 488*0.9=439.2→440
+    {71, new ChongWuBaseAttribute(){Attack = 395, Defence = 352, Crit = 650, Hp = 652} }, // 391*0.9=351.9→352
+    {72, new ChongWuBaseAttribute(){Attack = 405, Defence = 368, Crit = 670, Hp = 678} }, // 408*0.9=367.2→368
+    {73, new ChongWuBaseAttribute(){Attack = 415, Defence = 371, Crit = 690, Hp = 690} }, // 412*0.9=370.8→371
+    {74, new ChongWuBaseAttribute(){Attack = 425, Defence = 386, Crit = 710, Hp = 718} }, // 428*0.9=385.2→386
+    {75, new ChongWuBaseAttribute(){Attack = 435, Defence = 388, Crit = 730, Hp = 733} }, // 431*0.9=387.9→388
+    {76, new ChongWuBaseAttribute(){Attack = 445, Defence = 404, Crit = 750, Hp = 753} }, // 448*0.9=403.2→404
+    {77, new ChongWuBaseAttribute(){Attack = 455, Defence = 406, Crit = 770, Hp = 771} }, // 451*0.9=405.9→406
+    {78, new ChongWuBaseAttribute(){Attack = 465, Defence = 422, Crit = 790, Hp = 793} }, // 468*0.9=421.2→422
+    {79, new ChongWuBaseAttribute(){Attack = 475, Defence = 425, Crit = 810, Hp = 812} }, // 472*0.9=424.8→425
+    {80, new ChongWuBaseAttribute(){Attack = 485, Defence = 440, Crit = 830, Hp = 838} }, // 488*0.9=439.2→440
     
-    {91, new ChongWuBaseAttribute(){Attack = 505, Defence = 451, Crit = 850, Hp = 852} }, // 501*0.9=450.9→451
-    {92, new ChongWuBaseAttribute(){Attack = 525, Defence = 477, Crit = 870, Hp = 879} }, // 529*0.9=476.1→477
-    {93, new ChongWuBaseAttribute(){Attack = 545, Defence = 488, Crit = 890, Hp = 890} }, // 542*0.9=487.8→488
-    {94, new ChongWuBaseAttribute(){Attack = 565, Defence = 513, Crit = 910, Hp = 919} }, // 569*0.9=512.1→513
-    {95, new ChongWuBaseAttribute(){Attack = 585, Defence = 523, Crit = 930, Hp = 933} }, // 581*0.9=522.9→523
-    {96, new ChongWuBaseAttribute(){Attack = 605, Defence = 549, Crit = 950, Hp = 953} }, // 609*0.9=548.1→549
-    {97, new ChongWuBaseAttribute(){Attack = 625, Defence = 559, Crit = 970, Hp = 971} }, // 621*0.9=558.9→559
-    {98, new ChongWuBaseAttribute(){Attack = 655, Defence = 594, Crit = 990, Hp = 993} }, // 659*0.9=593.1→594
-    {99, new ChongWuBaseAttribute(){Attack = 685, Defence = 614, Crit = 1010, Hp = 1102} }, // 682*0.9=613.8→614
-    {100, new ChongWuBaseAttribute(){Attack = 735, Defence = 666, Crit = 1100, Hp = 1109} } // 739*0.9=665.1→666
+    {81, new ChongWuBaseAttribute(){Attack = 505, Defence = 451, Crit = 850, Hp = 852} }, // 501*0.9=450.9→451
+    {82, new ChongWuBaseAttribute(){Attack = 525, Defence = 477, Crit = 870, Hp = 879} }, // 529*0.9=476.1→477
+    {83, new ChongWuBaseAttribute(){Attack = 545, Defence = 488, Crit = 890, Hp = 890} }, // 542*0.9=487.8→488
+    {84, new ChongWuBaseAttribute(){Attack = 565, Defence = 513, Crit = 910, Hp = 919} }, // 569*0.9=512.1→513
+    {85, new ChongWuBaseAttribute(){Attack = 585, Defence = 523, Crit = 930, Hp = 933} }, // 581*0.9=522.9→523
+    {86, new ChongWuBaseAttribute(){Attack = 605, Defence = 549, Crit = 950, Hp = 953} }, // 609*0.9=548.1→549
+    {87, new ChongWuBaseAttribute(){Attack = 625, Defence = 559, Crit = 970, Hp = 971} }, // 621*0.9=558.9→559
+    {88, new ChongWuBaseAttribute(){Attack = 655, Defence = 594, Crit = 990, Hp = 993} }, // 659*0.9=593.1→594
+    {89, new ChongWuBaseAttribute(){Attack = 685, Defence = 614, Crit = 1010, Hp = 1102} }, // 682*0.9=613.8→614
+    {90, new ChongWuBaseAttribute(){Attack = 705, Defence = 636, Crit = 1050, Hp = 1056} }, // 739*0.9=665.1→666
+    
+    {91, new ChongWuBaseAttribute(){Attack = 725, Defence = 650, Crit = 1100, Hp = 1100} }, // 501*0.9=450.9→451
+    {92, new ChongWuBaseAttribute(){Attack = 745, Defence = 665, Crit = 1150, Hp = 1150} }, // 529*0.9=476.1→477
+    {93, new ChongWuBaseAttribute(){Attack = 768, Defence = 680, Crit = 1200, Hp = 1200} }, // 542*0.9=487.8→488
+    {94, new ChongWuBaseAttribute(){Attack = 785, Defence = 695, Crit = 1250, Hp = 1250} }, // 569*0.9=512.1→513
+    {95, new ChongWuBaseAttribute(){Attack = 805, Defence = 710, Crit = 1300, Hp = 1300} }, // 581*0.9=522.9→523
+    {96, new ChongWuBaseAttribute(){Attack = 825, Defence = 725, Crit = 1350, Hp = 1350} }, // 609*0.9=548.1→549
+    {97, new ChongWuBaseAttribute(){Attack = 845, Defence = 740, Crit = 1400, Hp = 1400} }, // 621*0.9=558.9→559
+    {98, new ChongWuBaseAttribute(){Attack = 865, Defence = 755, Crit = 1450, Hp = 1450} }, // 659*0.9=593.1→594
+    {99, new ChongWuBaseAttribute(){Attack = 905, Defence = 770, Crit = 1500, Hp = 1500} }, // 682*0.9=613.8→614
+    {100, new ChongWuBaseAttribute(){Attack = 935, Defence = 800, Crit = 1550, Hp = 1550} } // 739*0.9=66
 };
     public static Dictionary<int, float> NormalChongWuDanGaiLv = new Dictionary<int, float>()
     {
