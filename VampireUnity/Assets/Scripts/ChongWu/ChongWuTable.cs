@@ -82,7 +82,8 @@ public enum YuanSuType
     Ice,
     Huo,
     Dian,
-    HeiAn
+    HeiAn,
+    All
 }
 
 public class ChongWuSkillItem

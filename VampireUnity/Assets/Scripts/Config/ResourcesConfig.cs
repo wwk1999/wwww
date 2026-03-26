@@ -521,6 +521,12 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ChongWuSkillBgPurple;
     public static Sprite ChongWuSkillBgOrange;
     public static Sprite ChongWuSkillBgRed;
+    
+    public static Sprite YuanSuIconIce;
+    public static Sprite YuanSuIconHuo;
+    public static Sprite YuanSuIconDian;
+    public static Sprite YuanSuIconHeiAn;
+    public static Sprite YuanSuIconAll;
 
 
     public static Sprite ChongWuSkill1;
@@ -1362,6 +1368,13 @@ public class ResourcesConfig : MonoBehaviour
         ChongWuSkillBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框橙");
         ChongWuSkillBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框红");
         
+        
+        YuanSuIconDian=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon电");
+        YuanSuIconHuo=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon火");
+        YuanSuIconHeiAn=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon黑暗");
+        YuanSuIconIce=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon冰");
+        YuanSuIconAll=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon全");
+
         
         ChongWuQualityBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框白");
         ChongWuQualityBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框绿");

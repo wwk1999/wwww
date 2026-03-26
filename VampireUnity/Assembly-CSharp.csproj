@@ -587,6 +587,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\IcePen\IcePen.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuItemSwitch.cs" />
+    <Compile Include="Assets\Scripts\Window\TuJianItem.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoQuXian\HuoQuXian.cs" />
     <Compile Include="Assets\Scripts\Config\MJConfig.cs" />
@@ -697,6 +698,7 @@
     <None Include="Assets\Arts\Spine\第二关\虫子\congzi.json" />
     <None Include="Assets\Arts\Spine\宠物\Purple\火purple2——前\pet_9212.json" />
     <None Include="Assets\Arts\Spine\fly\6\fly6.atlas.txt" />
+    <None Include="Assets\Arts\Spine\弹幕\dianqiu\skeleton.json" />
     <None Include="Assets\Arts\Spine\小怪1\shuangtoulong\zhaozishuangtoushe1.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\红龙打包\red_dragon.json" />
     <None Include="Assets\Arts\Spine\小怪1\fenngheguai2\fengheguaiboss2.json" />
@@ -1384,6 +1386,7 @@
     <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\翅膀\绿3\eff_wing_626.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\黑暗purple2——前\pet_9205.atlas.txt" />
+    <None Include="Assets\Arts\Spine\弹幕\dianqiu\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\第一关\粘液怪\nyg.json" />
     <None Include="Assets\Arts\Spine\技能\json\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Blue\冰blue2\pet_9308.atlas.txt" />

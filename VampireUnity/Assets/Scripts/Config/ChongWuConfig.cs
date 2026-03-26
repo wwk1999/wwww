@@ -458,26 +458,86 @@ public class ChongWuConfig
             {ChongWuTuJianType.YuanGuShenLin ,new CongWuTuJianAttribute(){Attack = 1000,Hp = 10000,HeiAn = 80,Huo = 80,Ice = 80,Dian = 80}},
         };
     
-    
-
-    public static Dictionary<ChongWuTuJianType, string> TuJianDescDic = new Dictionary<ChongWuTuJianType, string>()
+    public static Dictionary<ChongWuTuJianType, int> TuJianQualityDic = new Dictionary<ChongWuTuJianType, int>()
     {
-        { ChongWuTuJianType.ShiLaiMu ,"生命值+100,魔力值+10"},
+        { ChongWuTuJianType.ShiLaiMu ,2},
         
-        { ChongWuTuJianType.Huo1 ,"生命值+1000,魔力值+100,火焰伤害+20%"},
-        { ChongWuTuJianType.Dian1 ,"生命值+1000,魔力值+100,电系伤害+20%"},
-        { ChongWuTuJianType.HeiAn1 ,"生命值+1000,魔力值+100,黑暗伤害+20%"},
-        { ChongWuTuJianType.Ice1 ,"生命值+1000,魔力值+100,冰霜伤害+20%"},
+        { ChongWuTuJianType.Huo1 ,3},
+        { ChongWuTuJianType.Dian1 ,3},
+        { ChongWuTuJianType.HeiAn1 ,3},
+        { ChongWuTuJianType.Ice1 ,3},
 
-        { ChongWuTuJianType.Huo2 ,"生命值+5000,魔力值+500,火焰伤害+50%"},
-        { ChongWuTuJianType.Dian2 ,"生命值+5000,魔力值+500,电系伤害+50%"},
-        { ChongWuTuJianType.HeiAn2 ,"生命值+5000,魔力值+500,黑暗伤害+50%"},
-        { ChongWuTuJianType.Ice2 ,"生命值+5000,魔力值+500,冰霜伤害+50%"},
+        { ChongWuTuJianType.Huo2 ,4},
+        { ChongWuTuJianType.Dian2 ,4},
+        { ChongWuTuJianType.HeiAn2 ,4},
+        { ChongWuTuJianType.Ice2 ,4},
         
-        { ChongWuTuJianType.Long ,"生命值+8000,魔力值+800,四系元素伤害+50%"},
-        { ChongWuTuJianType.HuLi ,"生命值+5000,魔力值+500,四系元素伤害+30%"},
-        { ChongWuTuJianType.KongZhongBaZhu ,"生命值+5000,魔力值+500,四系元素伤害+30%"},
-        { ChongWuTuJianType.YuanGuShenLin ,"生命值+10000,魔力值+1000,四系元素伤害+80%"},
+        { ChongWuTuJianType.Long ,4},
+        { ChongWuTuJianType.HuLi ,4},
+        { ChongWuTuJianType.KongZhongBaZhu ,4},
+        { ChongWuTuJianType.YuanGuShenLin ,5},
+    };
+    
+    
+    public static Dictionary<ChongWuTuJianType, YuanSuType> TuJianYuanSuTypeDic = new Dictionary<ChongWuTuJianType, YuanSuType>()
+    {
+        { ChongWuTuJianType.ShiLaiMu ,YuanSuType.Huo},
+        
+        { ChongWuTuJianType.Huo1 ,YuanSuType.Huo},
+        { ChongWuTuJianType.Dian1 ,YuanSuType.Dian},
+        { ChongWuTuJianType.HeiAn1 ,YuanSuType.HeiAn},
+        { ChongWuTuJianType.Ice1 ,YuanSuType.Ice},
+
+        { ChongWuTuJianType.Huo2 ,YuanSuType.Huo},
+        { ChongWuTuJianType.Dian2 ,YuanSuType.Dian},
+        { ChongWuTuJianType.HeiAn2 ,YuanSuType.HeiAn},
+        { ChongWuTuJianType.Ice2 ,YuanSuType.Ice},
+        
+        { ChongWuTuJianType.Long ,YuanSuType.All},
+        { ChongWuTuJianType.HuLi ,YuanSuType.All},
+        { ChongWuTuJianType.KongZhongBaZhu ,YuanSuType.All},
+        { ChongWuTuJianType.YuanGuShenLin ,YuanSuType.All},
+    };
+
+    public static Dictionary<ChongWuTuJianType, string[]> TuJianDescDic = new Dictionary<ChongWuTuJianType, string[]>()
+    {
+        { ChongWuTuJianType.ShiLaiMu, new string[] { "生命值+100", "魔力值+10", "火焰伤害+10" } },
+    
+        { ChongWuTuJianType.Huo1, new string[] { "生命值+1000", "魔力值+100", "火焰伤害+20" } },
+        { ChongWuTuJianType.Dian1, new string[] { "生命值+1000", "魔力值+100", "电系伤害+20" } },
+        { ChongWuTuJianType.HeiAn1, new string[] { "生命值+1000", "魔力值+100", "黑暗伤害+20" } },
+        { ChongWuTuJianType.Ice1, new string[] { "生命值+1000", "魔力值+100", "冰霜伤害+20" } },
+
+        { ChongWuTuJianType.Huo2, new string[] { "生命值+5000", "魔力值+500", "火焰伤害+50" } },
+        { ChongWuTuJianType.Dian2, new string[] { "生命值+5000", "魔力值+500", "电系伤害+50" } },
+        { ChongWuTuJianType.HeiAn2, new string[] { "生命值+5000", "魔力值+500", "黑暗伤害+50" } },
+        { ChongWuTuJianType.Ice2, new string[] { "生命值+5000", "魔力值+500", "冰霜伤害+50" } },
+    
+        { ChongWuTuJianType.Long, new string[] { "生命值+8000", "魔力值+800", "四系元素伤害+50" } },
+        { ChongWuTuJianType.HuLi, new string[] { "生命值+5000", "魔力值+500", "四系元素伤害+30" } },
+        { ChongWuTuJianType.KongZhongBaZhu, new string[] { "生命值+5000", "魔力值+500", "四系元素伤害+30" } },
+        { ChongWuTuJianType.YuanGuShenLin, new string[] { "生命值+10000", "魔力值+1000", "四系元素伤害+80" } },
+    };
+    
+    
+    public static Dictionary<ChongWuTuJianType, string> TuJianNameDic = new Dictionary<ChongWuTuJianType, string>()
+    {
+        { ChongWuTuJianType.ShiLaiMu ,"史莱姆之家"},
+        
+        { ChongWuTuJianType.Huo1 ,"史莱姆之家"},
+        { ChongWuTuJianType.Dian1 ,"史莱姆之家"},
+        { ChongWuTuJianType.HeiAn1 ,"史莱姆之家"},
+        { ChongWuTuJianType.Ice1 ,"史莱姆之家"},
+
+        { ChongWuTuJianType.Huo2 ,"史莱姆之家"},
+        { ChongWuTuJianType.Dian2 ,"史莱姆之家"},
+        { ChongWuTuJianType.HeiAn2 ,"史莱姆之家"},
+        { ChongWuTuJianType.Ice2 ,"史莱姆之家"},
+        
+        { ChongWuTuJianType.Long ,"史莱姆之家"},
+        { ChongWuTuJianType.HuLi ,"史莱姆之家"},
+        { ChongWuTuJianType.KongZhongBaZhu ,"史莱姆之家"},
+        { ChongWuTuJianType.YuanGuShenLin ,"史莱姆之家"},
     };
     
 
