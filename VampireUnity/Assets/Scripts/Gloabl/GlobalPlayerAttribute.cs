@@ -29,12 +29,6 @@ public class TitleAttributeAll
 }
 public class GlobalPlayerAttribute
 {
-    public static ChiBangAttribute PlayerChiBangAttribute => GetPlayerChiBang();
-
-    public static ChiBangAttribute GetPlayerChiBang()
-    {
-        return null;
-    }
 
 
     public static float BingDongRate => (IceYuanSuBase / (7 + IceYuanSuBase))*(1.0f+SkillJiaDian.S.IceBei1*5/100f) * 100f;
@@ -2966,7 +2960,7 @@ public class GlobalPlayerAttribute
 
    public static float GetTotalMaxHp()
    {
-       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+PlayerChiBangAttribute.maxHp+MonsterHp+TitleAttributeAll.Hp+PlayerData.S.ChiBangHp));
+       float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+MonsterHp+TitleAttributeAll.Hp+PlayerData.S.ChiBangHp));
        maxhp += FinalChongWuAttribute.Hp;
        maxhp *= (1.0f + MaxHpPercent / 100f) * (1.0f + BaoShiHp / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
        maxhp *= (1.0f + ShiZhuangAttack / 100f);
@@ -2979,7 +2973,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDamage()
    {
-       float damage = PlayerDamage + EquipDamage+WeaponAttack+PlayerChiBangAttribute.attack+MonsterAttack+TitleAttributeAll.Attack+PlayerData.S.ChiBangAttack;
+       float damage = PlayerDamage + EquipDamage+WeaponAttack+MonsterAttack+TitleAttributeAll.Attack+PlayerData.S.ChiBangAttack;
        damage += FinalChongWuAttribute.Attack;
        damage *= (1f + DamageAddPercent / 100f) * (1.0f + BaoShiAttack / 100) *
                  (1.0f + TitleAttributeAll.AllBaseAttribute);
@@ -2995,7 +2989,7 @@ public class GlobalPlayerAttribute
    
    public static float GetTotalDefense()
    {
-       float defense=PlayerDefense + EquipDefense+WeaponDefense+PlayerChiBangAttribute.defense+MonsterDefense+TitleAttributeAll.Defense+PlayerData.S.ChiBangDefense;
+       float defense=PlayerDefense + EquipDefense+WeaponDefense+MonsterDefense+TitleAttributeAll.Defense+PlayerData.S.ChiBangDefense;
        defense += FinalChongWuAttribute.Defence;
        defense *= (1.0f + MaxDefensePercent / 100f);
        defense *= (1.0f + BaoShiDefense / 100);

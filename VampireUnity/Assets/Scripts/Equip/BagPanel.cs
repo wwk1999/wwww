@@ -24,7 +24,7 @@ public class BagPanel : MonoBehaviour
     
     public Button leftPageButton;
     public Button rightPageButton;
-    public Text pageText;
+    public TextMeshProUGUI pageText;
     
     public GameObject content;
     

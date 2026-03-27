@@ -25,7 +25,6 @@ public class EquipAttributePanel : MonoBehaviour
     public TextMeshProUGUI baseAttributeCount2;
     public Image equipBg;
     public Image equipImage;
-    public Animator animator;
 
     public GameObject fuJiaAttributeContent;
     public TextMeshProUGUI orangeEntryDesc;
@@ -67,6 +66,10 @@ public class EquipAttributePanel : MonoBehaviour
 
     public void SetKong()
     {
+        if (tableBase.Quality == 1)
+        {
+            return;
+        }
         EquipTable equip=(EquipTable)tableBase;
 
         foreach (Transform item in kongListContent.transform)
@@ -114,46 +117,6 @@ public class EquipAttributePanel : MonoBehaviour
             baseAttributeText2.text = "防御 :";
             baseAttributeCount1.text = Mathf.RoundToInt(equip.HP).ToString();
             baseAttributeCount2.text = Mathf.RoundToInt(equip.Defense).ToString();
-        }
-        
-        
-        switch (equip.Quality)
-        {
-            case 1:
-                quality.text = "普通";
-                animator.Play("WhiteEdge");
-                equipBg.sprite = ResourcesConfig.WhiteBg;
-                break;
-            case 2:
-                quality.text = "优秀";
-                animator.Play("GreenEdge");
-                equipBg.sprite = ResourcesConfig.GreenBg;
-                SetFuJiaAttribute(equip);
-                break;
-            case 3:
-                quality.text = "精良";
-                animator.Play("BlueEdge");
-                equipBg.sprite = ResourcesConfig.BlueBg;
-                SetFuJiaAttribute(equip);
-                break;
-            case 4:
-                quality.text = "史诗";
-                animator.Play("PurpleEdge");
-                equipBg.sprite = ResourcesConfig.PurpleBg;
-                SetFuJiaAttribute(equip);
-                break;
-            case 5:
-                quality.text = "传说";
-                animator.Play("OrangeEdge");
-                equipBg.sprite = ResourcesConfig.OrangeBg;
-                SetFuJiaAttribute(equip);
-                break;
-            case 6:
-                quality.text = "神话";
-                animator.Play("RedEdge");
-                equipBg.sprite = ResourcesConfig.OrangeBg;
-                SetFuJiaAttribute(equip);
-                break;
         }
     }
     
@@ -289,10 +252,9 @@ public class EquipAttributePanel : MonoBehaviour
                     }
                     PlayerData.S.SaveWearEquip(equip.equip_type_id, equip.equipid);
                     StoreController.S.SaveStoreData();
-                    BagController.S.ResetE();
                     BagController.S.InstallPlayerWearGrid(grid);
-                    BagController.S.SetE();
                     BagController.S.RefreshPlayerEquip();
+                    BagController.S.ShowEquip();
                     Destroy(gameObject);
             });
         }
