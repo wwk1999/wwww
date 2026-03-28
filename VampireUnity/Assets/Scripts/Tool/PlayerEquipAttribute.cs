@@ -66,6 +66,10 @@ public class PlayerEquipAttribute :  MonoBehaviour, IPointerEnterHandler, IPoint
    
    public void SetKong(EquipTable equipTable)
    {
+       if (equipTable.Quality == 1)
+       {
+           return;
+       }
        BagEquipAttributeInfo bagEquipAttributeInfo=instance.GetComponent<BagEquipAttributeInfo>();
        foreach (Transform item in bagEquipAttributeInfo.kongListContent.transform)
        {
@@ -194,36 +198,30 @@ public class PlayerEquipAttribute :  MonoBehaviour, IPointerEnterHandler, IPoint
         {
             case 1:
                 bagEquipAttributeInfo.quality.text = "普通";
-                bagEquipAttributeInfo.animator.Play("WhiteEdge");
                 bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.WhiteBg;
                 break;
             case 2:
                 bagEquipAttributeInfo.quality.text = "优秀";
-                bagEquipAttributeInfo.animator.Play("GreenEdge");
                 bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.GreenBg;
                 SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
                 break;
             case 3:
                 bagEquipAttributeInfo.quality.text = "精良";
-                bagEquipAttributeInfo.animator.Play("BlueEdge");
                 bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.BlueBg;
                 SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
                 break;
             case 4:
                 bagEquipAttributeInfo.quality.text = "史诗";
-                bagEquipAttributeInfo.animator.Play("PurpleEdge");
                 bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.PurpleBg;
                 SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
                 break;
             case 5:
                 bagEquipAttributeInfo.quality.text = "传说";
-                bagEquipAttributeInfo.animator.Play("OrangeEdge");
                 bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.OrangeBg;
                 SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
                 break;
             case 6:
                 bagEquipAttributeInfo.quality.text = "神话";
-                bagEquipAttributeInfo.animator.Play("RedEdge");
                 bagEquipAttributeInfo.equipBg.sprite = ResourcesConfig.OrangeBg;
                 SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
                 break;

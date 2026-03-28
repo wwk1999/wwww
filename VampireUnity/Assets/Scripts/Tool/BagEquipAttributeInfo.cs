@@ -14,7 +14,6 @@ public class BagEquipAttributeInfo : MonoBehaviour
     public TextMeshProUGUI baseAttributeCount2;
     public Image equipBg;
     public Image equipImage;
-    public Animator animator;
 
     public GameObject fuJiaAttributeContent;
     public TextMeshProUGUI orangeEntryDesc;

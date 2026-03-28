@@ -65,23 +65,18 @@ public class DuanZaoWindow : MonoBehaviour
     public Button jingCuiItem5Button;
 
     public Image item1ColorBg;
-    public Animator item1Edge;
     public Image item1Image;
     
     public Image item2ColorBg;
-    public Animator item2Edge;
     public Image item2Image;
     
     public Image item3ColorBg;
-    public Animator item3Edge;
     public Image item3Image;
     
     public Image item4ColorBg;
-    public Animator item4Edge;
     public Image item4Image;
     
     public Image itemColorBg;
-    public Animator itemEdge;
     public Image itemImage;
 
 
@@ -102,7 +97,6 @@ public class DuanZaoWindow : MonoBehaviour
     public GameObject equipInfo;
     public Button xiLian;
     public Image equipBg;
-    public Animator edge;
     public Image image;
     public Text level;
     public Text baseAttribute1;
@@ -162,7 +156,6 @@ public class DuanZaoWindow : MonoBehaviour
     public Button jinJieRight;
     public Button jinJieLeft;
     public Image jinJieEquipImage;
-    public Animator jinJieEdge;
     public Image jinJieEquipBg;
     public Button jinJie;
     public GameObject jinJieEquipContent;
@@ -180,7 +173,6 @@ public class DuanZaoWindow : MonoBehaviour
     private int XiangQianPageNum = 1;
     private int XiangQianEquipId = 0;
     public Image XiangQianEquipImage;
-    public Animator XiangQianEdge;
     public Image XiangQianEquipBg;
     public TextMeshProUGUI XiangQianPageNumText;
     public Button XiangQian;
@@ -258,8 +250,8 @@ public class DuanZaoWindow : MonoBehaviour
 
         if (isEquipPage)
         {
-            int startIndex = (XiangQianPageNum - 1) * 35;
-            int endIndex = Mathf.Min(XiangQianPageNum * 35, BagController.S.EquipIdList.Count);
+            int startIndex = (XiangQianPageNum - 1) * 32;
+            int endIndex = Mathf.Min(XiangQianPageNum * 32, BagController.S.EquipIdList.Count);
 
             List<EquipTable> list = BagController.S.EquipIdList.Values.ToList();
 
@@ -275,32 +267,26 @@ public class DuanZaoWindow : MonoBehaviour
                     case 1:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.WhiteBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
                         break;
                     case 2:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.GreenBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
                         break;
                     case 3:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.BlueBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
                         break;
                     case 4:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.PurpleBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
                         break;
                     case 5:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.OrangeBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
                         break;
                     case 6:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.RedBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
                         break;
                 }
             }
@@ -330,32 +316,26 @@ public class DuanZaoWindow : MonoBehaviour
                     case 1:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.WhiteBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
                         break;
                     case 2:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.GreenBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
                         break;
                     case 3:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.BlueBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
                         break;
                     case 4:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.PurpleBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
                         break;
                     case 5:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.OrangeBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
                         break;
                     case 6:
                         xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.RedBg;
-                        xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
                         break;
                 }
             }
@@ -365,7 +345,6 @@ public class DuanZaoWindow : MonoBehaviour
     public void ShowJinJieBag()
     {
         jinJieEquipImage.gameObject.SetActive(false);
-        jinJieEdge.gameObject.SetActive(false);
         jinJieEquipBg.gameObject.SetActive(false);
         foreach (Transform child in jinJieEquipContent.transform)
         {
@@ -384,32 +363,26 @@ public class DuanZaoWindow : MonoBehaviour
                 case 1:
                     jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.WhiteBg;
-                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
                     break;
                 case 2:
                     jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.GreenBg;
-                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
                     break;
                 case 3:
                     jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.BlueBg;
-                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
                     break;
                 case 4:
                     jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.PurpleBg;
-                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
                     break;
                 case 5:
                     jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.OrangeBg;
-                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
                     break;
                 case 6:
                     jinjieGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.RedBg;
-                    jinjieGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
                     break;
             }
         }
@@ -422,8 +395,8 @@ public class DuanZaoWindow : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        int startIndex = (PageNum - 1) * 35;
-        int endIndex = Mathf.Min(PageNum * 35, BagController.S.EquipIdList.Count);
+        int startIndex = (PageNum - 1) * 40;
+        int endIndex = Mathf.Min(PageNum * 40, BagController.S.EquipIdList.Count);
 
         List<EquipTable> list = BagController.S.EquipIdList.Values.ToList();
 
@@ -437,32 +410,26 @@ public class DuanZaoWindow : MonoBehaviour
                 case 1:
                     xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.WhiteBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("WhiteEdge");
                     break;
                 case 2:
                     xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.GreenBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("GreenEdge");
                     break;
                 case 3:
                     xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.BlueBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("BlueEdge");
                     break;
                 case 4:
                     xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.PurpleBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("PurpleEdge");
                     break;
                 case 5:
                     xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.OrangeBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("OrangeEdge");
                     break;
                 case 6:
                     xilianGrid.transform.Find("parent/EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.RedBg;
-                    xilianGrid.transform.Find("parent/Edge").GetComponent<Animator>().Play("RedEdge");
                     break;
             }
         }
@@ -473,23 +440,18 @@ public class DuanZaoWindow : MonoBehaviour
         ShowItems();
         _heChengType = HeChengType.GreenWeaponFragment;
         item1ColorBg.sprite = ResourcesConfig.WhiteBg;
-        item1Edge.Play("WhiteEdge");
         item1Image.sprite = ResourcesConfig.WhiteWeaponFragment;
         
         item2ColorBg.sprite = ResourcesConfig.WhiteBg;
-        item2Edge.Play("WhiteEdge");
         item2Image.sprite = ResourcesConfig.WhiteWeaponFragment;
         
         item3ColorBg.sprite = ResourcesConfig.WhiteBg;
-        item3Edge.Play("WhiteEdge");
         item3Image.sprite = ResourcesConfig.WhiteWeaponFragment;
         
         item4ColorBg.sprite = ResourcesConfig.WhiteBg;
-        item4Edge.Play("WhiteEdge");
         item4Image.sprite = ResourcesConfig.WhiteWeaponFragment;
         
         itemColorBg.sprite = ResourcesConfig.GreenBg;
-        itemEdge.Play("GreenEdge");
         itemImage.sprite = ResourcesConfig.GreenWeaponFragment;
     }
     
@@ -499,23 +461,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.BlueWeaponFragment;
 
         item1ColorBg.sprite = ResourcesConfig.GreenBg;
-        item1Edge.Play("GreenEdge");
         item1Image.sprite = ResourcesConfig.GreenWeaponFragment;
         
         item2ColorBg.sprite = ResourcesConfig.GreenBg;
-        item2Edge.Play("GreenEdge");
         item2Image.sprite = ResourcesConfig.GreenWeaponFragment;
         
         item3ColorBg.sprite = ResourcesConfig.GreenBg;
-        item3Edge.Play("GreenEdge");
         item3Image.sprite = ResourcesConfig.GreenWeaponFragment;
         
         item4ColorBg.sprite = ResourcesConfig.GreenBg;
-        item4Edge.Play("GreenEdge");
         item4Image.sprite = ResourcesConfig.GreenWeaponFragment;
         
         itemColorBg.sprite = ResourcesConfig.BlueBg;
-        itemEdge.Play("BlueEdge");
         itemImage.sprite = ResourcesConfig.BlueWeaponFragment;
     }
     
@@ -525,23 +482,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.PurpleWeaponFragment;
 
         item1ColorBg.sprite = ResourcesConfig.BlueBg;
-        item1Edge.Play("BlueEdge");
         item1Image.sprite = ResourcesConfig.BlueWeaponFragment;
         
         item2ColorBg.sprite = ResourcesConfig.BlueBg;
-        item2Edge.Play("BlueEdge");
         item2Image.sprite = ResourcesConfig.BlueWeaponFragment;
         
         item3ColorBg.sprite = ResourcesConfig.BlueBg;
-        item3Edge.Play("BlueEdge");
         item3Image.sprite = ResourcesConfig.BlueWeaponFragment;
         
         item4ColorBg.sprite = ResourcesConfig.BlueBg;
-        item4Edge.Play("BlueEdge");
         item4Image.sprite = ResourcesConfig.BlueWeaponFragment;
         
         itemColorBg.sprite = ResourcesConfig.PurpleBg;
-        itemEdge.Play("PurpleEdge");
         itemImage.sprite = ResourcesConfig.PurpleWeaponFragment;
     }
     
@@ -551,23 +503,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.OrangeWeaponFragment;
 
         item1ColorBg.sprite = ResourcesConfig.PurpleBg;
-        item1Edge.Play("PurpleEdge");
         item1Image.sprite = ResourcesConfig.PurpleWeaponFragment;
         
         item2ColorBg.sprite = ResourcesConfig.PurpleBg;
-        item2Edge.Play("PurpleEdge");
         item2Image.sprite = ResourcesConfig.PurpleWeaponFragment;
         
         item3ColorBg.sprite = ResourcesConfig.PurpleBg;
-        item3Edge.Play("PurpleEdge");
         item3Image.sprite = ResourcesConfig.PurpleWeaponFragment;
         
         item4ColorBg.sprite = ResourcesConfig.PurpleBg;
-        item4Edge.Play("PurpleEdge");
         item4Image.sprite = ResourcesConfig.PurpleWeaponFragment;
         
         itemColorBg.sprite = ResourcesConfig.OrangeBg;
-        itemEdge.Play("OrangeEdge");
         itemImage.sprite = ResourcesConfig.OrangeWeaponFragment;
     }
     
@@ -577,23 +524,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.RedWeaponFragment;
 
         item1ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item1Edge.Play("OrangeEdge");
         item1Image.sprite = ResourcesConfig.OrangeWeaponFragment;
         
         item2ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item2Edge.Play("OrangeEdge");
         item2Image.sprite = ResourcesConfig.OrangeWeaponFragment;
         
         item3ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item3Edge.Play("OrangeEdge");
         item3Image.sprite = ResourcesConfig.OrangeWeaponFragment;
         
         item4ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item4Edge.Play("OrangeEdge");
         item4Image.sprite = ResourcesConfig.OrangeWeaponFragment;
         
         itemColorBg.sprite = ResourcesConfig.RedBg;
-        itemEdge.Play("RedEdge");
         itemImage.sprite = ResourcesConfig.RedWeaponFragment;
     }
     
@@ -603,23 +545,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.GreenJingCui;
 
         item1ColorBg.sprite = ResourcesConfig.WhiteBg;
-        item1Edge.Play("WhiteEdge");
         item1Image.sprite = ResourcesConfig.WhiteJingCui;
         
         item2ColorBg.sprite = ResourcesConfig.WhiteBg;
-        item2Edge.Play("WhiteEdge");
         item2Image.sprite = ResourcesConfig.WhiteJingCui;
         
         item3ColorBg.sprite = ResourcesConfig.WhiteBg;
-        item3Edge.Play("WhiteEdge");
         item3Image.sprite = ResourcesConfig.WhiteJingCui;
         
         item4ColorBg.sprite = ResourcesConfig.WhiteBg;
-        item4Edge.Play("WhiteEdge");
         item4Image.sprite = ResourcesConfig.WhiteJingCui;
         
         itemColorBg.sprite = ResourcesConfig.GreenBg;
-        itemEdge.Play("GreenEdge");
         itemImage.sprite = ResourcesConfig.GreenJingCui;
     }
     
@@ -629,23 +566,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.BlueJingCui;
 
         item1ColorBg.sprite = ResourcesConfig.GreenBg;
-        item1Edge.Play("GreenEdge");
         item1Image.sprite = ResourcesConfig.GreenJingCui;
         
         item2ColorBg.sprite = ResourcesConfig.GreenBg;
-        item2Edge.Play("GreenEdge");
         item2Image.sprite = ResourcesConfig.GreenJingCui;
         
         item3ColorBg.sprite = ResourcesConfig.GreenBg;
-        item3Edge.Play("GreenEdge");
         item3Image.sprite = ResourcesConfig.GreenJingCui;
         
         item4ColorBg.sprite = ResourcesConfig.GreenBg;
-        item4Edge.Play("GreenEdge");
         item4Image.sprite = ResourcesConfig.GreenJingCui;
         
         itemColorBg.sprite = ResourcesConfig.BlueBg;
-        itemEdge.Play("BlueEdge");
         itemImage.sprite = ResourcesConfig.BlueJingCui;
     }
     
@@ -655,23 +587,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.PurpleJingCui;
 
         item1ColorBg.sprite = ResourcesConfig.BlueBg;
-        item1Edge.Play("BlueEdge");
         item1Image.sprite = ResourcesConfig.BlueJingCui;
         
         item2ColorBg.sprite = ResourcesConfig.BlueBg;
-        item2Edge.Play("BlueEdge");
         item2Image.sprite = ResourcesConfig.BlueJingCui;
         
         item3ColorBg.sprite = ResourcesConfig.BlueBg;
-        item3Edge.Play("BlueEdge");
         item3Image.sprite = ResourcesConfig.BlueJingCui;
         
         item4ColorBg.sprite = ResourcesConfig.BlueBg;
-        item4Edge.Play("BlueEdge");
         item4Image.sprite = ResourcesConfig.BlueJingCui;
         
         itemColorBg.sprite = ResourcesConfig.PurpleBg;
-        itemEdge.Play("PurpleEdge");
         itemImage.sprite = ResourcesConfig.PurpleJingCui;
     }
     
@@ -681,23 +608,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.OrangeJingCui;
 
         item1ColorBg.sprite = ResourcesConfig.PurpleBg;
-        item1Edge.Play("PurpleEdge");
         item1Image.sprite = ResourcesConfig.PurpleJingCui;
         
         item2ColorBg.sprite = ResourcesConfig.PurpleBg;
-        item2Edge.Play("PurpleEdge");
         item2Image.sprite = ResourcesConfig.PurpleJingCui;
         
         item3ColorBg.sprite = ResourcesConfig.PurpleBg;
-        item3Edge.Play("PurpleEdge");
         item3Image.sprite = ResourcesConfig.PurpleJingCui;
         
         item4ColorBg.sprite = ResourcesConfig.PurpleBg;
-        item4Edge.Play("PurpleEdge");
         item4Image.sprite = ResourcesConfig.PurpleJingCui;
         
         itemColorBg.sprite = ResourcesConfig.OrangeBg;
-        itemEdge.Play("OrangeEdge");
         itemImage.sprite = ResourcesConfig.OrangeJingCui;
     }
     
@@ -707,23 +629,18 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.RedJingCui;
 
         item1ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item1Edge.Play("OrangeEdge");
         item1Image.sprite = ResourcesConfig.OrangeJingCui;
         
         item2ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item2Edge.Play("OrangeEdge");
         item2Image.sprite = ResourcesConfig.OrangeJingCui;
         
         item3ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item3Edge.Play("OrangeEdge");
         item3Image.sprite = ResourcesConfig.OrangeJingCui;
         
         item4ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item4Edge.Play("OrangeEdge");
         item4Image.sprite = ResourcesConfig.OrangeJingCui;
         
         itemColorBg.sprite = ResourcesConfig.RedBg;
-        itemEdge.Play("RedEdge");
         itemImage.sprite = ResourcesConfig.RedJingCui;
     }
     
@@ -733,46 +650,36 @@ public class DuanZaoWindow : MonoBehaviour
         _heChengType = HeChengType.ShenHuaZhiXin;
 
         item1ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item1Edge.Play("OrangeEdge");
         item1Image.sprite = ResourcesConfig.FuMoZhiGu;
         
         item2ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item2Edge.Play("OrangeEdge");
         item2Image.sprite = ResourcesConfig.GoldBlood;
         
         item3ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item3Edge.Play("OrangeEdge");
         item3Image.sprite = ResourcesConfig.JuDaYaChi;
         
         item4ColorBg.sprite = ResourcesConfig.OrangeBg;
-        item4Edge.Play("OrangeEdge");
         item4Image.sprite = ResourcesConfig.ZuiEYanZhu;
         
         itemColorBg.sprite = ResourcesConfig.RedBg;
-        itemEdge.Play("RedEdge");
         itemImage.sprite = ResourcesConfig.ShenHuaZhiXin;
     }
     
     public void ShowItems()
     {
         item1ColorBg.gameObject.SetActive(true);
-        item1Edge.gameObject.SetActive(true);
         item1Image.gameObject.SetActive(true);
         
         item2ColorBg.gameObject.SetActive(true);
-        item2Edge.gameObject.SetActive(true);
         item2Image.gameObject.SetActive(true);
         
         item3ColorBg.gameObject.SetActive(true);
-        item3Edge.gameObject.SetActive(true);
         item3Image.gameObject.SetActive(true);
         
         item4ColorBg.gameObject.SetActive(true);
-        item4Edge.gameObject.SetActive(true);
         item4Image.gameObject.SetActive(true);
         
         itemColorBg.gameObject.SetActive(true);
-        itemEdge.gameObject.SetActive(true);
         itemImage.gameObject.SetActive(true);
     }
 
@@ -1209,23 +1116,18 @@ public class DuanZaoWindow : MonoBehaviour
     public void ResetItems()
     {
         item1ColorBg.gameObject.SetActive(false);
-        item1Edge.gameObject.SetActive(false);
         item1Image.gameObject.SetActive(false);
         
         item2ColorBg.gameObject.SetActive(false);
-        item2Edge.gameObject.SetActive(false);
         item2Image.gameObject.SetActive(false);
         
         item3ColorBg.gameObject.SetActive(false);
-        item3Edge.gameObject.SetActive(false);
         item3Image.gameObject.SetActive(false);
         
         item4ColorBg.gameObject.SetActive(false);
-        item4Edge.gameObject.SetActive(false);
         item4Image.gameObject.SetActive(false);
         
         itemColorBg.gameObject.SetActive(false);
-        itemEdge.gameObject.SetActive(false);
         itemImage.gameObject.SetActive(false);
     }
     public void ShowPanel(PanelType panelType)
@@ -1287,12 +1189,10 @@ public class DuanZaoWindow : MonoBehaviour
         }
 
         jinJieEquipId = equip.equipid;
-        jinJieEdge.gameObject.SetActive(true);
         jinJieEquipImage.gameObject.SetActive(true);
         jinJieEquipBg.gameObject.SetActive(true);
         jinJieEquipImage.sprite = ResourcesConfig.GetEquipSprite(equip);
         jinJieEquipBg.sprite = ResourcesConfig.OrangeBg;
-        jinJieEdge.Play("OrangeEdge");
     }
 
     public void JinJie()
@@ -1312,7 +1212,6 @@ public class DuanZaoWindow : MonoBehaviour
 
         BagController.S.EquipIdList[jinJieEquipId].Quality = 6;
         jinJieEquipBg.sprite = ResourcesConfig.RedBg;
-        jinJieEdge.Play("RedEdge");
         ShowJinJieBag();
     }
 
@@ -1352,7 +1251,6 @@ public class DuanZaoWindow : MonoBehaviour
                 purpleQuality.gameObject.SetActive(false);
                 orangeQuality.gameObject.SetActive(false);
                 redQuality.gameObject.SetActive(false);
-                edge.Play("GreenEdge");
                 equipBg.sprite = ResourcesConfig.GreenBg;
                 break;
             
@@ -1375,7 +1273,6 @@ public class DuanZaoWindow : MonoBehaviour
                 purpleQuality.gameObject.SetActive(false);
                 orangeQuality.gameObject.SetActive(false);
                 redQuality.gameObject.SetActive(false);
-                edge.Play("BlueEdge");
                 equipBg.sprite = ResourcesConfig.BlueBg;
                 break;
             
@@ -1398,7 +1295,6 @@ public class DuanZaoWindow : MonoBehaviour
                 purpleQuality.gameObject.SetActive(true);
                 orangeQuality.gameObject.SetActive(false);
                 redQuality.gameObject.SetActive(false);
-                edge.Play("PurpleEdge");
                 equipBg.sprite = ResourcesConfig.PurpleBg;
                 break;
             
@@ -1421,7 +1317,6 @@ public class DuanZaoWindow : MonoBehaviour
                 purpleQuality.gameObject.SetActive(false);
                 orangeQuality.gameObject.SetActive(true);
                 redQuality.gameObject.SetActive(false);
-                edge.Play("OrangeEdge");
                 equipBg.sprite = ResourcesConfig.OrangeBg;
                 break;
             
@@ -1444,7 +1339,6 @@ public class DuanZaoWindow : MonoBehaviour
                 purpleQuality.gameObject.SetActive(false);
                 orangeQuality.gameObject.SetActive(false);
                 redQuality.gameObject.SetActive(true);
-                edge.Play("RedEdge");
                 equipBg.sprite = ResourcesConfig.RedBg;
                 break;
         }
@@ -1552,7 +1446,6 @@ public class DuanZaoWindow : MonoBehaviour
                 XiangQianGreenQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.GreenQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.GreenBg;
-                XiangQianEdge.Play("GreenEdge");
                 break;
             
             case 3:
@@ -1568,7 +1461,6 @@ public class DuanZaoWindow : MonoBehaviour
                 }                XiangQianBlueQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.BlueQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.BlueBg;
-                XiangQianEdge.Play("BlueEdge");
                 break;
             case 4:
                 XiangQianPurpleName.gameObject.SetActive(true);
@@ -1583,7 +1475,6 @@ public class DuanZaoWindow : MonoBehaviour
                 }                XiangQianPurpleQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.PurpleQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.PurpleBg;
-                XiangQianEdge.Play("PurpleEdge");
                 break;
             
             case 5:
@@ -1600,7 +1491,6 @@ public class DuanZaoWindow : MonoBehaviour
                 }                XiangQianOrangeQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.OrangeQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.OrangeBg;
-                XiangQianEdge.Play("OrangeEdge");
                 break;
             
             case 6:
@@ -1616,7 +1506,6 @@ public class DuanZaoWindow : MonoBehaviour
                 }                XiangQianRedQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.RedQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.RedBg;
-                XiangQianEdge.Play("RedEdge");
                 break;
         }
     }

@@ -774,6 +774,7 @@
     <None Include="Assets\Arts\Spine\怪物\Boss1\Enemy_Panther_warrior.json" />
     <None Include="Assets\Arts\PngAnim\黑暗skiill2\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\翅膀\紫4\wing_511.atlas.txt" />
+    <None Include="Assets\Arts\Spine\New Folder\chailangren1\chailangren1.json" />
     <None Include="Assets\Arts\Spine\怪物\小恶魔打包\akmon_pirest.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\ZiPeng\action.json" />
     <None Include="Assets\Arts\Shaders\EquipOutline.shader" />
@@ -1053,6 +1054,7 @@
     <None Include="Assets\Arts\Spine\技能\特效\火peng\2030_saiboshantu_boom.json" />
     <None Include="Library\PackageCache\com.unity.modules.vr@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\宠物\Purple\黑暗purple3——前\pet_9210.json" />
+    <None Include="Assets\Arts\Spine\New Folder\chailangren1\chailangren1.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.9.4\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\宠物\Blue\火blue3\pet_9301.json" />
     <None Include="Assets\Arts\Spine\小怪1\wuyaozhiwang2\wuyaozhiwang2.json" />
@@ -1074,6 +1076,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Arts\Spine\小怪1\shanzei2\shanzei2.json" />
     <None Include="Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.4\ValidationConfig.json" />
+    <None Include="Assets\Arts\Spine\New Folder\cizhu\cizhu.json" />
     <None Include="Assets\Arts\Spine\第四关\XianRenZhang\xianrenzhang.json" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\技能\特效\电skill4\2001_Punk_skill_under.json" />
@@ -1095,6 +1098,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\Arts\Spine\小怪1\dijing2\dijing2.json" />
     <None Include="Assets\Arts\Spine\宠物\Purple\冰purple2——后\pet_9307.atlas.txt" />
+    <None Include="Assets\Arts\Spine\New Folder\cizhu\cizhu.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Arts\Shaders\LcL\Glitch.shader" />
     <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
