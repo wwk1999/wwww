@@ -546,6 +546,11 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite GaoJiXiSuiYe;
     public static Sprite NormalXueMaiDan;
     public static Sprite GaoJiXueMaiDan;
+    
+    public static Sprite NormalXiSuiYe1;
+    public static Sprite GaoJiXiSuiYe1;
+    public static Sprite NormalXueMaiDan1;
+    public static Sprite GaoJiXueMaiDan1;
 
     
     public static Sprite AddAttack;
@@ -1407,7 +1412,10 @@ public class ResourcesConfig : MonoBehaviour
         NormalXueMaiDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXueMaiDan");
         GaoJiXueMaiDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXueMaiDan");
 
-
+        NormalXiSuiYe1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXiSuiYe1");
+        GaoJiXiSuiYe1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXiSuiYe1");
+        NormalXueMaiDan1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXueMaiDan1");
+        GaoJiXueMaiDan1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXueMaiDan1");
 
         
         AddAttack=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddAttack");
@@ -1698,12 +1706,12 @@ public class ResourcesConfig : MonoBehaviour
 
 
         //道具
-        WhiteWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/WhiteWeaponFragment");
-        GreenWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/GreenWeaponFragment");
-        BlueWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/BlueWeaponFragment");
-        PurpleWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/PurpleWeaponFragment");
-        OrangeWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/OrangeWeaponFragment");
-        RedWeaponFragment = Resources.Load<Sprite>("Sprite/Prop/WeaponFragMent/RedWeaponFragment");
+        WhiteWeaponFragment = Resources.LoadAll<Sprite>("Sprite/Prop/WeaponFragMent/WeaponFragment")[5];
+        GreenWeaponFragment = Resources.LoadAll<Sprite>("Sprite/Prop/WeaponFragMent/WeaponFragment")[1];
+        BlueWeaponFragment = Resources.LoadAll<Sprite>("Sprite/Prop/WeaponFragMent/WeaponFragment")[0];
+        PurpleWeaponFragment = Resources.LoadAll<Sprite>("Sprite/Prop/WeaponFragMent/WeaponFragment")[3];
+        OrangeWeaponFragment = Resources.LoadAll<Sprite>("Sprite/Prop/WeaponFragMent/WeaponFragment")[2];
+        RedWeaponFragment = Resources.LoadAll<Sprite>("Sprite/Prop/WeaponFragMent/WeaponFragment")[4];
 
         WhiteJingCui = Resources.Load<Sprite>("Sprite/Prop/JingCui/WhiteJingCui");
         GreenJingCui = Resources.Load<Sprite>("Sprite/Prop/JingCui/GreenJingCui");

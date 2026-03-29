@@ -10286,7 +10286,6 @@ MonoBehaviour:
   equipInfo: {fileID: 8727843582888761619}
   xiLian: {fileID: 8978130531312722680}
   equipBg: {fileID: 436735493205289368}
-  edge: {fileID: 0}
   image: {fileID: 5645769732944581867}
   level: {fileID: 2876489948219186568}
   baseAttribute1: {fileID: 2442012426549095035}
@@ -10337,7 +10336,6 @@ MonoBehaviour:
   jinJieRight: {fileID: 8900706475319413483}
   jinJieLeft: {fileID: 8445210970814577082}
   jinJieEquipImage: {fileID: 7830598875555614927}
-  jinJieEdge: {fileID: 0}
   jinJieEquipBg: {fileID: 3686432185110417779}
   jinJie: {fileID: 3824770030055049220}
   jinJieEquipContent: {fileID: 8433975415415811776}
@@ -10348,7 +10346,6 @@ MonoBehaviour:
   XiangQianRight: {fileID: 5466900699467791551}
   XiangQianLeft: {fileID: 7101464300941571668}
   XiangQianEquipImage: {fileID: 1870943535443434373}
-  XiangQianEdge: {fileID: 0}
   XiangQianEquipBg: {fileID: 8255750959930536375}
   XiangQianPageNumText: {fileID: 8777441487110098246}
   XiangQian: {fileID: 4948387017476835539}
@@ -10368,7 +10365,7 @@ MonoBehaviour:
   XiangQianRedQuality: {fileID: 9220608359473265277}
   XiangQianEquipButton: {fileID: 4753027894853872507}
   XiangQianBaoShiButton: {fileID: 4837899683412567764}
-  XiangQianKongContent: {fileID: 0}
+  XiangQianKongContent: {fileID: 2184432218854848365}
 --- !u!1 &4260771354865299460
 GameObject:
   m_ObjectHideFlags: 0

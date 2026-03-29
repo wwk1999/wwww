@@ -125,14 +125,14 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 {
                     IsZiZhiPanel = true;
                     CurrentYaoCount.text=BagController.S.PropList[1703].Count.ToString();
-                    YaoShuibg.sprite = ResourcesConfig.NormalXiSuiYe;
+                    YaoShuibg.sprite = ResourcesConfig.NormalXiSuiYe1;
                     YaoShuiName3.text = PropConfig.PropNameDic[1703];
                 }
                 else
                 {
                     IsZiZhiPanel = false;
                     CurrentYaoCount.text=BagController.S.PropList[1803].Count.ToString();
-                    YaoShuibg.sprite = ResourcesConfig.NormalXueMaiDan;
+                    YaoShuibg.sprite = ResourcesConfig.NormalXueMaiDan1;
                     YaoShuiName3.text = PropConfig.PropNameDic[1803];
                 }
                 break;
@@ -153,14 +153,14 @@ public class ChongWuPeiYangWindow : MonoBehaviour
                 {
                     IsZiZhiPanel = true;
                     CurrentYaoCount.text=BagController.S.PropList[1705].Count.ToString();
-                    YaoShuibg.sprite = ResourcesConfig.GaoJiXiSuiYe;
+                    YaoShuibg.sprite = ResourcesConfig.GaoJiXiSuiYe1;
                     YaoShuiName5.text = PropConfig.PropNameDic[1705];
                 }
                 else
                 {
                     IsZiZhiPanel = false;
                     CurrentYaoCount.text=BagController.S.PropList[1805].Count.ToString();
-                    YaoShuibg.sprite = ResourcesConfig.GaoJiXueMaiDan;
+                    YaoShuibg.sprite = ResourcesConfig.GaoJiXueMaiDan1;
                     YaoShuiName5.text = PropConfig.PropNameDic[1805];
                 }
                 break;

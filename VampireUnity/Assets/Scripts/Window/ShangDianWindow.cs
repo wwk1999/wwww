@@ -7,16 +7,12 @@ using UnityEngine.UI;
 
 public class ShangDianWindow : MonoBehaviour
 {
-   public Button NormalButton;
-   public Button GaoJiButton;
    public GameObject Content;
-   private bool IsNormal=true;
    public Button ExitButton;
 
    private void OnEnable()
    {
-      IsNormal = true;
-      ShowShangDian(true);
+      ShowShangDian();
    }
 
    private void Start()
@@ -25,26 +21,10 @@ public class ShangDianWindow : MonoBehaviour
       {
          Destroy(gameObject);
       });
-      NormalButton.onClick.AddListener(() =>
-      {
-         if (!IsNormal)
-         {
-            IsNormal=true;
-            ShowShangDian(true);
-         }
-      });
       
-      GaoJiButton.onClick.AddListener(() =>
-      {
-         if (IsNormal)
-         {
-            IsNormal=false;
-            ShowShangDian(false);
-         }
-      });
    }
 
-   public void ShowShangDian(bool IsNormal)
+   public void ShowShangDian(bool IsNormal=true)
    {
       foreach (Transform item in Content.transform)
       {
@@ -64,10 +44,10 @@ public class ShangDianWindow : MonoBehaviour
       {
          var shangdianitem = Instantiate(Resources.Load("Prefabs/Window/ShangDianItem"),Content.transform);
          ShangDianItem ShangDianItem=shangdianitem.GetComponent<ShangDianItem>();
-         ShangDianItem.SetItem(Item);
          ShangDianItem.PropId=PropConfig.GetPropId(Item.type,Item.quality);
          ShangDianItem.PropType=Item.type;
          ShangDianItem.Quality=Item.quality;
+         ShangDianItem.SetItem(Item);
       }
    }
 }

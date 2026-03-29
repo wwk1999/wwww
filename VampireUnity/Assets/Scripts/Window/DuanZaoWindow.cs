@@ -113,11 +113,7 @@ public class DuanZaoWindow : MonoBehaviour
     public TextMeshProUGUI purpleEquipName;
     public TextMeshProUGUI blueEquipName;
     public TextMeshProUGUI greenEquipName;
-    public TextMeshProUGUI redQuality;
-    public TextMeshProUGUI orangeQuality;
-    public TextMeshProUGUI purpleQuality;
-    public TextMeshProUGUI blueQuality;
-    public TextMeshProUGUI greenQuality;
+ 
     private int clickEquipid=0;
 
 
@@ -1246,11 +1242,7 @@ public class DuanZaoWindow : MonoBehaviour
                 {
                     greenEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
                 }
-                greenQuality.gameObject.SetActive(true);
-                blueQuality.gameObject.SetActive(false);
-                purpleQuality.gameObject.SetActive(false);
-                orangeQuality.gameObject.SetActive(false);
-                redQuality.gameObject.SetActive(false);
+              
                 equipBg.sprite = ResourcesConfig.GreenBg;
                 break;
             
@@ -1268,11 +1260,7 @@ public class DuanZaoWindow : MonoBehaviour
                 {
                     blueEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
                 }
-                greenQuality.gameObject.SetActive(false);
-                blueQuality.gameObject.SetActive(true);
-                purpleQuality.gameObject.SetActive(false);
-                orangeQuality.gameObject.SetActive(false);
-                redQuality.gameObject.SetActive(false);
+            
                 equipBg.sprite = ResourcesConfig.BlueBg;
                 break;
             
@@ -1290,11 +1278,7 @@ public class DuanZaoWindow : MonoBehaviour
                 {
                     purpleEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
                 }
-                greenQuality.gameObject.SetActive(false);
-                blueQuality.gameObject.SetActive(false);
-                purpleQuality.gameObject.SetActive(true);
-                orangeQuality.gameObject.SetActive(false);
-                redQuality.gameObject.SetActive(false);
+             
                 equipBg.sprite = ResourcesConfig.PurpleBg;
                 break;
             
@@ -1312,11 +1296,7 @@ public class DuanZaoWindow : MonoBehaviour
                 {
                     orangeEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
                 }
-                greenQuality.gameObject.SetActive(false);
-                blueQuality.gameObject.SetActive(false);
-                purpleQuality.gameObject.SetActive(false);
-                orangeQuality.gameObject.SetActive(true);
-                redQuality.gameObject.SetActive(false);
+             
                 equipBg.sprite = ResourcesConfig.OrangeBg;
                 break;
             
@@ -1334,11 +1314,7 @@ public class DuanZaoWindow : MonoBehaviour
                 {
                     redEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
                 }
-                greenQuality.gameObject.SetActive(false);
-                blueQuality.gameObject.SetActive(false);
-                purpleQuality.gameObject.SetActive(false);
-                orangeQuality.gameObject.SetActive(false);
-                redQuality.gameObject.SetActive(true);
+             
                 equipBg.sprite = ResourcesConfig.RedBg;
                 break;
         }

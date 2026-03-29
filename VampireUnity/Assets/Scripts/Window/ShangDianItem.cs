@@ -9,13 +9,21 @@ using UnityEngine.UI;
 public class ShangDianItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
    public Image bg;
-   public Animator animator;
    public Image image;
    public int PropId;
    private GameObject instance;
    private Vector2 offset = new Vector2(250f, 0f);
    public PropConfig.PropType PropType;
    public int Quality;
+   public TextMeshProUGUI Name1;
+   public TextMeshProUGUI Name2;
+   public TextMeshProUGUI Name3;
+   public TextMeshProUGUI Name4;
+   public TextMeshProUGUI Name5;
+   public TextMeshProUGUI Name6;
+
+   public TextMeshProUGUI Count;
+
 
    public void OnPointerEnter(PointerEventData eventData)
    {
@@ -73,7 +81,7 @@ public class ShangDianItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
          if (IsMouseOverUIObject(bg.gameObject))
          {
             ShangDianConfig.ShangPingItem item=new ShangDianConfig.ShangPingItem(){type = PropType,quality = Quality};
-            int count = ShangDianConfig.ShangPingDic[item];
+            int count = ShangDianConfig.ShangPingCountDic[item];
             if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
             {
                if (GlobalPlayerAttribute.BloodEnergy < count * 10)
@@ -227,184 +235,49 @@ public class ShangDianItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
    public void SetItem(ShangDianConfig.ShangPingItem item)
    {
+      Name1.gameObject.SetActive(false);
+      Name2.gameObject.SetActive(false);
+      Name3.gameObject.SetActive(false);
+      Name4.gameObject.SetActive(false);
+      Name5.gameObject.SetActive(false);
+      Name6.gameObject.SetActive(false);
+
       switch (item.quality)
       {
          case 1:
             bg.sprite = ResourcesConfig.WhiteBg;
-            animator.Play("WhiteEdge");
+            Name1.gameObject.SetActive(true);
+            Name1.text= PropConfig.PropNameDic[PropId];
             break;
          case 2:
             bg.sprite = ResourcesConfig.GreenBg;
-            animator.Play("GreenEdge");
+            Name2.gameObject.SetActive(true);
+            Name2.text= PropConfig.PropNameDic[PropId];
             break;
          case 3:
             bg.sprite = ResourcesConfig.BlueBg;
-            animator.Play("BlueEdge");
+            Name3.gameObject.SetActive(true);
+            Name3.text= PropConfig.PropNameDic[PropId];
             break;
          case 4:
             bg.sprite = ResourcesConfig.PurpleBg;
-            animator.Play("PurpleEdge");
+            Name4.gameObject.SetActive(true);
+            Name4.text= PropConfig.PropNameDic[PropId];
             break;
          case 5:
             bg.sprite = ResourcesConfig.OrangeBg;
-            animator.Play("OrangeEdge");
+            Name5.gameObject.SetActive(true);
+            Name5.text= PropConfig.PropNameDic[PropId];
             break;
          case 6:
             bg.sprite = ResourcesConfig.RedBg;
-            animator.Play("RedEdge");
+            Name6.gameObject.SetActive(true);
+            Name6.text= PropConfig.PropNameDic[PropId];
             break;
       }
 
-      switch (item.type)
-      {
-         case PropConfig.PropType.WeaponFragment:
-            switch (item.quality)
-            {
-               case 1:
-                  image.sprite = ResourcesConfig.WhiteWeaponFragment;
-                  break;
-               case 2:
-                  image.sprite = ResourcesConfig.GreenWeaponFragment;
-                  break;
-               case 3:
-                  image.sprite = ResourcesConfig.BlueWeaponFragment;
-                  break;
-               case 4:
-                  image.sprite = ResourcesConfig.PurpleWeaponFragment;
-                  break;
-               case 5:
-                  image.sprite = ResourcesConfig.OrangeWeaponFragment;
-                  break;
-               case 6:
-                  image.sprite = ResourcesConfig.RedWeaponFragment;
-                  break;
-            }
+      image.sprite = ShangDianConfig.GetShangPingSprite(item);
+      Count.text = " " + ShangDianConfig.ShangPingCountDic[item]+"S";
 
-            break;
-         case PropConfig.PropType.ChiBang:
-            switch (item.quality)
-            {
-               case 1:
-                  image.sprite = ResourcesConfig.WhiteChiBang;
-                  break;
-               case 2:
-                  image.sprite = ResourcesConfig.GreenChiBang;
-                  break;
-               case 3:
-                  image.sprite = ResourcesConfig.BlueChiBang;
-                  break;
-               case 4:
-                  image.sprite = ResourcesConfig.PurpleChiBang;
-                  break;
-               case 5:
-                  image.sprite = ResourcesConfig.OrangeChiBang;
-                  break;
-               case 6:
-                  image.sprite = ResourcesConfig.RedChiBang;
-                  break;
-            }
-
-            break;
-         case PropConfig.PropType.ChongWuDan:
-            switch (item.quality)
-            {
-               case 3:
-                  image.sprite = ResourcesConfig.NormalChongWuDan;
-                  break;
-               case 5:
-                  image.sprite = ResourcesConfig.GaoJiChongWuDan;
-                  break;
-            }
-
-            break;
-
-         case PropConfig.PropType.XiSuiYe:
-            switch (item.quality)
-            {
-               case 3:
-                  image.sprite = ResourcesConfig.NormalXiSuiYe;
-                  break;
-               case 5:
-                  image.sprite = ResourcesConfig.GaoJiXiSuiYe;
-                  break;
-            }
-
-            break;
-
-         case PropConfig.PropType.XueMaiDan:
-            switch (item.quality)
-            {
-               case 3:
-                  image.sprite = ResourcesConfig.NormalXueMaiDan;
-                  break;
-               case 5:
-                  image.sprite = ResourcesConfig.GaoJiXueMaiDan;
-                  break;
-            }
-
-            break;
-
-         case PropConfig.PropType.HpYaoShui:
-            switch (item.quality)
-            {
-               case 1:
-                  image.sprite = ResourcesConfig.Hp1;
-                  break;
-               case 2:
-                  image.sprite = ResourcesConfig.Hp2;
-                  break;
-               case 3:
-                  image.sprite = ResourcesConfig.Hp3;
-                  break;
-               case 4:
-                  image.sprite = ResourcesConfig.Hp4;
-                  break;
-               case 5:
-                  image.sprite = ResourcesConfig.Hp5;
-                  break;
-               case 6:
-                  image.sprite = ResourcesConfig.Hp6;
-                  break;
-            }
-
-            break;
-
-         case PropConfig.PropType.ExYaoShui:
-            image.sprite = ResourcesConfig.Ex;
-            break;
-         case PropConfig.PropType.DiaoLuoYaoShui:
-            image.sprite = ResourcesConfig.DiaoLuo;
-            break;
-
-         case PropConfig.PropType.SkillShu:
-            switch (item.quality)
-            {
-               case 1:
-                  image.sprite = ResourcesConfig.ChongWuSkill1;
-                  break;
-               case 2:
-                  image.sprite = ResourcesConfig.ChongWuSkill2;
-                  break;
-               case 3:
-                  image.sprite = ResourcesConfig.ChongWuSkill3;
-                  break;
-               case 4:
-                  image.sprite = ResourcesConfig.ChongWuSkill4;
-                  break;
-               case 5:
-                  image.sprite = ResourcesConfig.ChongWuSkill5;
-                  break;
-               case 6:
-                  image.sprite = ResourcesConfig.ChongWuSkill6;
-                  break;
-            }
-
-            break;
-
-         case PropConfig.PropType.DaKongShi:
-            image.sprite = ResourcesConfig.DaKongShi;
-            break;
-
-      }
    }
 }
