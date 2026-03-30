@@ -7,6 +7,15 @@ public class ResourcesConfig : MonoBehaviour
 {
     public static Sprite LingHun;
 
+    //icon
+    public static Sprite AttackIcon;
+    public static Sprite DefenseIcon;
+    public static Sprite HpIcon;
+    public static Sprite CritIcon;
+    public static Sprite AttackSpeedIcon;
+
+    
+    
     //翅膀
     public static Sprite Blue1;
     public static Sprite Blue2;
@@ -1281,6 +1290,15 @@ public class ResourcesConfig : MonoBehaviour
 
     public static void Init()
     {
+        //Icon
+        AttackIcon=Resources.Load<Sprite>("Sprite/Icon/AttackIcon");
+        DefenseIcon=Resources.Load<Sprite>("Sprite/Icon/DefenseIcon");
+        HpIcon=Resources.Load<Sprite>("Sprite/Icon/HpIcon");
+        CritIcon=Resources.Load<Sprite>("Sprite/Icon/CritIcon");
+        AttackSpeedIcon=Resources.Load<Sprite>("Sprite/Icon/AttackSpeedIcon");
+
+        
+        
         DaKongShi=Resources.Load<Sprite>("Sprite/Prop/DaKongShi");
 
         //翅膀

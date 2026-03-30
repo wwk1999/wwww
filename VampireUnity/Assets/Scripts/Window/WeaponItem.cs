@@ -21,6 +21,8 @@ public class WeaponItem : MonoBehaviour
    public TextMeshProUGUI Name4;
    public TextMeshProUGUI Name5;
    public TextMeshProUGUI Name6;
+   public Image bg;
+   public TextMeshProUGUI levelText;
 
 
    public int GetWeaponLevel(WeaponType type)
@@ -90,37 +92,60 @@ public class WeaponItem : MonoBehaviour
       Name5.gameObject.SetActive(false);
       Name6.gameObject.SetActive(false);
 
+      levelText.text = "Lv." + GetWeaponLevel(type);
       switch (quality)
       {
          case 1:
             Name1.gameObject.SetActive(true);
-            Name1.text = name+" Lv."+GetWeaponLevel(type);
+            Name1.text = name;
             break;
          case 2:
             Name2.gameObject.SetActive(true);
-            Name2.text = name+" Lv."+GetWeaponLevel(type);
+            Name2.text = name;
             break;
          case 3:
             Name3.gameObject.SetActive(true);
-            Name3.text = name+" Lv."+GetWeaponLevel(type);
+            Name3.text = name;
             break;
          case 4:
             Name4.gameObject.SetActive(true);
-            Name4.text = name+" Lv."+GetWeaponLevel(type);
+            Name4.text = name;
             break;
          case 5:
             Name5.gameObject.SetActive(true);
-            Name5.text = name+" Lv."+GetWeaponLevel(type);
+            Name5.text = name;
             break;
          case 6:
             Name6.gameObject.SetActive(true);
-            Name6.text = name+" Lv."+GetWeaponLevel(type);
+            Name6.text = name;
             break;
       }
    }
 
    public void SetWeapon()
    {
+      switch (WeaponConfig.WeaponQualityDic[type])
+      {
+         case 1:
+            bg.sprite = ResourcesConfig.WhiteBg;
+            break;
+         case 2:
+            bg.sprite = ResourcesConfig.GreenBg;
+            break;
+         case 3:
+            bg.sprite = ResourcesConfig.BlueBg;
+            break;
+         case 4:
+            bg.sprite = ResourcesConfig.PurpleBg;
+            break;
+         case 5:
+            bg.sprite = ResourcesConfig.OrangeBg;
+            break;
+         case 6:
+            bg.sprite = ResourcesConfig.RedBg;
+            break;
+      }
+      
       switch (type)
       {
          case WeaponType.Primary:
