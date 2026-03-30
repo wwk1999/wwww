@@ -2064,7 +2064,7 @@ public class DuanZaoWindow : MonoBehaviour
         });
         exitButton.onClick.AddListener(() =>
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         });
         xiLianButton.onClick.AddListener(() =>
         {

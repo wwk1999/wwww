@@ -19,7 +19,7 @@ public class ShangDianWindow : MonoBehaviour
    {
       ExitButton.onClick.AddListener(() =>
       {
-         Destroy(gameObject);
+         gameObject.SetActive(false);
       });
       
    }

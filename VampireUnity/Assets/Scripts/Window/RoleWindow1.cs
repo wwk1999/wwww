@@ -50,13 +50,6 @@ public class RoleWindow1 : MonoBehaviour
     public Button chibangButton;
     public Button chongwuButton;
 
-    public Animator whiteChiBang;
-    public Animator greenChiBang;
-    public Animator blueChiBang;
-    public Animator purpleChiBang;
-    public Animator orangeChiBang;
-    public Animator redChiBang;
-
     public TextMeshProUGUI TuJian;
     public TextMeshProUGUI Weapon;
     public TextMeshProUGUI Bag;
@@ -68,6 +61,8 @@ public class RoleWindow1 : MonoBehaviour
 
 
     public Button TitleButton;
+    
+    public Button SettingButton;
 
     public void SwitchLanguage(LanguageType language)
     {
@@ -182,6 +177,10 @@ public class RoleWindow1 : MonoBehaviour
     
     private void Start()
     {
+        SettingButton.onClick.AddListener(() =>
+        {
+            WindowController.S.SettingWindow.gameObject.SetActive(true);
+        });
         DebugChiBang.onClick.AddListener(() =>
         {
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue1))
