@@ -1384,6 +1384,7 @@ GameObject:
   - component: {fileID: 8262558634542927236}
   - component: {fileID: 5437496035645328329}
   - component: {fileID: 9131709509489476500}
+  - component: {fileID: 6315601232065891716}
   m_Layer: 6
   m_Name: lujiaocike
   m_TagString: Monster
@@ -1509,6 +1510,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6315601232065891716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6896814452841893273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a32ad800fac084fbc11430609190f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bingkuai: {fileID: 6169571425640415541}
+  du: {fileID: 6282994670152404350}
+  jiansu: {fileID: 598020957811974420}
+  yidian: {fileID: 4582565095926591785}
+  zhuoshao: {fileID: 4378523032994598965}
+  hpSliderCanvas: {fileID: 5372373494090581647}
+  meshRenderer: {fileID: 1840129468531238385}
+  parent: {fileID: 181944943885488512}
+  size: 0
+  monsterSkeletonAnimation: {fileID: 121435342859534902}
+  hpSlider: {fileID: 8966070784895008651}
+  collider2D: {fileID: 4440623323976174912}
+  rigidbody2D: {fileID: 9131709509489476500}
+  attackTrans: {fileID: 2111890243883587747}
 --- !u!1 &6902656976528576577
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,11 +4,11 @@ using Equip;
 using Spine;
 using UnityEngine;
 
-public class chailangren2 : MonsterBase
+public class shishigui : MonsterBase
 {
-    public Transform attackTrans;
+     public Transform attackTrans;
 
-    public chailangren2() : base(MonsterType.Normal, "chailangren2", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public shishigui() : base(MonsterType.Normal, "shishigui", 1, 100, 0.6f, 20, 5, 10, 1, 0)
     {
     }
 

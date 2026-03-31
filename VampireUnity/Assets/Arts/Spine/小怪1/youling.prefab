@@ -593,9 +593,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 634675118121406562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 65, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6733976848608845916
@@ -743,9 +743,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 634675118121406562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 145, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7071472109921413759
@@ -1027,9 +1027,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 634675118121406562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &674609698930869310
@@ -1138,9 +1138,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 634675118121406562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1855311359681093304
@@ -1193,6 +1193,7 @@ GameObject:
   - component: {fileID: 6148211635080774113}
   - component: {fileID: 7387263071069430412}
   - component: {fileID: 7947198987221745086}
+  - component: {fileID: 7253170720289979029}
   m_Layer: 6
   m_Name: youling
   m_TagString: Monster
@@ -1318,6 +1319,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7253170720289979029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7997150292241987587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23a3b5532ec15343872577b097ca4fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bingkuai: {fileID: 1457501326677071121}
+  du: {fileID: 7762662681374409817}
+  jiansu: {fileID: 3695976190825585164}
+  yidian: {fileID: 5985431016387282418}
+  zhuoshao: {fileID: 4641465014666528977}
+  hpSliderCanvas: {fileID: 8626885624585832292}
+  meshRenderer: {fileID: 2724133738190233662}
+  parent: {fileID: 9078278498281749152}
+  size: 0
+  monsterSkeletonAnimation: {fileID: 3409196265178656597}
+  hpSlider: {fileID: 8126120387739185481}
+  collider2D: {fileID: 2810003503901997385}
+  rigidbody2D: {fileID: 7947198987221745086}
+  attackTrans: {fileID: 2300541658943347335}
 --- !u!1 &8163290887850988133
 GameObject:
   m_ObjectHideFlags: 0

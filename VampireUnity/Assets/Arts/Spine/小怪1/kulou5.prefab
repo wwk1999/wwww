@@ -107,9 +107,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2897146172100357711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 145, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &969648060727568438
@@ -580,9 +580,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2897146172100357711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7888236783640514292
@@ -829,9 +829,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2897146172100357711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 65, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5948076365473324631
@@ -959,6 +959,7 @@ GameObject:
   - component: {fileID: 8584092129272471879}
   - component: {fileID: 4659256369504245045}
   - component: {fileID: 289852605586297782}
+  - component: {fileID: 5657569402390723852}
   m_Layer: 6
   m_Name: kulou5
   m_TagString: Monster
@@ -1084,6 +1085,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5657569402390723852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6807184639390352737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66fffeb2cdbd11428d62be7b7d851a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bingkuai: {fileID: 4177273790367072827}
+  du: {fileID: 3896032582901867078}
+  jiansu: {fileID: 4617659114830686503}
+  yidian: {fileID: 7550420969706347830}
+  zhuoshao: {fileID: 2663604773453316391}
+  hpSliderCanvas: {fileID: 3766657358123037492}
+  meshRenderer: {fileID: 1553545101905436906}
+  parent: {fileID: 7107465130076195866}
+  size: 0
+  monsterSkeletonAnimation: {fileID: 6592162215340437172}
+  hpSlider: {fileID: 4839896757996274821}
+  collider2D: {fileID: 1936656058589673835}
+  rigidbody2D: {fileID: 289852605586297782}
+  attackTrans: {fileID: 698553617000691284}
 --- !u!1 &7107465130076195866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,9 +1280,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2897146172100357711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5502056702633162683
