@@ -1968,6 +1968,312 @@ public class Entrance : MonoBehaviour
             FightBGController.S.CircleAttack.SetActive(false);
 
             //初始化怪物队列
+
+            for (int i = 0; i < 100; i++)
+{
+    var chailangren1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren1").GetComponent<chailangren1>(), GameController.S.transform);
+    chailangren1.gameObject.SetActive(false);
+    GameController.S.chailangren1Queue.Enqueue(chailangren1);
+    MonsterBase chailangren1monsterBase = chailangren1.GetComponent<MonsterBase>();
+    Collider2D chailangren12D = chailangren1monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(chailangren12D, chailangren1monsterBase);
+
+    var chailangren2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren2").GetComponent<chailangren2>(), GameController.S.transform);
+    chailangren2.gameObject.SetActive(false);
+    GameController.S.chailangren2Queue.Enqueue(chailangren2);
+    MonsterBase chailangren2monsterBase = chailangren2.GetComponent<MonsterBase>();
+    Collider2D chailangren22D = chailangren2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(chailangren22D, chailangren2monsterBase);
+
+    var chailangren3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren3").GetComponent<chailangren3>(), GameController.S.transform);
+    chailangren3.gameObject.SetActive(false);
+    GameController.S.chailangren3Queue.Enqueue(chailangren3);
+    MonsterBase chailangren3monsterBase = chailangren3.GetComponent<MonsterBase>();
+    Collider2D chailangren32D = chailangren3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(chailangren32D, chailangren3monsterBase);
+
+    var chailangren4 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren4").GetComponent<chailangren4>(), GameController.S.transform);
+    chailangren4.gameObject.SetActive(false);
+    GameController.S.chailangren4Queue.Enqueue(chailangren4);
+    MonsterBase chailangren4monsterBase = chailangren4.GetComponent<MonsterBase>();
+    Collider2D chailangren42D = chailangren4monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(chailangren42D, chailangren4monsterBase);
+
+    var cizhu = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/YeShouZhanShi").GetComponent<YeShouZhanShi>(), GameController.S.transform);
+    cizhu.gameObject.SetActive(false);
+    GameController.S.cizhuQueue.Enqueue(cizhu);
+    MonsterBase cizhumonsterBase = cizhu.GetComponent<MonsterBase>();
+    Collider2D cizhu2D = cizhumonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(cizhu2D, cizhumonsterBase);
+
+    var daocaoren = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/ZhiZhuNvWang").GetComponent<ZhiZhuNvWang>(), GameController.S.transform);
+    daocaoren.gameObject.SetActive(false);
+    GameController.S.daocaorenQueue.Enqueue(daocaoren);
+    MonsterBase daocaorenmonsterBase = daocaoren.GetComponent<MonsterBase>();
+    Collider2D daocaoren2D = daocaorenmonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(daocaoren2D, daocaorenmonsterBase);
+
+    var dijing2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijing2").GetComponent<dijing2>(), GameController.S.transform);
+    dijing2.gameObject.SetActive(false);
+    GameController.S.dijing2Queue.Enqueue(dijing2);
+    MonsterBase dijing2monsterBase = dijing2.GetComponent<MonsterBase>();
+    Collider2D dijing22D = dijing2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(dijing22D, dijing2monsterBase);
+
+    var dijing3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijing3").GetComponent<dijing3>(), GameController.S.transform);
+    dijing3.gameObject.SetActive(false);
+    GameController.S.dijing3Queue.Enqueue(dijing3);
+    MonsterBase dijing3monsterBase = dijing3.GetComponent<MonsterBase>();
+    Collider2D dijing32D = dijing3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(dijing32D, dijing3monsterBase);
+
+    var dijingshouwei1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijingshouwei1").GetComponent<dijingshouwei1>(), GameController.S.transform);
+    dijingshouwei1.gameObject.SetActive(false);
+    GameController.S.dijingshouwei1Queue.Enqueue(dijingshouwei1);
+    MonsterBase dijingshouwei1monsterBase = dijingshouwei1.GetComponent<MonsterBase>();
+    Collider2D dijingshouwei12D = dijingshouwei1monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(dijingshouwei12D, dijingshouwei1monsterBase);
+
+    var dijingshouwei2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijingshouwei2").GetComponent<dijingshouwei2>(), GameController.S.transform);
+    dijingshouwei2.gameObject.SetActive(false);
+    GameController.S.dijingshouwei2Queue.Enqueue(dijingshouwei2);
+    MonsterBase dijingshouwei2monsterBase = dijingshouwei2.GetComponent<MonsterBase>();
+    Collider2D dijingshouwei22D = dijingshouwei2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(dijingshouwei22D, dijingshouwei2monsterBase);
+
+    var dijingshouwei3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijingshouwei3").GetComponent<dijingshouwei3>(), GameController.S.transform);
+    dijingshouwei3.gameObject.SetActive(false);
+    GameController.S.dijingshouwei3Queue.Enqueue(dijingshouwei3);
+    MonsterBase dijingshouwei3monsterBase = dijingshouwei3.GetComponent<MonsterBase>();
+    Collider2D dijingshouwei32D = dijingshouwei3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(dijingshouwei32D, dijingshouwei3monsterBase);
+
+    var heixiong = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/heixiong").GetComponent<heixiong>(), GameController.S.transform);
+    heixiong.gameObject.SetActive(false);
+    GameController.S.heixiongQueue.Enqueue(heixiong);
+    MonsterBase heixiongmonsterBase = heixiong.GetComponent<MonsterBase>();
+    Collider2D heixiong2D = heixiongmonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(heixiong2D, heixiongmonsterBase);
+
+    var jianchizhu = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/jianchizhu").GetComponent<jianchizhu>(), GameController.S.transform);
+    jianchizhu.gameObject.SetActive(false);
+    GameController.S.jianchizhuQueue.Enqueue(jianchizhu);
+    MonsterBase jianchizhumonsterBase = jianchizhu.GetComponent<MonsterBase>();
+    Collider2D jianchizhu2D = jianchizhumonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(jianchizhu2D, jianchizhumonsterBase);
+
+    var kulou1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou1").GetComponent<kulou1>(), GameController.S.transform);
+    kulou1.gameObject.SetActive(false);
+    GameController.S.kulou1Queue.Enqueue(kulou1);
+    MonsterBase kulou1monsterBase = kulou1.GetComponent<MonsterBase>();
+    Collider2D kulou12D = kulou1monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(kulou12D, kulou1monsterBase);
+
+    var kulou2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou2").GetComponent<kulou2>(), GameController.S.transform);
+    kulou2.gameObject.SetActive(false);
+    GameController.S.kulou2Queue.Enqueue(kulou2);
+    MonsterBase kulou2monsterBase = kulou2.GetComponent<MonsterBase>();
+    Collider2D kulou22D = kulou2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(kulou22D, kulou2monsterBase);
+
+    var kulou3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou3").GetComponent<kulou3>(), GameController.S.transform);
+    kulou3.gameObject.SetActive(false);
+    GameController.S.kulou3Queue.Enqueue(kulou3);
+    MonsterBase kulou3monsterBase = kulou3.GetComponent<MonsterBase>();
+    Collider2D kulou32D = kulou3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(kulou32D, kulou3monsterBase);
+
+    var kulou4 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou4").GetComponent<kulou4>(), GameController.S.transform);
+    kulou4.gameObject.SetActive(false);
+    GameController.S.kulou4Queue.Enqueue(kulou4);
+    MonsterBase kulou4monsterBase = kulou4.GetComponent<MonsterBase>();
+    Collider2D kulou42D = kulou4monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(kulou42D, kulou4monsterBase);
+
+    var kulou5 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou5").GetComponent<kulou5>(), GameController.S.transform);
+    kulou5.gameObject.SetActive(false);
+    GameController.S.kulou5Queue.Enqueue(kulou5);
+    MonsterBase kulou5monsterBase = kulou5.GetComponent<MonsterBase>();
+    Collider2D kulou52D = kulou5monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(kulou52D, kulou5monsterBase);
+
+    var kulou6 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou6").GetComponent<kulou6>(), GameController.S.transform);
+    kulou6.gameObject.SetActive(false);
+    GameController.S.kulou6Queue.Enqueue(kulou6);
+    MonsterBase kulou6monsterBase = kulou6.GetComponent<MonsterBase>();
+    Collider2D kulou62D = kulou6monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(kulou62D, kulou6monsterBase);
+
+    var lujiaocike = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/lujiaocike").GetComponent<lujiaocike>(), GameController.S.transform);
+    lujiaocike.gameObject.SetActive(false);
+    GameController.S.lujiaocikeQueue.Enqueue(lujiaocike);
+    MonsterBase lujiaocikemonsterBase = lujiaocike.GetComponent<MonsterBase>();
+    Collider2D lujiaocike2D = lujiaocikemonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(lujiaocike2D, lujiaocikemonsterBase);
+
+    var lujiaocike2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/lujiaocike2").GetComponent<lujiaocike2>(), GameController.S.transform);
+    lujiaocike2.gameObject.SetActive(false);
+    GameController.S.lujiaocike2Queue.Enqueue(lujiaocike2);
+    MonsterBase lujiaocike2monsterBase = lujiaocike2.GetComponent<MonsterBase>();
+    Collider2D lujiaocike22D = lujiaocike2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(lujiaocike22D, lujiaocike2monsterBase);
+
+    var niutouren1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niutouren1").GetComponent<niutouren1>(), GameController.S.transform);
+    niutouren1.gameObject.SetActive(false);
+    GameController.S.niutouren1Queue.Enqueue(niutouren1);
+    MonsterBase niutouren1monsterBase = niutouren1.GetComponent<MonsterBase>();
+    Collider2D niutouren12D = niutouren1monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(niutouren12D, niutouren1monsterBase);
+
+    var niutouren2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niutouren2").GetComponent<niutouren2>(), GameController.S.transform);
+    niutouren2.gameObject.SetActive(false);
+    GameController.S.niutouren2Queue.Enqueue(niutouren2);
+    MonsterBase niutouren2monsterBase = niutouren2.GetComponent<MonsterBase>();
+    Collider2D niutouren22D = niutouren2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(niutouren22D, niutouren2monsterBase);
+
+    var niutouren3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niutouren3").GetComponent<niutouren3>(), GameController.S.transform);
+    niutouren3.gameObject.SetActive(false);
+    GameController.S.niutouren3Queue.Enqueue(niutouren3);
+    MonsterBase niutouren3monsterBase = niutouren3.GetComponent<MonsterBase>();
+    Collider2D niutouren32D = niutouren3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(niutouren32D, niutouren3monsterBase);
+
+    var shanzei3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shanzei3").GetComponent<shanzei3>(), GameController.S.transform);
+    shanzei3.gameObject.SetActive(false);
+    GameController.S.shanzei3Queue.Enqueue(shanzei3);
+    MonsterBase shanzei3monsterBase = shanzei3.GetComponent<MonsterBase>();
+    Collider2D shanzei32D = shanzei3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shanzei32D, shanzei3monsterBase);
+
+    var shijiachong = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shijiachong").GetComponent<shijiachong>(), GameController.S.transform);
+    shijiachong.gameObject.SetActive(false);
+    GameController.S.shijiachongQueue.Enqueue(shijiachong);
+    MonsterBase shijiachongmonsterBase = shijiachong.GetComponent<MonsterBase>();
+    Collider2D shijiachong2D = shijiachongmonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shijiachong2D, shijiachongmonsterBase);
+
+    var shishigui = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shishigui").GetComponent<shishigui>(), GameController.S.transform);
+    shishigui.gameObject.SetActive(false);
+    GameController.S.shishiguiQueue.Enqueue(shishigui);
+    MonsterBase shishiguimonsterBase = shishigui.GetComponent<MonsterBase>();
+    Collider2D shishigui2D = shishiguimonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shishigui2D, shishiguimonsterBase);
+
+    var shixianggui = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shixianggui").GetComponent<shixianggui>(), GameController.S.transform);
+    shixianggui.gameObject.SetActive(false);
+    GameController.S.shixiangguiQueue.Enqueue(shixianggui);
+    MonsterBase shixiangguimonsterBase = shixianggui.GetComponent<MonsterBase>();
+    Collider2D shixianggui2D = shixiangguimonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shixianggui2D, shixiangguimonsterBase);
+
+    var shouren1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shouren1").GetComponent<shouren1>(), GameController.S.transform);
+    shouren1.gameObject.SetActive(false);
+    GameController.S.shouren1Queue.Enqueue(shouren1);
+    MonsterBase shouren1monsterBase = shouren1.GetComponent<MonsterBase>();
+    Collider2D shouren12D = shouren1monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shouren12D, shouren1monsterBase);
+
+    var shouren2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shouren2").GetComponent<shouren2>(), GameController.S.transform);
+    shouren2.gameObject.SetActive(false);
+    GameController.S.shouren2Queue.Enqueue(shouren2);
+    MonsterBase shouren2monsterBase = shouren2.GetComponent<MonsterBase>();
+    Collider2D shouren22D = shouren2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shouren22D, shouren2monsterBase);
+
+    var shouren3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shouren3").GetComponent<shouren3>(), GameController.S.transform);
+    shouren3.gameObject.SetActive(false);
+    GameController.S.shouren3Queue.Enqueue(shouren3);
+    MonsterBase shouren3monsterBase = shouren3.GetComponent<MonsterBase>();
+    Collider2D shouren32D = shouren3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shouren32D, shouren3monsterBase);
+
+    var shuangtoulong = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shuangtoulong").GetComponent<shuangtoulong>(), GameController.S.transform);
+    shuangtoulong.gameObject.SetActive(false);
+    GameController.S.shuangtoulongQueue.Enqueue(shuangtoulong);
+    MonsterBase shuangtoulongmonsterBase = shuangtoulong.GetComponent<MonsterBase>();
+    Collider2D shuangtoulong2D = shuangtoulongmonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shuangtoulong2D, shuangtoulongmonsterBase);
+
+    var shuangtoulong2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shuangtoulong2").GetComponent<shuangtoulong2>(), GameController.S.transform);
+    shuangtoulong2.gameObject.SetActive(false);
+    GameController.S.shuangtoulong2Queue.Enqueue(shuangtoulong2);
+    MonsterBase shuangtoulong2monsterBase = shuangtoulong2.GetComponent<MonsterBase>();
+    Collider2D shuangtoulong22D = shuangtoulong2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shuangtoulong22D, shuangtoulong2monsterBase);
+
+    var shuangtoulong3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shuangtoulong3").GetComponent<shuangtoulong3>(), GameController.S.transform);
+    shuangtoulong3.gameObject.SetActive(false);
+    GameController.S.shuangtoulong3Queue.Enqueue(shuangtoulong3);
+    MonsterBase shuangtoulong3monsterBase = shuangtoulong3.GetComponent<MonsterBase>();
+    Collider2D shuangtoulong32D = shuangtoulong3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(shuangtoulong32D, shuangtoulong3monsterBase);
+
+    var tujiu = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/tujiu").GetComponent<tujiu>(), GameController.S.transform);
+    tujiu.gameObject.SetActive(false);
+    GameController.S.tujiuQueue.Enqueue(tujiu);
+    MonsterBase tujiumonsterBase = tujiu.GetComponent<MonsterBase>();
+    Collider2D tujiu2D = tujiumonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(tujiu2D, tujiumonsterBase);
+
+    var wuya = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/wuya").GetComponent<wuya>(), GameController.S.transform);
+    wuya.gameObject.SetActive(false);
+    GameController.S.wuyaQueue.Enqueue(wuya);
+    MonsterBase wuyamonsterBase = wuya.GetComponent<MonsterBase>();
+    Collider2D wuya2D = wuyamonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(wuya2D, wuyamonsterBase);
+
+    var youhunlingzhu = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/youhunlingzhu").GetComponent<youhunlingzhu>(), GameController.S.transform);
+    youhunlingzhu.gameObject.SetActive(false);
+    GameController.S.youhunlingzhuQueue.Enqueue(youhunlingzhu);
+    MonsterBase youhunlingzhumonsterBase = youhunlingzhu.GetComponent<MonsterBase>();
+    Collider2D youhunlingzhu2D = youhunlingzhumonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(youhunlingzhu2D, youhunlingzhumonsterBase);
+
+    var youlang = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/youlang").GetComponent<youlang>(), GameController.S.transform);
+    youlang.gameObject.SetActive(false);
+    GameController.S.youlangQueue.Enqueue(youlang);
+    MonsterBase youlangmonsterBase = youlang.GetComponent<MonsterBase>();
+    Collider2D youlang2D = youlangmonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(youlang2D, youlangmonsterBase);
+
+    var youling = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/youling").GetComponent<youling>(), GameController.S.transform);
+    youling.gameObject.SetActive(false);
+    GameController.S.youlingQueue.Enqueue(youling);
+    MonsterBase youlingmonsterBase = youling.GetComponent<MonsterBase>();
+    Collider2D youling2D = youlingmonsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(youling2D, youlingmonsterBase);
+
+    var youling2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/youling2").GetComponent<youling2>(), GameController.S.transform);
+    youling2.gameObject.SetActive(false);
+    GameController.S.youling2Queue.Enqueue(youling2);
+    MonsterBase youling2monsterBase = youling2.GetComponent<MonsterBase>();
+    Collider2D youling22D = youling2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(youling22D, youling2monsterBase);
+
+    var yuren1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yuren1").GetComponent<yuren1>(), GameController.S.transform);
+    yuren1.gameObject.SetActive(false);
+    GameController.S.yuren1Queue.Enqueue(yuren1);
+    MonsterBase yuren1monsterBase = yuren1.GetComponent<MonsterBase>();
+    Collider2D yuren12D = yuren1monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(yuren12D, yuren1monsterBase);
+
+    var yuren2 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yuren2").GetComponent<yuren2>(), GameController.S.transform);
+    yuren2.gameObject.SetActive(false);
+    GameController.S.yuren2Queue.Enqueue(yuren2);
+    MonsterBase yuren2monsterBase = yuren2.GetComponent<MonsterBase>();
+    Collider2D yuren22D = yuren2monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(yuren22D, yuren2monsterBase);
+
+    var yuren3 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yuren3").GetComponent<yuren3>(), GameController.S.transform);
+    yuren3.gameObject.SetActive(false);
+    GameController.S.yuren3Queue.Enqueue(yuren3);
+    MonsterBase yuren3monsterBase = yuren3.GetComponent<MonsterBase>();
+    Collider2D yuren32D = yuren3monsterBase.collider2D;
+    GameController.S.MonsterColliderDic.Add(yuren32D, yuren3monsterBase);
+}
+            
+            
             if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 ||
                 LevelInfoConfig.CurrentGameLevel == 3)
             {
@@ -1978,14 +2284,14 @@ public class Entrance : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/Level1/SnotMonster")
                                 .GetComponent<SnotMonster>(), GameController.S.transform);
                     snotMonster.gameObject.SetActive(false);
-                    GameController.S.SnotMonsterQueue.Enqueue(snotMonster.GetComponent<SnotMonster>());
+                    GameController.S.SnotMonsterQueue.Enqueue(snotMonster);
 
                     var batMonster =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/Level1/BatMonster").GetComponent<BatMonster>(),
                             GameController.S.transform);
                     batMonster.gameObject.SetActive(false);
-                    GameController.S.BatMonsterQueue.Enqueue(batMonster.GetComponent<BatMonster>());
+                    GameController.S.BatMonsterQueue.Enqueue(batMonster);
 
 
                     var beeBullet = Instantiate(Resources.Load<BeeBullet>("Prefabs/Monster/Level1/BeeBullet"),
@@ -1999,7 +2305,7 @@ public class Entrance : MonoBehaviour
                                 .GetComponent<SpiderMonster>(),
                             GameController.S.transform);
                     spiderMonster.gameObject.SetActive(false);
-                    GameController.S.SpiderMonsterQueue.Enqueue(spiderMonster.GetComponent<SpiderMonster>());
+                    GameController.S.SpiderMonsterQueue.Enqueue(spiderMonster);
 
                     Collider2D spidercollider2D = spiderMonster.GetComponent<MonsterBase>().collider2D;
                     GameController.S.MonsterColliderDic.Add(spidercollider2D,
@@ -2433,10 +2739,6 @@ public class Entrance : MonoBehaviour
 
 
             GameController.S.CreatePlayer();
-
-            GameController.S.FirstlevelMonsterList.Add(GameController.S.snotMonster);
-            GameController.S.FirstlevelMonsterList.Add(GameController.S.batMonster);
-            GameController.S.FirstlevelMonsterList.Add(GameController.S.spiderMonster);
         }
     }
 }

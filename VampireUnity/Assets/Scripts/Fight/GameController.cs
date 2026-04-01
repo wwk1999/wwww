@@ -106,10 +106,7 @@ public class GameController : XSingleton<GameController>
     
     
     [NonSerialized]public Player gamePlayer;
-    //怪物相关
-    public SnotMonster snotMonster;
-    public BatMonster batMonster;
-    public SpiderMonster spiderMonster;
+
     
     [NonSerialized] public Queue<PlayerHurt> PlayerHurtQueue = new Queue<PlayerHurt>();
     
@@ -117,6 +114,50 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<CircleAttack> CircleQueue = new Queue<CircleAttack>();
     [NonSerialized] public Queue<SqrtAttack> SqrtQueue = new Queue<SqrtAttack>();
 
+    //小怪
+    [NonSerialized] public Queue<chailangren1> chailangren1Queue = new Queue<chailangren1>();
+[NonSerialized] public Queue<chailangren2> chailangren2Queue = new Queue<chailangren2>();
+[NonSerialized] public Queue<chailangren3> chailangren3Queue = new Queue<chailangren3>();
+[NonSerialized] public Queue<chailangren4> chailangren4Queue = new Queue<chailangren4>();
+[NonSerialized] public Queue<YeShouZhanShi> cizhuQueue = new Queue<YeShouZhanShi>();
+[NonSerialized] public Queue<ZhiZhuNvWang> daocaorenQueue = new Queue<ZhiZhuNvWang>();
+[NonSerialized] public Queue<dijing2> dijing2Queue = new Queue<dijing2>();
+[NonSerialized] public Queue<dijing3> dijing3Queue = new Queue<dijing3>();
+[NonSerialized] public Queue<dijingshouwei1> dijingshouwei1Queue = new Queue<dijingshouwei1>();
+[NonSerialized] public Queue<dijingshouwei2> dijingshouwei2Queue = new Queue<dijingshouwei2>();
+[NonSerialized] public Queue<dijingshouwei3> dijingshouwei3Queue = new Queue<dijingshouwei3>();
+[NonSerialized] public Queue<heixiong> heixiongQueue = new Queue<heixiong>();
+[NonSerialized] public Queue<jianchizhu> jianchizhuQueue = new Queue<jianchizhu>();
+[NonSerialized] public Queue<kulou1> kulou1Queue = new Queue<kulou1>();
+[NonSerialized] public Queue<kulou2> kulou2Queue = new Queue<kulou2>();
+[NonSerialized] public Queue<kulou3> kulou3Queue = new Queue<kulou3>();
+[NonSerialized] public Queue<kulou4> kulou4Queue = new Queue<kulou4>();
+[NonSerialized] public Queue<kulou5> kulou5Queue = new Queue<kulou5>();
+[NonSerialized] public Queue<kulou6> kulou6Queue = new Queue<kulou6>();
+[NonSerialized] public Queue<lujiaocike> lujiaocikeQueue = new Queue<lujiaocike>();
+[NonSerialized] public Queue<lujiaocike2> lujiaocike2Queue = new Queue<lujiaocike2>();
+[NonSerialized] public Queue<niutouren1> niutouren1Queue = new Queue<niutouren1>();
+[NonSerialized] public Queue<niutouren2> niutouren2Queue = new Queue<niutouren2>();
+[NonSerialized] public Queue<niutouren3> niutouren3Queue = new Queue<niutouren3>();
+[NonSerialized] public Queue<shanzei3> shanzei3Queue = new Queue<shanzei3>();
+[NonSerialized] public Queue<shijiachong> shijiachongQueue = new Queue<shijiachong>();
+[NonSerialized] public Queue<shishigui> shishiguiQueue = new Queue<shishigui>();
+[NonSerialized] public Queue<shixianggui> shixiangguiQueue = new Queue<shixianggui>();
+[NonSerialized] public Queue<shouren1> shouren1Queue = new Queue<shouren1>();
+[NonSerialized] public Queue<shouren2> shouren2Queue = new Queue<shouren2>();
+[NonSerialized] public Queue<shouren3> shouren3Queue = new Queue<shouren3>();
+[NonSerialized] public Queue<shuangtoulong> shuangtoulongQueue = new Queue<shuangtoulong>();
+[NonSerialized] public Queue<shuangtoulong2> shuangtoulong2Queue = new Queue<shuangtoulong2>();
+[NonSerialized] public Queue<shuangtoulong3> shuangtoulong3Queue = new Queue<shuangtoulong3>();
+[NonSerialized] public Queue<tujiu> tujiuQueue = new Queue<tujiu>();
+[NonSerialized] public Queue<wuya> wuyaQueue = new Queue<wuya>();
+[NonSerialized] public Queue<youhunlingzhu> youhunlingzhuQueue = new Queue<youhunlingzhu>();
+[NonSerialized] public Queue<youlang> youlangQueue = new Queue<youlang>();
+[NonSerialized] public Queue<youling> youlingQueue = new Queue<youling>();
+[NonSerialized] public Queue<youling2> youling2Queue = new Queue<youling2>();
+[NonSerialized] public Queue<yuren1> yuren1Queue = new Queue<yuren1>();
+[NonSerialized] public Queue<yuren2> yuren2Queue = new Queue<yuren2>();
+[NonSerialized] public Queue<yuren3> yuren3Queue = new Queue<yuren3>();
     //第一关怪
     [NonSerialized] public Queue<SnotMonster> SnotMonsterQueue = new Queue<SnotMonster>();
     [NonSerialized] public Queue<EliteBeeMonster> EliteBeeMonsterQueue = new Queue<EliteBeeMonster>();
@@ -464,9 +505,6 @@ public class GameController : XSingleton<GameController>
     [NonSerialized]public int DieNormalMonsterCount=0;
     [NonSerialized]public int DieEliteMonsterCount=0;
 
-    
-    
-    [NonSerialized] public List<MonsterBase> FirstlevelMonsterList= new List<MonsterBase>();
     
     
     public float monsterBirthTimeScale = 1f; //间隔一秒钟生成一个怪物
@@ -1732,15 +1770,15 @@ public class GameController : XSingleton<GameController>
             {
                 if (NormalMonsterCount % 3 == 0)
                 {
-                    monsterBase = SnotMonsterQueue.Dequeue();
+                    monsterBase = yuren1Queue.Dequeue();
                 }
                 else if (NormalMonsterCount % 3 == 1)
                 {
-                    monsterBase = BatMonsterQueue.Dequeue();
+                    monsterBase = yuren2Queue.Dequeue();
                 }
                 else
                 {
-                    monsterBase = SpiderMonsterQueue.Dequeue();
+                    monsterBase = yuren3Queue.Dequeue();
                 }
             }
             else

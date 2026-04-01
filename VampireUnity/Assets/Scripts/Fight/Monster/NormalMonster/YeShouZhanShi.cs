@@ -4,11 +4,11 @@ using Equip;
 using Spine;
 using UnityEngine;
 
-public class daocaoren : MonsterBase
+public class YeShouZhanShi : MonsterBase
 {
-    public Transform attackTrans;
+     public Transform attackTrans;
 
-    public daocaoren() : base(MonsterType.Normal, "daocaoren", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public YeShouZhanShi() : base(MonsterType.Normal, "YeShouZhanShi", 1, 100, 0.6f, 20, 5, 10, 1, 0)
     {
     }
 
@@ -40,9 +40,9 @@ public class daocaoren : MonsterBase
         base.Awake();
         var randomSpeed = Random.Range(-0.1f, 0.1f);
         Speed += randomSpeed;
-        MonsterSpineName.AttackName = "attack";
-        MonsterSpineName.HitName = "hit";
-        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.AttackName = "attack1";
+        MonsterSpineName.HitName = "hurt";
+        MonsterSpineName.MoveName = "run";
         MonsterSpineName.DieName = "die";
     }
 

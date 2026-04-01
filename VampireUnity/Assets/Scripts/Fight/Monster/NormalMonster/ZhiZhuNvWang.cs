@@ -4,11 +4,11 @@ using Equip;
 using Spine;
 using UnityEngine;
 
-public class cizhu : MonsterBase
+public class ZhiZhuNvWang : MonsterBase
 {
-     public Transform attackTrans;
+    public Transform attackTrans;
 
-    public cizhu() : base(MonsterType.Normal, "cizhu", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public ZhiZhuNvWang() : base(MonsterType.Normal, "ZhiZhuNvWang", 1, 100, 0.6f, 20, 5, 10, 1, 0)
     {
     }
 
@@ -40,10 +40,10 @@ public class cizhu : MonsterBase
         base.Awake();
         var randomSpeed = Random.Range(-0.1f, 0.1f);
         Speed += randomSpeed;
-        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "hit";
-        MonsterSpineName.MoveName = "walk";
-        MonsterSpineName.DieName = "die";
+        MonsterSpineName.MoveName = "run";
+        MonsterSpineName.DieName = "death";
     }
 
     private void RandomDelayDie()
@@ -88,7 +88,7 @@ public class cizhu : MonsterBase
         if (!IsDead)
         {
             MonsterMove();
-            SpriteFlipX(true);
+            SpriteFlipX(false);
         }
     }
 
