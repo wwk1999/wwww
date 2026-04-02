@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Equip;
 using Spine;
-public class kuangshimuzhu : MonsterBase
+public class cizhu : MonsterBase
 {
-   public Transform attackTrans;
+     public Transform attackTrans;
 
-    public kuangshimuzhu() : base(MonsterType.Elite, "kuangshimuzhu", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public cizhu() : base(MonsterType.Normal, "cizhu", 1, 100, 0.6f, 20, 5, 10, 1, 0)
     {
     }
 

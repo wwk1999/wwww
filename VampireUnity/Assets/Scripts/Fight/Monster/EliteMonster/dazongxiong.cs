@@ -40,10 +40,10 @@ public class dazongxiong : MonsterBase
         base.Awake();
         var randomSpeed = Random.Range(-0.1f, 0.1f);
         Speed += randomSpeed;
-        MonsterSpineName.AttackName = "attack1";
-        MonsterSpineName.HitName = "hurt";
-        MonsterSpineName.MoveName = "run";
-        MonsterSpineName.DieName = "die";
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "dead";
     }
 
     private void RandomDelayDie()

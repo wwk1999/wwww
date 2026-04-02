@@ -117,12 +117,21 @@ public class GameController : XSingleton<GameController>
     //小怪
     [NonSerialized] public Queue<BaoXue> BaoXueQueue = new Queue<BaoXue>();
 
+    [NonSerialized] public Queue<dazongxiong> dazongxiongQueue = new Queue<dazongxiong>();
+    [NonSerialized] public Queue<fengheguai> fengheguaiQueue = new Queue<fengheguai>();
+    [NonSerialized] public Queue<kuangshimuzhu> kuangshimuzhuQueue = new Queue<kuangshimuzhu>();
+    [NonSerialized] public Queue<lujiaodoushi> lujiaodoushiQueue = new Queue<lujiaodoushi>();
+    [NonSerialized] public Queue<shuangtouren> shuangtourenQueue = new Queue<shuangtouren>();
+
+    [NonSerialized] public Queue<cizhu> cizhuQueue = new Queue<cizhu>();
+    [NonSerialized] public Queue<daocaoren> daocaorenQueue = new Queue<daocaoren>();
+
     [NonSerialized] public Queue<chailangren1> chailangren1Queue = new Queue<chailangren1>();
 [NonSerialized] public Queue<chailangren2> chailangren2Queue = new Queue<chailangren2>();
 [NonSerialized] public Queue<chailangren3> chailangren3Queue = new Queue<chailangren3>();
 [NonSerialized] public Queue<chailangren4> chailangren4Queue = new Queue<chailangren4>();
 [NonSerialized] public Queue<YeShouZhanShi> YeShouZhanShiQueue = new Queue<YeShouZhanShi>();
-[NonSerialized] public Queue<ZhiZhuNvWang> daocaorenQueue = new Queue<ZhiZhuNvWang>();
+[NonSerialized] public Queue<ZhiZhuNvWang> ZhiZhuNvWangQueue = new Queue<ZhiZhuNvWang>();
 [NonSerialized] public Queue<dijing2> dijing2Queue = new Queue<dijing2>();
 [NonSerialized] public Queue<dijing3> dijing3Queue = new Queue<dijing3>();
 [NonSerialized] public Queue<dijingshouwei1> dijingshouwei1Queue = new Queue<dijingshouwei1>();
@@ -1723,7 +1732,7 @@ public class GameController : XSingleton<GameController>
         
         if ( LevelInfoConfig.CurrentGameLevel == 2|| LevelInfoConfig.CurrentGameLevel ==3)
         {
-            eliteMonster = EliteBeeMonsterQueue.Dequeue();
+            eliteMonster = shuangtourenQueue.Dequeue();
         }
         if ( LevelInfoConfig.CurrentGameLevel ==5 || LevelInfoConfig.CurrentGameLevel ==6)
         {

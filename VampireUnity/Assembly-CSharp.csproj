@@ -147,6 +147,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\雷兽\LeiShouSkill3.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoFenLie\HuoFenLie.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\cizhu.cs" />
     <Compile Include="Assets\Scripts\Window\WeaponItem.cs" />
     <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill5Anim.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\AllReplyAddPercent.cs" />
@@ -482,6 +483,7 @@
     <Compile Include="Assets\Scripts\Gun\PistolBullet.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\dazongxiong.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanHelmet.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\daocaoren.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManNecklace.cs" />
     <Compile Include="Assets\Scripts\Tool\ResourceUsageFinder.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoFenLie\HuoFenLieBaoZha.cs" />
