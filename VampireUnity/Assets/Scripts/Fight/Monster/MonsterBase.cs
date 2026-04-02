@@ -810,8 +810,10 @@ public abstract class MonsterBase : MonoBehaviour
        
         if (monsterSkeletonAnimation != null)
         {
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.DieName, false);
-            Invoke(nameof(DelayDestroy), 0.5f); // ← 几乎不分配内存
+            DelayDestroy();
+            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            baoxue.transform.position=transform.position;
+            baoxue.gameObject.SetActive(true);
         }
         if(collider2D != null)
             collider2D.enabled = false;

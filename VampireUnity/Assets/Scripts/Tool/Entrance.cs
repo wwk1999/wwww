@@ -1971,6 +1971,12 @@ public class Entrance : MonoBehaviour
 
             for (int i = 0; i < 100; i++)
 {
+    var baoxue = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/BaoXue").GetComponent<BaoXue>(), GameController.S.transform);
+    baoxue.gameObject.SetActive(false);
+    GameController.S.BaoXueQueue.Enqueue(baoxue);
+    
+    
+    
     var chailangren1 = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren1").GetComponent<chailangren1>(), GameController.S.transform);
     chailangren1.gameObject.SetActive(false);
     GameController.S.chailangren1Queue.Enqueue(chailangren1);
@@ -2001,7 +2007,7 @@ public class Entrance : MonoBehaviour
 
     var cizhu = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/YeShouZhanShi").GetComponent<YeShouZhanShi>(), GameController.S.transform);
     cizhu.gameObject.SetActive(false);
-    GameController.S.cizhuQueue.Enqueue(cizhu);
+    GameController.S.YeShouZhanShiQueue.Enqueue(cizhu);
     MonsterBase cizhumonsterBase = cizhu.GetComponent<MonsterBase>();
     Collider2D cizhu2D = cizhumonsterBase.collider2D;
     GameController.S.MonsterColliderDic.Add(cizhu2D, cizhumonsterBase);
