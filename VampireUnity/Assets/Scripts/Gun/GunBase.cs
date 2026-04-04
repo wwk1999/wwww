@@ -273,7 +273,7 @@ public class GunBase : MonoBehaviour
         PrimaryHuo bullet = GameController.S.PrimaryHuoQueue.Dequeue();
         bullet.transform.position = attackTrans;
         bullet.MoveDirection = direction;
-        bullet.MoveSpeed = 10f;
+        bullet.MoveSpeed = 14f;
         bullet.gameObject.SetActive(true);
     }
     
