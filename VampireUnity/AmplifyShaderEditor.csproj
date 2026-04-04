@@ -391,9 +391,9 @@
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Nodes\Misc\PosFromTransformMatrix.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Nodes\NodeAttributes.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Nodes\DynamicTypeNode.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Nodes\SimpleNodes\SimpleMaxOpNode.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Actions\ActionLog.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Nodes\LogicalOperators\Compare.cs" />
+    <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Nodes\SimpleNodes\SimpleMaxOpNode.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Templates\TemplateData.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Nodes\Operators\SmoothstepOpNode.cs" />
     <Compile Include="Assets\AmplifyShaderEditor\Plugins\Editor\Nodes\Operators\TransposeOpNode.cs" />

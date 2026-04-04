@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 6458578355852640540}
   - component: {fileID: 609131928347823862}
   - component: {fileID: 2350884846414718758}
-  - component: {fileID: 2126668581304951365}
+  - component: {fileID: 5776444622243554203}
   m_Layer: 6
   m_Name: ZhiZhuNvWang
   m_TagString: Monster
@@ -712,7 +712,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2126668581304951365
+--- !u!114 &5776444622243554203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

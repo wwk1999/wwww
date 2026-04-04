@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class ZhiZhuNvWang : MonsterBase
 {
-    public Transform attackTrans;
+     public Transform attackTrans;
 
-    public ZhiZhuNvWang() : base(MonsterType.Elite, "ZhiZhuNvWang", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public ZhiZhuNvWang() : base(MonsterType.Normal, "ZhiZhuNvWang", 1, 100, 0.6f, 20, 5, 10, 1, 0)
     {
     }
 
@@ -43,7 +43,7 @@ public class ZhiZhuNvWang : MonsterBase
         MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "run";
-        MonsterSpineName.DieName = "death";
+        MonsterSpineName.DieName = "die";
     }
 
     private void RandomDelayDie()

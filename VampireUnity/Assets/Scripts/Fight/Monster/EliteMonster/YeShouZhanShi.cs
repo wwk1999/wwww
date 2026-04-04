@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class YeShouZhanShi : MonsterBase
 {
-     public Transform attackTrans;
+    public Transform attackTrans;
 
-    public YeShouZhanShi() : base(MonsterType.Elite, "YeShouZhanShi", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public YeShouZhanShi() : base(MonsterType.Normal, "YeShouZhanShi", 1, 100, 0.6f, 20, 5, 10, 1, 0)
     {
     }
 
@@ -40,7 +40,7 @@ public class YeShouZhanShi : MonsterBase
         base.Awake();
         var randomSpeed = Random.Range(-0.1f, 0.1f);
         Speed += randomSpeed;
-        MonsterSpineName.AttackName = "attack1";
+        MonsterSpineName.AttackName = "attack2";
         MonsterSpineName.HitName = "hurt";
         MonsterSpineName.MoveName = "run";
         MonsterSpineName.DieName = "die";

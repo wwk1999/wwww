@@ -101,11 +101,13 @@ public class GameLevelWindow1 : MonoBehaviour
         if (PlayerData.S.maxGameLevel > 15)
         {
             Level6Image.sprite = ResourcesConfig.Level6Liang;
+            Level6Image.raycastTarget = true;
             Level6Suo.gameObject.SetActive(false);
 
         }
         else
         {
+            Level6Image.raycastTarget = false;
             Level6Image.sprite = ResourcesConfig.Level6An;
             Level6Suo.gameObject.SetActive(true);
         }

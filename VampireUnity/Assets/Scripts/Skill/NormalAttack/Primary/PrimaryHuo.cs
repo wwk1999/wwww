@@ -13,7 +13,7 @@ namespace Skill.NormalAttack.Primary
         public GameObject bullet;
         private void OnEnable()
         {
-            CancelInvoke();
+            CancelInvoke(nameof(Hide));
             ske.AnimationState.SetAnimation(0, "fly_48",true);
             float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
             bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));

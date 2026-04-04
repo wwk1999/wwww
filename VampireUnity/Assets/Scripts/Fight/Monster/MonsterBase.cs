@@ -353,6 +353,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else
         {
+            monsterSkeletonAnimation.timeScale = 1;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
         }
     }
@@ -365,7 +366,7 @@ public abstract class MonsterBase : MonoBehaviour
         collider2D.tag = "Monster";
     }
     
-    void DelayDestroy()
+    public void DelayDestroy()
     {
         gameObject.SetActive(false);
          //第一关怪物死亡
@@ -807,14 +808,7 @@ public abstract class MonsterBase : MonoBehaviour
                 }
                 break;
         }
-       
-        if (monsterSkeletonAnimation != null)
-        {
-            DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
-            baoxue.transform.position=transform.position;
-            baoxue.gameObject.SetActive(true);
-        }
+        
         if(collider2D != null)
             collider2D.enabled = false;
         
@@ -960,6 +954,7 @@ public abstract class MonsterBase : MonoBehaviour
                 if (!IsSkill)
                 {
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
+                    monsterSkeletonAnimation.timeScale = 0.5f;
                 }
             }
             CurrentHp -= finalDamage;
