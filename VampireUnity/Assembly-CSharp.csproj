@@ -456,6 +456,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\youling2.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\WhiteChiBang.cs" />
     <Compile Include="Assets\Scripts\Mysql\PropTable.cs" />
+    <Compile Include="Assets\Scripts\Fight\UI\JiangLiItem.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\Du.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\IceBaoZha\IceBaoZhaNextAnim.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeNecklace.cs" />

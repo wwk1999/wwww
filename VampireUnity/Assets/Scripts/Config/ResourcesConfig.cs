@@ -6,6 +6,8 @@ using UnityEngine;
 public class ResourcesConfig : MonoBehaviour
 {
     public static Sprite LingHun;
+    public static Sprite EXP;
+
 
     //icon
     public static Sprite AttackIcon;
@@ -1784,6 +1786,8 @@ public class ResourcesConfig : MonoBehaviour
         OrangeMaterial = Resources.Load<Material>("Material/EquipOutline/OrangeEquipOutline");
 
         LingHun = Resources.Load<Sprite>("Sprite/Prop/LingHun");
+        EXP = Resources.Load<Sprite>("Sprite/Prop/EXP");
+
         //新手套装
         PrimaryCloth = Resources.Load<Sprite>("Sprite/Equip/PrimaryCloth");
         PrimaryCloak = Resources.Load<Sprite>("Sprite/Equip/PrimaryCloak");

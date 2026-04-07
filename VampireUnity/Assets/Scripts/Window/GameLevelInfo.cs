@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,8 +10,8 @@ public class GameLevelInfo : MonoBehaviour
     public Button exitButton;
     public Button tiaozhanButton;
     [NonSerialized] public int CurrentClickLevel=0;
-    public Text LevelNameText;
-    public Text TuiJianLevelText;
+    public TextMeshProUGUI LevelNameText;
+    public TextMeshProUGUI TuiJianLevelText;
     public GameObject MonsterListContent;
     public GameObject DiaoLuoListContent;
 
@@ -57,7 +58,7 @@ public class GameLevelInfo : MonoBehaviour
         {
             foreach (var item in DiaoLuoList)
             {
-                if (item.PropId == 0)
+                if (item.PropId == 0)//是装备
                 {
                     var DiaoluoEquipSprite = ResourcesConfig.GetEquipSprite(item);
                     if (DiaoluoEquipSprite != null)
@@ -67,28 +68,6 @@ public class GameLevelInfo : MonoBehaviour
                         DiaoLuoGrid.transform.Find("BagGridImage").GetComponent<Image>().sprite = DiaoluoEquipSprite;
                         DiaoLuoGrid.transform.Find("EquipGridBG").GetComponent<Image>().sprite =
                             ResourcesConfig.GetEquipColorBgBySuitId(item.SuitId);
-                        switch (item.SuitId)
-                        {
-                            case 1:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
-                                break;
-                            case 2:
-                            case 101:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
-                                break;
-                            case 3:
-                            case 102:
-                            case 103:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-                                break;
-                            case 4:
-                            case 7:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
-                                break;
-                            case 5:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
-                                break;
-                        }
                     }
                 }
                 else
@@ -99,32 +78,6 @@ public class GameLevelInfo : MonoBehaviour
                     DiaoLuoGrid.transform.Find("BagGridImage").GetComponent<Image>().sprite = DiaoluoPropSprite;
                     DiaoLuoGrid.transform.Find("EquipGridBG").GetComponent<Image>().sprite =
                         ResourcesConfig.GetPropColorBg(item.PropId);
-
-                    if (item.PropId == 3)
-                    {
-                        DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
-                    }
-                    else
-                    {
-                        switch (item.PropId % 100)
-                        {
-                            case 1:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("WhiteEdge");
-                                break;
-                            case 2:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("GreenEdge");
-                                break;
-                            case 3:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("BlueEdge");
-                                break;
-                            case 4:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("PurpleEdge");
-                                break;
-                            case 5:
-                                DiaoLuoGrid.transform.Find("Edge").GetComponent<Animator>().Play("OrangeEdge");
-                                break;
-                        }
-                    }
                 }
             }
         }

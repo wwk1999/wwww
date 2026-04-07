@@ -25,17 +25,10 @@ public class MJinfo : MonoBehaviour
     public TextMeshProUGUI PlayerLinhun;
     public TextMeshProUGUI PlayerEx;
     public TextMeshProUGUI PlayerBao;
-    
-    public TextMeshProUGUI jiangliEx;
-    public TextMeshProUGUI jiangliLinhun;
-    public TextMeshProUGUI jinCuiCount;
-    public TextMeshProUGUI zhuanjinCount;
-    public Animator jingcuiAnimator;
-    public Animator zhuanjinAnimator;
 
 
-    public TextMeshProUGUI MonsterName;
-    public TextMeshProUGUI PlayerName;
+
+    public GameObject JiangLiContent;
 
     public Button TiaoZhanButton;
 
@@ -53,117 +46,77 @@ public class MJinfo : MonoBehaviour
         switch (mJLevel)
         {
             case MJLevel.White:
-                MonsterName.text = "普通 怪物属性";
-                PlayerName.text = "普通 人物属性";
                 whiteName.gameObject.SetActive(true);
                 break;
             case MJLevel.Green:
-                MonsterName.text = "困难 怪物属性";
-                PlayerName.text = "困难 人物属性";
                 greenName.gameObject.SetActive(true);
                 break;
             case MJLevel.Blue:
-                MonsterName.text = "超难 怪物属性";
-                PlayerName.text = "超难 人物属性";
                 blueName.gameObject.SetActive(true);
                 break;
             case MJLevel.Purple:
-                MonsterName.text = "史诗 怪物属性";
-                PlayerName.text = "史诗 人物属性";
                 purpleName.gameObject.SetActive(true);
                 break;
             case MJLevel.Orange:
-                MonsterName.text = "传说 怪物属性";
-                PlayerName.text = "传说 人物属性";
                 orangeName.gameObject.SetActive(true);
                 break;
             case MJLevel.Red1:
-                MonsterName.text = "神话I 怪物属性";
-                PlayerName.text = "神话I 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话I";
                 break;
             case MJLevel.Red2:
-                MonsterName.text = "神话II 怪物属性";
-                PlayerName.text = "神话II 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话II";
                 break;
             case MJLevel.Red3:
-                MonsterName.text = "神话III 怪物属性";
-                PlayerName.text = "神话III 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话III";
                 break;
             case MJLevel.Red4:
-                MonsterName.text = "神话IV 怪物属性";
-                PlayerName.text = "神话IV 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话IV";
                 break;
             case MJLevel.Red5:
-                MonsterName.text = "神话V 怪物属性";
-                PlayerName.text = "神话V 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话V";
                 break;
             case MJLevel.Red6:
-                MonsterName.text = "神话VI 怪物属性";
-                PlayerName.text = "神话VI 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话VI";
                 break;
             case MJLevel.Red7:
-                MonsterName.text = "神话VII 怪物属性";
-                PlayerName.text = "神话VII 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话VII";
                 break;
             case MJLevel.Red8:
-                MonsterName.text = "神话VIII 怪物属性";
-                PlayerName.text = "神话VIII 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话VIII";
                 break;
             case MJLevel.Red9:
-                MonsterName.text = "神话IX 怪物属性";
-                PlayerName.text = "神话IX 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话IX";
                 break;
             case MJLevel.Red10:
-                MonsterName.text = "神话X 怪物属性";
-                PlayerName.text = "神话X 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话X";
                 break;
             case MJLevel.Red11:
-                MonsterName.text = "神话XI 怪物属性";
-                PlayerName.text = "神话XI 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话XI";
                 break;
             case MJLevel.Red12:
-                MonsterName.text = "神话XII 怪物属性";
-                PlayerName.text = "神话XII 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话XII";
                 break;
             case MJLevel.Red13:
-                MonsterName.text = "神话XIII 怪物属性";
-                PlayerName.text = "神话XIII 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话XIII";
                 break;
             case MJLevel.Red14:
-                MonsterName.text = "神话XIV 怪物属性";
-                PlayerName.text = "神话XIV 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话XIV";
                 break;
             case MJLevel.Red15:
-                MonsterName.text = "神话XV 怪物属性";
-                PlayerName.text = "神话XV 人物属性";
                 redName.gameObject.SetActive(true);
                 redName.text = "神话XV";
                 break;
@@ -179,12 +132,22 @@ public class MJinfo : MonoBehaviour
         PlayerLinhun.text = MJConfig.PlayerAttributeDic[mJLevel].linhun+"%灵魂";
         PlayerEx.text = MJConfig.PlayerAttributeDic[mJLevel].ex+"%经验";
         PlayerBao.text = MJConfig.PlayerAttributeDic[mJLevel].bao+"%寻宝值";
-        jiangliEx.text=MJConfig.JiangLiDic[mJLevel].ex+"经验";
-        jiangliLinhun.text=MJConfig.JiangLiDic[mJLevel].linhun+"灵魂";
-        jinCuiCount.text="X"+MJConfig.JiangLiDic[mJLevel].jingcui;
-        zhuanjinCount.text="X"+MJConfig.JiangLiDic[mJLevel].zhuanjin;
-        jingcuiAnimator.Play("OrangeEdge");
-        zhuanjinAnimator.Play("OrangeEdge");
+        foreach (Transform item in JiangLiContent.transform)
+        {
+            Destroy(item.gameObject);
+        }
+
+        var jiangliitem1 = Instantiate(Resources.Load<GameObject>("Prefabs/UI/jiangliItem"), JiangLiContent.transform).GetComponent<JiangLiItem>();
+        jiangliitem1.type = JiangLiType.LingHun;
+        jiangliitem1.SetItem(mJLevel);
+        
+        var jiangliitem2 = Instantiate(Resources.Load<GameObject>("Prefabs/UI/jiangliItem"), JiangLiContent.transform).GetComponent<JiangLiItem>();
+        jiangliitem2.type = JiangLiType.Exp;
+        jiangliitem2.SetItem(mJLevel);
+        
+        var jiangliitem3 = Instantiate(Resources.Load<GameObject>("Prefabs/UI/jiangliItem"), JiangLiContent.transform).GetComponent<JiangLiItem>();
+        jiangliitem3.type = JiangLiType.JingCui;
+        jiangliitem3.SetItem(mJLevel);
     }
 
     private void OnEnable()

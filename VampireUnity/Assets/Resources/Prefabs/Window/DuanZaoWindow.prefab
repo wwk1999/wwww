@@ -6390,7 +6390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10301,11 +10301,6 @@ MonoBehaviour:
   purpleEquipName: {fileID: 8554471010986886821}
   blueEquipName: {fileID: 689552666547509570}
   greenEquipName: {fileID: 8774616752538145205}
-  redQuality: {fileID: 0}
-  orangeQuality: {fileID: 0}
-  purpleQuality: {fileID: 0}
-  blueQuality: {fileID: 0}
-  greenQuality: {fileID: 0}
   TopHeChengText: {fileID: 2260357274262854766}
   TopXiLianText: {fileID: 1873291643578807478}
   TopJinJieText: {fileID: 2850588999770968324}
@@ -10701,7 +10696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13212,7 +13207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14128,6 +14123,7 @@ GameObject:
   - component: {fileID: 253010787479036907}
   - component: {fileID: 5575238361484985292}
   - component: {fileID: 3430025912991355014}
+  - component: {fileID: 5782495095359382398}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -14218,6 +14214,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5782495095359382398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5857830533749449353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c16610776b74f43b8d0cd68ff884c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5874332896887518081
 GameObject:
   m_ObjectHideFlags: 0
