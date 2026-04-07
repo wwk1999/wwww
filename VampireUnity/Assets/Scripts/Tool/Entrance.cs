@@ -400,10 +400,10 @@ public class Entrance : MonoBehaviour
 
 
         //秘境怪物
-        if (LevelInfoConfig.CurrentGameLevel > 15)
+       // if (LevelInfoConfig.CurrentGameLevel > 15)
         {
 
-            if (LevelInfoConfig.CurrentGameLevel == 18)
+            //if (LevelInfoConfig.CurrentGameLevel == 18)
             {
                 for (int i = 0; i < 150; i++)
                 {

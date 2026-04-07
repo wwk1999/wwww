@@ -1,6 +1,10 @@
 wuya.png
-size:85,161
+size:85,472
 filter:Linear,Linear
+pma:true
+3e2c3b
+bounds:2,161,309,80
+rotate:90
 body_1
 bounds:2,37,48,35
 offsets:1,1,50,37

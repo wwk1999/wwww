@@ -1781,15 +1781,15 @@ public class GameController : XSingleton<GameController>
             {
                 if (NormalMonsterCount % 3 == 0)
                 {
-                    monsterBase = yuren1Queue.Dequeue();
+                    monsterBase = DaLongQueue.Dequeue();
                 }
                 else if (NormalMonsterCount % 3 == 1)
                 {
-                    monsterBase = yuren2Queue.Dequeue();
+                    monsterBase = DaLongQueue.Dequeue();
                 }
                 else
                 {
-                    monsterBase = yuren3Queue.Dequeue();
+                    monsterBase = DaLongQueue.Dequeue();
                 }
             }
             else

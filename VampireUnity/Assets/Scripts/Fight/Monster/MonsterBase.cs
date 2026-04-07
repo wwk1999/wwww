@@ -954,7 +954,6 @@ public abstract class MonsterBase : MonoBehaviour
                 if (!IsSkill)
                 {
                     monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.HitName, false);
-                    monsterSkeletonAnimation.timeScale = 0.5f;
                 }
             }
             CurrentHp -= finalDamage;
