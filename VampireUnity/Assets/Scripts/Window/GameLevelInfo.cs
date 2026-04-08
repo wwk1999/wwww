@@ -14,7 +14,7 @@ public class GameLevelInfo : MonoBehaviour
     public TextMeshProUGUI TuiJianLevelText;
     public GameObject MonsterListContent;
     public GameObject DiaoLuoListContent;
-
+    
     private void Start()
     {
         exitButton.onClick.AddListener(() =>
@@ -45,7 +45,7 @@ public class GameLevelInfo : MonoBehaviour
         {
             foreach (var item in MonsterList)
             {
-                var MonsterSprite = GetSpriteByMonsterName(item);
+                var MonsterSprite = ResourcesConfig.GetMonsterIcon(item);
                 if (MonsterSprite != null)
                 {
                     var MonsterGrid=Instantiate(Resources.Load<GameObject>("Prefabs/UI/MonsterGrid"),MonsterListContent.transform);
@@ -158,69 +158,6 @@ public class GameLevelInfo : MonoBehaviour
                 return LevelInfoConfig.LevelDiaoLuo15;
         }
 
-        return null;
-    }
-
-    public Sprite GetSpriteByMonsterName(MonsterTypeByName monsterType)
-    {
-        switch (monsterType)
-        {
-            case MonsterTypeByName.Snot:
-            return ResourcesConfig.SnotIcon;
-            case MonsterTypeByName.Bat:
-                return ResourcesConfig.BatIcon;
-            case MonsterTypeByName.Spider:
-                return ResourcesConfig.Spidericon;
-            case MonsterTypeByName.Bee:
-                return ResourcesConfig.EliteBeeIcon;
-            case MonsterTypeByName.TreeMan:
-                return ResourcesConfig.BossTreeManIcon;
-            case MonsterTypeByName.XiaoHuo:
-                return ResourcesConfig.XiaoHuoIcon;
-            case MonsterTypeByName.ChongZi:
-                return ResourcesConfig.ChongZiIcon;
-            case MonsterTypeByName.DunDi:
-                return ResourcesConfig.DunDiicon;
-            case MonsterTypeByName.DaZui:
-                return ResourcesConfig.DaZuiIcon;
-            case MonsterTypeByName.HuoShanBoss:
-                return ResourcesConfig.BossHuoShanIcon;
-            case MonsterTypeByName.JiaChong:
-                return ResourcesConfig.JiaChongIcon;
-            case MonsterTypeByName.QingWa:
-                return ResourcesConfig.QingWaIcon;
-            case MonsterTypeByName.ShiRenHua:
-                return ResourcesConfig.ShiRenHuaIcon;
-            case MonsterTypeByName.ShiRenBoss:
-                return ResourcesConfig.BossShiRenIcon;
-            
-            case MonsterTypeByName.WenZi:
-                return ResourcesConfig.WenZiIcon;
-            case MonsterTypeByName.ZhaoZeBoss:
-                return ResourcesConfig.ZhaoZeBossIcon;
-            
-            case MonsterTypeByName.ShaChong:
-                return ResourcesConfig.ShaChongIcon;
-            case MonsterTypeByName.ShaNiao:
-                return ResourcesConfig.ShaNiaoIcon;
-            case MonsterTypeByName.ShaXiYi:
-                return ResourcesConfig.XiYiicon;
-            case MonsterTypeByName.XianRenZhang:
-                return ResourcesConfig.XianRenZhangIcon;
-            case MonsterTypeByName.XieZi:
-                return ResourcesConfig.XieZiIcon;
-            
-            case MonsterTypeByName.XueQiE:
-                return ResourcesConfig.XueQiEIcon;
-            case MonsterTypeByName.XueRen:
-                return ResourcesConfig.XueRenIcon;
-            case MonsterTypeByName.XueZhangLang:
-                return ResourcesConfig.XUeZhangLangIcon;
-            case MonsterTypeByName.YingShu:
-                return ResourcesConfig.YingShuIcon;
-            case MonsterTypeByName.XueRenBoss:
-                return ResourcesConfig.XueRenBossIcon;
-        }
         return null;
     }
 }

@@ -346,37 +346,91 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite HeiAnMain;
 
     //关卡界面怪物icon
-    public static Sprite SnotIcon;
-    public static Sprite BatIcon;
-    public static Sprite Spidericon;
-    public static Sprite EliteBeeIcon;
-    public static Sprite BossTreeManIcon;
+   // 第一页怪物
+public static Sprite BatIcon;
+public static Sprite BeeIcon;
+public static Sprite Chailangren1Icon;
+public static Sprite Chailangren2Icon;
+public static Sprite Chailangren3Icon;
+public static Sprite Chailangren4Icon;
+public static Sprite ChongziIcon;
+public static Sprite CizhuIcon;
+public static Sprite DaocaorenIcon;
+public static Sprite DazongxiongIcon;
+public static Sprite DazuiIcon;
+public static Sprite Dijing2Icon;
+public static Sprite Dijing3Icon;
+public static Sprite Dijingshouwei1Icon;
+public static Sprite Dijingshouwei2Icon;
+public static Sprite Dijingshouwei3Icon;
+public static Sprite DijingzhanglaoIcon;
+public static Sprite DixuezhiwangIcon;
+public static Sprite DundiIcon;
+public static Sprite FengheguaiIcon;
+public static Sprite HeixiongIcon;
+public static Sprite HuoshanbossIcon;
+public static Sprite JiachongIcon;
+public static Sprite JianchizhuIcon;
+public static Sprite KuangshimuzhuIcon;
+public static Sprite Kulou1Icon;
+public static Sprite Kulou2Icon;
+public static Sprite Kulou3Icon;
+public static Sprite Kulou4Icon;
+public static Sprite Kulou5Icon;
+public static Sprite Kulou6Icon;
+public static Sprite LujiaocikeIcon;
+public static Sprite Lujiaocike2Icon;
+public static Sprite LujiaodoushiIcon;
+public static Sprite Niutouren1Icon;
+public static Sprite Niutouren2Icon;
+public static Sprite Niutouren3Icon;
+public static Sprite QingwaIcon;
+public static Sprite RongyanguaiIcon;
+public static Sprite ShachongIcon;
+public static Sprite ShaniaoIcon;
+public static Sprite Shanzei3Icon;
+public static Sprite ShaxiyiIcon;
+public static Sprite ShifubossIcon;
+public static Sprite ShijiachongIcon;
+public static Sprite ShirenhuaIcon;
+public static Sprite ShishiguiIcon;
+public static Sprite ShixiangguiIcon;
+public static Sprite Shouren1Icon;
 
-    public static Sprite ChongZiIcon;
-    public static Sprite XiaoHuoIcon;
-    public static Sprite DunDiicon;
-    public static Sprite DaZuiIcon;
-    public static Sprite BossHuoShanIcon;
+// 第二页怪物
+public static Sprite Shouren2Icon;
+public static Sprite Shouren3Icon;
+public static Sprite ShuangtoulongIcon;
+public static Sprite Shuangtoulong2Icon;
+public static Sprite Shuangtoulong3Icon;
+public static Sprite SnotIcon;
+public static Sprite SpiderIcon;
+public static Sprite TujiuIcon;
+public static Sprite WenziIcon;
+public static Sprite WuyaIcon;
+public static Sprite WuyaozhiwangIcon;
+public static Sprite Wuyaozhiwang2Icon;
+public static Sprite XianrenzhangIcon;
+public static Sprite XiaohuoIcon;
+public static Sprite XieziIcon;
+public static Sprite XueqieIcon;
+public static Sprite XuerenIcon;
+public static Sprite XuerenbossIcon;
+public static Sprite XuezhanglangIcon;
+public static Sprite YingshuIcon;
+public static Sprite YouhunlingzhuIcon;
+public static Sprite YoulangIcon;
+public static Sprite YoulingIcon;
+public static Sprite Youling2Icon;
+public static Sprite TreemanIcon;
+public static Sprite Yuren1Icon;
+public static Sprite Yuren2Icon;
+public static Sprite Yuren3Icon;
+public static Sprite ZhaozebossIcon;
 
-    public static Sprite QingWaIcon;
-    public static Sprite JiaChongIcon;
-    public static Sprite XiYiicon;
-    public static Sprite ShiRenHuaIcon;
-    public static Sprite BossShiRenIcon;
-    public static Sprite WenZiIcon;
-    public static Sprite ZhaoZeBossIcon;
-
-    public static Sprite ShaChongIcon;
-    public static Sprite ShaNiaoIcon;
-    public static Sprite XianRenZhangIcon;
-    public static Sprite ShaXiYiIcon;
-    public static Sprite XieZiIcon;
-
-    public static Sprite XueQiEIcon;
-    public static Sprite XueRenIcon;
-    public static Sprite XUeZhangLangIcon;
-    public static Sprite YingShuIcon;
-    public static Sprite XueRenBossIcon;
+public static Sprite ShuangtourenIcon;
+public static Sprite ZhizhunvwangIcon;
+public static Sprite YeshouzhanshiIcon;
 
 
     //颜色背景
@@ -525,6 +579,13 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ChongWuShiWuBgPurple;
     public static Sprite ChongWuShiWuBgOrange;
     public static Sprite ChongWuShiWuBgRed;
+    
+    public static Sprite ChongWuShiWuWhite;
+    public static Sprite ChongWuShiWuGreen;
+    public static Sprite ChongWuShiWuBlue;
+    public static Sprite ChongWuShiWuPurple;
+    public static Sprite ChongWuShiWuOrange;
+    public static Sprite ChongWuShiWuRed;
     
     public static Sprite ChongWuSkillBgWhite;
     public static Sprite ChongWuSkillBgGreen;
@@ -996,6 +1057,179 @@ public class ResourcesConfig : MonoBehaviour
         return null;
     }
 
+    public static Sprite GetMonsterIcon(MonsterTypeByName type)
+    {
+        switch (type)
+        {
+            case MonsterTypeByName.None:
+                return null;
+            case MonsterTypeByName.Snot:
+                return SnotIcon;
+            case MonsterTypeByName.Bat:
+                return BatIcon;
+            case MonsterTypeByName.Spider:
+                return SpiderIcon;
+            case MonsterTypeByName.Bee:
+                return BeeIcon;
+            case MonsterTypeByName.TreeMan:
+                return TreemanIcon; 
+            case MonsterTypeByName.XiaoHuo:
+                return XiaohuoIcon;
+            case MonsterTypeByName.DaZui:
+                return DazuiIcon;
+            case MonsterTypeByName.DunDi:
+                return DundiIcon;
+            case MonsterTypeByName.ChongZi:
+                return ChongziIcon;
+            case MonsterTypeByName.HuoShanBoss:
+                return HuoshanbossIcon;
+            case MonsterTypeByName.ShiRenHua:
+                return ShirenhuaIcon;
+            case MonsterTypeByName.JiaChong:
+                return JiachongIcon;
+            case MonsterTypeByName.WenZi:
+                return WenziIcon;
+            case MonsterTypeByName.ZhaoZeBoss:
+                return ZhaozebossIcon;
+            case MonsterTypeByName.ShaChong:
+                return ShachongIcon;
+            case MonsterTypeByName.ShaNiao:
+                return ShaniaoIcon;
+            case MonsterTypeByName.ShaXiYi:
+                return ShaxiyiIcon;
+            case MonsterTypeByName.XianRenZhang:
+                return XianrenzhangIcon;
+            case MonsterTypeByName.XieZi:
+                return XieziIcon;
+            case MonsterTypeByName.XueRen:
+                return XuerenIcon;
+            case MonsterTypeByName.XueZhangLang:
+                return XuezhanglangIcon;
+            case MonsterTypeByName.XueQiE:
+                return XueqieIcon;
+            case MonsterTypeByName.YingShu:
+                return YingshuIcon;
+            case MonsterTypeByName.XueRenBoss:
+                return XuerenbossIcon;
+            case MonsterTypeByName.QingWa:
+                return QingwaIcon;
+            // 小怪
+            case MonsterTypeByName.ChaiLangRen1:
+                return Chailangren1Icon;
+            case MonsterTypeByName.ChaiLangRen2:
+                return Chailangren2Icon;
+            case MonsterTypeByName.ChaiLangRen3:
+                return Chailangren3Icon;
+            case MonsterTypeByName.ChaiLangRen4:
+                return Chailangren4Icon;
+            case MonsterTypeByName.CiZhu:
+                return CizhuIcon;
+            case MonsterTypeByName.DaoCaoRen:
+                return DaocaorenIcon;
+            case MonsterTypeByName.DiJing2:
+                return Dijing2Icon;
+            case MonsterTypeByName.DiJing3:
+                return Dijing3Icon;
+            case MonsterTypeByName.DiJingShouWei1:
+                return Dijingshouwei1Icon;
+            case MonsterTypeByName.DiJingShouWei2:
+                return Dijingshouwei2Icon;
+            case MonsterTypeByName.DiJingShouWei3:
+                return Dijingshouwei3Icon;
+            case MonsterTypeByName.HeiXiong:
+                return HeixiongIcon;
+            case MonsterTypeByName.JianChiZhu:
+                return JianchizhuIcon;
+            case MonsterTypeByName.KuLou1:
+                return Kulou1Icon;
+            case MonsterTypeByName.KuLou2:
+                return Kulou2Icon;
+            case MonsterTypeByName.KuLou3:
+                return Kulou3Icon;
+            case MonsterTypeByName.KuLou4:
+                return Kulou4Icon;
+            case MonsterTypeByName.KuLou5:
+                return Kulou5Icon;
+            case MonsterTypeByName.KuLou6:
+                return Kulou6Icon;
+            case MonsterTypeByName.LuJiaoCiKe1:
+                return LujiaocikeIcon; 
+            case MonsterTypeByName.LuJiaoCiKe2:
+                return Lujiaocike2Icon;
+            case MonsterTypeByName.NiuTouRen1:
+                return Niutouren1Icon;
+            case MonsterTypeByName.NiuTouRen2:
+                return Niutouren2Icon;
+            case MonsterTypeByName.NiuTouRen3:
+                return Niutouren3Icon;
+            case MonsterTypeByName.ShanZei3:
+                return Shanzei3Icon;
+            case MonsterTypeByName.ShiJiaChong:
+                return ShijiachongIcon;
+            case MonsterTypeByName.ShiShiGui:
+                return ShishiguiIcon;
+            case MonsterTypeByName.ShiXiangGui:
+                return ShixiangguiIcon;
+            case MonsterTypeByName.ShouRen1:
+                return Shouren1Icon;
+            case MonsterTypeByName.ShouRen2:
+                return Shouren2Icon;
+            case MonsterTypeByName.ShouRen3:
+                return Shouren3Icon;
+            case MonsterTypeByName.ShuangTouLong1:
+                return ShuangtoulongIcon;
+            case MonsterTypeByName.ShuangTouLong2:
+                return Shuangtoulong2Icon;
+            case MonsterTypeByName.ShuangTouLong3:
+                return Shuangtoulong3Icon;
+            case MonsterTypeByName.TuJiu:
+                return TujiuIcon;
+            case MonsterTypeByName.WuYa:
+                return WuyaIcon;
+            case MonsterTypeByName.YouHunLingZhu:
+                return YouhunlingzhuIcon;
+            case MonsterTypeByName.YouLang:
+                return YoulangIcon;
+            case MonsterTypeByName.YouLing1:
+                return YoulingIcon;
+            case MonsterTypeByName.YouLing2:
+                return Youling2Icon;
+            case MonsterTypeByName.YuRen1:
+                return Yuren1Icon;
+            case MonsterTypeByName.YuRen2:
+                return Yuren2Icon;
+            case MonsterTypeByName.YuRen3:
+                return Yuren3Icon;
+            // 精英怪
+            case MonsterTypeByName.DaZongXiong:
+                return DazongxiongIcon;
+            case MonsterTypeByName.DiJingZhangLao:
+                return DijingzhanglaoIcon;
+            case MonsterTypeByName.FengHeGuai:
+                return FengheguaiIcon;
+            case MonsterTypeByName.KuangShiMuZhu:
+                return KuangshimuzhuIcon;
+            case MonsterTypeByName.LuJiaoDouShi:
+                return LujiaodoushiIcon;
+            case MonsterTypeByName.RongYanGuai:
+                return RongyanguaiIcon;
+            case MonsterTypeByName.ShiFuBoss:
+                return ShifubossIcon;
+            case MonsterTypeByName.ShuangTouRen:
+                return ShuangtourenIcon; 
+            case MonsterTypeByName.WuYaoZhiWang:
+                return WuyaozhiwangIcon;
+            case MonsterTypeByName.WuYaoZhiWang2:
+                return Wuyaozhiwang2Icon;
+            case MonsterTypeByName.YeShouZhanShi:
+                return YeshouzhanshiIcon; 
+            case MonsterTypeByName.ZhiZhuNvWang:
+                return ZhizhunvwangIcon; 
+            default:
+                return null;
+        }
+    }
+
     public static Sprite GetChongWuSkillSprite(ChongWuConfig.ChongWuSKillType skill)
     {
         switch (skill)
@@ -1293,185 +1527,192 @@ public class ResourcesConfig : MonoBehaviour
     public static void Init()
     {
         //Icon
-        AttackIcon=Resources.Load<Sprite>("Sprite/Icon/AttackIcon");
-        DefenseIcon=Resources.Load<Sprite>("Sprite/Icon/DefenseIcon");
-        HpIcon=Resources.Load<Sprite>("Sprite/Icon/HpIcon");
-        CritIcon=Resources.Load<Sprite>("Sprite/Icon/CritIcon");
-        AttackSpeedIcon=Resources.Load<Sprite>("Sprite/Icon/AttackSpeedIcon");
+        AttackIcon = Resources.Load<Sprite>("Sprite/Icon/AttackIcon");
+        DefenseIcon = Resources.Load<Sprite>("Sprite/Icon/DefenseIcon");
+        HpIcon = Resources.Load<Sprite>("Sprite/Icon/HpIcon");
+        CritIcon = Resources.Load<Sprite>("Sprite/Icon/CritIcon");
+        AttackSpeedIcon = Resources.Load<Sprite>("Sprite/Icon/AttackSpeedIcon");
 
-        
-        
-        DaKongShi=Resources.Load<Sprite>("Sprite/Prop/DaKongShi");
+
+
+        DaKongShi = Resources.Load<Sprite>("Sprite/Prop/DaKongShi");
 
         //翅膀
-        Blue1=Resources.Load<Sprite>("Sprite/ChiBang/Blue1");
-        Blue2=Resources.Load<Sprite>("Sprite/ChiBang/Blue2");
-        Blue3=Resources.Load<Sprite>("Sprite/ChiBang/Blue3");
-        Blue4=Resources.Load<Sprite>("Sprite/ChiBang/Blue4");
-        Blue5=Resources.Load<Sprite>("Sprite/ChiBang/Blue5");
-        Blue6=Resources.Load<Sprite>("Sprite/ChiBang/Blue6");
-        Blue7=Resources.Load<Sprite>("Sprite/ChiBang/Blue7");
-        Blue8=Resources.Load<Sprite>("Sprite/ChiBang/Blue8");
+        Blue1 = Resources.Load<Sprite>("Sprite/ChiBang/Blue1");
+        Blue2 = Resources.Load<Sprite>("Sprite/ChiBang/Blue2");
+        Blue3 = Resources.Load<Sprite>("Sprite/ChiBang/Blue3");
+        Blue4 = Resources.Load<Sprite>("Sprite/ChiBang/Blue4");
+        Blue5 = Resources.Load<Sprite>("Sprite/ChiBang/Blue5");
+        Blue6 = Resources.Load<Sprite>("Sprite/ChiBang/Blue6");
+        Blue7 = Resources.Load<Sprite>("Sprite/ChiBang/Blue7");
+        Blue8 = Resources.Load<Sprite>("Sprite/ChiBang/Blue8");
 
-        Green1=Resources.Load<Sprite>("Sprite/ChiBang/Green1");
-        Green2=Resources.Load<Sprite>("Sprite/ChiBang/Green2");
-        Green3=Resources.Load<Sprite>("Sprite/ChiBang/Green3");
-        Green4=Resources.Load<Sprite>("Sprite/ChiBang/Green4");
-        Green5=Resources.Load<Sprite>("Sprite/ChiBang/Green5");
-        Green6=Resources.Load<Sprite>("Sprite/ChiBang/Green6");
-    
-        Purple1=Resources.Load<Sprite>("Sprite/ChiBang/Purple1");
-        Purple2=Resources.Load<Sprite>("Sprite/ChiBang/Purple2");
-        Purple3=Resources.Load<Sprite>("Sprite/ChiBang/Purple3");
-        Purple4=Resources.Load<Sprite>("Sprite/ChiBang/Purple4");
-        Purple5=Resources.Load<Sprite>("Sprite/ChiBang/Purple5");
-        Purple6=Resources.Load<Sprite>("Sprite/ChiBang/Purple6");
-        Purple7=Resources.Load<Sprite>("Sprite/ChiBang/Purple7");
-    
-        Orange1=Resources.Load<Sprite>("Sprite/ChiBang/Orange1");
-        Orange2=Resources.Load<Sprite>("Sprite/ChiBang/Orange2");
-        Orange3=Resources.Load<Sprite>("Sprite/ChiBang/Orange3");
-    
-        Red1=Resources.Load<Sprite>("Sprite/ChiBang/Red1");
-        
+        Green1 = Resources.Load<Sprite>("Sprite/ChiBang/Green1");
+        Green2 = Resources.Load<Sprite>("Sprite/ChiBang/Green2");
+        Green3 = Resources.Load<Sprite>("Sprite/ChiBang/Green3");
+        Green4 = Resources.Load<Sprite>("Sprite/ChiBang/Green4");
+        Green5 = Resources.Load<Sprite>("Sprite/ChiBang/Green5");
+        Green6 = Resources.Load<Sprite>("Sprite/ChiBang/Green6");
+
+        Purple1 = Resources.Load<Sprite>("Sprite/ChiBang/Purple1");
+        Purple2 = Resources.Load<Sprite>("Sprite/ChiBang/Purple2");
+        Purple3 = Resources.Load<Sprite>("Sprite/ChiBang/Purple3");
+        Purple4 = Resources.Load<Sprite>("Sprite/ChiBang/Purple4");
+        Purple5 = Resources.Load<Sprite>("Sprite/ChiBang/Purple5");
+        Purple6 = Resources.Load<Sprite>("Sprite/ChiBang/Purple6");
+        Purple7 = Resources.Load<Sprite>("Sprite/ChiBang/Purple7");
+
+        Orange1 = Resources.Load<Sprite>("Sprite/ChiBang/Orange1");
+        Orange2 = Resources.Load<Sprite>("Sprite/ChiBang/Orange2");
+        Orange3 = Resources.Load<Sprite>("Sprite/ChiBang/Orange3");
+
+        Red1 = Resources.Load<Sprite>("Sprite/ChiBang/Red1");
+
         //地图
-        Level1Liang=Resources.Load<Sprite>("Sprite/DiTu/Level1Liang");
-        Level1An=Resources.Load<Sprite>("Sprite/DiTu/Level1An");
-        Level2Liang=Resources.Load<Sprite>("Sprite/DiTu/Level2Liang");
-        Level2An=Resources.Load<Sprite>("Sprite/DiTu/Level2An");
-        Level3Liang=Resources.Load<Sprite>("Sprite/DiTu/Level3Liang");
-        Level3An=Resources.Load<Sprite>("Sprite/DiTu/Level3An");
-        Level4Liang=Resources.Load<Sprite>("Sprite/DiTu/Level4Liang");
-        Level4An=Resources.Load<Sprite>("Sprite/DiTu/Level4An");
-        Level5Liang=Resources.Load<Sprite>("Sprite/DiTu/Level5Liang");
-        Level5An=Resources.Load<Sprite>("Sprite/DiTu/Level5An");
-        Level6Liang=Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
-        Level6An=Resources.Load<Sprite>("Sprite/DiTu/Level6An");
-        Level6XuanZhong=Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
+        Level1Liang = Resources.Load<Sprite>("Sprite/DiTu/Level1Liang");
+        Level1An = Resources.Load<Sprite>("Sprite/DiTu/Level1An");
+        Level2Liang = Resources.Load<Sprite>("Sprite/DiTu/Level2Liang");
+        Level2An = Resources.Load<Sprite>("Sprite/DiTu/Level2An");
+        Level3Liang = Resources.Load<Sprite>("Sprite/DiTu/Level3Liang");
+        Level3An = Resources.Load<Sprite>("Sprite/DiTu/Level3An");
+        Level4Liang = Resources.Load<Sprite>("Sprite/DiTu/Level4Liang");
+        Level4An = Resources.Load<Sprite>("Sprite/DiTu/Level4An");
+        Level5Liang = Resources.Load<Sprite>("Sprite/DiTu/Level5Liang");
+        Level5An = Resources.Load<Sprite>("Sprite/DiTu/Level5An");
+        Level6Liang = Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
+        Level6An = Resources.Load<Sprite>("Sprite/DiTu/Level6An");
+        Level6XuanZhong = Resources.Load<Sprite>("Sprite/DiTu/Level6Liang");
 
-        Level1ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level1ButtonLiang");
-        Level1ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level1ButtonAn");
-        Level2ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level2ButtonLiang");
-        Level2ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level2ButtonAn");
-        Level3ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level3ButtonLiang");
-        Level3ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level3ButtonAn");
-        Level4ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level4ButtonLiang");
-        Level4ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level4ButtonAn");
-        Level5ButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/Level5ButtonLiang");
-        Level5ButtonAn=Resources.Load<Sprite>("Sprite/DiTu/Level5ButtonAn");
-    
-        ChongWuButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/ChongWuButtonLiang");
-        ChongWuButtonAn=Resources.Load<Sprite>("Sprite/DiTu/ChongWuButtonAn");
-        ChiBangButtonLiang=Resources.Load<Sprite>("Sprite/DiTu/ChiBangButtonLiang");
-        ChiBangButtonAn=Resources.Load<Sprite>("Sprite/DiTu/ChiBangButtonAn");
+        Level1ButtonLiang = Resources.Load<Sprite>("Sprite/DiTu/Level1ButtonLiang");
+        Level1ButtonAn = Resources.Load<Sprite>("Sprite/DiTu/Level1ButtonAn");
+        Level2ButtonLiang = Resources.Load<Sprite>("Sprite/DiTu/Level2ButtonLiang");
+        Level2ButtonAn = Resources.Load<Sprite>("Sprite/DiTu/Level2ButtonAn");
+        Level3ButtonLiang = Resources.Load<Sprite>("Sprite/DiTu/Level3ButtonLiang");
+        Level3ButtonAn = Resources.Load<Sprite>("Sprite/DiTu/Level3ButtonAn");
+        Level4ButtonLiang = Resources.Load<Sprite>("Sprite/DiTu/Level4ButtonLiang");
+        Level4ButtonAn = Resources.Load<Sprite>("Sprite/DiTu/Level4ButtonAn");
+        Level5ButtonLiang = Resources.Load<Sprite>("Sprite/DiTu/Level5ButtonLiang");
+        Level5ButtonAn = Resources.Load<Sprite>("Sprite/DiTu/Level5ButtonAn");
+
+        ChongWuButtonLiang = Resources.Load<Sprite>("Sprite/DiTu/ChongWuButtonLiang");
+        ChongWuButtonAn = Resources.Load<Sprite>("Sprite/DiTu/ChongWuButtonAn");
+        ChiBangButtonLiang = Resources.Load<Sprite>("Sprite/DiTu/ChiBangButtonLiang");
+        ChiBangButtonAn = Resources.Load<Sprite>("Sprite/DiTu/ChiBangButtonAn");
         //药水
-        Hp1=Resources.Load<Sprite>("Sprite/YaoShui/Hp1");
-        Hp2=Resources.Load<Sprite>("Sprite/YaoShui/Hp2");
-        Hp3=Resources.Load<Sprite>("Sprite/YaoShui/Hp3");
-        Hp4=Resources.Load<Sprite>("Sprite/YaoShui/Hp4");
-        Hp5=Resources.Load<Sprite>("Sprite/YaoShui/Hp5");
-        Hp6=Resources.Load<Sprite>("Sprite/YaoShui/Hp6");
-        Ex=Resources.Load<Sprite>("Sprite/YaoShui/Ex");
-        DiaoLuo=Resources.Load<Sprite>("Sprite/YaoShui/DiaoLuo");
+        Hp1 = Resources.Load<Sprite>("Sprite/YaoShui/Hp1");
+        Hp2 = Resources.Load<Sprite>("Sprite/YaoShui/Hp2");
+        Hp3 = Resources.Load<Sprite>("Sprite/YaoShui/Hp3");
+        Hp4 = Resources.Load<Sprite>("Sprite/YaoShui/Hp4");
+        Hp5 = Resources.Load<Sprite>("Sprite/YaoShui/Hp5");
+        Hp6 = Resources.Load<Sprite>("Sprite/YaoShui/Hp6");
+        Ex = Resources.Load<Sprite>("Sprite/YaoShui/Ex");
+        DiaoLuo = Resources.Load<Sprite>("Sprite/YaoShui/DiaoLuo");
 
 
 
-        
+
         //宠物
-        ChongWuShiWuBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物白");
-        ChongWuShiWuBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物绿");
-        ChongWuShiWuBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物蓝");
-        ChongWuShiWuBgPurple=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物紫");
-        ChongWuShiWuBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物橙");
-        ChongWuShiWuBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物红");
+        ChongWuShiWuBgWhite = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物白");
+        ChongWuShiWuBgGreen = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物绿");
+        ChongWuShiWuBgBlue = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物蓝");
+        ChongWuShiWuBgPurple = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物紫");
+        ChongWuShiWuBgOrange = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物橙");
+        ChongWuShiWuBgRed = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuShiWu/食物红");
 
-        
-        ChongWuSkillBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框白");
-        ChongWuSkillBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框绿");
-        ChongWuSkillBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框蓝");
-        ChongWuSkillBgPurple=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框紫");
-        ChongWuSkillBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框橙");
-        ChongWuSkillBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框红");
-        
-        
-        YuanSuIconDian=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon电");
-        YuanSuIconHuo=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon火");
-        YuanSuIconHeiAn=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon黑暗");
-        YuanSuIconIce=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon冰");
-        YuanSuIconAll=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon全");
-
-        
-        ChongWuQualityBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框白");
-        ChongWuQualityBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框绿");
-        ChongWuQualityBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框蓝");
-        ChongWuQualityBgPurple=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框紫");
-        ChongWuQualityBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框橙");
-        ChongWuQualityBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框红");
-
-        ChongWuItemBgWhite=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框白");
-        ChongWuItemBgGreen=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框绿");
-        ChongWuItemBgBlue=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框蓝");
-        ChongWuItemBgPurple=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框紫");
-        ChongWuItemBgOrange=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框橙");
-        ChongWuItemBgRed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框红");
-
-        
-        ChongWuSkill1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill1");
-        ChongWuSkill2=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill2");
-        ChongWuSkill3=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill3");
-        ChongWuSkill4=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill4");
-        ChongWuSkill5=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill5");
-        ChongWuSkill6=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill6");
+        ChongWuShiWuWhite = Resources.LoadAll<Sprite>("Sprite/ChongWu/ChongWuShiWu/shiwu")[5];
+        ChongWuShiWuGreen = Resources.LoadAll<Sprite>("Sprite/ChongWu/ChongWuShiWu/shiwu")[3];
+        ChongWuShiWuBlue = Resources.LoadAll<Sprite>("Sprite/ChongWu/ChongWuShiWu/shiwu")[2];
+        ChongWuShiWuPurple = Resources.LoadAll<Sprite>("Sprite/ChongWu/ChongWuShiWu/shiwu")[4];
+        ChongWuShiWuOrange = Resources.LoadAll<Sprite>("Sprite/ChongWu/ChongWuShiWu/shiwu")[6];
+        ChongWuShiWuRed = Resources.LoadAll<Sprite>("Sprite/ChongWu/ChongWuShiWu/shiwu")[1];
 
 
-        NormalChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/NormalChongWuDan");
-        GaoJiChongWuDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/GaoJiChongWuDan");
-        
-        NormalXiSuiYe=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXiSuiYe");
-        GaoJiXiSuiYe=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXiSuiYe");
-        NormalXueMaiDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXueMaiDan");
-        GaoJiXueMaiDan=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXueMaiDan");
-
-        NormalXiSuiYe1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXiSuiYe1");
-        GaoJiXiSuiYe1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXiSuiYe1");
-        NormalXueMaiDan1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXueMaiDan1");
-        GaoJiXueMaiDan1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXueMaiDan1");
-
-        
-        AddAttack=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddAttack");
-        AddCrit=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddCrit");
-        AddHp=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddHp");
-        AddDefense=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddDefense");
-        AddMoveSpeed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddMoveSpeed");
-        AddAttackSpeed=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddAttackSpeed");
-        AddFinalDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddFinalDamage");
-        AddYuanSuDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddYuanSuDamage");
-        
-        IceSkillCd=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/IceSkillCd");
-        HuoSkillCd=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HuoSkillCd");
-        DianSkillCd=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/DianSkillCd");
-        HeiAnSkillCd=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HeiAnSkillCd");
-        IceSkillDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/IceSkillDamage");
-        HuoSkillDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HuoSkillDamage");
-        DianSkillDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/DianSkillDamage");
-        HeiAnSkillDamage=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HeiAnSkillDamage");
+        ChongWuSkillBgWhite = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框白");
+        ChongWuSkillBgGreen = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框绿");
+        ChongWuSkillBgBlue = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框蓝");
+        ChongWuSkillBgPurple = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框紫");
+        ChongWuSkillBgOrange = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框橙");
+        ChongWuSkillBgRed = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/技能框红");
 
 
+        YuanSuIconDian = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon电");
+        YuanSuIconHuo = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon火");
+        YuanSuIconHeiAn = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon黑暗");
+        YuanSuIconIce = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon冰");
+        YuanSuIconAll = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuTuJian/元素icon全");
 
-        
-        XXAn=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/XXAn");
-        XXLiang=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/XXLiang");
-        ChongWuQuality1=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality1");
-        ChongWuQuality2=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality2");
-        ChongWuQuality3=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality3");
-        ChongWuQuality4=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality4");
-        ChongWuQuality5=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality5");
-        ChongWuQuality6=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality6");
 
-        IceIcon=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/IceIcon");
-        HuoIcon=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/HuoIcon");
-        DianIcon=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/DianIcon");
-        HeiAnIcon=Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/HeiAnIcon");
+        ChongWuQualityBgWhite = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框白");
+        ChongWuQualityBgGreen = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框绿");
+        ChongWuQualityBgBlue = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框蓝");
+        ChongWuQualityBgPurple = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框紫");
+        ChongWuQualityBgOrange = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框橙");
+        ChongWuQualityBgRed = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/品质背景框红");
+
+        ChongWuItemBgWhite = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框白");
+        ChongWuItemBgGreen = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框绿");
+        ChongWuItemBgBlue = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框蓝");
+        ChongWuItemBgPurple = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框紫");
+        ChongWuItemBgOrange = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框橙");
+        ChongWuItemBgRed = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/宠物item背景框红");
+
+
+        ChongWuSkill1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill1");
+        ChongWuSkill2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill2");
+        ChongWuSkill3 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill3");
+        ChongWuSkill4 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill4");
+        ChongWuSkill5 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill5");
+        ChongWuSkill6 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/Skill6");
+
+
+        NormalChongWuDan = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/NormalChongWuDan");
+        GaoJiChongWuDan = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuDan/GaoJiChongWuDan");
+
+        NormalXiSuiYe = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXiSuiYe");
+        GaoJiXiSuiYe = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXiSuiYe");
+        NormalXueMaiDan = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXueMaiDan");
+        GaoJiXueMaiDan = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXueMaiDan");
+
+        NormalXiSuiYe1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXiSuiYe1");
+        GaoJiXiSuiYe1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXiSuiYe1");
+        NormalXueMaiDan1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/NormalXueMaiDan1");
+        GaoJiXueMaiDan1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuChongZhi/GaoJiXueMaiDan1");
+
+
+        AddAttack = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddAttack");
+        AddCrit = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddCrit");
+        AddHp = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddHp");
+        AddDefense = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddDefense");
+        AddMoveSpeed = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddMoveSpeed");
+        AddAttackSpeed = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddAttackSpeed");
+        AddFinalDamage = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddFinalDamage");
+        AddYuanSuDamage = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/AddYuanSuDamage");
+
+        IceSkillCd = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/IceSkillCd");
+        HuoSkillCd = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HuoSkillCd");
+        DianSkillCd = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/DianSkillCd");
+        HeiAnSkillCd = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HeiAnSkillCd");
+        IceSkillDamage = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/IceSkillDamage");
+        HuoSkillDamage = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HuoSkillDamage");
+        DianSkillDamage = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/DianSkillDamage");
+        HeiAnSkillDamage = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuSkill/HeiAnSkillDamage");
+
+
+
+
+        XXAn = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/XXAn");
+        XXLiang = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/XXLiang");
+        ChongWuQuality1 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality1");
+        ChongWuQuality2 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality2");
+        ChongWuQuality3 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality3");
+        ChongWuQuality4 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality4");
+        ChongWuQuality5 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality5");
+        ChongWuQuality6 = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/ChongWuQuality6");
+
+        IceIcon = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/IceIcon");
+        HuoIcon = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/HuoIcon");
+        DianIcon = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/DianIcon");
+        HeiAnIcon = Resources.Load<Sprite>("Sprite/ChongWu/ChongWuItem/HeiAnIcon");
 
 
 // White sprites
@@ -1646,7 +1887,7 @@ public class ResourcesConfig : MonoBehaviour
         DD5 = Resources.Load<Sprite>("Sprite/BaoShi/DD5");
         DD6 = Resources.Load<Sprite>("Sprite/BaoShi/DD6");
 
-       
+
 
         //技能icon
         Ice1 = Resources.Load<Sprite>("Sprite/Skill/Ice1");
@@ -1654,73 +1895,73 @@ public class ResourcesConfig : MonoBehaviour
         Ice3 = Resources.LoadAll<Sprite>("Sprite/Skill/IceAll")[1];
         Ice4 = Resources.LoadAll<Sprite>("Sprite/Skill/IceAll")[2];
         Ice5 = Resources.LoadAll<Sprite>("Sprite/Skill/IceAll")[3];
-        IceCd=Resources.Load<Sprite>("Sprite/Skill/IceCd");
+        IceCd = Resources.Load<Sprite>("Sprite/Skill/IceCd");
         Ice1_2 = Resources.Load<Sprite>("Sprite/Skill/Ice1_2");
         Ice2_2 = Resources.Load<Sprite>("Sprite/Skill/Ice2_2");
         Ice3_2 = Resources.Load<Sprite>("Sprite/Skill/Ice3_2");
         Ice4_2 = Resources.Load<Sprite>("Sprite/Skill/Ice4_2");
         Ice5_2 = Resources.Load<Sprite>("Sprite/Skill/Ice5_2");
-        IceMain= Resources.Load<Sprite>("Sprite/Skill/IceMain");
-        IceBei1= Resources.Load<Sprite>("Sprite/Skill/IceBei1");
-        IceBei2= Resources.Load<Sprite>("Sprite/Skill/IceBei2");
-        IceBei3= Resources.Load<Sprite>("Sprite/Skill/IceBei3");
-        IceBei4= Resources.Load<Sprite>("Sprite/Skill/IceBei4");
-        
-        
+        IceMain = Resources.Load<Sprite>("Sprite/Skill/IceMain");
+        IceBei1 = Resources.Load<Sprite>("Sprite/Skill/IceBei1");
+        IceBei2 = Resources.Load<Sprite>("Sprite/Skill/IceBei2");
+        IceBei3 = Resources.Load<Sprite>("Sprite/Skill/IceBei3");
+        IceBei4 = Resources.Load<Sprite>("Sprite/Skill/IceBei4");
+
+
         Huo1 = Resources.Load<Sprite>("Sprite/Skill/Huo1");
         Huo2 = Resources.Load<Sprite>("Sprite/Skill/Huo2");
         Huo3 = Resources.Load<Sprite>("Sprite/Skill/Huo3");
         Huo4 = Resources.Load<Sprite>("Sprite/Skill/Huo4");
         Huo5 = Resources.Load<Sprite>("Sprite/Skill/Huo5");
-        HuoCd=Resources.Load<Sprite>("Sprite/Skill/HuoCd");
+        HuoCd = Resources.Load<Sprite>("Sprite/Skill/HuoCd");
         Huo1_2 = Resources.Load<Sprite>("Sprite/Skill/Huo1_2");
         Huo2_2 = Resources.Load<Sprite>("Sprite/Skill/Huo2_2");
         Huo3_2 = Resources.Load<Sprite>("Sprite/Skill/Huo3_2");
         Huo4_2 = Resources.Load<Sprite>("Sprite/Skill/Huo4_2");
         Huo5_2 = Resources.Load<Sprite>("Sprite/Skill/Huo5_2");
-        HuoMain= Resources.Load<Sprite>("Sprite/Skill/HuoMain");
-        HuoBei1= Resources.Load<Sprite>("Sprite/Skill/HuoBei1");
-        HuoBei2= Resources.Load<Sprite>("Sprite/Skill/HuoBei2");
-        HuoBei3= Resources.Load<Sprite>("Sprite/Skill/HuoBei3");
-        HuoBei4= Resources.Load<Sprite>("Sprite/Skill/HuoBei4");
+        HuoMain = Resources.Load<Sprite>("Sprite/Skill/HuoMain");
+        HuoBei1 = Resources.Load<Sprite>("Sprite/Skill/HuoBei1");
+        HuoBei2 = Resources.Load<Sprite>("Sprite/Skill/HuoBei2");
+        HuoBei3 = Resources.Load<Sprite>("Sprite/Skill/HuoBei3");
+        HuoBei4 = Resources.Load<Sprite>("Sprite/Skill/HuoBei4");
 
-        
+
         Dian1 = Resources.Load<Sprite>("Sprite/Skill/Dian1");
         Dian2 = Resources.Load<Sprite>("Sprite/Skill/Dian2");
         Dian3 = Resources.Load<Sprite>("Sprite/Skill/Dian3");
         Dian4 = Resources.Load<Sprite>("Sprite/Skill/Dian4");
         Dian5 = Resources.Load<Sprite>("Sprite/Skill/Dian5");
-        DianCd=Resources.Load<Sprite>("Sprite/Skill/DianCd");
+        DianCd = Resources.Load<Sprite>("Sprite/Skill/DianCd");
         Dian1_2 = Resources.Load<Sprite>("Sprite/Skill/Dian1_2");
         Dian2_2 = Resources.Load<Sprite>("Sprite/Skill/Dian2_2");
         Dian3_2 = Resources.Load<Sprite>("Sprite/Skill/Dian3_2");
         Dian4_2 = Resources.Load<Sprite>("Sprite/Skill/Dian4_2");
         Dian5_2 = Resources.Load<Sprite>("Sprite/Skill/Dian5_2");
-        DianMain= Resources.Load<Sprite>("Sprite/Skill/DianMain");
-        DianBei1= Resources.Load<Sprite>("Sprite/Skill/DianBei1");
-        DianBei2= Resources.Load<Sprite>("Sprite/Skill/DianBei2");
-        DianBei3= Resources.Load<Sprite>("Sprite/Skill/DianBei3");
-        DianBei4= Resources.Load<Sprite>("Sprite/Skill/DianBei4");
-        
-        
+        DianMain = Resources.Load<Sprite>("Sprite/Skill/DianMain");
+        DianBei1 = Resources.Load<Sprite>("Sprite/Skill/DianBei1");
+        DianBei2 = Resources.Load<Sprite>("Sprite/Skill/DianBei2");
+        DianBei3 = Resources.Load<Sprite>("Sprite/Skill/DianBei3");
+        DianBei4 = Resources.Load<Sprite>("Sprite/Skill/DianBei4");
+
+
         HeiAn1 = Resources.Load<Sprite>("Sprite/Skill/HeiAn1");
         HeiAn2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn2");
         HeiAn3 = Resources.Load<Sprite>("Sprite/Skill/HeiAn3");
         HeiAn4 = Resources.Load<Sprite>("Sprite/Skill/HeiAn4");
         HeiAn5 = Resources.Load<Sprite>("Sprite/Skill/HeiAn5");
-        HeiAnCd=Resources.Load<Sprite>("Sprite/Skill/HeiAnCd");
+        HeiAnCd = Resources.Load<Sprite>("Sprite/Skill/HeiAnCd");
         HeiAn1_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn1_2");
         HeiAn2_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn2_2");
         HeiAn3_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn3_2");
         HeiAn4_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn4_2");
         HeiAn5_2 = Resources.Load<Sprite>("Sprite/Skill/HeiAn5_2");
-        HeiAnMain= Resources.Load<Sprite>("Sprite/Skill/HeiAnMain");
-        HeiAnBei1= Resources.Load<Sprite>("Sprite/Skill/HeiAnBei1");
-        HeiAnBei2= Resources.Load<Sprite>("Sprite/Skill/HeiAnBei2");
-        HeiAnBei3= Resources.Load<Sprite>("Sprite/Skill/HeiAnBei3");
-        HeiAnBei4= Resources.Load<Sprite>("Sprite/Skill/HeiAnBei4");
+        HeiAnMain = Resources.Load<Sprite>("Sprite/Skill/HeiAnMain");
+        HeiAnBei1 = Resources.Load<Sprite>("Sprite/Skill/HeiAnBei1");
+        HeiAnBei2 = Resources.Load<Sprite>("Sprite/Skill/HeiAnBei2");
+        HeiAnBei3 = Resources.Load<Sprite>("Sprite/Skill/HeiAnBei3");
+        HeiAnBei4 = Resources.Load<Sprite>("Sprite/Skill/HeiAnBei4");
 
-        
+
 
 
 
@@ -1954,35 +2195,88 @@ public class ResourcesConfig : MonoBehaviour
         //关卡界面怪物icon
         SnotIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/snot");
         BatIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/bat");
-        Spidericon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/spider");
-        EliteBeeIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/bee");
-        BossTreeManIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/treeman");
+        BeeIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/bee");
+        Chailangren1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/chailangren1");
+        Chailangren2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/chailangren2");
+        Chailangren3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/chailangren3");
+        Chailangren4Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/chailangren4");
+        ChongziIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/chongzi");
+        CizhuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/cizhu");
+        DaocaorenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/daocaoren");
+        DazongxiongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dazongxiong");
+        DazuiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dazui");
+        Dijing2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dijing2");
+        Dijing3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dijing3");
+        Dijingshouwei1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dijingshouwei1");
+        Dijingshouwei2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dijingshouwei2");
+        Dijingshouwei3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dijingshouwei3");
+        DijingzhanglaoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dijingzhanglao");
+        DixuezhiwangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dixuezhiwang");
+        DundiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dundi");
+        FengheguaiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/fengheguai");
+        HeixiongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/heixiong");
+        HuoshanbossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/huoshanboss");
+        JiachongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/jiachong");
+        JianchizhuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/jianchizhu");
+        KuangshimuzhuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/kuangshimuzhu");
+        Kulou1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/kulou1");
+        Kulou2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/kulou2");
+        Kulou3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/kulou3");
+        Kulou4Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/kulou4");
+        Kulou5Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/kulou5");
+        Kulou6Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/kulou6");
+        LujiaocikeIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/lujiaocike");
+        Lujiaocike2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/lujiaocike2");
+        LujiaodoushiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/lujiaodoushi");
+        Niutouren1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/niutouren1");
+        Niutouren2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/niutouren2");
+        Niutouren3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/niutouren3");
+        QingwaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/qingwa");
+        RongyanguaiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/rongyanguai");
+        ShachongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shachong");
+        ShaniaoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaniao");
+        Shanzei3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shanzei3");
+        ShaxiyiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaxiyi");
+        ShifubossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shifuboss");
+        ShijiachongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shijiachong");
+        ShirenhuaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenhua");
+        ShishiguiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shishigui");
+        ShixiangguiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shixianggui");
+        Shouren1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shouren1");
+        Shouren2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shouren2");
+        Shouren3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shouren3");
+        ShuangtoulongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shuangtoulong");
+        Shuangtoulong2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shuangtoulong2");
+        Shuangtoulong3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shuangtoulong3");
+        SnotIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/snot");
+        SpiderIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/spider");
+        TujiuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/tujiu");
+        WenziIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/wenzi");
+        WuyaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/wuya");
+        WuyaozhiwangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/wuyaozhiwang");
+        Wuyaozhiwang2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/wuyaozhiwang2");
+        XianrenzhangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xianrenzhang");
+        XiaohuoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiaohuo");
+        XieziIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiezi");
+        XueqieIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueqie");
+        XuerenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueren");
+        XuerenbossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuerenboss");
+        XuezhanglangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuezhanglang");
+        YingshuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yingshu");
+        YouhunlingzhuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/youhunlingzhu");
+        YoulangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/youlang");
+        YoulingIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/youling");
+        Youling2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/youling2");
+        TreemanIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/treeman");
+        Yuren1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yuren1");
+        Yuren2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yuren2");
+        Yuren3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yuren3");
+        ZhaozebossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhaozeboss");
+        
+        YeshouzhanshiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yeshouzhanshi");
+        ZhizhunvwangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhizhunvwang");
+        ShuangtourenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shuangtouren");
 
-        ChongZiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/chongzi");
-        DunDiicon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dundi");
-        XiaoHuoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiaohuo");
-        DaZuiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/dazui");
-        BossHuoShanIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/huoshanboss");
-
-        JiaChongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/jiachong");
-        XiYiicon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaxiyi");
-        QingWaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/qingwa");
-        ShiRenHuaIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenhua");
-        BossShiRenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shirenboss");
-        WenZiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/wenzi");
-        ZhaoZeBossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhaozeboss");
-
-        ShaChongIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shachong");
-        ShaNiaoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaniao");
-        XianRenZhangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xianrenzhang");
-        ShaXiYiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shaxiyi");
-        XieZiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiezi");
-
-        XueQiEIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueqie");
-        XueRenBossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xueren");
-        XUeZhangLangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuezhanglang");
-        YingShuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yingshu");
-        XueRenBossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuerenboss");
     }
 
     public static Sprite GetLoadingBg()
@@ -2378,6 +2672,18 @@ public class ResourcesConfig : MonoBehaviour
             
             case 2305:
                 return DaKongShi;
+            case 2401:
+                return ChongWuShiWuWhite;
+            case 2402:
+                return ChongWuShiWuGreen;
+            case 2403:
+                return ChongWuShiWuBlue;
+            case 2404:
+                return ChongWuShiWuPurple;
+            case 2405:
+                return ChongWuShiWuOrange;
+            case 2406:
+                return ChongWuShiWuRed;
         }
 
         return null;

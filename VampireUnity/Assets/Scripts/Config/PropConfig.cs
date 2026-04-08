@@ -269,8 +269,25 @@ public class PropConfig : MonoBehaviour
                     case 5: return 2305; // 打孔石
                     default: return 0;
                 }
-
-            case PropType.None:
+                
+            case PropType.ChongWuShiWu:
+                switch (quality)
+                {
+                    case 1:
+                        return 2401;
+                    case 2:
+                        return 2402;
+                    case 3:
+                        return 2403;
+                    case 4:
+                        return 2404;
+                    case 5:
+                        return 2405;
+                    case 6:
+                        return 2406;
+                    default:
+                        return 0;
+                }
             default:
                 return 0;
         }

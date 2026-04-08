@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 77460afe147adaf41a045e17b16b0d41
+guid: d38226e123d828648aeea7d37b816b73
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,22 +123,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u5BA0\u7269\u5173\u5361\u6309\u94AE\u9009\u4E2D_0"
+      name: shuwu_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 18
-        width: 120
-        height: 120
+        x: 38
+        y: 1414
+        width: 223
+        height: 84
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 898faf82245e00543a93f0483db05b06
-      internalID: -1777530482
+      spriteID: 229b9bdf59fdfa7478a178ec378732a3
+      internalID: 1941180263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shuwu_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 550
+        width: 457
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c75f6c234718f3498056c533aa39290
+      internalID: -524266220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shuwu_2
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 565
+        width: 425
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ab04453641dee48a5e6a9cff68b85b
+      internalID: 655103291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shuwu_3
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 565
+        width: 440
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6b7edd5f5eb5741a8fa904be7b1d38
+      internalID: -999688686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shuwu_4
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 565
+        width: 436
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4d8276b5ccc6a46a797a1c43c67b85
+      internalID: 678336936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shuwu_5
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 634
+        width: 293
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1edee3e4cf9312d488eebc91c98f8908
+      internalID: -336844083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shuwu_6
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 562
+        width: 436
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797d6cb6d94d6334fbce952dd8eec895
+      internalID: -997623424
       vertices: []
       indices: 
       edges: []
@@ -154,7 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u5BA0\u7269\u5173\u5361\u6309\u94AE\u9009\u4E2D_0": -1777530482
+      shuwu_0: 1941180263
+      shuwu_1: -524266220
+      shuwu_2: 655103291
+      shuwu_3: -999688686
+      shuwu_4: 678336936
+      shuwu_5: -336844083
+      shuwu_6: -997623424
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

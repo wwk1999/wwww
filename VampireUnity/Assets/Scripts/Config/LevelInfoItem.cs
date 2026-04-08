@@ -8,13 +8,15 @@ public enum LevelType
     Normal,
     Elite,
     Boss,
-    MJ
+    MJ,
+    ChongWu,
+    LingHun,
+    ChiBang,
 }
 public class LevelInfoItem
 {
     public int Level;
     public LevelType LevelType;
-    public List<Sprite> MonsterIconList;
     public List<Sprite> DiaoLuoIconList;
     public List<String> DiaoLuoNameList;
     public bool LevelInfoDir;//关卡信息方向，false左，true右

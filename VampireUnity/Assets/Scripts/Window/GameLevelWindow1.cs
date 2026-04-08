@@ -33,6 +33,9 @@ public class GameLevelWindow1 : MonoBehaviour
     public GameObject Level5Suo;
     public GameObject Level6Suo;
 
+    public GameObject ChongWuInfo;
+    public Button ChongWuButton;
+
     public void HideLevelInfo()
     {
         levelInfo.SetActive(false);
@@ -120,7 +123,10 @@ public class GameLevelWindow1 : MonoBehaviour
 
     void Start()
     {
-        
+        ChongWuButton.onClick.AddListener(() =>
+        {
+            ChongWuInfo.gameObject.SetActive(true);
+        });
         MJButton.onClick.AddListener(() =>
         {
             MJInfo.gameObject.SetActive(true);

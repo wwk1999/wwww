@@ -856,7 +856,6 @@ public class LevelInfoConfig
    {
        Level = 1,
        LevelType = LevelType.Normal,
-       MonsterIconList = new List<Sprite>(),
        DiaoLuoIconList = new List<Sprite>(),
        DiaoLuoNameList = new List<string>()
    };
@@ -864,7 +863,6 @@ public class LevelInfoConfig
     {
          Level = 2,
          LevelType = LevelType.Elite,
-         MonsterIconList = new List<Sprite>(),
          DiaoLuoIconList = new List<Sprite>(),
             DiaoLuoNameList = new List<string>()
     };
@@ -872,7 +870,6 @@ public class LevelInfoConfig
     {
          Level = 3,
          LevelType = LevelType.Boss,
-         MonsterIconList = new List<Sprite>(),
          DiaoLuoIconList = new List<Sprite>(),
             DiaoLuoNameList = new List<string>()
     };
@@ -881,7 +878,6 @@ public class LevelInfoConfig
     {
         Level = 4,
         LevelType = LevelType.Normal,
-        MonsterIconList = new List<Sprite>(),
         DiaoLuoIconList = new List<Sprite>(),
         DiaoLuoNameList = new List<string>()
     };
@@ -889,7 +885,6 @@ public class LevelInfoConfig
     {
         Level = 5,
         LevelType = LevelType.Elite,
-        MonsterIconList = new List<Sprite>(),
         DiaoLuoIconList = new List<Sprite>(),
         DiaoLuoNameList = new List<string>()
     };
@@ -897,7 +892,6 @@ public class LevelInfoConfig
     {
         Level = 6,
         LevelType = LevelType.Boss,
-        MonsterIconList = new List<Sprite>(),
         DiaoLuoIconList = new List<Sprite>(),
         DiaoLuoNameList = new List<string>()
     };
@@ -905,7 +899,6 @@ public class LevelInfoConfig
     {
         Level = 7,
         LevelType = LevelType.Normal,
-        MonsterIconList = new List<Sprite>(),
         DiaoLuoIconList = new List<Sprite>(),
         DiaoLuoNameList = new List<string>()
     };
@@ -913,7 +906,6 @@ public class LevelInfoConfig
     {
         Level = 8,
         LevelType = LevelType.Elite,
-        MonsterIconList = new List<Sprite>(),
         DiaoLuoIconList = new List<Sprite>(),
         DiaoLuoNameList = new List<string>()
     };
@@ -921,7 +913,6 @@ public class LevelInfoConfig
     {
         Level = 9,
         LevelType = LevelType.Boss,
-        MonsterIconList = new List<Sprite>(),
         DiaoLuoIconList = new List<Sprite>(),
         DiaoLuoNameList = new List<string>()
     };
@@ -930,10 +921,6 @@ public class LevelInfoConfig
         //关卡1
         if (IsOneGame)
         {
-            LevelInfoItem1.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem1.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem1.MonsterIconList.Add(ResourcesConfig.Spidericon);
-
             LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloak);
             LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloth);
             LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryShoe);
@@ -953,10 +940,7 @@ public class LevelInfoConfig
             LevelInfoItem1.LoopScrollPos = new Vector2(-334, -34);
 
             //关卡2
-            LevelInfoItem2.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem2.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem2.MonsterIconList.Add(ResourcesConfig.Spidericon);
-            LevelInfoItem2.MonsterIconList.Add(ResourcesConfig.EliteBeeIcon);
+            
 
             LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloak);
             LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloth);
@@ -987,13 +971,7 @@ public class LevelInfoConfig
             LevelInfoItem2.LevelInfoDir = true;
             LevelInfoItem2.LevelInfoPos = new Vector2(374, -200);
             LevelInfoItem2.LoopScrollPos = new Vector2(-335, 169);
-
             //关卡3
-            LevelInfoItem3.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem3.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem3.MonsterIconList.Add(ResourcesConfig.Spidericon);
-            LevelInfoItem3.MonsterIconList.Add(ResourcesConfig.EliteBeeIcon);
-            LevelInfoItem3.MonsterIconList.Add(ResourcesConfig.BossTreeManIcon);
             
             
             
@@ -1041,53 +1019,29 @@ public class LevelInfoConfig
             LevelInfoItem3.LoopScrollPos = new Vector2(-597, 364);
 
             //关卡4
-            LevelInfoItem4.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem4.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem4.MonsterIconList.Add(ResourcesConfig.Spidericon);
             LevelInfoItem4.LevelInfoDir = false;
             LevelInfoItem4.LevelInfoPos = new Vector2(441, -73);
             
             
             //关卡5
-            LevelInfoItem5.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem5.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem5.MonsterIconList.Add(ResourcesConfig.Spidericon);
-            LevelInfoItem5.MonsterIconList.Add(ResourcesConfig.EliteBeeIcon);
             LevelInfoItem5.LevelInfoDir = true;
             LevelInfoItem5.LevelInfoPos = new Vector2(1220, -161);
             
             //关卡6
-            LevelInfoItem6.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem6.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem6.MonsterIconList.Add(ResourcesConfig.Spidericon);
-            LevelInfoItem6.MonsterIconList.Add(ResourcesConfig.EliteBeeIcon);
-            LevelInfoItem6.MonsterIconList.Add(ResourcesConfig.BossTreeManIcon);
             LevelInfoItem6.LevelInfoDir = true;
             LevelInfoItem6.LevelInfoPos = new Vector2(715, -400);
             
             
             //关卡7
-            LevelInfoItem7.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem7.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem7.MonsterIconList.Add(ResourcesConfig.Spidericon);
             LevelInfoItem7.LevelInfoDir = false;
             LevelInfoItem7.LevelInfoPos = new Vector2(468, -365);
             
             
             //关卡8
-            LevelInfoItem8.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem8.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem8.MonsterIconList.Add(ResourcesConfig.Spidericon);
-            LevelInfoItem8.MonsterIconList.Add(ResourcesConfig.EliteBeeIcon);
             LevelInfoItem8.LevelInfoDir = false;
             LevelInfoItem8.LevelInfoPos = new Vector2(618, -547);
             
             //关卡9
-            LevelInfoItem9.MonsterIconList.Add(ResourcesConfig.SnotIcon);
-            LevelInfoItem9.MonsterIconList.Add(ResourcesConfig.BatIcon);
-            LevelInfoItem9.MonsterIconList.Add(ResourcesConfig.Spidericon);
-            LevelInfoItem9.MonsterIconList.Add(ResourcesConfig.EliteBeeIcon);
-            LevelInfoItem9.MonsterIconList.Add(ResourcesConfig.BossTreeManIcon);
             LevelInfoItem9.LevelInfoDir = false;
             LevelInfoItem9.LevelInfoPos = new Vector2(886, -501);
         }

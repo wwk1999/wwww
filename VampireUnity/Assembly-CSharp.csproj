@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Skill\HeiAnSkill\HeiAnSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueRing.cs" />
     <Compile Include="Assets\Scripts\Equip\PropGrid.cs" />
+    <Compile Include="Assets\Scripts\Fight\UI\DiaoLuoGrid.cs" />
     <Compile Include="Assets\Scripts\Skill\Peng\IcePengAnim.cs" />
     <Compile Include="Assets\Scripts\Tool\YuMaoItem.cs" />
     <Compile Include="Assets\Scripts\Tool\BagEquipAttributeTool.cs" />
@@ -308,6 +309,7 @@
     <Compile Include="Assets\Scripts\Config\EquipConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\MonsterWeaponSource.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Fight\UI\MonsterGrid.cs" />
     <Compile Include="Assets\Number Themes\Scripts\FloatingTextSelfer.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeShoe.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\DelayDamage.cs" />
