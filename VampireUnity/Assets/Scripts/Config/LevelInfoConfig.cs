@@ -460,7 +460,7 @@ public class LevelInfoConfig
     
     
 
-    public static int[] LevelMonsterCount= new int[100];//关卡敌人数量
+    public static int[] LevelMonsterCount= new int[1000];//关卡敌人数量
 
     public static List<MonsterTypeByName> LevelMonster1 = new List<MonsterTypeByName>();//关卡敌人列表
     public static List<MonsterTypeByName> LevelMonster2 = new List<MonsterTypeByName>();//关卡敌人列表

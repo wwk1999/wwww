@@ -52,8 +52,15 @@ public class XueQiE : MonsterBase
 
     public override void Die()
     {
-        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
-        Invoke(nameof(RandomDelayDie),randomDelay);
+        if (monsterSkeletonAnimation != null)
+        {
+            DelayDestroy();
+            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            baoxue.transform.position=transform.position;
+            baoxue.gameObject.SetActive(true);
+        }
+        float randomDelay = Random.Range(0, 20) * 0.02f;
+        Invoke(nameof(RandomDelayDie), randomDelay);
     }
     
    

@@ -41,7 +41,7 @@ public class dijingshouwei3 : MonsterBase
         var randomSpeed = Random.Range(-0.1f, 0.1f);
         Speed += randomSpeed;
         MonsterSpineName.AttackName = "attack";
-        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.HitName = "hurt";
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
     }
@@ -58,7 +58,13 @@ public class dijingshouwei3 : MonsterBase
 
     public override void Die()
     {
-        //生成随机数
+        if (monsterSkeletonAnimation != null)
+        {
+            DelayDestroy();
+            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            baoxue.transform.position=transform.position;
+            baoxue.gameObject.SetActive(true);
+        }
         float randomDelay = Random.Range(0, 20) * 0.02f;
         Invoke(nameof(RandomDelayDie), randomDelay);
     }

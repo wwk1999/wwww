@@ -1967,7 +1967,7 @@ public class GameController : XSingleton<GameController>
             {
                 return;
             }
-        }else if (LevelInfoConfig.CurrentGameLevel > 15)
+        }else if (LevelInfoConfig.CurrentGameLevel > 15&&LevelInfoConfig.CurrentGameLevel < 100)
         {
             if (NormalMonsterCount >= LevelInfoConfig.LevelMonsterCount[15+(int)PlayerData.S.mJShowLevel])
             {
@@ -2094,11 +2094,7 @@ public class GameController : XSingleton<GameController>
 
         if(NormalMonsterCount%10==0&& NormalMonsterCount!=0)
          {
-             if (LevelInfoConfig.CurrentGameLevelType == LevelType.Elite ||
-                 LevelInfoConfig.CurrentGameLevelType == LevelType.Boss)
-             {
-                 CreateEliteMonster();
-             }
+             CreateEliteMonster();
          }
     }
     
