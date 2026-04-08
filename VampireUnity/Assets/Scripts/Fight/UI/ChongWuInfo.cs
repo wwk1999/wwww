@@ -21,6 +21,8 @@ public class ChongWuInfo : MonoBehaviour
     public GameObject DiaoLuoContent;
 
     public Button TiaoZhanButton;
+    public Button ExitButton;
+
     private void OnEnable()
     {
         Show();
@@ -51,6 +53,11 @@ public class ChongWuInfo : MonoBehaviour
             LevelInfoConfig.CurrentGameLevelType = LevelType.ChongWu;
             WindowController.S.Message.SetActive(false);
             WindowController.S.SceneLoadingWindow.SetActive(true);
+        });
+        
+        ExitButton.onClick.AddListener(() =>
+        {
+            gameObject.SetActive(false);
         });
         
         

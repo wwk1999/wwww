@@ -130,6 +130,174 @@ public class LevelInfoConfig
         {6,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 4},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 4},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 5,},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 5},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 5},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 6},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 6}}},
 
     };
+
+   public static MonsterBase GetMonster(MonsterTypeByName type)
+{
+    switch (type)
+    {
+        case MonsterTypeByName.None:
+            return null;
+        case MonsterTypeByName.Snot:
+            return GameController.S.SnotMonsterQueue.Dequeue();
+        case MonsterTypeByName.Bat:
+            return GameController.S.BatMonsterQueue.Dequeue();
+        case MonsterTypeByName.Spider:
+            return GameController.S.SpiderMonsterQueue.Dequeue();
+        case MonsterTypeByName.Bee:
+            return GameController.S.EliteBeeMonsterQueue.Dequeue();
+        case MonsterTypeByName.XiaoHuo:
+            return GameController.S.XiaoHuoMonsterQueue.Dequeue();
+        case MonsterTypeByName.DaZui:
+            return GameController.S.EliteDaZuiMonsterQueue.Dequeue();
+        case MonsterTypeByName.DunDi:
+            return GameController.S.DunDiMonsterQueue.Dequeue();
+        case MonsterTypeByName.ChongZi:
+            return GameController.S.ChongZiMonsterQueue.Dequeue();
+  
+        case MonsterTypeByName.ShiRenHua:
+            return GameController.S.ShiRenHuaMonsterQueue.Dequeue();
+        case MonsterTypeByName.JiaChong:
+            return GameController.S.JiaChongMonsterQueue.Dequeue();
+        case MonsterTypeByName.WenZi:
+            return GameController.S.WenZiMonsterQueue.Dequeue();
+   
+        case MonsterTypeByName.ShaChong:
+            return GameController.S.ShaChongQueue.Dequeue();
+        case MonsterTypeByName.ShaNiao:
+            return GameController.S.ShaNiaoQueue.Dequeue();
+        case MonsterTypeByName.ShaXiYi:
+            return GameController.S.ShaXiYiQueue.Dequeue();
+        case MonsterTypeByName.XianRenZhang:
+            return GameController.S.XianRenZhangQueue.Dequeue();
+        
+        case MonsterTypeByName.XueRen:
+            return GameController.S.XueRenQueue.Dequeue();
+        case MonsterTypeByName.XueZhangLang:
+            return GameController.S.XueZhangLangQueue.Dequeue();
+        case MonsterTypeByName.XueQiE:
+            return GameController.S.XueQiEQueue.Dequeue();
+        case MonsterTypeByName.YingShu:
+            return GameController.S.YingShuQueue.Dequeue();
+        
+       
+        case MonsterTypeByName.QingWa:
+            return GameController.S.QingWaMonsterQueue.Dequeue();
+        // 小怪
+        case MonsterTypeByName.ChaiLangRen1:
+            return GameController.S.chailangren1Queue.Dequeue();
+        case MonsterTypeByName.ChaiLangRen2:
+            return GameController.S.chailangren2Queue.Dequeue();
+        case MonsterTypeByName.ChaiLangRen3:
+            return GameController.S.chailangren3Queue.Dequeue();
+        case MonsterTypeByName.ChaiLangRen4:
+            return GameController.S.chailangren4Queue.Dequeue();
+        case MonsterTypeByName.CiZhu:
+            return GameController.S.cizhuQueue.Dequeue();
+        case MonsterTypeByName.DaoCaoRen:
+            return GameController.S.daocaorenQueue.Dequeue();
+        case MonsterTypeByName.DiJing2:
+            return GameController.S.dijing2Queue.Dequeue();
+        case MonsterTypeByName.DiJing3:
+            return GameController.S.dijing3Queue.Dequeue();
+        case MonsterTypeByName.DiJingShouWei1:
+            return GameController.S.dijingshouwei1Queue.Dequeue();
+        case MonsterTypeByName.DiJingShouWei2:
+            return GameController.S.dijingshouwei2Queue.Dequeue();
+        case MonsterTypeByName.DiJingShouWei3:
+            return GameController.S.dijingshouwei3Queue.Dequeue();
+        case MonsterTypeByName.HeiXiong:
+            return GameController.S.heixiongQueue.Dequeue();
+        case MonsterTypeByName.JianChiZhu:
+            return GameController.S.jianchizhuQueue.Dequeue();
+        case MonsterTypeByName.KuLou1:
+            return GameController.S.kulou1Queue.Dequeue();
+        case MonsterTypeByName.KuLou2:
+            return GameController.S.kulou2Queue.Dequeue();
+        case MonsterTypeByName.KuLou3:
+            return GameController.S.kulou3Queue.Dequeue();
+        case MonsterTypeByName.KuLou4:
+            return GameController.S.kulou4Queue.Dequeue();
+        case MonsterTypeByName.KuLou5:
+            return GameController.S.kulou5Queue.Dequeue();
+        case MonsterTypeByName.KuLou6:
+            return GameController.S.kulou6Queue.Dequeue();
+        case MonsterTypeByName.LuJiaoCiKe1:
+            return GameController.S.lujiaocikeQueue.Dequeue();
+        case MonsterTypeByName.LuJiaoCiKe2:
+            return GameController.S.lujiaocike2Queue.Dequeue();
+        case MonsterTypeByName.NiuTouRen1:
+            return GameController.S.niutouren1Queue.Dequeue();
+        case MonsterTypeByName.NiuTouRen2:
+            return GameController.S.niutouren2Queue.Dequeue();
+        case MonsterTypeByName.NiuTouRen3:
+            return GameController.S.niutouren3Queue.Dequeue();
+        case MonsterTypeByName.ShanZei3:
+            return GameController.S.shanzei3Queue.Dequeue();
+        case MonsterTypeByName.ShiJiaChong:
+            return GameController.S.shijiachongQueue.Dequeue();
+        case MonsterTypeByName.ShiShiGui:
+            return GameController.S.shishiguiQueue.Dequeue();
+        case MonsterTypeByName.ShiXiangGui:
+            return GameController.S.shixiangguiQueue.Dequeue();
+        case MonsterTypeByName.ShouRen1:
+            return GameController.S.shouren1Queue.Dequeue();
+        case MonsterTypeByName.ShouRen2:
+            return GameController.S.shouren2Queue.Dequeue();
+        case MonsterTypeByName.ShouRen3:
+            return GameController.S.shouren3Queue.Dequeue();
+        case MonsterTypeByName.ShuangTouLong1:
+            return GameController.S.shuangtoulongQueue.Dequeue();
+        case MonsterTypeByName.ShuangTouLong2:
+            return GameController.S.shuangtoulong2Queue.Dequeue();
+        case MonsterTypeByName.ShuangTouLong3:
+            return GameController.S.shuangtoulong3Queue.Dequeue();
+        case MonsterTypeByName.TuJiu:
+            return GameController.S.tujiuQueue.Dequeue();
+        case MonsterTypeByName.WuYa:
+            return GameController.S.wuyaQueue.Dequeue();
+        case MonsterTypeByName.YouHunLingZhu:
+            return GameController.S.youhunlingzhuQueue.Dequeue();
+        case MonsterTypeByName.YouLang:
+            return GameController.S.youlangQueue.Dequeue();
+        case MonsterTypeByName.YouLing1:
+            return GameController.S.youlingQueue.Dequeue();
+        case MonsterTypeByName.YouLing2:
+            return GameController.S.youling2Queue.Dequeue();
+        case MonsterTypeByName.YuRen1:
+            return GameController.S.yuren1Queue.Dequeue();
+        case MonsterTypeByName.YuRen2:
+            return GameController.S.yuren2Queue.Dequeue();
+        case MonsterTypeByName.YuRen3:
+            return GameController.S.yuren3Queue.Dequeue();
+        // 精英怪
+        case MonsterTypeByName.DaZongXiong:
+            return GameController.S.dazongxiongQueue.Dequeue();
+        case MonsterTypeByName.DiJingZhangLao:
+            return GameController.S.DijingzhanglaoQueue.Dequeue();
+        case MonsterTypeByName.FengHeGuai:
+            return GameController.S.fengheguaiQueue.Dequeue();
+        case MonsterTypeByName.KuangShiMuZhu:
+            return GameController.S.kuangshimuzhuQueue.Dequeue();
+        case MonsterTypeByName.LuJiaoDouShi:
+            return GameController.S.lujiaodoushiQueue.Dequeue();
+        case MonsterTypeByName.RongYanGuai:
+            return GameController.S.rongyanguaiQueue.Dequeue();
+        case MonsterTypeByName.ShiFuBoss:
+            return GameController.S.shifubossQueue.Dequeue();
+        case MonsterTypeByName.ShuangTouRen:
+            return GameController.S.shuangtourenQueue.Dequeue();
+        case MonsterTypeByName.WuYaoZhiWang:
+            return GameController.S.wuyaozhiwangQueue.Dequeue();
+        case MonsterTypeByName.WuYaoZhiWang2:
+            return GameController.S.wuyaozhiwang2Queue.Dequeue();
+        case MonsterTypeByName.YeShouZhanShi:
+            return GameController.S.YeShouZhanShiQueue.Dequeue();
+        case MonsterTypeByName.ZhiZhuNvWang:
+            return GameController.S.ZhiZhuNvWangQueue.Dequeue();
+        default:
+            return null;
+    }
+}
     public static void FaBaoShi()
     {
         BaoShiDiaoLuo baoShiDiaoLuo = null;
@@ -369,7 +537,13 @@ public class LevelInfoConfig
         LevelMonsterCount[45] = 300;
         LevelMonsterCount[46] = 300;
         
-        
+        LevelMonsterCount[101] = 100;
+        LevelMonsterCount[102] = 120;
+        LevelMonsterCount[103] = 140;
+        LevelMonsterCount[104] = 180;
+        LevelMonsterCount[105] = 250;
+        LevelMonsterCount[106] = 300;
+
         if (IsOneGame)
         {
             LevelMonster1.Add(MonsterTypeByName.Bat);

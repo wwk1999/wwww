@@ -169,6 +169,14 @@ public class GameController : XSingleton<GameController>
 [NonSerialized] public Queue<yuren1> yuren1Queue = new Queue<yuren1>();
 [NonSerialized] public Queue<yuren2> yuren2Queue = new Queue<yuren2>();
 [NonSerialized] public Queue<yuren3> yuren3Queue = new Queue<yuren3>();
+
+//精英怪，暂时没写
+[NonSerialized] public Queue<dijingzhanglao> DijingzhanglaoQueue = new Queue<dijingzhanglao>();
+[NonSerialized] public Queue<rongyanguai> rongyanguaiQueue = new Queue<rongyanguai>();
+[NonSerialized] public Queue<shifuboss> shifubossQueue = new Queue<shifuboss>();
+[NonSerialized] public Queue<wuyaozhiwang> wuyaozhiwangQueue = new Queue<wuyaozhiwang>();
+[NonSerialized] public Queue<wuyaozhiwang2> wuyaozhiwang2Queue = new Queue<wuyaozhiwang2>();
+
     //第一关怪
     [NonSerialized] public Queue<SnotMonster> SnotMonsterQueue = new Queue<SnotMonster>();
     [NonSerialized] public Queue<EliteBeeMonster> EliteBeeMonsterQueue = new Queue<EliteBeeMonster>();
@@ -1729,6 +1737,33 @@ public class GameController : XSingleton<GameController>
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
         MonsterBase eliteMonster = null;
 
+        if (LevelInfoConfig.CurrentGameLevel > 100 && LevelInfoConfig.CurrentGameLevel < 200)
+        {
+            List<MonsterTypeByName> monsterList = null;
+            switch (LevelInfoConfig.CurrentGameLevel)
+            {
+                case 101:
+                    monsterList = LevelInfoConfig.LevelMonster101;
+                    break;
+                case 102:
+                    monsterList = LevelInfoConfig.LevelMonster102;
+                    break;
+                case 103:
+                    monsterList = LevelInfoConfig.LevelMonster103;
+                    break;
+                case 104:
+                    monsterList = LevelInfoConfig.LevelMonster104;
+                    break;
+                case 105:
+                    monsterList = LevelInfoConfig.LevelMonster105;
+                    break;
+                case 106:
+                    monsterList = LevelInfoConfig.LevelMonster106;
+                    break;
+            }
+
+            eliteMonster = LevelInfoConfig.GetMonster(monsterList[2]);
+        }
         
         if ( LevelInfoConfig.CurrentGameLevel == 2|| LevelInfoConfig.CurrentGameLevel ==3)
         {
@@ -1775,6 +1810,48 @@ public class GameController : XSingleton<GameController>
         }
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
         MonsterBase monsterBase=null;
+        //宠物关卡
+        if (LevelInfoConfig.CurrentGameLevel > 100 && LevelInfoConfig.CurrentGameLevel < 200)
+        {
+            List<MonsterTypeByName> monsterList = null;
+            switch (LevelInfoConfig.CurrentGameLevel)
+            {
+                case 101:
+                    monsterList = LevelInfoConfig.LevelMonster101;
+                    break;
+                case 102:
+                    monsterList = LevelInfoConfig.LevelMonster102;
+                    break;
+                case 103:
+                    monsterList = LevelInfoConfig.LevelMonster103;
+                    break;
+                case 104:
+                    monsterList = LevelInfoConfig.LevelMonster104;
+                    break;
+                case 105:
+                    monsterList = LevelInfoConfig.LevelMonster105;
+                    break;
+                case 106:
+                    monsterList = LevelInfoConfig.LevelMonster106;
+                    break;
+            }
+
+            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
+            {
+                if (NormalMonsterCount % 2 == 0)
+                {
+                    monsterBase = LevelInfoConfig.GetMonster(monsterList[0]);
+                }
+                else
+                {
+                    monsterBase = LevelInfoConfig.GetMonster(monsterList[1]);
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3)
         {
             if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])

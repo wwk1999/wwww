@@ -43,6 +43,19 @@ public class GameLevelWindow1 : MonoBehaviour
 
     public void ShowDiTu()
     {
+        if (PlayerData.S.maxGameLevel >= 2)
+        {
+            ChongWuButton.image.color=new Color(1, 1, 1);
+            ChongWuButton.interactable = true;
+        }
+        else
+        {
+            ChongWuButton.image.color=new Color(60/255, 60/255, 60/255);
+            ChongWuButton.interactable = false;
+
+        }
+        
+        
         if (PlayerData.S.maxGameLevel >= 6)
         {
             Level2Image.sprite = ResourcesConfig.Level2Liang;
