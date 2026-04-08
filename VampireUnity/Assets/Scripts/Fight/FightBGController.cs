@@ -63,7 +63,7 @@ public class FightBGController : XSingleton<FightBGController>
     
     public void GetMJJiangLi()
     {
-        var jiangli=MJConfig.JiangLiDic[PlayerData.S.mJLevel];
+        var jiangli=MJConfig.JiangLiDic[PlayerData.S.mJShowLevel];
         GlobalPlayerAttribute.Exp+=jiangli.ex;
         while (GlobalPlayerAttribute.Exp > GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level])
         {
@@ -314,7 +314,7 @@ public class FightBGController : XSingleton<FightBGController>
         
         if (PlayerData.S.GuanKa5 == false)
         {
-            if (LevelInfoConfig.CurrentGameLevel == 16&&PlayerData.S.mJLevel==MJLevel.Red1)
+            if (LevelInfoConfig.CurrentGameLevel == 16&&PlayerData.S.mJShowLevel==MJLevel.Red1)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 PlayerData.S.GuanKa5 = true;
@@ -338,13 +338,13 @@ public class FightBGController : XSingleton<FightBGController>
         CheckGuanKaTitle();
         
         StartCoroutine(DelayPlaySuccessAnim(skeletonGraphic));
-        if (LevelInfoConfig.CurrentGameLevel + 3 > LevelInfoConfig.MaxGameLevel)
+        if (LevelInfoConfig.CurrentGameLevel + 3 > LevelInfoConfig.MaxGameLevel&&LevelInfoConfig.CurrentGameLevel<100)
         {
             LevelInfoConfig.MaxGameLevel= LevelInfoConfig.CurrentGameLevel + 3;
             StoreController.S.SaveStoreData();
         }
 
-        if (LevelInfoConfig.CurrentGameLevel >15)
+        if (LevelInfoConfig.CurrentGameLevel >15&&LevelInfoConfig.CurrentGameLevel<100)
         {
             StartCoroutine(DelayGetMJjiangli());
         }

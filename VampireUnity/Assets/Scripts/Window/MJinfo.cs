@@ -152,7 +152,7 @@ public class MJinfo : MonoBehaviour
 
     private void OnEnable()
     {
-        ShowMJInfo(PlayerData.S.mJLevel);
+        ShowMJInfo(PlayerData.S.mJShowLevel);
     }
 
     private void Start()
@@ -165,7 +165,7 @@ public class MJinfo : MonoBehaviour
         TiaoZhanButton.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);
-            LevelInfoConfig.CurrentGameLevel = 15 + (int)PlayerData.S.mJLevel;
+            LevelInfoConfig.CurrentGameLevel = 15 + (int)PlayerData.S.mJShowLevel;
             LevelInfoConfig.CurrentGameLevelType = LevelType.MJ;
             WindowController.S.Message.SetActive(false);
             WindowController.S.SceneLoadingWindow.SetActive(true);
@@ -173,137 +173,137 @@ public class MJinfo : MonoBehaviour
         
         leftButton.onClick.AddListener(() =>
         {
-            switch (PlayerData.S.mJLevel)
+            switch (PlayerData.S.mJShowLevel)
             {
                 case MJLevel.White:
                     break;
                 case MJLevel.Green:
-                    PlayerData.S.mJLevel=MJLevel.White;
+                    PlayerData.S.mJShowLevel=MJLevel.White;
                     break;
                 case MJLevel.Blue:
-                    PlayerData.S.mJLevel=MJLevel.Green;
+                    PlayerData.S.mJShowLevel=MJLevel.Green;
                     break;
                 case MJLevel.Purple:
-                    PlayerData.S.mJLevel=MJLevel.Blue;
+                    PlayerData.S.mJShowLevel=MJLevel.Blue;
                     break;
                 case MJLevel.Orange:
-                    PlayerData.S.mJLevel=MJLevel.Purple;
+                    PlayerData.S.mJShowLevel=MJLevel.Purple;
                     break;
                 case MJLevel.Red1:
-                    PlayerData.S.mJLevel=MJLevel.Orange;
+                    PlayerData.S.mJShowLevel=MJLevel.Orange;
                     break;
                 case MJLevel.Red2:
-                    PlayerData.S.mJLevel=MJLevel.Red1;
+                    PlayerData.S.mJShowLevel=MJLevel.Red1;
                     break;
                 case MJLevel.Red3:
-                    PlayerData.S.mJLevel=MJLevel.Red2;
+                    PlayerData.S.mJShowLevel=MJLevel.Red2;
                     break;
                 case MJLevel.Red4:
-                    PlayerData.S.mJLevel=MJLevel.Red3;
+                    PlayerData.S.mJShowLevel=MJLevel.Red3;
                     break;
                 case MJLevel.Red5:
-                    PlayerData.S.mJLevel=MJLevel.Red4;
+                    PlayerData.S.mJShowLevel=MJLevel.Red4;
                     break;
                 case MJLevel.Red6:
-                    PlayerData.S.mJLevel=MJLevel.Red5;
+                    PlayerData.S.mJShowLevel=MJLevel.Red5;
                     break;
                 case MJLevel.Red7:
-                    PlayerData.S.mJLevel=MJLevel.Red6;
+                    PlayerData.S.mJShowLevel=MJLevel.Red6;
                     break;
                 case MJLevel.Red8:
-                    PlayerData.S.mJLevel=MJLevel.Red7;
+                    PlayerData.S.mJShowLevel=MJLevel.Red7;
                     break;
                 case MJLevel.Red9:
-                    PlayerData.S.mJLevel=MJLevel.Red8;
+                    PlayerData.S.mJShowLevel=MJLevel.Red8;
                     break;
                 case MJLevel.Red10:
-                    PlayerData.S.mJLevel=MJLevel.Red9;
+                    PlayerData.S.mJShowLevel=MJLevel.Red9;
                     break;
                 case MJLevel.Red11:
-                    PlayerData.S.mJLevel=MJLevel.Red10;
+                    PlayerData.S.mJShowLevel=MJLevel.Red10;
                     break;
                 case MJLevel.Red12:
-                    PlayerData.S.mJLevel=MJLevel.Red11;
+                    PlayerData.S.mJShowLevel=MJLevel.Red11;
                     break;
                 case MJLevel.Red13:
-                    PlayerData.S.mJLevel=MJLevel.Red12;
+                    PlayerData.S.mJShowLevel=MJLevel.Red12;
                     break;
                 case MJLevel.Red14:
-                    PlayerData.S.mJLevel=MJLevel.Red13;
+                    PlayerData.S.mJShowLevel=MJLevel.Red13;
                     break;
                 case MJLevel.Red15:
-                    PlayerData.S.mJLevel=MJLevel.Red14;
+                    PlayerData.S.mJShowLevel=MJLevel.Red14;
                     break;
             }
-            ShowMJInfo(PlayerData.S.mJLevel);
+            ShowMJInfo(PlayerData.S.mJShowLevel);
             StoreController.S.SaveStoreData();
         });
         
         rightButton.onClick.AddListener(() =>
         {
-            switch (PlayerData.S.mJLevel)
+            switch (PlayerData.S.mJShowLevel)
             {
                 case MJLevel.White:
-                    PlayerData.S.mJLevel=MJLevel.Green;
+                    PlayerData.S.mJShowLevel=MJLevel.Green;
                     break;
                 case MJLevel.Green:
-                    PlayerData.S.mJLevel=MJLevel.Blue;
+                    PlayerData.S.mJShowLevel=MJLevel.Blue;
                     break;
                 case MJLevel.Blue:
-                    PlayerData.S.mJLevel=MJLevel.Purple;
+                    PlayerData.S.mJShowLevel=MJLevel.Purple;
                     break;
                 case MJLevel.Purple:
-                    PlayerData.S.mJLevel=MJLevel.Orange;
+                    PlayerData.S.mJShowLevel=MJLevel.Orange;
                     break;
                 case MJLevel.Orange:
-                    PlayerData.S.mJLevel=MJLevel.Red1;
+                    PlayerData.S.mJShowLevel=MJLevel.Red1;
                     break;
                 case MJLevel.Red1:
-                    PlayerData.S.mJLevel=MJLevel.Red2;
+                    PlayerData.S.mJShowLevel=MJLevel.Red2;
                     break;
                 case MJLevel.Red2:
-                    PlayerData.S.mJLevel=MJLevel.Red3;
+                    PlayerData.S.mJShowLevel=MJLevel.Red3;
                     break;
                 case MJLevel.Red3:
-                    PlayerData.S.mJLevel=MJLevel.Red4;
+                    PlayerData.S.mJShowLevel=MJLevel.Red4;
                     break;
                 case MJLevel.Red4:
-                    PlayerData.S.mJLevel=MJLevel.Red5;
+                    PlayerData.S.mJShowLevel=MJLevel.Red5;
                     break;
                 case MJLevel.Red5:
-                    PlayerData.S.mJLevel=MJLevel.Red6;
+                    PlayerData.S.mJShowLevel=MJLevel.Red6;
                     break;
                 case MJLevel.Red6:
-                    PlayerData.S.mJLevel=MJLevel.Red7;
+                    PlayerData.S.mJShowLevel=MJLevel.Red7;
                     break;
                 case MJLevel.Red7:
-                    PlayerData.S.mJLevel=MJLevel.Red8;
+                    PlayerData.S.mJShowLevel=MJLevel.Red8;
                     break;
                 case MJLevel.Red8:
-                    PlayerData.S.mJLevel=MJLevel.Red9;
+                    PlayerData.S.mJShowLevel=MJLevel.Red9;
                     break;
                 case MJLevel.Red9:
-                    PlayerData.S.mJLevel=MJLevel.Red10;
+                    PlayerData.S.mJShowLevel=MJLevel.Red10;
                     break;
                 case MJLevel.Red10:
-                    PlayerData.S.mJLevel=MJLevel.Red11;
+                    PlayerData.S.mJShowLevel=MJLevel.Red11;
                     break;
                 case MJLevel.Red11:
-                    PlayerData.S.mJLevel=MJLevel.Red12;
+                    PlayerData.S.mJShowLevel=MJLevel.Red12;
                     break;
                 case MJLevel.Red12:
-                    PlayerData.S.mJLevel=MJLevel.Red13;
+                    PlayerData.S.mJShowLevel=MJLevel.Red13;
                     break;
                 case MJLevel.Red13:
-                    PlayerData.S.mJLevel=MJLevel.Red14;
+                    PlayerData.S.mJShowLevel=MJLevel.Red14;
                     break;
                 case MJLevel.Red14:
-                    PlayerData.S.mJLevel=MJLevel.Red15;
+                    PlayerData.S.mJShowLevel=MJLevel.Red15;
                     break;
                 case MJLevel.Red15:
                     break;
             }
-            ShowMJInfo(PlayerData.S.mJLevel);
+            ShowMJInfo(PlayerData.S.mJShowLevel);
             StoreController.S.SaveStoreData();
         });
     }

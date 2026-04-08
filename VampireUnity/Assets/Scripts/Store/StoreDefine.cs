@@ -275,7 +275,7 @@ public class StoreDefine : XSingleton<StoreDefine>
 
 
             playerWeaponType = runtime.playerWeaponType;
-            mJLevel = runtime.mJLevel;
+            mJLevel = runtime.mJShowLevel;
             langType = runtime.langType;
 
             Level5 = runtime.Level5;
@@ -412,7 +412,7 @@ public class StoreDefine : XSingleton<StoreDefine>
 
 
             runtime.playerWeaponType = playerWeaponType;
-            runtime.mJLevel = mJLevel;
+            runtime.mJShowLevel = mJLevel;
             runtime.langType = langType;
 
 

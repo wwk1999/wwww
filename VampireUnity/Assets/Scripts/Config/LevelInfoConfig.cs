@@ -47,17 +47,89 @@ public enum MonsterTypeByName
     YingShu,
     XueRenBoss,
     ShiRenBoss,
-    QingWa
+    QingWa,
+    // 小怪
+    ChaiLangRen1,
+    ChaiLangRen2,
+    ChaiLangRen3,
+    ChaiLangRen4,
+    CiZhu,
+    DaoCaoRen,
+    DiJing2,
+    DiJing3,
+    DiJingShouWei1,
+    DiJingShouWei2,
+    DiJingShouWei3,
+    HeiXiong,
+    JianChiZhu,
+    KuLou1,
+    KuLou2,
+    KuLou3,
+    KuLou4,
+    KuLou5,
+    KuLou6,
+    LuJiaoCiKe1,
+    LuJiaoCiKe2,
+    NiuTouRen1,
+    NiuTouRen2,
+    NiuTouRen3,
+    ShanZei3,
+    ShiJiaChong,
+    ShiShiGui,
+    ShiXiangGui,
+    ShouRen1,
+    ShouRen2,
+    ShouRen3,
+    ShuangTouLong1,
+    ShuangTouLong2,
+    ShuangTouLong3,
+    TuJiu,
+    WuYa,
+    YouHunLingZhu,
+    YouLang,
+    YouLing1,
+    YouLing2,
+    YuRen1,
+    YuRen2,
+    YuRen3,
+    //精英怪
+    DaZongXiong,        // 大棕熊
+    DiJingZhangLao,     // 地精长老
+    FengHeGuai,         // 风和怪
+    KuangShiMuZhu,      // 狂食母蛛
+    LuJiaoDouShi,       // 鹿角斗士
+    RongYanGuai,        // 熔岩怪
+    ShiFuBoss,          // 师傅BOSS
+    ShuangTouRen,       // 双头人
+    WuYaoZhiWang,       // 巫妖之王
+    WuYaoZhiWang2,      // 巫妖之王2
+    YeShouZhanShi,      // 野兽战士
+    ZhiZhuNvWang,       // 蜘蛛女王
 }
-
 public class BaoShiDiaoLuo
 {
     public int Quality;
     public int count;
 }
+
+public class ChongWuDiaoLuoItem
+{
+    public PropConfig.PropType type;
+    public int Quality;
+}
 public class LevelInfoConfig
 {
 
+    public static Dictionary<int, List<ChongWuDiaoLuoItem>> ChongWuDiaoLuoDic = new Dictionary<int, List<ChongWuDiaoLuoItem>>()
+    {
+        {1,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 1}}},
+        {2,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 2}}},
+        {3,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 3}}},
+        {4,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 4},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 4}}},
+        {5,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 4},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 4},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 5,},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 5},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 5}}},
+        {6,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 1},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 2},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 3},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 4},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 4},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuDan,Quality = 5,},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 5},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 5},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.ChongWuShiWu,Quality = 6},new ChongWuDiaoLuoItem(){type = PropConfig.PropType.SkillShu,Quality = 6}}},
+
+    };
     public static void FaBaoShi()
     {
         BaoShiDiaoLuo baoShiDiaoLuo = null;
@@ -190,7 +262,6 @@ public class LevelInfoConfig
     
     public static bool IsOneGame = true; //第一次游戏
     public static int CurrentGameLevel = 1; // 当前游戏关卡
-    public static int CurrentMJLevel = 1; // 当前秘境关卡
 
 
     public static int MaxGameLevel
@@ -239,6 +310,12 @@ public class LevelInfoConfig
     public static List<MonsterTypeByName> LevelMonster14 = new List<MonsterTypeByName>();//关卡敌人列表
     public static List<MonsterTypeByName> LevelMonster15 = new List<MonsterTypeByName>();//关卡敌人列表
 
+    public static List<MonsterTypeByName> LevelMonster101 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster102 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster103 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster104 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster105 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster106 = new List<MonsterTypeByName>();//关卡敌人列表
 
    
     public static void InitGameLevel()
@@ -413,6 +490,50 @@ public class LevelInfoConfig
             LevelMonster15.Add(MonsterTypeByName.XueRen);
             LevelMonster15.Add(MonsterTypeByName.YingShu);
             LevelMonster15.Add(MonsterTypeByName.XueRenBoss);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster101.Add(MonsterTypeByName.ChaiLangRen1);
+            LevelMonster101.Add(MonsterTypeByName.ChaiLangRen2);
+            LevelMonster101.Add(MonsterTypeByName.DaZongXiong);
+
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster102.Add(MonsterTypeByName.ChaiLangRen3);
+            LevelMonster102.Add(MonsterTypeByName.ChaiLangRen4);
+            LevelMonster102.Add(MonsterTypeByName.FengHeGuai);
+
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster103.Add(MonsterTypeByName.CiZhu);
+            LevelMonster103.Add(MonsterTypeByName.DaoCaoRen);
+            LevelMonster103.Add(MonsterTypeByName.KuangShiMuZhu);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster104.Add(MonsterTypeByName.DiJing2);
+            LevelMonster104.Add(MonsterTypeByName.DiJing3);
+            LevelMonster104.Add(MonsterTypeByName.DiJingZhangLao);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster105.Add(MonsterTypeByName.TuJiu);
+            LevelMonster105.Add(MonsterTypeByName.WuYa);
+            LevelMonster105.Add(MonsterTypeByName.LuJiaoDouShi);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster106.Add(MonsterTypeByName.HeiXiong);
+            LevelMonster106.Add(MonsterTypeByName.JianChiZhu);
+            LevelMonster106.Add(MonsterTypeByName.RongYanGuai);
         }
         
         

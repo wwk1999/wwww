@@ -59,7 +59,7 @@ public class EquipBase : BagObjectBase
     }
     public int GetOrangeLevel()
     {
-        switch (PlayerData.S.mJLevel)
+        switch (PlayerData.S.mJShowLevel)
         {
             case MJLevel.White:
                 return 35;

@@ -14,8 +14,8 @@ public class MJToast : MonoBehaviour
 
    private void Awake()
    {
-      jingcuiCount.text = MJConfig.JiangLiDic[PlayerData.S.mJLevel].jingcui.ToString();
-      zhuanjinCount.text = MJConfig.JiangLiDic[PlayerData.S.mJLevel].zhuanjin.ToString();
+      jingcuiCount.text = MJConfig.JiangLiDic[PlayerData.S.mJShowLevel].jingcui.ToString();
+      zhuanjinCount.text = MJConfig.JiangLiDic[PlayerData.S.mJShowLevel].zhuanjin.ToString();
       jingcuiAnimator.Play("OrangeEdge");
       zhuanjinAnimator.Play("OrangeEdge");
    }

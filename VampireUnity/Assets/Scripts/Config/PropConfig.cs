@@ -302,6 +302,7 @@ public class PropConfig : MonoBehaviour
         DiaoLuoYaoShui,
 
         SkillShu,
+        ChongWuShiWu,
         DaKongShi,
     }
 

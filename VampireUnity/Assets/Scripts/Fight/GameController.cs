@@ -1573,7 +1573,7 @@ public class GameController : XSingleton<GameController>
         if (LevelInfoConfig.CurrentGameLevel > 15)
         {
             
-            switch (PlayerData.S.mJLevel)
+            switch (PlayerData.S.mJShowLevel)
             {
                 case MJLevel.White:
                     LeiShouBoss LeiShouBoss = Instantiate(Resources.Load<LeiShouBoss>("Prefabs/Monster/MJ/LeiShou/LeiShouBoss"));
@@ -1892,14 +1892,14 @@ public class GameController : XSingleton<GameController>
             }
         }else if (LevelInfoConfig.CurrentGameLevel > 15)
         {
-            if (NormalMonsterCount >= LevelInfoConfig.LevelMonsterCount[15+(int)PlayerData.S.mJLevel])
+            if (NormalMonsterCount >= LevelInfoConfig.LevelMonsterCount[15+(int)PlayerData.S.mJShowLevel])
             {
                 return;
             }
             var random=new System.Random();
             int index=random.Next(1,3);
 
-            switch (PlayerData.S.mJLevel)
+            switch (PlayerData.S.mJShowLevel)
             {
                 case MJLevel.White:
                     switch (index)
