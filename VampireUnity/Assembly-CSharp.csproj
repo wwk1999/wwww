@@ -334,6 +334,7 @@
     <Compile Include="Assets\Scripts\Equip\FightEquipAttribute.cs" />
     <Compile Include="Assets\Scripts\ChongWu\ChongWuController.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeHelmet.cs" />
+    <Compile Include="Assets\Scripts\Fight\UI\yuyiinfo.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipAttributePanel.cs" />
     <Compile Include="Assets\Scripts\Window\SceneLoading1.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaMoElite.cs" />

@@ -174,6 +174,8 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void Start()
     {
+        //monsterSkeletonAnimation.skeleton.SetColor(new Color(0,0,0.8f));
+
         baseSpeed = Speed;
         du.gameObject.SetActive(false);
         jiansu.gameObject.SetActive(false);

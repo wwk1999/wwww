@@ -30,7 +30,7 @@ public enum MonsterTypeByName
     XiaoHuo,
     DaZui,
     DunDi,
-    ChongZi,
+    ChongZi,     
     HuoShanBoss,
     ShiRenHua,
     JiaChong,
@@ -49,14 +49,14 @@ public enum MonsterTypeByName
     ShiRenBoss,
     QingWa,
     // 小怪
-    ChaiLangRen1,
-    ChaiLangRen2,
+    ChaiLangRen1,//1
+    ChaiLangRen2,//1
     ChaiLangRen3,
     ChaiLangRen4,
-    CiZhu,
-    DaoCaoRen,
-    DiJing2,
-    DiJing3,
+    CiZhu,//1
+    DaoCaoRen,//1
+    DiJing2,//1
+    DiJing3,//1
     DiJingShouWei1,
     DiJingShouWei2,
     DiJingShouWei3,
@@ -70,35 +70,35 @@ public enum MonsterTypeByName
     KuLou6,
     LuJiaoCiKe1,
     LuJiaoCiKe2,
-    NiuTouRen1,
-    NiuTouRen2,
-    NiuTouRen3,
+    NiuTouRen1,//1
+    NiuTouRen2,//1
+    NiuTouRen3,//1
     ShanZei3,
-    ShiJiaChong,
+    ShiJiaChong,//1
     ShiShiGui,
     ShiXiangGui,
-    ShouRen1,
-    ShouRen2,
-    ShouRen3,
-    ShuangTouLong1,
-    ShuangTouLong2,
-    ShuangTouLong3,
-    TuJiu,
-    WuYa,
+    ShouRen1,//1
+    ShouRen2,//1
+    ShouRen3,//1
+    ShuangTouLong1,//1
+    ShuangTouLong2,//1
+    ShuangTouLong3,//1
+    TuJiu,//1
+    WuYa,//1
     YouHunLingZhu,
-    YouLang,
-    YouLing1,
-    YouLing2,
-    YuRen1,
-    YuRen2,
-    YuRen3,
+    YouLang,//1
+    YouLing1,//1
+    YouLing2,//1
+    YuRen1,//1
+    YuRen2,//1
+    YuRen3,//1
     //精英怪
-    DaZongXiong,        // 大棕熊
-    DiJingZhangLao,     // 地精长老
-    FengHeGuai,         // 风和怪
-    KuangShiMuZhu,      // 狂食母蛛
-    LuJiaoDouShi,       // 鹿角斗士
-    RongYanGuai,        // 熔岩怪
+    DaZongXiong,        // 1
+    DiJingZhangLao,     // 1
+    FengHeGuai,         // 1
+    KuangShiMuZhu,      // 1
+    LuJiaoDouShi,       // 1
+    RongYanGuai,        // 1
     ShiFuBoss,          // 师傅BOSS
     ShuangTouRen,       // 双头人
     WuYaoZhiWang,       // 巫妖之王
@@ -485,6 +485,14 @@ public class LevelInfoConfig
     public static List<MonsterTypeByName> LevelMonster105 = new List<MonsterTypeByName>();//关卡敌人列表
     public static List<MonsterTypeByName> LevelMonster106 = new List<MonsterTypeByName>();//关卡敌人列表
 
+    
+    public static List<MonsterTypeByName> LevelMonster201 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster202 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster203 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster204 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster205 = new List<MonsterTypeByName>();//关卡敌人列表
+    public static List<MonsterTypeByName> LevelMonster206 = new List<MonsterTypeByName>();//关卡敌人列表
+
    
     public static void InitGameLevel()
     {
@@ -668,46 +676,83 @@ public class LevelInfoConfig
         
         if (IsOneGame)
         {
-            LevelMonster101.Add(MonsterTypeByName.ChaiLangRen1);
-            LevelMonster101.Add(MonsterTypeByName.ChaiLangRen2);
+            LevelMonster101.Add(MonsterTypeByName.CiZhu);
+            LevelMonster101.Add(MonsterTypeByName.YouLang);
             LevelMonster101.Add(MonsterTypeByName.DaZongXiong);
 
         }
         
         if (IsOneGame)
         {
-            LevelMonster102.Add(MonsterTypeByName.ChaiLangRen3);
-            LevelMonster102.Add(MonsterTypeByName.ChaiLangRen4);
+            LevelMonster102.Add(MonsterTypeByName.DaoCaoRen);
+            LevelMonster102.Add(MonsterTypeByName.ShiJiaChong);
             LevelMonster102.Add(MonsterTypeByName.FengHeGuai);
 
         }
         
         if (IsOneGame)
         {
-            LevelMonster103.Add(MonsterTypeByName.CiZhu);
-            LevelMonster103.Add(MonsterTypeByName.DaoCaoRen);
+            LevelMonster103.Add(MonsterTypeByName.TuJiu);
+            LevelMonster103.Add(MonsterTypeByName.WuYa);
             LevelMonster103.Add(MonsterTypeByName.KuangShiMuZhu);
         }
         
         if (IsOneGame)
         {
-            LevelMonster104.Add(MonsterTypeByName.DiJing2);
-            LevelMonster104.Add(MonsterTypeByName.DiJing3);
+            LevelMonster104.Add(MonsterTypeByName.ChaiLangRen1);
+            LevelMonster104.Add(MonsterTypeByName.ChaiLangRen2);
             LevelMonster104.Add(MonsterTypeByName.DiJingZhangLao);
         }
         
         if (IsOneGame)
         {
-            LevelMonster105.Add(MonsterTypeByName.TuJiu);
-            LevelMonster105.Add(MonsterTypeByName.WuYa);
+            LevelMonster105.Add(MonsterTypeByName.YouLing1);
+            LevelMonster105.Add(MonsterTypeByName.YouLing2);
             LevelMonster105.Add(MonsterTypeByName.LuJiaoDouShi);
         }
         
         if (IsOneGame)
         {
-            LevelMonster106.Add(MonsterTypeByName.HeiXiong);
-            LevelMonster106.Add(MonsterTypeByName.JianChiZhu);
+            LevelMonster106.Add(MonsterTypeByName.DiJing2);
+            LevelMonster106.Add(MonsterTypeByName.DiJing3);
             LevelMonster106.Add(MonsterTypeByName.RongYanGuai);
+        }
+        
+        if (IsOneGame)
+        {
+            LevelMonster201.Add(MonsterTypeByName.YuRen1);
+            LevelMonster201.Add(MonsterTypeByName.ShuangTouLong1);
+            LevelMonster201.Add(MonsterTypeByName.RongYanGuai);
+        }
+        if (IsOneGame)
+        {
+            LevelMonster202.Add(MonsterTypeByName.YuRen2);
+            LevelMonster202.Add(MonsterTypeByName.ShuangTouLong2);
+            LevelMonster202.Add(MonsterTypeByName.RongYanGuai);
+        }
+        if (IsOneGame)
+        {
+            LevelMonster203.Add(MonsterTypeByName.YuRen3);
+            LevelMonster203.Add(MonsterTypeByName.ShuangTouLong3);
+            LevelMonster203.Add(MonsterTypeByName.RongYanGuai);
+        }
+        if (IsOneGame)
+        {
+            LevelMonster204.Add(MonsterTypeByName.ShouRen1);
+            LevelMonster204.Add(MonsterTypeByName.NiuTouRen1);
+            LevelMonster204.Add(MonsterTypeByName.RongYanGuai);
+        }
+        if (IsOneGame)
+        {
+            LevelMonster205.Add(MonsterTypeByName.ShouRen2);
+            LevelMonster205.Add(MonsterTypeByName.NiuTouRen2);
+            LevelMonster205.Add(MonsterTypeByName.RongYanGuai);
+        }
+        if (IsOneGame)
+        {
+            LevelMonster206.Add(MonsterTypeByName.ShouRen3);
+            LevelMonster206.Add(MonsterTypeByName.NiuTouRen3);
+            LevelMonster206.Add(MonsterTypeByName.RongYanGuai);
         }
         
         

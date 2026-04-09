@@ -84,7 +84,6 @@ public class ChongZiMonster : MonsterBase
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
-
     }
     
     private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
