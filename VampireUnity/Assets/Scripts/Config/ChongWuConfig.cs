@@ -673,72 +673,73 @@ public class ChongWuConfig
             { ChongWuTuJianType.YuanGuShenLin ,new List<ChongWuType>(){ChongWuType.huoorange1_q,ChongWuType.iceorange1_q,ChongWuType.heianorange1_q,ChongWuType.dianorange1_q}},
 
         };
-    public static Dictionary<ChongWuType, string> ChongWuNamDic = new Dictionary<ChongWuType, string>()
-    {
-        { ChongWuType.dianwhite1,"熔电史莱姆" },
-        { ChongWuType.dianblue1,"胶电仔" },
-        { ChongWuType.dianblue2,"雷葱头" },
-        { ChongWuType.diangreen1,"电泡球" },
-        { ChongWuType.diangreen2,"雷啾" },
-        { ChongWuType.dianorange1_q,"雷翼龙" },
-        { ChongWuType.dianorange1_h,"雷翼龙" },
-        { ChongWuType.dianpurple1_q,"雷甲" },
-        { ChongWuType.dianpurple1_h,"雷甲" },
-        { ChongWuType.dianpurple2_q,"电翎凤" },
-        { ChongWuType.dianpurple2_h,"电翎凤" },
-        { ChongWuType.dianpurple3_q,"雷球姬" },
-        { ChongWuType.dianpurple3_h,"雷球姬" },
+   public static Dictionary<ChongWuType, string> ChongWuNameDic = new Dictionary<ChongWuType, string>()
+{
+    // ========== 电系 (dian) ==========
+    { ChongWuType.dianwhite1, "雷云仔" },
+    { ChongWuType.dianblue1, "雷狼" },
+    { ChongWuType.dianblue2, "电灵猫" },
+    { ChongWuType.diangreen1, "电球怪" },
+    { ChongWuType.diangreen2, "雷尾松鼠" },
+    { ChongWuType.dianorange1_q, "晶甲雷狼" },
+    { ChongWuType.dianorange1_h, "晶甲雷狼" },
+    { ChongWuType.dianpurple1_q, "雷翼狮鹫" },
+    { ChongWuType.dianpurple1_h, "雷翼狮鹫" },
+    { ChongWuType.dianpurple2_q, "电灵蛇" },
+    { ChongWuType.dianpurple2_h, "电灵蛇" },
+    { ChongWuType.dianpurple3_q, "雷翼黑豹" },
+    { ChongWuType.dianpurple3_h, "雷翼黑豹" },
 
-        
-        { ChongWuType.heianblue1,"黑魔仔" },
-        { ChongWuType.heianblue2,"咒猫" },
-        { ChongWuType.heianblue3,"岩魔猪" },
-        { ChongWuType.heiangreen1,"暗泡" },
-        { ChongWuType.heiangreen2,"虚空史莱姆" },
-        { ChongWuType.heiangreen3,"岩猪" },
-        { ChongWuType.heianorange1_q,"暗黑主宰" },
-        { ChongWuType.heianorange1_h,"暗黑主宰" },
-        { ChongWuType.heianpurple1_q,"魇龙" },
-        { ChongWuType.heianpurple1_h,"魇龙" },
-        { ChongWuType.heianpurple2_q,"恶魔之龙" },
-        { ChongWuType.heianpurple2_h,"恶魔之龙" },
-        { ChongWuType.heianpurple3_q,"魂狼" },
-        { ChongWuType.heianpurple3_h,"魂狼" },
-        { ChongWuType.heianwhite1,"黑暗粘液怪" },
-        { ChongWuType.heianwhite2,"黑暗史莱姆" },
-        
-        
-        { ChongWuType.huoblue1,"熔岩仔" },
-        { ChongWuType.huoblue2,"烈焰魔狐" },
-        { ChongWuType.huoblue3,"炎雀儿" },
-        { ChongWuType.huogreen1,"熔岩史莱姆" },
-        { ChongWuType.huogreen2,"烈焰狐" },
-        { ChongWuType.huoorange1_q,"火焰行者" },
-        { ChongWuType.huoorange1_h,"火焰行者" },
-        { ChongWuType.huopurple1_q,"葫芦猫" },
-        { ChongWuType.huopurple1_h,"葫芦猫" },
-        { ChongWuType.huopurple2_q,"竹炎熊猫" },
-        { ChongWuType.huopurple2_h,"竹炎熊猫" },
-        { ChongWuType.huopurple3_q,"焰狐仙" },
-        { ChongWuType.huopurple3_h,"焰狐仙" },
-        { ChongWuType.huowhite1,"火叶球" },
-        
-        
-        { ChongWuType.iceblue1,"冰霜仔" },
-        { ChongWuType.iceblue2,"霜甲兽" },
-        { ChongWuType.icegreen1,"冰史莱姆" },
-        { ChongWuType.icegreen2,"冰滴仔" },
-        { ChongWuType.icegreen3,"小霜甲兽" },
-        { ChongWuType.iceorange1_q,"霜龙皇" },
-        { ChongWuType.iceorange1_h,"霜龙皇" },
-        { ChongWuType.icepurple1_q,"霜翼蝶" },
-        { ChongWuType.icepurple1_h,"霜翼蝶" },
-        { ChongWuType.icepurple2_q,"霜角猫" },
-        { ChongWuType.icepurple2_h,"霜角猫" },
-        { ChongWuType.icepurple3_q,"霜华狐" },
-        { ChongWuType.icepurple3_h,"霜华狐" },
-        { ChongWuType.icewhite1,"冰晶粘液怪" },
-    };
+    // ========== 黑暗系 (heian) ==========
+    { ChongWuType.heianblue1, "渡鸦法师" },
+    { ChongWuType.heianblue2, "冥火猫" },
+    { ChongWuType.heianblue3, "暗影法师" },
+    { ChongWuType.heiangreen1, "暗影猫" },
+    { ChongWuType.heiangreen2, "幽冥猫" },
+    { ChongWuType.heiangreen3, "小幽灵" },
+    { ChongWuType.heianorange1_q, "炎魔" },
+    { ChongWuType.heianorange1_h, "炎魔" },
+    { ChongWuType.heianpurple1_q, "暗影狮鹫" },
+    { ChongWuType.heianpurple1_h, "暗影狮鹫" },
+    { ChongWuType.heianpurple2_q, "紫晶蝙蝠" },
+    { ChongWuType.heianpurple2_h, "紫晶蝙蝠" },
+    { ChongWuType.heianpurple3_q, "九头蛇" },
+    { ChongWuType.heianpurple3_h, "九头蛇" },
+    { ChongWuType.heianwhite1, "迷眼蝠" },
+    { ChongWuType.heianwhite2, "夜枭" },
+
+    // ========== 火系 (huo) ==========
+    { ChongWuType.huoblue1, "冰焰狐" },
+    { ChongWuType.huoblue2, "火凤凰" },
+    { ChongWuType.huoblue3, "火尾猴" },
+    { ChongWuType.huogreen1, "火耳鼠" },
+    { ChongWuType.huogreen2, "熔岩蛇" },
+    { ChongWuType.huoorange1_q, "烈焰龙" },
+    { ChongWuType.huoorange1_h, "烈焰龙" },
+    { ChongWuType.huopurple1_q, "熔岩狼" },
+    { ChongWuType.huopurple1_h, "熔岩狼" },
+    { ChongWuType.huopurple2_q, "紫焰凤凰" },
+    { ChongWuType.huopurple2_h, "紫焰凤凰" },
+    { ChongWuType.huopurple3_q, "晶背龙" },
+    { ChongWuType.huopurple3_h, "晶背龙" },
+    { ChongWuType.huowhite1, "火蜥蜴" },
+
+    // ========== 冰系 (ice) ==========
+    { ChongWuType.iceblue1, "冰晶鹿" },
+    { ChongWuType.iceblue2, "冰晶熊" },
+    { ChongWuType.icegreen1, "冰甲龟" },
+    { ChongWuType.icegreen2, "冰灵狐" },
+    { ChongWuType.icegreen3, "冰晶蜂" },           // 蓝色冰蜜蜂
+    { ChongWuType.iceorange1_q, "金焰狐" },         // 金色小狐狸
+    { ChongWuType.iceorange1_h, "九尾金狐" },       // 金色九尾狐，带宝石装饰
+    { ChongWuType.icepurple1_q, "霜晶狐" },         // 抱紫色水晶的白色小狐狸
+    { ChongWuType.icepurple1_h, "九尾霜狐" },       // 白色九尾狐，带紫焰
+    { ChongWuType.icepurple2_q, "霜晶熊枭" },       // 白色猫头鹰熊宝宝，带紫晶
+    { ChongWuType.icepurple2_h, "晶甲熊枭" },       // 怒吼的白色熊枭，满身紫晶
+    { ChongWuType.icepurple3_q, "霜纹羊" },         // 带紫色花纹和水晶项圈的白羊
+    { ChongWuType.icepurple3_h, "晶角霜羊" },       // 巨大紫晶羊角，吐紫气
+    { ChongWuType.icewhite1, "冰史莱姆" },          // 浅蓝色水滴史莱姆
+};
     
     
 

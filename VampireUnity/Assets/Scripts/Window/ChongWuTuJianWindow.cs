@@ -71,10 +71,10 @@ public class ChongWuTuJianWindow : MonoBehaviour
       Image2.sprite = ResourcesConfig.GetChongWuSprite(list[1]);
       Image3.sprite = ResourcesConfig.GetChongWuSprite(list[2]);
       Image4.sprite = ResourcesConfig.GetChongWuSprite(list[3]);
-      Name1.text = ChongWuConfig.ChongWuNamDic[list[0]];
-      Name2.text = ChongWuConfig.ChongWuNamDic[list[1]];
-      Name3.text = ChongWuConfig.ChongWuNamDic[list[2]];
-      Name4.text = ChongWuConfig.ChongWuNamDic[list[3]];
+      Name1.text = ChongWuConfig.ChongWuNameDic[list[0]];
+      Name2.text = ChongWuConfig.ChongWuNameDic[list[1]];
+      Name3.text = ChongWuConfig.ChongWuNameDic[list[2]];
+      Name4.text = ChongWuConfig.ChongWuNameDic[list[3]];
       
       TitleName.text=ChongWuConfig.TuJianNameDic[type];
       AttackText.text = ChongWuConfig.TuJianDescDic[type][0];

@@ -44,7 +44,7 @@ public class ChongWuController:XSingleton<ChongWuController>
         float xuemai = Random.Range(xuemaiMinMax.min, xuemaiMinMax.max);
         float xuemaiRounded = float.Parse(xuemai.ToString("F2"));
         YuanSuType yuanSuType = ChongWuConfig.GetChongWuYuanSuByType(chongWuType);
-        string Name=ChongWuConfig.ChongWuNamDic[chongWuType];
+        string Name=ChongWuConfig.ChongWuNameDic[chongWuType];
         List<ChongWuConfig.ChongWuSKillType> ChongWuSkillList = null;
         switch (yuanSuType)
         {
