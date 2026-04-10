@@ -66,6 +66,7 @@ public class MonsterSpineName
 }
 public abstract class MonsterBase : MonoBehaviour
 {
+    [NonSerialized]  public MonsterTypeByName MonsterTypeByName;
     public GameObject bingkuai;
     public GameObject du;
     public GameObject jiansu;
@@ -140,18 +141,9 @@ public abstract class MonsterBase : MonoBehaviour
 
 
     //构造方法
-    public MonsterBase(MonsterType monsterType, string monsterName, int monsterLevel, int maxHp, float speed, int attack, int defense, int exp, int bloodEnergy, int evolutionEnergy)
+    public MonsterBase(MonsterTypeByName type)
     {
-        MonsterType = monsterType;
-        MonsterName = monsterName;
-        MonsterLevel = monsterLevel;
-        MaxHp = maxHp;
-        Speed = speed;
-        Attack = attack;
-        Defense = defense;
-        Exp = exp;
-        BloodEnergy = bloodEnergy;
-        EvolutionEnergy = evolutionEnergy;
+        MonsterTypeByName = type;
     }
 
     public abstract void AddMonsterEquip();
@@ -196,9 +188,6 @@ public abstract class MonsterBase : MonoBehaviour
     {
         monsterSkeletonAnimation.AnimationState.Complete -= OnAnimationComplete;
     }
-
-    private float hurtTime = 0.75f;
-    private float currentHurtTime = 0;
 
     private void OnEnable()
     {
@@ -250,28 +239,6 @@ public abstract class MonsterBase : MonoBehaviour
         {
             Speed = baseSpeed;
             jiansu.gameObject.SetActive(false);
-        }
-        
-        if (YiDianTime > 0)
-        {
-            yidian.gameObject.SetActive(true);
-            YiDianTime -= Time.deltaTime;
-        }
-        else
-        {
-            yidian.gameObject.SetActive(false);
-        }
-        
-       
-        currentHurtTime += Time.deltaTime;
-        float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
-
-        if (dis < 5f)
-        {
-             if(transform.position.y < GameController.S.gamePlayer.transform.position.y-4)
-                return;
-            if(transform.position.y > GameController.S.gamePlayer.transform.position.y+4)
-                return;
         }
     }
     

@@ -206,6 +206,7 @@
     <Compile Include="Assets\Scripts\Fight\Player\PickUpController.cs" />
     <Compile Include="Assets\Scripts\Prop\BaoShi\BaoShi.cs" />
     <Compile Include="Assets\Scripts\Tool\ImageCropTool.cs" />
+    <Compile Include="Assets\Scripts\Config\MonsterConfig.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\dijing3.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\Skill2AddDan.cs" />
     <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill4.cs" />

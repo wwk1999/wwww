@@ -8,7 +8,7 @@ public class chailangren1 : MonsterBase
 {
     public Transform attackTrans;
 
-    public chailangren1() : base(MonsterType.Normal, "chailangren1", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public chailangren1() : base(MonsterTypeByName.ChaiLangRen1)
     {
     }
 
