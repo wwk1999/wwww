@@ -7,7 +7,7 @@ public class kuangshimuzhu : MonsterBase
 {
    public Transform attackTrans;
 
-    public kuangshimuzhu() : base(MonsterType.Elite, "kuangshimuzhu", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public kuangshimuzhu() : base(MonsterTypeByName.KuangShiMuZhu)
     {
     }
 

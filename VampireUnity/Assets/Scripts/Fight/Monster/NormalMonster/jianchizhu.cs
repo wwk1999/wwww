@@ -8,7 +8,7 @@ public class jianchizhu : MonsterBase
 {
     public Transform attackTrans;
 
-    public jianchizhu() : base(MonsterType.Normal, "jianchizhu", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public jianchizhu() : base(MonsterTypeByName.JianChiZhu)
     {
     }
 

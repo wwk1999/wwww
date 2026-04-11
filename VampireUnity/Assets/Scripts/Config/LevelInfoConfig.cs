@@ -105,6 +105,31 @@ public enum MonsterTypeByName
     WuYaoZhiWang2,      // 巫妖之王2
     YeShouZhanShi,      // 野兽战士
     ZhiZhuNvWang,       // 蜘蛛女王
+    
+    
+    //异界怪物
+    //小怪
+    DaLong,
+    Emo1,
+    Emo2,
+    Emo3,
+    HongLong1,
+    HongLong2,
+    HongLong3,
+    LanLong1,
+    LanLong2,
+    LanLong3,
+    LvLang,
+    LvLong1,
+    LvLong2,
+    LvLong3,
+    
+    //boss
+    LeiShou,
+    KuiJia,
+    HuoLang,
+    BaoZi,
+    ShuangDao,
 }
 public class BaoShiDiaoLuo
 {

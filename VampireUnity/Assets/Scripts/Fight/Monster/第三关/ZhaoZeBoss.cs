@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ZhaoZeBoss : MonsterBase
 {
-   public ZhaoZeBoss() : base(MonsterType.Boss, "ZhaoZeBoss", 1, 100000, 1f, 500, 150, 600, 60, 0)
+   public ZhaoZeBoss() : base(MonsterTypeByName.ZhaoZeBoss)
     {
     }
     public Transform attackTrans;

@@ -7,8 +7,7 @@ using UnityEngine;
 
 public class LvLong2 : MonsterBase
 {
-    public LvLong2() : base(MonsterType.Normal, "LvLong2", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Orange].hp, 1f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Orange].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Orange].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Orange].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Orange].linhun, 0)
-    {
+    public LvLong2() : base(MonsterTypeByName.LvLong2)    {
     }
     public Transform attackTrans;
     

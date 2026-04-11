@@ -7,8 +7,7 @@ using UnityEngine;
 
 public class LanLong2 : MonsterBase
 {
-    public LanLong2() : base(MonsterType.Normal, "LanLong2", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Orange].hp, 1f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Orange].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Orange].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Orange].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Orange].linhun, 0)
-    {
+    public LanLong2() : base(MonsterTypeByName.LanLong2)    {
     }
     public Transform attackTrans;
     

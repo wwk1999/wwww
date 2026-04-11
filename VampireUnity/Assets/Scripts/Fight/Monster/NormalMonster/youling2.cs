@@ -7,7 +7,7 @@ public class youling2 : MonsterBase
 {
     public Transform attackTrans;
 
-    public youling2() : base(MonsterType.Normal, "youling2", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public youling2() : base(MonsterTypeByName.YouLing2)
     {
     }
 

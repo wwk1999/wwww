@@ -8,7 +8,7 @@ public class kulou2 : MonsterBase
 {
     public Transform attackTrans;
 
-    public kulou2() : base(MonsterType.Normal, "kulou2", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public kulou2() : base(MonsterTypeByName.KuLou2)
     {
     }
 

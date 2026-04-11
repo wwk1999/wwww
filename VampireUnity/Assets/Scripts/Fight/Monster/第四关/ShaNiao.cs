@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShaNiao : MonsterBase
 {
-    public ShaNiao() : base(MonsterType.Normal, "ShaNiao", 1, 5000, 0.8f, 500, 150, 40, 4, 0)
+    public ShaNiao() : base(MonsterTypeByName.ShaNiao)
     {
     }
     public Transform attackTrans;

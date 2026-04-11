@@ -8,7 +8,7 @@ public class dijing2 : MonsterBase
 {
      public Transform attackTrans;
 
-    public dijing2() : base(MonsterType.Normal, "dijing2", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public dijing2() : base(MonsterTypeByName.DiJing2)
     {
     }
 

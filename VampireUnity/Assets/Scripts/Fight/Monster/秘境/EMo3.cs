@@ -7,8 +7,7 @@ using UnityEngine;
 
 public class EMo3 : MonsterBase
 {
-    public EMo3() : base(MonsterType.Normal, "EMo3", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Red2].hp, 1f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Red2].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Red2].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Red2].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Red2].linhun, 0)
-    {
+    public EMo3() : base(MonsterTypeByName.Emo3)    {
     }
     public Transform attackTrans;
     

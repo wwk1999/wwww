@@ -14,13 +14,7 @@ public enum HuoLangSkill2Type
 }
 public class HuoLangBoss : MonsterBase
 {
-    public HuoLangBoss() : base(MonsterType.Boss, "HuoLangBoss", 1,
-        MJConfig.BossMonsterAttribute.hp * MJConfig.MonsterAttributeDic[MJLevel.Purple].hp, 1.8f,
-        MJConfig.BossMonsterAttribute.atk * MJConfig.MonsterAttributeDic[MJLevel.Purple].atk,
-        MJConfig.BossMonsterAttribute.def * MJConfig.MonsterAttributeDic[MJLevel.Purple].def,
-        MJConfig.BossMonsterAttribute.ex * MJConfig.PlayerAttributeDic[MJLevel.Purple].ex,
-        MJConfig.BossMonsterAttribute.linhun * MJConfig.PlayerAttributeDic[MJLevel.Purple].linhun, 0)
-    {
+    public HuoLangBoss() : base(MonsterTypeByName.HuoLang){
     }
 
     public Transform attackTrans;

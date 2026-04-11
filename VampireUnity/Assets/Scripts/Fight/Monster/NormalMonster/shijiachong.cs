@@ -7,7 +7,7 @@ public class shijiachong : MonsterBase
 {
     public Transform attackTrans;
 
-    public shijiachong() : base(MonsterType.Normal, "shijiachong", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public shijiachong() : base(MonsterTypeByName.ShiJiaChong)
     {
     }
 

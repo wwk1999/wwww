@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class HuangShu : MonsterBase
 {
-    public HuangShu() : base(MonsterType.Normal, "HuangShu", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Red1].hp, 0.8f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Red1].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Red1].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Red1].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Red1].linhun, 0)
+    public HuangShu() : base(MonsterTypeByName.ChaiLangRen2)
     {
     }
     

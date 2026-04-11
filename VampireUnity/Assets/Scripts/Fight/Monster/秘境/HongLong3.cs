@@ -7,8 +7,7 @@ using UnityEngine;
 
 public class HongLong3 : MonsterBase
 {
-    public HongLong3() : base(MonsterType.Normal, "HongLong3", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Red2].hp, 1f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Red2].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Red2].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Red2].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Red2].linhun, 0)
-    {
+    public HongLong3() : base(MonsterTypeByName.HongLong3)    {
     }
     public Transform attackTrans;
     

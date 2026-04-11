@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class QingWaMonster : MonsterBase
 {
-   public QingWaMonster() : base(MonsterType.Normal, "QingWaMonster", 1, 2500, 0.7f, 250, 100, 30, 3, 0)
+   public QingWaMonster() : base(MonsterTypeByName.QingWa)
     {
     }
     public Transform attackTrans;

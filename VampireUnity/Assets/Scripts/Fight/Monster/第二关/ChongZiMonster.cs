@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ChongZiMonster : MonsterBase
 {
-    public ChongZiMonster() : base(MonsterType.Normal, "ChongZiMonster", 1, 500, 0.7f, 100, 20, 20, 2, 0)
+    public ChongZiMonster() : base(MonsterTypeByName.ChongZi)
     {
     }
 

@@ -7,7 +7,7 @@ public class shuangtoulong : MonsterBase
 {
     public Transform attackTrans;
 
-    public shuangtoulong() : base(MonsterType.Normal, "shuangtoulong", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public shuangtoulong() : base(MonsterTypeByName.ShuangTouLong1)
     {
     }
 

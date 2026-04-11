@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class XiNiuMonster : MonsterBase
 {
-    public XiNiuMonster() : base(MonsterType.Normal, "XiuNiuMonster", 1, 100, 0.5f, 10, 5, 10, 10, 0)
+    public XiNiuMonster() : base(MonsterTypeByName.ChaiLangRen2)
     {
     }
    

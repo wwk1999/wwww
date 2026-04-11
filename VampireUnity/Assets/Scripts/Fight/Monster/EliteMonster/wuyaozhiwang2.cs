@@ -8,7 +8,7 @@ public class wuyaozhiwang2 : MonsterBase
 {
      public Transform attackTrans;
 
-    public wuyaozhiwang2() : base(MonsterType.Elite, "wuyaozhiwang2", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public wuyaozhiwang2() : base(MonsterTypeByName.WuYaoZhiWang2)
     {
     }
 

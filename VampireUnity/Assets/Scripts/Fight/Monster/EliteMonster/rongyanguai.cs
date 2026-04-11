@@ -8,7 +8,7 @@ public class rongyanguai : MonsterBase
 {
     public Transform attackTrans;
 
-    public rongyanguai() : base(MonsterType.Elite, "rongyanguai", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public rongyanguai() : base(MonsterTypeByName.RongYanGuai)
     {
     }
 

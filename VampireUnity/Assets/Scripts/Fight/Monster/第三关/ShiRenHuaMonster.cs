@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShiRenHuaMonster : MonsterBase
 {
-    public ShiRenHuaMonster() : base(MonsterType.Elite, "ShiRenHuaMonster", 1, 8000, 0.7f, 500, 150, 150, 15, 0)
+    public ShiRenHuaMonster() : base(MonsterTypeByName.ShiRenHua)
     {
     }
     public Transform attackTrans;

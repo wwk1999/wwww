@@ -18,8 +18,7 @@ namespace Fight.Monster.秘境.豹子
     }
     public class BaoZiBoss:MonsterBase
     {
-        public BaoZiBoss() : base(MonsterType.Boss, "BaoZiBoss", 1, MJConfig.BossMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Blue].hp, 1.3f, MJConfig.BossMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Blue].atk, MJConfig.BossMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Blue].def, MJConfig.BossMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Blue].ex, MJConfig.BossMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Blue].linhun, 0)
-        {
+        public BaoZiBoss() : base(MonsterTypeByName.BaoZi)        {
         }
         
         public Transform attackTrans;

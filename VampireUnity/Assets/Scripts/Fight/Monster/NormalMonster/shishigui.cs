@@ -8,7 +8,7 @@ public class shishigui : MonsterBase
 {
      public Transform attackTrans;
 
-    public shishigui() : base(MonsterType.Normal, "shishigui", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public shishigui() : base(MonsterTypeByName.ShiShiGui)
     {
     }
 

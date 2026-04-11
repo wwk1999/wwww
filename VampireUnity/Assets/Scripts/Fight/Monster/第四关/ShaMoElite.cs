@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShaMoElite : MonsterBase
 {
-    public ShaMoElite() : base(MonsterType.Normal, "ShaMoElite", 1, 100, 0.3f, 10, 5, 10, 10, 0)
+    public ShaMoElite() : base(MonsterTypeByName.ShaChong)
     {
     }
     public Transform skillTrans1;

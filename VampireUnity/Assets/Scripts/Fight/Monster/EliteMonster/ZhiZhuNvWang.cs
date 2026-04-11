@@ -8,7 +8,7 @@ public class ZhiZhuNvWang : MonsterBase
 {
      public Transform attackTrans;
 
-    public ZhiZhuNvWang() : base(MonsterType.Normal, "ZhiZhuNvWang", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public ZhiZhuNvWang() : base(MonsterTypeByName.ZhiZhuNvWang)
     {
     }
 

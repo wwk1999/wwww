@@ -7,8 +7,7 @@ using UnityEngine;
 
 public class DaLong : MonsterBase
 {
-    public DaLong() : base(MonsterType.Normal, "DaLong", 1, MJConfig.BaseMonsterAttribute.hp*MJConfig.MonsterAttributeDic[MJLevel.Blue].hp, 1f, MJConfig.BaseMonsterAttribute.atk*MJConfig.MonsterAttributeDic[MJLevel.Blue].atk, MJConfig.BaseMonsterAttribute.def*MJConfig.MonsterAttributeDic[MJLevel.Blue].def, MJConfig.BaseMonsterAttribute.ex*MJConfig.PlayerAttributeDic[MJLevel.Blue].ex, MJConfig.BaseMonsterAttribute.linhun*MJConfig.PlayerAttributeDic[MJLevel.Blue].linhun, 0)
-    {
+    public DaLong() : base(MonsterTypeByName.DaLong)    {
     }
     public Transform attackTrans;
     

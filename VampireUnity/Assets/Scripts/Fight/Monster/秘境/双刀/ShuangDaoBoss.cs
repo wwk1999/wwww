@@ -9,13 +9,7 @@ using Random = UnityEngine.Random;
 
 public class ShuangDaoBoss : MonsterBase
 {
-    public ShuangDaoBoss() : base(MonsterType.Boss, "ShuangDaoBoss", 1,
-        MJConfig.BossMonsterAttribute.hp * MJConfig.MonsterAttributeDic[MJLevel.Orange].hp, 1.8f,
-        MJConfig.BossMonsterAttribute.atk * MJConfig.MonsterAttributeDic[MJLevel.Orange].atk,
-        MJConfig.BossMonsterAttribute.def * MJConfig.MonsterAttributeDic[MJLevel.Orange].def,
-        MJConfig.BossMonsterAttribute.ex * MJConfig.PlayerAttributeDic[MJLevel.Orange].ex,
-        MJConfig.BossMonsterAttribute.linhun * MJConfig.PlayerAttributeDic[MJLevel.Orange].linhun, 0)
-    {
+    public ShuangDaoBoss() : base(MonsterTypeByName.ShuangDao){
     }
     
     public Transform attackTrans;

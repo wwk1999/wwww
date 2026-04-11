@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ShaXiYi : MonsterBase
 {
-    public ShaXiYi() : base(MonsterType.Elite, "ShaXiYi", 1, 15000, 1.3f, 1000, 300, 200, 20, 0)
+    public ShaXiYi() : base(MonsterTypeByName.ShaXiYi)
     {
     }
     public Transform attackTrans;

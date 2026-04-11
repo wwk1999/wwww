@@ -8,7 +8,7 @@ public class niutouren2 : MonsterBase
 {
      public Transform attackTrans;
 
-    public niutouren2() : base(MonsterType.Normal, "niutouren2", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public niutouren2() : base(MonsterTypeByName.NiuTouRen2)
     {
     }
 

@@ -7,7 +7,7 @@ public class shanzei3 : MonsterBase
 {
     public Transform attackTrans;
 
-    public shanzei3() : base(MonsterType.Normal, "shanzei3", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public shanzei3() : base(MonsterTypeByName.ShanZei3)
     {
     }
 

@@ -7,7 +7,7 @@ public class youlang : MonsterBase
 {
      public Transform attackTrans;
 
-    public youlang() : base(MonsterType.Normal, "youlang", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public youlang() : base(MonsterTypeByName.YouLang)
     {
     }
 

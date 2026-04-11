@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class XueZhangLang : MonsterBase
 {
-    public XueZhangLang() : base(MonsterType.Normal, "XueZhangLang", 1, 10000, 0.8f, 800, 350, 50, 5, 0)
+    public XueZhangLang() : base(MonsterTypeByName.XueZhangLang)
     {
     }
     

@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 public class XiaoHuoMonster : MonsterBase
 {
-    public XiaoHuoMonster() : base(MonsterType.Normal, "XiaoHuoMonster", 1, 500, 0.7f, 100, 20, 20, 2, 0)
+    public XiaoHuoMonster() : base(MonsterTypeByName.XiaoHuo)
     {
     }
 

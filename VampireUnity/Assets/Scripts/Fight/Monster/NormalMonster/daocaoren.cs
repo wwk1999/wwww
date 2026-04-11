@@ -7,7 +7,7 @@ public class daocaoren : MonsterBase
 {
     public Transform attackTrans;
 
-    public daocaoren() : base(MonsterType.Normal, "daocaoren", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public daocaoren() : base(MonsterTypeByName.DaoCaoRen)
     {
     }
 

@@ -8,7 +8,7 @@ public class lujiaocike2 : MonsterBase
 {
     public Transform attackTrans;
 
-    public lujiaocike2() : base(MonsterType.Normal, "lujiaocike2", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public lujiaocike2() : base(MonsterTypeByName.LuJiaoCiKe2)
     {
     }
 

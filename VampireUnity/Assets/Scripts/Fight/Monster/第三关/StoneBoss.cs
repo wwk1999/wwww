@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class StoneBoss : MonsterBase
 {
-   public StoneBoss() : base(MonsterType.Boss, "StoneBossMonster", 1, 100, 0.3f, 10, 5, 10, 10, 0)
+   public StoneBoss() : base(MonsterTypeByName.ChaiLangRen2)
     {
     }
     

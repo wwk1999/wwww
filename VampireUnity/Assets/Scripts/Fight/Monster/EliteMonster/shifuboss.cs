@@ -8,7 +8,7 @@ public class shifuboss : MonsterBase
 {
     public Transform attackTrans;
 
-    public shifuboss() : base(MonsterType.Elite, "shifuboss", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public shifuboss() : base(MonsterTypeByName.ShiFuBoss)
     {
     }
 

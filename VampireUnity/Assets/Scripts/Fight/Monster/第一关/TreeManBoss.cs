@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class TreeManBoss : MonsterBase
 {
-    public TreeManBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 10000, 1f, 80, 5, 200, 10, 0) { }
+    public TreeManBoss() : base(MonsterTypeByName.TreeMan) { }
    [NonSerialized]public float FireSkillTime = 15f;
    [NonSerialized]public float FireSkillCurrentTime = 0f;
    [NonSerialized]public float DashSkillTime = 8f;

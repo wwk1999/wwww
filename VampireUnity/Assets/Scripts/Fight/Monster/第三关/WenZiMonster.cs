@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class WenZiMonster : MonsterBase
 {
-   public WenZiMonster() : base(MonsterType.Normal, "WenZiMonster", 1, 2500, 0.7f, 250, 100, 30, 3, 0)
+   public WenZiMonster() : base(MonsterTypeByName.WenZi)
     {
     }
     public Transform attackTrans;

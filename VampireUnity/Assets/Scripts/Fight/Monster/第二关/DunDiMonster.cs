@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 public class DunDiMonster : MonsterBase
 {
-    public DunDiMonster() : base(MonsterType.Normal, "DunDiMonster", 1, 500, 0.7f, 100, 20, 20, 2, 0)
+    public DunDiMonster() : base(MonsterTypeByName.DunDi)
     {
     }
 

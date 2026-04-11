@@ -8,7 +8,7 @@ public class dazongxiong : MonsterBase
 {
    public Transform attackTrans;
 
-    public dazongxiong() : base(MonsterType.Elite, "dazongxiong", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public dazongxiong() : base(MonsterTypeByName.DaZongXiong)
     {
     }
 

@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 
 public class HuoShanBoss : MonsterBase
 {
-    public HuoShanBoss() : base(MonsterType.Boss, "TreeManBoss", 1, 30000, 0.7f, 150, 50, 300, 30, 0) { }
+    public HuoShanBoss() : base(MonsterTypeByName.HuoShanBoss) { }
     public Transform attackTrans;
     public Collider2D skill3Collider;
     [NonSerialized]public float Skill1Time= 3f;

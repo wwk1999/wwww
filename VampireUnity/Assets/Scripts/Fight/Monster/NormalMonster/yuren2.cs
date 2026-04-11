@@ -7,7 +7,7 @@ public class yuren2 : MonsterBase
 {
     public Transform attackTrans;
 
-    public yuren2() : base(MonsterType.Normal, "yuren2", 1, 100, 0.6f, 20, 5, 10, 1, 0)
+    public yuren2() : base(MonsterTypeByName.YuRen2)
     {
     }
 
