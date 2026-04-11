@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Config;
+using Equip;
 using Mysql;
 using Prop.BaoShi;
 using Skill.NormalAttack.Primary;
@@ -10,6 +11,819 @@ using UnityEngine.UI;
 
 public class Entrance : MonoBehaviour
 {
+    public static void InitOrangeQueue()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            //传说装备
+
+            GameObject FinalDamageReductionFixed =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/FinalDamageReductionFixed"));
+            FinalDamageReductionFixed.gameObject.SetActive(false);
+            GameController.S.FinalDamageReductionFixedQueue.Enqueue(FinalDamageReductionFixed);
+
+            GameObject FinalDamageReductionPercent =
+                Instantiate(
+                    Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/FinalDamageReductionPercent"));
+            FinalDamageReductionPercent.gameObject.SetActive(false);
+            GameController.S.FinalDamageReductionPercentQueue.Enqueue(FinalDamageReductionPercent);
+
+            GameObject AllReplyAddPercent =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/AllReplyAddPercent"));
+            AllReplyAddPercent.gameObject.SetActive(false);
+            GameController.S.AllReplyAddPercentQueue.Enqueue(AllReplyAddPercent);
+
+            GameObject AddHpForTime =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/AddHpForTime"));
+            AddHpForTime.gameObject.SetActive(false);
+            GameController.S.AddHpForTimeQueue.Enqueue(AddHpForTime);
+
+            GameObject AddDefenseForTime =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/AddDefenseForTime"));
+            AddDefenseForTime.gameObject.SetActive(false);
+            GameController.S.AddDefenseForTimeQueue.Enqueue(AddDefenseForTime);
+
+            GameObject ReplyDeath =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/ReplyDeath"));
+            ReplyDeath.gameObject.SetActive(false);
+            GameController.S.ReplyDeathQueue.Enqueue(ReplyDeath);
+
+            GameObject DelayDamage =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/DelayDamage"));
+            DelayDamage.gameObject.SetActive(false);
+            GameController.S.DelayDamageQueue.Enqueue(DelayDamage);
+
+            GameObject HpReductionReplyAdd50 =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/HpReductionReplyAdd50"));
+            HpReductionReplyAdd50.gameObject.SetActive(false);
+            GameController.S.HpReductionReplyAdd50Queue.Enqueue(HpReductionReplyAdd50);
+
+            GameObject HpReductionAddDefense =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/HpReductionAddDefense"));
+            HpReductionAddDefense.gameObject.SetActive(false);
+            GameController.S.HpReductionAddDefenseQueue.Enqueue(HpReductionAddDefense);
+
+            GameObject FinalDamageAddPercent =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/FinalDamageAddPercent"));
+            FinalDamageAddPercent.gameObject.SetActive(false);
+            GameController.S.FinalDamageAddPercentQueue.Enqueue(FinalDamageAddPercent);
+
+            GameObject KillNormal =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/KillNormal"));
+            KillNormal.gameObject.SetActive(false);
+            GameController.S.KillNormalQueue.Enqueue(KillNormal);
+
+            GameObject AddAttackForTime =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/AddAttackForTime"));
+            AddAttackForTime.gameObject.SetActive(false);
+            GameController.S.AddAttackForTimeQueue.Enqueue(AddAttackForTime);
+
+            GameObject NormalAddDamage =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NormalAddDamage"));
+            NormalAddDamage.gameObject.SetActive(false);
+            GameController.S.NormalAddDamageQueue.Enqueue(NormalAddDamage);
+
+            GameObject RecudeHpAddAttack =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/RecudeHpAddAttack"));
+            RecudeHpAddAttack.gameObject.SetActive(false);
+            GameController.S.RecudeHpAddAttackQueue.Enqueue(RecudeHpAddAttack);
+
+            GameObject JianSuAddAttack =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/JianSuAddAttack"));
+            JianSuAddAttack.gameObject.SetActive(false);
+            GameController.S.JianSuAddAttackQueue.Enqueue(JianSuAddAttack);
+
+            GameObject FanPuGuiZhen =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/FanPuGuiZhen"));
+            FanPuGuiZhen.gameObject.SetActive(false);
+            GameController.S.FanPuGuiZhenQueue.Enqueue(FanPuGuiZhen);
+
+            GameObject NoSkill =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NoSkill"));
+            NoSkill.gameObject.SetActive(false);
+            GameController.S.NoSkillQueue.Enqueue(NoSkill);
+
+            GameObject BuWangChuXin =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/BuWangChuXin"));
+            BuWangChuXin.gameObject.SetActive(false);
+            GameController.S.BuWangChuXinQueue.Enqueue(BuWangChuXin);
+
+            GameObject HeiDongAddSpeed =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/HeiDongAddSpeed"));
+            HeiDongAddSpeed.gameObject.SetActive(false);
+            GameController.S.HeiDongAddSpeedQueue.Enqueue(HeiDongAddSpeed);
+
+            GameObject DuAddDuQuan =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/DuAddDuQuan"));
+            DuAddDuQuan.gameObject.SetActive(false);
+            GameController.S.DuAddDuQuanQueue.Enqueue(DuAddDuQuan);
+
+            GameObject LvQuanAddScale =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/LvQuanAddScale"));
+            LvQuanAddScale.gameObject.SetActive(false);
+            GameController.S.LvQuanAddScaleQueue.Enqueue(LvQuanAddScale);
+
+            GameObject XuKongAdd2Dan =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/XuKongAdd2Dan"));
+            XuKongAdd2Dan.gameObject.SetActive(false);
+            GameController.S.XuKongAdd2DanQueue.Enqueue(XuKongAdd2Dan);
+
+            GameObject PuTong3ChuanTou =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/PuTong3ChuanTou"));
+            PuTong3ChuanTou.gameObject.SetActive(false);
+            GameController.S.PuTong3ChuanTouQueue.Enqueue(PuTong3ChuanTou);
+
+            GameObject FireBaoZha1 =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/FireBaoZha"));
+            FireBaoZha1.gameObject.SetActive(false);
+            GameController.S.FireBaoZhaQueue.Enqueue(FireBaoZha1);
+
+            GameObject Skill1ReplaceNormalAttack =
+                Instantiate(
+                    Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill1ReplaceNormalAttack"));
+            Skill1ReplaceNormalAttack.gameObject.SetActive(false);
+            GameController.S.Skill1ReplaceNormalAttackQueue.Enqueue(Skill1ReplaceNormalAttack);
+
+            GameObject Skill1YiDianDouble =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill1YiDianDouble"));
+            Skill1YiDianDouble.gameObject.SetActive(false);
+            GameController.S.Skill1YiDianDoubleQueue.Enqueue(Skill1YiDianDouble);
+
+            GameObject Skill1AddRange =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/Skill1AddRange"));
+            Skill1AddRange.gameObject.SetActive(false);
+            GameController.S.Skill1AddRangeQueue.Enqueue(Skill1AddRange);
+
+            GameObject Skill2AddDan =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill2AddDan"));
+            Skill2AddDan.gameObject.SetActive(false);
+            GameController.S.Skill2AddDanQueue.Enqueue(Skill2AddDan);
+
+            GameObject Skill2RotateAdd =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill2RotateAdd"));
+            Skill2RotateAdd.gameObject.SetActive(false);
+            GameController.S.Skill2RotateAddQueue.Enqueue(Skill2RotateAdd);
+
+            GameObject Skill2AddRange =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/Skill2AddRange"));
+            Skill2AddRange.gameObject.SetActive(false);
+            GameController.S.Skill2AddRangeQueue.Enqueue(Skill2AddRange);
+
+            GameObject Skill3Bian3 =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill3Bian3"));
+            Skill3Bian3.gameObject.SetActive(false);
+            GameController.S.Skill3Bian3Queue.Enqueue(Skill3Bian3);
+
+            GameObject Skill3AddRange =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill3AddRange"));
+            Skill3AddRange.gameObject.SetActive(false);
+            GameController.S.Skill3AddRangeQueue.Enqueue(Skill3AddRange);
+
+            GameObject DashCd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/DashCd"));
+            DashCd.gameObject.SetActive(false);
+            GameController.S.DashCdQueue.Enqueue(DashCd);
+
+            GameObject DashRange =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/DashRange"));
+            DashRange.gameObject.SetActive(false);
+            GameController.S.DashRangeQueue.Enqueue(DashRange);
+
+            GameObject MoveSpeedAdd =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/MoveSpeedAdd"));
+            MoveSpeedAdd.gameObject.SetActive(false);
+            GameController.S.MoveSpeedAddQueue.Enqueue(MoveSpeedAdd);
+
+            GameObject ExAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/ExAdd"));
+            ExAdd.gameObject.SetActive(false);
+            GameController.S.ExAddQueue.Enqueue(ExAdd);
+
+            GameObject ClothFortureAdd =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/ClothFortureAdd"));
+            ClothFortureAdd.gameObject.SetActive(false);
+            GameController.S.ClothFortureAddQueue.Enqueue(ClothFortureAdd);
+
+            GameObject ShoeFortureAdd =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/ShoeFortureAdd"));
+            ShoeFortureAdd.gameObject.SetActive(false);
+            GameController.S.ShoeFortureAddQueue.Enqueue(ShoeFortureAdd);
+
+            GameObject CloakFortureAdd =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/CloakFortureAdd"));
+            CloakFortureAdd.gameObject.SetActive(false);
+            GameController.S.CloakFortureAddQueue.Enqueue(CloakFortureAdd);
+
+            GameObject NecklaceFortureAdd =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NecklaceFortureAdd"));
+            NecklaceFortureAdd.gameObject.SetActive(false);
+            GameController.S.NecklaceFortureAddQueue.Enqueue(NecklaceFortureAdd);
+
+            GameObject RingFortureAdd =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/RingFortureAdd"));
+            RingFortureAdd.gameObject.SetActive(false);
+            GameController.S.RingFortureAddQueue.Enqueue(RingFortureAdd);
+
+            GameObject HelmetFortureAdd =
+                Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/HelmetFortureAdd"));
+            HelmetFortureAdd.gameObject.SetActive(false);
+            GameController.S.HelmetFortureAddQueue.Enqueue(HelmetFortureAdd);
+
+        }
+    }
+
+    public static void InitProp(MonsterProp info)
+    {
+        switch (info.PropItem.PropType)
+        {
+            case PropConfig.PropType.WeaponFragment:
+                switch (info.PropItem.Quality)
+                {
+                    case 1:
+                        GameObject whiteWeaponFragmeng =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/WhiteWeaponFragmeng"));
+                        whiteWeaponFragmeng.gameObject.SetActive(false);
+                        GameController.S.WhiteWeaponFragmengQueue.Enqueue(whiteWeaponFragmeng);
+                        break;
+                    case 2:
+                        GameObject GreenWeaponFragmeng =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/GreenWeaponFragmeng"));
+                        GreenWeaponFragmeng.gameObject.SetActive(false);
+                        GameController.S.GreenWeaponFragmengQueue.Enqueue(GreenWeaponFragmeng);
+                        break;
+                    case 3:
+                        GameObject BlueWeaponFragmeng =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BlueWeaponFragmeng"));
+                        BlueWeaponFragmeng.gameObject.SetActive(false);
+                        GameController.S.BlueWeaponFragmengQueue.Enqueue(BlueWeaponFragmeng);
+                        break;
+                    case 4:
+                        GameObject PurpleWeaponFragmeng =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/PurpleWeaponFragmeng"));
+                        PurpleWeaponFragmeng.gameObject.SetActive(false);
+                        GameController.S.PurpleWeaponFragmengQueue.Enqueue(PurpleWeaponFragmeng);
+                        break;
+                    case 5:
+                        GameObject OrangeWeaponFragmeng =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/OrangeWeaponFragmeng"));
+                        OrangeWeaponFragmeng.gameObject.SetActive(false);
+                        GameController.S.OrangeWeaponFragmengQueue.Enqueue(OrangeWeaponFragmeng);
+                        break;
+                    case 6:
+                        GameObject RedWeaponFragmeng =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/RedWeaponFragmeng"));
+                        RedWeaponFragmeng.gameObject.SetActive(false);
+                        GameController.S.RedWeaponFragmengQueue.Enqueue(RedWeaponFragmeng);
+                        break;
+                }
+                break;
+            
+            
+            
+            case PropConfig.PropType.ChiBang:
+                switch (info.PropItem.Quality)
+                {
+                    case 1:
+                        GameObject whiteChiBang =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/WhiteChiBang"));
+                        whiteChiBang.gameObject.SetActive(false);
+                        GameController.S.WhiteChiBangQueue.Enqueue(whiteChiBang);
+                        break;
+                    case 2:
+                        GameObject GreenChiBang =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/GreenChiBang"));
+                        GreenChiBang.gameObject.SetActive(false);
+                        GameController.S.GreenChiBangQueue.Enqueue(GreenChiBang);
+                        break;
+                    case 3:
+                        GameObject BlueChiBang =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BlueChiBang"));
+                        BlueChiBang.gameObject.SetActive(false);
+                        GameController.S.BlueChiBangQueue.Enqueue(BlueChiBang);
+                        break;
+                    case 4:
+                        GameObject PurpleChiBang =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/PurpleChiBang"));
+                        PurpleChiBang.gameObject.SetActive(false);
+                        GameController.S.PurpleChiBangQueue.Enqueue(PurpleChiBang);
+                        break;
+                    case 5:
+                        GameObject OrangeChiBang =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/OrangeChiBang"));
+                        OrangeChiBang.gameObject.SetActive(false);
+                        GameController.S.OrangeChiBangQueue.Enqueue(OrangeChiBang);
+                        break;
+                    case 6:
+                        GameObject RedChiBang =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Prop/RedChiBang"));
+                        RedChiBang.gameObject.SetActive(false);
+                        GameController.S.RedChiBangQueue.Enqueue(RedChiBang);
+                        break;
+                }
+                break;
+            
+            
+            case PropConfig.PropType.ChongWuDan:
+                ChongWuDanFight ChongWuDan =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChongWuDan")).GetComponent<ChongWuDanFight>();
+                ChongWuDan.gameObject.SetActive(false);
+                switch (info.PropItem.Quality)
+                {
+                    case 3:
+                        ChongWuDan.quality = 3;
+                        break;
+                    case 5:
+                        ChongWuDan.quality = 5;
+                        break;
+                }
+                GameController.S.ChongWuDanQueue.Enqueue(ChongWuDan);
+                break;
+            
+            case PropConfig.PropType.XiSuiYe:
+                XiSuiYeFight XiSuiYe =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/XiSuiYe")).GetComponent<XiSuiYeFight>();
+                XiSuiYe.gameObject.SetActive(false);
+                switch (info.PropItem.Quality)
+                {
+                    case 3:
+                        XiSuiYe.quality = 3;
+                        break;
+                    case 5:
+                        XiSuiYe.quality = 5;
+                        break;
+                }
+                GameController.S.XiSuiYeQueue.Enqueue(XiSuiYe);
+                break;
+            
+            
+            case PropConfig.PropType.XueMaiDan:
+                XueMaiDanFight XueMaiDan =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/XueMaiDan")).GetComponent<XueMaiDanFight>();
+                XueMaiDan.gameObject.SetActive(false);
+                switch (info.PropItem.Quality)
+                {
+                    case 3:
+                        XueMaiDan.quality = 3;
+                        break;
+                    case 5:
+                        XueMaiDan.quality = 5;
+                        break;
+                }
+                GameController.S.XueMaiDanQueue.Enqueue(XueMaiDan);
+                break;
+            
+            
+            case PropConfig.PropType.SkillShu:
+                ChongWuSkillShuFight ChongWuSkillShu =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChongWuSkillShu")).GetComponent<ChongWuSkillShuFight>();
+                ChongWuSkillShu.gameObject.SetActive(false);
+                switch (info.PropItem.Quality)
+                {
+                    case 1:
+                        ChongWuSkillShu.quality = 1;
+                        break;
+                    case 2:
+                        ChongWuSkillShu.quality = 2;
+                        break;
+                    case 3:
+                        ChongWuSkillShu.quality = 3;
+                        break;
+                    case 4:
+                        ChongWuSkillShu.quality = 4;
+                        break;
+                    case 5:
+                        ChongWuSkillShu.quality = 5;
+                        break;
+                    case 6:
+                        ChongWuSkillShu.quality = 6;
+                        break;
+                }
+                GameController.S.ChongWuSkillShuQueue.Enqueue(ChongWuSkillShu);
+                break;
+            
+            
+            case PropConfig.PropType.ChongWuShiWu:
+                ChongWuShiWuFight ChongWuShiWu =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChongWuShiWu")).GetComponent<ChongWuShiWuFight>();
+                ChongWuShiWu.gameObject.SetActive(false);
+                switch (info.PropItem.Quality)
+                {
+                    case 1:
+                        ChongWuShiWu.quality = 1;
+                        break;
+                    case 2:
+                        ChongWuShiWu.quality = 2;
+                        break;
+                    case 3:
+                        ChongWuShiWu.quality = 3;
+                        break;
+                    case 4:
+                        ChongWuShiWu.quality = 4;
+                        break;
+                    case 5:
+                        ChongWuShiWu.quality = 5;
+                        break;
+                    case 6:
+                        ChongWuShiWu.quality = 6;
+                        break;
+                }
+                GameController.S.ChongWuShiWuQueue.Enqueue(ChongWuShiWu);
+                break;
+            
+            case PropConfig.PropType.DaKongShi:
+                DaKongShiFight DaKongShi =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/DaKongShi")).GetComponent<DaKongShiFight>();
+                DaKongShi.gameObject.SetActive(false);
+                GameController.S.DaKongShiQueue.Enqueue(DaKongShi);
+                break;
+            
+            case PropConfig.PropType.ShenHuaCaiLiao:
+                ShenHuaCaiLiaoFight ShenHuaCaiLiao =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ShenHuaCaiLiao")).GetComponent<ShenHuaCaiLiaoFight>();
+                ShenHuaCaiLiao.gameObject.SetActive(false);
+                switch (info.PropItem.Quality)
+                {
+                    case 1:
+                        ShenHuaCaiLiao.quality = 1;
+                        break;
+                    case 2:
+                        ShenHuaCaiLiao.quality = 2;
+                        break;
+                    case 3:
+                        ShenHuaCaiLiao.quality = 3;
+                        break;
+                    case 4:
+                        ShenHuaCaiLiao.quality = 4;
+                        break;
+                }
+                break;
+        }
+    }
+
+    public static void InitEquip(MonsterEquip info)
+    {
+        switch (info.EquipLevel)
+        {
+            case PlayerEquipConfig.EquipLevel.Primary:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject primaryCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryCloakFight"));
+                    primaryCloakFight.gameObject.SetActive(false);
+                    GameController.S.PrimaryCloakQueue.Enqueue(primaryCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject primaryNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryNecklaceFight"));
+                        primaryNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.PrimaryNecklaceQueue.Enqueue(primaryNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject primaryClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryClothFight"));
+                        primaryClothFight.gameObject.SetActive(false);
+                        GameController.S.PrimaryClothQueue.Enqueue(primaryClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject primaryHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryHelmetFight"));
+                        primaryHelmetFight.gameObject.SetActive(false);
+                        GameController.S.PrimaryHelmetQueue.Enqueue(primaryHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject primaryShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryShoeFight"));
+                        primaryShoeFight.gameObject.SetActive(false);
+                        GameController.S.PrimaryShoeQueue.Enqueue(primaryShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject primaryRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryRingFight"));
+                        primaryRingFight.gameObject.SetActive(false);
+                        GameController.S.PrimaryRingQueue.Enqueue(primaryRingFight);
+                        break;
+                }
+                break;
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.Green:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject GreenCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenCloakFight"));
+                    GreenCloakFight.gameObject.SetActive(false);
+                    GameController.S.GreenCloakQueue.Enqueue(GreenCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject GreenNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenNecklaceFight"));
+                        GreenNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.GreenNecklaceQueue.Enqueue(GreenNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject GreenClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenClothFight"));
+                        GreenClothFight.gameObject.SetActive(false);
+                        GameController.S.GreenClothQueue.Enqueue(GreenClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject GreenHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenHelmetFight"));
+                        GreenHelmetFight.gameObject.SetActive(false);
+                        GameController.S.GreenHelmetQueue.Enqueue(GreenHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject GreenShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenShoeFight"));
+                        GreenShoeFight.gameObject.SetActive(false);
+                        GameController.S.GreenShoeQueue.Enqueue(GreenShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject GreenRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenRingFight"));
+                        GreenRingFight.gameObject.SetActive(false);
+                        GameController.S.GreenRingQueue.Enqueue(GreenRingFight);
+                        break;
+                }
+                break;
+            
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.Blue:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject BlueCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueCloakFight"));
+                    BlueCloakFight.gameObject.SetActive(false);
+                    GameController.S.BlueCloakQueue.Enqueue(BlueCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject BlueNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueNecklaceFight"));
+                        BlueNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.BlueNecklaceQueue.Enqueue(BlueNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject BlueClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueClothFight"));
+                        BlueClothFight.gameObject.SetActive(false);
+                        GameController.S.BlueClothQueue.Enqueue(BlueClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject BlueHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueHelmetFight"));
+                        BlueHelmetFight.gameObject.SetActive(false);
+                        GameController.S.BlueHelmetQueue.Enqueue(BlueHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject BlueShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueShoeFight"));
+                        BlueShoeFight.gameObject.SetActive(false);
+                        GameController.S.BlueShoeQueue.Enqueue(BlueShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject BlueRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueRingFight"));
+                        BlueRingFight.gameObject.SetActive(false);
+                        GameController.S.BlueRingQueue.Enqueue(BlueRingFight);
+                        break;
+                }
+                break;
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.Purple:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject PurpleCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleCloakFight"));
+                    PurpleCloakFight.gameObject.SetActive(false);
+                    GameController.S.PurpleCloakQueue.Enqueue(PurpleCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject PurpleNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleNecklaceFight"));
+                        PurpleNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.PurpleNecklaceQueue.Enqueue(PurpleNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject PurpleClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleClothFight"));
+                        PurpleClothFight.gameObject.SetActive(false);
+                        GameController.S.PurpleClothQueue.Enqueue(PurpleClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject PurpleHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleHelmetFight"));
+                        PurpleHelmetFight.gameObject.SetActive(false);
+                        GameController.S.PurpleHelmetQueue.Enqueue(PurpleHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject PurpleShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleShoeFight"));
+                        PurpleShoeFight.gameObject.SetActive(false);
+                        GameController.S.PurpleShoeQueue.Enqueue(PurpleShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject PurpleRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleRingFight"));
+                        PurpleRingFight.gameObject.SetActive(false);
+                        GameController.S.PurpleRingQueue.Enqueue(PurpleRingFight);
+                        break;
+                }
+                break;
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.Purple1:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject Purple1CloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1CloakFight"));
+                    Purple1CloakFight.gameObject.SetActive(false);
+                    GameController.S.Purple1CloakQueue.Enqueue(Purple1CloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject Purple1NecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1NecklaceFight"));
+                        Purple1NecklaceFight.gameObject.SetActive(false);
+                        GameController.S.Purple1NecklaceQueue.Enqueue(Purple1NecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject Purple1ClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1ClothFight"));
+                        Purple1ClothFight.gameObject.SetActive(false);
+                        GameController.S.Purple1ClothQueue.Enqueue(Purple1ClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject Purple1HelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1HelmetFight"));
+                        Purple1HelmetFight.gameObject.SetActive(false);
+                        GameController.S.Purple1HelmetQueue.Enqueue(Purple1HelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject Purple1ShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1ShoeFight"));
+                        Purple1ShoeFight.gameObject.SetActive(false);
+                        GameController.S.Purple1ShoeQueue.Enqueue(Purple1ShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject Purple1RingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1RingFight"));
+                        Purple1RingFight.gameObject.SetActive(false);
+                        GameController.S.Purple1RingQueue.Enqueue(Purple1RingFight);
+                        break;
+                }
+                break;
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.TreeMan:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject TreeManCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManCloakFight"));
+                    TreeManCloakFight.gameObject.SetActive(false);
+                    GameController.S.TreeManCloakQueue.Enqueue(TreeManCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject TreeManNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManNecklaceFight"));
+                        TreeManNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.TreeManNecklaceQueue.Enqueue(TreeManNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject TreeManClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManClothFight"));
+                        TreeManClothFight.gameObject.SetActive(false);
+                        GameController.S.TreeManClothQueue.Enqueue(TreeManClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject TreeManHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManHelmetFight"));
+                        TreeManHelmetFight.gameObject.SetActive(false);
+                        GameController.S.TreeManHelmetQueue.Enqueue(TreeManHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject TreeManShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManShoeFight"));
+                        TreeManShoeFight.gameObject.SetActive(false);
+                        GameController.S.TreeManShoeQueue.Enqueue(TreeManShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject TreeManRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManRingFight"));
+                        TreeManRingFight.gameObject.SetActive(false);
+                        GameController.S.TreeManRingQueue.Enqueue(TreeManRingFight);
+                        break;
+                }
+                break;
+            
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.HuoShan:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject HuoShanBossCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossCloakFight"));
+                    HuoShanBossCloakFight.gameObject.SetActive(false);
+                    GameController.S.HuoShanCloakQueue.Enqueue(HuoShanBossCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject HuoShanBossNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossNecklaceFight"));
+                        HuoShanBossNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.HuoShanNecklaceQueue.Enqueue(HuoShanBossNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject HuoShanBossClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossClothFight"));
+                        HuoShanBossClothFight.gameObject.SetActive(false);
+                        GameController.S.HuoShanClothQueue.Enqueue(HuoShanBossClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject HuoShanBossHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossHelmetFight"));
+                        HuoShanBossHelmetFight.gameObject.SetActive(false);
+                        GameController.S.HuoShanHelmetQueue.Enqueue(HuoShanBossHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject HuoShanBossShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossShoeFight"));
+                        HuoShanBossShoeFight.gameObject.SetActive(false);
+                        GameController.S.HuoShanShoeQueue.Enqueue(HuoShanBossShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject HuoShanBossRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossRingFight"));
+                        HuoShanBossRingFight.gameObject.SetActive(false);
+                        GameController.S.HuoShanRingQueue.Enqueue(HuoShanBossRingFight);
+                        break;
+                }
+                break;
+            
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.ZhaoZe:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject ZhaoZeCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeCloakFight"));
+                    ZhaoZeCloakFight.gameObject.SetActive(false);
+                    GameController.S.ZhaoZeCloakQueue.Enqueue(ZhaoZeCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject ZhaoZeNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeNecklaceFight"));
+                        ZhaoZeNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.ZhaoZeNecklaceQueue.Enqueue(ZhaoZeNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject ZhaoZeClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeClothFight"));
+                        ZhaoZeClothFight.gameObject.SetActive(false);
+                        GameController.S.ZhaoZeClothQueue.Enqueue(ZhaoZeClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject ZhaoZeHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeHelmetFight"));
+                        ZhaoZeHelmetFight.gameObject.SetActive(false);
+                        GameController.S.ZhaoZeHelmetQueue.Enqueue(ZhaoZeHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject ZhaoZeShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeShoeFight"));
+                        ZhaoZeShoeFight.gameObject.SetActive(false);
+                        GameController.S.ZhaoZeShoeQueue.Enqueue(ZhaoZeShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject ZhaoZeRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeRingFight"));
+                        ZhaoZeRingFight.gameObject.SetActive(false);
+                        GameController.S.ZhaoZeRingQueue.Enqueue(ZhaoZeRingFight);
+                        break;
+                }
+                break;
+            
+        }
+    }
 
     private void Awake()
     {
@@ -718,784 +1532,10 @@ public class Entrance : MonoBehaviour
             GameController.S.BaoShiQueue.Enqueue(BaoShi);
         }
 
-
-
-        //装备对象池
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(0, 0, prop: 401)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject whiteChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangWhite"));
-                whiteChiBang.gameObject.SetActive(false);
-                GameController.S.WhiteChiBang.Enqueue(whiteChiBang);
-            }
-        }
-
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 402)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject GreenChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangGreen"));
-                GreenChiBang.gameObject.SetActive(false);
-                GameController.S.GreenChiBang.Enqueue(GreenChiBang);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 403)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject BlueChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangBlue"));
-                BlueChiBang.gameObject.SetActive(false);
-                GameController.S.BlueChiBang.Enqueue(BlueChiBang);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 404)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject PurpleChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangPurple"));
-                PurpleChiBang.gameObject.SetActive(false);
-                GameController.S.PurpleChiBang.Enqueue(PurpleChiBang);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 405)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject OrangeChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangOrange"));
-                OrangeChiBang.gameObject.SetActive(false);
-                GameController.S.OrangeChiBang.Enqueue(OrangeChiBang);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 406)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-
-                GameObject RedChiBang = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBangRed"));
-                RedChiBang.gameObject.SetActive(false);
-                GameController.S.RedChiBang.Enqueue(RedChiBang);
-            }
-        }
-
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 101)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject whiteWeaponFragmeng =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/WhiteWeaponFragmeng"));
-                whiteWeaponFragmeng.gameObject.SetActive(false);
-                GameController.S.WhiteWeaponFragmengQueue.Enqueue(whiteWeaponFragmeng);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 102)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject GreenWeaponFragmeng =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/GreenWeaponFragmeng"));
-                GreenWeaponFragmeng.gameObject.SetActive(false);
-                GameController.S.GreenWeaponFragmengQueue.Enqueue(GreenWeaponFragmeng);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 103)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject BlueWeaponFragmeng =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BlueWeaponFragmeng"));
-                BlueWeaponFragmeng.gameObject.SetActive(false);
-                GameController.S.BlueWeaponFragmengQueue.Enqueue(BlueWeaponFragmeng);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 104)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject PurpleWeaponFragmeng =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/PurpleWeaponFragmeng"));
-                PurpleWeaponFragmeng.gameObject.SetActive(false);
-                GameController.S.PurpleWeaponFragmengQueue.Enqueue(PurpleWeaponFragmeng);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 105)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject OrangeWeaponFragmeng =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/OrangeWeaponFragmeng"));
-                OrangeWeaponFragmeng.gameObject.SetActive(false);
-                GameController.S.OrangeWeaponFragmengQueue.Enqueue(OrangeWeaponFragmeng);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(),
-                new DiaoLuoConfig(0, 0, prop: 106)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject RedWeaponFragmeng =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/RedWeaponFragmeng"));
-                RedWeaponFragmeng.gameObject.SetActive(false);
-                GameController.S.RedWeaponFragmengQueue.Enqueue(RedWeaponFragmeng);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(0, 0, prop: 303)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject JuDaYaChi = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/JuDaYaChi"));
-                JuDaYaChi.gameObject.SetActive(false);
-                GameController.S.JuDaYaChiQueue.Enqueue(JuDaYaChi);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(0, 0, prop: 302)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject GoldBlood = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/GoldBlood"));
-                GoldBlood.gameObject.SetActive(false);
-                GameController.S.GoldBloodQueue.Enqueue(GoldBlood);
-            }
-        }
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(0, 0, prop: 304)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject ZuiEYanZhu = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ZuiEYanZhu"));
-                ZuiEYanZhu.gameObject.SetActive(false);
-                GameController.S.ZuiEYanZhuQueue.Enqueue(ZuiEYanZhu);
-            }
-        }
-
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(0, 0, prop: 301)))
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                GameObject FuMoZhiGu = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/FuMoZhiGu"));
-                FuMoZhiGu.gameObject.SetActive(false);
-                GameController.S.FuMoZhiGuQueue.Enqueue(FuMoZhiGu);
-            }
-        }
-
-        
-
-
-
-
-        if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(1, equipType: 1)))
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                GameObject primaryCloakFight =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryCloakFight"));
-                primaryCloakFight.gameObject.SetActive(false);
-                GameController.S.PrimaryCloakQueue.Enqueue(primaryCloakFight);
-
-                GameObject primaryClothFight =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryClothFight"));
-                primaryClothFight.gameObject.SetActive(false);
-                GameController.S.PrimaryClothQueue.Enqueue(primaryClothFight);
-
-                GameObject primaryRingFight =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryRingFight"));
-                primaryRingFight.gameObject.SetActive(false);
-                GameController.S.PrimaryRingQueue.Enqueue(primaryRingFight);
-
-                GameObject primaryShoeFight =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryShoeFight"));
-                primaryShoeFight.gameObject.SetActive(false);
-                GameController.S.PrimaryShoeQueue.Enqueue(primaryShoeFight);
-
-                GameObject primaryNecklaceFight =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryNecklaceFight"));
-                primaryNecklaceFight.gameObject.SetActive(false);
-                GameController.S.PrimaryNecklaceQueue.Enqueue(primaryNecklaceFight);
-
-                GameObject primaryHelmetFight =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryHelmetFight"));
-                primaryHelmetFight.gameObject.SetActive(false);
-                GameController.S.PrimaryHelmetQueue.Enqueue(primaryHelmetFight);
-
-            }
-            
-            
-
-            if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(2, equipType: 1)))
-            {
-                for (int i = 0; i < 20; i++)
-                {
-
-                    GameObject GreenCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenCloakFight"));
-                    GreenCloakFight.gameObject.SetActive(false);
-                    GameController.S.GreenCloakQueue.Enqueue(GreenCloakFight);
-
-                    GameObject GreenClothFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenClothFight"));
-                    GreenClothFight.gameObject.SetActive(false);
-                    GameController.S.GreenClothQueue.Enqueue(GreenClothFight);
-
-                    GameObject GreenRingFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenRingFight"));
-                    GreenRingFight.gameObject.SetActive(false);
-                    GameController.S.GreenRingQueue.Enqueue(GreenRingFight);
-
-                    GameObject GreenShoeFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenShoeFight"));
-                    GreenShoeFight.gameObject.SetActive(false);
-                    GameController.S.GreenShoeQueue.Enqueue(GreenShoeFight);
-
-                    GameObject GreenNecklaceFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenNecklaceFight"));
-                    GreenNecklaceFight.gameObject.SetActive(false);
-                    GameController.S.GreenNecklaceQueue.Enqueue(GreenNecklaceFight);
-
-                    GameObject GreenHelmetFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenHelmetFight"));
-                    GreenHelmetFight.gameObject.SetActive(false);
-                    GameController.S.GreenHelmetQueue.Enqueue(GreenHelmetFight);
-
-                }
-            }
-            
-
-            if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(3, equipType: 1)))
-            {
-                for (int i = 0; i < 20; i++)
-                {
-
-                    GameObject BlueCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueCloakFight"));
-                    BlueCloakFight.gameObject.SetActive(false);
-                    GameController.S.BlueCloakQueue.Enqueue(BlueCloakFight);
-
-                    GameObject BlueClothFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueClothFight"));
-                    BlueClothFight.gameObject.SetActive(false);
-                    GameController.S.BlueClothQueue.Enqueue(BlueClothFight);
-
-                    GameObject BlueRingFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueRingFight"));
-                    BlueRingFight.gameObject.SetActive(false);
-                    GameController.S.BlueRingQueue.Enqueue(BlueRingFight);
-
-                    GameObject BlueShoeFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueShoeFight"));
-                    BlueShoeFight.gameObject.SetActive(false);
-                    GameController.S.BlueShoeQueue.Enqueue(BlueShoeFight);
-
-                    GameObject BlueNecklaceFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueNecklaceFight"));
-                    BlueNecklaceFight.gameObject.SetActive(false);
-                    GameController.S.BlueNecklaceQueue.Enqueue(BlueNecklaceFight);
-
-                    GameObject BlueHelmetFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueHelmetFight"));
-                    BlueHelmetFight.gameObject.SetActive(false);
-                    GameController.S.BlueHelmetQueue.Enqueue(BlueHelmetFight);
-
-                }
-            }
-
-            if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(6, equipType: 1)))
-            {
-                for (int i = 0; i < 20; i++)
-                {
-
-
-                    GameObject ZhaoZeCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeCloakFight"));
-                    ZhaoZeCloakFight.gameObject.SetActive(false);
-                    GameController.S.ZhaoZeCloakQueue.Enqueue(ZhaoZeCloakFight);
-
-                    GameObject ZhaoZeClothFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeClothFight"));
-                    ZhaoZeClothFight.gameObject.SetActive(false);
-                    GameController.S.ZhaoZeClothQueue.Enqueue(ZhaoZeClothFight);
-
-                    GameObject ZhaoZeRingFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeRingFight"));
-                    ZhaoZeRingFight.gameObject.SetActive(false);
-                    GameController.S.ZhaoZeRingQueue.Enqueue(ZhaoZeRingFight);
-
-                    GameObject ZhaoZeShoeFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeShoeFight"));
-                    ZhaoZeShoeFight.gameObject.SetActive(false);
-                    GameController.S.ZhaoZeShoeQueue.Enqueue(ZhaoZeShoeFight);
-
-                    GameObject ZhaoZeNecklaceFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeNecklaceFight"));
-                    ZhaoZeNecklaceFight.gameObject.SetActive(false);
-                    GameController.S.ZhaoZeNecklaceQueue.Enqueue(ZhaoZeNecklaceFight);
-
-                    GameObject ZhaoZeHelmetFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeHelmetFight"));
-                    ZhaoZeHelmetFight.gameObject.SetActive(false);
-                    GameController.S.ZhaoZeHelmetQueue.Enqueue(ZhaoZeHelmetFight);
-
-                }
-            }
-
-
-
-
-
-            if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(7, equipType: 1)))
-            {
-                for (int i = 0; i < 20; i++)
-                {
-
-                    GameObject PurpleCloakFight1 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleCloakFight1"));
-                    PurpleCloakFight1.gameObject.SetActive(false);
-                    GameController.S.Purple1CloakQueue.Enqueue(PurpleCloakFight1);
-
-                    GameObject PurpleClothFight1 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleClothFight1"));
-                    PurpleClothFight1.gameObject.SetActive(false);
-                    GameController.S.Purple1ClothQueue.Enqueue(PurpleClothFight1);
-
-                    GameObject PurpleRingFight1 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleRingFight1"));
-                    PurpleRingFight1.gameObject.SetActive(false);
-                    GameController.S.Purple1RingQueue.Enqueue(PurpleRingFight1);
-
-                    GameObject PurpleShoeFight1 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleShoeFight1"));
-                    PurpleShoeFight1.gameObject.SetActive(false);
-                    GameController.S.Purple1ShoeQueue.Enqueue(PurpleShoeFight1);
-
-                    GameObject PurpleNecklaceFight1 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleNecklaceFight1"));
-                    PurpleNecklaceFight1.gameObject.SetActive(false);
-                    GameController.S.Purple1NecklaceQueue.Enqueue(PurpleNecklaceFight1);
-
-                    GameObject PurpleHelmetFight1 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/PurpleHelmetFight1"));
-                    PurpleHelmetFight1.gameObject.SetActive(false);
-                    GameController.S.Purple1HelmetQueue.Enqueue(PurpleHelmetFight1);
-
-                }
-            }
-
-
-
-
-
-            if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(101, equipType: 1)))
-            {
-                for (int i = 0; i < 20; i++)
-                {
-
-                    GameObject TreeManCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManCloakFight"));
-                    TreeManCloakFight.gameObject.SetActive(false);
-                    GameController.S.TreeManCloakQueue.Enqueue(TreeManCloakFight);
-
-                    GameObject TreeManClothFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManClothFight"));
-                    TreeManClothFight.gameObject.SetActive(false);
-                    GameController.S.TreeManClothQueue.Enqueue(TreeManClothFight);
-
-                    GameObject TreeManRingFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManRingFight"));
-                    TreeManRingFight.gameObject.SetActive(false);
-                    GameController.S.TreeManRingQueue.Enqueue(TreeManRingFight);
-
-                    GameObject TreeManShoeFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManShoeFight"));
-                    TreeManShoeFight.gameObject.SetActive(false);
-                    GameController.S.TreeManShoeQueue.Enqueue(TreeManShoeFight);
-
-                    GameObject TreeManNecklaceFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManNecklaceFight"));
-                    TreeManNecklaceFight.gameObject.SetActive(false);
-                    GameController.S.TreeManNecklaceQueue.Enqueue(TreeManNecklaceFight);
-
-                    GameObject TreeManHelmetFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManHelmetFight"));
-                    TreeManHelmetFight.gameObject.SetActive(false);
-                    GameController.S.TreeManHelmetQueue.Enqueue(TreeManHelmetFight);
-
-                }
-            }
-
-            if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(102, equipType: 1)))
-            {
-                for (int i = 0; i < 20; i++)
-                {
-
-                    GameObject HuoShanCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanCloakFight"));
-                    HuoShanCloakFight.gameObject.SetActive(false);
-                    GameController.S.HuoShanCloakQueue.Enqueue(HuoShanCloakFight);
-
-                    GameObject HuoShanClothFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanClothFight"));
-                    HuoShanClothFight.gameObject.SetActive(false);
-                    GameController.S.HuoShanClothQueue.Enqueue(HuoShanClothFight);
-
-                    GameObject HuoShanRingFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanRingFight"));
-                    HuoShanRingFight.gameObject.SetActive(false);
-                    GameController.S.HuoShanRingQueue.Enqueue(HuoShanRingFight);
-
-                    GameObject HuoShanShoeFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanShoeFight"));
-                    HuoShanShoeFight.gameObject.SetActive(false);
-                    GameController.S.HuoShanShoeQueue.Enqueue(HuoShanShoeFight);
-
-                    GameObject HuoShanNecklaceFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanNecklaceFight"));
-                    HuoShanNecklaceFight.gameObject.SetActive(false);
-                    GameController.S.HuoShanNecklaceQueue.Enqueue(HuoShanNecklaceFight);
-
-                    GameObject HuoShanHelmetFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanHelmetFight"));
-                    HuoShanHelmetFight.gameObject.SetActive(false);
-                    GameController.S.HuoShanHelmetQueue.Enqueue(HuoShanHelmetFight);
-
-                }
-            }
-
-            if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(4, equipType: 1)))
-            {
-                for (int i = 0; i < 20; i++)
-                {
-
-                    GameObject PurpleCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleCloakFight"));
-                    PurpleCloakFight.gameObject.SetActive(false);
-                    GameController.S.PurpleCloakQueue.Enqueue(PurpleCloakFight);
-
-                    GameObject PurpleClothFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleClothFight"));
-                    PurpleClothFight.gameObject.SetActive(false);
-                    GameController.S.PurpleClothQueue.Enqueue(PurpleClothFight);
-
-                    GameObject PurpleRingFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleRingFight"));
-                    PurpleRingFight.gameObject.SetActive(false);
-                    GameController.S.PurpleRingQueue.Enqueue(PurpleRingFight);
-
-                    GameObject PurpleShoeFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleShoeFight"));
-                    PurpleShoeFight.gameObject.SetActive(false);
-                    GameController.S.PurpleShoeQueue.Enqueue(PurpleShoeFight);
-
-                    GameObject PurpleNecklaceFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleNecklaceFight"));
-                    PurpleNecklaceFight.gameObject.SetActive(false);
-                    GameController.S.PurpleNecklaceQueue.Enqueue(PurpleNecklaceFight);
-
-                    GameObject PurpleHelmetFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleHelmetFight"));
-                    PurpleHelmetFight.gameObject.SetActive(false);
-                    GameController.S.PurpleHelmetQueue.Enqueue(PurpleHelmetFight);
-                }
-            }
-
-            if (LevelInfoConfig.IsHaveDiaoLuo(LevelInfoConfig.GetDiaoLuoList(), new DiaoLuoConfig(5, equipType: 1)))
-            {
-                for (int i = 0; i < 20; i++)
-                {
-
-                    GameObject OrangeCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeCloakFight"));
-                    OrangeCloakFight.gameObject.SetActive(false);
-                    OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
-                    GameController.S.OrangeCloakQueue.Enqueue(OrangeCloakFight);
-
-                    GameObject OrangeClothFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeClothFight"));
-                    OrangeClothFight.gameObject.SetActive(false);
-                    OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
-                    GameController.S.OrangeClothQueue.Enqueue(OrangeClothFight);
-
-                    GameObject OrangeRingFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeRingFight"));
-                    OrangeRingFight.gameObject.SetActive(false);
-                    OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
-                    GameController.S.OrangeRingQueue.Enqueue(OrangeRingFight);
-
-                    GameObject OrangeShoeFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeShoeFight"));
-                    OrangeShoeFight.gameObject.SetActive(false);
-                    OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
-                    GameController.S.OrangeShoeQueue.Enqueue(OrangeShoeFight);
-
-                    GameObject OrangeNecklaceFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeNecklaceFight"));
-                    OrangeNecklaceFight.gameObject.SetActive(false);
-                    OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
-                    GameController.S.OrangeNecklaceQueue.Enqueue(OrangeNecklaceFight);
-
-                    GameObject OrangeHelmetFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/OrangeHelmetFight"));
-                    OrangeHelmetFight.gameObject.SetActive(false);
-                    OrangeCloakFight.GetComponent<EquipBase>().enabled = true;
-                    GameController.S.OrangeHelmetQueue.Enqueue(OrangeHelmetFight);
-                }
-            }
-            
-
-            if (LevelInfoConfig.CurrentGameLevel > 15)
-            {
-                for (int i = 0; i < 5; i++)
-                {
-
-                    //传说装备
-
-                    GameObject FinalDamageReductionFixed =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/FinalDamageReductionFixed"));
-                    FinalDamageReductionFixed.gameObject.SetActive(false);
-                    GameController.S.FinalDamageReductionFixedQueue.Enqueue(FinalDamageReductionFixed);
-
-                    GameObject FinalDamageReductionPercent =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/FinalDamageReductionPercent"));
-                    FinalDamageReductionPercent.gameObject.SetActive(false);
-                    GameController.S.FinalDamageReductionPercentQueue.Enqueue(FinalDamageReductionPercent);
-
-                    GameObject AllReplyAddPercent =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/AllReplyAddPercent"));
-                    AllReplyAddPercent.gameObject.SetActive(false);
-                    GameController.S.AllReplyAddPercentQueue.Enqueue(AllReplyAddPercent);
-
-                    GameObject AddHpForTime =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/AddHpForTime"));
-                    AddHpForTime.gameObject.SetActive(false);
-                    GameController.S.AddHpForTimeQueue.Enqueue(AddHpForTime);
-
-                    GameObject AddDefenseForTime =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/AddDefenseForTime"));
-                    AddDefenseForTime.gameObject.SetActive(false);
-                    GameController.S.AddDefenseForTimeQueue.Enqueue(AddDefenseForTime);
-
-                    GameObject ReplyDeath =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/ReplyDeath"));
-                    ReplyDeath.gameObject.SetActive(false);
-                    GameController.S.ReplyDeathQueue.Enqueue(ReplyDeath);
-
-                    GameObject DelayDamage =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/DelayDamage"));
-                    DelayDamage.gameObject.SetActive(false);
-                    GameController.S.DelayDamageQueue.Enqueue(DelayDamage);
-
-                    GameObject HpReductionReplyAdd50 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/HpReductionReplyAdd50"));
-                    HpReductionReplyAdd50.gameObject.SetActive(false);
-                    GameController.S.HpReductionReplyAdd50Queue.Enqueue(HpReductionReplyAdd50);
-
-                    GameObject HpReductionAddDefense =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/HpReductionAddDefense"));
-                    HpReductionAddDefense.gameObject.SetActive(false);
-                    GameController.S.HpReductionAddDefenseQueue.Enqueue(HpReductionAddDefense);
-
-                    GameObject FinalDamageAddPercent =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/FinalDamageAddPercent"));
-                    FinalDamageAddPercent.gameObject.SetActive(false);
-                    GameController.S.FinalDamageAddPercentQueue.Enqueue(FinalDamageAddPercent);
-
-                    GameObject KillNormal =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/KillNormal"));
-                    KillNormal.gameObject.SetActive(false);
-                    GameController.S.KillNormalQueue.Enqueue(KillNormal);
-
-                    GameObject AddAttackForTime =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/AddAttackForTime"));
-                    AddAttackForTime.gameObject.SetActive(false);
-                    GameController.S.AddAttackForTimeQueue.Enqueue(AddAttackForTime);
-
-                    GameObject NormalAddDamage =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NormalAddDamage"));
-                    NormalAddDamage.gameObject.SetActive(false);
-                    GameController.S.NormalAddDamageQueue.Enqueue(NormalAddDamage);
-
-                    GameObject RecudeHpAddAttack =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/RecudeHpAddAttack"));
-                    RecudeHpAddAttack.gameObject.SetActive(false);
-                    GameController.S.RecudeHpAddAttackQueue.Enqueue(RecudeHpAddAttack);
-
-                    GameObject JianSuAddAttack =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/JianSuAddAttack"));
-                    JianSuAddAttack.gameObject.SetActive(false);
-                    GameController.S.JianSuAddAttackQueue.Enqueue(JianSuAddAttack);
-
-                    GameObject FanPuGuiZhen =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/FanPuGuiZhen"));
-                    FanPuGuiZhen.gameObject.SetActive(false);
-                    GameController.S.FanPuGuiZhenQueue.Enqueue(FanPuGuiZhen);
-
-                    GameObject NoSkill =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NoSkill"));
-                    NoSkill.gameObject.SetActive(false);
-                    GameController.S.NoSkillQueue.Enqueue(NoSkill);
-
-                    GameObject BuWangChuXin =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/BuWangChuXin"));
-                    BuWangChuXin.gameObject.SetActive(false);
-                    GameController.S.BuWangChuXinQueue.Enqueue(BuWangChuXin);
-
-                    GameObject HeiDongAddSpeed =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/HeiDongAddSpeed"));
-                    HeiDongAddSpeed.gameObject.SetActive(false);
-                    GameController.S.HeiDongAddSpeedQueue.Enqueue(HeiDongAddSpeed);
-
-                    GameObject DuAddDuQuan =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/DuAddDuQuan"));
-                    DuAddDuQuan.gameObject.SetActive(false);
-                    GameController.S.DuAddDuQuanQueue.Enqueue(DuAddDuQuan);
-
-                    GameObject LvQuanAddScale =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/LvQuanAddScale"));
-                    LvQuanAddScale.gameObject.SetActive(false);
-                    GameController.S.LvQuanAddScaleQueue.Enqueue(LvQuanAddScale);
-
-                    GameObject XuKongAdd2Dan =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/XuKongAdd2Dan"));
-                    XuKongAdd2Dan.gameObject.SetActive(false);
-                    GameController.S.XuKongAdd2DanQueue.Enqueue(XuKongAdd2Dan);
-
-                    GameObject PuTong3ChuanTou =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/PuTong3ChuanTou"));
-                    PuTong3ChuanTou.gameObject.SetActive(false);
-                    GameController.S.PuTong3ChuanTouQueue.Enqueue(PuTong3ChuanTou);
-
-                    GameObject FireBaoZha1 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/FireBaoZha"));
-                    FireBaoZha1.gameObject.SetActive(false);
-                    GameController.S.FireBaoZhaQueue.Enqueue(FireBaoZha1);
-
-                    GameObject Skill1ReplaceNormalAttack =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill1ReplaceNormalAttack"));
-                    Skill1ReplaceNormalAttack.gameObject.SetActive(false);
-                    GameController.S.Skill1ReplaceNormalAttackQueue.Enqueue(Skill1ReplaceNormalAttack);
-
-                    GameObject Skill1YiDianDouble =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill1YiDianDouble"));
-                    Skill1YiDianDouble.gameObject.SetActive(false);
-                    GameController.S.Skill1YiDianDoubleQueue.Enqueue(Skill1YiDianDouble);
-
-                    GameObject Skill1AddRange =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/Skill1AddRange"));
-                    Skill1AddRange.gameObject.SetActive(false);
-                    GameController.S.Skill1AddRangeQueue.Enqueue(Skill1AddRange);
-
-                    GameObject Skill2AddDan =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill2AddDan"));
-                    Skill2AddDan.gameObject.SetActive(false);
-                    GameController.S.Skill2AddDanQueue.Enqueue(Skill2AddDan);
-
-                    GameObject Skill2RotateAdd =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill2RotateAdd"));
-                    Skill2RotateAdd.gameObject.SetActive(false);
-                    GameController.S.Skill2RotateAddQueue.Enqueue(Skill2RotateAdd);
-
-                    GameObject Skill2AddRange =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/Skill2AddRange"));
-                    Skill2AddRange.gameObject.SetActive(false);
-                    GameController.S.Skill2AddRangeQueue.Enqueue(Skill2AddRange);
-
-                    GameObject Skill3Bian3 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill3Bian3"));
-                    Skill3Bian3.gameObject.SetActive(false);
-                    GameController.S.Skill3Bian3Queue.Enqueue(Skill3Bian3);
-
-                    GameObject Skill3AddRange =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill3AddRange"));
-                    Skill3AddRange.gameObject.SetActive(false);
-                    GameController.S.Skill3AddRangeQueue.Enqueue(Skill3AddRange);
-
-                    GameObject DashCd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/DashCd"));
-                    DashCd.gameObject.SetActive(false);
-                    GameController.S.DashCdQueue.Enqueue(DashCd);
-
-                    GameObject DashRange =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/DashRange"));
-                    DashRange.gameObject.SetActive(false);
-                    GameController.S.DashRangeQueue.Enqueue(DashRange);
-
-                    GameObject MoveSpeedAdd =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/MoveSpeedAdd"));
-                    MoveSpeedAdd.gameObject.SetActive(false);
-                    GameController.S.MoveSpeedAddQueue.Enqueue(MoveSpeedAdd);
-
-                    GameObject ExAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/ExAdd"));
-                    ExAdd.gameObject.SetActive(false);
-                    GameController.S.ExAddQueue.Enqueue(ExAdd);
-
-                    GameObject ClothFortureAdd =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/ClothFortureAdd"));
-                    ClothFortureAdd.gameObject.SetActive(false);
-                    GameController.S.ClothFortureAddQueue.Enqueue(ClothFortureAdd);
-
-                    GameObject ShoeFortureAdd =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/ShoeFortureAdd"));
-                    ShoeFortureAdd.gameObject.SetActive(false);
-                    GameController.S.ShoeFortureAddQueue.Enqueue(ShoeFortureAdd);
-
-                    GameObject CloakFortureAdd =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/CloakFortureAdd"));
-                    CloakFortureAdd.gameObject.SetActive(false);
-                    GameController.S.CloakFortureAddQueue.Enqueue(CloakFortureAdd);
-
-                    GameObject NecklaceFortureAdd =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NecklaceFortureAdd"));
-                    NecklaceFortureAdd.gameObject.SetActive(false);
-                    GameController.S.NecklaceFortureAddQueue.Enqueue(NecklaceFortureAdd);
-
-                    GameObject RingFortureAdd =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/RingFortureAdd"));
-                    RingFortureAdd.gameObject.SetActive(false);
-                    GameController.S.RingFortureAddQueue.Enqueue(RingFortureAdd);
-
-                    GameObject HelmetFortureAdd =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/HelmetFortureAdd"));
-                    HelmetFortureAdd.gameObject.SetActive(false);
-                    GameController.S.HelmetFortureAddQueue.Enqueue(HelmetFortureAdd);
-
-                }
-            }
-
-
-
-
-            /*
-            for (int i = 0; i < 200; i++)
-        {
-            GameObject bloodEnergy = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BloodEnergy"));
-            bloodEnergy.gameObject.SetActive(false);
-            GameController.S.BloodEnergyQueue.Enqueue(bloodEnergy);
-        }
-        */
-
+        //初始化装备和道具队列
+       LevelInfoConfig.InitEquipQueue();
+       LevelInfoConfig.InitPropQueue();
+       
             for (int i = 0; i < 200; i++)
             {
                 GameObject monsterHurtText = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/MonsterHurtText"));
@@ -2778,20 +2818,14 @@ public class Entrance : MonoBehaviour
                     GameController.S.XieZiSkill4Queue.Enqueue(xieziskill4);
                 }
             }
-
-
-
+            
 
 
             GameController.S.fightBG = Instantiate(Resources.Load<GameObject>("Prefabs/Window/FightBG"),
                 GameController.S.transform);
             GameController.S.fightBG.transform.position = new Vector3(0, 0, 0.1f);
             GameController.S.monsterHpSliderPrefabs = Resources.Load<GameObject>("Prefabs/Tool/MonsterHPBloodBar");
-
-
-
-
-
+        
             GameController.S.CreatePlayer();
         }
     }

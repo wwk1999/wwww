@@ -21,6 +21,10 @@ using Random = UnityEngine.Random;
 
 public class GameController : XSingleton<GameController>
 {
+    [NonSerialized] public MonsterTypeByName EliteMonster = MonsterTypeByName.None;
+    [NonSerialized] public List<MonsterTypeByName> NormalMonster = null;
+    [NonSerialized] public MonsterTypeByName Boss = MonsterTypeByName.None;
+
     [NonSerialized]public HashSet<EquipBase> EquipBaseSet = new HashSet<EquipBase>();
     [NonSerialized]public HashSet<PropBase> PropBaseSet = new HashSet<PropBase>();
 
@@ -507,13 +511,22 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>ZuiEYanZhuQueue = new Queue<GameObject>();
     
     
+    //宠物蛋
+    [NonReorderable]public Queue<ChongWuDanFight>ChongWuDanQueue = new Queue<ChongWuDanFight>();
+    [NonReorderable]public Queue<XiSuiYeFight>XiSuiYeQueue = new Queue<XiSuiYeFight>();
+    [NonReorderable]public Queue<XueMaiDanFight>XueMaiDanQueue = new Queue<XueMaiDanFight>();
+    [NonReorderable]public Queue<ChongWuSkillShuFight>ChongWuSkillShuQueue = new Queue<ChongWuSkillShuFight>();
+    [NonReorderable]public Queue<ChongWuShiWuFight>ChongWuShiWuQueue = new Queue<ChongWuShiWuFight>();
+    [NonReorderable]public Queue<DaKongShiFight>DaKongShiQueue = new Queue<DaKongShiFight>();
+    [NonReorderable]public Queue<ShenHuaCaiLiaoFight>ShenHuaCaiLiaoQueue = new Queue<ShenHuaCaiLiaoFight>();
+
     //羽毛
-    [NonReorderable]public Queue<GameObject>WhiteChiBang = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GreenChiBang = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BlueChiBang = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PurpleChiBang = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>OrangeChiBang = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>RedChiBang = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>WhiteChiBangQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>GreenChiBangQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>BlueChiBangQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>PurpleChiBangQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>OrangeChiBangQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>RedChiBangQueue = new Queue<GameObject>();
 
 
    
@@ -633,17 +646,17 @@ public class GameController : XSingleton<GameController>
                 switch (prop.Quality)
                 {
                     case 1:
-                        return WhiteChiBang.Dequeue();
+                        return WhiteChiBangQueue.Dequeue();
                     case 2:
-                        return GreenChiBang.Dequeue();
+                        return GreenChiBangQueue.Dequeue();
                     case 3:
-                        return BlueChiBang.Dequeue();
+                        return BlueChiBangQueue.Dequeue();
                     case 4:
-                        return PurpleChiBang.Dequeue();
+                        return PurpleChiBangQueue.Dequeue();
                     case 5:
-                        return OrangeChiBang.Dequeue();
+                        return OrangeChiBangQueue.Dequeue();
                     case 6:
-                        return RedChiBang.Dequeue();
+                        return RedChiBangQueue.Dequeue();
                 }
                 break;
             case PropConfig.PropType.AA:
@@ -1729,71 +1742,33 @@ public class GameController : XSingleton<GameController>
         // 乘以半径并加上玩家位置
         return pos;
     }
-    
+
     public void CreateEliteMonster()
     {
         if (GameOver)
             return;
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
-        MonsterBase eliteMonster = null;
 
-        if (LevelInfoConfig.CurrentGameLevel > 100 && LevelInfoConfig.CurrentGameLevel < 200)
+        List<MonsterTypeByName> monsterList = null;
+        monsterList = LevelInfoConfig.LevelMonsterDic[LevelInfoConfig.CurrentGameLevel];
+        if (EliteMonster == MonsterTypeByName.None)
         {
-            List<MonsterTypeByName> monsterList = null;
-            switch (LevelInfoConfig.CurrentGameLevel)
+            foreach (var item in monsterList)
             {
-                case 101:
-                    monsterList = LevelInfoConfig.LevelMonster101;
+                if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Elite)
+                {
+                    EliteMonster = item;
                     break;
-                case 102:
-                    monsterList = LevelInfoConfig.LevelMonster102;
-                    break;
-                case 103:
-                    monsterList = LevelInfoConfig.LevelMonster103;
-                    break;
-                case 104:
-                    monsterList = LevelInfoConfig.LevelMonster104;
-                    break;
-                case 105:
-                    monsterList = LevelInfoConfig.LevelMonster105;
-                    break;
-                case 106:
-                    monsterList = LevelInfoConfig.LevelMonster106;
-                    break;
+                }
             }
-
-            eliteMonster = LevelInfoConfig.GetMonster(monsterList[2]);
-        }
-        
-        if ( LevelInfoConfig.CurrentGameLevel == 2|| LevelInfoConfig.CurrentGameLevel ==3)
-        {
-            eliteMonster = shuangtourenQueue.Dequeue();
-        }
-        if ( LevelInfoConfig.CurrentGameLevel ==5 || LevelInfoConfig.CurrentGameLevel ==6)
-        {
-            eliteMonster = EliteDaZuiMonsterQueue.Dequeue();
         }
 
-        if (LevelInfoConfig.CurrentGameLevel == 8 || LevelInfoConfig.CurrentGameLevel == 9 )
-        {
-            eliteMonster = ShiRenHuaMonsterQueue.Dequeue();
-        }
-        
-        if (LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 12 )
-        {
-            eliteMonster = ShaXiYiQueue.Dequeue();
-        }
-        
-        if (LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15 )
-        {
-            eliteMonster = YingShuQueue.Dequeue();
-        }
-        
-        eliteMonster.gameObject.SetActive(true);
-        eliteMonster.CurrentHp = eliteMonster.MaxHp;
-        eliteMonster.transform.position = monsterRandomPoint;
-        eliteMonster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, eliteMonster.MonsterSpineName.MoveName, true);
-        eliteMonster.hpSliderCanvas.sortingOrder = 2000+EliteMonsterCount;
+        MonsterBase monster = LevelInfoConfig.GetMonster(EliteMonster);
+        monster.gameObject.SetActive(true);
+        monster.CurrentHp = monster.MaxHp;
+        monster.transform.position = monsterRandomPoint;
+        monster.monsterSkeletonAnimation.AnimationState.SetAnimation(0, monster.MonsterSpineName.MoveName, true);
+        monster.hpSliderCanvas.sortingOrder = 2000 + EliteMonsterCount;
         TotalMonsterCount++;
         EliteMonsterCount++;
     }
@@ -1811,271 +1786,20 @@ public class GameController : XSingleton<GameController>
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
         MonsterBase monsterBase=null;
         //宠物关卡
-        if (LevelInfoConfig.CurrentGameLevel > 100 && LevelInfoConfig.CurrentGameLevel < 200)
+        if (NormalMonster == null)
         {
-            List<MonsterTypeByName> monsterList = null;
-            switch (LevelInfoConfig.CurrentGameLevel)
+            List<MonsterTypeByName> monsterList=LevelInfoConfig.LevelMonsterDic[LevelInfoConfig.CurrentGameLevel];
+            foreach (var item in monsterList)
             {
-                case 101:
-                    monsterList = LevelInfoConfig.LevelMonster101;
-                    break;
-                case 102:
-                    monsterList = LevelInfoConfig.LevelMonster102;
-                    break;
-                case 103:
-                    monsterList = LevelInfoConfig.LevelMonster103;
-                    break;
-                case 104:
-                    monsterList = LevelInfoConfig.LevelMonster104;
-                    break;
-                case 105:
-                    monsterList = LevelInfoConfig.LevelMonster105;
-                    break;
-                case 106:
-                    monsterList = LevelInfoConfig.LevelMonster106;
-                    break;
-            }
-
-            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
-            {
-                if (NormalMonsterCount % 2 == 0)
+                if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Normal)
                 {
-                    monsterBase = LevelInfoConfig.GetMonster(monsterList[0]);
+                    NormalMonster.Add(item);
                 }
-                else
-                {
-                    monsterBase = LevelInfoConfig.GetMonster(monsterList[1]);
-                }
-            }
-            else
-            {
-                return;
-            }
-        }
-        if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 || LevelInfoConfig.CurrentGameLevel == 3)
-        {
-            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
-            {
-                if (NormalMonsterCount % 3 == 0)
-                {
-                    monsterBase = DaLongQueue.Dequeue();
-                }
-                else if (NormalMonsterCount % 3 == 1)
-                {
-                    monsterBase = DaLongQueue.Dequeue();
-                }
-                else
-                {
-                    monsterBase = DaLongQueue.Dequeue();
-                }
-            }
-            else
-            {
-                return;
             }
         }
 
-        else if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 || LevelInfoConfig.CurrentGameLevel == 6)
-        {
-            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
-            {
-                if (NormalMonsterCount % 3 == 0)
-                {
-                    monsterBase = ChongZiMonsterQueue.Dequeue();
-                }
-                else if (NormalMonsterCount % 3 == 1)
-                {
-                    monsterBase = DunDiMonsterQueue.Dequeue();
-                }
-                else
-                {
-                    monsterBase = XiaoHuoMonsterQueue.Dequeue();
-                }
-            }
-            else
-            {
-                return;
-            }
-        }
-        
-        
-        else if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 8 || LevelInfoConfig.CurrentGameLevel == 9)
-        {
-            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
-            {
-                if (NormalMonsterCount % 3 == 0)
-                {
-                    monsterBase = WenZiMonsterQueue.Dequeue();
-                }
-                else if (NormalMonsterCount % 3 == 1)
-                {
-                    monsterBase = QingWaMonsterQueue.Dequeue();
-                }
-                else
-                {
-                    monsterBase = JiaChongMonsterQueue.Dequeue();
-                }
-            }
-            else
-            {
-                return;
-            }
-        }
-        
-        else if (LevelInfoConfig.CurrentGameLevel == 10 || LevelInfoConfig.CurrentGameLevel == 11 || LevelInfoConfig.CurrentGameLevel == 12)
-        {
-            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
-            {
-                if (NormalMonsterCount % 3 == 0)
-                {
-                    monsterBase = ShaChongQueue.Dequeue();
-                }
-                else if (NormalMonsterCount % 3 == 1)
-                {
-                    monsterBase = ShaNiaoQueue.Dequeue();
-                }
-                else
-                {
-                    monsterBase =XianRenZhangQueue.Dequeue();
-                }
-            }
-            else
-            {
-                return;
-            }
-        }
-        
-        
-        else if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 || LevelInfoConfig.CurrentGameLevel == 15)
-        {
-            if (NormalMonsterCount < LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
-            {
-                if (NormalMonsterCount % 3 == 0)
-                {
-                    monsterBase = XueQiEQueue.Dequeue();
-                }
-                else if (NormalMonsterCount % 3 == 1)
-                {
-                    monsterBase = XueZhangLangQueue.Dequeue();
-                }
-                else
-                {
-                    monsterBase =XueRenQueue.Dequeue();
-                }
-            }
-            else
-            {
-                return;
-            }
-        }else if (LevelInfoConfig.CurrentGameLevel > 15&&LevelInfoConfig.CurrentGameLevel < 100)
-        {
-            if (NormalMonsterCount >= LevelInfoConfig.LevelMonsterCount[15+(int)PlayerData.S.mJShowLevel])
-            {
-                return;
-            }
-            var random=new System.Random();
-            int index=random.Next(1,3);
-
-            switch (PlayerData.S.mJShowLevel)
-            {
-                case MJLevel.White:
-                    switch (index)
-                    {
-                        case 1:
-                            monsterBase = EMo1Queue.Dequeue();
-                            break;
-                        case 2:
-                            monsterBase = HongLong1Queue.Dequeue();
-                            break;
-                    }
-                    break;
-                case MJLevel.Green:
-                    switch (index)
-                    {
-                        case 1:
-                            monsterBase = LanLong1Queue.Dequeue();
-                            break;
-                        case 2:
-                            monsterBase = LvLong1Queue.Dequeue();
-                            break;
-                    }
-                    break;
-                
-                case MJLevel.Blue:
-                    switch (index)
-                    {
-                        case 1:
-                            monsterBase = DaLongQueue.Dequeue();
-                            break;
-                        case 2:
-                            monsterBase = LvLangQueue.Dequeue();
-                            break;
-                    }
-                    break;
-                
-                case MJLevel.Purple:
-                    switch (index)
-                    {
-                        case 1:
-                            monsterBase = EMo2Queue.Dequeue();
-                            break;
-                        case 2:
-                            monsterBase = HongLong2Queue.Dequeue();
-                            break;
-                    }
-                    break;
-                
-                case MJLevel.Orange:
-                    switch (index)
-                    {
-                        case 1:
-                            monsterBase = LanLong2Queue.Dequeue();
-                            break;
-                        case 2:
-                            monsterBase = LvLong2Queue.Dequeue();
-                            break;
-                    }
-                    break;
-                
-                case MJLevel.Red1:
-                    switch (index)
-                    {
-                        case 1:
-                            monsterBase = HuangShuQueue.Dequeue();
-                            break;
-                        case 2:
-                            monsterBase = HuangZhuQueue.Dequeue();
-                            break;
-                    }
-                    break;
-                
-                case MJLevel.Red2:
-                    switch (index)
-                    {
-                        case 1:
-                            monsterBase = EMo3Queue.Dequeue();
-                            break;
-                        case 2:
-                            monsterBase = HongLong3Queue.Dequeue();
-                            break;
-                    }
-                    break;
-                
-                case MJLevel.Red3:
-                    switch (index)
-                    {
-                        case 1:
-                            monsterBase = LanLong3Queue.Dequeue();
-                            break;
-                        case 2:
-                            monsterBase = LvLong3Queue.Dequeue();
-                            break;
-                    }
-                    break;
-                
-            }
-        }
-
+        var random = Random.Range(0, NormalMonster.Count);
+        monsterBase=LevelInfoConfig.GetMonster(NormalMonster[random]);
         if (monsterBase == null)
         {
             return;

@@ -25,6 +25,8 @@ public class PlayerEquipConfig : MonoBehaviour
         HuoShan ,
         ZhaoZe,
         Purple1,
+        XieZi,
+        XueRen,
         OrangeEntry
     }
     

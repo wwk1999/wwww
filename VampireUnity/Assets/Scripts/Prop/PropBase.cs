@@ -134,22 +134,22 @@ public class PropBase : MonoBehaviour
                 switch (propTable.Quality)
                 {
                     case 1:
-                        GameController.S.WhiteChiBang.Enqueue(gameObject);
+                        GameController.S.WhiteChiBangQueue.Enqueue(gameObject);
                         break;
                     case 2:
-                        GameController.S.GreenChiBang.Enqueue(gameObject);
+                        GameController.S.GreenChiBangQueue.Enqueue(gameObject);
                         break;
                     case 3:
-                        GameController.S.BlueChiBang.Enqueue(gameObject);
+                        GameController.S.BlueChiBangQueue.Enqueue(gameObject);
                         break;
                     case 4:
-                        GameController.S.PurpleChiBang.Enqueue(gameObject);
+                        GameController.S.PurpleChiBangQueue.Enqueue(gameObject);
                         break;
                     case 5:
-                        GameController.S.OrangeChiBang.Enqueue(gameObject);
+                        GameController.S.OrangeChiBangQueue.Enqueue(gameObject);
                         break;
                     case6:
-                        GameController.S.RedChiBang.Enqueue(gameObject);
+                        GameController.S.RedChiBangQueue.Enqueue(gameObject);
                         break;
                 }
                 break;
@@ -165,6 +165,8 @@ public class PropBase : MonoBehaviour
             case PropConfig.PropType.DD:
                 GameController.S.BaoShiQueue.Enqueue(this as BaoShi);
                 break;
+            
+            
 
         }
     }

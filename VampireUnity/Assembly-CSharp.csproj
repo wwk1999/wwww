@@ -224,6 +224,7 @@
     <Compile Include="Assets\Scripts\Store\EquipIDData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\Scripts\Prop\DaKongShiFight.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\kulou5.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleRing1.cs" />
     <Compile Include="Assets\Scripts\Mysql\UserController.cs" />
@@ -245,6 +246,7 @@
     <Compile Include="Assets\Scripts\Equip\XiLianGrid.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanCloth.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\RecudeHpAddAttack.cs" />
+    <Compile Include="Assets\Scripts\Prop\XueMaiDanFight.cs" />
     <Compile Include="Assets\Scripts\Window\MonsterBook.cs" />
     <Compile Include="Assets\Scripts\Equip\BagPanel.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\dijingzhanglao.cs" />
@@ -437,6 +439,7 @@
     <Compile Include="Assets\Scripts\Equip\BagGrid.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\wuyaozhiwang2.cs" />
+    <Compile Include="Assets\Scripts\Prop\ChongWuDanFight.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\PuTong3\PuTong3.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiAnBaoZha\HeiAnBaoZhaNext.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenJian.cs" />
@@ -490,6 +493,7 @@
     <Compile Include="Assets\Scripts\Tool\ReturnButton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Scripts\Tool\ButtonHoverHandler.cs" />
+    <Compile Include="Assets\Scripts\Prop\XiSuiYeFight.cs" />
     <Compile Include="Assets\Scripts\Gun\PistolBullet.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\dazongxiong.cs" />
     <Compile Include="Assets\Scripts\Equip\HuoShanBoss\HuoShanHelmet.cs" />
@@ -647,12 +651,14 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\LuoLei\LuoLei.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuItemSwitch.cs" />
     <Compile Include="Assets\Scripts\Window\TuJianItem.cs" />
+    <Compile Include="Assets\Scripts\Prop\ChongWuShiWuFight.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BossDiLieTrigger.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoQuXian\HuoQuXian.cs" />
     <Compile Include="Assets\Scripts\Config\MJConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\BagObjectBase.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\ZuiEYanZhu.cs" />
     <Compile Include="Assets\Scripts\Equip\TreeMan\TreeManCloak.cs" />
+    <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiaoFight.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoDiPen\HuoDiPenAnim.cs" />
     <Compile Include="Assets\Scripts\FightWeaponSourceStone\Penetrate.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong3.cs" />
@@ -669,6 +675,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\HeiDongAddSpeed.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\HelmetFortureAdd.cs" />
+    <Compile Include="Assets\Scripts\Prop\ChongWuSkillShuFight.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueQiE.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\DianLuoLei\DianLuoLeiNextAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LvLong2.cs" />

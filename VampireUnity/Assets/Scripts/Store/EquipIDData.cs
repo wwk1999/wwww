@@ -361,6 +361,105 @@ public class EquipIDData : XSingleton<EquipIDData>
                         break;
                 }
                 break;
+            
+            case PropConfig.PropType.ChongWuDan:
+                switch (prop.Quality)
+                {
+                    case 3:
+                        value = 1603;
+                        break;
+                    case 5:
+                        value = 1605;
+                        break;
+                }
+                break;
+            
+            
+            case PropConfig.PropType.XiSuiYe:
+                switch (prop.Quality)
+                {
+                    case 3:
+                        value = 1703;
+                        break;
+                    case 5:
+                        value = 1705;
+                        break;
+                }
+                break;
+            
+            case PropConfig.PropType.XueMaiDan:
+                switch (prop.Quality)
+                {
+                    case 3:
+                        value = 1803;
+                        break;
+                    case 5:
+                        value = 1805;
+                        break;
+                }
+                break;
+            
+            
+            
+            case PropConfig.PropType.SkillShu:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 2201;
+                        break;
+                    case 2:
+                        value = 2202;
+                        break;
+                    case 3:
+                        value = 2203;
+                        break;
+                    case 4:
+                        value = 2204;
+                        break;
+                    case 5:
+                        value = 2205;
+                        break;
+                    case 6:
+                        value = 2206;
+                        break;
+                }
+                break;
+            
+            
+            
+            case PropConfig.PropType.ChongWuShiWu:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        value = 2301;
+                        break;
+                    case 2:
+                        value = 2302;
+                        break;
+                    case 3:
+                        value = 2303;
+                        break;
+                    case 4:
+                        value = 2304;
+                        break;
+                    case 5:
+                        value = 2305;
+                        break;
+                    case 6:
+                        value = 2306;
+                        break;
+                }
+
+                break;
+                
+            case PropConfig.PropType.DaKongShi:
+                switch (prop.Quality)
+                {
+                    case 5:
+                        value = 2405;
+                        break;
+                }
+                break;
         }
        
         if (propTables.ContainsKey(value))

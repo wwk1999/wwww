@@ -87,36 +87,36 @@ public class ChongWuInfo : MonoBehaviour
         {
             case 1:
                 Name1.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonster101;
+                monsterList = LevelInfoConfig.LevelMonsterDic[101];
                 diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[1];
                 break;
             case 2:
                 Name2.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonster102;
+                monsterList = LevelInfoConfig.LevelMonsterDic[102];
                 diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[2];
 
                 break;
             case 3:
                 Name3.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonster103;
+                monsterList = LevelInfoConfig.LevelMonsterDic[103];
                 diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[3];
 
                 break;
             case 4:
                 Name4.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonster104;
+                monsterList = LevelInfoConfig.LevelMonsterDic[104];
                 diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[4];
 
                 break;
             case 5:
                 Name5.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonster105;
+                monsterList = LevelInfoConfig.LevelMonsterDic[105];
                 diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[5];
 
                 break;
             case 6:
                 Name6.gameObject.SetActive(true);                
-                monsterList = LevelInfoConfig.LevelMonster106;
+                monsterList = LevelInfoConfig.LevelMonsterDic[106];
                 diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[6];
 
                 break;
