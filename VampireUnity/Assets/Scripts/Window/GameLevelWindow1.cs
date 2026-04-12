@@ -9,7 +9,6 @@ public class GameLevelWindow1 : MonoBehaviour
 {
     //public GameObject loopScrollRect;
     public Button exitButton;
-    public Button breakButton;
     
     public Button level3Button;
     public Button level6Button;
@@ -150,11 +149,6 @@ public class GameLevelWindow1 : MonoBehaviour
             gameObject.SetActive(false);
             WindowController.S.Message.SetActive(false);
             WindowController.S.RoleWindow.SetActive(true);
-        });
-        breakButton.onClick.AddListener(() =>
-        {
-            WindowController.S.Message.SetActive(false);
-            HideLevelInfo();
         });
         
         

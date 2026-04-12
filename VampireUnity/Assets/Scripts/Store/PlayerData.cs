@@ -18,8 +18,8 @@ public class PlayerData : XSingleton<PlayerData>
 
     
     public  int level=1;
-    public int exp=0;
-    public int bloodEnergy=0;
+    public float exp=0;
+    public float bloodEnergy=0;
     public int maxGameLevel=3;
     
     public int clothid;
@@ -34,7 +34,7 @@ public class PlayerData : XSingleton<PlayerData>
     public int primaryDianLevel=1;
     public int primaryHuoLevel=1;
     public int primaryHeiAnLevel=1;
-    public int dianBaoZhaLevel;
+    public float dianBaoZhaLevel;
     public int iceBaoZhaLevel;
     public int HuoBaoZhaWeaponLevel;
     public int puTong3WeaponLevel;
@@ -62,37 +62,37 @@ public class PlayerData : XSingleton<PlayerData>
     public int HuoAllLevel => primaryHuoLevel + HuoBaoZhaWeaponLevel + lvQuanWeaponLevel + Huo7WeaponLevel +
                               HuoFenLieWeaponLevel + jianQiWeaponLevel+HuoDiPenWeaponLevel;
 
-    public int DianAllLevel => primaryDianLevel + dianBaoZhaLevel + fireWeaponLevel + DianJiSuWeaponLevel +
-                              DianSanSheWeaponLevel + DianLuoLei5WeaponLevel;
+    public float DianAllLevel => primaryDianLevel + dianBaoZhaLevel + fireWeaponLevel + DianJiSuWeaponLevel +
+                                 DianSanSheWeaponLevel + DianLuoLei5WeaponLevel;
     
     public int HeiAnAllLevel => primaryHeiAnLevel + HeiAnBaoZhaWeaponLevel + xuKongWeaponLevel + HeiAnQuXianWeaponLevel +
                               HeiAnHuiXuanWeaponLevel + heiDongWeaponLevel;
     
-    public int primaryWeaponExp;
-    public int primaryDianExp;
-    public int primaryHuoExp;
-    public int primaryHeiAnExp;
-    public int dianBaoZhaExp;
-    public int iceBaoZhaExp;
-    public int HuoBaoZhaExp;
-    public int puTong3WeaponExp;
-    public int xuKongWeaponExp;
-    public int lvQuanWeaponExp;
-    public int fireWeaponExp;
-    public int heiDongWeaponExp;
-    public int jianQiWeaponExp;
-    public int Huo7WeaponExp;
-    public int IcePenWeaponExp;
-    public int Ice7WeaponExp;
-    public int Ice4BaoZhaWeaponExp;
-    public int HuoFenLieWeaponExp;
-    public int HuoDiPenWeaponExp;
-    public int HeiAnQuXianWeaponExp;
-    public int HeiAnHuiXuanWeaponExp;
-    public int HeiAnBaoZhaWeaponExp;
-    public int DianSanSheWeaponExp;
-    public int DianLuoLei5WeaponExp;
-    public int DianJiSuWeaponExp;
+    public float primaryWeaponExp;
+    public float primaryDianExp;
+    public float primaryHuoExp;
+    public float primaryHeiAnExp;
+    public float dianBaoZhaExp;
+    public float iceBaoZhaExp;
+    public float HuoBaoZhaExp;
+    public float puTong3WeaponExp;
+    public float xuKongWeaponExp;
+    public float lvQuanWeaponExp;
+    public float fireWeaponExp;
+    public float heiDongWeaponExp;
+    public float jianQiWeaponExp;
+    public float Huo7WeaponExp;
+    public float IcePenWeaponExp;
+    public float Ice7WeaponExp;
+    public float Ice4BaoZhaWeaponExp;
+    public float HuoFenLieWeaponExp;
+    public float HuoDiPenWeaponExp;
+    public float HeiAnQuXianWeaponExp;
+    public float HeiAnHuiXuanWeaponExp;
+    public float HeiAnBaoZhaWeaponExp;
+    public float DianSanSheWeaponExp;
+    public float DianLuoLei5WeaponExp;
+    public float DianJiSuWeaponExp;
 
     
 

@@ -2495,7 +2495,7 @@ public class GlobalPlayerAttribute
    {
        return 0;
    }
-   public static int GetWeaponLevel(WeaponType type)
+   public static float GetWeaponLevel(WeaponType type)
    {
       switch (type)
       {
@@ -2561,28 +2561,28 @@ public class GlobalPlayerAttribute
    public static float GetWeaponAttack()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       int level = GetWeaponLevel(PlayerData.S.playerWeaponType);
+       float level = GetWeaponLevel(PlayerData.S.playerWeaponType);
        return weaponAttribute.Attack * WeaponConfig.WeaponLevelAttributeDic[level];
    }
    
    public static float GetWeaponDefense()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       int level = GetWeaponLevel(PlayerData.S.playerWeaponType);
+       float level = GetWeaponLevel(PlayerData.S.playerWeaponType);
        return weaponAttribute.Defense * WeaponConfig.WeaponLevelAttributeDic[level];
    }
    
    public static float GetWeaponCrit()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       int level = GetWeaponLevel(PlayerData.S.playerWeaponType);
+       float level = GetWeaponLevel(PlayerData.S.playerWeaponType);
        return weaponAttribute.Crit * WeaponConfig.WeaponLevelAttributeDic[level];
    }
    
    public static float GetWeaponHp()
    {
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
-       int level = GetWeaponLevel(PlayerData.S.playerWeaponType);
+       float level = GetWeaponLevel(PlayerData.S.playerWeaponType);
        return weaponAttribute.Hp * WeaponConfig.WeaponLevelAttributeDic[level];
    }
    
@@ -2659,7 +2659,7 @@ public class GlobalPlayerAttribute
        }
    }
    
-   public static int BloodEnergy
+   public static float BloodEnergy
    {
        get => PlayerData.S.bloodEnergy;
        set => PlayerData.S.bloodEnergy = value;
@@ -2671,12 +2671,12 @@ public class GlobalPlayerAttribute
          set => PlayerData.S.level = value;
    }
 
-   public static int Exp
+   public static float Exp
    {
          get => PlayerData.S.exp;
          set => PlayerData.S.exp = value;
    }
-   public static Dictionary<int,int> ExpDic=new Dictionary<int,int>()
+   public static Dictionary<float,int> ExpDic=new Dictionary<float,int>()
    {
          {1,100 },
          {2,200 },

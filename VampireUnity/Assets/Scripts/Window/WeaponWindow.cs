@@ -187,7 +187,7 @@ public class WeaponWindow : MonoBehaviour
 
    }
    
-   public int GetWeaponExp(WeaponType type)
+   public float GetWeaponExp(WeaponType type)
    {
       switch (type)
       {
@@ -247,7 +247,7 @@ public class WeaponWindow : MonoBehaviour
    }
    
    
-   public int GetWeaponLevel(WeaponType type)
+   public float GetWeaponLevel(WeaponType type)
    {
       switch (type)
       {

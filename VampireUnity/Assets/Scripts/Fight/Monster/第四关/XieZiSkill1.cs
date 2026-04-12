@@ -9,7 +9,7 @@ public class XieZiSkill1 : MonoBehaviour
    public Rigidbody2D rg;
    public SkeletonAnimation skeletonAnimation;
    [NonSerialized]public Vector2 MoveDirection;
-   [NonSerialized]public int Damage;
+   [NonSerialized]public float Damage;
 
    private void OnEnable()
    {

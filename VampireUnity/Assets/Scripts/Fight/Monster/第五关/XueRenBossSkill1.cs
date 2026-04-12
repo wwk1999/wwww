@@ -7,7 +7,7 @@ using UnityEngine;
 public class XueRenBossSkill1 : MonoBehaviour
 {
     public Rigidbody2D rg;
-    [NonSerialized]public int Damage;
+    [NonSerialized]public float Damage;
 
     private void OnEnable()
     {

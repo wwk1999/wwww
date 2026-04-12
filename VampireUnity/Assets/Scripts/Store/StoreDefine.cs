@@ -64,8 +64,8 @@ public class StoreDefine : XSingleton<StoreDefine>
         public ChiBangType playerChiBangType;
         public Dictionary<ChiBangType,ChiBangInfo> ChiBangList = new Dictionary<ChiBangType,ChiBangInfo>();
         public int level;
-        public int exp;
-        public int bloodEnergy;
+        public float exp;
+        public float bloodEnergy;
         public int gameLevel;
 
         public int clothid;
@@ -103,31 +103,31 @@ public class StoreDefine : XSingleton<StoreDefine>
         public int DianLuoLei5WeaponLevel;
         public int DianJiSuWeaponLevel;
 
-        public int primaryWeaponExp;
-        public int primaryDianExp;
-        public int primaryHuoExp;
-        public int primaryHeiAnExp;
-        public int dianBaoZhaExp;
-        public int iceBaoZhaExp;
-        public int duWeaponExp;
-        public int puTong3WeaponExp;
-        public int xuKongWeaponExp;
-        public int lvQuanWeaponExp;
-        public int fireWeaponExp;
-        public int heiDongWeaponExp;
-        public int jianQiWeaponExp;
-        public int Huo7WeaponExp;
-        public int IcePenWeaponExp;
-        public int Ice7WeaponExp;
-        public int Ice4BaoZhaWeaponExp;
-        public int HuoFenLieWeaponExp;
-        public int HuoDiPenWeaponExp;
-        public int HeiAnQuXianWeaponExp;
-        public int HeiAnHuiXuanWeaponExp;
-        public int HeiAnBaoZhaWeaponExp;
-        public int DianSanSheWeaponExp;
-        public int DianLuoLei5WeaponExp;
-        public int DianJiSuWeaponExp;
+        public float primaryWeaponExp;
+        public float primaryDianExp;
+        public float primaryHuoExp;
+        public float primaryHeiAnExp;
+        public float dianBaoZhaExp;
+        public float iceBaoZhaExp;
+        public float duWeaponExp;
+        public float puTong3WeaponExp;
+        public float xuKongWeaponExp;
+        public float lvQuanWeaponExp;
+        public float fireWeaponExp;
+        public float heiDongWeaponExp;
+        public float jianQiWeaponExp;
+        public float Huo7WeaponExp;
+        public float IcePenWeaponExp;
+        public float Ice7WeaponExp;
+        public float Ice4BaoZhaWeaponExp;
+        public float HuoFenLieWeaponExp;
+        public float HuoDiPenWeaponExp;
+        public float HeiAnQuXianWeaponExp;
+        public float HeiAnHuiXuanWeaponExp;
+        public float HeiAnBaoZhaWeaponExp;
+        public float DianSanSheWeaponExp;
+        public float DianLuoLei5WeaponExp;
+        public float DianJiSuWeaponExp;
         
         
         public int zhuanjinCount = 0;

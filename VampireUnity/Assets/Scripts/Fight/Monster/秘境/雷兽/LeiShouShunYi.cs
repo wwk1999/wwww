@@ -6,7 +6,7 @@ using UnityEngine;
 public class LeiShouShunYi : MonoBehaviour
 {
   public Animator Animator;
-  public int damage;
+  public float damage;
   private void Start()
   {
     Animator.Play("LeiShouShunYi",10000,0);

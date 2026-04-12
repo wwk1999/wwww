@@ -6,7 +6,7 @@ using UnityEngine;
 public class LeiShouSkill3 : MonoBehaviour
 {
     public Animator Animator;
-    public int damage;
+    public float damage;
 
     private void OnEnable()
     {

@@ -346,7 +346,7 @@ namespace Config
                 {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.HeiAn,quality = 5},"黑暗系法杖的总等级>100"}
             };
 
-        public static Dictionary<int, float> WeaponLevelAttributeDic = new Dictionary<int, float>()
+        public static Dictionary<float, float> WeaponLevelAttributeDic = new Dictionary<float, float>()
         {
            {1,1.0f },
          {2,1.1f },

@@ -12,9 +12,9 @@ public class BeeBullet : MonoBehaviour
 
     private void OnEnable()
     {
+        CancelInvoke();
         Vector3 direction = Vector2.zero;
-        skeletonAnimation.AnimationState.SetAnimation(0, "action", true);
-        Invoke(nameof(EnQueue), 5f);
+        Invoke(nameof(EnQueue), 3f);
         if (GameController.S.gamePlayer != null)
         {
             direction = (GameController.S.gamePlayer.transform.position - transform.position).normalized;
@@ -23,6 +23,7 @@ public class BeeBullet : MonoBehaviour
             parent.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
             rg.velocity = direction * 7;
         }
+        skeletonAnimation.AnimationState.SetAnimation(0, "action", true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

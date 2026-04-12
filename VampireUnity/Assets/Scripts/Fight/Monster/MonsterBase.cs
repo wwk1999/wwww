@@ -100,10 +100,10 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized]public float CurrentHp;//当前血量
     [NonSerialized]public  float MaxHp;//最大血量
     [NonSerialized]public float Speed;//速度
-    [NonSerialized]public int Attack;//攻击力
-    [NonSerialized]public int Defense;//防御力
-    [NonSerialized]public int Exp;//经验值
-    [NonSerialized]public int BloodEnergy;//血能
+    [NonSerialized]public float Attack;//攻击力
+    [NonSerialized]public float Defense;//防御力
+    [NonSerialized]public float Exp;//经验值
+    [NonSerialized]public float BloodEnergy;//血能
     [NonSerialized]public int EvolutionEnergy;//源能
     [NonSerialized]public bool IsDead=false;//是否死亡
     [NonSerialized]public bool IsDash=false;//是否攻击
@@ -139,6 +139,21 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized]public bool isBingDong=false;
 
 
+    public void InitAttribute()
+    {
+        MonsterInfo info = MonsterConfig.MonsterInfoDic[
+            new MonsterDiaoLuoType()
+            {
+                GameLevel = LevelInfoConfig.CurrentGameLevel,
+                MonsterType = MonsterConfig.MonsterTypeDic[MonsterTypeByName]
+            }];
+        Speed = info.speed;
+        Attack = info.attack;
+        Defense = info.defence;
+        MaxHp = info.hp;
+        Exp = info.ex;
+        BloodEnergy = info.linghun;
+    }
 
     //构造方法
     public MonsterBase(MonsterTypeByName type)
@@ -151,7 +166,6 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void Awake()
     {
-        CurrentHp = MaxHp;
         if (MonsterType != MonsterType.Boss)
         {
             hpSlider.gameObject.SetActive(false);
@@ -167,7 +181,8 @@ public abstract class MonsterBase : MonoBehaviour
     public void Start()
     {
         //monsterSkeletonAnimation.skeleton.SetColor(new Color(0,0,0.8f));
-
+        InitAttribute();
+        CurrentHp = MaxHp;
         baseSpeed = Speed;
         du.gameObject.SetActive(false);
         jiansu.gameObject.SetActive(false);

@@ -25,7 +25,7 @@ public class WeaponItem : MonoBehaviour
    public TextMeshProUGUI levelText;
 
 
-   public int GetWeaponLevel(WeaponType type)
+   public float GetWeaponLevel(WeaponType type)
    {
       switch (type)
       {
