@@ -20,6 +20,20 @@ public class MonsterDiaoLuoType
 {
     public int GameLevel;
     public MonsterType MonsterType;
+    
+    public override bool Equals(object obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+            return false;
+        
+        MonsterDiaoLuoType other = (MonsterDiaoLuoType)obj;
+        return GameLevel == other.GameLevel && MonsterType == other.MonsterType;
+    }
+    
+    public override int GetHashCode()
+    {
+        return GameLevel.GetHashCode() ^ MonsterType.GetHashCode();
+    }
 }
 
 public class MonsterConfig

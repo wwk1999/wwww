@@ -49,7 +49,7 @@ public class GameLevelInfo : MonoBehaviour
                 if (MonsterSprite != null)
                 {
                     var MonsterGrid=Instantiate(Resources.Load<GameObject>("Prefabs/UI/MonsterGrid"),MonsterListContent.transform);
-                    MonsterGrid.transform.Find("huan/MonsterIcon").GetComponent<Image>().sprite = MonsterSprite;
+                    MonsterGrid.transform.Find("icon").GetComponent<Image>().sprite = MonsterSprite;
                 }
             }
         }

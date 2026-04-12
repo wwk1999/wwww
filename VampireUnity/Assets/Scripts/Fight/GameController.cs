@@ -22,7 +22,7 @@ using Random = UnityEngine.Random;
 public class GameController : XSingleton<GameController>
 {
     [NonSerialized] public MonsterTypeByName EliteMonster = MonsterTypeByName.None;
-    [NonSerialized] public List<MonsterTypeByName> NormalMonster = null;
+    [NonSerialized] public List<MonsterTypeByName> NormalMonster = new List<MonsterTypeByName>();
     [NonSerialized] public MonsterTypeByName Boss = MonsterTypeByName.None;
 
     [NonSerialized]public HashSet<EquipBase> EquipBaseSet = new HashSet<EquipBase>();
@@ -1802,7 +1802,7 @@ public class GameController : XSingleton<GameController>
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
         MonsterBase monsterBase=null;
         //宠物关卡
-        if (NormalMonster == null)
+        if (NormalMonster.Count==0)
         {
             List<MonsterTypeByName> monsterList=LevelInfoConfig.LevelMonsterDic[LevelInfoConfig.CurrentGameLevel];
             foreach (var item in monsterList)

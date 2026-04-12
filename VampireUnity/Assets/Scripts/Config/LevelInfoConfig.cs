@@ -586,15 +586,28 @@ public class LevelInfoConfig
 
     public static List<DiaoLuoConfig> GetDiaoLuoList(int GameLevel)
     {
-        var monsterlist = LevelMonsterDic[CurrentGameLevel];
+        if (!LevelMonsterDic.ContainsKey(GameLevel))
+        {
+            return new List<DiaoLuoConfig>();
+        }
+        
+        var monsterlist = LevelMonsterDic[GameLevel];
         List<DiaoLuoConfig> diaoLuoList = new List<DiaoLuoConfig>();
         List<MonsterEquip> equiplist = new List<MonsterEquip>();
         List<MonsterProp> proplist = new List<MonsterProp>();
+        
         foreach (var item in monsterlist)
         {
-            MonsterInfo info = MonsterConfig.MonsterInfoDic[
-                new MonsterDiaoLuoType()
-                    { GameLevel = CurrentGameLevel, MonsterType = MonsterConfig.MonsterTypeDic[item] }];
+            var key = new MonsterDiaoLuoType()
+                { GameLevel = GameLevel, MonsterType = MonsterConfig.MonsterTypeDic[item] };
+            
+            if (!MonsterConfig.MonsterInfoDic.ContainsKey(key))
+            {
+                // 如果找不到对应的数据，使用默认值
+                continue;
+            }
+            
+            MonsterInfo info = MonsterConfig.MonsterInfoDic[key];
             foreach (var item1 in info.MonsterPropList)
             {
                 if (!proplist.Contains(item1))
@@ -606,9 +619,16 @@ public class LevelInfoConfig
 
         foreach (var item in monsterlist)
         {
-            MonsterInfo info = MonsterConfig.MonsterInfoDic[
-                new MonsterDiaoLuoType()
-                    { GameLevel = CurrentGameLevel, MonsterType = MonsterConfig.MonsterTypeDic[item] }];
+            var key = new MonsterDiaoLuoType()
+                { GameLevel = GameLevel, MonsterType = MonsterConfig.MonsterTypeDic[item] };
+            
+            if (!MonsterConfig.MonsterInfoDic.ContainsKey(key))
+            {
+                // 如果找不到对应的数据，跳过
+                continue;
+            }
+            
+            MonsterInfo info = MonsterConfig.MonsterInfoDic[key];
             if (info.orangeEquip)
             {
                 MonsterEquip monsterEquip = new MonsterEquip(equipLevel:PlayerEquipConfig.EquipLevel.None,equipType:PlayerEquipConfig.EquipType.None,orange:true);
@@ -644,6 +664,28 @@ public class LevelInfoConfig
         }
 
         return diaoLuoList;
+    }
+
+    public static void InitMonsterQueue()
+    {
+        var monsterlist = LevelMonsterDic[CurrentGameLevel];
+        foreach (var item in monsterlist)
+        {
+            int count = 0;
+            if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Normal)
+            {
+                count = 150;
+            }
+            if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Elite)
+            {
+                count = 15;
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                Entrance.InitMonster(item);
+            }
+        }
     }
 
     public static void InitPropQueue()
