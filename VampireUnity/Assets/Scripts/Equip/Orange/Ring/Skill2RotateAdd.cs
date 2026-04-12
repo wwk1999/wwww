@@ -15,8 +15,8 @@ public class Skill2RotateAdd :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "Skill2RotateAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill2RotateAdd;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+
         EquipAttributes.orangeid = 35;
 
         //暂时写死

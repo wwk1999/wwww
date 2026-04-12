@@ -15,8 +15,8 @@ public class BlueRing : EquipBase
         EquipAttributes.EquipName = "BlueRing";
         EquipAttributes.EquipLevel = 10;
 
-        EquipAttributes.suitid = 3;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
         EquipAttributes.Quality = 3;
         
         SetBaseAttribute();

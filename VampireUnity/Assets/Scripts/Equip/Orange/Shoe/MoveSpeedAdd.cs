@@ -15,8 +15,8 @@ public class MoveSpeedAdd :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "MoveSpeedAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.MoveSpeedAdd;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+
         EquipAttributes.orangeid = 41;
 
         //暂时写死

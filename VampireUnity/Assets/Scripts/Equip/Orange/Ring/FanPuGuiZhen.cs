@@ -14,8 +14,8 @@ public class FanPuGuiZhen :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "FanPuGuiZhen";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FanPuGuiZhen;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+
         EquipAttributes.orangeid = 31;
 
         //暂时写死

@@ -15,8 +15,8 @@ public class ShoeFortureAdd :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "ShoeFortureAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.ShoeFortureAdd;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+
         EquipAttributes.orangeid = 42;
 
         //暂时写死

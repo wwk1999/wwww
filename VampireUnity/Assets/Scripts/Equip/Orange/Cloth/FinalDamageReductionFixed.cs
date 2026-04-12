@@ -14,8 +14,8 @@ public class FinalDamageReductionFixed :EquipBase
         Random random = new Random();
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FinalDamageReductionFixed;
         EquipAttributes.EquipName = "FinalDamageReductionFixed";
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 2;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
+
         EquipAttributes.orangeid = 12;
 
         //暂时写死

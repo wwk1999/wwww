@@ -13,8 +13,8 @@ public class HpReductionReplyAdd50 :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "HpReductionReplyAdd50";
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 2;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
+
         EquipAttributes.orangeid = 13;
 
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.HpReductionReplyAdd50;

@@ -40,7 +40,7 @@ public class GameLevelInfo : MonoBehaviour
             Destroy(child.gameObject);
         }
         var MonsterList = GetMonsterList();
-        var DiaoLuoList = GetDiaoLuoList();
+        var DiaoLuoList = LevelInfoConfig.GetDiaoLuoList(CurrentClickLevel);
         if (MonsterList != null)
         {
             foreach (var item in MonsterList)
@@ -67,7 +67,7 @@ public class GameLevelInfo : MonoBehaviour
                             DiaoLuoListContent.transform);
                         DiaoLuoGrid.transform.Find("BagGridImage").GetComponent<Image>().sprite = DiaoluoEquipSprite;
                         DiaoLuoGrid.transform.Find("EquipGridBG").GetComponent<Image>().sprite =
-                            ResourcesConfig.GetEquipColorBgBySuitId(item.SuitId);
+                            ResourcesConfig.GetEquipColorBgBySuitId(item.EquipLevel);
                     }
                 }
                 else
@@ -85,79 +85,7 @@ public class GameLevelInfo : MonoBehaviour
 
     public List<MonsterTypeByName> GetMonsterList()
     {
-        switch (CurrentClickLevel)
-        {
-            case 1:
-                return LevelInfoConfig.LevelMonster1;
-            case 2:
-                return LevelInfoConfig.LevelMonster2;
-            case 3:
-                return LevelInfoConfig.LevelMonster3;
-            case 4:
-                return LevelInfoConfig.LevelMonster4;
-            case 5:
-                return LevelInfoConfig.LevelMonster5;
-            case 6:
-                return LevelInfoConfig.LevelMonster6;
-            case 7:
-                return LevelInfoConfig.LevelMonster7;
-            case 8:
-                return LevelInfoConfig.LevelMonster8;
-            case 9:
-                return LevelInfoConfig.LevelMonster9;
-            case 10:
-                return LevelInfoConfig.LevelMonster10;
-            case 11:
-                return LevelInfoConfig.LevelMonster11;
-            case 12:
-                return LevelInfoConfig.LevelMonster12;
-            case 13:
-                return LevelInfoConfig.LevelMonster13;
-            case 14:
-                return LevelInfoConfig.LevelMonster14;
-            case 15:
-                return LevelInfoConfig.LevelMonster15;
-        }
-
-        return null;
+        return LevelInfoConfig.LevelMonsterDic[CurrentClickLevel];
     }
     
-    public List<DiaoLuoConfig> GetDiaoLuoList()
-    {
-        switch (CurrentClickLevel)
-        {
-            case 1:
-                return LevelInfoConfig.LevelDiaoLuo1;
-            case 2:
-                return LevelInfoConfig.LevelDiaoLuo2;
-            case 3:
-                return LevelInfoConfig.LevelDiaoLuo3;
-            case 4:
-                return LevelInfoConfig.LevelDiaoLuo4;
-            case 5:
-                return LevelInfoConfig.LevelDiaoLuo5;
-            case 6:
-                return LevelInfoConfig.LevelDiaoLuo6;
-            case 7:
-                return LevelInfoConfig.LevelDiaoLuo7;
-            case 8:
-                return LevelInfoConfig.LevelDiaoLuo8;
-            case 9:
-                return LevelInfoConfig.LevelDiaoLuo9;
-            case 10:
-                return LevelInfoConfig.LevelDiaoLuo10;
-            case 11:
-                return LevelInfoConfig.LevelDiaoLuo11;
-            case 12:
-                return LevelInfoConfig.LevelDiaoLuo12;
-            case 13:
-                return LevelInfoConfig.LevelDiaoLuo13;
-            case 14:
-                return LevelInfoConfig.LevelDiaoLuo14;
-            case 15:
-                return LevelInfoConfig.LevelDiaoLuo15;
-        }
-
-        return null;
-    }
 }

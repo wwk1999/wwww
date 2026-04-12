@@ -15,8 +15,8 @@ public class Skill3Bian3 :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "Skill3Bian3";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill3Bian3;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+
         EquipAttributes.orangeid = 29;
 
         //暂时写死

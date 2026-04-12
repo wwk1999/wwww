@@ -15,10 +15,8 @@ public class BuWangChuXin :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "BuWangChuXin";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.BuWangChuXin;
-        EquipAttributes.suitid = 6;
         EquipAttributes.orangeid = 1;
-
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

@@ -15,8 +15,8 @@ namespace Equip
              EquipAttributes.EquipLevel = 1;
 
             EquipAttributes.EquipName = "PrimaryCloth";
-            EquipAttributes.suitid = 1;
-            EquipAttributes.equip_type_id = 2;
+            EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
             EquipAttributes.Quality = 1;
             
             SetBaseAttribute();

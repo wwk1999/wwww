@@ -15,8 +15,8 @@ public class ZhaoZeRing : EquipBase
         EquipAttributes.EquipName = "ZhaoZeRing";
         EquipAttributes.EquipLevel = 20;
 
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.ZhaoZe;
         EquipAttributes.Quality = 3;
         
         SetBaseAttribute();

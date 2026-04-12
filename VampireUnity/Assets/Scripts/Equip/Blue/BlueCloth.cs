@@ -13,8 +13,8 @@ public class BlueCloth : EquipBase
         EquipAttributes.EquipName = "BlueCloth";
         EquipAttributes.EquipLevel = 10;
 
-        EquipAttributes.suitid = 3;
-        EquipAttributes.equip_type_id = 2;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
         EquipAttributes.Quality = 3;
         
         SetBaseAttribute();

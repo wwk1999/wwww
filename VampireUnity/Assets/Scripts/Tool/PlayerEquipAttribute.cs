@@ -179,7 +179,7 @@ public class PlayerEquipAttribute :  MonoBehaviour, IPointerEnterHandler, IPoint
         bagEquipAttributeInfo.level.text = equipTable.EquipLevel.ToString();
         
         //基础属性
-        if (equipTable.equip_type_id == 1 || equipTable.equip_type_id == 4 || equipTable.equip_type_id == 5)
+        if (equipTable.EquipType == PlayerEquipConfig.EquipType.Cloak || equipTable.EquipType == PlayerEquipConfig.EquipType.Ring || equipTable.EquipType == PlayerEquipConfig.EquipType.Necklace)
         {
             bagEquipAttributeInfo.baseAttributeText1.text = "攻击 :";
             bagEquipAttributeInfo.baseAttributeText2.text = "暴击 :";

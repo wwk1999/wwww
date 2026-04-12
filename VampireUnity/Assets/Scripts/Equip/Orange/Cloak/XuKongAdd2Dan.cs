@@ -15,8 +15,8 @@ public class XuKongAdd2Dan :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "XuKongAdd2Dan";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.XuKongAdd2Dan;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
+
         EquipAttributes.orangeid = 8;
 
         //暂时写死

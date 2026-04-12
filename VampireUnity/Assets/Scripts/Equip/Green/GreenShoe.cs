@@ -15,8 +15,8 @@ public class GreenShoe : EquipBase
         Random random = new Random();
         EquipAttributes.EquipLevel = 5;
         EquipAttributes.EquipName = "GreenShoe";
-        EquipAttributes.suitid = 2;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Green;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
         EquipAttributes.Quality = 2;
         SetBaseAttribute();
         InitEntry();

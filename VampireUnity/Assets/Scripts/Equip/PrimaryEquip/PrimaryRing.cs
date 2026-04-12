@@ -17,8 +17,8 @@ namespace Equip
             EquipAttributes.EquipLevel = 1;
 
             EquipAttributes.EquipName = "PrimaryRing";
-            EquipAttributes.suitid =1;
-            EquipAttributes.equip_type_id = 5;
+            EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
             EquipAttributes.Quality = 1;
             SetBaseAttribute();
             

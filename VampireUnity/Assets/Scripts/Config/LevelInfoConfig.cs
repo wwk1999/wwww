@@ -6,17 +6,17 @@ using UnityEngine;
 
 public class DiaoLuoConfig
 {
-    public int SuitId = 0;
-    public int EquipType;
+    public PlayerEquipConfig.EquipLevel EquipLevel = PlayerEquipConfig.EquipLevel.None;
+    public PlayerEquipConfig.EquipType SuitType;
     public int PropId;
-    public int OrangeId=0;
+    public bool IsOrange;
 
-    public DiaoLuoConfig(int suitid,int equipType,int prop=0,int  orangeid=0)
+    public DiaoLuoConfig(PlayerEquipConfig.EquipLevel equipLevel,PlayerEquipConfig.EquipType suitType=PlayerEquipConfig.EquipType.None,int propId=0,bool  isOrange=false)
     {
-        SuitId = suitid;
-        EquipType = equipType;
-        PropId = prop;
-        OrangeId=orangeid;
+        EquipLevel = equipLevel;
+        SuitType = suitType;
+        PropId = propId;
+        IsOrange=isOrange;
     }
 }
 
@@ -418,6 +418,8 @@ public class LevelInfoConfig
     }
     
     
+    
+    
     public static Dictionary<int, BaoShiDiaoLuo> BaoShiDiaoLuoDic = new Dictionary<int, BaoShiDiaoLuo>()
     {
         {3,new BaoShiDiaoLuo(){Quality = 1,count = 3}},
@@ -581,199 +583,67 @@ public class LevelInfoConfig
         LevelMonsterCount[105] = 250;
         LevelMonsterCount[106] = 300;
     }
-   public static LevelInfoItem LevelInfoItem1= new LevelInfoItem
-   {
-       Level = 1,
-       LevelType = LevelType.Normal,
-       DiaoLuoIconList = new List<Sprite>(),
-       DiaoLuoNameList = new List<string>()
-   };
-    public static LevelInfoItem LevelInfoItem2 = new LevelInfoItem
-    {
-         Level = 2,
-         LevelType = LevelType.Elite,
-         DiaoLuoIconList = new List<Sprite>(),
-            DiaoLuoNameList = new List<string>()
-    };
-    public static LevelInfoItem LevelInfoItem3 = new LevelInfoItem
-    {
-         Level = 3,
-         LevelType = LevelType.Boss,
-         DiaoLuoIconList = new List<Sprite>(),
-            DiaoLuoNameList = new List<string>()
-    };
 
-    public static LevelInfoItem LevelInfoItem4= new LevelInfoItem
+    public static List<DiaoLuoConfig> GetDiaoLuoList(int GameLevel)
     {
-        Level = 4,
-        LevelType = LevelType.Normal,
-        DiaoLuoIconList = new List<Sprite>(),
-        DiaoLuoNameList = new List<string>()
-    };
-    public static LevelInfoItem LevelInfoItem5= new LevelInfoItem
-    {
-        Level = 5,
-        LevelType = LevelType.Elite,
-        DiaoLuoIconList = new List<Sprite>(),
-        DiaoLuoNameList = new List<string>()
-    };
-    public static LevelInfoItem LevelInfoItem6= new LevelInfoItem
-    {
-        Level = 6,
-        LevelType = LevelType.Boss,
-        DiaoLuoIconList = new List<Sprite>(),
-        DiaoLuoNameList = new List<string>()
-    };
-    public static LevelInfoItem LevelInfoItem7= new LevelInfoItem
-    {
-        Level = 7,
-        LevelType = LevelType.Normal,
-        DiaoLuoIconList = new List<Sprite>(),
-        DiaoLuoNameList = new List<string>()
-    };
-    public static LevelInfoItem LevelInfoItem8= new LevelInfoItem
-    {
-        Level = 8,
-        LevelType = LevelType.Elite,
-        DiaoLuoIconList = new List<Sprite>(),
-        DiaoLuoNameList = new List<string>()
-    };
-    public static LevelInfoItem LevelInfoItem9= new LevelInfoItem
-    {
-        Level = 9,
-        LevelType = LevelType.Boss,
-        DiaoLuoIconList = new List<Sprite>(),
-        DiaoLuoNameList = new List<string>()
-    };
-    public static void init()
-    {
-        //关卡1
-        if (IsOneGame)
+        var monsterlist = LevelMonsterDic[CurrentGameLevel];
+        List<DiaoLuoConfig> diaoLuoList = new List<DiaoLuoConfig>();
+        List<MonsterEquip> equiplist = new List<MonsterEquip>();
+        List<MonsterProp> proplist = new List<MonsterProp>();
+        foreach (var item in monsterlist)
         {
-            LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloak);
-            LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloth);
-            LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryShoe);
-            LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryHelmet);
-            LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryNecklace);
-            LevelInfoItem1.DiaoLuoIconList.Add(ResourcesConfig.PrimaryRing);
-
-            LevelInfoItem1.DiaoLuoNameList.Add("新手披风");
-            LevelInfoItem1.DiaoLuoNameList.Add("新手衣服");
-            LevelInfoItem1.DiaoLuoNameList.Add("新手鞋子");
-            LevelInfoItem1.DiaoLuoNameList.Add("新手头盔");
-            LevelInfoItem1.DiaoLuoNameList.Add("新手项链");
-            LevelInfoItem1.DiaoLuoNameList.Add("新手戒指");
-
-            LevelInfoItem1.LevelInfoDir = true;
-            LevelInfoItem1.LevelInfoPos = new Vector2(374, -407);
-            LevelInfoItem1.LoopScrollPos = new Vector2(-334, -34);
-
-            //关卡2
-            
-
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloak);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloth);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.PrimaryShoe);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.PrimaryHelmet);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.PrimaryNecklace);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.PrimaryRing);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.WhiteDivision);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.WhiteExplosion);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.WhiteDuration);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.WhiteScale);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.WhitePenetrate);
-            LevelInfoItem2.DiaoLuoIconList.Add(ResourcesConfig.WhiteExtremeSpeed);
-
-            LevelInfoItem2.DiaoLuoNameList.Add("新手披风");
-            LevelInfoItem2.DiaoLuoNameList.Add("新手衣服");
-            LevelInfoItem2.DiaoLuoNameList.Add("新手鞋子");
-            LevelInfoItem2.DiaoLuoNameList.Add("新手头盔");
-            LevelInfoItem2.DiaoLuoNameList.Add("新手项链");
-            LevelInfoItem2.DiaoLuoNameList.Add("新手戒指");
-            LevelInfoItem2.DiaoLuoNameList.Add("初级源石：分裂");
-            LevelInfoItem2.DiaoLuoNameList.Add("初级源石：爆炸");
-            LevelInfoItem2.DiaoLuoNameList.Add("初级源石：持续");
-            LevelInfoItem2.DiaoLuoNameList.Add("初级源石：缩放");
-            LevelInfoItem2.DiaoLuoNameList.Add("初级源石：穿透");
-            LevelInfoItem2.DiaoLuoNameList.Add("初级源石：极速");
-
-            LevelInfoItem2.LevelInfoDir = true;
-            LevelInfoItem2.LevelInfoPos = new Vector2(374, -200);
-            LevelInfoItem2.LoopScrollPos = new Vector2(-335, 169);
-            //关卡3
-            
-            
-            
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.WhiteDivision);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.WhiteExplosion);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.WhiteDuration);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.WhiteScale);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.WhitePenetrate);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.WhiteExtremeSpeed);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloak);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.PrimaryCloth);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.PrimaryShoe);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.PrimaryHelmet);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.PrimaryNecklace);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.PrimaryRing);
-          
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.TreeManCloak);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.TreeManCloth);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.TreeManShoe);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.TreeManHelmet);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.TreeManNecklace);
-            LevelInfoItem3.DiaoLuoIconList.Add(ResourcesConfig.TreeManRing);
-
-            LevelInfoItem3.DiaoLuoNameList.Add("新手披风");
-            LevelInfoItem3.DiaoLuoNameList.Add("新手衣服");
-            LevelInfoItem3.DiaoLuoNameList.Add("新手鞋子");
-            LevelInfoItem3.DiaoLuoNameList.Add("新手头盔");
-            LevelInfoItem3.DiaoLuoNameList.Add("新手项链");
-            LevelInfoItem3.DiaoLuoNameList.Add("新手戒指");
-            LevelInfoItem3.DiaoLuoNameList.Add("初级源石：分裂");
-            LevelInfoItem3.DiaoLuoNameList.Add("初级源石：爆炸");
-            LevelInfoItem3.DiaoLuoNameList.Add("初级源石：持续");
-            LevelInfoItem3.DiaoLuoNameList.Add("初级源石：缩放");
-            LevelInfoItem3.DiaoLuoNameList.Add("初级源石：穿透");
-            LevelInfoItem3.DiaoLuoNameList.Add("初级源石：极速");
-            LevelInfoItem3.DiaoLuoNameList.Add("树人披风");
-            LevelInfoItem3.DiaoLuoNameList.Add("树人衣服");
-            LevelInfoItem3.DiaoLuoNameList.Add("树人鞋子");
-            LevelInfoItem3.DiaoLuoNameList.Add("树人头盔");
-            LevelInfoItem3.DiaoLuoNameList.Add("树人项链");
-            LevelInfoItem3.DiaoLuoNameList.Add("树人戒指");
-
-            LevelInfoItem3.LevelInfoDir = false;
-            LevelInfoItem3.LevelInfoPos = new Vector2(-22, -3);
-            LevelInfoItem3.LoopScrollPos = new Vector2(-597, 364);
-
-            //关卡4
-            LevelInfoItem4.LevelInfoDir = false;
-            LevelInfoItem4.LevelInfoPos = new Vector2(441, -73);
-            
-            
-            //关卡5
-            LevelInfoItem5.LevelInfoDir = true;
-            LevelInfoItem5.LevelInfoPos = new Vector2(1220, -161);
-            
-            //关卡6
-            LevelInfoItem6.LevelInfoDir = true;
-            LevelInfoItem6.LevelInfoPos = new Vector2(715, -400);
-            
-            
-            //关卡7
-            LevelInfoItem7.LevelInfoDir = false;
-            LevelInfoItem7.LevelInfoPos = new Vector2(468, -365);
-            
-            
-            //关卡8
-            LevelInfoItem8.LevelInfoDir = false;
-            LevelInfoItem8.LevelInfoPos = new Vector2(618, -547);
-            
-            //关卡9
-            LevelInfoItem9.LevelInfoDir = false;
-            LevelInfoItem9.LevelInfoPos = new Vector2(886, -501);
+            MonsterInfo info = MonsterConfig.MonsterInfoDic[
+                new MonsterDiaoLuoType()
+                    { GameLevel = CurrentGameLevel, MonsterType = MonsterConfig.MonsterTypeDic[item] }];
+            foreach (var item1 in info.MonsterPropList)
+            {
+                if (!proplist.Contains(item1))
+                {
+                    proplist.Add(item1);
+                }
+            }
         }
+
+        foreach (var item in monsterlist)
+        {
+            MonsterInfo info = MonsterConfig.MonsterInfoDic[
+                new MonsterDiaoLuoType()
+                    { GameLevel = CurrentGameLevel, MonsterType = MonsterConfig.MonsterTypeDic[item] }];
+            if (info.orangeEquip)
+            {
+                MonsterEquip monsterEquip = new MonsterEquip(equipLevel:PlayerEquipConfig.EquipLevel.None,equipType:PlayerEquipConfig.EquipType.None,orange:true);
+                equiplist.Add(monsterEquip);
+                break;
+            }
+            foreach (var item1 in info.MonsterEquipList)
+            {
+                if (!equiplist.Contains(item1))
+                {
+                    equiplist.Add(item1);
+                }
+            }
+
+        }
+
+        if (proplist.Count > 0)
+        {
+            foreach (var item1 in proplist)
+            {
+                DiaoLuoConfig diaoluo = new DiaoLuoConfig(equipLevel:PlayerEquipConfig.EquipLevel.None,propId:PropConfig.GetPropId(item1.PropItem.PropType,item1.PropItem.Quality));
+                diaoLuoList.Add(diaoluo);
+            }
+        }
+
+        if (equiplist.Count > 0)
+        {
+            foreach (var item1 in equiplist)
+            {
+                DiaoLuoConfig diaoluo = new DiaoLuoConfig(equipLevel:item1.EquipLevel,suitType:item1.EquipType,isOrange:item1.Orange);
+                diaoLuoList.Add(diaoluo);
+            }
+        }
+
+        return diaoLuoList;
     }
 
     public static void InitPropQueue()
@@ -833,30 +703,5 @@ public class LevelInfoConfig
                 Entrance.InitEquip(item);
             }
         }
-    }
-
-    public static  bool IsHaveDiaoLuo(List<DiaoLuoConfig> list, DiaoLuoConfig diaoluo)
-    {
-        if (list == null)
-            return false;
-        foreach (var item in list)
-        {
-            if (item.PropId == diaoluo.PropId && diaoluo.PropId != 0)
-            {
-                return true;
-            }
-
-            if (item.OrangeId == diaoluo.OrangeId && diaoluo.OrangeId != 0)
-            {
-                return true;
-            }
-
-            if (item.SuitId == diaoluo.SuitId && diaoluo.SuitId != 0)
-            {
-                return true;
-            }
-        }
-
-        return false;
     }
 }

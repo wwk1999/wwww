@@ -13,8 +13,8 @@ public class GreenCloak : EquipBase
         SpriteRenderer = transform.Find("GreenCloakSprite").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipLevel = 5;
         EquipAttributes.EquipName = "GreenCloak";
-        EquipAttributes.suitid =2;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Green;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
         //暂时写死
         EquipAttributes.Quality = 2;
         

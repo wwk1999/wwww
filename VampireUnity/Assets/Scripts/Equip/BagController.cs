@@ -697,44 +697,44 @@ public class BagController : XSingleton<BagController>
             return;
         }
 
-        switch (equipTable.equip_type_id)
+        switch (equipTable.EquipType)
         {
-            case 1:
+            case PlayerEquipConfig.EquipType.Cloak:
                 if (PlayerEquipConfig.CloakId == equipTable.equipid)
                 {
                     PlayerCloakGrid = null;
                 }
 
                 break;
-            case 2:
+            case PlayerEquipConfig.EquipType.Cloth:
                 if (PlayerEquipConfig.ClothId == equipTable.equipid)
                 {
                     PlayerClothGrid = null;
                 }
 
                 break;
-            case 3:
+            case PlayerEquipConfig.EquipType.Helmet:
                 if (PlayerEquipConfig.HelmetId == equipTable.equipid)
                 {
                     PlayerHelmetGrid = null;
                 }
 
                 break;
-            case 4:
+            case PlayerEquipConfig.EquipType.Necklace:
                 if (PlayerEquipConfig.NecklaceId == equipTable.equipid)
                 {
                     PlayerNecklaceGrid = null;
                 }
 
                 break;
-            case 5:
+            case PlayerEquipConfig.EquipType.Ring:
                 if (PlayerEquipConfig.RingId == equipTable.equipid)
                 {
                     PlayerRingGrid = null;
                 }
 
                 break;
-            case 6:
+            case PlayerEquipConfig.EquipType.Shoe:
                 if (PlayerEquipConfig.ShoeId == equipTable.equipid)
                 {
                     PlayerShoeGrid = null;
@@ -747,44 +747,44 @@ public class BagController : XSingleton<BagController>
     public void InstallPlayerWearGrid(BagGrid equipGrid)
     {
         EquipTable equipTable = equipGrid.tableBase as EquipTable;
-        switch (equipTable.equip_type_id)
+        switch (equipTable.EquipType)
         {
-            case 1:
+            case PlayerEquipConfig.EquipType.Cloak:
                 if (PlayerEquipConfig.CloakId == equipTable.equipid)
                 {
                     PlayerCloakGrid = equipGrid;
                 }
 
                 break;
-            case 2:
+            case PlayerEquipConfig.EquipType.Cloth:
                 if (PlayerEquipConfig.ClothId == equipTable.equipid)
                 {
                     PlayerClothGrid = equipGrid;
                 }
 
                 break;
-            case 3:
+            case PlayerEquipConfig.EquipType.Helmet:
                 if (PlayerEquipConfig.HelmetId == equipTable.equipid)
                 {
                     PlayerHelmetGrid = equipGrid;
                 }
 
                 break;
-            case 4:
+            case PlayerEquipConfig.EquipType.Necklace:
                 if (PlayerEquipConfig.NecklaceId == equipTable.equipid)
                 {
                     PlayerNecklaceGrid = equipGrid;
                 }
 
                 break;
-            case 5:
+            case PlayerEquipConfig.EquipType.Ring:
                 if (PlayerEquipConfig.RingId == equipTable.equipid)
                 {
                     PlayerRingGrid = equipGrid;
                 }
 
                 break;
-            case 6:
+            case PlayerEquipConfig.EquipType.Shoe:
                 if (PlayerEquipConfig.ShoeId == equipTable.equipid)
                 {
                     PlayerShoeGrid = equipGrid;
@@ -1544,19 +1544,19 @@ public class BagController : XSingleton<BagController>
 
     public bool IsClickInstalled(EquipTable equiptable)
     {
-        switch (equiptable.equip_type_id)
+        switch (equiptable.EquipType)
         {
-            case 1:
+            case PlayerEquipConfig.EquipType.Cloak:
                 return equiptable.equipid == PlayerEquipConfig.CloakId;
-            case 2:
+            case PlayerEquipConfig.EquipType.Cloth:
                 return equiptable.equipid == PlayerEquipConfig.ClothId;
-            case 3:
+            case PlayerEquipConfig.EquipType.Helmet:
                 return equiptable.equipid == PlayerEquipConfig.HelmetId;
-            case 4:
+            case PlayerEquipConfig.EquipType.Necklace:
                 return equiptable.equipid == PlayerEquipConfig.NecklaceId;
-            case 5:
+            case PlayerEquipConfig.EquipType.Ring:
                 return equiptable.equipid == PlayerEquipConfig.RingId;
-            case 6:
+            case PlayerEquipConfig.EquipType.Shoe:
                 return equiptable.equipid == PlayerEquipConfig.ShoeId;
             default:
                 return false;

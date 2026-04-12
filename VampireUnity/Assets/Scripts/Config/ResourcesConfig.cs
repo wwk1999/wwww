@@ -228,6 +228,22 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ZhaoZeHelmet;
     public static Sprite ZhaoZeRing;
     public static Sprite ZhaoZeNecklace;
+    
+    
+    public static Sprite XieZiCloth;
+    public static Sprite XieZiCloak;
+    public static Sprite XieZiShoe;
+    public static Sprite XieZiHelmet;
+    public static Sprite XieZiRing;
+    public static Sprite XieZiNecklace;
+    
+    
+    public static Sprite XueRenCloth;
+    public static Sprite XueRenCloak;
+    public static Sprite XueRenShoe;
+    public static Sprite XueRenHelmet;
+    public static Sprite XueRenRing;
+    public static Sprite XueRenNecklace;
 
     // Resource沼泽套装
     public static Sprite Purple1Cloth;
@@ -2364,27 +2380,24 @@ public static Sprite YeshouzhanshiIcon;
         return null;
     }
 
-    public static Sprite GetEquipColorBgBySuitId(int suitId)
+    public static Sprite GetEquipColorBgBySuitId(PlayerEquipConfig.EquipLevel equipLevel)
     {
-        switch (suitId)
+        switch (equipLevel)
         {
-            case 1:
+            case PlayerEquipConfig.EquipLevel.Primary:
                 return WhiteBg;
-            case 2:
+            case PlayerEquipConfig.EquipLevel.Green:
+            case PlayerEquipConfig.EquipLevel.TreeMan:
                 return GreenBg;
-            case 3:
+            case PlayerEquipConfig.EquipLevel.HuoShan:
+            case PlayerEquipConfig.EquipLevel.Blue:
                 return BlueBg;
-            case 4:
-            case 7:
+            case PlayerEquipConfig.EquipLevel.Purple:
+            case PlayerEquipConfig.EquipLevel.Purple1:
+            case PlayerEquipConfig.EquipLevel.XieZi:
+            case PlayerEquipConfig.EquipLevel.XueRen:
+            case PlayerEquipConfig.EquipLevel.ZhaoZe:
                 return PurpleBg;
-            case 5:
-                return OrangeBg;
-            case 101:
-                return GreenBg;
-            case 102:
-                return BlueBg;
-            case 103:
-                return BlueBg;
         }
 
         return null;
@@ -2392,175 +2405,203 @@ public static Sprite YeshouzhanshiIcon;
 
     public static Sprite GetEquipSprite(DiaoLuoConfig equipTable)
     {
-        switch (equipTable.SuitId)
+        switch (equipTable.EquipLevel)
         {
-            case 1:
+            case PlayerEquipConfig.EquipLevel.Primary:
 
-                switch (equipTable.EquipType)
+                switch (equipTable.SuitType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return PrimaryCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return PrimaryCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return PrimaryHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return PrimaryNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return PrimaryRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return PrimaryShoe;
                 }
 
                 break;
 
-            case 2:
-                switch (equipTable.EquipType)
+            case PlayerEquipConfig.EquipLevel.Green:
+
+                switch (equipTable.SuitType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return GreenCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return GreenCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return GreenHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return GreenNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return GreenRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return GreenShoe;
                 }
 
                 break;
 
-            case 3:
-                switch (equipTable.EquipType)
+            case PlayerEquipConfig.EquipLevel.Blue:
+
+                switch (equipTable.SuitType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return BlueCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return BlueCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return BlueHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return BlueNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return BlueRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return BlueShoe;
                 }
 
                 break;
 
-            case 4:
-                switch (equipTable.EquipType)
+            case PlayerEquipConfig.EquipLevel.Purple:
+
+                switch (equipTable.SuitType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return PurpleCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return PurpleCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return PurpleHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return PurpleNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return PurpleRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return PurpleShoe;
                 }
 
                 break;
 
-            case 5:
-                switch (equipTable.EquipType)
+            case PlayerEquipConfig.EquipLevel.Purple1:
+
+                switch (equipTable.SuitType)
                 {
-                    case 1:
-                        return OrangeCloak;
-                    case 2:
-                        return OrangeCloth;
-                    case 3:
-                        return OrangeHelmet;
-                    case 4:
-                        return OrangeNecklace;
-                    case 5:
-                        return OrangeRing;
-                    case 6:
-                        return OrangeShoe;
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return Purple1Cloak;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return Purple1Cloth;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return Purple1Helmet;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return Purple1Necklace;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return Purple1Ring;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return Purple1Shoe;
                 }
 
                 break;
 
-            case 101:
-                switch (equipTable.EquipType)
+            case PlayerEquipConfig.EquipLevel.TreeMan:
+
+                switch (equipTable.SuitType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return TreeManCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return TreeManCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return TreeManHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return TreeManNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return TreeManRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return TreeManShoe;
                 }
 
                 break;
-            case 102:
-                switch (equipTable.EquipType)
+            case PlayerEquipConfig.EquipLevel.HuoShan:
+
+                switch (equipTable.SuitType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return HuoShanCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return HuoShanCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return HuoShanHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return HuoShanNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return HuoShanRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return HuoShanShoe;
                 }
 
                 break;
+            case PlayerEquipConfig.EquipLevel.ZhaoZe:
 
-            case 103:
-                switch (equipTable.EquipType)
+                switch (equipTable.SuitType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return ZhaoZeCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return ZhaoZeCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return ZhaoZeHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return ZhaoZeNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return ZhaoZeRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return ZhaoZeShoe;
                 }
 
                 break;
+            case PlayerEquipConfig.EquipLevel.XieZi:
 
-            case 7:
-                switch (equipTable.EquipType)
+                switch (equipTable.SuitType)
                 {
-                    case 1:
-                        return Purple1Cloak;
-                    case 2:
-                        return Purple1Cloth;
-                    case 3:
-                        return Purple1Helmet;
-                    case 4:
-                        return Purple1Necklace;
-                    case 5:
-                        return Purple1Ring;
-                    case 6:
-                        return Purple1Shoe;
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return XieZiCloak;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return XieZiCloth;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return XieZiHelmet;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return XieZiNecklace;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return XieZiRing;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return XieZiShoe;
+                }
+
+                break;
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.XueRen:
+
+                switch (equipTable.SuitType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return XueRenCloak;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return XueRenCloth;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return XueRenHelmet;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return XueRenNecklace;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return XueRenRing;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return XueRenShoe;
                 }
 
                 break;
@@ -3065,199 +3106,239 @@ public static Sprite YeshouzhanshiIcon;
             }
         }
 
-        switch (equipTable.suitid)
+        switch (equipTable.EquipQuality)
         {
-            case 1:
-                switch (equipTable.Quality)
+            case PlayerEquipConfig.EquipLevel.Primary:
+            {
+                switch (equipTable.EquipType)
                 {
-                    case 1:
-                        switch (equipTable.equip_type_id)
-                        {
-                            case 1:
-                                return PrimaryCloak;
-                            case 2:
-                                return PrimaryCloth;
-                            case 3:
-                                return PrimaryHelmet;
-                            case 4:
-                                return PrimaryNecklace;
-                            case 5:
-                                return PrimaryRing;
-                            case 6:
-                                return PrimaryShoe;
-                        }
-
-                        break;
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return PrimaryCloak;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return PrimaryCloth;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return PrimaryHelmet;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return PrimaryNecklace;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return PrimaryRing;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return PrimaryShoe;
                 }
 
                 break;
-            case 2:
-                switch (equipTable.equip_type_id)
+            }
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.Green:
+            {
+                switch (equipTable.EquipType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return GreenCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return GreenCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return GreenHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return GreenNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return GreenRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return GreenShoe;
                 }
 
                 break;
-
-            case 3:
-                switch (equipTable.equip_type_id)
+            }
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.Blue:
+            {
+                switch (equipTable.EquipType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return BlueCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return BlueCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return BlueHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return BlueNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return BlueRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return BlueShoe;
                 }
 
                 break;
-
-            case 4:
-                switch (equipTable.equip_type_id)
+            }
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.Purple:
+            {
+                switch (equipTable.EquipType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return PurpleCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return PurpleCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return PurpleHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return PurpleNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return PurpleRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return PurpleShoe;
                 }
 
                 break;
-
-            case 5:
-                switch (equipTable.equip_type_id)
+            }
+            
+            
+            case PlayerEquipConfig.EquipLevel.Purple1:
+            {
+                switch (equipTable.EquipType)
                 {
-                    case 1:
-                        return OrangeCloak;
-                    case 2:
-                        return OrangeCloth;
-                    case 3:
-                        return OrangeHelmet;
-                    case 4:
-                        return OrangeNecklace;
-                    case 5:
-                        return OrangeRing;
-                    case 6:
-                        return OrangeShoe;
-                }
-
-                break;
-
-            case 6:
-                switch (equipTable.equip_type_id)
-                {
-                    case 1:
-                        return ZhaoZeCloak;
-                    case 2:
-                        return ZhaoZeCloth;
-                    case 3:
-                        return ZhaoZeHelmet;
-                    case 4:
-                        return ZhaoZeNecklace;
-                    case 5:
-                        return ZhaoZeRing;
-                    case 6:
-                        return ZhaoZeShoe;
-                }
-
-                break;
-            case 7:
-                switch (equipTable.equip_type_id)
-                {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return Purple1Cloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return Purple1Cloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return Purple1Helmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return Purple1Necklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return Purple1Ring;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return Purple1Shoe;
                 }
 
                 break;
-            case 101:
-                switch (equipTable.equip_type_id)
+            }
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.TreeMan:
+            {
+                switch (equipTable.EquipType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return TreeManCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return TreeManCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return TreeManHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return TreeManNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return TreeManRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return TreeManShoe;
                 }
 
                 break;
-            case 102:
-                switch (equipTable.equip_type_id)
+            }
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.HuoShan:
+            {
+                switch (equipTable.EquipType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return HuoShanCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return HuoShanCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return HuoShanHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return HuoShanNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return HuoShanRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return HuoShanShoe;
                 }
 
                 break;
-
-            case 103:
-                switch (equipTable.equip_type_id)
+            }
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.ZhaoZe:
+            {
+                switch (equipTable.EquipType)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipType.Cloak:
                         return ZhaoZeCloak;
-                    case 2:
+                    case PlayerEquipConfig.EquipType.Cloth:
                         return ZhaoZeCloth;
-                    case 3:
+                    case PlayerEquipConfig.EquipType.Helmet:
                         return ZhaoZeHelmet;
-                    case 4:
+                    case PlayerEquipConfig.EquipType.Necklace:
                         return ZhaoZeNecklace;
-                    case 5:
+                    case PlayerEquipConfig.EquipType.Ring:
                         return ZhaoZeRing;
-                    case 6:
+                    case PlayerEquipConfig.EquipType.Shoe:
                         return ZhaoZeShoe;
                 }
 
                 break;
+            }
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.XieZi:
+            {
+                switch (equipTable.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return XieZiCloak;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return XieZiCloth;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return XieZiHelmet;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return XieZiNecklace;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return XieZiRing;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return XieZiShoe;
+                }
+
+                break;
+            }
+            
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.XueRen:
+            {
+                switch (equipTable.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return XueRenCloak;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return XueRenCloth;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return XueRenHelmet;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return XueRenNecklace;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return XueRenRing;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return XueRenShoe;
+                }
+
+                break;
+            }
         }
 
         return null;

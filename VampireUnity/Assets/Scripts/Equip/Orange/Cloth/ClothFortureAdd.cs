@@ -13,8 +13,8 @@ public class ClothFortureAdd :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "ClothFortureAdd";
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 2;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
+
         EquipAttributes.orangeid = 11;
 
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.ClothFortureAdd;

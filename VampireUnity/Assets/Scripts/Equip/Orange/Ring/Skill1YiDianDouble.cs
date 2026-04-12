@@ -15,8 +15,8 @@ public class Skill1YiDianDouble :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "Skill1YiDianDouble";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill1YiDianDouble;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+
         EquipAttributes.orangeid = 34;
 
         //暂时写死

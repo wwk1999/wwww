@@ -7,7 +7,7 @@ public class HuoShanCloak : EquipBase
 {
     private bool isSend = false; //是否发送消息
 
-    public HuoShanCloak() : base( "HuoShanCloakFight", SuitType.HuoShan,new EquipTable()){}
+    public HuoShanCloak() : base( "HuoShanCloakFight", SuitType.Cloak,new EquipTable()){}
     
     private void Awake()
     {
@@ -20,8 +20,8 @@ public class HuoShanCloak : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "HuoShanCloak";
         EquipAttributes.EquipLevel = 15;
-        EquipAttributes.suitid = 102;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.HuoShan;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
         //暂时写死
         EquipAttributes.Quality = 3;
         EquipAttributes.CRIT=random.Next(4,8);

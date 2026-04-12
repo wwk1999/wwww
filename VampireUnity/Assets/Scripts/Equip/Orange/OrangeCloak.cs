@@ -13,8 +13,8 @@ public class OrangeCloak :EquipBase
         SpriteRenderer = transform.Find("OrangeCloakSprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "OrangeCloak";
-        EquipAttributes.suitid = 5;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

@@ -5,15 +5,15 @@ public class TreeManHelmet : EquipBase
 {
     private bool isSend = false; //是否发送消息
 
-    public TreeManHelmet() : base( "TreeManHelmetFight", SuitType.TreeMan,new EquipTable()){}
+    public TreeManHelmet() : base( "TreeManHelmetFight", SuitType.None,new EquipTable()){}
 
     private void Awake()
     {
         SpriteRenderer = transform.Find("TreeManHelmetSprite").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipName = "TreeManHelmet";
         EquipAttributes.EquipLevel = 5;
-        EquipAttributes.suitid = 101;
-        EquipAttributes.equip_type_id = 3;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.TreeMan;
         EquipAttributes.Quality = 2;
         
         SetBaseAttribute();

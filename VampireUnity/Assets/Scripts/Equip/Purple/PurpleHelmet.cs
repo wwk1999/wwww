@@ -15,8 +15,8 @@ public class PurpleHelmet :EquipBase
         EquipAttributes.EquipLevel = 25;
 
         EquipAttributes.EquipName = "PurpleHelmet";
-        EquipAttributes.suitid = 4;
-        EquipAttributes.equip_type_id = 3;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Purple;
         //暂时写死
         EquipAttributes.Quality = 4;
         SetBaseAttribute();  

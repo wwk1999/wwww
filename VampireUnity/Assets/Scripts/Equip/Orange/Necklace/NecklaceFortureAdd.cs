@@ -15,8 +15,8 @@ public class NecklaceFortureAdd :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "NecklaceFortureAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.NecklaceFortureAdd;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+
         EquipAttributes.orangeid = 23;
 
         //暂时写死

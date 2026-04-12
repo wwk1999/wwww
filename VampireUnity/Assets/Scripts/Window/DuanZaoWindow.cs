@@ -1320,18 +1320,18 @@ public class DuanZaoWindow : MonoBehaviour
         }
 
         image.sprite = ResourcesConfig.GetEquipSprite(equip);
-        baseAttribute1.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
+        baseAttribute1.text = (equip.EquipType == PlayerEquipConfig.EquipType.Cloth || equip.EquipType == PlayerEquipConfig.EquipType.Helmet || equip.EquipType == PlayerEquipConfig.EquipType.Shoe)
             ? LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Hp+" :"
             : LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.NormalAttack+" :";
-        baseAttribute2.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
+        baseAttribute2.text = (equip.EquipType == PlayerEquipConfig.EquipType.Cloth || equip.EquipType == PlayerEquipConfig.EquipType.Helmet || equip.EquipType == PlayerEquipConfig.EquipType.Shoe)
             ? LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Defense+" :"
             : LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.Crit+" :";
 
-        baseAttribute1Value.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
+        baseAttribute1Value.text = (equip.EquipType == PlayerEquipConfig.EquipType.Cloth || equip.EquipType == PlayerEquipConfig.EquipType.Helmet || equip.EquipType == PlayerEquipConfig.EquipType.Shoe)
             ? equip.HP.ToString()
             : equip.Damage.ToString();
         
-        baseAttribute2Value.text = (equip.equip_type_id == 2 || equip.equip_type_id == 3 || equip.equip_type_id == 5)
+        baseAttribute2Value.text = (equip.EquipType == PlayerEquipConfig.EquipType.Cloth || equip.EquipType == PlayerEquipConfig.EquipType.Helmet || equip.EquipType == PlayerEquipConfig.EquipType.Shoe)
             ? equip.Defense.ToString()
             : equip.CRIT.ToString();
         foreach (Transform child in fuJiaContent.transform)
@@ -2189,8 +2189,8 @@ public class DuanZaoWindow : MonoBehaviour
             }
             BagController.S.EquipIdList[clickEquipid].defenseEntryInfos.Clear();
             BagController.S.EquipIdList[clickEquipid].damageEntryInfos.Clear();
-            if (BagController.S.EquipIdList[clickEquipid].equip_type_id == 1 || BagController.S.EquipIdList[clickEquipid].equip_type_id == 4 ||
-                BagController.S.EquipIdList[clickEquipid].equip_type_id == 5)
+            if (BagController.S.EquipIdList[clickEquipid].EquipType == PlayerEquipConfig.EquipType.Cloak || BagController.S.EquipIdList[clickEquipid].EquipType == PlayerEquipConfig.EquipType.Ring ||
+                BagController.S.EquipIdList[clickEquipid].EquipType == PlayerEquipConfig.EquipType.Necklace)
             {
                 for (int i = 1; i < BagController.S.EquipIdList[clickEquipid].Quality; i++)
                 {

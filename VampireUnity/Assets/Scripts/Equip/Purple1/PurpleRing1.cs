@@ -14,8 +14,8 @@ public class PurpleRing1 :EquipBase
         SpriteRenderer = transform.Find("PurpleRingSprite1").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipLevel = 30;
         EquipAttributes.EquipName = "PurpleRing1";
-        EquipAttributes.suitid = 7;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Purple1;
         //暂时写死
         EquipAttributes.Quality = 4;
         SetBaseAttribute();     

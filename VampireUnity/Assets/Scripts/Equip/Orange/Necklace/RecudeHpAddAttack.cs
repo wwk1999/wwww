@@ -15,8 +15,8 @@ public class RecudeHpAddAttack :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "RecudeHpAddAttack";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.RecudeHpAddAttack;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+
         EquipAttributes.orangeid = 26;
 
         //暂时写死

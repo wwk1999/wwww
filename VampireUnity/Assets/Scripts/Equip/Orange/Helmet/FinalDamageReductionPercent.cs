@@ -13,8 +13,8 @@ public class FinalDamageReductionPercent :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "FinalDamageReductionPercent";
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 3;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
+
         EquipAttributes.orangeid = 17;
 
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FinalDamageReductionPercent;

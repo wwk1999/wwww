@@ -15,8 +15,8 @@ public class ZhaoZeNecklace : EquipBase
             EquipAttributes.EquipName = "ZhaoZeNecklace";
             EquipAttributes.EquipLevel = 20;
 
-            EquipAttributes.suitid =6;
-            EquipAttributes.equip_type_id = 4;
+            EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.ZhaoZe;
             EquipAttributes.Quality = 3;
             
             SetBaseAttribute();

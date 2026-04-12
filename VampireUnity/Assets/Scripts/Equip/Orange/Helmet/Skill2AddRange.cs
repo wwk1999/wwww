@@ -13,8 +13,8 @@ public class Skill2AddRange :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "Skill2AddRange";
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 3;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
+
         EquipAttributes.orangeid = 21;
 
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill2AddRange;

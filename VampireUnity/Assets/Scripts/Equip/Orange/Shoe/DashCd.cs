@@ -15,8 +15,8 @@ public class DashCd :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "DashCd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DashCd;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+
         EquipAttributes.orangeid = 37;
 
         //暂时写死

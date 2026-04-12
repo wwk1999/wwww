@@ -13,8 +13,8 @@ public class ZhaoZeCloth : EquipBase
         EquipAttributes.EquipName = "ZhaoZeCloth";
         EquipAttributes.EquipLevel = 20;
 
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 2;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.ZhaoZe;
         EquipAttributes.Quality = 3;
         
         SetBaseAttribute();

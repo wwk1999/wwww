@@ -7,7 +7,7 @@ public class HuoShanCloth : EquipBase
 {
     private bool isSend = false; //是否发送消息
 
-    public HuoShanCloth() : base( "HuoShanClothFight", SuitType.HuoShan,new EquipTable()){}
+    public HuoShanCloth() : base( "HuoShanClothFight", SuitType.None,new EquipTable()){}
 
     private void Awake()
     {
@@ -21,8 +21,8 @@ public class HuoShanCloth : EquipBase
         EquipAttributes.EquipName = "HuoShanCloth";
         EquipAttributes.EquipLevel = 15;
 
-        EquipAttributes.suitid = 102;
-        EquipAttributes.equip_type_id = 2;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.HuoShan;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
         EquipAttributes.Quality = 3;
         
         SetBaseAttribute();

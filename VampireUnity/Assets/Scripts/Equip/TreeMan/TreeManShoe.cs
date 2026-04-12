@@ -6,7 +6,7 @@ public class TreeManShoe : EquipBase
 {
     private bool isSend = false; //是否发送消息
 
-    public TreeManShoe() : base( "TreeManShoeFight", SuitType.TreeMan,new EquipTable()){}
+    public TreeManShoe() : base( "TreeManShoeFight", SuitType.None,new EquipTable()){}
 
     private void Awake()
     {
@@ -19,8 +19,8 @@ public class TreeManShoe : EquipBase
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "TreeManShoe";
         EquipAttributes.EquipLevel = 5;
-        EquipAttributes.suitid = 101;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.TreeMan;
         EquipAttributes.Quality = 2;
         
         SetBaseAttribute();

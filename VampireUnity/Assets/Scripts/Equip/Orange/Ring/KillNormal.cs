@@ -15,8 +15,8 @@ public class KillNormal :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "KillNormal";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.KillNormal;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+
         EquipAttributes.orangeid = 32;
 
         //暂时写死

@@ -6,6 +6,7 @@ public class PlayerEquipConfig : MonoBehaviour
 {
     public  enum EquipType
     {
+        None,
         Helmet ,
         Ring ,
         Cloak ,
@@ -16,6 +17,7 @@ public class PlayerEquipConfig : MonoBehaviour
     
     public  enum EquipLevel
     {
+        None,
         Primary ,
         Green ,
         Blue ,

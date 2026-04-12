@@ -15,8 +15,8 @@ public class Skill1ReplaceNormalAttack :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "Skill1ReplaceNormalAttack";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+
         EquipAttributes.orangeid = 27;
 
         //暂时写死

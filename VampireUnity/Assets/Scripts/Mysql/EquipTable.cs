@@ -8,17 +8,17 @@ public class EquipTable:TableBase
 {
     public int EquipLevel { get; set; }
     public int equipid { get; set; }
-    public int suitid { get; set; } // 套装ID
     public int orangeid { get; set; } // 套装ID
 
-    public int equip_type_id{ get; set; } // 装备类型ID
     public float Damage { get; set; }
     public float CRIT { get; set; }
     public float Defense { get; set; }
     public float HP { get; set; }
     public bool Lock { get; set; }
 
-    
+    public PlayerEquipConfig.EquipLevel EquipQuality{ get; set; }
+    public PlayerEquipConfig.EquipType EquipType{ get; set; }
+
     public List<DamageEntryInfo> damageEntryInfos=new List<DamageEntryInfo>();
     public List<DefenseEntryInfo> defenseEntryInfos=new List<DefenseEntryInfo>();
 
@@ -34,9 +34,9 @@ public class EquipTable:TableBase
         float crit = 0, 
         float defense = 0, 
         float hp = 0, 
-        int suitid = 0,
-        int equip_type_id = 0,
         int level=0,
+        PlayerEquipConfig.EquipLevel equipQuality = PlayerEquipConfig.EquipLevel.None,
+        PlayerEquipConfig.EquipType equipType = PlayerEquipConfig.EquipType.None,
         List<DamageEntryInfo> damageEntryInfos=null,
         List<DefenseEntryInfo> defenseEntryInfos=null,
         EntryConfig.OrangeEntry OrangeEntry1= EntryConfig.OrangeEntry.None,
@@ -52,8 +52,8 @@ public class EquipTable:TableBase
         HP = hp;
         TableType = TableType.EquipTable;
         EquipLevel = level;
-        this.suitid = suitid;
-        this.equip_type_id = equip_type_id;
+        this.EquipQuality = equipQuality;
+        this.EquipType = equipType;
         this.damageEntryInfos = damageEntryInfos ?? new List<DamageEntryInfo>();
         this.defenseEntryInfos = defenseEntryInfos ?? new List<DefenseEntryInfo>();
         this.OrangeEntry1 = OrangeEntry1;

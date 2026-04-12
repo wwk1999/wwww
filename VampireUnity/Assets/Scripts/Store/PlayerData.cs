@@ -461,26 +461,26 @@ public class PlayerData : XSingleton<PlayerData>
         DontDestroyOnLoad(gameObject);
     }
 
-    public void SaveWearEquip(int equipType, int equipid)
+    public void SaveWearEquip(PlayerEquipConfig.EquipType equipType, int equipid)
     {
         switch (equipType)
         {
-            case 1:
+            case PlayerEquipConfig.EquipType.Cloak:
                 cloakid = equipid;
                 break;
-            case 2:
+            case PlayerEquipConfig.EquipType.Cloth:
                 clothid = equipid;
                 break;
-            case 3:
+            case PlayerEquipConfig.EquipType.Helmet:
                 helmetid = equipid;
                 break;
-            case 4:
+            case PlayerEquipConfig.EquipType.Necklace:
                 necklaceid = equipid;
                 break;
-            case 5:
+            case PlayerEquipConfig.EquipType.Ring:
                 ringid = equipid;
                 break;
-            case 6:
+            case PlayerEquipConfig.EquipType.Shoe:
                 shoeid = equipid;
                 break;
         }

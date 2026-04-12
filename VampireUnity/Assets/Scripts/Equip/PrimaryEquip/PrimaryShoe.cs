@@ -15,8 +15,8 @@ namespace Equip
             SpriteRenderer = transform.Find("PrimaryShoeSprite").GetComponent<SpriteRenderer>();
             EquipAttributes.EquipLevel = 1;
             EquipAttributes.EquipName = "PrimaryShoe";
-            EquipAttributes.suitid = 1;
-            EquipAttributes.equip_type_id = 6;
+            EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
             EquipAttributes.Quality = 1;
             SetBaseAttribute();        
         }

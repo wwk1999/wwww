@@ -15,8 +15,8 @@ public class PurpleRing :EquipBase
         EquipAttributes.EquipLevel = 25;
 
         EquipAttributes.EquipName = "PurpleRing";
-        EquipAttributes.suitid = 4;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Purple;
         //暂时写死
         EquipAttributes.Quality = 4;
         SetBaseAttribute();     

@@ -15,8 +15,8 @@ public class PuTong3ChuanTou :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "PuTong3ChuanTou";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.PuTong3ChuanTou;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
+
         EquipAttributes.orangeid = 7;
 
         //暂时写死

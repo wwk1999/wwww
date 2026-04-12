@@ -250,7 +250,6 @@ public class StoreWindow : MonoBehaviour
             {
                WindowController.S.MainWindow.gameObject.SetActive(false);
                WindowController.S.RoleWindow.gameObject.SetActive(true);
-               LevelInfoConfig.init();
                LevelInfoConfig.InitGameLevel();
                StoreController.S.LoadStoreData();
                gameObject.SetActive(false);
@@ -274,7 +273,6 @@ public class StoreWindow : MonoBehaviour
             {
                WindowController.S.MainWindow.gameObject.SetActive(false);
                WindowController.S.RoleWindow.gameObject.SetActive(true);
-               LevelInfoConfig.init();
                LevelInfoConfig.InitGameLevel();
                StoreController.S.LoadStoreData();
                gameObject.SetActive(false);
@@ -298,7 +296,6 @@ public class StoreWindow : MonoBehaviour
             {
                WindowController.S.MainWindow.gameObject.SetActive(false);
                WindowController.S.RoleWindow.gameObject.SetActive(true);
-               LevelInfoConfig.init();
                LevelInfoConfig.InitGameLevel();
                StoreController.S.LoadStoreData();
                gameObject.SetActive(false);

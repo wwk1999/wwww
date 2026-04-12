@@ -15,8 +15,8 @@ public class AddAttackForTime :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "AddAttackForTime";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.AddAttackForTime;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+
         EquipAttributes.orangeid = 30;
 
         //暂时写死

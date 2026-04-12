@@ -13,8 +13,8 @@ public class HelmetFortureAdd :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "HelmetFortureAdd";
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 3;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
+
         EquipAttributes.orangeid = 18;
 
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.HelmetFortureAdd;

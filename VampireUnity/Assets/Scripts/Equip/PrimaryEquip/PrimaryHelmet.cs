@@ -16,8 +16,8 @@ namespace Equip
             EquipAttributes.EquipLevel = 1;
 
             EquipAttributes.EquipName = "PrimaryHelmet";
-            EquipAttributes.suitid = 1;
-            EquipAttributes.equip_type_id = 3;
+            EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
             EquipAttributes.Quality = 1;
 
             SetBaseAttribute();

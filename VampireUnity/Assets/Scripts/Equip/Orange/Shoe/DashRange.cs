@@ -15,8 +15,8 @@ public class DashRange :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "DashRange";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DashRange;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+
         EquipAttributes.orangeid = 38;
 
         //暂时写死

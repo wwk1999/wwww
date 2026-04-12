@@ -15,8 +15,8 @@ public class FinalDamageAddPercent :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "FinalDamageAddPercent";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FinalDamageAddPercent;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+
         EquipAttributes.orangeid = 22;
 
         //暂时写死

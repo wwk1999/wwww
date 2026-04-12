@@ -15,8 +15,8 @@ public class NoSkill :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "NoSkill";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.NoSkill;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+
         EquipAttributes.orangeid = 25;
 
         //暂时写死

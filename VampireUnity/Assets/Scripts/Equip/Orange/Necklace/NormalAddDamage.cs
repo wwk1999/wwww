@@ -15,8 +15,8 @@ public class NormalAddDamage :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "NormalAddDamage";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.NormalAddDamage;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+
         EquipAttributes.orangeid = 24;
 
         //暂时写死

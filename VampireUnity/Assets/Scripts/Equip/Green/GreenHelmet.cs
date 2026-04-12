@@ -17,8 +17,8 @@ public class GreenHelmet : EquipBase
         EquipAttributes.EquipLevel = 5;
 
         EquipAttributes.EquipName = "GreenHelmet";
-        EquipAttributes.suitid = 2;
-        EquipAttributes.equip_type_id = 3;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Green;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
         EquipAttributes.Quality = 2;
         SetBaseAttribute();
         InitEntry();

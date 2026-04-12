@@ -15,8 +15,8 @@ public class PurpleNecklace :EquipBase
         EquipAttributes.EquipLevel = 25;
 
         EquipAttributes.EquipName = "PurpleNecklace";
-        EquipAttributes.suitid = 4;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Purple;
         //暂时写死
         EquipAttributes.Quality = 4;
         SetBaseAttribute(); 

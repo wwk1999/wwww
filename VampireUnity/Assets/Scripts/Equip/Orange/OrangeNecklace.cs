@@ -19,8 +19,8 @@ public class OrangeNecklace :EquipBase
         // //添加生命值，随机10-20
         // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
         EquipAttributes.EquipName = "OrangeNecklace";
-        EquipAttributes.suitid = 5;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+
         //暂时写死
         EquipAttributes.Quality = 5;
         EquipAttributes.EquipLevel = GetOrangeLevel();

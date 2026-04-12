@@ -266,7 +266,7 @@ public class PropConfig : MonoBehaviour
             case PropType.DaKongShi:
                 switch (quality)
                 {
-                    case 5: return 2305; // 打孔石
+                    case 5: return 2405; // 打孔石
                     default: return 0;
                 }
                 
@@ -274,17 +274,17 @@ public class PropConfig : MonoBehaviour
                 switch (quality)
                 {
                     case 1:
-                        return 2401;
+                        return 2301;
                     case 2:
-                        return 2402;
+                        return 2302;
                     case 3:
-                        return 2403;
+                        return 2303;
                     case 4:
-                        return 2404;
+                        return 2304;
                     case 5:
-                        return 2405;
+                        return 2305;
                     case 6:
-                        return 2406;
+                        return 2306;
                     default:
                         return 0;
                 }

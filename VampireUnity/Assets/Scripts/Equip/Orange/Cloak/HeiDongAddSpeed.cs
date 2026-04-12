@@ -15,8 +15,8 @@ public class HeiDongAddSpeed :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "HeiDongAddSpeed";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.HeiDongAddSpeed;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
+
         EquipAttributes.orangeid = 5;
 
         //暂时写死

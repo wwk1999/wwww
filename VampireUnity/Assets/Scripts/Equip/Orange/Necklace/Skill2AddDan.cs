@@ -15,8 +15,8 @@ public class Skill2AddDan :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "Skill2AddDan";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill2AddDan;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 4;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+
         EquipAttributes.orangeid = 28;
 
         //暂时写死

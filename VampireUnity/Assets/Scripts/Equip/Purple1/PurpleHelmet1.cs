@@ -14,8 +14,8 @@ public class PurpleHelmet1 :EquipBase
         SpriteRenderer = transform.Find("PurpleHelmetSprite1").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipLevel = 30;
         EquipAttributes.EquipName = "PurpleHelmet1";
-        EquipAttributes.suitid = 7;
-        EquipAttributes.equip_type_id = 3;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Purple1;
         //暂时写死
         EquipAttributes.Quality = 4;
         SetBaseAttribute();  

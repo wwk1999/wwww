@@ -16,8 +16,8 @@ public class GreenCloth : EquipBase
         EquipAttributes.EquipLevel = 5;
 
         EquipAttributes.EquipName = "GreenCloth";
-        EquipAttributes.suitid = 2;
-        EquipAttributes.equip_type_id = 2;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Green;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
         EquipAttributes.Quality = 2;
         
         SetBaseAttribute();

@@ -15,8 +15,8 @@ public class ExAdd :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "ExAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.ExAdd;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+
         EquipAttributes.orangeid = 39;
 
         //暂时写死

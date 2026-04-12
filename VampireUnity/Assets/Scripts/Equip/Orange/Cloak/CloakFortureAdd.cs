@@ -15,8 +15,8 @@ public class CloakFortureAdd :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "CloakFortureAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.CloakFortureAdd;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
+
         EquipAttributes.orangeid = 2;
 
         //暂时写死

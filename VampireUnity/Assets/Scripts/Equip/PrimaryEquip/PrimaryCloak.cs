@@ -15,8 +15,9 @@ namespace Equip
              EquipAttributes.EquipLevel = 1;
 
             EquipAttributes.EquipName = "PrimaryCloak";
-            EquipAttributes.suitid = 1;
-            EquipAttributes.equip_type_id = 1;
+            EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
+
             EquipAttributes.Quality = 1;
             
             SetBaseAttribute();

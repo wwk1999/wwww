@@ -10,8 +10,12 @@ using Random = UnityEngine.Random;
 public enum SuitType
 {
     None,
-    TreeMan,
-    HuoShan
+    Cloak,
+    Cloth,
+    Helmet,
+    Shoe,
+    Necklace,
+    Ring
 }
 public class EquipBase : BagObjectBase
 {
@@ -101,8 +105,8 @@ public class EquipBase : BagObjectBase
         var qualityScale = EquipConfig.EquipQualityDic[EquipAttributes.Quality];
         float random1=Random.Range(0.8f, 1.2f);
         float random2=Random.Range(0.8f, 1.2f);
-        if (EquipAttributes.equip_type_id == 1 || EquipAttributes.equip_type_id == 4 ||
-            EquipAttributes.equip_type_id == 5)
+        if (EquipAttributes.EquipType == PlayerEquipConfig.EquipType.Cloak || EquipAttributes.EquipType == PlayerEquipConfig.EquipType.Necklace ||
+            EquipAttributes.EquipType == PlayerEquipConfig.EquipType.Ring)
         {
             EquipAttributes.CRIT = equipBaseAttribute.Crit * qualityScale*random1;
             EquipAttributes.Damage= equipBaseAttribute.Attack * qualityScale*random2;
@@ -116,8 +120,8 @@ public class EquipBase : BagObjectBase
 
     public void InitEntry()
     {
-        if (EquipAttributes.equip_type_id == 1 || EquipAttributes.equip_type_id == 4 ||
-            EquipAttributes.equip_type_id == 5)
+        if (EquipAttributes.EquipType == PlayerEquipConfig.EquipType.Cloak || EquipAttributes.EquipType == PlayerEquipConfig.EquipType.Necklace ||
+            EquipAttributes.EquipType == PlayerEquipConfig.EquipType.Ring)
         {
             for (int i = 1; i < EquipAttributes.Quality; i++)
             {
@@ -237,205 +241,259 @@ public class EquipBase : BagObjectBase
 
     public void EnEquipQueue(EquipTable equipAttributes)
     {
-        switch (equipAttributes.equip_type_id)
+        switch (equipAttributes.EquipType)
         {
-            case 1:
-                switch (equipAttributes.suitid)
+            case PlayerEquipConfig.EquipType.Cloak:
+                switch (equipAttributes.EquipQuality)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipLevel.Primary:
                         GameController.S.PrimaryCloakQueue.Enqueue(gameObject);
                         break;
-                    case 2:
+                    case PlayerEquipConfig.EquipLevel.Green:
                         GameController.S.GreenCloakQueue.Enqueue(gameObject);
                         break;
-                    case 3:
+                    case PlayerEquipConfig.EquipLevel.Blue:
                         GameController.S.BlueCloakQueue.Enqueue(gameObject);
                         break;
-                    case 4:
+                    case PlayerEquipConfig.EquipLevel.Purple:
                         GameController.S.PurpleCloakQueue.Enqueue(gameObject);
                         break;
-                    case 5:
+                    case PlayerEquipConfig.EquipLevel.Orange:
                         GameController.S.OrangeCloakQueue.Enqueue(gameObject);
                         break;
-                    case 6:
+                    case PlayerEquipConfig.EquipLevel.ZhaoZe:
                         GameController.S.ZhaoZeCloakQueue.Enqueue(gameObject);
                         break;
-                    case 7:
+                    case PlayerEquipConfig.EquipLevel.Purple1:
                         GameController.S.Purple1CloakQueue.Enqueue(gameObject);
                         break;
-                    case 101:
+                    case PlayerEquipConfig.EquipLevel.TreeMan:
                         GameController.S.TreeManCloakQueue.Enqueue(gameObject);
                         break;
-                    case 102:
+                    case PlayerEquipConfig.EquipLevel.HuoShan:
                         GameController.S.HuoShanCloakQueue.Enqueue(gameObject);
                         break;
+                    case PlayerEquipConfig.EquipLevel.XieZi:
+                        GameController.S.XieZiCloakQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.XueRen:
+                        GameController.S.XueRenCloakQueue.Enqueue(gameObject);
+                        break;
                 }
                 break;
             
-            case 2:
-                switch (equipAttributes.suitid)
+             case PlayerEquipConfig.EquipType.Cloth:
+                switch (equipAttributes.EquipQuality)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipLevel.Primary:
                         GameController.S.PrimaryClothQueue.Enqueue(gameObject);
                         break;
-                    case 2:
+                    case PlayerEquipConfig.EquipLevel.Green:
                         GameController.S.GreenClothQueue.Enqueue(gameObject);
                         break;
-                    case 3:
+                    case PlayerEquipConfig.EquipLevel.Blue:
                         GameController.S.BlueClothQueue.Enqueue(gameObject);
                         break;
-                    case 4:
+                    case PlayerEquipConfig.EquipLevel.Purple:
                         GameController.S.PurpleClothQueue.Enqueue(gameObject);
                         break;
-                    case 5:
+                    case PlayerEquipConfig.EquipLevel.Orange:
                         GameController.S.OrangeClothQueue.Enqueue(gameObject);
                         break;
-                    case 6:
+                    case PlayerEquipConfig.EquipLevel.ZhaoZe:
                         GameController.S.ZhaoZeClothQueue.Enqueue(gameObject);
                         break;
-                    case 7:
+                    case PlayerEquipConfig.EquipLevel.Purple1:
                         GameController.S.Purple1ClothQueue.Enqueue(gameObject);
                         break;
-                    case 101:
+                    case PlayerEquipConfig.EquipLevel.TreeMan:
                         GameController.S.TreeManClothQueue.Enqueue(gameObject);
                         break;
-                    case 102:
+                    case PlayerEquipConfig.EquipLevel.HuoShan:
                         GameController.S.HuoShanClothQueue.Enqueue(gameObject);
                         break;
+                    case PlayerEquipConfig.EquipLevel.XieZi:
+                        GameController.S.XieZiClothQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.XueRen:
+                        GameController.S.XueRenClothQueue.Enqueue(gameObject);
+                        break;
                 }
                 break;
-            
-            case 3:
-                switch (equipAttributes.suitid)
+             
+             
+             
+             
+              case PlayerEquipConfig.EquipType.Helmet:
+                switch (equipAttributes.EquipQuality)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipLevel.Primary:
                         GameController.S.PrimaryHelmetQueue.Enqueue(gameObject);
                         break;
-                    case 2:
+                    case PlayerEquipConfig.EquipLevel.Green:
                         GameController.S.GreenHelmetQueue.Enqueue(gameObject);
                         break;
-                    case 3:
+                    case PlayerEquipConfig.EquipLevel.Blue:
                         GameController.S.BlueHelmetQueue.Enqueue(gameObject);
                         break;
-                    case 4:
+                    case PlayerEquipConfig.EquipLevel.Purple:
                         GameController.S.PurpleHelmetQueue.Enqueue(gameObject);
                         break;
-                    case 5:
+                    case PlayerEquipConfig.EquipLevel.Orange:
                         GameController.S.OrangeHelmetQueue.Enqueue(gameObject);
                         break;
-                    case 6:
+                    case PlayerEquipConfig.EquipLevel.ZhaoZe:
                         GameController.S.ZhaoZeHelmetQueue.Enqueue(gameObject);
                         break;
-                    case 7:
+                    case PlayerEquipConfig.EquipLevel.Purple1:
                         GameController.S.Purple1HelmetQueue.Enqueue(gameObject);
                         break;
-                    case 101:
+                    case PlayerEquipConfig.EquipLevel.TreeMan:
                         GameController.S.TreeManHelmetQueue.Enqueue(gameObject);
                         break;
-                    case 102:
+                    case PlayerEquipConfig.EquipLevel.HuoShan:
                         GameController.S.HuoShanHelmetQueue.Enqueue(gameObject);
                         break;
-                }
-                break;
-            
-            case 4:
-                switch (equipAttributes.suitid)
-                {
-                    case 1:
-                        GameController.S.PrimaryNecklaceQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.XieZi:
+                        GameController.S.XieZiHelmetQueue.Enqueue(gameObject);
                         break;
-                    case 2:
-                        GameController.S.GreenNecklaceQueue.Enqueue(gameObject);
-                        break;
-                    case 3:
-                        GameController.S.BlueNecklaceQueue.Enqueue(gameObject);
-                        break;
-                    case 4:
-                        GameController.S.PurpleNecklaceQueue.Enqueue(gameObject);
-                        break;
-                    case 5:
-                        GameController.S.OrangeNecklaceQueue.Enqueue(gameObject);
-                        break;
-                    case 6:
-                        GameController.S.ZhaoZeNecklaceQueue.Enqueue(gameObject);
-                        break;
-                    case 7:
-                        GameController.S.Purple1NecklaceQueue.Enqueue(gameObject);
-                        break;
-                    case 101:
-                        GameController.S.TreeManNecklaceQueue.Enqueue(gameObject);
-                        break;
-                    case 102:
-                        GameController.S.HuoShanNecklaceQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.XueRen:
+                        GameController.S.XueRenHelmetQueue.Enqueue(gameObject);
                         break;
                 }
                 break;
             
-            case 5:
-                switch (equipAttributes.suitid)
+              
+              
+              
+              
+               case PlayerEquipConfig.EquipType.Ring:
+                switch (equipAttributes.EquipQuality)
                 {
-                    case 1:
+                    case PlayerEquipConfig.EquipLevel.Primary:
                         GameController.S.PrimaryRingQueue.Enqueue(gameObject);
                         break;
-                    case 2:
+                    case PlayerEquipConfig.EquipLevel.Green:
                         GameController.S.GreenRingQueue.Enqueue(gameObject);
                         break;
-                    case 3:
+                    case PlayerEquipConfig.EquipLevel.Blue:
                         GameController.S.BlueRingQueue.Enqueue(gameObject);
                         break;
-                    case 4:
+                    case PlayerEquipConfig.EquipLevel.Purple:
                         GameController.S.PurpleRingQueue.Enqueue(gameObject);
                         break;
-                    case 5:
+                    case PlayerEquipConfig.EquipLevel.Orange:
                         GameController.S.OrangeRingQueue.Enqueue(gameObject);
                         break;
-                    case 6:
+                    case PlayerEquipConfig.EquipLevel.ZhaoZe:
                         GameController.S.ZhaoZeRingQueue.Enqueue(gameObject);
                         break;
-                    case 7:
+                    case PlayerEquipConfig.EquipLevel.Purple1:
                         GameController.S.Purple1RingQueue.Enqueue(gameObject);
                         break;
-                    case 101:
+                    case PlayerEquipConfig.EquipLevel.TreeMan:
                         GameController.S.TreeManRingQueue.Enqueue(gameObject);
                         break;
-                    case 102:
+                    case PlayerEquipConfig.EquipLevel.HuoShan:
                         GameController.S.HuoShanRingQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.XieZi:
+                        GameController.S.XieZiRingQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.XueRen:
+                        GameController.S.XueRenRingQueue.Enqueue(gameObject);
                         break;
                 }
                 break;
             
-            case 6:
-                switch (equipAttributes.suitid)
+               
+               
+               
+               
+               
+                case PlayerEquipConfig.EquipType.Necklace:
+                switch (equipAttributes.EquipQuality)
                 {
-                    case 1:
-                        GameController.S.PrimaryShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.Primary:
+                        GameController.S.PrimaryNecklaceQueue.Enqueue(gameObject);
                         break;
-                    case 2:
-                        GameController.S.GreenShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.Green:
+                        GameController.S.GreenNecklaceQueue.Enqueue(gameObject);
                         break;
-                    case 3:
-                        GameController.S.BlueShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.Blue:
+                        GameController.S.BlueNecklaceQueue.Enqueue(gameObject);
                         break;
-                    case 4:
-                        GameController.S.PurpleShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.Purple:
+                        GameController.S.PurpleNecklaceQueue.Enqueue(gameObject);
                         break;
-                    case 5:
-                        GameController.S.OrangeShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.Orange:
+                        GameController.S.OrangeNecklaceQueue.Enqueue(gameObject);
                         break;
-                    case 6:
-                        GameController.S.ZhaoZeShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.ZhaoZe:
+                        GameController.S.ZhaoZeNecklaceQueue.Enqueue(gameObject);
                         break;
-                    case 7:
-                        GameController.S.Purple1ShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.Purple1:
+                        GameController.S.Purple1NecklaceQueue.Enqueue(gameObject);
                         break;
-                    case 101:
-                        GameController.S.TreeManShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.TreeMan:
+                        GameController.S.TreeManNecklaceQueue.Enqueue(gameObject);
                         break;
-                    case 102:
-                        GameController.S.HuoShanShoeQueue.Enqueue(gameObject);
+                    case PlayerEquipConfig.EquipLevel.HuoShan:
+                        GameController.S.HuoShanNecklaceQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.XieZi:
+                        GameController.S.XieZiNecklaceQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.XueRen:
+                        GameController.S.XueRenNecklaceQueue.Enqueue(gameObject);
                         break;
                 }
                 break;
+            
+                
+                
+                
+                
+                 case PlayerEquipConfig.EquipType.Shoe:
+                switch (equipAttributes.EquipQuality)
+                {
+                    case PlayerEquipConfig.EquipLevel.Primary:
+                        GameController.S.PrimaryShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.Green:
+                        GameController.S.GreenShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.Blue:
+                        GameController.S.BlueShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.Purple:
+                        GameController.S.PurpleShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.Orange:
+                        GameController.S.OrangeShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.ZhaoZe:
+                        GameController.S.ZhaoZeShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.Purple1:
+                        GameController.S.Purple1ShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.TreeMan:
+                        GameController.S.TreeManShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.HuoShan:
+                        GameController.S.HuoShanShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.XieZi:
+                        GameController.S.XieZiShoeQueue.Enqueue(gameObject);
+                        break;
+                    case PlayerEquipConfig.EquipLevel.XueRen:
+                        GameController.S.XueRenShoeQueue.Enqueue(gameObject);
+                        break;
+                }
+                break;
+            
+            
         }
     }
 }

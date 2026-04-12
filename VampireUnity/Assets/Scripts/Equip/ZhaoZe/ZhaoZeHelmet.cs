@@ -14,8 +14,8 @@ public class ZhaoZeHelmet : EquipBase
         EquipAttributes.EquipName = "ZhaoZeHelmet";
         EquipAttributes.EquipLevel = 20;
 
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 3;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.ZhaoZe;
         EquipAttributes.Quality = 3;
         
         SetBaseAttribute();

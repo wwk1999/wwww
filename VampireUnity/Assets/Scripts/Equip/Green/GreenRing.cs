@@ -15,8 +15,8 @@ public class GreenRing : EquipBase
         Random random = new Random();
         EquipAttributes.EquipLevel = 5;
         EquipAttributes.EquipName = "GreenRing";
-        EquipAttributes.suitid = 2;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Green;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
         EquipAttributes.Quality = 2;
         SetBaseAttribute();
         InitEntry();

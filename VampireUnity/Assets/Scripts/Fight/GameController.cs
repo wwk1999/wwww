@@ -442,6 +442,22 @@ public class GameController : XSingleton<GameController>
     [NonReorderable]public Queue<GameObject>HuoShanNecklaceQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>HuoShanShoeQueue = new Queue<GameObject>();
     
+    [NonReorderable]public Queue<GameObject>XieZiCloakQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XieZiClothQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XieZiRingQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XieZiHelmetQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XieZiNecklaceQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XieZiShoeQueue = new Queue<GameObject>();
+
+    
+    [NonReorderable]public Queue<GameObject>XueRenCloakQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XueRenClothQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XueRenRingQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XueRenHelmetQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XueRenNecklaceQueue = new Queue<GameObject>();
+    [NonReorderable]public Queue<GameObject>XueRenShoeQueue = new Queue<GameObject>();
+
+    
     [NonReorderable]public Queue<GameObject>PurpleCloakQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>PurpleClothQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>PurpleRingQueue = new Queue<GameObject>();

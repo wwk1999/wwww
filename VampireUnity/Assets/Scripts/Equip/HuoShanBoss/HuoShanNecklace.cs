@@ -7,7 +7,7 @@ public class HuoShanNecklace : EquipBase
 {
     private bool isSend = false; //是否发送消息
 
-    public HuoShanNecklace() : base( "HuoShanNecklaceFight", SuitType.HuoShan,new EquipTable()){}
+    public HuoShanNecklace() : base( "HuoShanNecklaceFight", SuitType.None,new EquipTable()){}
 
         private void Awake()
         {
@@ -20,8 +20,8 @@ public class HuoShanNecklace : EquipBase
             // EquipAttributes.Attributes.Add(EquipAttribute.HP, random.Next(10, 20));
             EquipAttributes.EquipName = "HuoShanNecklace";
             EquipAttributes.EquipLevel = 15;
-            EquipAttributes.suitid = 102;
-            EquipAttributes.equip_type_id = 4;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.HuoShan;
+            EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
             EquipAttributes.Quality = 3;
             SetBaseAttribute();
             InitEntry();

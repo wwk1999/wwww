@@ -17,8 +17,8 @@ namespace Equip
             EquipAttributes.EquipLevel = 1;
 
             EquipAttributes.EquipName = "PrimaryNecklace";
-            EquipAttributes.suitid = 1;
-            EquipAttributes.equip_type_id = 4;
+            EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
             EquipAttributes.Quality = 1;
             
             SetBaseAttribute();

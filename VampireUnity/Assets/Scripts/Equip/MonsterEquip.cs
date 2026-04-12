@@ -7,12 +7,14 @@ namespace Equip
         public PlayerEquipConfig.EquipType EquipType;
         public PlayerEquipConfig.EquipLevel EquipLevel;
         public float Probability;
+        public bool Orange = false;
 
-        public MonsterEquip(PlayerEquipConfig.EquipType equipType, PlayerEquipConfig.EquipLevel equipLevel, float probability)
+        public MonsterEquip( PlayerEquipConfig.EquipType equipType,PlayerEquipConfig.EquipLevel equipLevel=PlayerEquipConfig.EquipLevel.None, float probability=0,bool orange=false)
         {
             EquipType = equipType;
             EquipLevel = equipLevel;
             Probability = probability;
+            Orange = orange;
         }
     }
     

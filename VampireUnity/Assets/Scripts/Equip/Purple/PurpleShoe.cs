@@ -16,8 +16,8 @@ public class PurpleShoe :EquipBase
         EquipAttributes.EquipLevel = 25;
 
         EquipAttributes.EquipName = "PurpleShoe";
-        EquipAttributes.suitid = 4;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Purple;
         //暂时写死
         EquipAttributes.Quality = 4;
         SetBaseAttribute();  

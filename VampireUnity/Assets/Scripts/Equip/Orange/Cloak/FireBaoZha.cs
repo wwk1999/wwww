@@ -15,8 +15,8 @@ public class FireBaoZha :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "FireBaoZha";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FireBaoZha;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
+
         EquipAttributes.orangeid = 4;
 
         //暂时写死

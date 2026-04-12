@@ -15,8 +15,8 @@ public class RingFortureAdd :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "RingFortureAdd";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.RingFortureAdd;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 5;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
+
         EquipAttributes.orangeid = 33;
 
         //暂时写死

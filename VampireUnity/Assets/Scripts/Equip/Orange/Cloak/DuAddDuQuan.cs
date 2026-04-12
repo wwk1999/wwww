@@ -15,8 +15,8 @@ public class DuAddDuQuan :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "DuAddDuQuan";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DuAddDuQuan;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 1;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
+
         EquipAttributes.orangeid = 3;
 
         //暂时写死

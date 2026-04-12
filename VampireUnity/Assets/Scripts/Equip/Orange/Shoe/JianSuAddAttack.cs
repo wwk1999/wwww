@@ -15,8 +15,8 @@ public class JianSuAddAttack :EquipBase
         Random random = new Random();
         EquipAttributes.EquipName = "JianSuAddAttack";
         EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.JianSuAddAttack;
-        EquipAttributes.suitid = 6;
-        EquipAttributes.equip_type_id = 6;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
+
         EquipAttributes.orangeid = 40;
 
         //暂时写死
