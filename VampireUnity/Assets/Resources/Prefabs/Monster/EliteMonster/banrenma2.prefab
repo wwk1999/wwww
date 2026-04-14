@@ -323,9 +323,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1370053458629136105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 145, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5213232616507462088
@@ -398,9 +398,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1370053458629136105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 65, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3276297002758343116
@@ -817,9 +817,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1370053458629136105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1895898069419298103
@@ -967,9 +967,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1370053458629136105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -22}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1958157652740802958
@@ -1473,7 +1473,7 @@ GameObject:
   - component: {fileID: 1129523498024891217}
   - component: {fileID: 6242593484603221776}
   - component: {fileID: 9172130028546111337}
-  - component: {fileID: 882794822476332217}
+  - component: {fileID: 7208115488910899214}
   m_Layer: 6
   m_Name: banrenma2
   m_TagString: Monster
@@ -1599,7 +1599,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &882794822476332217
+--- !u!114 &7208115488910899214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9054626244596966706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11c7c612781a7164b94cd96c8d1a1973, type: 3}
+  m_Script: {fileID: 11500000, guid: 459538c23ff089b42b45b33ce050479f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bingkuai: {fileID: 5432437421427466681}

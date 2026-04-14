@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 8889282684616039129}
   - component: {fileID: 7555290136532220701}
   - component: {fileID: 7516840824652195366}
-  - component: {fileID: -1439972398708722894}
+  - component: {fileID: 4591894002205181632}
   m_Layer: 6
   m_Name: niguai1
   m_TagString: Monster
@@ -767,7 +767,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-1439972398708722894
+--- !u!114 &4591894002205181632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -776,7 +776,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4832888727490123094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b4096f3d0ab68e41bf950a49ea5a5b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 02249c2608a8d0d4792695e562f54ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bingkuai: {fileID: 3946250759175962165}

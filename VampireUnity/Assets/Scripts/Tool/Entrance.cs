@@ -855,7 +855,7 @@ public class Entrance : MonoBehaviour
 
                 var niutouren1 =
                     Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niutouren1")
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/niutouren1")
                             .GetComponent<niutouren1>(), GameController.S.transform);
                 niutouren1.gameObject.SetActive(false);
                 GameController.S.niutouren1Queue.Enqueue(niutouren1);
@@ -868,7 +868,7 @@ public class Entrance : MonoBehaviour
 
                 var niutouren2 =
                     Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niutouren2")
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/niutouren2")
                             .GetComponent<niutouren2>(), GameController.S.transform);
                 niutouren2.gameObject.SetActive(false);
                 GameController.S.niutouren2Queue.Enqueue(niutouren2);
@@ -881,7 +881,7 @@ public class Entrance : MonoBehaviour
 
                 var niutouren3 =
                     Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niutouren3")
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/niutouren3")
                             .GetComponent<niutouren3>(), GameController.S.transform);
                 niutouren3.gameObject.SetActive(false);
                 GameController.S.niutouren3Queue.Enqueue(niutouren3);
@@ -947,7 +947,7 @@ public class Entrance : MonoBehaviour
 
                 var shouren1 =
                     Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shouren1").GetComponent<shouren1>(),
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/shouren1").GetComponent<shouren1>(),
                         GameController.S.transform);
                 shouren1.gameObject.SetActive(false);
                 GameController.S.shouren1Queue.Enqueue(shouren1);
@@ -961,7 +961,7 @@ public class Entrance : MonoBehaviour
 
                 var shouren2 =
                     Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shouren2").GetComponent<shouren2>(),
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/shouren2").GetComponent<shouren2>(),
                         GameController.S.transform);
                 shouren2.gameObject.SetActive(false);
                 GameController.S.shouren2Queue.Enqueue(shouren2);
@@ -975,7 +975,7 @@ public class Entrance : MonoBehaviour
 
                 var shouren3 =
                     Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shouren3").GetComponent<shouren3>(),
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/shouren3").GetComponent<shouren3>(),
                         GameController.S.transform);
                 shouren3.gameObject.SetActive(false);
                 GameController.S.shouren3Queue.Enqueue(shouren3);
@@ -1055,7 +1055,7 @@ public class Entrance : MonoBehaviour
 
                 var youhunlingzhu =
                     Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/youhunlingzhu")
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/youhunlingzhu")
                             .GetComponent<youhunlingzhu>(), GameController.S.transform);
                 youhunlingzhu.gameObject.SetActive(false);
                 GameController.S.youhunlingzhuQueue.Enqueue(youhunlingzhu);

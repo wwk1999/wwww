@@ -1483,7 +1483,7 @@ GameObject:
   - component: {fileID: 1129523498024891217}
   - component: {fileID: 6242593484603221776}
   - component: {fileID: 9172130028546111337}
-  - component: {fileID: 882794822476332217}
+  - component: {fileID: 4993213122425696645}
   m_Layer: 6
   m_Name: paopao
   m_TagString: Monster
@@ -1609,7 +1609,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &882794822476332217
+--- !u!114 &4993213122425696645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9054626244596966706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11c7c612781a7164b94cd96c8d1a1973, type: 3}
+  m_Script: {fileID: 11500000, guid: 6df10446e4b484e46b7f08085c2fdf18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bingkuai: {fileID: 5432437421427466681}
@@ -1632,7 +1632,7 @@ MonoBehaviour:
   size: 0
   monsterSkeletonAnimation: {fileID: 2283714033163351672}
   hpSlider: {fileID: 8386147638183279120}
-  collider2D: {fileID: 0}
+  collider2D: {fileID: 783989536963431647}
   rigidbody2D: {fileID: 9172130028546111337}
   attackTrans: {fileID: 2595909989702392437}
 --- !u!1 &9108251255535514489

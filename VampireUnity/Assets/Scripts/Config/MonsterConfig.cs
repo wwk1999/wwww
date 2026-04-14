@@ -102,6 +102,10 @@ public class MonsterConfig
         { MonsterTypeByName.YuRen1, MonsterType.Normal },
         { MonsterTypeByName.YuRen2, MonsterType.Normal },
         { MonsterTypeByName.YuRen3, MonsterType.Normal },
+        { MonsterTypeByName.JianChiZhu, MonsterType.Normal },
+        { MonsterTypeByName.HeiXiong, MonsterType.Normal },
+
+
         
         // ========== 精英怪 (Elite) ==========
         { MonsterTypeByName.DaZongXiong, MonsterType.Elite },
@@ -120,9 +124,6 @@ public class MonsterConfig
         { MonsterTypeByName.NiuTouRen1, MonsterType.Elite },
         { MonsterTypeByName.NiuTouRen2, MonsterType.Elite },
         { MonsterTypeByName.NiuTouRen3, MonsterType.Elite },
-        { MonsterTypeByName.HeiXiong, MonsterType.Elite },
-        { MonsterTypeByName.JianChiZhu, MonsterType.Elite },
-
         
         // ========== BOSS ==========
         { MonsterTypeByName.HuoShanBoss, MonsterType.Boss },

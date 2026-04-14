@@ -71,29 +71,57 @@ public enum MonsterTypeByName
     KuLou6,
     LuJiaoCiKe1,
     LuJiaoCiKe2,
-    NiuTouRen1,//1
-    NiuTouRen2,//1
-    NiuTouRen3,//1
     ShanZei3,
     ShiJiaChong,//1
     ShiShiGui,
     ShiXiangGui,
-    ShouRen1,//1
-    ShouRen2,//1
-    ShouRen3,//1
     ShuangTouLong1,//1
     ShuangTouLong2,//1
     ShuangTouLong3,//1
     TuJiu,//1
     WuYa,//1
-    YouHunLingZhu,
     YouLang,//1
     YouLing1,//1
     YouLing2,//1
     YuRen1,//1
     YuRen2,//1
     YuRen3,//1
+    cat,
+    queen,
+    egg,
+    onyx,
+    xiaohuoling,
+    xiaoshuguai,
+    xiaozhizhu,
+    shanyang,
+    yanshu,
+    niguai1,
+    niguai2,
+    niguai3,
+    lang,
+    zibaolaoshu,
+    mogu,
+    she,
+    woniu,
+    xiezi1,
+    xiezi2,
+    yezhu,
+    xuelaoshu,
     //精英怪
+    zhumodaocaoren,
+    xiongbuou,
+    rongyanboss,
+    paopao,
+    banrenma1,
+    banrenma2,
+    banrenma3,
+    NiuTouRen1,//1
+    NiuTouRen2,//1
+    NiuTouRen3,//1
+    ShouRen1,//1
+    ShouRen2,//1
+    ShouRen3,//1
+    YouHunLingZhu,
     DaZongXiong,        // 1
     DiJingZhangLao,     // 1
     FengHeGuai,         // 1
@@ -102,12 +130,12 @@ public enum MonsterTypeByName
     RongYanGuai,        // 1
     ShiFuBoss,          // 师傅BOSS
     ShuangTouRen,       // 双头人
-    WuYaoZhiWang,       // 巫妖之王
-    WuYaoZhiWang2,      // 巫妖之王2
     YeShouZhanShi,      // 野兽战士
     ZhiZhuNvWang,       // 蜘蛛女王
     
-    
+    //boss
+    WuYaoZhiWang,       // 巫妖之王
+    WuYaoZhiWang2, 
     //异界怪物
     //小怪
     DaLong,
