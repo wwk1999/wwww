@@ -14,7 +14,7 @@ public class chailangren1 : MonsterBase
 
     void Start()
     {
-        base.Start();
+        base.Start();1
         monsterSkeletonAnimation.timeScale = 1.5f;
 
         size = 0.45f;

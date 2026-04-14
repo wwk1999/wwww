@@ -1,0 +1,16 @@
+mogu.png
+size:474,84
+filter:Linear,Linear
+3e2c3b
+bounds:2,2,309,80
+body
+bounds:403,3,49,34
+offsets:1,1,51,36
+head_A
+bounds:313,13,69,43
+rotate:90
+head_B
+bounds:358,13,69,43
+rotate:90
+head_C
+bounds:403,39,69,43
