@@ -121,6 +121,37 @@ public class GameController : XSingleton<GameController>
     //小怪
     [NonSerialized] public Queue<BaoXue> BaoXueQueue = new Queue<BaoXue>();
 
+    [NonSerialized] public Queue<banrenma1> banrenma1Queue = new Queue<banrenma1>();
+    [NonSerialized] public Queue<banrenma2> banrenma2Queue = new Queue<banrenma2>();
+    [NonSerialized] public Queue<banrenma3> banrenma3Queue = new Queue<banrenma3>();
+    [NonSerialized] public Queue<cat> catQueue = new Queue<cat>();
+    [NonSerialized] public Queue<egg> eggQueue = new Queue<egg>();
+    [NonSerialized] public Queue<lang> langQueue = new Queue<lang>();
+    [NonSerialized] public Queue<mogu> moguQueue = new Queue<mogu>();
+    [NonSerialized] public Queue<niguai1> niguai1Queue = new Queue<niguai1>();
+    [NonSerialized] public Queue<niguai2> niguai2Queue = new Queue<niguai2>();
+    [NonSerialized] public Queue<niguai3> niguai3Queue = new Queue<niguai3>();
+    [NonSerialized] public Queue<onyx> onyxQueue = new Queue<onyx>();
+    [NonSerialized] public Queue<paopao> paopaoQueue = new Queue<paopao>();
+    [NonSerialized] public Queue<queen> queenQueue = new Queue<queen>();
+    [NonSerialized] public Queue<rongyanboss> rongyanbossQueue = new Queue<rongyanboss>();
+    [NonSerialized] public Queue<shanyang> shanyangQueue = new Queue<shanyang>();
+    [NonSerialized] public Queue<she> sheQueue = new Queue<she>();
+    [NonSerialized] public Queue<woniu> woniuQueue = new Queue<woniu>();
+    [NonSerialized] public Queue<xiaohuoling> xiaohuolingQueue = new Queue<xiaohuoling>();
+    [NonSerialized] public Queue<xiaoshuguai> xiaoshuguaiQueue = new Queue<xiaoshuguai>();
+    [NonSerialized] public Queue<xiaozhizhu> xiaozhizhuQueue = new Queue<xiaozhizhu>();
+    [NonSerialized] public Queue<xiezi1> xiezi1Queue = new Queue<xiezi1>();
+    [NonSerialized] public Queue<xiezi2> xiezi2Queue = new Queue<xiezi2>();
+    [NonSerialized] public Queue<xiongbuou> xiongbuouQueue = new Queue<xiongbuou>();
+    [NonSerialized] public Queue<xuelaoshu> xuelaoshuQueue = new Queue<xuelaoshu>();
+    [NonSerialized] public Queue<yanshu> yanshuQueue = new Queue<yanshu>();
+    [NonSerialized] public Queue<yezhu> yezhuQueue = new Queue<yezhu>();
+    [NonSerialized] public Queue<zhumodaocaoren> zhumodaocaorenQueue = new Queue<zhumodaocaoren>();
+    [NonSerialized] public Queue<zibaolaoshu> zibaolaoshuQueue = new Queue<zibaolaoshu>();
+
+    
+    
     [NonSerialized] public Queue<dazongxiong> dazongxiongQueue = new Queue<dazongxiong>();
     [NonSerialized] public Queue<fengheguai> fengheguaiQueue = new Queue<fengheguai>();
     [NonSerialized] public Queue<kuangshimuzhu> kuangshimuzhuQueue = new Queue<kuangshimuzhu>();

@@ -323,6 +323,52 @@ public class LevelInfoConfig
             return GameController.S.yuren2Queue.Dequeue();
         case MonsterTypeByName.YuRen3:
             return GameController.S.yuren3Queue.Dequeue();
+        case MonsterTypeByName.cat:
+            return GameController.S.catQueue.Dequeue();
+        case MonsterTypeByName.egg:
+            return GameController.S.eggQueue.Dequeue();
+        case MonsterTypeByName.lang:
+            return GameController.S.langQueue.Dequeue();
+        case MonsterTypeByName.mogu:
+            return GameController.S.moguQueue.Dequeue();
+        case MonsterTypeByName.niguai1:
+            return GameController.S.niguai1Queue.Dequeue();
+        case MonsterTypeByName.niguai2:
+            return GameController.S.niguai2Queue.Dequeue();
+        case MonsterTypeByName.niguai3:
+            return GameController.S.niguai3Queue.Dequeue();
+        case MonsterTypeByName.onyx:
+            return GameController.S.onyxQueue.Dequeue();
+        case MonsterTypeByName.queen:
+            return GameController.S.queenQueue.Dequeue();
+        case MonsterTypeByName.shanyang:
+            return GameController.S.shanyangQueue.Dequeue();
+        case MonsterTypeByName.she:
+            return GameController.S.sheQueue.Dequeue();
+        case MonsterTypeByName.woniu:
+            return GameController.S.woniuQueue.Dequeue();
+        case MonsterTypeByName.xiaohuoling:
+            return GameController.S.xiaohuolingQueue.Dequeue();
+        case MonsterTypeByName.xiaozhizhu:
+            return GameController.S.xiaozhizhuQueue.Dequeue();
+        case MonsterTypeByName.xiaoshuguai:
+            return GameController.S.xiaoshuguaiQueue.Dequeue();
+        case MonsterTypeByName.xiezi1:
+            return GameController.S.xiezi1Queue.Dequeue();
+        case MonsterTypeByName.xiezi2:
+            return GameController.S.xiezi2Queue.Dequeue();
+        case MonsterTypeByName.xuelaoshu:
+            return GameController.S.xuelaoshuQueue.Dequeue();
+        case MonsterTypeByName.yanshu:
+            return GameController.S.yanshuQueue.Dequeue();
+        case MonsterTypeByName.yezhu:
+            return GameController.S.yezhuQueue.Dequeue();
+        case MonsterTypeByName.zibaolaoshu:
+            return GameController.S.zibaolaoshuQueue.Dequeue();
+        
+        
+        
+        
         // 精英怪
         case MonsterTypeByName.DaZongXiong:
             return GameController.S.dazongxiongQueue.Dequeue();
@@ -348,6 +394,21 @@ public class LevelInfoConfig
             return GameController.S.YeShouZhanShiQueue.Dequeue();
         case MonsterTypeByName.ZhiZhuNvWang:
             return GameController.S.ZhiZhuNvWangQueue.Dequeue();
+        
+        case MonsterTypeByName.banrenma1:
+            return GameController.S.banrenma1Queue.Dequeue();
+        case MonsterTypeByName.banrenma2:
+            return GameController.S.banrenma2Queue.Dequeue();
+        case MonsterTypeByName.banrenma3:
+            return GameController.S.banrenma3Queue.Dequeue();
+        case MonsterTypeByName.paopao:
+            return GameController.S.paopaoQueue.Dequeue();
+        case MonsterTypeByName.rongyanboss:
+            return GameController.S.rongyanbossQueue.Dequeue();
+        case MonsterTypeByName.xiongbuou:
+            return GameController.S.xiongbuouQueue.Dequeue();
+        case MonsterTypeByName.zhumodaocaoren:
+            return GameController.S.zhumodaocaorenQueue.Dequeue();
         default:
             return null;
     }
@@ -499,7 +560,7 @@ public class LevelInfoConfig
     public static Dictionary<int, List<MonsterTypeByName>> LevelMonsterDic =
         new Dictionary<int, List<MonsterTypeByName>>()
         {
-            {3,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
+            {3,new List<MonsterTypeByName>() { MonsterTypeByName.cat ,MonsterTypeByName.xiongbuou,MonsterTypeByName.niguai1,MonsterTypeByName.niguai2,MonsterTypeByName.niguai3}},
             {6,new List<MonsterTypeByName>() { MonsterTypeByName.ChongZi ,MonsterTypeByName.DunDi,MonsterTypeByName.DaZui,MonsterTypeByName.XiaoHuo,MonsterTypeByName.HuoShanBoss}},
             {9,new List<MonsterTypeByName>() { MonsterTypeByName.ZhaoZeBoss ,MonsterTypeByName.ShiRenHua,MonsterTypeByName.WenZi,MonsterTypeByName.QingWa,MonsterTypeByName.JiaChong}},
             {12,new List<MonsterTypeByName>() { MonsterTypeByName.ShaChong ,MonsterTypeByName.ShaNiao,MonsterTypeByName.ShaXiYi,MonsterTypeByName.XianRenZhang,MonsterTypeByName.XieZi}},

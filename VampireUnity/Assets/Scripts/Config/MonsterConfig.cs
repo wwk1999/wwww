@@ -104,6 +104,29 @@ public class MonsterConfig
         { MonsterTypeByName.YuRen3, MonsterType.Normal },
         { MonsterTypeByName.JianChiZhu, MonsterType.Normal },
         { MonsterTypeByName.HeiXiong, MonsterType.Normal },
+        
+        { MonsterTypeByName.cat, MonsterType.Normal },
+        { MonsterTypeByName.egg, MonsterType.Normal },
+        { MonsterTypeByName.queen, MonsterType.Normal },
+        { MonsterTypeByName.shanyang, MonsterType.Normal },
+        { MonsterTypeByName.she, MonsterType.Normal },
+        { MonsterTypeByName.woniu, MonsterType.Normal },
+        { MonsterTypeByName.xiaohuoling, MonsterType.Normal },
+        { MonsterTypeByName.xiaoshuguai, MonsterType.Normal },
+        { MonsterTypeByName.xiaozhizhu, MonsterType.Normal },
+        { MonsterTypeByName.xiezi2, MonsterType.Normal },
+        { MonsterTypeByName.xiezi1, MonsterType.Normal },
+        { MonsterTypeByName.xuelaoshu, MonsterType.Normal },
+        { MonsterTypeByName.yanshu, MonsterType.Normal },
+        { MonsterTypeByName.yezhu, MonsterType.Normal },
+        { MonsterTypeByName.zibaolaoshu, MonsterType.Normal },
+        { MonsterTypeByName.onyx, MonsterType.Normal },
+        { MonsterTypeByName.niguai1, MonsterType.Normal },
+        { MonsterTypeByName.niguai2, MonsterType.Normal },
+        { MonsterTypeByName.niguai3, MonsterType.Normal },
+        { MonsterTypeByName.mogu, MonsterType.Normal },
+        { MonsterTypeByName.lang, MonsterType.Normal },
+
 
 
         
@@ -125,6 +148,14 @@ public class MonsterConfig
         { MonsterTypeByName.NiuTouRen2, MonsterType.Elite },
         { MonsterTypeByName.NiuTouRen3, MonsterType.Elite },
         
+        { MonsterTypeByName.banrenma1, MonsterType.Elite },
+        { MonsterTypeByName.banrenma2, MonsterType.Elite },
+        { MonsterTypeByName.banrenma3, MonsterType.Elite },
+        { MonsterTypeByName.paopao, MonsterType.Elite },
+        { MonsterTypeByName.rongyanboss, MonsterType.Elite },
+        { MonsterTypeByName.xiongbuou, MonsterType.Elite },
+        { MonsterTypeByName.zhumodaocaoren, MonsterType.Elite },
+
         // ========== BOSS ==========
         { MonsterTypeByName.HuoShanBoss, MonsterType.Boss },
         { MonsterTypeByName.ZhaoZeBoss, MonsterType.Boss },

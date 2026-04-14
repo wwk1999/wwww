@@ -473,6 +473,370 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(ShaNiao2D, ShaNiaoMonster);
                 break;
             
+            
+            case MonsterTypeByName.banrenma1:
+                var banrenma1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/banrenma1")
+                            .GetComponent<banrenma1>(), GameController.S.transform);
+                banrenma1.gameObject.SetActive(false);
+                GameController.S.banrenma1Queue.Enqueue(banrenma1);
+                MonsterBase banrenma1monsterBase = banrenma1.GetComponent<MonsterBase>();
+                Collider2D banrenma12D = banrenma1monsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(banrenma12D, banrenma1monsterBase);
+                break;
+            
+            case MonsterTypeByName.banrenma2:
+                var banrenma2 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/banrenma2")
+                            .GetComponent<banrenma2>(), GameController.S.transform);
+                banrenma2.gameObject.SetActive(false);
+                GameController.S.banrenma2Queue.Enqueue(banrenma2);
+                MonsterBase banrenma2monsterBase = banrenma2.GetComponent<MonsterBase>();
+                Collider2D banrenma22D = banrenma2monsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(banrenma22D, banrenma2monsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.banrenma3:
+                var banrenma3 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/banrenma3")
+                            .GetComponent<banrenma3>(), GameController.S.transform);
+                banrenma3.gameObject.SetActive(false);
+                GameController.S.banrenma3Queue.Enqueue(banrenma3);
+                MonsterBase banrenma3monsterBase = banrenma3.GetComponent<MonsterBase>();
+                Collider2D banrenma32D = banrenma3monsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(banrenma32D, banrenma3monsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.she:
+                var she =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/she")
+                            .GetComponent<she>(), GameController.S.transform);
+                she.gameObject.SetActive(false);
+                GameController.S.sheQueue.Enqueue(she);
+                MonsterBase shemonsterBase = she.GetComponent<MonsterBase>();
+                Collider2D she2D = shemonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(she2D, shemonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.zibaolaoshu:
+                var zibaolaoshu =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/zibaolaoshu")
+                            .GetComponent<zibaolaoshu>(), GameController.S.transform);
+                zibaolaoshu.gameObject.SetActive(false);
+                GameController.S.zibaolaoshuQueue.Enqueue(zibaolaoshu);
+                MonsterBase zibaolaoshumonsterBase = zibaolaoshu.GetComponent<MonsterBase>();
+                Collider2D zibaolaoshu2D = zibaolaoshumonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(zibaolaoshu2D, zibaolaoshumonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.zhumodaocaoren:
+                var zhumodaocaoren =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/zhumodaocaoren")
+                            .GetComponent<zhumodaocaoren>(), GameController.S.transform);
+                zhumodaocaoren.gameObject.SetActive(false);
+                GameController.S.zhumodaocaorenQueue.Enqueue(zhumodaocaoren);
+                MonsterBase zhumodaocaorenmonsterBase = zhumodaocaoren.GetComponent<MonsterBase>();
+                Collider2D zhumodaocaoren2D = zhumodaocaorenmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(zhumodaocaoren2D, zhumodaocaorenmonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.yezhu:
+                var yezhu =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yezhu")
+                            .GetComponent<yezhu>(), GameController.S.transform);
+                yezhu.gameObject.SetActive(false);
+                GameController.S.yezhuQueue.Enqueue(yezhu);
+                MonsterBase yezhumonsterBase = yezhu.GetComponent<MonsterBase>();
+                Collider2D yezhu2D = yezhumonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(yezhu2D, yezhumonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.yanshu:
+                var yanshu =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yanshu")
+                            .GetComponent<yanshu>(), GameController.S.transform);
+                yanshu.gameObject.SetActive(false);
+                GameController.S.yanshuQueue.Enqueue(yanshu);
+                MonsterBase yanshumonsterBase = yanshu.GetComponent<MonsterBase>();
+                Collider2D yanshu2D = yanshumonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(yanshu2D, yanshumonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.xuelaoshu:
+                var xuelaoshu =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xuelaoshu")
+                            .GetComponent<xuelaoshu>(), GameController.S.transform);
+                xuelaoshu.gameObject.SetActive(false);
+                GameController.S.xuelaoshuQueue.Enqueue(xuelaoshu);
+                MonsterBase xuelaoshumonsterBase = xuelaoshu.GetComponent<MonsterBase>();
+                Collider2D xuelaoshu2D = xuelaoshumonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(xuelaoshu2D, xuelaoshumonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.xiongbuou:
+                var xiongbuou =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/xiongbuou")
+                            .GetComponent<xiongbuou>(), GameController.S.transform);
+                xiongbuou.gameObject.SetActive(false);
+                GameController.S.xiongbuouQueue.Enqueue(xiongbuou);
+                MonsterBase xiongbuoumonsterBase = xiongbuou.GetComponent<MonsterBase>();
+                Collider2D xiongbuou2D = xiongbuoumonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(xiongbuou2D, xiongbuoumonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.xiezi2:
+                var xiezi2 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiezi2")
+                            .GetComponent<xiezi2>(), GameController.S.transform);
+                xiezi2.gameObject.SetActive(false);
+                GameController.S.xiezi2Queue.Enqueue(xiezi2);
+                MonsterBase xiezi2monsterBase = xiezi2.GetComponent<MonsterBase>();
+                Collider2D xiezi22D = xiezi2monsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(xiezi22D, xiezi2monsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.xiezi1:
+                var xiezi1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiezi1")
+                            .GetComponent<xiezi1>(), GameController.S.transform);
+                xiezi1.gameObject.SetActive(false);
+                GameController.S.xiezi1Queue.Enqueue(xiezi1);
+                MonsterBase xiezi1monsterBase = xiezi1.GetComponent<MonsterBase>();
+                Collider2D xiezi12D = xiezi1monsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(xiezi12D, xiezi1monsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.xiaoshuguai:
+                var xiaoshuguai =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiaoshuguai")
+                            .GetComponent<xiaoshuguai>(), GameController.S.transform);
+                xiaoshuguai.gameObject.SetActive(false);
+                GameController.S.xiaoshuguaiQueue.Enqueue(xiaoshuguai);
+                MonsterBase xiaoshuguaimonsterBase = xiaoshuguai.GetComponent<MonsterBase>();
+                Collider2D xiaoshuguai2D = xiaoshuguaimonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(xiaoshuguai2D, xiaoshuguaimonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.xiaozhizhu:
+                var xiaozhizhu =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiaozhizhu")
+                            .GetComponent<xiaozhizhu>(), GameController.S.transform);
+                xiaozhizhu.gameObject.SetActive(false);
+                GameController.S.xiaozhizhuQueue.Enqueue(xiaozhizhu);
+                MonsterBase xiaozhizhumonsterBase = xiaozhizhu.GetComponent<MonsterBase>();
+                Collider2D xiaozhizhu2D = xiaozhizhumonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(xiaozhizhu2D, xiaozhizhumonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.xiaohuoling:
+                var xiaohuoling =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiaohuoling")
+                            .GetComponent<xiaohuoling>(), GameController.S.transform);
+                xiaohuoling.gameObject.SetActive(false);
+                GameController.S.xiaohuolingQueue.Enqueue(xiaohuoling);
+                MonsterBase xiaohuolingmonsterBase = xiaohuoling.GetComponent<MonsterBase>();
+                Collider2D xiaohuoling2D = xiaohuolingmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(xiaohuoling2D, xiaohuolingmonsterBase);
+                break;
+            
+            case MonsterTypeByName.woniu:
+                var woniu =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/woniu")
+                            .GetComponent<woniu>(), GameController.S.transform);
+                woniu.gameObject.SetActive(false);
+                GameController.S.woniuQueue.Enqueue(woniu);
+                MonsterBase woniumonsterBase = woniu.GetComponent<MonsterBase>();
+                Collider2D woniu2D = woniumonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(woniu2D, woniumonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.shanyang:
+                var shanyang =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shanyang")
+                            .GetComponent<shanyang>(), GameController.S.transform);
+                shanyang.gameObject.SetActive(false);
+                GameController.S.shanyangQueue.Enqueue(shanyang);
+                MonsterBase shanyangmonsterBase = shanyang.GetComponent<MonsterBase>();
+                Collider2D shanyang2D = shanyangmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(shanyang2D, shanyangmonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.rongyanboss:
+                var rongyanboss =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/rongyanboss")
+                            .GetComponent<rongyanboss>(), GameController.S.transform);
+                rongyanboss.gameObject.SetActive(false);
+                GameController.S.rongyanbossQueue.Enqueue(rongyanboss);
+                MonsterBase rongyanbossmonsterBase = rongyanboss.GetComponent<MonsterBase>();
+                Collider2D rongyanboss2D = rongyanbossmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(rongyanboss2D, rongyanbossmonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.queen:
+                var queen =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/queen")
+                            .GetComponent<queen>(), GameController.S.transform);
+                queen.gameObject.SetActive(false);
+                GameController.S.queenQueue.Enqueue(queen);
+                MonsterBase queenmonsterBase = queen.GetComponent<MonsterBase>();
+                Collider2D queen2D = queenmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(queen2D, queenmonsterBase);
+                break;
+            
+            
+            
+            case MonsterTypeByName.paopao:
+                var paopao =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/paopao")
+                            .GetComponent<paopao>(), GameController.S.transform);
+                paopao.gameObject.SetActive(false);
+                GameController.S.paopaoQueue.Enqueue(paopao);
+                MonsterBase paopaomonsterBase = paopao.GetComponent<MonsterBase>();
+                Collider2D paopao2D = paopaomonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(paopao2D, paopaomonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.onyx:
+                var onyx =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/onyx")
+                            .GetComponent<onyx>(), GameController.S.transform);
+                onyx.gameObject.SetActive(false);
+                GameController.S.onyxQueue.Enqueue(onyx);
+                MonsterBase onyxmonsterBase = onyx.GetComponent<MonsterBase>();
+                Collider2D onyx2D = onyxmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(onyx2D, onyxmonsterBase);
+                break;
+            
+            
+            
+            case MonsterTypeByName.niguai3:
+                var niguai3 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niguai3")
+                            .GetComponent<niguai3>(), GameController.S.transform);
+                niguai3.gameObject.SetActive(false);
+                GameController.S.niguai3Queue.Enqueue(niguai3);
+                MonsterBase niguai3monsterBase = niguai3.GetComponent<MonsterBase>();
+                Collider2D niguai32D = niguai3monsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(niguai32D, niguai3monsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.niguai2:
+                var niguai2 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niguai2")
+                            .GetComponent<niguai2>(), GameController.S.transform);
+                niguai2.gameObject.SetActive(false);
+                GameController.S.niguai2Queue.Enqueue(niguai2);
+                MonsterBase niguai2monsterBase = niguai2.GetComponent<MonsterBase>();
+                Collider2D niguai22D = niguai2monsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(niguai22D, niguai2monsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.niguai1:
+                var niguai1 =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niguai1")
+                            .GetComponent<niguai1>(), GameController.S.transform);
+                niguai1.gameObject.SetActive(false);
+                GameController.S.niguai1Queue.Enqueue(niguai1);
+                MonsterBase niguai1monsterBase = niguai1.GetComponent<MonsterBase>();
+                Collider2D niguai12D = niguai1monsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(niguai12D, niguai1monsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.lang:
+                var lang =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/lang")
+                            .GetComponent<lang>(), GameController.S.transform);
+                lang.gameObject.SetActive(false);
+                GameController.S.langQueue.Enqueue(lang);
+                MonsterBase langmonsterBase = lang.GetComponent<MonsterBase>();
+                Collider2D lang2D = langmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(lang2D, langmonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.egg:
+                var egg =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/egg")
+                            .GetComponent<egg>(), GameController.S.transform);
+                egg.gameObject.SetActive(false);
+                GameController.S.eggQueue.Enqueue(egg);
+                MonsterBase eggmonsterBase = egg.GetComponent<MonsterBase>();
+                Collider2D egg2D = eggmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(egg2D, eggmonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.mogu:
+                var mogu =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/mogu")
+                            .GetComponent<mogu>(), GameController.S.transform);
+                mogu.gameObject.SetActive(false);
+                GameController.S.moguQueue.Enqueue(mogu);
+                MonsterBase mogumonsterBase = mogu.GetComponent<MonsterBase>();
+                Collider2D mogu2D = mogumonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(mogu2D, mogumonsterBase);
+                break;
+            
+            
+            case MonsterTypeByName.cat:
+                var cat =
+                    Instantiate(
+                        Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/cat")
+                            .GetComponent<cat>(), GameController.S.transform);
+                cat.gameObject.SetActive(false);
+                GameController.S.catQueue.Enqueue(cat);
+                MonsterBase catmonsterBase = cat.GetComponent<MonsterBase>();
+                Collider2D cat2D = catmonsterBase.collider2D;
+                GameController.S.MonsterColliderDic.Add(cat2D, catmonsterBase);
+                break;
+            
             case MonsterTypeByName.DaZongXiong:
             var dazongxiong =
                     Instantiate(

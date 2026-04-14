@@ -16,8 +16,8 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite CritIcon;
     public static Sprite AttackSpeedIcon;
 
-    
-    
+
+
     //翅膀
     public static Sprite Blue1;
     public static Sprite Blue2;
@@ -34,7 +34,7 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite Green4;
     public static Sprite Green5;
     public static Sprite Green6;
-    
+
     public static Sprite Purple1;
     public static Sprite Purple2;
     public static Sprite Purple3;
@@ -42,11 +42,11 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite Purple5;
     public static Sprite Purple6;
     public static Sprite Purple7;
-    
+
     public static Sprite Orange1;
     public static Sprite Orange2;
     public static Sprite Orange3;
-    
+
     public static Sprite Red1;
 
     //地图
@@ -74,27 +74,27 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite Level4ButtonAn;
     public static Sprite Level5ButtonLiang;
     public static Sprite Level5ButtonAn;
-    
+
     public static Sprite ChongWuButtonLiang;
     public static Sprite ChongWuButtonAn;
     public static Sprite ChiBangButtonLiang;
     public static Sprite ChiBangButtonAn;
-    
-    //武器图片
-    public static Sprite Primary;//ice
-    public static Sprite PrimaryDian;//ice
-    public static Sprite PrimaryHuo;//ice
-    public static Sprite PrimaryHeiAn;//ice
-    public static Sprite DianBaoZha;//ice
-    public static Sprite IceBaoZha;//ice
 
-    public static Sprite Fire;//dian
-    public static Sprite XuKong;//dian
-    public static Sprite LvQuan;//heian
-    public static Sprite HeiDong;//heian
-    public static Sprite Du;//huo
-    public static Sprite PuTong3;//ice
-    public static Sprite JianQi;//huo
+    //武器图片
+    public static Sprite Primary; //ice
+    public static Sprite PrimaryDian; //ice
+    public static Sprite PrimaryHuo; //ice
+    public static Sprite PrimaryHeiAn; //ice
+    public static Sprite DianBaoZha; //ice
+    public static Sprite IceBaoZha; //ice
+
+    public static Sprite Fire; //dian
+    public static Sprite XuKong; //dian
+    public static Sprite LvQuan; //heian
+    public static Sprite HeiDong; //heian
+    public static Sprite Du; //huo
+    public static Sprite PuTong3; //ice
+    public static Sprite JianQi; //huo
     public static Sprite HeiAnBaoZha;
     public static Sprite DianSanShe;
     public static Sprite Huo7;
@@ -107,9 +107,9 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite HeiAnHuiXuan;
     public static Sprite HeiAnQuXian;
     public static Sprite HuoDiPen;
-    
-    
-    
+
+
+
     //宝石
     public static Sprite HH1;
     public static Sprite HH2;
@@ -228,16 +228,16 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite ZhaoZeHelmet;
     public static Sprite ZhaoZeRing;
     public static Sprite ZhaoZeNecklace;
-    
-    
+
+
     public static Sprite XieZiCloth;
     public static Sprite XieZiCloak;
     public static Sprite XieZiShoe;
     public static Sprite XieZiHelmet;
     public static Sprite XieZiRing;
     public static Sprite XieZiNecklace;
-    
-    
+
+
     public static Sprite XueRenCloth;
     public static Sprite XueRenCloak;
     public static Sprite XueRenShoe;
@@ -285,20 +285,20 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite Ice5;
 
     public static Sprite IceCd;
-    
+
     public static Sprite Ice1_2;
     public static Sprite Ice2_2;
     public static Sprite Ice3_2;
     public static Sprite Ice4_2;
     public static Sprite Ice5_2;
-    
+
     public static Sprite IceBei1;
     public static Sprite IceBei2;
     public static Sprite IceBei3;
     public static Sprite IceBei4;
     public static Sprite IceMain;
-    
-    
+
+
     public static Sprite Huo1;
     public static Sprite Huo2;
     public static Sprite Huo3;
@@ -306,20 +306,20 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite Huo5;
 
     public static Sprite HuoCd;
-    
+
     public static Sprite Huo1_2;
     public static Sprite Huo2_2;
     public static Sprite Huo3_2;
     public static Sprite Huo4_2;
     public static Sprite Huo5_2;
-    
+
     public static Sprite HuoBei1;
     public static Sprite HuoBei2;
     public static Sprite HuoBei3;
     public static Sprite HuoBei4;
     public static Sprite HuoMain;
-    
-    
+
+
     public static Sprite Dian1;
     public static Sprite Dian2;
     public static Sprite Dian3;
@@ -327,20 +327,20 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite Dian5;
 
     public static Sprite DianCd;
-    
+
     public static Sprite Dian1_2;
     public static Sprite Dian2_2;
     public static Sprite Dian3_2;
     public static Sprite Dian4_2;
     public static Sprite Dian5_2;
-    
+
     public static Sprite DianBei1;
     public static Sprite DianBei2;
     public static Sprite DianBei3;
     public static Sprite DianBei4;
     public static Sprite DianMain;
-    
-    
+
+
     public static Sprite HeiAn1;
     public static Sprite HeiAn2;
     public static Sprite HeiAn3;
@@ -348,13 +348,13 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite HeiAn5;
 
     public static Sprite HeiAnCd;
-    
+
     public static Sprite HeiAn1_2;
     public static Sprite HeiAn2_2;
     public static Sprite HeiAn3_2;
     public static Sprite HeiAn4_2;
     public static Sprite HeiAn5_2;
-    
+
     public static Sprite HeiAnBei1;
     public static Sprite HeiAnBei2;
     public static Sprite HeiAnBei3;
@@ -362,91 +362,121 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite HeiAnMain;
 
     //关卡界面怪物icon
-   // 第一页怪物
-public static Sprite BatIcon;
-public static Sprite BeeIcon;
-public static Sprite Chailangren1Icon;
-public static Sprite Chailangren2Icon;
-public static Sprite Chailangren3Icon;
-public static Sprite Chailangren4Icon;
-public static Sprite ChongziIcon;
-public static Sprite CizhuIcon;
-public static Sprite DaocaorenIcon;
-public static Sprite DazongxiongIcon;
-public static Sprite DazuiIcon;
-public static Sprite Dijing2Icon;
-public static Sprite Dijing3Icon;
-public static Sprite Dijingshouwei1Icon;
-public static Sprite Dijingshouwei2Icon;
-public static Sprite Dijingshouwei3Icon;
-public static Sprite DijingzhanglaoIcon;
-public static Sprite DixuezhiwangIcon;
-public static Sprite DundiIcon;
-public static Sprite FengheguaiIcon;
-public static Sprite HeixiongIcon;
-public static Sprite HuoshanbossIcon;
-public static Sprite JiachongIcon;
-public static Sprite JianchizhuIcon;
-public static Sprite KuangshimuzhuIcon;
-public static Sprite Kulou1Icon;
-public static Sprite Kulou2Icon;
-public static Sprite Kulou3Icon;
-public static Sprite Kulou4Icon;
-public static Sprite Kulou5Icon;
-public static Sprite Kulou6Icon;
-public static Sprite LujiaocikeIcon;
-public static Sprite Lujiaocike2Icon;
-public static Sprite LujiaodoushiIcon;
-public static Sprite Niutouren1Icon;
-public static Sprite Niutouren2Icon;
-public static Sprite Niutouren3Icon;
-public static Sprite QingwaIcon;
-public static Sprite RongyanguaiIcon;
-public static Sprite ShachongIcon;
-public static Sprite ShaniaoIcon;
-public static Sprite Shanzei3Icon;
-public static Sprite ShaxiyiIcon;
-public static Sprite ShifubossIcon;
-public static Sprite ShijiachongIcon;
-public static Sprite ShirenhuaIcon;
-public static Sprite ShishiguiIcon;
-public static Sprite ShixiangguiIcon;
-public static Sprite Shouren1Icon;
+    // 第一页怪物
+    public static Sprite BatIcon;
+    public static Sprite BeeIcon;
+    public static Sprite Chailangren1Icon;
+    public static Sprite Chailangren2Icon;
+    public static Sprite Chailangren3Icon;
+    public static Sprite Chailangren4Icon;
+    public static Sprite ChongziIcon;
+    public static Sprite CizhuIcon;
+    public static Sprite DaocaorenIcon;
+    public static Sprite DazongxiongIcon;
+    public static Sprite DazuiIcon;
+    public static Sprite Dijing2Icon;
+    public static Sprite Dijing3Icon;
+    public static Sprite Dijingshouwei1Icon;
+    public static Sprite Dijingshouwei2Icon;
+    public static Sprite Dijingshouwei3Icon;
+    public static Sprite DijingzhanglaoIcon;
+    public static Sprite DixuezhiwangIcon;
+    public static Sprite DundiIcon;
+    public static Sprite FengheguaiIcon;
+    public static Sprite HeixiongIcon;
+    public static Sprite HuoshanbossIcon;
+    public static Sprite JiachongIcon;
+    public static Sprite JianchizhuIcon;
+    public static Sprite KuangshimuzhuIcon;
+    public static Sprite Kulou1Icon;
+    public static Sprite Kulou2Icon;
+    public static Sprite Kulou3Icon;
+    public static Sprite Kulou4Icon;
+    public static Sprite Kulou5Icon;
+    public static Sprite Kulou6Icon;
+    public static Sprite LujiaocikeIcon;
+    public static Sprite Lujiaocike2Icon;
+    public static Sprite LujiaodoushiIcon;
+    public static Sprite Niutouren1Icon;
+    public static Sprite Niutouren2Icon;
+    public static Sprite Niutouren3Icon;
+    public static Sprite QingwaIcon;
+    public static Sprite RongyanguaiIcon;
+    public static Sprite ShachongIcon;
+    public static Sprite ShaniaoIcon;
+    public static Sprite Shanzei3Icon;
+    public static Sprite ShaxiyiIcon;
+    public static Sprite ShifubossIcon;
+    public static Sprite ShijiachongIcon;
+    public static Sprite ShirenhuaIcon;
+    public static Sprite ShishiguiIcon;
+    public static Sprite ShixiangguiIcon;
+    public static Sprite Shouren1Icon;
 
 // 第二页怪物
-public static Sprite Shouren2Icon;
-public static Sprite Shouren3Icon;
-public static Sprite ShuangtoulongIcon;
-public static Sprite Shuangtoulong2Icon;
-public static Sprite Shuangtoulong3Icon;
-public static Sprite SnotIcon;
-public static Sprite SpiderIcon;
-public static Sprite TujiuIcon;
-public static Sprite WenziIcon;
-public static Sprite WuyaIcon;
-public static Sprite WuyaozhiwangIcon;
-public static Sprite Wuyaozhiwang2Icon;
-public static Sprite XianrenzhangIcon;
-public static Sprite XiaohuoIcon;
-public static Sprite XieziIcon;
-public static Sprite XueqieIcon;
-public static Sprite XuerenIcon;
-public static Sprite XuerenbossIcon;
-public static Sprite XuezhanglangIcon;
-public static Sprite YingshuIcon;
-public static Sprite YouhunlingzhuIcon;
-public static Sprite YoulangIcon;
-public static Sprite YoulingIcon;
-public static Sprite Youling2Icon;
-public static Sprite TreemanIcon;
-public static Sprite Yuren1Icon;
-public static Sprite Yuren2Icon;
-public static Sprite Yuren3Icon;
-public static Sprite ZhaozebossIcon;
+    public static Sprite Shouren2Icon;
+    public static Sprite Shouren3Icon;
+    public static Sprite ShuangtoulongIcon;
+    public static Sprite Shuangtoulong2Icon;
+    public static Sprite Shuangtoulong3Icon;
+    public static Sprite SnotIcon;
+    public static Sprite SpiderIcon;
+    public static Sprite TujiuIcon;
+    public static Sprite WenziIcon;
+    public static Sprite WuyaIcon;
+    public static Sprite WuyaozhiwangIcon;
+    public static Sprite Wuyaozhiwang2Icon;
+    public static Sprite XianrenzhangIcon;
+    public static Sprite XiaohuoIcon;
+    public static Sprite XieziIcon;
+    public static Sprite XueqieIcon;
+    public static Sprite XuerenIcon;
+    public static Sprite XuerenbossIcon;
+    public static Sprite XuezhanglangIcon;
+    public static Sprite YingshuIcon;
+    public static Sprite YouhunlingzhuIcon;
+    public static Sprite YoulangIcon;
+    public static Sprite YoulingIcon;
+    public static Sprite Youling2Icon;
+    public static Sprite TreemanIcon;
+    public static Sprite Yuren1Icon;
+    public static Sprite Yuren2Icon;
+    public static Sprite Yuren3Icon;
+    public static Sprite ZhaozebossIcon;
 
-public static Sprite ShuangtourenIcon;
-public static Sprite ZhizhunvwangIcon;
-public static Sprite YeshouzhanshiIcon;
+    public static Sprite ShuangtourenIcon;
+    public static Sprite ZhizhunvwangIcon;
+    public static Sprite YeshouzhanshiIcon;
+
+    public static Sprite banrenma1Icon;
+    public static Sprite banrenma2Icon;
+    public static Sprite banrenma3Icon;
+    public static Sprite catIcon;
+    public static Sprite eggIcon;
+    public static Sprite langIcon;
+    public static Sprite moguIcon;
+    public static Sprite niguai1Icon;
+    public static Sprite niguai2Icon;
+    public static Sprite niguai3Icon;
+    public static Sprite onyxIcon;
+    public static Sprite paopaoIcon;
+    public static Sprite queenIcon;
+    public static Sprite rongyanbossIcon;
+    public static Sprite shanyangIcon;
+    public static Sprite sheIcon;
+    public static Sprite woniuIcon;
+    public static Sprite xiaohuolingIcon;
+    public static Sprite xiaoshuguaiIcon;
+    public static Sprite xiaozhizhuIcon;
+    public static Sprite xiezi1Icon;
+    public static Sprite xiezi2Icon;
+    public static Sprite xiongbuouIcon;
+    public static Sprite xuelaoshuIcon;
+    public static Sprite yanshuIcon;
+    public static Sprite yezhuIcon;
+    public static Sprite zhumodaocaorenIcon;
+    public static Sprite zibaolaoshuIcon;
+
 
 
     //颜色背景
@@ -561,7 +591,7 @@ public static Sprite YeshouzhanshiIcon;
     public static Sprite HelmetFortureAddSprite;
 
     public static Sprite DaKongShi;
-    
+
     //药水
     public static Sprite Hp1;
     public static Sprite Hp2;
@@ -574,42 +604,42 @@ public static Sprite YeshouzhanshiIcon;
 
 
     //宠物图片
-    
+
     public static Sprite ChongWuItemBgWhite;
     public static Sprite ChongWuItemBgGreen;
     public static Sprite ChongWuItemBgBlue;
     public static Sprite ChongWuItemBgPurple;
     public static Sprite ChongWuItemBgOrange;
     public static Sprite ChongWuItemBgRed;
-    
+
     public static Sprite ChongWuQualityBgWhite;
     public static Sprite ChongWuQualityBgGreen;
     public static Sprite ChongWuQualityBgBlue;
     public static Sprite ChongWuQualityBgPurple;
     public static Sprite ChongWuQualityBgOrange;
     public static Sprite ChongWuQualityBgRed;
-    
+
     public static Sprite ChongWuShiWuBgWhite;
     public static Sprite ChongWuShiWuBgGreen;
     public static Sprite ChongWuShiWuBgBlue;
     public static Sprite ChongWuShiWuBgPurple;
     public static Sprite ChongWuShiWuBgOrange;
     public static Sprite ChongWuShiWuBgRed;
-    
+
     public static Sprite ChongWuShiWuWhite;
     public static Sprite ChongWuShiWuGreen;
     public static Sprite ChongWuShiWuBlue;
     public static Sprite ChongWuShiWuPurple;
     public static Sprite ChongWuShiWuOrange;
     public static Sprite ChongWuShiWuRed;
-    
+
     public static Sprite ChongWuSkillBgWhite;
     public static Sprite ChongWuSkillBgGreen;
     public static Sprite ChongWuSkillBgBlue;
     public static Sprite ChongWuSkillBgPurple;
     public static Sprite ChongWuSkillBgOrange;
     public static Sprite ChongWuSkillBgRed;
-    
+
     public static Sprite YuanSuIconIce;
     public static Sprite YuanSuIconHuo;
     public static Sprite YuanSuIconDian;
@@ -624,23 +654,23 @@ public static Sprite YeshouzhanshiIcon;
     public static Sprite ChongWuSkill5;
     public static Sprite ChongWuSkill6;
 
-    
+
     public static Sprite NormalChongWuDan;
     public static Sprite GaoJiChongWuDan;
 
-   
-    
+
+
     public static Sprite NormalXiSuiYe;
     public static Sprite GaoJiXiSuiYe;
     public static Sprite NormalXueMaiDan;
     public static Sprite GaoJiXueMaiDan;
-    
+
     public static Sprite NormalXiSuiYe1;
     public static Sprite GaoJiXiSuiYe1;
     public static Sprite NormalXueMaiDan1;
     public static Sprite GaoJiXueMaiDan1;
 
-    
+
     public static Sprite AddAttack;
     public static Sprite AddDefense;
     public static Sprite AddCrit;
@@ -675,7 +705,7 @@ public static Sprite YeshouzhanshiIcon;
     public static Sprite DianIcon;
     public static Sprite HeiAnIcon;
 
-    
+
     public static Sprite icewhite1;
     public static Sprite huowhite1;
     public static Sprite dianwhite1;
@@ -745,135 +775,135 @@ public static Sprite YeshouzhanshiIcon;
     public static Sprite heianorange1_h;
 
     public static Sprite GetChongWuSprite(ChongWuType type)
-{
-    switch (type)
     {
-        case ChongWuType.icewhite1:
-            return icewhite1;
-        case ChongWuType.huowhite1:
-            return huowhite1;
-        case ChongWuType.dianwhite1:
-            return dianwhite1;
-        case ChongWuType.heianwhite1:
-            return heianwhite1;
-        case ChongWuType.heianwhite2:
-            return heianwhite2;
+        switch (type)
+        {
+            case ChongWuType.icewhite1:
+                return icewhite1;
+            case ChongWuType.huowhite1:
+                return huowhite1;
+            case ChongWuType.dianwhite1:
+                return dianwhite1;
+            case ChongWuType.heianwhite1:
+                return heianwhite1;
+            case ChongWuType.heianwhite2:
+                return heianwhite2;
 
-        case ChongWuType.icegreen1:
-            return icegreen1;
-        case ChongWuType.icegreen2:
-            return icegreen2;
-        case ChongWuType.icegreen3:
-            return icegreen3;
-        case ChongWuType.huogreen1:
-            return huogreen1;
-        case ChongWuType.huogreen2:
-            return huogreen2;
-        case ChongWuType.diangreen1:
-            return diangreen1;
-        case ChongWuType.diangreen2:
-            return diangreen2;
-        case ChongWuType.heiangreen1:
-            return heiangreen1;
-        case ChongWuType.heiangreen2:
-            return heiangreen2;
-        case ChongWuType.heiangreen3:
-            return heiangreen3;
+            case ChongWuType.icegreen1:
+                return icegreen1;
+            case ChongWuType.icegreen2:
+                return icegreen2;
+            case ChongWuType.icegreen3:
+                return icegreen3;
+            case ChongWuType.huogreen1:
+                return huogreen1;
+            case ChongWuType.huogreen2:
+                return huogreen2;
+            case ChongWuType.diangreen1:
+                return diangreen1;
+            case ChongWuType.diangreen2:
+                return diangreen2;
+            case ChongWuType.heiangreen1:
+                return heiangreen1;
+            case ChongWuType.heiangreen2:
+                return heiangreen2;
+            case ChongWuType.heiangreen3:
+                return heiangreen3;
 
-        case ChongWuType.iceblue1:
-            return iceblue1;
-        case ChongWuType.iceblue2:
-            return iceblue2;
-        case ChongWuType.huoblue1:
-            return huoblue1;
-        case ChongWuType.huoblue2:
-            return huoblue2;
-        case ChongWuType.huoblue3:
-            return huoblue3;
-        case ChongWuType.dianblue1:
-            return dianblue1;
-        case ChongWuType.dianblue2:
-            return dianblue2;
-        case ChongWuType.heianblue1:
-            return heianblue1;
-        case ChongWuType.heianblue2:
-            return heianblue2;
-        case ChongWuType.heianblue3:
-            return heianblue3;
+            case ChongWuType.iceblue1:
+                return iceblue1;
+            case ChongWuType.iceblue2:
+                return iceblue2;
+            case ChongWuType.huoblue1:
+                return huoblue1;
+            case ChongWuType.huoblue2:
+                return huoblue2;
+            case ChongWuType.huoblue3:
+                return huoblue3;
+            case ChongWuType.dianblue1:
+                return dianblue1;
+            case ChongWuType.dianblue2:
+                return dianblue2;
+            case ChongWuType.heianblue1:
+                return heianblue1;
+            case ChongWuType.heianblue2:
+                return heianblue2;
+            case ChongWuType.heianblue3:
+                return heianblue3;
 
-        case ChongWuType.icepurple1_q:
-            return icepurple1_q;
-        case ChongWuType.icepurple1_h:
-            return icepurple1_h;
-        case ChongWuType.icepurple2_q:
-            return icepurple2_q;
-        case ChongWuType.icepurple2_h:
-            return icepurple2_h;
-        case ChongWuType.icepurple3_q:
-            return icepurple3_q;
-        case ChongWuType.icepurple3_h:
-            return icepurple3_h;
+            case ChongWuType.icepurple1_q:
+                return icepurple1_q;
+            case ChongWuType.icepurple1_h:
+                return icepurple1_h;
+            case ChongWuType.icepurple2_q:
+                return icepurple2_q;
+            case ChongWuType.icepurple2_h:
+                return icepurple2_h;
+            case ChongWuType.icepurple3_q:
+                return icepurple3_q;
+            case ChongWuType.icepurple3_h:
+                return icepurple3_h;
 
-        case ChongWuType.huopurple1_q:
-            return huopurple1_q;
-        case ChongWuType.huopurple1_h:
-            return huopurple1_h;
-        case ChongWuType.huopurple2_q:
-            return huopurple2_q;
-        case ChongWuType.huopurple2_h:
-            return huopurple2_h;
-        case ChongWuType.huopurple3_q:
-            return huopurple3_q;
-        case ChongWuType.huopurple3_h:
-            return huopurple3_h;
+            case ChongWuType.huopurple1_q:
+                return huopurple1_q;
+            case ChongWuType.huopurple1_h:
+                return huopurple1_h;
+            case ChongWuType.huopurple2_q:
+                return huopurple2_q;
+            case ChongWuType.huopurple2_h:
+                return huopurple2_h;
+            case ChongWuType.huopurple3_q:
+                return huopurple3_q;
+            case ChongWuType.huopurple3_h:
+                return huopurple3_h;
 
-        case ChongWuType.dianpurple1_q:
-            return dianpurple1_q;
-        case ChongWuType.dianpurple1_h:
-            return dianpurple1_h;
-        case ChongWuType.dianpurple2_q:
-            return dianpurple2_q;
-        case ChongWuType.dianpurple2_h:
-            return dianpurple2_h;
-        case ChongWuType.dianpurple3_q:
-            return dianpurple3_q;
-        case ChongWuType.dianpurple3_h:
-            return dianpurple3_h;
+            case ChongWuType.dianpurple1_q:
+                return dianpurple1_q;
+            case ChongWuType.dianpurple1_h:
+                return dianpurple1_h;
+            case ChongWuType.dianpurple2_q:
+                return dianpurple2_q;
+            case ChongWuType.dianpurple2_h:
+                return dianpurple2_h;
+            case ChongWuType.dianpurple3_q:
+                return dianpurple3_q;
+            case ChongWuType.dianpurple3_h:
+                return dianpurple3_h;
 
-        case ChongWuType.heianpurple1_q:
-            return heianpurple1_q;
-        case ChongWuType.heianpurple1_h:
-            return heianpurple1_h;
-        case ChongWuType.heianpurple2_q:
-            return heianpurple2_q;
-        case ChongWuType.heianpurple2_h:
-            return heianpurple2_h;
-        case ChongWuType.heianpurple3_q:
-            return heianpurple3_q;
-        case ChongWuType.heianpurple3_h:
-            return heianpurple3_h;
+            case ChongWuType.heianpurple1_q:
+                return heianpurple1_q;
+            case ChongWuType.heianpurple1_h:
+                return heianpurple1_h;
+            case ChongWuType.heianpurple2_q:
+                return heianpurple2_q;
+            case ChongWuType.heianpurple2_h:
+                return heianpurple2_h;
+            case ChongWuType.heianpurple3_q:
+                return heianpurple3_q;
+            case ChongWuType.heianpurple3_h:
+                return heianpurple3_h;
 
-        case ChongWuType.iceorange1_q:
-            return iceorange1_q;
-        case ChongWuType.iceorange1_h:
-            return iceorange1_h;
-        case ChongWuType.huoorange1_q:
-            return huoorange1_q;
-        case ChongWuType.huoorange1_h:
-            return huoorange1_h;
-        case ChongWuType.dianorange1_q:
-            return dianorange1_q;
-        case ChongWuType.dianorange1_h:
-            return dianorange1_h;
-        case ChongWuType.heianorange1_q:
-            return heianorange1_q;
-        case ChongWuType.heianorange1_h:
-            return heianorange1_h;
+            case ChongWuType.iceorange1_q:
+                return iceorange1_q;
+            case ChongWuType.iceorange1_h:
+                return iceorange1_h;
+            case ChongWuType.huoorange1_q:
+                return huoorange1_q;
+            case ChongWuType.huoorange1_h:
+                return huoorange1_h;
+            case ChongWuType.dianorange1_q:
+                return dianorange1_q;
+            case ChongWuType.dianorange1_h:
+                return dianorange1_h;
+            case ChongWuType.heianorange1_q:
+                return heianorange1_q;
+            case ChongWuType.heianorange1_h:
+                return heianorange1_h;
 
-        default:
-            return null; // 或者返回一个默认的 Sprite
+            default:
+                return null; // 或者返回一个默认的 Sprite
+        }
     }
-}
 
     public static Sprite GetBaoShiSprite(BaoShiInfo info)
     {
@@ -1088,7 +1118,7 @@ public static Sprite YeshouzhanshiIcon;
             case MonsterTypeByName.Bee:
                 return BeeIcon;
             case MonsterTypeByName.TreeMan:
-                return TreemanIcon; 
+                return TreemanIcon;
             case MonsterTypeByName.XiaoHuo:
                 return XiaohuoIcon;
             case MonsterTypeByName.DaZui:
@@ -1169,7 +1199,7 @@ public static Sprite YeshouzhanshiIcon;
             case MonsterTypeByName.KuLou6:
                 return Kulou6Icon;
             case MonsterTypeByName.LuJiaoCiKe1:
-                return LujiaocikeIcon; 
+                return LujiaocikeIcon;
             case MonsterTypeByName.LuJiaoCiKe2:
                 return Lujiaocike2Icon;
             case MonsterTypeByName.NiuTouRen1:
@@ -1216,6 +1246,35 @@ public static Sprite YeshouzhanshiIcon;
                 return Yuren2Icon;
             case MonsterTypeByName.YuRen3:
                 return Yuren3Icon;
+
+            case MonsterTypeByName.cat: return catIcon;
+            case MonsterTypeByName.queen: return queenIcon;
+            case MonsterTypeByName.egg: return eggIcon;
+            case MonsterTypeByName.onyx: return onyxIcon;
+            case MonsterTypeByName.xiaohuoling: return xiaohuolingIcon;
+            case MonsterTypeByName.xiaoshuguai: return xiaoshuguaiIcon;
+            case MonsterTypeByName.xiaozhizhu: return xiaozhizhuIcon;
+            case MonsterTypeByName.shanyang: return shanyangIcon;
+            case MonsterTypeByName.yanshu: return yanshuIcon;
+            case MonsterTypeByName.niguai1: return niguai1Icon;
+            case MonsterTypeByName.niguai2: return niguai2Icon;
+            case MonsterTypeByName.niguai3: return niguai3Icon;
+            case MonsterTypeByName.lang: return langIcon;
+            case MonsterTypeByName.zibaolaoshu: return zibaolaoshuIcon;
+            case MonsterTypeByName.mogu: return moguIcon;
+            case MonsterTypeByName.she: return sheIcon;
+            case MonsterTypeByName.woniu: return woniuIcon;
+            case MonsterTypeByName.xiezi1: return xiezi1Icon;
+            case MonsterTypeByName.xiezi2: return xiezi2Icon;
+            case MonsterTypeByName.yezhu: return yezhuIcon;
+            case MonsterTypeByName.xuelaoshu: return xuelaoshuIcon;
+            case MonsterTypeByName.zhumodaocaoren: return zhumodaocaorenIcon;
+            case MonsterTypeByName.xiongbuou: return xiongbuouIcon;
+            case MonsterTypeByName.rongyanboss: return rongyanbossIcon;
+            case MonsterTypeByName.paopao: return paopaoIcon;
+            case MonsterTypeByName.banrenma1: return banrenma1Icon;
+            case MonsterTypeByName.banrenma2: return banrenma2Icon;
+            case MonsterTypeByName.banrenma3: return banrenma3Icon;
             // 精英怪
             case MonsterTypeByName.DaZongXiong:
                 return DazongxiongIcon;
@@ -1232,15 +1291,15 @@ public static Sprite YeshouzhanshiIcon;
             case MonsterTypeByName.ShiFuBoss:
                 return ShifubossIcon;
             case MonsterTypeByName.ShuangTouRen:
-                return ShuangtourenIcon; 
+                return ShuangtourenIcon;
             case MonsterTypeByName.WuYaoZhiWang:
                 return WuyaozhiwangIcon;
             case MonsterTypeByName.WuYaoZhiWang2:
                 return Wuyaozhiwang2Icon;
             case MonsterTypeByName.YeShouZhanShi:
-                return YeshouzhanshiIcon; 
+                return YeshouzhanshiIcon;
             case MonsterTypeByName.ZhiZhuNvWang:
-                return ZhizhunvwangIcon; 
+                return ZhizhunvwangIcon;
             default:
                 return null;
         }
@@ -1270,17 +1329,17 @@ public static Sprite YeshouzhanshiIcon;
                 return IceSkillCd;
             case ChongWuConfig.ChongWuSKillType.IceSkillDamage:
                 return IceSkillDamage;
-            
+
             case ChongWuConfig.ChongWuSKillType.HuoSkillCd:
                 return HuoSkillCd;
             case ChongWuConfig.ChongWuSKillType.HuoSkillDamage:
                 return HuoSkillDamage;
-            
+
             case ChongWuConfig.ChongWuSKillType.DianSkillCd:
                 return DianSkillCd;
             case ChongWuConfig.ChongWuSKillType.DianSkillDamage:
                 return DianSkillDamage;
-            
+
             case ChongWuConfig.ChongWuSKillType.HeiAnSkillCd:
                 return HeiAnSkillCd;
             case ChongWuConfig.ChongWuSKillType.HeiAnSkillDamage:
@@ -1294,249 +1353,250 @@ public static Sprite YeshouzhanshiIcon;
     {
         switch (type)
         {
-            case  SkillType.Ice1:
+            case SkillType.Ice1:
                 return Ice1;
-            case  SkillType.Ice2:
+            case SkillType.Ice2:
                 return Ice2;
-            case  SkillType.Ice3:
+            case SkillType.Ice3:
                 return Ice3;
-            case  SkillType.Ice4:
+            case SkillType.Ice4:
                 return Ice4;
-            case  SkillType.Ice5:
+            case SkillType.Ice5:
                 return Ice5;
-            
-            case  SkillType.Huo1:
+
+            case SkillType.Huo1:
                 return Huo1;
-            case  SkillType.Huo2:
+            case SkillType.Huo2:
                 return Huo2;
-            case  SkillType.Huo3:
+            case SkillType.Huo3:
                 return Huo3;
-            case  SkillType.Huo4:
+            case SkillType.Huo4:
                 return Huo4;
-            case  SkillType.Huo5:
+            case SkillType.Huo5:
                 return Huo5;
-            
-            
-            case  SkillType.Dian1:
+
+
+            case SkillType.Dian1:
                 return Dian1;
-            case  SkillType.Dian2:
+            case SkillType.Dian2:
                 return Dian2;
-            case  SkillType.Dian3:
+            case SkillType.Dian3:
                 return Dian3;
-            case  SkillType.Dian4:
+            case SkillType.Dian4:
                 return Dian4;
-            case  SkillType.Dian5:
+            case SkillType.Dian5:
                 return Dian5;
-            
-            
-            case  SkillType.HeiAn1:
+
+
+            case SkillType.HeiAn1:
                 return HeiAn1;
-            case  SkillType.HeiAn2:
+            case SkillType.HeiAn2:
                 return HeiAn2;
-            case  SkillType.HeiAn3:
+            case SkillType.HeiAn3:
                 return HeiAn3;
-            case  SkillType.HeiAn4:
+            case SkillType.HeiAn4:
                 return HeiAn4;
-            case  SkillType.HeiAn5:
+            case SkillType.HeiAn5:
                 return HeiAn5;
         }
 
         return null;
     }
- 
+
     public static Sprite GetSkillSprite(SkillInfoType type)
     {
         switch (type)
         {
-            case  SkillInfoType.Ice1:
+            case SkillInfoType.Ice1:
                 return Ice1;
-            case  SkillInfoType.Ice2:
+            case SkillInfoType.Ice2:
                 return Ice2;
-            case  SkillInfoType.Ice3:
+            case SkillInfoType.Ice3:
                 return Ice3;
-            case  SkillInfoType.Ice4:
+            case SkillInfoType.Ice4:
                 return Ice4;
-            case  SkillInfoType.Ice5:
+            case SkillInfoType.Ice5:
                 return Ice5;
-            
-            case  SkillInfoType.IceBei1:
+
+            case SkillInfoType.IceBei1:
                 return IceBei1;
-            case  SkillInfoType.IceBei2:
+            case SkillInfoType.IceBei2:
                 return IceBei2;
-            case  SkillInfoType.IceBei3:
+            case SkillInfoType.IceBei3:
                 return IceBei3;
-            case  SkillInfoType.IceBei4:
+            case SkillInfoType.IceBei4:
                 return IceBei4;
-            
-            case  SkillInfoType.Ice1_1:
-            case  SkillInfoType.Ice2_1:
-            case  SkillInfoType.Ice3_1:
-            case  SkillInfoType.Ice4_1:
-            case  SkillInfoType.Ice5_1:
+
+            case SkillInfoType.Ice1_1:
+            case SkillInfoType.Ice2_1:
+            case SkillInfoType.Ice3_1:
+            case SkillInfoType.Ice4_1:
+            case SkillInfoType.Ice5_1:
                 return IceCd;
-            
-            case  SkillInfoType.Ice1_2:
+
+            case SkillInfoType.Ice1_2:
                 return Ice1_2;
-            case  SkillInfoType.Ice2_2:
+            case SkillInfoType.Ice2_2:
                 return Ice2_2;
-            case  SkillInfoType.Ice3_2:
+            case SkillInfoType.Ice3_2:
                 return Ice3_2;
-            case  SkillInfoType.Ice4_2:
+            case SkillInfoType.Ice4_2:
                 return Ice4_2;
-            case  SkillInfoType.Ice5_2:
+            case SkillInfoType.Ice5_2:
                 return Ice5_2;
-            
-            case  SkillInfoType.IceMain:
+
+            case SkillInfoType.IceMain:
                 return IceMain;
-            
-            
-            
-            
-            
-            
-            
-            case  SkillInfoType.Huo1:
+
+
+
+
+
+
+
+            case SkillInfoType.Huo1:
                 return Huo1;
-            case  SkillInfoType.Huo2:
+            case SkillInfoType.Huo2:
                 return Huo2;
-            case  SkillInfoType.Huo3:
+            case SkillInfoType.Huo3:
                 return Huo3;
-            case  SkillInfoType.Huo4:
+            case SkillInfoType.Huo4:
                 return Huo4;
-            case  SkillInfoType.Huo5:
+            case SkillInfoType.Huo5:
                 return Huo5;
-            
-            case  SkillInfoType.HuoBei1:
+
+            case SkillInfoType.HuoBei1:
                 return HuoBei1;
-            case  SkillInfoType.HuoBei2:
+            case SkillInfoType.HuoBei2:
                 return HuoBei2;
-            case  SkillInfoType.HuoBei3:
+            case SkillInfoType.HuoBei3:
                 return HuoBei3;
-            case  SkillInfoType.HuoBei4:
+            case SkillInfoType.HuoBei4:
                 return HuoBei4;
-            
-            case  SkillInfoType.Huo1_1:
-            case  SkillInfoType.Huo2_1:
-            case  SkillInfoType.Huo3_1:
-            case  SkillInfoType.Huo4_1:
-            case  SkillInfoType.Huo5_1:
+
+            case SkillInfoType.Huo1_1:
+            case SkillInfoType.Huo2_1:
+            case SkillInfoType.Huo3_1:
+            case SkillInfoType.Huo4_1:
+            case SkillInfoType.Huo5_1:
                 return HuoCd;
-            
-            case  SkillInfoType.Huo1_2:
+
+            case SkillInfoType.Huo1_2:
                 return Huo1_2;
-            case  SkillInfoType.Huo2_2:
+            case SkillInfoType.Huo2_2:
                 return Huo2_2;
-            case  SkillInfoType.Huo3_2:
+            case SkillInfoType.Huo3_2:
                 return Huo3_2;
-            case  SkillInfoType.Huo4_2:
+            case SkillInfoType.Huo4_2:
                 return Huo4_2;
-            case  SkillInfoType.Huo5_2:
+            case SkillInfoType.Huo5_2:
                 return Huo5_2;
-            
-            case  SkillInfoType.HuoMain:
+
+            case SkillInfoType.HuoMain:
                 return HuoMain;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            case  SkillInfoType.Dian1:
+
+
+
+
+
+
+
+
+
+            case SkillInfoType.Dian1:
                 return Dian1;
-            case  SkillInfoType.Dian2:
+            case SkillInfoType.Dian2:
                 return Dian2;
-            case  SkillInfoType.Dian3:
+            case SkillInfoType.Dian3:
                 return Dian3;
-            case  SkillInfoType.Dian4:
+            case SkillInfoType.Dian4:
                 return Dian4;
-            case  SkillInfoType.Dian5:
+            case SkillInfoType.Dian5:
                 return Dian5;
-            
-            case  SkillInfoType.DianBei1:
+
+            case SkillInfoType.DianBei1:
                 return DianBei1;
-            case  SkillInfoType.DianBei2:
+            case SkillInfoType.DianBei2:
                 return DianBei2;
-            case  SkillInfoType.DianBei3:
+            case SkillInfoType.DianBei3:
                 return DianBei3;
-            case  SkillInfoType.DianBei4:
+            case SkillInfoType.DianBei4:
                 return DianBei4;
-            
-            case  SkillInfoType.Dian1_1:
-            case  SkillInfoType.Dian2_1:
-            case  SkillInfoType.Dian3_1:
-            case  SkillInfoType.Dian4_1:
-            case  SkillInfoType.Dian5_1:
+
+            case SkillInfoType.Dian1_1:
+            case SkillInfoType.Dian2_1:
+            case SkillInfoType.Dian3_1:
+            case SkillInfoType.Dian4_1:
+            case SkillInfoType.Dian5_1:
                 return DianCd;
-            
-            case  SkillInfoType.Dian1_2:
+
+            case SkillInfoType.Dian1_2:
                 return Dian1_2;
-            case  SkillInfoType.Dian2_2:
+            case SkillInfoType.Dian2_2:
                 return Dian2_2;
-            case  SkillInfoType.Dian3_2:
+            case SkillInfoType.Dian3_2:
                 return Dian3_2;
-            case  SkillInfoType.Dian4_2:
+            case SkillInfoType.Dian4_2:
                 return Dian4_2;
-            case  SkillInfoType.Dian5_2:
+            case SkillInfoType.Dian5_2:
                 return Dian5_2;
-            
-            case  SkillInfoType.DianMain:
+
+            case SkillInfoType.DianMain:
                 return DianMain;
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            case  SkillInfoType.HeiAn1:
+
+
+
+
+
+
+
+
+
+            case SkillInfoType.HeiAn1:
                 return HeiAn1;
-            case  SkillInfoType.HeiAn2:
+            case SkillInfoType.HeiAn2:
                 return HeiAn2;
-            case  SkillInfoType.HeiAn3:
+            case SkillInfoType.HeiAn3:
                 return HeiAn3;
-            case  SkillInfoType.HeiAn4:
+            case SkillInfoType.HeiAn4:
                 return HeiAn4;
-            case  SkillInfoType.HeiAn5:
+            case SkillInfoType.HeiAn5:
                 return HeiAn5;
-            
-            case  SkillInfoType.HeiAnBei1:
+
+            case SkillInfoType.HeiAnBei1:
                 return HeiAnBei1;
-            case  SkillInfoType.HeiAnBei2:
+            case SkillInfoType.HeiAnBei2:
                 return HeiAnBei2;
-            case  SkillInfoType.HeiAnBei3:
+            case SkillInfoType.HeiAnBei3:
                 return HeiAnBei3;
-            case  SkillInfoType.HeiAnBei4:
+            case SkillInfoType.HeiAnBei4:
                 return HeiAnBei4;
-            
-            case  SkillInfoType.HeiAn1_1:
-            case  SkillInfoType.HeiAn2_1:
-            case  SkillInfoType.HeiAn3_1:
-            case  SkillInfoType.HeiAn4_1:
-            case  SkillInfoType.HeiAn5_1:
+
+            case SkillInfoType.HeiAn1_1:
+            case SkillInfoType.HeiAn2_1:
+            case SkillInfoType.HeiAn3_1:
+            case SkillInfoType.HeiAn4_1:
+            case SkillInfoType.HeiAn5_1:
                 return HeiAnCd;
-            
-            case  SkillInfoType.HeiAn1_2:
+
+            case SkillInfoType.HeiAn1_2:
                 return HeiAn1_2;
-            case  SkillInfoType.HeiAn2_2:
+            case SkillInfoType.HeiAn2_2:
                 return HeiAn2_2;
-            case  SkillInfoType.HeiAn3_2:
+            case SkillInfoType.HeiAn3_2:
                 return HeiAn3_2;
-            case  SkillInfoType.HeiAn4_2:
+            case SkillInfoType.HeiAn4_2:
                 return HeiAn4_2;
-            case  SkillInfoType.HeiAn5_2:
+            case SkillInfoType.HeiAn5_2:
                 return HeiAn5_2;
-            
-            case  SkillInfoType.HeiAnMain:
+
+            case SkillInfoType.HeiAnMain:
                 return HeiAnMain;
 
 
 
         }
+
         return null;
     }
 
@@ -2288,10 +2348,40 @@ public static Sprite YeshouzhanshiIcon;
         Yuren2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yuren2");
         Yuren3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yuren3");
         ZhaozebossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhaozeboss");
-        
+
         YeshouzhanshiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yeshouzhanshi");
         ZhizhunvwangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhizhunvwang");
         ShuangtourenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shuangtouren");
+
+        banrenma1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/banrenma1");
+        banrenma2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/banrenma2");
+        banrenma3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/banrenma3");
+        catIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/cat");
+        eggIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/egg");
+        langIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/lang");
+        moguIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/mogu");
+        niguai1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/niguai1");
+        niguai2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/niguai2");
+        niguai3Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/niguai3");
+        onyxIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/onyx");
+        paopaoIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/paopao");
+        queenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/queen");
+        rongyanbossIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/rongyanboss");
+        shanyangIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/shanyang");
+        sheIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/she");
+        woniuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/woniu");
+        xiaohuolingIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiaohuoling");
+        xiaoshuguaiIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiaoshuguai");
+        xiaozhizhuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiaozhizhu");
+        xiezi1Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiezi1");
+        xiezi2Icon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiezi2");
+        xiongbuouIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xiongbuou");
+        xuelaoshuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/xuelaoshu");
+        yanshuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yanshu");
+        yezhuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/yezhu");
+        zhumodaocaorenIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zhumodaocaoren");
+        zibaolaoshuIcon = Resources.Load<Sprite>("Sprite/LevelMonsterIcon/zibaolaoshu");
+
 
     }
 
@@ -2583,9 +2673,9 @@ public static Sprite YeshouzhanshiIcon;
                 }
 
                 break;
-            
-            
-            
+
+
+
             case PlayerEquipConfig.EquipLevel.XueRen:
 
                 switch (equipTable.SuitType)
@@ -2664,22 +2754,22 @@ public static Sprite YeshouzhanshiIcon;
                 return OrangeChiBang;
             case 406:
                 return RedChiBang;
-            
+
             case 1603:
                 return NormalChongWuDan;
             case 1605:
                 return GaoJiChongWuDan;
-            
+
             case 1703:
                 return NormalXiSuiYe;
             case 1705:
                 return GaoJiXiSuiYe;
-            
+
             case 1803:
                 return NormalXueMaiDan;
             case 1805:
                 return GaoJiXueMaiDan;
-            
+
             case 1901:
                 return Hp1;
             case 1902:
@@ -2692,12 +2782,12 @@ public static Sprite YeshouzhanshiIcon;
                 return Hp5;
             case 1906:
                 return Hp6;
-            
+
             case 2005:
                 return Ex;
             case 2105:
                 return DiaoLuo;
-            
+
             case 2201:
                 return ChongWuSkill1;
             case 2202:
@@ -2710,7 +2800,7 @@ public static Sprite YeshouzhanshiIcon;
                 return ChongWuSkill5;
             case 2206:
                 return ChongWuSkill6;
-            
+
             case 2305:
                 return DaKongShi;
             case 2401:
@@ -3128,9 +3218,9 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
-            
+
+
+
             case PlayerEquipConfig.EquipLevel.Green:
             {
                 switch (equipTable.EquipType)
@@ -3151,9 +3241,9 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
-            
+
+
+
             case PlayerEquipConfig.EquipLevel.Blue:
             {
                 switch (equipTable.EquipType)
@@ -3174,9 +3264,9 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
-            
+
+
+
             case PlayerEquipConfig.EquipLevel.Purple:
             {
                 switch (equipTable.EquipType)
@@ -3197,8 +3287,8 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
+
+
             case PlayerEquipConfig.EquipLevel.Purple1:
             {
                 switch (equipTable.EquipType)
@@ -3219,10 +3309,10 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.TreeMan:
             {
                 switch (equipTable.EquipType)
@@ -3243,10 +3333,10 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.HuoShan:
             {
                 switch (equipTable.EquipType)
@@ -3267,10 +3357,10 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.ZhaoZe:
             {
                 switch (equipTable.EquipType)
@@ -3291,10 +3381,10 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.XieZi:
             {
                 switch (equipTable.EquipType)
@@ -3315,10 +3405,10 @@ public static Sprite YeshouzhanshiIcon;
 
                 break;
             }
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.XueRen:
             {
                 switch (equipTable.EquipType)
