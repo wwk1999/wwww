@@ -7,8 +7,7 @@ public class DanMu : MonoBehaviour
 {
    public SpriteRenderer image;
    [NonSerialized] public Vector3 dir;
-   [NonSerialized] public float size;
-   [NonSerialized] public float speed;
+   [NonSerialized] public float size=0.35f;
    [NonSerialized] public float attack;
    [NonSerialized] public bool isBoss;
 
@@ -21,6 +20,7 @@ public class DanMu : MonoBehaviour
 
    public void Hide()
    {
+      GameController.S.DanMuQueue.Enqueue(this);
       gameObject.SetActive(false);
    }
 
@@ -35,10 +35,11 @@ public class DanMu : MonoBehaviour
 
    private void Update()
    {
-      transform.position+=dir*speed;
+      transform.position += dir * 4 * Time.deltaTime;
       if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= size)
       {
          GameController.S.gamePlayer.PlayerHurt(attack,isBoss);
+         GameController.S.DanMuQueue.Enqueue(this);
          gameObject.SetActive(false);
       }
    }

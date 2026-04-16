@@ -58,6 +58,7 @@ public class MonsterSpineName
     public string MoveName;
     public string HitName;
     public string DieName;
+    public string IdleName;
     public string AttackName;
     public string Skill1Name;
     public string Skill2Name;
@@ -66,6 +67,7 @@ public class MonsterSpineName
 }
 public abstract class MonsterBase : MonoBehaviour
 {
+    [NonSerialized] public float NormalYuanChenSize = 4f;
     [NonSerialized]  public MonsterTypeByName MonsterTypeByName;
     public GameObject bingkuai;
     public GameObject du;
@@ -228,6 +230,10 @@ public abstract class MonsterBase : MonoBehaviour
     {
         SetBingKuai();
         SetOrder();
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName&&Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= size)
+        {
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.IdleName, false);
+        }
         if (zhuoShaoTime > 0)
         {
             zhuoShaoTime -= Time.deltaTime;
@@ -347,7 +353,14 @@ public abstract class MonsterBase : MonoBehaviour
         else
         {
             monsterSkeletonAnimation.timeScale = 1;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
+            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) > size)
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
+            }
+            else
+            {
+                monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.IdleName, false);
+            }
         }
     }
 
@@ -467,9 +480,9 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else
         {
-            if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName ||
+            if ((monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName ||
                 IsDash || monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name ==
-                MonsterSpineName.HitName)
+                MonsterSpineName.HitName)&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position) >size)
             {
                 rigidbody2D.velocity = direction.normalized * Speed;
             }

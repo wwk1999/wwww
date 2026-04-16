@@ -19,7 +19,7 @@ public class chailangren4 : MonsterBase
         base.Start();
         monsterSkeletonAnimation.timeScale = 1.5f;
 
-        size = 5f;
+        size = NormalYuanChenSize;
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
@@ -32,6 +32,7 @@ public class chailangren4 : MonsterBase
         {
             var dir=(GameController.S.gamePlayer.transform.position - transform.position).normalized;
            ShotDanMu(attackTrans.position,ResourcesConfig.DanMu1,Attack,dir,false);
+           NormalYuanChenCurrentTime = 0;
         }
     }
 
@@ -44,6 +45,8 @@ public class chailangren4 : MonsterBase
         MonsterSpineName.HitName = "hurt";
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
+        MonsterSpineName.IdleName = "stand";
+
     }
 
     private void RandomDelayDie()
@@ -83,13 +86,9 @@ public class chailangren4 : MonsterBase
         if (IsDead) return;
         NormalYuanChenCurrentTime += Time.deltaTime;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size&&NormalYuanChenCurrentTime >= NormalYuanChenTime)
         {
-            if (NormalYuanChenCurrentTime >= NormalYuanChenTime)
-            {
-                 isAttack = true;
-                 NormalYuanChenCurrentTime = 0;
-            }
+            isAttack = true;
         }
         else
         {
@@ -99,15 +98,7 @@ public class chailangren4 : MonsterBase
         if (!IsDead)
         {
             SpriteFlipX(true);
-        }
-
-        if (!IsDead && Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
-        {
             MonsterMove();
-        }
-        else
-        {
-            rigidbody2D.velocity = Vector2.zero;
         }
     }
 
