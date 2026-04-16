@@ -8,6 +8,21 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite LingHun;
     public static Sprite EXP;
 
+    //弹幕
+    public static Sprite DanMu1;
+    public static Sprite DanMu2;
+    public static Sprite DanMu3;
+    public static Sprite DanMu4;
+    public static Sprite DanMu5;
+    public static Sprite DanMu6;
+    public static Sprite DanMu7;
+    public static Sprite DanMu8;
+    public static Sprite DanMu9;
+    public static Sprite DanMu10;
+    public static Sprite DanMu11;
+
+
+
 
     //icon
     public static Sprite AttackIcon;
@@ -1602,6 +1617,21 @@ public class ResourcesConfig : MonoBehaviour
 
     public static void Init()
     {
+        //弹幕
+        DanMu1 = Resources.Load<Sprite>("Sprite/DanMu/DanMu1");
+        DanMu2 = Resources.Load<Sprite>("Sprite/DanMu/DanMu2");
+        DanMu3 = Resources.Load<Sprite>("Sprite/DanMu/DanMu3");
+        DanMu4 = Resources.Load<Sprite>("Sprite/DanMu/DanMu4");
+        DanMu5 = Resources.Load<Sprite>("Sprite/DanMu/DanMu5");
+        DanMu6 = Resources.Load<Sprite>("Sprite/DanMu/DanMu6");
+        DanMu7 = Resources.Load<Sprite>("Sprite/DanMu/DanMu7");
+        DanMu8 = Resources.LoadAll<Sprite>("Sprite/DanMu/DanMu")[0];
+        DanMu9 = Resources.LoadAll<Sprite>("Sprite/DanMu/DanMu")[3];
+        DanMu10 = Resources.LoadAll<Sprite>("Sprite/DanMu/DanMu")[4];
+        DanMu11 = Resources.LoadAll<Sprite>("Sprite/DanMu/DanMu")[5];
+
+
+        
         //Icon
         AttackIcon = Resources.Load<Sprite>("Sprite/Icon/AttackIcon");
         DefenseIcon = Resources.Load<Sprite>("Sprite/Icon/DefenseIcon");

@@ -119,6 +119,8 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<SqrtAttack> SqrtQueue = new Queue<SqrtAttack>();
 
     //小怪
+    [NonSerialized] public Queue<DanMu> DanMuQueue = new Queue<DanMu>();
+
     [NonSerialized] public Queue<BaoXue> BaoXueQueue = new Queue<BaoXue>();
 
     [NonSerialized] public Queue<banrenma1> banrenma1Queue = new Queue<banrenma1>();

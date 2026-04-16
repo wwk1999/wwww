@@ -5,7 +5,7 @@ using Equip;
 using Spine;
 public class shuangtoulong : MonsterBase
 {
-    public Transform attackTrans;
+   public Transform attackTrans;
 
     public shuangtoulong() : base(MonsterTypeByName.ShuangTouLong1)
     {
@@ -16,7 +16,7 @@ public class shuangtoulong : MonsterBase
         base.Start();
         monsterSkeletonAnimation.timeScale = 1.5f;
 
-        size = 0.45f;
+        size = 5f;
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
@@ -27,10 +27,8 @@ public class shuangtoulong : MonsterBase
     {
         if (e.Data.Name == "attack")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
-            {
-                GameController.S.gamePlayer.PlayerHurt(Attack, false);
-            }
+            var dir=(GameController.S.gamePlayer.transform.position - transform.position).normalized;
+            ShotDanMu(attackTrans.position,ResourcesConfig.DanMu1,Attack,dir,false);
         }
     }
 
@@ -83,7 +81,11 @@ public class shuangtoulong : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
-            isAttack = true;
+            if (NormalYuanChenCurrentTime >= NormalYuanChenTime)
+            {
+                isAttack = true;
+                NormalYuanChenCurrentTime = 0;
+            }
         }
         else
         {
@@ -92,8 +94,16 @@ public class shuangtoulong : MonsterBase
 
         if (!IsDead)
         {
-            MonsterMove();
             SpriteFlipX(true);
+        }
+        
+        if (!IsDead && Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        {
+            MonsterMove();
+        }
+        else
+        {
+            rigidbody2D.velocity = Vector2.zero;
         }
     }
 

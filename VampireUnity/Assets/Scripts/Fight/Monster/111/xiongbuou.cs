@@ -40,9 +40,9 @@ public class xiongbuou : MonsterBase
         base.Awake();
         var randomSpeed = Random.Range(-0.1f, 0.1f);
         Speed += randomSpeed;
-        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "hurt";
-        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.MoveName = "run";
         MonsterSpineName.DieName = "die";
     }
 

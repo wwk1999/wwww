@@ -3302,6 +3302,14 @@ public class Entrance : MonoBehaviour
                 baoxue.gameObject.SetActive(false);
                 GameController.S.BaoXueQueue.Enqueue(baoxue);
             }
+
+            for (int i = 0; i < 100; i++)
+            {
+                DanMu danmu = Instantiate(Resources.Load<GameObject>("Prefabs/MonsterDanMu/DanMu"),transform).GetComponent<DanMu>();
+                danmu.gameObject.SetActive(false);
+                GameController.S.DanMuQueue.Enqueue(danmu);
+            }
+
         
 
 

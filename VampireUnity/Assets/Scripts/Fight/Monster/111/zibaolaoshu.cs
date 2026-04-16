@@ -42,7 +42,7 @@ public class zibaolaoshu : MonsterBase
         Speed += randomSpeed;
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hurt";
-        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.MoveName = "run";
         MonsterSpineName.DieName = "die";
     }
 

@@ -17,7 +17,7 @@ public class xuelaoshu : MonsterBase
         base.Start();
         monsterSkeletonAnimation.timeScale = 1.5f;
 
-        size = 0.45f;
+        size = 5f;
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
@@ -28,10 +28,8 @@ public class xuelaoshu : MonsterBase
     {
         if (e.Data.Name == "attack")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
-            {
-                GameController.S.gamePlayer.PlayerHurt(Attack, false);
-            }
+            var dir=(GameController.S.gamePlayer.transform.position - transform.position).normalized;
+            ShotDanMu(attackTrans.position,ResourcesConfig.DanMu1,Attack,dir,false);
         }
     }
 
@@ -42,7 +40,7 @@ public class xuelaoshu : MonsterBase
         Speed += randomSpeed;
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hurt";
-        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.MoveName = "run";
         MonsterSpineName.DieName = "die";
     }
 
@@ -84,7 +82,11 @@ public class xuelaoshu : MonsterBase
         base.Update();
         if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
-            isAttack = true;
+            if (NormalYuanChenCurrentTime >= NormalYuanChenTime)
+            {
+                isAttack = true;
+                NormalYuanChenCurrentTime = 0;
+            }
         }
         else
         {
@@ -93,8 +95,16 @@ public class xuelaoshu : MonsterBase
 
         if (!IsDead)
         {
-            MonsterMove();
             SpriteFlipX(true);
+        }
+        
+        if (!IsDead && Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        {
+            MonsterMove();
+        }
+        else
+        {
+            rigidbody2D.velocity = Vector2.zero;
         }
     }
 

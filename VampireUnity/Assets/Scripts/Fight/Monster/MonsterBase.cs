@@ -72,6 +72,8 @@ public abstract class MonsterBase : MonoBehaviour
     public GameObject jiansu;
     public GameObject yidian;
     public GameObject zhuoshao;
+    [NonSerialized] public float NormalYuanChenTime = 2f;
+    [NonSerialized] public float NormalYuanChenCurrentTime = 2f;
 
     [NonSerialized] public float zhuoShaoTime = 0;
     [NonSerialized] public float zhuoShaoCurrentTime = 0;//毒间隔时间
@@ -138,6 +140,13 @@ public abstract class MonsterBase : MonoBehaviour
     
     [NonSerialized]public bool isBingDong=false;
 
+    public void ShotDanMu(Vector2 trans, Sprite sprite, float attack, Vector3 dir, bool isBoss)
+    {
+        DanMu danmu = GameController.S.DanMuQueue.Dequeue();
+        danmu.SetDanMu(sprite, attack, dir, isBoss);
+        danmu.transform.position = trans;
+        danmu.gameObject.SetActive(true);
+    }
 
     public void InitAttribute()
     {
