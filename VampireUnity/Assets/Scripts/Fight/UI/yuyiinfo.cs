@@ -81,42 +81,42 @@ public class yuyiinfo : MonoBehaviour
         }
 
         List<MonsterTypeByName> monsterList = null;
-        List<ChongWuDiaoLuoItem> diaoluolist = null;
+        List<ChiBangType> diaoluolist = null;
         switch (PlayerData.S.yuyiShowLevel)
         {
             case 1:
                 Name1.gameObject.SetActive(true);
                 monsterList = LevelInfoConfig.LevelMonsterDic[201];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[1];
+                diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[1];
                 break;
             case 2:
                 Name2.gameObject.SetActive(true);
                 monsterList = LevelInfoConfig.LevelMonsterDic[202];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[2];
+                diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[2];
 
                 break;
             case 3:
                 Name3.gameObject.SetActive(true);
                 monsterList = LevelInfoConfig.LevelMonsterDic[203];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[3];
+                diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[3];
 
                 break;
             case 4:
                 Name4.gameObject.SetActive(true);
                 monsterList = LevelInfoConfig.LevelMonsterDic[204];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[4];
+                diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[4];
 
                 break;
             case 5:
                 Name5.gameObject.SetActive(true);
                 monsterList = LevelInfoConfig.LevelMonsterDic[205];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[5];
+                diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[5];
 
                 break;
             case 6:
                 Name6.gameObject.SetActive(true);                
                 monsterList = LevelInfoConfig.LevelMonsterDic[206];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[6];
+                diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[6];
 
                 break;
         }
@@ -131,10 +131,9 @@ public class yuyiinfo : MonoBehaviour
 
         foreach (var item in diaoluolist)
         {
-            int propid=PropConfig.GetPropId(item.type,item.Quality);
-            var diaoluogrid=Instantiate(Resources.Load<GameObject>("Prefabs/UI/DiaoLuoGrid"),DiaoLuoContent.transform)
-                .GetComponent<DiaoLuoGrid>();
-            diaoluogrid.PropId=propid;
+            var diaoluogrid=Instantiate(Resources.Load<GameObject>("Prefabs/UI/YuYiDiaoLuoGrid"),DiaoLuoContent.transform)
+                .GetComponent<YuYiDiaoLuoGrid>();
+            diaoluogrid.ChiBangType=item;
             diaoluogrid.SetItem();
         }
     }

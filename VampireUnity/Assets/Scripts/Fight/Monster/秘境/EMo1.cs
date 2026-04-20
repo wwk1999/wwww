@@ -7,55 +7,47 @@ using UnityEngine;
 
 public class EMo1 : MonsterBase
 {
-    public EMo1() : base(MonsterTypeByName.Emo1)    {
-    }
-    public Transform attackTrans;
-    
-    
-    public void Awake()
+   public Transform attackTrans;
+
+    public EMo1() : base(MonsterTypeByName.Emo1)
     {
-        MaxHp /= 100;
-        Attack /= 100;
-        Defense/= 100;
-        Exp/= 100;
-        BloodEnergy/= 100;
-        base.Awake();
-        MonsterSpineName.AttackName = "attack1";
-        MonsterSpineName.HitName = "hurt";
-        MonsterSpineName.MoveName = "run";
-        MonsterSpineName.DieName = "death";
+    }
+
+    void Start()
+    {
+        base.Start();
+        monsterSkeletonAnimation.timeScale = 1.5f;
+
+        size = 0.45f;
+        AddMonsterEquip();
+        AddMonsterProp();
+        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
     }
-    public override void AddMonsterEquip()
+
+    private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-       
-    }
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,4),3));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,4),3));
-    }
-   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
-    {
-        base.Hurt(damage,isCrit,damageFrom);
-        if (!IsDead)
+        if (e.Data.Name == "attack")
         {
-            AudioController.S.PlayBatHit();
+            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            {
+                GameController.S.gamePlayer.PlayerHurt(Attack, false);
+            }
         }
     }
-    
-    public override void Skill()
+
+    public void Awake()
     {
-        // Implement the skill logic here
+        base.Awake();
+        var randomSpeed = Random.Range(-0.1f, 0.1f);
+        Speed += randomSpeed;
+        MonsterSpineName.AttackName = "attack";
+        MonsterSpineName.HitName = "hurt";
+        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.DieName = "die";
     }
 
-    public override void Die()
-    {
-        float randomDelay = UnityEngine.Random.Range(0, 20) * 0.02f;
-        Invoke(nameof(RandomDelayDie),randomDelay);
-    }
-
-    private void  RandomDelayDie()
+    private void RandomDelayDie()
     {
         AudioController.S.PlaySnotDie();
         GeneralDie();
@@ -64,53 +56,78 @@ public class EMo1 : MonsterBase
         CreateEquip();
         CreateProp();
     }
-    
-    private void Start()
-    {
-        base.Start();
-        isBeatback = false;
-        size = 0.5f;
-        AddMonsterEquip();
-        AddMonsterProp();
 
-        monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
-    }
-    
-    private void OnDestroy()
+    public override void Die()
     {
-        monsterSkeletonAnimation.AnimationState.Event -= OnSpineEvent;
-    }
-    
-    public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
-    {
-        if (e.Data.Name == "attack"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack")
+        if (monsterSkeletonAnimation != null)
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 1.2)
-            {
-                GameController.S.gamePlayer.PlayerHurt(Attack,false);
-            }
+            DelayDestroy();
+            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            baoxue.transform.position=transform.position;
+            baoxue.gameObject.SetActive(true);
         }
+        float randomDelay = Random.Range(0, 20) * 0.02f;
+        Invoke(nameof(RandomDelayDie), randomDelay);
     }
-    
+
+
+
+    public override void Skill()
+    {
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "zhiwnag", false);
+        IsSkill = true;
+    }
+
+    // Update is called once per frame
     void Update()
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 1.2)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
         {
-            isAttack=true;
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            isAttack = true;
         }
         else
         {
-            isAttack=false;
-            monsterSkeletonAnimation.timeScale = 1f;
+            isAttack = false;
         }
-        
+
         if (!IsDead)
         {
             MonsterMove();
             SpriteFlipX(true);
+        }
+    }
+
+    public override void AddMonsterProp()
+    {
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment, 1), 3));
+        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang, 1), 3));
+    }
+
+    public override void AddMonsterEquip()
+    {
+
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Primary,
+            1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Primary,
+            1));
+        MonsterEquipList.Add(
+            new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 1));
+        MonsterEquipList.Add(
+            new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Primary, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,
+            PlayerEquipConfig.EquipLevel.Primary, 1));
+        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Primary,
+            1));
+    }
+
+    public override void Hurt(float damage, bool isCrit, DamageFrom damageFrom)
+    {
+        base.Hurt(damage, isCrit, damageFrom);
+        if (!IsDead)
+        {
+            AudioController.S.PlayBatHit();
         }
     }
 }

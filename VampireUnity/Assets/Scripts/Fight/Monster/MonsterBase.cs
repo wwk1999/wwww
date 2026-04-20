@@ -68,6 +68,8 @@ public class MonsterSpineName
 public abstract class MonsterBase : MonoBehaviour
 {
     [NonSerialized] public float NormalYuanChenSize = 4f;
+    [NonSerialized] public float EliteYuanChenSize = 6f;
+
     [NonSerialized]  public MonsterTypeByName MonsterTypeByName;
     public GameObject bingkuai;
     public GameObject du;

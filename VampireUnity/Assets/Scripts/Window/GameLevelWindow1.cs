@@ -34,6 +34,9 @@ public class GameLevelWindow1 : MonoBehaviour
 
     public GameObject ChongWuInfo;
     public Button ChongWuButton;
+    public Button ChiBangButton;
+    public GameObject ChiBangInfo;
+
 
     public void HideLevelInfo()
     {
@@ -51,6 +54,19 @@ public class GameLevelWindow1 : MonoBehaviour
         {
             ChongWuButton.image.color=new Color(60/255, 60/255, 60/255);
             ChongWuButton.interactable = false;
+
+        }
+        
+        
+        if (PlayerData.S.maxGameLevel >= 3)
+        {
+            ChiBangButton.image.color=new Color(1, 1, 1);
+            ChiBangButton.interactable = true;
+        }
+        else
+        {
+            ChiBangButton.image.color=new Color(60/255, 60/255, 60/255);
+            ChiBangButton.interactable = false;
 
         }
         
@@ -138,6 +154,11 @@ public class GameLevelWindow1 : MonoBehaviour
         ChongWuButton.onClick.AddListener(() =>
         {
             ChongWuInfo.gameObject.SetActive(true);
+        });
+        
+        ChiBangButton.onClick.AddListener(() =>
+        {
+            ChiBangInfo.gameObject.SetActive(true);
         });
         MJButton.onClick.AddListener(() =>
         {

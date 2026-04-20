@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class banrenma3 : MonsterBase
 {
-   public Transform attackTrans;
+  public Transform attackTrans;
 
     public banrenma3() : base(MonsterTypeByName.banrenma3)
     {
@@ -17,7 +17,7 @@ public class banrenma3 : MonsterBase
         base.Start();
         monsterSkeletonAnimation.timeScale = 1.5f;
 
-        size = 0.45f;
+        size = EliteYuanChenSize;
         AddMonsterEquip();
         AddMonsterProp();
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
@@ -28,10 +28,9 @@ public class banrenma3 : MonsterBase
     {
         if (e.Data.Name == "attack")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
-            {
-                GameController.S.gamePlayer.PlayerHurt(Attack, false);
-            }
+            NormalYuanChenCurrentTime = 0;
+            var dir=(GameController.S.gamePlayer.transform.position - transform.position).normalized;
+            ShotDanMu(attackTrans.position,ResourcesConfig.DanMu1,Attack,dir,false);
         }
     }
 
@@ -44,6 +43,8 @@ public class banrenma3 : MonsterBase
         MonsterSpineName.HitName = "hurt";
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
+        MonsterSpineName.IdleName = "stand";
+
     }
 
     private void RandomDelayDie()
@@ -82,7 +83,7 @@ public class banrenma3 : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size&&NormalYuanChenCurrentTime >= NormalYuanChenTime)
         {
             isAttack = true;
         }
@@ -93,8 +94,8 @@ public class banrenma3 : MonsterBase
 
         if (!IsDead)
         {
-            MonsterMove();
             SpriteFlipX(true);
+            MonsterMove();
         }
     }
 
