@@ -21,22 +21,11 @@ public class VacantEye : MonsterBase
          CreateProp();
      }
      
-     public override void AddMonsterProp()
-     {
-         MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
-     }
+    
      public override void Skill()
      {
      }
-    public override void AddMonsterEquip()
-    {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Blue, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Blue, 10));
-    }
+   
     
   
 
@@ -71,7 +60,7 @@ public class VacantEye : MonsterBase
     private void Start()
     {
         VacantEyeBullet=Resources.Load<VacantEyeBullet>("Prefabs/Monster/VacantEyeBullet");
-        AddMonsterEquip();
+        
     }
     void Update()
     {

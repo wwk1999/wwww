@@ -90,22 +90,7 @@ namespace Fight.Monster.秘境.豹子
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
             }
         }
-
-        public override void AddMonsterEquip()
-        {
-            MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Purple,
-                20));
-            MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,
-                PlayerEquipConfig.EquipLevel.Purple, 20));
-            MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,
-                PlayerEquipConfig.EquipLevel.Purple, 20));
-            MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,
-                PlayerEquipConfig.EquipLevel.Purple, 20));
-            MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Purple,
-                20));
-            MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,
-                PlayerEquipConfig.EquipLevel.Purple, 20));
-        }
+        
 
         public override void Hurt(float damage, bool isCrit, DamageFrom damageFrom)
         {
@@ -159,8 +144,8 @@ namespace Fight.Monster.秘境.豹子
         {
             base.Start();
             size = 2.5f;
-            AddMonsterEquip();
-            AddMonsterProp();
+            
+           
         }
 
         private void OnDestroy()
@@ -251,12 +236,6 @@ namespace Fight.Monster.秘境.豹子
                     bullet.gameObject.SetActive(true);
                 }
             }
-        }
-        public override void AddMonsterProp()
-        {
-            MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment, 4), 10));
-            MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang, 4), 10));
-
         }
 
         public void MonsterMove1()

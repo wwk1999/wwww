@@ -121,9 +121,6 @@ public abstract class MonsterBase : MonoBehaviour
     //public SpriteRenderer monsterSpriteRenderer;
     //public Animator monsterAnimator;
     public Slider hpSlider;
-    [NonSerialized]public List<MonsterEquip> MonsterEquipList=new List<MonsterEquip>() ;//怪物装备列表
-    [NonSerialized]public List<MonsterOrangeEntryEquip> MonsterOrangeEntryEquip=new List<MonsterOrangeEntryEquip>() ;//怪物装备列表
-    [NonSerialized]public List<MonsterProp> MonsterPropList=new List<MonsterProp>() ;//怪物源石列表
 
 
     //经验相关
@@ -173,9 +170,6 @@ public abstract class MonsterBase : MonoBehaviour
     {
         MonsterTypeByName = type;
     }
-
-    public abstract void AddMonsterEquip();
-    public abstract void AddMonsterProp();
     
     public void Awake()
     {
@@ -992,8 +986,12 @@ public abstract class MonsterBase : MonoBehaviour
      /// </summary>
     public void CreateEquip()
     {
+        var monsterType = MonsterConfig.MonsterTypeDic[MonsterTypeByName];
+        var info=MonsterConfig.MonsterInfoDic[
+            new MonsterDiaoLuoType() { GameLevel = LevelInfoConfig.CurrentGameLevel, MonsterType = monsterType }];
         //根据MonsterEquip的概率随机生成装备
-        foreach (MonsterEquip monsterEquip in MonsterEquipList)
+        var monsterEquipList=info.MonsterEquipList;
+        foreach (MonsterEquip monsterEquip in monsterEquipList)
         {
             float random = Random.Range(0, 100f);
             if (random <= monsterEquip.Probability*(1.0f+GlobalPlayerAttribute.Forture))
@@ -1008,26 +1006,30 @@ public abstract class MonsterBase : MonoBehaviour
                 equip.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
         }
-        
-        foreach (MonsterOrangeEntryEquip monsterEquip in MonsterOrangeEntryEquip)
+
+        if (info.orangeEquip)
         {
             float random = Random.Range(0, 100f);
-            if (random <= monsterEquip.Probability * (1.0f + GlobalPlayerAttribute.Forture))
+            if (random <= 0.2f)
             {
-                GameObject equip = GameController.S.GetOrangeEntryEquip(monsterEquip);
-                var comp = equip.GetComponent<EquipBase>(); 
-                GameController.S.EquipBaseSet.Add(comp);
-                // 对应的具体脚本
-                comp.enabled = true;
-                equip.SetActive(true);
-                equip.transform.position = transform.position;
+                //生成装备
+                GameObject equip = GameController.S.GetOrangeEquip(GameController.S.GetRandomOrangeEquip());
+                EquipBase equipbase=equip.GetComponent<EquipBase>();
+                GameController.S.EquipBaseSet.Add(equipbase);
+                equipbase.enabled = true;
+                equip.gameObject.SetActive(true);
+                //设置装备位置为怪物位置
+                equip.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
         }
     }
 
     public void CreateProp()
     {
-        foreach (MonsterProp prop in MonsterPropList)
+        var monsterType = MonsterConfig.MonsterTypeDic[MonsterTypeByName];
+        var info=MonsterConfig.MonsterInfoDic[
+            new MonsterDiaoLuoType() { GameLevel = LevelInfoConfig.CurrentGameLevel, MonsterType = monsterType }];
+        foreach (MonsterProp prop in info.MonsterPropList)
         {
             float random = Random.Range(0, 100f);
             if (random <= prop.Probability*(1+GlobalPlayerAttribute.Forture))

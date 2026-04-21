@@ -1085,8 +1085,84 @@ public class GameController : XSingleton<GameController>
                         baoshi1.propTables.EquipName = "DD6";
                         break;
                 }
-
                 return baoshi1.gameObject;
+                case PropConfig.PropType.ChongWuDan:
+                switch (prop.Quality)
+                {
+                    case 3:
+                        var chongwudan = ChongWuDanQueue.Dequeue();
+                        chongwudan.quality = 3;
+                        return chongwudan.gameObject;
+                    case 5:
+                        var chongwudan1 = ChongWuDanQueue.Dequeue();
+                        chongwudan1.quality = 5;
+                        return chongwudan1.gameObject;
+                }
+                break;
+                
+                
+            case PropConfig.PropType.ChongWuShiWu:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        var chongwushiwu1 = ChongWuShiWuQueue.Dequeue();
+                        chongwushiwu1.quality = 1;
+                        return chongwushiwu1.gameObject;
+                    case 2:
+                        var chongwushiwu2 = ChongWuShiWuQueue.Dequeue();
+                        chongwushiwu2.quality = 2;
+                        return chongwushiwu2.gameObject;
+                    case 3:
+                        var chongwushiwu3 = ChongWuShiWuQueue.Dequeue();
+                        chongwushiwu3.quality = 3;
+                        return chongwushiwu3.gameObject;
+                    case 4:
+                        var chongwushiwu4 = ChongWuShiWuQueue.Dequeue();
+                        chongwushiwu4.quality = 4;
+                        return chongwushiwu4.gameObject;
+                    case 5:
+                        var chongwushiwu5 = ChongWuShiWuQueue.Dequeue();
+                        chongwushiwu5.quality = 5;
+                        return chongwushiwu5.gameObject;
+                    case 6:
+                        var chongwushiwu6 = ChongWuShiWuQueue.Dequeue();
+                        chongwushiwu6.quality = 6;
+                        return chongwushiwu6.gameObject;
+                }
+                break;
+            
+            
+            case PropConfig.PropType.SkillShu:
+                switch (prop.Quality)
+                {
+                    case 1:
+                        var chongwuSkillShu1 = ChongWuSkillShuQueue.Dequeue();
+                        chongwuSkillShu1.quality = 1;
+                        return chongwuSkillShu1.gameObject;
+                    case 2:
+                        var chongwuSkillShu2 = ChongWuSkillShuQueue.Dequeue();
+                        chongwuSkillShu2.quality = 2;
+                        return chongwuSkillShu2.gameObject;
+                    case 3:
+                        var chongwuSkillShu3 = ChongWuSkillShuQueue.Dequeue();
+                        chongwuSkillShu3.quality = 3;
+                        return chongwuSkillShu3.gameObject;
+                    case 4:
+                        var chongwuSkillShu4 = ChongWuSkillShuQueue.Dequeue();
+                        chongwuSkillShu4.quality = 4;
+                        return chongwuSkillShu4.gameObject;
+                    case 5:
+                        var chongwuSkillShu5 = ChongWuSkillShuQueue.Dequeue();
+                        chongwuSkillShu5.quality = 5;
+                        return chongwuSkillShu5.gameObject;
+                    case 6:
+                        var chongwuSkillShu6 = ChongWuSkillShuQueue.Dequeue();
+                        chongwuSkillShu6.quality = 6;
+                        return chongwuSkillShu6.gameObject;
+                }
+                break;
+
+                
         }
         return null;
     }
@@ -1225,7 +1301,104 @@ public class GameController : XSingleton<GameController>
 
         return null;
     }
-    
+    public OrangeEquipType GetRandomOrangeEquip()
+    {
+        Array values = Enum.GetValues(typeof(OrangeEquipType));
+        return (OrangeEquipType)values.GetValue(Random.Range(1, values.Length));
+    }
+
+       public GameObject GetOrangeEquip(OrangeEquipType type)
+    {
+        switch (type)
+        {
+            case OrangeEquipType.BuWangChuXin:
+                return BuWangChuXinQueue.Dequeue();
+            case OrangeEquipType.CloakFortureAdd:
+                return CloakFortureAddQueue.Dequeue();
+            case OrangeEquipType.DuAddDuQuan:
+                return DuAddDuQuanQueue.Dequeue();
+            case OrangeEquipType.FireBaoZha:
+                return FireBaoZhaQueue.Dequeue();
+            case OrangeEquipType.HeiDongAddSpeed:
+                return HeiDongAddSpeedQueue.Dequeue();
+            case OrangeEquipType.LvQuanAddScale:
+                return LvQuanAddScaleQueue.Dequeue();
+            case OrangeEquipType.PuTong3ChuanTou:
+                return PuTong3ChuanTouQueue.Dequeue();
+            case OrangeEquipType.XuKongAdd2Dan:
+                return XuKongAdd2DanQueue.Dequeue();
+            case OrangeEquipType.AddDefenseForTime:
+                return AddDefenseForTimeQueue.Dequeue();
+            case OrangeEquipType.AllReplyAddPercent:
+                return AllReplyAddPercentQueue.Dequeue();
+            case OrangeEquipType.ClothFortureAdd:
+                return ClothFortureAddQueue.Dequeue();
+            case OrangeEquipType.FinalDamageReductionFixed:
+                return FinalDamageReductionFixedQueue.Dequeue();
+            case OrangeEquipType.HpReductionReplyAdd50:
+                return HpReductionReplyAdd50Queue.Dequeue();
+            case OrangeEquipType.ReplyDeath:
+                return ReplyDeathQueue.Dequeue();
+            case OrangeEquipType.AddHpForTime:
+                return AddHpForTimeQueue.Dequeue();
+            case OrangeEquipType.DelayDamage:
+                return DelayDamageQueue.Dequeue();
+            case OrangeEquipType.FinalDamageReductionPercent:
+                return FinalDamageReductionPercentQueue.Dequeue();
+            case OrangeEquipType.HelmetFortureAdd:
+                return HelmetFortureAddQueue.Dequeue();
+            case OrangeEquipType.HpReductionAddDefense:
+                return HpReductionAddDefenseQueue.Dequeue();
+            case OrangeEquipType.Skill1AddRange:
+                return Skill1AddRangeQueue.Dequeue();
+            case OrangeEquipType.Skill2AddRange:
+                return Skill2AddRangeQueue.Dequeue();
+            case OrangeEquipType.FinalDamageAddPercent:
+                return FinalDamageAddPercentQueue.Dequeue();
+            case OrangeEquipType.NecklaceFortureAdd:
+                return NecklaceFortureAddQueue.Dequeue();
+            case OrangeEquipType.NormalAddDamage:
+                return NormalAddDamageQueue.Dequeue();
+            case OrangeEquipType.NoSkill:
+                return NoSkillQueue.Dequeue();
+            case OrangeEquipType.RecudeHpAddAttack:
+                return RecudeHpAddAttackQueue.Dequeue();
+            case OrangeEquipType.Skill1ReplaceNormalAttack:
+                return Skill1ReplaceNormalAttackQueue.Dequeue();
+            case OrangeEquipType.Skill2AddDan:
+                return Skill2AddDanQueue.Dequeue();
+            case OrangeEquipType.Skill3Bian3:
+                return Skill3Bian3Queue.Dequeue();
+            case OrangeEquipType.AddAttackForTime:
+                return AddAttackForTimeQueue.Dequeue();
+            case OrangeEquipType.FanPuGuiZhen:
+                return FanPuGuiZhenQueue.Dequeue();
+            case OrangeEquipType.KillNormal:
+                return KillNormalQueue.Dequeue();
+            case OrangeEquipType.RingFortureAdd:
+                return RingFortureAddQueue.Dequeue();
+            case OrangeEquipType.Skill1YiDianDouble:
+                return Skill1YiDianDoubleQueue.Dequeue();
+            case OrangeEquipType.Skill2RotateAdd:
+                return Skill2RotateAddQueue.Dequeue();
+            case OrangeEquipType.Skill3AddRange:
+                return Skill3AddRangeQueue.Dequeue();
+            case OrangeEquipType.DashCd:
+                return DashCdQueue.Dequeue();
+            case OrangeEquipType.DashRange:
+                return DashRangeQueue.Dequeue();
+            case OrangeEquipType.ExAdd:
+                return ExAddQueue.Dequeue();
+            case OrangeEquipType.JianSuAddAttack:
+                return JianSuAddAttackQueue.Dequeue();
+            case OrangeEquipType.MoveSpeedAdd:
+                return MoveSpeedAddQueue.Dequeue();
+            case OrangeEquipType.ShoeFortureAdd:
+                return ShoeFortureAddQueue.Dequeue();
+            default:
+                return null;
+        }
+    }
     
     public GameObject GetEquip(MonsterEquip monsterEquip)
     {

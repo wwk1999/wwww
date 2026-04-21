@@ -147,15 +147,7 @@ public class XueRenBoss : MonsterBase
         }
     }
 
-    public override void AddMonsterEquip()
-    {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple1, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Purple1, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Purple1, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Purple1, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Purple1, 20));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Purple1, 20));
-    }
+    
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
@@ -207,8 +199,8 @@ public class XueRenBoss : MonsterBase
     {
         base.Start();
         size = 1.2f;
-        AddMonsterEquip();
-        AddMonsterProp();
+        
+       
     }
     
     private void OnDestroy()
@@ -281,12 +273,7 @@ public class XueRenBoss : MonsterBase
     }
     
     
-     public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,4),10));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,4),10));
-
-    }
+    
     
     public void MonsterMove1()
     {

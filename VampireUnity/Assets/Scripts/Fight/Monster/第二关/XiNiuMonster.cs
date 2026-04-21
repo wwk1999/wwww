@@ -9,22 +9,10 @@ public class XiNiuMonster : MonsterBase
     {
     }
    
-    public override void AddMonsterEquip()
-    {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.Green, 10));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Green, 10));
-    }
+    
     public override void Skill()
     {
         // Implement the skill logic here
-    }
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
     }
     
     public override void Die()
@@ -87,7 +75,7 @@ public class XiNiuMonster : MonsterBase
     private void Start()
     {
         size = 0.3f;
-        AddMonsterEquip();
+        
         
         // 确保 isMove 初始化为 true（基类已初始化，这里只是确保）
         isMove = true;

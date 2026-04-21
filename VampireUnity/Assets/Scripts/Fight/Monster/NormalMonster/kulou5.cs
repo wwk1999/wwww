@@ -18,8 +18,8 @@ public class kulou5 : MonsterBase
         monsterSkeletonAnimation.timeScale = 1.5f;
 
         size = NormalYuanChenSize;
-        AddMonsterEquip();
-        AddMonsterProp();
+        
+       
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
     }
@@ -100,28 +100,7 @@ public class kulou5 : MonsterBase
         }
     }
 
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment, 1), 3));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang, 1), 3));
-    }
-
-    public override void AddMonsterEquip()
-    {
-
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Primary,
-            1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Primary,
-            1));
-        MonsterEquipList.Add(
-            new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 1));
-        MonsterEquipList.Add(
-            new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Primary, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,
-            PlayerEquipConfig.EquipLevel.Primary, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Primary,
-            1));
-    }
+   
 
     public override void Hurt(float damage, bool isCrit, DamageFrom damageFrom)
     {

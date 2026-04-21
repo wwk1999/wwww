@@ -17,6 +17,53 @@ public enum SuitType
     Necklace,
     Ring
 }
+
+public enum OrangeEquipType
+{
+    None,
+    BuWangChuXin,
+    CloakFortureAdd,
+    DuAddDuQuan,
+    FireBaoZha,
+    HeiDongAddSpeed,
+    LvQuanAddScale,
+    PuTong3ChuanTou,
+    XuKongAdd2Dan,
+    AddDefenseForTime,
+    AllReplyAddPercent,
+    ClothFortureAdd,
+    FinalDamageReductionFixed,
+    HpReductionReplyAdd50,
+    ReplyDeath,
+    AddHpForTime,
+    DelayDamage,
+    FinalDamageReductionPercent,
+    HelmetFortureAdd,
+    HpReductionAddDefense,
+    Skill1AddRange,
+    Skill2AddRange,
+    FinalDamageAddPercent,
+    NecklaceFortureAdd,
+    NormalAddDamage,
+    NoSkill,
+    RecudeHpAddAttack,
+    Skill1ReplaceNormalAttack,
+    Skill2AddDan,
+    Skill3Bian3,
+    AddAttackForTime,
+    FanPuGuiZhen,
+    KillNormal,
+    RingFortureAdd,
+    Skill1YiDianDouble,
+    Skill2RotateAdd,
+    Skill3AddRange,
+    DashCd,
+    DashRange,
+    ExAdd,
+    JianSuAddAttack,
+    MoveSpeedAdd,
+    ShoeFortureAdd,
+}
 public class EquipBase : BagObjectBase
 {
     [NonSerialized]public Rigidbody2D equipRb;

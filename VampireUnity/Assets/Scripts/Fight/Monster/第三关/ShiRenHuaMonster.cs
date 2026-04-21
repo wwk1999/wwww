@@ -24,16 +24,7 @@ public class ShiRenHuaMonster : MonsterBase
         MonsterSpineName.Skill1Name = "skill1";
 
     }
-
-    public override void AddMonsterEquip()
-    {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.HuoShan, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.HuoShan, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.HuoShan, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.HuoShan, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.HuoShan, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.HuoShan, 3));
-    }
+    
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
@@ -72,19 +63,13 @@ public class ShiRenHuaMonster : MonsterBase
         Invoke(nameof(RandomDelayDie), randomDelay);
     }
     
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),10));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),10));
-
-    }
 
     private void Start()
     {
         base.Start();
         size = 0.8f;
-        AddMonsterEquip();
-        AddMonsterProp();
+        
+       
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 
     }

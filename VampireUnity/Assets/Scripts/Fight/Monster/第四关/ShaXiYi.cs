@@ -26,20 +26,7 @@ public class ShaXiYi : MonsterBase
         MonsterSpineName.DieName = "fail";
         MonsterSpineName.Skill1Name = "stealth";
     }
-    public override void AddMonsterEquip()
-    {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Shoe,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.ZhaoZe, 3));
-    }
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),10));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.ChiBang,3),10));
-    }
+   
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
@@ -84,8 +71,8 @@ public class ShaXiYi : MonsterBase
         base.Start();
         size = 0.5f;
         isBeatback = false;
-        AddMonsterEquip();
-        AddMonsterProp();
+        
+       
 
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
     }

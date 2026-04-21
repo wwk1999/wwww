@@ -30,12 +30,7 @@ public class ShaMoElite : MonsterBase
 
     }
 
-    public override void AddMonsterEquip()
-    {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Blue, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Blue, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Blue, 1));
-    }
+  
 
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
@@ -69,18 +64,15 @@ public class ShaMoElite : MonsterBase
         CreateProp();
     }
     
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),100));
-    }
+   
     
     private void Start()
     {
         base.Start();
         size = 1f;
         isBeatback = false;
-        AddMonsterEquip();
-        AddMonsterProp();
+        
+       
 
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
 

@@ -25,15 +25,7 @@ public class YingShu : MonsterBase
 
     }
 
-    public override void AddMonsterEquip()
-    {
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Necklace,PlayerEquipConfig.EquipLevel.Purple, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloak,PlayerEquipConfig.EquipLevel.Purple, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Helmet,PlayerEquipConfig.EquipLevel.Purple, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Ring,PlayerEquipConfig.EquipLevel.Purple, 1));
-        MonsterEquipList.Add(new MonsterEquip(PlayerEquipConfig.EquipType.Cloth,PlayerEquipConfig.EquipLevel.Purple, 1));
-    }
+  
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
     {
         base.Hurt(damage,isCrit,damageFrom);
@@ -71,19 +63,15 @@ public class YingShu : MonsterBase
         CreateProp();
     }
     
-    public override void AddMonsterProp()
-    {
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),10));
-        MonsterPropList.Add(new MonsterProp(new PropItem(PropConfig.PropType.JingCui,3),10));
-    }
+   
     
     private void Start()
     {
         base.Start();
         isBeatback = false;
         size = 0.5f;
-        AddMonsterEquip();
-        AddMonsterProp();
+        
+       
 
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
     }
