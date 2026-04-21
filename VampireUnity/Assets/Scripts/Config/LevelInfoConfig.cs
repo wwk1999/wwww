@@ -597,28 +597,28 @@ public class LevelInfoConfig
             {35,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
             
             
-            {101,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {102,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {103,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {104,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {105,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {106,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
+            {101,new List<MonsterTypeByName>() { MonsterTypeByName.cat ,MonsterTypeByName.egg,MonsterTypeByName.paopao}},
+            {102,new List<MonsterTypeByName>() { MonsterTypeByName.CiZhu ,MonsterTypeByName.she,MonsterTypeByName.banrenma1}},
+            {103,new List<MonsterTypeByName>() { MonsterTypeByName.YouLang ,MonsterTypeByName.onyx,MonsterTypeByName.banrenma2}},
+            {104,new List<MonsterTypeByName>() { MonsterTypeByName.TuJiu ,MonsterTypeByName.WuYa,MonsterTypeByName.banrenma3}},
+            {105,new List<MonsterTypeByName>() { MonsterTypeByName.xuelaoshu ,MonsterTypeByName.lang,MonsterTypeByName.xiongbuou}},
+            {106,new List<MonsterTypeByName>() { MonsterTypeByName.xiezi1 ,MonsterTypeByName.xiezi2,MonsterTypeByName.zhumodaocaoren}},
 
             
-            {201,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {202,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {203,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {204,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {205,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {206,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
+            {201,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen1 ,MonsterTypeByName.KuLou1,MonsterTypeByName.ShouRen1}},
+            {202,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen2 ,MonsterTypeByName.KuLou2,MonsterTypeByName.ShouRen2}},
+            {203,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen3 ,MonsterTypeByName.KuLou3,MonsterTypeByName.ShouRen3}},
+            {204,new List<MonsterTypeByName>() { MonsterTypeByName.niguai1 ,MonsterTypeByName.KuLou4,MonsterTypeByName.NiuTouRen1}},
+            {205,new List<MonsterTypeByName>() { MonsterTypeByName.niguai2 ,MonsterTypeByName.KuLou5,MonsterTypeByName.NiuTouRen2}},
+            {206,new List<MonsterTypeByName>() { MonsterTypeByName.niguai3 ,MonsterTypeByName.KuLou6,MonsterTypeByName.NiuTouRen3}},
 
             
-            {301,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {302,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {303,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {304,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {305,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {306,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
+            {301,new List<MonsterTypeByName>() { MonsterTypeByName.ChaiLangRen1 ,MonsterTypeByName.ChaiLangRen2,MonsterTypeByName.ShuangTouRen}},
+            {302,new List<MonsterTypeByName>() { MonsterTypeByName.ChaiLangRen3 ,MonsterTypeByName.ChaiLangRen4,MonsterTypeByName.RongYanGuai}},
+            {303,new List<MonsterTypeByName>() { MonsterTypeByName.DiJing2 ,MonsterTypeByName.DiJing3,MonsterTypeByName.DiJingZhangLao}},
+            {304,new List<MonsterTypeByName>() { MonsterTypeByName.DaoCaoRen ,MonsterTypeByName.HeiXiong,MonsterTypeByName.rongyanboss}},
+            {305,new List<MonsterTypeByName>() { MonsterTypeByName.queen ,MonsterTypeByName.shanyang,MonsterTypeByName.FengHeGuai}},
+            {306,new List<MonsterTypeByName>() { MonsterTypeByName.ShiShiGui ,MonsterTypeByName.ShiXiangGui,MonsterTypeByName.DaZongXiong}},
 
         };
     public static int[] LevelMonsterCount= new int[1000];//关卡敌人数量
