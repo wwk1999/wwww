@@ -680,6 +680,24 @@ public class LevelInfoConfig
         LevelMonsterCount[104] = 180;
         LevelMonsterCount[105] = 250;
         LevelMonsterCount[106] = 300;
+        
+        
+        LevelMonsterCount[201] = 100;
+        LevelMonsterCount[202] = 120;
+        LevelMonsterCount[203] = 140;
+        LevelMonsterCount[204] = 180;
+        LevelMonsterCount[205] = 250;
+        LevelMonsterCount[206] = 300;
+        
+        
+        
+        
+        LevelMonsterCount[301] = 100;
+        LevelMonsterCount[302] = 120;
+        LevelMonsterCount[303] = 140;
+        LevelMonsterCount[304] = 180;
+        LevelMonsterCount[305] = 250;
+        LevelMonsterCount[306] = 300;
     }
 
     public static List<DiaoLuoConfig> GetDiaoLuoList(int GameLevel)

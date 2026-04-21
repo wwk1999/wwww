@@ -628,6 +628,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\yuren2.cs" />
     <Compile Include="Assets\Scripts\Server\SourceStoneServer.cs" />
     <Compile Include="Assets\Scripts\Gun\Pistol.cs" />
+    <Compile Include="Assets\Scripts\Fight\UI\LinHunInfo.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleShoe1.cs" />
     <Compile Include="Assets\Scripts\Skill\TwoNormalAttackTrigger.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerInfoConfig.cs" />
