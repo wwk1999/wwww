@@ -30,7 +30,7 @@ public class Ice4BaoZhaItem : MonoBehaviour
          if (col.CompareTag("Monster")||col.CompareTag("Boss"))
          {
             var crit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Ice);
          }
       }
    }

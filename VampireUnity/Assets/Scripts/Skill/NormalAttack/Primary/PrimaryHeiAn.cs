@@ -32,7 +32,7 @@ namespace Skill.NormalAttack.Primary
             if (other.CompareTag("Monster")||other.CompareTag("Boss"))
             {
                 bool isCrit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal);
+                GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
                 gameObject.SetActive(false);
                 GameController.S.PrimaryHeiAnQueue.Enqueue(this);
                 Vector2 closestPoint = other.ClosestPoint(transform.position);

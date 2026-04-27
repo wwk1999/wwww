@@ -40,17 +40,11 @@ public class IceExplosion : MonoBehaviour
       if (other.CompareTag("Monster")||other.CompareTag("Boss"))
       {
          bool isCrit = GameController.S.GetIsCrit();
-         GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice3Damage*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),isCrit,DamageFrom.Skill3);
+         GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice3Damage*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),isCrit,DamageFrom.Skill3,YuanSuType.Ice);
          Vector2 closestPoint = other.ClosestPoint(transform.position);
          var hit = GameController.S.IcePengQueue.Dequeue();
          hit.transform.position = closestPoint;
          hit.SetActive(true);
-         var random = Random.Range(0f, 100f);
-         if (random <= GlobalPlayerAttribute.BingDongRate)
-         {
-            GameController.S.MonsterColliderDic[other].isBingDong=true;
-            GameController.S.StartCoroutine(GameController.S.DelayJieDong(GameController.S.MonsterColliderDic[other]));
-         }
       }
    }
 }

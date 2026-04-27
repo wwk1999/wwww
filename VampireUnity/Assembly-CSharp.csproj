@@ -790,6 +790,7 @@
     <None Include="Assets\Arts\Spine\小怪2\rongyanguai\rongyanyuansu.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\怪物\ShaMoElite\Enemy_Skeleton_berserker.json" />
+    <None Include="Assets\Arts\Spine\飞行道具\电5\dian5.json" />
     <None Include="Assets\Arts\Spine\fly\4\fly4.json" />
     <None Include="Assets\Arts\Spine\技能\json5\skeleton.json" />
     <None Include="Assets\Arts\Spine\技能\1225\火山boss\action.atlas.txt" />
@@ -1101,6 +1102,7 @@
     <None Include="Assets\Arts\Spine\小怪3\banrenma2\banrenma2.json" />
     <None Include="Assets\Arts\Spine\小怪3\蛇\she.atlas.txt" />
     <None Include="Assets\Arts\Spine\翅膀\紫7\wing_512.atlas.txt" />
+    <None Include="Assets\Arts\Spine\飞行道具\电球\dian qiu.json" />
     <None Include="Assets\Arts\Spine\技能\特效\9\2017_liandaolang_effectb.json" />
     <None Include="Library\PackageCache\com.unity.shadergraph@14.0.12\ValidationConfig.json" />
     <None Include="Assets\Arts\Spine\小怪2\shuangtouren\shuangtoushirenmo.atlas.txt" />
@@ -1149,6 +1151,7 @@
     <None Include="Assets\Arts\Spine\技能\火skill5\Enemy_Demon_goat_skill1_BD.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\LanShui\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\飞行道具\冰飞行道具\bing dan.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\HuangShu\Enemy_Mouse_patrol.json" />
     <None Include="Assets\Arts\Spine\技能\特效\黑暗魔法弹1\2025_nongyaoxiong_attack.json" />
     <None Include="Assets\Arts\Shaders\LcL\Pixel.shader" />
@@ -1171,6 +1174,7 @@
     <None Include="Assets\Arts\Spine\宠物\Green\黑暗green2\Anima_Small_Skeleton_M11-7.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪2\youling2\youling2.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪\波冈\Boss_3001_GoblinKing.atlas.txt" />
+    <None Include="Assets\Arts\Spine\飞行道具\电球\dian qiu.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\火purple3——前\mon_9tails_fox_02.json" />
     <None Include="Assets\Arts\Spine\宠物\Orange\电orange1——后\mon_wind_dragon_03.json" />
     <None Include="Assets\Arts\Spine\宠物\Green\冰green2\Anima_Small_Skeleton_M11-6.atlas.txt" />
@@ -1272,6 +1276,7 @@
     <None Include="Assets\Arts\Spine\第四关\ShaBoss\XieZi\xiezi.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪3\山羊\shanyang.json" />
     <None Include="Assets\Arts\Spine\技能\1225\黄魔法弹 已用\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\飞行道具\电场\dianchang.json" />
     <None Include="Assets\Arts\Spine\小怪2\chailangren2\chailangren2.json" />
     <None Include="Assets\Arts\Spine\宠物\White\电white1\Anima_Small_Skeleton_M5.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\绿魔法弹\2052_qingshe_attack.atlas.txt" />
@@ -1324,6 +1329,7 @@
     <None Include="Assets\Arts\Spine\宠物\Purple\黑暗purple2——后\pet_9305.json" />
     <None Include="Assets\Arts\Spine\小怪2\dijingshouwei2\dijingshouwei2.json" />
     <None Include="Assets\Arts\Spine\第一关\蜘蛛\zz.atlas.txt" />
+    <None Include="Assets\Arts\Spine\飞行道具\电5\dian5.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@14.0.12\ValidationExceptions.json" />
     <None Include="Assets\Arts\Spine\翅膀\绿2\eff_spine_byyxw_dts.json" />
     <None Include="Assets\Arts\Spine\怪物\json 8\guyalang02.atlas.txt" />
@@ -1470,6 +1476,7 @@
     <None Include="Assets\Arts\PngAnim\火skill3\Spell_Active_DragonFire.json" />
     <None Include="Assets\Arts\Spine\第一关\蜘蛛\zz.json" />
     <None Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\package.json" />
+    <None Include="Assets\Arts\Spine\飞行道具\电场\dianchang.atlas.txt" />
     <None Include="Assets\Arts\Spine\fly\5\fly5.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\DiLie\1605122.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\盔甲\fensexionggui.atlas.txt" />
@@ -1576,6 +1583,7 @@
     <None Include="Assets\Arts\Spine\技能\特效\20\2054_xiaotianquan_skill_under.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\小恶魔打包\akmon_pirest.json" />
     <None Include="Assets\Arts\Spine\小怪2\niutouren1\nuitouren1.json" />
+    <None Include="Assets\Arts\Spine\飞行道具\冰飞行道具\bing dan.json" />
     <None Include="Assets\Arts\Spine\小怪2\kulou1\kulou2.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\火purple1——后\pet_9309.json" />
     <None Include="Assets\Arts\Spine\小怪2\chailangren3\chailangren3.atlas.txt" />

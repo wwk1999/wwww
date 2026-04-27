@@ -43,17 +43,11 @@ public class IceSkill1 : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GameController.S.GameAttack*SkillConfig.Ice1Damage*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal);
+                monster.Hurt(GameController.S.GameAttack*SkillConfig.Ice1Damage*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Ice);
                 Vector2 closestPoint = col.ClosestPoint(transform.position);
                 var hit = GameController.S.IcePengQueue.Dequeue();
                 hit.transform.position = closestPoint;
                 hit.SetActive(true);
-                var random = Random.Range(0f, 100f);
-                if (random <= GlobalPlayerAttribute.BingDongRate)
-                {
-                    monster.isBingDong=true;
-                    GameController.S.StartCoroutine(GameController.S.DelayJieDong(monster));
-                }
             }
         }
     }

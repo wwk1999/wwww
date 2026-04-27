@@ -101,9 +101,9 @@ public class yuren3 : MonsterBase
 
    
 
-    public override void Hurt(float damage, bool isCrit, DamageFrom damageFrom)
+   public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom,YuanSuType yuanSuType)
     {
-        base.Hurt(damage, isCrit, damageFrom);
+        base.Hurt(damage,isCrit,damageFrom,yuanSuType);
         if (!IsDead)
         {
             AudioController.S.PlayBatHit();

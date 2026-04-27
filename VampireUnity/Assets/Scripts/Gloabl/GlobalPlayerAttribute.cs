@@ -31,7 +31,7 @@ public class GlobalPlayerAttribute
 {
 
 
-    public static float BingDongRate => (IceYuanSuBase / (7 + IceYuanSuBase))*(1.0f+SkillJiaDian.S.IceBei1*5/100f) * 100f;
+    public static float JianSuRate => ((IceYuanSuBase) / (5 + IceYuanSuBase))*(1.0f+SkillJiaDian.S.IceBei1*5/100f) * 100f;
     public static float BingDongTime => 1 * (1.0f + SkillJiaDian.S.IceBei2 * 5 / 100f);
     public static float LuoLeiRate =>
         (GlobalPlayerAttribute.DianYuanSuBase / (10f + GlobalPlayerAttribute.DianYuanSuBase)) * 100;

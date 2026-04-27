@@ -569,7 +569,7 @@ public class LevelInfoConfig
     public static Dictionary<int, List<MonsterTypeByName>> LevelMonsterDic =
         new Dictionary<int, List<MonsterTypeByName>>()
         {
-            {3,new List<MonsterTypeByName>() { MonsterTypeByName.ChaiLangRen4 ,MonsterTypeByName.xiongbuou,MonsterTypeByName.niguai1}},
+            {3,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Bat,MonsterTypeByName.Spider,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
             {6,new List<MonsterTypeByName>() { MonsterTypeByName.ChongZi ,MonsterTypeByName.DunDi,MonsterTypeByName.DaZui,MonsterTypeByName.XiaoHuo,MonsterTypeByName.HuoShanBoss}},
             {9,new List<MonsterTypeByName>() { MonsterTypeByName.ZhaoZeBoss ,MonsterTypeByName.ShiRenHua,MonsterTypeByName.WenZi,MonsterTypeByName.QingWa,MonsterTypeByName.JiaChong}},
             {12,new List<MonsterTypeByName>() { MonsterTypeByName.ShaChong ,MonsterTypeByName.ShaNiao,MonsterTypeByName.ShaXiYi,MonsterTypeByName.XianRenZhang,MonsterTypeByName.XieZi}},

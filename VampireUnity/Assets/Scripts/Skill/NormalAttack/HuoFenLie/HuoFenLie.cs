@@ -36,7 +36,7 @@ public class HuoFenLie : MonoBehaviour
             var hit = GameController.S.HuoPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
             hit.SetActive(true);
             GameController.S.HuoFenLieQueue.Enqueue(this);
             HuoFenLieDan dan1 = GameController.S.HuoFenLieDanQueue.Dequeue();

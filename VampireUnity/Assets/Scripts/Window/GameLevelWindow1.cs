@@ -46,7 +46,7 @@ public class GameLevelWindow1 : MonoBehaviour
 
     public void ShowDiTu()
     {
-        if (PlayerData.S.maxGameLevel >= 2)
+        if (PlayerData.S.maxGameLevel >= 6)
         {
             ChongWuButton.image.color=new Color(1, 1, 1);
             ChongWuButton.interactable = true;
@@ -59,7 +59,7 @@ public class GameLevelWindow1 : MonoBehaviour
         }
         
         
-        if (PlayerData.S.maxGameLevel >= 3)
+        if (PlayerData.S.maxGameLevel >= 9)
         {
             ChiBangButton.image.color=new Color(1, 1, 1);
             ChiBangButton.interactable = true;
@@ -72,7 +72,7 @@ public class GameLevelWindow1 : MonoBehaviour
         }
         
         
-        if (PlayerData.S.maxGameLevel >= 4)
+        if (PlayerData.S.maxGameLevel >= 12)
         {
             LinHunButton.image.color=new Color(1, 1, 1);
             LinHunButton.interactable = true;

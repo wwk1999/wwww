@@ -1,17 +1,30 @@
+using System;
 using Mysql;
 
 public class PropItem
 {
-    public int Quality{ get; set; }
+    public int Quality { get; set; }
     public PropConfig.PropType PropType { get; set; }
-    public PropItem(
-        PropConfig.PropType propType=PropConfig.PropType.None,
-        int quality = 1)
+
+    public PropItem(PropConfig.PropType propType = PropConfig.PropType.None, int quality = 1)
     {
-        this.PropType = propType;
-        this.Quality = quality;
+        PropType = propType;
+        Quality = quality;
     }
 
+    public override bool Equals(object obj)
+    {
+        if (obj is PropItem other)
+        {
+            return Quality == other.Quality && PropType == other.PropType;
+        }
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(Quality, PropType);
+    }
 }
 public class PropTable:TableBase
 {

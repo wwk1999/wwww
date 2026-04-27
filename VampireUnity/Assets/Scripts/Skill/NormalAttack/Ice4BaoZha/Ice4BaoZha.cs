@@ -36,7 +36,7 @@ public class Ice4BaoZha : MonoBehaviour
             var hit = GameController.S.IcePengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
             hit.SetActive(true);
             GameController.S.Ice4BaoZhaQueue.Enqueue(this);
             var baozha1=GameController.S.Ice4BaoZhaItemQueue.Dequeue();

@@ -51,6 +51,22 @@ public class MonsterProp
         PropItem = propItem;
         Probability = probability;
     }
+
+    public override bool Equals(object obj)
+    {
+        if (obj is MonsterProp other)
+        {
+            // 只比较 PropItem，忽略 Probability
+            return Equals(PropItem, other.PropItem);
+        }
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        // 只基于 PropItem 计算哈希码
+        return PropItem?.GetHashCode() ?? 0;
+    }
 }
 
 public class MonsterSpineName
@@ -84,10 +100,6 @@ public abstract class MonsterBase : MonoBehaviour
     public float zhuoShaoDamage =>GameController.S.GameAttack*0.2f;
     
     
-    [NonSerialized] public float jiansuTime = 0;
-    [NonSerialized] public float jiansuCount = 0;
-    [NonSerialized] public float YiDianTime = 0;
-    [NonSerialized] public float JianSuTime = 0;
     
     [NonSerialized] public float baseSpeed = 0;
 
@@ -139,7 +151,8 @@ public abstract class MonsterBase : MonoBehaviour
     public Rigidbody2D rigidbody2D;
 
     
-    [NonSerialized]public bool isBingDong=false;
+    [NonSerialized]public bool isJianSu=false;
+    [NonSerialized]public float JianSuTime=0;
 
     public void ShotDanMu(Vector2 trans, Sprite sprite, float attack, Vector3 dir, bool isBoss)
     {
@@ -218,8 +231,8 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void SetBingKuai()
     {
-        bingkuai.gameObject.SetActive(isBingDong);
-        monsterSkeletonAnimation.gameObject.SetActive(!isBingDong);
+        bingkuai.gameObject.SetActive(false);
+        monsterSkeletonAnimation.gameObject.SetActive(!isJianSu);
     }
 
     public void Update()
@@ -255,16 +268,18 @@ public abstract class MonsterBase : MonoBehaviour
                 Die();
             }
         }
-        if (jiansuTime > 0)
+        if (JianSuTime > 0)
         {
-            jiansuTime -= Time.deltaTime;
-            Speed = baseSpeed*jiansuCount;
+            JianSuTime -= Time.deltaTime;
+            Speed = baseSpeed*(1.0f-GlobalPlayerAttribute.JianSuRate/100.0f);
             jiansu.gameObject.SetActive(true);
+            monsterSkeletonAnimation.skeleton.SetColor(Color.blue);
         }
         else
         {
             Speed = baseSpeed;
             jiansu.gameObject.SetActive(false);
+            monsterSkeletonAnimation.skeleton.SetColor(Color.white);
         }
     }
     
@@ -470,7 +485,7 @@ public abstract class MonsterBase : MonoBehaviour
     public void MonsterMove()
     {
         Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
-        if (isBingDong)
+        if (isJianSu)
         {
             rigidbody2D.velocity = direction.normalized * 0; 
         }
@@ -912,9 +927,9 @@ public abstract class MonsterBase : MonoBehaviour
 
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.JianSuAddAttack))
         {
-            if (jiansuTime > 0)
+            if (JianSuTime > 0)
             {
-                finalDamage*=1.15f;
+                finalDamage*= (1.0f+SkillJiaDian.S.IceBei4*5/100.0f);
             }
         }
 
@@ -922,11 +937,16 @@ public abstract class MonsterBase : MonoBehaviour
     }
     
   
-    public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom)
+    public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom,YuanSuType yuansutype)
     {
         if (IsDead) return;
         if(MonsterState== State.Die) return;
-      
+
+
+        if (yuansutype == YuanSuType.Ice)
+        {
+            JianSuTime = SkillJiaDian.S.IceJianSuTime;
+        }
         float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
         finalDamage *= (1.0f+GlobalPlayerAttribute.FinalDamage);//最终伤害
         if (damageFrom == DamageFrom.Normal)

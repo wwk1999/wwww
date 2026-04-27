@@ -101,12 +101,12 @@ public class SpiderMonster : MonsterBase
     }
    
 
-public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom)
-{
-    base.Hurt(damage,isCrit,damageFrom);
-    if (!IsDead)
+    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom,YuanSuType yuanSuType)
     {
-        AudioController.S.PlayBatHit();
+        base.Hurt(damage,isCrit,damageFrom,yuanSuType);
+        if (!IsDead)
+        {
+            AudioController.S.PlayBatHit();
+        }
     }
-}
 }

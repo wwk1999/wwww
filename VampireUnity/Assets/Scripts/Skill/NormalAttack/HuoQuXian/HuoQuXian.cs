@@ -243,7 +243,7 @@ public class HuoQuXian : MonoBehaviour
                     monster.Hurt(
                         GameController.S.GameAttack * SkillController.S.HuoYuanSuDamage,
                         isCrit,
-                        DamageFrom.Normal
+                        DamageFrom.Normal,YuanSuType.Huo
                     );
                 }
                 

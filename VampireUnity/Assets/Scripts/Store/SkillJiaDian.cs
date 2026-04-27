@@ -271,6 +271,8 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public int ZJDianAll=>GetZJDianAll();
     public int ZJHeiAnAll=>GetZJHeiAnAll();
     public int ZJZhiYeAll=>GetZJZhiYeAll();
+
+    public float IceJianSuTime => 2.0f * (1.0f + IceBei3 * 5 / 100.0f);
     
     public SkillType LMB = SkillType.Normal;
     public SkillType RMB = SkillType.Dash;

@@ -266,11 +266,11 @@ public class SkillInfo : MonoBehaviour
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei1);
                 skillName.text = "冰系专精1";
                 skillType.text = "被动技能";
-                LevelUpText.text = $"每级当前增加冻结概率：<color=green>5%</color>";
+                LevelUpText.text = $"每级当前增加减速效果：<color=green>5%</color>";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
                 float value11 = (SkillJiaDian.S.IceBei1 * 5);
-                CurrentText.text = $"当前增加<color=green>{value11}%</color>的冰冻概率";
+                CurrentText.text = $"当前增加<color=green>{value11}%</color>的减速效果";
                 YouJian.gameObject.SetActive(false);
                 LevelLimit.gameObject.SetActive(false);
                 break;
@@ -279,11 +279,11 @@ public class SkillInfo : MonoBehaviour
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei3);
                 skillName.text = "冰系专精2";
                 skillType.text = "被动技能";
-                LevelUpText.text = $"每级当前增加冻结时间：<color=green>5%</color>";
+                LevelUpText.text = $"每级当前增加减速持续时间：<color=green>5%</color>";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
                 float value12 = (SkillJiaDian.S.IceBei3 * 5);
-                CurrentText.text = $"当前增加<color=green>{value12}%</color>的冰冻时间";
+                CurrentText.text = $"当前增加<color=green>{value12}%</color>的减速时间";
                 YouJian.gameObject.SetActive(false);
                 LevelLimit.gameObject.SetActive(false);
                 break;
@@ -305,7 +305,7 @@ public class SkillInfo : MonoBehaviour
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei4);
                 skillName.text = "冰系专精3";
                 skillType.text = "被动技能";
-                LevelUpText.text = $"每级对冰冻敌人增加：<color=green>5%</color> 冰霜伤害";
+                LevelUpText.text = $"每级对减速敌人增加：<color=green>5%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
                 float value131 = (SkillJiaDian.S.IceBei4 * 5);

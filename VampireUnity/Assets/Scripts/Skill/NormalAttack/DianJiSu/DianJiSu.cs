@@ -36,7 +36,7 @@ public class DianJiSu : MonoBehaviour
             var hit = GameController.S.DianPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
             hit.SetActive(true);
             GameController.S.DianJiSuQueue.Enqueue(this);
             gameObject.SetActive(false);

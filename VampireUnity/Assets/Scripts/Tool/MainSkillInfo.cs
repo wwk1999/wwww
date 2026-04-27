@@ -19,7 +19,7 @@ public class MainSkillInfo : MonoBehaviour
          case SkillInfoType.IceMain:
             image.sprite=ResourcesConfig.GetSkillSprite(SkillInfoType.IceMain);
             skillName.text = "冰霜专精";
-            text.text = $"每一个冰系技能点可增加<color=green>1%</color>的冰霜元素伤害，并且冰霜伤害有概率冻结敌人<color=green>1</color>s，冰霜元素伤害越高，概率越大（当前概率<color=green>{(GlobalPlayerAttribute.BingDongRate).ToString("F2")}%</color>）";
+            text.text = $"每一个冰系技能点可增加<color=green>1%</color>的冰霜元素伤害，并且冰霜伤害会减速敌人<color=green>1</color>s，冰霜元素伤害越高，减速效果越好（当前减速<color=green>{(GlobalPlayerAttribute.JianSuRate).ToString("F2")}%</color>）";
             break;
          
          case SkillInfoType.HuoMain:

@@ -64,12 +64,6 @@ public class GameController : XSingleton<GameController>
         return value;
     }
     
-    public IEnumerator DelayJieDong(MonsterBase monster)
-    {
-        yield return new WaitForSeconds(GlobalPlayerAttribute.BingDongTime);
-        monster.isBingDong = false;
-    }
-    
     
     [NonSerialized] public float OrangeEntryTime = 5f;
     [NonSerialized] public float CurrentOrangeEntryTime = 0f;

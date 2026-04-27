@@ -33,7 +33,7 @@ public class DianBaoZha : MonoBehaviour
         {
             Vector2 closestPoint = other.ClosestPoint(transform.position);
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
             var baozha = GameController.S.DianBaoZhaNextQueue.Dequeue();
             baozha.transform.position = closestPoint;
             baozha.gameObject.SetActive(true);

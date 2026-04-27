@@ -755,7 +755,7 @@ public class Player : MonoBehaviour
                 DianSanSheAnim.Play("NewSequenceAnim");
                 DianSanSheAnim.speed = GlobalPlayerAttribute.TotalAttackSpeed;
             }
-            else if (CurrentAttackTime >= AttackTime/5)
+            else if (CurrentAttackTime >= AttackTime)
             {
                 CurrentAttackTime = 0;
                 SkillController.S.ShotBulletInvoke(fasheTrans.transform.position);
@@ -764,6 +764,6 @@ public class Player : MonoBehaviour
         }
         PlayerMove();
         SetGunRotate(GameController.S.nearMonsterPosition);
-    }
+    }  
 }
 
