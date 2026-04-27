@@ -18,7 +18,8 @@ public class BatMonsterWarning : MonoBehaviour
     public void AttackEnd()
     {
         gameObject.SetActive(false);
-        transform.parent.GetComponent<BatMonster>().IsDash = false;
-        transform.parent.GetComponent<BatMonster>().Speed = 0.3f;
+        MonsterBase monsterBase = transform.parent.GetComponent<BatMonster>();
+        monsterBase.IsDash = false;
+        monsterBase.Speed = monsterBase.baseSpeed;
     }
 }

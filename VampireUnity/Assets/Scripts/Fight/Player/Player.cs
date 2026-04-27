@@ -352,7 +352,10 @@ public class Player : MonoBehaviour
 
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
-        
+        if (trackEntry.Animation.Name =="hit")
+        {
+            playerSkeleton.AnimationState.SetAnimation(0, "move", true);
+        }
     }
 
     /// <summary>
@@ -397,22 +400,24 @@ public class Player : MonoBehaviour
         }
         rg.velocity = new Vector2(horizontal, vertical).normalized * NealMoveSpeed;
 
-
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ||
-            Input.GetKey(KeyCode.W))
+        if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "hit")
         {
-            if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "move")
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ||
+                Input.GetKey(KeyCode.W))
             {
-                playerSkeleton.AnimationState.TimeScale = NealMoveSpeed / GlobalPlayerAttribute._baseMoveSpeed;
-                playerSkeleton.AnimationState.SetAnimation(0, "move", true);
+                if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "move")
+                {
+                    playerSkeleton.AnimationState.TimeScale = NealMoveSpeed / GlobalPlayerAttribute._baseMoveSpeed;
+                    playerSkeleton.AnimationState.SetAnimation(0, "move", true);
+                }
             }
-        }
-        else 
-        {
-            if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idle")
+            else
             {
-                playerSkeleton.AnimationState.TimeScale = 1;
-                playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
+                if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idle")
+                {
+                    playerSkeleton.AnimationState.TimeScale = 1;
+                    playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
+                }
             }
         }
     }
@@ -552,6 +557,7 @@ public class Player : MonoBehaviour
         {
             return;
         }
+        GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0,"hit",false);
 
         GameController.S.HitCount++;
         GameController.S.HitCount=Math.Min(10, GameController.S.HitCount);

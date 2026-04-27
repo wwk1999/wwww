@@ -11,6 +11,7 @@ public class BatMonster : MonsterBase
     [NonSerialized]public float attackTime = 3f;
     [NonSerialized]public float currentTime = 0f;
     public Transform attackTrans;
+    public bool isGongJi = false;
 
     public BatMonster() : base(MonsterTypeByName.Bat) { }
     void Start()
@@ -51,13 +52,22 @@ public class BatMonster : MonsterBase
         // Implement the skill logic here
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (Speed > 3)
+        {
+                   // GameController.S.gamePlayer.PlayerHurt(Attack,false);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (IsDead) return;
         base.Update();
-        if (Speed == 8&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<0.6f)
+        if (IsDash&&isGongJi&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<0.6f)
         {
+            isGongJi=false;
             GameController.S.gamePlayer.PlayerHurt(Attack,false);
         }
         
@@ -80,6 +90,7 @@ public class BatMonster : MonsterBase
 
     public void AttackBegin()
     {
+        isGongJi = true;
         transform.Find("MonsterWarning").gameObject.SetActive(true);
         transform.Find("MonsterWarning").GetComponent<Animator>().Play("MonsterWarning");
         IsDash = true;
