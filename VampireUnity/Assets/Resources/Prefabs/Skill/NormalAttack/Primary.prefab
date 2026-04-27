@@ -173,8 +173,8 @@ Transform:
   m_GameObject: {fileID: 6250509302642511218}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.087, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalPosition: {x: 0.308, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4773886759100711590}
@@ -207,7 +207,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a13bee4d82dc2fb4e9721bab15c694ff, type: 2}
+  - {fileID: 2100000, guid: 1e326990eba2ce74fa0700384ad4f142, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: d1bcd630face1fe44a3d420fc346307a, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: fc0e7c982c575a641a55a6e9adcb6a4e, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: fly_10
+  animationName: "\u51B0\u9525"
   loop: 1
   timeScale: 1
   unscaledTime: 0

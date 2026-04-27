@@ -1001,7 +1001,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7215234115721182372}
@@ -1121,6 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca0740b652424e32b10194d6881f998, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bingkuai: {fileID: 0}
   du: {fileID: 4986487487989784665}
   jiansu: {fileID: 5036551070889547618}
   yidian: {fileID: 5963192513330118432}

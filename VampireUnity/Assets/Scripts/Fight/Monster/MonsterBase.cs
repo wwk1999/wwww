@@ -239,7 +239,7 @@ public abstract class MonsterBase : MonoBehaviour
     {
         SetBingKuai();
         SetOrder();
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName&&Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= size)
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName&&Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= size&&MonsterTypeByName!=MonsterTypeByName.Bat)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.IdleName, false);
         }
@@ -364,7 +364,7 @@ public abstract class MonsterBase : MonoBehaviour
         else
         {
             monsterSkeletonAnimation.timeScale = 1;
-            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) > size)
+            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) > size||MonsterTypeByName==MonsterTypeByName.Bat)
             {
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
             }
