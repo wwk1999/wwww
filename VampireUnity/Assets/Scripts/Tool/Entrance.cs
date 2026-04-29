@@ -233,6 +233,19 @@ public class Entrance : MonoBehaviour
 
     public static void InitMonster(MonsterTypeByName type)
     {
+
+        if (LevelInfoConfig.CurrentGameLevel == 3)
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                var TreeManDanMu = Instantiate(
+                    Resources.Load<GameObject>("Prefabs/Monster/Level1/TreeManDanMu").GetComponent<TreeManDanMu>(),
+                    GameController.S.transform);
+                TreeManDanMu.gameObject.SetActive(false);
+                GameController.S.TreeManDanMuQueue.Enqueue(TreeManDanMu);
+            }
+        }
+
         switch (type)
         {
             case MonsterTypeByName.Snot:

@@ -566,6 +566,64 @@ public class LevelInfoConfig
     
     public static LevelType CurrentGameLevelType = LevelType.Normal;
     
+     public static Dictionary<int, float> LevelMonsterCreateSpeedDic =
+        new Dictionary<int, float>()
+        {
+            {3,1f},
+            {6,1f},
+            {9,1f},
+            {12,1f},
+            {15,1f},
+            
+            {16,1f},
+            {17,1f},
+            {18,1f},
+            {19,1f},
+            {20,1f},
+            {21,1f},
+            {22,1f},
+            {23,1f},
+            {24,1f},
+            {25,1f},
+            {26,1f},
+            {27,1f},
+            {28,1f},
+            {29,1f},
+            {30,1f},
+            {31,1f},
+            {32,1f},
+            {33,1f},
+            {34,1f},
+            {35,1f},
+            
+            
+            {101,1f},
+            {102,1f},
+            {103,1f},
+            {104,1f},
+            {105,1f},
+            {106,1f},
+
+            
+            {201,1f},
+            {202,1f},
+            {203,1f},
+            {204,1f},
+            {205,1f},
+            {206,1f},
+
+            
+            {301,1f},
+            {302,1f},
+            {303,1f},
+            {304,1f},
+            {305,1f},
+            {306,1f},
+
+        };
+    
+    
+    
     public static Dictionary<int, List<MonsterTypeByName>> LevelMonsterDic =
         new Dictionary<int, List<MonsterTypeByName>>()
         {
@@ -575,26 +633,26 @@ public class LevelInfoConfig
             {12,new List<MonsterTypeByName>() { MonsterTypeByName.ShaChong ,MonsterTypeByName.ShaNiao,MonsterTypeByName.ShaXiYi,MonsterTypeByName.XianRenZhang,MonsterTypeByName.XieZi}},
             {15,new List<MonsterTypeByName>() { MonsterTypeByName.XueZhangLang ,MonsterTypeByName.XueQiE,MonsterTypeByName.YingShu,MonsterTypeByName.XueRen,MonsterTypeByName.XueRenBoss}},
             
-            {16,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {17,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {18,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {19,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {20,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {21,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {22,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {23,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {24,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {25,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {26,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {27,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {28,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {29,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {30,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {31,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {32,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {33,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {34,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
-            {35,new List<MonsterTypeByName>() { MonsterTypeByName.Snot ,MonsterTypeByName.Spider,MonsterTypeByName.Bat,MonsterTypeByName.Bee,MonsterTypeByName.TreeMan}},
+            {16,new List<MonsterTypeByName>() { MonsterTypeByName.XueZhangLang ,MonsterTypeByName.XueQiE,MonsterTypeByName.YingShu,MonsterTypeByName.XueRen,MonsterTypeByName.XueRenBoss}},
+            {17,new List<MonsterTypeByName>() { MonsterTypeByName.XueZhangLang ,MonsterTypeByName.XueQiE,MonsterTypeByName.YingShu,MonsterTypeByName.XueRen,MonsterTypeByName.XueRenBoss}},
+            {18,new List<MonsterTypeByName>() { MonsterTypeByName.XueZhangLang ,MonsterTypeByName.XueQiE,MonsterTypeByName.YingShu,MonsterTypeByName.XueRen,MonsterTypeByName.XueRenBoss}},
+            {19,new List<MonsterTypeByName>()},
+            {20,new List<MonsterTypeByName>()},
+            {21,new List<MonsterTypeByName>()},
+            {22,new List<MonsterTypeByName>()},
+            {23,new List<MonsterTypeByName>()},
+            {24,new List<MonsterTypeByName>()},
+            {25,new List<MonsterTypeByName>()},
+            {26,new List<MonsterTypeByName>()},
+            {27,new List<MonsterTypeByName>()},
+            {28,new List<MonsterTypeByName>()},
+            {29,new List<MonsterTypeByName>()},
+            {30,new List<MonsterTypeByName>()},
+            {31,new List<MonsterTypeByName>()},
+            {32,new List<MonsterTypeByName>()},
+            {33,new List<MonsterTypeByName>()},
+            {34,new List<MonsterTypeByName>()},
+            {35,new List<MonsterTypeByName>()},
             
             
             {101,new List<MonsterTypeByName>() { MonsterTypeByName.cat ,MonsterTypeByName.egg,MonsterTypeByName.paopao}},
@@ -625,21 +683,11 @@ public class LevelInfoConfig
    
     public static void InitGameLevel()
     {
-        LevelMonsterCount[0] = 0;
-        LevelMonsterCount[1] = 20;
-        LevelMonsterCount[2] = 30;
-        LevelMonsterCount[3] = 50;
-        LevelMonsterCount[4] = 50;
-        LevelMonsterCount[5] = 60;
+       
+        LevelMonsterCount[3] = 10;
         LevelMonsterCount[6] = 70;
-        LevelMonsterCount[7] = 70;
-        LevelMonsterCount[8] = 80;
         LevelMonsterCount[9] = 90;
-        LevelMonsterCount[10] = 90;
-        LevelMonsterCount[11] = 100;
         LevelMonsterCount[12] = 100;
-        LevelMonsterCount[13] = 100;
-        LevelMonsterCount[14] = 100;
         LevelMonsterCount[15] = 100;
         LevelMonsterCount[16] = 110;
         LevelMonsterCount[17] = 120;

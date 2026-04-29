@@ -30,6 +30,8 @@ public class XueRenBoss : MonsterBase
     public  void Awake()
     {
         base.Awake();
+        MonsterSpineName.IdleName = "idle";
+
         MonsterSpineName.AttackName = "attack1";
         MonsterSpineName.HitName = "injured";
         MonsterSpineName.MoveName = "move";

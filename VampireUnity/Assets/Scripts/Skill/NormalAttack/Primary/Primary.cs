@@ -15,7 +15,7 @@ public class Primary : MonoBehaviour
     private void OnEnable()
     {
         CancelInvoke();
-        ske.AnimationState.SetAnimation(0, "冰锥", true);
+        ske.AnimationState.SetAnimation(0, "雪花", true);
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         rg.velocity = MoveDirection * MoveSpeed;

@@ -83,6 +83,7 @@ public class MonsterSpineName
 }
 public abstract class MonsterBase : MonoBehaviour
 {
+    [NonSerialized] public bool IsYuanChen = false;
     [NonSerialized] public float NormalYuanChenSize = 4f;
     [NonSerialized] public float EliteYuanChenSize = 6f;
 
@@ -209,7 +210,7 @@ public abstract class MonsterBase : MonoBehaviour
         yidian.gameObject.SetActive(false);
         zhuoshao.gameObject.SetActive(false);
 
-        if (MonsterType != MonsterType.Boss)
+        if (MonsterConfig.MonsterTypeDic[MonsterTypeByName] != MonsterType.Boss)
         {
             if (monsterSkeletonAnimation != null)
             {
@@ -239,7 +240,7 @@ public abstract class MonsterBase : MonoBehaviour
     {
         SetBingKuai();
         SetOrder();
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName&&Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= size&&MonsterTypeByName!=MonsterTypeByName.Bat)
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName&&Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= size&&IsYuanChen)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.IdleName, false);
         }
@@ -272,13 +273,11 @@ public abstract class MonsterBase : MonoBehaviour
         {
             JianSuTime -= Time.deltaTime;
             Speed = baseSpeed*(1.0f-GlobalPlayerAttribute.JianSuRate/100.0f);
-            jiansu.gameObject.SetActive(true);
             monsterSkeletonAnimation.skeleton.SetColor(Color.blue);
         }
         else
         {
             Speed = baseSpeed;
-            jiansu.gameObject.SetActive(false);
             monsterSkeletonAnimation.skeleton.SetColor(Color.white);
         }
     }
@@ -364,7 +363,7 @@ public abstract class MonsterBase : MonoBehaviour
         else
         {
             monsterSkeletonAnimation.timeScale = 1;
-            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) > size||MonsterTypeByName==MonsterTypeByName.Bat)
+            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) > size||IsYuanChen==false)
             {
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
             }
@@ -894,6 +893,7 @@ public abstract class MonsterBase : MonoBehaviour
         finalDamage *= random;
         var monsterDenfense = Defense * (1 - GlobalPlayerAttribute.Penetrate/100f);
         finalDamage-=monsterDenfense;
+        finalDamage=MathF.Max(0,finalDamage);
         if (isCrit)
         {
             finalDamage *= (2+GlobalPlayerAttribute.TotalCritDamage/100.0f);
@@ -964,7 +964,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
         
         
-        if (MonsterType != MonsterType.Boss)
+        if (MonsterConfig.MonsterTypeDic[MonsterTypeByName] != MonsterType.Boss)
         {
             if (hpSlider.gameObject.activeSelf == false)
             {

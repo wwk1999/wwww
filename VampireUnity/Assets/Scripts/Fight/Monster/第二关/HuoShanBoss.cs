@@ -32,6 +32,8 @@ public class HuoShanBoss : MonsterBase
     {
         base.Awake();
         size = 1.2f;
+        MonsterSpineName.IdleName = "idle";
+
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "walk";

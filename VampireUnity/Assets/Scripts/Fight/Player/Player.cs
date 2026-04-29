@@ -59,7 +59,8 @@ public class Player : MonoBehaviour
     
     public MeshRenderer  meshRenderer;
     public SpriteRenderer SpriteRenderer;
-    
+
+    [NonSerialized] public bool IsDie = false;
     // 移动攻击力加成标志位
     
     // 延迟伤害相关变量
@@ -366,6 +367,11 @@ public class Player : MonoBehaviour
     /// </summary>
     public void PlayerMove()
     {
+        if (IsDie)
+        {
+            rg.velocity=Vector2.zero;
+            return;
+        }
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10f; // 距离相机的距离
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
@@ -399,24 +405,26 @@ public class Player : MonoBehaviour
             NealMoveSpeed = GlobalPlayerAttribute.PlayerMoveSpeed*0.3f;
         }
         rg.velocity = new Vector2(horizontal, vertical).normalized * NealMoveSpeed;
-
-        if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "hit")
+        if (!IsDie)
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ||
-                Input.GetKey(KeyCode.W))
+            if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "hit")
             {
-                if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "move")
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) ||
+                    Input.GetKey(KeyCode.W))
                 {
-                    playerSkeleton.AnimationState.TimeScale = NealMoveSpeed / GlobalPlayerAttribute._baseMoveSpeed;
-                    playerSkeleton.AnimationState.SetAnimation(0, "move", true);
+                    if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "move")
+                    {
+                        playerSkeleton.AnimationState.TimeScale = NealMoveSpeed / GlobalPlayerAttribute._baseMoveSpeed;
+                        playerSkeleton.AnimationState.SetAnimation(0, "move", true);
+                    }
                 }
-            }
-            else
-            {
-                if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idle")
+                else
                 {
-                    playerSkeleton.AnimationState.TimeScale = 1;
-                    playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
+                    if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name != "idle")
+                    {
+                        playerSkeleton.AnimationState.TimeScale = 1;
+                        playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
+                    }
                 }
             }
         }
@@ -557,7 +565,11 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0,"hit",false);
+
+        if (!IsDie)
+        {
+            GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0,"hit",false);
+        }
 
         GameController.S.HitCount++;
         GameController.S.HitCount=Math.Min(10, GameController.S.HitCount);
@@ -613,7 +625,7 @@ public class Player : MonoBehaviour
         }
         //打印调用这个方法的脚本name
         AudioController.S.PlayPlayerHurt();
-        //CameraContraller.S.CameraShake(0.1f, 0.005f);
+        CameraContraller.S.CameraShake(0.1f, 0.005f);
         var playerhit = FightBGController.S.PlayerHitQueue.Dequeue();
         playerhit.gameObject.SetActive(true);
         StartCoroutine(DelayCancelWuDi(0.2f));
@@ -627,6 +639,7 @@ public class Player : MonoBehaviour
 
     public void PlayerDie()
     {
+        IsDie = true;
         playerSkeleton.timeScale = 1;
         playerSkeleton.AnimationState.SetAnimation(0, "die", false);
         FightBGController.S.SetHp();
@@ -635,7 +648,7 @@ public class Player : MonoBehaviour
 
     IEnumerator DelayShowPanel()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         Time.timeScale = 0;
         Instantiate(Resources.Load("Prefabs/Window/FailPanel") as GameObject);
     }

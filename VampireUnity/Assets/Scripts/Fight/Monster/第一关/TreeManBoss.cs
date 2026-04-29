@@ -6,6 +6,8 @@ using Spine;
 using Spine.Unity;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 public class TreeManBoss : MonsterBase
 {
     public TreeManBoss() : base(MonsterTypeByName.TreeMan) { }
@@ -14,7 +16,7 @@ public class TreeManBoss : MonsterBase
    [NonSerialized]public float DashSkillTime = 8f;
    [NonSerialized]public float DashSkillCurrentTime = 0f;
    [NonSerialized]public float GroundFissureSkillTime = 12f;
-   [NonSerialized]public float GroundFissureSkillCurrentTime = 0f;
+   [NonSerialized]public float GroundFissureSkillCurrentTime = 9f;
    [NonSerialized]public Vector2 Dashdirection = Vector2.zero;
    [NonSerialized]public Vector2 GroundFissurepos = Vector2.zero;
    [NonSerialized]public Vector2 BaoZhapos = Vector2.zero;
@@ -31,6 +33,7 @@ public class TreeManBoss : MonsterBase
         monsterSkeletonAnimation.AnimationState.Complete += Complete;
        
        MonsterSpineName.AttackName = "attack";
+       MonsterSpineName.IdleName = "idle";
        MonsterSpineName.HitName = "hit";
        MonsterSpineName.MoveName = "walk";
        MonsterSpineName.DieName = "die_02";
@@ -42,6 +45,10 @@ public class TreeManBoss : MonsterBase
 
     public void Complete(TrackEntry trackEntry)
     {
+        if (trackEntry.Animation.Name == "die_01")
+        {
+            gameObject.SetActive(false);
+        }
         if (trackEntry.Animation.Name == "Exit")
         {
             IsSkill=false;
@@ -63,7 +70,7 @@ public class TreeManBoss : MonsterBase
             isSkill1=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_01", false);
             GroundFissurepos=GameController.S.gamePlayer.transform.position;
-            GameController.S.CreateCircleAttack(GroundFissurepos,1f);
+            GameController.S.CreateCircleAttack(GroundFissurepos,0.75f);
         }else if (isSkill2)
         {
             IsSkill=true;
@@ -122,27 +129,32 @@ public class TreeManBoss : MonsterBase
     public void Skill2()
     {
         Vector2 center = GameController.S.gamePlayer.transform.position;   // (0,0)
-        float radius = 12f;
+        float radius = 10f;
 
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 20; i++)
         {
             // 在单位圆内随机一个点，再乘以半径 -> 半径为 12 的圆内
             Vector2 randomInCircle = UnityEngine.Random.insideUnitCircle * radius;
             Vector3 pos = new Vector3(center.x + randomInCircle.x, center.y + randomInCircle.y, 0f);
-            GameController.S.CreateCircleAttack(pos,0.75f);
-            var treeManSkill = GameController.S.TreeManSkillQueue.Dequeue();
-            treeManSkill.transform.position = pos;
-            treeManSkill.damage = Attack;
-            treeManSkill.gameObject.SetActive(true);
+            GameController.S.CreateCircleAttack(pos,0.5f);
+            StartCoroutine(DelaySkill(pos));
         }
+    }
+
+    IEnumerator DelaySkill(Vector3 pos)
+    {
+        yield return new WaitForSeconds(1f);
+        var treeManSkill = GameController.S.TreeManSkillQueue.Dequeue();
+        treeManSkill.transform.position = pos;
+        treeManSkill.damage = Attack;
+        treeManSkill.gameObject.SetActive(true);
     }
     
 
     public void Start()
     {
+        base.Start();
         size = 1.5f;
-        
-       
     }
     
     private void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
@@ -158,6 +170,7 @@ public class TreeManBoss : MonsterBase
         }else if (e.Data.Name == "baozha")
         {
             GameController.S.CreateDiLie(new Vector2(transform.position.x,transform.position.y-0.5f),Attack);
+            ShotDanMu();
         }
     }
 
@@ -192,6 +205,8 @@ public class TreeManBoss : MonsterBase
    
     public override void Die()
     {
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die_01", false);
+        rigidbody2D.velocity = Vector2.zero;
         GeneralDie();
         GetEx();
         //CreateBloodEnergy();
@@ -209,10 +224,33 @@ public class TreeManBoss : MonsterBase
         chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
     
+    
+    
+    public void ShotDanMu()
+    {
+        float waveOffset = Random.Range(0,30);
+        int bulletCount = 15;
+        float angleStep = 360f / bulletCount;
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            var xieZiSkill1 = GameController.S.TreeManDanMuQueue.Dequeue();
+            float angle = i * angleStep + waveOffset;
+            float angleRad = angle * Mathf.Deg2Rad;
+            Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
+            xieZiSkill1.transform.position = transform.position;
+            xieZiSkill1.MoveDirection = direction;
+            xieZiSkill1.MoveSpeed = 5f;
+            xieZiSkill1.damage = Attack;
+            xieZiSkill1.gameObject.SetActive(true);
+        }
+    }
+    
 
     private void Update()
     {
         if (IsDead) return;
+        base.Update();
         DashSkillCurrentTime+=Time.deltaTime;
         FireSkillCurrentTime+=Time.deltaTime;
         GroundFissureSkillCurrentTime += Time.deltaTime;

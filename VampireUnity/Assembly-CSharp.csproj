@@ -176,6 +176,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\111\xuelaoshu.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\ExAdd.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\DianBaoZha\DianBaoZhaNext.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManDanMu.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuTuJianWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\shouren3.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossAttack.cs" />
@@ -468,6 +469,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenJian.cs" />
     <Compile Include="Assets\Scripts\Tool\UISmoothScaleEffect.cs" />
     <Compile Include="Assets\Scripts\Skill\IceSkill\IceSkill1.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManSkillAnim.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\FanPuGuiZhen.cs" />
     <Compile Include="Assets\Scripts\Skill\DianQuan\DianQuan.cs" />
     <Compile Include="Assets\Scripts\Equip\PrimaryEquip\PrimaryCloak.cs" />

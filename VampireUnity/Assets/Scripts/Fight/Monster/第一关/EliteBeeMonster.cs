@@ -27,6 +27,7 @@ public class EliteBeeMonster : MonsterBase
     public void Awake()
     {
         base.Awake();
+        IsYuanChen = true;
         var randomSpeed=Random.Range(-0.1f,0.1f);
         Speed+=randomSpeed;
         MonsterSpineName.AttackName = "attack";
@@ -52,6 +53,7 @@ public class EliteBeeMonster : MonsterBase
         {
             DelayDestroy();
             var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            baoxue.transform.localScale = new Vector3(1.5f, 1.5f, 3f);
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
         }

@@ -19,7 +19,6 @@ public class ToastInfo : MonoBehaviour
 
     public Image bg;
     public Image image;
-    public Animator anim;
 
     public Animation toastAnim;
 
@@ -55,7 +54,6 @@ public class ToastInfo : MonoBehaviour
                 case 1:
                     whiteName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.WhiteBg;
-                    anim.Play("WhiteEdge");
                     if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
                     {
                         whiteName.text = EquipName.EquipNameDic[equipTable.EquipName];
@@ -69,7 +67,6 @@ public class ToastInfo : MonoBehaviour
                 case 2:
                     greenName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.GreenBg;
-                    anim.Play("GreenEdge");
                     if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
                     {
                         greenName.text = EquipName.EquipNameDic[equipTable.EquipName];
@@ -83,7 +80,6 @@ public class ToastInfo : MonoBehaviour
                 case 3:
                     blueName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.BlueBg;
-                    anim.Play("BlueEdge");
                     if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
                     {
                         blueName.text = EquipName.EquipNameDic[equipTable.EquipName];
@@ -97,7 +93,6 @@ public class ToastInfo : MonoBehaviour
                 case 4:
                     purpleName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.PurpleBg;
-                    anim.Play("PurpleEdge");
                     if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
                     {
                         purpleName.text = EquipName.EquipNameDic[equipTable.EquipName];
@@ -111,7 +106,6 @@ public class ToastInfo : MonoBehaviour
                 case 5:
                     orangeName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.OrangeBg;
-                    anim.Play("OrangeEdge");
                     if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
                     {
                         orangeName.text = EquipName.EquipNameDic[equipTable.EquipName];
@@ -125,7 +119,6 @@ public class ToastInfo : MonoBehaviour
                 case 6:
                     redName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.RedBg;
-                    anim.Play("RedEdge");
                     if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
                     {
                         redName.text = EquipName.EquipNameDic[equipTable.EquipName];
@@ -158,38 +151,32 @@ public class ToastInfo : MonoBehaviour
                 case 1:
                     whiteName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.WhiteBg;
-                    anim.Play("WhiteEdge");
                     whiteName.text = EquipName.EquipNameDic[propTable.EquipName];
                     break;
                 case 2:
                     greenName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.GreenBg;
-                    anim.Play("GreenEdge");
                     greenName.text = EquipName.EquipNameDic[propTable.EquipName];
 
                     break;
                 case 3:
                     blueName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.BlueBg;
-                    anim.Play("BlueEdge");
                     blueName.text = EquipName.EquipNameDic[propTable.EquipName];
                     break;
                 case 4:
                     purpleName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.PurpleBg;
-                    anim.Play("PurpleEdge");
                     purpleName.text = EquipName.EquipNameDic[propTable.EquipName];
                     break;
                 case 5:
                     orangeName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.OrangeBg;
-                    anim.Play("OrangeEdge");
                     orangeName.text = EquipName.EquipNameDic[propTable.EquipName];
                     break;
                 case 6:
                     redName.gameObject.SetActive(true);
                     bg.sprite = ResourcesConfig.RedBg;
-                    anim.Play("RedEdge");
                     redName.text = EquipName.EquipNameDic[propTable.EquipName];
                     break;
             }

@@ -216,6 +216,7 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public Queue<TreeManSkill> TreeManSkillQueue = new Queue<TreeManSkill>();
     [NonSerialized] public Queue<TreeManDiLie> TreeManDiLieQueue = new Queue<TreeManDiLie>();
     [NonSerialized] public Queue<BeeBullet> BeeBulletQueue = new Queue<BeeBullet>();
+    [NonReorderable]public Queue<TreeManDanMu>TreeManDanMuQueue = new Queue<TreeManDanMu>();
 
 
     
@@ -580,9 +581,9 @@ public class GameController : XSingleton<GameController>
     [NonSerialized]public int DieNormalMonsterCount=0;
     [NonSerialized]public int DieEliteMonsterCount=0;
 
-    
-    
-    public float monsterBirthTimeScale = 1f; //间隔一秒钟生成一个怪物
+
+
+    public float monsterBirthTimeScale => LevelInfoConfig.LevelMonsterCreateSpeedDic[LevelInfoConfig.CurrentGameLevel]; //间隔一秒钟生成一个怪物
     public float currentTime = 0f;
     public GameObject fightBG;
     [NonSerialized]public Transform[] MonsterBirthPoints1;
@@ -1996,6 +1997,11 @@ public class GameController : XSingleton<GameController>
             return;
         //控制同屏怪物数量
         if (TotalMonsterCount - KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 2)
+        {
+            return;
+        }
+
+        if (TotalMonsterCount > LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
         {
             return;
         }

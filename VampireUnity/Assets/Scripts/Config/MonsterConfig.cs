@@ -196,7 +196,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 3, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 10, defence = 10, hp = 100, ex = 10, linghun = 10,speed = 1f,
+                    attack = 10, defence = 10, hp = 20, ex = 10, linghun = 10,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {
                         new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 2), 
@@ -212,7 +212,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 3, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 30, defence = 30, hp = 300, ex = 50, linghun = 50,speed = 1f,
+                    attack = 20, defence = 20, hp = 100, ex = 40, linghun = 40,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
                         {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 10), 
                             new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Primary, 10),
@@ -227,7 +227,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 3, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 2000, ex = 200, linghun = 200,speed = 1f,
+                    attack = 100, defence = 30, hp = 1000, ex = 200, linghun = 200,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
                         {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.TreeMan, 10), 
                             new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.TreeMan, 10),

@@ -1253,7 +1253,7 @@ public class SkillController : XSingleton<SkillController>
             GlobalPlayerAttribute.PlayerMoveSpeed = dashSpeed;
             GameObject playerShadow = Instantiate(Resources.Load("Prefabs/Skill/DashShadowObject"),GameController.S.transform).GameObject().transform.Find("DashShadow").gameObject;
             playerShadow.gameObject.SetActive(true);
-            playerShadow.transform.localPosition = new Vector3(GameController.S.gamePlayer.transform.Find("IceMage").position.x-0.15f, GameController.S.gamePlayer.transform.Find("IceMage").position.y+0.62f,GameController.S.gamePlayer.transform.Find("IceMage").position.z);
+            playerShadow.transform.localPosition = new Vector3(GameController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.x-0.15f, GameController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.y+0.62f,GameController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.z);
             playerShadow.GetComponent<DashShadow>().StartA = 120+CurrentDashCount*10;
             CurrentDashCount++;
             if (CurrentDashCount > ShadowCount)

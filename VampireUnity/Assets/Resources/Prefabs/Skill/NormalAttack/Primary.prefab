@@ -94,9 +94,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.60019684, y: 0.000047534704}
+  m_Offset: {x: 0.19382052, y: 0.000047534704}
   serializedVersion: 2
-  m_Radius: 0.1685004
+  m_Radius: 0.22217259
 --- !u!114 &6636088774422746496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 3463387001401245623}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.004, y: -0, z: 0}
+  m_LocalPosition: {x: -0.169, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -173,7 +173,7 @@ Transform:
   m_GameObject: {fileID: 6250509302642511218}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.308, y: 0, z: 0}
+  m_LocalPosition: {x: 0.267, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: "\u51B0\u9525"
+  animationName: "\u96EA\u82B1"
   loop: 1
   timeScale: 1
   unscaledTime: 0
