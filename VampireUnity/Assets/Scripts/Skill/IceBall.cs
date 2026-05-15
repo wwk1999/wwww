@@ -18,7 +18,7 @@ public class IceBall : MonoBehaviour
         {
             bool isCrit = GameController.S.GetIsCrit();
             GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice2Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Skill2,YuanSuType.Ice);
-            Vector2 closestPoint = other.ClosestPoint(transform.position);
+            Vector2 closestPoint = other.ClosestPoint(other.transform.position);
             var hit = GameController.S.IcePengQueue.Dequeue();
             hit.transform.position = closestPoint;
             hit.SetActive(true);

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6748304014197755163}
   - component: {fileID: 6355260084868707910}
   m_Layer: 0
-  m_Name: PurpleCloakSprite1
+  m_Name: XieZiCloakSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

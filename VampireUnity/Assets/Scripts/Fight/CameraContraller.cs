@@ -63,13 +63,8 @@ public class CameraContraller : XSingleton<CameraContraller>
             {
                 if (GameController.S.gamePlayer != null)
                 {
-                    Vector3 targetPos = new Vector3(
-                        GameController.S.gamePlayer.transform.position.x,
-                        GameController.S.gamePlayer.transform.position.y,
-                        -12
-                    );
-                    // 线性插值移动，速度与帧率无关
-                    transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * 5);
+                    transform.position = new Vector3(GameController.S.gamePlayer.transform.position.x,
+                        GameController.S.gamePlayer.transform.position.y, -12);
                 }
             }
             else if (CameraStatus == CameraStatus.MoveToBoss)
