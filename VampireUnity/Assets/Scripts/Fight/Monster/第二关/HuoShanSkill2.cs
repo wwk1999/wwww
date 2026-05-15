@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Spine;
 using Spine.Unity;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HuoShanSkill2 : MonoBehaviour
@@ -37,6 +38,7 @@ public class HuoShanSkill2 : MonoBehaviour
    }
    private void OnEnable()
    {
+      CancelInvoke();
       Invoke(nameof(Show),1f);      
       Invoke(nameof(EnQueue),3f);
    }

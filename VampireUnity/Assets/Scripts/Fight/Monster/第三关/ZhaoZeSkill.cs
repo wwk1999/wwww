@@ -16,7 +16,7 @@ public class ZhaoZeSkill : MonoBehaviour
 
     private void Start()
     {
-        MeshRenderer.sortingOrder=new Random().Next(0,1000);
+        MeshRenderer.sortingOrder=new Random().Next(4000,5000);
         skeletonAnimation.AnimationState.Complete += OnAnimationComplete;
         skeletonAnimation.AnimationState.Event += OnSpineEvent;
     }
@@ -54,6 +54,7 @@ public class ZhaoZeSkill : MonoBehaviour
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
         GameController.S.ZhaoZeSkillQueue.Enqueue(this);
+        gameObject.SetActive(false);
     }
     private void OnEnable()
     {

@@ -25,7 +25,7 @@ public class HuoSkill4Anim : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GameController.S.GameAttack*SkillConfig.Huo4Damage*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Huo);
+                monster.Hurt(GameController.S.GameAttack*SkillConfig.Huo4Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Huo);
             }
         }
         

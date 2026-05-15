@@ -37,7 +37,7 @@ public class IceSkill5 : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice5Damage*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Normal,YuanSuType.Ice);
+            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice5Damage/100f*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Normal,YuanSuType.Ice);
             Vector2 closestPoint = other.ClosestPoint(transform.position);
             var hit = GameController.S.IcePengQueue.Dequeue();
             hit.transform.position = closestPoint;

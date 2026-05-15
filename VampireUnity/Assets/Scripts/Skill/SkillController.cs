@@ -282,7 +282,7 @@ public class SkillController : XSingleton<SkillController>
     public float HuoYuanSuDamage => GetHuoDamage();
     public float DianYuanSuDamage => GetDianDamage();
     public float HeiAnYuanSuDamage => GetHeiAnDamage();
-    public float IceYuanSuDamage => GetIceDamage();
+    public float IceYuanSuDamage => GetIceDamage();//小数
 
 
     public bool IsHuoSkill2=false;
@@ -557,6 +557,8 @@ public class SkillController : XSingleton<SkillController>
         {
             return;
         }
+
+        IceSkill5Coolingtime = 0;
         float waveOffset = Random.Range(0,30);
         int bulletCount = 12+2*SkillJiaDian.S.Ice5_2;
         float angleStep = 360f / bulletCount;
@@ -600,6 +602,8 @@ public class SkillController : XSingleton<SkillController>
         {
             return;
         }
+
+        HeiAnSkill4Coolingtime = 0;
         switch (count)
         {
             case 4:
@@ -666,6 +670,8 @@ public class SkillController : XSingleton<SkillController>
         {
             return;
         }
+
+        DianSkill4Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
         float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
@@ -680,10 +686,12 @@ public class SkillController : XSingleton<SkillController>
 
     public void HeiAnSkill5(int count)
     {
-        if (HuoSkill4Coolingtime < HuoSkill4Time)
+        if (HuoSkill5Coolingtime < HuoSkill5Time)
         {
             return;
         }
+
+        HuoSkill5Coolingtime = 0;
         for (int i = 0; i < count; i++)
         {
             var heianSkill5=GameController.S.HeiAnSkill5Queue.Dequeue();
@@ -698,6 +706,8 @@ public class SkillController : XSingleton<SkillController>
         {
             return;
         }
+
+        DianSkill5Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
         float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
@@ -716,6 +726,8 @@ public class SkillController : XSingleton<SkillController>
         {
             return;
         }
+
+        HeiAnSkill4Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
         float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
@@ -1081,6 +1093,8 @@ public class SkillController : XSingleton<SkillController>
                 {
                     return;
                 }
+
+                IceSkill4Coolingtime = 0;
                 StartCoroutine(IceSkill4(4+SkillJiaDian.S.Ice4_2,1f,0.3f));
                 break;
             case SkillType.Ice5:
@@ -1106,6 +1120,11 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case SkillType.Huo3:
                 int count = 5;
+                if (HuoSkill3Coolingtime < HuoSkill3Time)
+                {
+                    return;
+                }
+                HuoSkill3Coolingtime = 0;
                 StartCoroutine(HuoSkill3(count,1.3f,0.2f));
                 break;
             case SkillType.Huo4:
@@ -1232,6 +1251,16 @@ public class SkillController : XSingleton<SkillController>
         if (Input.GetKey(KeyCode.Alpha3))
         {
             ExcuteSkill(Alpha3);
+        }
+        
+        if (Input.GetKey(KeyCode.Alpha4))
+        {
+            ExcuteSkill(Alpha4);
+        }
+        
+        if (Input.GetKey(KeyCode.Alpha5))
+        {
+            ExcuteSkill(Alpha5);
         }
         
         if (Input.GetKeyDown(KeyCode.J))

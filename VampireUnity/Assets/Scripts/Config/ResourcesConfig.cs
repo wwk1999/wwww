@@ -2182,6 +2182,23 @@ public class ResourcesConfig : MonoBehaviour
         ZhaoZeHelmet = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeHelmet");
         ZhaoZeRing = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeRing");
         ZhaoZeNecklace = Resources.Load<Sprite>("Sprite/Equip/ZhaoZeNecklace");
+        
+        
+        //沙漠套装
+        XieZiCloth = Resources.Load<Sprite>("Sprite/Equip/XieZiCloth");
+        XieZiCloak = Resources.Load<Sprite>("Sprite/Equip/XieZiCloak");
+        XieZiShoe = Resources.Load<Sprite>("Sprite/Equip/XieZiShoe");
+        XieZiHelmet = Resources.Load<Sprite>("Sprite/Equip/XieZiHelmet");
+        XieZiRing = Resources.Load<Sprite>("Sprite/Equip/XieZiRing");
+        XieZiNecklace = Resources.Load<Sprite>("Sprite/Equip/XieZiNecklace");
+        
+        //雪人套装
+        XueRenCloth = Resources.Load<Sprite>("Sprite/Equip/XueRenCloth");
+        XueRenCloak = Resources.Load<Sprite>("Sprite/Equip/XueRenCloak");
+        XueRenShoe = Resources.Load<Sprite>("Sprite/Equip/XueRenShoe");
+        XueRenHelmet = Resources.Load<Sprite>("Sprite/Equip/XueRenHelmet");
+        XueRenRing = Resources.Load<Sprite>("Sprite/Equip/XueRenRing");
+        XueRenNecklace = Resources.Load<Sprite>("Sprite/Equip/XueRenNecklace");
 
         //紫色套装
         PurpleCloth = Resources.Load<Sprite>("Sprite/Equip/Purple/PurpleCloth");
@@ -2511,12 +2528,12 @@ public class ResourcesConfig : MonoBehaviour
                 return GreenBg;
             case PlayerEquipConfig.EquipLevel.HuoShan:
             case PlayerEquipConfig.EquipLevel.Blue:
+            case PlayerEquipConfig.EquipLevel.ZhaoZe:
                 return BlueBg;
             case PlayerEquipConfig.EquipLevel.Purple:
             case PlayerEquipConfig.EquipLevel.Purple1:
             case PlayerEquipConfig.EquipLevel.XieZi:
             case PlayerEquipConfig.EquipLevel.XueRen:
-            case PlayerEquipConfig.EquipLevel.ZhaoZe:
                 return PurpleBg;
         }
 

@@ -88,7 +88,6 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized] public float EliteYuanChenSize = 6f;
 
     [NonSerialized]  public MonsterTypeByName MonsterTypeByName;
-    public GameObject bingkuai;
     public GameObject du;
     public GameObject jiansu;
     public GameObject yidian;
@@ -187,7 +186,7 @@ public abstract class MonsterBase : MonoBehaviour
     
     public void Awake()
     {
-        if (MonsterType != MonsterType.Boss)
+        if (MonsterConfig.MonsterTypeDic[MonsterTypeByName] != MonsterType.Boss)
         {
             hpSlider.gameObject.SetActive(false);
         }
@@ -232,7 +231,6 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void SetBingKuai()
     {
-        bingkuai.gameObject.SetActive(false);
         monsterSkeletonAnimation.gameObject.SetActive(!isJianSu);
     }
 
@@ -621,7 +619,7 @@ public abstract class MonsterBase : MonoBehaviour
                 }
                 break;
             case WeaponType.DianBaoZha:
-                PlayerData.S.dianBaoZhaLevel += Exp; 
+                PlayerData.S.dianBaoZhaExp += Exp; 
                 if (PlayerData.S.dianBaoZhaExp > GlobalPlayerAttribute.ExpDic[PlayerData.S.dianBaoZhaLevel])
                 {
                     PlayerData.S.dianBaoZhaExp -= GlobalPlayerAttribute.ExpDic[PlayerData.S.dianBaoZhaLevel];

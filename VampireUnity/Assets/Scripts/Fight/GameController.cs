@@ -1540,6 +1540,46 @@ public class GameController : XSingleton<GameController>
                 }
                 break;
             
+            
+            
+            case PlayerEquipConfig.EquipLevel.XueRen:
+                switch (monsterEquip.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return XueRenCloakQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return XueRenClothQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return XueRenRingQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return XueRenShoeQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return XueRenHelmetQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return XueRenNecklaceQueue.Dequeue();
+                }
+                break;
+            
+            
+            
+            case PlayerEquipConfig.EquipLevel.XieZi:
+                switch (monsterEquip.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                        return XieZiCloakQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        return XieZiClothQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Ring:
+                        return XieZiRingQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        return XieZiShoeQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        return XieZiHelmetQueue.Dequeue();
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        return XieZiNecklaceQueue.Dequeue();
+                }
+                break;
+            
             case PlayerEquipConfig.EquipLevel.Purple1:
                 switch (monsterEquip.EquipType)
                 {

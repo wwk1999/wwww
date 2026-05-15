@@ -34,7 +34,7 @@ public class PlayerData : XSingleton<PlayerData>
     public int primaryDianLevel=1;
     public int primaryHuoLevel=1;
     public int primaryHeiAnLevel=1;
-    public float dianBaoZhaLevel;
+    public int dianBaoZhaLevel;
     public int iceBaoZhaLevel;
     public int HuoBaoZhaWeaponLevel;
     public int puTong3WeaponLevel;

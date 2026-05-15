@@ -14,6 +14,9 @@ using UnityEngine.UI;
 public class WeaponWindow : MonoBehaviour
 {
 
+   public GameObject LevelPanel;
+   public GameObject ExpPanel;
+
    public Image WeaponImage;
    public GameObject WeaponListContent;
    public Button exitButton; // 退出按钮
@@ -387,8 +390,7 @@ public class WeaponWindow : MonoBehaviour
          switch (item._propType)
          {
             case PropConfig.PropType.LingHun:
-               weaponItem.transform.Find("prop/ImageBg").gameObject.SetActive(false);
-               weaponItem.transform.Find("prop/Edge").gameObject.SetActive(false);
+               weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
                weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.LingHun;
                weaponItem.transform.Find("Count").GetComponent<TextMeshProUGUI>().text = item.count.ToString();
                break;
@@ -399,35 +401,29 @@ public class WeaponWindow : MonoBehaviour
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.WhiteJingCui;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("WhiteEdge");
                      break;
                   case 2:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.GreenJingCui;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("GreenEdge");
                      break;
                   case 3:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.BlueJingCui;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("BlueEdge");
                      break;
                   case 4:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.PurpleJingCui;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("PurpleEdge");
                      break;
                   case 5:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.OrangeJingCui;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("OrangeEdge");
                      break;
                   case 6:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite = ResourcesConfig.RedJingCui;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("RedEdge");
                      break;
                }
 
@@ -440,37 +436,31 @@ public class WeaponWindow : MonoBehaviour
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.WhiteWeaponFragment;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.WhiteBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("WhiteEdge");
                      break;
                   case 2:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.GreenWeaponFragment;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.GreenBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("GreenEdge");
                      break;
                   case 3:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.BlueWeaponFragment;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.BlueBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("BlueEdge");
                      break;
                   case 4:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.PurpleWeaponFragment;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.PurpleBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("PurpleEdge");
                      break;
                   case 5:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.OrangeWeaponFragment;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.OrangeBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("OrangeEdge");
                      break;
                   case 6:
                      weaponItem.transform.Find("prop/Image").GetComponent<Image>().sprite =
                         ResourcesConfig.RedWeaponFragment;
                      weaponItem.transform.Find("prop/ImageBg").GetComponent<Image>().sprite = ResourcesConfig.RedBg;
-                     weaponItem.transform.Find("prop/Edge").GetComponent<Animator>().Play("RedEdge");
                      break;
                }
 
@@ -533,25 +523,25 @@ public class WeaponWindow : MonoBehaviour
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                      }
-                     break;
+                     return;
                   case 3:
                      if (!BagController.S.PropList.ContainsKey(103) || BagController.S.PropList[103].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                      }
-                     break;
+                     return;
                   case 4:
                      if (!BagController.S.PropList.ContainsKey(104) || BagController.S.PropList[104].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                      }
-                     break;
+                     return;
                   case 5:
                      if (!BagController.S.PropList.ContainsKey(105) || BagController.S.PropList[105].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                      }
-                     break;
+                     return;
                }
                break;
             
@@ -564,25 +554,25 @@ public class WeaponWindow : MonoBehaviour
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                      }
-                     break;
+                     return;
                   case 3:
                      if (!BagController.S.PropList.ContainsKey(203) || BagController.S.PropList[203].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                      }
-                     break;
+                     return;
                   case 4:
                      if (!BagController.S.PropList.ContainsKey(204) || BagController.S.PropList[204].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                      }
-                     break;
+                     return;
                   case 5:
                      if (!BagController.S.PropList.ContainsKey(205) || BagController.S.PropList[205].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                      }
-                     break;
+                     return;
                }
                break;
          }
@@ -852,6 +842,8 @@ public class WeaponWindow : MonoBehaviour
 
    public void SuoButtonClick(object[] obj)
    {
+      LevelPanel.gameObject.SetActive(false);
+      ExpPanel.gameObject.SetActive(false);
       WeaponType type = (WeaponType)obj[0];
 
       switch (type)
@@ -996,6 +988,8 @@ public class WeaponWindow : MonoBehaviour
 
    public void BgButtonClick(object[] obj)
    {
+      LevelPanel.gameObject.SetActive(true);
+      ExpPanel.gameObject.SetActive(true);
       WeaponType type = (WeaponType)obj[0];
       WeaponImage.sprite=WeaponConfig.GetWeaponSprite(type);
       switch (type)

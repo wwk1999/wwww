@@ -2035,37 +2035,37 @@ public class Entrance : MonoBehaviour
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
                     GameObject HuoShanBossCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossCloakFight"));
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanCloakFight"));
                     HuoShanBossCloakFight.gameObject.SetActive(false);
                     GameController.S.HuoShanCloakQueue.Enqueue(HuoShanBossCloakFight);
                     break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject HuoShanBossNecklaceFight =
-                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossNecklaceFight"));
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanNecklaceFight"));
                         HuoShanBossNecklaceFight.gameObject.SetActive(false);
                         GameController.S.HuoShanNecklaceQueue.Enqueue(HuoShanBossNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject HuoShanBossClothFight =
-                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossClothFight"));
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanClothFight"));
                         HuoShanBossClothFight.gameObject.SetActive(false);
                         GameController.S.HuoShanClothQueue.Enqueue(HuoShanBossClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject HuoShanBossHelmetFight =
-                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossHelmetFight"));
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanHelmetFight"));
                         HuoShanBossHelmetFight.gameObject.SetActive(false);
                         GameController.S.HuoShanHelmetQueue.Enqueue(HuoShanBossHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject HuoShanBossShoeFight =
-                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossShoeFight"));
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanShoeFight"));
                         HuoShanBossShoeFight.gameObject.SetActive(false);
                         GameController.S.HuoShanShoeQueue.Enqueue(HuoShanBossShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject HuoShanBossRingFight =
-                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShanBoss/HuoShanBossRingFight"));
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanRingFight"));
                         HuoShanBossRingFight.gameObject.SetActive(false);
                         GameController.S.HuoShanRingQueue.Enqueue(HuoShanBossRingFight);
                         break;
@@ -2114,6 +2114,93 @@ public class Entrance : MonoBehaviour
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeRingFight"));
                         ZhaoZeRingFight.gameObject.SetActive(false);
                         GameController.S.ZhaoZeRingQueue.Enqueue(ZhaoZeRingFight);
+                        break;
+                }
+                break;
+            
+            
+            
+             case PlayerEquipConfig.EquipLevel.XieZi:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject XieZiCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiCloakFight"));
+                    XieZiCloakFight.gameObject.SetActive(false);
+                    GameController.S.XieZiCloakQueue.Enqueue(XieZiCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject XieZiNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiNecklaceFight"));
+                        XieZiNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.XieZiNecklaceQueue.Enqueue(XieZiNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject XieZiClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiClothFight"));
+                        XieZiClothFight.gameObject.SetActive(false);
+                        GameController.S.XieZiClothQueue.Enqueue(XieZiClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject XieZiHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiHelmetFight"));
+                        XieZiHelmetFight.gameObject.SetActive(false);
+                        GameController.S.XieZiHelmetQueue.Enqueue(XieZiHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject XieZiShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiShoeFight"));
+                        XieZiShoeFight.gameObject.SetActive(false);
+                        GameController.S.XieZiShoeQueue.Enqueue(XieZiShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject XieZiRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiRingFight"));
+                        XieZiRingFight.gameObject.SetActive(false);
+                        GameController.S.XieZiRingQueue.Enqueue(XieZiRingFight);
+                        break;
+                }
+                break;
+             
+             
+              case PlayerEquipConfig.EquipLevel.XueRen:
+                switch (info.EquipType)
+                {
+                    case PlayerEquipConfig.EquipType.Cloak:
+                    GameObject XueRenCloakFight =
+                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenCloakFight"));
+                    XueRenCloakFight.gameObject.SetActive(false);
+                    GameController.S.XueRenCloakQueue.Enqueue(XueRenCloakFight);
+                    break;
+                    case PlayerEquipConfig.EquipType.Necklace:
+                        GameObject XueRenNecklaceFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenNecklaceFight"));
+                        XueRenNecklaceFight.gameObject.SetActive(false);
+                        GameController.S.XueRenNecklaceQueue.Enqueue(XueRenNecklaceFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Cloth:
+                        GameObject XueRenClothFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenClothFight"));
+                        XueRenClothFight.gameObject.SetActive(false);
+                        GameController.S.XueRenClothQueue.Enqueue(XueRenClothFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Helmet:
+                        GameObject XueRenHelmetFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenHelmetFight"));
+                        XueRenHelmetFight.gameObject.SetActive(false);
+                        GameController.S.XueRenHelmetQueue.Enqueue(XueRenHelmetFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Shoe:
+                        GameObject XueRenShoeFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenShoeFight"));
+                        XueRenShoeFight.gameObject.SetActive(false);
+                        GameController.S.XueRenShoeQueue.Enqueue(XueRenShoeFight);
+                        break;
+                    case PlayerEquipConfig.EquipType.Ring:
+                        GameObject XueRenRingFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenRingFight"));
+                        XueRenRingFight.gameObject.SetActive(false);
+                        GameController.S.XueRenRingQueue.Enqueue(XueRenRingFight);
                         break;
                 }
                 break;
@@ -3355,19 +3442,24 @@ public class Entrance : MonoBehaviour
 
             if (LevelInfoConfig.CurrentGameLevel == 6)
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 3; i++)
                 {
                     var jianqi =
                         Instantiate(Resources.Load<HuoShanJianQi>("Prefabs/Monster/Level2/HuoShanJianQi"),
                             GameController.S.transform);
                     jianqi.gameObject.SetActive(false);
                     GameController.S.HuoShanJianQiQueue.Enqueue(jianqi);
+                }
+
+                for (int i = 0; i < 51; i++)
+                {
                     var huoshanskill2 =
                         Instantiate(Resources.Load<HuoShanSkill2>("Prefabs/Monster/Level2/HuoShanSkill2"),
                             GameController.S.transform);
                     huoshanskill2.gameObject.SetActive(false);
                     GameController.S.HuoShanSkill2QiQueue.Enqueue(huoshanskill2);
                 }
+
             }
 
 

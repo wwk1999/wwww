@@ -80,7 +80,7 @@ public class DianQuan : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GameController.S.GameAttack*SkillConfig.Dian1Damage*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill1,YuanSuType.Dian);
+                monster.Hurt(GameController.S.GameAttack*SkillConfig.Dian1Damage/100f*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill1,YuanSuType.Dian);
                 var hit = GameController.S.DianQuanPengQueue.Dequeue();
                 hit.transform.position = monster.transform.position;
                 hit.SetActive(true);

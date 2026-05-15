@@ -46,6 +46,10 @@ public class XieZi : MonsterBase
     
     public void Complete(TrackEntry trackEntry)
     {
+        if (trackEntry.Animation.Name == "fail")
+        {
+            gameObject.SetActive(false);
+        }
         if (trackEntry.Animation.Name == "skill2")
         {
             collider2D.tag = "Bullet"; 
@@ -104,23 +108,10 @@ public class XieZi : MonsterBase
 
     public override void Die()
     {
-
-        //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
-        StartCoroutine(RandomDelayDie(randomDelay));
-    }
-
-    private IEnumerator RandomDelayDie(int delay)
-    {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
-
-        AudioController.S.PlaySnotDie();
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "fail", false);
+        rigidbody2D.velocity = Vector2.zero;
         GeneralDie();
         GetEx();
-        ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
         //CreateBloodEnergy();
         CreateEquip();
         CreateProp();

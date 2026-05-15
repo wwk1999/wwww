@@ -219,13 +219,13 @@ public class StoreDefine : XSingleton<StoreDefine>
             necklaceid = runtime.necklaceid;
 
         primaryWeaponLevel=runtime.primaryWeaponLevel;
-        primaryDianLevel=runtime.primaryWeaponLevel;
-        primaryHuoLevel=runtime.primaryWeaponLevel;
-        primaryHeiAnLevel=runtime.primaryWeaponLevel;
-        dianBaoZha=runtime.primaryWeaponLevel;
-        iceBaoZha=runtime.primaryWeaponLevel;
+        primaryDianLevel=runtime.primaryDianLevel;
+        primaryHuoLevel=runtime.primaryHuoLevel;
+        primaryHeiAnLevel=runtime.primaryHeiAnLevel;
+        dianBaoZha=runtime.dianBaoZhaLevel;
+        iceBaoZha=runtime.iceBaoZhaLevel;
 
-        duWeaponLevel=runtime.primaryWeaponLevel;
+        duWeaponLevel=runtime.HuoBaoZhaWeaponLevel;
         puTong3WeaponLevel=runtime.puTong3WeaponLevel;
         xuKongWeaponLevel=runtime.xuKongWeaponLevel;
         lvQuanWeaponLevel=runtime.lvQuanWeaponLevel;

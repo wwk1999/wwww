@@ -43,7 +43,7 @@ public class IceSkill1 : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = GameController.S.MonsterColliderDic[col];
-                monster.Hurt(GameController.S.GameAttack*SkillConfig.Ice1Damage*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Ice);
+                monster.Hurt(GameController.S.GameAttack*SkillConfig.Ice1Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Ice);
                 Vector2 closestPoint = col.ClosestPoint(transform.position);
                 var hit = GameController.S.IcePengQueue.Dequeue();
                 hit.transform.position = closestPoint;
@@ -54,7 +54,7 @@ public class IceSkill1 : MonoBehaviour
     
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "bing")
+        if (e.Data.Name == "hit")
         {
             CheckCollisionWithMonsters();
         }

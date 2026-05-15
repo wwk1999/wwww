@@ -24,8 +24,6 @@ public class HuoShanBoss : MonsterBase
     public void Start()
     {
         base.Start();
-        
-       
     }
     
     public  void Awake()
@@ -69,6 +67,11 @@ public class HuoShanBoss : MonsterBase
         if (trackEntry.Animation.Name == "Exit"||trackEntry.Animation.Name == "skill_01"||trackEntry.Animation.Name == "skill_02"||trackEntry.Animation.Name == "skill_03")
         {
             IsSkill=false;
+        }
+
+        if (trackEntry.Animation.Name == "die")
+        {
+            gameObject.SetActive(false);
         }
         
         if (isSkill1)
@@ -150,6 +153,8 @@ public class HuoShanBoss : MonsterBase
     
     public override void Die()
     {
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "die", false);
+        rigidbody2D.velocity = Vector2.zero;
         GeneralDie();
         GetEx();
         //CreateBloodEnergy();

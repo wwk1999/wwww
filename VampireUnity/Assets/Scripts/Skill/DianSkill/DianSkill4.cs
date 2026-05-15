@@ -31,7 +31,7 @@ public class DianSkill4 : MonoBehaviour
          if (col.CompareTag("Monster") || col.CompareTag("Boss"))
          {
             MonsterBase monster = GameController.S.MonsterColliderDic[col];
-            monster.Hurt(GameController.S.GameAttack*SkillConfig.Dian4Damage*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Dian);
+            monster.Hurt(GameController.S.GameAttack*SkillConfig.Dian4Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Dian);
             // var hit = GameController.S.HeiDongPengQueue.Dequeue();
             //hit.transform.position = monster.transform.position;
             //hit.SetActive(true);

@@ -11,12 +11,12 @@ public class ZhaoZeBoss : MonsterBase
     {
     }
     public Transform attackTrans;
-    private float skill1Time=3;
-    private float skill3Time=10;
-    private float skill4Time=6;
+    private float skill1Time=5;
+    private float skill3Time=14;
+    private float skill4Time=10;
     private float currentSkill1Time=0;
-    private float currentSkill3Time=0;
-    private float currentSkill4Time=0;
+    private float currentSkill3Time=5;
+    private float currentSkill4Time=8;
     public Collider2D skill1Collider;
     public Collider2D skill2Collider;
     public Collider2D skill3Collider;
@@ -56,28 +56,18 @@ public class ZhaoZeBoss : MonsterBase
 
     public override void Die()
     {
-        //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
-        StartCoroutine(RandomDelayDie(randomDelay));
-    }
-
-    private IEnumerator RandomDelayDie(int delay)
-    {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
-
-        AudioController.S.PlaySnotDie();
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "fail", false);
+        rigidbody2D.velocity = Vector2.zero;
         GeneralDie();
         GetEx();
         //CreateBloodEnergy();
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
+        
         GameController.S.StartCoroutine(DelayChuanSongMen());
     }
-
+    
     IEnumerator DelayChuanSongMen()
     {
         yield return new WaitForSeconds(1f);
@@ -110,15 +100,15 @@ public class ZhaoZeBoss : MonsterBase
     IEnumerator ShuiSkill()
     {
         StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
-        yield return  new WaitForSeconds(1f);
+        yield return  new WaitForSeconds(1.5f);
         StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
-        yield return  new WaitForSeconds(1f);
+        yield return  new WaitForSeconds(1.5f);
         StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
     }
 
     IEnumerator DelayShui(Vector2 pos)
     {
-        GameController.S.CreateCircleAttack(pos,1);
+        GameController.S.CreateCircleAttack(pos,0.8f);
         yield return  new WaitForSeconds(1f);
         var shui = GameController.S.ZhaoZeSkillQueue.Dequeue();
         shui.damage = Attack;
@@ -128,6 +118,10 @@ public class ZhaoZeBoss : MonsterBase
     
     public void Complete(TrackEntry trackEntry)
     {
+        if (trackEntry.Animation.Name == "fail")
+        {
+            gameObject.SetActive(false);
+        }
         if (trackEntry.Animation.Name == "appear"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill3")
         {
             IsSkill=false;

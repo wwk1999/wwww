@@ -561,7 +561,7 @@ public class Player : MonoBehaviour
     /// <param name="damage"></param>
     public void PlayerHurt(float damage,bool isBoss)
     {
-        if (GlobalPlayerAttribute.CurrentHp <= 0)
+        if (GlobalPlayerAttribute.CurrentHp <= 0||IsDie)
         {
             return;
         }

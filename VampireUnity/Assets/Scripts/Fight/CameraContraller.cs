@@ -63,8 +63,13 @@ public class CameraContraller : XSingleton<CameraContraller>
             {
                 if (GameController.S.gamePlayer != null)
                 {
-                    transform.position = new Vector3(GameController.S.gamePlayer.transform.position.x,
-                        GameController.S.gamePlayer.transform.position.y, -12);
+                    Vector3 targetPos = new Vector3(
+                        GameController.S.gamePlayer.transform.position.x,
+                        GameController.S.gamePlayer.transform.position.y,
+                        -12
+                    );
+                    // 线性插值移动，速度与帧率无关
+                    transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * 5);
                 }
             }
             else if (CameraStatus == CameraStatus.MoveToBoss)
@@ -104,6 +109,7 @@ public class CameraContraller : XSingleton<CameraContraller>
     }
     private System.Collections.IEnumerator CameraShakeCoroutine(float duration, float magnitude)
     {
+        IsShaking = true;
         Vector3 originalPosition = Camera.main.transform.localPosition;
         float elapsed = 0f;
 
@@ -119,5 +125,6 @@ public class CameraContraller : XSingleton<CameraContraller>
         }
 
         Camera.main.transform.localPosition = originalPosition; // 恢复原始位置
+        IsShaking = false;
     }
 }
