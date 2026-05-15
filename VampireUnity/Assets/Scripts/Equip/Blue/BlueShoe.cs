@@ -14,7 +14,7 @@ public class BlueShoe : EquipBase
         SpriteRenderer = transform.Find("BlueShoeSprite").GetComponent<SpriteRenderer>();
         EquipAttributes.EquipName = "BlueShoe";
         EquipAttributes.EquipLevel = 10;
-        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Blue;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
         EquipAttributes.Quality = 3;
         

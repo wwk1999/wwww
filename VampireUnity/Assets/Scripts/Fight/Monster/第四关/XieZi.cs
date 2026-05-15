@@ -10,7 +10,6 @@ public class XieZi : MonsterBase
     {
     }
     
-     public GameObject parent;
      public Transform attackTrans;
      public Transform skill1Trans;
      private float attackRange = 1.5f;
@@ -20,7 +19,6 @@ public class XieZi : MonsterBase
      private float currentSkill1Time = 0;
      private float currentSkill2Time = 0;
      private float currentSkill4Time = 0;
-     public Collider2D collider2D;
      private bool IsSkill4 = false;
 
     

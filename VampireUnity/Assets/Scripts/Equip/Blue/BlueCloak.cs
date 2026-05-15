@@ -14,7 +14,7 @@ public class BlueCloak : EquipBase
         EquipAttributes.EquipName = "BlueCloak";
         EquipAttributes.EquipLevel = 10;
 
-        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Blue;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
         //暂时写死
         EquipAttributes.Quality = 3;

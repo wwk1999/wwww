@@ -964,11 +964,7 @@ public abstract class MonsterBase : MonoBehaviour
         
         if (MonsterConfig.MonsterTypeDic[MonsterTypeByName] != MonsterType.Boss)
         {
-            if (hpSlider.gameObject.activeSelf == false)
-            {
-                hpSlider.gameObject.SetActive(true);
-            }
-
+            hpSlider.gameObject.SetActive(true);
             if (monsterSkeletonAnimation != null)
             {
                 if (!IsSkill)

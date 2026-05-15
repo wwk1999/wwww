@@ -15,7 +15,7 @@ public class BlueNecklace : EquipBase
             EquipAttributes.EquipName = "BlueNecklace";
             EquipAttributes.EquipLevel = 10;
 
-            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
+            EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Blue;
             EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
             EquipAttributes.Quality = 3;
             

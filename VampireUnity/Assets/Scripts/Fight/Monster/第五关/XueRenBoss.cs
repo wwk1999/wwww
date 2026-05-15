@@ -12,9 +12,9 @@ public class XueRenBoss : MonsterBase
     }
     
     public Transform attackTrans;
-    private float skill1Time = 12;
-    private float skill2Time = 7;
-    private float skill3Time = 10;
+    private float skill1Time = 14;
+    private float skill2Time = 9;
+    private float skill3Time = 12;
     private float currentSkill1Time = 0;
     private float currentSkill2Time = 0;
     private float currentSkill3Time = 0;
@@ -106,6 +106,10 @@ public class XueRenBoss : MonsterBase
      public void Complete(TrackEntry trackEntry)
     {
         monsterSkeletonAnimation.timeScale = 1f;
+        if (trackEntry.Animation.Name == "fail")
+        {
+            gameObject.SetActive(false);
+        }
         if (trackEntry.Animation.Name == "chuchang"||trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3")
         {
             IsSkill=false;
@@ -124,7 +128,7 @@ public class XueRenBoss : MonsterBase
             isSkill2=false;
             SpriteFlipX1(false);
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
-            monsterSkeletonAnimation.timeScale = 2f;
+            monsterSkeletonAnimation.timeScale = 1f;
             Invoke(nameof(ShowSkill2),1f);
         }
         else if(isSkill3)
@@ -167,10 +171,16 @@ public class XueRenBoss : MonsterBase
 
     public override void Die()
     {
-
-        //生成随机数
-        int randomDelay = Random.Range(0, 10);
-        StartCoroutine(RandomDelayDie(randomDelay));
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, "fail", false);
+        rigidbody2D.velocity = Vector2.zero;
+        GeneralDie();
+        GetEx();
+        //CreateBloodEnergy();
+        CreateEquip();
+        CreateProp();
+        FightBGController.S.PlaySuccessAnim();
+        
+        GameController.S.StartCoroutine(DelayChuanSongMen());
     }
 
     private IEnumerator RandomDelayDie(int delay)

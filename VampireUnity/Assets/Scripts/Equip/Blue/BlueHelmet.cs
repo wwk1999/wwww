@@ -14,7 +14,7 @@ public class BlueHelmet : EquipBase
         EquipAttributes.EquipName = "BlueHelmet";
         EquipAttributes.EquipLevel = 10;
 
-        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Primary;
+        EquipAttributes.EquipQuality = PlayerEquipConfig.EquipLevel.Blue;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Helmet;
         EquipAttributes.Quality = 3;
         

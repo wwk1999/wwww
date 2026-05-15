@@ -54,6 +54,22 @@ namespace Tool
             {"ZhaoZeShoe", "水泽靴"},
             
             
+            {"XieZiCloak", "水泽护手"},
+            {"XieZiCloth", "水泽护身衣"},
+            {"XieZiHelmet", "水泽盔"},
+            {"XieZiNecklace", "水泽项链"},
+            {"XieZiRing", "水泽戒指"},
+            {"XieZiShoe", "水泽靴"},
+            
+            
+            {"XueRenCloak", "水泽护手"},
+            {"XueRenCloth", "水泽护身衣"},
+            {"XueRenHelmet", "水泽盔"},
+            {"XueRenNecklace", "水泽项链"},
+            {"XueRenRing", "水泽戒指"},
+            {"XueRenShoe", "水泽靴"},
+            
+            
             {"HuoShanCloak", "火山披风"},
             {"HuoShanCloth", "火山衣服"},
             {"HuoShanHelmet", "火山头盔"},

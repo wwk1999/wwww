@@ -11,6 +11,10 @@ public class XueRenBossSkill1 : MonoBehaviour
 
     private void OnEnable()
     {
+        if (GameController.S.gamePlayer == null)
+        {
+            return;
+        }
         transform.localScale = new Vector3(1, 1, 1);
         var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;

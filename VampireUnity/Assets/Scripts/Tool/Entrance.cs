@@ -3506,7 +3506,7 @@ public class Entrance : MonoBehaviour
             //Boss技能队列
             if (LevelInfoConfig.CurrentGameLevel == 12)
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 30; i++)
                 {
                     var xieziskill1 =
                         Instantiate(

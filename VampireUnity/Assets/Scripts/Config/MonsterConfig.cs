@@ -59,7 +59,7 @@ public class MonsterConfig
         { MonsterTypeByName.ShaChong, MonsterType.Normal },
         { MonsterTypeByName.ShaNiao, MonsterType.Normal },
         { MonsterTypeByName.ShaXiYi, MonsterType.Elite },
-        { MonsterTypeByName.XianRenZhang, MonsterType.Elite },
+        { MonsterTypeByName.XianRenZhang, MonsterType.Normal },
         { MonsterTypeByName.XieZi, MonsterType.Boss },
         { MonsterTypeByName.XueRen, MonsterType.Normal },
         { MonsterTypeByName.XueZhangLang, MonsterType.Normal },
@@ -342,7 +342,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 12, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 50, defence = 50, hp = 200, ex = 50, linghun = 50,speed = 1f,
+                    attack = 120, defence = 100, hp = 500, ex = 50, linghun = 50,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Blue, 1), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Blue, 1),
@@ -357,7 +357,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 12, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 150, defence = 130, hp = 2000, ex = 300, linghun = 300,speed = 1f,
+                    attack = 200, defence = 150, hp = 3000, ex = 300, linghun = 300,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Blue, 4), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Blue, 4),
@@ -392,27 +392,46 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 15, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed = 1f,
+                    attack = 200, defence = 150, hp = 1000, ex = 100, linghun = 100,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
-                        { new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Green, 2) }
+                    {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Blue, 1), 
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Blue, 1),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Blue, 1),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Blue, 1),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Blue, 1),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Blue, 1),
+                    }
+                    
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 15, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed = 1f,
+                    attack = 300, defence = 200, hp = 8000, ex = 600, linghun = 600,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
-                        { new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Green, 2) }
+                    {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Blue, 5), 
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Blue, 5),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Blue, 5),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Blue, 5),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Blue, 5),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Blue, 5),
+                    }
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 15, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed = 1f,
+                    attack = 80, defence = 30, hp = 5000, ex = 3000, linghun = 3000,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
-                        { new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Green, 2) }
+                    {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.XueRen, 15), 
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.XueRen, 15),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.XueRen, 15),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.XueRen, 15),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.XueRen, 15),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.XueRen, 15),
+                    }                   
                 }
             },
             
