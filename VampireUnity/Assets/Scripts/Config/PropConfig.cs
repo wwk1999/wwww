@@ -320,6 +320,7 @@ public class PropConfig : MonoBehaviour
         SkillShu,
         ChongWuShiWu,
         DaKongShi,
+        ChiBangFight
     }
 
     public static Dictionary<int, string> PropNameDic = new Dictionary<int, string>()

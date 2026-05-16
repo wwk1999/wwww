@@ -48,7 +48,7 @@ public class yuyiinfo : MonoBehaviour
         TiaoZhanButton.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);
-            LevelInfoConfig.CurrentGameLevel = 200+PlayerData.S.yuyiShowLevel;
+            LevelInfoConfig.CurrentGameLevel = 300+PlayerData.S.yuyiShowLevel;
             LevelInfoConfig.CurrentGameLevelType = LevelType.ChiBang;
             WindowController.S.Message.SetActive(false);
             WindowController.S.SceneLoadingWindow.SetActive(true);
@@ -86,36 +86,36 @@ public class yuyiinfo : MonoBehaviour
         {
             case 1:
                 Name1.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[201];
+                monsterList = LevelInfoConfig.LevelMonsterDic[301];
                 diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[1];
                 break;
             case 2:
                 Name2.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[202];
+                monsterList = LevelInfoConfig.LevelMonsterDic[302];
                 diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[2];
 
                 break;
             case 3:
                 Name3.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[203];
+                monsterList = LevelInfoConfig.LevelMonsterDic[303];
                 diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[3];
 
                 break;
             case 4:
                 Name4.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[204];
+                monsterList = LevelInfoConfig.LevelMonsterDic[304];
                 diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[4];
 
                 break;
             case 5:
                 Name5.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[205];
+                monsterList = LevelInfoConfig.LevelMonsterDic[305];
                 diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[5];
 
                 break;
             case 6:
                 Name6.gameObject.SetActive(true);                
-                monsterList = LevelInfoConfig.LevelMonsterDic[206];
+                monsterList = LevelInfoConfig.LevelMonsterDic[306];
                 diaoluolist = LevelInfoConfig.ChiBangDiaoLuoDic[6];
 
                 break;

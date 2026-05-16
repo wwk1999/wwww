@@ -146,55 +146,91 @@ public class ToastInfo : MonoBehaviour
 
         if (propTable != null)
         {
-            switch (propTable.Quality)
+            if (propTable.ChiBangType != ChiBangType.None)
             {
-                case 1:
-                    whiteName.gameObject.SetActive(true);
-                    bg.sprite = ResourcesConfig.WhiteBg;
-                    whiteName.text = EquipName.EquipNameDic[propTable.EquipName];
-                    break;
-                case 2:
-                    greenName.gameObject.SetActive(true);
-                    bg.sprite = ResourcesConfig.GreenBg;
-                    greenName.text = EquipName.EquipNameDic[propTable.EquipName];
-
-                    break;
-                case 3:
-                    blueName.gameObject.SetActive(true);
-                    bg.sprite = ResourcesConfig.BlueBg;
-                    blueName.text = EquipName.EquipNameDic[propTable.EquipName];
-                    break;
-                case 4:
-                    purpleName.gameObject.SetActive(true);
-                    bg.sprite = ResourcesConfig.PurpleBg;
-                    purpleName.text = EquipName.EquipNameDic[propTable.EquipName];
-                    break;
-                case 5:
-                    orangeName.gameObject.SetActive(true);
-                    bg.sprite = ResourcesConfig.OrangeBg;
-                    orangeName.text = EquipName.EquipNameDic[propTable.EquipName];
-                    break;
-                case 6:
-                    redName.gameObject.SetActive(true);
-                    bg.sprite = ResourcesConfig.RedBg;
-                    redName.text = EquipName.EquipNameDic[propTable.EquipName];
-                    break;
-            }
-
-            if (propTable.PropType == PropConfig.PropType.HH || propTable.PropType == PropConfig.PropType.HA ||
-                propTable.PropType == PropConfig.PropType.HC || propTable.PropType == PropConfig.PropType.HD ||
-                propTable.PropType == PropConfig.PropType.AA || propTable.PropType == PropConfig.PropType.AC ||
-                propTable.PropType == PropConfig.PropType.AD || propTable.PropType == PropConfig.PropType.CC ||
-                propTable.PropType == PropConfig.PropType.DD || propTable.PropType == PropConfig.PropType.CD)
-            {
-                BaoShiInfo baoshi = new BaoShiInfo();
-                baoshi.BaoShiType= (BaoShiType)(propTable.PropType-5);
-                baoshi.Quality = propTable.Quality;
-                image.sprite = ResourcesConfig.GetBaoShiSprite(baoshi);
+                image.sprite = ChiBangConfig.GetChiBangSprite(propTable.ChiBangType);
+                int quality = ChiBangConfig.GetChiBangQuality(propTable.ChiBangType);
+                switch (quality)
+                {
+                    case 2:
+                        greenName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.GreenBg;
+                        greenName.text = ChiBangConfig.GetChiBangName(propTable.ChiBangType);
+                        break;
+                    case 3:
+                        blueName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.BlueBg;
+                        blueName.text = ChiBangConfig.GetChiBangName(propTable.ChiBangType);
+                        break;
+                    case 4:
+                        purpleName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.PurpleBg;
+                        purpleName.text = ChiBangConfig.GetChiBangName(propTable.ChiBangType);
+                        break;
+                    case 5:
+                        orangeName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.OrangeBg;
+                        orangeName.text = ChiBangConfig.GetChiBangName(propTable.ChiBangType);
+                        break;
+                    case 6:
+                        redName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.RedBg;
+                        redName.text = ChiBangConfig.GetChiBangName(propTable.ChiBangType);
+                        break;
+                }
             }
             else
             {
-                image.sprite = ResourcesConfig.GetPropSprite(propTable);
+                switch (propTable.Quality)
+                {
+                    case 1:
+                        whiteName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.WhiteBg;
+                        whiteName.text = EquipName.EquipNameDic[propTable.EquipName];
+                        break;
+                    case 2:
+                        greenName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.GreenBg;
+                        greenName.text = EquipName.EquipNameDic[propTable.EquipName];
+
+                        break;
+                    case 3:
+                        blueName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.BlueBg;
+                        blueName.text = EquipName.EquipNameDic[propTable.EquipName];
+                        break;
+                    case 4:
+                        purpleName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.PurpleBg;
+                        purpleName.text = EquipName.EquipNameDic[propTable.EquipName];
+                        break;
+                    case 5:
+                        orangeName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.OrangeBg;
+                        orangeName.text = EquipName.EquipNameDic[propTable.EquipName];
+                        break;
+                    case 6:
+                        redName.gameObject.SetActive(true);
+                        bg.sprite = ResourcesConfig.RedBg;
+                        redName.text = EquipName.EquipNameDic[propTable.EquipName];
+                        break;
+                }
+
+                if (propTable.PropType == PropConfig.PropType.HH || propTable.PropType == PropConfig.PropType.HA ||
+                    propTable.PropType == PropConfig.PropType.HC || propTable.PropType == PropConfig.PropType.HD ||
+                    propTable.PropType == PropConfig.PropType.AA || propTable.PropType == PropConfig.PropType.AC ||
+                    propTable.PropType == PropConfig.PropType.AD || propTable.PropType == PropConfig.PropType.CC ||
+                    propTable.PropType == PropConfig.PropType.DD || propTable.PropType == PropConfig.PropType.CD)
+                {
+                    BaoShiInfo baoshi = new BaoShiInfo();
+                    baoshi.BaoShiType = (BaoShiType)(propTable.PropType - 5);
+                    baoshi.Quality = propTable.Quality;
+                    image.sprite = ResourcesConfig.GetBaoShiSprite(baoshi);
+                }
+                else
+                {
+                    image.sprite = ResourcesConfig.GetPropSprite(propTable);
+                }
             }
         }
 

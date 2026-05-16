@@ -390,6 +390,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaChong.cs" />
     <Compile Include="Assets\Scripts\Equip\XueRen\XueRenShoe.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Helmet\HpReductionAddDefense.cs" />
+    <Compile Include="Assets\Scripts\Prop\ChiBangFight.cs" />
     <Compile Include="Assets\Scripts\Tool\AnimCallBack.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioController.cs" />
     <Compile Include="Assets\Scripts\Tool\BossWarning.cs" />

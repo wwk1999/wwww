@@ -31,6 +31,7 @@ public class PropTable:TableBase
         public PropConfig.PropType PropType { get; set; }
         public int Count { get; set; }
         public string Desc { get; set; }
+        public ChiBangType  ChiBangType { get; set; }
 
         
         public PropTable(

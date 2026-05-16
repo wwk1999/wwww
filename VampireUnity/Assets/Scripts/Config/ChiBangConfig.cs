@@ -56,6 +56,93 @@ namespace Config
     
     public class ChiBangConfig
     {
+
+        public static ChiBangType GetRandomChiBangType(int quality)
+        {
+            switch (quality)
+            {
+                case 2:
+                    var random = Random.Range(1, 7);
+                    switch (random)
+                    {
+                        case 1:
+                            return ChiBangType.Green1;
+                        case 2:
+                            return ChiBangType.Green2;
+                        case 3:
+                            return ChiBangType.Green3;
+                        case 4:
+                            return ChiBangType.Green4;
+                        case 5:
+                            return ChiBangType.Green5;
+                        case 6:
+                            return ChiBangType.Green6;
+                    }
+                    break;
+                case 3:
+                    var random1 = Random.Range(1, 9);
+
+                    switch (random1)
+                    {
+                        case 1:
+                            return  ChiBangType.Blue1;
+                        case 2:
+                            return  ChiBangType.Blue2;
+                        case 3:
+                            return  ChiBangType.Blue3;
+                        case 4:
+                            return  ChiBangType.Blue4;
+                        case 5:
+                            return  ChiBangType.Blue5;
+                        case 6:
+                            return  ChiBangType.Blue6;
+                        case 7:
+                            return  ChiBangType.Blue7;
+                        case 8:
+                            return  ChiBangType.Blue8;
+                    }
+                    break;
+                
+                case 4:
+                    var random2=Random.Range(1, 8);
+                    switch (random2)
+                    {
+                        case 1:
+                            return ChiBangType.Purple1;
+                        case 2:
+                            return ChiBangType.Purple2;
+                        case 3:
+                            return ChiBangType.Purple3;
+                        case 4:
+                            return ChiBangType.Purple4;
+                        case 5:
+                            return ChiBangType.Purple5;
+                        case 6:
+                            return ChiBangType.Purple6;
+                        case 7:
+                            return ChiBangType.Purple7;
+                    }
+                    break;
+                
+                case 5:
+                    var random3=Random.Range(1, 4);
+                    switch (random3)
+                    {
+                        case 1:
+                            return ChiBangType.Orange1;
+                        case 2:
+                            return ChiBangType.Orange2;
+                        case 3:
+                            return ChiBangType.Orange3;
+                    }
+                    break;
+                
+                case 6:
+                    return ChiBangType.Red1;
+            }
+
+            return ChiBangType.None;
+        }
         public static Dictionary<int, float> ChiBangXjAttributeDic = new Dictionary<int, float>()
         {
             {1,1f},

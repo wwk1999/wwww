@@ -1039,6 +1039,7 @@ public abstract class MonsterBase : MonoBehaviour
             float random = Random.Range(0, 100f);
             if (random <= prop.Probability*(1+GlobalPlayerAttribute.Forture))
             {
+                
                 //生成装备
                 GameObject propObj = GameController.S.GetProp(prop.PropItem);
                 GameController.S.PropBaseSet.Add(propObj.GetComponent<PropBase>());

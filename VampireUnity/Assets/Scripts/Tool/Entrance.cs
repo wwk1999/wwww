@@ -1529,6 +1529,12 @@ public class Entrance : MonoBehaviour
     {
         switch (info.PropItem.PropType)
         {
+            case PropConfig.PropType.ChiBangFight:
+                ChiBangFight chibang =
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBang")).GetComponent<ChiBangFight>();
+                chibang.gameObject.SetActive(false);
+                GameController.S.ChiBangFightQueue.Enqueue(chibang);
+                break;
             case PropConfig.PropType.WeaponFragment:
                 switch (info.PropItem.Quality)
                 {

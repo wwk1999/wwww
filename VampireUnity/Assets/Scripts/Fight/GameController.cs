@@ -408,7 +408,9 @@ public class GameController : XSingleton<GameController>
     //怪物伤害文本对象池队列
     [NonReorderable]public Queue<MonsterHurtText>MonsterHurtTextQueue = new Queue<MonsterHurtText>();
 
-    
+    //翅膀对象池
+    [NonReorderable]public Queue<ChiBangFight>ChiBangFightQueue = new Queue<ChiBangFight>();
+
     
     //武器碎片对象池
     [NonReorderable]public Queue<GameObject>WhiteWeaponFragmengQueue = new Queue<GameObject>();
@@ -655,6 +657,11 @@ public class GameController : XSingleton<GameController>
     {
         switch (prop.PropType)
         {
+            case PropConfig.PropType.ChiBangFight:
+                ChiBangType chiBangType = ChiBangConfig.GetRandomChiBangType(prop.Quality);
+                ChiBangFight chiBangFight = ChiBangFightQueue.Dequeue();
+                chiBangFight.ChiBangType=chiBangType;
+                return chiBangFight.gameObject;
             case PropConfig.PropType.WeaponFragment:
                 switch (prop.Quality)
                 {

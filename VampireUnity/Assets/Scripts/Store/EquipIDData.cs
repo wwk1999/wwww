@@ -48,6 +48,28 @@ public class EquipIDData : XSingleton<EquipIDData>
 
     public void SaveProp(PropTable prop)
     {
+        if (prop.PropType == PropConfig.PropType.ChiBangFight)//翅膀道具
+        {
+            if(PlayerData.S.ChiBangList.ContainsKey(prop.ChiBangType))
+            {
+                PlayerData.S.ChiBangList[prop.ChiBangType].XjEx++;
+                if (PlayerData.S.ChiBangList[prop.ChiBangType].XjEx >=
+                    ChiBangConfig.ChiBangXjDic[PlayerData.S.ChiBangList[prop.ChiBangType].Xj])
+                {
+                    PlayerData.S.ChiBangList[prop.ChiBangType].Xj++;
+                    PlayerData.S.ChiBangList[prop.ChiBangType].XjEx=0;
+                }
+            }
+            else
+            {
+                ChiBangInfo chiBangInfo = new ChiBangInfo();
+                chiBangInfo.ChiBangType = prop.ChiBangType;
+                PlayerData.S.ChiBangList[prop.ChiBangType]=chiBangInfo;
+            }
+
+            return;
+        }
+        
         var data = new PropTable()
         {
             PropType =  prop.PropType,
