@@ -50,6 +50,19 @@ public class GameLevelWindow1 : MonoBehaviour
     {
         if (PlayerData.S.maxGameLevel >= 6)
         {
+            WeaponButton.image.color=new Color(1, 1, 1);
+            WeaponButton.interactable = true;
+        }
+        else
+        {
+            WeaponButton.image.color=new Color(60/255, 60/255, 60/255);
+            WeaponButtonwww.interactable = false;
+
+        }
+        
+        
+        if (PlayerData.S.maxGameLevel >= 9)
+        {
             ChongWuButton.image.color=new Color(1, 1, 1);
             ChongWuButton.interactable = true;
         }
@@ -61,7 +74,7 @@ public class GameLevelWindow1 : MonoBehaviour
         }
         
         
-        if (PlayerData.S.maxGameLevel >= 9)
+        if (PlayerData.S.maxGameLevel >= 12)
         {
             ChiBangButton.image.color=new Color(1, 1, 1);
             ChiBangButton.interactable = true;
@@ -74,7 +87,7 @@ public class GameLevelWindow1 : MonoBehaviour
         }
         
         
-        if (PlayerData.S.maxGameLevel >= 12)
+        if (PlayerData.S.maxGameLevel >= 15)
         {
             LinHunButton.image.color=new Color(1, 1, 1);
             LinHunButton.interactable = true;

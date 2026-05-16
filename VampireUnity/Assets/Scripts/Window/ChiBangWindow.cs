@@ -311,11 +311,12 @@ public class ChiBangWindow : MonoBehaviour
       LevelLeftText.text=chiBangInfo.LevelEx.ToString();
       LevelRightText.text=ChiBangConfig.ChiBangExDic[chiBangInfo.Level].ToString();
       ChiBangAttribute chiBangAttribute =ChiBangConfig.ChiBangBaseAttributeDic[ChiBangConfig.GetChiBangQuality(chiBangInfo.ChiBangType)];
-      float scale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
-      float attack = chiBangAttribute.attack * scale;
-      float defense = chiBangAttribute.defense * scale;
-      float hp = chiBangAttribute.maxHp * scale;
-      float crit = chiBangAttribute.Crit * scale;
+      float levelscale=ChiBangConfig.ChiBangLevelAttributeDic[chiBangInfo.Level];
+      float xjscale = ((chiBangInfo.Xj - 1) * 0.2f) + 1.0f;
+      float attack = chiBangAttribute.attack * levelscale*xjscale;
+      float defense = chiBangAttribute.defense * levelscale*xjscale;
+      float hp = chiBangAttribute.maxHp * levelscale*xjscale;
+      float crit = chiBangAttribute.Crit * levelscale*xjscale;
       AttackText.text=Mathf.RoundToInt(attack).ToString();
       DefenseText.text=Mathf.RoundToInt(defense).ToString();
       CritText.text=Mathf.RoundToInt(crit).ToString();
