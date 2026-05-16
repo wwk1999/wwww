@@ -317,7 +317,6 @@ public class PropConfig : MonoBehaviour
         HpYaoShui,
         ExYaoShui,
         DiaoLuoYaoShui,
-
         SkillShu,
         ChongWuShiWu,
         DaKongShi,

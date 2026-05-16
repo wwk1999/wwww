@@ -798,15 +798,12 @@ public abstract class MonsterBase : MonoBehaviour
             LevelInfoConfig.CurrentGameLevelType == LevelType.ChiBang ||
             LevelInfoConfig.CurrentGameLevelType == LevelType.LingHun)
         {
-            if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]+LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/10)
+            if (GameController.S.KillMonsterCount > LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
                 GameController.S.StartCoroutine(DelayChuanSongMen());
             }
         }
-        if (MonsterType == MonsterType.Boss)
-        {
-            GameController.S.CollectEquip();
-        }
+       
         //附加属性
         int replyHp = Mathf.RoundToInt(GameController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
         GlobalPlayerAttribute.ReplyHp(replyHp);
@@ -816,27 +813,6 @@ public abstract class MonsterBase : MonoBehaviour
         AddWeaponEx();
         GlobalPlayerAttribute.BloodEnergy+=BloodEnergy;
         //胜利
-        switch (LevelInfoConfig.CurrentGameLevelType)
-        {
-            case LevelType.Elite:
-                if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] + LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] / 10)
-                {
-                    GameController.S.CollectEquip();
-                    var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
-                    chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                    FightBGController.S.PlaySuccessAnim();
-                }
-                break;
-            case LevelType.Normal:
-                if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
-                {
-                    GameController.S.CollectEquip();
-                    var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
-                    chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-                    FightBGController.S.PlaySuccessAnim();
-                }
-                break;
-        }
         
         if(collider2D != null)
             collider2D.enabled = false;

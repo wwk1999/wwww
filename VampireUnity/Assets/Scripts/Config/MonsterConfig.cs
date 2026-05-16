@@ -953,18 +953,7 @@ public class MonsterConfig
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 104, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
+            
             
             
             
@@ -996,18 +985,7 @@ public class MonsterConfig
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 105, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
+           
             
             
             
@@ -1041,18 +1019,8 @@ public class MonsterConfig
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 106, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
+            
+            
             
             
             
@@ -1064,11 +1032,13 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 201, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 50, defence = 50, hp = 100, ex = 20, linghun = 20,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,1),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,1),5),
+
                     }
                 }
             },
@@ -1076,26 +1046,19 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 201, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 500, ex = 100, linghun = 100,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,1),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,1),25),
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 201, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
+            
+            
+            
+            
             
             
             
@@ -1104,11 +1067,12 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 202, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 150, defence = 150, hp = 300, ex = 50, linghun = 50,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,2),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,2),5),
                     }
                 }
             },
@@ -1116,27 +1080,16 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 202, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 300, defence = 300, hp = 1500, ex = 250, linghun = 250,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,2),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,2),25),
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 202, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
-            
+           
             
             
             
@@ -1147,11 +1100,12 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 203, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 450, defence = 450, hp = 1000, ex = 150, linghun = 150,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,3),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,3),5),
                     }
                 }
             },
@@ -1159,26 +1113,18 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 203, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 900, defence = 900, hp = 5000, ex = 500, linghun = 500,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,3),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,3),25),
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 203, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
+           
+            
+            
             
             
             
@@ -1191,8 +1137,9 @@ public class MonsterConfig
                     attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,4),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,4),5),
                     }
                 }
             },
@@ -1203,23 +1150,14 @@ public class MonsterConfig
                     attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,4),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,4),25),
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 204, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
+            
+            
             
             
             
@@ -1233,8 +1171,9 @@ public class MonsterConfig
                     attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,5),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,5),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,5),5),
                     }
                 }
             },
@@ -1245,23 +1184,16 @@ public class MonsterConfig
                     attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,5),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,5),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,5),25),
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 205, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
+           
+            
+            
+            
             
             
             
@@ -1275,8 +1207,9 @@ public class MonsterConfig
                     attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,5),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,6),1),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,6),5),
                     }
                 }
             },
@@ -1287,26 +1220,12 @@ public class MonsterConfig
                     attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,5),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.SkillShu,6),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.ChongWuShiWu,6),25),
                     }
                 }
             },
-            {
-                new MonsterDiaoLuoType() { GameLevel = 206, MonsterType = MonsterType.Boss },
-                new MonsterInfo()
-                {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
-                    MonsterPropList = new List<MonsterProp>()
-                    {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5)
-                    }
-                }
-            },
-           
-            
-            
             
             
             

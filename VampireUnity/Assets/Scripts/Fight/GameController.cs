@@ -1776,7 +1776,7 @@ public class GameController : XSingleton<GameController>
         FightBGController.S.BossEnergySlider.maxValue = MaxBossEnergyNum;
         FightBGController.S.BossEnergySlider.value = BossEnergyNum;
         //召唤BOSS，激活BOSS，bosswarning动画
-        if (KillMonsterCount>=LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/2 && HaveBossWarning == false&&(LevelInfoConfig.CurrentGameLevelType==LevelType.Boss||LevelInfoConfig.CurrentGameLevelType==LevelType.MJ))
+        if (KillMonsterCount>=LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/2 && HaveBossWarning == false&&(LevelInfoConfig.CurrentGameLevelType==LevelType.Normal||LevelInfoConfig.CurrentGameLevelType==LevelType.MJ))
         {
             gamePlayer.ShowArrow();
             HaveBossWarning=true;
@@ -2124,6 +2124,7 @@ public class GameController : XSingleton<GameController>
             }
     }
 
+    //收集装备
     public void CollectEquip()
     {
         foreach (var item in EquipBaseSet)

@@ -50,7 +50,7 @@ public class WeaponInfo : MonoBehaviour
         {
             gameObject.SetActive(false);
             LevelInfoConfig.CurrentGameLevel = 100+PlayerData.S.chongwuShowLevel;
-            LevelInfoConfig.CurrentGameLevelType = LevelType.ChongWu;
+            LevelInfoConfig.CurrentGameLevelType = LevelType.Weapon;
             WindowController.S.Message.SetActive(false);
             WindowController.S.SceneLoadingWindow.SetActive(true);
         });

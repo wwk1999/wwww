@@ -15,6 +15,7 @@ public class AddUserSourceStoneData
     public int sourcestoneid;
     public int sourcestonecount;
 }
+
 public class RoleWindow1 : MonoBehaviour
 {
     public Button DebugChiBang;
@@ -44,8 +45,8 @@ public class RoleWindow1 : MonoBehaviour
     public Button debugWuQi;
 
 
-    
-    
+
+
     public Button duanzaoButton;
     public Button chibangButton;
     public Button chongwuButton;
@@ -61,7 +62,7 @@ public class RoleWindow1 : MonoBehaviour
 
 
     public Button TitleButton;
-    
+
     public Button SettingButton;
 
     public void SwitchLanguage(LanguageType language)
@@ -73,11 +74,11 @@ public class RoleWindow1 : MonoBehaviour
                 Weapon.characterSpacing = 20;
                 Bag.characterSpacing = 20;
                 ChiBang.characterSpacing = 20;
-                Skill.characterSpacing =20;
+                Skill.characterSpacing = 20;
                 Setting.characterSpacing = 20;
                 DuanZao.characterSpacing = 20;
-                StartGame.characterSpacing =20;
-                
+                StartGame.characterSpacing = 20;
+
                 TuJian.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.TuJian;
                 Weapon.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.WuQi;
                 Bag.text = LanguageConfig.LanguageItems[LanguageType.Chinese].RoleWindowLanguage.Bag;
@@ -92,11 +93,11 @@ public class RoleWindow1 : MonoBehaviour
                 Weapon.characterSpacing = 0;
                 Bag.characterSpacing = 0;
                 ChiBang.characterSpacing = 0;
-                Skill.characterSpacing =0;
+                Skill.characterSpacing = 0;
                 Setting.characterSpacing = 0;
                 DuanZao.characterSpacing = 0;
-                StartGame.characterSpacing =0;
-                
+                StartGame.characterSpacing = 0;
+
                 TuJian.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.TuJian;
                 Weapon.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.WuQi;
                 Bag.text = LanguageConfig.LanguageItems[LanguageType.English].RoleWindowLanguage.Bag;
@@ -111,11 +112,11 @@ public class RoleWindow1 : MonoBehaviour
                 Weapon.characterSpacing = 20;
                 Bag.characterSpacing = 20;
                 ChiBang.characterSpacing = 20;
-                Skill.characterSpacing =20;
+                Skill.characterSpacing = 20;
                 Setting.characterSpacing = 20;
                 DuanZao.characterSpacing = 20;
-                StartGame.characterSpacing =20;
-                
+                StartGame.characterSpacing = 20;
+
                 TuJian.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.TuJian;
                 Weapon.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.WuQi;
                 Bag.text = LanguageConfig.LanguageItems[LanguageType.Han].RoleWindowLanguage.Bag;
@@ -130,11 +131,11 @@ public class RoleWindow1 : MonoBehaviour
                 Weapon.characterSpacing = 20;
                 Bag.characterSpacing = 20;
                 ChiBang.characterSpacing = 20;
-                Skill.characterSpacing =20;
+                Skill.characterSpacing = 20;
                 Setting.characterSpacing = 20;
                 DuanZao.characterSpacing = 20;
-                StartGame.characterSpacing =20;
-                
+                StartGame.characterSpacing = 20;
+
                 TuJian.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.TuJian;
                 Weapon.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.WuQi;
                 Bag.text = LanguageConfig.LanguageItems[LanguageType.Ri].RoleWindowLanguage.Bag;
@@ -146,17 +147,17 @@ public class RoleWindow1 : MonoBehaviour
                 break;
         }
     }
-    
-    
+
+
 
     public void UpdateRoleWindow()
     {
-        yuanLinText.text = GlobalPlayerAttribute.BloodEnergy.ToString();// 元灵数量text
-        levelText.text= GlobalPlayerAttribute.Level.ToString();
-        expSlider.maxValue=GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
-        expSlider.value=GlobalPlayerAttribute.Exp ;
+        yuanLinText.text = GlobalPlayerAttribute.BloodEnergy.ToString(); // 元灵数量text
+        levelText.text = GlobalPlayerAttribute.Level.ToString();
+        expSlider.maxValue = GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
+        expSlider.value = GlobalPlayerAttribute.Exp;
     }
-    
+
     private void OnEnable()
     {
         UpdateRoleWindow();
@@ -173,154 +174,236 @@ public class RoleWindow1 : MonoBehaviour
         LanguageType langType = (LanguageType)obj[0];
         SwitchLanguage(langType);
     }
-    
-    
+
+
     private void Start()
     {
-        SettingButton.onClick.AddListener(() =>
-        {
-            WindowController.S.SettingWindow.gameObject.SetActive(true);
-        });
+        SettingButton.onClick.AddListener(() => { WindowController.S.SettingWindow.gameObject.SetActive(true); });
         DebugChiBang.onClick.AddListener(() =>
         {
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue1))
             {
-                PlayerData.S.ChiBangList.Add(ChiBangType.Blue1, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue1});
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue1, new ChiBangInfo() { ChiBangType = ChiBangType.Blue1 });
             }
+
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue2))
             {
-                PlayerData.S.ChiBangList.Add(ChiBangType.Blue2, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue2});
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue2, new ChiBangInfo() { ChiBangType = ChiBangType.Blue2 });
             }
+
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue3))
             {
-                PlayerData.S.ChiBangList.Add(ChiBangType.Blue3, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue3});
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue3, new ChiBangInfo() { ChiBangType = ChiBangType.Blue3 });
             }
+
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue4))
             {
-                PlayerData.S.ChiBangList.Add(ChiBangType.Blue4, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue4});
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue4, new ChiBangInfo() { ChiBangType = ChiBangType.Blue4 });
             }
+
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue5))
             {
-                PlayerData.S.ChiBangList.Add(ChiBangType.Blue5, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue5});
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue5, new ChiBangInfo() { ChiBangType = ChiBangType.Blue5 });
             }
+
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue6))
             {
-                PlayerData.S.ChiBangList.Add(ChiBangType.Blue6, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue6});
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue6, new ChiBangInfo() { ChiBangType = ChiBangType.Blue6 });
             }
+
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue7))
             {
-                PlayerData.S.ChiBangList.Add(ChiBangType.Blue7, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue7});
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue7, new ChiBangInfo() { ChiBangType = ChiBangType.Blue7 });
             }
+
             if (!PlayerData.S.ChiBangList.ContainsKey(ChiBangType.Blue8))
             {
-                PlayerData.S.ChiBangList.Add(ChiBangType.Blue8, new ChiBangInfo(){ChiBangType =  ChiBangType.Blue8});
+                PlayerData.S.ChiBangList.Add(ChiBangType.Blue8, new ChiBangInfo() { ChiBangType = ChiBangType.Blue8 });
             }
-            
-            
+
+
 
             if (!BagController.S.PropList.ContainsKey(401))
             {
-                BagController.S.PropList.Add(401,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:1));
+                BagController.S.PropList.Add(401, new PropTable(PropConfig.PropType.ChiBang, count: 10, quality: 1));
             }
-            
+
             if (!BagController.S.PropList.ContainsKey(402))
             {
-                BagController.S.PropList.Add(402,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:2));
+                BagController.S.PropList.Add(402, new PropTable(PropConfig.PropType.ChiBang, count: 10, quality: 2));
             }
-            
+
             if (!BagController.S.PropList.ContainsKey(403))
             {
-                BagController.S.PropList.Add(403,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:3));
+                BagController.S.PropList.Add(403, new PropTable(PropConfig.PropType.ChiBang, count: 10, quality: 3));
             }
-            
+
             if (!BagController.S.PropList.ContainsKey(404))
             {
-                BagController.S.PropList.Add(404,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:4));
+                BagController.S.PropList.Add(404, new PropTable(PropConfig.PropType.ChiBang, count: 10, quality: 4));
             }
-            
+
             if (!BagController.S.PropList.ContainsKey(405))
             {
-                BagController.S.PropList.Add(405,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:5));
+                BagController.S.PropList.Add(405, new PropTable(PropConfig.PropType.ChiBang, count: 10, quality: 5));
             }
-            
+
             if (!BagController.S.PropList.ContainsKey(406))
             {
-                BagController.S.PropList.Add(406,new PropTable(PropConfig.PropType.ChiBang,count:10,quality:6));
+                BagController.S.PropList.Add(406, new PropTable(PropConfig.PropType.ChiBang, count: 10, quality: 6));
             }
-           
+
         });
         Debug.Log("点击进入角色界面");
         InitEquip();
-        chongwuButton.onClick.AddListener(() =>
-        {
-            WindowController.S.ChongWuWindow.gameObject.SetActive(true);
-        });
+        chongwuButton.onClick.AddListener(() => { WindowController.S.ChongWuWindow.gameObject.SetActive(true); });
         debugWuQi.onClick.AddListener(() =>
         {
-    PlayerData.S.primaryWeaponLevel++;
-    PlayerData.S.primaryDianLevel++;
-    PlayerData.S.primaryHuoLevel++;
-    PlayerData.S.primaryHeiAnLevel++;
-    PlayerData.S.dianBaoZhaLevel++;
-    PlayerData.S.iceBaoZhaLevel++;
+            PlayerData.S.primaryWeaponLevel++;
+            PlayerData.S.primaryDianLevel++;
+            PlayerData.S.primaryHuoLevel++;
+            PlayerData.S.primaryHeiAnLevel++;
+            if (PlayerData.S.dianBaoZhaLevel > 0)
+            {
+                PlayerData.S.dianBaoZhaLevel++;
+            }
 
-    PlayerData.S.HuoBaoZhaWeaponLevel++;
-    PlayerData.S.puTong3WeaponLevel++;
-    PlayerData.S.xuKongWeaponLevel++;
-    PlayerData.S.lvQuanWeaponLevel++;
-    PlayerData.S.fireWeaponLevel++;
-    PlayerData.S.heiDongWeaponLevel++;
-    PlayerData.S.jianQiWeaponLevel++;
-    
-    PlayerData.S.Huo7WeaponLevel++;
-    PlayerData.S.IcePenWeaponLevel++;
-    PlayerData.S.Ice7WeaponLevel++;
-    PlayerData.S.Ice4BaoZhaWeaponLevel++;
-    PlayerData.S.HuoFenLieWeaponLevel++;
-    PlayerData.S.HuoDiPenWeaponLevel++;
-    PlayerData.S.HeiAnQuXianWeaponLevel++;
-    PlayerData.S.HeiAnHuiXuanWeaponLevel++;
-    PlayerData.S.HeiAnBaoZhaWeaponLevel++;
-    PlayerData.S.DianSanSheWeaponLevel++;
-    PlayerData.S.DianLuoLei5WeaponLevel++;
-    PlayerData.S.DianJiSuWeaponLevel++;
+            if (PlayerData.S.iceBaoZhaLevel > 0)
+            {
+                PlayerData.S.iceBaoZhaLevel++;
+            }
+
+            if (PlayerData.S.HuoBaoZhaWeaponLevel > 0)
+            {
+                PlayerData.S.HuoBaoZhaWeaponLevel++;
+            }
+
+            if (PlayerData.S.puTong3WeaponLevel > 0)
+            {
+                PlayerData.S.puTong3WeaponLevel++;
+            }
+
+            if (PlayerData.S.xuKongWeaponLevel > 0)
+            {
+                PlayerData.S.xuKongWeaponLevel++;
+            }
+
+            if (PlayerData.S.lvQuanWeaponLevel > 0)
+            {
+                PlayerData.S.lvQuanWeaponLevel++;
+            }
+
+            if (PlayerData.S.fireWeaponLevel > 0)
+            {
+                PlayerData.S.fireWeaponLevel++;
+            }
+
+            if (PlayerData.S.heiDongWeaponLevel > 0)
+            {
+                PlayerData.S.heiDongWeaponLevel++;
+            }
+
+            if (PlayerData.S.jianQiWeaponLevel > 0)
+            {
+                PlayerData.S.jianQiWeaponLevel++;
+            }
+
+            if (PlayerData.S.Huo7WeaponLevel > 0)
+            {
+                PlayerData.S.Huo7WeaponLevel++;
+            }
+
+            if (PlayerData.S.IcePenWeaponLevel > 0)
+            {
+                PlayerData.S.IcePenWeaponLevel++;
+            }
+
+            if (PlayerData.S.Ice7WeaponLevel > 0)
+            {
+                PlayerData.S.Ice7WeaponLevel++;
+            }
+
+            if (PlayerData.S.Ice4BaoZhaWeaponLevel > 0)
+            {
+                PlayerData.S.Ice4BaoZhaWeaponLevel++;
+            }
+
+            if (PlayerData.S.HuoFenLieWeaponLevel > 0)
+            {
+                PlayerData.S.HuoFenLieWeaponLevel++;
+            }
+
+            if (PlayerData.S.HuoDiPenWeaponLevel > 0)
+            {
+                PlayerData.S.HuoDiPenWeaponLevel++;
+            }
+
+            if (PlayerData.S.HeiAnQuXianWeaponLevel > 0)
+            {
+                PlayerData.S.HeiAnQuXianWeaponLevel++;
+            }
+
+            if (PlayerData.S.HeiAnHuiXuanWeaponLevel > 0)
+            {
+                PlayerData.S.HeiAnHuiXuanWeaponLevel++;
+            }
+
+            if (PlayerData.S.HeiAnBaoZhaWeaponLevel > 0)
+            {
+                PlayerData.S.HeiAnBaoZhaWeaponLevel++;
+            }
+
+            if (PlayerData.S.DianSanSheWeaponLevel > 0)
+            {
+                PlayerData.S.DianSanSheWeaponLevel++;
+            }
+
+            if (PlayerData.S.DianLuoLei5WeaponLevel > 0)
+            {
+                PlayerData.S.DianLuoLei5WeaponLevel++;
+            }
+
+            if (PlayerData.S.DianJiSuWeaponLevel > 0)
+            {
+                PlayerData.S.DianJiSuWeaponLevel++;
+            }
         });
 
         debugChongWu.onClick.AddListener(() =>
         {
             var data3 = new PropTable()
             {
-                PropType =  PropConfig.PropType.ChongWuDan,
+                PropType = PropConfig.PropType.ChongWuDan,
                 Quality = 3,
                 Desc = "",
-                Count =  100,
+                Count = 100,
                 EquipName = "NormalChongWuDan",
             };
             if (BagController.S.PropList.ContainsKey(1603))
             {
-                BagController.S.PropList[1603].Count+=data3.Count;
+                BagController.S.PropList[1603].Count += data3.Count;
             }
             else
             {
-                BagController.S.PropList.Add(1603,data3);
+                BagController.S.PropList.Add(1603, data3);
             }
-            
-            
+
+
             var data5 = new PropTable()
             {
-                PropType =  PropConfig.PropType.ChongWuDan,
+                PropType = PropConfig.PropType.ChongWuDan,
                 Quality = 5,
                 Desc = "",
-                Count =  100,
+                Count = 100,
                 EquipName = "GaoJiChongWuDan",
             };
             if (BagController.S.PropList.ContainsKey(1605))
             {
-                BagController.S.PropList[1605].Count+=data5.Count;
+                BagController.S.PropList[1605].Count += data5.Count;
             }
             else
             {
-                BagController.S.PropList.Add(1605,data5);
+                BagController.S.PropList.Add(1605, data5);
             }
 
             PlayerData.S.ChongWuShiWu1 += 10;
@@ -329,91 +412,82 @@ public class RoleWindow1 : MonoBehaviour
             PlayerData.S.ChongWuShiWu4 += 10;
             PlayerData.S.ChongWuShiWu5 += 10;
             PlayerData.S.ChongWuShiWu6 += 10;
-            
+
             var XiSuiYeData3 = new PropTable()
             {
-                PropType =  PropConfig.PropType.XiSuiYe,
+                PropType = PropConfig.PropType.XiSuiYe,
                 Quality = 3,
                 Desc = "",
-                Count =  100,
+                Count = 100,
                 EquipName = "NormalXiSuiYe",
             };
             if (BagController.S.PropList.ContainsKey(1703))
             {
-                BagController.S.PropList[1703].Count+=XiSuiYeData3.Count;
+                BagController.S.PropList[1703].Count += XiSuiYeData3.Count;
             }
             else
             {
-                BagController.S.PropList.Add(1703,XiSuiYeData3);
+                BagController.S.PropList.Add(1703, XiSuiYeData3);
             }
-            
+
             var XiSuiYeData5 = new PropTable()
             {
-                PropType =  PropConfig.PropType.XiSuiYe,
+                PropType = PropConfig.PropType.XiSuiYe,
                 Quality = 5,
                 Desc = "",
-                Count =  100,
+                Count = 100,
                 EquipName = "GaoJiXiSuiYe",
             };
             if (BagController.S.PropList.ContainsKey(1705))
             {
-                BagController.S.PropList[1705].Count+=XiSuiYeData5.Count;
+                BagController.S.PropList[1705].Count += XiSuiYeData5.Count;
             }
             else
             {
-                BagController.S.PropList.Add(1705,XiSuiYeData5);
+                BagController.S.PropList.Add(1705, XiSuiYeData5);
             }
-            
-            
+
+
             var XueMaiDanData3 = new PropTable()
             {
-                PropType =  PropConfig.PropType.XueMaiDan,
+                PropType = PropConfig.PropType.XueMaiDan,
                 Quality = 3,
                 Desc = "",
-                Count =  100,
+                Count = 100,
                 EquipName = "NormalXueMaiDan",
             };
             if (BagController.S.PropList.ContainsKey(1803))
             {
-                BagController.S.PropList[1803].Count+=XueMaiDanData3.Count;
+                BagController.S.PropList[1803].Count += XueMaiDanData3.Count;
             }
             else
             {
-                BagController.S.PropList.Add(1803,XueMaiDanData3);
+                BagController.S.PropList.Add(1803, XueMaiDanData3);
             }
-            
+
             var XueMaiDanData5 = new PropTable()
             {
-                PropType =  PropConfig.PropType.XueMaiDan,
+                PropType = PropConfig.PropType.XueMaiDan,
                 Quality = 5,
                 Desc = "",
-                Count =  100,
+                Count = 100,
                 EquipName = "GaoJiXueMaiDan",
             };
             if (BagController.S.PropList.ContainsKey(1805))
             {
-                BagController.S.PropList[1805].Count+=XueMaiDanData5.Count;
+                BagController.S.PropList[1805].Count += XueMaiDanData5.Count;
             }
             else
             {
-                BagController.S.PropList.Add(1805,XueMaiDanData5);
+                BagController.S.PropList.Add(1805, XueMaiDanData5);
             }
 
         });
-        TitleButton.onClick.AddListener(() =>
-        {
-            WindowController.S.TitleWindow.gameObject.SetActive(true);
-        });
-        ObserverModuleManager.S.RegisterEvent(ConstKeys.SwitchLanguage,SwitchLanguageObj);
-        debugBaoshi.onClick.AddListener(() =>
-        {
-           BagController.S.BaoShiDebug();
-        });
-        settingButton.onClick.AddListener(() =>
-        {
-            WindowController.S.SettingWindow.SetActive(true);
-        });
-        ObserverModuleManager.S.RegisterEvent("ChiBang",RefreshChiBang);
+        TitleButton.onClick.AddListener(() => { WindowController.S.TitleWindow.gameObject.SetActive(true); });
+        ObserverModuleManager.S.RegisterEvent(ConstKeys.SwitchLanguage, SwitchLanguageObj);
+        debugBaoshi.onClick.AddListener(() => { BagController.S.BaoShiDebug(); });
+        settingButton.onClick.AddListener(() => { WindowController.S.SettingWindow.SetActive(true); });
+        ObserverModuleManager.S.RegisterEvent("ChiBang", RefreshChiBang);
 
         GlobalPlayerAttribute.RefreshFuJiaAttribute();
 
@@ -424,45 +498,36 @@ public class RoleWindow1 : MonoBehaviour
                 StoreController.S.SaveStoreData();
             }
         });
-        
+
         BagController.S.IsInit = true;
-        chibangButton.onClick.AddListener(() =>
-        {
-            Instantiate(Resources.Load("Prefabs/Window/ChiBangWindow"));
-        });
+        chibangButton.onClick.AddListener(() => { Instantiate(Resources.Load("Prefabs/Window/ChiBangWindow")); });
         debugLingHun.onClick.AddListener(() =>
         {
             GlobalPlayerAttribute.BloodEnergy += 100000;
             StoreController.S.SaveStoreData();
         });
-        debugSkillCount.onClick.AddListener(()=>
+        debugSkillCount.onClick.AddListener(() =>
         {
             SkillJiaDian.S.CurrentSkillCount += 10;
             StoreController.S.SaveStoreData();
         });
-        
-        debugJingCui.onClick.AddListener(() =>
-        {
-            BagController.S.JingCuiDebug();
-        });
-        
-        debugWeaponFragment.onClick.AddListener(() =>
-        {
-            BagController.S.WeaponFragmentDebug();
-        });
-        
+
+        debugJingCui.onClick.AddListener(() => { BagController.S.JingCuiDebug(); });
+
+        debugWeaponFragment.onClick.AddListener(() => { BagController.S.WeaponFragmentDebug(); });
+
         duanzaoButton.onClick.AddListener(() =>
         {
-            GameObject duanzao=Instantiate(Resources.Load<GameObject>("Prefabs/Window/DuanZaoWindow"));
+            GameObject duanzao = Instantiate(Resources.Load<GameObject>("Prefabs/Window/DuanZaoWindow"));
         });
-        
-        
+
+
         debugLevel.onClick.AddListener(() =>
         {
             GlobalPlayerAttribute.GameLevel = 100;
             StoreController.S.SaveStoreData();
         });
-        
+
         monsterBookButton.onClick.AddListener(() =>
         {
             Debug.Log("点击进入怪物图鉴界面");
@@ -471,13 +536,13 @@ public class RoleWindow1 : MonoBehaviour
         bagButton.onClick.AddListener(() =>
         {
             Debug.Log("开始执行ShowBag方法");
-        
+
             // 检查背包对象是否为空
             if (BagController.S.bag == null)
             {
                 Debug.LogError("ShowBag出错: bag对象为null，尝试重新初始化背包");
                 BagController.S.InitBag();
-            
+
                 // 再次检查背包对象
                 if (BagController.S.bag == null)
                 {
@@ -485,24 +550,24 @@ public class RoleWindow1 : MonoBehaviour
                     return;
                 }
             }
-        
+
             // 检查装备列表是否为空
             if (BagController.S.EquipIdList == null)
             {
                 Debug.LogWarning("ShowBag警告: EquipIdList为null，初始化为空列表");
                 BagController.S.EquipIdList = new Dictionary<int, EquipTable>();
             }
-        
+
             Debug.Log($"暂停游戏，当前EquipIdList中有 {BagController.S.EquipIdList.Count} 件装备");
-        
+
             // 暂停游戏
             BagController.S.bag.gameObject.SetActive(true);
-        
-            
+
+
             Debug.Log("调用ShowEquip方法显示装备");
             BagController.S.ShowEquip();
             BagController.S.RefreshPlayerEquip();
-        
+
             Debug.Log("ShowBag方法执行完成");
         });
         weaponButton.onClick.AddListener(() =>
@@ -529,9 +594,9 @@ public class RoleWindow1 : MonoBehaviour
             WindowController.S.SkillWindow.SetActive(true);
             gameObject.SetActive(false);
         });
-        
+
     }
-    
+
     public void InitEquip()
     {
         if (BagController.S.IsInit)

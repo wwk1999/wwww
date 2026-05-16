@@ -2847,21 +2847,22 @@ public class ResourcesConfig : MonoBehaviour
                 return ChongWuSkill5;
             case 2206:
                 return ChongWuSkill6;
-
-            case 2305:
-                return DaKongShi;
-            case 2401:
+            
+            case 2301:
                 return ChongWuShiWuWhite;
-            case 2402:
+            case 2302:
                 return ChongWuShiWuGreen;
-            case 2403:
+            case 2303:
                 return ChongWuShiWuBlue;
-            case 2404:
+            case 2304:
                 return ChongWuShiWuPurple;
-            case 2405:
+            case 2305:
                 return ChongWuShiWuOrange;
-            case 2406:
+            case 2306:
                 return ChongWuShiWuRed;
+            
+            case 2405:
+                return DaKongShi;
         }
 
         return null;

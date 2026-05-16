@@ -202,7 +202,6 @@ public class GameLevelWindow1 : MonoBehaviour
         level3Button.onClick.AddListener(() =>
         {
            Debug.Log("点击关卡3");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 3;
            levelInfo.SetActive(true);
@@ -213,7 +212,6 @@ public class GameLevelWindow1 : MonoBehaviour
         level6Button.onClick.AddListener(() =>
         {
            Debug.Log("点击关卡6");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 6;
            levelInfo.SetActive(true);
@@ -224,7 +222,6 @@ public class GameLevelWindow1 : MonoBehaviour
         level9Button.onClick.AddListener(() =>
         {
            Debug.Log("点击关卡9");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 9;
            levelInfo.SetActive(true);
@@ -235,7 +232,6 @@ public class GameLevelWindow1 : MonoBehaviour
         level12Button.onClick.AddListener(() =>
         {
            Debug.Log("点击关卡12");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 12;
            levelInfo.SetActive(true);
@@ -245,7 +241,6 @@ public class GameLevelWindow1 : MonoBehaviour
         level15Button.onClick.AddListener(() =>
         {
            Debug.Log("点击关卡15");
-           LevelInfoConfig.CurrentGameLevelType = LevelType.Boss;
            WindowController.S.Message.SetActive(false);
            LevelInfoConfig.CurrentGameLevel = 15;
            levelInfo.SetActive(true);

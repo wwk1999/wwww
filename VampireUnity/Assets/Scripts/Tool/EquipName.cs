@@ -124,6 +124,24 @@ namespace Tool
             {"OrangeChiBang", "黑虚之羽"},
             {"RedChiBang", "无端之羽"},
             
+            {"ChongWuShiWu1","初级宠物食物"},
+            {"ChongWuShiWu2","中级宠物食物"},
+            {"ChongWuShiWu3","高级宠物食物"},
+            {"ChongWuShiWu4","史诗宠物食物"},
+            {"ChongWuShiWu5","传说宠物食物"},
+            {"ChongWuShiWu6","神话宠物食物"},
+            
+            {"ChongWuSkillShu1","初级宠物食物"},
+            {"ChongWuSkillShu2","中级宠物食物"},
+            {"ChongWuSkillShu3","高级宠物食物"},
+            {"ChongWuSkillShu4","史诗宠物食物"},
+            {"ChongWuSkillShu5","传说宠物食物"},
+            {"ChongWuSkillShu6","神话宠物食物"},
+            
+            {"ChongWuDan3","普通宠物蛋"},
+            {"ChongWuDan5","高级宠物蛋"},
+
+            
             {"HH1", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
             {"HH2", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},
             {"HH3", LanguageConfig.LanguageItems[PlayerData.S.langType].BaoShiLanguage.HHName},

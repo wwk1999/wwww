@@ -522,26 +522,30 @@ public class WeaponWindow : MonoBehaviour
                      if (!BagController.S.PropList.ContainsKey(102) || BagController.S.PropList[102].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                        return;
                      }
-                     return;
+                     break;
                   case 3:
                      if (!BagController.S.PropList.ContainsKey(103) || BagController.S.PropList[103].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                        return;
                      }
-                     return;
+                     break;
                   case 4:
                      if (!BagController.S.PropList.ContainsKey(104) || BagController.S.PropList[104].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                        return;
                      }
-                     return;
+                     break;
                   case 5:
                      if (!BagController.S.PropList.ContainsKey(105) || BagController.S.PropList[105].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                        return;
                      }
-                     return;
+                     break;
                }
                break;
             
@@ -553,26 +557,30 @@ public class WeaponWindow : MonoBehaviour
                      if (!BagController.S.PropList.ContainsKey(202) || BagController.S.PropList[202].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                        return;
                      }
-                     return;
+                     break;
                   case 3:
                      if (!BagController.S.PropList.ContainsKey(203) || BagController.S.PropList[203].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                        return;
                      }
-                     return;
+                     break;
                   case 4:
                      if (!BagController.S.PropList.ContainsKey(204) || BagController.S.PropList[204].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                        return;
                      }
-                     return;
+                     break;
                   case 5:
                      if (!BagController.S.PropList.ContainsKey(205) || BagController.S.PropList[205].Count < item.count)
                      {
                         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
+                        return;
                      }
-                     return;
+                     break;
                }
                break;
          }
@@ -586,7 +594,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.HuoBaoZhaWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.IceBaoZha:
@@ -596,7 +604,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.iceBaoZhaLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.DianBaoZha:
@@ -606,7 +614,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.dianBaoZhaLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.HeiAnBaoZha:
@@ -616,7 +624,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.HeiAnBaoZhaWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
 
          case WeaponType.PuTong3:
@@ -626,7 +634,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.puTong3WeaponLevel = 1;
-
+            ShowWeaponList();
             break;
 
          case WeaponType.XuKong:
@@ -636,7 +644,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.xuKongWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          case WeaponType.Fire:
             if (PlayerData.S.dianBaoZhaLevel<10)
@@ -645,7 +653,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.fireWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
 
          case WeaponType.LvQuan:
@@ -655,7 +663,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.lvQuanWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.Ice7:
@@ -665,7 +673,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.Ice7WeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.Huo7:
@@ -675,7 +683,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.Huo7WeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.DianJiSu:
@@ -685,7 +693,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.DianJiSuWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.DianSanShe:
@@ -695,7 +703,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.DianSanSheWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.HuoFenLie:
@@ -705,7 +713,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.HuoFenLieWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.JianQi:
@@ -715,7 +723,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.jianQiWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.HeiAnQuXian:
@@ -725,7 +733,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.HeiAnQuXianWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.HeiAnHuiXuan:
@@ -735,7 +743,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.HeiAnHuiXuanWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.Ice4BaoZha:
@@ -745,7 +753,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.Ice4BaoZhaWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
 
          case WeaponType.HeiDong:
@@ -755,7 +763,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.heiDongWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          
@@ -766,7 +774,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.IcePenWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          case WeaponType.HuoDiPen:
@@ -776,7 +784,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.HuoDiPenWeaponLevel = 1;
-
+            ShowWeaponList();
             break;
          
          
@@ -787,6 +795,7 @@ public class WeaponWindow : MonoBehaviour
                return;
             }
             PlayerData.S.DianLuoLei5WeaponLevel = 1;
+            ShowWeaponList();
             break;
       }
 

@@ -24,6 +24,7 @@ public class GameLevelInfo : MonoBehaviour
         tiaozhanButton.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);
+            LevelInfoConfig.CurrentGameLevelType = LevelType.Normal;
             WindowController.S.Message.SetActive(false);
             WindowController.S.SceneLoadingWindow.SetActive(true);
         });

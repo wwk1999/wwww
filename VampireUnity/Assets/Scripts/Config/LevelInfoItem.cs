@@ -6,8 +6,6 @@ using UnityEngine;
 public enum LevelType
 {
     Normal,
-    Elite,
-    Boss,
     MJ,
     ChongWu,
     LingHun,
