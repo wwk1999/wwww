@@ -12,6 +12,7 @@ public enum LevelType
     ChongWu,
     LingHun,
     ChiBang,
+    Weapon,
 }
 public class LevelInfoItem
 {

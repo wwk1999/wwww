@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChongWuInfo : MonoBehaviour
+public class WeaponInfo : MonoBehaviour
 {
     public TextMeshProUGUI Name1;
     public TextMeshProUGUI Name2;
@@ -32,24 +32,24 @@ public class ChongWuInfo : MonoBehaviour
     {
         LeftArrow.onClick.AddListener(() =>
         {
-            if (PlayerData.S.chongwuShowLevel > 1)
+            if (PlayerData.S.weaponShowLevel > 1)
             {
-                PlayerData.S.chongwuShowLevel--;
+                PlayerData.S.weaponShowLevel--;
                 Show();
             }
         });
         RightArrow.onClick.AddListener(() =>
         {
-            if (PlayerData.S.chongwuShowLevel < 6)
+            if (PlayerData.S.weaponShowLevel < 6)
             {
-                PlayerData.S.chongwuShowLevel++;
+                PlayerData.S.weaponShowLevel++;
                 Show();
             }
         });
         TiaoZhanButton.onClick.AddListener(() =>
         {
             gameObject.SetActive(false);
-            LevelInfoConfig.CurrentGameLevel = 200+PlayerData.S.chongwuShowLevel;
+            LevelInfoConfig.CurrentGameLevel = 100+PlayerData.S.chongwuShowLevel;
             LevelInfoConfig.CurrentGameLevelType = LevelType.ChongWu;
             WindowController.S.Message.SetActive(false);
             WindowController.S.SceneLoadingWindow.SetActive(true);
@@ -83,41 +83,41 @@ public class ChongWuInfo : MonoBehaviour
 
         List<MonsterTypeByName> monsterList = null;
         List<ChongWuDiaoLuoItem> diaoluolist = null;
-        switch (PlayerData.S.chongwuShowLevel)
+        switch (PlayerData.S.weaponShowLevel)
         {
             case 1:
                 Name1.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[201];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[1];
+                monsterList = LevelInfoConfig.LevelMonsterDic[101];
+                diaoluolist = LevelInfoConfig.WeaponDiaoLuoDic[1];
                 break;
             case 2:
                 Name2.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[202];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[2];
+                monsterList = LevelInfoConfig.LevelMonsterDic[102];
+                diaoluolist = LevelInfoConfig.WeaponDiaoLuoDic[2];
 
                 break;
             case 3:
                 Name3.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[203];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[3];
+                monsterList = LevelInfoConfig.LevelMonsterDic[103];
+                diaoluolist = LevelInfoConfig.WeaponDiaoLuoDic[3];
 
                 break;
             case 4:
                 Name4.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[204];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[4];
+                monsterList = LevelInfoConfig.LevelMonsterDic[104];
+                diaoluolist = LevelInfoConfig.WeaponDiaoLuoDic[4];
 
                 break;
             case 5:
                 Name5.gameObject.SetActive(true);
-                monsterList = LevelInfoConfig.LevelMonsterDic[205];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[5];
+                monsterList = LevelInfoConfig.LevelMonsterDic[105];
+                diaoluolist = LevelInfoConfig.WeaponDiaoLuoDic[5];
 
                 break;
             case 6:
                 Name6.gameObject.SetActive(true);                
-                monsterList = LevelInfoConfig.LevelMonsterDic[206];
-                diaoluolist = LevelInfoConfig.ChongWuDiaoLuoDic[6];
+                monsterList = LevelInfoConfig.LevelMonsterDic[106];
+                diaoluolist = LevelInfoConfig.WeaponDiaoLuoDic[6];
 
                 break;
         }

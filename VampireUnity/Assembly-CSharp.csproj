@@ -430,6 +430,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第二关\HuoShanSkill2.cs" />
     <Compile Include="Assets\Scripts\WeaponSourceStone\SourceStoneItem.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleCloak1.cs" />
+    <Compile Include="Assets\Scripts\Fight\UI\WeaponInfo.cs" />
     <Compile Include="Assets\Scripts\ShiZhuang\ShiZhuangItem.cs" />
     <Compile Include="Assets\Number Themes\Scripts\FloatingTextManager.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\111\yezhu.cs" />

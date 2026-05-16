@@ -173,6 +173,16 @@ public class ChongWuDiaoLuoItem
 }
 public class LevelInfoConfig
 {
+    
+     public static Dictionary<int, List<ChongWuDiaoLuoItem>> WeaponDiaoLuoDic = new Dictionary<int, List<ChongWuDiaoLuoItem>>()
+    {
+        {1,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.WeaponFragment,Quality = 1}}},
+        {2,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.WeaponFragment,Quality = 2}}},
+        {3,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.WeaponFragment,Quality = 3}}},
+        {4,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.WeaponFragment,Quality = 4}}},
+        {5,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.WeaponFragment,Quality = 5}}},
+        {6,new List<ChongWuDiaoLuoItem>(){new ChongWuDiaoLuoItem(){type = PropConfig.PropType.WeaponFragment,Quality = 6}}},
+    };
 
     public static Dictionary<int, List<ChongWuDiaoLuoItem>> ChongWuDiaoLuoDic = new Dictionary<int, List<ChongWuDiaoLuoItem>>()
     {
@@ -655,20 +665,20 @@ public class LevelInfoConfig
             {35,new List<MonsterTypeByName>()},
             
             
-            {101,new List<MonsterTypeByName>() { MonsterTypeByName.cat ,MonsterTypeByName.egg,MonsterTypeByName.paopao}},
-            {102,new List<MonsterTypeByName>() { MonsterTypeByName.CiZhu ,MonsterTypeByName.she,MonsterTypeByName.banrenma1}},
-            {103,new List<MonsterTypeByName>() { MonsterTypeByName.YouLang ,MonsterTypeByName.onyx,MonsterTypeByName.banrenma2}},
-            {104,new List<MonsterTypeByName>() { MonsterTypeByName.TuJiu ,MonsterTypeByName.WuYa,MonsterTypeByName.banrenma3}},
-            {105,new List<MonsterTypeByName>() { MonsterTypeByName.xuelaoshu ,MonsterTypeByName.lang,MonsterTypeByName.xiongbuou}},
-            {106,new List<MonsterTypeByName>() { MonsterTypeByName.xiezi1 ,MonsterTypeByName.xiezi2,MonsterTypeByName.zhumodaocaoren}},
+            {201,new List<MonsterTypeByName>() { MonsterTypeByName.cat ,MonsterTypeByName.egg,MonsterTypeByName.paopao}},
+            {202,new List<MonsterTypeByName>() { MonsterTypeByName.CiZhu ,MonsterTypeByName.she,MonsterTypeByName.banrenma1}},
+            {203,new List<MonsterTypeByName>() { MonsterTypeByName.YouLang ,MonsterTypeByName.onyx,MonsterTypeByName.banrenma2}},
+            {204,new List<MonsterTypeByName>() { MonsterTypeByName.TuJiu ,MonsterTypeByName.WuYa,MonsterTypeByName.banrenma3}},
+            {205,new List<MonsterTypeByName>() { MonsterTypeByName.xuelaoshu ,MonsterTypeByName.lang,MonsterTypeByName.xiongbuou}},
+            {206,new List<MonsterTypeByName>() { MonsterTypeByName.xiezi1 ,MonsterTypeByName.xiezi2,MonsterTypeByName.zhumodaocaoren}},
 
             
-            {201,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen1 ,MonsterTypeByName.KuLou1,MonsterTypeByName.ShouRen1}},
-            {202,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen2 ,MonsterTypeByName.KuLou2,MonsterTypeByName.ShouRen2}},
-            {203,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen3 ,MonsterTypeByName.KuLou3,MonsterTypeByName.ShouRen3}},
-            {204,new List<MonsterTypeByName>() { MonsterTypeByName.niguai1 ,MonsterTypeByName.KuLou4,MonsterTypeByName.NiuTouRen1}},
-            {205,new List<MonsterTypeByName>() { MonsterTypeByName.niguai2 ,MonsterTypeByName.KuLou5,MonsterTypeByName.NiuTouRen2}},
-            {206,new List<MonsterTypeByName>() { MonsterTypeByName.niguai3 ,MonsterTypeByName.KuLou6,MonsterTypeByName.NiuTouRen3}},
+            {101,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen1 ,MonsterTypeByName.KuLou1,MonsterTypeByName.ShouRen1}},
+            {102,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen2 ,MonsterTypeByName.KuLou2,MonsterTypeByName.ShouRen2}},
+            {103,new List<MonsterTypeByName>() { MonsterTypeByName.YuRen3 ,MonsterTypeByName.KuLou3,MonsterTypeByName.ShouRen3}},
+            {104,new List<MonsterTypeByName>() { MonsterTypeByName.niguai1 ,MonsterTypeByName.KuLou4,MonsterTypeByName.NiuTouRen1}},
+            {105,new List<MonsterTypeByName>() { MonsterTypeByName.niguai2 ,MonsterTypeByName.KuLou5,MonsterTypeByName.NiuTouRen2}},
+            {106,new List<MonsterTypeByName>() { MonsterTypeByName.niguai3 ,MonsterTypeByName.KuLou6,MonsterTypeByName.NiuTouRen3}},
 
             
             {301,new List<MonsterTypeByName>() { MonsterTypeByName.ChaiLangRen1 ,MonsterTypeByName.ChaiLangRen2,MonsterTypeByName.ShuangTouRen}},
@@ -722,7 +732,7 @@ public class LevelInfoConfig
         LevelMonsterCount[45] = 300;
         LevelMonsterCount[46] = 300;
         
-        LevelMonsterCount[101] = 100;
+        LevelMonsterCount[101] = 10;
         LevelMonsterCount[102] = 120;
         LevelMonsterCount[103] = 140;
         LevelMonsterCount[104] = 180;

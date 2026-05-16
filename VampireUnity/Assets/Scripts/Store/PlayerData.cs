@@ -138,6 +138,8 @@ public class PlayerData : XSingleton<PlayerData>
     public MJLevel mJShowLevel = MJLevel.White;
     public int chongwuShowLevel = 1;
     public int yuyiShowLevel = 1;
+    public int weaponShowLevel = 1;
+
 
     public LanguageType langType=LanguageType.Chinese;
     

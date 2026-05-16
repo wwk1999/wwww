@@ -780,13 +780,29 @@ public abstract class MonsterBase : MonoBehaviour
                 break;
         }
     }
-
+    IEnumerator DelayChuanSongMen()
+    {
+        yield return new WaitForSeconds(1f);
+        var chuansongmen = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/ChuanSongMen"));
+        chuansongmen.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+    }
 
     /// <summary>
     /// 死亡通用
     /// </summary>
     public void GeneralDie()
     {
+        GameController.S.KillMonsterCount++;
+        if (LevelInfoConfig.CurrentGameLevelType == LevelType.Weapon ||
+            LevelInfoConfig.CurrentGameLevelType == LevelType.ChongWu ||
+            LevelInfoConfig.CurrentGameLevelType == LevelType.ChiBang ||
+            LevelInfoConfig.CurrentGameLevelType == LevelType.LingHun)
+        {
+            if (GameController.S.KillMonsterCount >= LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]+LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/10)
+            {
+                GameController.S.StartCoroutine(DelayChuanSongMen());
+            }
+        }
         if (MonsterType == MonsterType.Boss)
         {
             GameController.S.CollectEquip();
@@ -799,7 +815,6 @@ public abstract class MonsterBase : MonoBehaviour
 
         AddWeaponEx();
         GlobalPlayerAttribute.BloodEnergy+=BloodEnergy;
-        GameController.S.KillMonsterCount++;
         //胜利
         switch (LevelInfoConfig.CurrentGameLevelType)
         {
