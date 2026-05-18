@@ -331,9 +331,9 @@ namespace Config
                 {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.HeiAn,quality = 2},$"{WeaponNameDic[WeaponType.PrimaryHeiAn]}的等级>5"},
                 
                 {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Ice,quality = 3},$"{WeaponNameDic[WeaponType.IceBaoZha]}的等级>10"},
-                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Huo,quality = 3},$"{WeaponNameDic[WeaponType.HuoBaoZha]}的等级>5"},
-                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Dian,quality = 3},$"{WeaponNameDic[WeaponType.DianBaoZha]}的等级>5"},
-                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.HeiAn,quality = 3},$"{WeaponNameDic[WeaponType.HeiAnBaoZha]}的等级>5"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Huo,quality = 3},$"{WeaponNameDic[WeaponType.HuoBaoZha]}的等级>10"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Dian,quality = 3},$"{WeaponNameDic[WeaponType.DianBaoZha]}的等级>10"},
+                {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.HeiAn,quality = 3},$"{WeaponNameDic[WeaponType.HeiAnBaoZha]}的等级>10"},
                 
                 {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Ice,quality = 4},"冰系法杖的总等级>30"},
                 {new WeaponJieSuoDesc(){YuanSuType = YuanSuType.Huo,quality = 4},"火系法杖的总等级>30"}, 

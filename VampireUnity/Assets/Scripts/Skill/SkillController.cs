@@ -1154,6 +1154,10 @@ public class SkillController : XSingleton<SkillController>
                 break;
         }
     }
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
 
     IEnumerator Skill3Bian3()

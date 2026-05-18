@@ -59,8 +59,12 @@ public class FightBGController : XSingleton<FightBGController>
     private float currentReplyHpTime = 0;
     
     public bool isShowAgain = false;
-    
-    
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void GetMJJiangLi()
     {
         var jiangli=MJConfig.JiangLiDic[PlayerData.S.mJShowLevel];

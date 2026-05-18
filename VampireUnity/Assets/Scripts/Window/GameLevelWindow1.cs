@@ -56,7 +56,7 @@ public class GameLevelWindow1 : MonoBehaviour
         else
         {
             WeaponButton.image.color=new Color(60/255, 60/255, 60/255);
-            WeaponButtonwww.interactable = false;
+            WeaponButton.interactable = false;
 
         }
         

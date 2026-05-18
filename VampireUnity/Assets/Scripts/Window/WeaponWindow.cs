@@ -638,7 +638,7 @@ public class WeaponWindow : MonoBehaviour
             break;
 
          case WeaponType.XuKong:
-            if (PlayerData.S.HeiAnBaoZhaWeaponLevel<10)
+            if (PlayerData.S.dianBaoZhaLevel<10)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
@@ -657,7 +657,7 @@ public class WeaponWindow : MonoBehaviour
             break;
 
          case WeaponType.LvQuan:
-            if (PlayerData.S.HuoBaoZhaWeaponLevel<10)
+            if (PlayerData.S.HeiAnBaoZhaWeaponLevel<10)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
@@ -697,7 +697,7 @@ public class WeaponWindow : MonoBehaviour
             break;
          
          case WeaponType.DianSanShe:
-            if (PlayerData.S.DianAllLevel<10)
+            if (PlayerData.S.DianAllLevel<30)
             {
                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "条件不满足");
                return;
@@ -1000,73 +1000,151 @@ public class WeaponWindow : MonoBehaviour
       LevelPanel.gameObject.SetActive(true);
       ExpPanel.gameObject.SetActive(true);
       WeaponType type = (WeaponType)obj[0];
-      WeaponImage.sprite=WeaponConfig.GetWeaponSprite(type);
+      WeaponImage.sprite = WeaponConfig.GetWeaponSprite(type);
       switch (type)
       {
+         case WeaponType.None:
+            currentShowType = WeaponType.None;
+            ShowAttribute(WeaponType.None);
+            break;
+
          case WeaponType.Primary:
             currentShowType = WeaponType.Primary;
             ShowAttribute(WeaponType.Primary);
             break;
-         
+
          case WeaponType.PrimaryDian:
             currentShowType = WeaponType.PrimaryDian;
             ShowAttribute(WeaponType.PrimaryDian);
             break;
-         
+
          case WeaponType.PrimaryHuo:
             currentShowType = WeaponType.PrimaryHuo;
             ShowAttribute(WeaponType.PrimaryHuo);
             break;
-         
+
          case WeaponType.PrimaryHeiAn:
             currentShowType = WeaponType.PrimaryHeiAn;
             ShowAttribute(WeaponType.PrimaryHeiAn);
             break;
-         
-         case WeaponType.HuoBaoZha:
-            currentShowType = WeaponType.HuoBaoZha;
-            ShowAttribute(WeaponType.HuoBaoZha);
-            break;
-         
-         case WeaponType.DianBaoZha:
-            currentShowType = WeaponType.DianBaoZha;
-            ShowAttribute(WeaponType.DianBaoZha);
-            break;
-         
+
          case WeaponType.IceBaoZha:
             currentShowType = WeaponType.IceBaoZha;
             ShowAttribute(WeaponType.IceBaoZha);
             break;
-         
-         case WeaponType.LvQuan:
-            currentShowType = WeaponType.LvQuan;
-            ShowAttribute(WeaponType.LvQuan);
+
+         case WeaponType.DianBaoZha:
+            currentShowType = WeaponType.DianBaoZha;
+            ShowAttribute(WeaponType.DianBaoZha);
             break;
-         
-         
-         case WeaponType.XuKong:
-            currentShowType = WeaponType.XuKong;
-            ShowAttribute(WeaponType.XuKong);
+
+         case WeaponType.LanBao:
+            currentShowType = WeaponType.LanBao;
+            ShowAttribute(WeaponType.LanBao);
             break;
-         
-         case WeaponType.PuTong3:
-            currentShowType = WeaponType.PuTong3;
-            ShowAttribute(WeaponType.PuTong3);
-            break;
-         
+
          case WeaponType.Fire:
             currentShowType = WeaponType.Fire;
             ShowAttribute(WeaponType.Fire);
             break;
-         
+
+         case WeaponType.XuKong:
+            currentShowType = WeaponType.XuKong;
+            ShowAttribute(WeaponType.XuKong);
+            break;
+
+         case WeaponType.LvQuan:
+            currentShowType = WeaponType.LvQuan;
+            ShowAttribute(WeaponType.LvQuan);
+            break;
+
+         case WeaponType.HeiDong:
+            currentShowType = WeaponType.HeiDong;
+            ShowAttribute(WeaponType.HeiDong);
+            break;
+
+         case WeaponType.HuoBaoZha:
+            currentShowType = WeaponType.HuoBaoZha;
+            ShowAttribute(WeaponType.HuoBaoZha);
+            break;
+
+         case WeaponType.LuoLei:
+            currentShowType = WeaponType.LuoLei;
+            ShowAttribute(WeaponType.LuoLei);
+            break;
+
+         case WeaponType.PuTong3:
+            currentShowType = WeaponType.PuTong3;
+            ShowAttribute(WeaponType.PuTong3);
+            break;
+
          case WeaponType.JianQi:
             currentShowType = WeaponType.JianQi;
             ShowAttribute(WeaponType.JianQi);
             break;
-         
-         case WeaponType.HeiDong:
-            currentShowType = WeaponType.HeiDong;
-            ShowAttribute(WeaponType.HeiDong);
+
+         case WeaponType.HeiAnBaoZha:
+            currentShowType = WeaponType.HeiAnBaoZha;
+            ShowAttribute(WeaponType.HeiAnBaoZha);
+            break;
+
+         case WeaponType.DianSanShe:
+            currentShowType = WeaponType.DianSanShe;
+            ShowAttribute(WeaponType.DianSanShe);
+            break;
+
+         case WeaponType.Huo7:
+            currentShowType = WeaponType.Huo7;
+            ShowAttribute(WeaponType.Huo7);
+            break;
+
+         case WeaponType.HuoFenLie:
+            currentShowType = WeaponType.HuoFenLie;
+            ShowAttribute(WeaponType.HuoFenLie);
+            break;
+
+         case WeaponType.Ice4BaoZha:
+            currentShowType = WeaponType.Ice4BaoZha;
+            ShowAttribute(WeaponType.Ice4BaoZha);
+            break;
+
+         case WeaponType.Ice7:
+            currentShowType = WeaponType.Ice7;
+            ShowAttribute(WeaponType.Ice7);
+            break;
+
+         case WeaponType.IcePen:
+            currentShowType = WeaponType.IcePen;
+            ShowAttribute(WeaponType.IcePen);
+            break;
+
+         case WeaponType.DianLuoLei5:
+            currentShowType = WeaponType.DianLuoLei5;
+            ShowAttribute(WeaponType.DianLuoLei5);
+            break;
+
+         case WeaponType.DianJiSu:
+            currentShowType = WeaponType.DianJiSu;
+            ShowAttribute(WeaponType.DianJiSu);
+            break;
+
+         case WeaponType.HeiAnHuiXuan:
+            currentShowType = WeaponType.HeiAnHuiXuan;
+            ShowAttribute(WeaponType.HeiAnHuiXuan);
+            break;
+
+         case WeaponType.HeiAnQuXian:
+            currentShowType = WeaponType.HeiAnQuXian;
+            ShowAttribute(WeaponType.HeiAnQuXian);
+            break;
+
+         case WeaponType.HuoDiPen:
+            currentShowType = WeaponType.HuoDiPen;
+            ShowAttribute(WeaponType.HuoDiPen);
+            break;
+
+         default:
+            // 可选：处理未知类型
             break;
       }
    }

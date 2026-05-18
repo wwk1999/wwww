@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Config;
 using Equip;
@@ -236,14 +237,28 @@ public class Entrance : MonoBehaviour
 
         if (LevelInfoConfig.CurrentGameLevel == 3)
         {
-            for (int i = 0; i < 30; i++)
-            {
-                var TreeManDanMu = Instantiate(
-                    Resources.Load<GameObject>("Prefabs/Monster/Level1/TreeManDanMu").GetComponent<TreeManDanMu>(),
-                    GameController.S.transform);
-                TreeManDanMu.gameObject.SetActive(false);
-                GameController.S.TreeManDanMuQueue.Enqueue(TreeManDanMu);
-            }
+            var TreeManDanMu = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/Level1/TreeManDanMu").GetComponent<TreeManDanMu>(),
+                GameController.S.transform);
+            TreeManDanMu.gameObject.SetActive(false);
+            GameController.S.TreeManDanMuQueue.Enqueue(TreeManDanMu);
+        }
+
+        if (LevelInfoConfig.CurrentGameLevel == 12)
+        {
+            var xieziskill1 =
+                Instantiate(
+                    Resources.Load<GameObject>("Prefabs/Monster/Level4/XieZiSkill1")
+                        .GetComponent<XieZiSkill1>(), GameController.S.transform);
+            xieziskill1.gameObject.SetActive(false);
+            GameController.S.XieZiSkill1Queue.Enqueue(xieziskill1);
+            
+            var xieziskill4 =
+                Instantiate(
+                    Resources.Load<GameObject>("Prefabs/Monster/Level4/XieZiSkill4")
+                        .GetComponent<XieZiSkill4>(), GameController.S.transform);
+            xieziskill4.gameObject.SetActive(false);
+            GameController.S.XieZiSkill4Queue.Enqueue(xieziskill4);
         }
 
         switch (type)
@@ -277,7 +292,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.EliteBeeMonsterQueue.Enqueue(BeeMonster);
                 Collider2D Bee2D = BeeMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(Bee2D, BeeMonster);
-                
+
                 var BeeBullet = Instantiate(
                     Resources.Load<GameObject>("Prefabs/Monster/Level1/BeeBullet").GetComponent<BeeBullet>(),
                     GameController.S.transform);
@@ -294,8 +309,8 @@ public class Entrance : MonoBehaviour
                 Collider2D Spider2D = SpiderMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(Spider2D, SpiderMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.XiaoHuo:
                 var XiaoHuoMonster =
                     Instantiate(
@@ -306,7 +321,7 @@ public class Entrance : MonoBehaviour
                 Collider2D XiaoHuo2D = XiaoHuoMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(XiaoHuo2D, XiaoHuoMonster);
                 break;
-            
+
             case MonsterTypeByName.ChongZi:
                 var ChongZiMonster =
                     Instantiate(
@@ -317,8 +332,8 @@ public class Entrance : MonoBehaviour
                 Collider2D ChongZi2D = ChongZiMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(ChongZi2D, ChongZiMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.DaZui:
                 var DaZuiMonster =
                     Instantiate(
@@ -329,8 +344,8 @@ public class Entrance : MonoBehaviour
                 Collider2D DaZui2D = DaZuiMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(DaZui2D, DaZuiMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.DunDi:
                 var DunDiMonster =
                     Instantiate(
@@ -341,9 +356,9 @@ public class Entrance : MonoBehaviour
                 Collider2D DunDi2D = DunDiMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(DunDi2D, DunDiMonster);
                 break;
-            
-            
-            
+
+
+
             case MonsterTypeByName.JiaChong:
                 var JiaChongMonster =
                     Instantiate(
@@ -354,8 +369,8 @@ public class Entrance : MonoBehaviour
                 Collider2D JiaChong2D = JiaChongMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(JiaChong2D, JiaChongMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.QingWa:
                 var QingWaMonster =
                     Instantiate(
@@ -366,7 +381,7 @@ public class Entrance : MonoBehaviour
                 Collider2D QingWa2D = QingWaMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(QingWa2D, QingWaMonster);
                 break;
-            
+
             case MonsterTypeByName.ShiRenHua:
                 var ShiRenHuaMonster =
                     Instantiate(
@@ -377,7 +392,7 @@ public class Entrance : MonoBehaviour
                 Collider2D ShiRenHua2D = ShiRenHuaMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(ShiRenHua2D, ShiRenHuaMonster);
                 break;
-            
+
             case MonsterTypeByName.WenZi:
                 var WenZiMonster =
                     Instantiate(
@@ -388,8 +403,8 @@ public class Entrance : MonoBehaviour
                 Collider2D WenZi2D = WenZiMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(WenZi2D, WenZiMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.XueQiE:
                 var XueQiEMonster =
                     Instantiate(
@@ -400,9 +415,9 @@ public class Entrance : MonoBehaviour
                 Collider2D XueQiE2D = XueQiEMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(XueQiE2D, XueQiEMonster);
                 break;
-            
-            
-            
+
+
+
             case MonsterTypeByName.XueZhangLang:
                 var XueZhangLangMonster =
                     Instantiate(
@@ -413,8 +428,8 @@ public class Entrance : MonoBehaviour
                 Collider2D XueZhangLang2D = XueZhangLangMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(XueZhangLang2D, XueZhangLangMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.YingShu:
                 var YingShuMonster =
                     Instantiate(
@@ -425,8 +440,8 @@ public class Entrance : MonoBehaviour
                 Collider2D YingShu2D = YingShuMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(YingShu2D, YingShuMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.XueRen:
                 var XueRenMonster =
                     Instantiate(
@@ -437,9 +452,9 @@ public class Entrance : MonoBehaviour
                 Collider2D XueRen2D = XueRenMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(XueRen2D, XueRenMonster);
                 break;
-            
-            
-            
+
+
+
             case MonsterTypeByName.ShaXiYi:
                 var ShaXiYiMonster =
                     Instantiate(
@@ -450,7 +465,7 @@ public class Entrance : MonoBehaviour
                 Collider2D ShaXiYi2D = ShaXiYiMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(ShaXiYi2D, ShaXiYiMonster);
                 break;
-            
+
             case MonsterTypeByName.XianRenZhang:
                 var XianRenZhangMonster =
                     Instantiate(
@@ -461,8 +476,8 @@ public class Entrance : MonoBehaviour
                 Collider2D XianRenZhang2D = XianRenZhangMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(XianRenZhang2D, XianRenZhangMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.ShaChong:
                 var ShaChongMonster =
                     Instantiate(
@@ -473,8 +488,8 @@ public class Entrance : MonoBehaviour
                 Collider2D ShaChong2D = ShaChongMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(ShaChong2D, ShaChongMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.ShaNiao:
                 var ShaNiaoMonster =
                     Instantiate(
@@ -485,8 +500,8 @@ public class Entrance : MonoBehaviour
                 Collider2D ShaNiao2D = ShaNiaoMonster.collider2D;
                 GameController.S.MonsterColliderDic.Add(ShaNiao2D, ShaNiaoMonster);
                 break;
-            
-            
+
+
             case MonsterTypeByName.banrenma1:
                 var banrenma1 =
                     Instantiate(
@@ -498,7 +513,7 @@ public class Entrance : MonoBehaviour
                 Collider2D banrenma12D = banrenma1monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(banrenma12D, banrenma1monsterBase);
                 break;
-            
+
             case MonsterTypeByName.banrenma2:
                 var banrenma2 =
                     Instantiate(
@@ -510,8 +525,8 @@ public class Entrance : MonoBehaviour
                 Collider2D banrenma22D = banrenma2monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(banrenma22D, banrenma2monsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.banrenma3:
                 var banrenma3 =
                     Instantiate(
@@ -523,8 +538,8 @@ public class Entrance : MonoBehaviour
                 Collider2D banrenma32D = banrenma3monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(banrenma32D, banrenma3monsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.she:
                 var she =
                     Instantiate(
@@ -536,8 +551,8 @@ public class Entrance : MonoBehaviour
                 Collider2D she2D = shemonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(she2D, shemonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.zibaolaoshu:
                 var zibaolaoshu =
                     Instantiate(
@@ -549,8 +564,8 @@ public class Entrance : MonoBehaviour
                 Collider2D zibaolaoshu2D = zibaolaoshumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(zibaolaoshu2D, zibaolaoshumonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.zhumodaocaoren:
                 var zhumodaocaoren =
                     Instantiate(
@@ -562,8 +577,8 @@ public class Entrance : MonoBehaviour
                 Collider2D zhumodaocaoren2D = zhumodaocaorenmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(zhumodaocaoren2D, zhumodaocaorenmonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.yezhu:
                 var yezhu =
                     Instantiate(
@@ -575,8 +590,8 @@ public class Entrance : MonoBehaviour
                 Collider2D yezhu2D = yezhumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(yezhu2D, yezhumonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.yanshu:
                 var yanshu =
                     Instantiate(
@@ -588,8 +603,8 @@ public class Entrance : MonoBehaviour
                 Collider2D yanshu2D = yanshumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(yanshu2D, yanshumonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.xuelaoshu:
                 var xuelaoshu =
                     Instantiate(
@@ -601,8 +616,8 @@ public class Entrance : MonoBehaviour
                 Collider2D xuelaoshu2D = xuelaoshumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(xuelaoshu2D, xuelaoshumonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.xiongbuou:
                 var xiongbuou =
                     Instantiate(
@@ -614,8 +629,8 @@ public class Entrance : MonoBehaviour
                 Collider2D xiongbuou2D = xiongbuoumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(xiongbuou2D, xiongbuoumonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.xiezi2:
                 var xiezi2 =
                     Instantiate(
@@ -627,8 +642,8 @@ public class Entrance : MonoBehaviour
                 Collider2D xiezi22D = xiezi2monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(xiezi22D, xiezi2monsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.xiezi1:
                 var xiezi1 =
                     Instantiate(
@@ -640,8 +655,8 @@ public class Entrance : MonoBehaviour
                 Collider2D xiezi12D = xiezi1monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(xiezi12D, xiezi1monsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.xiaoshuguai:
                 var xiaoshuguai =
                     Instantiate(
@@ -653,8 +668,8 @@ public class Entrance : MonoBehaviour
                 Collider2D xiaoshuguai2D = xiaoshuguaimonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(xiaoshuguai2D, xiaoshuguaimonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.xiaozhizhu:
                 var xiaozhizhu =
                     Instantiate(
@@ -666,8 +681,8 @@ public class Entrance : MonoBehaviour
                 Collider2D xiaozhizhu2D = xiaozhizhumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(xiaozhizhu2D, xiaozhizhumonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.xiaohuoling:
                 var xiaohuoling =
                     Instantiate(
@@ -679,7 +694,7 @@ public class Entrance : MonoBehaviour
                 Collider2D xiaohuoling2D = xiaohuolingmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(xiaohuoling2D, xiaohuolingmonsterBase);
                 break;
-            
+
             case MonsterTypeByName.woniu:
                 var woniu =
                     Instantiate(
@@ -691,8 +706,8 @@ public class Entrance : MonoBehaviour
                 Collider2D woniu2D = woniumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(woniu2D, woniumonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.shanyang:
                 var shanyang =
                     Instantiate(
@@ -704,8 +719,8 @@ public class Entrance : MonoBehaviour
                 Collider2D shanyang2D = shanyangmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(shanyang2D, shanyangmonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.rongyanboss:
                 var rongyanboss =
                     Instantiate(
@@ -717,8 +732,8 @@ public class Entrance : MonoBehaviour
                 Collider2D rongyanboss2D = rongyanbossmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(rongyanboss2D, rongyanbossmonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.queen:
                 var queen =
                     Instantiate(
@@ -730,9 +745,9 @@ public class Entrance : MonoBehaviour
                 Collider2D queen2D = queenmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(queen2D, queenmonsterBase);
                 break;
-            
-            
-            
+
+
+
             case MonsterTypeByName.paopao:
                 var paopao =
                     Instantiate(
@@ -744,8 +759,8 @@ public class Entrance : MonoBehaviour
                 Collider2D paopao2D = paopaomonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(paopao2D, paopaomonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.onyx:
                 var onyx =
                     Instantiate(
@@ -757,9 +772,9 @@ public class Entrance : MonoBehaviour
                 Collider2D onyx2D = onyxmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(onyx2D, onyxmonsterBase);
                 break;
-            
-            
-            
+
+
+
             case MonsterTypeByName.niguai3:
                 var niguai3 =
                     Instantiate(
@@ -771,8 +786,8 @@ public class Entrance : MonoBehaviour
                 Collider2D niguai32D = niguai3monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(niguai32D, niguai3monsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.niguai2:
                 var niguai2 =
                     Instantiate(
@@ -784,8 +799,8 @@ public class Entrance : MonoBehaviour
                 Collider2D niguai22D = niguai2monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(niguai22D, niguai2monsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.niguai1:
                 var niguai1 =
                     Instantiate(
@@ -797,8 +812,8 @@ public class Entrance : MonoBehaviour
                 Collider2D niguai12D = niguai1monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(niguai12D, niguai1monsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.lang:
                 var lang =
                     Instantiate(
@@ -810,8 +825,8 @@ public class Entrance : MonoBehaviour
                 Collider2D lang2D = langmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(lang2D, langmonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.egg:
                 var egg =
                     Instantiate(
@@ -823,8 +838,8 @@ public class Entrance : MonoBehaviour
                 Collider2D egg2D = eggmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(egg2D, eggmonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.mogu:
                 var mogu =
                     Instantiate(
@@ -836,8 +851,8 @@ public class Entrance : MonoBehaviour
                 Collider2D mogu2D = mogumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(mogu2D, mogumonsterBase);
                 break;
-            
-            
+
+
             case MonsterTypeByName.cat:
                 var cat =
                     Instantiate(
@@ -849,9 +864,9 @@ public class Entrance : MonoBehaviour
                 Collider2D cat2D = catmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(cat2D, catmonsterBase);
                 break;
-            
+
             case MonsterTypeByName.DaZongXiong:
-            var dazongxiong =
+                var dazongxiong =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/dazongxiong")
                             .GetComponent<dazongxiong>(), GameController.S.transform);
@@ -861,7 +876,7 @@ public class Entrance : MonoBehaviour
                 Collider2D dazongxiong2D = dazongxiongmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(dazongxiong2D, dazongxiongmonsterBase);
                 break;
-            
+
             case MonsterTypeByName.LuJiaoDouShi:
 
                 var lujiaodoushi =
@@ -874,7 +889,7 @@ public class Entrance : MonoBehaviour
                 Collider2D lujiaodoushi2D = lujiaodoushimonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(lujiaodoushi2D, lujiaodoushimonsterBase);
                 break;
-                
+
             case MonsterTypeByName.KuangShiMuZhu:
 
                 var kuangshimuzhu =
@@ -887,7 +902,7 @@ public class Entrance : MonoBehaviour
                 Collider2D kuangshimuzhu2D = kuangshimuzhumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(kuangshimuzhu2D, kuangshimuzhumonsterBase);
                 break;
-                
+
             case MonsterTypeByName.FengHeGuai:
 
                 var fengheguai =
@@ -901,7 +916,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(fengheguai2D, fengheguaimonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ShuangTouRen:
 
                 var shuangtouren =
@@ -915,7 +930,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(shuangtouren2D, shuangtourenmonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.DaoCaoRen:
 
                 var daocaoren =
@@ -929,7 +944,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(daocaoren2D, daocaorenmonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.CiZhu:
 
                 var cizhu = Instantiate(
@@ -941,7 +956,7 @@ public class Entrance : MonoBehaviour
                 Collider2D cizhu2D = cizhumonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(cizhu2D, cizhumonsterBase);
                 break;
-                
+
             case MonsterTypeByName.ChaiLangRen1:
 
 
@@ -956,7 +971,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(chailangren12D, chailangren1monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ChaiLangRen2:
 
                 var chailangren2 =
@@ -970,7 +985,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(chailangren22D, chailangren2monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ChaiLangRen3:
 
                 var chailangren3 =
@@ -984,7 +999,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(chailangren32D, chailangren3monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ChaiLangRen4:
 
                 var chailangren4 =
@@ -998,7 +1013,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(chailangren42D, chailangren4monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.YeShouZhanShi:
 
                 var YeShouZhanShi =
@@ -1012,7 +1027,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(YeShouZhanShi2D, YeShouZhanShimonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ZhiZhuNvWang:
 
                 var ZhiZhuNvWang =
@@ -1025,7 +1040,7 @@ public class Entrance : MonoBehaviour
                 Collider2D ZhiZhuNvWang2D = ZhiZhuNvWangmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(ZhiZhuNvWang2D, ZhiZhuNvWangmonsterBase);
                 break;
-                
+
             case MonsterTypeByName.DiJing2:
 
                 var dijing2 =
@@ -1051,7 +1066,7 @@ public class Entrance : MonoBehaviour
                 Collider2D dijing32D = dijing3monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(dijing32D, dijing3monsterBase);
                 break;
-                
+
             case MonsterTypeByName.DiJingShouWei1:
 
                 var dijingshouwei1 =
@@ -1064,7 +1079,7 @@ public class Entrance : MonoBehaviour
                 Collider2D dijingshouwei12D = dijingshouwei1monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(dijingshouwei12D, dijingshouwei1monsterBase);
                 break;
-                
+
             case MonsterTypeByName.DiJingShouWei2:
 
                 var dijingshouwei2 =
@@ -1089,7 +1104,7 @@ public class Entrance : MonoBehaviour
                 Collider2D dijingshouwei32D = dijingshouwei3monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(dijingshouwei32D, dijingshouwei3monsterBase);
                 break;
-                
+
             case MonsterTypeByName.HeiXiong:
 
                 var heixiong =
@@ -1102,7 +1117,7 @@ public class Entrance : MonoBehaviour
                 Collider2D heixiong2D = heixiongmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(heixiong2D, heixiongmonsterBase);
                 break;
-                
+
             case MonsterTypeByName.JianChiZhu:
 
                 var jianchizhu =
@@ -1116,7 +1131,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(jianchizhu2D, jianchizhumonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.KuLou1:
 
                 var kulou1 =
@@ -1130,7 +1145,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(kulou12D, kulou1monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.KuLou2:
 
                 var kulou2 =
@@ -1144,7 +1159,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(kulou22D, kulou2monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.KuLou3:
 
                 var kulou3 =
@@ -1157,7 +1172,7 @@ public class Entrance : MonoBehaviour
                 Collider2D kulou32D = kulou3monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(kulou32D, kulou3monsterBase);
                 break;
-                
+
             case MonsterTypeByName.KuLou4:
 
                 var kulou4 =
@@ -1171,7 +1186,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(kulou42D, kulou4monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.KuLou5:
 
                 var kulou5 =
@@ -1185,7 +1200,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(kulou52D, kulou5monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.KuLou6:
 
                 var kulou6 =
@@ -1199,7 +1214,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(kulou62D, kulou6monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.LuJiaoCiKe1:
 
                 var lujiaocike =
@@ -1213,7 +1228,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(lujiaocike2D, lujiaocikemonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.LuJiaoCiKe2:
 
                 var lujiaocike2 =
@@ -1227,7 +1242,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(lujiaocike22D, lujiaocike2monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.NiuTouRen1:
 
                 var niutouren1 =
@@ -1240,7 +1255,7 @@ public class Entrance : MonoBehaviour
                 Collider2D niutouren12D = niutouren1monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(niutouren12D, niutouren1monsterBase);
                 break;
-                
+
             case MonsterTypeByName.NiuTouRen2:
 
                 var niutouren2 =
@@ -1253,7 +1268,7 @@ public class Entrance : MonoBehaviour
                 Collider2D niutouren22D = niutouren2monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(niutouren22D, niutouren2monsterBase);
                 break;
-                
+
             case MonsterTypeByName.NiuTouRen3:
 
                 var niutouren3 =
@@ -1266,7 +1281,7 @@ public class Entrance : MonoBehaviour
                 Collider2D niutouren32D = niutouren3monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(niutouren32D, niutouren3monsterBase);
                 break;
-                
+
             case MonsterTypeByName.ShanZei3:
 
                 var shanzei3 =
@@ -1280,7 +1295,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(shanzei32D, shanzei3monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ShiJiaChong:
 
                 var shijiachong =
@@ -1293,7 +1308,7 @@ public class Entrance : MonoBehaviour
                 Collider2D shijiachong2D = shijiachongmonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(shijiachong2D, shijiachongmonsterBase);
                 break;
-                
+
             case MonsterTypeByName.ShiShiGui:
 
                 var shishigui =
@@ -1306,7 +1321,7 @@ public class Entrance : MonoBehaviour
                 Collider2D shishigui2D = shishiguimonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(shishigui2D, shishiguimonsterBase);
                 break;
-                
+
             case MonsterTypeByName.ShiXiangGui:
 
                 var shixianggui =
@@ -1333,7 +1348,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(shouren12D, shouren1monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ShouRen2:
 
                 var shouren2 =
@@ -1347,7 +1362,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(shouren22D, shouren2monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ShouRen3:
 
                 var shouren3 =
@@ -1360,7 +1375,7 @@ public class Entrance : MonoBehaviour
                 Collider2D shouren32D = shouren3monsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(shouren32D, shouren3monsterBase);
                 break;
-                
+
             case MonsterTypeByName.ShuangTouLong1:
 
                 var shuangtoulong =
@@ -1374,7 +1389,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(shuangtoulong2D, shuangtoulongmonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ShuangTouLong2:
 
                 var shuangtoulong2 =
@@ -1388,7 +1403,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(shuangtoulong22D, shuangtoulong2monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.ShuangTouLong3:
 
                 var shuangtoulong3 =
@@ -1402,7 +1417,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(shuangtoulong32D, shuangtoulong3monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.TuJiu:
 
                 var tujiu = Instantiate(
@@ -1415,7 +1430,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(tujiu2D, tujiumonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.WuYa:
 
                 var wuya = Instantiate(
@@ -1427,7 +1442,7 @@ public class Entrance : MonoBehaviour
                 Collider2D wuya2D = wuyamonsterBase.collider2D;
                 GameController.S.MonsterColliderDic.Add(wuya2D, wuyamonsterBase);
                 break;
-                
+
             case MonsterTypeByName.YouHunLingZhu:
 
                 var youhunlingzhu =
@@ -1467,7 +1482,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(youling2D, youlingmonsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.YouLing2:
 
                 var youling2 =
@@ -1481,7 +1496,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(youling22D, youling2monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.YuRen1:
 
                 var yuren1 =
@@ -1495,7 +1510,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(yuren12D, yuren1monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.YuRen2:
 
                 var yuren2 =
@@ -1509,7 +1524,7 @@ public class Entrance : MonoBehaviour
                 GameController.S.MonsterColliderDic.Add(yuren22D, yuren2monsterBase);
 
                 break;
-                
+
             case MonsterTypeByName.YuRen3:
 
                 var yuren3 =
@@ -1575,10 +1590,11 @@ public class Entrance : MonoBehaviour
                         GameController.S.RedWeaponFragmengQueue.Enqueue(RedWeaponFragmeng);
                         break;
                 }
+
                 break;
-            
-            
-            
+
+
+
             case PropConfig.PropType.ChiBang:
                 switch (info.PropItem.Quality)
                 {
@@ -1619,9 +1635,10 @@ public class Entrance : MonoBehaviour
                         GameController.S.RedChiBangQueue.Enqueue(RedChiBang);
                         break;
                 }
+
                 break;
-            
-            
+
+
             case PropConfig.PropType.ChongWuDan:
                 ChongWuDanFight ChongWuDan =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChongWuDan")).GetComponent<ChongWuDanFight>();
@@ -1635,9 +1652,10 @@ public class Entrance : MonoBehaviour
                         ChongWuDan.quality = 5;
                         break;
                 }
+
                 GameController.S.ChongWuDanQueue.Enqueue(ChongWuDan);
                 break;
-            
+
             case PropConfig.PropType.XiSuiYe:
                 XiSuiYeFight XiSuiYe =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Prop/XiSuiYe")).GetComponent<XiSuiYeFight>();
@@ -1651,10 +1669,11 @@ public class Entrance : MonoBehaviour
                         XiSuiYe.quality = 5;
                         break;
                 }
+
                 GameController.S.XiSuiYeQueue.Enqueue(XiSuiYe);
                 break;
-            
-            
+
+
             case PropConfig.PropType.XueMaiDan:
                 XueMaiDanFight XueMaiDan =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Prop/XueMaiDan")).GetComponent<XueMaiDanFight>();
@@ -1668,13 +1687,15 @@ public class Entrance : MonoBehaviour
                         XueMaiDan.quality = 5;
                         break;
                 }
+
                 GameController.S.XueMaiDanQueue.Enqueue(XueMaiDan);
                 break;
-            
-            
+
+
             case PropConfig.PropType.SkillShu:
                 ChongWuSkillShuFight ChongWuSkillShu =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChongWuSkillShu")).GetComponent<ChongWuSkillShuFight>();
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChongWuSkillShu"))
+                        .GetComponent<ChongWuSkillShuFight>();
                 ChongWuSkillShu.gameObject.SetActive(false);
                 switch (info.PropItem.Quality)
                 {
@@ -1697,13 +1718,15 @@ public class Entrance : MonoBehaviour
                         ChongWuSkillShu.quality = 6;
                         break;
                 }
+
                 GameController.S.ChongWuSkillShuQueue.Enqueue(ChongWuSkillShu);
                 break;
-            
-            
+
+
             case PropConfig.PropType.ChongWuShiWu:
                 ChongWuShiWuFight ChongWuShiWu =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChongWuShiWu")).GetComponent<ChongWuShiWuFight>();
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChongWuShiWu"))
+                        .GetComponent<ChongWuShiWuFight>();
                 ChongWuShiWu.gameObject.SetActive(false);
                 switch (info.PropItem.Quality)
                 {
@@ -1726,19 +1749,21 @@ public class Entrance : MonoBehaviour
                         ChongWuShiWu.quality = 6;
                         break;
                 }
+
                 GameController.S.ChongWuShiWuQueue.Enqueue(ChongWuShiWu);
                 break;
-            
+
             case PropConfig.PropType.DaKongShi:
                 DaKongShiFight DaKongShi =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Prop/DaKongShi")).GetComponent<DaKongShiFight>();
                 DaKongShi.gameObject.SetActive(false);
                 GameController.S.DaKongShiQueue.Enqueue(DaKongShi);
                 break;
-            
+
             case PropConfig.PropType.ShenHuaCaiLiao:
                 ShenHuaCaiLiaoFight ShenHuaCaiLiao =
-                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ShenHuaCaiLiao")).GetComponent<ShenHuaCaiLiaoFight>();
+                    Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ShenHuaCaiLiao"))
+                        .GetComponent<ShenHuaCaiLiaoFight>();
                 ShenHuaCaiLiao.gameObject.SetActive(false);
                 switch (info.PropItem.Quality)
                 {
@@ -1755,10 +1780,12 @@ public class Entrance : MonoBehaviour
                         ShenHuaCaiLiao.quality = 4;
                         break;
                 }
+
                 GameController.S.ShenHuaCaiLiaoQueue.Enqueue(ShenHuaCaiLiao);
                 break;
         }
     }
+    
 
     public static void InitEquip(MonsterEquip info)
     {
@@ -1768,11 +1795,11 @@ public class Entrance : MonoBehaviour
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject primaryCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryCloakFight"));
-                    primaryCloakFight.gameObject.SetActive(false);
-                    GameController.S.PrimaryCloakQueue.Enqueue(primaryCloakFight);
-                    break;
+                        GameObject primaryCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryCloakFight"));
+                        primaryCloakFight.gameObject.SetActive(false);
+                        GameController.S.PrimaryCloakQueue.Enqueue(primaryCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject primaryNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryNecklaceFight"));
@@ -1804,20 +1831,21 @@ public class Entrance : MonoBehaviour
                         GameController.S.PrimaryRingQueue.Enqueue(primaryRingFight);
                         break;
                 }
+
                 break;
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.Green:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject GreenCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenCloakFight"));
-                    GreenCloakFight.gameObject.SetActive(false);
-                    GameController.S.GreenCloakQueue.Enqueue(GreenCloakFight);
-                    break;
+                        GameObject GreenCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenCloakFight"));
+                        GreenCloakFight.gameObject.SetActive(false);
+                        GameController.S.GreenCloakQueue.Enqueue(GreenCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject GreenNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenNecklaceFight"));
@@ -1849,21 +1877,22 @@ public class Entrance : MonoBehaviour
                         GameController.S.GreenRingQueue.Enqueue(GreenRingFight);
                         break;
                 }
+
                 break;
-            
-            
-            
-            
-            
+
+
+
+
+
             case PlayerEquipConfig.EquipLevel.Blue:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject BlueCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueCloakFight"));
-                    BlueCloakFight.gameObject.SetActive(false);
-                    GameController.S.BlueCloakQueue.Enqueue(BlueCloakFight);
-                    break;
+                        GameObject BlueCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueCloakFight"));
+                        BlueCloakFight.gameObject.SetActive(false);
+                        GameController.S.BlueCloakQueue.Enqueue(BlueCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject BlueNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueNecklaceFight"));
@@ -1895,20 +1924,21 @@ public class Entrance : MonoBehaviour
                         GameController.S.BlueRingQueue.Enqueue(BlueRingFight);
                         break;
                 }
+
                 break;
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.Purple:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject PurpleCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleCloakFight"));
-                    PurpleCloakFight.gameObject.SetActive(false);
-                    GameController.S.PurpleCloakQueue.Enqueue(PurpleCloakFight);
-                    break;
+                        GameObject PurpleCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleCloakFight"));
+                        PurpleCloakFight.gameObject.SetActive(false);
+                        GameController.S.PurpleCloakQueue.Enqueue(PurpleCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject PurpleNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleNecklaceFight"));
@@ -1940,20 +1970,21 @@ public class Entrance : MonoBehaviour
                         GameController.S.PurpleRingQueue.Enqueue(PurpleRingFight);
                         break;
                 }
+
                 break;
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.Purple1:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject Purple1CloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1CloakFight"));
-                    Purple1CloakFight.gameObject.SetActive(false);
-                    GameController.S.Purple1CloakQueue.Enqueue(Purple1CloakFight);
-                    break;
+                        GameObject Purple1CloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1CloakFight"));
+                        Purple1CloakFight.gameObject.SetActive(false);
+                        GameController.S.Purple1CloakQueue.Enqueue(Purple1CloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject Purple1NecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1NecklaceFight"));
@@ -1985,20 +2016,21 @@ public class Entrance : MonoBehaviour
                         GameController.S.Purple1RingQueue.Enqueue(Purple1RingFight);
                         break;
                 }
+
                 break;
-            
-            
-            
-            
+
+
+
+
             case PlayerEquipConfig.EquipLevel.TreeMan:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject TreeManCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManCloakFight"));
-                    TreeManCloakFight.gameObject.SetActive(false);
-                    GameController.S.TreeManCloakQueue.Enqueue(TreeManCloakFight);
-                    break;
+                        GameObject TreeManCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManCloakFight"));
+                        TreeManCloakFight.gameObject.SetActive(false);
+                        GameController.S.TreeManCloakQueue.Enqueue(TreeManCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject TreeManNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManNecklaceFight"));
@@ -2030,21 +2062,22 @@ public class Entrance : MonoBehaviour
                         GameController.S.TreeManRingQueue.Enqueue(TreeManRingFight);
                         break;
                 }
+
                 break;
-            
-            
-            
-            
-            
+
+
+
+
+
             case PlayerEquipConfig.EquipLevel.HuoShan:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject HuoShanBossCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanCloakFight"));
-                    HuoShanBossCloakFight.gameObject.SetActive(false);
-                    GameController.S.HuoShanCloakQueue.Enqueue(HuoShanBossCloakFight);
-                    break;
+                        GameObject HuoShanBossCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanCloakFight"));
+                        HuoShanBossCloakFight.gameObject.SetActive(false);
+                        GameController.S.HuoShanCloakQueue.Enqueue(HuoShanBossCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject HuoShanBossNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanNecklaceFight"));
@@ -2076,21 +2109,22 @@ public class Entrance : MonoBehaviour
                         GameController.S.HuoShanRingQueue.Enqueue(HuoShanBossRingFight);
                         break;
                 }
+
                 break;
-            
-            
-            
-            
-            
+
+
+
+
+
             case PlayerEquipConfig.EquipLevel.ZhaoZe:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject ZhaoZeCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeCloakFight"));
-                    ZhaoZeCloakFight.gameObject.SetActive(false);
-                    GameController.S.ZhaoZeCloakQueue.Enqueue(ZhaoZeCloakFight);
-                    break;
+                        GameObject ZhaoZeCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeCloakFight"));
+                        ZhaoZeCloakFight.gameObject.SetActive(false);
+                        GameController.S.ZhaoZeCloakQueue.Enqueue(ZhaoZeCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject ZhaoZeNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeNecklaceFight"));
@@ -2122,19 +2156,20 @@ public class Entrance : MonoBehaviour
                         GameController.S.ZhaoZeRingQueue.Enqueue(ZhaoZeRingFight);
                         break;
                 }
+
                 break;
-            
-            
-            
-             case PlayerEquipConfig.EquipLevel.XieZi:
+
+
+
+            case PlayerEquipConfig.EquipLevel.XieZi:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject XieZiCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiCloakFight"));
-                    XieZiCloakFight.gameObject.SetActive(false);
-                    GameController.S.XieZiCloakQueue.Enqueue(XieZiCloakFight);
-                    break;
+                        GameObject XieZiCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiCloakFight"));
+                        XieZiCloakFight.gameObject.SetActive(false);
+                        GameController.S.XieZiCloakQueue.Enqueue(XieZiCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject XieZiNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiNecklaceFight"));
@@ -2166,18 +2201,19 @@ public class Entrance : MonoBehaviour
                         GameController.S.XieZiRingQueue.Enqueue(XieZiRingFight);
                         break;
                 }
+
                 break;
-             
-             
-              case PlayerEquipConfig.EquipLevel.XueRen:
+
+
+            case PlayerEquipConfig.EquipLevel.XueRen:
                 switch (info.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                    GameObject XueRenCloakFight =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenCloakFight"));
-                    XueRenCloakFight.gameObject.SetActive(false);
-                    GameController.S.XueRenCloakQueue.Enqueue(XueRenCloakFight);
-                    break;
+                        GameObject XueRenCloakFight =
+                            Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenCloakFight"));
+                        XueRenCloakFight.gameObject.SetActive(false);
+                        GameController.S.XueRenCloakQueue.Enqueue(XueRenCloakFight);
+                        break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject XueRenNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenNecklaceFight"));
@@ -2209,1336 +2245,14 @@ public class Entrance : MonoBehaviour
                         GameController.S.XueRenRingQueue.Enqueue(XueRenRingFight);
                         break;
                 }
+
                 break;
-            
+
         }
+        
     }
 
     private void Awake()
     {
-        GameController.S.MonsterList = GameController.S.SelectTwoUniqueNumbers();
-        GameController.S.MonsterColliderDic.Clear();
-        Application.targetFrameRate = 30;
-        GlobalPlayerAttribute.CurrentHp = GlobalPlayerAttribute.TotalMaxHp;
-        LevelInfoConfig.IsOneGame = false;
-
-        AudioController.S.BGAudioSource.clip = Resources.Load<AudioClip>("Audio/BG/Level1BG");
-        AudioController.S.BGAudioSource.Play();
-
-        GameController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp;
-        GameController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp;
-        //GameController.S.GameDefense = GlobalPlayerAttribute.TotalDefense;
-        //GameController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
-        GameController.S.GameCrit = GlobalPlayerAttribute.TotalCRIT;
-        GameController.S.isFuHuo = true;
-        GameController.S.TotalAddHp = 0;
-
-
-
-        //初始化最大boss能量值
-        GameController.S.MaxBossEnergyNum =
-            LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel] *
-            2; //这时小怪数量，精英不算数量，每10只普通怪出一只精英，所以正好是2倍
-        GameController.S.MaxBossEnergyNum = 10;
-
-        if (SkillJiaDian.S.Alpha1 == SkillType.Ice3 || SkillJiaDian.S.Alpha2 == SkillType.Ice3 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Ice3 || SkillJiaDian.S.Alpha4 == SkillType.Ice3 || SkillJiaDian.S.Alpha5 == SkillType.Ice3)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/IceExplosion").GetComponent<IceExplosion>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.IceExQueue.Enqueue(Monster1);
-            }
-        }
-
-        if (SkillJiaDian.S.Alpha1 == SkillType.Huo1 || SkillJiaDian.S.Alpha2 == SkillType.Huo1 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Huo1|| SkillJiaDian.S.Alpha4 == SkillType.Huo1|| SkillJiaDian.S.Alpha5 == SkillType.Huo1)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill1").GetComponent<HuoSkill1>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HuoSkill1Queue.Enqueue(Monster1);
-            }
-        }
-
-        if (SkillJiaDian.S.Alpha1 == SkillType.Dian2 || SkillJiaDian.S.Alpha2 == SkillType.Dian2 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Dian2|| SkillJiaDian.S.Alpha4 == SkillType.Dian2|| SkillJiaDian.S.Alpha5 == SkillType.Dian2)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill2").GetComponent<DianSkill2>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.DianSkill2Queue.Enqueue(Monster1);
-            }
-        }
-
-        if (SkillJiaDian.S.Alpha1 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn3 ||
-            SkillJiaDian.S.Alpha3 == SkillType.HeiAn3|| SkillJiaDian.S.Alpha4 == SkillType.HeiAn3|| SkillJiaDian.S.Alpha5 == SkillType.HeiAn3)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill3")
-                            .GetComponent<HeiAnSkill3>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HeiAnSkill3Queue.Enqueue(Monster1);
-            }
-        }
-
-        if (SkillJiaDian.S.Alpha1 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn1 ||
-            SkillJiaDian.S.Alpha3 == SkillType.HeiAn1|| SkillJiaDian.S.Alpha4 == SkillType.HeiAn1|| SkillJiaDian.S.Alpha5 == SkillType.HeiAn1)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill1")
-                            .GetComponent<HeiAnSkill1>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HeiAnSkill1Queue.Enqueue(Monster1);
-            }
-        }
-
-        if (SkillJiaDian.S.Alpha1 == SkillType.Dian3 || SkillJiaDian.S.Alpha2 == SkillType.Dian3 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Dian3|| SkillJiaDian.S.Alpha4 == SkillType.Dian3|| SkillJiaDian.S.Alpha5 == SkillType.Dian3)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill3").GetComponent<DianSkill3>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.DianSkill3Queue.Enqueue(Monster1);
-            }
-        }
-
-        if (SkillJiaDian.S.Alpha1 == SkillType.Huo3 || SkillJiaDian.S.Alpha2 == SkillType.Huo3 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Huo3|| SkillJiaDian.S.Alpha4 == SkillType.Huo3|| SkillJiaDian.S.Alpha5 == SkillType.Huo3)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill3").GetComponent<HuoSkill3>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HuoSkill3Queue.Enqueue(Monster1);
-            }
-        }
-
-        if (SkillJiaDian.S.Alpha1 == SkillType.Ice1 || SkillJiaDian.S.Alpha2 == SkillType.Ice1 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Ice1|| SkillJiaDian.S.Alpha4 == SkillType.Ice1|| SkillJiaDian.S.Alpha5 == SkillType.Ice1)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/IceSkill/IceSkill1").GetComponent<IceSkill1>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.IceSkill1Queue.Enqueue(Monster1);
-            }
-        }
-        
-        if (SkillJiaDian.S.Alpha1 != SkillType.Ice4 || SkillJiaDian.S.Alpha2 == SkillType.Ice4 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Ice4|| SkillJiaDian.S.Alpha4 == SkillType.Ice4|| SkillJiaDian.S.Alpha5 == SkillType.Ice4)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/IceSkill/IceSkill4").GetComponent<IceSkill4>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.IceSkill4Queue.Enqueue(Monster1);
-            }
-        }
-        
-        
-        if (SkillJiaDian.S.Alpha1 != SkillType.Ice5 || SkillJiaDian.S.Alpha2 == SkillType.Ice5 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Ice5|| SkillJiaDian.S.Alpha4 == SkillType.Ice5|| SkillJiaDian.S.Alpha5 == SkillType.Ice5)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/IceSkill/IceSkill5").GetComponent<IceSkill5>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.IceSkill5Queue.Enqueue(Monster1);
-            }
-        }
-        
-        
-        
-        if (SkillJiaDian.S.Alpha1 != SkillType.Huo4 || SkillJiaDian.S.Alpha2 == SkillType.Huo4 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Huo4|| SkillJiaDian.S.Alpha4 == SkillType.Huo4|| SkillJiaDian.S.Alpha5 == SkillType.Huo4)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill4").GetComponent<HuoSkill4>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HuoSkill4Queue.Enqueue(Monster1);
-            }
-        }
-        
-        
-        
-        if (SkillJiaDian.S.Alpha1 != SkillType.Huo5 || SkillJiaDian.S.Alpha2 == SkillType.Huo5 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Huo5|| SkillJiaDian.S.Alpha4 == SkillType.Huo5|| SkillJiaDian.S.Alpha5 == SkillType.Huo5)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HuoSkill/HuoSkill5").GetComponent<HuoSkill5>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HuoSkill5Queue.Enqueue(Monster1);
-            }
-        }
-        
-        
-        
-        if (SkillJiaDian.S.Alpha1 != SkillType.Dian4 || SkillJiaDian.S.Alpha2 == SkillType.Dian4 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Dian4|| SkillJiaDian.S.Alpha4 == SkillType.Dian4|| SkillJiaDian.S.Alpha5 == SkillType.Dian4)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill4").GetComponent<DianSkill4>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.DianSkill4Queue.Enqueue(Monster1);
-            }
-        }
-        
-        
-        
-        if (SkillJiaDian.S.Alpha1 != SkillType.Dian5 || SkillJiaDian.S.Alpha2 == SkillType.Dian5 ||
-            SkillJiaDian.S.Alpha3 == SkillType.Dian5|| SkillJiaDian.S.Alpha4 == SkillType.Dian5|| SkillJiaDian.S.Alpha5 == SkillType.Dian5)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/DianSkill/DianSkill5").GetComponent<DianSkill5>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.DianSkill5Queue.Enqueue(Monster1);
-            }
-        }
-        
-        
-        
-        if (SkillJiaDian.S.Alpha1 != SkillType.HeiAn4 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn4 ||
-            SkillJiaDian.S.Alpha3 == SkillType.HeiAn4|| SkillJiaDian.S.Alpha4 == SkillType.HeiAn4|| SkillJiaDian.S.Alpha5 == SkillType.HeiAn4)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill4").GetComponent<HeiAnSkill4>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HeiAnSkill4Queue.Enqueue(Monster1);
-            }
-        }
-        
-        
-        
-        if (SkillJiaDian.S.Alpha1 != SkillType.HeiAn5 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn5 ||
-            SkillJiaDian.S.Alpha3 == SkillType.HeiAn5|| SkillJiaDian.S.Alpha4 == SkillType.HeiAn5|| SkillJiaDian.S.Alpha5 == SkillType.HeiAn5)
-        {
-            for (int i = 0; i < 30; i++)
-            {
-                var Monster1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/HeiAnSkill/HeiAnSkill5").GetComponent<HeiAnSkill5>(),
-                        GameController.S.transform);
-                Monster1.gameObject.SetActive(false);
-                GameController.S.HeiAnSkill5Queue.Enqueue(Monster1);
-            }
-        }
-
-
-        if (LevelInfoConfig.CurrentGameLevel > 15)
-        {
-
-            if (LevelInfoConfig.CurrentGameLevel == 16)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var Monster1 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LeiShou/LeiShouSkill3")
-                                .GetComponent<LeiShouSkill3>(),
-                            GameController.S.transform);
-                    Monster1.gameObject.SetActive(false);
-                    GameController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel ==17)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var Monster2 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/KuiJia/HeiXuanFen")
-                                .GetComponent<HeiXuanFen>(),
-                            GameController.S.transform);
-                    Monster2.gameObject.SetActive(false);
-                    GameController.S.HeiXuanFenQueue.Enqueue(Monster2.GetComponent<HeiXuanFen>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 18)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var Monster3 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/LvZhuiZong")
-                                .GetComponent<LvZhuiZong>(),
-                            GameController.S.transform);
-                    Monster3.gameObject.SetActive(false);
-                    GameController.S.LvZhuiZongQueue.Enqueue(Monster3.GetComponent<LvZhuiZong>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel ==18)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var Monster4 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/LvXuanFen")
-                                .GetComponent<LvXuanFen>(),
-                            GameController.S.transform);
-                    Monster4.gameObject.SetActive(false);
-                    GameController.S.LvXuanFenQueue.Enqueue(Monster4.GetComponent<LvXuanFen>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 18)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-
-                    var Monster5 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/BaoZiSkill2")
-                                .GetComponent<BaoZiSkill2>(),
-                            GameController.S.transform);
-                    Monster5.gameObject.SetActive(false);
-                    GameController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel ==19)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-
-                    var Monster6 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoLang/HuoLangSkill2")
-                                .GetComponent<HuoLangSkill2>(),
-                            GameController.S.transform);
-                    Monster6.gameObject.SetActive(false);
-                    GameController.S.HuoLangSkill2Queue.Enqueue(Monster6.GetComponent<HuoLangSkill2>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 20)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-
-                    var Monster7 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoSkill2")
-                                .GetComponent<ShuangDaoSkill2>(),
-                            GameController.S.transform);
-                    Monster7.gameObject.SetActive(false);
-                    GameController.S.ShuangDaoSkill2Queue.Enqueue(Monster7.GetComponent<ShuangDaoSkill2>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel ==20)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var Monster8 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoSkill3")
-                                .GetComponent<ShuangDaoSkill3>(),
-                            GameController.S.transform);
-                    Monster8.gameObject.SetActive(false);
-                    GameController.S.ShuangDaoSkill3Queue.Enqueue(Monster8.GetComponent<ShuangDaoSkill3>());
-                }
-            }
-
-        }
-
-
-        //秘境怪物
-       // if (LevelInfoConfig.CurrentGameLevel > 15)
-        {
-
-            //if (LevelInfoConfig.CurrentGameLevel == 18)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster1 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),
-                            GameController.S.transform);
-                    Monster1.gameObject.SetActive(false);
-                    GameController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
-                    Collider2D collider2D = Monster1.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D, Monster1.GetComponent<MonsterBase>());
-                }
-            }
-            
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 16)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster2 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo1").GetComponent<EMo1>(),
-                            GameController.S.transform);
-                    Monster2.gameObject.SetActive(false);
-                    GameController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
-                    Collider2D collider2D2 =
-                        Monster2.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D2,
-                        Monster2.GetComponent<MonsterBase>());
-                }
-            }
-            
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 19)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-
-                    var Monster3 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo2").GetComponent<EMo2>(),
-                            GameController.S.transform);
-                    Monster3.gameObject.SetActive(false);
-                    GameController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
-                    Collider2D collider2D3 =
-                        Monster3.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D3,
-                        Monster3.GetComponent<MonsterBase>());
-                }
-            }
-            
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 22)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster4 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo3").GetComponent<EMo3>(),
-                            GameController.S.transform);
-                    Monster4.gameObject.SetActive(false);
-                    GameController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
-                    Collider2D collider2D4 = Monster4.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D4, Monster4.GetComponent<MonsterBase>());
-                }
-            }
-            
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 16)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster5 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1")
-                                .GetComponent<HongLong1>(), GameController.S.transform);
-                    Monster5.gameObject.SetActive(false);
-                    GameController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
-                    Collider2D collider2D5 =
-                        Monster5.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D5,
-                        Monster5.GetComponent<MonsterBase>());
-                }
-            }
-            
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 19)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster6 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2")
-                                .GetComponent<HongLong2>(), GameController.S.transform);
-                    Monster6.gameObject.SetActive(false);
-                    GameController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
-                    Collider2D collider2D6 =
-                        Monster6.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D6,
-                        Monster6.GetComponent<MonsterBase>());
-                }
-            }
-            
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 22)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-
-                    var Monster7 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3")
-                                .GetComponent<HongLong3>(), GameController.S.transform);
-                    Monster7.gameObject.SetActive(false);
-                    GameController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
-                    Collider2D collider2D7 = Monster7.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D7, Monster7.GetComponent<MonsterBase>());
-                }
-            }
-
-            
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 17)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster8 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong1")
-                                .GetComponent<LanLong1>(),
-                            GameController.S.transform);
-                    Monster8.gameObject.SetActive(false);
-                    GameController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
-                    Collider2D collider2D8 =
-                        Monster8.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D8,
-                        Monster8.GetComponent<MonsterBase>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 20)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster9 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong2")
-                                .GetComponent<LanLong2>(),
-                            GameController.S.transform);
-                    Monster9.gameObject.SetActive(false);
-                    GameController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
-                    Collider2D collider2D9 =
-                        Monster9.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D9,
-                        Monster9.GetComponent<MonsterBase>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 23)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster10 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),
-                            GameController.S.transform);
-                    Monster10.gameObject.SetActive(false);
-                    GameController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
-                    Collider2D collider2D10 = Monster10.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D10, Monster10.GetComponent<MonsterBase>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 18)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster11 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLang")
-                                .GetComponent<LvLang>(),
-                            GameController.S.transform);
-                    Monster11.gameObject.SetActive(false);
-                    GameController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
-                    Collider2D collider2D11 =
-                        Monster11.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D11,
-                        Monster11.GetComponent<MonsterBase>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 17)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster12 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong1")
-                                .GetComponent<LvLong1>(),
-                            GameController.S.transform);
-                    Monster12.gameObject.SetActive(false);
-                    GameController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
-                    Collider2D collider2D12 =
-                        Monster12.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D12,
-                        Monster12.GetComponent<MonsterBase>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 20)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster13 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong2")
-                                .GetComponent<LvLong2>(),
-                            GameController.S.transform);
-                    Monster13.gameObject.SetActive(false);
-                    GameController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
-                    Collider2D collider2D13 =
-                        Monster13.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D13,
-                        Monster13.GetComponent<MonsterBase>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 21)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var huangshu =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangShuMonster")
-                                .GetComponent<HuangShu>(),
-                            GameController.S.transform);
-                    huangshu.gameObject.SetActive(false);
-                    GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
-
-                    Collider2D Huangshucollider2D = huangshu.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(Huangshucollider2D,
-                        huangshu.GetComponent<MonsterBase>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 21)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-
-                    var Huangzhu =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangZhuMonster")
-                                .GetComponent<Huangzhu>(),
-                            GameController.S.transform);
-                    Huangzhu.gameObject.SetActive(false);
-                    GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
-                    Collider2D Huangzhucollider2D = Huangzhu.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(Huangzhucollider2D, Huangzhu.GetComponent<MonsterBase>());
-                }
-            }
-
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 23)
-            {
-                for (int i = 0; i < 150; i++)
-                {
-                    var Monster14 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),
-                            GameController.S.transform);
-                    Monster14.gameObject.SetActive(false);
-                    GameController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
-                    Collider2D collider2D14 = Monster14.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D14, Monster14.GetComponent<MonsterBase>());
-                }
-            }
-            
-            
-
-
-        }
-
-        //实例化
-        //FightBGController
-
-
-        //Boss攻击对象池
-        for (int i = 0; i < 100; i++)
-        {
-            PlayerHurt playerHurt = Instantiate(Resources.Load<PlayerHurt>("Prefabs/Player/PlayerHurt"));
-            playerHurt.gameObject.SetActive(false);
-            GameController.S.PlayerHurtQueue.Enqueue(playerHurt);
-
-            CircleAttack circle = Instantiate(Resources.Load<CircleAttack>("Prefabs/Tool/CircleAttack"));
-            circle.gameObject.SetActive(false);
-            GameController.S.CircleQueue.Enqueue(circle);
-
-            SqrtAttack sqrt = Instantiate(Resources.Load<SqrtAttack>("Prefabs/Tool/SqrtAttack"));
-            sqrt.gameObject.SetActive(false);
-            GameController.S.SqrtQueue.Enqueue(sqrt);
-
-            BaoShi BaoShi = Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BaoShi")).GetComponent<BaoShi>();
-            BaoShi.gameObject.SetActive(false);
-            GameController.S.BaoShiQueue.Enqueue(BaoShi);
-        }
-
-        //初始化装备和道具队列
-       LevelInfoConfig.InitEquipQueue();
-       LevelInfoConfig.InitPropQueue();
-       
-            for (int i = 0; i < 200; i++)
-            {
-                GameObject monsterHurtText = Instantiate(Resources.Load<GameObject>("Prefabs/Tool/MonsterHurtText"));
-                monsterHurtText.gameObject.SetActive(false);
-                GameController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
-            }
-
-            if (SkillJiaDian.S.Alpha1 == SkillType.Dian1 || SkillJiaDian.S.Alpha2 == SkillType.Dian1 ||
-                SkillJiaDian.S.Alpha3 == SkillType.Dian1|| SkillJiaDian.S.Alpha4 == SkillType.Dian1|| SkillJiaDian.S.Alpha5 == SkillType.Dian1)
-            {
-                for (int i = 0; i < 10; i++)
-                {
-                    GameObject dianQuanPeng =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Skill/DianQuan/DianPeng"));
-                    dianQuanPeng.gameObject.SetActive(false);
-                    GameController.S.DianQuanPengQueue.Enqueue(dianQuanPeng);
-
-                    var dianqian = Instantiate(Resources.Load("Prefabs/Skill/DianQuan/DianQuan"), new Vector3(0, 0, 0),
-                        Quaternion.identity) as GameObject;
-                    dianqian.SetActive(false);
-                    GameController.S.DianQuanQueue.Enqueue(dianqian);
-                }
-            }
-
-            for (int i = 0; i < 10; i++)
-            {
-                var circleAttack = Instantiate(Resources.Load("Prefabs/Tool/CircleAttack"), new Vector3(0, 0, 0),
-                    Quaternion.identity) as GameObject;
-                circleAttack.SetActive(false);
-                FightBGController.S.CircleAttackQueue.Enqueue(circleAttack.GetComponent<CircleAttack>());
-                var fire = Instantiate(Resources.Load("Prefabs/Skill/TreeManFire"), new Vector3(0, 0, 0),
-                    Quaternion.identity) as GameObject;
-                fire.SetActive(false);
-                FightBGController.S.TreeManFireQueue.Enqueue(fire.GetComponent<TreeManFire>());
-                var sqrtattack = Instantiate(Resources.Load("Prefabs/Tool/SqrtAttack"), new Vector3(0, 0, 0),
-                    Quaternion.identity) as GameObject;
-                sqrtattack.SetActive(false);
-                FightBGController.S.SqrtAttackQueue.Enqueue(sqrtattack.GetComponent<SqrtAttack>());
-                var playerhit = Instantiate(Resources.Load("Prefabs/Player/PlayerHit"), new Vector3(0, 0, 0),
-                    Quaternion.identity) as GameObject;
-                playerhit.SetActive(false);
-                FightBGController.S.PlayerHitQueue.Enqueue(playerhit.GetComponent<PlayerHit>());
-            }
-
-
-
-
-            //初始化技能队列
-
-            for (int i = 0; i < 100; i++)
-            {
-                switch (PlayerData.S.playerWeaponType)
-                {
-                    case WeaponType.Primary:
-                        var PuTong31 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/Primary"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        PuTong31.SetActive(false);
-                        GameController.S.PrimaryQueue.Enqueue(PuTong31);
-
-                        var PuTong3Peng1 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTongPeng3"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        PuTong3Peng1.SetActive(false);
-                        GameController.S.PuTong3PengQueue.Enqueue(PuTong3Peng1);
-                        break;
-                    case WeaponType.LanBao:
-                        var twoNormalAttack = Instantiate(Resources.Load("Prefabs/Skill/2NormalAttackPrefab"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        twoNormalAttack.SetActive(false);
-                        GameController.S.LvQuanQueue.Enqueue(twoNormalAttack);
-                        break;
-
-                    case WeaponType.HeiDong:
-                        var HeiDong = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/HeiDongPro"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        HeiDong.SetActive(false);
-                        GameController.S.HeiDongQueue.Enqueue(HeiDong);
-
-                        var HeiDongNext = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/HeiDongNext"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        HeiDongNext.SetActive(false);
-                        GameController.S.HeiDongNextQueue.Enqueue(HeiDongNext);
-
-                        var HeiDongPeng = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/HeiDongPeng"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        HeiDongPeng.SetActive(false);
-                        GameController.S.HeiDongPengQueue.Enqueue(HeiDongPeng);
-                        break;
-
-                    case WeaponType.HuoBaoZha:
-                        var Du = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/HuoBaoZha")).GetComponent<HuoBaoZha>();
-                        Du.gameObject.SetActive(false);
-                        GameController.S.HuoBaoZhaQueue.Enqueue(Du);
-
-                        var DuPeng = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/HuoBaoZhaNext")).GetComponent<HuoYanBaoZhaNext>();
-                        DuPeng.gameObject.SetActive(false);
-                        GameController.S.HuoYanBaoZhaNextQueue.Enqueue(DuPeng);
-                        break;
-                    
-                    
-                    case WeaponType.IceBaoZha:
-                        var Du1 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/IceBaoZha")).GetComponent<IceBaoZha>();
-                        Du1.gameObject.SetActive(false);
-                        GameController.S.IceBaoZhaQueue.Enqueue(Du1);
-
-                        var DuPeng1 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/IceBaoZhaNext")).GetComponent<IceBaoZhaNext>();
-                        DuPeng1.gameObject.SetActive(false);
-                        GameController.S.IceBaoZhaNextQueue.Enqueue(DuPeng1);
-                        break;
-                    
-                    case WeaponType.DianBaoZha:
-                        var Du2 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/DianBaoZha")).GetComponent<DianBaoZha>();
-                        Du2.gameObject.SetActive(false);
-                        GameController.S.DianBaoZhaQueue.Enqueue(Du2);
-
-                        var DuPeng2 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/DianBaoZhaNext")).GetComponent<DianBaoZhaNext>();
-                        DuPeng2.gameObject.SetActive(false);
-                        GameController.S.DianBaoZhaNextQueue.Enqueue(DuPeng2);
-                        break;
-
-                    case WeaponType.LuoLei:
-                        var LuoLei = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/LuoLei"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        LuoLei.SetActive(false);
-                        GameController.S.LuoLeiQueue.Enqueue(LuoLei);
-                        break;
-
-                    case WeaponType.PuTong3:
-                        var PuTong3 = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTong3"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        PuTong3.SetActive(false);
-                        GameController.S.PuTong3Queue.Enqueue(PuTong3);
-
-                        var PuTong3Peng = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PuTongPeng3"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        PuTong3Peng.SetActive(false);
-                        GameController.S.PuTong3PengQueue.Enqueue(PuTong3Peng);
-                        break;
-
-                    case WeaponType.Fire:
-                        var FireAttack = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/Fire"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        FireAttack.SetActive(false);
-                        GameController.S.FireQueue.Enqueue(FireAttack);
-
-                        var FirePengAttack = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/FirePeng"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        FirePengAttack.SetActive(false);
-                        GameController.S.FirePengQueue.Enqueue(FirePengAttack);
-
-                        var FireBaoZha = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/FireBaoZha"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        FireBaoZha.SetActive(false);
-                        GameController.S.FireBaoZha1Queue.Enqueue(FireBaoZha);
-                        break;
-
-                    case WeaponType.XuKong:
-                        var XuKongAttack = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/XuKong"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        XuKongAttack.SetActive(false);
-                        GameController.S.XuKongQueue.Enqueue(XuKongAttack);
-
-                        var XuKongPengAttack = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/XuKongPeng"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        XuKongPengAttack.SetActive(false);
-                        GameController.S.XuKongPengQueue.Enqueue(XuKongPengAttack);
-                        break;
-
-                    case WeaponType.LvQuan:
-                        var lvNormalAttack = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/LvQuan"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        lvNormalAttack.SetActive(false);
-                        GameController.S.LvQuanQueue.Enqueue(lvNormalAttack);
-                        break;
-
-                    case WeaponType.JianQi:
-                        var JianQi =
-                            Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/PlayerJianQi"), new Vector3(0, 0, 0),
-                                Quaternion.identity).GetComponent<PlayerJianQi>();
-                        JianQi.gameObject.SetActive(false);
-                        GameController.S.PlayerJianQiQueue.Enqueue(JianQi);
-
-                        var zibaozha = Instantiate(Resources.Load("Prefabs/Skill/NormalAttack/ZiPeng"),
-                            new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-                        zibaozha.SetActive(false);
-                        GameController.S.ZiBaoZhaQueue.Enqueue(zibaozha);
-                        break;
-
-                }
-            }
-
-            if (WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType] == YuanSuType.Ice ||
-                SkillJiaDian.S.Alpha1 == SkillType.Ice1 || SkillJiaDian.S.Alpha1 == SkillType.Ice2 ||
-                SkillJiaDian.S.Alpha1 == SkillType.Ice3 || SkillJiaDian.S.Alpha1 == SkillType.Ice4 ||
-                SkillJiaDian.S.Alpha1 == SkillType.Ice5
-                || SkillJiaDian.S.Alpha2 == SkillType.Ice1 || SkillJiaDian.S.Alpha2 == SkillType.Ice2 ||
-                SkillJiaDian.S.Alpha2 == SkillType.Ice3 || SkillJiaDian.S.Alpha2 == SkillType.Ice4 ||
-                SkillJiaDian.S.Alpha2 == SkillType.Ice5
-                || SkillJiaDian.S.Alpha3 == SkillType.Ice1 || SkillJiaDian.S.Alpha3 == SkillType.Ice2 ||
-                SkillJiaDian.S.Alpha3 == SkillType.Ice3 || SkillJiaDian.S.Alpha3 == SkillType.Ice4 ||
-                SkillJiaDian.S.Alpha3 == SkillType.Ice5
-                || SkillJiaDian.S.Alpha4 == SkillType.Ice1 || SkillJiaDian.S.Alpha4 == SkillType.Ice2 ||
-                SkillJiaDian.S.Alpha4 == SkillType.Ice3 || SkillJiaDian.S.Alpha4 == SkillType.Ice4 ||
-                SkillJiaDian.S.Alpha4 == SkillType.Ice5
-                || SkillJiaDian.S.Alpha5 == SkillType.Ice1 || SkillJiaDian.S.Alpha5 == SkillType.Ice2 ||
-                SkillJiaDian.S.Alpha5 == SkillType.Ice3 || SkillJiaDian.S.Alpha5 == SkillType.Ice4 ||
-                SkillJiaDian.S.Alpha5 == SkillType.Ice5)
-            {
-                for (int i = 0; i < 200; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/Peng/IcePeng"));
-                    IcePeng.SetActive(false);
-                    GameController.S.IcePengQueue.Enqueue(IcePeng);
-                }
-            }
-            
-            
-            
-            if (WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType] == YuanSuType.HeiAn ||
-                SkillJiaDian.S.Alpha1 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha1 == SkillType.HeiAn2 ||
-                SkillJiaDian.S.Alpha1 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha1 == SkillType.HeiAn4 ||
-                SkillJiaDian.S.Alpha1 == SkillType.HeiAn5
-                || SkillJiaDian.S.Alpha2 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn2 ||
-                SkillJiaDian.S.Alpha2 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha2 == SkillType.HeiAn4 ||
-                SkillJiaDian.S.Alpha2 == SkillType.HeiAn5
-                || SkillJiaDian.S.Alpha3 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha3 == SkillType.HeiAn2 ||
-                SkillJiaDian.S.Alpha3 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha3 == SkillType.HeiAn4 ||
-                SkillJiaDian.S.Alpha3 == SkillType.HeiAn5
-                || SkillJiaDian.S.Alpha4 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha4 == SkillType.HeiAn2 ||
-                SkillJiaDian.S.Alpha4 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha4 == SkillType.HeiAn4 ||
-                SkillJiaDian.S.Alpha4 == SkillType.HeiAn5
-                || SkillJiaDian.S.Alpha5 == SkillType.HeiAn1 || SkillJiaDian.S.Alpha5 == SkillType.HeiAn2 ||
-                SkillJiaDian.S.Alpha5 == SkillType.HeiAn3 || SkillJiaDian.S.Alpha5 == SkillType.HeiAn4 ||
-                SkillJiaDian.S.Alpha5 == SkillType.HeiAn5)
-            {
-                for (int i = 0; i < 200; i++)
-                {
-                    var HeiAnPeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/Peng/HeiAnPeng"));
-                    HeiAnPeng.SetActive(false);
-                    GameController.S.HeiAnPengQueue.Enqueue(HeiAnPeng);
-                }
-            }
-            
-            
-            
-            if (WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType] == YuanSuType.Huo ||
-                SkillJiaDian.S.Alpha1 == SkillType.Huo1 || SkillJiaDian.S.Alpha1 == SkillType.Huo2 ||
-                SkillJiaDian.S.Alpha1 == SkillType.Huo3 || SkillJiaDian.S.Alpha1 == SkillType.Huo4 ||
-                SkillJiaDian.S.Alpha1 == SkillType.Huo5
-                || SkillJiaDian.S.Alpha2 == SkillType.Huo1 || SkillJiaDian.S.Alpha2 == SkillType.Huo2 ||
-                SkillJiaDian.S.Alpha2 == SkillType.Huo3 || SkillJiaDian.S.Alpha2 == SkillType.Huo4 ||
-                SkillJiaDian.S.Alpha2 == SkillType.Huo5
-                || SkillJiaDian.S.Alpha3 == SkillType.Huo1 || SkillJiaDian.S.Alpha3 == SkillType.Huo2 ||
-                SkillJiaDian.S.Alpha3 == SkillType.Huo3 || SkillJiaDian.S.Alpha3 == SkillType.Huo4 ||
-                SkillJiaDian.S.Alpha3 == SkillType.Huo5
-                || SkillJiaDian.S.Alpha4 == SkillType.Huo1 || SkillJiaDian.S.Alpha4 == SkillType.Huo2 ||
-                SkillJiaDian.S.Alpha4 == SkillType.Huo3 || SkillJiaDian.S.Alpha4 == SkillType.Huo4 ||
-                SkillJiaDian.S.Alpha4 == SkillType.Huo5
-                || SkillJiaDian.S.Alpha5 == SkillType.Huo1 || SkillJiaDian.S.Alpha5 == SkillType.Huo2 ||
-                SkillJiaDian.S.Alpha5 == SkillType.Huo3 || SkillJiaDian.S.Alpha5 == SkillType.Huo4 ||
-                SkillJiaDian.S.Alpha5 == SkillType.Huo5)
-            {
-                for (int i = 0; i < 200; i++)
-                {
-                    var HuoPeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/Peng/HuoPeng"));
-                    HuoPeng.SetActive(false);
-                    GameController.S.HuoPengQueue.Enqueue(HuoPeng);
-                }
-            }
-            
-            
-            if (WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType] == YuanSuType.Dian ||
-                SkillJiaDian.S.Alpha1 == SkillType.Dian1 || SkillJiaDian.S.Alpha1 == SkillType.Dian2 ||
-                SkillJiaDian.S.Alpha1 == SkillType.Dian3 || SkillJiaDian.S.Alpha1 == SkillType.Dian4 ||
-                SkillJiaDian.S.Alpha1 == SkillType.Dian5
-                || SkillJiaDian.S.Alpha2 == SkillType.Dian1 || SkillJiaDian.S.Alpha2 == SkillType.Dian2 ||
-                SkillJiaDian.S.Alpha2 == SkillType.Dian3 || SkillJiaDian.S.Alpha2 == SkillType.Dian4 ||
-                SkillJiaDian.S.Alpha2 == SkillType.Dian5
-                || SkillJiaDian.S.Alpha3 == SkillType.Dian1 || SkillJiaDian.S.Alpha3 == SkillType.Dian2 ||
-                SkillJiaDian.S.Alpha3 == SkillType.Dian3 || SkillJiaDian.S.Alpha3 == SkillType.Dian4 ||
-                SkillJiaDian.S.Alpha3 == SkillType.Dian5
-                || SkillJiaDian.S.Alpha4 == SkillType.Dian1 || SkillJiaDian.S.Alpha4 == SkillType.Dian2 ||
-                SkillJiaDian.S.Alpha4 == SkillType.Dian3 || SkillJiaDian.S.Alpha4 == SkillType.Dian4 ||
-                SkillJiaDian.S.Alpha4 == SkillType.Dian5
-                || SkillJiaDian.S.Alpha5 == SkillType.Dian1 || SkillJiaDian.S.Alpha5 == SkillType.Dian2 ||
-                SkillJiaDian.S.Alpha5 == SkillType.Dian3 || SkillJiaDian.S.Alpha5 == SkillType.Dian4 ||
-                SkillJiaDian.S.Alpha5 == SkillType.Dian5)
-            {
-                for (int i = 0; i < 200; i++)
-                {
-                    var DianPeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/Peng/DianPeng"));
-                    DianPeng.SetActive(false);
-                    GameController.S.DianPengQueue.Enqueue(DianPeng);
-                }
-            }
-            
-
-
-            if (PlayerData.S.playerWeaponType == WeaponType.HeiAnBaoZha)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnBaoZha"));
-                    IcePeng.SetActive(false);
-                    GameController.S.HeiAnBaoZhaQueue.Enqueue(IcePeng);
-                    var IcePeng1 =
-                        Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnBaoZhaNext"));
-                    IcePeng1.SetActive(false);
-                    GameController.S.HeiAnBaoZhaNextQueue.Enqueue(IcePeng1);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.Huo7)
-            {
-                for (int i = 0; i < 100; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Huo7Item").GetComponent<Huo7Item>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.Huo7Queue.Enqueue(IcePeng);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.Ice7)
-            {
-                for (int i = 0; i < 100; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Ice7Item").GetComponent<Ice7Item>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.Ice7Queue.Enqueue(IcePeng);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.DianLuoLei5)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/DianLuoLei").GetComponent<DianLuoLei>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.DianLuoLeiQueue.Enqueue(IcePeng);
-                    
-                    var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/DianLuoLeiNext").GetComponent<DianLuoLeiNext>());
-                    IcePeng1.gameObject.SetActive(false);
-                    GameController.S.DianLuoLeiNextQueue.Enqueue(IcePeng1);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.PrimaryDian)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/PrimaryDian").GetComponent<PrimaryDian>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.PrimaryDianQueue.Enqueue(IcePeng);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.PrimaryHuo)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/PrimaryHuo").GetComponent<PrimaryHuo>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.PrimaryHuoQueue.Enqueue(IcePeng);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.PrimaryHeiAn)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/PrimaryHeiAn").GetComponent<PrimaryHeiAn>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.PrimaryHeiAnQueue.Enqueue(IcePeng);
-                }
-            }
-            
-            
-            
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.IcePen)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/IcePen").GetComponent<IcePen>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.IcePenQueue.Enqueue(IcePeng);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.HuoFenLie)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLie").GetComponent<HuoFenLie>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.HuoFenLieQueue.Enqueue(IcePeng);
-                    var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieDan").GetComponent<HuoFenLieDan>());
-                    IcePeng1.gameObject.SetActive(false);
-                    GameController.S.HuoFenLieDanQueue.Enqueue(IcePeng1);
-                    var IcePeng2 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoFenLieBaoZha").GetComponent<HuoFenLieBaoZha>());
-                    IcePeng2.gameObject.SetActive(false);
-                    GameController.S.HuoFenLieBaoZhaQueue.Enqueue(IcePeng2);
-
-                }
-            }
-            
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.Ice4BaoZha)
-            {
-                for (int i = 0; i < 50; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Ice4BaoZha").GetComponent<Ice4BaoZha>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.Ice4BaoZhaQueue.Enqueue(IcePeng);
-                    var IcePeng1 = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/Ice4BaoZhaItem").GetComponent<Ice4BaoZhaItem>());
-                    IcePeng1.gameObject.SetActive(false);
-                    GameController.S.Ice4BaoZhaItemQueue.Enqueue(IcePeng1);
-                }
-            }
-            
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.DianJiSu)
-            {
-                for (int i = 0; i < 50; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/DianJiSu").GetComponent<DianJiSu>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.DianJiSuQueue.Enqueue(IcePeng);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.HeiAnHuiXuan)
-            {
-                for (int i = 0; i < 50; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnHuiXuan").GetComponent<HeiAnHuiXuan>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.HeiAnHuiXuanQueue.Enqueue(IcePeng);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.HuoDiPen)
-            {
-                for (int i = 0; i < 50; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HuoDiPen").GetComponent<HuoDiPen>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.HuoDiPenQueue.Enqueue(IcePeng);
-                }
-            }
-            
-            if (PlayerData.S.playerWeaponType == WeaponType.HeiAnQuXian)
-            {
-                for (int i = 0; i < 50; i++)
-                {
-                    var IcePeng = Instantiate(Resources.Load<GameObject>("Prefabs/Skill/NormalAttack/HeiAnQuXian").GetComponent<HuoQuXian>());
-                    IcePeng.gameObject.SetActive(false);
-                    GameController.S.HeiAnQuXianQueue.Enqueue(IcePeng);
-                }
-            }
-
-            
-            
-
-            FightBGController.S.DiLie = Instantiate(Resources.Load("Prefabs/Skill/BossGroundFissure"),
-                new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            FightBGController.S.DiLie.SetActive(false);
-
-            FightBGController.S.CircleAttack =
-                Instantiate(Resources.Load<GameObject>("Prefabs/Tool/CircleAttack")).gameObject;
-            FightBGController.S.CircleAttack.SetActive(false);
-
-            //初始化怪物队列
-            
-            LevelInfoConfig.InitMonsterQueue();
-        
-
-            for (int i = 0; i < 100; i++)
-            {
-                var baoxue = Instantiate(Resources.Load<GameObject>("Prefabs/Monster/BaoXue").GetComponent<BaoXue>(),
-                    GameController.S.transform);
-                baoxue.gameObject.SetActive(false);
-                GameController.S.BaoXueQueue.Enqueue(baoxue);
-            }
-
-            for (int i = 0; i < 100; i++)
-            {
-                DanMu danmu = Instantiate(Resources.Load<GameObject>("Prefabs/MonsterDanMu/DanMu"),transform).GetComponent<DanMu>();
-                danmu.gameObject.SetActive(false);
-                GameController.S.DanMuQueue.Enqueue(danmu);
-            }
-
-        
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 ||
-                LevelInfoConfig.CurrentGameLevel == 3)
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    var DiLie = Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Skill/DiLie").GetComponent<TreeManDiLie>(),
-                        GameController.S.transform);
-                    DiLie.gameObject.SetActive(false);
-                    GameController.S.TreeManDiLieQueue.Enqueue(DiLie.GetComponent<TreeManDiLie>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 3)
-            {
-                for (int i = 0; i < 50; i++)
-                {
-                    var treemanSkill =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/Level1/TreeManSkill")
-                                .GetComponent<TreeManSkill>(),
-                            GameController.S.transform);
-                    treemanSkill.gameObject.SetActive(false);
-                    GameController.S.TreeManSkillQueue.Enqueue(treemanSkill.GetComponent<TreeManSkill>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 6)
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    var jianqi =
-                        Instantiate(Resources.Load<HuoShanJianQi>("Prefabs/Monster/Level2/HuoShanJianQi"),
-                            GameController.S.transform);
-                    jianqi.gameObject.SetActive(false);
-                    GameController.S.HuoShanJianQiQueue.Enqueue(jianqi);
-                }
-
-                for (int i = 0; i < 51; i++)
-                {
-                    var huoshanskill2 =
-                        Instantiate(Resources.Load<HuoShanSkill2>("Prefabs/Monster/Level2/HuoShanSkill2"),
-                            GameController.S.transform);
-                    huoshanskill2.gameObject.SetActive(false);
-                    GameController.S.HuoShanSkill2QiQueue.Enqueue(huoshanskill2);
-                }
-
-            }
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 9)
-            {
-                for (int i = 0; i < 10; i++)
-                {
-                    var zhaozeSkill = Instantiate(Resources.Load<ZhaoZeSkill>("Prefabs/Monster/Level3/ZhaoZeBossSkill"),
-                        GameController.S.transform);
-                    zhaozeSkill.gameObject.SetActive(false);
-                    GameController.S.ZhaoZeSkillQueue.Enqueue(zhaozeSkill);
-                }
-            }
-        
-
-
-            if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 ||
-                LevelInfoConfig.CurrentGameLevel == 15)
-            {
-                for (int i = 0; i < 100; i++)
-                {
-                    var XueRenJian =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRenJian").GetComponent<XueRenJian>(),
-                            GameController.S.transform);
-                    XueRenJian.gameObject.SetActive(false);
-                    GameController.S.XueRenJianQueue.Enqueue(XueRenJian.GetComponent<XueRenJian>());
-                }
-            }
-
-            if (LevelInfoConfig.CurrentGameLevel == 15)
-            {
-                var XueRenBossSkill1 =
-                    Instantiate(
-                        Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRenBossSkill1")
-                            .GetComponent<XueRenBossSkill1>(), GameController.S.transform);
-                XueRenBossSkill1.gameObject.SetActive(false);
-                GameController.S.XueRenBossSkill1Queue.Enqueue(XueRenBossSkill1.GetComponent<XueRenBossSkill1>());
-            }
-
-
-        
-            
-            //Boss技能队列
-            if (LevelInfoConfig.CurrentGameLevel == 12)
-            {
-                for (int i = 0; i < 30; i++)
-                {
-                    var xieziskill1 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/Level4/XieZiSkill1")
-                                .GetComponent<XieZiSkill1>(), GameController.S.transform);
-                    xieziskill1.gameObject.SetActive(false);
-                    GameController.S.XieZiSkill1Queue.Enqueue(xieziskill1);
-                }
-
-                for (int i = 0; i < 10; i++)
-                {
-                    var xieziskill4 =
-                        Instantiate(
-                            Resources.Load<GameObject>("Prefabs/Monster/Level4/XieZiSkill4")
-                                .GetComponent<XieZiSkill4>(), GameController.S.transform);
-                    xieziskill4.gameObject.SetActive(false);
-                    GameController.S.XieZiSkill4Queue.Enqueue(xieziskill4);
-                }
-            }
-            
-        
-            GameController.S.fightBG = Instantiate(Resources.Load<GameObject>("Prefabs/Window/FightBG"),
-                GameController.S.transform);
-            GameController.S.fightBG.transform.position = new Vector3(0, 0, 0.1f);
-            GameController.S.monsterHpSliderPrefabs = Resources.Load<GameObject>("Prefabs/Tool/MonsterHPBloodBar");
-        
-            GameController.S.CreatePlayer();
-        }
+    }
 }

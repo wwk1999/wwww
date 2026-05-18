@@ -46,29 +46,14 @@ public class StoreController : XSingleton<StoreController>
     {
         try
         {
-            Debug.Log("开始保存数据...");
             StoreData = data ?? StoreData ?? new StoreDefine.StoreData();
-            Debug.Log("StoreData 初始化完成");
-
-
-            Debug.Log("复制Player数据...");
             StoreData.Player.CopyFromRuntime(PlayerData.S);
-            Debug.Log("复制Equip数据...");
             StoreData.Equip.CopyFromRuntime(EquipIDData.S);
-            Debug.Log("复制Skill数据...");
             StoreData.Skill.CopyFromRuntime(SkillData.S);
-            Debug.Log("复制SkillJiaDian数据...");
             StoreData.SkillJiaDian1.CopyFromRuntime(SkillJiaDian.S);
-            Debug.Log("数据复制完成");
-
-
-            Debug.Log("开始序列化...");
             var json = JsonConvert.SerializeObject(StoreData, Newtonsoft.Json.Formatting.None);
-            Debug.Log($"序列化完成，JSON长度: {json.Length}");
 
-            Debug.Log($"保存路径: {SavePath}");
             File.WriteAllText(SavePath, json);
-            Debug.Log("文件写入完成");
 
             Debug.Log($"保存数据成功->{SavePath}");
         }

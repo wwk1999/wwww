@@ -1613,6 +1613,7 @@ public class GameController : XSingleton<GameController>
     {
         RegisterEvent();
         GameOver = false;
+        DontDestroyOnLoad(gameObject);
         var _ = SkillController.S;//激活SkillController
     }
 
@@ -1685,29 +1686,6 @@ public class GameController : XSingleton<GameController>
                     break;
             }
         }
-        
-        
-        //赋值
-        FightBGController.S.WeaponButton= fightBG.GetComponent<FightBg>().weaponButton;
-        FightBGController.S.normalAttackButton=fightBG.GetComponent<FightBg>().normalAttackButton;
-        FightBGController.S.FightStopButton=fightBG.GetComponent<FightBg>().fightStopButton;
-        FightBGController.S.dashButton=fightBG.GetComponent<FightBg>().dashButton;
-        FightBGController.S.rageButton=fightBG.GetComponent<FightBg>().rageButton;
-        FightBGController.S.shieldButton=fightBG.GetComponent<FightBg>().shieldButton;
-        FightBGController.S.iceArrowButton=fightBG.GetComponent<FightBg>().iceArrowButton;
-        FightBGController.S.iceExButton=fightBG.GetComponent<FightBg>().iceExButton;
-        FightBGController.S.iceBallButton=fightBG.GetComponent<FightBg>().iceBallButton;
-        FightBGController.S.IceExYellowCd=fightBG.GetComponent<FightBg>().iceExYellowCd;
-        FightBGController.S.IceBallYellowCd=fightBG.GetComponent<FightBg>().iceBallYellowCd;
-        FightBGController.S.IceArrowYellowCd=fightBG.GetComponent<FightBg>().iceArrowYellowCd;
-        FightBGController.S.BossEnergySlider=fightBG.GetComponent<FightBg>().bossEnergySlider;
-
-
-        FightBGController.S.playerHpSlider=fightBG.GetComponent<FightBg>().playerHpSlider;
-        FightBGController.S.playerExSlider=fightBG.GetComponent<FightBg>().playerExSlider;
-        FightBGController.S.playerLevelText=fightBG.GetComponent<FightBg>().playerLevelText;
-        FightBGController.S.GameMaxHp=fightBG.GetComponent<FightBg>().GameMaxHp;
-        FightBGController.S.GameCurrentHp=fightBG.GetComponent<FightBg>().GameCurrentHp;
         
         fightTimeText = fightBG.GetComponent<FightBg>().fightTimeText;
 

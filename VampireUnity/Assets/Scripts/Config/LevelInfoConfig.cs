@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Config;
 using Equip;
 using NUnit.Framework;
+using Skill.NormalAttack.Primary;
 using UnityEngine;
 
 public class DiaoLuoConfig
@@ -839,66 +841,692 @@ public class LevelInfoConfig
 
         return diaoLuoList;
     }
-
-    public static void InitMonsterQueue()
+    
+    
+    public static IEnumerator InitMonsterQueueAsync(int perFrame=2)
     {
         var monsterlist = LevelMonsterDic[CurrentGameLevel];
+
         foreach (var item in monsterlist)
         {
-            int count = 0;
+            int total = 0;
             if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Normal)
-            {
-                count = 150;
-            }
-            if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Elite)
-            {
-                count = 15;
-            }
+                total = 150;
+            else if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Elite)
+                total = 15;
 
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < total; i++)
             {
-                Entrance.InitMonster(item);
+                Entrance.InitMonster(item); // 假设这个方法是同步实例化
+                if (i % perFrame == perFrame - 1)
+                    yield return null; // 每创建 perFrame 个，让出一帧
             }
         }
     }
+    
+    public static IEnumerator InitSkillAsync(int perFrame = 2)
+{
+    // 收集 Component 类型的技能（每个预热 10 个）
+    var skillsToPreload = new List<(string prefabPath, System.Type componentType, System.Action<Component> enqueueAction, int count)>();
 
-    public static void InitPropQueue()
+    void AddSkill(bool condition, string path, System.Type type, System.Action<Component> enqueue, int count = 10)
     {
-        var monsterlist = LevelMonsterDic[CurrentGameLevel];
-        List<MonsterProp> proplist = new List<MonsterProp>();
-        foreach (var item in monsterlist)
+        if (condition) skillsToPreload.Add((path, type, enqueue, count));
+    }
+
+    var a1 = SkillJiaDian.S.Alpha1;
+    var a2 = SkillJiaDian.S.Alpha2;
+    var a3 = SkillJiaDian.S.Alpha3;
+    var a4 = SkillJiaDian.S.Alpha4;
+    var a5 = SkillJiaDian.S.Alpha5;
+
+    // ========== 冰系 ==========
+    AddSkill(a1 == SkillType.Ice3 || a2 == SkillType.Ice3 || a3 == SkillType.Ice3 || a4 == SkillType.Ice3 || a5 == SkillType.Ice3,
+        "Prefabs/Skill/IceExplosion", typeof(IceExplosion), c => GameController.S.IceExQueue.Enqueue(c as IceExplosion));
+    AddSkill(a1 == SkillType.Ice1 || a2 == SkillType.Ice1 || a3 == SkillType.Ice1 || a4 == SkillType.Ice1 || a5 == SkillType.Ice1,
+        "Prefabs/Skill/IceSkill/IceSkill1", typeof(IceSkill1), c => GameController.S.IceSkill1Queue.Enqueue(c as IceSkill1));
+    AddSkill((a1 != SkillType.Ice4) || a2 == SkillType.Ice4 || a3 == SkillType.Ice4 || a4 == SkillType.Ice4 || a5 == SkillType.Ice4,
+        "Prefabs/Skill/IceSkill/IceSkill4", typeof(IceSkill4), c => GameController.S.IceSkill4Queue.Enqueue(c as IceSkill4));
+    AddSkill((a1 != SkillType.Ice5) || a2 == SkillType.Ice5 || a3 == SkillType.Ice5 || a4 == SkillType.Ice5 || a5 == SkillType.Ice5,
+        "Prefabs/Skill/IceSkill/IceSkill5", typeof(IceSkill5), c => GameController.S.IceSkill5Queue.Enqueue(c as IceSkill5));
+
+    // ========== 火系 ==========
+    AddSkill(a1 == SkillType.Huo1 || a2 == SkillType.Huo1 || a3 == SkillType.Huo1 || a4 == SkillType.Huo1 || a5 == SkillType.Huo1,
+        "Prefabs/Skill/HuoSkill/HuoSkill1", typeof(HuoSkill1), c => GameController.S.HuoSkill1Queue.Enqueue(c as HuoSkill1));
+    AddSkill(a1 == SkillType.Huo3 || a2 == SkillType.Huo3 || a3 == SkillType.Huo3 || a4 == SkillType.Huo3 || a5 == SkillType.Huo3,
+        "Prefabs/Skill/HuoSkill/HuoSkill3", typeof(HuoSkill3), c => GameController.S.HuoSkill3Queue.Enqueue(c as HuoSkill3));
+    AddSkill((a1 != SkillType.Huo4) || a2 == SkillType.Huo4 || a3 == SkillType.Huo4 || a4 == SkillType.Huo4 || a5 == SkillType.Huo4,
+        "Prefabs/Skill/HuoSkill/HuoSkill4", typeof(HuoSkill4), c => GameController.S.HuoSkill4Queue.Enqueue(c as HuoSkill4));
+    AddSkill((a1 != SkillType.Huo5) || a2 == SkillType.Huo5 || a3 == SkillType.Huo5 || a4 == SkillType.Huo5 || a5 == SkillType.Huo5,
+        "Prefabs/Skill/HuoSkill/HuoSkill5", typeof(HuoSkill5), c => GameController.S.HuoSkill5Queue.Enqueue(c as HuoSkill5));
+
+    // ========== 电系 ==========
+    AddSkill(a1 == SkillType.Dian2 || a2 == SkillType.Dian2 || a3 == SkillType.Dian2 || a4 == SkillType.Dian2 || a5 == SkillType.Dian2,
+        "Prefabs/Skill/DianSkill/DianSkill2", typeof(DianSkill2), c => GameController.S.DianSkill2Queue.Enqueue(c as DianSkill2));
+    AddSkill(a1 == SkillType.Dian3 || a2 == SkillType.Dian3 || a3 == SkillType.Dian3 || a4 == SkillType.Dian3 || a5 == SkillType.Dian3,
+        "Prefabs/Skill/DianSkill/DianSkill3", typeof(DianSkill3), c => GameController.S.DianSkill3Queue.Enqueue(c as DianSkill3));
+    AddSkill((a1 != SkillType.Dian4) || a2 == SkillType.Dian4 || a3 == SkillType.Dian4 || a4 == SkillType.Dian4 || a5 == SkillType.Dian4,
+        "Prefabs/Skill/DianSkill/DianSkill4", typeof(DianSkill4), c => GameController.S.DianSkill4Queue.Enqueue(c as DianSkill4));
+    AddSkill((a1 != SkillType.Dian5) || a2 == SkillType.Dian5 || a3 == SkillType.Dian5 || a4 == SkillType.Dian5 || a5 == SkillType.Dian5,
+        "Prefabs/Skill/DianSkill/DianSkill5", typeof(DianSkill5), c => GameController.S.DianSkill5Queue.Enqueue(c as DianSkill5));
+
+    // ========== 黑暗系 ==========
+    AddSkill(a1 == SkillType.HeiAn3 || a2 == SkillType.HeiAn3 || a3 == SkillType.HeiAn3 || a4 == SkillType.HeiAn3 || a5 == SkillType.HeiAn3,
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill3", typeof(HeiAnSkill3), c => GameController.S.HeiAnSkill3Queue.Enqueue(c as HeiAnSkill3));
+    AddSkill(a1 == SkillType.HeiAn1 || a2 == SkillType.HeiAn1 || a3 == SkillType.HeiAn1 || a4 == SkillType.HeiAn1 || a5 == SkillType.HeiAn1,
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill1", typeof(HeiAnSkill1), c => GameController.S.HeiAnSkill1Queue.Enqueue(c as HeiAnSkill1));
+    AddSkill((a1 != SkillType.HeiAn4) || a2 == SkillType.HeiAn4 || a3 == SkillType.HeiAn4 || a4 == SkillType.HeiAn4 || a5 == SkillType.HeiAn4,
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill4", typeof(HeiAnSkill4), c => GameController.S.HeiAnSkill4Queue.Enqueue(c as HeiAnSkill4));
+    AddSkill((a1 != SkillType.HeiAn5) || a2 == SkillType.HeiAn5 || a3 == SkillType.HeiAn5 || a4 == SkillType.HeiAn5 || a5 == SkillType.HeiAn5,
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill5", typeof(HeiAnSkill5), c => GameController.S.HeiAnSkill5Queue.Enqueue(c as HeiAnSkill5));
+
+    // ========== 分帧实例化 Component 技能 ==========
+    int totalInstantiated = 0;
+    foreach (var skill in skillsToPreload)
+    {
+        GameObject prefab = Resources.Load<GameObject>(skill.prefabPath);
+        if (prefab == null)
         {
-            MonsterInfo info = MonsterConfig.MonsterInfoDic[new MonsterDiaoLuoType() { GameLevel = CurrentGameLevel, MonsterType = MonsterConfig.MonsterTypeDic[item] }];
-            foreach (var item1 in info.MonsterPropList)
+            Debug.LogError($"技能预制体加载失败: {skill.prefabPath}");
+            continue;
+        }
+
+        Component sourceComp = prefab.GetComponent(skill.componentType);
+        if (sourceComp == null)
+        {
+            Debug.LogError($"预制体 {skill.prefabPath} 上找不到组件 {skill.componentType}");
+            continue;
+        }
+
+        for (int i = 0; i < skill.count; i++)
+        {
+            Component instance = UnityEngine.Object.Instantiate(sourceComp, GameController.S.transform);
+            instance.gameObject.SetActive(false);
+            skill.enqueueAction(instance);
+
+            totalInstantiated++;
+            if (totalInstantiated % perFrame == 0)
+                yield return null;
+        }
+    }
+
+    // ========== 处理 Dian1 的 GameObject 技能（各 10 个） ==========
+    bool hasDian1 = a1 == SkillType.Dian1 || a2 == SkillType.Dian1 || a3 == SkillType.Dian1 || a4 == SkillType.Dian1 || a5 == SkillType.Dian1;
+    if (hasDian1)
+    {
+        // DianPeng
+        GameObject dianPengPrefab = Resources.Load<GameObject>("Prefabs/Skill/DianQuan/DianPeng");
+        if (dianPengPrefab != null)
+        {
+            for (int i = 0; i < 10; i++)
             {
-                if (!proplist.Contains(item1))
+                GameObject obj = UnityEngine.Object.Instantiate(dianPengPrefab, GameController.S.transform);
+                obj.SetActive(false);
+                GameController.S.DianQuanPengQueue.Enqueue(obj);
+                totalInstantiated++;
+                if (totalInstantiated % perFrame == 0)
+                    yield return null;
+            }
+        }
+        else Debug.LogError("DianPeng 预制体加载失败");
+
+        // DianQuan
+        GameObject dianQuanPrefab = Resources.Load<GameObject>("Prefabs/Skill/DianQuan/DianQuan");
+        if (dianQuanPrefab != null)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject obj = UnityEngine.Object.Instantiate(dianQuanPrefab, GameController.S.transform);
+                obj.SetActive(false);
+                GameController.S.DianQuanQueue.Enqueue(obj);
+                totalInstantiated++;
+                if (totalInstantiated % perFrame == 0)
+                    yield return null;
+            }
+        }
+        else Debug.LogError("DianQuan 预制体加载失败");
+    }
+
+    Debug.Log($"技能池预热完成，共实例化 {totalInstantiated} 个技能对象");
+}
+    
+    
+    
+    public static IEnumerator InitPlayerHurtAndToolsAsync(int perFrame = 2)
+    {
+        // 提前加载预制体，避免循环中重复加载
+        PlayerHurt playerHurtPrefab = Resources.Load<PlayerHurt>("Prefabs/Player/PlayerHurt");
+        CircleAttack circlePrefab = Resources.Load<CircleAttack>("Prefabs/Tool/CircleAttack");
+        SqrtAttack sqrtPrefab = Resources.Load<SqrtAttack>("Prefabs/Tool/SqrtAttack");
+
+        if (playerHurtPrefab == null || circlePrefab == null || sqrtPrefab == null)
+        {
+            Debug.LogError("预制体加载失败，请检查路径");
+            yield break;
+        }
+
+        int totalInstantiated = 0;
+        int totalCount = 100;
+
+        for (int i = 0; i < totalCount; i++)
+        {
+            // 实例化 PlayerHurt
+            PlayerHurt playerHurt = UnityEngine.Object.Instantiate(playerHurtPrefab);
+            playerHurt.gameObject.SetActive(false);
+            GameController.S.PlayerHurtQueue.Enqueue(playerHurt);
+            totalInstantiated++;
+
+            // 实例化 CircleAttack
+            CircleAttack circle = UnityEngine.Object.Instantiate(circlePrefab);
+            circle.gameObject.SetActive(false);
+            GameController.S.CircleQueue.Enqueue(circle);
+            totalInstantiated++;
+
+            // 实例化 SqrtAttack
+            SqrtAttack sqrt = UnityEngine.Object.Instantiate(sqrtPrefab);
+            sqrt.gameObject.SetActive(false);
+            GameController.S.SqrtQueue.Enqueue(sqrt);
+            totalInstantiated++;
+
+            // 每实例化 perFrame 个完整轮次，让出一帧
+            if ((i + 1) % perFrame == 0)
+                yield return null;
+        }
+
+        Debug.Log($"PlayerHurt + CircleAttack + SqrtAttack 池预热完成，共实例化 {totalInstantiated} 个对象");
+    }
+    
+    
+    public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
+    {
+        // 提前加载预制体，避免循环中重复加载
+        GameObject prefab = Resources.Load<GameObject>("Prefabs/Tool/MonsterHurtText");
+        if (prefab == null)
+        {
+            Debug.LogError("预制体 MonsterHurtText 加载失败，请检查路径");
+            yield break;
+        }
+
+        int totalCount = 200;
+        for (int i = 0; i < totalCount; i++)
+        {
+            GameObject monsterHurtText = UnityEngine.Object.Instantiate(prefab);
+            monsterHurtText.SetActive(false);
+            GameController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
+
+            // 每实例化 perFrame 个，让出一帧
+            if ((i + 1) % perFrame == 0)
+                yield return null;
+        }
+
+        Debug.Log($"MonsterHurtText 池预热完成，共实例化 {totalCount} 个");
+    }
+    
+    public static IEnumerator InitNormalAttackPoolAsync(int perFrame = 3)
+{
+    WeaponType weaponType = PlayerData.S.playerWeaponType;
+    
+    // ===== 根据当前武器类型，预先加载所有需要的预制体 =====
+    // 为了通用，定义结构存储预制体和对应的队列添加方法
+    var tasks = new List<System.Action>();
+    
+    // 辅助函数：加载 GameObject 预制体并加入队列
+    void AddGameObjectTask(string path, Queue<GameObject> queue)
+    {
+        GameObject prefab = Resources.Load<GameObject>(path);
+        if (prefab == null)
+        {
+            Debug.LogError($"预制体加载失败: {path}");
+            return;
+        }
+        tasks.Add(() =>
+        {
+            GameObject obj = UnityEngine.Object.Instantiate(prefab, GameController.S.transform);
+            obj.SetActive(false);
+            queue.Enqueue(obj);
+        });
+    }
+    
+    // 辅助函数：加载带组件脚本的预制体并加入队列（队列存储组件）
+    void AddComponentTask<T>(string path, Queue<T> queue) where T : Component
+    {
+        GameObject prefab = Resources.Load<GameObject>(path);
+        if (prefab == null)
+        {
+            Debug.LogError($"预制体加载失败: {path}");
+            return;
+        }
+        T component = prefab.GetComponent<T>();
+        if (component == null)
+        {
+            Debug.LogError($"预制体 {path} 上找不到组件 {typeof(T)}");
+            return;
+        }
+        tasks.Add(() =>
+        {
+            T instance = UnityEngine.Object.Instantiate(component, GameController.S.transform);
+            instance.gameObject.SetActive(false);
+            queue.Enqueue(instance);
+        });
+    }
+    
+    // 根据武器类型添加对应的实例化任务
+    switch (weaponType)
+    {
+        case WeaponType.Primary:
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/Primary", GameController.S.PrimaryQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTongPeng3", GameController.S.PuTong3PengQueue);
+            break;
+        case WeaponType.LanBao:
+            AddGameObjectTask("Prefabs/Skill/2NormalAttackPrefab", GameController.S.LvQuanQueue);
+            break;
+        case WeaponType.HeiDong:
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongPro", GameController.S.HeiDongQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongNext", GameController.S.HeiDongNextQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongPeng", GameController.S.HeiDongPengQueue);
+            break;
+        case WeaponType.HuoBaoZha:
+            AddComponentTask<HuoBaoZha>("Prefabs/Skill/NormalAttack/HuoBaoZha", GameController.S.HuoBaoZhaQueue);
+            AddComponentTask<HuoYanBaoZhaNext>("Prefabs/Skill/NormalAttack/HuoBaoZhaNext", GameController.S.HuoYanBaoZhaNextQueue);
+            break;
+        case WeaponType.IceBaoZha:
+            AddComponentTask<IceBaoZha>("Prefabs/Skill/NormalAttack/IceBaoZha", GameController.S.IceBaoZhaQueue);
+            AddComponentTask<IceBaoZhaNext>("Prefabs/Skill/NormalAttack/IceBaoZhaNext", GameController.S.IceBaoZhaNextQueue);
+            break;
+        case WeaponType.DianBaoZha:
+            AddComponentTask<DianBaoZha>("Prefabs/Skill/NormalAttack/DianBaoZha", GameController.S.DianBaoZhaQueue);
+            AddComponentTask<DianBaoZhaNext>("Prefabs/Skill/NormalAttack/DianBaoZhaNext", GameController.S.DianBaoZhaNextQueue);
+            break;
+        case WeaponType.LuoLei:
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/LuoLei", GameController.S.LuoLeiQueue);
+            break;
+        case WeaponType.PuTong3:
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTong3", GameController.S.PuTong3Queue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTongPeng3", GameController.S.PuTong3PengQueue);
+            break;
+        case WeaponType.Fire:
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/Fire", GameController.S.FireQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/FirePeng", GameController.S.FirePengQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/FireBaoZha", GameController.S.FireBaoZha1Queue);
+            break;
+        case WeaponType.XuKong:
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/XuKong", GameController.S.XuKongQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/XuKongPeng", GameController.S.XuKongPengQueue);
+            break;
+        case WeaponType.LvQuan:
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/LvQuan", GameController.S.LvQuanQueue);
+            break;
+        case WeaponType.JianQi:
+            AddComponentTask<PlayerJianQi>("Prefabs/Skill/NormalAttack/PlayerJianQi", GameController.S.PlayerJianQiQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/ZiPeng", GameController.S.ZiBaoZhaQueue);
+            break;
+        default:
+            Debug.LogWarning($"未处理的武器类型: {weaponType}");
+            yield break;
+    }
+    
+    if (tasks.Count == 0)
+    {
+        Debug.LogWarning("当前武器类型没有需要预热的普通攻击技能");
+        yield break;
+    }
+    
+    // ===== 分帧实例化 100 次 =====
+    int totalInstantiated = 0;
+    int totalIterations = 100;
+    
+    for (int i = 0; i < totalIterations; i++)
+    {
+        // 执行当前轮次的所有实例化任务
+        foreach (var task in tasks)
+        {
+            task();
+            totalInstantiated++;
+            if (totalInstantiated % perFrame == 0)
+                yield return null;
+        }
+    }
+    
+    Debug.Log($"普通攻击池预热完成，武器类型: {weaponType}，共实例化 {totalInstantiated} 个对象");
+}
+    
+    
+    public static IEnumerator InitPengEffectsAsync(int perFrame = 5)
+{
+    var a1 = SkillJiaDian.S.Alpha1;
+    var a2 = SkillJiaDian.S.Alpha2;
+    var a3 = SkillJiaDian.S.Alpha3;
+    var a4 = SkillJiaDian.S.Alpha4;
+    var a5 = SkillJiaDian.S.Alpha5;
+    var weaponYuanSu = WeaponConfig.WeaponYuanSuTypeDic[PlayerData.S.playerWeaponType];
+
+    // 定义需要预热的元素及对应预制体路径、队列
+    var elements = new List<(bool needPreload, string path, Queue<GameObject> queue)>();
+
+    // 冰系判定
+    bool needIce = weaponYuanSu == YuanSuType.Ice ||
+                   a1 == SkillType.Ice1 || a1 == SkillType.Ice2 || a1 == SkillType.Ice3 || a1 == SkillType.Ice4 || a1 == SkillType.Ice5 ||
+                   a2 == SkillType.Ice1 || a2 == SkillType.Ice2 || a2 == SkillType.Ice3 || a2 == SkillType.Ice4 || a2 == SkillType.Ice5 ||
+                   a3 == SkillType.Ice1 || a3 == SkillType.Ice2 || a3 == SkillType.Ice3 || a3 == SkillType.Ice4 || a3 == SkillType.Ice5 ||
+                   a4 == SkillType.Ice1 || a4 == SkillType.Ice2 || a4 == SkillType.Ice3 || a4 == SkillType.Ice4 || a4 == SkillType.Ice5 ||
+                   a5 == SkillType.Ice1 || a5 == SkillType.Ice2 || a5 == SkillType.Ice3 || a5 == SkillType.Ice4 || a5 == SkillType.Ice5;
+    elements.Add((needIce, "Prefabs/Skill/Peng/IcePeng", GameController.S.IcePengQueue));
+
+    // 黑暗系判定
+    bool needHeiAn = weaponYuanSu == YuanSuType.HeiAn ||
+                     a1 == SkillType.HeiAn1 || a1 == SkillType.HeiAn2 || a1 == SkillType.HeiAn3 || a1 == SkillType.HeiAn4 || a1 == SkillType.HeiAn5 ||
+                     a2 == SkillType.HeiAn1 || a2 == SkillType.HeiAn2 || a2 == SkillType.HeiAn3 || a2 == SkillType.HeiAn4 || a2 == SkillType.HeiAn5 ||
+                     a3 == SkillType.HeiAn1 || a3 == SkillType.HeiAn2 || a3 == SkillType.HeiAn3 || a3 == SkillType.HeiAn4 || a3 == SkillType.HeiAn5 ||
+                     a4 == SkillType.HeiAn1 || a4 == SkillType.HeiAn2 || a4 == SkillType.HeiAn3 || a4 == SkillType.HeiAn4 || a4 == SkillType.HeiAn5 ||
+                     a5 == SkillType.HeiAn1 || a5 == SkillType.HeiAn2 || a5 == SkillType.HeiAn3 || a5 == SkillType.HeiAn4 || a5 == SkillType.HeiAn5;
+    elements.Add((needHeiAn, "Prefabs/Skill/Peng/HeiAnPeng", GameController.S.HeiAnPengQueue));
+
+    // 火系判定
+    bool needHuo = weaponYuanSu == YuanSuType.Huo ||
+                   a1 == SkillType.Huo1 || a1 == SkillType.Huo2 || a1 == SkillType.Huo3 || a1 == SkillType.Huo4 || a1 == SkillType.Huo5 ||
+                   a2 == SkillType.Huo1 || a2 == SkillType.Huo2 || a2 == SkillType.Huo3 || a2 == SkillType.Huo4 || a2 == SkillType.Huo5 ||
+                   a3 == SkillType.Huo1 || a3 == SkillType.Huo2 || a3 == SkillType.Huo3 || a3 == SkillType.Huo4 || a3 == SkillType.Huo5 ||
+                   a4 == SkillType.Huo1 || a4 == SkillType.Huo2 || a4 == SkillType.Huo3 || a4 == SkillType.Huo4 || a4 == SkillType.Huo5 ||
+                   a5 == SkillType.Huo1 || a5 == SkillType.Huo2 || a5 == SkillType.Huo3 || a5 == SkillType.Huo4 || a5 == SkillType.Huo5;
+    elements.Add((needHuo, "Prefabs/Skill/Peng/HuoPeng", GameController.S.HuoPengQueue));
+
+    // 电系判定
+    bool needDian = weaponYuanSu == YuanSuType.Dian ||
+                    a1 == SkillType.Dian1 || a1 == SkillType.Dian2 || a1 == SkillType.Dian3 || a1 == SkillType.Dian4 || a1 == SkillType.Dian5 ||
+                    a2 == SkillType.Dian1 || a2 == SkillType.Dian2 || a2 == SkillType.Dian3 || a2 == SkillType.Dian4 || a2 == SkillType.Dian5 ||
+                    a3 == SkillType.Dian1 || a3 == SkillType.Dian2 || a3 == SkillType.Dian3 || a3 == SkillType.Dian4 || a3 == SkillType.Dian5 ||
+                    a4 == SkillType.Dian1 || a4 == SkillType.Dian2 || a4 == SkillType.Dian3 || a4 == SkillType.Dian4 || a4 == SkillType.Dian5 ||
+                    a5 == SkillType.Dian1 || a5 == SkillType.Dian2 || a5 == SkillType.Dian3 || a5 == SkillType.Dian4 || a5 == SkillType.Dian5;
+    elements.Add((needDian, "Prefabs/Skill/Peng/DianPeng", GameController.S.DianPengQueue));
+
+    int totalInstantiated = 0;
+    const int totalCount = 200;  // 每个元素预热200个
+
+    foreach (var (needPreload, path, queue) in elements)
+    {
+        if (!needPreload) continue;
+
+        // 预先加载预制体
+        GameObject prefab = Resources.Load<GameObject>(path);
+        if (prefab == null)
+        {
+            Debug.LogError($"爆炸特效预制体加载失败: {path}");
+            continue;
+        }
+
+        // 分帧实例化200个
+        for (int i = 0; i < totalCount; i++)
+        {
+            GameObject peng = UnityEngine.Object.Instantiate(prefab, GameController.S.transform);
+            peng.SetActive(false);
+            queue.Enqueue(peng);
+
+            totalInstantiated++;
+            if (totalInstantiated % perFrame == 0)
+                yield return null;  // 每实例化 perFrame 个，让出一帧
+        }
+    }
+
+    Debug.Log($"爆炸特效池预热完成，共实例化 {totalInstantiated} 个对象");
+}
+    
+    public static IEnumerator InitSpecialWeaponPoolsAsync(int perFrame = 5)
+{
+    WeaponType currentWeapon = PlayerData.S.playerWeaponType;
+
+    // 定义一个任务：包含实例化并加入队列的动作（无参数，每次调用创建一个对象）
+    List<System.Action> tasks = new List<System.Action>();
+
+    // 辅助：添加普通 GameObject 类型任务
+    void AddGameObjectTask(string path, Queue<GameObject> queue)
+    {
+        GameObject prefab = Resources.Load<GameObject>(path);
+        if (prefab == null)
+        {
+            Debug.LogError($"预制体加载失败: {path}");
+            return;
+        }
+        tasks.Add(() =>
+        {
+            GameObject obj = UnityEngine.Object.Instantiate(prefab, GameController.S.transform);
+            obj.SetActive(false);
+            queue.Enqueue(obj);
+        });
+    }
+
+    // 辅助：添加 Component 类型任务（队列存储组件）
+    void AddComponentTask<T>(string path, Queue<T> queue) where T : Component
+    {
+        GameObject prefab = Resources.Load<GameObject>(path);
+        if (prefab == null)
+        {
+            Debug.LogError($"预制体加载失败: {path}");
+            return;
+        }
+        T component = prefab.GetComponent<T>();
+        if (component == null)
+        {
+            Debug.LogError($"预制体 {path} 上找不到组件 {typeof(T)}");
+            return;
+        }
+        tasks.Add(() =>
+        {
+            T instance = UnityEngine.Object.Instantiate(component, GameController.S.transform);
+            instance.gameObject.SetActive(false);
+            queue.Enqueue(instance);
+        });
+    }
+
+    // 根据武器类型添加对应的预热任务（每个任务代表一次实例化，最终会执行 count 次）
+    int count = 100;  // 每个对象预热 100 个
+
+    switch (currentWeapon)
+    {
+        case WeaponType.HeiAnBaoZha:
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiAnBaoZha", GameController.S.HeiAnBaoZhaQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiAnBaoZhaNext", GameController.S.HeiAnBaoZhaNextQueue);
+            break;
+
+        case WeaponType.Huo7:
+            AddComponentTask<Huo7Item>("Prefabs/Skill/NormalAttack/Huo7Item", GameController.S.Huo7Queue);
+            break;
+
+        case WeaponType.Ice7:
+            AddComponentTask<Ice7Item>("Prefabs/Skill/NormalAttack/Ice7Item", GameController.S.Ice7Queue);
+            break;
+
+        case WeaponType.DianLuoLei5:
+            AddComponentTask<DianLuoLei>("Prefabs/Skill/NormalAttack/DianLuoLei", GameController.S.DianLuoLeiQueue);
+            AddComponentTask<DianLuoLeiNext>("Prefabs/Skill/NormalAttack/DianLuoLeiNext", GameController.S.DianLuoLeiNextQueue);
+            break;
+
+        case WeaponType.PrimaryDian:
+            AddComponentTask<PrimaryDian>("Prefabs/Skill/NormalAttack/PrimaryDian", GameController.S.PrimaryDianQueue);
+            break;
+
+        case WeaponType.PrimaryHuo:
+            AddComponentTask<PrimaryHuo>("Prefabs/Skill/NormalAttack/PrimaryHuo", GameController.S.PrimaryHuoQueue);
+            break;
+
+        case WeaponType.PrimaryHeiAn:
+            AddComponentTask<PrimaryHeiAn>("Prefabs/Skill/NormalAttack/PrimaryHeiAn", GameController.S.PrimaryHeiAnQueue);
+            break;
+
+        case WeaponType.IcePen:
+            AddComponentTask<IcePen>("Prefabs/Skill/NormalAttack/IcePen", GameController.S.IcePenQueue);
+            break;
+
+        case WeaponType.HuoFenLie:
+            AddComponentTask<HuoFenLie>("Prefabs/Skill/NormalAttack/HuoFenLie", GameController.S.HuoFenLieQueue);
+            AddComponentTask<HuoFenLieDan>("Prefabs/Skill/NormalAttack/HuoFenLieDan", GameController.S.HuoFenLieDanQueue);
+            AddComponentTask<HuoFenLieBaoZha>("Prefabs/Skill/NormalAttack/HuoFenLieBaoZha", GameController.S.HuoFenLieBaoZhaQueue);
+            break;
+
+        case WeaponType.Ice4BaoZha:
+            AddComponentTask<Ice4BaoZha>("Prefabs/Skill/NormalAttack/Ice4BaoZha", GameController.S.Ice4BaoZhaQueue);
+            AddComponentTask<Ice4BaoZhaItem>("Prefabs/Skill/NormalAttack/Ice4BaoZhaItem", GameController.S.Ice4BaoZhaItemQueue);
+            break;
+
+        case WeaponType.DianJiSu:
+            AddComponentTask<DianJiSu>("Prefabs/Skill/NormalAttack/DianJiSu", GameController.S.DianJiSuQueue);
+            break;
+
+        case WeaponType.HeiAnHuiXuan:
+            AddComponentTask<HeiAnHuiXuan>("Prefabs/Skill/NormalAttack/HeiAnHuiXuan", GameController.S.HeiAnHuiXuanQueue);
+            break;
+
+        case WeaponType.HuoDiPen:
+            AddComponentTask<HuoDiPen>("Prefabs/Skill/NormalAttack/HuoDiPen", GameController.S.HuoDiPenQueue);
+            break;
+
+        case WeaponType.HeiAnQuXian:
+            AddComponentTask<HuoQuXian>("Prefabs/Skill/NormalAttack/HeiAnQuXian", GameController.S.HeiAnQuXianQueue);
+            break;
+
+        default:
+            // 当前武器类型不需要特殊预热
+            yield break;
+    }
+
+    if (tasks.Count == 0)
+        yield break;
+
+    // 分帧实例化：每个任务执行 count 次，每 perFrame 次实例化后让出一帧
+    int totalInstantiated = 0;
+    for (int i = 0; i < count; i++)           // 外层循环100次
+    {
+        foreach (var task in tasks)           // 内层循环当前武器类型的所有任务
+        {
+            task();                           // 执行一次实例化+入队
+            totalInstantiated++;
+            if (totalInstantiated % perFrame == 0)
+                yield return null;            // 让主线程处理 UI 动画
+        }
+    }
+
+    Debug.Log($"特殊武器池预热完成，武器类型: {currentWeapon}，共实例化 {totalInstantiated} 个对象");
+}
+    
+    
+    public static IEnumerator InitBaoXueAndDanMuAsync(int perFrame = 5)
+    {
+        // 1. 加载 BaoXue 预制体并获取组件
+        GameObject baoXuePrefab = Resources.Load<GameObject>("Prefabs/Monster/BaoXue");
+        if (baoXuePrefab == null)
+        {
+            Debug.LogError("BaoXue 预制体加载失败");
+        }
+        else
+        {
+            BaoXue baoXueComp = baoXuePrefab.GetComponent<BaoXue>();
+            if (baoXueComp == null)
+            {
+                Debug.LogError("BaoXue 预制体上没有 BaoXue 组件");
+            }
+            else
+            {
+                // 分帧实例化 100 个 BaoXue
+                for (int i = 0; i < 100; i++)
                 {
-                    proplist.Add(item1);
+                    BaoXue instance = UnityEngine.Object.Instantiate(baoXueComp, GameController.S.transform);
+                    instance.gameObject.SetActive(false);
+                    GameController.S.BaoXueQueue.Enqueue(instance);
+
+                    if ((i + 1) % perFrame == 0)
+                        yield return null;
                 }
             }
         }
-        foreach (var item in proplist)
+
+        // 2. 加载 DanMu 预制体并获取组件
+        GameObject danMuPrefab = Resources.Load<GameObject>("Prefabs/MonsterDanMu/DanMu");
+        if (danMuPrefab == null)
+        {
+            Debug.LogError("DanMu 预制体加载失败");
+        }
+        else
+        {
+            DanMu danMuComp = danMuPrefab.GetComponent<DanMu>();
+            if (danMuComp == null)
+            {
+                Debug.LogError("DanMu 预制体上没有 DanMu 组件");
+            }
+            else
+            {
+                // 分帧实例化 100 个 DanMu（父对象使用 GameController.S.transform）
+                for (int i = 0; i < 100; i++)
+                {
+                    DanMu instance = UnityEngine.Object.Instantiate(danMuComp, GameController.S.transform);
+                    instance.gameObject.SetActive(false);
+                    GameController.S.DanMuQueue.Enqueue(instance);
+
+                    if ((i + 1) % perFrame == 0)
+                        yield return null;
+                }
+            }
+        }
+
+        Debug.Log("BaoXue 和 DanMu 池预热完成，各 100 个");
+    }
+    
+    
+    
+    public static IEnumerator InitPropQueueAsync(int perFrame = 2)
+    {
+        var monsterlist = LevelMonsterDic[CurrentGameLevel];
+        List<MonsterProp> proplist = new List<MonsterProp>();
+
+        foreach (var item in monsterlist)
+        {
+            MonsterInfo info = MonsterConfig.MonsterInfoDic[new MonsterDiaoLuoType()
+            {
+                GameLevel = CurrentGameLevel,
+                MonsterType = MonsterConfig.MonsterTypeDic[item]
+            }];
+            foreach (var item1 in info.MonsterPropList)
+            {
+                if (!proplist.Contains(item1))
+                    proplist.Add(item1);
+            }
+        }
+        int totalInstantiated = 0;
+        foreach (var propType in proplist)
         {
             for (int i = 0; i < 20; i++)
             {
-                Entrance.InitProp(item);
+                Entrance.InitProp(propType);   // 假设这是同步实例化
+                totalInstantiated++;
+
+                // 每实例化 perFrame 个，让出一帧
+                if (totalInstantiated % perFrame == 0)
+                    yield return null;
             }
         }
     }
-   
 
-    public static void InitEquipQueue()
+    public static void InitSkillQueue()
+    {
+        
+    }
+    
+    
+    public static IEnumerator InitEquipQueueAsync(int perFrame = 2)
     {
         List<MonsterEquip> equiplist = new List<MonsterEquip>();
         var monsterlist = LevelMonsterDic[CurrentGameLevel];
-        
+
         foreach (var item in monsterlist)
         {
-            MonsterInfo info=MonsterConfig.MonsterInfoDic[new MonsterDiaoLuoType(){GameLevel = CurrentGameLevel,MonsterType = MonsterConfig.MonsterTypeDic[item]}];
+            MonsterInfo info = MonsterConfig.MonsterInfoDic[new MonsterDiaoLuoType()
+            {
+                GameLevel = CurrentGameLevel,
+                MonsterType = MonsterConfig.MonsterTypeDic[item]
+            }];
             if (info.orangeEquip == true)
             {
+                // 注意：如果 Entrance.InitOrangeQueue() 内部也是大批量实例化，建议也改为异步分帧
                 Entrance.InitOrangeQueue();
-                return;
+                yield break;  // 直接退出协程
             }
             else
             {
@@ -912,11 +1540,15 @@ public class LevelInfoConfig
             }
         }
 
-        foreach (var item in equiplist)
+        int totalInstantiated = 0;
+        foreach (var equipType in equiplist)
         {
             for (int i = 0; i < 20; i++)
             {
-                Entrance.InitEquip(item);
+                Entrance.InitEquip(equipType);
+                totalInstantiated++;
+                if (totalInstantiated % perFrame == 0)
+                    yield return null;
             }
         }
     }

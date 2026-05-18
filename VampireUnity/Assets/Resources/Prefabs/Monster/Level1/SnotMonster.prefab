@@ -655,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5291361906137642081
 Transform:
   m_ObjectHideFlags: 0
@@ -1013,7 +1013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9123846030649bfb0a81ce2d49a297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bingkuai: {fileID: 7028499506459407157}
   du: {fileID: 3593300229780768141}
   jiansu: {fileID: 1149849706877108463}
   yidian: {fileID: 4929390011811437976}
