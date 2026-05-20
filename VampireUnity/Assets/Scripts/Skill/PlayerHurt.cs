@@ -7,6 +7,8 @@ using UnityEngine;
 public class PlayerHurt : MonoBehaviour
 {
    public SkeletonAnimation skeletonAnimation;
+   
+
    private void OnEnable()
    {
       skeletonAnimation.AnimationState.SetAnimation(0,"animation",false);
@@ -16,6 +18,6 @@ public class PlayerHurt : MonoBehaviour
    public void Hide()
    {
       gameObject.SetActive(false);
-      GameController.S.PlayerHurtQueue.Enqueue(this);
+      QueueController.S.PlayerHurtQueue.Enqueue(this);
    }
 }

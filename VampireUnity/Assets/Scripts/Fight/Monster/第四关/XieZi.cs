@@ -51,7 +51,7 @@ public class XieZi : MonsterBase
         if (trackEntry.Animation.Name == "skill2")
         {
             collider2D.tag = "Bullet"; 
-            var pos = GameController.S.gamePlayer.transform.position;
+            var pos = QueueController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(pos,1);
             StartCoroutine(DelayShow(1, pos));
             return;
@@ -114,7 +114,7 @@ public class XieZi : MonsterBase
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
     IEnumerator DelayChuanSongMen()
     {
@@ -140,9 +140,9 @@ public class XieZi : MonsterBase
     {
         if (e.Data.Name == "attack_attack1"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < attackRange)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
         if (e.Data.Name == "attack_skill1"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill1")
@@ -153,7 +153,7 @@ public class XieZi : MonsterBase
             
             for (int i = 0; i < bulletCount; i++)
             {
-                var xieZiSkill1 = GameController.S.XieZiSkill1Queue.Dequeue();
+                var xieZiSkill1 = QueueController.S.XieZiSkill1Queue.Dequeue();
                 float angle = i * angleStep + waveOffset;
                 float angleRad = angle * Mathf.Deg2Rad;
                 Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
@@ -167,9 +167,9 @@ public class XieZi : MonsterBase
         if (e.Data.Name == "attack_skill3"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill3")
         {
             collider2D.tag="Monster";
-            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 2)
+            if (Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 2)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
         
@@ -181,18 +181,18 @@ public class XieZi : MonsterBase
     
     IEnumerator ShuiSkill()
     {
-        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        StartCoroutine(DelayShui(QueueController.S.gamePlayer.transform.position));
         yield return  new WaitForSeconds(1f);
-        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        StartCoroutine(DelayShui(QueueController.S.gamePlayer.transform.position));
         yield return  new WaitForSeconds(1f);
-        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        StartCoroutine(DelayShui(QueueController.S.gamePlayer.transform.position));
     }
 
     IEnumerator DelayShui(Vector2 pos)
     {
         GameController.S.CreateCircleAttack(pos,0.7f);
         yield return  new WaitForSeconds(1f);
-        var shui = GameController.S.XieZiSkill4Queue.Dequeue();
+        var shui = QueueController.S.XieZiSkill4Queue.Dequeue();
         shui.transform.position = pos;
         shui.gameObject.SetActive(true);
         shui.damage = Attack;
@@ -202,7 +202,7 @@ public class XieZi : MonsterBase
     
     public void MonsterMove1()
     {
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move")
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
@@ -219,7 +219,7 @@ public class XieZi : MonsterBase
         {
             return;
         }
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
+        float dis=Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position);
         if(dis<0.2f)
         {
             //如果距离小于0.2f，则不翻转
@@ -228,7 +228,7 @@ public class XieZi : MonsterBase
         //翻转精灵
         if (isRight)
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -238,7 +238,7 @@ public class XieZi : MonsterBase
             }
         }else
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(-1, 1, 1);
             }
@@ -276,7 +276,7 @@ public class XieZi : MonsterBase
             IsSkill4 = true;
         }
         
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < attackRange)
         {
             isAttack=true;
         }

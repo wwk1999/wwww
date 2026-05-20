@@ -9,7 +9,7 @@ namespace Skill.NormalAttack.DianLuoLei
         public Collider2D Collider2D;
         public void Hide()
         {
-            GameController.S.DianLuoLeiNextQueue.Enqueue(DianLuoLeiNext);
+            QueueController.S.DianLuoLeiNextQueue.Enqueue(DianLuoLeiNext);
             DianLuoLeiNext.gameObject.SetActive(false);
         }
         public void CheckCollider()
@@ -30,7 +30,7 @@ namespace Skill.NormalAttack.DianLuoLei
                 if (col.CompareTag("Monster")||col.CompareTag("Boss"))
                 {
                     var crit = GameController.S.GetIsCrit();
-                    GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Dian);
+                    QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Dian);
                 }
             }
         }

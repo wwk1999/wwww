@@ -16,6 +16,6 @@ public class HeiDongNext : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
-        GameController.S.HeiDongNextQueue.Enqueue(gameObject);
+        QueueController.S.HeiDongNextQueue.Enqueue(gameObject);
     }
 }

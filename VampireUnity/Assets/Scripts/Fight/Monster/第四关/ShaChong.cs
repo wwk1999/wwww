@@ -47,7 +47,7 @@ public class ShaChong : MonsterBase
         if (monsterSkeletonAnimation != null)
         {
             DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            var baoxue = QueueController.S.BaoXueQueue.Dequeue();
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
         }
@@ -86,9 +86,9 @@ public class ShaChong : MonsterBase
     {
         if (e.Data.Name == "attack_attack1"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < attackRange)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
     }
@@ -97,7 +97,7 @@ public class ShaChong : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < attackRange)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < attackRange)
         {
             monsterSkeletonAnimation.timeScale = 1.2f;
             isAttack=true;

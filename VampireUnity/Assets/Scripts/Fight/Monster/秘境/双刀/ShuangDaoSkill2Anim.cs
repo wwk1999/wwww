@@ -10,7 +10,7 @@ public class ShuangDaoSkill2Anim : MonoBehaviour
    public void Hide()
    {
       gameObject.SetActive(false);
-      GameController.S.ShuangDaoSkill2Queue.Enqueue(ShuangDaoSkill2);
+      QueueController.S.ShuangDaoSkill2Queue.Enqueue(ShuangDaoSkill2);
    }
    
    public void CheckCollisionWithMonsters()
@@ -30,7 +30,7 @@ public class ShuangDaoSkill2Anim : MonoBehaviour
 
          if (col.CompareTag("Player"))
          {
-            GameController.S.gamePlayer.PlayerHurt(ShuangDaoSkill2.damage, true);
+            QueueController.S.gamePlayer.PlayerHurt(ShuangDaoSkill2.damage, true);
          }
       }
    }   

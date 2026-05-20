@@ -25,7 +25,7 @@ public class FourNormalAttack : MonoBehaviour
     {
         if (other.CompareTag("Monster")|| other.CompareTag("Boss"))
         {
-            var hit = GameController.S.FourNormalAttackHitQueue.Dequeue();
+            var hit = QueueController.S.FourNormalAttackHitQueue.Dequeue();
             hit.SetActive(true);
             hit.transform.position = other.transform.position;
             hit.GetComponent<ParticleSystem>().Play();
@@ -40,6 +40,6 @@ public class FourNormalAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         obj.SetActive(false);
-        GameController.S.ThreeNormalAttackHitQueue.Enqueue(obj);
+        QueueController.S.ThreeNormalAttackHitQueue.Enqueue(obj);
     }
 }

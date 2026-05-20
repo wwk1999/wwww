@@ -8,7 +8,7 @@ public class BloodEnergyController : MonoBehaviour
 
     private void Update()
     {
-        var distance = Vector3.Distance(transform.position, GameController.S.gamePlayer.transform.position);
+        var distance = Vector3.Distance(transform.position, QueueController.S.gamePlayer.transform.position);
         if(distance<1.0f)
         {
             isPickUp = true;
@@ -22,14 +22,14 @@ public class BloodEnergyController : MonoBehaviour
         {
             GlobalPlayerAttribute.BloodEnergy++; // 增加元灵数量
             gameObject.SetActive(false);
-            GameController.S.BloodEnergyQueue.Enqueue(gameObject);
+            QueueController.S.BloodEnergyQueue.Enqueue(gameObject);
         }
     }
 
     void FllowPlayer()
     {
         //血能跟随Player
-        transform.position = Vector3.Lerp(transform.position, GameController.S.gamePlayer.transform.position, Time.deltaTime * speed);
+        transform.position = Vector3.Lerp(transform.position, QueueController.S.gamePlayer.transform.position, Time.deltaTime * speed);
 
     }
 }

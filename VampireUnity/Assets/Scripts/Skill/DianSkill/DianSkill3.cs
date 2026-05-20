@@ -25,7 +25,7 @@ public class DianSkill3 : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        GameController.S.DianSkill3Queue.Enqueue(this);
+        QueueController.S.DianSkill3Queue.Enqueue(this);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -35,11 +35,11 @@ public class DianSkill3 : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.DianQuanPengQueue.Dequeue();
+            var hit = QueueController.S.DianQuanPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].zhuoShaoTime = 3.1f;
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Dian3Damage/100f*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f)*SkillController.S.DianYuanSuDamage*(1.0f),isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].zhuoShaoTime = 3.1f;
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Dian3Damage/100f*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f)*SkillController.S.DianYuanSuDamage*(1.0f),isCrit,DamageFrom.Normal,YuanSuType.Dian);
             hit.SetActive(true);
         }
     }

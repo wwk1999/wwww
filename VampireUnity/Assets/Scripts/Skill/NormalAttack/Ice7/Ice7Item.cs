@@ -21,7 +21,7 @@ public class Ice7Item : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.Ice7Queue.Enqueue(this);
+        QueueController.S.Ice7Queue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -32,12 +32,12 @@ public class Ice7Item : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.IcePengQueue.Dequeue();
+            var hit = QueueController.S.IcePengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
             hit.SetActive(true);
-            GameController.S.Ice7Queue.Enqueue(this);
+            QueueController.S.Ice7Queue.Enqueue(this);
             gameObject.SetActive(false);
         }
     }

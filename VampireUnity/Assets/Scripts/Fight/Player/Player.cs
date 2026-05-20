@@ -525,7 +525,7 @@ public class Player : MonoBehaviour
     
     public void ShowHurtText(float damage)
     {
-        MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
+        MonsterHurtText monsterHpGameObject = QueueController.S.MonsterHurtTextQueue.Dequeue();
         monsterHpGameObject.isPlayer=true;
         monsterHpGameObject.transform.position = transform.position;
         monsterHpGameObject.playerText.text =FloatToSpriteString(damage);
@@ -568,16 +568,17 @@ public class Player : MonoBehaviour
 
         if (!IsDie)
         {
-            GameController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0,"hit",false);
+            QueueController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0,"hit",false);
         }
 
         GameController.S.HitCount++;
         GameController.S.HitCount=Math.Min(10, GameController.S.HitCount);
         GlobalPlayerAttribute.CDTeXiao5Time = 5;
 
-        var playerHurt=GameController.S.PlayerHurtQueue.Dequeue();
-        playerHurt.transform.position = transform.position;
+        var playerHurt=QueueController.S.PlayerHurtQueue.Dequeue();
         playerHurt.gameObject.SetActive(true);
+        playerHurt.transform.position = transform.position;
+        
 
         damage -= GameController.S.GameDefense;
         float realDamage = 0;
@@ -656,7 +657,7 @@ public class Player : MonoBehaviour
     IEnumerator DelayCancelWuDi(float time)
     {
         yield return new WaitForSeconds(time);
-        GameController.S.gamePlayer.IsWuDi = false;
+        QueueController.S.gamePlayer.IsWuDi = false;
     }
 
     /// <summary>

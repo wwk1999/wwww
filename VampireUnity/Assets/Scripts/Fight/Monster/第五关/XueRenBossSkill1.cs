@@ -11,12 +11,12 @@ public class XueRenBossSkill1 : MonoBehaviour
 
     private void OnEnable()
     {
-        if (GameController.S.gamePlayer == null)
+        if (QueueController.S.gamePlayer == null)
         {
             return;
         }
         transform.localScale = new Vector3(1, 1, 1);
-        var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+        var dir=(QueueController.S.gamePlayer.transform.position-transform.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         if (angle < 0)
         {
@@ -31,19 +31,19 @@ public class XueRenBossSkill1 : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        GameController.S.XueRenBossSkill1Queue.Enqueue(this);
+        QueueController.S.XueRenBossSkill1Queue.Enqueue(this);
     }
    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            GameController.S.gamePlayer.PlayerHurt(Damage,true);
+            QueueController.S.gamePlayer.PlayerHurt(Damage,true);
         }
         if (other.CompareTag("BgEdge"))
         {
             gameObject.SetActive(false);
-            GameController.S.XueRenBossSkill1Queue.Enqueue(this);
+            QueueController.S.XueRenBossSkill1Queue.Enqueue(this);
         }
     }
 }

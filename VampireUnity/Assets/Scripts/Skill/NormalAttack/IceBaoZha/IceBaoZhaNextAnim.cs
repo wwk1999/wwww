@@ -8,7 +8,7 @@ public class IceBaoZhaNextAnim : MonoBehaviour
     public IceBaoZhaNext IceBaoZhaNext;
     public void Hide()
     {
-        GameController.S.IceBaoZhaNextQueue.Enqueue(IceBaoZhaNext);
+        QueueController.S.IceBaoZhaNextQueue.Enqueue(IceBaoZhaNext);
         IceBaoZhaNext.gameObject.SetActive(false);
     }
     
@@ -31,7 +31,7 @@ public class IceBaoZhaNextAnim : MonoBehaviour
             if (col.CompareTag("Monster")||col.CompareTag("Boss"))
             {
                 var crit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Ice);
+                QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Ice);
             }
         }
     }

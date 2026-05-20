@@ -17,7 +17,7 @@ public class LuoLei : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
-        GameController.S.LuoLeiQueue.Enqueue(gameObject);
+        QueueController.S.LuoLeiQueue.Enqueue(gameObject);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +25,7 @@ public class LuoLei : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack,isCrit,DamageFrom.Normal,YuanSuType.Dian);
         }
     }
 }

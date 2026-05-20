@@ -6,7 +6,7 @@ public class IcePengAnim : MonoBehaviour
 {
    public void Hide()
    {
-      GameController.S.IcePengQueue.Enqueue(gameObject);
+      QueueController.S.IcePengQueue.Enqueue(gameObject);
       gameObject.SetActive(false);
    }
 }

@@ -18,32 +18,32 @@ public class SceneLoading1 : MonoBehaviour
 
     public IEnumerator PreloadAllPools()
     {
-        GameController.S.fightBG = Instantiate(Resources.Load<GameObject>("Prefabs/Window/FightBG"),
-            GameController.S.transform);
-        GameController.S.fightBG.transform.position = new Vector3(0, 0, 0.1f);
+        QueueController.S.fightBG = Instantiate(Resources.Load<GameObject>("Prefabs/Window/FightBG"),
+            QueueController.S.transform);
+        QueueController.S.fightBG.transform.position = new Vector3(0, 0, 0.1f);
         
         
         //赋值
-        FightBGController.S.WeaponButton= GameController.S.fightBG.GetComponent<FightBg>().weaponButton;
-        FightBGController.S.normalAttackButton=GameController.S.fightBG.GetComponent<FightBg>().normalAttackButton;
-        FightBGController.S.FightStopButton=GameController.S.fightBG.GetComponent<FightBg>().fightStopButton;
-        FightBGController.S.dashButton=GameController.S.fightBG.GetComponent<FightBg>().dashButton;
-        FightBGController.S.rageButton=GameController.S.fightBG.GetComponent<FightBg>().rageButton;
-        FightBGController.S.shieldButton=GameController.S.fightBG.GetComponent<FightBg>().shieldButton;
-        FightBGController.S.iceArrowButton=GameController.S.fightBG.GetComponent<FightBg>().iceArrowButton;
-        FightBGController.S.iceExButton=GameController.S.fightBG.GetComponent<FightBg>().iceExButton;
-        FightBGController.S.iceBallButton=GameController.S.fightBG.GetComponent<FightBg>().iceBallButton;
-        FightBGController.S.IceExYellowCd=GameController.S.fightBG.GetComponent<FightBg>().iceExYellowCd;
-        FightBGController.S.IceBallYellowCd=GameController.S.fightBG.GetComponent<FightBg>().iceBallYellowCd;
-        FightBGController.S.IceArrowYellowCd=GameController.S.fightBG.GetComponent<FightBg>().iceArrowYellowCd;
-        FightBGController.S.BossEnergySlider=GameController.S.fightBG.GetComponent<FightBg>().bossEnergySlider;
+        FightBGController.S.WeaponButton= QueueController.S.fightBG.GetComponent<FightBg>().weaponButton;
+        FightBGController.S.normalAttackButton=QueueController.S.fightBG.GetComponent<FightBg>().normalAttackButton;
+        FightBGController.S.FightStopButton=QueueController.S.fightBG.GetComponent<FightBg>().fightStopButton;
+        FightBGController.S.dashButton=QueueController.S.fightBG.GetComponent<FightBg>().dashButton;
+        FightBGController.S.rageButton=QueueController.S.fightBG.GetComponent<FightBg>().rageButton;
+        FightBGController.S.shieldButton=QueueController.S.fightBG.GetComponent<FightBg>().shieldButton;
+        FightBGController.S.iceArrowButton=QueueController.S.fightBG.GetComponent<FightBg>().iceArrowButton;
+        FightBGController.S.iceExButton=QueueController.S.fightBG.GetComponent<FightBg>().iceExButton;
+        FightBGController.S.iceBallButton=QueueController.S.fightBG.GetComponent<FightBg>().iceBallButton;
+        FightBGController.S.IceExYellowCd=QueueController.S.fightBG.GetComponent<FightBg>().iceExYellowCd;
+        FightBGController.S.IceBallYellowCd=QueueController.S.fightBG.GetComponent<FightBg>().iceBallYellowCd;
+        FightBGController.S.IceArrowYellowCd=QueueController.S.fightBG.GetComponent<FightBg>().iceArrowYellowCd;
+        FightBGController.S.BossEnergySlider=QueueController.S.fightBG.GetComponent<FightBg>().bossEnergySlider;
 
 
-        FightBGController.S.playerHpSlider=GameController.S.fightBG.GetComponent<FightBg>().playerHpSlider;
-        FightBGController.S.playerExSlider=GameController.S.fightBG.GetComponent<FightBg>().playerExSlider;
-        FightBGController.S.playerLevelText=GameController.S.fightBG.GetComponent<FightBg>().playerLevelText;
-        FightBGController.S.GameMaxHp=GameController.S.fightBG.GetComponent<FightBg>().GameMaxHp;
-        FightBGController.S.GameCurrentHp=GameController.S.fightBG.GetComponent<FightBg>().GameCurrentHp;
+        FightBGController.S.playerHpSlider=QueueController.S.fightBG.GetComponent<FightBg>().playerHpSlider;
+        FightBGController.S.playerExSlider=QueueController.S.fightBG.GetComponent<FightBg>().playerExSlider;
+        FightBGController.S.playerLevelText=QueueController.S.fightBG.GetComponent<FightBg>().playerLevelText;
+        FightBGController.S.GameMaxHp=QueueController.S.fightBG.GetComponent<FightBg>().GameMaxHp;
+        FightBGController.S.GameCurrentHp=QueueController.S.fightBG.GetComponent<FightBg>().GameCurrentHp;
 
         GameController.S.CreatePlayer();
         GameController.S.monsterHpSliderPrefabs = Resources.Load<GameObject>("Prefabs/Tool/MonsterHPBloodBar");
@@ -92,7 +92,7 @@ public class SceneLoading1 : MonoBehaviour
     public void EntranceAwake()
     {
          GameController.S.MonsterList = GameController.S.SelectTwoUniqueNumbers();
-        GameController.S.MonsterColliderDic.Clear();
+         QueueController.S.MonsterColliderDic.Clear();
         Application.targetFrameRate = 30;
         GlobalPlayerAttribute.CurrentHp = GlobalPlayerAttribute.TotalMaxHp;
         LevelInfoConfig.IsOneGame = false;
@@ -131,7 +131,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LeiShouSkill3>(),
                             GameController.S.transform);
                     Monster1.gameObject.SetActive(false);
-                    GameController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
+                    QueueController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
                 }
             }
 
@@ -145,7 +145,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<HeiXuanFen>(),
                             GameController.S.transform);
                     Monster2.gameObject.SetActive(false);
-                    GameController.S.HeiXuanFenQueue.Enqueue(Monster2.GetComponent<HeiXuanFen>());
+                    QueueController.S.HeiXuanFenQueue.Enqueue(Monster2.GetComponent<HeiXuanFen>());
                 }
             }
 
@@ -159,7 +159,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LvZhuiZong>(),
                             GameController.S.transform);
                     Monster3.gameObject.SetActive(false);
-                    GameController.S.LvZhuiZongQueue.Enqueue(Monster3.GetComponent<LvZhuiZong>());
+                    QueueController.S.LvZhuiZongQueue.Enqueue(Monster3.GetComponent<LvZhuiZong>());
                 }
             }
 
@@ -173,7 +173,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LvXuanFen>(),
                             GameController.S.transform);
                     Monster4.gameObject.SetActive(false);
-                    GameController.S.LvXuanFenQueue.Enqueue(Monster4.GetComponent<LvXuanFen>());
+                    QueueController.S.LvXuanFenQueue.Enqueue(Monster4.GetComponent<LvXuanFen>());
                 }
             }
 
@@ -188,7 +188,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<BaoZiSkill2>(),
                             GameController.S.transform);
                     Monster5.gameObject.SetActive(false);
-                    GameController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
+                    QueueController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
                 }
             }
 
@@ -203,7 +203,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<HuoLangSkill2>(),
                             GameController.S.transform);
                     Monster6.gameObject.SetActive(false);
-                    GameController.S.HuoLangSkill2Queue.Enqueue(Monster6.GetComponent<HuoLangSkill2>());
+                    QueueController.S.HuoLangSkill2Queue.Enqueue(Monster6.GetComponent<HuoLangSkill2>());
                 }
             }
 
@@ -218,7 +218,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<ShuangDaoSkill2>(),
                             GameController.S.transform);
                     Monster7.gameObject.SetActive(false);
-                    GameController.S.ShuangDaoSkill2Queue.Enqueue(Monster7.GetComponent<ShuangDaoSkill2>());
+                    QueueController.S.ShuangDaoSkill2Queue.Enqueue(Monster7.GetComponent<ShuangDaoSkill2>());
                 }
             }
 
@@ -232,7 +232,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<ShuangDaoSkill3>(),
                             GameController.S.transform);
                     Monster8.gameObject.SetActive(false);
-                    GameController.S.ShuangDaoSkill3Queue.Enqueue(Monster8.GetComponent<ShuangDaoSkill3>());
+                    QueueController.S.ShuangDaoSkill3Queue.Enqueue(Monster8.GetComponent<ShuangDaoSkill3>());
                 }
             }
 
@@ -252,9 +252,9 @@ public class SceneLoading1 : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),
                             GameController.S.transform);
                     Monster1.gameObject.SetActive(false);
-                    GameController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
+                    QueueController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
                     Collider2D collider2D = Monster1.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D, Monster1.GetComponent<MonsterBase>());
+                    QueueController.S.MonsterColliderDic.Add(collider2D, Monster1.GetComponent<MonsterBase>());
                 }
             }
 
@@ -269,10 +269,10 @@ public class SceneLoading1 : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo1").GetComponent<EMo1>(),
                             GameController.S.transform);
                     Monster2.gameObject.SetActive(false);
-                    GameController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
+                    QueueController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
                     Collider2D collider2D2 =
                         Monster2.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D2,
+                    QueueController.S.MonsterColliderDic.Add(collider2D2,
                         Monster2.GetComponent<MonsterBase>());
                 }
             }
@@ -289,10 +289,10 @@ public class SceneLoading1 : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo2").GetComponent<EMo2>(),
                             GameController.S.transform);
                     Monster3.gameObject.SetActive(false);
-                    GameController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
+                    QueueController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
                     Collider2D collider2D3 =
                         Monster3.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D3,
+                    QueueController.S.MonsterColliderDic.Add(collider2D3,
                         Monster3.GetComponent<MonsterBase>());
                 }
             }
@@ -307,9 +307,9 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo3").GetComponent<EMo3>(),
                             GameController.S.transform);
                     Monster4.gameObject.SetActive(false);
-                    GameController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
+                    QueueController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
                     Collider2D collider2D4 = Monster4.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D4, Monster4.GetComponent<MonsterBase>());
+                    QueueController.S.MonsterColliderDic.Add(collider2D4, Monster4.GetComponent<MonsterBase>());
                 }
             }
 
@@ -324,10 +324,10 @@ public class SceneLoading1 : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1")
                                 .GetComponent<HongLong1>(), GameController.S.transform);
                     Monster5.gameObject.SetActive(false);
-                    GameController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
+                    QueueController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
                     Collider2D collider2D5 =
                         Monster5.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D5,
+                    QueueController.S.MonsterColliderDic.Add(collider2D5,
                         Monster5.GetComponent<MonsterBase>());
                 }
             }
@@ -343,10 +343,10 @@ public class SceneLoading1 : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2")
                                 .GetComponent<HongLong2>(), GameController.S.transform);
                     Monster6.gameObject.SetActive(false);
-                    GameController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
+                    QueueController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
                     Collider2D collider2D6 =
                         Monster6.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D6,
+                    QueueController.S.MonsterColliderDic.Add(collider2D6,
                         Monster6.GetComponent<MonsterBase>());
                 }
             }
@@ -363,9 +363,9 @@ public class SceneLoading1 : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3")
                                 .GetComponent<HongLong3>(), GameController.S.transform);
                     Monster7.gameObject.SetActive(false);
-                    GameController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
+                    QueueController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
                     Collider2D collider2D7 = Monster7.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D7, Monster7.GetComponent<MonsterBase>());
+                    QueueController.S.MonsterColliderDic.Add(collider2D7, Monster7.GetComponent<MonsterBase>());
                 }
             }
 
@@ -382,10 +382,10 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LanLong1>(),
                             GameController.S.transform);
                     Monster8.gameObject.SetActive(false);
-                    GameController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
+                    QueueController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
                     Collider2D collider2D8 =
                         Monster8.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D8,
+                    QueueController.S.MonsterColliderDic.Add(collider2D8,
                         Monster8.GetComponent<MonsterBase>());
                 }
             }
@@ -400,10 +400,10 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LanLong2>(),
                             GameController.S.transform);
                     Monster9.gameObject.SetActive(false);
-                    GameController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
+                    QueueController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
                     Collider2D collider2D9 =
                         Monster9.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D9,
+                    QueueController.S.MonsterColliderDic.Add(collider2D9,
                         Monster9.GetComponent<MonsterBase>());
                 }
             }
@@ -417,9 +417,9 @@ public class SceneLoading1 : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),
                             GameController.S.transform);
                     Monster10.gameObject.SetActive(false);
-                    GameController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
+                    QueueController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
                     Collider2D collider2D10 = Monster10.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D10, Monster10.GetComponent<MonsterBase>());
+                    QueueController.S.MonsterColliderDic.Add(collider2D10, Monster10.GetComponent<MonsterBase>());
                 }
             }
 
@@ -433,10 +433,10 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LvLang>(),
                             GameController.S.transform);
                     Monster11.gameObject.SetActive(false);
-                    GameController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
+                    QueueController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
                     Collider2D collider2D11 =
                         Monster11.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D11,
+                    QueueController.S.MonsterColliderDic.Add(collider2D11,
                         Monster11.GetComponent<MonsterBase>());
                 }
             }
@@ -451,10 +451,10 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LvLong1>(),
                             GameController.S.transform);
                     Monster12.gameObject.SetActive(false);
-                    GameController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
+                    QueueController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
                     Collider2D collider2D12 =
                         Monster12.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D12,
+                    QueueController.S.MonsterColliderDic.Add(collider2D12,
                         Monster12.GetComponent<MonsterBase>());
                 }
             }
@@ -469,10 +469,10 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LvLong2>(),
                             GameController.S.transform);
                     Monster13.gameObject.SetActive(false);
-                    GameController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
+                    QueueController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
                     Collider2D collider2D13 =
                         Monster13.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D13,
+                    QueueController.S.MonsterColliderDic.Add(collider2D13,
                         Monster13.GetComponent<MonsterBase>());
                 }
             }
@@ -487,10 +487,10 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<HuangShu>(),
                             GameController.S.transform);
                     huangshu.gameObject.SetActive(false);
-                    GameController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
+                    QueueController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
 
                     Collider2D Huangshucollider2D = huangshu.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(Huangshucollider2D,
+                    QueueController.S.MonsterColliderDic.Add(Huangshucollider2D,
                         huangshu.GetComponent<MonsterBase>());
                 }
             }
@@ -506,9 +506,9 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<Huangzhu>(),
                             GameController.S.transform);
                     Huangzhu.gameObject.SetActive(false);
-                    GameController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
+                    QueueController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
                     Collider2D Huangzhucollider2D = Huangzhu.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(Huangzhucollider2D, Huangzhu.GetComponent<MonsterBase>());
+                    QueueController.S.MonsterColliderDic.Add(Huangzhucollider2D, Huangzhu.GetComponent<MonsterBase>());
                 }
             }
 
@@ -523,9 +523,9 @@ public class SceneLoading1 : MonoBehaviour
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),
                             GameController.S.transform);
                     Monster14.gameObject.SetActive(false);
-                    GameController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
+                    QueueController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
                     Collider2D collider2D14 = Monster14.GetComponent<MonsterBase>().collider2D;
-                    GameController.S.MonsterColliderDic.Add(collider2D14, Monster14.GetComponent<MonsterBase>());
+                    QueueController.S.MonsterColliderDic.Add(collider2D14, Monster14.GetComponent<MonsterBase>());
                 }
             }
         }
@@ -535,20 +535,16 @@ public class SceneLoading1 : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            var circleAttack = Instantiate(Resources.Load("Prefabs/Tool/CircleAttack"), new Vector3(0, 0, 0),
-                Quaternion.identity) as GameObject;
+            var circleAttack = Instantiate(Resources.Load("Prefabs/Tool/CircleAttack"),GameController.S.transform) as GameObject;
             circleAttack.SetActive(false);
             FightBGController.S.CircleAttackQueue.Enqueue(circleAttack.GetComponent<CircleAttack>());
-            var fire = Instantiate(Resources.Load("Prefabs/Skill/TreeManFire"), new Vector3(0, 0, 0),
-                Quaternion.identity) as GameObject;
+            var fire = Instantiate(Resources.Load("Prefabs/Skill/TreeManFire"),GameController.S.transform) as GameObject;
             fire.SetActive(false);
             FightBGController.S.TreeManFireQueue.Enqueue(fire.GetComponent<TreeManFire>());
-            var sqrtattack = Instantiate(Resources.Load("Prefabs/Tool/SqrtAttack"), new Vector3(0, 0, 0),
-                Quaternion.identity) as GameObject;
+            var sqrtattack = Instantiate(Resources.Load("Prefabs/Tool/SqrtAttack"),GameController.S.transform) as GameObject;
             sqrtattack.SetActive(false);
             FightBGController.S.SqrtAttackQueue.Enqueue(sqrtattack.GetComponent<SqrtAttack>());
-            var playerhit = Instantiate(Resources.Load("Prefabs/Player/PlayerHit"), new Vector3(0, 0, 0),
-                Quaternion.identity) as GameObject;
+            var playerhit = Instantiate(Resources.Load("Prefabs/Player/PlayerHit"),GameController.S.transform) as GameObject;
             playerhit.SetActive(false);
             FightBGController.S.PlayerHitQueue.Enqueue(playerhit.GetComponent<PlayerHit>());
         }
@@ -581,7 +577,7 @@ public class SceneLoading1 : MonoBehaviour
                     Resources.Load<GameObject>("Prefabs/Skill/DiLie").GetComponent<TreeManDiLie>(),
                     GameController.S.transform);
                 DiLie.gameObject.SetActive(false);
-                GameController.S.TreeManDiLieQueue.Enqueue(DiLie.GetComponent<TreeManDiLie>());
+                QueueController.S.TreeManDiLieQueue.Enqueue(DiLie.GetComponent<TreeManDiLie>());
             }
         }
 
@@ -595,7 +591,7 @@ public class SceneLoading1 : MonoBehaviour
                             .GetComponent<TreeManSkill>(),
                         GameController.S.transform);
                 treemanSkill.gameObject.SetActive(false);
-                GameController.S.TreeManSkillQueue.Enqueue(treemanSkill.GetComponent<TreeManSkill>());
+                QueueController.S.TreeManSkillQueue.Enqueue(treemanSkill.GetComponent<TreeManSkill>());
             }
         }
 
@@ -607,7 +603,7 @@ public class SceneLoading1 : MonoBehaviour
                     Instantiate(Resources.Load<HuoShanJianQi>("Prefabs/Monster/Level2/HuoShanJianQi"),
                         GameController.S.transform);
                 jianqi.gameObject.SetActive(false);
-                GameController.S.HuoShanJianQiQueue.Enqueue(jianqi);
+                QueueController.S.HuoShanJianQiQueue.Enqueue(jianqi);
             }
 
             for (int i = 0; i < 51; i++)
@@ -616,7 +612,7 @@ public class SceneLoading1 : MonoBehaviour
                     Instantiate(Resources.Load<HuoShanSkill2>("Prefabs/Monster/Level2/HuoShanSkill2"),
                         GameController.S.transform);
                 huoshanskill2.gameObject.SetActive(false);
-                GameController.S.HuoShanSkill2QiQueue.Enqueue(huoshanskill2);
+                QueueController.S.HuoShanSkill2QiQueue.Enqueue(huoshanskill2);
             }
 
         }
@@ -629,7 +625,7 @@ public class SceneLoading1 : MonoBehaviour
                 var zhaozeSkill = Instantiate(Resources.Load<ZhaoZeSkill>("Prefabs/Monster/Level3/ZhaoZeBossSkill"),
                     GameController.S.transform);
                 zhaozeSkill.gameObject.SetActive(false);
-                GameController.S.ZhaoZeSkillQueue.Enqueue(zhaozeSkill);
+                QueueController.S.ZhaoZeSkillQueue.Enqueue(zhaozeSkill);
             }
         }
 
@@ -645,7 +641,7 @@ public class SceneLoading1 : MonoBehaviour
                         Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRenJian").GetComponent<XueRenJian>(),
                         GameController.S.transform);
                 XueRenJian.gameObject.SetActive(false);
-                GameController.S.XueRenJianQueue.Enqueue(XueRenJian.GetComponent<XueRenJian>());
+                QueueController.S.XueRenJianQueue.Enqueue(XueRenJian.GetComponent<XueRenJian>());
             }
         }
 
@@ -656,7 +652,7 @@ public class SceneLoading1 : MonoBehaviour
                     Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRenBossSkill1")
                         .GetComponent<XueRenBossSkill1>(), GameController.S.transform);
             XueRenBossSkill1.gameObject.SetActive(false);
-            GameController.S.XueRenBossSkill1Queue.Enqueue(XueRenBossSkill1.GetComponent<XueRenBossSkill1>());
+            QueueController.S.XueRenBossSkill1Queue.Enqueue(XueRenBossSkill1.GetComponent<XueRenBossSkill1>());
         }
     }
 

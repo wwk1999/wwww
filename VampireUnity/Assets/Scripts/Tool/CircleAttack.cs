@@ -11,6 +11,6 @@ public class CircleAttack : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        GameController.S.CircleQueue.Enqueue(this);
+        QueueController.S.CircleQueue.Enqueue(this);
     }
 }

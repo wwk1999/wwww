@@ -24,7 +24,7 @@ public class TreeManDanMu : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.TreeManDanMuQueue.Enqueue(this);
+        QueueController.S.TreeManDanMuQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -35,7 +35,7 @@ public class TreeManDanMu : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Player"))
         {
-            GameController.S.gamePlayer.PlayerHurt(damage,true);
+            QueueController.S.gamePlayer.PlayerHurt(damage,true);
             gameObject.SetActive(false);
         }
     }

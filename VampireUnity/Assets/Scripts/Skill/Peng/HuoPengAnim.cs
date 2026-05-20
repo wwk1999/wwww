@@ -6,7 +6,7 @@ public class HuoPengAnim : MonoBehaviour
 {
    public void Hide()
    {
-      GameController.S.HuoPengQueue.Enqueue(gameObject);
+      QueueController.S.HuoPengQueue.Enqueue(gameObject);
       gameObject.SetActive(false);
    }
 }

@@ -35,7 +35,7 @@ public class HuoSkill5 : MonoBehaviour
         
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
-                MonsterBase monster = GameController.S.MonsterColliderDic[col];
+                MonsterBase monster = QueueController.S.MonsterColliderDic[col];
                 monster.Hurt(GameController.S.GameAttack*SkillConfig.Huo5Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Huo);
             }
         }
@@ -50,7 +50,7 @@ public class HuoSkill5 : MonoBehaviour
 
     public void Complete(TrackEntry trackEntry)
     {
-        GameController.S.HuoSkill5Queue.Enqueue(this);
+        QueueController.S.HuoSkill5Queue.Enqueue(this);
         gameObject.SetActive(false);
     }
     

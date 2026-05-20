@@ -18,6 +18,6 @@ public class FirePeng : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
-        GameController.S.FirePengQueue.Enqueue(gameObject);
+        QueueController.S.FirePengQueue.Enqueue(gameObject);
     }
 }

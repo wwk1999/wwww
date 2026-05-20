@@ -49,7 +49,7 @@ namespace Fight.Monster.秘境.雷兽
     public void ShowSkill1()
     {
         skill1.SetActive(true);
-        var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+        var dir=(QueueController.S.gamePlayer.transform.position-transform.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         skill1parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         skill1parent.transform.localScale=parent.transform.localScale;
@@ -66,7 +66,7 @@ namespace Fight.Monster.秘境.雷兽
     {
          GameController.S.CreateCircleAttack(spawnPos,1f);
          yield return new WaitForSeconds(delay);
-         LeiShouSkill3 huoyan=GameController.S.LeiShouSkill3Queue.Dequeue();
+         LeiShouSkill3 huoyan=QueueController.S.LeiShouSkill3Queue.Dequeue();
          huoyan.transform.position = spawnPos;
          huoyan.damage = Attack;
          huoyan.gameObject.SetActive(true);
@@ -92,7 +92,7 @@ namespace Fight.Monster.秘境.雷兽
     IEnumerator ShunYiNext()
     {
         yield return new WaitForSeconds(2f);
-        var pos = GameController.S.gamePlayer.transform.position;
+        var pos = QueueController.S.gamePlayer.transform.position;
         GameController.S.CreateCircleAttack(pos,1);
         yield return new WaitForSeconds(0.5f);
         transform.position = pos;
@@ -187,7 +187,7 @@ namespace Fight.Monster.秘境.雷兽
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
     IEnumerator DelayChuanSongMen()
     {
@@ -225,7 +225,7 @@ namespace Fight.Monster.秘境.雷兽
         
             if (col.CompareTag("Player"))
             {
-               GameController.S.gamePlayer.PlayerHurt(Attack*0.7f,true);
+               QueueController.S.gamePlayer.PlayerHurt(Attack*0.7f,true);
             }
         }
     }
@@ -249,10 +249,10 @@ namespace Fight.Monster.秘境.雷兽
 
         if (e.Data.Name == "draw" && trackEntry.Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size ||
-                Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.5f)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size ||
+                Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.5f)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
     }
@@ -262,7 +262,7 @@ namespace Fight.Monster.秘境.雷兽
     
     public void MonsterMove1()
     {
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move"||IsDash)
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
@@ -279,7 +279,7 @@ namespace Fight.Monster.秘境.雷兽
         {
             return;
         }
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
+        float dis=Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position);
         if(dis<0.2f)
         {
             //如果距离小于0.2f，则不翻转
@@ -288,7 +288,7 @@ namespace Fight.Monster.秘境.雷兽
         //翻转精灵
         if (isRight)
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -298,7 +298,7 @@ namespace Fight.Monster.秘境.雷兽
             }
         }else
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(-1, 1, 1);
             }
@@ -326,12 +326,12 @@ namespace Fight.Monster.秘境.雷兽
 
         if (currentSkill1Time > skill1Time)
         {
-            if (parent.transform.localScale.x > 0&&transform.position.x-GameController.S.gamePlayer.transform.position.x>1)
+            if (parent.transform.localScale.x > 0&&transform.position.x-QueueController.S.gamePlayer.transform.position.x>1)
             {
                 currentSkill1Time = 0;
                 isSkill1 = true;
             }
-            if (parent.transform.localScale.x < 0&&GameController.S.gamePlayer.transform.position.x-transform.position.x>1)
+            if (parent.transform.localScale.x < 0&&QueueController.S.gamePlayer.transform.position.x-transform.position.x>1)
             {
                 currentSkill1Time = 0;
                 isSkill1 = true;
@@ -350,7 +350,7 @@ namespace Fight.Monster.秘境.雷兽
             isSkill3 = true;
         }
         
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.5f)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size||Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.5f)
         {
             isAttack=true;
         }

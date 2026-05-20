@@ -8,7 +8,7 @@ public class DianBaoZhaNextAnim : MonoBehaviour
     public DianBaoZhaNext DianBaoZhaNext;
     public void Hide()
     {
-        GameController.S.DianBaoZhaNextQueue.Enqueue(DianBaoZhaNext);
+        QueueController.S.DianBaoZhaNextQueue.Enqueue(DianBaoZhaNext);
         DianBaoZhaNext.gameObject.SetActive(false);
     }
     
@@ -31,7 +31,7 @@ public class DianBaoZhaNextAnim : MonoBehaviour
             if (col.CompareTag("Monster")||col.CompareTag("Boss"))
             {
                 var crit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Dian);
+                QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Dian);
             }
         }
     }

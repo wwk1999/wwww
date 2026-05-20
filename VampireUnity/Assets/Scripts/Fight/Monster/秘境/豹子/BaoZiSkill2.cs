@@ -22,13 +22,13 @@ public class BaoZiSkill2 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameController.S.gamePlayer.PlayerHurt(damage,false);
+            QueueController.S.gamePlayer.PlayerHurt(damage,false);
         }
     }
 
     public void EnQueue()
     {
         gameObject.SetActive(false);
-        GameController.S.BaoZiSkill2Queue.Enqueue(this);
+        QueueController.S.BaoZiSkill2Queue.Enqueue(this);
     }
 }

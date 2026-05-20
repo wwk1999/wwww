@@ -21,7 +21,7 @@ public class BaoXue : MonoBehaviour
 
    public void Complete(TrackEntry trackEntry)
    {
-      GameController.S.BaoXueQueue.Enqueue(this);
+      QueueController.S.BaoXueQueue.Enqueue(this);
       gameObject.SetActive(false);
    }
 

@@ -26,7 +26,7 @@ public class XuKong : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
-        GameController.S.XuKongQueue.Enqueue(obj);
+        QueueController.S.XuKongQueue.Enqueue(obj);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,11 +34,11 @@ public class XuKong : MonoBehaviour
         Vector2 closestPoint = other.ClosestPoint(transform.position);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.XuKongPengQueue.Dequeue();
+            var hit = QueueController.S.XuKongPengQueue.Dequeue();
             hit.SetActive(true);
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.DianYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.DianYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
         }
     }
 }

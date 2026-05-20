@@ -22,7 +22,7 @@ public class DianJiSu : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.DianJiSuQueue.Enqueue(this);
+        QueueController.S.DianJiSuQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -33,12 +33,12 @@ public class DianJiSu : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.DianPengQueue.Dequeue();
+            var hit = QueueController.S.DianPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
             hit.SetActive(true);
-            GameController.S.DianJiSuQueue.Enqueue(this);
+            QueueController.S.DianJiSuQueue.Enqueue(this);
             gameObject.SetActive(false);
         }
     }

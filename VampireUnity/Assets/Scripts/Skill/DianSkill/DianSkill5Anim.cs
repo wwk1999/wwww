@@ -9,7 +9,7 @@ public class DianSkill5Anim : MonoBehaviour
    public Collider2D collider;
    public void Hide()
    {
-      GameController.S.DianSkill5Queue.Enqueue(DianSkill5);
+      QueueController.S.DianSkill5Queue.Enqueue(DianSkill5);
       gameObject.SetActive(false);
    }
    
@@ -31,7 +31,7 @@ public class DianSkill5Anim : MonoBehaviour
         
          if (col.CompareTag("Monster") || col.CompareTag("Boss"))
          {
-            MonsterBase monster = GameController.S.MonsterColliderDic[col];
+            MonsterBase monster = QueueController.S.MonsterColliderDic[col];
             monster.Hurt(GameController.S.GameAttack*SkillConfig.Dian5Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Dian);
             // var hit = GameController.S.HeiDongPengQueue.Dequeue();
             //hit.transform.position = monster.transform.position;

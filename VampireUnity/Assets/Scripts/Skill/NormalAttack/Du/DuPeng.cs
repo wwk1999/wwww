@@ -16,6 +16,6 @@ public class DuPeng : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
-        GameController.S.DuPengQueue.Enqueue(gameObject);
+        QueueController.S.DuPengQueue.Enqueue(gameObject);
     }
 }

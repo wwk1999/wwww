@@ -50,7 +50,7 @@ public class HuoLangBoss : MonsterBase
     public void Skill2Pro()
     {
         skill2PosList.Clear();
-        Vector2 center = GameController.S.gamePlayer.transform.position;   // (0,0)
+        Vector2 center = QueueController.S.gamePlayer.transform.position;   // (0,0)
         float radius = 10f;
 
         for (int i = 0; i < 15; i++)
@@ -67,7 +67,7 @@ public class HuoLangBoss : MonsterBase
     {
         foreach (var pos in skill2PosList)
         {
-            var skill2 = GameController.S.HuoLangSkill2Queue.Dequeue();
+            var skill2 = QueueController.S.HuoLangSkill2Queue.Dequeue();
             skill2.transform.position = pos;
             skill2.damage = Attack;
             skill2.gameObject.SetActive(true);
@@ -88,7 +88,7 @@ public class HuoLangBoss : MonsterBase
             IsSkill = true;
             isSkill1 = false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
-            skill1Pos = GameController.S.gamePlayer.transform.position;
+            skill1Pos = QueueController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(skill1Pos,1f);
         }
         else if (isSkill2)
@@ -157,7 +157,7 @@ public class HuoLangBoss : MonsterBase
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
 
     IEnumerator DelayChuanSongMen()
@@ -221,7 +221,7 @@ public class HuoLangBoss : MonsterBase
 
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack, true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack, true);
             }
         }
     }
@@ -230,10 +230,10 @@ public class HuoLangBoss : MonsterBase
     {
         if (e.Data.Name == "damage" && trackEntry.Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size ||
-                Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.2f)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size ||
+                Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.2f)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack, true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack, true);
             }
         }
 
@@ -242,9 +242,9 @@ public class HuoLangBoss : MonsterBase
             HuoLangSkill3Dan HuoLangSkill3Dan=Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoLang/HuoLangSkill3Dan").GetComponent<HuoLangSkill3Dan>());
             HuoLangSkill3Dan.transform.position = skill3pos.position;
             HuoLangSkill3Dan.damage = Attack;
-            Vector2 dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
-            HuoLangSkill3Dan.pos=GameController.S.gamePlayer.transform.position;
-            GameController.S.CreateCircleAttack(GameController.S.gamePlayer.transform.position,1f);
+            Vector2 dir=(QueueController.S.gamePlayer.transform.position-transform.position).normalized;
+            HuoLangSkill3Dan.pos=QueueController.S.gamePlayer.transform.position;
+            GameController.S.CreateCircleAttack(QueueController.S.gamePlayer.transform.position,1f);
         }
 
         if (e.Data.Name == "damage" && trackEntry.Animation.Name == "skill1")
@@ -269,7 +269,7 @@ public class HuoLangBoss : MonsterBase
 
     public void MonsterMove1()
     {
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move" || IsDash)
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed;
@@ -287,7 +287,7 @@ public class HuoLangBoss : MonsterBase
             return;
         }
 
-        float dis = Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
+        float dis = Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position);
         if (dis < 0.2f)
         {
             //如果距离小于0.2f，则不翻转
@@ -297,7 +297,7 @@ public class HuoLangBoss : MonsterBase
         //翻转精灵
         if (isRight)
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -308,7 +308,7 @@ public class HuoLangBoss : MonsterBase
         }
         else
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(-1, 1, 1);
             }
@@ -350,8 +350,8 @@ public class HuoLangBoss : MonsterBase
             isSkill3 = true;
         }
 
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size ||
-            Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.2f)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size ||
+            Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.2f)
         {
             isAttack = true;
         }

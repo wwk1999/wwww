@@ -30,7 +30,7 @@ public class chailangren4 : MonsterBase
     {
         if (e.Data.Name == "attack")
         {
-            var dir=(GameController.S.gamePlayer.transform.position - transform.position).normalized;
+            var dir=(QueueController.S.gamePlayer.transform.position - transform.position).normalized;
            ShotDanMu(attackTrans.position,ResourcesConfig.DanMu1,Attack,dir,false);
            NormalYuanChenCurrentTime = 0;
         }
@@ -64,7 +64,7 @@ public class chailangren4 : MonsterBase
         if (monsterSkeletonAnimation != null)
         {
             DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            var baoxue = QueueController.S.BaoXueQueue.Dequeue();
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
         }
@@ -86,7 +86,7 @@ public class chailangren4 : MonsterBase
         if (IsDead) return;
         NormalYuanChenCurrentTime += Time.deltaTime;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size&&NormalYuanChenCurrentTime >= NormalYuanChenTime)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size&&NormalYuanChenCurrentTime >= NormalYuanChenTime)
         {
             isAttack = true;
         }

@@ -156,7 +156,7 @@ public abstract class MonsterBase : MonoBehaviour
 
     public void ShotDanMu(Vector2 trans, Sprite sprite, float attack, Vector3 dir, bool isBoss)
     {
-        DanMu danmu = GameController.S.DanMuQueue.Dequeue();
+        DanMu danmu = QueueController.S.DanMuQueue.Dequeue();
         danmu.SetDanMu(sprite, attack, dir, isBoss);
         danmu.transform.position = trans;
         danmu.gameObject.SetActive(true);
@@ -238,7 +238,7 @@ public abstract class MonsterBase : MonoBehaviour
     {
         SetBingKuai();
         SetOrder();
-        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName&&Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= size&&IsYuanChen)
+        if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName&&Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) <= size&&IsYuanChen)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.IdleName, false);
         }
@@ -286,7 +286,7 @@ public abstract class MonsterBase : MonoBehaviour
     IEnumerator DelayXieZi()
     {
         yield return new WaitForSeconds(2f);
-        transform.position=GameController.S.gamePlayer.transform.position;
+        transform.position=QueueController.S.gamePlayer.transform.position;
         monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
     }
     
@@ -361,7 +361,7 @@ public abstract class MonsterBase : MonoBehaviour
         else
         {
             monsterSkeletonAnimation.timeScale = 1;
-            if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) > size||IsYuanChen==false)
+            if (Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) > size||IsYuanChen==false)
             {
                 monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.MoveName, false);
             }
@@ -386,102 +386,102 @@ public abstract class MonsterBase : MonoBehaviour
          //第一关怪物死亡
            if (this is SnotMonster snotMonster)
             {
-                GameController.S.SnotMonsterQueue.Enqueue(snotMonster);
+                QueueController.S.SnotMonsterQueue.Enqueue(snotMonster);
             }
             else if (this is BatMonster batMonster)
             {
-                GameController.S.BatMonsterQueue.Enqueue(batMonster);
+                QueueController.S.BatMonsterQueue.Enqueue(batMonster);
             }
             else if (this is SpiderMonster spiderMonster)
             {
-                GameController.S.SpiderMonsterQueue.Enqueue(spiderMonster);
+                QueueController.S.SpiderMonsterQueue.Enqueue(spiderMonster);
             }
             else if (this is EliteBeeMonster eliteBeeMonster)
             {
-                GameController.S.EliteBeeMonsterQueue.Enqueue(eliteBeeMonster);
+                QueueController.S.EliteBeeMonsterQueue.Enqueue(eliteBeeMonster);
             }
             // 第二关怪物死亡
             else if (this is ChongZiMonster chongZiMonster)
             {
-                GameController.S.ChongZiMonsterQueue.Enqueue(chongZiMonster);
+                QueueController.S.ChongZiMonsterQueue.Enqueue(chongZiMonster);
             }
             else if (this is XiaoHuoMonster xiaoHuoMonster)
             {
-                GameController.S.XiaoHuoMonsterQueue.Enqueue(xiaoHuoMonster);
+                QueueController.S.XiaoHuoMonsterQueue.Enqueue(xiaoHuoMonster);
             }
             else if (this is DunDiMonster dunDiMonster)
             {
-                GameController.S.DunDiMonsterQueue.Enqueue(dunDiMonster);
+                QueueController.S.DunDiMonsterQueue.Enqueue(dunDiMonster);
             }
             else if (this is EliteDaZuiMonster eliteDaZuiMonster)
             {
-                GameController.S.EliteDaZuiMonsterQueue.Enqueue(eliteDaZuiMonster);
+                QueueController.S.EliteDaZuiMonsterQueue.Enqueue(eliteDaZuiMonster);
             }
             else if (this is XiNiuMonster xiNiuMonster)
             {
-                GameController.S.XiNiuMonsterQueue.Enqueue(xiNiuMonster);
+                QueueController.S.XiNiuMonsterQueue.Enqueue(xiNiuMonster);
             }
             else if (this is HuangShu huangshu)
             {
-                GameController.S.HuangShuQueue.Enqueue(huangshu);
+                QueueController.S.HuangShuQueue.Enqueue(huangshu);
             } 
             // 第三关怪物死亡
             else if (this is WenZiMonster wenZiMonster)
             {
-                GameController.S.WenZiMonsterQueue.Enqueue(wenZiMonster);
+                QueueController.S.WenZiMonsterQueue.Enqueue(wenZiMonster);
             }
             else if (this is QingWaMonster qingWaMonster)
             {
-                GameController.S.QingWaMonsterQueue.Enqueue(qingWaMonster);
+                QueueController.S.QingWaMonsterQueue.Enqueue(qingWaMonster);
             }
             else if (this is JiaChongMonster jiaChongMonster)
             {
-                GameController.S.JiaChongMonsterQueue.Enqueue(jiaChongMonster);
+                QueueController.S.JiaChongMonsterQueue.Enqueue(jiaChongMonster);
             }
             else if (this is ShiRenHuaMonster shiRenHuaMonster)
             {
-                GameController.S.ShiRenHuaMonsterQueue.Enqueue(shiRenHuaMonster);
+                QueueController.S.ShiRenHuaMonsterQueue.Enqueue(shiRenHuaMonster);
             }
             // 第四关怪物死亡
             else if (this is KuLou kuLou)
             {
-                GameController.S.KuLouQueue.Enqueue(kuLou);
+                QueueController.S.KuLouQueue.Enqueue(kuLou);
             }
             else if (this is Huangzhu huangzhu)
             {
-                GameController.S.HuangZhuQueue.Enqueue(huangzhu);
+                QueueController.S.HuangZhuQueue.Enqueue(huangzhu);
             }
             else if (this is ShaChong shaChong)
             {
-                GameController.S.ShaChongQueue.Enqueue(shaChong);
+                QueueController.S.ShaChongQueue.Enqueue(shaChong);
             } else if (this is ShaNiao shaniao)
             {
-                GameController.S.ShaNiaoQueue.Enqueue(shaniao);
+                QueueController.S.ShaNiaoQueue.Enqueue(shaniao);
             } else if (this is XianRenZhang xianrenzhang)
             {
-                GameController.S.XianRenZhangQueue.Enqueue(xianrenzhang);
+                QueueController.S.XianRenZhangQueue.Enqueue(xianrenzhang);
             }  else if (this is ShaXiYi shaxiyi)
             {
-                GameController.S.ShaXiYiQueue.Enqueue(shaxiyi);
+                QueueController.S.ShaXiYiQueue.Enqueue(shaxiyi);
             } 
            
            //第五关怪物
            else if (this is XueQiE xueQiE)
            {
-               GameController.S.XueQiEQueue.Enqueue(xueQiE);
+               QueueController.S.XueQiEQueue.Enqueue(xueQiE);
            } 
            else if (this is XueZhangLang xueZhangLang)
            {
-               GameController.S.XueZhangLangQueue.Enqueue(xueZhangLang);
+               QueueController.S.XueZhangLangQueue.Enqueue(xueZhangLang);
            } else if (this is YingShu yingShu)
            {
-               GameController.S.YingShuQueue.Enqueue(yingShu);
+               QueueController.S.YingShuQueue.Enqueue(yingShu);
            } 
     }
 
     public void MonsterMove()
     {
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (isJianSu)
         {
             rigidbody2D.velocity = direction.normalized * 0; 
@@ -490,7 +490,7 @@ public abstract class MonsterBase : MonoBehaviour
         {
             if ((monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName ||
                 IsDash || monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name ==
-                MonsterSpineName.HitName)&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position) >size)
+                MonsterSpineName.HitName)&&Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position) >size)
             {
                 rigidbody2D.velocity = direction.normalized * Speed;
             }
@@ -518,7 +518,7 @@ public abstract class MonsterBase : MonoBehaviour
         {
             return;
         }
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
+        float dis=Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position);
         if(dis<0.2f)
         {
             //如果距离小于0.2f，则不翻转
@@ -527,7 +527,7 @@ public abstract class MonsterBase : MonoBehaviour
         //翻转精灵
         if (isRight)
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -537,7 +537,7 @@ public abstract class MonsterBase : MonoBehaviour
             }
         }else
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(-1, 1, 1);
             }
@@ -568,7 +568,7 @@ public abstract class MonsterBase : MonoBehaviour
     public void CreateBloodEnergy()
     {
         //生成血能
-        GameObject bloodEnergy = GameController.S.BloodEnergyQueue.Dequeue();
+        GameObject bloodEnergy = QueueController.S.BloodEnergyQueue.Dequeue();
         bloodEnergy.SetActive(true);
         //设置血能位置为怪物位置
         bloodEnergy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -800,7 +800,7 @@ public abstract class MonsterBase : MonoBehaviour
         {
             if (GameController.S.KillMonsterCount > LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel])
             {
-                GameController.S.StartCoroutine(DelayChuanSongMen());
+                QueueController.S.StartCoroutine(DelayChuanSongMen());
             }
         }
        
@@ -844,7 +844,7 @@ public abstract class MonsterBase : MonoBehaviour
     }
     public void ShowHurtText(float damage,bool isCrit,YiChangState yiChangState=YiChangState.None)
     {
-        MonsterHurtText monsterHpGameObject = GameController.S.MonsterHurtTextQueue.Dequeue();
+        MonsterHurtText monsterHpGameObject = QueueController.S.MonsterHurtTextQueue.Dequeue();
         monsterHpGameObject.yiChangState=yiChangState;
         switch (yiChangState)
         {

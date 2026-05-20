@@ -29,9 +29,9 @@ public class BatMonster : MonsterBase
     {
         if (e.Data.Name == "attack")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) <= size)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
     }
@@ -56,7 +56,7 @@ public class BatMonster : MonsterBase
     {
         if (Speed > 3)
         {
-                   // GameController.S.gamePlayer.PlayerHurt(Attack,false);
+                   // QueueController.S.gamePlayer.PlayerHurt(Attack,false);
         }
     }
 
@@ -65,14 +65,14 @@ public class BatMonster : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (IsDash&&isGongJi&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<0.6f)
+        if (IsDash&&isGongJi&&Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position)<0.6f)
         {
             isGongJi=false;
-            GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            QueueController.S.gamePlayer.PlayerHurt(Attack,false);
         }
         
         
-        float distance = Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
+        float distance = Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position);
         currentTime+= Time.deltaTime;
         if(currentTime>= attackTime&&distance<2.6f)
         {
@@ -112,7 +112,7 @@ public class BatMonster : MonsterBase
         if (monsterSkeletonAnimation != null)
         {
             DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            var baoxue = QueueController.S.BaoXueQueue.Dequeue();
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
         }

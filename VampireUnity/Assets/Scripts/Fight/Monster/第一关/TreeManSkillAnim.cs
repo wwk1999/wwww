@@ -12,7 +12,7 @@ public class TreeManSkillAnim : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.TreeManSkillQueue.Enqueue(TreeManSkill);
+        QueueController.S.TreeManSkillQueue.Enqueue(TreeManSkill);
         TreeManSkill.gameObject.SetActive(false);
     }
     
@@ -33,7 +33,7 @@ public class TreeManSkillAnim : MonoBehaviour
 
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(TreeManSkill.damage, true);
+                QueueController.S.gamePlayer.PlayerHurt(TreeManSkill.damage, true);
             }
         }
     }   

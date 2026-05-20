@@ -23,7 +23,7 @@ namespace Skill.NormalAttack.Primary
     
         public void Hide()
         {
-            GameController.S.PrimaryHeiAnQueue.Enqueue(this);
+            QueueController.S.PrimaryHeiAnQueue.Enqueue(this);
             gameObject.SetActive(false);
         }
     
@@ -32,11 +32,11 @@ namespace Skill.NormalAttack.Primary
             if (other.CompareTag("Monster")||other.CompareTag("Boss"))
             {
                 bool isCrit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
+                QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
                 gameObject.SetActive(false);
-                GameController.S.PrimaryHeiAnQueue.Enqueue(this);
+                QueueController.S.PrimaryHeiAnQueue.Enqueue(this);
                 Vector2 closestPoint = other.ClosestPoint(transform.position);
-                var hit = GameController.S.HeiAnPengQueue.Dequeue();
+                var hit = QueueController.S.HeiAnPengQueue.Dequeue();
                 hit.transform.position = closestPoint;
                 hit.SetActive(true);
             }

@@ -52,7 +52,7 @@ public class EliteBeeMonster : MonsterBase
         if (monsterSkeletonAnimation != null)
         {
             DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            var baoxue = QueueController.S.BaoXueQueue.Dequeue();
             baoxue.transform.localScale = new Vector3(1.5f, 1.5f, 3f);
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
@@ -65,7 +65,7 @@ public class EliteBeeMonster : MonsterBase
 
     public override void Skill()
     {
-        var bullet=GameController.S.BeeBulletQueue.Dequeue();
+        var bullet=QueueController.S.BeeBulletQueue.Dequeue();
         bullet.damage = Attack;
         bullet.transform.position = transform.position;
         bullet.gameObject.SetActive(true);
@@ -77,7 +77,7 @@ public class EliteBeeMonster : MonsterBase
         base.Update();
         
         SkillColingTime+= Time.deltaTime;
-        if(SkillColingTime>=SkillTime&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<8f&& !IsDead)
+        if(SkillColingTime>=SkillTime&&Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position)<8f&& !IsDead)
         {
             SkillColingTime = 0;
             isSkill1 = true;
@@ -92,7 +92,7 @@ public class EliteBeeMonster : MonsterBase
         {
             rigidbody2D.velocity = Vector2.zero;
         }
-        if (!IsDead && Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)>8f)
+        if (!IsDead && Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position)>8f)
         {
              MonsterMove();
         }

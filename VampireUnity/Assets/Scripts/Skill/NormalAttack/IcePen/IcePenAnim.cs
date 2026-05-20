@@ -11,8 +11,8 @@ public class IcePenAnim : MonoBehaviour
    public void Hide()
    {
       IcePen.gameObject.SetActive(false);
-      GameController.S.IcePenQueue.Enqueue(IcePen);
-      Debug.LogError(GameController.S.IcePenQueue.Count);
+      QueueController.S.IcePenQueue.Enqueue(IcePen);
+      Debug.LogError(QueueController.S.IcePenQueue.Count);
    }
    
    public void CheckCollider2()
@@ -33,7 +33,7 @@ public class IcePenAnim : MonoBehaviour
          if (col.CompareTag("Monster")||col.CompareTag("Boss"))
          {
             var crit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Ice);
          }
       }
    }
@@ -57,7 +57,7 @@ public class IcePenAnim : MonoBehaviour
          if (col.CompareTag("Monster")||col.CompareTag("Boss"))
          {
             var crit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Ice);
          }
       }
    }

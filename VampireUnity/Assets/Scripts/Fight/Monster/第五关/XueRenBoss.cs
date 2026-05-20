@@ -45,7 +45,7 @@ public class XueRenBoss : MonsterBase
     public void ShowSkill2()
     {
         skill2.SetActive(true);
-        var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+        var dir=(QueueController.S.gamePlayer.transform.position-transform.position).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         skill2parent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         skill2parent.transform.localScale=parent.transform.localScale;
@@ -98,7 +98,7 @@ public class XueRenBoss : MonsterBase
         
             if (col.CompareTag("Player"))
             {
-               GameController.S.gamePlayer.PlayerHurt(Attack,true);
+               QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
     }
@@ -138,7 +138,7 @@ public class XueRenBoss : MonsterBase
             SpriteFlipX1(false);
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
             monsterSkeletonAnimation.timeScale = 2f;
-            luodiPos = GameController.S.gamePlayer.transform.position;
+            luodiPos = QueueController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(luodiPos,1);
         }
         else if(isAttack)
@@ -180,7 +180,7 @@ public class XueRenBoss : MonsterBase
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
         
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
 
     private IEnumerator RandomDelayDie(int delay)
@@ -198,7 +198,7 @@ public class XueRenBoss : MonsterBase
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
     IEnumerator DelayChuanSongMen()
     {
@@ -236,7 +236,7 @@ public class XueRenBoss : MonsterBase
         
             if (col.CompareTag("Player"))
             {
-               GameController.S.gamePlayer.PlayerHurt(Attack*0.6f,true);
+               QueueController.S.gamePlayer.PlayerHurt(Attack*0.6f,true);
             }
         }
     }
@@ -252,15 +252,15 @@ public class XueRenBoss : MonsterBase
     {
         if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.5f)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size||Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.5f)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
         
         if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill1")
         {
-            var xuerenbossskill1 = GameController.S.XueRenBossSkill1Queue.Dequeue();
+            var xuerenbossskill1 = QueueController.S.XueRenBossSkill1Queue.Dequeue();
             xuerenbossskill1.Damage = Attack;
             xuerenbossskill1.transform.position=transform.position;
             xuerenbossskill1.gameObject.SetActive(true);
@@ -289,7 +289,7 @@ public class XueRenBoss : MonsterBase
     
     public void MonsterMove1()
     {
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move"||IsDash)
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
@@ -306,7 +306,7 @@ public class XueRenBoss : MonsterBase
         {
             return;
         }
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
+        float dis=Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position);
         if(dis<0.2f)
         {
             //如果距离小于0.2f，则不翻转
@@ -315,7 +315,7 @@ public class XueRenBoss : MonsterBase
         //翻转精灵
         if (isRight)
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -325,7 +325,7 @@ public class XueRenBoss : MonsterBase
             }
         }else
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(-1, 1, 1);
             }
@@ -363,7 +363,7 @@ public class XueRenBoss : MonsterBase
             isSkill3 = true;
         }
         
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.5f)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size||Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.5f)
         {
             isAttack=true;
         }

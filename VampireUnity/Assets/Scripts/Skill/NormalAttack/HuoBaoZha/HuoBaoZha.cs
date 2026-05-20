@@ -22,7 +22,7 @@ public class HuoBaoZha : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.HuoBaoZhaQueue.Enqueue(this);
+        QueueController.S.HuoBaoZhaQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -32,10 +32,10 @@ public class HuoBaoZha : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             Vector2 closestPoint = other.ClosestPoint(transform.position);
-            var baozha = GameController.S.HuoYanBaoZhaNextQueue.Dequeue();
+            var baozha = QueueController.S.HuoYanBaoZhaNextQueue.Dequeue();
             baozha.transform.position = closestPoint;
             baozha.gameObject.SetActive(true);
-            GameController.S.HuoBaoZhaQueue.Enqueue(this);
+            QueueController.S.HuoBaoZhaQueue.Enqueue(this);
             gameObject.SetActive(false);
         }
     }

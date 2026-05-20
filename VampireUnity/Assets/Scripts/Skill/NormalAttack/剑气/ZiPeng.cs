@@ -16,6 +16,6 @@ public class ZiPeng : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        GameController.S.ZiBaoZhaQueue.Enqueue(gameObject);
+        QueueController.S.ZiBaoZhaQueue.Enqueue(gameObject);
     }
 }

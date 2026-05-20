@@ -20,14 +20,14 @@ public class LvXuanFen : MonoBehaviour
    public void Hide()
    {
       gameObject.SetActive(false);
-      GameController.S.LvXuanFenQueue.Enqueue(this);
+      QueueController.S.LvXuanFenQueue.Enqueue(this);
    }
 
    private void OnTriggerEnter2D(Collider2D other)
    {
       if (other.tag == "Player")
       {
-         GameController.S.gamePlayer.PlayerHurt(damage,true);
+         QueueController.S.gamePlayer.PlayerHurt(damage,true);
       }
    }
     
@@ -39,14 +39,14 @@ public class LvXuanFen : MonoBehaviour
          if (currentDamageTime >= damageTime)
          {
             currentDamageTime = 0;
-            GameController.S.gamePlayer.PlayerHurt(damage,true);
+            QueueController.S.gamePlayer.PlayerHurt(damage,true);
          }
       }
    }
 
    private void Update()
    {
-      Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+      Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
       rg.velocity = direction.normalized * 1.3f; 
    }
 }

@@ -24,7 +24,7 @@ public class PrimaryDian : MonoBehaviour
     
     public void Hide()
     {
-        GameController.S.PrimaryDianQueue.Enqueue(this);
+        QueueController.S.PrimaryDianQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -33,11 +33,11 @@ public class PrimaryDian : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
             gameObject.SetActive(false);
-            GameController.S.PrimaryDianQueue.Enqueue(this);
+            QueueController.S.PrimaryDianQueue.Enqueue(this);
             Vector2 closestPoint = other.ClosestPoint(transform.position);
-            var hit = GameController.S.DianPengQueue.Dequeue();
+            var hit = QueueController.S.DianPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             hit.SetActive(true);
         }

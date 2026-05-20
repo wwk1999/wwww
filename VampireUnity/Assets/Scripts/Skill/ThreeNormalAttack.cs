@@ -27,11 +27,11 @@ public class ThreeNormalAttack : MonoBehaviour
     {
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.ThreeNormalAttackHitQueue.Dequeue();
+            var hit = QueueController.S.ThreeNormalAttackHitQueue.Dequeue();
             hit.SetActive(true);
             hit.transform.position = transform.position;
             hit.GetComponent<ParticleSystem>().Play();
-            GameController.S.MonsterColliderDic[other].Hurt(20,GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(20,GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Dian);
             GameController.S.StartCoroutine(WaitAndDestroy(hit)); // 在GameController上启动
             gameObject.SetActive(false);
         }
@@ -41,6 +41,6 @@ public class ThreeNormalAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         obj.SetActive(false);
-        GameController.S.ThreeNormalAttackHitQueue.Enqueue(obj);
+        QueueController.S.ThreeNormalAttackHitQueue.Enqueue(obj);
     }
 }

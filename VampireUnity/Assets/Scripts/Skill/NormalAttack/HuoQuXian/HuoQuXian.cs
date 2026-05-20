@@ -182,7 +182,7 @@ public class HuoQuXian : MonoBehaviour
         // 确保对象被正确回收
         if (GameController.S != null)
         {
-            GameController.S.HeiAnQuXianQueue.Enqueue(this);
+            QueueController.S.HeiAnQuXianQueue.Enqueue(this);
         }
         
         gameObject.SetActive(false);
@@ -230,15 +230,15 @@ public class HuoQuXian : MonoBehaviour
         
         if (other.CompareTag("Monster") || other.CompareTag("Boss"))
         {
-            if (GameController.S.HeiAnPengQueue.Count > 0)
+            if (QueueController.S.HeiAnPengQueue.Count > 0)
             {
-                var hit = GameController.S.HeiAnPengQueue.Dequeue();
+                var hit = QueueController.S.HeiAnPengQueue.Dequeue();
                 hit.transform.position = closestPoint;
                 
                 bool isCrit = GameController.S.GetIsCrit();
                 
-                if (GameController.S.MonsterColliderDic != null && 
-                    GameController.S.MonsterColliderDic.TryGetValue(other, out var monster))
+                if (QueueController.S.MonsterColliderDic != null && 
+                    QueueController.S.MonsterColliderDic.TryGetValue(other, out var monster))
                 {
                     monster.Hurt(
                         GameController.S.GameAttack * SkillController.S.HuoYuanSuDamage,

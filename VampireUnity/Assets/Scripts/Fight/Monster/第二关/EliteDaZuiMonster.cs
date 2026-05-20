@@ -65,7 +65,7 @@ public class EliteDaZuiMonster : MonsterBase
         if (monsterSkeletonAnimation != null)
         {
             DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            var baoxue = QueueController.S.BaoXueQueue.Dequeue();
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
         }
@@ -132,7 +132,7 @@ public class EliteDaZuiMonster : MonsterBase
         
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
     }
@@ -143,7 +143,7 @@ public class EliteDaZuiMonster : MonsterBase
     {
         if (e.Data.Name == "akill")
         {
-            var MoveDirection=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+            var MoveDirection=(QueueController.S.gamePlayer.transform.position-transform.position).normalized;
             float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
             fireParent.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             fireParent.gameObject.SetActive(true);
@@ -166,15 +166,15 @@ public class EliteDaZuiMonster : MonsterBase
             currentFireTime = 0;
             CheckCollider();
         }
-       float yabs=Math.Abs(transform.position.y-GameController.S.gamePlayer.transform.position.y);
-       float xabs=Math.Abs(transform.position.x-GameController.S.gamePlayer.transform.position.x);
+       float yabs=Math.Abs(transform.position.y-QueueController.S.gamePlayer.transform.position.y);
+       float xabs=Math.Abs(transform.position.x-QueueController.S.gamePlayer.transform.position.x);
        float bili = yabs / xabs;
-        if (currentTime > skillTime && Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 3&&bili<1.5)
+        if (currentTime > skillTime && Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 3&&bili<1.5)
         {
             currentTime = 0;
             isSkill1 = true;
         }
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size)
         {
             isAttack=true;
         }

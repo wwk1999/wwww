@@ -22,7 +22,7 @@ public class IceBaoZha : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.IceBaoZhaQueue.Enqueue(this);
+        QueueController.S.IceBaoZhaQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -32,13 +32,13 @@ public class IceBaoZha : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             Vector2 closestPoint = other.ClosestPoint(transform.position);
-            var baozha = GameController.S.IceBaoZhaNextQueue.Dequeue();
+            var baozha = QueueController.S.IceBaoZhaNextQueue.Dequeue();
             baozha.direction = MoveDirection;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
             baozha.transform.position = closestPoint;
             baozha.gameObject.SetActive(true);
-            GameController.S.IceBaoZhaQueue.Enqueue(this);
+            QueueController.S.IceBaoZhaQueue.Enqueue(this);
             gameObject.SetActive(false);
         }
     }

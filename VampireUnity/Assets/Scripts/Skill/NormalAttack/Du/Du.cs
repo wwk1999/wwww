@@ -26,14 +26,14 @@ public class Du : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.DuPengQueue.Dequeue();
+            var hit = QueueController.S.DuPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].zhuoShaoTime = 3.1f;
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
+            QueueController.S.MonsterColliderDic[other].zhuoShaoTime = 3.1f;
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
             hit.SetActive(true);
             gameObject.SetActive(false);
-            GameController.S.DuQueue.Enqueue(gameObject);
+            QueueController.S.DuQueue.Enqueue(gameObject);
         }
     }
 }

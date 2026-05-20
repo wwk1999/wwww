@@ -29,7 +29,7 @@ public class TwoNormalAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         gameObject.SetActive(false);
-        GameController.S.XuKongQueue.Enqueue(obj);
+        QueueController.S.XuKongQueue.Enqueue(obj);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -51,7 +51,7 @@ public class TwoNormalAttack : MonoBehaviour
             {
                 CurrentTime = 0;
                 bool isCrit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.HeiAnYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
+                QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.HeiAnYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
             }
         }
         

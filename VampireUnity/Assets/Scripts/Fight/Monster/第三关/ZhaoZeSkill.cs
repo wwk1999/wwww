@@ -38,7 +38,7 @@ public class ZhaoZeSkill : MonoBehaviour
         
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(damage,true);
+                QueueController.S.gamePlayer.PlayerHurt(damage,true);
             }
         }
     }
@@ -53,7 +53,7 @@ public class ZhaoZeSkill : MonoBehaviour
 
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
-        GameController.S.ZhaoZeSkillQueue.Enqueue(this);
+        QueueController.S.ZhaoZeSkillQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     private void OnEnable()

@@ -22,7 +22,7 @@ public class Huo7Item : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.Huo7Queue.Enqueue(this);
+        QueueController.S.Huo7Queue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -33,12 +33,12 @@ public class Huo7Item : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.HuoPengQueue.Dequeue();
+            var hit = QueueController.S.HuoPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
             hit.SetActive(true);
-            GameController.S.Huo7Queue.Enqueue(this);
+            QueueController.S.Huo7Queue.Enqueue(this);
             gameObject.SetActive(false);
         }
     }

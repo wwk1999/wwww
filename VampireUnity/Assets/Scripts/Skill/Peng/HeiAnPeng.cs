@@ -17,7 +17,7 @@ public class HeiAnPeng : MonoBehaviour
 
    public void OnAnimationComplete(TrackEntry trackEntry)
    {
-      GameController.S.HeiAnPengQueue.Enqueue(gameObject);
+      QueueController.S.HeiAnPengQueue.Enqueue(gameObject);
       gameObject.SetActive(false);
    }
    

@@ -24,12 +24,12 @@ public class ShuangDaoSkill3 : MonoBehaviour
   {
     if (other.CompareTag("Player"))
     {
-      GameController.S.gamePlayer.PlayerHurt(damage,true);
+      QueueController.S.gamePlayer.PlayerHurt(damage,true);
     }
 
     if (other.CompareTag("BgEdge"))
     { 
-      GameController.S.ShuangDaoSkill3Queue.Enqueue(this);
+      QueueController.S.ShuangDaoSkill3Queue.Enqueue(this);
       gameObject.SetActive(false);
     }
   }

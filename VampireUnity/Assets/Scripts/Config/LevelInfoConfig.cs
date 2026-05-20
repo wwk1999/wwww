@@ -213,223 +213,223 @@ public class LevelInfoConfig
         case MonsterTypeByName.None:
             return null;
         case MonsterTypeByName.Snot:
-            return GameController.S.SnotMonsterQueue.Dequeue();
+            return QueueController.S.SnotMonsterQueue.Dequeue();
         case MonsterTypeByName.Bat:
-            return GameController.S.BatMonsterQueue.Dequeue();
+            return QueueController.S.BatMonsterQueue.Dequeue();
         case MonsterTypeByName.Spider:
-            return GameController.S.SpiderMonsterQueue.Dequeue();
+            return QueueController.S.SpiderMonsterQueue.Dequeue();
         case MonsterTypeByName.Bee:
-            return GameController.S.EliteBeeMonsterQueue.Dequeue();
+            return QueueController.S.EliteBeeMonsterQueue.Dequeue();
         case MonsterTypeByName.XiaoHuo:
-            return GameController.S.XiaoHuoMonsterQueue.Dequeue();
+            return QueueController.S.XiaoHuoMonsterQueue.Dequeue();
         case MonsterTypeByName.DaZui:
-            return GameController.S.EliteDaZuiMonsterQueue.Dequeue();
+            return QueueController.S.EliteDaZuiMonsterQueue.Dequeue();
         case MonsterTypeByName.DunDi:
-            return GameController.S.DunDiMonsterQueue.Dequeue();
+            return QueueController.S.DunDiMonsterQueue.Dequeue();
         case MonsterTypeByName.ChongZi:
-            return GameController.S.ChongZiMonsterQueue.Dequeue();
+            return QueueController.S.ChongZiMonsterQueue.Dequeue();
   
         case MonsterTypeByName.ShiRenHua:
-            return GameController.S.ShiRenHuaMonsterQueue.Dequeue();
+            return QueueController.S.ShiRenHuaMonsterQueue.Dequeue();
         case MonsterTypeByName.JiaChong:
-            return GameController.S.JiaChongMonsterQueue.Dequeue();
+            return QueueController.S.JiaChongMonsterQueue.Dequeue();
         case MonsterTypeByName.WenZi:
-            return GameController.S.WenZiMonsterQueue.Dequeue();
+            return QueueController.S.WenZiMonsterQueue.Dequeue();
    
         case MonsterTypeByName.ShaChong:
-            return GameController.S.ShaChongQueue.Dequeue();
+            return QueueController.S.ShaChongQueue.Dequeue();
         case MonsterTypeByName.ShaNiao:
-            return GameController.S.ShaNiaoQueue.Dequeue();
+            return QueueController.S.ShaNiaoQueue.Dequeue();
         case MonsterTypeByName.ShaXiYi:
-            return GameController.S.ShaXiYiQueue.Dequeue();
+            return QueueController.S.ShaXiYiQueue.Dequeue();
         case MonsterTypeByName.XianRenZhang:
-            return GameController.S.XianRenZhangQueue.Dequeue();
+            return QueueController.S.XianRenZhangQueue.Dequeue();
         
         case MonsterTypeByName.XueRen:
-            return GameController.S.XueRenQueue.Dequeue();
+            return QueueController.S.XueRenQueue.Dequeue();
         case MonsterTypeByName.XueZhangLang:
-            return GameController.S.XueZhangLangQueue.Dequeue();
+            return QueueController.S.XueZhangLangQueue.Dequeue();
         case MonsterTypeByName.XueQiE:
-            return GameController.S.XueQiEQueue.Dequeue();
+            return QueueController.S.XueQiEQueue.Dequeue();
         case MonsterTypeByName.YingShu:
-            return GameController.S.YingShuQueue.Dequeue();
+            return QueueController.S.YingShuQueue.Dequeue();
         
        
         case MonsterTypeByName.QingWa:
-            return GameController.S.QingWaMonsterQueue.Dequeue();
+            return QueueController.S.QingWaMonsterQueue.Dequeue();
         // 小怪
         case MonsterTypeByName.ChaiLangRen1:
-            return GameController.S.chailangren1Queue.Dequeue();
+            return QueueController.S.chailangren1Queue.Dequeue();
         case MonsterTypeByName.ChaiLangRen2:
-            return GameController.S.chailangren2Queue.Dequeue();
+            return QueueController.S.chailangren2Queue.Dequeue();
         case MonsterTypeByName.ChaiLangRen3:
-            return GameController.S.chailangren3Queue.Dequeue();
+            return QueueController.S.chailangren3Queue.Dequeue();
         case MonsterTypeByName.ChaiLangRen4:
-            return GameController.S.chailangren4Queue.Dequeue();
+            return QueueController.S.chailangren4Queue.Dequeue();
         case MonsterTypeByName.CiZhu:
-            return GameController.S.cizhuQueue.Dequeue();
+            return QueueController.S.cizhuQueue.Dequeue();
         case MonsterTypeByName.DaoCaoRen:
-            return GameController.S.daocaorenQueue.Dequeue();
+            return QueueController.S.daocaorenQueue.Dequeue();
         case MonsterTypeByName.DiJing2:
-            return GameController.S.dijing2Queue.Dequeue();
+            return QueueController.S.dijing2Queue.Dequeue();
         case MonsterTypeByName.DiJing3:
-            return GameController.S.dijing3Queue.Dequeue();
+            return QueueController.S.dijing3Queue.Dequeue();
         case MonsterTypeByName.DiJingShouWei1:
-            return GameController.S.dijingshouwei1Queue.Dequeue();
+            return QueueController.S.dijingshouwei1Queue.Dequeue();
         case MonsterTypeByName.DiJingShouWei2:
-            return GameController.S.dijingshouwei2Queue.Dequeue();
+            return QueueController.S.dijingshouwei2Queue.Dequeue();
         case MonsterTypeByName.DiJingShouWei3:
-            return GameController.S.dijingshouwei3Queue.Dequeue();
+            return QueueController.S.dijingshouwei3Queue.Dequeue();
         case MonsterTypeByName.HeiXiong:
-            return GameController.S.heixiongQueue.Dequeue();
+            return QueueController.S.heixiongQueue.Dequeue();
         case MonsterTypeByName.JianChiZhu:
-            return GameController.S.jianchizhuQueue.Dequeue();
+            return QueueController.S.jianchizhuQueue.Dequeue();
         case MonsterTypeByName.KuLou1:
-            return GameController.S.kulou1Queue.Dequeue();
+            return QueueController.S.kulou1Queue.Dequeue();
         case MonsterTypeByName.KuLou2:
-            return GameController.S.kulou2Queue.Dequeue();
+            return QueueController.S.kulou2Queue.Dequeue();
         case MonsterTypeByName.KuLou3:
-            return GameController.S.kulou3Queue.Dequeue();
+            return QueueController.S.kulou3Queue.Dequeue();
         case MonsterTypeByName.KuLou4:
-            return GameController.S.kulou4Queue.Dequeue();
+            return QueueController.S.kulou4Queue.Dequeue();
         case MonsterTypeByName.KuLou5:
-            return GameController.S.kulou5Queue.Dequeue();
+            return QueueController.S.kulou5Queue.Dequeue();
         case MonsterTypeByName.KuLou6:
-            return GameController.S.kulou6Queue.Dequeue();
+            return QueueController.S.kulou6Queue.Dequeue();
         case MonsterTypeByName.LuJiaoCiKe1:
-            return GameController.S.lujiaocikeQueue.Dequeue();
+            return QueueController.S.lujiaocikeQueue.Dequeue();
         case MonsterTypeByName.LuJiaoCiKe2:
-            return GameController.S.lujiaocike2Queue.Dequeue();
+            return QueueController.S.lujiaocike2Queue.Dequeue();
         case MonsterTypeByName.NiuTouRen1:
-            return GameController.S.niutouren1Queue.Dequeue();
+            return QueueController.S.niutouren1Queue.Dequeue();
         case MonsterTypeByName.NiuTouRen2:
-            return GameController.S.niutouren2Queue.Dequeue();
+            return QueueController.S.niutouren2Queue.Dequeue();
         case MonsterTypeByName.NiuTouRen3:
-            return GameController.S.niutouren3Queue.Dequeue();
+            return QueueController.S.niutouren3Queue.Dequeue();
         case MonsterTypeByName.ShanZei3:
-            return GameController.S.shanzei3Queue.Dequeue();
+            return QueueController.S.shanzei3Queue.Dequeue();
         case MonsterTypeByName.ShiJiaChong:
-            return GameController.S.shijiachongQueue.Dequeue();
+            return QueueController.S.shijiachongQueue.Dequeue();
         case MonsterTypeByName.ShiShiGui:
-            return GameController.S.shishiguiQueue.Dequeue();
+            return QueueController.S.shishiguiQueue.Dequeue();
         case MonsterTypeByName.ShiXiangGui:
-            return GameController.S.shixiangguiQueue.Dequeue();
+            return QueueController.S.shixiangguiQueue.Dequeue();
         case MonsterTypeByName.ShouRen1:
-            return GameController.S.shouren1Queue.Dequeue();
+            return QueueController.S.shouren1Queue.Dequeue();
         case MonsterTypeByName.ShouRen2:
-            return GameController.S.shouren2Queue.Dequeue();
+            return QueueController.S.shouren2Queue.Dequeue();
         case MonsterTypeByName.ShouRen3:
-            return GameController.S.shouren3Queue.Dequeue();
+            return QueueController.S.shouren3Queue.Dequeue();
         case MonsterTypeByName.ShuangTouLong1:
-            return GameController.S.shuangtoulongQueue.Dequeue();
+            return QueueController.S.shuangtoulongQueue.Dequeue();
         case MonsterTypeByName.ShuangTouLong2:
-            return GameController.S.shuangtoulong2Queue.Dequeue();
+            return QueueController.S.shuangtoulong2Queue.Dequeue();
         case MonsterTypeByName.ShuangTouLong3:
-            return GameController.S.shuangtoulong3Queue.Dequeue();
+            return QueueController.S.shuangtoulong3Queue.Dequeue();
         case MonsterTypeByName.TuJiu:
-            return GameController.S.tujiuQueue.Dequeue();
+            return QueueController.S.tujiuQueue.Dequeue();
         case MonsterTypeByName.WuYa:
-            return GameController.S.wuyaQueue.Dequeue();
+            return QueueController.S.wuyaQueue.Dequeue();
         case MonsterTypeByName.YouHunLingZhu:
-            return GameController.S.youhunlingzhuQueue.Dequeue();
+            return QueueController.S.youhunlingzhuQueue.Dequeue();
         case MonsterTypeByName.YouLang:
-            return GameController.S.youlangQueue.Dequeue();
+            return QueueController.S.youlangQueue.Dequeue();
         case MonsterTypeByName.YouLing1:
-            return GameController.S.youlingQueue.Dequeue();
+            return QueueController.S.youlingQueue.Dequeue();
         case MonsterTypeByName.YouLing2:
-            return GameController.S.youling2Queue.Dequeue();
+            return QueueController.S.youling2Queue.Dequeue();
         case MonsterTypeByName.YuRen1:
-            return GameController.S.yuren1Queue.Dequeue();
+            return QueueController.S.yuren1Queue.Dequeue();
         case MonsterTypeByName.YuRen2:
-            return GameController.S.yuren2Queue.Dequeue();
+            return QueueController.S.yuren2Queue.Dequeue();
         case MonsterTypeByName.YuRen3:
-            return GameController.S.yuren3Queue.Dequeue();
+            return QueueController.S.yuren3Queue.Dequeue();
         case MonsterTypeByName.cat:
-            return GameController.S.catQueue.Dequeue();
+            return QueueController.S.catQueue.Dequeue();
         case MonsterTypeByName.egg:
-            return GameController.S.eggQueue.Dequeue();
+            return QueueController.S.eggQueue.Dequeue();
         case MonsterTypeByName.lang:
-            return GameController.S.langQueue.Dequeue();
+            return QueueController.S.langQueue.Dequeue();
         case MonsterTypeByName.mogu:
-            return GameController.S.moguQueue.Dequeue();
+            return QueueController.S.moguQueue.Dequeue();
         case MonsterTypeByName.niguai1:
-            return GameController.S.niguai1Queue.Dequeue();
+            return QueueController.S.niguai1Queue.Dequeue();
         case MonsterTypeByName.niguai2:
-            return GameController.S.niguai2Queue.Dequeue();
+            return QueueController.S.niguai2Queue.Dequeue();
         case MonsterTypeByName.niguai3:
-            return GameController.S.niguai3Queue.Dequeue();
+            return QueueController.S.niguai3Queue.Dequeue();
         case MonsterTypeByName.onyx:
-            return GameController.S.onyxQueue.Dequeue();
+            return QueueController.S.onyxQueue.Dequeue();
         case MonsterTypeByName.queen:
-            return GameController.S.queenQueue.Dequeue();
+            return QueueController.S.queenQueue.Dequeue();
         case MonsterTypeByName.shanyang:
-            return GameController.S.shanyangQueue.Dequeue();
+            return QueueController.S.shanyangQueue.Dequeue();
         case MonsterTypeByName.she:
-            return GameController.S.sheQueue.Dequeue();
+            return QueueController.S.sheQueue.Dequeue();
         case MonsterTypeByName.woniu:
-            return GameController.S.woniuQueue.Dequeue();
+            return QueueController.S.woniuQueue.Dequeue();
         case MonsterTypeByName.xiaohuoling:
-            return GameController.S.xiaohuolingQueue.Dequeue();
+            return QueueController.S.xiaohuolingQueue.Dequeue();
         case MonsterTypeByName.xiaozhizhu:
-            return GameController.S.xiaozhizhuQueue.Dequeue();
+            return QueueController.S.xiaozhizhuQueue.Dequeue();
         case MonsterTypeByName.xiaoshuguai:
-            return GameController.S.xiaoshuguaiQueue.Dequeue();
+            return QueueController.S.xiaoshuguaiQueue.Dequeue();
         case MonsterTypeByName.xiezi1:
-            return GameController.S.xiezi1Queue.Dequeue();
+            return QueueController.S.xiezi1Queue.Dequeue();
         case MonsterTypeByName.xiezi2:
-            return GameController.S.xiezi2Queue.Dequeue();
+            return QueueController.S.xiezi2Queue.Dequeue();
         case MonsterTypeByName.xuelaoshu:
-            return GameController.S.xuelaoshuQueue.Dequeue();
+            return QueueController.S.xuelaoshuQueue.Dequeue();
         case MonsterTypeByName.yanshu:
-            return GameController.S.yanshuQueue.Dequeue();
+            return QueueController.S.yanshuQueue.Dequeue();
         case MonsterTypeByName.yezhu:
-            return GameController.S.yezhuQueue.Dequeue();
+            return QueueController.S.yezhuQueue.Dequeue();
         case MonsterTypeByName.zibaolaoshu:
-            return GameController.S.zibaolaoshuQueue.Dequeue();
+            return QueueController.S.zibaolaoshuQueue.Dequeue();
         
         
         
         
         // 精英怪
         case MonsterTypeByName.DaZongXiong:
-            return GameController.S.dazongxiongQueue.Dequeue();
+            return QueueController.S.dazongxiongQueue.Dequeue();
         case MonsterTypeByName.DiJingZhangLao:
-            return GameController.S.DijingzhanglaoQueue.Dequeue();
+            return QueueController.S.DijingzhanglaoQueue.Dequeue();
         case MonsterTypeByName.FengHeGuai:
-            return GameController.S.fengheguaiQueue.Dequeue();
+            return QueueController.S.fengheguaiQueue.Dequeue();
         case MonsterTypeByName.KuangShiMuZhu:
-            return GameController.S.kuangshimuzhuQueue.Dequeue();
+            return QueueController.S.kuangshimuzhuQueue.Dequeue();
         case MonsterTypeByName.LuJiaoDouShi:
-            return GameController.S.lujiaodoushiQueue.Dequeue();
+            return QueueController.S.lujiaodoushiQueue.Dequeue();
         case MonsterTypeByName.RongYanGuai:
-            return GameController.S.rongyanguaiQueue.Dequeue();
+            return QueueController.S.rongyanguaiQueue.Dequeue();
         case MonsterTypeByName.ShiFuBoss:
-            return GameController.S.shifubossQueue.Dequeue();
+            return QueueController.S.shifubossQueue.Dequeue();
         case MonsterTypeByName.ShuangTouRen:
-            return GameController.S.shuangtourenQueue.Dequeue();
+            return QueueController.S.shuangtourenQueue.Dequeue();
         case MonsterTypeByName.WuYaoZhiWang:
-            return GameController.S.wuyaozhiwangQueue.Dequeue();
+            return QueueController.S.wuyaozhiwangQueue.Dequeue();
         case MonsterTypeByName.WuYaoZhiWang2:
-            return GameController.S.wuyaozhiwang2Queue.Dequeue();
+            return QueueController.S.wuyaozhiwang2Queue.Dequeue();
         case MonsterTypeByName.YeShouZhanShi:
-            return GameController.S.YeShouZhanShiQueue.Dequeue();
+            return QueueController.S.YeShouZhanShiQueue.Dequeue();
         case MonsterTypeByName.ZhiZhuNvWang:
-            return GameController.S.ZhiZhuNvWangQueue.Dequeue();
+            return QueueController.S.ZhiZhuNvWangQueue.Dequeue();
         
         case MonsterTypeByName.banrenma1:
-            return GameController.S.banrenma1Queue.Dequeue();
+            return QueueController.S.banrenma1Queue.Dequeue();
         case MonsterTypeByName.banrenma2:
-            return GameController.S.banrenma2Queue.Dequeue();
+            return QueueController.S.banrenma2Queue.Dequeue();
         case MonsterTypeByName.banrenma3:
-            return GameController.S.banrenma3Queue.Dequeue();
+            return QueueController.S.banrenma3Queue.Dequeue();
         case MonsterTypeByName.paopao:
-            return GameController.S.paopaoQueue.Dequeue();
+            return QueueController.S.paopaoQueue.Dequeue();
         case MonsterTypeByName.rongyanboss:
-            return GameController.S.rongyanbossQueue.Dequeue();
+            return QueueController.S.rongyanbossQueue.Dequeue();
         case MonsterTypeByName.xiongbuou:
-            return GameController.S.xiongbuouQueue.Dequeue();
+            return QueueController.S.xiongbuouQueue.Dequeue();
         case MonsterTypeByName.zhumodaocaoren:
-            return GameController.S.zhumodaocaorenQueue.Dequeue();
+            return QueueController.S.zhumodaocaorenQueue.Dequeue();
         default:
             return null;
     }
@@ -882,43 +882,43 @@ public class LevelInfoConfig
 
     // ========== 冰系 ==========
     AddSkill(a1 == SkillType.Ice3 || a2 == SkillType.Ice3 || a3 == SkillType.Ice3 || a4 == SkillType.Ice3 || a5 == SkillType.Ice3,
-        "Prefabs/Skill/IceExplosion", typeof(IceExplosion), c => GameController.S.IceExQueue.Enqueue(c as IceExplosion));
+        "Prefabs/Skill/IceExplosion", typeof(IceExplosion), c => QueueController.S.IceExQueue.Enqueue(c as IceExplosion));
     AddSkill(a1 == SkillType.Ice1 || a2 == SkillType.Ice1 || a3 == SkillType.Ice1 || a4 == SkillType.Ice1 || a5 == SkillType.Ice1,
-        "Prefabs/Skill/IceSkill/IceSkill1", typeof(IceSkill1), c => GameController.S.IceSkill1Queue.Enqueue(c as IceSkill1));
+        "Prefabs/Skill/IceSkill/IceSkill1", typeof(IceSkill1), c => QueueController.S.IceSkill1Queue.Enqueue(c as IceSkill1));
     AddSkill((a1 != SkillType.Ice4) || a2 == SkillType.Ice4 || a3 == SkillType.Ice4 || a4 == SkillType.Ice4 || a5 == SkillType.Ice4,
-        "Prefabs/Skill/IceSkill/IceSkill4", typeof(IceSkill4), c => GameController.S.IceSkill4Queue.Enqueue(c as IceSkill4));
+        "Prefabs/Skill/IceSkill/IceSkill4", typeof(IceSkill4), c => QueueController.S.IceSkill4Queue.Enqueue(c as IceSkill4));
     AddSkill((a1 != SkillType.Ice5) || a2 == SkillType.Ice5 || a3 == SkillType.Ice5 || a4 == SkillType.Ice5 || a5 == SkillType.Ice5,
-        "Prefabs/Skill/IceSkill/IceSkill5", typeof(IceSkill5), c => GameController.S.IceSkill5Queue.Enqueue(c as IceSkill5));
+        "Prefabs/Skill/IceSkill/IceSkill5", typeof(IceSkill5), c => QueueController.S.IceSkill5Queue.Enqueue(c as IceSkill5));
 
     // ========== 火系 ==========
     AddSkill(a1 == SkillType.Huo1 || a2 == SkillType.Huo1 || a3 == SkillType.Huo1 || a4 == SkillType.Huo1 || a5 == SkillType.Huo1,
-        "Prefabs/Skill/HuoSkill/HuoSkill1", typeof(HuoSkill1), c => GameController.S.HuoSkill1Queue.Enqueue(c as HuoSkill1));
+        "Prefabs/Skill/HuoSkill/HuoSkill1", typeof(HuoSkill1), c => QueueController.S.HuoSkill1Queue.Enqueue(c as HuoSkill1));
     AddSkill(a1 == SkillType.Huo3 || a2 == SkillType.Huo3 || a3 == SkillType.Huo3 || a4 == SkillType.Huo3 || a5 == SkillType.Huo3,
-        "Prefabs/Skill/HuoSkill/HuoSkill3", typeof(HuoSkill3), c => GameController.S.HuoSkill3Queue.Enqueue(c as HuoSkill3));
+        "Prefabs/Skill/HuoSkill/HuoSkill3", typeof(HuoSkill3), c => QueueController.S.HuoSkill3Queue.Enqueue(c as HuoSkill3));
     AddSkill((a1 != SkillType.Huo4) || a2 == SkillType.Huo4 || a3 == SkillType.Huo4 || a4 == SkillType.Huo4 || a5 == SkillType.Huo4,
-        "Prefabs/Skill/HuoSkill/HuoSkill4", typeof(HuoSkill4), c => GameController.S.HuoSkill4Queue.Enqueue(c as HuoSkill4));
+        "Prefabs/Skill/HuoSkill/HuoSkill4", typeof(HuoSkill4), c => QueueController.S.HuoSkill4Queue.Enqueue(c as HuoSkill4));
     AddSkill((a1 != SkillType.Huo5) || a2 == SkillType.Huo5 || a3 == SkillType.Huo5 || a4 == SkillType.Huo5 || a5 == SkillType.Huo5,
-        "Prefabs/Skill/HuoSkill/HuoSkill5", typeof(HuoSkill5), c => GameController.S.HuoSkill5Queue.Enqueue(c as HuoSkill5));
+        "Prefabs/Skill/HuoSkill/HuoSkill5", typeof(HuoSkill5), c => QueueController.S.HuoSkill5Queue.Enqueue(c as HuoSkill5));
 
     // ========== 电系 ==========
     AddSkill(a1 == SkillType.Dian2 || a2 == SkillType.Dian2 || a3 == SkillType.Dian2 || a4 == SkillType.Dian2 || a5 == SkillType.Dian2,
-        "Prefabs/Skill/DianSkill/DianSkill2", typeof(DianSkill2), c => GameController.S.DianSkill2Queue.Enqueue(c as DianSkill2));
+        "Prefabs/Skill/DianSkill/DianSkill2", typeof(DianSkill2), c => QueueController.S.DianSkill2Queue.Enqueue(c as DianSkill2));
     AddSkill(a1 == SkillType.Dian3 || a2 == SkillType.Dian3 || a3 == SkillType.Dian3 || a4 == SkillType.Dian3 || a5 == SkillType.Dian3,
-        "Prefabs/Skill/DianSkill/DianSkill3", typeof(DianSkill3), c => GameController.S.DianSkill3Queue.Enqueue(c as DianSkill3));
+        "Prefabs/Skill/DianSkill/DianSkill3", typeof(DianSkill3), c => QueueController.S.DianSkill3Queue.Enqueue(c as DianSkill3));
     AddSkill((a1 != SkillType.Dian4) || a2 == SkillType.Dian4 || a3 == SkillType.Dian4 || a4 == SkillType.Dian4 || a5 == SkillType.Dian4,
-        "Prefabs/Skill/DianSkill/DianSkill4", typeof(DianSkill4), c => GameController.S.DianSkill4Queue.Enqueue(c as DianSkill4));
+        "Prefabs/Skill/DianSkill/DianSkill4", typeof(DianSkill4), c => QueueController.S.DianSkill4Queue.Enqueue(c as DianSkill4));
     AddSkill((a1 != SkillType.Dian5) || a2 == SkillType.Dian5 || a3 == SkillType.Dian5 || a4 == SkillType.Dian5 || a5 == SkillType.Dian5,
-        "Prefabs/Skill/DianSkill/DianSkill5", typeof(DianSkill5), c => GameController.S.DianSkill5Queue.Enqueue(c as DianSkill5));
+        "Prefabs/Skill/DianSkill/DianSkill5", typeof(DianSkill5), c => QueueController.S.DianSkill5Queue.Enqueue(c as DianSkill5));
 
     // ========== 黑暗系 ==========
     AddSkill(a1 == SkillType.HeiAn3 || a2 == SkillType.HeiAn3 || a3 == SkillType.HeiAn3 || a4 == SkillType.HeiAn3 || a5 == SkillType.HeiAn3,
-        "Prefabs/Skill/HeiAnSkill/HeiAnSkill3", typeof(HeiAnSkill3), c => GameController.S.HeiAnSkill3Queue.Enqueue(c as HeiAnSkill3));
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill3", typeof(HeiAnSkill3), c => QueueController.S.HeiAnSkill3Queue.Enqueue(c as HeiAnSkill3));
     AddSkill(a1 == SkillType.HeiAn1 || a2 == SkillType.HeiAn1 || a3 == SkillType.HeiAn1 || a4 == SkillType.HeiAn1 || a5 == SkillType.HeiAn1,
-        "Prefabs/Skill/HeiAnSkill/HeiAnSkill1", typeof(HeiAnSkill1), c => GameController.S.HeiAnSkill1Queue.Enqueue(c as HeiAnSkill1));
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill1", typeof(HeiAnSkill1), c => QueueController.S.HeiAnSkill1Queue.Enqueue(c as HeiAnSkill1));
     AddSkill((a1 != SkillType.HeiAn4) || a2 == SkillType.HeiAn4 || a3 == SkillType.HeiAn4 || a4 == SkillType.HeiAn4 || a5 == SkillType.HeiAn4,
-        "Prefabs/Skill/HeiAnSkill/HeiAnSkill4", typeof(HeiAnSkill4), c => GameController.S.HeiAnSkill4Queue.Enqueue(c as HeiAnSkill4));
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill4", typeof(HeiAnSkill4), c => QueueController.S.HeiAnSkill4Queue.Enqueue(c as HeiAnSkill4));
     AddSkill((a1 != SkillType.HeiAn5) || a2 == SkillType.HeiAn5 || a3 == SkillType.HeiAn5 || a4 == SkillType.HeiAn5 || a5 == SkillType.HeiAn5,
-        "Prefabs/Skill/HeiAnSkill/HeiAnSkill5", typeof(HeiAnSkill5), c => GameController.S.HeiAnSkill5Queue.Enqueue(c as HeiAnSkill5));
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill5", typeof(HeiAnSkill5), c => QueueController.S.HeiAnSkill5Queue.Enqueue(c as HeiAnSkill5));
 
     // ========== 分帧实例化 Component 技能 ==========
     int totalInstantiated = 0;
@@ -960,9 +960,9 @@ public class LevelInfoConfig
         {
             for (int i = 0; i < 10; i++)
             {
-                GameObject obj = UnityEngine.Object.Instantiate(dianPengPrefab, GameController.S.transform);
+                GameObject obj = UnityEngine.Object.Instantiate(dianPengPrefab, QueueController.S.transform);
                 obj.SetActive(false);
-                GameController.S.DianQuanPengQueue.Enqueue(obj);
+                QueueController.S.DianQuanPengQueue.Enqueue(obj);
                 totalInstantiated++;
                 if (totalInstantiated % perFrame == 0)
                     yield return null;
@@ -976,9 +976,9 @@ public class LevelInfoConfig
         {
             for (int i = 0; i < 10; i++)
             {
-                GameObject obj = UnityEngine.Object.Instantiate(dianQuanPrefab, GameController.S.transform);
+                GameObject obj = UnityEngine.Object.Instantiate(dianQuanPrefab, QueueController.S.transform);
                 obj.SetActive(false);
-                GameController.S.DianQuanQueue.Enqueue(obj);
+                QueueController.S.DianQuanQueue.Enqueue(obj);
                 totalInstantiated++;
                 if (totalInstantiated % perFrame == 0)
                     yield return null;
@@ -1013,19 +1013,19 @@ public class LevelInfoConfig
             // 实例化 PlayerHurt
             PlayerHurt playerHurt = UnityEngine.Object.Instantiate(playerHurtPrefab);
             playerHurt.gameObject.SetActive(false);
-            GameController.S.PlayerHurtQueue.Enqueue(playerHurt);
+            QueueController.S.PlayerHurtQueue.Enqueue(playerHurt);
             totalInstantiated++;
 
             // 实例化 CircleAttack
             CircleAttack circle = UnityEngine.Object.Instantiate(circlePrefab);
             circle.gameObject.SetActive(false);
-            GameController.S.CircleQueue.Enqueue(circle);
+            QueueController.S.CircleQueue.Enqueue(circle);
             totalInstantiated++;
 
             // 实例化 SqrtAttack
             SqrtAttack sqrt = UnityEngine.Object.Instantiate(sqrtPrefab);
             sqrt.gameObject.SetActive(false);
-            GameController.S.SqrtQueue.Enqueue(sqrt);
+            QueueController.S.SqrtQueue.Enqueue(sqrt);
             totalInstantiated++;
 
             // 每实例化 perFrame 个完整轮次，让出一帧
@@ -1052,7 +1052,7 @@ public class LevelInfoConfig
         {
             GameObject monsterHurtText = UnityEngine.Object.Instantiate(prefab);
             monsterHurtText.SetActive(false);
-            GameController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
+            QueueController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
 
             // 每实例化 perFrame 个，让出一帧
             if ((i + 1) % perFrame == 0)
@@ -1081,7 +1081,7 @@ public class LevelInfoConfig
         }
         tasks.Add(() =>
         {
-            GameObject obj = UnityEngine.Object.Instantiate(prefab, GameController.S.transform);
+            GameObject obj = UnityEngine.Object.Instantiate(prefab, QueueController.S.transform);
             obj.SetActive(false);
             queue.Enqueue(obj);
         });
@@ -1104,7 +1104,7 @@ public class LevelInfoConfig
         }
         tasks.Add(() =>
         {
-            T instance = UnityEngine.Object.Instantiate(component, GameController.S.transform);
+            T instance = UnityEngine.Object.Instantiate(component, QueueController.S.transform);
             instance.gameObject.SetActive(false);
             queue.Enqueue(instance);
         });
@@ -1114,51 +1114,51 @@ public class LevelInfoConfig
     switch (weaponType)
     {
         case WeaponType.Primary:
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/Primary", GameController.S.PrimaryQueue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTongPeng3", GameController.S.PuTong3PengQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/Primary", QueueController.S.PrimaryQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTongPeng3", QueueController.S.PuTong3PengQueue);
             break;
         case WeaponType.LanBao:
-            AddGameObjectTask("Prefabs/Skill/2NormalAttackPrefab", GameController.S.LvQuanQueue);
+            AddGameObjectTask("Prefabs/Skill/2NormalAttackPrefab", QueueController.S.LvQuanQueue);
             break;
         case WeaponType.HeiDong:
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongPro", GameController.S.HeiDongQueue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongNext", GameController.S.HeiDongNextQueue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongPeng", GameController.S.HeiDongPengQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongPro", QueueController.S.HeiDongQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongNext", QueueController.S.HeiDongNextQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiDongPeng", QueueController.S.HeiDongPengQueue);
             break;
         case WeaponType.HuoBaoZha:
-            AddComponentTask<HuoBaoZha>("Prefabs/Skill/NormalAttack/HuoBaoZha", GameController.S.HuoBaoZhaQueue);
-            AddComponentTask<HuoYanBaoZhaNext>("Prefabs/Skill/NormalAttack/HuoBaoZhaNext", GameController.S.HuoYanBaoZhaNextQueue);
+            AddComponentTask<HuoBaoZha>("Prefabs/Skill/NormalAttack/HuoBaoZha", QueueController.S.HuoBaoZhaQueue);
+            AddComponentTask<HuoYanBaoZhaNext>("Prefabs/Skill/NormalAttack/HuoBaoZhaNext", QueueController.S.HuoYanBaoZhaNextQueue);
             break;
         case WeaponType.IceBaoZha:
-            AddComponentTask<IceBaoZha>("Prefabs/Skill/NormalAttack/IceBaoZha", GameController.S.IceBaoZhaQueue);
-            AddComponentTask<IceBaoZhaNext>("Prefabs/Skill/NormalAttack/IceBaoZhaNext", GameController.S.IceBaoZhaNextQueue);
+            AddComponentTask<IceBaoZha>("Prefabs/Skill/NormalAttack/IceBaoZha", QueueController.S.IceBaoZhaQueue);
+            AddComponentTask<IceBaoZhaNext>("Prefabs/Skill/NormalAttack/IceBaoZhaNext", QueueController.S.IceBaoZhaNextQueue);
             break;
         case WeaponType.DianBaoZha:
-            AddComponentTask<DianBaoZha>("Prefabs/Skill/NormalAttack/DianBaoZha", GameController.S.DianBaoZhaQueue);
-            AddComponentTask<DianBaoZhaNext>("Prefabs/Skill/NormalAttack/DianBaoZhaNext", GameController.S.DianBaoZhaNextQueue);
+            AddComponentTask<DianBaoZha>("Prefabs/Skill/NormalAttack/DianBaoZha", QueueController.S.DianBaoZhaQueue);
+            AddComponentTask<DianBaoZhaNext>("Prefabs/Skill/NormalAttack/DianBaoZhaNext", QueueController.S.DianBaoZhaNextQueue);
             break;
         case WeaponType.LuoLei:
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/LuoLei", GameController.S.LuoLeiQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/LuoLei", QueueController.S.LuoLeiQueue);
             break;
         case WeaponType.PuTong3:
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTong3", GameController.S.PuTong3Queue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTongPeng3", GameController.S.PuTong3PengQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTong3", QueueController.S.PuTong3Queue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/PuTongPeng3", QueueController.S.PuTong3PengQueue);
             break;
         case WeaponType.Fire:
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/Fire", GameController.S.FireQueue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/FirePeng", GameController.S.FirePengQueue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/FireBaoZha", GameController.S.FireBaoZha1Queue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/Fire", QueueController.S.FireQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/FirePeng", QueueController.S.FirePengQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/FireBaoZha", QueueController.S.FireBaoZha1Queue);
             break;
         case WeaponType.XuKong:
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/XuKong", GameController.S.XuKongQueue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/XuKongPeng", GameController.S.XuKongPengQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/XuKong", QueueController.S.XuKongQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/XuKongPeng", QueueController.S.XuKongPengQueue);
             break;
         case WeaponType.LvQuan:
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/LvQuan", GameController.S.LvQuanQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/LvQuan", QueueController.S.LvQuanQueue);
             break;
         case WeaponType.JianQi:
-            AddComponentTask<PlayerJianQi>("Prefabs/Skill/NormalAttack/PlayerJianQi", GameController.S.PlayerJianQiQueue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/ZiPeng", GameController.S.ZiBaoZhaQueue);
+            AddComponentTask<PlayerJianQi>("Prefabs/Skill/NormalAttack/PlayerJianQi", QueueController.S.PlayerJianQiQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/ZiPeng", QueueController.S.ZiBaoZhaQueue);
             break;
         default:
             Debug.LogWarning($"未处理的武器类型: {weaponType}");
@@ -1210,7 +1210,7 @@ public class LevelInfoConfig
                    a3 == SkillType.Ice1 || a3 == SkillType.Ice2 || a3 == SkillType.Ice3 || a3 == SkillType.Ice4 || a3 == SkillType.Ice5 ||
                    a4 == SkillType.Ice1 || a4 == SkillType.Ice2 || a4 == SkillType.Ice3 || a4 == SkillType.Ice4 || a4 == SkillType.Ice5 ||
                    a5 == SkillType.Ice1 || a5 == SkillType.Ice2 || a5 == SkillType.Ice3 || a5 == SkillType.Ice4 || a5 == SkillType.Ice5;
-    elements.Add((needIce, "Prefabs/Skill/Peng/IcePeng", GameController.S.IcePengQueue));
+    elements.Add((needIce, "Prefabs/Skill/Peng/IcePeng", QueueController.S.IcePengQueue));
 
     // 黑暗系判定
     bool needHeiAn = weaponYuanSu == YuanSuType.HeiAn ||
@@ -1219,7 +1219,7 @@ public class LevelInfoConfig
                      a3 == SkillType.HeiAn1 || a3 == SkillType.HeiAn2 || a3 == SkillType.HeiAn3 || a3 == SkillType.HeiAn4 || a3 == SkillType.HeiAn5 ||
                      a4 == SkillType.HeiAn1 || a4 == SkillType.HeiAn2 || a4 == SkillType.HeiAn3 || a4 == SkillType.HeiAn4 || a4 == SkillType.HeiAn5 ||
                      a5 == SkillType.HeiAn1 || a5 == SkillType.HeiAn2 || a5 == SkillType.HeiAn3 || a5 == SkillType.HeiAn4 || a5 == SkillType.HeiAn5;
-    elements.Add((needHeiAn, "Prefabs/Skill/Peng/HeiAnPeng", GameController.S.HeiAnPengQueue));
+    elements.Add((needHeiAn, "Prefabs/Skill/Peng/HeiAnPeng", QueueController.S.HeiAnPengQueue));
 
     // 火系判定
     bool needHuo = weaponYuanSu == YuanSuType.Huo ||
@@ -1228,7 +1228,7 @@ public class LevelInfoConfig
                    a3 == SkillType.Huo1 || a3 == SkillType.Huo2 || a3 == SkillType.Huo3 || a3 == SkillType.Huo4 || a3 == SkillType.Huo5 ||
                    a4 == SkillType.Huo1 || a4 == SkillType.Huo2 || a4 == SkillType.Huo3 || a4 == SkillType.Huo4 || a4 == SkillType.Huo5 ||
                    a5 == SkillType.Huo1 || a5 == SkillType.Huo2 || a5 == SkillType.Huo3 || a5 == SkillType.Huo4 || a5 == SkillType.Huo5;
-    elements.Add((needHuo, "Prefabs/Skill/Peng/HuoPeng", GameController.S.HuoPengQueue));
+    elements.Add((needHuo, "Prefabs/Skill/Peng/HuoPeng", QueueController.S.HuoPengQueue));
 
     // 电系判定
     bool needDian = weaponYuanSu == YuanSuType.Dian ||
@@ -1237,7 +1237,7 @@ public class LevelInfoConfig
                     a3 == SkillType.Dian1 || a3 == SkillType.Dian2 || a3 == SkillType.Dian3 || a3 == SkillType.Dian4 || a3 == SkillType.Dian5 ||
                     a4 == SkillType.Dian1 || a4 == SkillType.Dian2 || a4 == SkillType.Dian3 || a4 == SkillType.Dian4 || a4 == SkillType.Dian5 ||
                     a5 == SkillType.Dian1 || a5 == SkillType.Dian2 || a5 == SkillType.Dian3 || a5 == SkillType.Dian4 || a5 == SkillType.Dian5;
-    elements.Add((needDian, "Prefabs/Skill/Peng/DianPeng", GameController.S.DianPengQueue));
+    elements.Add((needDian, "Prefabs/Skill/Peng/DianPeng", QueueController.S.DianPengQueue));
 
     int totalInstantiated = 0;
     const int totalCount = 200;  // 每个元素预热200个
@@ -1257,7 +1257,7 @@ public class LevelInfoConfig
         // 分帧实例化200个
         for (int i = 0; i < totalCount; i++)
         {
-            GameObject peng = UnityEngine.Object.Instantiate(prefab, GameController.S.transform);
+            GameObject peng = UnityEngine.Object.Instantiate(prefab, QueueController.S.transform);
             peng.SetActive(false);
             queue.Enqueue(peng);
 
@@ -1288,7 +1288,7 @@ public class LevelInfoConfig
         }
         tasks.Add(() =>
         {
-            GameObject obj = UnityEngine.Object.Instantiate(prefab, GameController.S.transform);
+            GameObject obj = UnityEngine.Object.Instantiate(prefab, QueueController.S.transform);
             obj.SetActive(false);
             queue.Enqueue(obj);
         });
@@ -1311,7 +1311,7 @@ public class LevelInfoConfig
         }
         tasks.Add(() =>
         {
-            T instance = UnityEngine.Object.Instantiate(component, GameController.S.transform);
+            T instance = UnityEngine.Object.Instantiate(component, QueueController.S.transform);
             instance.gameObject.SetActive(false);
             queue.Enqueue(instance);
         });
@@ -1323,64 +1323,64 @@ public class LevelInfoConfig
     switch (currentWeapon)
     {
         case WeaponType.HeiAnBaoZha:
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiAnBaoZha", GameController.S.HeiAnBaoZhaQueue);
-            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiAnBaoZhaNext", GameController.S.HeiAnBaoZhaNextQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiAnBaoZha", QueueController.S.HeiAnBaoZhaQueue);
+            AddGameObjectTask("Prefabs/Skill/NormalAttack/HeiAnBaoZhaNext", QueueController.S.HeiAnBaoZhaNextQueue);
             break;
 
         case WeaponType.Huo7:
-            AddComponentTask<Huo7Item>("Prefabs/Skill/NormalAttack/Huo7Item", GameController.S.Huo7Queue);
+            AddComponentTask<Huo7Item>("Prefabs/Skill/NormalAttack/Huo7Item", QueueController.S.Huo7Queue);
             break;
 
         case WeaponType.Ice7:
-            AddComponentTask<Ice7Item>("Prefabs/Skill/NormalAttack/Ice7Item", GameController.S.Ice7Queue);
+            AddComponentTask<Ice7Item>("Prefabs/Skill/NormalAttack/Ice7Item", QueueController.S.Ice7Queue);
             break;
 
         case WeaponType.DianLuoLei5:
-            AddComponentTask<DianLuoLei>("Prefabs/Skill/NormalAttack/DianLuoLei", GameController.S.DianLuoLeiQueue);
-            AddComponentTask<DianLuoLeiNext>("Prefabs/Skill/NormalAttack/DianLuoLeiNext", GameController.S.DianLuoLeiNextQueue);
+            AddComponentTask<DianLuoLei>("Prefabs/Skill/NormalAttack/DianLuoLei", QueueController.S.DianLuoLeiQueue);
+            AddComponentTask<DianLuoLeiNext>("Prefabs/Skill/NormalAttack/DianLuoLeiNext", QueueController.S.DianLuoLeiNextQueue);
             break;
 
         case WeaponType.PrimaryDian:
-            AddComponentTask<PrimaryDian>("Prefabs/Skill/NormalAttack/PrimaryDian", GameController.S.PrimaryDianQueue);
+            AddComponentTask<PrimaryDian>("Prefabs/Skill/NormalAttack/PrimaryDian", QueueController.S.PrimaryDianQueue);
             break;
 
         case WeaponType.PrimaryHuo:
-            AddComponentTask<PrimaryHuo>("Prefabs/Skill/NormalAttack/PrimaryHuo", GameController.S.PrimaryHuoQueue);
+            AddComponentTask<PrimaryHuo>("Prefabs/Skill/NormalAttack/PrimaryHuo", QueueController.S.PrimaryHuoQueue);
             break;
 
         case WeaponType.PrimaryHeiAn:
-            AddComponentTask<PrimaryHeiAn>("Prefabs/Skill/NormalAttack/PrimaryHeiAn", GameController.S.PrimaryHeiAnQueue);
+            AddComponentTask<PrimaryHeiAn>("Prefabs/Skill/NormalAttack/PrimaryHeiAn", QueueController.S.PrimaryHeiAnQueue);
             break;
 
         case WeaponType.IcePen:
-            AddComponentTask<IcePen>("Prefabs/Skill/NormalAttack/IcePen", GameController.S.IcePenQueue);
+            AddComponentTask<IcePen>("Prefabs/Skill/NormalAttack/IcePen", QueueController.S.IcePenQueue);
             break;
 
         case WeaponType.HuoFenLie:
-            AddComponentTask<HuoFenLie>("Prefabs/Skill/NormalAttack/HuoFenLie", GameController.S.HuoFenLieQueue);
-            AddComponentTask<HuoFenLieDan>("Prefabs/Skill/NormalAttack/HuoFenLieDan", GameController.S.HuoFenLieDanQueue);
-            AddComponentTask<HuoFenLieBaoZha>("Prefabs/Skill/NormalAttack/HuoFenLieBaoZha", GameController.S.HuoFenLieBaoZhaQueue);
+            AddComponentTask<HuoFenLie>("Prefabs/Skill/NormalAttack/HuoFenLie", QueueController.S.HuoFenLieQueue);
+            AddComponentTask<HuoFenLieDan>("Prefabs/Skill/NormalAttack/HuoFenLieDan", QueueController.S.HuoFenLieDanQueue);
+            AddComponentTask<HuoFenLieBaoZha>("Prefabs/Skill/NormalAttack/HuoFenLieBaoZha", QueueController.S.HuoFenLieBaoZhaQueue);
             break;
 
         case WeaponType.Ice4BaoZha:
-            AddComponentTask<Ice4BaoZha>("Prefabs/Skill/NormalAttack/Ice4BaoZha", GameController.S.Ice4BaoZhaQueue);
-            AddComponentTask<Ice4BaoZhaItem>("Prefabs/Skill/NormalAttack/Ice4BaoZhaItem", GameController.S.Ice4BaoZhaItemQueue);
+            AddComponentTask<Ice4BaoZha>("Prefabs/Skill/NormalAttack/Ice4BaoZha", QueueController.S.Ice4BaoZhaQueue);
+            AddComponentTask<Ice4BaoZhaItem>("Prefabs/Skill/NormalAttack/Ice4BaoZhaItem", QueueController.S.Ice4BaoZhaItemQueue);
             break;
 
         case WeaponType.DianJiSu:
-            AddComponentTask<DianJiSu>("Prefabs/Skill/NormalAttack/DianJiSu", GameController.S.DianJiSuQueue);
+            AddComponentTask<DianJiSu>("Prefabs/Skill/NormalAttack/DianJiSu", QueueController.S.DianJiSuQueue);
             break;
 
         case WeaponType.HeiAnHuiXuan:
-            AddComponentTask<HeiAnHuiXuan>("Prefabs/Skill/NormalAttack/HeiAnHuiXuan", GameController.S.HeiAnHuiXuanQueue);
+            AddComponentTask<HeiAnHuiXuan>("Prefabs/Skill/NormalAttack/HeiAnHuiXuan", QueueController.S.HeiAnHuiXuanQueue);
             break;
 
         case WeaponType.HuoDiPen:
-            AddComponentTask<HuoDiPen>("Prefabs/Skill/NormalAttack/HuoDiPen", GameController.S.HuoDiPenQueue);
+            AddComponentTask<HuoDiPen>("Prefabs/Skill/NormalAttack/HuoDiPen", QueueController.S.HuoDiPenQueue);
             break;
 
         case WeaponType.HeiAnQuXian:
-            AddComponentTask<HuoQuXian>("Prefabs/Skill/NormalAttack/HeiAnQuXian", GameController.S.HeiAnQuXianQueue);
+            AddComponentTask<HuoQuXian>("Prefabs/Skill/NormalAttack/HeiAnQuXian", QueueController.S.HeiAnQuXianQueue);
             break;
 
         default:
@@ -1428,9 +1428,9 @@ public class LevelInfoConfig
                 // 分帧实例化 100 个 BaoXue
                 for (int i = 0; i < 100; i++)
                 {
-                    BaoXue instance = UnityEngine.Object.Instantiate(baoXueComp, GameController.S.transform);
+                    BaoXue instance = UnityEngine.Object.Instantiate(baoXueComp, QueueController.S.transform);
                     instance.gameObject.SetActive(false);
-                    GameController.S.BaoXueQueue.Enqueue(instance);
+                    QueueController.S.BaoXueQueue.Enqueue(instance);
 
                     if ((i + 1) % perFrame == 0)
                         yield return null;
@@ -1453,12 +1453,12 @@ public class LevelInfoConfig
             }
             else
             {
-                // 分帧实例化 100 个 DanMu（父对象使用 GameController.S.transform）
+                // 分帧实例化 100 个 DanMu（父对象使用 QueueController.S.transform）
                 for (int i = 0; i < 100; i++)
                 {
-                    DanMu instance = UnityEngine.Object.Instantiate(danMuComp, GameController.S.transform);
+                    DanMu instance = UnityEngine.Object.Instantiate(danMuComp, QueueController.S.transform);
                     instance.gameObject.SetActive(false);
-                    GameController.S.DanMuQueue.Enqueue(instance);
+                    QueueController.S.DanMuQueue.Enqueue(instance);
 
                     if ((i + 1) % perFrame == 0)
                         yield return null;

@@ -43,7 +43,7 @@ public class XieZiSkill4 : MonoBehaviour
         
             if (col.CompareTag("Player"))
             {
-               GameController.S.gamePlayer.PlayerHurt(damage,true);
+               QueueController.S.gamePlayer.PlayerHurt(damage,true);
             }
         }
     }
@@ -51,7 +51,7 @@ public class XieZiSkill4 : MonoBehaviour
     public void Complete(TrackEntry trackEntry)
     {
         gameObject.SetActive(false);
-        GameController.S.XieZiSkill4Queue.Enqueue(this);
+        QueueController.S.XieZiSkill4Queue.Enqueue(this);
     }
 
     private void OnEnable()

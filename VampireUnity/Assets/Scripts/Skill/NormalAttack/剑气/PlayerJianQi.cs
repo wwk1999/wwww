@@ -23,7 +23,7 @@ public class PlayerJianQi : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        GameController.S.PlayerJianQiQueue.Enqueue(this);
+        QueueController.S.PlayerJianQiQueue.Enqueue(this);
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -32,10 +32,10 @@ public class PlayerJianQi : MonoBehaviour
         Vector2 closestPoint = other.ClosestPoint(transform.position);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.ZiBaoZhaQueue.Dequeue();
+            var hit = QueueController.S.ZiBaoZhaQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
             hit.SetActive(true);
         }
     }

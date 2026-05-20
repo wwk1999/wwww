@@ -3,11 +3,16 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void OnEnable()
     {
-        if (GameController.S.gamePlayer != null)
+        if (QueueController.S.gamePlayer != null)
         {
-            GameController.S.gamePlayer.IsWuDi = true;
+            QueueController.S.gamePlayer.IsWuDi = true;
         }
         GetComponent<Animator>().Play("PlayerHit");
     }

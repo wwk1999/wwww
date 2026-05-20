@@ -74,7 +74,7 @@ namespace Skill.NormalAttack.Primary
             isInitialized = false;
             
             // 回收对象
-            GameController.S.PrimaryHuoQueue.Enqueue(this);
+            QueueController.S.PrimaryHuoQueue.Enqueue(this);
             gameObject.SetActive(false);
         }
     
@@ -86,12 +86,12 @@ namespace Skill.NormalAttack.Primary
                 if (!isInitialized) return;
                 
                 bool isCrit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack * SkillController.S.IceYuanSuDamage, isCrit, DamageFrom.Normal,YuanSuType.Huo);
+                QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack * SkillController.S.IceYuanSuDamage, isCrit, DamageFrom.Normal,YuanSuType.Huo);
                 
                 Hide();
                 
                 Vector2 closestPoint = other.ClosestPoint(transform.position);
-                var hit = GameController.S.HuoPengQueue.Dequeue();
+                var hit = QueueController.S.HuoPengQueue.Dequeue();
                 hit.transform.position = closestPoint;
                 hit.SetActive(true);
             }

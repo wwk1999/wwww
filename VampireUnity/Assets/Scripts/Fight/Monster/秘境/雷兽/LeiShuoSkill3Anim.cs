@@ -10,7 +10,7 @@ public class LeiShuoSkill3Anim : MonoBehaviour
     public void Hide()
     {
         obj.SetActive(false);
-        GameController.S.LeiShouSkill3Queue.Enqueue(LeiShouSkill3);
+        QueueController.S.LeiShouSkill3Queue.Enqueue(LeiShouSkill3);
     }
     public void CheckCollisionWithMonsters()
     {
@@ -29,7 +29,7 @@ public class LeiShuoSkill3Anim : MonoBehaviour
         
             if (col.CompareTag("Player"))
             {
-               GameController.S.gamePlayer.PlayerHurt(LeiShouSkill3.damage,true);
+               QueueController.S.gamePlayer.PlayerHurt(LeiShouSkill3.damage,true);
             }
         }
     }

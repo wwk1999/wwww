@@ -425,10 +425,10 @@ public class SkillController : XSingleton<SkillController>
     void Start()
     {
         //技能相关
-        NormalAttack= GameController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack").GetComponent<ParticleSystem>();
-        NormalAttack2= GameController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack2").gameObject;
-        NormalAttack3= GameController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack3").gameObject;
-        NormalAttack4= GameController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack4").gameObject;
+        NormalAttack= QueueController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack").GetComponent<ParticleSystem>();
+        NormalAttack2= QueueController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack2").gameObject;
+        NormalAttack3= QueueController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack3").gameObject;
+        NormalAttack4= QueueController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack4").gameObject;
         ParticleSystem normalAttack21=NormalAttack2.transform.Find("NormalAttack-1").GetComponent<ParticleSystem>();
         ParticleSystem normalAttack22=NormalAttack2.transform.Find("NormalAttack-2").GetComponent<ParticleSystem>();
         ParticleSystem normalAttack31=NormalAttack3.transform.Find("NormalAttack-1").GetComponent<ParticleSystem>();
@@ -457,7 +457,7 @@ public class SkillController : XSingleton<SkillController>
     {
         
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
 
@@ -470,7 +470,7 @@ public class SkillController : XSingleton<SkillController>
                 float offectY = Random.Range(-0.5f, 0.5f);
                 Vector3 dir = new Vector2(offectX, offectY);
                 Vector2 pos = worldPos + dir * redis;
-                var dianquan = GameController.S.HuoSkill3Queue.Dequeue();
+                var dianquan = QueueController.S.HuoSkill3Queue.Dequeue();
                 dianquan.gameObject.SetActive(true);
                 dianquan.transform.position = pos;
                 dianquan._renderer.sortingOrder = 10001 + i;
@@ -483,7 +483,7 @@ public class SkillController : XSingleton<SkillController>
     {
 
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         HuoSkill3Coolingtime = 0;
@@ -493,7 +493,7 @@ public class SkillController : XSingleton<SkillController>
             float offectY = Random.Range(-0.5f, 0.5f);
             Vector3 dir = new Vector2(offectX, offectY);
             Vector2 pos = worldPos + dir * redis;
-            var dianquan = GameController.S.HuoSkill5Queue.Dequeue();
+            var dianquan = QueueController.S.HuoSkill5Queue.Dequeue();
             dianquan.gameObject.SetActive(true);
             dianquan.transform.position = pos;
             dianquan._renderer.sortingOrder = 10001 + i;
@@ -506,7 +506,7 @@ public class SkillController : XSingleton<SkillController>
     {
 
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         for (int i = 0; i < count; i++)
@@ -515,7 +515,7 @@ public class SkillController : XSingleton<SkillController>
             float offectY = Random.Range(-0.5f, 0.5f);
             Vector3 dir = new Vector2(offectX, offectY);
             Vector2 pos = worldPos + dir * redis;
-            var dianquan = GameController.S.IceSkill4Queue.Dequeue();
+            var dianquan = QueueController.S.IceSkill4Queue.Dequeue();
             dianquan.gameObject.SetActive(true);
             dianquan.transform.position = pos;
             dianquan.render.sortingOrder = 10001 + i;
@@ -539,11 +539,11 @@ public class SkillController : XSingleton<SkillController>
 
         for (int i = 0; i < bulletCount; i++)
         {
-            var xieZiSkill1 = GameController.S.DianSkill3Queue.Dequeue();
+            var xieZiSkill1 = QueueController.S.DianSkill3Queue.Dequeue();
             float angle = i * angleStep + waveOffset;
             float angleRad = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
-            xieZiSkill1.transform.position = GameController.S.gamePlayer.transform.position;
+            xieZiSkill1.transform.position = QueueController.S.gamePlayer.transform.position;
             xieZiSkill1.MoveDirection = direction;
             xieZiSkill1.MoveSpeed = 10f;
             xieZiSkill1.gameObject.SetActive(true);
@@ -565,11 +565,11 @@ public class SkillController : XSingleton<SkillController>
 
         for (int i = 0; i < bulletCount; i++)
         {
-            var xieZiSkill1 = GameController.S.IceSkill5Queue.Dequeue();
+            var xieZiSkill1 = QueueController.S.IceSkill5Queue.Dequeue();
             float angle = i * angleStep + waveOffset;
             float angleRad = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
-            xieZiSkill1.transform.position = GameController.S.gamePlayer.transform.position;
+            xieZiSkill1.transform.position = QueueController.S.gamePlayer.transform.position;
             xieZiSkill1.MoveDirection = direction;
             xieZiSkill1.MoveSpeed = 10f;
             xieZiSkill1.gameObject.SetActive(true);
@@ -584,10 +584,10 @@ public class SkillController : XSingleton<SkillController>
         }
         IceSkill1Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        var dianquan= GameController.S.IceSkill1Queue.Dequeue();
+        var dianquan= QueueController.S.IceSkill1Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
         dianquan.transform.localScale = new Vector3(dianquan.transform.localScale.x*(1.0f+SkillJiaDian.S.Ice1_2*5/100f), dianquan.transform.localScale.y*(1.0f+SkillJiaDian.S.Ice1_2*5/100f), 1f);
@@ -607,27 +607,27 @@ public class SkillController : XSingleton<SkillController>
         switch (count)
         {
             case 4:
-                GameController.S.gamePlayer.HeiAnSkill4_4.gameObject.SetActive(true);
+                QueueController.S.gamePlayer.HeiAnSkill4_4.gameObject.SetActive(true);
                 Invoke(nameof(HideHeiAnSkill4_4),5f);
                 break;
             case 5:
-                GameController.S.gamePlayer.HeiAnSkill4_5.gameObject.SetActive(true);
+                QueueController.S.gamePlayer.HeiAnSkill4_5.gameObject.SetActive(true);
                 Invoke(nameof(HideHeiAnSkill4_5),5f);
                 break;
             case 6:
-                GameController.S.gamePlayer.HeiAnSkill4_6.gameObject.SetActive(true);
+                QueueController.S.gamePlayer.HeiAnSkill4_6.gameObject.SetActive(true);
                 Invoke(nameof(HideHeiAnSkill4_6),5f);
                 break;
             case 7:
-                GameController.S.gamePlayer.HeiAnSkill4_7.gameObject.SetActive(true);
+                QueueController.S.gamePlayer.HeiAnSkill4_7.gameObject.SetActive(true);
                 Invoke(nameof(HideHeiAnSkill4_7),5f);
                 break;
             case 8:
-                GameController.S.gamePlayer.HeiAnSkill4_8.gameObject.SetActive(true);
+                QueueController.S.gamePlayer.HeiAnSkill4_8.gameObject.SetActive(true);
                 Invoke(nameof(HideHeiAnSkill4_8),5f);
                 break;
             case 9:
-                GameController.S.gamePlayer.HeiAnSkill4_9.gameObject.SetActive(true);
+                QueueController.S.gamePlayer.HeiAnSkill4_9.gameObject.SetActive(true);
                 Invoke(nameof(HideHeiAnSkill4_9),5f);
                 break;
         }
@@ -635,32 +635,32 @@ public class SkillController : XSingleton<SkillController>
 
     public void HideHeiAnSkill4_4()
     {
-        GameController.S.gamePlayer.HeiAnSkill4_4.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.HeiAnSkill4_4.gameObject.SetActive(false);
     }
     
     public void HideHeiAnSkill4_5()
     {
-        GameController.S.gamePlayer.HeiAnSkill4_5.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.HeiAnSkill4_5.gameObject.SetActive(false);
     }
     
     public void HideHeiAnSkill4_6()
     {
-        GameController.S.gamePlayer.HeiAnSkill4_6.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.HeiAnSkill4_6.gameObject.SetActive(false);
     }
     
     public void HideHeiAnSkill4_7()
     {
-        GameController.S.gamePlayer.HeiAnSkill4_7.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.HeiAnSkill4_7.gameObject.SetActive(false);
     }
     
     public void HideHeiAnSkill4_8()
     {
-        GameController.S.gamePlayer.HeiAnSkill4_8.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.HeiAnSkill4_8.gameObject.SetActive(false);
     }
     
     public void HideHeiAnSkill4_9()
     {
-        GameController.S.gamePlayer.HeiAnSkill4_9.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.HeiAnSkill4_9.gameObject.SetActive(false);
     }
     
     
@@ -673,10 +673,10 @@ public class SkillController : XSingleton<SkillController>
 
         DianSkill4Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        var dianquan= GameController.S.DianSkill4Queue.Dequeue();
+        var dianquan= QueueController.S.DianSkill4Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
         dianquan.transform.localPosition =
@@ -694,7 +694,7 @@ public class SkillController : XSingleton<SkillController>
         HuoSkill5Coolingtime = 0;
         for (int i = 0; i < count; i++)
         {
-            var heianSkill5=GameController.S.HeiAnSkill5Queue.Dequeue();
+            var heianSkill5=QueueController.S.HeiAnSkill5Queue.Dequeue();
             heianSkill5.transform.position = GameController.S.GetRandomMonsterPos();
             heianSkill5.gameObject.SetActive(true);
         }
@@ -709,10 +709,10 @@ public class SkillController : XSingleton<SkillController>
 
         DianSkill5Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        var dianquan= GameController.S.DianSkill5Queue.Dequeue();
+        var dianquan= QueueController.S.DianSkill5Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
         dianquan.transform.localPosition =
@@ -729,10 +729,10 @@ public class SkillController : XSingleton<SkillController>
 
         HeiAnSkill4Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        var dianquan= GameController.S.HuoSkill4Queue.Dequeue();
+        var dianquan= QueueController.S.HuoSkill4Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
         dianquan.transform.localPosition =
@@ -749,10 +749,10 @@ public class SkillController : XSingleton<SkillController>
 
         HeiAnSkill1Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        var dianquan= GameController.S.HeiAnSkill1Queue.Dequeue();
+        var dianquan= QueueController.S.HeiAnSkill1Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
         dianquan.transform.localPosition =
@@ -768,7 +768,7 @@ public class SkillController : XSingleton<SkillController>
         }
 
         HuoSkill2Coolingtime = 0;
-        GameController.S.gamePlayer.HuoSkill2.gameObject.SetActive(true);
+        QueueController.S.gamePlayer.HuoSkill2.gameObject.SetActive(true);
         IsHuoSkill2 = true;
         Invoke(nameof(StopHuoSkill2),HuoSkill2Duration);
     }
@@ -781,7 +781,7 @@ public class SkillController : XSingleton<SkillController>
         }
 
         DianSkill2Coolingtime = 0;
-        GameController.S.gamePlayer.DianSkill2.gameObject.SetActive(true);
+        QueueController.S.gamePlayer.DianSkill2.gameObject.SetActive(true);
         IsDianSkill2 = true;
         Invoke(nameof(StopDianSkill2),DianSkill2Duration);
     }
@@ -793,26 +793,26 @@ public class SkillController : XSingleton<SkillController>
             return;
         }
         HeiAnSkill2Coolingtime = 0;
-        GameController.S.gamePlayer.HeiAnSkill2.gameObject.SetActive(true);
+        QueueController.S.gamePlayer.HeiAnSkill2.gameObject.SetActive(true);
         IsHeiAnSkill2 = true;
         Invoke(nameof(StopHeiAnSkill2),HeiAnSkill2Duration);
     }
 
     public void StopHuoSkill2()
     {
-        GameController.S.gamePlayer.HuoSkill2.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.HuoSkill2.gameObject.SetActive(false);
         IsHuoSkill2 = false;
     }
     
     public void StopDianSkill2()
     {
-        GameController.S.gamePlayer.DianSkill2.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.DianSkill2.gameObject.SetActive(false);
         IsDianSkill2 = false;
     }
     
     public void StopHeiAnSkill2()
     {
-        GameController.S.gamePlayer.HeiAnSkill2.gameObject.SetActive(false);
+        QueueController.S.gamePlayer.HeiAnSkill2.gameObject.SetActive(false);
         IsHeiAnSkill2 = false;
     }
     
@@ -824,10 +824,10 @@ public class SkillController : XSingleton<SkillController>
         }
         HeiAnSkill3Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        var dianquan= GameController.S.HeiAnSkill3Queue.Dequeue();
+        var dianquan= QueueController.S.HeiAnSkill3Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
         dianquan.transform.position = worldPos;
         dianquan.transform.localPosition =
@@ -843,11 +843,11 @@ public class SkillController : XSingleton<SkillController>
         }
         HuoSkill1Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
-        float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+        float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         // 原始方向
-        Vector2 baseDir = (worldPos -GameController.S.gamePlayer.transform.position).normalized;
+        Vector2 baseDir = (worldPos -QueueController.S.gamePlayer.transform.position).normalized;
 
         int bulletCount = 3+SkillJiaDian.S.Huo1_2;
         // 两个偏移角度：+10° 和 -10°
@@ -928,8 +928,8 @@ public class SkillController : XSingleton<SkillController>
         }
         foreach (Vector2 dir in dirs)
         {
-            HuoSkill1 bullet = GameController.S.HuoSkill1Queue.Dequeue();
-            bullet.transform.position = GameController.S.gamePlayer.transform.position;
+            HuoSkill1 bullet = QueueController.S.HuoSkill1Queue.Dequeue();
+            bullet.transform.position = QueueController.S.gamePlayer.transform.position;
             
             bullet.MoveDirection = dir;
             bullet.MoveSpeed = 10f;
@@ -945,82 +945,82 @@ public class SkillController : XSingleton<SkillController>
         switch (PlayerData.S.playerWeaponType)
         {
             case WeaponType.Primary:
-                GameController.S.gamePlayer.currentGun.PrimaryShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.PrimaryShot(attackTrans);
                 break;
             case WeaponType.LanBao:
-                GameController.S.gamePlayer.currentGun.LanBaoShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.LanBaoShot(attackTrans);
                 break;
             case WeaponType.Fire:
-                GameController.S.gamePlayer.currentGun.FireShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.FireShot(attackTrans);
                 break;
             case WeaponType.XuKong:
-                GameController.S.gamePlayer.currentGun.XuKongShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.XuKongShot(attackTrans);
                 break;
             case WeaponType.LvQuan:
-                GameController.S.gamePlayer.currentGun.LvQuanShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.LvQuanShot(attackTrans);
                 break;
             case WeaponType.HeiDong:
-                GameController.S.gamePlayer.currentGun.HeiDongShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.HeiDongShot(attackTrans);
                 break;
             case WeaponType.HuoBaoZha:
-                GameController.S.gamePlayer.currentGun.HuoBaoZhaShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.HuoBaoZhaShot(attackTrans);
                 break;
             case WeaponType.LuoLei:
-                GameController.S.gamePlayer.currentGun.LuoLeiShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.LuoLeiShot(attackTrans);
                 break;
             case WeaponType.PuTong3:
-                GameController.S.gamePlayer.currentGun.PuTong3Shot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.PuTong3Shot(attackTrans);
                 break;
             case WeaponType.JianQi:
-                GameController.S.gamePlayer.currentGun.JianQiShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.JianQiShot(attackTrans);
                 break;
             case WeaponType.HeiAnBaoZha:
-                GameController.S.gamePlayer.currentGun.HeiAnBaoZhaShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.HeiAnBaoZhaShot(attackTrans);
                 break;
             case WeaponType.Huo7:
-                GameController.S.gamePlayer.currentGun.Huo7Shot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.Huo7Shot(attackTrans);
                 break;
             case WeaponType.HuoFenLie:
-                GameController.S.gamePlayer.currentGun.HuoFenLieShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.HuoFenLieShot(attackTrans);
                 break;
             case WeaponType.Ice4BaoZha:
-                GameController.S.gamePlayer.currentGun.Ice4BaoZhaShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.Ice4BaoZhaShot(attackTrans);
                 break;
             case WeaponType.Ice7:
-                GameController.S.gamePlayer.currentGun.Ice7Shot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.Ice7Shot(attackTrans);
                 break;
             case WeaponType.IcePen:
-                GameController.S.gamePlayer.currentGun.IcePenShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.IcePenShot(attackTrans);
                 break;
             case WeaponType.DianLuoLei5:
-                GameController.S.gamePlayer.currentGun.DianLuoLeiShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.DianLuoLeiShot(attackTrans);
                 break;
             case WeaponType.DianJiSu:
-                GameController.S.gamePlayer.currentGun.DianJiSuShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.DianJiSuShot(attackTrans);
                 break;
             case WeaponType.HeiAnHuiXuan:
-                GameController.S.gamePlayer.currentGun.HeiAnHuiXuanShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.HeiAnHuiXuanShot(attackTrans);
                 break;
             case WeaponType.HeiAnQuXian:
-                GameController.S.gamePlayer.currentGun.HuoQuXianShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.HuoQuXianShot(attackTrans);
                 break;
             case WeaponType.HuoDiPen:
-                GameController.S.gamePlayer.currentGun.HuoDiPenShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.HuoDiPenShot(attackTrans);
                 break;
             case WeaponType.PrimaryDian:
-                GameController.S.gamePlayer.currentGun.PrimaryDianShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.PrimaryDianShot(attackTrans);
                 break;
             case WeaponType.PrimaryHeiAn:
-                GameController.S.gamePlayer.currentGun.PrimaryHeiAnShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.PrimaryHeiAnShot(attackTrans);
                 break;
             case WeaponType.PrimaryHuo:
-                GameController.S.gamePlayer.currentGun.PrimaryHuoShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.PrimaryHuoShot(attackTrans);
                 break;
             case WeaponType.DianBaoZha:
-                GameController.S.gamePlayer.currentGun.DianBaoZhaShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.DianBaoZhaShot(attackTrans);
                 break;
             case WeaponType.IceBaoZha:
-                GameController.S.gamePlayer.currentGun.IceBaoZhaShot(attackTrans);
+                QueueController.S.gamePlayer.currentGun.IceBaoZhaShot(attackTrans);
                 break;
         }
     }
@@ -1045,12 +1045,12 @@ public class SkillController : XSingleton<SkillController>
                 if (DianQuanCoolingtime>=DianQuantime)
                 {
                     Vector3 mouseScreen = Input.mousePosition;
-                    float depth = Mathf.Abs(Camera.main.transform.position.z - GameController.S.gamePlayer.transform.position.z);
+                    float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
                     mouseScreen.z = depth; 
                     Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
                     IceArrowCoolingtime = 0;
                     DianQuanCoolingtime = 0;
-                    var dianquan= GameController.S.DianQuanQueue.Dequeue();
+                    var dianquan= QueueController.S.DianQuanQueue.Dequeue();
                     dianquan.gameObject.SetActive(true);
                     dianquan.transform.localScale=new Vector3(dianquan.transform.localScale.x*(1+SkillJiaDian.S.Dian1_2*5/100f),dianquan.transform.localScale.y*(1+SkillJiaDian.S.Dian1_2*5/100f),1);
                     dianquan.transform.position = worldPos;
@@ -1076,9 +1076,9 @@ public class SkillController : XSingleton<SkillController>
                     }
                     else
                     {
-                        var iceex = GameController.S.IceExQueue.Dequeue();
+                        var iceex = QueueController.S.IceExQueue.Dequeue();
                         iceex.transform.localScale = new Vector3(iceex.transform.localScale.x*(1.0f+SkillJiaDian.S.Ice3_2*5/100f), iceex.transform.localScale.y*(1.0f+SkillJiaDian.S.Ice3_2*5/100f), 1f);
-                        iceex.transform.position = GameController.S.gamePlayer.transform.position;
+                        iceex.transform.position = QueueController.S.gamePlayer.transform.position;
                         iceex.gameObject.SetActive(true);
                     }
                 }
@@ -1154,19 +1154,15 @@ public class SkillController : XSingleton<SkillController>
                 break;
         }
     }
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
 
 
     IEnumerator Skill3Bian3()
     {
         for (int i = 0; i < 3; i++)
         {
-            var iceex = GameController.S.IceExQueue.Dequeue();
+            var iceex = QueueController.S.IceExQueue.Dequeue();
             iceex.transform.localScale = new Vector3(iceex.transform.localScale.x*(1.0f+SkillJiaDian.S.Ice3_2*5/100f), iceex.transform.localScale.y*(1.0f+SkillJiaDian.S.Ice3_2*5/100f), 1f);
-            iceex.transform.position = GameController.S.gamePlayer.transform.position;
+            iceex.transform.position = QueueController.S.gamePlayer.transform.position;
             iceex.damageCount = 0.7f;
             iceex.gameObject.SetActive(true);
             yield return new WaitForSeconds(0.5f);
@@ -1269,11 +1265,11 @@ public class SkillController : XSingleton<SkillController>
         
         if (Input.GetKeyDown(KeyCode.J))
         {
-            GameController.S.gamePlayer.transform.Find("Shield").gameObject.SetActive(true);
+            QueueController.S.gamePlayer.transform.Find("Shield").gameObject.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
-            GameController.S.gamePlayer.transform.Find("Rage").gameObject.SetActive(true);
+            QueueController.S.gamePlayer.transform.Find("Rage").gameObject.SetActive(true);
         }
         
         if (IsDash )
@@ -1284,9 +1280,9 @@ public class SkillController : XSingleton<SkillController>
                 dashSpeed *=1.3f;
             }
             GlobalPlayerAttribute.PlayerMoveSpeed = dashSpeed;
-            GameObject playerShadow = Instantiate(Resources.Load("Prefabs/Skill/DashShadowObject"),GameController.S.transform).GameObject().transform.Find("DashShadow").gameObject;
+            GameObject playerShadow = Instantiate(Resources.Load("Prefabs/Skill/DashShadowObject"),QueueController.S.transform).GameObject().transform.Find("DashShadow").gameObject;
             playerShadow.gameObject.SetActive(true);
-            playerShadow.transform.localPosition = new Vector3(GameController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.x-0.15f, GameController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.y+0.62f,GameController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.z);
+            playerShadow.transform.localPosition = new Vector3(QueueController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.x-0.15f, QueueController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.y+0.62f,QueueController.S.gamePlayer.transform.Find("Image/parent/IceMage").position.z);
             playerShadow.GetComponent<DashShadow>().StartA = 120+CurrentDashCount*10;
             CurrentDashCount++;
             if (CurrentDashCount > ShadowCount)
@@ -1303,22 +1299,22 @@ public class SkillController : XSingleton<SkillController>
         switch (num)
         {
             case 4:
-                GameController.S.gamePlayer.IceBall4.SetActive(true);
+                QueueController.S.gamePlayer.IceBall4.SetActive(true);
                 break;
             case 5:
-                GameController.S.gamePlayer.IceBall5.SetActive(true);
+                QueueController.S.gamePlayer.IceBall5.SetActive(true);
                 break;
             case 6:
-                GameController.S.gamePlayer.IceBall6.SetActive(true);
+                QueueController.S.gamePlayer.IceBall6.SetActive(true);
                 break;
             case 7:
-                GameController.S.gamePlayer.IceBall7.SetActive(true);
+                QueueController.S.gamePlayer.IceBall7.SetActive(true);
                 break;
             case 8:
-                GameController.S.gamePlayer.IceBall8.SetActive(true);
+                QueueController.S.gamePlayer.IceBall8.SetActive(true);
                 break;
             case 9:
-                GameController.S.gamePlayer.IceBall9.SetActive(true);
+                QueueController.S.gamePlayer.IceBall9.SetActive(true);
                 break;
         }
     }

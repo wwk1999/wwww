@@ -69,7 +69,7 @@ public class TreeManBoss : MonsterBase
             IsSkill=true;
             isSkill1=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_01", false);
-            GroundFissurepos=GameController.S.gamePlayer.transform.position;
+            GroundFissurepos=QueueController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(GroundFissurepos,0.75f);
         }else if (isSkill2)
         {
@@ -83,7 +83,7 @@ public class TreeManBoss : MonsterBase
             isSkill3=false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill_04", false);
             IsDash = true;
-            Dashdirection=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+            Dashdirection=(QueueController.S.gamePlayer.transform.position-transform.position).normalized;
             if (Dashdirection.x>0)
             {
                 parent.transform.localScale = new Vector3(1, 1, 1);
@@ -128,7 +128,7 @@ public class TreeManBoss : MonsterBase
 
     public void Skill2()
     {
-        Vector2 center = GameController.S.gamePlayer.transform.position;   // (0,0)
+        Vector2 center = QueueController.S.gamePlayer.transform.position;   // (0,0)
         float radius = 10f;
 
         for (int i = 0; i < 20; i++)
@@ -144,7 +144,7 @@ public class TreeManBoss : MonsterBase
     IEnumerator DelaySkill(Vector3 pos)
     {
         yield return new WaitForSeconds(1f);
-        var treeManSkill = GameController.S.TreeManSkillQueue.Dequeue();
+        var treeManSkill = QueueController.S.TreeManSkillQueue.Dequeue();
         treeManSkill.transform.position = pos;
         treeManSkill.damage = Attack;
         treeManSkill.gameObject.SetActive(true);
@@ -214,7 +214,7 @@ public class TreeManBoss : MonsterBase
         FightBGController.S.PlaySuccessAnim();
         CreateProp();
 
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
 
     IEnumerator DelayChuanSongMen()
@@ -234,7 +234,7 @@ public class TreeManBoss : MonsterBase
 
         for (int i = 0; i < bulletCount; i++)
         {
-            var xieZiSkill1 = GameController.S.TreeManDanMuQueue.Dequeue();
+            var xieZiSkill1 = QueueController.S.TreeManDanMuQueue.Dequeue();
             float angle = i * angleStep + waveOffset;
             float angleRad = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
@@ -254,7 +254,7 @@ public class TreeManBoss : MonsterBase
         DashSkillCurrentTime+=Time.deltaTime;
         FireSkillCurrentTime+=Time.deltaTime;
         GroundFissureSkillCurrentTime += Time.deltaTime;
-        if (GroundFissureSkillCurrentTime > GroundFissureSkillTime&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position) > 3)
+        if (GroundFissureSkillCurrentTime > GroundFissureSkillTime&&Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position) > 3)
         {
             GroundFissureSkillCurrentTime = 0;
             isSkill1 = true;
@@ -270,12 +270,12 @@ public class TreeManBoss : MonsterBase
             isSkill3 = true;
         }
 
-        if ( IsDash&& Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < size)
+        if ( IsDash&& Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < size)
         {
             IsDash = false;
-            GameController.S.gamePlayer.PlayerHurt(Attack,true);
+            QueueController.S.gamePlayer.PlayerHurt(Attack,true);
         }
-        if (Vector2.Distance(AttackTrans.position, GameController.S.gamePlayer.transform.position) < size&&!IsSkill)
+        if (Vector2.Distance(AttackTrans.position, QueueController.S.gamePlayer.transform.position) < size&&!IsSkill)
         {
             isAttack = true;
             if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name != "attack")
@@ -297,7 +297,7 @@ public class TreeManBoss : MonsterBase
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "walk" ||
             monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "hit")
         {
-            Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+            Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
             rigidbody2D.velocity = direction.normalized * Speed; 
         }
         else

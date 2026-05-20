@@ -11,11 +11,11 @@ public class XueRenJian : MonoBehaviour
 
   private void OnEnable()
   {
-    if(GameController.S.gamePlayer==null)
+    if(QueueController.S.gamePlayer==null)
     {
       return;
     }
-    var dir=(GameController.S.gamePlayer.transform.position-transform.position).normalized;
+    var dir=(QueueController.S.gamePlayer.transform.position-transform.position).normalized;
     float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
     transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     rb.velocity = dir*7f;
@@ -25,15 +25,15 @@ public class XueRenJian : MonoBehaviour
   public void Hide()
   {
     gameObject.SetActive(false);
-    GameController.S.XueRenJianQueue.Enqueue(this);
+    QueueController.S.XueRenJianQueue.Enqueue(this);
   }
 
   private void Update()
   {
-    if (Vector2.Distance(attacktrans.position, GameController.S.gamePlayer.transform.position) <= 0.4f)
+    if (Vector2.Distance(attacktrans.position, QueueController.S.gamePlayer.transform.position) <= 0.4f)
     {
       gameObject.SetActive(false);
-      GameController.S.gamePlayer.PlayerHurt(damage,false);
+      QueueController.S.gamePlayer.PlayerHurt(damage,false);
     }
   }
 }

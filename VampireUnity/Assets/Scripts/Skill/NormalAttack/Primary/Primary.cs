@@ -24,7 +24,7 @@ public class Primary : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.PrimaryQueue.Enqueue(gameObject);
+        QueueController.S.PrimaryQueue.Enqueue(gameObject);
         gameObject.SetActive(false);
     }
     
@@ -33,11 +33,11 @@ public class Primary : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
             gameObject.SetActive(false);
-            GameController.S.PrimaryQueue.Enqueue(gameObject);
+            QueueController.S.PrimaryQueue.Enqueue(gameObject);
             Vector2 closestPoint = other.ClosestPoint(transform.position);
-            var hit = GameController.S.IcePengQueue.Dequeue();
+            var hit = QueueController.S.IcePengQueue.Dequeue();
             hit.transform.position = closestPoint;
             hit.SetActive(true);
         }

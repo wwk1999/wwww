@@ -18,6 +18,6 @@ public class XuKongPeng : MonoBehaviour
    {
       yield return new WaitForSeconds(2f);
       gameObject.SetActive(false);
-      GameController.S.XuKongPengQueue.Enqueue(gameObject);
+      QueueController.S.XuKongPengQueue.Enqueue(gameObject);
    }
 }

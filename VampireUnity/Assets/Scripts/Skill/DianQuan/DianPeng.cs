@@ -19,7 +19,7 @@ public class DianPeng : MonoBehaviour
     if (trackEntry.Animation.Name == "action")
     {
       gameObject.SetActive(false);
-      GameController.S.DianQuanPengQueue.Enqueue(gameObject);
+      QueueController.S.DianQuanPengQueue.Enqueue(gameObject);
     }
   }
 

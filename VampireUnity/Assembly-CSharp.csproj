@@ -278,6 +278,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\BaoZiBoss.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BeeBullet.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\fengheguai.cs" />
+    <Compile Include="Assets\Scripts\Tool\QueueController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZiSkill4.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\YeShouZhanShi.cs" />
     <Compile Include="Assets\Scripts\Tool\PlayerEquipAttribute.cs" />

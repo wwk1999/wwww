@@ -41,7 +41,7 @@ public class HuoSkill3 : MonoBehaviour
         
       if (col.CompareTag("Monster") || col.CompareTag("Boss"))
       {
-        MonsterBase monster = GameController.S.MonsterColliderDic[col];
+        MonsterBase monster = QueueController.S.MonsterColliderDic[col];
         monster.Hurt(GameController.S.GameAttack*SkillConfig.Huo3Damage/100f*SkillController.S.HuoYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Huo);
         // var hit = GameController.S.HeiDongPengQueue.Dequeue();
         //hit.transform.position = monster.transform.position;
@@ -61,6 +61,6 @@ public class HuoSkill3 : MonoBehaviour
   public void Complete(TrackEntry trackEntry)
   {
     gameObject.SetActive(false);
-    GameController.S.HuoSkill3Queue.Enqueue(this);
+    QueueController.S.HuoSkill3Queue.Enqueue(this);
   }
 }

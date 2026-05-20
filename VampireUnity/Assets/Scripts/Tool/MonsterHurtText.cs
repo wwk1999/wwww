@@ -55,6 +55,6 @@ public class MonsterHurtText : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        GameController.S.MonsterHurtTextQueue.Enqueue(this);
+        QueueController.S.MonsterHurtTextQueue.Enqueue(this);
     }
 }

@@ -19,13 +19,13 @@ public class TreeManDiLie : MonoBehaviour
   {
     if (other.CompareTag("Player"))
     {
-      GameController.S.gamePlayer.PlayerHurt(damage,true);
+      QueueController.S.gamePlayer.PlayerHurt(damage,true);
     }
   }
 
   public void Hide()
   {
     gameObject.SetActive(false);
-    GameController.S.TreeManDiLieQueue.Enqueue(this);
+    QueueController.S.TreeManDiLieQueue.Enqueue(this);
   }
 }

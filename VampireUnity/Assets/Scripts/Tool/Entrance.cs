@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Config;
 using Equip;
 using Mysql;
@@ -21,212 +22,212 @@ public class Entrance : MonoBehaviour
             GameObject FinalDamageReductionFixed =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/FinalDamageReductionFixed"));
             FinalDamageReductionFixed.gameObject.SetActive(false);
-            GameController.S.FinalDamageReductionFixedQueue.Enqueue(FinalDamageReductionFixed);
+            QueueController.S.FinalDamageReductionFixedQueue.Enqueue(FinalDamageReductionFixed);
 
             GameObject FinalDamageReductionPercent =
                 Instantiate(
                     Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/FinalDamageReductionPercent"));
             FinalDamageReductionPercent.gameObject.SetActive(false);
-            GameController.S.FinalDamageReductionPercentQueue.Enqueue(FinalDamageReductionPercent);
+            QueueController.S.FinalDamageReductionPercentQueue.Enqueue(FinalDamageReductionPercent);
 
             GameObject AllReplyAddPercent =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/AllReplyAddPercent"));
             AllReplyAddPercent.gameObject.SetActive(false);
-            GameController.S.AllReplyAddPercentQueue.Enqueue(AllReplyAddPercent);
+            QueueController.S.AllReplyAddPercentQueue.Enqueue(AllReplyAddPercent);
 
             GameObject AddHpForTime =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/AddHpForTime"));
             AddHpForTime.gameObject.SetActive(false);
-            GameController.S.AddHpForTimeQueue.Enqueue(AddHpForTime);
+            QueueController.S.AddHpForTimeQueue.Enqueue(AddHpForTime);
 
             GameObject AddDefenseForTime =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/AddDefenseForTime"));
             AddDefenseForTime.gameObject.SetActive(false);
-            GameController.S.AddDefenseForTimeQueue.Enqueue(AddDefenseForTime);
+            QueueController.S.AddDefenseForTimeQueue.Enqueue(AddDefenseForTime);
 
             GameObject ReplyDeath =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/ReplyDeath"));
             ReplyDeath.gameObject.SetActive(false);
-            GameController.S.ReplyDeathQueue.Enqueue(ReplyDeath);
+            QueueController.S.ReplyDeathQueue.Enqueue(ReplyDeath);
 
             GameObject DelayDamage =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/DelayDamage"));
             DelayDamage.gameObject.SetActive(false);
-            GameController.S.DelayDamageQueue.Enqueue(DelayDamage);
+            QueueController.S.DelayDamageQueue.Enqueue(DelayDamage);
 
             GameObject HpReductionReplyAdd50 =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/HpReductionReplyAdd50"));
             HpReductionReplyAdd50.gameObject.SetActive(false);
-            GameController.S.HpReductionReplyAdd50Queue.Enqueue(HpReductionReplyAdd50);
+            QueueController.S.HpReductionReplyAdd50Queue.Enqueue(HpReductionReplyAdd50);
 
             GameObject HpReductionAddDefense =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/HpReductionAddDefense"));
             HpReductionAddDefense.gameObject.SetActive(false);
-            GameController.S.HpReductionAddDefenseQueue.Enqueue(HpReductionAddDefense);
+            QueueController.S.HpReductionAddDefenseQueue.Enqueue(HpReductionAddDefense);
 
             GameObject FinalDamageAddPercent =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/FinalDamageAddPercent"));
             FinalDamageAddPercent.gameObject.SetActive(false);
-            GameController.S.FinalDamageAddPercentQueue.Enqueue(FinalDamageAddPercent);
+            QueueController.S.FinalDamageAddPercentQueue.Enqueue(FinalDamageAddPercent);
 
             GameObject KillNormal =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/KillNormal"));
             KillNormal.gameObject.SetActive(false);
-            GameController.S.KillNormalQueue.Enqueue(KillNormal);
+            QueueController.S.KillNormalQueue.Enqueue(KillNormal);
 
             GameObject AddAttackForTime =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/AddAttackForTime"));
             AddAttackForTime.gameObject.SetActive(false);
-            GameController.S.AddAttackForTimeQueue.Enqueue(AddAttackForTime);
+            QueueController.S.AddAttackForTimeQueue.Enqueue(AddAttackForTime);
 
             GameObject NormalAddDamage =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NormalAddDamage"));
             NormalAddDamage.gameObject.SetActive(false);
-            GameController.S.NormalAddDamageQueue.Enqueue(NormalAddDamage);
+            QueueController.S.NormalAddDamageQueue.Enqueue(NormalAddDamage);
 
             GameObject RecudeHpAddAttack =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/RecudeHpAddAttack"));
             RecudeHpAddAttack.gameObject.SetActive(false);
-            GameController.S.RecudeHpAddAttackQueue.Enqueue(RecudeHpAddAttack);
+            QueueController.S.RecudeHpAddAttackQueue.Enqueue(RecudeHpAddAttack);
 
             GameObject JianSuAddAttack =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/JianSuAddAttack"));
             JianSuAddAttack.gameObject.SetActive(false);
-            GameController.S.JianSuAddAttackQueue.Enqueue(JianSuAddAttack);
+            QueueController.S.JianSuAddAttackQueue.Enqueue(JianSuAddAttack);
 
             GameObject FanPuGuiZhen =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/FanPuGuiZhen"));
             FanPuGuiZhen.gameObject.SetActive(false);
-            GameController.S.FanPuGuiZhenQueue.Enqueue(FanPuGuiZhen);
+            QueueController.S.FanPuGuiZhenQueue.Enqueue(FanPuGuiZhen);
 
             GameObject NoSkill =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NoSkill"));
             NoSkill.gameObject.SetActive(false);
-            GameController.S.NoSkillQueue.Enqueue(NoSkill);
+            QueueController.S.NoSkillQueue.Enqueue(NoSkill);
 
             GameObject BuWangChuXin =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/BuWangChuXin"));
             BuWangChuXin.gameObject.SetActive(false);
-            GameController.S.BuWangChuXinQueue.Enqueue(BuWangChuXin);
+            QueueController.S.BuWangChuXinQueue.Enqueue(BuWangChuXin);
 
             GameObject HeiDongAddSpeed =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/HeiDongAddSpeed"));
             HeiDongAddSpeed.gameObject.SetActive(false);
-            GameController.S.HeiDongAddSpeedQueue.Enqueue(HeiDongAddSpeed);
+            QueueController.S.HeiDongAddSpeedQueue.Enqueue(HeiDongAddSpeed);
 
             GameObject DuAddDuQuan =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/DuAddDuQuan"));
             DuAddDuQuan.gameObject.SetActive(false);
-            GameController.S.DuAddDuQuanQueue.Enqueue(DuAddDuQuan);
+            QueueController.S.DuAddDuQuanQueue.Enqueue(DuAddDuQuan);
 
             GameObject LvQuanAddScale =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/LvQuanAddScale"));
             LvQuanAddScale.gameObject.SetActive(false);
-            GameController.S.LvQuanAddScaleQueue.Enqueue(LvQuanAddScale);
+            QueueController.S.LvQuanAddScaleQueue.Enqueue(LvQuanAddScale);
 
             GameObject XuKongAdd2Dan =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/XuKongAdd2Dan"));
             XuKongAdd2Dan.gameObject.SetActive(false);
-            GameController.S.XuKongAdd2DanQueue.Enqueue(XuKongAdd2Dan);
+            QueueController.S.XuKongAdd2DanQueue.Enqueue(XuKongAdd2Dan);
 
             GameObject PuTong3ChuanTou =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/PuTong3ChuanTou"));
             PuTong3ChuanTou.gameObject.SetActive(false);
-            GameController.S.PuTong3ChuanTouQueue.Enqueue(PuTong3ChuanTou);
+            QueueController.S.PuTong3ChuanTouQueue.Enqueue(PuTong3ChuanTou);
 
             GameObject FireBaoZha1 =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/FireBaoZha"));
             FireBaoZha1.gameObject.SetActive(false);
-            GameController.S.FireBaoZhaQueue.Enqueue(FireBaoZha1);
+            QueueController.S.FireBaoZhaQueue.Enqueue(FireBaoZha1);
 
             GameObject Skill1ReplaceNormalAttack =
                 Instantiate(
                     Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill1ReplaceNormalAttack"));
             Skill1ReplaceNormalAttack.gameObject.SetActive(false);
-            GameController.S.Skill1ReplaceNormalAttackQueue.Enqueue(Skill1ReplaceNormalAttack);
+            QueueController.S.Skill1ReplaceNormalAttackQueue.Enqueue(Skill1ReplaceNormalAttack);
 
             GameObject Skill1YiDianDouble =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill1YiDianDouble"));
             Skill1YiDianDouble.gameObject.SetActive(false);
-            GameController.S.Skill1YiDianDoubleQueue.Enqueue(Skill1YiDianDouble);
+            QueueController.S.Skill1YiDianDoubleQueue.Enqueue(Skill1YiDianDouble);
 
             GameObject Skill1AddRange =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/Skill1AddRange"));
             Skill1AddRange.gameObject.SetActive(false);
-            GameController.S.Skill1AddRangeQueue.Enqueue(Skill1AddRange);
+            QueueController.S.Skill1AddRangeQueue.Enqueue(Skill1AddRange);
 
             GameObject Skill2AddDan =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill2AddDan"));
             Skill2AddDan.gameObject.SetActive(false);
-            GameController.S.Skill2AddDanQueue.Enqueue(Skill2AddDan);
+            QueueController.S.Skill2AddDanQueue.Enqueue(Skill2AddDan);
 
             GameObject Skill2RotateAdd =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill2RotateAdd"));
             Skill2RotateAdd.gameObject.SetActive(false);
-            GameController.S.Skill2RotateAddQueue.Enqueue(Skill2RotateAdd);
+            QueueController.S.Skill2RotateAddQueue.Enqueue(Skill2RotateAdd);
 
             GameObject Skill2AddRange =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/Skill2AddRange"));
             Skill2AddRange.gameObject.SetActive(false);
-            GameController.S.Skill2AddRangeQueue.Enqueue(Skill2AddRange);
+            QueueController.S.Skill2AddRangeQueue.Enqueue(Skill2AddRange);
 
             GameObject Skill3Bian3 =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/Skill3Bian3"));
             Skill3Bian3.gameObject.SetActive(false);
-            GameController.S.Skill3Bian3Queue.Enqueue(Skill3Bian3);
+            QueueController.S.Skill3Bian3Queue.Enqueue(Skill3Bian3);
 
             GameObject Skill3AddRange =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/Skill3AddRange"));
             Skill3AddRange.gameObject.SetActive(false);
-            GameController.S.Skill3AddRangeQueue.Enqueue(Skill3AddRange);
+            QueueController.S.Skill3AddRangeQueue.Enqueue(Skill3AddRange);
 
             GameObject DashCd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/DashCd"));
             DashCd.gameObject.SetActive(false);
-            GameController.S.DashCdQueue.Enqueue(DashCd);
+            QueueController.S.DashCdQueue.Enqueue(DashCd);
 
             GameObject DashRange =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/DashRange"));
             DashRange.gameObject.SetActive(false);
-            GameController.S.DashRangeQueue.Enqueue(DashRange);
+            QueueController.S.DashRangeQueue.Enqueue(DashRange);
 
             GameObject MoveSpeedAdd =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/MoveSpeedAdd"));
             MoveSpeedAdd.gameObject.SetActive(false);
-            GameController.S.MoveSpeedAddQueue.Enqueue(MoveSpeedAdd);
+            QueueController.S.MoveSpeedAddQueue.Enqueue(MoveSpeedAdd);
 
             GameObject ExAdd = Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/ExAdd"));
             ExAdd.gameObject.SetActive(false);
-            GameController.S.ExAddQueue.Enqueue(ExAdd);
+            QueueController.S.ExAddQueue.Enqueue(ExAdd);
 
             GameObject ClothFortureAdd =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloth/ClothFortureAdd"));
             ClothFortureAdd.gameObject.SetActive(false);
-            GameController.S.ClothFortureAddQueue.Enqueue(ClothFortureAdd);
+            QueueController.S.ClothFortureAddQueue.Enqueue(ClothFortureAdd);
 
             GameObject ShoeFortureAdd =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Shoe/ShoeFortureAdd"));
             ShoeFortureAdd.gameObject.SetActive(false);
-            GameController.S.ShoeFortureAddQueue.Enqueue(ShoeFortureAdd);
+            QueueController.S.ShoeFortureAddQueue.Enqueue(ShoeFortureAdd);
 
             GameObject CloakFortureAdd =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Cloak/CloakFortureAdd"));
             CloakFortureAdd.gameObject.SetActive(false);
-            GameController.S.CloakFortureAddQueue.Enqueue(CloakFortureAdd);
+            QueueController.S.CloakFortureAddQueue.Enqueue(CloakFortureAdd);
 
             GameObject NecklaceFortureAdd =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Necklace/NecklaceFortureAdd"));
             NecklaceFortureAdd.gameObject.SetActive(false);
-            GameController.S.NecklaceFortureAddQueue.Enqueue(NecklaceFortureAdd);
+            QueueController.S.NecklaceFortureAddQueue.Enqueue(NecklaceFortureAdd);
 
             GameObject RingFortureAdd =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Ring/RingFortureAdd"));
             RingFortureAdd.gameObject.SetActive(false);
-            GameController.S.RingFortureAddQueue.Enqueue(RingFortureAdd);
+            QueueController.S.RingFortureAddQueue.Enqueue(RingFortureAdd);
 
             GameObject HelmetFortureAdd =
                 Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Orange/Helmet/HelmetFortureAdd"));
             HelmetFortureAdd.gameObject.SetActive(false);
-            GameController.S.HelmetFortureAddQueue.Enqueue(HelmetFortureAdd);
+            QueueController.S.HelmetFortureAddQueue.Enqueue(HelmetFortureAdd);
 
         }
     }
@@ -239,9 +240,9 @@ public class Entrance : MonoBehaviour
         {
             var TreeManDanMu = Instantiate(
                 Resources.Load<GameObject>("Prefabs/Monster/Level1/TreeManDanMu").GetComponent<TreeManDanMu>(),
-                GameController.S.transform);
+                QueueController.S.transform);
             TreeManDanMu.gameObject.SetActive(false);
-            GameController.S.TreeManDanMuQueue.Enqueue(TreeManDanMu);
+            QueueController.S.TreeManDanMuQueue.Enqueue(TreeManDanMu);
         }
 
         if (LevelInfoConfig.CurrentGameLevel == 12)
@@ -249,16 +250,16 @@ public class Entrance : MonoBehaviour
             var xieziskill1 =
                 Instantiate(
                     Resources.Load<GameObject>("Prefabs/Monster/Level4/XieZiSkill1")
-                        .GetComponent<XieZiSkill1>(), GameController.S.transform);
+                        .GetComponent<XieZiSkill1>(), QueueController.S.transform);
             xieziskill1.gameObject.SetActive(false);
-            GameController.S.XieZiSkill1Queue.Enqueue(xieziskill1);
+            QueueController.S.XieZiSkill1Queue.Enqueue(xieziskill1);
             
             var xieziskill4 =
                 Instantiate(
                     Resources.Load<GameObject>("Prefabs/Monster/Level4/XieZiSkill4")
-                        .GetComponent<XieZiSkill4>(), GameController.S.transform);
+                        .GetComponent<XieZiSkill4>(), QueueController.S.transform);
             xieziskill4.gameObject.SetActive(false);
-            GameController.S.XieZiSkill4Queue.Enqueue(xieziskill4);
+            QueueController.S.XieZiSkill4Queue.Enqueue(xieziskill4);
         }
 
         switch (type)
@@ -267,47 +268,47 @@ public class Entrance : MonoBehaviour
                 var snotMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level1/SnotMonster")
-                            .GetComponent<SnotMonster>(), GameController.S.transform);
+                            .GetComponent<SnotMonster>(), QueueController.S.transform);
                 snotMonster.gameObject.SetActive(false);
-                GameController.S.SnotMonsterQueue.Enqueue(snotMonster);
+                QueueController.S.SnotMonsterQueue.Enqueue(snotMonster);
                 Collider2D Snot2D = snotMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(Snot2D, snotMonster);
+                QueueController.S.MonsterColliderDic.Add(Snot2D, snotMonster);
                 break;
             case MonsterTypeByName.Bat:
                 var BatMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level1/BatMonster")
-                            .GetComponent<BatMonster>(), GameController.S.transform);
+                            .GetComponent<BatMonster>(), QueueController.S.transform);
                 BatMonster.gameObject.SetActive(false);
-                GameController.S.BatMonsterQueue.Enqueue(BatMonster);
+                QueueController.S.BatMonsterQueue.Enqueue(BatMonster);
                 Collider2D Bat2D = BatMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(Bat2D, BatMonster);
+                QueueController.S.MonsterColliderDic.Add(Bat2D, BatMonster);
                 break;
             case MonsterTypeByName.Bee:
                 var BeeMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level1/EliteBeeMonster")
-                            .GetComponent<EliteBeeMonster>(), GameController.S.transform);
+                            .GetComponent<EliteBeeMonster>(), QueueController.S.transform);
                 BeeMonster.gameObject.SetActive(false);
-                GameController.S.EliteBeeMonsterQueue.Enqueue(BeeMonster);
+                QueueController.S.EliteBeeMonsterQueue.Enqueue(BeeMonster);
                 Collider2D Bee2D = BeeMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(Bee2D, BeeMonster);
+                QueueController.S.MonsterColliderDic.Add(Bee2D, BeeMonster);
 
                 var BeeBullet = Instantiate(
                     Resources.Load<GameObject>("Prefabs/Monster/Level1/BeeBullet").GetComponent<BeeBullet>(),
-                    GameController.S.transform);
+                    QueueController.S.transform);
                 BeeBullet.gameObject.SetActive(false);
-                GameController.S.BeeBulletQueue.Enqueue(BeeBullet);
+                QueueController.S.BeeBulletQueue.Enqueue(BeeBullet);
                 break;
             case MonsterTypeByName.Spider:
                 var SpiderMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level1/SpiderMonster")
-                            .GetComponent<SpiderMonster>(), GameController.S.transform);
+                            .GetComponent<SpiderMonster>(), QueueController.S.transform);
                 SpiderMonster.gameObject.SetActive(false);
-                GameController.S.SpiderMonsterQueue.Enqueue(SpiderMonster);
+                QueueController.S.SpiderMonsterQueue.Enqueue(SpiderMonster);
                 Collider2D Spider2D = SpiderMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(Spider2D, SpiderMonster);
+                QueueController.S.MonsterColliderDic.Add(Spider2D, SpiderMonster);
                 break;
 
 
@@ -315,22 +316,22 @@ public class Entrance : MonoBehaviour
                 var XiaoHuoMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level2/XiaoHuoMonster")
-                            .GetComponent<XiaoHuoMonster>(), GameController.S.transform);
+                            .GetComponent<XiaoHuoMonster>(), QueueController.S.transform);
                 XiaoHuoMonster.gameObject.SetActive(false);
-                GameController.S.XiaoHuoMonsterQueue.Enqueue(XiaoHuoMonster);
+                QueueController.S.XiaoHuoMonsterQueue.Enqueue(XiaoHuoMonster);
                 Collider2D XiaoHuo2D = XiaoHuoMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(XiaoHuo2D, XiaoHuoMonster);
+                QueueController.S.MonsterColliderDic.Add(XiaoHuo2D, XiaoHuoMonster);
                 break;
 
             case MonsterTypeByName.ChongZi:
                 var ChongZiMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level2/ChongZiMonster")
-                            .GetComponent<ChongZiMonster>(), GameController.S.transform);
+                            .GetComponent<ChongZiMonster>(), QueueController.S.transform);
                 ChongZiMonster.gameObject.SetActive(false);
-                GameController.S.ChongZiMonsterQueue.Enqueue(ChongZiMonster);
+                QueueController.S.ChongZiMonsterQueue.Enqueue(ChongZiMonster);
                 Collider2D ChongZi2D = ChongZiMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(ChongZi2D, ChongZiMonster);
+                QueueController.S.MonsterColliderDic.Add(ChongZi2D, ChongZiMonster);
                 break;
 
 
@@ -338,11 +339,11 @@ public class Entrance : MonoBehaviour
                 var DaZuiMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level2/EliteDaZuiMonster")
-                            .GetComponent<EliteDaZuiMonster>(), GameController.S.transform);
+                            .GetComponent<EliteDaZuiMonster>(), QueueController.S.transform);
                 DaZuiMonster.gameObject.SetActive(false);
-                GameController.S.EliteDaZuiMonsterQueue.Enqueue(DaZuiMonster);
+                QueueController.S.EliteDaZuiMonsterQueue.Enqueue(DaZuiMonster);
                 Collider2D DaZui2D = DaZuiMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(DaZui2D, DaZuiMonster);
+                QueueController.S.MonsterColliderDic.Add(DaZui2D, DaZuiMonster);
                 break;
 
 
@@ -350,11 +351,11 @@ public class Entrance : MonoBehaviour
                 var DunDiMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level2/DunDiMonster")
-                            .GetComponent<DunDiMonster>(), GameController.S.transform);
+                            .GetComponent<DunDiMonster>(), QueueController.S.transform);
                 DunDiMonster.gameObject.SetActive(false);
-                GameController.S.DunDiMonsterQueue.Enqueue(DunDiMonster);
+                QueueController.S.DunDiMonsterQueue.Enqueue(DunDiMonster);
                 Collider2D DunDi2D = DunDiMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(DunDi2D, DunDiMonster);
+                QueueController.S.MonsterColliderDic.Add(DunDi2D, DunDiMonster);
                 break;
 
 
@@ -363,11 +364,11 @@ public class Entrance : MonoBehaviour
                 var JiaChongMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level3/JiaChongMonster")
-                            .GetComponent<JiaChongMonster>(), GameController.S.transform);
+                            .GetComponent<JiaChongMonster>(), QueueController.S.transform);
                 JiaChongMonster.gameObject.SetActive(false);
-                GameController.S.JiaChongMonsterQueue.Enqueue(JiaChongMonster);
+                QueueController.S.JiaChongMonsterQueue.Enqueue(JiaChongMonster);
                 Collider2D JiaChong2D = JiaChongMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(JiaChong2D, JiaChongMonster);
+                QueueController.S.MonsterColliderDic.Add(JiaChong2D, JiaChongMonster);
                 break;
 
 
@@ -375,33 +376,33 @@ public class Entrance : MonoBehaviour
                 var QingWaMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level3/QingWaMonster")
-                            .GetComponent<QingWaMonster>(), GameController.S.transform);
+                            .GetComponent<QingWaMonster>(), QueueController.S.transform);
                 QingWaMonster.gameObject.SetActive(false);
-                GameController.S.QingWaMonsterQueue.Enqueue(QingWaMonster);
+                QueueController.S.QingWaMonsterQueue.Enqueue(QingWaMonster);
                 Collider2D QingWa2D = QingWaMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(QingWa2D, QingWaMonster);
+                QueueController.S.MonsterColliderDic.Add(QingWa2D, QingWaMonster);
                 break;
 
             case MonsterTypeByName.ShiRenHua:
                 var ShiRenHuaMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level3/ShiRenHuaMonster")
-                            .GetComponent<ShiRenHuaMonster>(), GameController.S.transform);
+                            .GetComponent<ShiRenHuaMonster>(), QueueController.S.transform);
                 ShiRenHuaMonster.gameObject.SetActive(false);
-                GameController.S.ShiRenHuaMonsterQueue.Enqueue(ShiRenHuaMonster);
+                QueueController.S.ShiRenHuaMonsterQueue.Enqueue(ShiRenHuaMonster);
                 Collider2D ShiRenHua2D = ShiRenHuaMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(ShiRenHua2D, ShiRenHuaMonster);
+                QueueController.S.MonsterColliderDic.Add(ShiRenHua2D, ShiRenHuaMonster);
                 break;
 
             case MonsterTypeByName.WenZi:
                 var WenZiMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level3/WenZiMonster")
-                            .GetComponent<WenZiMonster>(), GameController.S.transform);
+                            .GetComponent<WenZiMonster>(), QueueController.S.transform);
                 WenZiMonster.gameObject.SetActive(false);
-                GameController.S.WenZiMonsterQueue.Enqueue(WenZiMonster);
+                QueueController.S.WenZiMonsterQueue.Enqueue(WenZiMonster);
                 Collider2D WenZi2D = WenZiMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(WenZi2D, WenZiMonster);
+                QueueController.S.MonsterColliderDic.Add(WenZi2D, WenZiMonster);
                 break;
 
 
@@ -409,11 +410,11 @@ public class Entrance : MonoBehaviour
                 var XueQiEMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level5/XueQiE")
-                            .GetComponent<XueQiE>(), GameController.S.transform);
+                            .GetComponent<XueQiE>(), QueueController.S.transform);
                 XueQiEMonster.gameObject.SetActive(false);
-                GameController.S.XueQiEQueue.Enqueue(XueQiEMonster);
+                QueueController.S.XueQiEQueue.Enqueue(XueQiEMonster);
                 Collider2D XueQiE2D = XueQiEMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(XueQiE2D, XueQiEMonster);
+                QueueController.S.MonsterColliderDic.Add(XueQiE2D, XueQiEMonster);
                 break;
 
 
@@ -422,11 +423,11 @@ public class Entrance : MonoBehaviour
                 var XueZhangLangMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level5/XueZhangLang")
-                            .GetComponent<XueZhangLang>(), GameController.S.transform);
+                            .GetComponent<XueZhangLang>(), QueueController.S.transform);
                 XueZhangLangMonster.gameObject.SetActive(false);
-                GameController.S.XueZhangLangQueue.Enqueue(XueZhangLangMonster);
+                QueueController.S.XueZhangLangQueue.Enqueue(XueZhangLangMonster);
                 Collider2D XueZhangLang2D = XueZhangLangMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(XueZhangLang2D, XueZhangLangMonster);
+                QueueController.S.MonsterColliderDic.Add(XueZhangLang2D, XueZhangLangMonster);
                 break;
 
 
@@ -434,11 +435,11 @@ public class Entrance : MonoBehaviour
                 var YingShuMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level5/YingShu")
-                            .GetComponent<YingShu>(), GameController.S.transform);
+                            .GetComponent<YingShu>(), QueueController.S.transform);
                 YingShuMonster.gameObject.SetActive(false);
-                GameController.S.YingShuQueue.Enqueue(YingShuMonster);
+                QueueController.S.YingShuQueue.Enqueue(YingShuMonster);
                 Collider2D YingShu2D = YingShuMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(YingShu2D, YingShuMonster);
+                QueueController.S.MonsterColliderDic.Add(YingShu2D, YingShuMonster);
                 break;
 
 
@@ -446,11 +447,11 @@ public class Entrance : MonoBehaviour
                 var XueRenMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRen")
-                            .GetComponent<XueRen>(), GameController.S.transform);
+                            .GetComponent<XueRen>(), QueueController.S.transform);
                 XueRenMonster.gameObject.SetActive(false);
-                GameController.S.XueRenQueue.Enqueue(XueRenMonster);
+                QueueController.S.XueRenQueue.Enqueue(XueRenMonster);
                 Collider2D XueRen2D = XueRenMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(XueRen2D, XueRenMonster);
+                QueueController.S.MonsterColliderDic.Add(XueRen2D, XueRenMonster);
                 break;
 
 
@@ -459,22 +460,22 @@ public class Entrance : MonoBehaviour
                 var ShaXiYiMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaXiYi")
-                            .GetComponent<ShaXiYi>(), GameController.S.transform);
+                            .GetComponent<ShaXiYi>(), QueueController.S.transform);
                 ShaXiYiMonster.gameObject.SetActive(false);
-                GameController.S.ShaXiYiQueue.Enqueue(ShaXiYiMonster);
+                QueueController.S.ShaXiYiQueue.Enqueue(ShaXiYiMonster);
                 Collider2D ShaXiYi2D = ShaXiYiMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(ShaXiYi2D, ShaXiYiMonster);
+                QueueController.S.MonsterColliderDic.Add(ShaXiYi2D, ShaXiYiMonster);
                 break;
 
             case MonsterTypeByName.XianRenZhang:
                 var XianRenZhangMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level4/XianRenZhang")
-                            .GetComponent<XianRenZhang>(), GameController.S.transform);
+                            .GetComponent<XianRenZhang>(), QueueController.S.transform);
                 XianRenZhangMonster.gameObject.SetActive(false);
-                GameController.S.XianRenZhangQueue.Enqueue(XianRenZhangMonster);
+                QueueController.S.XianRenZhangQueue.Enqueue(XianRenZhangMonster);
                 Collider2D XianRenZhang2D = XianRenZhangMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(XianRenZhang2D, XianRenZhangMonster);
+                QueueController.S.MonsterColliderDic.Add(XianRenZhang2D, XianRenZhangMonster);
                 break;
 
 
@@ -482,11 +483,11 @@ public class Entrance : MonoBehaviour
                 var ShaChongMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaChong")
-                            .GetComponent<ShaChong>(), GameController.S.transform);
+                            .GetComponent<ShaChong>(), QueueController.S.transform);
                 ShaChongMonster.gameObject.SetActive(false);
-                GameController.S.ShaChongQueue.Enqueue(ShaChongMonster);
+                QueueController.S.ShaChongQueue.Enqueue(ShaChongMonster);
                 Collider2D ShaChong2D = ShaChongMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(ShaChong2D, ShaChongMonster);
+                QueueController.S.MonsterColliderDic.Add(ShaChong2D, ShaChongMonster);
                 break;
 
 
@@ -494,11 +495,11 @@ public class Entrance : MonoBehaviour
                 var ShaNiaoMonster =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level4/ShaNiao")
-                            .GetComponent<ShaNiao>(), GameController.S.transform);
+                            .GetComponent<ShaNiao>(), QueueController.S.transform);
                 ShaNiaoMonster.gameObject.SetActive(false);
-                GameController.S.ShaNiaoQueue.Enqueue(ShaNiaoMonster);
+                QueueController.S.ShaNiaoQueue.Enqueue(ShaNiaoMonster);
                 Collider2D ShaNiao2D = ShaNiaoMonster.collider2D;
-                GameController.S.MonsterColliderDic.Add(ShaNiao2D, ShaNiaoMonster);
+                QueueController.S.MonsterColliderDic.Add(ShaNiao2D, ShaNiaoMonster);
                 break;
 
 
@@ -506,24 +507,24 @@ public class Entrance : MonoBehaviour
                 var banrenma1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/banrenma1")
-                            .GetComponent<banrenma1>(), GameController.S.transform);
+                            .GetComponent<banrenma1>(), QueueController.S.transform);
                 banrenma1.gameObject.SetActive(false);
-                GameController.S.banrenma1Queue.Enqueue(banrenma1);
+                QueueController.S.banrenma1Queue.Enqueue(banrenma1);
                 MonsterBase banrenma1monsterBase = banrenma1.GetComponent<MonsterBase>();
                 Collider2D banrenma12D = banrenma1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(banrenma12D, banrenma1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(banrenma12D, banrenma1monsterBase);
                 break;
 
             case MonsterTypeByName.banrenma2:
                 var banrenma2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/banrenma2")
-                            .GetComponent<banrenma2>(), GameController.S.transform);
+                            .GetComponent<banrenma2>(), QueueController.S.transform);
                 banrenma2.gameObject.SetActive(false);
-                GameController.S.banrenma2Queue.Enqueue(banrenma2);
+                QueueController.S.banrenma2Queue.Enqueue(banrenma2);
                 MonsterBase banrenma2monsterBase = banrenma2.GetComponent<MonsterBase>();
                 Collider2D banrenma22D = banrenma2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(banrenma22D, banrenma2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(banrenma22D, banrenma2monsterBase);
                 break;
 
 
@@ -531,12 +532,12 @@ public class Entrance : MonoBehaviour
                 var banrenma3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/banrenma3")
-                            .GetComponent<banrenma3>(), GameController.S.transform);
+                            .GetComponent<banrenma3>(), QueueController.S.transform);
                 banrenma3.gameObject.SetActive(false);
-                GameController.S.banrenma3Queue.Enqueue(banrenma3);
+                QueueController.S.banrenma3Queue.Enqueue(banrenma3);
                 MonsterBase banrenma3monsterBase = banrenma3.GetComponent<MonsterBase>();
                 Collider2D banrenma32D = banrenma3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(banrenma32D, banrenma3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(banrenma32D, banrenma3monsterBase);
                 break;
 
 
@@ -544,12 +545,12 @@ public class Entrance : MonoBehaviour
                 var she =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/she")
-                            .GetComponent<she>(), GameController.S.transform);
+                            .GetComponent<she>(), QueueController.S.transform);
                 she.gameObject.SetActive(false);
-                GameController.S.sheQueue.Enqueue(she);
+                QueueController.S.sheQueue.Enqueue(she);
                 MonsterBase shemonsterBase = she.GetComponent<MonsterBase>();
                 Collider2D she2D = shemonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(she2D, shemonsterBase);
+                QueueController.S.MonsterColliderDic.Add(she2D, shemonsterBase);
                 break;
 
 
@@ -557,12 +558,12 @@ public class Entrance : MonoBehaviour
                 var zibaolaoshu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/zibaolaoshu")
-                            .GetComponent<zibaolaoshu>(), GameController.S.transform);
+                            .GetComponent<zibaolaoshu>(), QueueController.S.transform);
                 zibaolaoshu.gameObject.SetActive(false);
-                GameController.S.zibaolaoshuQueue.Enqueue(zibaolaoshu);
+                QueueController.S.zibaolaoshuQueue.Enqueue(zibaolaoshu);
                 MonsterBase zibaolaoshumonsterBase = zibaolaoshu.GetComponent<MonsterBase>();
                 Collider2D zibaolaoshu2D = zibaolaoshumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(zibaolaoshu2D, zibaolaoshumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(zibaolaoshu2D, zibaolaoshumonsterBase);
                 break;
 
 
@@ -570,12 +571,12 @@ public class Entrance : MonoBehaviour
                 var zhumodaocaoren =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/zhumodaocaoren")
-                            .GetComponent<zhumodaocaoren>(), GameController.S.transform);
+                            .GetComponent<zhumodaocaoren>(), QueueController.S.transform);
                 zhumodaocaoren.gameObject.SetActive(false);
-                GameController.S.zhumodaocaorenQueue.Enqueue(zhumodaocaoren);
+                QueueController.S.zhumodaocaorenQueue.Enqueue(zhumodaocaoren);
                 MonsterBase zhumodaocaorenmonsterBase = zhumodaocaoren.GetComponent<MonsterBase>();
                 Collider2D zhumodaocaoren2D = zhumodaocaorenmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(zhumodaocaoren2D, zhumodaocaorenmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(zhumodaocaoren2D, zhumodaocaorenmonsterBase);
                 break;
 
 
@@ -583,12 +584,12 @@ public class Entrance : MonoBehaviour
                 var yezhu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yezhu")
-                            .GetComponent<yezhu>(), GameController.S.transform);
+                            .GetComponent<yezhu>(), QueueController.S.transform);
                 yezhu.gameObject.SetActive(false);
-                GameController.S.yezhuQueue.Enqueue(yezhu);
+                QueueController.S.yezhuQueue.Enqueue(yezhu);
                 MonsterBase yezhumonsterBase = yezhu.GetComponent<MonsterBase>();
                 Collider2D yezhu2D = yezhumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(yezhu2D, yezhumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(yezhu2D, yezhumonsterBase);
                 break;
 
 
@@ -596,12 +597,12 @@ public class Entrance : MonoBehaviour
                 var yanshu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yanshu")
-                            .GetComponent<yanshu>(), GameController.S.transform);
+                            .GetComponent<yanshu>(), QueueController.S.transform);
                 yanshu.gameObject.SetActive(false);
-                GameController.S.yanshuQueue.Enqueue(yanshu);
+                QueueController.S.yanshuQueue.Enqueue(yanshu);
                 MonsterBase yanshumonsterBase = yanshu.GetComponent<MonsterBase>();
                 Collider2D yanshu2D = yanshumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(yanshu2D, yanshumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(yanshu2D, yanshumonsterBase);
                 break;
 
 
@@ -609,12 +610,12 @@ public class Entrance : MonoBehaviour
                 var xuelaoshu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xuelaoshu")
-                            .GetComponent<xuelaoshu>(), GameController.S.transform);
+                            .GetComponent<xuelaoshu>(), QueueController.S.transform);
                 xuelaoshu.gameObject.SetActive(false);
-                GameController.S.xuelaoshuQueue.Enqueue(xuelaoshu);
+                QueueController.S.xuelaoshuQueue.Enqueue(xuelaoshu);
                 MonsterBase xuelaoshumonsterBase = xuelaoshu.GetComponent<MonsterBase>();
                 Collider2D xuelaoshu2D = xuelaoshumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(xuelaoshu2D, xuelaoshumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(xuelaoshu2D, xuelaoshumonsterBase);
                 break;
 
 
@@ -622,12 +623,12 @@ public class Entrance : MonoBehaviour
                 var xiongbuou =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/xiongbuou")
-                            .GetComponent<xiongbuou>(), GameController.S.transform);
+                            .GetComponent<xiongbuou>(), QueueController.S.transform);
                 xiongbuou.gameObject.SetActive(false);
-                GameController.S.xiongbuouQueue.Enqueue(xiongbuou);
+                QueueController.S.xiongbuouQueue.Enqueue(xiongbuou);
                 MonsterBase xiongbuoumonsterBase = xiongbuou.GetComponent<MonsterBase>();
                 Collider2D xiongbuou2D = xiongbuoumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(xiongbuou2D, xiongbuoumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(xiongbuou2D, xiongbuoumonsterBase);
                 break;
 
 
@@ -635,12 +636,12 @@ public class Entrance : MonoBehaviour
                 var xiezi2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiezi2")
-                            .GetComponent<xiezi2>(), GameController.S.transform);
+                            .GetComponent<xiezi2>(), QueueController.S.transform);
                 xiezi2.gameObject.SetActive(false);
-                GameController.S.xiezi2Queue.Enqueue(xiezi2);
+                QueueController.S.xiezi2Queue.Enqueue(xiezi2);
                 MonsterBase xiezi2monsterBase = xiezi2.GetComponent<MonsterBase>();
                 Collider2D xiezi22D = xiezi2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(xiezi22D, xiezi2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(xiezi22D, xiezi2monsterBase);
                 break;
 
 
@@ -648,12 +649,12 @@ public class Entrance : MonoBehaviour
                 var xiezi1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiezi1")
-                            .GetComponent<xiezi1>(), GameController.S.transform);
+                            .GetComponent<xiezi1>(), QueueController.S.transform);
                 xiezi1.gameObject.SetActive(false);
-                GameController.S.xiezi1Queue.Enqueue(xiezi1);
+                QueueController.S.xiezi1Queue.Enqueue(xiezi1);
                 MonsterBase xiezi1monsterBase = xiezi1.GetComponent<MonsterBase>();
                 Collider2D xiezi12D = xiezi1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(xiezi12D, xiezi1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(xiezi12D, xiezi1monsterBase);
                 break;
 
 
@@ -661,12 +662,12 @@ public class Entrance : MonoBehaviour
                 var xiaoshuguai =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiaoshuguai")
-                            .GetComponent<xiaoshuguai>(), GameController.S.transform);
+                            .GetComponent<xiaoshuguai>(), QueueController.S.transform);
                 xiaoshuguai.gameObject.SetActive(false);
-                GameController.S.xiaoshuguaiQueue.Enqueue(xiaoshuguai);
+                QueueController.S.xiaoshuguaiQueue.Enqueue(xiaoshuguai);
                 MonsterBase xiaoshuguaimonsterBase = xiaoshuguai.GetComponent<MonsterBase>();
                 Collider2D xiaoshuguai2D = xiaoshuguaimonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(xiaoshuguai2D, xiaoshuguaimonsterBase);
+                QueueController.S.MonsterColliderDic.Add(xiaoshuguai2D, xiaoshuguaimonsterBase);
                 break;
 
 
@@ -674,12 +675,12 @@ public class Entrance : MonoBehaviour
                 var xiaozhizhu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiaozhizhu")
-                            .GetComponent<xiaozhizhu>(), GameController.S.transform);
+                            .GetComponent<xiaozhizhu>(), QueueController.S.transform);
                 xiaozhizhu.gameObject.SetActive(false);
-                GameController.S.xiaozhizhuQueue.Enqueue(xiaozhizhu);
+                QueueController.S.xiaozhizhuQueue.Enqueue(xiaozhizhu);
                 MonsterBase xiaozhizhumonsterBase = xiaozhizhu.GetComponent<MonsterBase>();
                 Collider2D xiaozhizhu2D = xiaozhizhumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(xiaozhizhu2D, xiaozhizhumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(xiaozhizhu2D, xiaozhizhumonsterBase);
                 break;
 
 
@@ -687,24 +688,24 @@ public class Entrance : MonoBehaviour
                 var xiaohuoling =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/xiaohuoling")
-                            .GetComponent<xiaohuoling>(), GameController.S.transform);
+                            .GetComponent<xiaohuoling>(), QueueController.S.transform);
                 xiaohuoling.gameObject.SetActive(false);
-                GameController.S.xiaohuolingQueue.Enqueue(xiaohuoling);
+                QueueController.S.xiaohuolingQueue.Enqueue(xiaohuoling);
                 MonsterBase xiaohuolingmonsterBase = xiaohuoling.GetComponent<MonsterBase>();
                 Collider2D xiaohuoling2D = xiaohuolingmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(xiaohuoling2D, xiaohuolingmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(xiaohuoling2D, xiaohuolingmonsterBase);
                 break;
 
             case MonsterTypeByName.woniu:
                 var woniu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/woniu")
-                            .GetComponent<woniu>(), GameController.S.transform);
+                            .GetComponent<woniu>(), QueueController.S.transform);
                 woniu.gameObject.SetActive(false);
-                GameController.S.woniuQueue.Enqueue(woniu);
+                QueueController.S.woniuQueue.Enqueue(woniu);
                 MonsterBase woniumonsterBase = woniu.GetComponent<MonsterBase>();
                 Collider2D woniu2D = woniumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(woniu2D, woniumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(woniu2D, woniumonsterBase);
                 break;
 
 
@@ -712,12 +713,12 @@ public class Entrance : MonoBehaviour
                 var shanyang =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shanyang")
-                            .GetComponent<shanyang>(), GameController.S.transform);
+                            .GetComponent<shanyang>(), QueueController.S.transform);
                 shanyang.gameObject.SetActive(false);
-                GameController.S.shanyangQueue.Enqueue(shanyang);
+                QueueController.S.shanyangQueue.Enqueue(shanyang);
                 MonsterBase shanyangmonsterBase = shanyang.GetComponent<MonsterBase>();
                 Collider2D shanyang2D = shanyangmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shanyang2D, shanyangmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(shanyang2D, shanyangmonsterBase);
                 break;
 
 
@@ -725,12 +726,12 @@ public class Entrance : MonoBehaviour
                 var rongyanboss =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/rongyanboss")
-                            .GetComponent<rongyanboss>(), GameController.S.transform);
+                            .GetComponent<rongyanboss>(), QueueController.S.transform);
                 rongyanboss.gameObject.SetActive(false);
-                GameController.S.rongyanbossQueue.Enqueue(rongyanboss);
+                QueueController.S.rongyanbossQueue.Enqueue(rongyanboss);
                 MonsterBase rongyanbossmonsterBase = rongyanboss.GetComponent<MonsterBase>();
                 Collider2D rongyanboss2D = rongyanbossmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(rongyanboss2D, rongyanbossmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(rongyanboss2D, rongyanbossmonsterBase);
                 break;
 
 
@@ -738,12 +739,12 @@ public class Entrance : MonoBehaviour
                 var queen =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/queen")
-                            .GetComponent<queen>(), GameController.S.transform);
+                            .GetComponent<queen>(), QueueController.S.transform);
                 queen.gameObject.SetActive(false);
-                GameController.S.queenQueue.Enqueue(queen);
+                QueueController.S.queenQueue.Enqueue(queen);
                 MonsterBase queenmonsterBase = queen.GetComponent<MonsterBase>();
                 Collider2D queen2D = queenmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(queen2D, queenmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(queen2D, queenmonsterBase);
                 break;
 
 
@@ -752,12 +753,12 @@ public class Entrance : MonoBehaviour
                 var paopao =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/paopao")
-                            .GetComponent<paopao>(), GameController.S.transform);
+                            .GetComponent<paopao>(), QueueController.S.transform);
                 paopao.gameObject.SetActive(false);
-                GameController.S.paopaoQueue.Enqueue(paopao);
+                QueueController.S.paopaoQueue.Enqueue(paopao);
                 MonsterBase paopaomonsterBase = paopao.GetComponent<MonsterBase>();
                 Collider2D paopao2D = paopaomonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(paopao2D, paopaomonsterBase);
+                QueueController.S.MonsterColliderDic.Add(paopao2D, paopaomonsterBase);
                 break;
 
 
@@ -765,12 +766,12 @@ public class Entrance : MonoBehaviour
                 var onyx =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/onyx")
-                            .GetComponent<onyx>(), GameController.S.transform);
+                            .GetComponent<onyx>(), QueueController.S.transform);
                 onyx.gameObject.SetActive(false);
-                GameController.S.onyxQueue.Enqueue(onyx);
+                QueueController.S.onyxQueue.Enqueue(onyx);
                 MonsterBase onyxmonsterBase = onyx.GetComponent<MonsterBase>();
                 Collider2D onyx2D = onyxmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(onyx2D, onyxmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(onyx2D, onyxmonsterBase);
                 break;
 
 
@@ -779,12 +780,12 @@ public class Entrance : MonoBehaviour
                 var niguai3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niguai3")
-                            .GetComponent<niguai3>(), GameController.S.transform);
+                            .GetComponent<niguai3>(), QueueController.S.transform);
                 niguai3.gameObject.SetActive(false);
-                GameController.S.niguai3Queue.Enqueue(niguai3);
+                QueueController.S.niguai3Queue.Enqueue(niguai3);
                 MonsterBase niguai3monsterBase = niguai3.GetComponent<MonsterBase>();
                 Collider2D niguai32D = niguai3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(niguai32D, niguai3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(niguai32D, niguai3monsterBase);
                 break;
 
 
@@ -792,12 +793,12 @@ public class Entrance : MonoBehaviour
                 var niguai2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niguai2")
-                            .GetComponent<niguai2>(), GameController.S.transform);
+                            .GetComponent<niguai2>(), QueueController.S.transform);
                 niguai2.gameObject.SetActive(false);
-                GameController.S.niguai2Queue.Enqueue(niguai2);
+                QueueController.S.niguai2Queue.Enqueue(niguai2);
                 MonsterBase niguai2monsterBase = niguai2.GetComponent<MonsterBase>();
                 Collider2D niguai22D = niguai2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(niguai22D, niguai2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(niguai22D, niguai2monsterBase);
                 break;
 
 
@@ -805,12 +806,12 @@ public class Entrance : MonoBehaviour
                 var niguai1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/niguai1")
-                            .GetComponent<niguai1>(), GameController.S.transform);
+                            .GetComponent<niguai1>(), QueueController.S.transform);
                 niguai1.gameObject.SetActive(false);
-                GameController.S.niguai1Queue.Enqueue(niguai1);
+                QueueController.S.niguai1Queue.Enqueue(niguai1);
                 MonsterBase niguai1monsterBase = niguai1.GetComponent<MonsterBase>();
                 Collider2D niguai12D = niguai1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(niguai12D, niguai1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(niguai12D, niguai1monsterBase);
                 break;
 
 
@@ -818,12 +819,12 @@ public class Entrance : MonoBehaviour
                 var lang =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/lang")
-                            .GetComponent<lang>(), GameController.S.transform);
+                            .GetComponent<lang>(), QueueController.S.transform);
                 lang.gameObject.SetActive(false);
-                GameController.S.langQueue.Enqueue(lang);
+                QueueController.S.langQueue.Enqueue(lang);
                 MonsterBase langmonsterBase = lang.GetComponent<MonsterBase>();
                 Collider2D lang2D = langmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(lang2D, langmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(lang2D, langmonsterBase);
                 break;
 
 
@@ -831,12 +832,12 @@ public class Entrance : MonoBehaviour
                 var egg =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/egg")
-                            .GetComponent<egg>(), GameController.S.transform);
+                            .GetComponent<egg>(), QueueController.S.transform);
                 egg.gameObject.SetActive(false);
-                GameController.S.eggQueue.Enqueue(egg);
+                QueueController.S.eggQueue.Enqueue(egg);
                 MonsterBase eggmonsterBase = egg.GetComponent<MonsterBase>();
                 Collider2D egg2D = eggmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(egg2D, eggmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(egg2D, eggmonsterBase);
                 break;
 
 
@@ -844,12 +845,12 @@ public class Entrance : MonoBehaviour
                 var mogu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/mogu")
-                            .GetComponent<mogu>(), GameController.S.transform);
+                            .GetComponent<mogu>(), QueueController.S.transform);
                 mogu.gameObject.SetActive(false);
-                GameController.S.moguQueue.Enqueue(mogu);
+                QueueController.S.moguQueue.Enqueue(mogu);
                 MonsterBase mogumonsterBase = mogu.GetComponent<MonsterBase>();
                 Collider2D mogu2D = mogumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(mogu2D, mogumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(mogu2D, mogumonsterBase);
                 break;
 
 
@@ -857,24 +858,24 @@ public class Entrance : MonoBehaviour
                 var cat =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/cat")
-                            .GetComponent<cat>(), GameController.S.transform);
+                            .GetComponent<cat>(), QueueController.S.transform);
                 cat.gameObject.SetActive(false);
-                GameController.S.catQueue.Enqueue(cat);
+                QueueController.S.catQueue.Enqueue(cat);
                 MonsterBase catmonsterBase = cat.GetComponent<MonsterBase>();
                 Collider2D cat2D = catmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(cat2D, catmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(cat2D, catmonsterBase);
                 break;
 
             case MonsterTypeByName.DaZongXiong:
                 var dazongxiong =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/dazongxiong")
-                            .GetComponent<dazongxiong>(), GameController.S.transform);
+                            .GetComponent<dazongxiong>(), QueueController.S.transform);
                 dazongxiong.gameObject.SetActive(false);
-                GameController.S.dazongxiongQueue.Enqueue(dazongxiong);
+                QueueController.S.dazongxiongQueue.Enqueue(dazongxiong);
                 MonsterBase dazongxiongmonsterBase = dazongxiong.GetComponent<MonsterBase>();
                 Collider2D dazongxiong2D = dazongxiongmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(dazongxiong2D, dazongxiongmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(dazongxiong2D, dazongxiongmonsterBase);
                 break;
 
             case MonsterTypeByName.LuJiaoDouShi:
@@ -882,12 +883,12 @@ public class Entrance : MonoBehaviour
                 var lujiaodoushi =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/lujiaodoushi")
-                            .GetComponent<lujiaodoushi>(), GameController.S.transform);
+                            .GetComponent<lujiaodoushi>(), QueueController.S.transform);
                 lujiaodoushi.gameObject.SetActive(false);
-                GameController.S.lujiaodoushiQueue.Enqueue(lujiaodoushi);
+                QueueController.S.lujiaodoushiQueue.Enqueue(lujiaodoushi);
                 MonsterBase lujiaodoushimonsterBase = lujiaodoushi.GetComponent<MonsterBase>();
                 Collider2D lujiaodoushi2D = lujiaodoushimonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(lujiaodoushi2D, lujiaodoushimonsterBase);
+                QueueController.S.MonsterColliderDic.Add(lujiaodoushi2D, lujiaodoushimonsterBase);
                 break;
 
             case MonsterTypeByName.KuangShiMuZhu:
@@ -895,12 +896,12 @@ public class Entrance : MonoBehaviour
                 var kuangshimuzhu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/kuangshimuzhu")
-                            .GetComponent<kuangshimuzhu>(), GameController.S.transform);
+                            .GetComponent<kuangshimuzhu>(), QueueController.S.transform);
                 kuangshimuzhu.gameObject.SetActive(false);
-                GameController.S.kuangshimuzhuQueue.Enqueue(kuangshimuzhu);
+                QueueController.S.kuangshimuzhuQueue.Enqueue(kuangshimuzhu);
                 MonsterBase kuangshimuzhumonsterBase = kuangshimuzhu.GetComponent<MonsterBase>();
                 Collider2D kuangshimuzhu2D = kuangshimuzhumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(kuangshimuzhu2D, kuangshimuzhumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(kuangshimuzhu2D, kuangshimuzhumonsterBase);
                 break;
 
             case MonsterTypeByName.FengHeGuai:
@@ -908,12 +909,12 @@ public class Entrance : MonoBehaviour
                 var fengheguai =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/fengheguai")
-                            .GetComponent<fengheguai>(), GameController.S.transform);
+                            .GetComponent<fengheguai>(), QueueController.S.transform);
                 fengheguai.gameObject.SetActive(false);
-                GameController.S.fengheguaiQueue.Enqueue(fengheguai);
+                QueueController.S.fengheguaiQueue.Enqueue(fengheguai);
                 MonsterBase fengheguaimonsterBase = fengheguai.GetComponent<MonsterBase>();
                 Collider2D fengheguai2D = fengheguaimonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(fengheguai2D, fengheguaimonsterBase);
+                QueueController.S.MonsterColliderDic.Add(fengheguai2D, fengheguaimonsterBase);
 
                 break;
 
@@ -922,12 +923,12 @@ public class Entrance : MonoBehaviour
                 var shuangtouren =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/shuangtouren")
-                            .GetComponent<shuangtouren>(), GameController.S.transform);
+                            .GetComponent<shuangtouren>(), QueueController.S.transform);
                 shuangtouren.gameObject.SetActive(false);
-                GameController.S.shuangtourenQueue.Enqueue(shuangtouren);
+                QueueController.S.shuangtourenQueue.Enqueue(shuangtouren);
                 MonsterBase shuangtourenmonsterBase = shuangtouren.GetComponent<MonsterBase>();
                 Collider2D shuangtouren2D = shuangtourenmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shuangtouren2D, shuangtourenmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(shuangtouren2D, shuangtourenmonsterBase);
 
                 break;
 
@@ -936,12 +937,12 @@ public class Entrance : MonoBehaviour
                 var daocaoren =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/daocaoren").GetComponent<daocaoren>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 daocaoren.gameObject.SetActive(false);
-                GameController.S.daocaorenQueue.Enqueue(daocaoren);
+                QueueController.S.daocaorenQueue.Enqueue(daocaoren);
                 MonsterBase daocaorenmonsterBase = daocaoren.GetComponent<MonsterBase>();
                 Collider2D daocaoren2D = daocaorenmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(daocaoren2D, daocaorenmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(daocaoren2D, daocaorenmonsterBase);
 
                 break;
 
@@ -949,12 +950,12 @@ public class Entrance : MonoBehaviour
 
                 var cizhu = Instantiate(
                     Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/cizhu").GetComponent<cizhu>(),
-                    GameController.S.transform);
+                    QueueController.S.transform);
                 cizhu.gameObject.SetActive(false);
-                GameController.S.cizhuQueue.Enqueue(cizhu);
+                QueueController.S.cizhuQueue.Enqueue(cizhu);
                 MonsterBase cizhumonsterBase = cizhu.GetComponent<MonsterBase>();
                 Collider2D cizhu2D = cizhumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(cizhu2D, cizhumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(cizhu2D, cizhumonsterBase);
                 break;
 
             case MonsterTypeByName.ChaiLangRen1:
@@ -963,12 +964,12 @@ public class Entrance : MonoBehaviour
                 var chailangren1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren1")
-                            .GetComponent<chailangren1>(), GameController.S.transform);
+                            .GetComponent<chailangren1>(), QueueController.S.transform);
                 chailangren1.gameObject.SetActive(false);
-                GameController.S.chailangren1Queue.Enqueue(chailangren1);
+                QueueController.S.chailangren1Queue.Enqueue(chailangren1);
                 MonsterBase chailangren1monsterBase = chailangren1.GetComponent<MonsterBase>();
                 Collider2D chailangren12D = chailangren1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(chailangren12D, chailangren1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(chailangren12D, chailangren1monsterBase);
 
                 break;
 
@@ -977,12 +978,12 @@ public class Entrance : MonoBehaviour
                 var chailangren2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren2")
-                            .GetComponent<chailangren2>(), GameController.S.transform);
+                            .GetComponent<chailangren2>(), QueueController.S.transform);
                 chailangren2.gameObject.SetActive(false);
-                GameController.S.chailangren2Queue.Enqueue(chailangren2);
+                QueueController.S.chailangren2Queue.Enqueue(chailangren2);
                 MonsterBase chailangren2monsterBase = chailangren2.GetComponent<MonsterBase>();
                 Collider2D chailangren22D = chailangren2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(chailangren22D, chailangren2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(chailangren22D, chailangren2monsterBase);
 
                 break;
 
@@ -991,12 +992,12 @@ public class Entrance : MonoBehaviour
                 var chailangren3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren3")
-                            .GetComponent<chailangren3>(), GameController.S.transform);
+                            .GetComponent<chailangren3>(), QueueController.S.transform);
                 chailangren3.gameObject.SetActive(false);
-                GameController.S.chailangren3Queue.Enqueue(chailangren3);
+                QueueController.S.chailangren3Queue.Enqueue(chailangren3);
                 MonsterBase chailangren3monsterBase = chailangren3.GetComponent<MonsterBase>();
                 Collider2D chailangren32D = chailangren3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(chailangren32D, chailangren3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(chailangren32D, chailangren3monsterBase);
 
                 break;
 
@@ -1005,12 +1006,12 @@ public class Entrance : MonoBehaviour
                 var chailangren4 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/chailangren4")
-                            .GetComponent<chailangren4>(), GameController.S.transform);
+                            .GetComponent<chailangren4>(), QueueController.S.transform);
                 chailangren4.gameObject.SetActive(false);
-                GameController.S.chailangren4Queue.Enqueue(chailangren4);
+                QueueController.S.chailangren4Queue.Enqueue(chailangren4);
                 MonsterBase chailangren4monsterBase = chailangren4.GetComponent<MonsterBase>();
                 Collider2D chailangren42D = chailangren4monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(chailangren42D, chailangren4monsterBase);
+                QueueController.S.MonsterColliderDic.Add(chailangren42D, chailangren4monsterBase);
 
                 break;
 
@@ -1019,12 +1020,12 @@ public class Entrance : MonoBehaviour
                 var YeShouZhanShi =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/YeShouZhanShi")
-                            .GetComponent<YeShouZhanShi>(), GameController.S.transform);
+                            .GetComponent<YeShouZhanShi>(), QueueController.S.transform);
                 YeShouZhanShi.gameObject.SetActive(false);
-                GameController.S.YeShouZhanShiQueue.Enqueue(YeShouZhanShi);
+                QueueController.S.YeShouZhanShiQueue.Enqueue(YeShouZhanShi);
                 MonsterBase YeShouZhanShimonsterBase = YeShouZhanShi.GetComponent<MonsterBase>();
                 Collider2D YeShouZhanShi2D = YeShouZhanShimonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(YeShouZhanShi2D, YeShouZhanShimonsterBase);
+                QueueController.S.MonsterColliderDic.Add(YeShouZhanShi2D, YeShouZhanShimonsterBase);
 
                 break;
 
@@ -1033,12 +1034,12 @@ public class Entrance : MonoBehaviour
                 var ZhiZhuNvWang =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/ZhiZhuNvWang")
-                            .GetComponent<ZhiZhuNvWang>(), GameController.S.transform);
+                            .GetComponent<ZhiZhuNvWang>(), QueueController.S.transform);
                 ZhiZhuNvWang.gameObject.SetActive(false);
-                GameController.S.ZhiZhuNvWangQueue.Enqueue(ZhiZhuNvWang);
+                QueueController.S.ZhiZhuNvWangQueue.Enqueue(ZhiZhuNvWang);
                 MonsterBase ZhiZhuNvWangmonsterBase = ZhiZhuNvWang.GetComponent<MonsterBase>();
                 Collider2D ZhiZhuNvWang2D = ZhiZhuNvWangmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(ZhiZhuNvWang2D, ZhiZhuNvWangmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(ZhiZhuNvWang2D, ZhiZhuNvWangmonsterBase);
                 break;
 
             case MonsterTypeByName.DiJing2:
@@ -1046,12 +1047,12 @@ public class Entrance : MonoBehaviour
                 var dijing2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijing2").GetComponent<dijing2>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 dijing2.gameObject.SetActive(false);
-                GameController.S.dijing2Queue.Enqueue(dijing2);
+                QueueController.S.dijing2Queue.Enqueue(dijing2);
                 MonsterBase dijing2monsterBase = dijing2.GetComponent<MonsterBase>();
                 Collider2D dijing22D = dijing2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(dijing22D, dijing2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(dijing22D, dijing2monsterBase);
 
                 break;
             case MonsterTypeByName.DiJing3:
@@ -1059,12 +1060,12 @@ public class Entrance : MonoBehaviour
                 var dijing3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijing3").GetComponent<dijing3>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 dijing3.gameObject.SetActive(false);
-                GameController.S.dijing3Queue.Enqueue(dijing3);
+                QueueController.S.dijing3Queue.Enqueue(dijing3);
                 MonsterBase dijing3monsterBase = dijing3.GetComponent<MonsterBase>();
                 Collider2D dijing32D = dijing3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(dijing32D, dijing3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(dijing32D, dijing3monsterBase);
                 break;
 
             case MonsterTypeByName.DiJingShouWei1:
@@ -1072,12 +1073,12 @@ public class Entrance : MonoBehaviour
                 var dijingshouwei1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijingshouwei1")
-                            .GetComponent<dijingshouwei1>(), GameController.S.transform);
+                            .GetComponent<dijingshouwei1>(), QueueController.S.transform);
                 dijingshouwei1.gameObject.SetActive(false);
-                GameController.S.dijingshouwei1Queue.Enqueue(dijingshouwei1);
+                QueueController.S.dijingshouwei1Queue.Enqueue(dijingshouwei1);
                 MonsterBase dijingshouwei1monsterBase = dijingshouwei1.GetComponent<MonsterBase>();
                 Collider2D dijingshouwei12D = dijingshouwei1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(dijingshouwei12D, dijingshouwei1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(dijingshouwei12D, dijingshouwei1monsterBase);
                 break;
 
             case MonsterTypeByName.DiJingShouWei2:
@@ -1085,24 +1086,24 @@ public class Entrance : MonoBehaviour
                 var dijingshouwei2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijingshouwei2")
-                            .GetComponent<dijingshouwei2>(), GameController.S.transform);
+                            .GetComponent<dijingshouwei2>(), QueueController.S.transform);
                 dijingshouwei2.gameObject.SetActive(false);
-                GameController.S.dijingshouwei2Queue.Enqueue(dijingshouwei2);
+                QueueController.S.dijingshouwei2Queue.Enqueue(dijingshouwei2);
                 MonsterBase dijingshouwei2monsterBase = dijingshouwei2.GetComponent<MonsterBase>();
                 Collider2D dijingshouwei22D = dijingshouwei2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(dijingshouwei22D, dijingshouwei2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(dijingshouwei22D, dijingshouwei2monsterBase);
                 break;
             case MonsterTypeByName.DiJingShouWei3:
 
                 var dijingshouwei3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/dijingshouwei3")
-                            .GetComponent<dijingshouwei3>(), GameController.S.transform);
+                            .GetComponent<dijingshouwei3>(), QueueController.S.transform);
                 dijingshouwei3.gameObject.SetActive(false);
-                GameController.S.dijingshouwei3Queue.Enqueue(dijingshouwei3);
+                QueueController.S.dijingshouwei3Queue.Enqueue(dijingshouwei3);
                 MonsterBase dijingshouwei3monsterBase = dijingshouwei3.GetComponent<MonsterBase>();
                 Collider2D dijingshouwei32D = dijingshouwei3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(dijingshouwei32D, dijingshouwei3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(dijingshouwei32D, dijingshouwei3monsterBase);
                 break;
 
             case MonsterTypeByName.HeiXiong:
@@ -1110,12 +1111,12 @@ public class Entrance : MonoBehaviour
                 var heixiong =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/heixiong").GetComponent<heixiong>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 heixiong.gameObject.SetActive(false);
-                GameController.S.heixiongQueue.Enqueue(heixiong);
+                QueueController.S.heixiongQueue.Enqueue(heixiong);
                 MonsterBase heixiongmonsterBase = heixiong.GetComponent<MonsterBase>();
                 Collider2D heixiong2D = heixiongmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(heixiong2D, heixiongmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(heixiong2D, heixiongmonsterBase);
                 break;
 
             case MonsterTypeByName.JianChiZhu:
@@ -1123,12 +1124,12 @@ public class Entrance : MonoBehaviour
                 var jianchizhu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/jianchizhu")
-                            .GetComponent<jianchizhu>(), GameController.S.transform);
+                            .GetComponent<jianchizhu>(), QueueController.S.transform);
                 jianchizhu.gameObject.SetActive(false);
-                GameController.S.jianchizhuQueue.Enqueue(jianchizhu);
+                QueueController.S.jianchizhuQueue.Enqueue(jianchizhu);
                 MonsterBase jianchizhumonsterBase = jianchizhu.GetComponent<MonsterBase>();
                 Collider2D jianchizhu2D = jianchizhumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(jianchizhu2D, jianchizhumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(jianchizhu2D, jianchizhumonsterBase);
 
                 break;
 
@@ -1137,12 +1138,12 @@ public class Entrance : MonoBehaviour
                 var kulou1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou1").GetComponent<kulou1>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 kulou1.gameObject.SetActive(false);
-                GameController.S.kulou1Queue.Enqueue(kulou1);
+                QueueController.S.kulou1Queue.Enqueue(kulou1);
                 MonsterBase kulou1monsterBase = kulou1.GetComponent<MonsterBase>();
                 Collider2D kulou12D = kulou1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(kulou12D, kulou1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(kulou12D, kulou1monsterBase);
 
                 break;
 
@@ -1151,12 +1152,12 @@ public class Entrance : MonoBehaviour
                 var kulou2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou2").GetComponent<kulou2>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 kulou2.gameObject.SetActive(false);
-                GameController.S.kulou2Queue.Enqueue(kulou2);
+                QueueController.S.kulou2Queue.Enqueue(kulou2);
                 MonsterBase kulou2monsterBase = kulou2.GetComponent<MonsterBase>();
                 Collider2D kulou22D = kulou2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(kulou22D, kulou2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(kulou22D, kulou2monsterBase);
 
                 break;
 
@@ -1165,12 +1166,12 @@ public class Entrance : MonoBehaviour
                 var kulou3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou3").GetComponent<kulou3>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 kulou3.gameObject.SetActive(false);
-                GameController.S.kulou3Queue.Enqueue(kulou3);
+                QueueController.S.kulou3Queue.Enqueue(kulou3);
                 MonsterBase kulou3monsterBase = kulou3.GetComponent<MonsterBase>();
                 Collider2D kulou32D = kulou3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(kulou32D, kulou3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(kulou32D, kulou3monsterBase);
                 break;
 
             case MonsterTypeByName.KuLou4:
@@ -1178,12 +1179,12 @@ public class Entrance : MonoBehaviour
                 var kulou4 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou4").GetComponent<kulou4>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 kulou4.gameObject.SetActive(false);
-                GameController.S.kulou4Queue.Enqueue(kulou4);
+                QueueController.S.kulou4Queue.Enqueue(kulou4);
                 MonsterBase kulou4monsterBase = kulou4.GetComponent<MonsterBase>();
                 Collider2D kulou42D = kulou4monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(kulou42D, kulou4monsterBase);
+                QueueController.S.MonsterColliderDic.Add(kulou42D, kulou4monsterBase);
 
                 break;
 
@@ -1192,12 +1193,12 @@ public class Entrance : MonoBehaviour
                 var kulou5 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou5").GetComponent<kulou5>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 kulou5.gameObject.SetActive(false);
-                GameController.S.kulou5Queue.Enqueue(kulou5);
+                QueueController.S.kulou5Queue.Enqueue(kulou5);
                 MonsterBase kulou5monsterBase = kulou5.GetComponent<MonsterBase>();
                 Collider2D kulou52D = kulou5monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(kulou52D, kulou5monsterBase);
+                QueueController.S.MonsterColliderDic.Add(kulou52D, kulou5monsterBase);
 
                 break;
 
@@ -1206,12 +1207,12 @@ public class Entrance : MonoBehaviour
                 var kulou6 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/kulou6").GetComponent<kulou6>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 kulou6.gameObject.SetActive(false);
-                GameController.S.kulou6Queue.Enqueue(kulou6);
+                QueueController.S.kulou6Queue.Enqueue(kulou6);
                 MonsterBase kulou6monsterBase = kulou6.GetComponent<MonsterBase>();
                 Collider2D kulou62D = kulou6monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(kulou62D, kulou6monsterBase);
+                QueueController.S.MonsterColliderDic.Add(kulou62D, kulou6monsterBase);
 
                 break;
 
@@ -1220,12 +1221,12 @@ public class Entrance : MonoBehaviour
                 var lujiaocike =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/lujiaocike")
-                            .GetComponent<lujiaocike>(), GameController.S.transform);
+                            .GetComponent<lujiaocike>(), QueueController.S.transform);
                 lujiaocike.gameObject.SetActive(false);
-                GameController.S.lujiaocikeQueue.Enqueue(lujiaocike);
+                QueueController.S.lujiaocikeQueue.Enqueue(lujiaocike);
                 MonsterBase lujiaocikemonsterBase = lujiaocike.GetComponent<MonsterBase>();
                 Collider2D lujiaocike2D = lujiaocikemonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(lujiaocike2D, lujiaocikemonsterBase);
+                QueueController.S.MonsterColliderDic.Add(lujiaocike2D, lujiaocikemonsterBase);
 
                 break;
 
@@ -1234,12 +1235,12 @@ public class Entrance : MonoBehaviour
                 var lujiaocike2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/lujiaocike2")
-                            .GetComponent<lujiaocike2>(), GameController.S.transform);
+                            .GetComponent<lujiaocike2>(), QueueController.S.transform);
                 lujiaocike2.gameObject.SetActive(false);
-                GameController.S.lujiaocike2Queue.Enqueue(lujiaocike2);
+                QueueController.S.lujiaocike2Queue.Enqueue(lujiaocike2);
                 MonsterBase lujiaocike2monsterBase = lujiaocike2.GetComponent<MonsterBase>();
                 Collider2D lujiaocike22D = lujiaocike2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(lujiaocike22D, lujiaocike2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(lujiaocike22D, lujiaocike2monsterBase);
 
                 break;
 
@@ -1248,12 +1249,12 @@ public class Entrance : MonoBehaviour
                 var niutouren1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/niutouren1")
-                            .GetComponent<niutouren1>(), GameController.S.transform);
+                            .GetComponent<niutouren1>(), QueueController.S.transform);
                 niutouren1.gameObject.SetActive(false);
-                GameController.S.niutouren1Queue.Enqueue(niutouren1);
+                QueueController.S.niutouren1Queue.Enqueue(niutouren1);
                 MonsterBase niutouren1monsterBase = niutouren1.GetComponent<MonsterBase>();
                 Collider2D niutouren12D = niutouren1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(niutouren12D, niutouren1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(niutouren12D, niutouren1monsterBase);
                 break;
 
             case MonsterTypeByName.NiuTouRen2:
@@ -1261,12 +1262,12 @@ public class Entrance : MonoBehaviour
                 var niutouren2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/niutouren2")
-                            .GetComponent<niutouren2>(), GameController.S.transform);
+                            .GetComponent<niutouren2>(), QueueController.S.transform);
                 niutouren2.gameObject.SetActive(false);
-                GameController.S.niutouren2Queue.Enqueue(niutouren2);
+                QueueController.S.niutouren2Queue.Enqueue(niutouren2);
                 MonsterBase niutouren2monsterBase = niutouren2.GetComponent<MonsterBase>();
                 Collider2D niutouren22D = niutouren2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(niutouren22D, niutouren2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(niutouren22D, niutouren2monsterBase);
                 break;
 
             case MonsterTypeByName.NiuTouRen3:
@@ -1274,12 +1275,12 @@ public class Entrance : MonoBehaviour
                 var niutouren3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/niutouren3")
-                            .GetComponent<niutouren3>(), GameController.S.transform);
+                            .GetComponent<niutouren3>(), QueueController.S.transform);
                 niutouren3.gameObject.SetActive(false);
-                GameController.S.niutouren3Queue.Enqueue(niutouren3);
+                QueueController.S.niutouren3Queue.Enqueue(niutouren3);
                 MonsterBase niutouren3monsterBase = niutouren3.GetComponent<MonsterBase>();
                 Collider2D niutouren32D = niutouren3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(niutouren32D, niutouren3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(niutouren32D, niutouren3monsterBase);
                 break;
 
             case MonsterTypeByName.ShanZei3:
@@ -1287,12 +1288,12 @@ public class Entrance : MonoBehaviour
                 var shanzei3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shanzei3").GetComponent<shanzei3>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 shanzei3.gameObject.SetActive(false);
-                GameController.S.shanzei3Queue.Enqueue(shanzei3);
+                QueueController.S.shanzei3Queue.Enqueue(shanzei3);
                 MonsterBase shanzei3monsterBase = shanzei3.GetComponent<MonsterBase>();
                 Collider2D shanzei32D = shanzei3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shanzei32D, shanzei3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(shanzei32D, shanzei3monsterBase);
 
                 break;
 
@@ -1301,12 +1302,12 @@ public class Entrance : MonoBehaviour
                 var shijiachong =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shijiachong")
-                            .GetComponent<shijiachong>(), GameController.S.transform);
+                            .GetComponent<shijiachong>(), QueueController.S.transform);
                 shijiachong.gameObject.SetActive(false);
-                GameController.S.shijiachongQueue.Enqueue(shijiachong);
+                QueueController.S.shijiachongQueue.Enqueue(shijiachong);
                 MonsterBase shijiachongmonsterBase = shijiachong.GetComponent<MonsterBase>();
                 Collider2D shijiachong2D = shijiachongmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shijiachong2D, shijiachongmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(shijiachong2D, shijiachongmonsterBase);
                 break;
 
             case MonsterTypeByName.ShiShiGui:
@@ -1314,12 +1315,12 @@ public class Entrance : MonoBehaviour
                 var shishigui =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shishigui").GetComponent<shishigui>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 shishigui.gameObject.SetActive(false);
-                GameController.S.shishiguiQueue.Enqueue(shishigui);
+                QueueController.S.shishiguiQueue.Enqueue(shishigui);
                 MonsterBase shishiguimonsterBase = shishigui.GetComponent<MonsterBase>();
                 Collider2D shishigui2D = shishiguimonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shishigui2D, shishiguimonsterBase);
+                QueueController.S.MonsterColliderDic.Add(shishigui2D, shishiguimonsterBase);
                 break;
 
             case MonsterTypeByName.ShiXiangGui:
@@ -1327,12 +1328,12 @@ public class Entrance : MonoBehaviour
                 var shixianggui =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shixianggui")
-                            .GetComponent<shixianggui>(), GameController.S.transform);
+                            .GetComponent<shixianggui>(), QueueController.S.transform);
                 shixianggui.gameObject.SetActive(false);
-                GameController.S.shixiangguiQueue.Enqueue(shixianggui);
+                QueueController.S.shixiangguiQueue.Enqueue(shixianggui);
                 MonsterBase shixiangguimonsterBase = shixianggui.GetComponent<MonsterBase>();
                 Collider2D shixianggui2D = shixiangguimonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shixianggui2D, shixiangguimonsterBase);
+                QueueController.S.MonsterColliderDic.Add(shixianggui2D, shixiangguimonsterBase);
 
                 break;
             case MonsterTypeByName.ShouRen1:
@@ -1340,12 +1341,12 @@ public class Entrance : MonoBehaviour
                 var shouren1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/shouren1").GetComponent<shouren1>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 shouren1.gameObject.SetActive(false);
-                GameController.S.shouren1Queue.Enqueue(shouren1);
+                QueueController.S.shouren1Queue.Enqueue(shouren1);
                 MonsterBase shouren1monsterBase = shouren1.GetComponent<MonsterBase>();
                 Collider2D shouren12D = shouren1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shouren12D, shouren1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(shouren12D, shouren1monsterBase);
 
                 break;
 
@@ -1354,12 +1355,12 @@ public class Entrance : MonoBehaviour
                 var shouren2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/shouren2").GetComponent<shouren2>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 shouren2.gameObject.SetActive(false);
-                GameController.S.shouren2Queue.Enqueue(shouren2);
+                QueueController.S.shouren2Queue.Enqueue(shouren2);
                 MonsterBase shouren2monsterBase = shouren2.GetComponent<MonsterBase>();
                 Collider2D shouren22D = shouren2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shouren22D, shouren2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(shouren22D, shouren2monsterBase);
 
                 break;
 
@@ -1368,12 +1369,12 @@ public class Entrance : MonoBehaviour
                 var shouren3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/shouren3").GetComponent<shouren3>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 shouren3.gameObject.SetActive(false);
-                GameController.S.shouren3Queue.Enqueue(shouren3);
+                QueueController.S.shouren3Queue.Enqueue(shouren3);
                 MonsterBase shouren3monsterBase = shouren3.GetComponent<MonsterBase>();
                 Collider2D shouren32D = shouren3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shouren32D, shouren3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(shouren32D, shouren3monsterBase);
                 break;
 
             case MonsterTypeByName.ShuangTouLong1:
@@ -1381,12 +1382,12 @@ public class Entrance : MonoBehaviour
                 var shuangtoulong =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shuangtoulong")
-                            .GetComponent<shuangtoulong>(), GameController.S.transform);
+                            .GetComponent<shuangtoulong>(), QueueController.S.transform);
                 shuangtoulong.gameObject.SetActive(false);
-                GameController.S.shuangtoulongQueue.Enqueue(shuangtoulong);
+                QueueController.S.shuangtoulongQueue.Enqueue(shuangtoulong);
                 MonsterBase shuangtoulongmonsterBase = shuangtoulong.GetComponent<MonsterBase>();
                 Collider2D shuangtoulong2D = shuangtoulongmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shuangtoulong2D, shuangtoulongmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(shuangtoulong2D, shuangtoulongmonsterBase);
 
                 break;
 
@@ -1395,12 +1396,12 @@ public class Entrance : MonoBehaviour
                 var shuangtoulong2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shuangtoulong2")
-                            .GetComponent<shuangtoulong2>(), GameController.S.transform);
+                            .GetComponent<shuangtoulong2>(), QueueController.S.transform);
                 shuangtoulong2.gameObject.SetActive(false);
-                GameController.S.shuangtoulong2Queue.Enqueue(shuangtoulong2);
+                QueueController.S.shuangtoulong2Queue.Enqueue(shuangtoulong2);
                 MonsterBase shuangtoulong2monsterBase = shuangtoulong2.GetComponent<MonsterBase>();
                 Collider2D shuangtoulong22D = shuangtoulong2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shuangtoulong22D, shuangtoulong2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(shuangtoulong22D, shuangtoulong2monsterBase);
 
                 break;
 
@@ -1409,12 +1410,12 @@ public class Entrance : MonoBehaviour
                 var shuangtoulong3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/shuangtoulong3")
-                            .GetComponent<shuangtoulong3>(), GameController.S.transform);
+                            .GetComponent<shuangtoulong3>(), QueueController.S.transform);
                 shuangtoulong3.gameObject.SetActive(false);
-                GameController.S.shuangtoulong3Queue.Enqueue(shuangtoulong3);
+                QueueController.S.shuangtoulong3Queue.Enqueue(shuangtoulong3);
                 MonsterBase shuangtoulong3monsterBase = shuangtoulong3.GetComponent<MonsterBase>();
                 Collider2D shuangtoulong32D = shuangtoulong3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(shuangtoulong32D, shuangtoulong3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(shuangtoulong32D, shuangtoulong3monsterBase);
 
                 break;
 
@@ -1422,12 +1423,12 @@ public class Entrance : MonoBehaviour
 
                 var tujiu = Instantiate(
                     Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/tujiu").GetComponent<tujiu>(),
-                    GameController.S.transform);
+                    QueueController.S.transform);
                 tujiu.gameObject.SetActive(false);
-                GameController.S.tujiuQueue.Enqueue(tujiu);
+                QueueController.S.tujiuQueue.Enqueue(tujiu);
                 MonsterBase tujiumonsterBase = tujiu.GetComponent<MonsterBase>();
                 Collider2D tujiu2D = tujiumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(tujiu2D, tujiumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(tujiu2D, tujiumonsterBase);
 
                 break;
 
@@ -1435,12 +1436,12 @@ public class Entrance : MonoBehaviour
 
                 var wuya = Instantiate(
                     Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/wuya").GetComponent<wuya>(),
-                    GameController.S.transform);
+                    QueueController.S.transform);
                 wuya.gameObject.SetActive(false);
-                GameController.S.wuyaQueue.Enqueue(wuya);
+                QueueController.S.wuyaQueue.Enqueue(wuya);
                 MonsterBase wuyamonsterBase = wuya.GetComponent<MonsterBase>();
                 Collider2D wuya2D = wuyamonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(wuya2D, wuyamonsterBase);
+                QueueController.S.MonsterColliderDic.Add(wuya2D, wuyamonsterBase);
                 break;
 
             case MonsterTypeByName.YouHunLingZhu:
@@ -1448,12 +1449,12 @@ public class Entrance : MonoBehaviour
                 var youhunlingzhu =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/EliteMonster/youhunlingzhu")
-                            .GetComponent<youhunlingzhu>(), GameController.S.transform);
+                            .GetComponent<youhunlingzhu>(), QueueController.S.transform);
                 youhunlingzhu.gameObject.SetActive(false);
-                GameController.S.youhunlingzhuQueue.Enqueue(youhunlingzhu);
+                QueueController.S.youhunlingzhuQueue.Enqueue(youhunlingzhu);
                 MonsterBase youhunlingzhumonsterBase = youhunlingzhu.GetComponent<MonsterBase>();
                 Collider2D youhunlingzhu2D = youhunlingzhumonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(youhunlingzhu2D, youhunlingzhumonsterBase);
+                QueueController.S.MonsterColliderDic.Add(youhunlingzhu2D, youhunlingzhumonsterBase);
 
                 break;
             case MonsterTypeByName.YouLang:
@@ -1461,12 +1462,12 @@ public class Entrance : MonoBehaviour
                 var youlang =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/youlang").GetComponent<youlang>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 youlang.gameObject.SetActive(false);
-                GameController.S.youlangQueue.Enqueue(youlang);
+                QueueController.S.youlangQueue.Enqueue(youlang);
                 MonsterBase youlangmonsterBase = youlang.GetComponent<MonsterBase>();
                 Collider2D youlang2D = youlangmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(youlang2D, youlangmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(youlang2D, youlangmonsterBase);
 
                 break;
             case MonsterTypeByName.YouLing1:
@@ -1474,12 +1475,12 @@ public class Entrance : MonoBehaviour
                 var youling =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/youling").GetComponent<youling>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 youling.gameObject.SetActive(false);
-                GameController.S.youlingQueue.Enqueue(youling);
+                QueueController.S.youlingQueue.Enqueue(youling);
                 MonsterBase youlingmonsterBase = youling.GetComponent<MonsterBase>();
                 Collider2D youling2D = youlingmonsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(youling2D, youlingmonsterBase);
+                QueueController.S.MonsterColliderDic.Add(youling2D, youlingmonsterBase);
 
                 break;
 
@@ -1488,12 +1489,12 @@ public class Entrance : MonoBehaviour
                 var youling2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/youling2").GetComponent<youling2>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 youling2.gameObject.SetActive(false);
-                GameController.S.youling2Queue.Enqueue(youling2);
+                QueueController.S.youling2Queue.Enqueue(youling2);
                 MonsterBase youling2monsterBase = youling2.GetComponent<MonsterBase>();
                 Collider2D youling22D = youling2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(youling22D, youling2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(youling22D, youling2monsterBase);
 
                 break;
 
@@ -1502,12 +1503,12 @@ public class Entrance : MonoBehaviour
                 var yuren1 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yuren1").GetComponent<yuren1>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 yuren1.gameObject.SetActive(false);
-                GameController.S.yuren1Queue.Enqueue(yuren1);
+                QueueController.S.yuren1Queue.Enqueue(yuren1);
                 MonsterBase yuren1monsterBase = yuren1.GetComponent<MonsterBase>();
                 Collider2D yuren12D = yuren1monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(yuren12D, yuren1monsterBase);
+                QueueController.S.MonsterColliderDic.Add(yuren12D, yuren1monsterBase);
 
                 break;
 
@@ -1516,12 +1517,12 @@ public class Entrance : MonoBehaviour
                 var yuren2 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yuren2").GetComponent<yuren2>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 yuren2.gameObject.SetActive(false);
-                GameController.S.yuren2Queue.Enqueue(yuren2);
+                QueueController.S.yuren2Queue.Enqueue(yuren2);
                 MonsterBase yuren2monsterBase = yuren2.GetComponent<MonsterBase>();
                 Collider2D yuren22D = yuren2monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(yuren22D, yuren2monsterBase);
+                QueueController.S.MonsterColliderDic.Add(yuren22D, yuren2monsterBase);
 
                 break;
 
@@ -1530,12 +1531,12 @@ public class Entrance : MonoBehaviour
                 var yuren3 =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/NormalMonster/yuren3").GetComponent<yuren3>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 yuren3.gameObject.SetActive(false);
-                GameController.S.yuren3Queue.Enqueue(yuren3);
+                QueueController.S.yuren3Queue.Enqueue(yuren3);
                 MonsterBase yuren3monsterBase = yuren3.GetComponent<MonsterBase>();
                 Collider2D yuren32D = yuren3monsterBase.collider2D;
-                GameController.S.MonsterColliderDic.Add(yuren32D, yuren3monsterBase);
+                QueueController.S.MonsterColliderDic.Add(yuren32D, yuren3monsterBase);
                 break;
         }
     }
@@ -1548,7 +1549,7 @@ public class Entrance : MonoBehaviour
                 ChiBangFight chibang =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Prop/ChiBang")).GetComponent<ChiBangFight>();
                 chibang.gameObject.SetActive(false);
-                GameController.S.ChiBangFightQueue.Enqueue(chibang);
+                QueueController.S.ChiBangFightQueue.Enqueue(chibang);
                 break;
             case PropConfig.PropType.WeaponFragment:
                 switch (info.PropItem.Quality)
@@ -1557,37 +1558,37 @@ public class Entrance : MonoBehaviour
                         GameObject whiteWeaponFragmeng =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/WhiteWeaponFragmeng"));
                         whiteWeaponFragmeng.gameObject.SetActive(false);
-                        GameController.S.WhiteWeaponFragmengQueue.Enqueue(whiteWeaponFragmeng);
+                        QueueController.S.WhiteWeaponFragmengQueue.Enqueue(whiteWeaponFragmeng);
                         break;
                     case 2:
                         GameObject GreenWeaponFragmeng =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/GreenWeaponFragmeng"));
                         GreenWeaponFragmeng.gameObject.SetActive(false);
-                        GameController.S.GreenWeaponFragmengQueue.Enqueue(GreenWeaponFragmeng);
+                        QueueController.S.GreenWeaponFragmengQueue.Enqueue(GreenWeaponFragmeng);
                         break;
                     case 3:
                         GameObject BlueWeaponFragmeng =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BlueWeaponFragmeng"));
                         BlueWeaponFragmeng.gameObject.SetActive(false);
-                        GameController.S.BlueWeaponFragmengQueue.Enqueue(BlueWeaponFragmeng);
+                        QueueController.S.BlueWeaponFragmengQueue.Enqueue(BlueWeaponFragmeng);
                         break;
                     case 4:
                         GameObject PurpleWeaponFragmeng =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/PurpleWeaponFragmeng"));
                         PurpleWeaponFragmeng.gameObject.SetActive(false);
-                        GameController.S.PurpleWeaponFragmengQueue.Enqueue(PurpleWeaponFragmeng);
+                        QueueController.S.PurpleWeaponFragmengQueue.Enqueue(PurpleWeaponFragmeng);
                         break;
                     case 5:
                         GameObject OrangeWeaponFragmeng =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/OrangeWeaponFragmeng"));
                         OrangeWeaponFragmeng.gameObject.SetActive(false);
-                        GameController.S.OrangeWeaponFragmengQueue.Enqueue(OrangeWeaponFragmeng);
+                        QueueController.S.OrangeWeaponFragmengQueue.Enqueue(OrangeWeaponFragmeng);
                         break;
                     case 6:
                         GameObject RedWeaponFragmeng =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/RedWeaponFragmeng"));
                         RedWeaponFragmeng.gameObject.SetActive(false);
-                        GameController.S.RedWeaponFragmengQueue.Enqueue(RedWeaponFragmeng);
+                        QueueController.S.RedWeaponFragmengQueue.Enqueue(RedWeaponFragmeng);
                         break;
                 }
 
@@ -1602,37 +1603,37 @@ public class Entrance : MonoBehaviour
                         GameObject whiteChiBang =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/WhiteChiBang"));
                         whiteChiBang.gameObject.SetActive(false);
-                        GameController.S.WhiteChiBangQueue.Enqueue(whiteChiBang);
+                        QueueController.S.WhiteChiBangQueue.Enqueue(whiteChiBang);
                         break;
                     case 2:
                         GameObject GreenChiBang =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/GreenChiBang"));
                         GreenChiBang.gameObject.SetActive(false);
-                        GameController.S.GreenChiBangQueue.Enqueue(GreenChiBang);
+                        QueueController.S.GreenChiBangQueue.Enqueue(GreenChiBang);
                         break;
                     case 3:
                         GameObject BlueChiBang =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/BlueChiBang"));
                         BlueChiBang.gameObject.SetActive(false);
-                        GameController.S.BlueChiBangQueue.Enqueue(BlueChiBang);
+                        QueueController.S.BlueChiBangQueue.Enqueue(BlueChiBang);
                         break;
                     case 4:
                         GameObject PurpleChiBang =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/PurpleChiBang"));
                         PurpleChiBang.gameObject.SetActive(false);
-                        GameController.S.PurpleChiBangQueue.Enqueue(PurpleChiBang);
+                        QueueController.S.PurpleChiBangQueue.Enqueue(PurpleChiBang);
                         break;
                     case 5:
                         GameObject OrangeChiBang =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/OrangeChiBang"));
                         OrangeChiBang.gameObject.SetActive(false);
-                        GameController.S.OrangeChiBangQueue.Enqueue(OrangeChiBang);
+                        QueueController.S.OrangeChiBangQueue.Enqueue(OrangeChiBang);
                         break;
                     case 6:
                         GameObject RedChiBang =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Prop/RedChiBang"));
                         RedChiBang.gameObject.SetActive(false);
-                        GameController.S.RedChiBangQueue.Enqueue(RedChiBang);
+                        QueueController.S.RedChiBangQueue.Enqueue(RedChiBang);
                         break;
                 }
 
@@ -1653,7 +1654,7 @@ public class Entrance : MonoBehaviour
                         break;
                 }
 
-                GameController.S.ChongWuDanQueue.Enqueue(ChongWuDan);
+                QueueController.S.ChongWuDanQueue.Enqueue(ChongWuDan);
                 break;
 
             case PropConfig.PropType.XiSuiYe:
@@ -1670,7 +1671,7 @@ public class Entrance : MonoBehaviour
                         break;
                 }
 
-                GameController.S.XiSuiYeQueue.Enqueue(XiSuiYe);
+                QueueController.S.XiSuiYeQueue.Enqueue(XiSuiYe);
                 break;
 
 
@@ -1688,7 +1689,7 @@ public class Entrance : MonoBehaviour
                         break;
                 }
 
-                GameController.S.XueMaiDanQueue.Enqueue(XueMaiDan);
+                QueueController.S.XueMaiDanQueue.Enqueue(XueMaiDan);
                 break;
 
 
@@ -1719,7 +1720,7 @@ public class Entrance : MonoBehaviour
                         break;
                 }
 
-                GameController.S.ChongWuSkillShuQueue.Enqueue(ChongWuSkillShu);
+                QueueController.S.ChongWuSkillShuQueue.Enqueue(ChongWuSkillShu);
                 break;
 
 
@@ -1750,14 +1751,14 @@ public class Entrance : MonoBehaviour
                         break;
                 }
 
-                GameController.S.ChongWuShiWuQueue.Enqueue(ChongWuShiWu);
+                QueueController.S.ChongWuShiWuQueue.Enqueue(ChongWuShiWu);
                 break;
 
             case PropConfig.PropType.DaKongShi:
                 DaKongShiFight DaKongShi =
                     Instantiate(Resources.Load<GameObject>("Prefabs/Prop/DaKongShi")).GetComponent<DaKongShiFight>();
                 DaKongShi.gameObject.SetActive(false);
-                GameController.S.DaKongShiQueue.Enqueue(DaKongShi);
+                QueueController.S.DaKongShiQueue.Enqueue(DaKongShi);
                 break;
 
             case PropConfig.PropType.ShenHuaCaiLiao:
@@ -1781,7 +1782,7 @@ public class Entrance : MonoBehaviour
                         break;
                 }
 
-                GameController.S.ShenHuaCaiLiaoQueue.Enqueue(ShenHuaCaiLiao);
+                QueueController.S.ShenHuaCaiLiaoQueue.Enqueue(ShenHuaCaiLiao);
                 break;
         }
     }
@@ -1798,37 +1799,37 @@ public class Entrance : MonoBehaviour
                         GameObject primaryCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryCloakFight"));
                         primaryCloakFight.gameObject.SetActive(false);
-                        GameController.S.PrimaryCloakQueue.Enqueue(primaryCloakFight);
+                        QueueController.S.PrimaryCloakQueue.Enqueue(primaryCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject primaryNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryNecklaceFight"));
                         primaryNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.PrimaryNecklaceQueue.Enqueue(primaryNecklaceFight);
+                        QueueController.S.PrimaryNecklaceQueue.Enqueue(primaryNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject primaryClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryClothFight"));
                         primaryClothFight.gameObject.SetActive(false);
-                        GameController.S.PrimaryClothQueue.Enqueue(primaryClothFight);
+                        QueueController.S.PrimaryClothQueue.Enqueue(primaryClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject primaryHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryHelmetFight"));
                         primaryHelmetFight.gameObject.SetActive(false);
-                        GameController.S.PrimaryHelmetQueue.Enqueue(primaryHelmetFight);
+                        QueueController.S.PrimaryHelmetQueue.Enqueue(primaryHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject primaryShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryShoeFight"));
                         primaryShoeFight.gameObject.SetActive(false);
-                        GameController.S.PrimaryShoeQueue.Enqueue(primaryShoeFight);
+                        QueueController.S.PrimaryShoeQueue.Enqueue(primaryShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject primaryRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Primary/PrimaryRingFight"));
                         primaryRingFight.gameObject.SetActive(false);
-                        GameController.S.PrimaryRingQueue.Enqueue(primaryRingFight);
+                        QueueController.S.PrimaryRingQueue.Enqueue(primaryRingFight);
                         break;
                 }
 
@@ -1844,37 +1845,37 @@ public class Entrance : MonoBehaviour
                         GameObject GreenCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenCloakFight"));
                         GreenCloakFight.gameObject.SetActive(false);
-                        GameController.S.GreenCloakQueue.Enqueue(GreenCloakFight);
+                        QueueController.S.GreenCloakQueue.Enqueue(GreenCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject GreenNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenNecklaceFight"));
                         GreenNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.GreenNecklaceQueue.Enqueue(GreenNecklaceFight);
+                        QueueController.S.GreenNecklaceQueue.Enqueue(GreenNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject GreenClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenClothFight"));
                         GreenClothFight.gameObject.SetActive(false);
-                        GameController.S.GreenClothQueue.Enqueue(GreenClothFight);
+                        QueueController.S.GreenClothQueue.Enqueue(GreenClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject GreenHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenHelmetFight"));
                         GreenHelmetFight.gameObject.SetActive(false);
-                        GameController.S.GreenHelmetQueue.Enqueue(GreenHelmetFight);
+                        QueueController.S.GreenHelmetQueue.Enqueue(GreenHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject GreenShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenShoeFight"));
                         GreenShoeFight.gameObject.SetActive(false);
-                        GameController.S.GreenShoeQueue.Enqueue(GreenShoeFight);
+                        QueueController.S.GreenShoeQueue.Enqueue(GreenShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject GreenRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Green/GreenRingFight"));
                         GreenRingFight.gameObject.SetActive(false);
-                        GameController.S.GreenRingQueue.Enqueue(GreenRingFight);
+                        QueueController.S.GreenRingQueue.Enqueue(GreenRingFight);
                         break;
                 }
 
@@ -1891,37 +1892,37 @@ public class Entrance : MonoBehaviour
                         GameObject BlueCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueCloakFight"));
                         BlueCloakFight.gameObject.SetActive(false);
-                        GameController.S.BlueCloakQueue.Enqueue(BlueCloakFight);
+                        QueueController.S.BlueCloakQueue.Enqueue(BlueCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject BlueNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueNecklaceFight"));
                         BlueNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.BlueNecklaceQueue.Enqueue(BlueNecklaceFight);
+                        QueueController.S.BlueNecklaceQueue.Enqueue(BlueNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject BlueClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueClothFight"));
                         BlueClothFight.gameObject.SetActive(false);
-                        GameController.S.BlueClothQueue.Enqueue(BlueClothFight);
+                        QueueController.S.BlueClothQueue.Enqueue(BlueClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject BlueHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueHelmetFight"));
                         BlueHelmetFight.gameObject.SetActive(false);
-                        GameController.S.BlueHelmetQueue.Enqueue(BlueHelmetFight);
+                        QueueController.S.BlueHelmetQueue.Enqueue(BlueHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject BlueShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueShoeFight"));
                         BlueShoeFight.gameObject.SetActive(false);
-                        GameController.S.BlueShoeQueue.Enqueue(BlueShoeFight);
+                        QueueController.S.BlueShoeQueue.Enqueue(BlueShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject BlueRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Blue/BlueRingFight"));
                         BlueRingFight.gameObject.SetActive(false);
-                        GameController.S.BlueRingQueue.Enqueue(BlueRingFight);
+                        QueueController.S.BlueRingQueue.Enqueue(BlueRingFight);
                         break;
                 }
 
@@ -1937,37 +1938,37 @@ public class Entrance : MonoBehaviour
                         GameObject PurpleCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleCloakFight"));
                         PurpleCloakFight.gameObject.SetActive(false);
-                        GameController.S.PurpleCloakQueue.Enqueue(PurpleCloakFight);
+                        QueueController.S.PurpleCloakQueue.Enqueue(PurpleCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject PurpleNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleNecklaceFight"));
                         PurpleNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.PurpleNecklaceQueue.Enqueue(PurpleNecklaceFight);
+                        QueueController.S.PurpleNecklaceQueue.Enqueue(PurpleNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject PurpleClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleClothFight"));
                         PurpleClothFight.gameObject.SetActive(false);
-                        GameController.S.PurpleClothQueue.Enqueue(PurpleClothFight);
+                        QueueController.S.PurpleClothQueue.Enqueue(PurpleClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject PurpleHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleHelmetFight"));
                         PurpleHelmetFight.gameObject.SetActive(false);
-                        GameController.S.PurpleHelmetQueue.Enqueue(PurpleHelmetFight);
+                        QueueController.S.PurpleHelmetQueue.Enqueue(PurpleHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject PurpleShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleShoeFight"));
                         PurpleShoeFight.gameObject.SetActive(false);
-                        GameController.S.PurpleShoeQueue.Enqueue(PurpleShoeFight);
+                        QueueController.S.PurpleShoeQueue.Enqueue(PurpleShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject PurpleRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple/PurpleRingFight"));
                         PurpleRingFight.gameObject.SetActive(false);
-                        GameController.S.PurpleRingQueue.Enqueue(PurpleRingFight);
+                        QueueController.S.PurpleRingQueue.Enqueue(PurpleRingFight);
                         break;
                 }
 
@@ -1983,37 +1984,37 @@ public class Entrance : MonoBehaviour
                         GameObject Purple1CloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1CloakFight"));
                         Purple1CloakFight.gameObject.SetActive(false);
-                        GameController.S.Purple1CloakQueue.Enqueue(Purple1CloakFight);
+                        QueueController.S.Purple1CloakQueue.Enqueue(Purple1CloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject Purple1NecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1NecklaceFight"));
                         Purple1NecklaceFight.gameObject.SetActive(false);
-                        GameController.S.Purple1NecklaceQueue.Enqueue(Purple1NecklaceFight);
+                        QueueController.S.Purple1NecklaceQueue.Enqueue(Purple1NecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject Purple1ClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1ClothFight"));
                         Purple1ClothFight.gameObject.SetActive(false);
-                        GameController.S.Purple1ClothQueue.Enqueue(Purple1ClothFight);
+                        QueueController.S.Purple1ClothQueue.Enqueue(Purple1ClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject Purple1HelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1HelmetFight"));
                         Purple1HelmetFight.gameObject.SetActive(false);
-                        GameController.S.Purple1HelmetQueue.Enqueue(Purple1HelmetFight);
+                        QueueController.S.Purple1HelmetQueue.Enqueue(Purple1HelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject Purple1ShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1ShoeFight"));
                         Purple1ShoeFight.gameObject.SetActive(false);
-                        GameController.S.Purple1ShoeQueue.Enqueue(Purple1ShoeFight);
+                        QueueController.S.Purple1ShoeQueue.Enqueue(Purple1ShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject Purple1RingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/Purple1/Purple1RingFight"));
                         Purple1RingFight.gameObject.SetActive(false);
-                        GameController.S.Purple1RingQueue.Enqueue(Purple1RingFight);
+                        QueueController.S.Purple1RingQueue.Enqueue(Purple1RingFight);
                         break;
                 }
 
@@ -2029,37 +2030,37 @@ public class Entrance : MonoBehaviour
                         GameObject TreeManCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManCloakFight"));
                         TreeManCloakFight.gameObject.SetActive(false);
-                        GameController.S.TreeManCloakQueue.Enqueue(TreeManCloakFight);
+                        QueueController.S.TreeManCloakQueue.Enqueue(TreeManCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject TreeManNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManNecklaceFight"));
                         TreeManNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.TreeManNecklaceQueue.Enqueue(TreeManNecklaceFight);
+                        QueueController.S.TreeManNecklaceQueue.Enqueue(TreeManNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject TreeManClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManClothFight"));
                         TreeManClothFight.gameObject.SetActive(false);
-                        GameController.S.TreeManClothQueue.Enqueue(TreeManClothFight);
+                        QueueController.S.TreeManClothQueue.Enqueue(TreeManClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject TreeManHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManHelmetFight"));
                         TreeManHelmetFight.gameObject.SetActive(false);
-                        GameController.S.TreeManHelmetQueue.Enqueue(TreeManHelmetFight);
+                        QueueController.S.TreeManHelmetQueue.Enqueue(TreeManHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject TreeManShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManShoeFight"));
                         TreeManShoeFight.gameObject.SetActive(false);
-                        GameController.S.TreeManShoeQueue.Enqueue(TreeManShoeFight);
+                        QueueController.S.TreeManShoeQueue.Enqueue(TreeManShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject TreeManRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/TreeMan/TreeManRingFight"));
                         TreeManRingFight.gameObject.SetActive(false);
-                        GameController.S.TreeManRingQueue.Enqueue(TreeManRingFight);
+                        QueueController.S.TreeManRingQueue.Enqueue(TreeManRingFight);
                         break;
                 }
 
@@ -2076,37 +2077,37 @@ public class Entrance : MonoBehaviour
                         GameObject HuoShanBossCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanCloakFight"));
                         HuoShanBossCloakFight.gameObject.SetActive(false);
-                        GameController.S.HuoShanCloakQueue.Enqueue(HuoShanBossCloakFight);
+                        QueueController.S.HuoShanCloakQueue.Enqueue(HuoShanBossCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject HuoShanBossNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanNecklaceFight"));
                         HuoShanBossNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.HuoShanNecklaceQueue.Enqueue(HuoShanBossNecklaceFight);
+                        QueueController.S.HuoShanNecklaceQueue.Enqueue(HuoShanBossNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject HuoShanBossClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanClothFight"));
                         HuoShanBossClothFight.gameObject.SetActive(false);
-                        GameController.S.HuoShanClothQueue.Enqueue(HuoShanBossClothFight);
+                        QueueController.S.HuoShanClothQueue.Enqueue(HuoShanBossClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject HuoShanBossHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanHelmetFight"));
                         HuoShanBossHelmetFight.gameObject.SetActive(false);
-                        GameController.S.HuoShanHelmetQueue.Enqueue(HuoShanBossHelmetFight);
+                        QueueController.S.HuoShanHelmetQueue.Enqueue(HuoShanBossHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject HuoShanBossShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanShoeFight"));
                         HuoShanBossShoeFight.gameObject.SetActive(false);
-                        GameController.S.HuoShanShoeQueue.Enqueue(HuoShanBossShoeFight);
+                        QueueController.S.HuoShanShoeQueue.Enqueue(HuoShanBossShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject HuoShanBossRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/HuoShan/HuoShanRingFight"));
                         HuoShanBossRingFight.gameObject.SetActive(false);
-                        GameController.S.HuoShanRingQueue.Enqueue(HuoShanBossRingFight);
+                        QueueController.S.HuoShanRingQueue.Enqueue(HuoShanBossRingFight);
                         break;
                 }
 
@@ -2123,37 +2124,37 @@ public class Entrance : MonoBehaviour
                         GameObject ZhaoZeCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeCloakFight"));
                         ZhaoZeCloakFight.gameObject.SetActive(false);
-                        GameController.S.ZhaoZeCloakQueue.Enqueue(ZhaoZeCloakFight);
+                        QueueController.S.ZhaoZeCloakQueue.Enqueue(ZhaoZeCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject ZhaoZeNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeNecklaceFight"));
                         ZhaoZeNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.ZhaoZeNecklaceQueue.Enqueue(ZhaoZeNecklaceFight);
+                        QueueController.S.ZhaoZeNecklaceQueue.Enqueue(ZhaoZeNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject ZhaoZeClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeClothFight"));
                         ZhaoZeClothFight.gameObject.SetActive(false);
-                        GameController.S.ZhaoZeClothQueue.Enqueue(ZhaoZeClothFight);
+                        QueueController.S.ZhaoZeClothQueue.Enqueue(ZhaoZeClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject ZhaoZeHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeHelmetFight"));
                         ZhaoZeHelmetFight.gameObject.SetActive(false);
-                        GameController.S.ZhaoZeHelmetQueue.Enqueue(ZhaoZeHelmetFight);
+                        QueueController.S.ZhaoZeHelmetQueue.Enqueue(ZhaoZeHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject ZhaoZeShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeShoeFight"));
                         ZhaoZeShoeFight.gameObject.SetActive(false);
-                        GameController.S.ZhaoZeShoeQueue.Enqueue(ZhaoZeShoeFight);
+                        QueueController.S.ZhaoZeShoeQueue.Enqueue(ZhaoZeShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject ZhaoZeRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/ZhaoZe/ZhaoZeRingFight"));
                         ZhaoZeRingFight.gameObject.SetActive(false);
-                        GameController.S.ZhaoZeRingQueue.Enqueue(ZhaoZeRingFight);
+                        QueueController.S.ZhaoZeRingQueue.Enqueue(ZhaoZeRingFight);
                         break;
                 }
 
@@ -2168,37 +2169,37 @@ public class Entrance : MonoBehaviour
                         GameObject XieZiCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiCloakFight"));
                         XieZiCloakFight.gameObject.SetActive(false);
-                        GameController.S.XieZiCloakQueue.Enqueue(XieZiCloakFight);
+                        QueueController.S.XieZiCloakQueue.Enqueue(XieZiCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject XieZiNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiNecklaceFight"));
                         XieZiNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.XieZiNecklaceQueue.Enqueue(XieZiNecklaceFight);
+                        QueueController.S.XieZiNecklaceQueue.Enqueue(XieZiNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject XieZiClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiClothFight"));
                         XieZiClothFight.gameObject.SetActive(false);
-                        GameController.S.XieZiClothQueue.Enqueue(XieZiClothFight);
+                        QueueController.S.XieZiClothQueue.Enqueue(XieZiClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject XieZiHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiHelmetFight"));
                         XieZiHelmetFight.gameObject.SetActive(false);
-                        GameController.S.XieZiHelmetQueue.Enqueue(XieZiHelmetFight);
+                        QueueController.S.XieZiHelmetQueue.Enqueue(XieZiHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject XieZiShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiShoeFight"));
                         XieZiShoeFight.gameObject.SetActive(false);
-                        GameController.S.XieZiShoeQueue.Enqueue(XieZiShoeFight);
+                        QueueController.S.XieZiShoeQueue.Enqueue(XieZiShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject XieZiRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XieZi/XieZiRingFight"));
                         XieZiRingFight.gameObject.SetActive(false);
-                        GameController.S.XieZiRingQueue.Enqueue(XieZiRingFight);
+                        QueueController.S.XieZiRingQueue.Enqueue(XieZiRingFight);
                         break;
                 }
 
@@ -2212,37 +2213,37 @@ public class Entrance : MonoBehaviour
                         GameObject XueRenCloakFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenCloakFight"));
                         XueRenCloakFight.gameObject.SetActive(false);
-                        GameController.S.XueRenCloakQueue.Enqueue(XueRenCloakFight);
+                        QueueController.S.XueRenCloakQueue.Enqueue(XueRenCloakFight);
                         break;
                     case PlayerEquipConfig.EquipType.Necklace:
                         GameObject XueRenNecklaceFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenNecklaceFight"));
                         XueRenNecklaceFight.gameObject.SetActive(false);
-                        GameController.S.XueRenNecklaceQueue.Enqueue(XueRenNecklaceFight);
+                        QueueController.S.XueRenNecklaceQueue.Enqueue(XueRenNecklaceFight);
                         break;
                     case PlayerEquipConfig.EquipType.Cloth:
                         GameObject XueRenClothFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenClothFight"));
                         XueRenClothFight.gameObject.SetActive(false);
-                        GameController.S.XueRenClothQueue.Enqueue(XueRenClothFight);
+                        QueueController.S.XueRenClothQueue.Enqueue(XueRenClothFight);
                         break;
                     case PlayerEquipConfig.EquipType.Helmet:
                         GameObject XueRenHelmetFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenHelmetFight"));
                         XueRenHelmetFight.gameObject.SetActive(false);
-                        GameController.S.XueRenHelmetQueue.Enqueue(XueRenHelmetFight);
+                        QueueController.S.XueRenHelmetQueue.Enqueue(XueRenHelmetFight);
                         break;
                     case PlayerEquipConfig.EquipType.Shoe:
                         GameObject XueRenShoeFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenShoeFight"));
                         XueRenShoeFight.gameObject.SetActive(false);
-                        GameController.S.XueRenShoeQueue.Enqueue(XueRenShoeFight);
+                        QueueController.S.XueRenShoeQueue.Enqueue(XueRenShoeFight);
                         break;
                     case PlayerEquipConfig.EquipType.Ring:
                         GameObject XueRenRingFight =
                             Instantiate(Resources.Load<GameObject>("Prefabs/Equip/XueRen/XueRenRingFight"));
                         XueRenRingFight.gameObject.SetActive(false);
-                        GameController.S.XueRenRingQueue.Enqueue(XueRenRingFight);
+                        QueueController.S.XueRenRingQueue.Enqueue(XueRenRingFight);
                         break;
                 }
 
@@ -2254,5 +2255,6 @@ public class Entrance : MonoBehaviour
 
     private void Awake()
     {
+        Debug.LogError($"切换后: Count={QueueController.S.MonsterColliderDic.Count}, 第一个Key={QueueController.S.MonsterColliderDic.Keys.FirstOrDefault()} is null? {QueueController.S.MonsterColliderDic.Keys.FirstOrDefault() == null}");
     }
 }

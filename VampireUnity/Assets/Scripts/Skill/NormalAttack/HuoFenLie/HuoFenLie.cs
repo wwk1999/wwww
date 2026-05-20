@@ -22,7 +22,7 @@ public class HuoFenLie : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.HuoFenLieQueue.Enqueue(this);
+        QueueController.S.HuoFenLieQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -33,27 +33,27 @@ public class HuoFenLie : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.HuoPengQueue.Dequeue();
+            var hit = QueueController.S.HuoPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
             hit.SetActive(true);
-            GameController.S.HuoFenLieQueue.Enqueue(this);
-            HuoFenLieDan dan1 = GameController.S.HuoFenLieDanQueue.Dequeue();
+            QueueController.S.HuoFenLieQueue.Enqueue(this);
+            HuoFenLieDan dan1 = QueueController.S.HuoFenLieDanQueue.Dequeue();
             dan1.dir = 1;
             dan1.transform.position = closestPoint;
             dan1.gameObject.SetActive(true);
-            HuoFenLieDan dan2 = GameController.S.HuoFenLieDanQueue.Dequeue();
+            HuoFenLieDan dan2 = QueueController.S.HuoFenLieDanQueue.Dequeue();
             dan2.dir = 2;
             dan2.transform.position = closestPoint;
             dan2.gameObject.SetActive(true);
             
-            HuoFenLieDan dan3 = GameController.S.HuoFenLieDanQueue.Dequeue();
+            HuoFenLieDan dan3 = QueueController.S.HuoFenLieDanQueue.Dequeue();
             dan3.dir = 3;
             dan3.transform.position = closestPoint;
             dan3.gameObject.SetActive(true);
             
-            HuoFenLieDan dan4 = GameController.S.HuoFenLieDanQueue.Dequeue();
+            HuoFenLieDan dan4 = QueueController.S.HuoFenLieDanQueue.Dequeue();
             dan4.dir = 4;
             dan4.transform.position = closestPoint;
             dan4.gameObject.SetActive(true);

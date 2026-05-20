@@ -32,7 +32,7 @@ public class HeiAnHuiXuan : MonoBehaviour
         if (isHuiXuan)
         {
             rg.velocity=Vector2.zero;
-            Vector2 targetPos = GameController.S.gamePlayer.transform.position;
+            Vector2 targetPos = QueueController.S.gamePlayer.transform.position;
             transform.position = Vector2.MoveTowards(transform.position, targetPos, 10 * Time.deltaTime
             );
             Vector2 direction = targetPos - (Vector2)transform.position;
@@ -40,10 +40,10 @@ public class HeiAnHuiXuan : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
 
-        if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= 0.1f)
+        if (Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) <= 0.1f)
         {
             isHuiXuan = false;
-            GameController.S.HeiAnHuiXuanQueue.Enqueue(this);
+            QueueController.S.HeiAnHuiXuanQueue.Enqueue(this);
             gameObject.SetActive(false);
         }
     }
@@ -55,10 +55,10 @@ public class HeiAnHuiXuan : MonoBehaviour
         Debug.Log("碰撞点世界坐标: " + closestPoint);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.HeiAnPengQueue.Dequeue();
+            var hit = QueueController.S.HeiAnPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
             hit.SetActive(true);
         }
     }

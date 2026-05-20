@@ -34,7 +34,7 @@ public class HeiAnSkill5 : MonoBehaviour
         
          if (col.CompareTag("Monster") || col.CompareTag("Boss"))
          {
-            MonsterBase monster = GameController.S.MonsterColliderDic[col];
+            MonsterBase monster = QueueController.S.MonsterColliderDic[col];
             monster.Hurt(GameController.S.GameAttack*SkillConfig.HeiAn5Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.HeiAn);
             // var hit = GameController.S.HeiDongPengQueue.Dequeue();
             //hit.transform.position = monster.transform.position;
@@ -56,7 +56,7 @@ public class HeiAnSkill5 : MonoBehaviour
 
    public void Hide()
    {
-      GameController.S.HeiAnSkill5Queue.Enqueue(this);
+      QueueController.S.HeiAnSkill5Queue.Enqueue(this);
       gameObject.SetActive(false);
    }
 }

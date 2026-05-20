@@ -8,7 +8,7 @@ public class HuoFenLieBaoZhaAnim : MonoBehaviour
     public HuoFenLieBaoZha HuoFenLieBaoZha;
     public void Hide()
     {
-        GameController.S.HuoFenLieBaoZhaQueue.Enqueue(HuoFenLieBaoZha);
+        QueueController.S.HuoFenLieBaoZhaQueue.Enqueue(HuoFenLieBaoZha);
         HuoFenLieBaoZha.gameObject.SetActive(false);
     }
     
@@ -30,7 +30,7 @@ public class HuoFenLieBaoZhaAnim : MonoBehaviour
             if (col.CompareTag("Monster")||col.CompareTag("Boss"))
             {
                 var crit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Huo);
+                QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Huo);
             }
         }
     }

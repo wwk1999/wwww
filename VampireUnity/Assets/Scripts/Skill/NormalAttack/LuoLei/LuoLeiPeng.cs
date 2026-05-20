@@ -16,6 +16,6 @@ public class LuoLeiPeng : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
-        GameController.S.DianPengQueue.Enqueue(gameObject);
+        QueueController.S.DianPengQueue.Enqueue(gameObject);
     }
 }

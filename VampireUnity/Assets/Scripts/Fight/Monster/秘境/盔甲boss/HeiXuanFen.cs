@@ -23,13 +23,13 @@ public class HeiXuanFen : MonoBehaviour
    {
       if (other.tag == "Player")
       {
-         GameController.S.gamePlayer.PlayerHurt(damage,true);
+         QueueController.S.gamePlayer.PlayerHurt(damage,true);
       }
    }
 
    public void Hide()
    {
       gameObject.SetActive(false);
-      GameController.S.HeiXuanFenQueue.Enqueue(this);
+      QueueController.S.HeiXuanFenQueue.Enqueue(this);
    }
 }

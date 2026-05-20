@@ -21,12 +21,12 @@ public class XieZiSkill1 : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
-         GameController.S.gamePlayer.PlayerHurt(Damage,true);
+         QueueController.S.gamePlayer.PlayerHurt(Damage,true);
       }
       if (other.CompareTag("BgEdge"))
       {
          gameObject.SetActive(false);
-         GameController.S.XieZiSkill1Queue.Enqueue(this);
+         QueueController.S.XieZiSkill1Queue.Enqueue(this);
       }
    }
 }

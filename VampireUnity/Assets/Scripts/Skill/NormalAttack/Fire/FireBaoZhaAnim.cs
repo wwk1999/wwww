@@ -10,7 +10,7 @@ public class FireBaoZhaAnim : MonoBehaviour
     public void Hide()
     {
         FireBaoZha.SetActive(false);
-        GameController.S.FireBaoZha1Queue.Enqueue(FireBaoZha);
+        QueueController.S.FireBaoZha1Queue.Enqueue(FireBaoZha);
     }
     
     
@@ -32,11 +32,11 @@ public class FireBaoZhaAnim : MonoBehaviour
             if (col.CompareTag("Monster")||col.CompareTag("Boss"))
             {
                 Vector2 closestPoint = col.ClosestPoint(transform.position);
-                var hit = GameController.S.FirePengQueue.Dequeue();
+                var hit = QueueController.S.FirePengQueue.Dequeue();
                 hit.SetActive(true);
                 hit.transform.position = closestPoint;
                 var crit = GameController.S.GetIsCrit();
-                GameController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Huo);
+                QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Huo);
             }
         }
     }

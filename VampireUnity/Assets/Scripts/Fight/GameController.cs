@@ -15,6 +15,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
@@ -73,11 +74,10 @@ public class GameController : XSingleton<GameController>
     
 
     //碰撞字典
-    [NonSerialized] public Dictionary<Collider2D, MonsterBase> MonsterColliderDic = new Dictionary<Collider2D, MonsterBase>();
 
     public Vector2 GetRandomMonsterPos()
     {
-        List<MonsterBase> monsters = new List<MonsterBase>(MonsterColliderDic.Values);
+        List<MonsterBase> monsters = new List<MonsterBase>(QueueController.S.MonsterColliderDic.Values);
         
         int n = monsters.Count;
         for (int i = n - 1; i > 0; i--)
@@ -90,7 +90,7 @@ public class GameController : XSingleton<GameController>
         foreach (var item in monsters)
         {
             if (item.gameObject.activeSelf &&
-                Vector2.Distance(gamePlayer.transform.position, item.transform.position) < 6)
+                Vector2.Distance(QueueController.S.gamePlayer.transform.position, item.transform.position) < 6)
             {
                 return item.transform.position;
             }
@@ -99,481 +99,11 @@ public class GameController : XSingleton<GameController>
         float x = Random.Range(-0.5f, 0.5f);
         float y = Random.Range(-0.5f, 0.5f);
         Vector3 dir = new Vector3(x, y,0);
-        return gamePlayer.transform.position+dir * 6;
+        return QueueController.S.gamePlayer.transform.position+dir * 6;
     }
     
     
-    [NonSerialized]public Player gamePlayer;
-
     
-    [NonSerialized] public Queue<PlayerHurt> PlayerHurtQueue = new Queue<PlayerHurt>();
-    
-    //Boss攻击提示对象池
-    [NonSerialized] public Queue<CircleAttack> CircleQueue = new Queue<CircleAttack>();
-    [NonSerialized] public Queue<SqrtAttack> SqrtQueue = new Queue<SqrtAttack>();
-
-    //小怪
-    [NonSerialized] public Queue<DanMu> DanMuQueue = new Queue<DanMu>();
-
-    [NonSerialized] public Queue<BaoXue> BaoXueQueue = new Queue<BaoXue>();
-
-    [NonSerialized] public Queue<banrenma1> banrenma1Queue = new Queue<banrenma1>();
-    [NonSerialized] public Queue<banrenma2> banrenma2Queue = new Queue<banrenma2>();
-    [NonSerialized] public Queue<banrenma3> banrenma3Queue = new Queue<banrenma3>();
-    [NonSerialized] public Queue<cat> catQueue = new Queue<cat>();
-    [NonSerialized] public Queue<egg> eggQueue = new Queue<egg>();
-    [NonSerialized] public Queue<lang> langQueue = new Queue<lang>();
-    [NonSerialized] public Queue<mogu> moguQueue = new Queue<mogu>();
-    [NonSerialized] public Queue<niguai1> niguai1Queue = new Queue<niguai1>();
-    [NonSerialized] public Queue<niguai2> niguai2Queue = new Queue<niguai2>();
-    [NonSerialized] public Queue<niguai3> niguai3Queue = new Queue<niguai3>();
-    [NonSerialized] public Queue<onyx> onyxQueue = new Queue<onyx>();
-    [NonSerialized] public Queue<paopao> paopaoQueue = new Queue<paopao>();
-    [NonSerialized] public Queue<queen> queenQueue = new Queue<queen>();
-    [NonSerialized] public Queue<rongyanboss> rongyanbossQueue = new Queue<rongyanboss>();
-    [NonSerialized] public Queue<shanyang> shanyangQueue = new Queue<shanyang>();
-    [NonSerialized] public Queue<she> sheQueue = new Queue<she>();
-    [NonSerialized] public Queue<woniu> woniuQueue = new Queue<woniu>();
-    [NonSerialized] public Queue<xiaohuoling> xiaohuolingQueue = new Queue<xiaohuoling>();
-    [NonSerialized] public Queue<xiaoshuguai> xiaoshuguaiQueue = new Queue<xiaoshuguai>();
-    [NonSerialized] public Queue<xiaozhizhu> xiaozhizhuQueue = new Queue<xiaozhizhu>();
-    [NonSerialized] public Queue<xiezi1> xiezi1Queue = new Queue<xiezi1>();
-    [NonSerialized] public Queue<xiezi2> xiezi2Queue = new Queue<xiezi2>();
-    [NonSerialized] public Queue<xiongbuou> xiongbuouQueue = new Queue<xiongbuou>();
-    [NonSerialized] public Queue<xuelaoshu> xuelaoshuQueue = new Queue<xuelaoshu>();
-    [NonSerialized] public Queue<yanshu> yanshuQueue = new Queue<yanshu>();
-    [NonSerialized] public Queue<yezhu> yezhuQueue = new Queue<yezhu>();
-    [NonSerialized] public Queue<zhumodaocaoren> zhumodaocaorenQueue = new Queue<zhumodaocaoren>();
-    [NonSerialized] public Queue<zibaolaoshu> zibaolaoshuQueue = new Queue<zibaolaoshu>();
-
-    
-    
-    [NonSerialized] public Queue<dazongxiong> dazongxiongQueue = new Queue<dazongxiong>();
-    [NonSerialized] public Queue<fengheguai> fengheguaiQueue = new Queue<fengheguai>();
-    [NonSerialized] public Queue<kuangshimuzhu> kuangshimuzhuQueue = new Queue<kuangshimuzhu>();
-    [NonSerialized] public Queue<lujiaodoushi> lujiaodoushiQueue = new Queue<lujiaodoushi>();
-    [NonSerialized] public Queue<shuangtouren> shuangtourenQueue = new Queue<shuangtouren>();
-
-    [NonSerialized] public Queue<cizhu> cizhuQueue = new Queue<cizhu>();
-    [NonSerialized] public Queue<daocaoren> daocaorenQueue = new Queue<daocaoren>();
-
-    [NonSerialized] public Queue<chailangren1> chailangren1Queue = new Queue<chailangren1>();
-[NonSerialized] public Queue<chailangren2> chailangren2Queue = new Queue<chailangren2>();
-[NonSerialized] public Queue<chailangren3> chailangren3Queue = new Queue<chailangren3>();
-[NonSerialized] public Queue<chailangren4> chailangren4Queue = new Queue<chailangren4>();
-[NonSerialized] public Queue<YeShouZhanShi> YeShouZhanShiQueue = new Queue<YeShouZhanShi>();
-[NonSerialized] public Queue<ZhiZhuNvWang> ZhiZhuNvWangQueue = new Queue<ZhiZhuNvWang>();
-[NonSerialized] public Queue<dijing2> dijing2Queue = new Queue<dijing2>();
-[NonSerialized] public Queue<dijing3> dijing3Queue = new Queue<dijing3>();
-[NonSerialized] public Queue<dijingshouwei1> dijingshouwei1Queue = new Queue<dijingshouwei1>();
-[NonSerialized] public Queue<dijingshouwei2> dijingshouwei2Queue = new Queue<dijingshouwei2>();
-[NonSerialized] public Queue<dijingshouwei3> dijingshouwei3Queue = new Queue<dijingshouwei3>();
-[NonSerialized] public Queue<heixiong> heixiongQueue = new Queue<heixiong>();
-[NonSerialized] public Queue<jianchizhu> jianchizhuQueue = new Queue<jianchizhu>();
-[NonSerialized] public Queue<kulou1> kulou1Queue = new Queue<kulou1>();
-[NonSerialized] public Queue<kulou2> kulou2Queue = new Queue<kulou2>();
-[NonSerialized] public Queue<kulou3> kulou3Queue = new Queue<kulou3>();
-[NonSerialized] public Queue<kulou4> kulou4Queue = new Queue<kulou4>();
-[NonSerialized] public Queue<kulou5> kulou5Queue = new Queue<kulou5>();
-[NonSerialized] public Queue<kulou6> kulou6Queue = new Queue<kulou6>();
-[NonSerialized] public Queue<lujiaocike> lujiaocikeQueue = new Queue<lujiaocike>();
-[NonSerialized] public Queue<lujiaocike2> lujiaocike2Queue = new Queue<lujiaocike2>();
-[NonSerialized] public Queue<niutouren1> niutouren1Queue = new Queue<niutouren1>();
-[NonSerialized] public Queue<niutouren2> niutouren2Queue = new Queue<niutouren2>();
-[NonSerialized] public Queue<niutouren3> niutouren3Queue = new Queue<niutouren3>();
-[NonSerialized] public Queue<shanzei3> shanzei3Queue = new Queue<shanzei3>();
-[NonSerialized] public Queue<shijiachong> shijiachongQueue = new Queue<shijiachong>();
-[NonSerialized] public Queue<shishigui> shishiguiQueue = new Queue<shishigui>();
-[NonSerialized] public Queue<shixianggui> shixiangguiQueue = new Queue<shixianggui>();
-[NonSerialized] public Queue<shouren1> shouren1Queue = new Queue<shouren1>();
-[NonSerialized] public Queue<shouren2> shouren2Queue = new Queue<shouren2>();
-[NonSerialized] public Queue<shouren3> shouren3Queue = new Queue<shouren3>();
-[NonSerialized] public Queue<shuangtoulong> shuangtoulongQueue = new Queue<shuangtoulong>();
-[NonSerialized] public Queue<shuangtoulong2> shuangtoulong2Queue = new Queue<shuangtoulong2>();
-[NonSerialized] public Queue<shuangtoulong3> shuangtoulong3Queue = new Queue<shuangtoulong3>();
-[NonSerialized] public Queue<tujiu> tujiuQueue = new Queue<tujiu>();
-[NonSerialized] public Queue<wuya> wuyaQueue = new Queue<wuya>();
-[NonSerialized] public Queue<youhunlingzhu> youhunlingzhuQueue = new Queue<youhunlingzhu>();
-[NonSerialized] public Queue<youlang> youlangQueue = new Queue<youlang>();
-[NonSerialized] public Queue<youling> youlingQueue = new Queue<youling>();
-[NonSerialized] public Queue<youling2> youling2Queue = new Queue<youling2>();
-[NonSerialized] public Queue<yuren1> yuren1Queue = new Queue<yuren1>();
-[NonSerialized] public Queue<yuren2> yuren2Queue = new Queue<yuren2>();
-[NonSerialized] public Queue<yuren3> yuren3Queue = new Queue<yuren3>();
-
-//精英怪，暂时没写
-[NonSerialized] public Queue<dijingzhanglao> DijingzhanglaoQueue = new Queue<dijingzhanglao>();
-[NonSerialized] public Queue<rongyanguai> rongyanguaiQueue = new Queue<rongyanguai>();
-[NonSerialized] public Queue<shifuboss> shifubossQueue = new Queue<shifuboss>();
-[NonSerialized] public Queue<wuyaozhiwang> wuyaozhiwangQueue = new Queue<wuyaozhiwang>();
-[NonSerialized] public Queue<wuyaozhiwang2> wuyaozhiwang2Queue = new Queue<wuyaozhiwang2>();
-
-    //第一关怪
-    [NonSerialized] public Queue<SnotMonster> SnotMonsterQueue = new Queue<SnotMonster>();
-    [NonSerialized] public Queue<EliteBeeMonster> EliteBeeMonsterQueue = new Queue<EliteBeeMonster>();
-    [NonSerialized] public Queue<BatMonster> BatMonsterQueue = new Queue<BatMonster>();
-    [NonSerialized] public Queue<SpiderMonster> SpiderMonsterQueue = new Queue<SpiderMonster>();
-    [NonSerialized] public Queue<TreeManSkill> TreeManSkillQueue = new Queue<TreeManSkill>();
-    [NonSerialized] public Queue<TreeManDiLie> TreeManDiLieQueue = new Queue<TreeManDiLie>();
-    [NonSerialized] public Queue<BeeBullet> BeeBulletQueue = new Queue<BeeBullet>();
-    [NonReorderable]public Queue<TreeManDanMu>TreeManDanMuQueue = new Queue<TreeManDanMu>();
-
-
-    
-    //第二关怪
-    [NonSerialized] public Queue<ChongZiMonster> ChongZiMonsterQueue = new Queue<ChongZiMonster>();
-    [NonSerialized] public Queue<DunDiMonster> DunDiMonsterQueue = new Queue<DunDiMonster>();
-    [NonSerialized] public Queue<XiaoHuoMonster> XiaoHuoMonsterQueue = new Queue<XiaoHuoMonster>();
-    [NonSerialized] public Queue<EliteDaZuiMonster> EliteDaZuiMonsterQueue = new Queue<EliteDaZuiMonster>();
-    [NonSerialized] public Queue<XiNiuMonster> XiNiuMonsterQueue = new Queue<XiNiuMonster>();
-
-  
-    [NonSerialized] public Queue<HuoShanJianQi> HuoShanJianQiQueue = new Queue<HuoShanJianQi>();
-    [NonSerialized] public Queue<HuoShanSkill2> HuoShanSkill2QiQueue = new Queue<HuoShanSkill2>();
-
-
-    
-    
-    //第三关怪
-    [NonSerialized] public Queue<JiaChongMonster> JiaChongMonsterQueue = new Queue<JiaChongMonster>();
-    [NonSerialized] public Queue<WenZiMonster> WenZiMonsterQueue = new Queue<WenZiMonster>();
-    [NonSerialized] public Queue<QingWaMonster> QingWaMonsterQueue = new Queue<QingWaMonster>();
-    [NonSerialized] public Queue<ShiRenHuaMonster> ShiRenHuaMonsterQueue = new Queue<ShiRenHuaMonster>();
-    
-    [NonSerialized] public Queue<ZhaoZeSkill> ZhaoZeSkillQueue = new Queue<ZhaoZeSkill>();
-
-
-
-    //第四关怪
-    [NonSerialized] public Queue<Huangzhu> HuangZhuQueue = new Queue<Huangzhu>();
-    [NonSerialized] public Queue<HuangShu> HuangShuQueue = new Queue<HuangShu>();
-    [NonSerialized] public Queue<KuLou> KuLouQueue = new Queue<KuLou>();
-    [NonSerialized] public Queue<ShaMoElite> ShaMoEliteQueue = new Queue<ShaMoElite>();
-    
-    [NonSerialized] public Queue<ShaChong> ShaChongQueue = new Queue<ShaChong>();
-    [NonSerialized] public Queue<ShaNiao> ShaNiaoQueue = new Queue<ShaNiao>();
-    [NonSerialized] public Queue<ShaXiYi> ShaXiYiQueue = new Queue<ShaXiYi>();
-    [NonSerialized] public Queue<XianRenZhang> XianRenZhangQueue = new Queue<XianRenZhang>();
-    [NonSerialized] public Queue<XieZiSkill1> XieZiSkill1Queue = new Queue<XieZiSkill1>();
-    [NonSerialized] public Queue<XieZiSkill4> XieZiSkill4Queue = new Queue<XieZiSkill4>();
-
-
-    //第五关怪
-    [NonSerialized] public Queue<XueQiE> XueQiEQueue = new Queue<XueQiE>();
-    [NonSerialized] public Queue<XueZhangLang> XueZhangLangQueue = new Queue<XueZhangLang>();
-    [NonSerialized] public Queue<XueRen> XueRenQueue = new Queue<XueRen>();
-    [NonSerialized] public Queue<XueRenJian> XueRenJianQueue = new Queue<XueRenJian>();
-    [NonSerialized] public Queue<XueRenBossSkill1> XueRenBossSkill1Queue = new Queue<XueRenBossSkill1>();
-    [NonSerialized] public Queue<YingShu> YingShuQueue = new Queue<YingShu>();
-    
-    //秘境怪物
-    [NonSerialized] public Queue<DaLong> DaLongQueue = new Queue<DaLong>();
-    [NonSerialized] public Queue<EMo1> EMo1Queue = new Queue<EMo1>();
-    [NonSerialized] public Queue<EMo2> EMo2Queue = new Queue<EMo2>();
-    [NonSerialized] public Queue<EMo3> EMo3Queue = new Queue<EMo3>();
-    [NonSerialized] public Queue<HongLong1> HongLong1Queue = new Queue<HongLong1>();
-    [NonSerialized] public Queue<HongLong2> HongLong2Queue = new Queue<HongLong2>();
-    [NonSerialized] public Queue<HongLong3> HongLong3Queue = new Queue<HongLong3>();
-    [NonSerialized] public Queue<LanLong1> LanLong1Queue = new Queue<LanLong1>();
-    [NonSerialized] public Queue<LanLong2> LanLong2Queue = new Queue<LanLong2>();
-    [NonSerialized] public Queue<LanLong3> LanLong3Queue = new Queue<LanLong3>();
-    [NonSerialized] public Queue<LvLang> LvLangQueue = new Queue<LvLang>();
-    [NonSerialized] public Queue<LvLong1> LvLong1Queue = new Queue<LvLong1>();
-    [NonSerialized] public Queue<LvLong2> LvLong2Queue = new Queue<LvLong2>();
-    [NonSerialized] public Queue<LvLong3> LvLong3Queue = new Queue<LvLong3>();
-    
-    [NonSerialized] public Queue<LeiShouSkill3> LeiShouSkill3Queue = new Queue<LeiShouSkill3>();
-    [NonSerialized] public Queue<HeiXuanFen> HeiXuanFenQueue = new Queue<HeiXuanFen>();
-    [NonSerialized] public Queue<LvZhuiZong> LvZhuiZongQueue = new Queue<LvZhuiZong>();
-    [NonSerialized] public Queue<LvXuanFen> LvXuanFenQueue = new Queue<LvXuanFen>();
-    [NonSerialized] public Queue<BaoZiSkill2> BaoZiSkill2Queue = new Queue<BaoZiSkill2>();
-
-    [NonSerialized] public Queue<HuoLangSkill2> HuoLangSkill2Queue = new Queue<HuoLangSkill2>();
-    [NonSerialized] public Queue<ShuangDaoSkill2> ShuangDaoSkill2Queue = new Queue<ShuangDaoSkill2>();
-    [NonSerialized] public Queue<ShuangDaoSkill3> ShuangDaoSkill3Queue = new Queue<ShuangDaoSkill3>();
-
-
-
-
-
-
-
-    
-    
-    
-    //子弹队列
-    [NonReorderable]public Queue<GameObject>ThreeNormalAttackQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ThreeNormalAttackHitQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FourNormalAttackQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FourNormalAttackHitQueue = new Queue<GameObject>();
-    
-    
-    [NonReorderable]public Queue<GameObject>FirePengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FireQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>XuKongPengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XuKongQueue = new Queue<GameObject>();
-
-    [NonReorderable]public Queue<GameObject>LvQuanQueue = new Queue<GameObject>();
-
-    [NonReorderable]public Queue<GameObject>HeiDongQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HeiDongNextQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HeiDongPengQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>DuQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DuPengQueue = new Queue<GameObject>();
-
-
-    [NonReorderable]public Queue<GameObject>LuoLeiQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PrimaryQueue = new Queue<GameObject>();
-
-    [NonReorderable]public Queue<GameObject>PuTong3Queue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PuTong3PengQueue = new Queue<GameObject>();
-    
-    
-    [NonReorderable]public Queue<GameObject>FireBaoZha1Queue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<PlayerJianQi>PlayerJianQiQueue = new Queue<PlayerJianQi>();
-    [NonReorderable]public Queue<GameObject>ZiBaoZhaQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>IcePengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HeiAnPengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HuoPengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DianPengQueue = new Queue<GameObject>();
-
-    [NonReorderable]public Queue<Huo7Item>Huo7Queue = new Queue<Huo7Item>();
-    [NonReorderable]public Queue<Ice7Item>Ice7Queue = new Queue<Ice7Item>();
-    [NonReorderable]public Queue<IcePen>IcePenQueue = new Queue<IcePen>();
-    [NonReorderable]public Queue<PrimaryDian>PrimaryDianQueue = new Queue<PrimaryDian>();
-    [NonReorderable]public Queue<PrimaryHuo>PrimaryHuoQueue = new Queue<PrimaryHuo>();
-    [NonReorderable]public Queue<PrimaryHeiAn>PrimaryHeiAnQueue = new Queue<PrimaryHeiAn>();
-
-
-    [NonReorderable]public Queue<DianLuoLei>DianLuoLeiQueue = new Queue<DianLuoLei>();
-    [NonReorderable]public Queue<DianLuoLeiNext>DianLuoLeiNextQueue = new Queue<DianLuoLeiNext>();
-
-
-    [NonReorderable]public Queue<HuoFenLie>HuoFenLieQueue = new Queue<HuoFenLie>();
-    [NonReorderable]public Queue<HuoFenLieDan>HuoFenLieDanQueue = new Queue<HuoFenLieDan>();
-    [NonReorderable]public Queue<HuoFenLieBaoZha>HuoFenLieBaoZhaQueue = new Queue<HuoFenLieBaoZha>();
-
-    [NonReorderable]public Queue<Ice4BaoZhaItem>Ice4BaoZhaItemQueue = new Queue<Ice4BaoZhaItem>();
-    [NonReorderable]public Queue<Ice4BaoZha>Ice4BaoZhaQueue = new Queue<Ice4BaoZha>();
-    [NonReorderable]public Queue<DianJiSu>DianJiSuQueue = new Queue<DianJiSu>();
-    [NonReorderable]public Queue<HeiAnHuiXuan>HeiAnHuiXuanQueue = new Queue<HeiAnHuiXuan>();
-    [NonReorderable]public Queue<HuoQuXian>HeiAnQuXianQueue = new Queue<HuoQuXian>();
-
-    [NonReorderable]public Queue<HuoDiPen>HuoDiPenQueue = new Queue<HuoDiPen>();
-    [NonReorderable]public Queue<HuoBaoZha>HuoBaoZhaQueue = new Queue<HuoBaoZha>();
-    [NonReorderable]public Queue<HuoYanBaoZhaNext>HuoYanBaoZhaNextQueue = new Queue<HuoYanBaoZhaNext>();
-    [NonReorderable]public Queue<DianBaoZha>DianBaoZhaQueue = new Queue<DianBaoZha>();
-    [NonReorderable]public Queue<DianBaoZhaNext>DianBaoZhaNextQueue = new Queue<DianBaoZhaNext>();
-    [NonReorderable]public Queue<IceBaoZha>IceBaoZhaQueue = new Queue<IceBaoZha>();
-    [NonReorderable]public Queue<IceBaoZhaNext>IceBaoZhaNextQueue = new Queue<IceBaoZhaNext>();
-
-    
-    
-    [NonReorderable]public Queue<GameObject>HeiAnBaoZhaQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HeiAnBaoZhaNextQueue = new Queue<GameObject>();
-
-
-
-    
-    
-    //技能队列
-    [NonReorderable]public Queue<GameObject>DianQuanQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DianQuanPengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<IceExplosion>IceExQueue = new Queue<IceExplosion>();
-    [NonReorderable]public Queue<HuoSkill1>HuoSkill1Queue = new Queue<HuoSkill1>();
-    [NonReorderable]public Queue<DianSkill2>DianSkill2Queue = new Queue<DianSkill2>();
-    [NonReorderable]public Queue<HeiAnSkill3>HeiAnSkill3Queue = new Queue<HeiAnSkill3>();
-    [NonReorderable]public Queue<HeiAnSkill1>HeiAnSkill1Queue = new Queue<HeiAnSkill1>();
-    [NonReorderable]public Queue<DianSkill3>DianSkill3Queue = new Queue<DianSkill3>();
-    [NonReorderable]public Queue<HuoSkill3>HuoSkill3Queue = new Queue<HuoSkill3>();
-    [NonReorderable]public Queue<IceSkill1>IceSkill1Queue = new Queue<IceSkill1>();
-    [NonReorderable]public Queue<IceSkill4>IceSkill4Queue = new Queue<IceSkill4>();
-    [NonReorderable]public Queue<IceSkill5>IceSkill5Queue = new Queue<IceSkill5>();
-    [NonReorderable]public Queue<HuoSkill4>HuoSkill4Queue = new Queue<HuoSkill4>();
-    [NonReorderable]public Queue<HuoSkill5>HuoSkill5Queue = new Queue<HuoSkill5>();
-    [NonReorderable]public Queue<DianSkill4>DianSkill4Queue = new Queue<DianSkill4>();
-    [NonReorderable]public Queue<DianSkill5>DianSkill5Queue = new Queue<DianSkill5>();
-    [NonReorderable]public Queue<HeiAnSkill4>HeiAnSkill4Queue = new Queue<HeiAnSkill4>();
-    [NonReorderable]public Queue<HeiAnSkill5>HeiAnSkill5Queue = new Queue<HeiAnSkill5>();
-
-
-
-    
-    
-    //血能对象池队列
-    [NonReorderable]public Queue<GameObject>BloodEnergyQueue = new Queue<GameObject>();
-    //怪物伤害文本对象池队列
-    [NonReorderable]public Queue<MonsterHurtText>MonsterHurtTextQueue = new Queue<MonsterHurtText>();
-
-    //翅膀对象池
-    [NonReorderable]public Queue<ChiBangFight>ChiBangFightQueue = new Queue<ChiBangFight>();
-
-    
-    //武器碎片对象池
-    [NonReorderable]public Queue<GameObject>WhiteWeaponFragmengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GreenWeaponFragmengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BlueWeaponFragmengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PurpleWeaponFragmengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>OrangeWeaponFragmengQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>RedWeaponFragmengQueue = new Queue<GameObject>();
-    
-    
-    
-    //装备对象池
-    [NonReorderable]public Queue<GameObject>PrimaryCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PrimaryClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PrimaryRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PrimaryHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PrimaryNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PrimaryShoeQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>GreenCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GreenClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GreenRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GreenHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GreenNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GreenShoeQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>BlueCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BlueClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BlueRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BlueHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BlueNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BlueShoeQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>ZhaoZeCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ZhaoZeClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ZhaoZeRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ZhaoZeHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ZhaoZeNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ZhaoZeShoeQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>Purple1CloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Purple1ClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Purple1RingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Purple1HelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Purple1NecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Purple1ShoeQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>TreeManCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>TreeManClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>TreeManRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>TreeManHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>TreeManNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>TreeManShoeQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>HuoShanCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HuoShanClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HuoShanRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HuoShanHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HuoShanNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HuoShanShoeQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>XieZiCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XieZiClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XieZiRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XieZiHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XieZiNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XieZiShoeQueue = new Queue<GameObject>();
-
-    
-    [NonReorderable]public Queue<GameObject>XueRenCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XueRenClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XueRenRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XueRenHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XueRenNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XueRenShoeQueue = new Queue<GameObject>();
-
-    
-    [NonReorderable]public Queue<GameObject>PurpleCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PurpleClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PurpleRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PurpleHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PurpleNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PurpleShoeQueue = new Queue<GameObject>();
-    
-    [NonReorderable]public Queue<GameObject>OrangeCloakQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>OrangeClothQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>OrangeRingQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>OrangeHelmetQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>OrangeNecklaceQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>OrangeShoeQueue = new Queue<GameObject>();
-    
-    //传说装备
-  
-    [NonReorderable]public Queue<GameObject>FinalDamageReductionFixedQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FinalDamageReductionPercentQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>AllReplyAddPercentQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>AddHpForTimeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>AddDefenseForTimeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ReplyDeathQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DelayDamageQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HpReductionReplyAdd50Queue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HpReductionAddDefenseQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FinalDamageAddPercentQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>KillNormalQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>AddAttackForTimeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>NormalAddDamageQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>RecudeHpAddAttackQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>JianSuAddAttackQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FanPuGuiZhenQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>NoSkillQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BuWangChuXinQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HeiDongAddSpeedQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DuAddDuQuanQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>LvQuanAddScaleQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XuKongAdd2DanQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PuTong3ChuanTouQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FireBaoZhaQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill1ReplaceNormalAttackQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill1YiDianDoubleQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill1AddRangeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill2AddDanQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill2RotateAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill2AddRangeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill3Bian3Queue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill3AddRangeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DashCdQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DashRangeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>MoveSpeedAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ExAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ClothFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ShoeFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>CloakFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>NecklaceFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>RingFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HelmetFortureAddQueue = new Queue<GameObject>();
-
-    [NonReorderable]public Queue<BaoShi>BaoShiQueue = new Queue<BaoShi>();
-
-
-    //神话材料
-    [NonReorderable]public Queue<GameObject>JuDaYaChiQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FuMoZhiGuQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GoldBloodQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ZuiEYanZhuQueue = new Queue<GameObject>();
-    
-    
-    //宠物蛋
-    [NonReorderable]public Queue<ChongWuDanFight>ChongWuDanQueue = new Queue<ChongWuDanFight>();
-    [NonReorderable]public Queue<XiSuiYeFight>XiSuiYeQueue = new Queue<XiSuiYeFight>();
-    [NonReorderable]public Queue<XueMaiDanFight>XueMaiDanQueue = new Queue<XueMaiDanFight>();
-    [NonReorderable]public Queue<ChongWuSkillShuFight>ChongWuSkillShuQueue = new Queue<ChongWuSkillShuFight>();
-    [NonReorderable]public Queue<ChongWuShiWuFight>ChongWuShiWuQueue = new Queue<ChongWuShiWuFight>();
-    [NonReorderable]public Queue<DaKongShiFight>DaKongShiQueue = new Queue<DaKongShiFight>();
-    [NonReorderable]public Queue<ShenHuaCaiLiaoFight>ShenHuaCaiLiaoQueue = new Queue<ShenHuaCaiLiaoFight>();
-
-    //羽毛
-    [NonReorderable]public Queue<GameObject>WhiteChiBangQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>GreenChiBangQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BlueChiBangQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PurpleChiBangQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>OrangeChiBangQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>RedChiBangQueue = new Queue<GameObject>();
-
 
    
     //怪物数量
@@ -587,7 +117,6 @@ public class GameController : XSingleton<GameController>
 
     public float monsterBirthTimeScale => LevelInfoConfig.LevelMonsterCreateSpeedDic[LevelInfoConfig.CurrentGameLevel]; //间隔一秒钟生成一个怪物
     public float currentTime = 0f;
-    public GameObject fightBG;
     [NonSerialized]public Transform[] MonsterBirthPoints1;
     [NonSerialized]public Transform[] MonsterBirthPoints2;
     [NonSerialized]public Transform[] MonsterBirthPoints3;
@@ -619,7 +148,7 @@ public class GameController : XSingleton<GameController>
 
     public void CreateDiLie(Vector2 pos,float damage)
     {
-        var dilie = TreeManDiLieQueue.Dequeue();
+        var dilie = QueueController.S.TreeManDiLieQueue.Dequeue();
         dilie.transform.position = pos;
         dilie.GetComponent<TreeManDiLie>().damage = damage;
         dilie.gameObject.SetActive(true);
@@ -627,7 +156,7 @@ public class GameController : XSingleton<GameController>
 
     public void CreateCircleAttack(Vector2 pos,float scale)
     {
-        var circle=CircleQueue.Dequeue();
+        var circle=QueueController.S.CircleQueue.Dequeue();
         circle.transform.position = pos;
         circle.transform.localScale = new Vector3(scale, scale, scale);
         circle.gameObject.SetActive(true);
@@ -635,7 +164,7 @@ public class GameController : XSingleton<GameController>
     
     public void CreateSqrtAttack(Vector2 pos, Vector2 dir)
     {
-        var sqrt = SqrtQueue.Dequeue();
+        var sqrt = QueueController.S.SqrtQueue.Dequeue();
         sqrt.transform.position = pos;
         sqrt.gameObject.SetActive(true);
         if (dir.sqrMagnitude > 0.0001f)
@@ -659,37 +188,37 @@ public class GameController : XSingleton<GameController>
         {
             case PropConfig.PropType.ChiBangFight:
                 ChiBangType chiBangType = ChiBangConfig.GetRandomChiBangType(prop.Quality);
-                ChiBangFight chiBangFight = ChiBangFightQueue.Dequeue();
+                ChiBangFight chiBangFight = QueueController.S.ChiBangFightQueue.Dequeue();
                 chiBangFight.ChiBangType=chiBangType;
                 return chiBangFight.gameObject;
             case PropConfig.PropType.WeaponFragment:
                 switch (prop.Quality)
                 {
                     case 1:
-                        return WhiteWeaponFragmengQueue.Dequeue();
+                        return QueueController.S.WhiteWeaponFragmengQueue.Dequeue();
                     case 2:
-                        return GreenWeaponFragmengQueue.Dequeue();
+                        return QueueController.S.GreenWeaponFragmengQueue.Dequeue();
                     case 3:
-                        return BlueWeaponFragmengQueue.Dequeue();
+                        return QueueController.S.BlueWeaponFragmengQueue.Dequeue();
                     case 4:
-                        return PurpleWeaponFragmengQueue.Dequeue();
+                        return QueueController.S.PurpleWeaponFragmengQueue.Dequeue();
                     case 5:
-                        return OrangeWeaponFragmengQueue.Dequeue();
+                        return QueueController.S.OrangeWeaponFragmengQueue.Dequeue();
                     case 6:
-                        return RedWeaponFragmengQueue.Dequeue();
+                        return QueueController.S.RedWeaponFragmengQueue.Dequeue();
                 }
                 break;
             case PropConfig.PropType.ShenHuaCaiLiao:
                 switch (prop.Quality)
                 {
                     case 1:
-                        return FuMoZhiGuQueue.Dequeue();
+                        return QueueController.S.FuMoZhiGuQueue.Dequeue();
                     case 2:
-                        return GoldBloodQueue.Dequeue();
+                        return QueueController.S.GoldBloodQueue.Dequeue();
                     case 3:
-                        return JuDaYaChiQueue.Dequeue();
+                        return QueueController.S.JuDaYaChiQueue.Dequeue();
                     case 4:
-                        return ZuiEYanZhuQueue.Dequeue();
+                        return QueueController.S.ZuiEYanZhuQueue.Dequeue();
                 }
                 break;
             
@@ -697,21 +226,21 @@ public class GameController : XSingleton<GameController>
                 switch (prop.Quality)
                 {
                     case 1:
-                        return WhiteChiBangQueue.Dequeue();
+                        return QueueController.S.WhiteChiBangQueue.Dequeue();
                     case 2:
-                        return GreenChiBangQueue.Dequeue();
+                        return QueueController.S.GreenChiBangQueue.Dequeue();
                     case 3:
-                        return BlueChiBangQueue.Dequeue();
+                        return QueueController.S.BlueChiBangQueue.Dequeue();
                     case 4:
-                        return PurpleChiBangQueue.Dequeue();
+                        return QueueController.S.PurpleChiBangQueue.Dequeue();
                     case 5:
-                        return OrangeChiBangQueue.Dequeue();
+                        return QueueController.S.OrangeChiBangQueue.Dequeue();
                     case 6:
-                        return RedChiBangQueue.Dequeue();
+                        return QueueController.S.RedChiBangQueue.Dequeue();
                 }
                 break;
             case PropConfig.PropType.AA:
-                BaoShi baoshi=BaoShiQueue.Dequeue();
+                BaoShi baoshi=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -749,7 +278,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi.gameObject;
             
             case PropConfig.PropType.AC:
-                BaoShi baoshi9=BaoShiQueue.Dequeue();
+                BaoShi baoshi9=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -787,7 +316,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi9.gameObject;
             
             case PropConfig.PropType.AD:
-                BaoShi baoshi8=BaoShiQueue.Dequeue();
+                BaoShi baoshi8=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -825,7 +354,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi8.gameObject;
             
             case PropConfig.PropType.HH:
-                BaoShi baoshi7=BaoShiQueue.Dequeue();
+                BaoShi baoshi7=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -863,7 +392,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi7.gameObject;
             
             case PropConfig.PropType.HA:
-                BaoShi baoshi6=BaoShiQueue.Dequeue();
+                BaoShi baoshi6=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -901,7 +430,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi6.gameObject;
             
             case PropConfig.PropType.HC:
-                BaoShi baoshi5=BaoShiQueue.Dequeue();
+                BaoShi baoshi5=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -939,7 +468,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi5.gameObject;
             
             case PropConfig.PropType.HD:
-                BaoShi baoshi4=BaoShiQueue.Dequeue();
+                BaoShi baoshi4=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -977,7 +506,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi4.gameObject;
             
             case PropConfig.PropType.CC:
-                BaoShi baoshi3=BaoShiQueue.Dequeue();
+                BaoShi baoshi3=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -1015,7 +544,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi3.gameObject;
             
             case PropConfig.PropType.CD:
-                BaoShi baoshi2=BaoShiQueue.Dequeue();
+                BaoShi baoshi2=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -1053,7 +582,7 @@ public class GameController : XSingleton<GameController>
                 return baoshi2.gameObject;
             
             case PropConfig.PropType.DD:
-                BaoShi baoshi1=BaoShiQueue.Dequeue();
+                BaoShi baoshi1=QueueController.S.BaoShiQueue.Dequeue();
                 switch (prop.Quality)
                 {
                     case 1:
@@ -1092,11 +621,11 @@ public class GameController : XSingleton<GameController>
                 switch (prop.Quality)
                 {
                     case 3:
-                        var chongwudan = ChongWuDanQueue.Dequeue();
+                        var chongwudan = QueueController.S.ChongWuDanQueue.Dequeue();
                         chongwudan.quality = 3;
                         return chongwudan.gameObject;
                     case 5:
-                        var chongwudan1 = ChongWuDanQueue.Dequeue();
+                        var chongwudan1 = QueueController.S.ChongWuDanQueue.Dequeue();
                         chongwudan1.quality = 5;
                         return chongwudan1.gameObject;
                 }
@@ -1107,27 +636,27 @@ public class GameController : XSingleton<GameController>
                 switch (prop.Quality)
                 {
                     case 1:
-                        var chongwushiwu1 = ChongWuShiWuQueue.Dequeue();
+                        var chongwushiwu1 = QueueController.S.ChongWuShiWuQueue.Dequeue();
                         chongwushiwu1.quality = 1;
                         return chongwushiwu1.gameObject;
                     case 2:
-                        var chongwushiwu2 = ChongWuShiWuQueue.Dequeue();
+                        var chongwushiwu2 = QueueController.S.ChongWuShiWuQueue.Dequeue();
                         chongwushiwu2.quality = 2;
                         return chongwushiwu2.gameObject;
                     case 3:
-                        var chongwushiwu3 = ChongWuShiWuQueue.Dequeue();
+                        var chongwushiwu3 = QueueController.S.ChongWuShiWuQueue.Dequeue();
                         chongwushiwu3.quality = 3;
                         return chongwushiwu3.gameObject;
                     case 4:
-                        var chongwushiwu4 = ChongWuShiWuQueue.Dequeue();
+                        var chongwushiwu4 = QueueController.S.ChongWuShiWuQueue.Dequeue();
                         chongwushiwu4.quality = 4;
                         return chongwushiwu4.gameObject;
                     case 5:
-                        var chongwushiwu5 = ChongWuShiWuQueue.Dequeue();
+                        var chongwushiwu5 = QueueController.S.ChongWuShiWuQueue.Dequeue();
                         chongwushiwu5.quality = 5;
                         return chongwushiwu5.gameObject;
                     case 6:
-                        var chongwushiwu6 = ChongWuShiWuQueue.Dequeue();
+                        var chongwushiwu6 = QueueController.S.ChongWuShiWuQueue.Dequeue();
                         chongwushiwu6.quality = 6;
                         return chongwushiwu6.gameObject;
                 }
@@ -1138,27 +667,27 @@ public class GameController : XSingleton<GameController>
                 switch (prop.Quality)
                 {
                     case 1:
-                        var chongwuSkillShu1 = ChongWuSkillShuQueue.Dequeue();
+                        var chongwuSkillShu1 = QueueController.S.ChongWuSkillShuQueue.Dequeue();
                         chongwuSkillShu1.quality = 1;
                         return chongwuSkillShu1.gameObject;
                     case 2:
-                        var chongwuSkillShu2 = ChongWuSkillShuQueue.Dequeue();
+                        var chongwuSkillShu2 = QueueController.S.ChongWuSkillShuQueue.Dequeue();
                         chongwuSkillShu2.quality = 2;
                         return chongwuSkillShu2.gameObject;
                     case 3:
-                        var chongwuSkillShu3 = ChongWuSkillShuQueue.Dequeue();
+                        var chongwuSkillShu3 = QueueController.S.ChongWuSkillShuQueue.Dequeue();
                         chongwuSkillShu3.quality = 3;
                         return chongwuSkillShu3.gameObject;
                     case 4:
-                        var chongwuSkillShu4 = ChongWuSkillShuQueue.Dequeue();
+                        var chongwuSkillShu4 = QueueController.S.ChongWuSkillShuQueue.Dequeue();
                         chongwuSkillShu4.quality = 4;
                         return chongwuSkillShu4.gameObject;
                     case 5:
-                        var chongwuSkillShu5 = ChongWuSkillShuQueue.Dequeue();
+                        var chongwuSkillShu5 = QueueController.S.ChongWuSkillShuQueue.Dequeue();
                         chongwuSkillShu5.quality = 5;
                         return chongwuSkillShu5.gameObject;
                     case 6:
-                        var chongwuSkillShu6 = ChongWuSkillShuQueue.Dequeue();
+                        var chongwuSkillShu6 = QueueController.S.ChongWuSkillShuQueue.Dequeue();
                         chongwuSkillShu6.quality = 6;
                         return chongwuSkillShu6.gameObject;
                 }
@@ -1174,131 +703,131 @@ public class GameController : XSingleton<GameController>
         switch (equip.OrangeEntry)
         {
             case EntryConfig.OrangeEntry.FinalDamageReductionFixed:
-                return FinalDamageReductionFixedQueue.Dequeue();
+                return QueueController.S.FinalDamageReductionFixedQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.FinalDamageReductionPercent:
-                return FinalDamageReductionPercentQueue.Dequeue();
+                return QueueController.S.FinalDamageReductionPercentQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.AllReplyAddPercent:
-                return AllReplyAddPercentQueue.Dequeue();
+                return QueueController.S.AllReplyAddPercentQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.AddHpForTime:
-                return AddHpForTimeQueue.Dequeue();
+                return QueueController.S.AddHpForTimeQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.AddDefenseForTime:
-                return AddDefenseForTimeQueue.Dequeue();
+                return QueueController.S.AddDefenseForTimeQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.ReplyDeath:
-                return ReplyDeathQueue.Dequeue();
+                return QueueController.S.ReplyDeathQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.DelayDamage:
-                return DelayDamageQueue.Dequeue();
+                return QueueController.S.DelayDamageQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.HpReductionReplyAdd50:
-                return HpReductionReplyAdd50Queue.Dequeue();
+                return QueueController.S.HpReductionReplyAdd50Queue.Dequeue();
             
             case EntryConfig.OrangeEntry.HpReductionAddDefense:
-                return HpReductionAddDefenseQueue.Dequeue();
+                return QueueController.S.HpReductionAddDefenseQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.FinalDamageAddPercent:
-                return FinalDamageAddPercentQueue.Dequeue();
+                return QueueController.S.FinalDamageAddPercentQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.KillNormal:
-                return KillNormalQueue.Dequeue();
+                return QueueController.S.KillNormalQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.AddAttackForTime:
-                return AddAttackForTimeQueue.Dequeue();
+                return QueueController.S.AddAttackForTimeQueue.Dequeue();
             
             
             case EntryConfig.OrangeEntry.NormalAddDamage:
-                return NormalAddDamageQueue.Dequeue();
+                return QueueController.S.NormalAddDamageQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.RecudeHpAddAttack:
-                return RecudeHpAddAttackQueue.Dequeue();
+                return QueueController.S.RecudeHpAddAttackQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.JianSuAddAttack:
-                return JianSuAddAttackQueue.Dequeue();
+                return QueueController.S.JianSuAddAttackQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.FanPuGuiZhen:
-                return FanPuGuiZhenQueue.Dequeue();
+                return QueueController.S.FanPuGuiZhenQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.NoSkill:
-                return NoSkillQueue.Dequeue();
+                return QueueController.S.NoSkillQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.BuWangChuXin:
-                return BuWangChuXinQueue.Dequeue();
+                return QueueController.S.BuWangChuXinQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.HeiDongAddSpeed:
-                return HeiDongAddSpeedQueue.Dequeue();
+                return QueueController.S.HeiDongAddSpeedQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.DuAddDuQuan:
-                return DuAddDuQuanQueue.Dequeue();
+                return QueueController.S.DuAddDuQuanQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.LvQuanAddScale:
-                return LvQuanAddScaleQueue.Dequeue();
+                return QueueController.S.LvQuanAddScaleQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.XuKongAdd2Dan:
-                return XuKongAdd2DanQueue.Dequeue();
+                return QueueController.S.XuKongAdd2DanQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.PuTong3ChuanTou:
-                return PuTong3ChuanTouQueue.Dequeue();
+                return QueueController.S.PuTong3ChuanTouQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.FireBaoZha:
-                return FireBaoZhaQueue.Dequeue();
+                return QueueController.S.FireBaoZhaQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack:
-                return Skill1ReplaceNormalAttackQueue.Dequeue();
+                return QueueController.S.Skill1ReplaceNormalAttackQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.Skill1YiDianDouble:
-                return Skill1YiDianDoubleQueue.Dequeue();
+                return QueueController.S.Skill1YiDianDoubleQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.Skill1AddRange:
-                return Skill1AddRangeQueue.Dequeue();
+                return QueueController.S.Skill1AddRangeQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.Skill2AddDan:
-                return Skill2AddDanQueue.Dequeue();
+                return QueueController.S.Skill2AddDanQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.Skill2RotateAdd:
-                return Skill2RotateAddQueue.Dequeue();
+                return QueueController.S.Skill2RotateAddQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.Skill2AddRange:
-                return Skill2AddRangeQueue.Dequeue();
+                return QueueController.S.Skill2AddRangeQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.Skill3Bian3:
-                return Skill3Bian3Queue.Dequeue();
+                return QueueController.S.Skill3Bian3Queue.Dequeue();
             
             case EntryConfig.OrangeEntry.Skill3AddRange:
-                return Skill3AddRangeQueue.Dequeue();
+                return QueueController.S.Skill3AddRangeQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.DashCd:
-                return DashCdQueue.Dequeue();
+                return QueueController.S.DashCdQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.DashRange:
-                return DashRangeQueue.Dequeue();
+                return QueueController.S.DashRangeQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.MoveSpeedAdd:
-                return MoveSpeedAddQueue.Dequeue();
+                return QueueController.S.MoveSpeedAddQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.ExAdd:
-                return ExAddQueue.Dequeue();
+                return QueueController.S.ExAddQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.ClothFortureAdd:
-                return ClothFortureAddQueue.Dequeue();
+                return QueueController.S.ClothFortureAddQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.ShoeFortureAdd:
-                return ShoeFortureAddQueue.Dequeue();
+                return QueueController.S.ShoeFortureAddQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.CloakFortureAdd:
-                return CloakFortureAddQueue.Dequeue();
+                return QueueController.S.CloakFortureAddQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.NecklaceFortureAdd:
-                return NecklaceFortureAddQueue.Dequeue();
+                return QueueController.S.NecklaceFortureAddQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.RingFortureAdd:
-                return RingFortureAddQueue.Dequeue();
+                return QueueController.S.RingFortureAddQueue.Dequeue();
             
             case EntryConfig.OrangeEntry.HelmetFortureAdd:
-                return HelmetFortureAddQueue.Dequeue();
+                return QueueController.S.HelmetFortureAddQueue.Dequeue();
         }
 
         return null;
@@ -1314,89 +843,89 @@ public class GameController : XSingleton<GameController>
         switch (type)
         {
             case OrangeEquipType.BuWangChuXin:
-                return BuWangChuXinQueue.Dequeue();
+                return QueueController.S.BuWangChuXinQueue.Dequeue();
             case OrangeEquipType.CloakFortureAdd:
-                return CloakFortureAddQueue.Dequeue();
+                return QueueController.S.CloakFortureAddQueue.Dequeue();
             case OrangeEquipType.DuAddDuQuan:
-                return DuAddDuQuanQueue.Dequeue();
+                return QueueController.S.DuAddDuQuanQueue.Dequeue();
             case OrangeEquipType.FireBaoZha:
-                return FireBaoZhaQueue.Dequeue();
+                return QueueController.S.FireBaoZhaQueue.Dequeue();
             case OrangeEquipType.HeiDongAddSpeed:
-                return HeiDongAddSpeedQueue.Dequeue();
+                return QueueController.S.HeiDongAddSpeedQueue.Dequeue();
             case OrangeEquipType.LvQuanAddScale:
-                return LvQuanAddScaleQueue.Dequeue();
+                return QueueController.S.LvQuanAddScaleQueue.Dequeue();
             case OrangeEquipType.PuTong3ChuanTou:
-                return PuTong3ChuanTouQueue.Dequeue();
+                return QueueController.S.PuTong3ChuanTouQueue.Dequeue();
             case OrangeEquipType.XuKongAdd2Dan:
-                return XuKongAdd2DanQueue.Dequeue();
+                return QueueController.S.XuKongAdd2DanQueue.Dequeue();
             case OrangeEquipType.AddDefenseForTime:
-                return AddDefenseForTimeQueue.Dequeue();
+                return QueueController.S.AddDefenseForTimeQueue.Dequeue();
             case OrangeEquipType.AllReplyAddPercent:
-                return AllReplyAddPercentQueue.Dequeue();
+                return QueueController.S.AllReplyAddPercentQueue.Dequeue();
             case OrangeEquipType.ClothFortureAdd:
-                return ClothFortureAddQueue.Dequeue();
+                return QueueController.S.ClothFortureAddQueue.Dequeue();
             case OrangeEquipType.FinalDamageReductionFixed:
-                return FinalDamageReductionFixedQueue.Dequeue();
+                return QueueController.S.FinalDamageReductionFixedQueue.Dequeue();
             case OrangeEquipType.HpReductionReplyAdd50:
-                return HpReductionReplyAdd50Queue.Dequeue();
+                return QueueController.S.HpReductionReplyAdd50Queue.Dequeue();
             case OrangeEquipType.ReplyDeath:
-                return ReplyDeathQueue.Dequeue();
+                return QueueController.S.ReplyDeathQueue.Dequeue();
             case OrangeEquipType.AddHpForTime:
-                return AddHpForTimeQueue.Dequeue();
+                return QueueController.S.AddHpForTimeQueue.Dequeue();
             case OrangeEquipType.DelayDamage:
-                return DelayDamageQueue.Dequeue();
+                return QueueController.S.DelayDamageQueue.Dequeue();
             case OrangeEquipType.FinalDamageReductionPercent:
-                return FinalDamageReductionPercentQueue.Dequeue();
+                return QueueController.S.FinalDamageReductionPercentQueue.Dequeue();
             case OrangeEquipType.HelmetFortureAdd:
-                return HelmetFortureAddQueue.Dequeue();
+                return QueueController.S.HelmetFortureAddQueue.Dequeue();
             case OrangeEquipType.HpReductionAddDefense:
-                return HpReductionAddDefenseQueue.Dequeue();
+                return QueueController.S.HpReductionAddDefenseQueue.Dequeue();
             case OrangeEquipType.Skill1AddRange:
-                return Skill1AddRangeQueue.Dequeue();
+                return QueueController.S.Skill1AddRangeQueue.Dequeue();
             case OrangeEquipType.Skill2AddRange:
-                return Skill2AddRangeQueue.Dequeue();
+                return QueueController.S.Skill2AddRangeQueue.Dequeue();
             case OrangeEquipType.FinalDamageAddPercent:
-                return FinalDamageAddPercentQueue.Dequeue();
+                return QueueController.S.FinalDamageAddPercentQueue.Dequeue();
             case OrangeEquipType.NecklaceFortureAdd:
-                return NecklaceFortureAddQueue.Dequeue();
+                return QueueController.S.NecklaceFortureAddQueue.Dequeue();
             case OrangeEquipType.NormalAddDamage:
-                return NormalAddDamageQueue.Dequeue();
+                return QueueController.S.NormalAddDamageQueue.Dequeue();
             case OrangeEquipType.NoSkill:
-                return NoSkillQueue.Dequeue();
+                return QueueController.S.NoSkillQueue.Dequeue();
             case OrangeEquipType.RecudeHpAddAttack:
-                return RecudeHpAddAttackQueue.Dequeue();
+                return QueueController.S.RecudeHpAddAttackQueue.Dequeue();
             case OrangeEquipType.Skill1ReplaceNormalAttack:
-                return Skill1ReplaceNormalAttackQueue.Dequeue();
+                return QueueController.S.Skill1ReplaceNormalAttackQueue.Dequeue();
             case OrangeEquipType.Skill2AddDan:
-                return Skill2AddDanQueue.Dequeue();
+                return QueueController.S.Skill2AddDanQueue.Dequeue();
             case OrangeEquipType.Skill3Bian3:
-                return Skill3Bian3Queue.Dequeue();
+                return QueueController.S.Skill3Bian3Queue.Dequeue();
             case OrangeEquipType.AddAttackForTime:
-                return AddAttackForTimeQueue.Dequeue();
+                return QueueController.S.AddAttackForTimeQueue.Dequeue();
             case OrangeEquipType.FanPuGuiZhen:
-                return FanPuGuiZhenQueue.Dequeue();
+                return QueueController.S.FanPuGuiZhenQueue.Dequeue();
             case OrangeEquipType.KillNormal:
-                return KillNormalQueue.Dequeue();
+                return QueueController.S.KillNormalQueue.Dequeue();
             case OrangeEquipType.RingFortureAdd:
-                return RingFortureAddQueue.Dequeue();
+                return QueueController.S.RingFortureAddQueue.Dequeue();
             case OrangeEquipType.Skill1YiDianDouble:
-                return Skill1YiDianDoubleQueue.Dequeue();
+                return QueueController.S.Skill1YiDianDoubleQueue.Dequeue();
             case OrangeEquipType.Skill2RotateAdd:
-                return Skill2RotateAddQueue.Dequeue();
+                return QueueController.S.Skill2RotateAddQueue.Dequeue();
             case OrangeEquipType.Skill3AddRange:
-                return Skill3AddRangeQueue.Dequeue();
+                return QueueController.S.Skill3AddRangeQueue.Dequeue();
             case OrangeEquipType.DashCd:
-                return DashCdQueue.Dequeue();
+                return QueueController.S.DashCdQueue.Dequeue();
             case OrangeEquipType.DashRange:
-                return DashRangeQueue.Dequeue();
+                return QueueController.S.DashRangeQueue.Dequeue();
             case OrangeEquipType.ExAdd:
-                return ExAddQueue.Dequeue();
+                return QueueController.S.ExAddQueue.Dequeue();
             case OrangeEquipType.JianSuAddAttack:
-                return JianSuAddAttackQueue.Dequeue();
+                return QueueController.S.JianSuAddAttackQueue.Dequeue();
             case OrangeEquipType.MoveSpeedAdd:
-                return MoveSpeedAddQueue.Dequeue();
+                return QueueController.S.MoveSpeedAddQueue.Dequeue();
             case OrangeEquipType.ShoeFortureAdd:
-                return ShoeFortureAddQueue.Dequeue();
+                return QueueController.S.ShoeFortureAddQueue.Dequeue();
             default:
                 return null;
         }
@@ -1411,85 +940,85 @@ public class GameController : XSingleton<GameController>
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return PrimaryCloakQueue.Dequeue();
+                        return QueueController.S.PrimaryCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return PrimaryClothQueue.Dequeue();
+                        return QueueController.S.PrimaryClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return PrimaryRingQueue.Dequeue();
+                        return QueueController.S.PrimaryRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return PrimaryShoeQueue.Dequeue();
+                        return QueueController.S.PrimaryShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return PrimaryHelmetQueue.Dequeue();
+                        return QueueController.S.PrimaryHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return PrimaryNecklaceQueue.Dequeue();
+                        return QueueController.S.PrimaryNecklaceQueue.Dequeue();
                 }
                 break;
             case PlayerEquipConfig.EquipLevel.Green:
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return GreenCloakQueue.Dequeue();
+                        return QueueController.S.GreenCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return GreenClothQueue.Dequeue();
+                        return QueueController.S.GreenClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return GreenRingQueue.Dequeue();
+                        return QueueController.S.GreenRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return GreenShoeQueue.Dequeue();
+                        return QueueController.S.GreenShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return GreenHelmetQueue.Dequeue();
+                        return QueueController.S.GreenHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return GreenNecklaceQueue.Dequeue();
+                        return QueueController.S.GreenNecklaceQueue.Dequeue();
                 }
                 break;
             case PlayerEquipConfig.EquipLevel.Blue:
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return BlueCloakQueue.Dequeue();
+                        return QueueController.S.BlueCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return BlueClothQueue.Dequeue();
+                        return QueueController.S.BlueClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return BlueRingQueue.Dequeue();
+                        return QueueController.S.BlueRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return BlueShoeQueue.Dequeue();
+                        return QueueController.S.BlueShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return BlueHelmetQueue.Dequeue();
+                        return QueueController.S.BlueHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return BlueNecklaceQueue.Dequeue();
+                        return QueueController.S.BlueNecklaceQueue.Dequeue();
                 }
                 break;
             case PlayerEquipConfig.EquipLevel.TreeMan:
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return TreeManCloakQueue.Dequeue();
+                        return QueueController.S.TreeManCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return TreeManClothQueue.Dequeue();
+                        return QueueController.S.TreeManClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return TreeManRingQueue.Dequeue();
+                        return QueueController.S.TreeManRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return TreeManShoeQueue.Dequeue();
+                        return QueueController.S.TreeManShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return TreeManHelmetQueue.Dequeue();
+                        return QueueController.S.TreeManHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return TreeManNecklaceQueue.Dequeue();
+                        return QueueController.S.TreeManNecklaceQueue.Dequeue();
                 }
                 break;
            case PlayerEquipConfig.EquipLevel.HuoShan:
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return HuoShanCloakQueue.Dequeue();
+                        return QueueController.S.HuoShanCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return HuoShanClothQueue.Dequeue();
+                        return QueueController.S.HuoShanClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return HuoShanRingQueue.Dequeue();
+                        return QueueController.S.HuoShanRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return HuoShanShoeQueue.Dequeue();
+                        return QueueController.S.HuoShanShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return HuoShanHelmetQueue.Dequeue();
+                        return QueueController.S.HuoShanHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return HuoShanNecklaceQueue.Dequeue();
+                        return QueueController.S.HuoShanNecklaceQueue.Dequeue();
                 }
                break;
            
@@ -1497,17 +1026,17 @@ public class GameController : XSingleton<GameController>
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return PurpleCloakQueue.Dequeue();
+                        return QueueController.S.PurpleCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return PurpleClothQueue.Dequeue();
+                        return QueueController.S.PurpleClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return PurpleRingQueue.Dequeue();
+                        return QueueController.S.PurpleRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return PurpleShoeQueue.Dequeue();
+                        return QueueController.S.PurpleShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return PurpleHelmetQueue.Dequeue();
+                        return QueueController.S.PurpleHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return PurpleNecklaceQueue.Dequeue();
+                        return QueueController.S.PurpleNecklaceQueue.Dequeue();
                 }
                 break;
             
@@ -1515,17 +1044,17 @@ public class GameController : XSingleton<GameController>
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return OrangeCloakQueue.Dequeue();
+                        return QueueController.S.OrangeCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return OrangeClothQueue.Dequeue();
+                        return QueueController.S.OrangeClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return OrangeRingQueue.Dequeue();
+                        return QueueController.S.OrangeRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return OrangeShoeQueue.Dequeue();
+                        return QueueController.S.OrangeShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return OrangeHelmetQueue.Dequeue();
+                        return QueueController.S.OrangeHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return OrangeNecklaceQueue.Dequeue();
+                        return QueueController.S.OrangeNecklaceQueue.Dequeue();
                 }
                 break;
             
@@ -1533,17 +1062,17 @@ public class GameController : XSingleton<GameController>
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return ZhaoZeCloakQueue.Dequeue();
+                        return QueueController.S.ZhaoZeCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return ZhaoZeClothQueue.Dequeue();
+                        return QueueController.S.ZhaoZeClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return ZhaoZeRingQueue.Dequeue();
+                        return QueueController.S.ZhaoZeRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return ZhaoZeShoeQueue.Dequeue();
+                        return QueueController.S.ZhaoZeShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return ZhaoZeHelmetQueue.Dequeue();
+                        return QueueController.S.ZhaoZeHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return ZhaoZeNecklaceQueue.Dequeue();
+                        return QueueController.S.ZhaoZeNecklaceQueue.Dequeue();
                 }
                 break;
             
@@ -1553,17 +1082,17 @@ public class GameController : XSingleton<GameController>
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return XueRenCloakQueue.Dequeue();
+                        return QueueController.S.XueRenCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return XueRenClothQueue.Dequeue();
+                        return QueueController.S.XueRenClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return XueRenRingQueue.Dequeue();
+                        return QueueController.S.XueRenRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return XueRenShoeQueue.Dequeue();
+                        return QueueController.S.XueRenShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return XueRenHelmetQueue.Dequeue();
+                        return QueueController.S.XueRenHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return XueRenNecklaceQueue.Dequeue();
+                        return QueueController.S.XueRenNecklaceQueue.Dequeue();
                 }
                 break;
             
@@ -1573,17 +1102,17 @@ public class GameController : XSingleton<GameController>
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return XieZiCloakQueue.Dequeue();
+                        return QueueController.S.XieZiCloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return XieZiClothQueue.Dequeue();
+                        return QueueController.S.XieZiClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return XieZiRingQueue.Dequeue();
+                        return QueueController.S.XieZiRingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return XieZiShoeQueue.Dequeue();
+                        return QueueController.S.XieZiShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return XieZiHelmetQueue.Dequeue();
+                        return QueueController.S.XieZiHelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return XieZiNecklaceQueue.Dequeue();
+                        return QueueController.S.XieZiNecklaceQueue.Dequeue();
                 }
                 break;
             
@@ -1591,17 +1120,17 @@ public class GameController : XSingleton<GameController>
                 switch (monsterEquip.EquipType)
                 {
                     case PlayerEquipConfig.EquipType.Cloak:
-                        return Purple1CloakQueue.Dequeue();
+                        return QueueController.S.Purple1CloakQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Cloth:
-                        return Purple1ClothQueue.Dequeue();
+                        return QueueController.S.Purple1ClothQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Ring:
-                        return Purple1RingQueue.Dequeue();
+                        return QueueController.S.Purple1RingQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Shoe:
-                        return Purple1ShoeQueue.Dequeue();
+                        return QueueController.S.Purple1ShoeQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Helmet:
-                        return Purple1HelmetQueue.Dequeue();
+                        return QueueController.S.Purple1HelmetQueue.Dequeue();
                     case PlayerEquipConfig.EquipType.Necklace:
-                        return Purple1NecklaceQueue.Dequeue();
+                        return QueueController.S.Purple1NecklaceQueue.Dequeue();
                 }
                 break;
         }
@@ -1613,7 +1142,6 @@ public class GameController : XSingleton<GameController>
     {
         RegisterEvent();
         GameOver = false;
-        DontDestroyOnLoad(gameObject);
         var _ = SkillController.S;//激活SkillController
     }
 
@@ -1635,12 +1163,12 @@ public class GameController : XSingleton<GameController>
 
     public void ShowChuanSongZhen()
     {
-        fightBG.GetComponent<FightBg>().ChuanSongZhen.SetActive(true);
+        QueueController.S.fightBG.GetComponent<FightBg>().ChuanSongZhen.SetActive(true);
     }
 
     public void JiHuoChuanSongZhen()
     {
-        fightBG.GetComponent<FightBg>().ChuanSongZhenAnimator.Play("NewSequenceAnim");
+        QueueController.S.fightBG.GetComponent<FightBg>().ChuanSongZhenAnimator.Play("NewSequenceAnim");
     }
     private void Start()
     {
@@ -1649,27 +1177,27 @@ public class GameController : XSingleton<GameController>
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 ||
             LevelInfoConfig.CurrentGameLevel == 3)
         {
-            transform.Find("FightBG(Clone)/Level1").gameObject.SetActive(true);
+            QueueController.S.transform.Find("FightBG(Clone)/Level1").gameObject.SetActive(true);
         }
         if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 ||
             LevelInfoConfig.CurrentGameLevel == 6)
         {
-            transform.Find("FightBG(Clone)/Level2").gameObject.SetActive(true);
+            QueueController.S.transform.Find("FightBG(Clone)/Level2").gameObject.SetActive(true);
         }
         if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 8 ||
             LevelInfoConfig.CurrentGameLevel == 9)
         {
-            transform.Find("FightBG(Clone)/Level3").gameObject.SetActive(true);
+            QueueController.S.transform.Find("FightBG(Clone)/Level3").gameObject.SetActive(true);
         }
         if (LevelInfoConfig.CurrentGameLevel == 10 || LevelInfoConfig.CurrentGameLevel == 11 ||
             LevelInfoConfig.CurrentGameLevel == 12)
         {
-            transform.Find("FightBG(Clone)/Level4").gameObject.SetActive(true);
+            QueueController.S.transform.Find("FightBG(Clone)/Level4").gameObject.SetActive(true);
         }
         if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 ||
             LevelInfoConfig.CurrentGameLevel == 15)
         {
-            transform.Find("FightBG(Clone)/Level5").gameObject.SetActive(true);
+            QueueController.S.transform.Find("FightBG(Clone)/Level5").gameObject.SetActive(true);
         }
 
         if (LevelInfoConfig.CurrentGameLevel > 15)
@@ -1687,7 +1215,7 @@ public class GameController : XSingleton<GameController>
             }
         }
         
-        fightTimeText = fightBG.GetComponent<FightBg>().fightTimeText;
+        fightTimeText = QueueController.S.fightBG.GetComponent<FightBg>().fightTimeText;
 
         
         //战斗暂停按钮点击事件
@@ -1717,12 +1245,12 @@ public class GameController : XSingleton<GameController>
         //怒气技能
         FightBGController.S.rageButton.onClick.AddListener(() =>
         {
-            gamePlayer.transform.Find("Rage").gameObject.SetActive(true);
+            QueueController.S.gamePlayer.transform.Find("Rage").gameObject.SetActive(true);
         });
         //护盾技能
         FightBGController.S.shieldButton.onClick.AddListener(() =>
         {
-            gamePlayer.transform.Find("Shield").gameObject.SetActive(true);
+            QueueController.S.gamePlayer.transform.Find("Shield").gameObject.SetActive(true);
         });
         //按钮冰爆技能
         FightBGController.S.iceExButton.onClick.AddListener(() =>
@@ -1763,7 +1291,7 @@ public class GameController : XSingleton<GameController>
         //召唤BOSS，激活BOSS，bosswarning动画
         if (KillMonsterCount>=LevelInfoConfig.LevelMonsterCount[LevelInfoConfig.CurrentGameLevel]/2 && HaveBossWarning == false&&(LevelInfoConfig.CurrentGameLevelType==LevelType.Normal||LevelInfoConfig.CurrentGameLevelType==LevelType.MJ))
         {
-            gamePlayer.ShowArrow();
+            QueueController.S.gamePlayer.ShowArrow();
             HaveBossWarning=true;
             BossJiHuo = true;
             ShowChuanSongZhen();
@@ -1783,7 +1311,7 @@ public class GameController : XSingleton<GameController>
              treeManBoss.IsSkill = true;
              sk.AnimationState.SetAnimation(0,"Exit",false);
              treeManBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-             MonsterColliderDic.Add(treeManBoss.collider2D,treeManBoss);
+             QueueController.S.MonsterColliderDic.Add(treeManBoss.collider2D,treeManBoss);
         }
         if (LevelInfoConfig.CurrentGameLevel == 6)
         {
@@ -1794,7 +1322,7 @@ public class GameController : XSingleton<GameController>
             SkeletonAnimation sk = huoShanBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
             sk.AnimationState.SetAnimation(0,"Exit",false);
             huoShanBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            MonsterColliderDic.Add(huoShanBoss.collider2D,huoShanBoss);
+            QueueController.S.MonsterColliderDic.Add(huoShanBoss.collider2D,huoShanBoss);
         }
         if (LevelInfoConfig.CurrentGameLevel == 9)
         {
@@ -1805,7 +1333,7 @@ public class GameController : XSingleton<GameController>
             SkeletonAnimation sk = ZhaoZeboss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
             sk.AnimationState.SetAnimation(0,"appear",false);
             ZhaoZeboss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            MonsterColliderDic.Add(ZhaoZeboss.collider2D,ZhaoZeboss);
+            QueueController.S.MonsterColliderDic.Add(ZhaoZeboss.collider2D,ZhaoZeboss);
         }
         
         if (LevelInfoConfig.CurrentGameLevel == 12)
@@ -1817,7 +1345,7 @@ public class GameController : XSingleton<GameController>
             SkeletonAnimation sk = xieZiboss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
             sk.AnimationState.SetAnimation(0,"chuchang",false);
             xieZiboss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            MonsterColliderDic.Add(xieZiboss.collider2D,xieZiboss);
+            QueueController.S.MonsterColliderDic.Add(xieZiboss.collider2D,xieZiboss);
 
         }
         
@@ -1830,7 +1358,7 @@ public class GameController : XSingleton<GameController>
             SkeletonAnimation sk = XueRenBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
             sk.AnimationState.SetAnimation(0,"appear",false);
             XueRenBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            MonsterColliderDic.Add(XueRenBoss.collider2D,XueRenBoss);
+            QueueController.S.MonsterColliderDic.Add(XueRenBoss.collider2D,XueRenBoss);
         }
 
         if (LevelInfoConfig.CurrentGameLevel > 15)
@@ -1846,7 +1374,7 @@ public class GameController : XSingleton<GameController>
                     SkeletonAnimation sk = LeiShouBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
                     sk.AnimationState.SetAnimation(0,"skill2",false);
                     LeiShouBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    MonsterColliderDic.Add(LeiShouBoss.collider2D,LeiShouBoss);
+                    QueueController.S.MonsterColliderDic.Add(LeiShouBoss.collider2D,LeiShouBoss);
                     break;
                 case MJLevel.Green:
                     KuiJiaBoss KuiJiaBoss = Instantiate(Resources.Load<KuiJiaBoss>("Prefabs/Monster/MJ/KuiJia/KuiJiaBoss"));
@@ -1857,7 +1385,7 @@ public class GameController : XSingleton<GameController>
                     sk1.AnimationState.SetAnimation(0,"skill2",false);
                     KuiJiaBoss.KuiJiaSkillType = KuiJiaSkillType.ChuChang;
                     KuiJiaBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    MonsterColliderDic.Add(KuiJiaBoss.collider2D,KuiJiaBoss);
+                    QueueController.S.MonsterColliderDic.Add(KuiJiaBoss.collider2D,KuiJiaBoss);
                     break;
                 
                 case MJLevel.Blue:
@@ -1869,7 +1397,7 @@ public class GameController : XSingleton<GameController>
                     sk2.AnimationState.SetAnimation(0,"skill1",false);
                     BaoZiBoss.BaoZiSkillType = BaoZiSkillType.ChuChang;
                     BaoZiBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    MonsterColliderDic.Add(BaoZiBoss.collider2D,BaoZiBoss);
+                    QueueController.S.MonsterColliderDic.Add(BaoZiBoss.collider2D,BaoZiBoss);
                     break;
                 
                 case MJLevel.Purple:
@@ -1881,7 +1409,7 @@ public class GameController : XSingleton<GameController>
                     sk3.AnimationState.SetAnimation(0,"skill2",false);
                     HuoLangBoss.HuoLangSkill2Type = HuoLangSkill2Type.ChuChang;
                     HuoLangBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    MonsterColliderDic.Add(HuoLangBoss.collider2D,HuoLangBoss);
+                    QueueController.S.MonsterColliderDic.Add(HuoLangBoss.collider2D,HuoLangBoss);
                     break;
                 
                 case MJLevel.Orange:
@@ -1892,7 +1420,7 @@ public class GameController : XSingleton<GameController>
                     SkeletonAnimation sk4 = ShuangDaoBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
                     sk4.AnimationState.SetAnimation(0,"chuchang",false);
                     ShuangDaoBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    MonsterColliderDic.Add(ShuangDaoBoss.collider2D,ShuangDaoBoss);
+                    QueueController.S.MonsterColliderDic.Add(ShuangDaoBoss.collider2D,ShuangDaoBoss);
                     break;
             }
         }
@@ -1935,7 +1463,7 @@ public class GameController : XSingleton<GameController>
     public void FreezePlayer()
     {
         GlobalPlayerAttribute.PlayerMoveSpeed = 0;
-        gamePlayer.playerSkeleton.timeScale = 0f;
+        QueueController.S.gamePlayer.playerSkeleton.timeScale = 0f;
     }
     
     //恢复怪物速度
@@ -1957,15 +1485,15 @@ public class GameController : XSingleton<GameController>
     public void  ResumePlayer()
     {
         GlobalPlayerAttribute.PlayerMoveSpeed = 3;
-        gamePlayer.playerSkeleton.timeScale = 1f;
+        QueueController.S.gamePlayer.playerSkeleton.timeScale = 1f;
     }
 
 
     public void CreatePlayer()
     {
-        gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player"),transform).GetComponent<Player>();
-        gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
-        gamePlayer.transform.position = Vector2.zero;
+        QueueController.S.gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player"),QueueController.S.transform).GetComponent<Player>();
+        QueueController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
+        QueueController.S.gamePlayer.transform.position = Vector2.zero;
         
     }
 
@@ -1974,12 +1502,12 @@ public class GameController : XSingleton<GameController>
     {
         Vector2 pos = Vector2.zero;
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        pos=(Vector2)gamePlayer.transform.position + randomDirection * radius;
+        pos=(Vector2)QueueController.S.gamePlayer.transform.position + randomDirection * radius;
         while (pos.x <= CameraContraller.S.LeftLimit + 2 || pos.x > CameraContraller.S.RightLimit - 2 ||
                pos.y > CameraContraller.S.UpLimit - 2 || pos.y < CameraContraller.S.ButtomLimit + 2)
         {
             randomDirection = Random.insideUnitCircle.normalized;
-            pos=(Vector2)gamePlayer.transform.position + randomDirection * radius;
+            pos=(Vector2)QueueController.S.gamePlayer.transform.position + randomDirection * radius;
         }
         // 乘以半径并加上玩家位置
         return pos;
@@ -2018,6 +1546,10 @@ public class GameController : XSingleton<GameController>
     //生成怪物
     public void CreateMonster()
     {
+        if (SceneManager.GetActiveScene().name != "FightScene")
+        {
+            return;
+        }
         if (GameOver||HaveBoss)
             return;
         //控制同屏怪物数量
@@ -2139,7 +1671,7 @@ public class GameController : XSingleton<GameController>
             RefreshOrangeEntry();
         }
 
-        if (BossJiHuo && Vector2.Distance(gamePlayer.transform.position, Vector2.zero) < 2)
+        if (BossJiHuo && Vector2.Distance(QueueController.S.gamePlayer.transform.position, Vector2.zero) < 2)
         {
             FightBGController.S.IsBossJiHuo = true;
 
@@ -2175,7 +1707,7 @@ public class GameController : XSingleton<GameController>
             if (monster == null || monster.gameObject == null || !monster.gameObject.activeSelf || monster.IsDead)
                 continue;
 
-            float distance = Vector3.Distance(gamePlayer.transform.position, monster.transform.position);
+            float distance = Vector3.Distance(QueueController.S.gamePlayer.transform.position, monster.transform.position);
             if (distance < nearestDistance)
             {
                 nearestDistance = distance;

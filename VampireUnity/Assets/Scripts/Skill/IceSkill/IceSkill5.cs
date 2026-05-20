@@ -28,7 +28,7 @@ public class IceSkill5 : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
-        GameController.S.IceSkill5Queue.Enqueue(this);
+        QueueController.S.IceSkill5Queue.Enqueue(this);
     }
     
     
@@ -37,9 +37,9 @@ public class IceSkill5 : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice5Damage/100f*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Normal,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice5Damage/100f*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Normal,YuanSuType.Ice);
             Vector2 closestPoint = other.ClosestPoint(transform.position);
-            var hit = GameController.S.IcePengQueue.Dequeue();
+            var hit = QueueController.S.IcePengQueue.Dequeue();
             hit.transform.position = closestPoint;
             hit.SetActive(true);
         }

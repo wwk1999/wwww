@@ -57,7 +57,7 @@ public class HuoShanBoss : MonsterBase
         
             if (col.CompareTag("Player"))
             {
-               GameController.S.gamePlayer.PlayerHurt(Attack,true);
+               QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
     }
@@ -114,7 +114,7 @@ public class HuoShanBoss : MonsterBase
 
             // 调用创建方法（假设 CreateCircleAttack 接受 Vector2 位置）
             GameController.S.CreateCircleAttack(spawnPos,0.6f);
-            HuoShanSkill2 huoyan=GameController.S.HuoShanSkill2QiQueue.Dequeue();
+            HuoShanSkill2 huoyan=QueueController.S.HuoShanSkill2QiQueue.Dequeue();
             huoyan.transform.position = spawnPos;
             huoyan.damage = Attack;
             huoyan.gameObject.SetActive(true);
@@ -128,7 +128,7 @@ public class HuoShanBoss : MonsterBase
 
     public void ShotJianQi()
     {
-        var jianqi = GameController.S.HuoShanJianQiQueue.Dequeue();
+        var jianqi = QueueController.S.HuoShanJianQiQueue.Dequeue();
         jianqi.damage = Attack;
         jianqi.transform.position = attackTrans.position;
         jianqi.gameObject.SetActive(true);
@@ -141,7 +141,7 @@ public class HuoShanBoss : MonsterBase
         }
         if (e.Data.Name == "huoyan"&&trackEntry.Animation.Name == "skill_02")
         {
-            Skill2(GameController.S.gamePlayer.transform.position,10,0.05f,50);
+            Skill2(QueueController.S.gamePlayer.transform.position,10,0.05f,50);
         }
         if (e.Data.Name == "huoyan"&&trackEntry.Animation.Name == "skill_03")
         {
@@ -162,7 +162,7 @@ public class HuoShanBoss : MonsterBase
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
         
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
 
     }
     IEnumerator DelayChuanSongMen()
@@ -181,7 +181,7 @@ public class HuoShanBoss : MonsterBase
         Skill1CurrentTime+=Time.deltaTime;
         Skill2CurrentTime+=Time.deltaTime;
         Skill3CurrentTime+=Time.deltaTime;
-        if (Skill1CurrentTime > Skill1Time&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position) > 3)
+        if (Skill1CurrentTime > Skill1Time&&Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position) > 3)
         {
             Skill1CurrentTime = 0;
             isSkill1 = true;
@@ -191,12 +191,12 @@ public class HuoShanBoss : MonsterBase
             Skill2CurrentTime = 0;
             isSkill2 = true;
         }
-        if (Skill3CurrentTime > Skill3Time&&Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position) < 5)
+        if (Skill3CurrentTime > Skill3Time&&Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position) < 5)
         {
             Skill3CurrentTime = 0;
             isSkill3 = true;
         }
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size)
         {
             isAttack=true;
         }

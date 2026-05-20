@@ -22,7 +22,7 @@ public class DianBaoZha : MonoBehaviour
 
     public void Hide()
     {
-        GameController.S.DianBaoZhaQueue.Enqueue(this);
+        QueueController.S.DianBaoZhaQueue.Enqueue(this);
         gameObject.SetActive(false);
     }
     
@@ -33,11 +33,11 @@ public class DianBaoZha : MonoBehaviour
         {
             Vector2 closestPoint = other.ClosestPoint(transform.position);
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
-            var baozha = GameController.S.DianBaoZhaNextQueue.Dequeue();
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            var baozha = QueueController.S.DianBaoZhaNextQueue.Dequeue();
             baozha.transform.position = closestPoint;
             baozha.gameObject.SetActive(true);
-            GameController.S.DianBaoZhaQueue.Enqueue(this);
+            QueueController.S.DianBaoZhaQueue.Enqueue(this);
             gameObject.SetActive(false);
         }
     }

@@ -25,7 +25,7 @@ public class HuoSkill1 : MonoBehaviour
   public void Hide()
   {
     gameObject.SetActive(false);
-    GameController.S.HuoSkill1Queue.Enqueue(this);
+    QueueController.S.HuoSkill1Queue.Enqueue(this);
   }
     
   private void OnTriggerEnter2D(Collider2D other)
@@ -35,10 +35,10 @@ public class HuoSkill1 : MonoBehaviour
     Debug.Log("碰撞点世界坐标: " + closestPoint);
     if (other.CompareTag("Monster")||other.CompareTag("Boss"))
     {
-      var hit = GameController.S.DuPengQueue.Dequeue();
+      var hit = QueueController.S.DuPengQueue.Dequeue();
       hit.transform.position = closestPoint;
       bool isCrit = GameController.S.GetIsCrit();
-      GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Huo1Damage/100f*(GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillDamage+1.0f)*SkillController.S.HuoYuanSuDamage*(1.0f),isCrit,DamageFrom.Skill1,YuanSuType.Huo);
+      QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Huo1Damage/100f*(GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillDamage+1.0f)*SkillController.S.HuoYuanSuDamage*(1.0f),isCrit,DamageFrom.Skill1,YuanSuType.Huo);
       hit.SetActive(true);
     }
   }

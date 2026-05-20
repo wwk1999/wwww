@@ -19,7 +19,7 @@ public class IceExplosion : MonoBehaviour
    public void Complete(TrackEntry trackEntry)
    {
       gameObject.SetActive(false);
-      GameController.S.IceExQueue.Enqueue(this);
+      QueueController.S.IceExQueue.Enqueue(this);
    }
 
    private void OnDestroy()
@@ -40,9 +40,9 @@ public class IceExplosion : MonoBehaviour
       if (other.CompareTag("Monster")||other.CompareTag("Boss"))
       {
          bool isCrit = GameController.S.GetIsCrit();
-         GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice3Damage/100f*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),isCrit,DamageFrom.Skill3,YuanSuType.Ice);
+         QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillConfig.Ice3Damage/100f*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),isCrit,DamageFrom.Skill3,YuanSuType.Ice);
          Vector2 closestPoint = other.ClosestPoint(transform.position);
-         var hit = GameController.S.IcePengQueue.Dequeue();
+         var hit = QueueController.S.IcePengQueue.Dequeue();
          hit.transform.position = closestPoint;
          hit.SetActive(true);
       }

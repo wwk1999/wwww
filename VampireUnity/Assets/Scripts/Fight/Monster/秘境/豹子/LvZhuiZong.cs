@@ -35,7 +35,7 @@ public class LvZhuiZong : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameController.S.gamePlayer.PlayerHurt(damage,true);
+            QueueController.S.gamePlayer.PlayerHurt(damage,true);
         }
     }
     
@@ -47,7 +47,7 @@ public class LvZhuiZong : MonoBehaviour
             if (currentDamageTime >= damageTime)
             {
                 currentDamageTime = 0;
-                GameController.S.gamePlayer.PlayerHurt(damage,true);
+                QueueController.S.gamePlayer.PlayerHurt(damage,true);
             }
         }
     }
@@ -55,6 +55,6 @@ public class LvZhuiZong : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        GameController.S.LvZhuiZongQueue.Enqueue(this);
+        QueueController.S.LvZhuiZongQueue.Enqueue(this);
     }
 }

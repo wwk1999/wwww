@@ -33,7 +33,7 @@ public class DianQuan : MonoBehaviour
         if (trackEntry.Animation.Name == "action")
         {
             gameObject.SetActive(false);
-            GameController.S.DianQuanQueue.Enqueue(gameObject);
+            QueueController.S.DianQuanQueue.Enqueue(gameObject);
         }
     }
 
@@ -79,9 +79,9 @@ public class DianQuan : MonoBehaviour
         {
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
-                MonsterBase monster = GameController.S.MonsterColliderDic[col];
+                MonsterBase monster = QueueController.S.MonsterColliderDic[col];
                 monster.Hurt(GameController.S.GameAttack*SkillConfig.Dian1Damage/100f*SkillController.S.DianYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillDamage+1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill1,YuanSuType.Dian);
-                var hit = GameController.S.DianQuanPengQueue.Dequeue();
+                var hit = QueueController.S.DianQuanPengQueue.Dequeue();
                 hit.transform.position = monster.transform.position;
                 hit.SetActive(true);
             }

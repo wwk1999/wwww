@@ -20,9 +20,9 @@ public class HuoShanSkill2 : MonoBehaviour
    {
       if (e.Data.Name == "hit")
       {
-         if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.2f)
+         if (Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.2f)
          {
-            GameController.S.gamePlayer.PlayerHurt(damage,true);
+            QueueController.S.gamePlayer.PlayerHurt(damage,true);
          }
       }
    }
@@ -46,6 +46,6 @@ public class HuoShanSkill2 : MonoBehaviour
    public void EnQueue()
    {
       gameObject.SetActive(false);
-      GameController.S.HuoShanSkill2QiQueue.Enqueue(this);
+      QueueController.S.HuoShanSkill2QiQueue.Enqueue(this);
    }
 }

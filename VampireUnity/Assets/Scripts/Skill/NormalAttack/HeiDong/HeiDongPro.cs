@@ -20,8 +20,8 @@ public class HeiDongPro : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
-        GameController.S.HeiDongQueue.Enqueue(gameObject);
-        var heidongnext = GameController.S.HeiDongNextQueue.Dequeue();
+        QueueController.S.HeiDongQueue.Enqueue(gameObject);
+        var heidongnext = QueueController.S.HeiDongNextQueue.Dequeue();
         heidongnext.transform.position = transform.position;
         heidongnext.gameObject.SetActive(true);
     }
@@ -31,10 +31,10 @@ public class HeiDongPro : MonoBehaviour
         Vector2 closestPoint = other.ClosestPoint(transform.position);
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
-            var hit = GameController.S.HeiDongPengQueue.Dequeue();
+            var hit = QueueController.S.HeiDongPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            GameController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HeiAnYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
+            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack*SkillController.S.HeiAnYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
             hit.SetActive(true);
         }
     }

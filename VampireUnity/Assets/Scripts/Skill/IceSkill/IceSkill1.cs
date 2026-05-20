@@ -42,10 +42,10 @@ public class IceSkill1 : MonoBehaviour
         
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
-                MonsterBase monster = GameController.S.MonsterColliderDic[col];
+                MonsterBase monster = QueueController.S.MonsterColliderDic[col];
                 monster.Hurt(GameController.S.GameAttack*SkillConfig.Ice1Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Ice);
                 Vector2 closestPoint = col.ClosestPoint(transform.position);
-                var hit = GameController.S.IcePengQueue.Dequeue();
+                var hit = QueueController.S.IcePengQueue.Dequeue();
                 hit.transform.position = closestPoint;
                 hit.SetActive(true);
             }
@@ -62,7 +62,7 @@ public class IceSkill1 : MonoBehaviour
 
     public void Complete(TrackEntry trackEntry)
     {
-        GameController.S.IceSkill1Queue.Enqueue(this);
+        QueueController.S.IceSkill1Queue.Enqueue(this);
         gameObject.SetActive(false);
         
     }

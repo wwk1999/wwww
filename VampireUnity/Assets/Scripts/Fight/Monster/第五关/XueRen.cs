@@ -47,7 +47,7 @@ public class XueRen : MonsterBase
         if (monsterSkeletonAnimation != null)
         {
             DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            var baoxue = QueueController.S.BaoXueQueue.Dequeue();
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
         }
@@ -89,7 +89,7 @@ public class XueRen : MonsterBase
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
             isAttack=false;
         }
-        else if(Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < size)
+        else if(Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < size)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "idle", false);
         }
@@ -108,7 +108,7 @@ public class XueRen : MonsterBase
     {
         if (e.Data.Name == "attack_attack1"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            var xuerenjian=GameController.S.XueRenJianQueue.Dequeue();
+            var xuerenjian=QueueController.S.XueRenJianQueue.Dequeue();
             xuerenjian.damage = Attack;
             xuerenjian.transform.position = skillTransform.position;
             xuerenjian.gameObject.SetActive(true);
@@ -117,12 +117,12 @@ public class XueRen : MonsterBase
     
     public void MonsterMove1()
     {
-        if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < size)
+        if (Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < size)
         {
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             return;
         }
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName||IsDash)
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
@@ -138,7 +138,7 @@ public class XueRen : MonsterBase
         if (IsDead) return;
         base.Update();
         currentAttackTime+=Time.deltaTime;
-        if (currentAttackTime>attackTime&&Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) <= size)
+        if (currentAttackTime>attackTime&&Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) <= size)
         {
             currentAttackTime = 0;
             isAttack=true;

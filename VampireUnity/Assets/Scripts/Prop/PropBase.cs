@@ -54,14 +54,14 @@ public class PropBase : MonoBehaviour
     
     private void Update()
     {
-        var distance = Vector3.Distance(transform.position, GameController.S.gamePlayer.transform.position);
+        var distance = Vector3.Distance(transform.position, QueueController.S.gamePlayer.transform.position);
         if (distance < 1.0f)
         {
             isPickUp = true;
         }
         if (isPickUp)
         {
-            transform.position = Vector3.Lerp(transform.position, GameController.S.gamePlayer.transform.position,
+            transform.position = Vector3.Lerp(transform.position, QueueController.S.gamePlayer.transform.position,
                 Time.deltaTime * speed);
             if (floatEffectCoroutine != null)
             {
@@ -92,22 +92,22 @@ public class PropBase : MonoBehaviour
                 switch (propTable.Quality)
                 {
                     case 1:
-                        GameController.S.WhiteWeaponFragmengQueue.Enqueue(gameObject);
+                        QueueController.S.WhiteWeaponFragmengQueue.Enqueue(gameObject);
                         break;
                     case 2:
-                        GameController.S.GreenWeaponFragmengQueue.Enqueue(gameObject);
+                        QueueController.S.GreenWeaponFragmengQueue.Enqueue(gameObject);
                         break;
                     case 3:
-                        GameController.S.BlueWeaponFragmengQueue.Enqueue(gameObject);
+                        QueueController.S.BlueWeaponFragmengQueue.Enqueue(gameObject);
                         break;
                     case 4:
-                        GameController.S.PurpleWeaponFragmengQueue.Enqueue(gameObject);
+                        QueueController.S.PurpleWeaponFragmengQueue.Enqueue(gameObject);
                         break;
                     case 5:
-                        GameController.S.OrangeWeaponFragmengQueue.Enqueue(gameObject);
+                        QueueController.S.OrangeWeaponFragmengQueue.Enqueue(gameObject);
                         break;
                     case 6:
-                        GameController.S.RedWeaponFragmengQueue.Enqueue(gameObject);
+                        QueueController.S.RedWeaponFragmengQueue.Enqueue(gameObject);
                         break;
                 }
                 break;
@@ -116,16 +116,16 @@ public class PropBase : MonoBehaviour
                 switch (propTable.Quality)
                 {
                     case 1:
-                        GameController.S.FuMoZhiGuQueue.Enqueue(gameObject);
+                        QueueController.S.FuMoZhiGuQueue.Enqueue(gameObject);
                         break;
                     case 2:
-                        GameController.S.GoldBloodQueue.Enqueue(gameObject);
+                        QueueController.S.GoldBloodQueue.Enqueue(gameObject);
                         break;
                     case 3:
-                        GameController.S.JuDaYaChiQueue.Enqueue(gameObject);
+                        QueueController.S.JuDaYaChiQueue.Enqueue(gameObject);
                         break;
                     case 4:
-                        GameController.S.ZuiEYanZhuQueue.Enqueue(gameObject);
+                        QueueController.S.ZuiEYanZhuQueue.Enqueue(gameObject);
                         break;
                 }
                 break;
@@ -134,22 +134,22 @@ public class PropBase : MonoBehaviour
                 switch (propTable.Quality)
                 {
                     case 1:
-                        GameController.S.WhiteChiBangQueue.Enqueue(gameObject);
+                        QueueController.S.WhiteChiBangQueue.Enqueue(gameObject);
                         break;
                     case 2:
-                        GameController.S.GreenChiBangQueue.Enqueue(gameObject);
+                        QueueController.S.GreenChiBangQueue.Enqueue(gameObject);
                         break;
                     case 3:
-                        GameController.S.BlueChiBangQueue.Enqueue(gameObject);
+                        QueueController.S.BlueChiBangQueue.Enqueue(gameObject);
                         break;
                     case 4:
-                        GameController.S.PurpleChiBangQueue.Enqueue(gameObject);
+                        QueueController.S.PurpleChiBangQueue.Enqueue(gameObject);
                         break;
                     case 5:
-                        GameController.S.OrangeChiBangQueue.Enqueue(gameObject);
+                        QueueController.S.OrangeChiBangQueue.Enqueue(gameObject);
                         break;
                     case6:
-                        GameController.S.RedChiBangQueue.Enqueue(gameObject);
+                        QueueController.S.RedChiBangQueue.Enqueue(gameObject);
                         break;
                 }
                 break;
@@ -163,7 +163,7 @@ public class PropBase : MonoBehaviour
             case PropConfig.PropType.CC:
             case PropConfig.PropType.CD:
             case PropConfig.PropType.DD:
-                GameController.S.BaoShiQueue.Enqueue(this as BaoShi);
+                QueueController.S.BaoShiQueue.Enqueue(this as BaoShi);
                 break;
             
             

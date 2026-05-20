@@ -29,7 +29,7 @@ public class shanzei3 : MonsterBase
         {
             NormalYuanChenCurrentTime = 0;
 
-            var dir=(GameController.S.gamePlayer.transform.position - transform.position).normalized;
+            var dir=(QueueController.S.gamePlayer.transform.position - transform.position).normalized;
             ShotDanMu(attackTrans.position,ResourcesConfig.DanMu1,Attack,dir,false);
         }
     }
@@ -61,7 +61,7 @@ public class shanzei3 : MonsterBase
         if (monsterSkeletonAnimation != null)
         {
             DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            var baoxue = QueueController.S.BaoXueQueue.Dequeue();
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
         }
@@ -82,7 +82,7 @@ public class shanzei3 : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size&&NormalYuanChenCurrentTime >= NormalYuanChenTime)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size&&NormalYuanChenCurrentTime >= NormalYuanChenTime)
         {
             isAttack = true;
         }

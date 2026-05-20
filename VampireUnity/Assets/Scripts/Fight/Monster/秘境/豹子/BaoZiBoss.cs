@@ -129,7 +129,7 @@ namespace Fight.Monster.秘境.豹子
             CreateEquip();
             CreateProp();
             FightBGController.S.PlaySuccessAnim();
-            GameController.S.StartCoroutine(DelayChuanSongMen());
+            QueueController.S.StartCoroutine(DelayChuanSongMen());
         }
 
         IEnumerator DelayChuanSongMen()
@@ -170,7 +170,7 @@ namespace Fight.Monster.秘境.豹子
             yield return  new WaitForSeconds(0.5f);
             foreach (var item in posList)
             {
-                var LvXuanFen = GameController.S.LvXuanFenQueue.Dequeue();
+                var LvXuanFen = QueueController.S.LvXuanFenQueue.Dequeue();
                 LvXuanFen.damage = Attack;
                 LvXuanFen.transform.position = item;
                 LvXuanFen.gameObject.SetActive(true);            }
@@ -180,10 +180,10 @@ namespace Fight.Monster.秘境.豹子
         {
             if (e.Data.Name == "damage" && trackEntry.Animation.Name == "attack1")
             {
-                if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size ||
-                    Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.2f)
+                if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size ||
+                    Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.2f)
                 {
-                    GameController.S.gamePlayer.PlayerHurt(Attack, true);
+                    QueueController.S.gamePlayer.PlayerHurt(Attack, true);
                 }
             }
             
@@ -201,7 +201,7 @@ namespace Fight.Monster.秘境.豹子
             
                         for (int i = 0; i < bulletCount; i++)
                         {
-                            var xieZiSkill1 = GameController.S.LvZhuiZongQueue.Dequeue();
+                            var xieZiSkill1 = QueueController.S.LvZhuiZongQueue.Dequeue();
                             float angle = i * angleStep + waveOffset;
                             float angleRad = angle * Mathf.Deg2Rad;
                             Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
@@ -216,7 +216,7 @@ namespace Fight.Monster.秘境.豹子
             
             if (e.Data.Name == "damage" && trackEntry.Animation.Name == "skill2")
             {
-                Vector2 baseDir = (GameController.S.gamePlayer.transform.position-transform.position).normalized;
+                Vector2 baseDir = (QueueController.S.gamePlayer.transform.position-transform.position).normalized;
 
                 // 两个偏移角度：+10° 和 -10°
                 Vector2[] dirs =
@@ -229,7 +229,7 @@ namespace Fight.Monster.秘境.豹子
                 // 连发两颗
                 foreach (Vector2 dir in dirs)
                 {
-                    var bullet = GameController.S.BaoZiSkill2Queue.Dequeue();
+                    var bullet = QueueController.S.BaoZiSkill2Queue.Dequeue();
                     bullet.transform.position = transform.position;
                     bullet.direction = dir;
                     bullet.damage = Attack;
@@ -240,7 +240,7 @@ namespace Fight.Monster.秘境.豹子
 
         public void MonsterMove1()
         {
-            Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+            Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
             if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move" || IsDash)
             {
                 GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed;
@@ -258,7 +258,7 @@ namespace Fight.Monster.秘境.豹子
                 return;
             }
 
-            float dis = Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
+            float dis = Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position);
             if (dis < 0.2f)
             {
                 //如果距离小于0.2f，则不翻转
@@ -268,7 +268,7 @@ namespace Fight.Monster.秘境.豹子
             //翻转精灵
             if (isRight)
             {
-                if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+                if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
                 {
                     parent.transform.localScale = new Vector3(1, 1, 1);
                 }
@@ -279,7 +279,7 @@ namespace Fight.Monster.秘境.豹子
             }
             else
             {
-                if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+                if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
                 {
                     parent.transform.localScale = new Vector3(-1, 1, 1);
                 }
@@ -321,8 +321,8 @@ namespace Fight.Monster.秘境.豹子
                 isSkill3 = true;
             }
 
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size ||
-                Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.2f)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size ||
+                Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.2f)
             {
                 isAttack = true;
             }

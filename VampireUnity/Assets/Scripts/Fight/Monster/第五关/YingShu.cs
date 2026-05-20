@@ -45,7 +45,7 @@ public class YingShu : MonsterBase
         if (monsterSkeletonAnimation != null)
         {
             DelayDestroy();
-            var baoxue = GameController.S.BaoXueQueue.Dequeue();
+            var baoxue = QueueController.S.BaoXueQueue.Dequeue();
             baoxue.transform.position=transform.position;
             baoxue.gameObject.SetActive(true);
         }
@@ -85,9 +85,9 @@ public class YingShu : MonsterBase
     {
         if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "skill1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 1f)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < 1f)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
     }
@@ -96,7 +96,7 @@ public class YingShu : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 1f)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < 1f)
         {
             isSkill1=true;
         }

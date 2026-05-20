@@ -72,7 +72,7 @@ public class ShuangDaoBoss : MonsterBase
         // 调用创建方法（假设 CreateCircleAttack 接受 Vector2 位置）
         GameController.S.CreateCircleAttack(spawnPos,1f);
         yield return new WaitForSeconds(time);
-        ShuangDaoSkill2 huoyan=GameController.S.ShuangDaoSkill2Queue.Dequeue();
+        ShuangDaoSkill2 huoyan=QueueController.S.ShuangDaoSkill2Queue.Dequeue();
         huoyan.transform.position = spawnPos;
         huoyan.damage = Attack;
         huoyan.gameObject.SetActive(true);
@@ -99,7 +99,7 @@ public class ShuangDaoBoss : MonsterBase
             IsSkill = true;
             isSkill1 = false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "short jump", false);
-            ShortJumpPos=GameController.S.gamePlayer.transform.position;
+            ShortJumpPos=QueueController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(ShortJumpPos,1f);
             monsterSkeletonAnimation.timeScale = 1.5f;
         }
@@ -108,8 +108,8 @@ public class ShuangDaoBoss : MonsterBase
             IsSkill = true;
             isSkill2 = false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
-            Vector2 pos = new Vector2(GameController.S.gamePlayer.transform.position.x,
-                GameController.S.gamePlayer.transform.position.y);
+            Vector2 pos = new Vector2(QueueController.S.gamePlayer.transform.position.x,
+                QueueController.S.gamePlayer.transform.position.y);
             Skill2(pos,8f,0.15f,0.7f,15);
             monsterSkeletonAnimation.timeScale = 1.2f;
         }
@@ -171,7 +171,7 @@ public class ShuangDaoBoss : MonsterBase
         CreateEquip();
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
 
     IEnumerator DelayChuanSongMen()
@@ -235,7 +235,7 @@ public class ShuangDaoBoss : MonsterBase
 
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack, true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack, true);
             }
         }
     }
@@ -248,7 +248,7 @@ public class ShuangDaoBoss : MonsterBase
             
         for (int i = 0; i < bulletCount; i++)
         {
-            var xieZiSkill1 = GameController.S.ShuangDaoSkill3Queue.Dequeue();
+            var xieZiSkill1 = QueueController.S.ShuangDaoSkill3Queue.Dequeue();
             float angle = i * angleStep + waveOffset;
             float angleRad = angle * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Cos(angleRad), Mathf.Sin(angleRad));
@@ -296,7 +296,7 @@ public class ShuangDaoBoss : MonsterBase
 
     public void MonsterMove1()
     {
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move" || IsDash)
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed;
@@ -314,7 +314,7 @@ public class ShuangDaoBoss : MonsterBase
             return;
         }
 
-        float dis = Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
+        float dis = Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position);
         if (dis < 0.2f)
         {
             //如果距离小于0.2f，则不翻转
@@ -324,7 +324,7 @@ public class ShuangDaoBoss : MonsterBase
         //翻转精灵
         if (isRight)
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -335,7 +335,7 @@ public class ShuangDaoBoss : MonsterBase
         }
         else
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(-1, 1, 1);
             }
@@ -377,8 +377,8 @@ public class ShuangDaoBoss : MonsterBase
             isSkill3 = true;
         }
 
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size ||
-            Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 1.2f)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size ||
+            Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.2f)
         {
             isAttack = true;
         }

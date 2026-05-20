@@ -65,7 +65,7 @@ public class ZhaoZeBoss : MonsterBase
         CreateProp();
         FightBGController.S.PlaySuccessAnim();
         
-        GameController.S.StartCoroutine(DelayChuanSongMen());
+        QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
     
     IEnumerator DelayChuanSongMen()
@@ -88,7 +88,7 @@ public class ZhaoZeBoss : MonsterBase
     IEnumerator DelayChuXian()
     {
         yield return new WaitForSeconds(1f);
-        var pos = GameController.S.gamePlayer.transform.position;
+        var pos = QueueController.S.gamePlayer.transform.position;
         GameController.S.CreateCircleAttack(new Vector2(pos.x+2,pos.y),1);
         yield return new WaitForSeconds(1f);
         parent.transform.localScale = new Vector3(1, 1, 1);
@@ -99,18 +99,18 @@ public class ZhaoZeBoss : MonsterBase
 
     IEnumerator ShuiSkill()
     {
-        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        StartCoroutine(DelayShui(QueueController.S.gamePlayer.transform.position));
         yield return  new WaitForSeconds(1.5f);
-        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        StartCoroutine(DelayShui(QueueController.S.gamePlayer.transform.position));
         yield return  new WaitForSeconds(1.5f);
-        StartCoroutine(DelayShui(GameController.S.gamePlayer.transform.position));
+        StartCoroutine(DelayShui(QueueController.S.gamePlayer.transform.position));
     }
 
     IEnumerator DelayShui(Vector2 pos)
     {
         GameController.S.CreateCircleAttack(pos,0.8f);
         yield return  new WaitForSeconds(1f);
-        var shui = GameController.S.ZhaoZeSkillQueue.Dequeue();
+        var shui = QueueController.S.ZhaoZeSkillQueue.Dequeue();
         shui.damage = Attack;
         shui.transform.position = pos;
         shui.gameObject.SetActive(true);
@@ -129,7 +129,7 @@ public class ZhaoZeBoss : MonsterBase
 
         if (trackEntry.Animation.Name == "skill3")
         {
-            GameController.S.StartCoroutine(DelayChuXian());
+            QueueController.S.StartCoroutine(DelayChuXian());
             return;
         }
         
@@ -145,7 +145,7 @@ public class ZhaoZeBoss : MonsterBase
             isSkill4=false;
             monsterSkeletonAnimation.timeScale = 1.3f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill4", false);
-            var pos = GameController.S.gamePlayer.transform.position;
+            var pos = QueueController.S.gamePlayer.transform.position;
             StartCoroutine(ShuiSkill());
         }else if (isSkill3)
         {
@@ -169,9 +169,9 @@ public class ZhaoZeBoss : MonsterBase
     {
         if (e.Data.Name == "damage"&&trackEntry.Animation.Name=="attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) <= size)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) <= size)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
         if (e.Data.Name == "damage"&&trackEntry.Animation.Name=="skill1")
@@ -205,7 +205,7 @@ public class ZhaoZeBoss : MonsterBase
         
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
     }
@@ -227,7 +227,7 @@ public class ZhaoZeBoss : MonsterBase
         
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
     }
@@ -249,7 +249,7 @@ public class ZhaoZeBoss : MonsterBase
         
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,true);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,true);
             }
         }
     }
@@ -257,7 +257,7 @@ public class ZhaoZeBoss : MonsterBase
     
     public void MonsterMove1()
     {
-        Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+        Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move")
         {
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
@@ -274,7 +274,7 @@ public class ZhaoZeBoss : MonsterBase
         {
             return;
         }
-        float dis=Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position);
+        float dis=Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position);
         if(dis<0.2f)
         {
             //如果距离小于0.2f，则不翻转
@@ -283,7 +283,7 @@ public class ZhaoZeBoss : MonsterBase
         //翻转精灵
         if (isRight)
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(1, 1, 1);
             }
@@ -293,7 +293,7 @@ public class ZhaoZeBoss : MonsterBase
             }
         }else
         {
-            if (GameController.S.gamePlayer.transform.position.x > transform.position.x)
+            if (QueueController.S.gamePlayer.transform.position.x > transform.position.x)
             {
                 parent.transform.localScale = new Vector3(-1, 1, 1);
             }
@@ -314,7 +314,7 @@ public class ZhaoZeBoss : MonsterBase
         currentSkill3Time+=Time.deltaTime;
         currentSkill4Time+=Time.deltaTime;
 
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < size)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size)
         {
             isAttack=true;
         }
@@ -324,13 +324,13 @@ public class ZhaoZeBoss : MonsterBase
         }
 
         if (currentSkill1Time > skill1Time &&
-            Vector2.Distance(skill1trans.position, GameController.S.gamePlayer.transform.position) < 1.5)
+            Vector2.Distance(skill1trans.position, QueueController.S.gamePlayer.transform.position) < 1.5)
         {
             currentSkill1Time = 0;
             isSkill1 = true;
         }
 
-        if (currentSkill3Time > skill3Time &&Math.Abs(skill3trans.position.x - GameController.S.gamePlayer.transform.position.x) < 5&&Math.Abs(skill3trans.position.y - GameController.S.gamePlayer.transform.position.y) < 5)
+        if (currentSkill3Time > skill3Time &&Math.Abs(skill3trans.position.x - QueueController.S.gamePlayer.transform.position.x) < 5&&Math.Abs(skill3trans.position.y - QueueController.S.gamePlayer.transform.position.y) < 5)
         {
             currentSkill3Time = 0;
             isSkill3 = true;

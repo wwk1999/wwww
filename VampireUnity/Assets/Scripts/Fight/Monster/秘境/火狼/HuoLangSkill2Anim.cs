@@ -10,7 +10,7 @@ public class HuoLangSkill2Anim : MonoBehaviour
    public void Hide()
    {
       gameObject.SetActive(false);
-      GameController.S.HuoLangSkill2Queue.Enqueue(HuoLangSkill2);
+      QueueController.S.HuoLangSkill2Queue.Enqueue(HuoLangSkill2);
    }
    
    public void CheckCollisionWithMonsters()
@@ -30,7 +30,7 @@ public class HuoLangSkill2Anim : MonoBehaviour
 
          if (col.CompareTag("Player"))
          {
-            GameController.S.gamePlayer.PlayerHurt(HuoLangSkill2.damage, true);
+            QueueController.S.gamePlayer.PlayerHurt(HuoLangSkill2.damage, true);
          }
       }
    }   

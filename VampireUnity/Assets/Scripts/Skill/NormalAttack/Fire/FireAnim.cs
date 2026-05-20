@@ -7,6 +7,6 @@ public class FireAnim : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        GameController.S.FirePengQueue.Enqueue(gameObject);
+        QueueController.S.FirePengQueue.Enqueue(gameObject);
     }
 }
