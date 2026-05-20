@@ -86,7 +86,7 @@ namespace Skill.NormalAttack.Primary
                 if (!isInitialized) return;
                 
                 bool isCrit = GameController.S.GetIsCrit();
-                QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack * SkillController.S.IceYuanSuDamage, isCrit, DamageFrom.Normal,YuanSuType.Huo);
+                QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack * SkillController.S.IceYuanSuDamage, isCrit, DamageFrom.Normal,YuanSuType.Huo);
                 
                 Hide();
                 

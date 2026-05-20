@@ -32,7 +32,7 @@ public class XiNiuMonster : MonsterBase
         CreateEquip();
         
         // gameObject.SetActive(false);
-        // GameController.S.SnotMonsterQueue.Enqueue(this);
+        // QueueController.S.SnotMonsterQueue.Enqueue(this);
     }
     
     public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom,YuanSuType yuanSuType)
@@ -46,10 +46,10 @@ public class XiNiuMonster : MonsterBase
     
     public void MonsterMove1()
     {
-        float dis= Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position);
+        float dis= Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position);
         if (!isHit)
         {
-            if (dis < GameController.S.gamePlayer.size + size)
+            if (dis < QueueController.S.gamePlayer.size + size)
             {
                 isMove = false;
             }
@@ -62,12 +62,12 @@ public class XiNiuMonster : MonsterBase
         // 判断是否在播放任何动画（包括过渡）
         if(isMove)
         {
-            Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+            Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
             GetComponent<Rigidbody2D>().velocity = direction.normalized * Speed; 
         }
         else
         {
-            Vector3 direction = GameController.S.gamePlayer.transform.position - transform.position;
+            Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
             GetComponent<Rigidbody2D>().velocity = direction.normalized * 0; 
         }
     }

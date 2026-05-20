@@ -23,7 +23,7 @@ public class ReturnButton : MonoBehaviour
 
     void Update()
     {
-        if(Vector2.Distance(transform.position,GameController.S.gamePlayer.transform.position)<1)
+        if(Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position)<1)
         {
             returnbutton.gameObject.SetActive(true);
         }

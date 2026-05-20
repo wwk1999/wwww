@@ -13,7 +13,7 @@ public class SpiderWeb : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
-         GameController.S.gamePlayer.TempChangePlayerMoveSpeed(0, 1);
+         QueueController.S.gamePlayer.TempChangePlayerMoveSpeed(0, 1);
         Invoke("DestroyGameObject", 1f);
       }
    }

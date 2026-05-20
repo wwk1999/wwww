@@ -29,7 +29,7 @@ public class ZhaoZeBossSkill2 : MonoBehaviour
         {
             if (isRange)
             {
-                GameController.S.gamePlayer.PlayerHurt(monsterBase.Attack,true);
+                QueueController.S.gamePlayer.PlayerHurt(monsterBase.Attack,true);
             }
         }
     }

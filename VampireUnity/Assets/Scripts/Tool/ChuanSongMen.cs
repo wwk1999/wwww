@@ -20,7 +20,7 @@ public class ChuanSongMen : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 2f)
+        if (Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 2f)
         {
             FightBGController.S.isShowAgain=true;
         }

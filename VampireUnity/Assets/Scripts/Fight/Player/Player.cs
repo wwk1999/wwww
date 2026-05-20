@@ -55,7 +55,6 @@ public class Player : MonoBehaviour
     private float _gunDistance = 0.3f;
     public SkeletonAnimation playerSkeleton;
     public float size = 0.28f;
-    [NonSerialized] public bool IsWuDi = false;//红闪的时候无敌
     
     public MeshRenderer  meshRenderer;
     public SpriteRenderer SpriteRenderer;
@@ -474,7 +473,7 @@ public class Player : MonoBehaviour
     /// </summary>
     private void CheckDeath()
     {
-        if (GameController.S.GameCurrentHp <= 0)
+        if (QueueController.S.GameCurrentHp <= 0)
         {
             // 停止延迟伤害协程（如果还在运行）
             if (delayedDamageCoroutine != null)
@@ -489,7 +488,7 @@ public class Player : MonoBehaviour
                 GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.ReplyDeath))
             {
                 Debug.LogError("触发复活");
-                GameController.S.GameCurrentHp = GameController.S.GameMaxHp * 0.3f;
+                QueueController.S.GameCurrentHp = QueueController.S.GameMaxHp * 0.3f;
             }
             else
             {
@@ -505,7 +504,7 @@ public class Player : MonoBehaviour
         float delayedDamage = realDamage * 0.3f;   // 30%延迟生效
             
         // 立即施加70%的伤害
-        GameController.S.GameCurrentHp -= Mathf.RoundToInt(immediateDamage);
+        QueueController.S.GameCurrentHp -= Mathf.RoundToInt(immediateDamage);
             
         // 统一死亡检查（立即伤害后）
         CheckDeath();
@@ -580,7 +579,7 @@ public class Player : MonoBehaviour
         playerHurt.transform.position = transform.position;
         
 
-        damage -= GameController.S.GameDefense;
+        damage -= QueueController.S.GameDefense;
         float realDamage = 0;
         if (isBoss)
         {
@@ -595,9 +594,9 @@ public class Player : MonoBehaviour
         
         realDamage=GetPlayerHurtDamageByOrangeEntry(realDamage);
         realDamage=Math.Max(0,realDamage);
-        if (GlobalPlayerAttribute.HH5Count > 0 && realDamage >= GameController.S.GameCurrentHp * 0.5f)
+        if (GlobalPlayerAttribute.HH5Count > 0 && realDamage >= QueueController.S.GameCurrentHp * 0.5f)
         {
-            realDamage = GameController.S.GameCurrentHp * 0.5f;
+            realDamage = QueueController.S.GameCurrentHp * 0.5f;
         }
         // 检查是否有DelayDamage词条
         bool hasDelayDamage = GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DelayDamage);
@@ -609,27 +608,23 @@ public class Player : MonoBehaviour
         else
         {
             // 没有DelayDamage词条：100%立即生效（原逻辑）
-            GameController.S.GameCurrentHp -= Mathf.RoundToInt(realDamage);
+            QueueController.S.GameCurrentHp -= Mathf.RoundToInt(realDamage);
             
             // 统一死亡检查
             CheckDeath();
             
             // 如果已经死亡，不再处理后续逻辑
-            if (GameController.S.GameCurrentHp <= 0)
+            if (QueueController.S.GameCurrentHp <= 0)
             {
                 return;
             }
         }
-        if (IsWuDi)
-        {
-            return;
-        }
+       
         //打印调用这个方法的脚本name
         AudioController.S.PlayPlayerHurt();
         CameraContraller.S.CameraShake(0.05f, 0.005f);
         var playerhit = FightBGController.S.PlayerHitQueue.Dequeue();
         playerhit.gameObject.SetActive(true);
-        StartCoroutine(DelayCancelWuDi(0.2f));
         if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name == "idle" ||
             playerSkeleton.AnimationState.GetCurrent(0).Animation.Name == "walk")
         {
@@ -657,7 +652,6 @@ public class Player : MonoBehaviour
     IEnumerator DelayCancelWuDi(float time)
     {
         yield return new WaitForSeconds(time);
-        QueueController.S.gamePlayer.IsWuDi = false;
     }
 
     /// <summary>
@@ -670,7 +664,7 @@ public class Player : MonoBehaviour
         while (delayedDamageQueue.Count > 0)
         {
             // 如果玩家已死亡，停止施加延迟伤害
-            if (GameController.S.GameCurrentHp <= 0)
+            if (QueueController.S.GameCurrentHp <= 0)
             {
                 break;
             }
@@ -711,13 +705,13 @@ public class Player : MonoBehaviour
             if (totalDamageThisFrame > 0)
             {
                 int finalDamage = Mathf.RoundToInt(totalDamageThisFrame);
-                GameController.S.GameCurrentHp -= finalDamage;
+                QueueController.S.GameCurrentHp -= finalDamage;
                 
                 // 统一死亡检查（延迟伤害后）
                 CheckDeath();
                 
                 // 如果死亡，退出协程
-                if (GameController.S.GameCurrentHp <= 0)
+                if (QueueController.S.GameCurrentHp <= 0)
                 {
                     break;
                 }

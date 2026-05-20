@@ -31,7 +31,7 @@ public class HuoBaoZhaNextAnim : MonoBehaviour
             if (col.CompareTag("Monster")||col.CompareTag("Boss"))
             {
                 var crit = GameController.S.GetIsCrit();
-                QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Huo);
+                QueueController.S.MonsterColliderDic[col].Hurt(QueueController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Huo);
             }
         }
     }

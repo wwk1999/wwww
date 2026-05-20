@@ -85,9 +85,9 @@ public class ShaMoElite : MonsterBase
     {
         if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.8f)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < 0.8f)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
     }
@@ -98,12 +98,12 @@ public class ShaMoElite : MonsterBase
         if (IsDead) return;
         base.Update();
         CurrentSkillTime += Time.deltaTime;
-        if (CurrentSkillTime >= SkillTime&&(Vector2.Distance(GameController.S.gamePlayer.transform.position,skillTrans1.position)<0.6f||Vector2.Distance(GameController.S.gamePlayer.transform.position,skillTrans2.position)<0.6f||Vector2.Distance(GameController.S.gamePlayer.transform.position,skillTrans3.position)<0.6f))
+        if (CurrentSkillTime >= SkillTime&&(Vector2.Distance(QueueController.S.gamePlayer.transform.position,skillTrans1.position)<0.6f||Vector2.Distance(QueueController.S.gamePlayer.transform.position,skillTrans2.position)<0.6f||Vector2.Distance(QueueController.S.gamePlayer.transform.position,skillTrans3.position)<0.6f))
         {
             CurrentSkillTime = 0;
             isSkill1=true;
         }
-        else if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.8f)
+        else if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < 0.8f)
         {
             isAttack=true;
         }
@@ -128,25 +128,25 @@ public class ShaMoElite : MonsterBase
 
     public void CheckSkill1()
     {
-        if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans1.position) < 0.6f)
+        if (Vector2.Distance(QueueController.S.gamePlayer.transform.position, skillTrans1.position) < 0.6f)
         {
-            GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            QueueController.S.gamePlayer.PlayerHurt(Attack,false);
         }
     }
     
     public void CheckSkill2()
     {
-        if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans2.position) < 0.6f)
+        if (Vector2.Distance(QueueController.S.gamePlayer.transform.position, skillTrans2.position) < 0.6f)
         {
-            GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            QueueController.S.gamePlayer.PlayerHurt(Attack,false);
         }
     }
     
     public void CheckSkill3()
     {
-        if (Vector2.Distance(GameController.S.gamePlayer.transform.position, skillTrans3.position) < 0.6f)
+        if (Vector2.Distance(QueueController.S.gamePlayer.transform.position, skillTrans3.position) < 0.6f)
         {
-            GameController.S.gamePlayer.PlayerHurt(Attack,false);
+            QueueController.S.gamePlayer.PlayerHurt(Attack,false);
         }
     }
 }

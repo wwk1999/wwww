@@ -36,7 +36,7 @@ public class FireBaoZhaAnim : MonoBehaviour
                 hit.SetActive(true);
                 hit.transform.position = closestPoint;
                 var crit = GameController.S.GetIsCrit();
-                QueueController.S.MonsterColliderDic[col].Hurt(GameController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Huo);
+                QueueController.S.MonsterColliderDic[col].Hurt(QueueController.S.GameAttack*1.5f*SkillController.S.DianYuanSuDamage,crit,DamageFrom.Normal,YuanSuType.Huo);
             }
         }
     }

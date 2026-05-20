@@ -76,7 +76,7 @@ public class PropBase : MonoBehaviour
             EquipIDData.S.SaveProp(propTables);
             StoreController.S.SaveStoreData();
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,propTables);
-            GameController.S.PropBaseSet.Remove(this);
+            QueueController.S.PropBaseSet.Remove(this);
             //如果被拾取，销毁装备
             gameObject.SetActive(false);
             EnEquipQueue(propTables);

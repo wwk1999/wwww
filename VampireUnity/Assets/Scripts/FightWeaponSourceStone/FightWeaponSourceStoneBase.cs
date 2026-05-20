@@ -47,7 +47,7 @@ public class FightWeaponSourceStoneBase : BagObjectBase
    private void Update()
    {
        if(isPickUp)
-           transform.position = Vector3.Lerp(transform.position, GameController.S.gamePlayer.transform.position, Time.deltaTime * speed);
+           transform.position = Vector3.Lerp(transform.position, QueueController.S.gamePlayer.transform.position, Time.deltaTime * speed);
    }
    
    private IEnumerator StopVelocityAfterDelay(Rigidbody2D rb, float delay)

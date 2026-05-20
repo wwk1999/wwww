@@ -23,7 +23,7 @@ public class LeiShouShunYiAnim : MonoBehaviour
         
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(LeiShouShunYi.damage,true);
+                QueueController.S.gamePlayer.PlayerHurt(LeiShouShunYi.damage,true);
             }
         }
     }

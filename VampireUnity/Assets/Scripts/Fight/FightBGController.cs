@@ -74,8 +74,8 @@ public class FightBGController : XSingleton<FightBGController>
             //升级
             SkillJiaDian.S.CurrentSkillCount++;
             ObserverModuleManager.S.SendEvent(ConstKeys.LevelUpAnim);
-            GameController.S.gamePlayer.LevelUp.SetActive(true);
-            GameController.S.gamePlayer.LevelUpParticle.Play();
+            QueueController.S.gamePlayer.LevelUp.SetActive(true);
+            QueueController.S.gamePlayer.LevelUpParticle.Play();
             GlobalPlayerAttribute.Level++;
             ObserverModuleManager.S.SendEvent("ShenJi");
             playerLevelText.text =  GlobalPlayerAttribute.Level.ToString();
@@ -143,7 +143,7 @@ public class FightBGController : XSingleton<FightBGController>
         if (currentReplyHpTime > ReplyHpTime)
         {
             currentReplyHpTime = 0;
-            float replyHp = GameController.S.GameMaxHp * GlobalPlayerAttribute.ReplyHpPercent/100f;
+            float replyHp = QueueController.S.GameMaxHp * GlobalPlayerAttribute.ReplyHpPercent/100f;
             GlobalPlayerAttribute.ReplyHp(replyHp);
         }
         
@@ -162,8 +162,8 @@ public class FightBGController : XSingleton<FightBGController>
                 //升级
                 SkillJiaDian.S.CurrentSkillCount++;
                 ObserverModuleManager.S.SendEvent(ConstKeys.LevelUpAnim);
-                GameController.S.gamePlayer.LevelUp.SetActive(true);
-                GameController.S.gamePlayer.LevelUpParticle.Play();
+                QueueController.S.gamePlayer.LevelUp.SetActive(true);
+                QueueController.S.gamePlayer.LevelUpParticle.Play();
                 GlobalPlayerAttribute.Level++;
                 ObserverModuleManager.S.SendEvent("ShenJi");
                 playerLevelText.text =  GlobalPlayerAttribute.Level.ToString();
@@ -280,20 +280,20 @@ public class FightBGController : XSingleton<FightBGController>
     public void SetHp()
     {
         
-        if (GameController.S.GameCurrentHp < 0)
+        if (QueueController.S.GameCurrentHp < 0)
         {
-            GameController.S.GameCurrentHp = 0f;
+            QueueController.S.GameCurrentHp = 0f;
         }
 
-        if (GameController.S.GameCurrentHp > GameController.S.GameMaxHp)
+        if (QueueController.S.GameCurrentHp > QueueController.S.GameMaxHp)
         {
-            GameController.S.GameCurrentHp=GameController.S.GameMaxHp;
+            QueueController.S.GameCurrentHp=QueueController.S.GameMaxHp;
         }
 
-        GameMaxHp.text = Mathf.RoundToInt(GameController.S.GameMaxHp).ToString();
-        GameCurrentHp.text = Mathf.RoundToInt(GameController.S.GameCurrentHp).ToString();
-        playerHpSlider.maxValue = GameController.S.GameMaxHp;
-        playerHpSlider.value = GameController.S.GameCurrentHp;
+        GameMaxHp.text = Mathf.RoundToInt(QueueController.S.GameMaxHp).ToString();
+        GameCurrentHp.text = Mathf.RoundToInt(QueueController.S.GameCurrentHp).ToString();
+        playerHpSlider.maxValue = QueueController.S.GameMaxHp;
+        playerHpSlider.value = QueueController.S.GameCurrentHp;
     }
 
     public void CheckGuanKaTitle()

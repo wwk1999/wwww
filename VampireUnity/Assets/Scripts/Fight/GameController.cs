@@ -26,16 +26,11 @@ public class GameController : XSingleton<GameController>
     [NonSerialized] public List<MonsterTypeByName> NormalMonster = new List<MonsterTypeByName>();
     [NonSerialized] public MonsterTypeByName Boss = MonsterTypeByName.None;
 
-    [NonSerialized]public HashSet<EquipBase> EquipBaseSet = new HashSet<EquipBase>();
-    [NonSerialized]public HashSet<PropBase> PropBaseSet = new HashSet<PropBase>();
+    
 
     
     [NonSerialized] public int[] MonsterList = new int[2];
-    [NonSerialized] public float GameMaxHp = 0;
-    [NonSerialized] public float GameCurrentHp = 0;
-    public float GameDefense =>GetGameDefense();
-    public float GameAttack =>GetGameAttack();
-    [NonSerialized] public float GameCrit = 0;
+    
     
 
     private int CritCount = 0;
@@ -1173,47 +1168,6 @@ public class GameController : XSingleton<GameController>
     private void Start()
     {
         KillMonsterCount = 0;
-        //初始化地图
-        if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 ||
-            LevelInfoConfig.CurrentGameLevel == 3)
-        {
-            QueueController.S.transform.Find("FightBG(Clone)/Level1").gameObject.SetActive(true);
-        }
-        if (LevelInfoConfig.CurrentGameLevel == 4 || LevelInfoConfig.CurrentGameLevel == 5 ||
-            LevelInfoConfig.CurrentGameLevel == 6)
-        {
-            QueueController.S.transform.Find("FightBG(Clone)/Level2").gameObject.SetActive(true);
-        }
-        if (LevelInfoConfig.CurrentGameLevel == 7 || LevelInfoConfig.CurrentGameLevel == 8 ||
-            LevelInfoConfig.CurrentGameLevel == 9)
-        {
-            QueueController.S.transform.Find("FightBG(Clone)/Level3").gameObject.SetActive(true);
-        }
-        if (LevelInfoConfig.CurrentGameLevel == 10 || LevelInfoConfig.CurrentGameLevel == 11 ||
-            LevelInfoConfig.CurrentGameLevel == 12)
-        {
-            QueueController.S.transform.Find("FightBG(Clone)/Level4").gameObject.SetActive(true);
-        }
-        if (LevelInfoConfig.CurrentGameLevel == 13 || LevelInfoConfig.CurrentGameLevel == 14 ||
-            LevelInfoConfig.CurrentGameLevel == 15)
-        {
-            QueueController.S.transform.Find("FightBG(Clone)/Level5").gameObject.SetActive(true);
-        }
-
-        if (LevelInfoConfig.CurrentGameLevel > 15)
-        {
-            var random = new System.Random();
-            var index= random.Next(1, 3);
-            switch (index)
-            {
-                case 1:
-                    transform.Find("FightBG(Clone)/MiJing1").gameObject.SetActive(true);
-                    break;
-                case 2:
-                    transform.Find("FightBG(Clone)/MiJing2").gameObject.SetActive(true);
-                    break;
-            }
-        }
         
         fightTimeText = QueueController.S.fightBG.GetComponent<FightBg>().fightTimeText;
 
@@ -1491,6 +1445,13 @@ public class GameController : XSingleton<GameController>
 
     public void CreatePlayer()
     {
+        if (QueueController.S.gamePlayer != null)
+        {
+            QueueController.S.gamePlayer.gameObject.SetActive(true);
+            QueueController.S.gamePlayer.transform.position=new  Vector3(0,0,0);
+            QueueController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
+            return;
+        }
         QueueController.S.gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player"),QueueController.S.transform).GetComponent<Player>();
         QueueController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
         QueueController.S.gamePlayer.transform.position = Vector2.zero;
@@ -1617,15 +1578,15 @@ public class GameController : XSingleton<GameController>
                 TotalAddHp+=0.03f * GlobalPlayerAttribute.TotalMaxHp;
                 if (TotalAddHp < GlobalPlayerAttribute.TotalMaxHp)
                 {
-                    GameMaxHp += 0.03f * GlobalPlayerAttribute.TotalMaxHp;
-                    GameCurrentHp+= 0.03f * GlobalPlayerAttribute.TotalMaxHp;
+                    QueueController.S.GameMaxHp += 0.03f * GlobalPlayerAttribute.TotalMaxHp;
+                    QueueController.S.GameCurrentHp+= 0.03f * GlobalPlayerAttribute.TotalMaxHp;
                 }
                 else
                 {
-                    GameMaxHp += (GlobalPlayerAttribute.TotalMaxHp -
-                                  (TotalAddHp - 0.03f * GlobalPlayerAttribute.TotalMaxHp));
-                    GameCurrentHp += (GlobalPlayerAttribute.TotalMaxHp -
-                                      (TotalAddHp - 0.03f * GlobalPlayerAttribute.TotalMaxHp));
+                    QueueController.S.GameMaxHp += (GlobalPlayerAttribute.TotalMaxHp -
+                                                    (TotalAddHp - 0.03f * GlobalPlayerAttribute.TotalMaxHp));
+                    QueueController.S.GameCurrentHp += (GlobalPlayerAttribute.TotalMaxHp -
+                                                        (TotalAddHp - 0.03f * GlobalPlayerAttribute.TotalMaxHp));
                 }
             }
             if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddDefenseForTime))
@@ -1644,12 +1605,12 @@ public class GameController : XSingleton<GameController>
     //收集装备
     public void CollectEquip()
     {
-        foreach (var item in EquipBaseSet)
+        foreach (var item in QueueController.S.EquipBaseSet)
         {
             item.speed = 4;
             item.isPickUp = true;
         }
-        foreach (var item in PropBaseSet)
+        foreach (var item in QueueController.S.PropBaseSet)
         {
             item.speed = 4;
             item.isPickUp = true;

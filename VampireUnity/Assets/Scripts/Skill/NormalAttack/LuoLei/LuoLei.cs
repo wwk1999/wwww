@@ -25,7 +25,7 @@ public class LuoLei : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(GameController.S.GameAttack,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack,isCrit,DamageFrom.Normal,YuanSuType.Dian);
         }
     }
 }

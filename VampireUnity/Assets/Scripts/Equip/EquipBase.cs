@@ -267,7 +267,7 @@ public class EquipBase : BagObjectBase
             EquipIDData.S.SavaEquip(EquipAttributes);
             StoreController.S.SaveStoreData();
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,EquipAttributes);
-            GameController.S.EquipBaseSet.Remove(this);
+            QueueController.S.EquipBaseSet.Remove(this);
             //如果被拾取，销毁装备
             gameObject.SetActive(false);
             EnEquipQueue(EquipAttributes);

@@ -32,14 +32,14 @@ public class CameraContraller : XSingleton<CameraContraller>
 
     public void CameraMovePlayer()
     {
-        Vector3 targetPosition = new Vector3(GameController.S.gamePlayer.transform.position.x,
-            GameController.S.gamePlayer.transform.position.y, GameController.S.gamePlayer.transform.position.z);
+        Vector3 targetPosition = new Vector3(QueueController.S.gamePlayer.transform.position.x,
+            QueueController.S.gamePlayer.transform.position.y, QueueController.S.gamePlayer.transform.position.z);
         Vector3 startPosition = transform.position;
         ElapsedTime += Time.deltaTime;
         float t = Mathf.Clamp01(ElapsedTime / Duration);
         transform.position = Vector3.Lerp(startPosition, targetPosition, t);
-        if (transform.transform.position== new Vector3(GameController.S.gamePlayer.transform.position.x,
-                GameController.S.gamePlayer.transform.position.y, -12))
+        if (transform.transform.position== new Vector3(QueueController.S.gamePlayer.transform.position.x,
+                QueueController.S.gamePlayer.transform.position.y, -12))
         {
             CameraStatus= CameraStatus.FollowPlayer;
             ObserverModuleManager.S.SendEvent(ConstKeys.ResumePlayerCamera);
@@ -61,10 +61,10 @@ public class CameraContraller : XSingleton<CameraContraller>
             //摄像机跟随玩家
             if (CameraStatus == CameraStatus.FollowPlayer)
             {
-                if (GameController.S.gamePlayer != null)
+                if (QueueController.S.gamePlayer != null)
                 {
-                    transform.position = new Vector3(GameController.S.gamePlayer.transform.position.x,
-                        GameController.S.gamePlayer.transform.position.y, -12);
+                    transform.position = new Vector3(QueueController.S.gamePlayer.transform.position.x,
+                        QueueController.S.gamePlayer.transform.position.y, -12);
                 }
             }
             else if (CameraStatus == CameraStatus.MoveToBoss)

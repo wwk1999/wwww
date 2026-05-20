@@ -29,11 +29,11 @@ public class BulletBase : MonoBehaviour
 
     public void SetbulletRotate()
     {
-        transform.rotation = GameController.S.gamePlayer.currentGun.transform.rotation;
+        transform.rotation = QueueController.S.gamePlayer.currentGun.transform.rotation;
         //rotation的z减去-90
         Vector3 rotation = transform.rotation.eulerAngles;
         rotation.z -= 90;
-         if (GameController.S.gamePlayer.currentGun.gunSpriteRender.flipY==true)
+         if (QueueController.S.gamePlayer.currentGun.gunSpriteRender.flipY==true)
          {
              GetComponent<SpriteRenderer>().flipY = true;
          }

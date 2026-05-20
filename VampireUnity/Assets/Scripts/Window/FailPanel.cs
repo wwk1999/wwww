@@ -24,12 +24,14 @@ public class FailPanel : MonoBehaviour
          Time.timeScale = 1;
          GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
          SceneManager.LoadScene("UIScene");
+         QueueController.S.FightExit();
       });
       againButton.onClick.AddListener(() =>
          {
             Time.timeScale = 1;
             GlobalPlayerAttribute.CurrentExitType = ExitType.Again;
             SceneManager.LoadScene("UIScene");
+            QueueController.S.FightAgain();
          }
       );
    }

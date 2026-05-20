@@ -81,9 +81,9 @@ public class KuLou : MonsterBase
     {
         if (e.Data.Name == "damage"&&monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "attack1")
         {
-            if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.4f)
+            if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 0.4f)
             {
-                GameController.S.gamePlayer.PlayerHurt(Attack,false);
+                QueueController.S.gamePlayer.PlayerHurt(Attack,false);
             }
         }
     }
@@ -92,7 +92,7 @@ public class KuLou : MonsterBase
     {
         if (IsDead) return;
         base.Update();
-        if (Vector2.Distance(attackTrans.position, GameController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, GameController.S.gamePlayer.transform.position) < 0.4f)
+        if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < 0.4f||Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 0.4f)
         {
             isAttack=true;
         }

@@ -241,7 +241,7 @@ public class HuoQuXian : MonoBehaviour
                     QueueController.S.MonsterColliderDic.TryGetValue(other, out var monster))
                 {
                     monster.Hurt(
-                        GameController.S.GameAttack * SkillController.S.HuoYuanSuDamage,
+                        QueueController.S.GameAttack * SkillController.S.HuoYuanSuDamage,
                         isCrit,
                         DamageFrom.Normal,YuanSuType.Huo
                     );

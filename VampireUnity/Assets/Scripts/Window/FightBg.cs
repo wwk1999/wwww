@@ -154,7 +154,7 @@ public class FightBg : MonoBehaviour
         jiHuoButton.onClick.AddListener(() =>
         {
             GameController.S.CollectEquip();
-            GameController.S.gamePlayer.HideArrow();
+            QueueController.S.gamePlayer.HideArrow();
             GameObject boosQuan=Instantiate(Resources.Load<GameObject>("Prefabs/Tool/BossQuan"));
             boosQuan.transform.position = new Vector3(0, 0, 0);
             GameController.S.JiHuoChuanSongZhen();

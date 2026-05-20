@@ -18,10 +18,11 @@ public class SceneLoading1 : MonoBehaviour
 
     public IEnumerator PreloadAllPools()
     {
-        QueueController.S.fightBG = Instantiate(Resources.Load<GameObject>("Prefabs/Window/FightBG"),
-            QueueController.S.transform);
-        QueueController.S.fightBG.transform.position = new Vector3(0, 0, 0.1f);
-        
+        if (QueueController.S.fightBG == null)
+        {
+            QueueController.S.fightBG = Instantiate(Resources.Load<GameObject>("Prefabs/Window/FightBG"), QueueController.S.transform);
+            QueueController.S.fightBG.transform.position = new Vector3(0, 0, 0.1f);
+        }
         
         //赋值
         FightBGController.S.WeaponButton= QueueController.S.fightBG.GetComponent<FightBg>().weaponButton;
@@ -91,8 +92,7 @@ public class SceneLoading1 : MonoBehaviour
 
     public void EntranceAwake()
     {
-         GameController.S.MonsterList = GameController.S.SelectTwoUniqueNumbers();
-         QueueController.S.MonsterColliderDic.Clear();
+        GameController.S.MonsterList = GameController.S.SelectTwoUniqueNumbers();
         Application.targetFrameRate = 30;
         GlobalPlayerAttribute.CurrentHp = GlobalPlayerAttribute.TotalMaxHp;
         LevelInfoConfig.IsOneGame = false;
@@ -100,11 +100,11 @@ public class SceneLoading1 : MonoBehaviour
         AudioController.S.BGAudioSource.clip = Resources.Load<AudioClip>("Audio/BG/Level1BG");
         AudioController.S.BGAudioSource.Play();
 
-        GameController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp;
-        GameController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp;
-        //GameController.S.GameDefense = GlobalPlayerAttribute.TotalDefense;
-        //GameController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
-        GameController.S.GameCrit = GlobalPlayerAttribute.TotalCRIT;
+        QueueController.S.GameMaxHp = GlobalPlayerAttribute.TotalMaxHp;
+        QueueController.S.GameCurrentHp = GlobalPlayerAttribute.TotalMaxHp;
+        //QueueController.S.GameDefense = GlobalPlayerAttribute.TotalDefense;
+        //QueueController.S.GameAttack = GlobalPlayerAttribute.TotalDamage;
+        QueueController.S.GameCrit = GlobalPlayerAttribute.TotalCRIT;
         GameController.S.isFuHuo = true;
         GameController.S.TotalAddHp = 0;
 
@@ -129,7 +129,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LeiShou/LeiShouSkill3")
                                 .GetComponent<LeiShouSkill3>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster1.gameObject.SetActive(false);
                     QueueController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
                 }
@@ -143,7 +143,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/KuiJia/HeiXuanFen")
                                 .GetComponent<HeiXuanFen>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster2.gameObject.SetActive(false);
                     QueueController.S.HeiXuanFenQueue.Enqueue(Monster2.GetComponent<HeiXuanFen>());
                 }
@@ -157,7 +157,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/LvZhuiZong")
                                 .GetComponent<LvZhuiZong>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster3.gameObject.SetActive(false);
                     QueueController.S.LvZhuiZongQueue.Enqueue(Monster3.GetComponent<LvZhuiZong>());
                 }
@@ -171,7 +171,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/LvXuanFen")
                                 .GetComponent<LvXuanFen>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster4.gameObject.SetActive(false);
                     QueueController.S.LvXuanFenQueue.Enqueue(Monster4.GetComponent<LvXuanFen>());
                 }
@@ -186,7 +186,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/BaoZi/BaoZiSkill2")
                                 .GetComponent<BaoZiSkill2>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster5.gameObject.SetActive(false);
                     QueueController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
                 }
@@ -201,7 +201,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoLang/HuoLangSkill2")
                                 .GetComponent<HuoLangSkill2>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster6.gameObject.SetActive(false);
                     QueueController.S.HuoLangSkill2Queue.Enqueue(Monster6.GetComponent<HuoLangSkill2>());
                 }
@@ -216,7 +216,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoSkill2")
                                 .GetComponent<ShuangDaoSkill2>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster7.gameObject.SetActive(false);
                     QueueController.S.ShuangDaoSkill2Queue.Enqueue(Monster7.GetComponent<ShuangDaoSkill2>());
                 }
@@ -230,7 +230,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/ShuangDao/ShuangDaoSkill3")
                                 .GetComponent<ShuangDaoSkill3>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster8.gameObject.SetActive(false);
                     QueueController.S.ShuangDaoSkill3Queue.Enqueue(Monster8.GetComponent<ShuangDaoSkill3>());
                 }
@@ -250,7 +250,7 @@ public class SceneLoading1 : MonoBehaviour
                     var Monster1 =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster1.gameObject.SetActive(false);
                     QueueController.S.DaLongQueue.Enqueue(Monster1.GetComponent<DaLong>());
                     Collider2D collider2D = Monster1.GetComponent<MonsterBase>().collider2D;
@@ -267,7 +267,7 @@ public class SceneLoading1 : MonoBehaviour
                     var Monster2 =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo1").GetComponent<EMo1>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster2.gameObject.SetActive(false);
                     QueueController.S.EMo1Queue.Enqueue(Monster2.GetComponent<EMo1>());
                     Collider2D collider2D2 =
@@ -287,7 +287,7 @@ public class SceneLoading1 : MonoBehaviour
                     var Monster3 =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo2").GetComponent<EMo2>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster3.gameObject.SetActive(false);
                     QueueController.S.EMo2Queue.Enqueue(Monster3.GetComponent<EMo2>());
                     Collider2D collider2D3 =
@@ -305,7 +305,7 @@ public class SceneLoading1 : MonoBehaviour
                 {
                     var Monster4 =
                         Instantiate(Resources.Load<GameObject>("Prefabs/Monster/MJ/EMo3").GetComponent<EMo3>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster4.gameObject.SetActive(false);
                     QueueController.S.EMo3Queue.Enqueue(Monster4.GetComponent<EMo3>());
                     Collider2D collider2D4 = Monster4.GetComponent<MonsterBase>().collider2D;
@@ -322,7 +322,7 @@ public class SceneLoading1 : MonoBehaviour
                     var Monster5 =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1")
-                                .GetComponent<HongLong1>(), GameController.S.transform);
+                                .GetComponent<HongLong1>(), QueueController.S.transform);
                     Monster5.gameObject.SetActive(false);
                     QueueController.S.HongLong1Queue.Enqueue(Monster5.GetComponent<HongLong1>());
                     Collider2D collider2D5 =
@@ -341,7 +341,7 @@ public class SceneLoading1 : MonoBehaviour
                     var Monster6 =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2")
-                                .GetComponent<HongLong2>(), GameController.S.transform);
+                                .GetComponent<HongLong2>(), QueueController.S.transform);
                     Monster6.gameObject.SetActive(false);
                     QueueController.S.HongLong2Queue.Enqueue(Monster6.GetComponent<HongLong2>());
                     Collider2D collider2D6 =
@@ -361,7 +361,7 @@ public class SceneLoading1 : MonoBehaviour
                     var Monster7 =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3")
-                                .GetComponent<HongLong3>(), GameController.S.transform);
+                                .GetComponent<HongLong3>(), QueueController.S.transform);
                     Monster7.gameObject.SetActive(false);
                     QueueController.S.HongLong3Queue.Enqueue(Monster7.GetComponent<HongLong3>());
                     Collider2D collider2D7 = Monster7.GetComponent<MonsterBase>().collider2D;
@@ -380,7 +380,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong1")
                                 .GetComponent<LanLong1>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster8.gameObject.SetActive(false);
                     QueueController.S.LanLong1Queue.Enqueue(Monster8.GetComponent<LanLong1>());
                     Collider2D collider2D8 =
@@ -398,7 +398,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong2")
                                 .GetComponent<LanLong2>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster9.gameObject.SetActive(false);
                     QueueController.S.LanLong2Queue.Enqueue(Monster9.GetComponent<LanLong2>());
                     Collider2D collider2D9 =
@@ -415,7 +415,7 @@ public class SceneLoading1 : MonoBehaviour
                     var Monster10 =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster10.gameObject.SetActive(false);
                     QueueController.S.LanLong3Queue.Enqueue(Monster10.GetComponent<LanLong3>());
                     Collider2D collider2D10 = Monster10.GetComponent<MonsterBase>().collider2D;
@@ -431,7 +431,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLang")
                                 .GetComponent<LvLang>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster11.gameObject.SetActive(false);
                     QueueController.S.LvLangQueue.Enqueue(Monster11.GetComponent<LvLang>());
                     Collider2D collider2D11 =
@@ -449,7 +449,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong1")
                                 .GetComponent<LvLong1>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster12.gameObject.SetActive(false);
                     QueueController.S.LvLong1Queue.Enqueue(Monster12.GetComponent<LvLong1>());
                     Collider2D collider2D12 =
@@ -467,7 +467,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong2")
                                 .GetComponent<LvLong2>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster13.gameObject.SetActive(false);
                     QueueController.S.LvLong2Queue.Enqueue(Monster13.GetComponent<LvLong2>());
                     Collider2D collider2D13 =
@@ -485,7 +485,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangShuMonster")
                                 .GetComponent<HuangShu>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     huangshu.gameObject.SetActive(false);
                     QueueController.S.HuangShuQueue.Enqueue(huangshu.GetComponent<HuangShu>());
 
@@ -504,7 +504,7 @@ public class SceneLoading1 : MonoBehaviour
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/Level4/HuangZhuMonster")
                                 .GetComponent<Huangzhu>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Huangzhu.gameObject.SetActive(false);
                     QueueController.S.HuangZhuQueue.Enqueue(Huangzhu.GetComponent<Huangzhu>());
                     Collider2D Huangzhucollider2D = Huangzhu.GetComponent<MonsterBase>().collider2D;
@@ -521,7 +521,7 @@ public class SceneLoading1 : MonoBehaviour
                     var Monster14 =
                         Instantiate(
                             Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),
-                            GameController.S.transform);
+                            QueueController.S.transform);
                     Monster14.gameObject.SetActive(false);
                     QueueController.S.LvLong3Queue.Enqueue(Monster14.GetComponent<LvLong3>());
                     Collider2D collider2D14 = Monster14.GetComponent<MonsterBase>().collider2D;
@@ -535,16 +535,16 @@ public class SceneLoading1 : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            var circleAttack = Instantiate(Resources.Load("Prefabs/Tool/CircleAttack"),GameController.S.transform) as GameObject;
+            var circleAttack = Instantiate(Resources.Load("Prefabs/Tool/CircleAttack"),QueueController.S.transform) as GameObject;
             circleAttack.SetActive(false);
             FightBGController.S.CircleAttackQueue.Enqueue(circleAttack.GetComponent<CircleAttack>());
-            var fire = Instantiate(Resources.Load("Prefabs/Skill/TreeManFire"),GameController.S.transform) as GameObject;
+            var fire = Instantiate(Resources.Load("Prefabs/Skill/TreeManFire"),QueueController.S.transform) as GameObject;
             fire.SetActive(false);
             FightBGController.S.TreeManFireQueue.Enqueue(fire.GetComponent<TreeManFire>());
-            var sqrtattack = Instantiate(Resources.Load("Prefabs/Tool/SqrtAttack"),GameController.S.transform) as GameObject;
+            var sqrtattack = Instantiate(Resources.Load("Prefabs/Tool/SqrtAttack"),QueueController.S.transform) as GameObject;
             sqrtattack.SetActive(false);
             FightBGController.S.SqrtAttackQueue.Enqueue(sqrtattack.GetComponent<SqrtAttack>());
-            var playerhit = Instantiate(Resources.Load("Prefabs/Player/PlayerHit"),GameController.S.transform) as GameObject;
+            var playerhit = Instantiate(Resources.Load("Prefabs/Player/PlayerHit"),QueueController.S.transform) as GameObject;
             playerhit.SetActive(false);
             FightBGController.S.PlayerHitQueue.Enqueue(playerhit.GetComponent<PlayerHit>());
         }
@@ -575,7 +575,7 @@ public class SceneLoading1 : MonoBehaviour
             {
                 var DiLie = Instantiate(
                     Resources.Load<GameObject>("Prefabs/Skill/DiLie").GetComponent<TreeManDiLie>(),
-                    GameController.S.transform);
+                    QueueController.S.transform);
                 DiLie.gameObject.SetActive(false);
                 QueueController.S.TreeManDiLieQueue.Enqueue(DiLie.GetComponent<TreeManDiLie>());
             }
@@ -589,7 +589,7 @@ public class SceneLoading1 : MonoBehaviour
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level1/TreeManSkill")
                             .GetComponent<TreeManSkill>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 treemanSkill.gameObject.SetActive(false);
                 QueueController.S.TreeManSkillQueue.Enqueue(treemanSkill.GetComponent<TreeManSkill>());
             }
@@ -601,7 +601,7 @@ public class SceneLoading1 : MonoBehaviour
             {
                 var jianqi =
                     Instantiate(Resources.Load<HuoShanJianQi>("Prefabs/Monster/Level2/HuoShanJianQi"),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 jianqi.gameObject.SetActive(false);
                 QueueController.S.HuoShanJianQiQueue.Enqueue(jianqi);
             }
@@ -610,7 +610,7 @@ public class SceneLoading1 : MonoBehaviour
             {
                 var huoshanskill2 =
                     Instantiate(Resources.Load<HuoShanSkill2>("Prefabs/Monster/Level2/HuoShanSkill2"),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 huoshanskill2.gameObject.SetActive(false);
                 QueueController.S.HuoShanSkill2QiQueue.Enqueue(huoshanskill2);
             }
@@ -623,7 +623,7 @@ public class SceneLoading1 : MonoBehaviour
             for (int i = 0; i < 10; i++)
             {
                 var zhaozeSkill = Instantiate(Resources.Load<ZhaoZeSkill>("Prefabs/Monster/Level3/ZhaoZeBossSkill"),
-                    GameController.S.transform);
+                    QueueController.S.transform);
                 zhaozeSkill.gameObject.SetActive(false);
                 QueueController.S.ZhaoZeSkillQueue.Enqueue(zhaozeSkill);
             }
@@ -639,7 +639,7 @@ public class SceneLoading1 : MonoBehaviour
                 var XueRenJian =
                     Instantiate(
                         Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRenJian").GetComponent<XueRenJian>(),
-                        GameController.S.transform);
+                        QueueController.S.transform);
                 XueRenJian.gameObject.SetActive(false);
                 QueueController.S.XueRenJianQueue.Enqueue(XueRenJian.GetComponent<XueRenJian>());
             }
@@ -650,7 +650,7 @@ public class SceneLoading1 : MonoBehaviour
             var XueRenBossSkill1 =
                 Instantiate(
                     Resources.Load<GameObject>("Prefabs/Monster/Level5/XueRenBossSkill1")
-                        .GetComponent<XueRenBossSkill1>(), GameController.S.transform);
+                        .GetComponent<XueRenBossSkill1>(), QueueController.S.transform);
             XueRenBossSkill1.gameObject.SetActive(false);
             QueueController.S.XueRenBossSkill1Queue.Enqueue(XueRenBossSkill1.GetComponent<XueRenBossSkill1>());
         }

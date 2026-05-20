@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Config;
@@ -5,6 +6,8 @@ using Equip;
 using NUnit.Framework;
 using Skill.NormalAttack.Primary;
 using UnityEngine;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 public class DiaoLuoConfig
 {
@@ -841,8 +844,10 @@ public class LevelInfoConfig
 
         return diaoLuoList;
     }
-    
-    
+
+    public static int NormalMonsterQueueCount = 150;
+    public static int EliteMonsterQueueCount = 15;
+
     public static IEnumerator InitMonsterQueueAsync(int perFrame=2)
     {
         var monsterlist = LevelMonsterDic[CurrentGameLevel];
@@ -851,9 +856,9 @@ public class LevelInfoConfig
         {
             int total = 0;
             if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Normal)
-                total = 150;
+                total = NormalMonsterQueueCount;
             else if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Elite)
-                total = 15;
+                total = EliteMonsterQueueCount;
 
             for (int i = 0; i < total; i++)
             {
@@ -864,14 +869,23 @@ public class LevelInfoConfig
         }
     }
     
+   
     public static IEnumerator InitSkillAsync(int perFrame = 2)
 {
-    // 收集 Component 类型的技能（每个预热 10 个）
-    var skillsToPreload = new List<(string prefabPath, System.Type componentType, System.Action<Component> enqueueAction, int count)>();
+    // 预热容量
+    const int defaultCapacity = 10;
 
-    void AddSkill(bool condition, string path, System.Type type, System.Action<Component> enqueue, int count = 10)
+    // 收集需要预加载的技能信息：预制体路径、组件类型、获取当前队列数量的委托、入队委托、需要实例化的数量
+    var skillsToPreload = new List<(string prefabPath, System.Type componentType, Func<int> getCount, System.Action<Component> enqueue, int needCount)>();
+
+    void AddSkill(bool condition, string path, System.Type type, Func<int> getCount, System.Action<Component> enqueue, int capacity = defaultCapacity)
     {
-        if (condition) skillsToPreload.Add((path, type, enqueue, count));
+        if (!condition) return;
+        int current = getCount();
+        if (current < capacity)
+        {
+            skillsToPreload.Add((path, type, getCount, enqueue, capacity - current));
+        }
     }
 
     var a1 = SkillJiaDian.S.Alpha1;
@@ -882,48 +896,78 @@ public class LevelInfoConfig
 
     // ========== 冰系 ==========
     AddSkill(a1 == SkillType.Ice3 || a2 == SkillType.Ice3 || a3 == SkillType.Ice3 || a4 == SkillType.Ice3 || a5 == SkillType.Ice3,
-        "Prefabs/Skill/IceExplosion", typeof(IceExplosion), c => QueueController.S.IceExQueue.Enqueue(c as IceExplosion));
+        "Prefabs/Skill/IceExplosion", typeof(IceExplosion),
+        () => QueueController.S.IceExQueue.Count, c => QueueController.S.IceExQueue.Enqueue(c as IceExplosion));
+
     AddSkill(a1 == SkillType.Ice1 || a2 == SkillType.Ice1 || a3 == SkillType.Ice1 || a4 == SkillType.Ice1 || a5 == SkillType.Ice1,
-        "Prefabs/Skill/IceSkill/IceSkill1", typeof(IceSkill1), c => QueueController.S.IceSkill1Queue.Enqueue(c as IceSkill1));
+        "Prefabs/Skill/IceSkill/IceSkill1", typeof(IceSkill1),
+        () => QueueController.S.IceSkill1Queue.Count, c => QueueController.S.IceSkill1Queue.Enqueue(c as IceSkill1));
+
+    // 注意原条件中 (a1 != SkillType.Ice4) 可能为笔误，保持原逻辑
     AddSkill((a1 != SkillType.Ice4) || a2 == SkillType.Ice4 || a3 == SkillType.Ice4 || a4 == SkillType.Ice4 || a5 == SkillType.Ice4,
-        "Prefabs/Skill/IceSkill/IceSkill4", typeof(IceSkill4), c => QueueController.S.IceSkill4Queue.Enqueue(c as IceSkill4));
+        "Prefabs/Skill/IceSkill/IceSkill4", typeof(IceSkill4),
+        () => QueueController.S.IceSkill4Queue.Count, c => QueueController.S.IceSkill4Queue.Enqueue(c as IceSkill4));
+
     AddSkill((a1 != SkillType.Ice5) || a2 == SkillType.Ice5 || a3 == SkillType.Ice5 || a4 == SkillType.Ice5 || a5 == SkillType.Ice5,
-        "Prefabs/Skill/IceSkill/IceSkill5", typeof(IceSkill5), c => QueueController.S.IceSkill5Queue.Enqueue(c as IceSkill5));
+        "Prefabs/Skill/IceSkill/IceSkill5", typeof(IceSkill5),
+        () => QueueController.S.IceSkill5Queue.Count, c => QueueController.S.IceSkill5Queue.Enqueue(c as IceSkill5));
 
     // ========== 火系 ==========
     AddSkill(a1 == SkillType.Huo1 || a2 == SkillType.Huo1 || a3 == SkillType.Huo1 || a4 == SkillType.Huo1 || a5 == SkillType.Huo1,
-        "Prefabs/Skill/HuoSkill/HuoSkill1", typeof(HuoSkill1), c => QueueController.S.HuoSkill1Queue.Enqueue(c as HuoSkill1));
+        "Prefabs/Skill/HuoSkill/HuoSkill1", typeof(HuoSkill1),
+        () => QueueController.S.HuoSkill1Queue.Count, c => QueueController.S.HuoSkill1Queue.Enqueue(c as HuoSkill1));
+
     AddSkill(a1 == SkillType.Huo3 || a2 == SkillType.Huo3 || a3 == SkillType.Huo3 || a4 == SkillType.Huo3 || a5 == SkillType.Huo3,
-        "Prefabs/Skill/HuoSkill/HuoSkill3", typeof(HuoSkill3), c => QueueController.S.HuoSkill3Queue.Enqueue(c as HuoSkill3));
+        "Prefabs/Skill/HuoSkill/HuoSkill3", typeof(HuoSkill3),
+        () => QueueController.S.HuoSkill3Queue.Count, c => QueueController.S.HuoSkill3Queue.Enqueue(c as HuoSkill3));
+
     AddSkill((a1 != SkillType.Huo4) || a2 == SkillType.Huo4 || a3 == SkillType.Huo4 || a4 == SkillType.Huo4 || a5 == SkillType.Huo4,
-        "Prefabs/Skill/HuoSkill/HuoSkill4", typeof(HuoSkill4), c => QueueController.S.HuoSkill4Queue.Enqueue(c as HuoSkill4));
+        "Prefabs/Skill/HuoSkill/HuoSkill4", typeof(HuoSkill4),
+        () => QueueController.S.HuoSkill4Queue.Count, c => QueueController.S.HuoSkill4Queue.Enqueue(c as HuoSkill4));
+
     AddSkill((a1 != SkillType.Huo5) || a2 == SkillType.Huo5 || a3 == SkillType.Huo5 || a4 == SkillType.Huo5 || a5 == SkillType.Huo5,
-        "Prefabs/Skill/HuoSkill/HuoSkill5", typeof(HuoSkill5), c => QueueController.S.HuoSkill5Queue.Enqueue(c as HuoSkill5));
+        "Prefabs/Skill/HuoSkill/HuoSkill5", typeof(HuoSkill5),
+        () => QueueController.S.HuoSkill5Queue.Count, c => QueueController.S.HuoSkill5Queue.Enqueue(c as HuoSkill5));
 
     // ========== 电系 ==========
     AddSkill(a1 == SkillType.Dian2 || a2 == SkillType.Dian2 || a3 == SkillType.Dian2 || a4 == SkillType.Dian2 || a5 == SkillType.Dian2,
-        "Prefabs/Skill/DianSkill/DianSkill2", typeof(DianSkill2), c => QueueController.S.DianSkill2Queue.Enqueue(c as DianSkill2));
+        "Prefabs/Skill/DianSkill/DianSkill2", typeof(DianSkill2),
+        () => QueueController.S.DianSkill2Queue.Count, c => QueueController.S.DianSkill2Queue.Enqueue(c as DianSkill2));
+
     AddSkill(a1 == SkillType.Dian3 || a2 == SkillType.Dian3 || a3 == SkillType.Dian3 || a4 == SkillType.Dian3 || a5 == SkillType.Dian3,
-        "Prefabs/Skill/DianSkill/DianSkill3", typeof(DianSkill3), c => QueueController.S.DianSkill3Queue.Enqueue(c as DianSkill3));
+        "Prefabs/Skill/DianSkill/DianSkill3", typeof(DianSkill3),
+        () => QueueController.S.DianSkill3Queue.Count, c => QueueController.S.DianSkill3Queue.Enqueue(c as DianSkill3));
+
     AddSkill((a1 != SkillType.Dian4) || a2 == SkillType.Dian4 || a3 == SkillType.Dian4 || a4 == SkillType.Dian4 || a5 == SkillType.Dian4,
-        "Prefabs/Skill/DianSkill/DianSkill4", typeof(DianSkill4), c => QueueController.S.DianSkill4Queue.Enqueue(c as DianSkill4));
+        "Prefabs/Skill/DianSkill/DianSkill4", typeof(DianSkill4),
+        () => QueueController.S.DianSkill4Queue.Count, c => QueueController.S.DianSkill4Queue.Enqueue(c as DianSkill4));
+
     AddSkill((a1 != SkillType.Dian5) || a2 == SkillType.Dian5 || a3 == SkillType.Dian5 || a4 == SkillType.Dian5 || a5 == SkillType.Dian5,
-        "Prefabs/Skill/DianSkill/DianSkill5", typeof(DianSkill5), c => QueueController.S.DianSkill5Queue.Enqueue(c as DianSkill5));
+        "Prefabs/Skill/DianSkill/DianSkill5", typeof(DianSkill5),
+        () => QueueController.S.DianSkill5Queue.Count, c => QueueController.S.DianSkill5Queue.Enqueue(c as DianSkill5));
 
     // ========== 黑暗系 ==========
     AddSkill(a1 == SkillType.HeiAn3 || a2 == SkillType.HeiAn3 || a3 == SkillType.HeiAn3 || a4 == SkillType.HeiAn3 || a5 == SkillType.HeiAn3,
-        "Prefabs/Skill/HeiAnSkill/HeiAnSkill3", typeof(HeiAnSkill3), c => QueueController.S.HeiAnSkill3Queue.Enqueue(c as HeiAnSkill3));
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill3", typeof(HeiAnSkill3),
+        () => QueueController.S.HeiAnSkill3Queue.Count, c => QueueController.S.HeiAnSkill3Queue.Enqueue(c as HeiAnSkill3));
+
     AddSkill(a1 == SkillType.HeiAn1 || a2 == SkillType.HeiAn1 || a3 == SkillType.HeiAn1 || a4 == SkillType.HeiAn1 || a5 == SkillType.HeiAn1,
-        "Prefabs/Skill/HeiAnSkill/HeiAnSkill1", typeof(HeiAnSkill1), c => QueueController.S.HeiAnSkill1Queue.Enqueue(c as HeiAnSkill1));
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill1", typeof(HeiAnSkill1),
+        () => QueueController.S.HeiAnSkill1Queue.Count, c => QueueController.S.HeiAnSkill1Queue.Enqueue(c as HeiAnSkill1));
+
     AddSkill((a1 != SkillType.HeiAn4) || a2 == SkillType.HeiAn4 || a3 == SkillType.HeiAn4 || a4 == SkillType.HeiAn4 || a5 == SkillType.HeiAn4,
-        "Prefabs/Skill/HeiAnSkill/HeiAnSkill4", typeof(HeiAnSkill4), c => QueueController.S.HeiAnSkill4Queue.Enqueue(c as HeiAnSkill4));
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill4", typeof(HeiAnSkill4),
+        () => QueueController.S.HeiAnSkill4Queue.Count, c => QueueController.S.HeiAnSkill4Queue.Enqueue(c as HeiAnSkill4));
+
     AddSkill((a1 != SkillType.HeiAn5) || a2 == SkillType.HeiAn5 || a3 == SkillType.HeiAn5 || a4 == SkillType.HeiAn5 || a5 == SkillType.HeiAn5,
-        "Prefabs/Skill/HeiAnSkill/HeiAnSkill5", typeof(HeiAnSkill5), c => QueueController.S.HeiAnSkill5Queue.Enqueue(c as HeiAnSkill5));
+        "Prefabs/Skill/HeiAnSkill/HeiAnSkill5", typeof(HeiAnSkill5),
+        () => QueueController.S.HeiAnSkill5Queue.Count, c => QueueController.S.HeiAnSkill5Queue.Enqueue(c as HeiAnSkill5));
 
     // ========== 分帧实例化 Component 技能 ==========
     int totalInstantiated = 0;
     foreach (var skill in skillsToPreload)
     {
+        // 每个技能只需要加载一次预制体
         GameObject prefab = Resources.Load<GameObject>(skill.prefabPath);
         if (prefab == null)
         {
@@ -938,11 +982,11 @@ public class LevelInfoConfig
             continue;
         }
 
-        for (int i = 0; i < skill.count; i++)
+        for (int i = 0; i < skill.needCount; i++)
         {
-            Component instance = UnityEngine.Object.Instantiate(sourceComp, GameController.S.transform);
+            Component instance = Object.Instantiate(sourceComp, QueueController.S.transform);
             instance.gameObject.SetActive(false);
-            skill.enqueueAction(instance);
+            skill.enqueue(instance);
 
             totalInstantiated++;
             if (totalInstantiated % perFrame == 0)
@@ -950,117 +994,173 @@ public class LevelInfoConfig
         }
     }
 
-    // ========== 处理 Dian1 的 GameObject 技能（各 10 个） ==========
+    // ========== 处理 Dian1 的 GameObject 技能（各 10 个，但需检查队列已有数量） ==========
     bool hasDian1 = a1 == SkillType.Dian1 || a2 == SkillType.Dian1 || a3 == SkillType.Dian1 || a4 == SkillType.Dian1 || a5 == SkillType.Dian1;
     if (hasDian1)
     {
         // DianPeng
-        GameObject dianPengPrefab = Resources.Load<GameObject>("Prefabs/Skill/DianQuan/DianPeng");
-        if (dianPengPrefab != null)
+        int dianPengCurrent = QueueController.S.DianQuanPengQueue.Count;
+        if (dianPengCurrent < defaultCapacity)
         {
-            for (int i = 0; i < 10; i++)
+            GameObject dianPengPrefab = Resources.Load<GameObject>("Prefabs/Skill/DianQuan/DianPeng");
+            if (dianPengPrefab != null)
             {
-                GameObject obj = UnityEngine.Object.Instantiate(dianPengPrefab, QueueController.S.transform);
-                obj.SetActive(false);
-                QueueController.S.DianQuanPengQueue.Enqueue(obj);
-                totalInstantiated++;
-                if (totalInstantiated % perFrame == 0)
-                    yield return null;
+                int need = defaultCapacity - dianPengCurrent;
+                for (int i = 0; i < need; i++)
+                {
+                    GameObject obj = Object.Instantiate(dianPengPrefab, QueueController.S.transform);
+                    obj.SetActive(false);
+                    QueueController.S.DianQuanPengQueue.Enqueue(obj);
+                    totalInstantiated++;
+                    if (totalInstantiated % perFrame == 0)
+                        yield return null;
+                }
             }
+            else Debug.LogError("DianPeng 预制体加载失败");
         }
-        else Debug.LogError("DianPeng 预制体加载失败");
 
         // DianQuan
-        GameObject dianQuanPrefab = Resources.Load<GameObject>("Prefabs/Skill/DianQuan/DianQuan");
-        if (dianQuanPrefab != null)
+        int dianQuanCurrent = QueueController.S.DianQuanQueue.Count;
+        if (dianQuanCurrent < defaultCapacity)
         {
-            for (int i = 0; i < 10; i++)
+            GameObject dianQuanPrefab = Resources.Load<GameObject>("Prefabs/Skill/DianQuan/DianQuan");
+            if (dianQuanPrefab != null)
             {
-                GameObject obj = UnityEngine.Object.Instantiate(dianQuanPrefab, QueueController.S.transform);
-                obj.SetActive(false);
-                QueueController.S.DianQuanQueue.Enqueue(obj);
-                totalInstantiated++;
-                if (totalInstantiated % perFrame == 0)
-                    yield return null;
+                int need = defaultCapacity - dianQuanCurrent;
+                for (int i = 0; i < need; i++)
+                {
+                    GameObject obj = Object.Instantiate(dianQuanPrefab, QueueController.S.transform);
+                    obj.SetActive(false);
+                    QueueController.S.DianQuanQueue.Enqueue(obj);
+                    totalInstantiated++;
+                    if (totalInstantiated % perFrame == 0)
+                        yield return null;
+                }
             }
+            else Debug.LogError("DianQuan 预制体加载失败");
         }
-        else Debug.LogError("DianQuan 预制体加载失败");
     }
 
     Debug.Log($"技能池预热完成，共实例化 {totalInstantiated} 个技能对象");
 }
     
     
-    
-    public static IEnumerator InitPlayerHurtAndToolsAsync(int perFrame = 2)
+   public static IEnumerator InitPlayerHurtAndToolsAsync(int perFrame = 2)
+{
+    const int targetCapacity = 100; // 目标容量
+
+    // 获取当前队列已有的数量
+    int currentPlayerHurt = QueueController.S.PlayerHurtQueue.Count;
+    int currentCircle = QueueController.S.CircleQueue.Count;
+    int currentSqrt = QueueController.S.SqrtQueue.Count;
+
+    // 如果所有队列都已经达到目标容量，直接跳过
+    if (currentPlayerHurt >= targetCapacity && currentCircle >= targetCapacity && currentSqrt >= targetCapacity)
     {
-        // 提前加载预制体，避免循环中重复加载
-        PlayerHurt playerHurtPrefab = Resources.Load<PlayerHurt>("Prefabs/Player/PlayerHurt");
-        CircleAttack circlePrefab = Resources.Load<CircleAttack>("Prefabs/Tool/CircleAttack");
-        SqrtAttack sqrtPrefab = Resources.Load<SqrtAttack>("Prefabs/Tool/SqrtAttack");
-
-        if (playerHurtPrefab == null || circlePrefab == null || sqrtPrefab == null)
-        {
-            Debug.LogError("预制体加载失败，请检查路径");
-            yield break;
-        }
-
-        int totalInstantiated = 0;
-        int totalCount = 100;
-
-        for (int i = 0; i < totalCount; i++)
-        {
-            // 实例化 PlayerHurt
-            PlayerHurt playerHurt = UnityEngine.Object.Instantiate(playerHurtPrefab);
-            playerHurt.gameObject.SetActive(false);
-            QueueController.S.PlayerHurtQueue.Enqueue(playerHurt);
-            totalInstantiated++;
-
-            // 实例化 CircleAttack
-            CircleAttack circle = UnityEngine.Object.Instantiate(circlePrefab);
-            circle.gameObject.SetActive(false);
-            QueueController.S.CircleQueue.Enqueue(circle);
-            totalInstantiated++;
-
-            // 实例化 SqrtAttack
-            SqrtAttack sqrt = UnityEngine.Object.Instantiate(sqrtPrefab);
-            sqrt.gameObject.SetActive(false);
-            QueueController.S.SqrtQueue.Enqueue(sqrt);
-            totalInstantiated++;
-
-            // 每实例化 perFrame 个完整轮次，让出一帧
-            if ((i + 1) % perFrame == 0)
-                yield return null;
-        }
-
-        Debug.Log($"PlayerHurt + CircleAttack + SqrtAttack 池预热完成，共实例化 {totalInstantiated} 个对象");
+        Debug.Log($"PlayerHurt + CircleAttack + SqrtAttack 池已满（≥{targetCapacity}），无需预热");
+        yield break;
     }
-    
-    
-    public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
+
+    // 计算每个队列还需要创建的数量
+    int needPlayerHurt = Mathf.Max(0, targetCapacity - currentPlayerHurt);
+    int needCircle = Mathf.Max(0, targetCapacity - currentCircle);
+    int needSqrt = Mathf.Max(0, targetCapacity - currentSqrt);
+
+    // 需要创建的总对象数（用于分帧进度）
+    int totalToCreate = needPlayerHurt + needCircle + needSqrt;
+    if (totalToCreate == 0) yield break;
+
+    // 提前加载预制体
+    PlayerHurt playerHurtPrefab = Resources.Load<PlayerHurt>("Prefabs/Player/PlayerHurt");
+    CircleAttack circlePrefab = Resources.Load<CircleAttack>("Prefabs/Tool/CircleAttack");
+    SqrtAttack sqrtPrefab = Resources.Load<SqrtAttack>("Prefabs/Tool/SqrtAttack");
+
+    if (playerHurtPrefab == null || circlePrefab == null || sqrtPrefab == null)
     {
-        // 提前加载预制体，避免循环中重复加载
-        GameObject prefab = Resources.Load<GameObject>("Prefabs/Tool/MonsterHurtText");
-        if (prefab == null)
-        {
-            Debug.LogError("预制体 MonsterHurtText 加载失败，请检查路径");
-            yield break;
-        }
-
-        int totalCount = 200;
-        for (int i = 0; i < totalCount; i++)
-        {
-            GameObject monsterHurtText = UnityEngine.Object.Instantiate(prefab);
-            monsterHurtText.SetActive(false);
-            QueueController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
-
-            // 每实例化 perFrame 个，让出一帧
-            if ((i + 1) % perFrame == 0)
-                yield return null;
-        }
-
-        Debug.Log($"MonsterHurtText 池预热完成，共实例化 {totalCount} 个");
+        Debug.LogError("预制体加载失败，请检查路径");
+        yield break;
     }
+
+    int createdCount = 0; // 已创建的对象计数
+
+    // 分别创建不足的部分，并分帧
+    // 先创建 PlayerHurt
+    for (int i = 0; i < needPlayerHurt; i++)
+    {
+        PlayerHurt playerHurt = Object.Instantiate(playerHurtPrefab, QueueController.S.transform);
+        playerHurt.gameObject.SetActive(false);
+        QueueController.S.PlayerHurtQueue.Enqueue(playerHurt);
+        createdCount++;
+        if (createdCount % perFrame == 0)
+            yield return null;
+    }
+
+    // 创建 CircleAttack
+    for (int i = 0; i < needCircle; i++)
+    {
+        CircleAttack circle = Object.Instantiate(circlePrefab, QueueController.S.transform);
+        circle.gameObject.SetActive(false);
+        QueueController.S.CircleQueue.Enqueue(circle);
+        createdCount++;
+        if (createdCount % perFrame == 0)
+            yield return null;
+    }
+
+    // 创建 SqrtAttack
+    for (int i = 0; i < needSqrt; i++)
+    {
+        SqrtAttack sqrt = Object.Instantiate(sqrtPrefab, QueueController.S.transform);
+        sqrt.gameObject.SetActive(false);
+        QueueController.S.SqrtQueue.Enqueue(sqrt);
+        createdCount++;
+        if (createdCount % perFrame == 0)
+            yield return null;
+    }
+
+    Debug.Log($"PlayerHurt + CircleAttack + SqrtAttack 池预热完成，共实例化 {createdCount} 个对象（目标{targetCapacity}，已有：PlayerHurt={currentPlayerHurt}，Circle={currentCircle}，Sqrt={currentSqrt}）");
+}
+    
+    
+public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
+{
+    const int targetCapacity = 200; // 目标容量
+
+    // 获取当前队列已有的数量
+    int currentCount = QueueController.S.MonsterHurtTextQueue.Count;
+
+    // 如果已经达到或超过目标容量，直接跳过
+    if (currentCount >= targetCapacity)
+    {
+        Debug.Log($"MonsterHurtText 池已满（≥{targetCapacity}），无需预热");
+        yield break;
+    }
+
+    // 计算还需要创建的数量
+    int needCount = targetCapacity - currentCount;
+
+    // 提前加载预制体
+    GameObject prefab = Resources.Load<GameObject>("Prefabs/Tool/MonsterHurtText");
+    if (prefab == null)
+    {
+        Debug.LogError("预制体 MonsterHurtText 加载失败，请检查路径");
+        yield break;
+    }
+
+    int createdCount = 0;
+    for (int i = 0; i < needCount; i++)
+    {
+        GameObject monsterHurtText = Object.Instantiate(prefab, QueueController.S.transform);
+        monsterHurtText.SetActive(false);
+        QueueController.S.MonsterHurtTextQueue.Enqueue(monsterHurtText.GetComponent<MonsterHurtText>());
+        createdCount++;
+
+        // 每实例化 perFrame 个，让出一帧
+        if (createdCount % perFrame == 0)
+            yield return null;
+    }
+
+    Debug.Log($"MonsterHurtText 池预热完成，共实例化 {createdCount} 个（目标{targetCapacity}，原有{currentCount}）");
+}
     
     public static IEnumerator InitNormalAttackPoolAsync(int perFrame = 3)
 {
@@ -1073,6 +1173,10 @@ public class LevelInfoConfig
     // 辅助函数：加载 GameObject 预制体并加入队列
     void AddGameObjectTask(string path, Queue<GameObject> queue)
     {
+        if (queue.Count > 100)
+        {
+            return;
+        }
         GameObject prefab = Resources.Load<GameObject>(path);
         if (prefab == null)
         {
@@ -1257,6 +1361,10 @@ public class LevelInfoConfig
         // 分帧实例化200个
         for (int i = 0; i < totalCount; i++)
         {
+            if (queue.Count > 200)
+            {
+                break;
+            }
             GameObject peng = UnityEngine.Object.Instantiate(prefab, QueueController.S.transform);
             peng.SetActive(false);
             queue.Enqueue(peng);
@@ -1280,6 +1388,10 @@ public class LevelInfoConfig
     // 辅助：添加普通 GameObject 类型任务
     void AddGameObjectTask(string path, Queue<GameObject> queue)
     {
+        if (queue.Count > 100)
+        {
+            return;
+        }
         GameObject prefab = Resources.Load<GameObject>(path);
         if (prefab == null)
         {
@@ -1428,6 +1540,10 @@ public class LevelInfoConfig
                 // 分帧实例化 100 个 BaoXue
                 for (int i = 0; i < 100; i++)
                 {
+                    if (QueueController.S.BaoXueQueue.Count > 100)
+                    {
+                        break;
+                    }
                     BaoXue instance = UnityEngine.Object.Instantiate(baoXueComp, QueueController.S.transform);
                     instance.gameObject.SetActive(false);
                     QueueController.S.BaoXueQueue.Enqueue(instance);
@@ -1456,6 +1572,10 @@ public class LevelInfoConfig
                 // 分帧实例化 100 个 DanMu（父对象使用 QueueController.S.transform）
                 for (int i = 0; i < 100; i++)
                 {
+                    if (QueueController.S.DanMuQueue.Count > 100)
+                    {
+                        break;
+                    }
                     DanMu instance = UnityEngine.Object.Instantiate(danMuComp, QueueController.S.transform);
                     instance.gameObject.SetActive(false);
                     QueueController.S.DanMuQueue.Enqueue(instance);
@@ -1503,12 +1623,6 @@ public class LevelInfoConfig
             }
         }
     }
-
-    public static void InitSkillQueue()
-    {
-        
-    }
-    
     
     public static IEnumerator InitEquipQueueAsync(int perFrame = 2)
     {

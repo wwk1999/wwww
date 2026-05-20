@@ -26,7 +26,7 @@ public class MonsterFlyObjectBase : MonoBehaviour
     public void SetFlyObjectRotate()
     {
         //飞行物方向
-        Vector3 direction = (GameController.S.gamePlayer.transform.position - transform.position).normalized;
+        Vector3 direction = (QueueController.S.gamePlayer.transform.position - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
@@ -40,7 +40,7 @@ public class MonsterFlyObjectBase : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameController.S.gamePlayer.PlayerHurt(_damage,false);
+            QueueController.S.gamePlayer.PlayerHurt(_damage,false);
         }
     }
 }

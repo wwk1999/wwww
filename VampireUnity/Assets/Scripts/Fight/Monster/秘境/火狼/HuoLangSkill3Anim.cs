@@ -25,7 +25,7 @@ public class HuoLangSkill3Anim : MonoBehaviour
 
             if (col.CompareTag("Player"))
             {
-                GameController.S.gamePlayer.PlayerHurt(HuoLangSkill3BaoZha.damage, true);
+                QueueController.S.gamePlayer.PlayerHurt(HuoLangSkill3BaoZha.damage, true);
             }
         }
     }

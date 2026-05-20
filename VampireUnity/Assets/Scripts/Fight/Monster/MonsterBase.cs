@@ -97,7 +97,7 @@ public abstract class MonsterBase : MonoBehaviour
 
     [NonSerialized] public float zhuoShaoTime = 0;
     [NonSerialized] public float zhuoShaoCurrentTime = 0;//毒间隔时间
-    public float zhuoShaoDamage =>GameController.S.GameAttack*0.2f;
+    public float zhuoShaoDamage =>QueueController.S.GameAttack*0.2f;
     
     
     
@@ -805,7 +805,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
        
         //附加属性
-        int replyHp = Mathf.RoundToInt(GameController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
+        int replyHp = Mathf.RoundToInt(QueueController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
         GlobalPlayerAttribute.ReplyHp(replyHp);
         PlayerData.S.MonsterCount++;
         PlayerData.S.LinHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun));
@@ -1004,7 +1004,7 @@ public abstract class MonsterBase : MonoBehaviour
                 //生成装备
                 GameObject equip = GameController.S.GetEquip(monsterEquip);
                 EquipBase equipbase=equip.GetComponent<EquipBase>();
-                GameController.S.EquipBaseSet.Add(equipbase);
+                QueueController.S.EquipBaseSet.Add(equipbase);
                 equipbase.enabled = true;
                 equip.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
@@ -1020,7 +1020,7 @@ public abstract class MonsterBase : MonoBehaviour
                 //生成装备
                 GameObject equip = GameController.S.GetOrangeEquip(GameController.S.GetRandomOrangeEquip());
                 EquipBase equipbase=equip.GetComponent<EquipBase>();
-                GameController.S.EquipBaseSet.Add(equipbase);
+                QueueController.S.EquipBaseSet.Add(equipbase);
                 equipbase.enabled = true;
                 equip.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
@@ -1042,7 +1042,7 @@ public abstract class MonsterBase : MonoBehaviour
                 
                 //生成装备
                 GameObject propObj = GameController.S.GetProp(prop.PropItem);
-                GameController.S.PropBaseSet.Add(propObj.GetComponent<PropBase>());
+                QueueController.S.PropBaseSet.Add(propObj.GetComponent<PropBase>());
                 propObj.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
                 propObj.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);

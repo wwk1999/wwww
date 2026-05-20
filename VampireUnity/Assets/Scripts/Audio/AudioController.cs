@@ -152,6 +152,7 @@ public class AudioController : XSingleton<AudioController>
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         //创建3个空的子物体
         GameObject bgAudioObject = new GameObject("BGAudioSource");
         bgAudioObject.transform.SetParent(transform);

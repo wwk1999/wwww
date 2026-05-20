@@ -19,6 +19,8 @@ public class FightExitPanel : MonoBehaviour
             GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
             GlobalPlayerAttribute.IsGame = false;
             SceneManager.LoadScene("UIScene");
+            QueueController.S.FightExit();
+            
         });
         ContinueButton.onClick.AddListener(() =>
         {

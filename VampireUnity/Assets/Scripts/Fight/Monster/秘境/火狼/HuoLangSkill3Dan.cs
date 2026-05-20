@@ -37,7 +37,7 @@ public class HuoLangSkill3Dan : MonoBehaviour
    {
       if (other.CompareTag("Player"))
       {
-         GameController.S.gamePlayer.PlayerHurt(damage,true);
+         QueueController.S.gamePlayer.PlayerHurt(damage,true);
       }
    }
 }

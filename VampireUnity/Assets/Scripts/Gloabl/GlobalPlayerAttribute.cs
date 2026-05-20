@@ -2600,13 +2600,13 @@ public class GlobalPlayerAttribute
        }
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HpReductionReplyAdd50))
        {
-           if (GameController.S.GameCurrentHp <= GameController.S.GameMaxHp / 0.5f)
+           if (QueueController.S.GameCurrentHp <= QueueController.S.GameMaxHp / 0.5f)
            {
                value *= 1.3f;
            }
        }
-       GameController.S.GameCurrentHp+= value;
-       GameController.S.GameCurrentHp=Math.Min(GameController.S.GameCurrentHp,GameController.S.GameMaxHp);
+       QueueController.S.GameCurrentHp+= value;
+       QueueController.S.GameCurrentHp=Math.Min(QueueController.S.GameCurrentHp,QueueController.S.GameMaxHp);
    }
    
    

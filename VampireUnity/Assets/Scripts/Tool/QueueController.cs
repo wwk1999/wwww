@@ -8,6 +8,12 @@ using UnityEngine;
 public class QueueController : XSingleton<QueueController>
 {
     public GameObject fightBG;
+    
+    [NonSerialized] public float GameMaxHp = 0;
+    [NonSerialized] public float GameCurrentHp = 0;
+    public float GameDefense =>GameController.S.GetGameDefense();
+    public float GameAttack =>GameController.S.GetGameAttack();
+    [NonSerialized] public float GameCrit = 0;
     public Dictionary<Collider2D, MonsterBase> MonsterColliderDic = new Dictionary<Collider2D, MonsterBase>();
 
      [NonSerialized] public Queue<PlayerHurt> PlayerHurtQueue = new Queue<PlayerHurt>();
@@ -479,8 +485,52 @@ public class QueueController : XSingleton<QueueController>
     [NonReorderable]public Queue<GameObject>RedChiBangQueue = new Queue<GameObject>();
 
     [NonSerialized]public Player gamePlayer;
+    
+    [NonSerialized]public HashSet<EquipBase> EquipBaseSet = new HashSet<EquipBase>();
+    [NonSerialized]public HashSet<PropBase> PropBaseSet = new HashSet<PropBase>();
     protected override void Awake()
     {
         DontDestroyOnLoad(gameObject);
     }
+
+    public void FightAgain()
+    {
+        fightBG.SetActive(true);
+        foreach (var item in MonsterColliderDic.Values)
+        {
+            item.gameObject.SetActive(false);
+        }
+        gamePlayer.gameObject.SetActive(false);
+        foreach (var item in EquipBaseSet)
+        {
+            item.gameObject.SetActive(false);
+        }
+        
+        foreach (var item in PropBaseSet)
+        {
+            item.gameObject.SetActive(false);
+        }
+    }
+
+    public void FightExit()
+    {
+        fightBG.SetActive(false);
+        foreach (var item in MonsterColliderDic.Values)
+        {
+            item.gameObject.SetActive(false);
+        }
+        gamePlayer.gameObject.SetActive(false);
+        foreach (var item in EquipBaseSet)
+        {
+            item.gameObject.SetActive(false);
+        }
+        
+        foreach (var item in PropBaseSet)
+        {
+            item.gameObject.SetActive(false);
+        }
+        AudioController.S.BGAudioSource.clip = Resources.Load<AudioClip>("Audio/BG/UIBG");
+        AudioController.S.BGAudioSource.loop = true;
+    }
+    
 }
