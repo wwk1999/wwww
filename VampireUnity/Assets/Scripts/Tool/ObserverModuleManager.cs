@@ -61,4 +61,9 @@ public class ObserverModuleManager : XSingleton<ObserverModuleManager>
     {
         _observerDic.Clear();
     }
+
+    protected override void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 }
