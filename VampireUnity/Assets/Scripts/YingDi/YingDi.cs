@@ -156,8 +156,8 @@ public class YingDi : MonoBehaviour
             jiaoHuType=JiaoHuType.None;
         }
 
-        ZhangPen.sortingOrder = 2;
-        shizhuang.sortingOrder = 3;
+        ZhangPen.sortingOrder = 10002;
+        shizhuang.sortingOrder = 10003;
         CheckCollider1(ZhangPenTri);
 
         TieJiangJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.TieJiang);
@@ -186,32 +186,32 @@ public class YingDi : MonoBehaviour
         
         CheckCollider(TanZiTri,Tanzi);
         CheckCollider(ChongWuDianTri,ChongWuDian);
-        ChongWuDaShi.sortingOrder=ChongWuDian.sortingOrder+1;
+        ChongWuDaShi.sortingOrder=ChongWuDian.sortingOrder+10001;
         if (player.transform.position.y > -3)
         {
-            shu1.sortingOrder = 5;
+            shu1.sortingOrder = 10005;
         }
         else
         {
-            shu1.sortingOrder = 3;
+            shu1.sortingOrder = 10003;
         }
         
         if (player.transform.position.y > 2)
         {
-            shu.sortingOrder = 5;
+            shu.sortingOrder = 10005;
         }
         else
         {
-            shu.sortingOrder = 3;
+            shu.sortingOrder = 10003;
         }
         
         if (player.transform.position.y > 0)
         {
-            PenQuan.sortingOrder = 5;
+            PenQuan.sortingOrder = 10005;
         }
         else
         {
-            PenQuan.sortingOrder = 3;
+            PenQuan.sortingOrder = 10003;
         }
         
         if (Input.GetMouseButtonDown(0))
