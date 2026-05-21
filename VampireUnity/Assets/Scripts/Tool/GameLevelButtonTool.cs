@@ -9,31 +9,14 @@ public class GameLevelButtonTool : MonoBehaviour,IPointerEnterHandler,IPointerEx
     public Sprite Liang;
     public Sprite An;
 
-    public float LiangScale;
-    public float AnScale;
-    public bool Down = false;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         gameObject.GetComponent<Image>().sprite = Liang;
-        transform.localScale=new Vector3(LiangScale,LiangScale,LiangScale);
-        if (Down)
-        {
-            RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
-            rectTransform.anchoredPosition =
-                new Vector2(rectTransform.anchoredPosition.x-5, rectTransform.anchoredPosition.y - 10);
-        }
     }
     
     public void OnPointerExit(PointerEventData eventData)
     {
         gameObject.GetComponent<Image>().sprite = An;
-        transform.localScale=new Vector3(AnScale,AnScale,AnScale);
-        if (Down)
-        {
-            RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
-            rectTransform.anchoredPosition =
-                new Vector2(rectTransform.anchoredPosition.x+5, rectTransform.anchoredPosition.y + 10);
-        }
     }
 }

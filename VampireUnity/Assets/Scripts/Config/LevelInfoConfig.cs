@@ -848,7 +848,7 @@ public class LevelInfoConfig
     public static int NormalMonsterQueueCount = 150;
     public static int EliteMonsterQueueCount = 15;
 
-    public static IEnumerator InitMonsterQueueAsync(int perFrame=2)
+    public static IEnumerator InitMonsterQueueAsync(int perFrame=10)
     {
         var monsterlist = LevelMonsterDic[CurrentGameLevel];
 
@@ -870,7 +870,7 @@ public class LevelInfoConfig
     }
     
    
-    public static IEnumerator InitSkillAsync(int perFrame = 2)
+    public static IEnumerator InitSkillAsync(int perFrame = 10)
 {
     // 预热容量
     const int defaultCapacity = 10;
@@ -1045,7 +1045,7 @@ public class LevelInfoConfig
 }
     
     
-   public static IEnumerator InitPlayerHurtAndToolsAsync(int perFrame = 2)
+   public static IEnumerator InitPlayerHurtAndToolsAsync(int perFrame = 10)
 {
     const int targetCapacity = 100; // 目标容量
 
@@ -1121,7 +1121,7 @@ public class LevelInfoConfig
 }
     
     
-public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
+public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 10)
 {
     const int targetCapacity = 200; // 目标容量
 
@@ -1162,7 +1162,7 @@ public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
     Debug.Log($"MonsterHurtText 池预热完成，共实例化 {createdCount} 个（目标{targetCapacity}，原有{currentCount}）");
 }
     
-    public static IEnumerator InitNormalAttackPoolAsync(int perFrame = 3)
+    public static IEnumerator InitNormalAttackPoolAsync(int perFrame = 10)
 {
     WeaponType weaponType = PlayerData.S.playerWeaponType;
     
@@ -1295,7 +1295,7 @@ public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
 }
     
     
-    public static IEnumerator InitPengEffectsAsync(int perFrame = 5)
+    public static IEnumerator InitPengEffectsAsync(int perFrame = 10)
 {
     var a1 = SkillJiaDian.S.Alpha1;
     var a2 = SkillJiaDian.S.Alpha2;
@@ -1378,7 +1378,7 @@ public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
     Debug.Log($"爆炸特效池预热完成，共实例化 {totalInstantiated} 个对象");
 }
     
-    public static IEnumerator InitSpecialWeaponPoolsAsync(int perFrame = 5)
+    public static IEnumerator InitSpecialWeaponPoolsAsync(int perFrame = 10)
 {
     WeaponType currentWeapon = PlayerData.S.playerWeaponType;
 
@@ -1520,7 +1520,7 @@ public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
 }
     
     
-    public static IEnumerator InitBaoXueAndDanMuAsync(int perFrame = 5)
+    public static IEnumerator InitBaoXueAndDanMuAsync(int perFrame =10)
     {
         // 1. 加载 BaoXue 预制体并获取组件
         GameObject baoXuePrefab = Resources.Load<GameObject>("Prefabs/Monster/BaoXue");
@@ -1591,7 +1591,7 @@ public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
     
     
     
-    public static IEnumerator InitPropQueueAsync(int perFrame = 2)
+    public static IEnumerator InitPropQueueAsync(int perFrame = 10)
     {
         var monsterlist = LevelMonsterDic[CurrentGameLevel];
         List<MonsterProp> proplist = new List<MonsterProp>();
@@ -1624,7 +1624,7 @@ public static IEnumerator InitMonsterHurtTextAsync(int perFrame = 3)
         }
     }
     
-    public static IEnumerator InitEquipQueueAsync(int perFrame = 2)
+    public static IEnumerator InitEquipQueueAsync(int perFrame = 10)
     {
         List<MonsterEquip> equiplist = new List<MonsterEquip>();
         var monsterlist = LevelMonsterDic[CurrentGameLevel];

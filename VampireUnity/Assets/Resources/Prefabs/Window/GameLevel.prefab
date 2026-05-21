@@ -312,7 +312,7 @@ RectTransform:
   m_GameObject: {fileID: 383516137185337194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7371754907640097297}
@@ -320,7 +320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -107}
+  m_AnchoredPosition: {x: -8, y: -126}
   m_SizeDelta: {x: 110, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8681559806125014095
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b2da8c8ab526574fa1107cac1797646, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c22c7a441172c642aae7f4394a2e245, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -417,11 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dfd7e26d521741890347f4578113e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Liang: {fileID: 21300000, guid: f240972dacb7b9041b37c259f8e753ec, type: 3}
-  An: {fileID: 21300000, guid: 3b2da8c8ab526574fa1107cac1797646, type: 3}
-  LiangScale: 1.2
-  AnScale: 0.7
-  Down: 0
+  Liang: {fileID: 21300000, guid: cc9d1318a28cb6f43b801d9f182a4325, type: 3}
+  An: {fileID: 21300000, guid: 0c22c7a441172c642aae7f4394a2e245, type: 3}
 --- !u!1 &488754560312859342
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &703759922309126415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1986,9 +1983,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Liang: {fileID: 21300000, guid: 5dc44218905224b428a2179e4374fcac, type: 3}
   An: {fileID: 21300000, guid: 1b6355ba5c7c8f54a84f611068052f33, type: 3}
-  LiangScale: 1.1
-  AnScale: 1
-  Down: 0
 --- !u!1 &2781829530561371006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +2001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2552232799317632141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2269,6 +2263,7 @@ GameObject:
   - component: {fileID: 5658460720784508233}
   - component: {fileID: 8365783043434890016}
   - component: {fileID: 5923162505035935016}
+  - component: {fileID: 6986457127020554137}
   m_Layer: 5
   m_Name: WeapnButton
   m_TagString: Untagged
@@ -2293,7 +2288,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -50, y: -3}
-  m_SizeDelta: {x: 80, y: 80}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5658460720784508233
 CanvasRenderer:
@@ -2323,7 +2318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3335c5e419684a6449a1d814959032ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b162dbd1d88a6347a0a47e99ae0be94, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2377,6 +2372,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6986457127020554137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3349701106340663643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408dfd7e26d521741890347f4578113e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Liang: {fileID: 21300000, guid: d9d709c7b28f26440ba9363e88f0be48, type: 3}
+  An: {fileID: 21300000, guid: 7b162dbd1d88a6347a0a47e99ae0be94, type: 3}
 --- !u!1 &3466197087752090551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,6 +2742,7 @@ GameObject:
   - component: {fileID: 6835767778470740238}
   - component: {fileID: 8027993161108498476}
   - component: {fileID: 4717733663695912917}
+  - component: {fileID: 4756730689617001950}
   m_Layer: 5
   m_Name: ChiBangButton
   m_TagString: Untagged
@@ -2757,7 +2767,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 93, y: -49}
-  m_SizeDelta: {x: 80, y: 80}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6835767778470740238
 CanvasRenderer:
@@ -2787,7 +2797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3335c5e419684a6449a1d814959032ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb449c92819d468458741dc125d61ffc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2841,6 +2851,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4756730689617001950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3682202704658422396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408dfd7e26d521741890347f4578113e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Liang: {fileID: 21300000, guid: 15efced5a571b9b4fbeb70711da25e6a, type: 3}
+  An: {fileID: 21300000, guid: cb449c92819d468458741dc125d61ffc, type: 3}
 --- !u!1 &3992959442879530426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,7 +3312,7 @@ RectTransform:
   m_GameObject: {fileID: 4859867464698913075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1798599028433123465}
@@ -3297,7 +3321,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1, y: -42}
-  m_SizeDelta: {x: 109, y: 108}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2253852048458932829
 CanvasRenderer:
@@ -3327,7 +3351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bedc81d9580bcd6418fcdac11d106a38, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca9e061229f712f499b43828f25a7001, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3393,11 +3417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dfd7e26d521741890347f4578113e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Liang: {fileID: 21300000, guid: 2687d36dac1360446b74dc1c342fe95e, type: 3}
-  An: {fileID: 21300000, guid: bedc81d9580bcd6418fcdac11d106a38, type: 3}
-  LiangScale: 1.1
-  AnScale: 0.7
-  Down: 0
+  Liang: {fileID: 21300000, guid: d4bb8a0202b905b47a99578b79bb0730, type: 3}
+  An: {fileID: 21300000, guid: ca9e061229f712f499b43828f25a7001, type: 3}
 --- !u!1 &4932265573279164458
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,8 +3839,8 @@ RectTransform:
   m_GameObject: {fileID: 5657131280493813785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 955894703625687323}
   m_Father: {fileID: 7069243306129950138}
@@ -3827,7 +3848,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3, y: 37.74}
-  m_SizeDelta: {x: 125, y: 123}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7844427579873358264
 CanvasRenderer:
@@ -3857,7 +3878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f1731ad22b4387347b52fd86669b6ff6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d992529db3ba2294388a73d0f78b6921, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3923,11 +3944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dfd7e26d521741890347f4578113e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Liang: {fileID: 21300000, guid: f1731ad22b4387347b52fd86669b6ff6, type: 3}
-  An: {fileID: 21300000, guid: c28c0021ca1773a42b973250bc63061f, type: 3}
-  LiangScale: 1.1
-  AnScale: 0.7
-  Down: 1
+  Liang: {fileID: 21300000, guid: 31804d6cc84eed94c87c2411e2002018, type: 3}
+  An: {fileID: 21300000, guid: d992529db3ba2294388a73d0f78b6921, type: 3}
 --- !u!1 &5851507082778851279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,7 +4454,7 @@ RectTransform:
   m_GameObject: {fileID: 6993676315621265265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1112936887791093609}
@@ -4445,7 +4463,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -42, y: -71.47803}
-  m_SizeDelta: {x: 134, y: 116.2056}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3857442269633327625
 CanvasRenderer:
@@ -4475,7 +4493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 48e1b7d516d960c45b7156ea60af05f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a11421eee15a8ed46920584d1c2d734c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4541,11 +4559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dfd7e26d521741890347f4578113e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Liang: {fileID: 21300000, guid: 7fe545637158d4747aa89768f71973be, type: 3}
-  An: {fileID: 21300000, guid: 48e1b7d516d960c45b7156ea60af05f9, type: 3}
-  LiangScale: 1.1
-  AnScale: 0.7
-  Down: 0
+  Liang: {fileID: 21300000, guid: 26fac2c8d0ef3984c98612392ccba675, type: 3}
+  An: {fileID: 21300000, guid: a11421eee15a8ed46920584d1c2d734c, type: 3}
 --- !u!1 &6999159896861409167
 GameObject:
   m_ObjectHideFlags: 0
@@ -4575,7 +4590,7 @@ RectTransform:
   m_GameObject: {fileID: 6999159896861409167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5614878263777751931}
@@ -4584,7 +4599,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 80, y: -26}
-  m_SizeDelta: {x: 106, y: 108}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &797606189335692656
 CanvasRenderer:
@@ -4614,7 +4629,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8ad92856061b957428cb9cf5d5a689f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f06fd26f11b7154f93ca98c71f3cc10, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4680,11 +4695,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408dfd7e26d521741890347f4578113e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Liang: {fileID: 21300000, guid: 8475943cd0ef260448fa149eeb329e15, type: 3}
-  An: {fileID: 21300000, guid: 8ad92856061b957428cb9cf5d5a689f2, type: 3}
-  LiangScale: 1.2
-  AnScale: 0.7
-  Down: 0
+  Liang: {fileID: 21300000, guid: 64513d68e9a53ce4798f56aa573054e9, type: 3}
+  An: {fileID: 21300000, guid: 7f06fd26f11b7154f93ca98c71f3cc10, type: 3}
 --- !u!1 &7503359665622686539
 GameObject:
   m_ObjectHideFlags: 0
@@ -5353,6 +5365,7 @@ GameObject:
   - component: {fileID: 7173399578682255347}
   - component: {fileID: 2779874061547539030}
   - component: {fileID: 944770915242707723}
+  - component: {fileID: 1184878093678063658}
   m_Layer: 5
   m_Name: ChongWuButton
   m_TagString: Untagged
@@ -5377,7 +5390,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 43, y: 12}
-  m_SizeDelta: {x: 80, y: 80}
+  m_SizeDelta: {x: 110, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7173399578682255347
 CanvasRenderer:
@@ -5407,7 +5420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3335c5e419684a6449a1d814959032ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f09e613df3044114b96410424e4b051c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5461,6 +5474,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1184878093678063658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8867708947058034747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408dfd7e26d521741890347f4578113e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Liang: {fileID: -1777530482, guid: 6f7e4dc81e44cb14cb588912c8e607bb, type: 3}
+  An: {fileID: 21300000, guid: f09e613df3044114b96410424e4b051c, type: 3}
 --- !u!1 &8884536068942339330
 GameObject:
   m_ObjectHideFlags: 0

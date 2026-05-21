@@ -55,7 +55,7 @@ Material:
     - _OutlinePixelWidth: 1
     - _OutlineSmoothness: 0
     - _OutlineSoftness: 0.5
-    - _OutlineThickness: 0.082
+    - _OutlineThickness: 0
     - _OutlineVisibility: 0
     - _OutlineVisible: 0.83
     - _OutlineWidth: 0

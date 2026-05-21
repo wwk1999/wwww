@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Spine;
 using Spine.Unity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Slider = UnityEngine.UI.Slider;
 
 public class SceneLoading1 : MonoBehaviour
 {
     public Image bg;
     public Slider loadSlider;
+    public SkeletonAnimation Ske;
     void Start()
     {
         bg.sprite = ResourcesConfig.GetLoadingBg();
         GlobalPlayerAttribute.IsGame = true;
+        Ske.AnimationState.SetAnimation(0, "loading", true);
         StartCoroutine(LoadAndPreload());
     }
 

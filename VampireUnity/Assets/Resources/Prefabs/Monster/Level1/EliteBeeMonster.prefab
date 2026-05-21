@@ -397,7 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: 
+  animationName: idle
   loop: 0
   timeScale: 1
   unscaledTime: 0

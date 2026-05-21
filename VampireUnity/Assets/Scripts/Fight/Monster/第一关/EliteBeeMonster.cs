@@ -19,7 +19,7 @@ public class EliteBeeMonster : MonsterBase
     {
         base.Start();
         monsterSkeletonAnimation.timeScale = 1.5f;
-        size = 0.5f;
+        size = 8;
         
        
         
@@ -35,6 +35,8 @@ public class EliteBeeMonster : MonsterBase
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
         MonsterSpineName.Skill1Name = "skill";
+        MonsterSpineName.IdleName = "idle";
+
     }
    
     private void RandomDelayDie()
@@ -77,7 +79,7 @@ public class EliteBeeMonster : MonsterBase
         base.Update();
         
         SkillColingTime+= Time.deltaTime;
-        if(SkillColingTime>=SkillTime&&Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position)<8f&& !IsDead)
+        if(SkillColingTime>=SkillTime&&Vector2.Distance(transform.position,QueueController.S.gamePlayer.transform.position)<size&& !IsDead)
         {
             SkillColingTime = 0;
             isSkill1 = true;

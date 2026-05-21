@@ -1450,6 +1450,7 @@ public class GameController : XSingleton<GameController>
             QueueController.S.gamePlayer.gameObject.SetActive(true);
             QueueController.S.gamePlayer.transform.position=new  Vector3(0,0,0);
             QueueController.S.gamePlayer.playerSkeleton.AnimationState.SetAnimation(0, "idle", false);
+            QueueController.S.gamePlayer.IsDie = false;
             return;
         }
         QueueController.S.gamePlayer = Instantiate(Resources.Load<GameObject>("Prefabs/Player/Player"),QueueController.S.transform).GetComponent<Player>();
