@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 2728982016546446357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 0.267, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8670186663633200454}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 908e73295b5cbc24481ec3926666c539, type: 2}
+  - {fileID: 2100000, guid: 9300c6f9b9a412d4981695c167b806f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 7427c89b2c0197a49bfdf10ffd47e788, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 673704586b99d08429c8588886cc53fc, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: play
+  animationName: huo
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -302,7 +302,7 @@ Transform:
   m_GameObject: {fileID: 8176825900773019215}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.236, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -340,6 +340,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.24074388, y: 0}
+  m_Offset: {x: 0.24074388, y: 0.01601984}
   serializedVersion: 2
-  m_Radius: 0.14484334
+  m_Radius: 0.1288236

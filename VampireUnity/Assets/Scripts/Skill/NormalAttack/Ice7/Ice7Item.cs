@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Spine.Unity;
 using UnityEngine;
 
 public class Ice7Item : MonoBehaviour
@@ -8,11 +9,11 @@ public class Ice7Item : MonoBehaviour
     public Rigidbody2D rg;
     [NonSerialized]public float MoveSpeed;
     [NonSerialized]public Vector2 MoveDirection;
-    public Animator Animator;
+    public SkeletonAnimation SkeletonAnimation;
     public GameObject bullet;
     private void OnEnable()
     {
-        Animator.Play("NewSequenceAnim");
+        SkeletonAnimation.AnimationState.SetAnimation(0, "雪花", true);
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         rg.velocity = MoveDirection * MoveSpeed;

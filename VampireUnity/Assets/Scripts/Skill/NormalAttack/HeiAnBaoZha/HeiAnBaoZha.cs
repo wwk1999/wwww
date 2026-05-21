@@ -14,7 +14,7 @@ public class HeiAnBaoZha : MonoBehaviour
     private void OnEnable()
     {
         CancelInvoke();
-        ske.AnimationState.SetAnimation(0, "fly_58", true);
+        ske.AnimationState.SetAnimation(0, "anxing", true);
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         rg.velocity = MoveDirection * MoveSpeed;

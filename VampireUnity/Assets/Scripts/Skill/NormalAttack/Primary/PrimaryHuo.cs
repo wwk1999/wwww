@@ -10,11 +10,11 @@ namespace Skill.NormalAttack.Primary
         public Rigidbody2D rg;
         [NonSerialized]public float MoveSpeed;
         [NonSerialized]public Vector2 MoveDirection;
-        public SkeletonAnimation ske;
         public GameObject bullet;
         private Vector2 currentMoveDirection;
         private float currentMoveSpeed;
         private bool isInitialized = false;
+        public Animator animator;
         
         private void OnEnable()
         {
@@ -52,7 +52,7 @@ namespace Skill.NormalAttack.Primary
             bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
             
             // 设置动画和旋转
-            ske.AnimationState.SetAnimation(0, "fly_48", true);
+            animator.Play("NewSequenceAnim");
             
             // 设置速度
             rg.velocity = currentMoveDirection * currentMoveSpeed;

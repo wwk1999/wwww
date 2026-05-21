@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6869430066285785559}
   - component: {fileID: 4278174095440880162}
-  - component: {fileID: 7943702767682034192}
   - component: {fileID: 6636088774422746496}
+  - component: {fileID: 224619936954565384}
   m_Layer: 10
   m_Name: Primary
   m_TagString: Untagged
@@ -62,8 +62,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7943702767682034192
-CircleCollider2D:
+--- !u!114 &6636088774422746496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2647210336188434990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e771bdd35355f4ea0e2a07f740ff1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 4278174095440880162}
+  ske: {fileID: 7134206569150568962}
+  bullet: {fileID: 2647210336188434990}
+--- !u!60 &224619936954565384
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,27 +106,27 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19382052, y: 0.000047534704}
-  serializedVersion: 2
-  m_Radius: 0.22217259
---- !u!114 &6636088774422746496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2647210336188434990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04e771bdd35355f4ea0e2a07f740ff1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rg: {fileID: 4278174095440880162}
-  ske: {fileID: 7134206569150568962}
-  bullet: {fileID: 2647210336188434990}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.25932747, y: 0.07132685}
+      - {x: 0.13447851, y: 0.122393236}
+      - {x: 0.13604936, y: -0.13631189}
+      - {x: 0.51873046, y: -0.013119195}
+      - {x: 0.4674456, y: 0.018149734}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3463387001401245623
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: "\u96EA\u82B1"
+  animationName: "\u51B0\u95252"
   loop: 1
   timeScale: 1
   unscaledTime: 0

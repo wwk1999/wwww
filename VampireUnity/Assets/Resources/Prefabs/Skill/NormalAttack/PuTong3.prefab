@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.114, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6828035612108910321}
@@ -55,7 +55,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a13bee4d82dc2fb4e9721bab15c694ff, type: 2}
+  - {fileID: 2100000, guid: 1e326990eba2ce74fa0700384ad4f142, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updateTiming: 1
   threadedAnimation: 2
-  animationName: fly_13
+  animationName: "\u51B0\u9525"
   loop: 1
   timeScale: 1
   unscaledTime: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e075b9a3e08e2f74fbd651c858ab16ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: d1bcd630face1fe44a3d420fc346307a, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: fc0e7c982c575a641a55a6e9adcb6a4e, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -176,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6828035612108910321}
-  - component: {fileID: 8517723954305425307}
+  - component: {fileID: 5320916758710887516}
   m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
@@ -194,14 +194,14 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.004, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3163772359684233689}
   m_Father: {fileID: 447476476710963666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &8517723954305425307
-CircleCollider2D:
+--- !u!60 &5320916758710887516
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -229,12 +229,27 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.5055628, y: -0.032413416}
-  serializedVersion: 2
-  m_Radius: 0.22448555
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.81305647, y: 0.35182893}
+      - {x: -0.33699983, y: 0.041788295}
+      - {x: 0.8563848, y: -0.39396042}
+      - {x: 2.685812, y: 0.021096706}
+      - {x: 1.098885, y: 0.37724563}
+  m_UseDelaunayMesh: 0
 --- !u!1 &8243644984124618918
 GameObject:
   m_ObjectHideFlags: 0

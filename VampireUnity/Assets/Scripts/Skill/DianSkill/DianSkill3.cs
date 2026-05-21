@@ -15,7 +15,7 @@ public class DianSkill3 : MonoBehaviour
     
     private void OnEnable()
     {
-        ske.AnimationState.SetAnimation(0, "action", true);
+        ske.AnimationState.SetAnimation(0, "bing", true);
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         rg.velocity = MoveDirection * MoveSpeed;

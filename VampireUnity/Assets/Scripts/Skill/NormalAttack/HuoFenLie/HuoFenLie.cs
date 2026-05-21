@@ -13,7 +13,7 @@ public class HuoFenLie : MonoBehaviour
     public GameObject bullet;
     private void OnEnable()
     {
-        ske.AnimationState.SetAnimation(0, "play", true);
+        ske.AnimationState.SetAnimation(0, "huo", true);
         float angle = Mathf.Atan2(MoveDirection.y, MoveDirection.x) * Mathf.Rad2Deg;
         bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         rg.velocity = MoveDirection * MoveSpeed;
