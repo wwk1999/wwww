@@ -14,7 +14,7 @@ public class HuoSkill3 : MonoBehaviour
 
   private void OnEnable()
   {
-    skeletonAnimation.AnimationState.SetAnimation(0, "action", false);
+    skeletonAnimation.AnimationState.SetAnimation(0, "eff2", false);
   }
 
 

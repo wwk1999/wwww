@@ -498,18 +498,22 @@ public class QueueController : XSingleton<QueueController>
         fightBG.SetActive(true);
         foreach (var item in MonsterColliderDic.Values)
         {
-            item.gameObject.SetActive(false);
+            if (item != null)
+            {
+                item.gameObject.SetActive(false);
+            }
         }
         gamePlayer.gameObject.SetActive(false);
         foreach (var item in EquipBaseSet)
         {
             item.gameObject.SetActive(false);
         }
-        
+        EquipBaseSet.Clear();
         foreach (var item in PropBaseSet)
         {
             item.gameObject.SetActive(false);
         }
+        PropBaseSet.Clear();
     }
 
     public void FightExit()
@@ -517,18 +521,22 @@ public class QueueController : XSingleton<QueueController>
         fightBG.SetActive(false);
         foreach (var item in MonsterColliderDic.Values)
         {
-            item.gameObject.SetActive(false);
+            if (item != null)
+            {
+                item.gameObject.SetActive(false);
+            }
         }
         gamePlayer.gameObject.SetActive(false);
         foreach (var item in EquipBaseSet)
         {
             item.gameObject.SetActive(false);
         }
-        
+        EquipBaseSet.Clear();
         foreach (var item in PropBaseSet)
         {
             item.gameObject.SetActive(false);
         }
+        PropBaseSet.Clear();
         AudioController.S.BGAudioSource.clip = Resources.Load<AudioClip>("Audio/BG/UIBG");
         AudioController.S.BGAudioSource.loop = true;
     }

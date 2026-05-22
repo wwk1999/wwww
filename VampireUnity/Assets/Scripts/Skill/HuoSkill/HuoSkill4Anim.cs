@@ -36,6 +36,6 @@ public class HuoSkill4Anim : MonoBehaviour
     public void Hide()
     {
         QueueController.S.HuoSkill4Queue.Enqueue(HuoSkill4);
-        gameObject.SetActive(false);
+        HuoSkill4.gameObject.SetActive(false);
     }
 }

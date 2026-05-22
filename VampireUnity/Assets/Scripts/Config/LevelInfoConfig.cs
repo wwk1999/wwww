@@ -904,11 +904,11 @@ public class LevelInfoConfig
         () => QueueController.S.IceSkill1Queue.Count, c => QueueController.S.IceSkill1Queue.Enqueue(c as IceSkill1));
 
     // 注意原条件中 (a1 != SkillType.Ice4) 可能为笔误，保持原逻辑
-    AddSkill((a1 != SkillType.Ice4) || a2 == SkillType.Ice4 || a3 == SkillType.Ice4 || a4 == SkillType.Ice4 || a5 == SkillType.Ice4,
+    AddSkill((a1 == SkillType.Ice4) || a2 == SkillType.Ice4 || a3 == SkillType.Ice4 || a4 == SkillType.Ice4 || a5 == SkillType.Ice4,
         "Prefabs/Skill/IceSkill/IceSkill4", typeof(IceSkill4),
         () => QueueController.S.IceSkill4Queue.Count, c => QueueController.S.IceSkill4Queue.Enqueue(c as IceSkill4));
 
-    AddSkill((a1 != SkillType.Ice5) || a2 == SkillType.Ice5 || a3 == SkillType.Ice5 || a4 == SkillType.Ice5 || a5 == SkillType.Ice5,
+    AddSkill((a1 == SkillType.Ice5) || a2 == SkillType.Ice5 || a3 == SkillType.Ice5 || a4 == SkillType.Ice5 || a5 == SkillType.Ice5,
         "Prefabs/Skill/IceSkill/IceSkill5", typeof(IceSkill5),
         () => QueueController.S.IceSkill5Queue.Count, c => QueueController.S.IceSkill5Queue.Enqueue(c as IceSkill5));
 
@@ -921,11 +921,11 @@ public class LevelInfoConfig
         "Prefabs/Skill/HuoSkill/HuoSkill3", typeof(HuoSkill3),
         () => QueueController.S.HuoSkill3Queue.Count, c => QueueController.S.HuoSkill3Queue.Enqueue(c as HuoSkill3));
 
-    AddSkill((a1 != SkillType.Huo4) || a2 == SkillType.Huo4 || a3 == SkillType.Huo4 || a4 == SkillType.Huo4 || a5 == SkillType.Huo4,
+    AddSkill((a1 == SkillType.Huo4) || a2 == SkillType.Huo4 || a3 == SkillType.Huo4 || a4 == SkillType.Huo4 || a5 == SkillType.Huo4,
         "Prefabs/Skill/HuoSkill/HuoSkill4", typeof(HuoSkill4),
         () => QueueController.S.HuoSkill4Queue.Count, c => QueueController.S.HuoSkill4Queue.Enqueue(c as HuoSkill4));
 
-    AddSkill((a1 != SkillType.Huo5) || a2 == SkillType.Huo5 || a3 == SkillType.Huo5 || a4 == SkillType.Huo5 || a5 == SkillType.Huo5,
+    AddSkill((a1 == SkillType.Huo5) || a2 == SkillType.Huo5 || a3 == SkillType.Huo5 || a4 == SkillType.Huo5 || a5 == SkillType.Huo5,
         "Prefabs/Skill/HuoSkill/HuoSkill5", typeof(HuoSkill5),
         () => QueueController.S.HuoSkill5Queue.Count, c => QueueController.S.HuoSkill5Queue.Enqueue(c as HuoSkill5));
 
@@ -938,11 +938,11 @@ public class LevelInfoConfig
         "Prefabs/Skill/DianSkill/DianSkill3", typeof(DianSkill3),
         () => QueueController.S.DianSkill3Queue.Count, c => QueueController.S.DianSkill3Queue.Enqueue(c as DianSkill3));
 
-    AddSkill((a1 != SkillType.Dian4) || a2 == SkillType.Dian4 || a3 == SkillType.Dian4 || a4 == SkillType.Dian4 || a5 == SkillType.Dian4,
+    AddSkill((a1 == SkillType.Dian4) || a2 == SkillType.Dian4 || a3 == SkillType.Dian4 || a4 == SkillType.Dian4 || a5 == SkillType.Dian4,
         "Prefabs/Skill/DianSkill/DianSkill4", typeof(DianSkill4),
         () => QueueController.S.DianSkill4Queue.Count, c => QueueController.S.DianSkill4Queue.Enqueue(c as DianSkill4));
 
-    AddSkill((a1 != SkillType.Dian5) || a2 == SkillType.Dian5 || a3 == SkillType.Dian5 || a4 == SkillType.Dian5 || a5 == SkillType.Dian5,
+    AddSkill((a1 == SkillType.Dian5) || a2 == SkillType.Dian5 || a3 == SkillType.Dian5 || a4 == SkillType.Dian5 || a5 == SkillType.Dian5,
         "Prefabs/Skill/DianSkill/DianSkill5", typeof(DianSkill5),
         () => QueueController.S.DianSkill5Queue.Count, c => QueueController.S.DianSkill5Queue.Enqueue(c as DianSkill5));
 
@@ -955,11 +955,11 @@ public class LevelInfoConfig
         "Prefabs/Skill/HeiAnSkill/HeiAnSkill1", typeof(HeiAnSkill1),
         () => QueueController.S.HeiAnSkill1Queue.Count, c => QueueController.S.HeiAnSkill1Queue.Enqueue(c as HeiAnSkill1));
 
-    AddSkill((a1 != SkillType.HeiAn4) || a2 == SkillType.HeiAn4 || a3 == SkillType.HeiAn4 || a4 == SkillType.HeiAn4 || a5 == SkillType.HeiAn4,
+    AddSkill((a1 == SkillType.HeiAn4) || a2 == SkillType.HeiAn4 || a3 == SkillType.HeiAn4 || a4 == SkillType.HeiAn4 || a5 == SkillType.HeiAn4,
         "Prefabs/Skill/HeiAnSkill/HeiAnSkill4", typeof(HeiAnSkill4),
         () => QueueController.S.HeiAnSkill4Queue.Count, c => QueueController.S.HeiAnSkill4Queue.Enqueue(c as HeiAnSkill4));
 
-    AddSkill((a1 != SkillType.HeiAn5) || a2 == SkillType.HeiAn5 || a3 == SkillType.HeiAn5 || a4 == SkillType.HeiAn5 || a5 == SkillType.HeiAn5,
+    AddSkill((a1 == SkillType.HeiAn5) || a2 == SkillType.HeiAn5 || a3 == SkillType.HeiAn5 || a4 == SkillType.HeiAn5 || a5 == SkillType.HeiAn5,
         "Prefabs/Skill/HeiAnSkill/HeiAnSkill5", typeof(HeiAnSkill5),
         () => QueueController.S.HeiAnSkill5Queue.Count, c => QueueController.S.HeiAnSkill5Queue.Enqueue(c as HeiAnSkill5));
 

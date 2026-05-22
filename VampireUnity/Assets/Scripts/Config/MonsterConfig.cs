@@ -199,12 +199,12 @@ public class MonsterConfig
                     attack = 10, defence = 10, hp = 20, ex = 10, linghun = 10,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {
-                        new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 1), 
-                        new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Primary, 1),
-                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Primary, 1),
-                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Primary, 1),
-                        new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Primary, 1),
-                        new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Primary, 1),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 2), 
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Primary, 2),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Primary, 2),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Primary, 2),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Primary, 2),
+                        new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Primary, 2),
                     }
                 }
             },
@@ -214,12 +214,12 @@ public class MonsterConfig
                 {
                     attack = 20, defence = 20, hp = 100, ex = 40, linghun = 40,speed = 1f,
                     MonsterEquipList = new List<MonsterEquip>()
-                        {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 5), 
-                            new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Primary, 5),
-                            new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Primary, 5),
-                            new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Primary, 5),
-                            new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Primary, 5),
-                            new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Primary, 5),
+                        {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 10), 
+                            new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Primary, 10),
+                            new MonsterEquip(PlayerEquipConfig.EquipType.Cloak, PlayerEquipConfig.EquipLevel.Primary, 10),
+                            new MonsterEquip(PlayerEquipConfig.EquipType.Cloth, PlayerEquipConfig.EquipLevel.Primary, 10),
+                            new MonsterEquip(PlayerEquipConfig.EquipType.Shoe, PlayerEquipConfig.EquipLevel.Primary, 10),
+                            new MonsterEquip(PlayerEquipConfig.EquipType.Helmet, PlayerEquipConfig.EquipLevel.Primary, 10),
                         }
                 }
             },

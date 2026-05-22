@@ -486,7 +486,7 @@ public class SkillController : XSingleton<SkillController>
         float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-        HuoSkill3Coolingtime = 0;
+        HuoSkill5Coolingtime = 0;
         for (int i = 0; i < count; i++)
         {
             float offectX = Random.Range(-0.5f, 0.5f);
@@ -686,12 +686,12 @@ public class SkillController : XSingleton<SkillController>
 
     public void HeiAnSkill5(int count)
     {
-        if (HuoSkill5Coolingtime < HuoSkill5Time)
+        if (HeiAnSkill5Coolingtime < HeiAnSkill5Time)
         {
             return;
         }
 
-        HuoSkill5Coolingtime = 0;
+        HeiAnSkill5Coolingtime = 0;
         for (int i = 0; i < count; i++)
         {
             var heianSkill5=QueueController.S.HeiAnSkill5Queue.Dequeue();
@@ -722,12 +722,12 @@ public class SkillController : XSingleton<SkillController>
     
     public void HuoSkill4()
     {
-        if (HeiAnSkill4Coolingtime < HeiAnSkill4Time)
+        if (HuoSkill4Coolingtime < HuoSkill4Time)
         {
             return;
         }
 
-        HeiAnSkill4Coolingtime = 0;
+        HuoSkill4Coolingtime = 0;
         Vector3 mouseScreen = Input.mousePosition;
         float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
@@ -1120,11 +1120,6 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case SkillType.Huo3:
                 int count = 5;
-                if (HuoSkill3Coolingtime < HuoSkill3Time)
-                {
-                    return;
-                }
-                HuoSkill3Coolingtime = 0;
                 StartCoroutine(HuoSkill3(count,1.3f,0.2f));
                 break;
             case SkillType.Huo4:
