@@ -45,7 +45,7 @@ public class HeiAnSkill5 : MonoBehaviour
 
    private void Update()
    {
-      timer -= Time.deltaTime;
+      timer += Time.deltaTime;
       if (timer > 0.5f)
       {
          timer = 0;

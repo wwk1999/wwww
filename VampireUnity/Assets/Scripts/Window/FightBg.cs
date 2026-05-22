@@ -171,8 +171,10 @@ public class FightBg : MonoBehaviour
             GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
             SceneManager.LoadScene("UIScene");
         });
-        
-        
+    }
+
+    private void OnEnable()
+    {
         if (SkillController.S.Alpha1 == SkillType.None)
         {
             skill1.gameObject.SetActive(false);
@@ -219,9 +221,8 @@ public class FightBg : MonoBehaviour
         {
             skill5.sprite=ResourcesConfig.GetZhuDongSkillSprite(SkillController.S.Alpha5);
         }
-        
     }
-    
+
     private void OnDestroy()
     {
         ObserverModuleManager.S.UnRegisterEvent(ConstKeys.ShowToast, ShowTaost);
