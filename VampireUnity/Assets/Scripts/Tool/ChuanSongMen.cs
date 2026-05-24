@@ -8,7 +8,7 @@ public class ChuanSongMen : MonoBehaviour
 {
     public SkeletonAnimation SkeletonAnimation;
 
-    private void Start()
+    private void OnEnable()
     {
         if (SkeletonAnimation != null)
             SkeletonAnimation.AnimationState.SetAnimation(0, "Idle", true);

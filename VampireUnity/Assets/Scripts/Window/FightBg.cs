@@ -164,12 +164,14 @@ public class FightBg : MonoBehaviour
         {
             GlobalPlayerAttribute.CurrentExitType = ExitType.Again;
             SceneManager.LoadScene("UIScene");
+            QueueController.S.FightAgain();
         });
         
         returnButton.onClick.AddListener(() =>
         {
             GlobalPlayerAttribute.CurrentExitType = ExitType.Exit;
             SceneManager.LoadScene("UIScene");
+            QueueController.S.FightExit();
         });
     }
 

@@ -703,12 +703,12 @@ public class LevelInfoConfig
         LevelMonsterCount[6] = 60;
         LevelMonsterCount[9] = 90;
         LevelMonsterCount[12] = 100;
-        LevelMonsterCount[15] = 10;
+        LevelMonsterCount[15] = 100;
         LevelMonsterCount[16] = 110;
         LevelMonsterCount[17] = 120;
         LevelMonsterCount[18] = 130;
         LevelMonsterCount[19] = 140;
-        LevelMonsterCount[20] = 2;
+        LevelMonsterCount[20] = 200;
         LevelMonsterCount[21] = 160;
         
         LevelMonsterCount[22] = 170;
@@ -737,7 +737,7 @@ public class LevelInfoConfig
         LevelMonsterCount[45] = 300;
         LevelMonsterCount[46] = 300;
         
-        LevelMonsterCount[101] = 10;
+        LevelMonsterCount[101] = 100;
         LevelMonsterCount[102] = 120;
         LevelMonsterCount[103] = 140;
         LevelMonsterCount[104] = 180;

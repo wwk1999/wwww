@@ -2299,7 +2299,22 @@ public class Entrance : MonoBehaviour
 }
     private void Awake()
     {
+        FightBGController.S.isShowAgain = false;
         QueueController.S.transform.Find("FightBG(Clone)").gameObject.SetActive(true);
+        QueueController.S.transform.Find("FightBG(Clone)/ChuanSongZhen").gameObject.SetActive(false);
+
+        if (LevelInfoConfig.CurrentGameLevel > 100 && LevelInfoConfig.CurrentGameLevel < 200)
+        {
+            QueueController.S.transform.Find("FightBG(Clone)/MiJing3").gameObject.SetActive(true);
+        }
+        if (LevelInfoConfig.CurrentGameLevel > 200 && LevelInfoConfig.CurrentGameLevel < 300)
+        {
+            QueueController.S.transform.Find("FightBG(Clone)/MiJing4").gameObject.SetActive(true);
+        }
+        if (LevelInfoConfig.CurrentGameLevel > 300 && LevelInfoConfig.CurrentGameLevel < 400)
+        {
+            QueueController.S.transform.Find("FightBG(Clone)/MiJing5").gameObject.SetActive(true);
+        }
         //初始化地图
         if (LevelInfoConfig.CurrentGameLevel == 1 || LevelInfoConfig.CurrentGameLevel == 2 ||
             LevelInfoConfig.CurrentGameLevel == 3)

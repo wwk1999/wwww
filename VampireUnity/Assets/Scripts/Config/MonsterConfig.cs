@@ -847,7 +847,7 @@ public class MonsterConfig
                     attack = 50, defence = 50, hp = 100, ex = 20, linghun = 20,speed=1f,
                     MonsterPropList = new List<MonsterProp>()
                     {
-                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),5),
+                        new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),10),
                     }
                 }
             },

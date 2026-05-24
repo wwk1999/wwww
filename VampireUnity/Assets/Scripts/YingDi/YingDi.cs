@@ -100,12 +100,12 @@ public class YingDi : MonoBehaviour
         
             if (col.CompareTag("Player"))
             {
-                spriteRenderer.sortingOrder = 2;
+                spriteRenderer.sortingOrder = 10002;
                 return;
             }
             else
             {
-                spriteRenderer.sortingOrder = 5;
+                spriteRenderer.sortingOrder = 10005;
             }
         }
     }
@@ -127,8 +127,8 @@ public class YingDi : MonoBehaviour
         
             if (col.CompareTag("Player"))
             {
-                ZhangPen.sortingOrder = 5;
-                shizhuang.sortingOrder = 6;
+                ZhangPen.sortingOrder = 10005;
+                shizhuang.sortingOrder = 10006;
                 return;
             }
         }
