@@ -1,0 +1,400 @@
+
+action.png
+size: 2041, 2024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+3
+  rotate: true
+  xy: 632, 324
+  size: 467, 526
+  orig: 594, 600
+  offset: 51, 40
+  index: -1
+[skin]yuan/bizui
+  rotate: false
+  xy: 2, 2009
+  size: 38, 13
+  orig: 40, 14
+  offset: 1, 0
+  index: -1
+[skin]yuan/huichen_1
+  rotate: true
+  xy: 293, 1909
+  size: 113, 152
+  orig: 115, 154
+  offset: 1, 1
+  index: -1
+[skin]yuan/huichen_2
+  rotate: true
+  xy: 1839, 1875
+  size: 147, 195
+  orig: 150, 197
+  offset: 1, 1
+  index: -1
+[skin]yuan/huichen_3
+  rotate: true
+  xy: 2, 1788
+  size: 150, 229
+  orig: 152, 231
+  offset: 1, 1
+  index: -1
+[skin]yuan/meimao_1
+  rotate: false
+  xy: 176, 1940
+  size: 115, 82
+  orig: 115, 83
+  offset: 0, 1
+  index: -1
+[skin]yuan/meimao_2
+  rotate: false
+  xy: 91, 1947
+  size: 83, 75
+  orig: 83, 75
+  offset: 0, 0
+  index: -1
+[skin]yuan/toufa_1
+  rotate: false
+  xy: 661, 793
+  size: 544, 419
+  orig: 546, 430
+  offset: 0, 10
+  index: -1
+[skin]yuan/toufa_hou
+  rotate: false
+  xy: 1207, 597
+  size: 613, 359
+  orig: 614, 363
+  offset: 1, 4
+  index: -1
+[skin]yuan/yinying
+  rotate: false
+  xy: 574, 1724
+  size: 530, 161
+  orig: 530, 161
+  offset: 0, 0
+  index: -1
+[skin]yuan/yizui
+  rotate: false
+  xy: 42, 1994
+  size: 47, 28
+  orig: 49, 30
+  offset: 1, 1
+  index: -1
+redbing/pifeng_up
+  rotate: false
+  xy: 1565, 1876
+  size: 272, 146
+  orig: 273, 154
+  offset: 1, 0
+  index: -1
+redbing/touda_up
+  rotate: true
+  xy: 1383, 1694
+  size: 180, 350
+  orig: 181, 350
+  offset: 1, 0
+  index: -1
+redbing/toufa
+  rotate: true
+  xy: 453, 1214
+  size: 247, 793
+  orig: 247, 804
+  offset: 0, 11
+  index: -1
+redbing/youtui
+  rotate: true
+  xy: 447, 1903
+  size: 119, 362
+  orig: 119, 362
+  offset: 0, 0
+  index: -1
+redbing/zuotui
+  rotate: true
+  xy: 811, 1887
+  size: 135, 400
+  orig: 135, 400
+  offset: 0, 0
+  index: -1
+reddian/pifeng_up
+  rotate: false
+  xy: 2, 1545
+  size: 348, 204
+  orig: 348, 204
+  offset: 0, 0
+  index: -1
+reddian/youtui
+  rotate: true
+  xy: 791, 1482
+  size: 226, 418
+  orig: 226, 419
+  offset: 0, 1
+  index: -1
+reddian/zuoshou_2
+  rotate: false
+  xy: 1248, 1112
+  size: 289, 349
+  orig: 289, 349
+  offset: 0, 0
+  index: -1
+reddian/zuotui
+  rotate: true
+  xy: 2, 1254
+  size: 248, 449
+  orig: 248, 449
+  offset: 0, 0
+  index: -1
+redheian/pifeng_hou
+  rotate: true
+  xy: 1160, 177
+  size: 418, 698
+  orig: 418, 698
+  offset: 0, 0
+  index: -1
+redheian/pifeng_hou2
+  rotate: true
+  xy: 2, 881
+  size: 331, 657
+  orig: 334, 664
+  offset: 2, 4
+  index: -1
+redheian/pifeng_up
+  rotate: false
+  xy: 1106, 1710
+  size: 275, 167
+  orig: 281, 172
+  offset: 0, 0
+  index: -1
+redheian/tou
+  rotate: false
+  xy: 1539, 958
+  size: 470, 425
+  orig: 472, 425
+  offset: 0, 0
+  index: -1
+redheian/youtui
+  rotate: true
+  xy: 233, 1751
+  size: 150, 339
+  orig: 150, 339
+  offset: 0, 0
+  index: -1
+redheian/zuoshou_2
+  rotate: true
+  xy: 1735, 1620
+  size: 253, 300
+  orig: 253, 302
+  offset: 0, 0
+  index: -1
+redheian/zuotui
+  rotate: true
+  xy: 1213, 1879
+  size: 143, 350
+  orig: 146, 351
+  offset: 1, 1
+  index: -1
+redhuo/pifeng_hou
+  rotate: true
+  xy: 2, 479
+  size: 400, 628
+  orig: 400, 628
+  offset: 0, 0
+  index: -1
+redhuo/shenti
+  rotate: true
+  xy: 2, 2
+  size: 475, 531
+  orig: 475, 531
+  offset: 0, 0
+  index: -1
+redhuo/youtui
+  rotate: true
+  xy: 352, 1504
+  size: 218, 437
+  orig: 219, 437
+  offset: 1, 0
+  index: -1
+redhuo/zuoshou_2
+  rotate: true
+  xy: 1211, 1463
+  size: 229, 369
+  orig: 229, 369
+  offset: 0, 0
+  index: -1
+redhuo/zuotui
+  rotate: true
+  xy: 1582, 1385
+  size: 233, 457
+  orig: 234, 457
+  offset: 1, 0
+  index: -1
+
+action_2.png
+size: 1774, 2005
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+1
+  rotate: true
+  xy: 1101, 1023
+  size: 492, 550
+  orig: 600, 601
+  offset: 41, 27
+  index: -1
+10
+  rotate: true
+  xy: 2, 1079
+  size: 488, 548
+  orig: 600, 601
+  offset: 39, 27
+  index: -1
+11
+  rotate: true
+  xy: 2, 579
+  size: 498, 540
+  orig: 595, 601
+  offset: 28, 27
+  index: -1
+2
+  rotate: true
+  xy: 1228, 1517
+  size: 486, 544
+  orig: 600, 601
+  offset: 37, 29
+  index: -1
+5
+  rotate: true
+  xy: 544, 15
+  size: 509, 549
+  orig: 599, 601
+  offset: 45, 27
+  index: -1
+6
+  rotate: true
+  xy: 552, 1035
+  size: 489, 547
+  orig: 600, 601
+  offset: 39, 28
+  index: -1
+7
+  rotate: true
+  xy: 684, 1526
+  size: 477, 542
+  orig: 600, 600
+  offset: 49, 31
+  index: -1
+8
+  rotate: true
+  xy: 1095, 2
+  size: 518, 545
+  orig: 597, 601
+  offset: 21, 22
+  index: -1
+9
+  rotate: true
+  xy: 2, 63
+  size: 514, 540
+  orig: 599, 601
+  offset: 40, 27
+  index: -1
+redbing/shenti
+  rotate: false
+  xy: 1152, 522
+  size: 620, 499
+  orig: 621, 702
+  offset: 0, 203
+  index: -1
+redbing/tou
+  rotate: true
+  xy: 544, 526
+  size: 495, 606
+  orig: 496, 608
+  offset: 0, 1
+  index: -1
+redhuo/tou
+  rotate: false
+  xy: 2, 1569
+  size: 680, 434
+  orig: 680, 434
+  offset: 0, 0
+  index: -1
+
+action_3.png
+size: 1860, 1094
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+12
+  rotate: true
+  xy: 2, 45
+  size: 526, 542
+  orig: 600, 601
+  offset: 28, 26
+  index: -1
+4
+  rotate: true
+  xy: 722, 571
+  size: 521, 549
+  orig: 598, 601
+  offset: 27, 22
+  index: -1
+reddian/shenti
+  rotate: false
+  xy: 2, 573
+  size: 718, 519
+  orig: 723, 519
+  offset: 2, 0
+  index: -1
+reddian/tou
+  rotate: true
+  xy: 1273, 571
+  size: 521, 585
+  orig: 524, 588
+  offset: 2, 2
+  index: -1
+redheian/shenti
+  rotate: true
+  xy: 546, 2
+  size: 567, 612
+  orig: 683, 612
+  offset: 1, 0
+  index: -1
+
+action_4.png
+size: 1468, 1064
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+redhuo/guang
+  rotate: true
+  xy: 2, 2
+  size: 1060, 1464
+  orig: 1132, 1523
+  offset: 36, 35
+  index: -1
+
+action_5.png
+size: 1379, 1120
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+redbing/guang
+  rotate: true
+  xy: 2, 2
+  size: 1116, 1375
+  orig: 1208, 1476
+  offset: 50, 50
+  index: -1
+
+action_6.png
+size: 1341, 1762
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+reddian/guang
+  rotate: false
+  xy: 2, 2
+  size: 1337, 1758
+  orig: 1337, 1758
+  offset: 0, 0
+  index: -1

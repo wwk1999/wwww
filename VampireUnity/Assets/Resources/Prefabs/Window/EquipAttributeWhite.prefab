@@ -696,7 +696,6 @@ MonoBehaviour:
   baseAttributeCount2: {fileID: 2142980149593963472}
   equipBg: {fileID: 545832924841189184}
   equipImage: {fileID: 630709820073495638}
-  animator: {fileID: 0}
   fuJiaAttributeContent: {fileID: 0}
   orangeEntryDesc: {fileID: 0}
   level: {fileID: 861292083789366653}
@@ -1606,10 +1605,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 38.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0

@@ -9,14 +9,14 @@ using UnityEngine.UI;
 public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // 优先使用 inspector 指定的 prefab；若为空则尝试 Resources.Load(resourcePath)
-    public GameObject prefab;
     private string resourcePath = "Prefabs/Window/EquipAttributeWhite";
-    private Vector2 offset = new Vector2(50f, 0f); // 在右下角的偏移（像素/画布单位）
+    private Vector2 offset = new Vector2(-70f, 0f); // 在右下角的偏移（像素/画布单位）
 
-    private GameObject instance;
     private RectTransform rt;
     private Canvas parentCanvas;
     public BagGrid bagGrid;
+    GameObject Leftinstance;
+    GameObject Rightinstance;
 
 
 
@@ -56,7 +56,7 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
         }
     }
     
-    public void SetKong()
+    public void SetKong(GameObject instance)
     {
         EquipTable equip = bagGrid.tableBase as EquipTable;
         BagEquipAttributeInfo bagEquipAttributeInfo=instance.GetComponent<BagEquipAttributeInfo>();
@@ -71,14 +71,11 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
             baoShiKong.SetKong(item.Value);
         }
     }
-    
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void ShowEquipAttriute(EquipTable equipTable,bool isInstall)
     {
-        if (instance != null) return;
-        EquipTable equipTable = bagGrid.tableBase as EquipTable;
-        if (prefab == null)
-        {
+         GameObject prefab = null;
+         GameObject instance = null;
             switch (equipTable.Quality)
             {
                 case 1:
@@ -100,7 +97,7 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
                     prefab = Resources.Load<GameObject>("Prefabs/Window/EquipAttributeRed");
                     break;
             }
-        }
+        
         if (prefab == null)
         {
             Debug.LogWarning($"EquipAttributeHover: 无法找到预制体（请在 inspector 指定或放入 Resources/{resourcePath}）");
@@ -109,11 +106,22 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
 
         // 实例化到 Canvas 下（保证是 UI）
         var canvasRect = parentCanvas.GetComponent<RectTransform>();
-        instance = Instantiate(prefab, parentCanvas.transform);
+        if (!isInstall)
+        {
+            Rightinstance = Instantiate(prefab, parentCanvas.transform);
+            instance = Rightinstance;
+        }
+        else
+        {
+            Leftinstance = Instantiate(prefab, parentCanvas.transform);
+            instance = Leftinstance;
+
+        }
+
         BagEquipAttributeInfo bagEquipAttributeInfo=instance.GetComponent<BagEquipAttributeInfo>();
         if (equipTable.Quality >= 2)
         {
-            SetKong(); 
+            SetKong(instance); 
         }
         
         if (equipTable.OrangeEntry1 == EntryConfig.OrangeEntry.None)
@@ -180,45 +188,111 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
                 SetFuJiaAttribute(equipTable,bagEquipAttributeInfo);
                 break;
         }
-        
-        
-        
-        
-        
         var instRt = instance.GetComponent<RectTransform>();
-
         // 计算按钮右下角世界坐标
         Vector3[] corners = new Vector3[4];
         rt.GetWorldCorners(corners); // 0:bottom-left, 1:top-left, 2:top-right, 3:bottom-right
         Vector3 worldBR = corners[3];
-
-        // 将世界坐标转换为 Canvas 的本地 anchoredPosition（处理各种 Canvas 渲染模式）
+// 将世界坐标转换为 Canvas 的本地 anchoredPosition（处理各种 Canvas 渲染模式）
         Camera cam = parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : parentCanvas.worldCamera;
         Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(cam, worldBR);
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPoint, cam, out Vector2 localPoint);
-
-        // 向右偏移实例化物体宽度的一半（再加上原有 offset）
         float halfWidth = instRt.rect.width * 0.5f;
-        instRt.anchoredPosition = localPoint + offset + new Vector2(halfWidth, 0f);
+        Vector2 pos = localPoint + offset + new Vector2(-halfWidth, 0f);
+        Vector2 posInstall = localPoint + offset + new Vector2(-halfWidth*3, 0f);
+
+        if (!isInstall)
+        {
+           instRt.anchoredPosition = pos; 
+        }
+        else
+        {
+            instRt.anchoredPosition = posInstall; 
+        }
+        
 
         instance.transform.SetAsLastSibling();
+    }
+    
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        EquipTable equipTable = bagGrid.tableBase as EquipTable;
+      
+        ShowEquipAttriute(equipTable,false);
+        PlayerEquipConfig.EquipType type = equipTable.EquipType;
+        int InstallEquipId = 0;
+        switch (type)
+        {
+            case  PlayerEquipConfig.EquipType.Necklace:
+                if (PlayerData.S.necklaceid != 0)
+                {
+                    InstallEquipId = PlayerData.S.necklaceid;
+                }
+                break;
+            case  PlayerEquipConfig.EquipType.Ring:
+                if (PlayerData.S.ringid != 0)
+                {
+                    InstallEquipId = PlayerData.S.ringid;
+                }
+                break;
+            case  PlayerEquipConfig.EquipType.Shoe:
+                if (PlayerData.S.shoeid != 0)
+                {
+                    InstallEquipId = PlayerData.S.shoeid;
+                }
+                break;
+            case  PlayerEquipConfig.EquipType.Helmet:
+                if (PlayerData.S.helmetid != 0)
+                {
+                    InstallEquipId = PlayerData.S.helmetid;
+                }
+                break;
+            case  PlayerEquipConfig.EquipType.Cloth:
+                if (PlayerData.S.clothid != 0)
+                {
+                    InstallEquipId = PlayerData.S.clothid;
+                }
+                break;
+            case  PlayerEquipConfig.EquipType.Cloak:
+                if (PlayerData.S.cloakid != 0)
+                {
+                    InstallEquipId = PlayerData.S.cloakid;
+                }
+                break;
+        }
+
+        EquipTable InstallTable = BagController.S.EquipIdList[InstallEquipId];
+        ShowEquipAttriute(InstallTable,true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (instance != null)
+        if (Leftinstance != null)
         {
-            Destroy(instance);
-            instance = null;
+            Destroy(Leftinstance);
+            Leftinstance = null;
+        }
+        
+        if (Rightinstance != null)
+        {
+            Destroy(Rightinstance);
+            Rightinstance = null;
         }
     }
 
     void OnDisable()
     {
-        if (instance != null)
+        if (Leftinstance != null)
         {
-            Destroy(instance);
-            instance = null;
+            Destroy(Leftinstance);
+            Leftinstance = null;
+        }
+        
+        if (Rightinstance != null)
+        {
+            Destroy(Rightinstance);
+            Rightinstance = null;
         }
     }
 }

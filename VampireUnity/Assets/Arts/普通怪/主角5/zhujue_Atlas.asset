@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: zhujue_Atlas
+  m_EditorClassIdentifier: 
+  serializedMaterialOverrides: []
+  textureLoadingMode: 0
+  onDemandTextureLoader: {fileID: 0}
+  atlasFile: {fileID: 4900000, guid: 8933fb0c82d9f644fb008de15a66c163, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 13cc244f65cf1d349bc413da0aa09c21, type: 2}
+  - {fileID: 2100000, guid: 2155c7c4ef634d140b57b3ab52d8e227, type: 2}
+  - {fileID: 2100000, guid: da0022cd1b41c154a8d7c21576a1e85d, type: 2}
+  - {fileID: 2100000, guid: 9a62bdb010ec397459f600a1c56892d8, type: 2}
+  - {fileID: 2100000, guid: 95a58a3814ea00e40bcfeec4fb48bf34, type: 2}
+  - {fileID: 2100000, guid: ed582fdfd58adec4c88f5e0581c29bac, type: 2}

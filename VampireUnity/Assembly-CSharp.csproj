@@ -917,6 +917,7 @@
     <None Include="Assets\Arts\Shaders\Outline.shader" />
     <None Include="Assets\Arts\Spine\宠物\Purple\火purple3——后\mon_9tails_fox_03.json" />
     <None Include="Assets\Arts\Spine\宠物\Purple\冰purple1——前\pet_9206.atlas.txt" />
+    <None Include="Assets\Arts\普通怪\主角3\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪\红蜘蛛\MiniBoss_2_Forest_Melee_Spider.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Blue\火blue1\Anima_Small_Skeleton_M17-1.json" />
     <None Include="Assets\Arts\Spine\技能\1225\json18\action.atlas.txt" />
@@ -1287,6 +1288,7 @@
     <None Include="Assets\Arts\Spine\飞行道具\飞行道具打包\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪\骷髅怪\Mob_21_Dungeon_Melee_SkeletonWarrior.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\27\9002_shijianshuo_boom.json" />
+    <None Include="Assets\Arts\普通怪\主角5\zhujue.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\PuTong3\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Arts\Spine\小怪3\岩鼠\yanshu.atlas.txt" />
@@ -1303,6 +1305,7 @@
     <None Include="Assets\Arts\Spine\小怪\猫咪\Hero_1001_Pinky.json" />
     <None Include="Assets\Arts\Spine\技能\Lvquanbao\skeleton.json" />
     <None Include="Assets\Arts\Spine\翅膀\蓝4\eff_byhls_fbcb.json" />
+    <None Include="Assets\Arts\普通怪\主角5\zhujue.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\18\2050_diwangqie_boom.json" />
     <None Include="Assets\Arts\Spine\小怪2\shifuboss\shifuboss.json" />
     <None Include="Assets\Arts\Spine\小怪2\shouren3\shouren3.atlas.txt" />
@@ -1651,6 +1654,7 @@
     <None Include="Assets\Arts\Spine\小怪2\kuangshimuzhu\kuangshimuzhu.json" />
     <None Include="Assets\Arts\Spine\技能\1225\蓝冲天激光\skeleton.json" />
     <None Include="Assets\Arts\Spine\怪物\蓝龙打包\blue_dragon.json" />
+    <None Include="Assets\Arts\普通怪\主角3\action.json" />
     <Reference Include="UnityEngine">
       <HintPath>D:\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

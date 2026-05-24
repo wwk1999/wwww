@@ -9,6 +9,8 @@ using UnityEngine.UI;
 
 public class EquipAttributePanel : MonoBehaviour
 {
+    public Button MaskButton;
+    
     public Button exitButton;
     public Button installButton;
     public Button sellButton;
@@ -203,6 +205,19 @@ public class EquipAttributePanel : MonoBehaviour
         }
         
         
+        if (MaskButton != null)
+        {
+            // 移除旧的监听器
+            MaskButton.onClick.RemoveAllListeners();
+            
+            MaskButton.onClick.AddListener(() =>
+            {
+                Destroy(gameObject);
+            });
+        }
+        
+        
+        
         if (uninstallButton != null)
         {
             // 移除旧的监听器
@@ -273,7 +288,6 @@ public class EquipAttributePanel : MonoBehaviour
             }
             grid.transform.Find("parent/EquipGridBG").GetComponent<Image>().color =new Color(1, 1, 1, 0);
             grid.transform.Find("parent/BagGridImage").GetComponent<Image>().color = new Color(1, 1, 1, 0);
-            grid.transform.Find("parent/Edge").GetComponent<Image>().color = new Color(1, 1, 1, 0);
             grid.transform.Find("parent/Count").GetComponent<Text>().text = null;
             BagController.S.EquipIdList.Remove(equip.equipid);
             switch (equip.Quality)

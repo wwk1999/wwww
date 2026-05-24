@@ -803,10 +803,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 42
   m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2263,7 +2263,6 @@ MonoBehaviour:
   baseAttributeCount2: {fileID: 7955551579153488407}
   equipBg: {fileID: 5651827730376664991}
   equipImage: {fileID: 3490513668934807971}
-  animator: {fileID: 0}
   fuJiaAttributeContent: {fileID: 1032807433430114438}
   orangeEntryDesc: {fileID: 7311884470726529731}
   level: {fileID: 5162577323599280042}
