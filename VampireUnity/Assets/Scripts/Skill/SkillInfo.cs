@@ -277,7 +277,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.IceBei3:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei3);
-                skillName.text = "冰系专精2";
+                skillName.text = "冰系专精3";
                 skillType.text = "被动技能";
                 LevelUpText.text = $"每级当前增加减速持续时间：<color=green>5%</color>";
                 LevelUpCount.text = "";
@@ -290,9 +290,9 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.IceBei2:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei2);
-                skillName.text = "冰系专精3";
+                skillName.text = "冰系专精2";
                 skillType.text = "被动技能";
-                LevelUpText.text = $"每级对冰冻敌人增加：<color=green>5%</color> 冰霜伤害";
+                LevelUpText.text = $"每级对减速敌人增加：<color=green>5%</color> 冰霜伤害";
                 LevelUpCount.text = "";
                 LevelUpText1.text = "";
                 float value13 = (SkillJiaDian.S.IceBei2 * 5);
@@ -303,7 +303,7 @@ public class SkillInfo : MonoBehaviour
             
             case SkillInfoType.IceBei4:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.IceBei4);
-                skillName.text = "冰系专精3";
+                skillName.text = "冰系专精4";
                 skillType.text = "被动技能";
                 LevelUpText.text = $"每级对减速敌人增加：<color=green>5%</color> 冰霜伤害";
                 LevelUpCount.text = "";

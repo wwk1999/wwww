@@ -924,6 +924,17 @@ public abstract class MonsterBase : MonoBehaviour
 
         return Mathf.RoundToInt(finalDamage);
     }
+
+    public float SetYuanSuSkillDamage(float damage,YuanSuType yuansutype)
+    {
+        switch (yuansutype)
+        {
+            case YuanSuType.Ice:
+                damage*=(SkillJiaDian.S.IceBei2 + SkillJiaDian.S.IceBei4) * 5 / 100;
+                break;
+        }
+        return damage;
+    }
     
   
     public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom,YuanSuType yuansutype)
@@ -944,6 +955,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
 
         finalDamage *= (1.0f + GlobalPlayerAttribute.AllDamage);
+        finalDamage=SetYuanSuSkillDamage(finalDamage,yuansutype);
         GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck/100.0f * finalDamage);
         ShowHurtText(finalDamage, isCrit);
         var random=Random.Range(0, 100);
