@@ -13,7 +13,8 @@ public class SkillWindow1 : MonoBehaviour
  private Button maskButton;
  private GameObject skillSwitchObj;
 
- [Header("技能计数显示")] private TextMeshProUGUI skillCount;
+ [Header("技能计数显示")] 
+ public TextMeshProUGUI skillCount;
  private TextMeshProUGUI monsterCount;
 
  private GameObject IcePanel;

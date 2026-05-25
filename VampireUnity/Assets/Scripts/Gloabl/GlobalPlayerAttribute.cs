@@ -33,6 +33,11 @@ public class GlobalPlayerAttribute
 
     public static float JianSuRate => ((IceYuanSuBase) / (5 + IceYuanSuBase))*(1.0f+SkillJiaDian.S.IceBei1*5/100f) * 100f;
     public static float JianSuTime => 1 * (1.0f + SkillJiaDian.S.IceBei3 * 5 / 100f);
+
+    public static float HuoMaxCengShu => 1 + SkillJiaDian.S.HuoBei1;
+    public static float HuoDamageJianGe => 1 * (1 - SkillJiaDian.S.HuoBei4 * 5 / 100);
+    public static float HuoTime => 3.1f + (0.5f * SkillJiaDian.S.HuoBei3);
+    public static float HuoZhuoShaoDamage => HuoYuanSuBase * GameController.S.GetGameAttack()*(1f+SkillJiaDian.S.HuoBei2*5/100);
     public static float LuoLeiRate =>
         (GlobalPlayerAttribute.DianYuanSuBase / (10f + GlobalPlayerAttribute.DianYuanSuBase)) * 100;
 

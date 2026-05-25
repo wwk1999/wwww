@@ -96,9 +96,9 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized] public float NormalYuanChenCurrentTime = 2f;
 
     [NonSerialized] public float zhuoShaoTime = 0;
-    [NonSerialized] public float zhuoShaoCurrentTime = 0;//毒间隔时间
-    public float zhuoShaoDamage =>QueueController.S.GameAttack*0.2f;
-    
+    [NonSerialized] public float zhuoShaoCurrentTime = 0;//灼烧间隔时间
+    [NonSerialized] public float CurrentZhuoShaoCeng = 0;
+
     
     
     [NonSerialized] public float baseSpeed = 0;
@@ -250,14 +250,15 @@ public abstract class MonsterBase : MonoBehaviour
         }
         else
         {
+            CurrentZhuoShaoCeng = 0;
             zhuoshao.gameObject.SetActive(false);
         }
 
-        if (zhuoShaoCurrentTime >= 1)
+        if (zhuoShaoCurrentTime >= GlobalPlayerAttribute.HuoDamageJianGe)
         {
             zhuoShaoCurrentTime = 0;
-            ShowHurtText(Mathf.RoundToInt(zhuoShaoDamage), false,YiChangState.ZhuoShao);
-            CurrentHp -= zhuoShaoDamage;
+            ShowHurtText(Mathf.RoundToInt(GlobalPlayerAttribute.HuoZhuoShaoDamage*CurrentZhuoShaoCeng), false,YiChangState.ZhuoShao);
+            CurrentHp -= GlobalPlayerAttribute.HuoZhuoShaoDamage*CurrentZhuoShaoCeng;
             //设置血条
             hpSlider.value = CurrentHp;
             hpSlider.maxValue = MaxHp;
@@ -942,11 +943,17 @@ public abstract class MonsterBase : MonoBehaviour
         if (IsDead) return;
         if(MonsterState== State.Die) return;
 
-
-        if (yuansutype == YuanSuType.Ice)
+        switch (yuansutype)
         {
-            JianSuTime = SkillJiaDian.S.IceJianSuTime;
+            case YuanSuType.Ice:
+                JianSuTime = GlobalPlayerAttribute.JianSuTime;
+                break;
+            case YuanSuType.Huo:
+                CurrentZhuoShaoCeng += 1;
+                CurrentZhuoShaoCeng=MathF.Min(CurrentZhuoShaoCeng,GlobalPlayerAttribute.HuoMaxCengShu);
+                break;
         }
+        
         float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
         finalDamage *= (1.0f+GlobalPlayerAttribute.FinalDamage);//最终伤害
         if (damageFrom == DamageFrom.Normal)
