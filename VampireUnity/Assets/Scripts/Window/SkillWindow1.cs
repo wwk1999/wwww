@@ -2844,6 +2844,7 @@ public class SkillWindow1 : MonoBehaviour
 
  private void OnEnable()
  {
+  skillCount.text = SkillJiaDian.S.CurrentSkillCount.ToString();
   PanelType = 1;
   ShowPanel();
  }

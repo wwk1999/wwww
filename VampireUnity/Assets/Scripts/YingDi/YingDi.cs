@@ -12,6 +12,7 @@ public enum JiaoHuType
     TieJiang,
     ChongWu,
     ShiZhuangDaShi,
+    ChuanSongMen,
 }
 public class YingDi : MonoBehaviour
 {
@@ -30,11 +31,15 @@ public class YingDi : MonoBehaviour
     public GameObject ChongWuShi;
     public GameObject ShiZhuangDaShi;
     public GameObject ShangRen;
+    public GameObject ChuanSongMen;
+
 
     public GameObject TieJiangJiaoHu;
     public GameObject ChongWuShiJiaoHu;
     public GameObject ShiZhuangDaShiJiaoHu;
     public GameObject ShangRenJiaoHu;
+    public GameObject ChuanSongMenJiaoHu;
+
     
     public SpriteRenderer shizhuang;
 
@@ -144,6 +149,10 @@ public class YingDi : MonoBehaviour
         }else if (Vector2.Distance(ChongWuShi.transform.position, player.transform.position) < 1)
         {
             jiaoHuType=JiaoHuType.ChongWu;
+        }
+        else if (Vector2.Distance(ChuanSongMen.transform.position, player.transform.position) < 1)
+        {
+            jiaoHuType=JiaoHuType.ChuanSongMen;
         }else if (Vector2.Distance(ShiZhuangDaShi.transform.position, player.transform.position) < 1)
         {
             jiaoHuType=JiaoHuType.ShiZhuangDaShi;
@@ -164,6 +173,8 @@ public class YingDi : MonoBehaviour
         ChongWuShiJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ChongWu);
         ShiZhuangDaShiJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ShiZhuangDaShi);
         ShangRenJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ShangRen);
+        ChuanSongMenJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ChuanSongMen);
+
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -180,6 +191,9 @@ public class YingDi : MonoBehaviour
                     break;
                 case  JiaoHuType.ChongWu:
                     WindowController.S.ChongWuWindow.gameObject.SetActive(true);
+                    break;
+                case  JiaoHuType.ChuanSongMen:
+                    WindowController.S.GameLevelWindow.SetActive(true);
                     break;
             }
         }

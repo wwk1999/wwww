@@ -20,6 +20,7 @@ public class RoleWindow1 : MonoBehaviour
 {
     public Button DebugChiBang;
     public SkeletonGraphic playerSkeleton;
+    private float lingun => GlobalPlayerAttribute.BloodEnergy;
     public Text yuanLinText;
     public Text yuanNengText;
     public Button weaponButton; // 武器按钮
@@ -152,7 +153,7 @@ public class RoleWindow1 : MonoBehaviour
 
     public void UpdateRoleWindow()
     {
-        yuanLinText.text = GlobalPlayerAttribute.BloodEnergy.ToString(); // 元灵数量text
+        yuanLinText.text = lingun.ToString(); // 元灵数量text
         levelText.text = GlobalPlayerAttribute.Level.ToString();
         expSlider.maxValue = GlobalPlayerAttribute.ExpDic[GlobalPlayerAttribute.Level];
         expSlider.value = GlobalPlayerAttribute.Exp;
