@@ -64,7 +64,7 @@ namespace Fight.Monster.秘境.雷兽
 
     IEnumerator Skill3(float delay,Vector2 spawnPos)
     {
-         GameController.S.CreateCircleAttack(spawnPos,1f);
+         GameController.S.CreateCircleAttack(spawnPos,0.8f);
          yield return new WaitForSeconds(delay);
          LeiShouSkill3 huoyan=QueueController.S.LeiShouSkill3Queue.Dequeue();
          huoyan.transform.position = spawnPos;
@@ -106,6 +106,11 @@ namespace Fight.Monster.秘境.雷兽
         if (trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill5")
         {
             IsSkill=false;
+        }
+
+        if (trackEntry.Animation.Name == MonsterSpineName.DieName)
+        {
+            gameObject.SetActive(false);
         }
 
         if (trackEntry.Animation.Name == "skill4")
@@ -166,29 +171,19 @@ namespace Fight.Monster.秘境.雷兽
 
     public override void Die()
     {
-
-        //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
-        StartCoroutine(RandomDelayDie(randomDelay));
-    }
-
-    private IEnumerator RandomDelayDie(int delay)
-    {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
-
-        AudioController.S.PlaySnotDie();
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.DieName, false);
+        rigidbody2D.velocity = Vector2.zero;
         GeneralDie();
         GetEx();
-        ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
         //CreateBloodEnergy();
         CreateEquip();
-        CreateProp();
         FightBGController.S.PlaySuccessAnim();
+        CreateProp();
+
         QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
+
+   
     IEnumerator DelayChuanSongMen()
     {
         yield return new WaitForSeconds(1f);

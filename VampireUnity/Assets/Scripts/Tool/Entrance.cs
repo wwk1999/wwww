@@ -2349,10 +2349,10 @@ public class Entrance : MonoBehaviour
             switch (index)
             {
                 case 1:
-                    transform.Find("FightBG(Clone)/MiJing1").gameObject.SetActive(true);
+                    QueueController.S.transform.Find("FightBG(Clone)/MiJing1").gameObject.SetActive(true);
                     break;
                 case 2:
-                    transform.Find("FightBG(Clone)/MiJing2").gameObject.SetActive(true);
+                    QueueController.S.transform.Find("FightBG(Clone)/MiJing2").gameObject.SetActive(true);
                     break;
             }
         }

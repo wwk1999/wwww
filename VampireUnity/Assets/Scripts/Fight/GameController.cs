@@ -1477,7 +1477,7 @@ public class GameController : XSingleton<GameController>
 
     public void CreateEliteMonster()
     {
-        if (GameOver)
+        if (GameOver||EliteMonster==MonsterTypeByName.None)
             return;
         Vector2 monsterRandomPoint = GetRandomPointOnCircle(10);
 

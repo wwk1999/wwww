@@ -57,29 +57,29 @@ public enum MonsterTypeByName
     // 小怪
     ChaiLangRen1,//1
     ChaiLangRen2,//1
-    ChaiLangRen3,
-    ChaiLangRen4,
+    ChaiLangRen3,//1
+    ChaiLangRen4,//1
     CiZhu,//1
     DaoCaoRen,//1
     DiJing2,//1
     DiJing3,//1
-    DiJingShouWei1,
-    DiJingShouWei2,
-    DiJingShouWei3,
-    HeiXiong,
-    JianChiZhu,
-    KuLou1,
-    KuLou2,
-    KuLou3,
-    KuLou4,
-    KuLou5,
-    KuLou6,
-    LuJiaoCiKe1,
-    LuJiaoCiKe2,
-    ShanZei3,
+    DiJingShouWei1,//1
+    DiJingShouWei2,//1
+    DiJingShouWei3,//1
+    HeiXiong,//1
+    JianChiZhu,//1
+    KuLou1,//1
+    KuLou2,//1
+    KuLou3,//1
+    KuLou4,//1
+    KuLou5,//1
+    KuLou6,//1
+    LuJiaoCiKe1,//1
+    LuJiaoCiKe2,//1
+    ShanZei3,//1
     ShiJiaChong,//1
-    ShiShiGui,
-    ShiXiangGui,
+    ShiShiGui,//1
+    ShiXiangGui,//1
     ShuangTouLong1,//1
     ShuangTouLong2,//1
     ShuangTouLong3,//1
@@ -91,35 +91,35 @@ public enum MonsterTypeByName
     YuRen1,//1
     YuRen2,//1
     YuRen3,//1
-    cat,
-    queen,
-    egg,
-    onyx,
-    xiaohuoling,
-    xiaoshuguai,
-    xiaozhizhu,
-    shanyang,
-    yanshu,
-    niguai1,
-    niguai2,
-    niguai3,
-    lang,
-    zibaolaoshu,
-    mogu,
-    she,
-    woniu,
-    xiezi1,
-    xiezi2,
-    yezhu,
-    xuelaoshu,
+    cat,//1
+    queen,//1
+    egg,//1
+    onyx,//1
+    xiaohuoling,//1
+    xiaoshuguai,//1
+    xiaozhizhu,//1
+    shanyang,//1
+    yanshu,//1
+    niguai1,//1
+    niguai2,//1
+    niguai3,//1
+    lang,//1
+    zibaolaoshu,//1
+    mogu,//1
+    she,//1
+    woniu,//1
+    xiezi1,//1
+    xiezi2,//1
+    yezhu,//1
+    xuelaoshu,//1
     //精英怪
-    zhumodaocaoren,
-    xiongbuou,
-    rongyanboss,
-    paopao,
-    banrenma1,
-    banrenma2,
-    banrenma3,
+    zhumodaocaoren,//1
+    xiongbuou,//1
+    rongyanboss,//1
+    paopao,//1
+    banrenma1,//1
+    banrenma2,//1
+    banrenma3,//1
     NiuTouRen1,//1
     NiuTouRen2,//1
     NiuTouRen3,//1
@@ -130,12 +130,12 @@ public enum MonsterTypeByName
     DaZongXiong,        // 1
     DiJingZhangLao,     // 1
     FengHeGuai,         // 1
-    KuangShiMuZhu,      // 1
-    LuJiaoDouShi,       // 1
-    RongYanGuai,        // 1
-    ShiFuBoss,          // 师傅BOSS
+    KuangShiMuZhu,      
+    LuJiaoDouShi,       
+    RongYanGuai,        
+    ShiFuBoss,          
     ShuangTouRen,       // 双头人
-    YeShouZhanShi,      // 野兽战士
+    YeShouZhanShi,      
     ZhiZhuNvWang,       // 蜘蛛女王
     
     //boss
@@ -143,20 +143,20 @@ public enum MonsterTypeByName
     WuYaoZhiWang2, 
     //异界怪物
     //小怪
-    DaLong,
-    Emo1,
-    Emo2,
-    Emo3,
-    HongLong1,
-    HongLong2,
-    HongLong3,
-    LanLong1,
-    LanLong2,
-    LanLong3,
+    DaLong,//1
+    Emo1,//1
+    Emo2,//1
+    Emo3,//1
+    HongLong1,//1
+    HongLong2,//1
+    HongLong3,//1
+    LanLong1,//1
+    LanLong2,//1
+    LanLong3,//1
     LvLang,
-    LvLong1,
-    LvLong2,
-    LvLong3,
+    LvLong1,//1
+    LvLong2,//1
+    LvLong3,//1
     
     //boss
     LeiShou,
@@ -648,26 +648,22 @@ public class LevelInfoConfig
             {12,new List<MonsterTypeByName>() { MonsterTypeByName.ShaChong ,MonsterTypeByName.ShaNiao,MonsterTypeByName.ShaXiYi,MonsterTypeByName.XianRenZhang,MonsterTypeByName.XieZi}},
             {15,new List<MonsterTypeByName>() { MonsterTypeByName.XueZhangLang ,MonsterTypeByName.XueQiE,MonsterTypeByName.YingShu,MonsterTypeByName.XueRen,MonsterTypeByName.XueRenBoss}},
             
-            {16,new List<MonsterTypeByName>() { MonsterTypeByName.XueZhangLang ,MonsterTypeByName.XueQiE,MonsterTypeByName.YingShu,MonsterTypeByName.XueRen,MonsterTypeByName.XueRenBoss}},
-            {17,new List<MonsterTypeByName>() { MonsterTypeByName.XueZhangLang ,MonsterTypeByName.XueQiE,MonsterTypeByName.YingShu,MonsterTypeByName.XueRen,MonsterTypeByName.XueRenBoss}},
-            {18,new List<MonsterTypeByName>() { MonsterTypeByName.XueZhangLang ,MonsterTypeByName.XueQiE,MonsterTypeByName.YingShu,MonsterTypeByName.XueRen,MonsterTypeByName.XueRenBoss}},
-            {19,new List<MonsterTypeByName>()},
-            {20,new List<MonsterTypeByName>()},
-            {21,new List<MonsterTypeByName>()},
-            {22,new List<MonsterTypeByName>()},
-            {23,new List<MonsterTypeByName>()},
-            {24,new List<MonsterTypeByName>()},
-            {25,new List<MonsterTypeByName>()},
-            {26,new List<MonsterTypeByName>()},
-            {27,new List<MonsterTypeByName>()},
-            {28,new List<MonsterTypeByName>()},
-            {29,new List<MonsterTypeByName>()},
-            {30,new List<MonsterTypeByName>()},
-            {31,new List<MonsterTypeByName>()},
-            {32,new List<MonsterTypeByName>()},
-            {33,new List<MonsterTypeByName>()},
-            {34,new List<MonsterTypeByName>()},
-            {35,new List<MonsterTypeByName>()},
+            {16,new List<MonsterTypeByName>() { MonsterTypeByName.DiJingShouWei1 ,MonsterTypeByName.JianChiZhu}},
+            {17,new List<MonsterTypeByName>() { MonsterTypeByName.DiJingShouWei2 ,MonsterTypeByName.LuJiaoCiKe1}},
+            {18,new List<MonsterTypeByName>() { MonsterTypeByName.DiJingShouWei3 ,MonsterTypeByName.LuJiaoCiKe2}},
+            {19,new List<MonsterTypeByName>(){ MonsterTypeByName.ShanZei3 ,MonsterTypeByName.ShiJiaChong}},
+            {20,new List<MonsterTypeByName>(){ MonsterTypeByName.ShuangTouLong1 ,MonsterTypeByName.xiaohuoling}},
+            {21,new List<MonsterTypeByName>(){ MonsterTypeByName.yanshu ,MonsterTypeByName.zibaolaoshu}},
+            {22,new List<MonsterTypeByName>(){ MonsterTypeByName.mogu ,MonsterTypeByName.woniu}},
+            {23,new List<MonsterTypeByName>(){ MonsterTypeByName.yezhu ,MonsterTypeByName.DaLong}},
+            {24,new List<MonsterTypeByName>(){ MonsterTypeByName.Emo1 ,MonsterTypeByName.HongLong1}},
+            {25,new List<MonsterTypeByName>(){ MonsterTypeByName.Emo2 ,MonsterTypeByName.HongLong2}},
+            {26,new List<MonsterTypeByName>(){ MonsterTypeByName.Emo3 ,MonsterTypeByName.HongLong3}},
+            {27,new List<MonsterTypeByName>(){ MonsterTypeByName.LanLong1 ,MonsterTypeByName.LvLong1}},
+            {28,new List<MonsterTypeByName>(){ MonsterTypeByName.LanLong2 ,MonsterTypeByName.LvLong2}},
+            {29,new List<MonsterTypeByName>(){ MonsterTypeByName.LanLong3 ,MonsterTypeByName.LvLong3}},
+            {30,new List<MonsterTypeByName>(){ MonsterTypeByName.LanLong1 ,MonsterTypeByName.xiaozhizhu}},
+           
             
             
             {201,new List<MonsterTypeByName>() { MonsterTypeByName.cat ,MonsterTypeByName.egg,MonsterTypeByName.paopao}},
@@ -704,7 +700,7 @@ public class LevelInfoConfig
         LevelMonsterCount[9] = 90;
         LevelMonsterCount[12] = 100;
         LevelMonsterCount[15] = 100;
-        LevelMonsterCount[16] = 110;
+        LevelMonsterCount[16] = 10;
         LevelMonsterCount[17] = 120;
         LevelMonsterCount[18] = 130;
         LevelMonsterCount[19] = 140;
