@@ -41,7 +41,7 @@ public class dijingshouwei3 : MonsterBase
         var randomSpeed = Random.Range(-0.1f, 0.1f);
         Speed += randomSpeed;
         MonsterSpineName.AttackName = "attack";
-        MonsterSpineName.HitName = "hurt";
+        MonsterSpineName.HitName = "hit";
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
     }

@@ -238,6 +238,7 @@ public abstract class MonsterBase : MonoBehaviour
     {
         SetBingKuai();
         SetOrder();
+        NormalYuanChenCurrentTime+=Time.deltaTime;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == MonsterSpineName.MoveName&&Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) <= size&&IsYuanChen)
         {
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.IdleName, false);

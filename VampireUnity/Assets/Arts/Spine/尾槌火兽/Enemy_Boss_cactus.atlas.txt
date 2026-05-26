@@ -1,0 +1,214 @@
+Enemy_Boss_cactus.png
+size:1024,1001
+filter:Linear,Linear
+pma:true
+beida
+bounds:223,951,59,48
+beiqi_r
+bounds:473,379,254,140
+houjiao_l
+bounds:544,757,207,87
+offsets:1,1,213,88
+houjiao_r
+bounds:222,777,203,86
+offsets:1,0,205,86
+qianjiao_r
+bounds:222,777,203,86
+offsets:1,0,205,86
+houtui_l1
+bounds:234,549,135,130
+offsets:1,2,137,133
+houtui_r2
+bounds:409,64,157,206
+offsets:2,0,188,207
+rotate:90
+jian_l
+bounds:2,263,153,160
+rotate:90
+jiao_l
+bounds:223,407,134,248
+offsets:0,1,136,250
+rotate:90
+jiao_r
+bounds:713,846,81,209
+offsets:2,0,83,210
+rotate:90
+qianjiao_l
+bounds:410,666,239,89
+offsets:0,7,240,96
+qiantui_l1
+bounds:828,598,123,111
+texiao/Vertigo/Vertigo_1_10
+bounds:770,929,168,70
+offsets:16,15,194,95
+texiao/Vertigo/Vertigo_1_11
+bounds:609,932,159,67
+offsets:25,14,194,95
+texiao/Vertigo/Vertigo_1_12
+bounds:441,933,166,66
+offsets:25,14,194,95
+texiao/Vertigo/Vertigo_1_13
+bounds:273,865,159,79
+offsets:25,7,194,95
+texiao/atk/px (1)
+bounds:125,875,146,74
+offsets:24,43,233,121
+texiao/atk/px (3)
+bounds:2,559,230,120
+offsets:0,0,233,121
+texiao/atk/px (5)
+bounds:371,543,232,121
+offsets:0,0,233,121
+texiao/atk/px (7)
+bounds:2,687,202,93
+offsets:13,25,233,121
+texiao/atk/px (9)
+bounds:206,681,202,94
+offsets:12,25,233,121
+texiao/atk/wu (3)
+bounds:611,848,100,82
+offsets:4,3,107,87
+texiao/atk/wu (4)
+bounds:2,804,106,86
+offsets:2,3,111,92
+texiao/atk/wu (5)
+bounds:110,782,110,91
+offsets:4,2,115,95
+texiao/atk/wu (6)
+bounds:753,750,113,94
+offsets:3,2,118,98
+texiao/atk/wu (7)
+bounds:427,764,115,93
+offsets:4,3,122,100
+texiao/atk/wu (8)
+bounds:868,711,116,95
+offsets:4,3,124,101
+texiao/chentu/chentu1
+bounds:284,946,155,53
+texiao/chentu/chentu2
+bounds:434,859,175,71
+texiao/chentu/chentu3
+bounds:651,654,175,94
+offsets:0,2,187,97
+texiao/chentu/chentu4
+bounds:2,892,121,75
+texiao/huo (1)
+bounds:605,521,219,131
+offsets:7,5,250,163
+texiao/huo (2)
+bounds:412,223,241,154
+offsets:0,3,250,163
+texiao/huo (4)
+bounds:2,102,244,155
+offsets:2,3,250,163
+texiao/huo (6)
+bounds:655,159,246,154
+offsets:4,5,250,163
+texiao/huo (7)
+bounds:617,2,248,155
+offsets:2,4,250,163
+texiao/huo (8)
+bounds:164,259,246,146
+offsets:3,6,250,163
+texiao/jineng/ccc
+bounds:2,974,68,25
+offsets:4,4,144,34
+texiao/jineng/d
+bounds:248,87,170,159
+offsets:21,9,214,182
+rotate:90
+texiao/jineng/d1
+bounds:134,957,42,42
+offsets:2,2,47,47
+texiao/jineng/d9
+bounds:178,956,43,43
+offsets:2,2,47,47
+texiao/yan_h
+bounds:72,969,60,30
+offsets:8,35,162,159
+weichui
+bounds:729,315,155,145
+offsets:0,1,156,146
+xiaba
+bounds:2,418,219,139
+offsets:1,1,221,140
+xuanyun
+bounds:924,808,104,98
+rotate:90
+yanbai
+bounds:940,914,70,85
+yanpi
+bounds:826,462,147,134
+offsets:0,3,147,137
+
+Enemy_Boss_cactus_2.png
+size:1024,914
+filter:Linear,Linear
+pma:true
+beibu
+bounds:2,353,454,253
+beiqi_l
+bounds:328,64,287,267
+rotate:90
+fubu
+bounds:2,608,505,304
+houtui_r
+bounds:597,2,182,214
+qiantui_r
+bounds:597,2,182,214
+qiantui_l2
+bounds:765,427,183,221
+offsets:0,1,184,223
+texiao/hhhhh (13)
+bounds:756,233,191,192
+offsets:8,11,205,207
+texiao/huo (3)
+bounds:597,218,243,157
+offsets:1,1,250,163
+rotate:90
+texiao/huo (5)
+bounds:866,666,246,156
+offsets:2,3,250,163
+rotate:90
+tou
+bounds:2,34,324,317
+tou_u
+bounds:509,650,355,262
+offsets:0,1,355,263
+weiba
+bounds:509,463,185,254
+rotate:90
+xiaba_u
+bounds:781,3,228,172
+rotate:90
+
+Enemy_Boss_cactus_3.png
+size:760,381
+filter:Linear,Linear
+pma:true
+texiao/hhhhh (1)
+bounds:572,184,186,195
+offsets:4,8,205,207
+texiao/hhhhh (11)
+bounds:196,192,187,188
+offsets:16,13,205,207
+rotate:90
+texiao/hhhhh (15)
+bounds:2,188,192,191
+offsets:3,11,205,207
+texiao/hhhhh (3)
+bounds:386,183,184,196
+offsets:3,8,205,207
+texiao/hhhhh (5)
+bounds:196,2,188,171
+offsets:1,3,205,207
+rotate:90
+texiao/hhhhh (7)
+bounds:2,4,192,182
+offsets:4,3,205,207
+texiao/hhhhh (9)
+bounds:369,3,178,187
+offsets:20,8,205,207
+rotate:90
+xiaba_d
+bounds:558,7,196,174

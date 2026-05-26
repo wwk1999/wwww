@@ -45,6 +45,7 @@ public class kulou5 : MonsterBase
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
         MonsterSpineName.IdleName = "stand";
+        IsYuanChen = true;
 
     }
 

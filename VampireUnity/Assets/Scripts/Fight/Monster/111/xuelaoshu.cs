@@ -44,6 +44,7 @@ public class xuelaoshu : MonsterBase
         MonsterSpineName.MoveName = "run";
         MonsterSpineName.DieName = "die";
         MonsterSpineName.IdleName = "idle";
+        IsYuanChen = true;
 
     }
 

@@ -44,6 +44,7 @@ public class dijingzhanglao : MonsterBase
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
         MonsterSpineName.IdleName = "stand";
+        IsYuanChen = true;
 
     }
 

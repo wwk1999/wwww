@@ -44,6 +44,8 @@ public class banrenma3 : MonsterBase
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
         MonsterSpineName.IdleName = "stand";
+        IsYuanChen = true;
+
 
     }
 

@@ -15,10 +15,6 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public int ShadowCount = 5;
     [NonSerialized]public int CurrentDashCount = 0;
     //技能相关
-    [NonSerialized]public ParticleSystem NormalAttack;
-    [NonSerialized]public GameObject NormalAttack2;
-    [NonSerialized]public GameObject NormalAttack3;
-    [NonSerialized]public GameObject NormalAttack4;
     [NonSerialized]public GameObject IceExTrigger;
     [NonSerialized]public float IceBallSpeed = 5f;
     [NonSerialized]public GameObject IceBallGameObject;
@@ -420,38 +416,7 @@ public class SkillController : XSingleton<SkillController>
 
         return cd;
     }
-
-
-    void Start()
-    {
-        //技能相关
-        NormalAttack= QueueController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack").GetComponent<ParticleSystem>();
-        NormalAttack2= QueueController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack2").gameObject;
-        NormalAttack3= QueueController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack3").gameObject;
-        NormalAttack4= QueueController.S.transform.Find("Player(Clone)/Pistol(Clone)/NormalAttack4").gameObject;
-        ParticleSystem normalAttack21=NormalAttack2.transform.Find("NormalAttack-1").GetComponent<ParticleSystem>();
-        ParticleSystem normalAttack22=NormalAttack2.transform.Find("NormalAttack-2").GetComponent<ParticleSystem>();
-        ParticleSystem normalAttack31=NormalAttack3.transform.Find("NormalAttack-1").GetComponent<ParticleSystem>();
-        ParticleSystem normalAttack32=NormalAttack3.transform.Find("NormalAttack-2").GetComponent<ParticleSystem>();
-        ParticleSystem normalAttack33=NormalAttack3.transform.Find("NormalAttack-3").GetComponent<ParticleSystem>();
-        ParticleSystem normalAttack41=NormalAttack4.transform.Find("NormalAttack-1").GetComponent<ParticleSystem>();
-        ParticleSystem normalAttack42=NormalAttack4.transform.Find("NormalAttack-2").GetComponent<ParticleSystem>();
-        ParticleSystem normalAttack43=NormalAttack4.transform.Find("NormalAttack-3").GetComponent<ParticleSystem>();
-        ParticleSystem normalAttack44=NormalAttack4.transform.Find("NormalAttack-4").GetComponent<ParticleSystem>();
-
-        normalAttack21.Stop();
-        normalAttack22.Stop();
-        normalAttack31.Stop();
-        normalAttack32.Stop();
-        normalAttack33.Stop();
-        
-        normalAttack41.Stop();
-        normalAttack42.Stop();
-        normalAttack43.Stop();
-        normalAttack44.Stop();
-
-        NormalAttack.Stop();
-    }
+    
 
     IEnumerator HuoSkill3(int count,float redis,float time)
     {

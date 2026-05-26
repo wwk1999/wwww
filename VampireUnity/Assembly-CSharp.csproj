@@ -1040,6 +1040,7 @@
     <None Include="Assets\Arts\Spine\胜利失败\胜利失败UI\Fail\bui_10.json" />
     <None Include="Assets\Arts\Spine\技能\特效\钳子\2005_jijuxie_attack.json" />
     <None Include="Assets\Arts\Spine\小怪\天使\Hero_7_Ariel_TheFallenAngel.json" />
+    <None Include="Assets\Arts\Spine\尾槌火兽\Enemy_Boss_cactus.json" />
     <None Include="Assets\Arts\Spine\小怪2\yuren2\yuren2.json" />
     <None Include="Assets\Arts\Spine\宠物\Orange\黑暗orange1——前\mon_hell_fire_03.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
@@ -1138,6 +1139,7 @@
     <None Include="Assets\Arts\Spine\宠物\Orange\冰orange1——前\mon_icicle_dragon_02.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\黑暗peng2\2066_niumowang_1_skill.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\豹子boss输出\Enemy_Panther_warrior.json" />
+    <None Include="Assets\Arts\Spine\尾槌火兽\Enemy_Boss_cactus.atlas.txt" />
     <None Include="Assets\Arts\PngAnim\黑暗skiill2\action.json" />
     <None Include="Assets\Arts\Spine\技能\特效\对话\buff_chenmo.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\LanXiNiu\BOSSlong_shui.json" />
@@ -1235,6 +1237,7 @@
     <None Include="Assets\Arts\Spine\怪物\TreeMan1\Enemy_Boss_arbor.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.4\ValidationConfig.json" />
+    <None Include="Assets\Arts\Spine\树人boss\Enemy_Boss_arbor.json" />
     <None Include="Assets\Arts\Spine\小怪2\cizhu\cizhu.json" />
     <None Include="Assets\Arts\Spine\第四关\XianRenZhang\xianrenzhang.json" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationExceptions.json" />
@@ -1302,6 +1305,7 @@
     <None Include="Assets\Arts\Spine\宠物\White\电white1\Anima_Small_Skeleton_M5.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\绿魔法弹\2052_qingshe_attack.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\8\2017_liandaolang_effecta.atlas.txt" />
+    <None Include="Assets\Arts\Spine\大鳄鱼\Enemy_Boss_crocman_S.json" />
     <None Include="Assets\Arts\Spine\小怪\猫咪\Hero_1001_Pinky.json" />
     <None Include="Assets\Arts\Spine\技能\Lvquanbao\skeleton.json" />
     <None Include="Assets\Arts\Spine\翅膀\蓝4\eff_byhls_fbcb.json" />
@@ -1323,6 +1327,7 @@
     <None Include="Assets\Arts\PngAnim\火skill3\Spell_Active_DragonFire.atlas.txt" />
     <None Include="Assets\Arts\PngAnim\黑暗skill1\action.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Arts\Spine\树人boss\Enemy_Boss_arbor.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\1225\紫尾巴\skeleton.json" />
     <None Include="Assets\Arts\Spine\技能\特效\黑暗skill5\9002_shijianshuo_attack.json" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.14.0\ValidationExceptions.json" />
@@ -1487,6 +1492,7 @@
     <None Include="Assets\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\useSharedDesignerContext.txt" />
     <None Include="Assets\Arts\Spine\小怪3\自爆老鼠\Minion_101_BomberMice.atlas.txt" />
     <None Include="Assets\Arts\Spine\飞行道具\电球 1\电6.atlas.txt" />
+    <None Include="Assets\Arts\Spine\大鳄鱼\Enemy_Boss_crocman_S.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple3——前\mon_cosmo_02.json" />
     <None Include="Assets\Arts\Spine\技能\特效\绿魔法弹\2052_qingshe_attack.json" />
     <None Include="Assets\Arts\Shaders\Rage.shader" />

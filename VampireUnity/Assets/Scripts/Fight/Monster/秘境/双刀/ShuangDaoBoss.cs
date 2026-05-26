@@ -81,6 +81,10 @@ public class ShuangDaoBoss : MonsterBase
     
     public void Complete(TrackEntry trackEntry)
     {
+        if (trackEntry.Animation.Name == MonsterSpineName.DieName)
+        {
+            gameObject.SetActive(false);
+        }
         monsterSkeletonAnimation.timeScale = 1f;
         if (trackEntry.Animation.Name == "short jump")
         {
@@ -150,27 +154,15 @@ public class ShuangDaoBoss : MonsterBase
 
     public override void Die()
     {
-
-        //生成随机数
-        int randomDelay = UnityEngine.Random.Range(0, 10);
-        StartCoroutine(RandomDelayDie(randomDelay));
-    }
-
-    private IEnumerator RandomDelayDie(int delay)
-    {
-        for (int i = 0; i < delay; i++)
-        {
-            yield return null;
-        }
-
-        AudioController.S.PlaySnotDie();
+        monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.DieName, false);
+        rigidbody2D.velocity = Vector2.zero;
         GeneralDie();
         GetEx();
-        ObserverModuleManager.S.SendEvent(ConstKeys.BossEnergy, 1);
-       // CreateBloodEnergy();
+        //CreateBloodEnergy();
         CreateEquip();
-        CreateProp();
         FightBGController.S.PlaySuccessAnim();
+        CreateProp();
+
         QueueController.S.StartCoroutine(DelayChuanSongMen());
     }
 

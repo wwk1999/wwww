@@ -44,6 +44,7 @@ public class zhumodaocaoren : MonsterBase
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
         MonsterSpineName.IdleName = "stand";
+        IsYuanChen = true;
 
     }
 

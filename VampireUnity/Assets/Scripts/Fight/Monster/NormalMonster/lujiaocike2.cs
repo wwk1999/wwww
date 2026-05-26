@@ -42,7 +42,7 @@ public class lujiaocike2 : MonsterBase
         MonsterSpineName.MoveName = "walk";
         MonsterSpineName.DieName = "die";
         MonsterSpineName.IdleName = "stand";
-
+        IsYuanChen = true;
     }
 
     private void RandomDelayDie()
