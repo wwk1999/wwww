@@ -794,6 +794,7 @@ public abstract class MonsterBase : MonoBehaviour
     /// </summary>
     public void GeneralDie()
     {
+        IsDead = true;
         GameController.S.KillMonsterCount++;
         if (LevelInfoConfig.CurrentGameLevelType == LevelType.Weapon ||
             LevelInfoConfig.CurrentGameLevelType == LevelType.ChongWu ||

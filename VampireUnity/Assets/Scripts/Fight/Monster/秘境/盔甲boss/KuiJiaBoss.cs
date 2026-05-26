@@ -56,6 +56,10 @@ namespace Fight.Monster.秘境.盔甲boss
             {
                 gameObject.SetActive(false);
             }
+            if (IsDead)
+            {
+                return;
+            }
             monsterSkeletonAnimation.timeScale = 1f;
             if (trackEntry.Animation.Name == "skill1" || trackEntry.Animation.Name == "skill2" || trackEntry.Animation.Name == "skill3" )
             {

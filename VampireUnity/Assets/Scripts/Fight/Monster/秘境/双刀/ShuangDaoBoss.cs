@@ -85,6 +85,10 @@ public class ShuangDaoBoss : MonsterBase
         {
             gameObject.SetActive(false);
         }
+        if (IsDead)
+        {
+            return;
+        }
         monsterSkeletonAnimation.timeScale = 1f;
         if (trackEntry.Animation.Name == "short jump")
         {

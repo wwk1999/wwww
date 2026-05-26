@@ -9,7 +9,7 @@ public class HuoLangSkill2Anim : MonoBehaviour
 
    public void Hide()
    {
-      gameObject.SetActive(false);
+      HuoLangSkill2.gameObject.SetActive(false);
       QueueController.S.HuoLangSkill2Queue.Enqueue(HuoLangSkill2);
    }
    

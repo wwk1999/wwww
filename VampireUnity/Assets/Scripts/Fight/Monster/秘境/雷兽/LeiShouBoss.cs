@@ -103,14 +103,19 @@ namespace Fight.Monster.秘境.雷兽
      public void Complete(TrackEntry trackEntry)
     {
         monsterSkeletonAnimation.timeScale = 1f;
-        if (trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill5")
-        {
-            IsSkill=false;
-        }
-
+        
         if (trackEntry.Animation.Name == MonsterSpineName.DieName)
         {
             gameObject.SetActive(false);
+        }
+        if (IsDead)
+        {
+            return;
+        }
+        
+        if (trackEntry.Animation.Name == "skill1"||trackEntry.Animation.Name == "skill2"||trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill5")
+        {
+            IsSkill=false;
         }
 
         if (trackEntry.Animation.Name == "skill4")

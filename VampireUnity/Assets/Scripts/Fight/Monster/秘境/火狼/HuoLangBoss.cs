@@ -59,7 +59,7 @@ public class HuoLangBoss : MonsterBase
             Vector2 randomInCircle = UnityEngine.Random.insideUnitCircle * radius;
             Vector3 pos = new Vector3(center.x + randomInCircle.x, center.y + randomInCircle.y, 0f);
             skill2PosList.Add(pos);
-            GameController.S.CreateCircleAttack(pos,1f);
+            GameController.S.CreateCircleAttack(pos,0.8f);
         }
     }
 
@@ -80,6 +80,10 @@ public class HuoLangBoss : MonsterBase
         {
             gameObject.SetActive(false);
         }
+        if (IsDead)
+        {
+            return;
+        }
         monsterSkeletonAnimation.timeScale = 1f;
         if (trackEntry.Animation.Name == "skill1" || trackEntry.Animation.Name == "skill2" ||
             trackEntry.Animation.Name == "skill3")
@@ -93,7 +97,7 @@ public class HuoLangBoss : MonsterBase
             isSkill1 = false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
             skill1Pos = QueueController.S.gamePlayer.transform.position;
-            GameController.S.CreateCircleAttack(skill1Pos,1f);
+            GameController.S.CreateCircleAttack(skill1Pos,0.8f);
         }
         else if (isSkill2)
         {
@@ -237,7 +241,7 @@ public class HuoLangBoss : MonsterBase
             HuoLangSkill3Dan.damage = Attack;
             Vector2 dir=(QueueController.S.gamePlayer.transform.position-transform.position).normalized;
             HuoLangSkill3Dan.pos=QueueController.S.gamePlayer.transform.position;
-            GameController.S.CreateCircleAttack(QueueController.S.gamePlayer.transform.position,1f);
+            GameController.S.CreateCircleAttack(QueueController.S.gamePlayer.transform.position,0.8f);
         }
 
         if (e.Data.Name == "damage" && trackEntry.Animation.Name == "skill1")
