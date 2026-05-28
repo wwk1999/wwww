@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 844943264753352676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.36, y: 1.07, z: 0}
   m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1.4999999}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 902112202076551058}
   - component: {fileID: 8535758393270902404}
   - component: {fileID: 8094693762184262376}
-  - component: {fileID: 8168806933976419155}
+  - component: {fileID: 2913051910013181024}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -76,7 +76,7 @@ Animator:
   m_GameObject: {fileID: 5244918791200846464}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a2852632c8c337b4abe771ad1d5c35e0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 25887d59e213b3341a2c3faca835fe57, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -128,7 +128,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10000
-  m_Sprite: {fileID: 21300000, guid: b3614eafe83125543b31a816804c7565, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b1939f7339c66b49b597df9c7ab8f93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,7 +139,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8168806933976419155
+--- !u!114 &2913051910013181024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,10 +148,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5244918791200846464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3473ce6e62874a75867e856e498a7b2a, type: 3}
+  m_Script: {fileID: 11500000, guid: d280a499018b457f9bb209c2fe2fa66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HuoShouBaoZha: {fileID: 4723994546557056260}
+  HuoShouDiPen: {fileID: -2741320037971504172}
   Collider: {fileID: 4516883547724265816}
 --- !u!1 &8202446736027589672
 GameObject:
@@ -163,9 +163,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8843518571598769892}
   - component: {fileID: 4516883547724265816}
-  - component: {fileID: 4723994546557056260}
+  - component: {fileID: -2741320037971504172}
   m_Layer: 11
-  m_Name: HuoShouBaoZha
+  m_Name: HuoShouDiPen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7610610123266688519}
@@ -219,10 +219,10 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.030711293, y: -0.17808616}
+  m_Offset: {x: -0.035767853, y: -0.07419586}
   serializedVersion: 2
-  m_Radius: 3.419913
---- !u!114 &4723994546557056260
+  m_Radius: 2.9870844
+--- !u!114 &-2741320037971504172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8202446736027589672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91a4a3a77fa9c22409711f65c2b6d553, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d4358f754fb6e04f9c2196aae8b9fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8535758393270902404}

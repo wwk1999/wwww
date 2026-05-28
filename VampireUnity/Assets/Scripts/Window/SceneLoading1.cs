@@ -83,7 +83,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LeiShouSkill3>(),
                             QueueController.S.transform);
                     Monster1.gameObject.SetActive(false);
-                    QueueController.S.LeiShouSkill3Queue.Enqueue(Monster1.GetComponent<LeiShouSkill3>());
+                    QueueController.S.LeiShouSkill3Queue.Enqueue(Monster1);
                     count++;
                     if (count % perFrame == 0)
                     {
@@ -105,7 +105,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<HeiXuanFen>(),
                             QueueController.S.transform);
                     Monster2.gameObject.SetActive(false);
-                    QueueController.S.HeiXuanFenQueue.Enqueue(Monster2.GetComponent<HeiXuanFen>());
+                    QueueController.S.HeiXuanFenQueue.Enqueue(Monster2);
                     count++;
                     if (count % perFrame == 0)
                     {
@@ -127,7 +127,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LvZhuiZong>(),
                             QueueController.S.transform);
                     Monster3.gameObject.SetActive(false);
-                    QueueController.S.LvZhuiZongQueue.Enqueue(Monster3.GetComponent<LvZhuiZong>());
+                    QueueController.S.LvZhuiZongQueue.Enqueue(Monster3);
                     count++;
                     if (count % perFrame == 0)
                     {
@@ -150,7 +150,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<LvXuanFen>(),
                             QueueController.S.transform);
                     Monster4.gameObject.SetActive(false);
-                    QueueController.S.LvXuanFenQueue.Enqueue(Monster4.GetComponent<LvXuanFen>());
+                    QueueController.S.LvXuanFenQueue.Enqueue(Monster4);
                     count++;
                     if (count % perFrame == 0)
                     {
@@ -174,7 +174,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<BaoZiSkill2>(),
                             QueueController.S.transform);
                     Monster5.gameObject.SetActive(false);
-                    QueueController.S.BaoZiSkill2Queue.Enqueue(Monster5.GetComponent<BaoZiSkill2>());
+                    QueueController.S.BaoZiSkill2Queue.Enqueue(Monster5);
                     count++;
                     if (count % perFrame == 0)
                     {
@@ -198,7 +198,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<HuoLangSkill2>(),
                             QueueController.S.transform);
                     Monster6.gameObject.SetActive(false);
-                    QueueController.S.HuoLangSkill2Queue.Enqueue(Monster6.GetComponent<HuoLangSkill2>());
+                    QueueController.S.HuoLangSkill2Queue.Enqueue(Monster6);
                     count++;
                     if (count % perFrame == 0)
                     {
@@ -222,7 +222,7 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<ShuangDaoSkill2>(),
                             QueueController.S.transform);
                     Monster7.gameObject.SetActive(false);
-                    QueueController.S.ShuangDaoSkill2Queue.Enqueue(Monster7.GetComponent<ShuangDaoSkill2>());
+                    QueueController.S.ShuangDaoSkill2Queue.Enqueue(Monster7);
                     count++;
                     if (count % perFrame == 0)
                     {
@@ -245,7 +245,73 @@ public class SceneLoading1 : MonoBehaviour
                                 .GetComponent<ShuangDaoSkill3>(),
                             QueueController.S.transform);
                     Monster8.gameObject.SetActive(false);
-                    QueueController.S.ShuangDaoSkill3Queue.Enqueue(Monster8.GetComponent<ShuangDaoSkill3>());
+                    QueueController.S.ShuangDaoSkill3Queue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+        }
+        
+        if (LevelInfoConfig.CurrentGameLevel == 21)
+        {
+            if (QueueController.S.HuoShouDiPenQueue.Count < 100)
+            {
+
+                for (int i = 0; i < 101; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoShou/HuoShouDiPen")
+                                .GetComponent<HuoShouDiPen>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.HuoShouDiPenQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+            
+            
+            if (QueueController.S.HuoShouDanQueue.Count < 5)
+            {
+
+                for (int i = 0; i < 5; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoShou/HuoShouDan")
+                                .GetComponent<HuoShouDan>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.HuoShouDanQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+            
+            
+            
+            if (QueueController.S.HuoShouBaoZhaQueue.Count < 5)
+            {
+
+                for (int i = 0; i < 5; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/HuoShou/HuoShouBaoZha")
+                                .GetComponent<HuoShouBaoZha>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.HuoShouBaoZhaQueue.Enqueue(Monster8);
                     count++;
                     if (count % perFrame == 0)
                     {

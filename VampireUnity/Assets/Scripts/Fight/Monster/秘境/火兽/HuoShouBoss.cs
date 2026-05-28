@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Spine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class HuoShouBoss : MonsterBase
 {
@@ -13,18 +14,19 @@ public class HuoShouBoss : MonsterBase
     private float skill1Time = 12;
     private float skill2Time = 15;
     private float skill3Time = 8;
-    private float skill4Time = 8;
+    private float skill4Time = 10;
 
     private float currentSkill1Time = 5;
-    private float currentSkill2Time = 5;
-    private float currentSkill3Time = 5;
-    private float currentSkill4Time = 5;
+    private float currentSkill2Time = 3;
+    private float currentSkill3Time = 0;
+    private float currentSkill4Time = 4;
 
     [NonSerialized]public bool IsCiTri=false;
     public Collider2D CiTri;
     
     private Vector2 Skill4Pos;
-
+    public Transform skill3Trans;
+    [NonSerialized]public Vector2 Skill3Pos;
     public void Awake()
     {
         MaxHp /= 100;
@@ -83,7 +85,7 @@ public class HuoShouBoss : MonsterBase
         {
             IsSkill = true;
             isSkill4 = false;
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.timeScale = 2f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill4", false);
             Skill4Pos=QueueController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(Skill4Pos,0.8f);
@@ -214,11 +216,49 @@ public class HuoShouBoss : MonsterBase
             CheckCollisionWithMonsters();
         }
 
-        if (e.Data.Name == "skill4_d1")
+        if (e.Data.Name == "skill4_1")
         {
-            StartCoroutine(JumpRoutine(1f, Skill4Pos));
+            StartCoroutine(JumpRoutine(0.8f, Skill4Pos));
         }
         
+        if (e.Data.Name == "skill3_1")
+        {
+            var huoshoudan = QueueController.S.HuoShouDanQueue.Dequeue();
+            huoshoudan.transform.position = skill3Trans.position;
+            Skill3Pos=QueueController.S.gamePlayer.transform.position;
+            GameController.S.CreateCircleAttack(Skill3Pos, 0.8f);
+            huoshoudan.pos = Skill3Pos;
+            huoshoudan.damage = Attack;
+            huoshoudan.gameObject.SetActive(true);
+        }
+
+        if (e.Data.Name == "draw" && trackEntry.Animation.Name == "skill2")
+        {
+            StartCoroutine(Skill2Coroutine(Vector2.zero, 10, 0.05f, 50));
+        }
+        
+    }
+    
+    private IEnumerator Skill2Coroutine(Vector2 pos, float dis, float time, int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            // 随机点：Random.insideUnitCircle 返回单位圆内随机点，乘以 dis 后移到指定半径范围
+            Vector2 randomOffset = Random.insideUnitCircle * dis;
+            Vector2 spawnPos = pos + randomOffset;
+
+            // 调用创建方法（假设 CreateCircleAttack 接受 Vector2 位置）
+            GameController.S.CreateCircleAttack(spawnPos,0.5f);
+            HuoShouDiPen huoyan=QueueController.S.HuoShouDiPenQueue.Dequeue();
+            huoyan.transform.position = spawnPos;
+            huoyan.damage = Attack;
+            huoyan.gameObject.SetActive(true);
+            // 等待下一个生成
+            if (time > 0f)
+                yield return new WaitForSeconds(time);
+            else
+                yield return null;
+        }
     }
 
 

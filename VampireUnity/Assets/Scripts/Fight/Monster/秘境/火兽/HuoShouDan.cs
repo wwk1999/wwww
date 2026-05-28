@@ -10,7 +10,8 @@ public class HuoShouDan : MonoBehaviour
     public Rigidbody2D rg;
     public Animator Animator;
     [NonSerialized] public float damage = 0;
-
+    [NonSerialized] public Vector2 pos;
+    public Transform trans;
     private void OnEnable()
     {
         CancelInvoke();
@@ -28,12 +29,23 @@ public class HuoShouDan : MonoBehaviour
         Animator.Play("NewSequenceAnim");
     }
 
+    private void Update()
+    {
+        if (Vector2.Distance(trans.position, pos) <= 0.2f)
+        {
+            HuoShouBaoZha HuoShouBaoZha = QueueController.S.HuoShouBaoZhaQueue.Dequeue();
+            HuoShouBaoZha.transform.position = pos;
+            HuoShouBaoZha.damage = damage;
+            HuoShouBaoZha.gameObject.SetActive(true);
+            EnQueue();
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             QueueController.S.gamePlayer.PlayerHurt(damage,true);
-            EnQueue();
         }
     }
 
