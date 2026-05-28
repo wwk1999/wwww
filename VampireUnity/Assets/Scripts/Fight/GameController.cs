@@ -1394,6 +1394,16 @@ public class GameController : XSingleton<GameController>
                     sk6.AnimationState.SetAnimation(0,"move",false);
                     QueueController.S.MonsterColliderDic.Add(DaEYuBoss.collider2D,DaEYuBoss);
                     break;
+                
+                
+                case MJLevel.Red3:
+                    ShuYaoBoss ShuYaoBoss = Instantiate(Resources.Load<ShuYaoBoss>("Prefabs/Monster/MJ/ShuYao/ShuYaoBoss"));
+                    ShuYaoBoss.gameObject.SetActive(true);
+                    ShuYaoBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk7 = ShuYaoBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk7.AnimationState.SetAnimation(0,"move",false);
+                    QueueController.S.MonsterColliderDic.Add(ShuYaoBoss.collider2D,ShuYaoBoss);
+                    break;
             }
         }
     }

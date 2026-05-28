@@ -166,6 +166,7 @@ public enum MonsterTypeByName
     ShuangDao,
     HuoShou,
     DaEYu,
+    ShuYao,
 }
 public class BaoShiDiaoLuo
 {

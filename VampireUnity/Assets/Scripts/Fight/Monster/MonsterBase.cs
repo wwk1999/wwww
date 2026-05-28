@@ -155,11 +155,12 @@ public abstract class MonsterBase : MonoBehaviour
     [NonSerialized]public bool isJianSu=false;
     [NonSerialized]public float JianSuTime=0;
 
-    public void ShotDanMu(Vector2 trans, Sprite sprite, float attack, Vector3 dir, bool isBoss)
+    public void ShotDanMu(Vector2 trans, Sprite sprite, float attack, Vector3 dir, bool isBoss,float scale=1)
     {
         DanMu danmu = QueueController.S.DanMuQueue.Dequeue();
         danmu.SetDanMu(sprite, attack, dir, isBoss);
         danmu.transform.position = trans;
+        danmu.transform.localScale = new Vector3(danmu.transform.localScale.x*scale, danmu.transform.localScale.y*scale, danmu.transform.localScale.z*scale);
         danmu.gameObject.SetActive(true);
     }
 

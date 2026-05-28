@@ -415,6 +415,30 @@ public class SceneLoading1 : MonoBehaviour
         }
 
 
+        if (LevelInfoConfig.CurrentGameLevel == 23)
+        {
+            if (QueueController.S.TreeManSkillQueue.Count < 50)
+            {
+
+                for (int i = 0; i < 50; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/Level1/TreeManSkill")
+                                .GetComponent<TreeManSkill>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.TreeManSkillQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+        }
+
+
         //实例化
 
 

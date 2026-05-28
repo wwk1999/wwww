@@ -482,6 +482,7 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HeiAnBaoZha\HeiAnBaoZhaNext.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenJian.cs" />
     <Compile Include="Assets\Scripts\Tool\UISmoothScaleEffect.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\树妖\CiTri1.cs" />
     <Compile Include="Assets\Scripts\Skill\IceSkill\IceSkill1.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\yanshu.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManSkillAnim.cs" />
@@ -607,6 +608,7 @@
     <Compile Include="Assets\Scripts\Equip\XueRen\XueRenCloak.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenBoss.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvZhuiZong.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\树妖\ShuYaoBoss.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalPlayerAttribute.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBallItem.cs" />
     <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill5.cs" />
@@ -661,6 +663,7 @@
     <Compile Include="Assets\Scripts\Skill\TwoNormalAttackTrigger.cs" />
     <Compile Include="Assets\Scripts\Config\PlayerInfoConfig.cs" />
     <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill3.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\树妖\CiTri2.cs" />
     <Compile Include="Assets\Scripts\Prop\ShenHuaCaiLiao\JuDaYaChi.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeRing.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\kulou6.cs" />

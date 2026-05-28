@@ -15,7 +15,7 @@ public class DanMu : MonoBehaviour
    private void OnEnable()
    {
       CancelInvoke();
-      Invoke(nameof(Hide),2f);
+      Invoke(nameof(Hide),5f);
    }
 
    public void Hide()

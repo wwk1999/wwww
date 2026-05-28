@@ -5,27 +5,30 @@ using Spine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class DaEYuBoss : MonsterBase
+public class ShuYaoBoss : MonsterBase
 {
-    public DaEYuBoss() : base(MonsterTypeByName.DaEYu){
+    public ShuYaoBoss() : base(MonsterTypeByName.ShuYao){
     }
 
     public Transform attackTrans;
-    private float skill1Time = 12;
+    private float skill1Time = 8;
     private float skill2Time = 20;
-    private float skill3Time = 8;
-    private float skill4Time = 8;
+    private float skill3Time = 12;
+    private float skill4Time = 15;
 
     private float currentSkill1Time = 5;
-    private float currentSkill2Time = 3;
-    private float currentSkill3Time = 0;
-    private float currentSkill4Time = 5;
-    
-    
-    private Vector2 Skill3Pos;
-    public Transform skill1Trans;
-    [NonSerialized]public Vector2 Skill1Pos;
-    public bool IsStand=false;
+    private float currentSkill2Time = 0;
+    private float currentSkill3Time = 5;
+    private float currentSkill4Time = 7;
+
+    [NonSerialized] public bool IsCiTri1=false;
+    [NonSerialized] public bool IsCiTri2=false;
+
+    public Collider2D CiTriCollider1;
+    public Collider2D CiTriCollider2;
+    [NonSerialized]public bool IsStand=false;
+    [NonSerialized]public HashSet<Vector2>Skill4Pos=new HashSet<Vector2>();
+
     public void Awake()
     {
         MaxHp /= 100;
@@ -41,6 +44,24 @@ public class DaEYuBoss : MonsterBase
         monsterSkeletonAnimation.AnimationState.Event += OnSpineEvent;
         monsterSkeletonAnimation.AnimationState.Complete += Complete;
     }
+
+   
+
+
+    public IEnumerator CreateSkill4Pos(int count, int dis)
+    {
+        Skill4Pos.Clear();
+        for (int i = 0; i < count; i++)
+        {
+            Vector2 randomOffset = Random.insideUnitCircle * dis;
+            Skill4Pos.Add(randomOffset);
+        }
+        yield return new  WaitForSeconds(1f);
+        foreach (var pos in Skill4Pos)
+        {
+            GameController.S.CreateCircleAttack(pos,0.7f);
+        }
+    }
     
    
     public void Complete(TrackEntry trackEntry)
@@ -49,13 +70,18 @@ public class DaEYuBoss : MonsterBase
         {
             gameObject.SetActive(false);
         }
+
+        if (trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill5")
+        {
+            IsStand=false;
+        }
         if (IsDead)
         {
             return;
         }
         monsterSkeletonAnimation.timeScale = 1f;
         if (trackEntry.Animation.Name == "skill1" || trackEntry.Animation.Name == "skill2" ||
-            trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4")
+            trackEntry.Animation.Name == "skill3"||trackEntry.Animation.Name == "skill4"||trackEntry.Animation.Name == "skill5")
         {
             IsSkill = false;
         }
@@ -64,7 +90,7 @@ public class DaEYuBoss : MonsterBase
         {
             IsSkill = true;
             isSkill1 = false;
-            monsterSkeletonAnimation.timeScale = 1.8f;
+            monsterSkeletonAnimation.timeScale = 1.4f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill1", false);
         }
         else if (isSkill2)
@@ -72,28 +98,29 @@ public class DaEYuBoss : MonsterBase
             IsSkill = true;
             isSkill2 = false;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill2", false);
-            monsterSkeletonAnimation.timeScale = 1.2f;
+            monsterSkeletonAnimation.timeScale = 1.5f;
         }
         else if (isSkill3)
         {
             IsSkill = true;
             isSkill3 = false;
             IsStand = true;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
-            monsterSkeletonAnimation.timeScale = 1.4f;
             rigidbody2D.velocity = Vector2.zero;
-            Skill3Pos=QueueController.S.gamePlayer.transform.position;
-            GameController.S.CreateCircleAttack(Skill3Pos,0.8f);
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill3", false);
+            monsterSkeletonAnimation.timeScale = 1.2f;
         }else if (isSkill4)
         {
             IsSkill = true;
             isSkill4 = false;
-            monsterSkeletonAnimation.timeScale = 1.3f;
-            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill4", false);
+            IsStand = true;
+            rigidbody2D.velocity = Vector2.zero;
+            StartCoroutine(CreateSkill4Pos(20,10));
+            monsterSkeletonAnimation.timeScale = 1.6f;
+            monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill5", false);
         }
         else if (isAttack)
         {
-            monsterSkeletonAnimation.timeScale = 1.5f;
+            monsterSkeletonAnimation.timeScale = 1.3f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, MonsterSpineName.AttackName, false);
         }
         else
@@ -155,32 +182,32 @@ public class DaEYuBoss : MonsterBase
         monsterSkeletonAnimation.AnimationState.Event -= OnSpineEvent;
     }
 
-    private IEnumerator JumpRoutine(float time, Vector2 target)
+    
+    public void CheckCollisionWithMonsters(Collider2D collider2D)
     {
-        Vector2 startPos = rigidbody2D.position;
-        Vector2 endPos = target;
+        // 检测所有重叠的碰撞体
+        List<Collider2D> results = new List<Collider2D>();
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.NoFilter();
+        filter.useTriggers = true;
 
-        float elapsed = 0f;
-        while (elapsed < time)
+        collider2D.OverlapCollider(filter, results);
+
+        // 找出所有怪物并处理
+        foreach (Collider2D col in results)
         {
-            elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / time);
+            if (col.gameObject == gameObject) continue;
 
-            // 线性插值移动刚体
-            Vector2 newPos = Vector2.Lerp(startPos, endPos, t);
-            rigidbody2D.MovePosition(newPos);
-
-            yield return null;
+            if (col.CompareTag("Player"))
+            {
+                QueueController.S.gamePlayer.PlayerHurt(Attack, true);
+            }
         }
-
-        // 确保最后到达精确位置
-        rigidbody2D.MovePosition(endPos);
-        IsSkill = false;
     }
 
     public void OnSpineEvent(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "draw" && trackEntry.Animation.Name == "attack1")
+        if (e.Data.Name == "damage" && trackEntry.Animation.Name == "attack1")
         {
             if (Vector2.Distance(attackTrans.position, QueueController.S.gamePlayer.transform.position) < size ||
                 Vector2.Distance(transform.position, QueueController.S.gamePlayer.transform.position) < 1.2f)
@@ -190,56 +217,67 @@ public class DaEYuBoss : MonsterBase
         }
 
         
-        if (e.Data.Name == "draw" && trackEntry.Animation.Name == "skill1")
+        if (e.Data.Name == "skill1_1" && trackEntry.Animation.Name == "skill1")
         {
-            var huoshoudan = QueueController.S.DaEYuDanQueue.Dequeue();
-            huoshoudan.transform.position = skill1Trans.position;
-            Skill1Pos=QueueController.S.gamePlayer.transform.position;
-            GameController.S.CreateCircleAttack(Skill1Pos, 1f);
-            huoshoudan.pos = Skill1Pos;
-            huoshoudan.damage = Attack;
-            huoshoudan.gameObject.SetActive(true);
-        }
-
-        if (e.Data.Name == "skill3_1")
-        {
-            IsStand=false;
-            StartCoroutine(JumpRoutine(0.8f, Skill3Pos));
+            CheckCollisionWithMonsters(CiTriCollider1);
         }
         
-        if (e.Data.Name == "attack"&& trackEntry.Animation.Name == "skill4")
+        if (e.Data.Name == "skill1_2" && trackEntry.Animation.Name == "skill1")
         {
-            var huoshoudan = QueueController.S.DaEYuDanXiaoQueue.Dequeue();
-            huoshoudan.transform.position = skill1Trans.position;
-            huoshoudan.damage = Attack;
-            huoshoudan.gameObject.SetActive(true);
+            CheckCollisionWithMonsters(CiTriCollider2);
         }
 
-        if (e.Data.Name == "skill2_2" && trackEntry.Animation.Name == "skill2")
+        if (e.Data.Name == "skill"&& trackEntry.Animation.Name == "skill5")
         {
-            Skill2(Vector2.zero, 10,  25);
+            StartCoroutine(Skill4(3));
+        }
+        
+        if (e.Data.Name == "skill3_1")
+        {
+            StartCoroutine(Skill3DanMu(50, 0.03f));
+        }
+
+        if (e.Data.Name == "damage" && trackEntry.Animation.Name == "skill2")
+        {
+            CurrentHp += MaxHp*0.15f;
+            CurrentHp=MathF.Min(CurrentHp, MaxHp);
+            hpSlider.maxValue = MaxHp;
+            hpSlider.value = CurrentHp;
         }
         
     }
-    
-    private void Skill2(Vector2 pos, float dis, int count)
+
+    public IEnumerator Skill4(int fream)
+    {
+        int count = 0;
+        foreach (var pos in Skill4Pos)
+        {
+            count++;
+            var item = QueueController.S.TreeManSkillQueue.Dequeue();
+            item.transform.position = pos;
+            item.damage = Attack;
+            item.gameObject.SetActive(true);
+            if (count >= fream)
+            {
+                count = 0;
+                yield return null;
+            }
+        }
+    }
+
+
+    public IEnumerator Skill3DanMu(int count, float time)
     {
         for (int i = 0; i < count; i++)
         {
-            // 随机点：Random.insideUnitCircle 返回单位圆内随机点，乘以 dis 后移到指定半径范围
-            Vector2 randomOffset = Random.insideUnitCircle * dis;
-            Vector2 spawnPos = pos + randomOffset;
+            // 生成 0 到 360 度的随机角度（弧度制）
+            float randomAngle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+            Vector2 randomDir = new Vector2(Mathf.Cos(randomAngle), Mathf.Sin(randomAngle));
 
-            // 调用创建方法（假设 CreateCircleAttack 接受 Vector2 位置）
-            GameController.S.CreateCircleAttack(spawnPos,0.5f);
-            DaEYuShuiPen huoyan=QueueController.S.DaEYuShuiPenQueue.Dequeue();
-            huoyan.transform.position = spawnPos;
-            huoyan.damage = Attack;
-            huoyan.gameObject.SetActive(true);
+            ShotDanMu(transform.position, ResourcesConfig.DanMu9, Attack, randomDir, true,0.9f);
+            yield return new WaitForSeconds(time);
         }
     }
-
-
     
 
     public void MonsterMove1()
@@ -302,7 +340,8 @@ public class DaEYuBoss : MonsterBase
 
     void Update()
     {
-        if (IsDead) return;
+        if (IsDead) 
+            return;
         base.Update();
         if (!IsSkill)
         {
@@ -313,7 +352,7 @@ public class DaEYuBoss : MonsterBase
 
         }
 
-        if (currentSkill1Time > skill1Time)
+        if (currentSkill1Time > skill1Time&&(IsCiTri1||IsCiTri2))
         {
             currentSkill1Time = 0;
             isSkill1 = true;
