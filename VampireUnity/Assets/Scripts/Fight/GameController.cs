@@ -1376,6 +1376,15 @@ public class GameController : XSingleton<GameController>
                     ShuangDaoBoss.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                     QueueController.S.MonsterColliderDic.Add(ShuangDaoBoss.collider2D,ShuangDaoBoss);
                     break;
+                
+                case MJLevel.Red1:
+                    HuoShouBoss HuoShouBoss = Instantiate(Resources.Load<HuoShouBoss>("Prefabs/Monster/MJ/HuoShou/HuoShouBoss"));
+                    HuoShouBoss.gameObject.SetActive(true);
+                    HuoShouBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk5 = HuoShouBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk5.AnimationState.SetAnimation(0,"move",false);
+                    QueueController.S.MonsterColliderDic.Add(HuoShouBoss.collider2D,HuoShouBoss);
+                    break;
             }
         }
     }

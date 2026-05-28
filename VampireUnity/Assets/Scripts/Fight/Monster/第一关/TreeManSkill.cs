@@ -8,7 +8,6 @@ public class TreeManSkill : MonoBehaviour
 {
     public Animator animator;
     public float damage;
-    private bool isDamaged = false;
     public SpriteRenderer spriteRenderer;
     
     private void OnEnable()

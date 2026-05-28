@@ -31,7 +31,7 @@ public class BeeBullet : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             QueueController.S.gamePlayer.PlayerHurt(damage,false);
-            gameObject.SetActive(false);
+            EnQueue();
         }
     }
 

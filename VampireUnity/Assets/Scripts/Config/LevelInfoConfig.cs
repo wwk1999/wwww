@@ -164,6 +164,7 @@ public enum MonsterTypeByName
     HuoLang,
     BaoZi,
     ShuangDao,
+    HuoShou,
 }
 public class BaoShiDiaoLuo
 {
