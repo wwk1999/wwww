@@ -27,6 +27,7 @@ public class HuoShouBoss : MonsterBase
     private Vector2 Skill4Pos;
     public Transform skill3Trans;
     [NonSerialized]public Vector2 Skill3Pos;
+    public bool IsStand=false;
     public void Awake()
     {
         MaxHp /= 100;
@@ -87,6 +88,8 @@ public class HuoShouBoss : MonsterBase
             isSkill4 = false;
             monsterSkeletonAnimation.timeScale = 2f;
             monsterSkeletonAnimation.AnimationState.SetAnimation(0, "skill4", false);
+            rigidbody2D.velocity = Vector2.zero;
+            IsStand = true;
             Skill4Pos=QueueController.S.gamePlayer.transform.position;
             GameController.S.CreateCircleAttack(Skill4Pos,0.8f);
         }
@@ -218,6 +221,7 @@ public class HuoShouBoss : MonsterBase
 
         if (e.Data.Name == "skill4_1")
         {
+            IsStand=false;
             StartCoroutine(JumpRoutine(0.8f, Skill4Pos));
         }
         
@@ -266,6 +270,10 @@ public class HuoShouBoss : MonsterBase
 
     public void MonsterMove1()
     {
+        if (IsStand)
+        {
+            return;
+        }
         Vector3 direction = QueueController.S.gamePlayer.transform.position - transform.position;
         if (monsterSkeletonAnimation.AnimationState.GetCurrent(0).Animation.Name == "move" || IsDash)
         {

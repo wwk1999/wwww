@@ -165,6 +165,7 @@ public enum MonsterTypeByName
     BaoZi,
     ShuangDao,
     HuoShou,
+    DaEYu,
 }
 public class BaoShiDiaoLuo
 {
@@ -708,9 +709,9 @@ public class LevelInfoConfig
         LevelMonsterCount[20] = 10;
         LevelMonsterCount[21] = 10;
         
-        LevelMonsterCount[22] = 170;
-        LevelMonsterCount[23] = 180;
-        LevelMonsterCount[24] = 190;
+        LevelMonsterCount[22] = 10;
+        LevelMonsterCount[23] = 10;
+        LevelMonsterCount[24] = 10;
         LevelMonsterCount[25] = 200;
         LevelMonsterCount[26] = 210;
         LevelMonsterCount[27] = 220;

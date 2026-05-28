@@ -320,7 +320,100 @@ public class SceneLoading1 : MonoBehaviour
                 }
             }
         }
-        
+
+
+
+
+
+        if (LevelInfoConfig.CurrentGameLevel == 22)
+        {
+            if (QueueController.S.DaEYuShuiPenQueue.Count < 100)
+            {
+
+                for (int i = 0; i < 101; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/DaEYu/DaEYuShuiPen")
+                                .GetComponent<DaEYuShuiPen>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.DaEYuShuiPenQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+            
+            
+            
+            if (QueueController.S.DaEYuDanXiaoQueue.Count < 10)
+            {
+
+                for (int i = 0; i < 10; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/DaEYu/DaEYuDanXiao")
+                                .GetComponent<DaEYuDanXiao>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.DaEYuDanXiaoQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+            
+            
+            
+            if (QueueController.S.DaEYuDanQueue.Count < 5)
+            {
+
+                for (int i = 0; i < 5; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/DaEYu/DaEYuDan")
+                                .GetComponent<DaEYuDan>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.DaEYuDanQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+            
+            
+            
+            if (QueueController.S.DaEYuBaoZhaQueue.Count < 5)
+            {
+
+                for (int i = 0; i < 5; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/DaEYu/DaEYuBaoZha")
+                                .GetComponent<DaEYuBaoZha>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.DaEYuBaoZhaQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+        }
+
 
         //实例化
 

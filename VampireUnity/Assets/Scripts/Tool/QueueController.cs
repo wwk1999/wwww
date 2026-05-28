@@ -209,6 +209,10 @@ public class QueueController : XSingleton<QueueController>
     [NonSerialized] public Queue<HuoShouDiPen> HuoShouDiPenQueue = new Queue<HuoShouDiPen>();
 
 
+    [NonSerialized] public Queue<DaEYuShuiPen> DaEYuShuiPenQueue = new Queue<DaEYuShuiPen>();
+    [NonSerialized] public Queue<DaEYuDanXiao> DaEYuDanXiaoQueue = new Queue<DaEYuDanXiao>();
+    [NonSerialized] public Queue<DaEYuDan> DaEYuDanQueue = new Queue<DaEYuDan>();
+    [NonSerialized] public Queue<DaEYuBaoZha> DaEYuBaoZhaQueue = new Queue<DaEYuBaoZha>();
 
 
     

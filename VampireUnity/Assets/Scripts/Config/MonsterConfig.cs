@@ -189,7 +189,7 @@ public class MonsterConfig
         { MonsterTypeByName.BaoZi, MonsterType.Boss },
         { MonsterTypeByName.ShuangDao, MonsterType.Boss },
         { MonsterTypeByName.HuoShou, MonsterType.Boss },
-
+        { MonsterTypeByName.DaEYu, MonsterType.Boss },
     };
     public static Dictionary<MonsterDiaoLuoType, MonsterInfo> MonsterInfoDic =
         new Dictionary<MonsterDiaoLuoType, MonsterInfo>()

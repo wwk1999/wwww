@@ -1385,6 +1385,15 @@ public class GameController : XSingleton<GameController>
                     sk5.AnimationState.SetAnimation(0,"move",false);
                     QueueController.S.MonsterColliderDic.Add(HuoShouBoss.collider2D,HuoShouBoss);
                     break;
+                
+                case MJLevel.Red2:
+                    DaEYuBoss DaEYuBoss = Instantiate(Resources.Load<DaEYuBoss>("Prefabs/Monster/MJ/DaEYu/DaEYuBoss"));
+                    DaEYuBoss.gameObject.SetActive(true);
+                    DaEYuBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk6 = DaEYuBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk6.AnimationState.SetAnimation(0,"move",false);
+                    QueueController.S.MonsterColliderDic.Add(DaEYuBoss.collider2D,DaEYuBoss);
+                    break;
             }
         }
     }
