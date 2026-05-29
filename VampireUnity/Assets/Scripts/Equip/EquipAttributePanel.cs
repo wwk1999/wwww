@@ -100,7 +100,7 @@ public class EquipAttributePanel : MonoBehaviour
         }
         else
         {
-            equipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+            equipName.text = EntryConfig.OrangeIdNameDic[equip.orangeid];
         }
         equipImage.sprite=ResourcesConfig.GetEquipSprite(equip);
         level.text = equip.EquipLevel.ToString();

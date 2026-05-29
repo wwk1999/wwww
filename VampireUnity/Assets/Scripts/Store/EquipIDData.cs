@@ -38,6 +38,7 @@ public class EquipIDData : XSingleton<EquipIDData>
             OrangeEntry1 = equip.OrangeEntry1,
             OrangeEntry2 = equip.OrangeEntry2,
             BaoShiDic = equip.BaoShiDic,
+            orangeid = equip.orangeid,
         };
         equipIds.Add(data.equipid,data);
     }

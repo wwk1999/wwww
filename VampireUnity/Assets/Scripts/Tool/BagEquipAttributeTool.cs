@@ -130,12 +130,12 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
         }
         else
         {
-            bagEquipAttributeInfo.equipName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+            bagEquipAttributeInfo.equipName.text = EntryConfig.OrangeIdNameDic[equipTable.orangeid];
         }
 
         if (bagEquipAttributeInfo.orangeEntryDesc != null)
         {
-            bagEquipAttributeInfo.orangeEntryDesc.text = EntryConfig.OrangeEntryAttributeDescDic[equipTable.OrangeEntry1];
+            bagEquipAttributeInfo.orangeEntryDesc.text = EntryConfig.OrangeIdDescDic[equipTable.orangeid];
         }
         bagEquipAttributeInfo.equipImage.sprite=ResourcesConfig.GetEquipSprite(equipTable);
         bagEquipAttributeInfo.level.text = equipTable.EquipLevel.ToString();
@@ -262,8 +262,12 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
                 break;
         }
 
-        EquipTable InstallTable = BagController.S.EquipIdList[InstallEquipId];
-        ShowEquipAttriute(InstallTable,true);
+        if (InstallEquipId != 0)
+        {
+            EquipTable InstallTable = BagController.S.EquipIdList[InstallEquipId];
+            ShowEquipAttriute(InstallTable,true);
+        }
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)

@@ -1599,7 +1599,7 @@ public class BagController : XSingleton<BagController>
         equipAttributePanel.grid = bagGrid.GetComponent<BagGrid>();
         if (equipAttributePanel.orangeEntryDesc != null)
         {
-            equipAttributePanel.orangeEntryDesc.text = EntryConfig.OrangeEntryAttributeDescDic[equipTable.OrangeEntry1];
+            equipAttributePanel.orangeEntryDesc.text = EntryConfig.OrangeIdDescDic[equipTable.orangeid];
         }
 
 

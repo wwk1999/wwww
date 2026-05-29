@@ -173,7 +173,7 @@ public class PlayerEquipAttribute :  MonoBehaviour, IPointerEnterHandler, IPoint
         }
         else
         {
-            bagEquipAttributeInfo.equipName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+            bagEquipAttributeInfo.equipName.text = EntryConfig.OrangeIdDescDic[equipTable.orangeid];
         }
         bagEquipAttributeInfo.equipImage.sprite=ResourcesConfig.GetEquipSprite(equipTable);
         bagEquipAttributeInfo.level.text = equipTable.EquipLevel.ToString();

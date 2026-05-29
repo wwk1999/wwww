@@ -1240,7 +1240,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    greenEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    greenEquipName.text = EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }
               
                 equipBg.sprite = ResourcesConfig.GreenBg;
@@ -1258,7 +1258,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    blueEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    blueEquipName.text = EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }
             
                 equipBg.sprite = ResourcesConfig.BlueBg;
@@ -1276,7 +1276,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    purpleEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    purpleEquipName.text = EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }
              
                 equipBg.sprite = ResourcesConfig.PurpleBg;
@@ -1294,7 +1294,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    orangeEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    orangeEquipName.text = EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }
              
                 equipBg.sprite = ResourcesConfig.OrangeBg;
@@ -1312,7 +1312,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    redEquipName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    redEquipName.text =EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }
              
                 equipBg.sprite = ResourcesConfig.RedBg;
@@ -1417,7 +1417,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    XiangQianGreenName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    XiangQianGreenName.text = EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }
                 XiangQianGreenQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.GreenQuality;
@@ -1433,7 +1433,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    XiangQianBlueName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    XiangQianBlueName.text = EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }                XiangQianBlueQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.BlueQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.BlueBg;
@@ -1447,7 +1447,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    XiangQianPurpleName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    XiangQianPurpleName.text = EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }                XiangQianPurpleQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.PurpleQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.PurpleBg;
@@ -1463,7 +1463,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    XiangQianOrangeName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    XiangQianOrangeName.text =EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }                XiangQianOrangeQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.OrangeQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.OrangeBg;
@@ -1478,7 +1478,7 @@ public class DuanZaoWindow : MonoBehaviour
                 }
                 else
                 {
-                    XiangQianRedName.text = EntryConfig.OrangeEntryNameDic[equip.OrangeEntry1];
+                    XiangQianRedName.text =EntryConfig.OrangeIdNameDic[equip.orangeid];
                 }                XiangQianRedQuality.text =
                     LanguageConfig.LanguageItems[PlayerData.S.langType].BaseLanguage.RedQuality;
                 XiangQianEquipBg.sprite = ResourcesConfig.RedBg;

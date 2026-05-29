@@ -60,7 +60,7 @@ public class ToastInfo : MonoBehaviour
                     }
                     else
                     {
-                        whiteName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                        whiteName.text = EntryConfig.OrangeIdNameDic[equipTable.orangeid];
                     }
 
                     break;
@@ -73,7 +73,7 @@ public class ToastInfo : MonoBehaviour
                     }
                     else
                     {
-                        greenName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                        greenName.text = EntryConfig.OrangeIdNameDic[equipTable.orangeid];
                     }
 
                     break;
@@ -86,7 +86,7 @@ public class ToastInfo : MonoBehaviour
                     }
                     else
                     {
-                        blueName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                        blueName.text = EntryConfig.OrangeIdNameDic[equipTable.orangeid];
                     }
 
                     break;
@@ -99,7 +99,7 @@ public class ToastInfo : MonoBehaviour
                     }
                     else
                     {
-                        purpleName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                        purpleName.text = EntryConfig.OrangeIdNameDic[equipTable.orangeid];
                     }
 
                     break;
@@ -112,7 +112,7 @@ public class ToastInfo : MonoBehaviour
                     }
                     else
                     {
-                        orangeName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                        orangeName.text = EntryConfig.OrangeIdNameDic[equipTable.orangeid];
                     }
 
                     break;
@@ -125,7 +125,7 @@ public class ToastInfo : MonoBehaviour
                     }
                     else
                     {
-                        redName.text = EntryConfig.OrangeEntryNameDic[equipTable.OrangeEntry1];
+                        redName.text = EntryConfig.OrangeIdNameDic[equipTable.orangeid];
                     }
 
                     break;

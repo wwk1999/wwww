@@ -74,89 +74,180 @@ public static Dictionary<DamageEntry, string> DamageEntryNameDic = new Dictionar
     { DamageEntry.DamageAddPercent, LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.DamageAddPercent+" :" },
     { DamageEntry.BloodSuck,LanguageConfig.LanguageItems[PlayerData.S.langType].EquipLanguage.BloodSuck+ " :" },
 };
-public static Dictionary<OrangeEntry, string> OrangeEntryNameDic = new Dictionary<OrangeEntry, string>()
+public static Dictionary<int, string> OrangeIdNameDic = new Dictionary<int, string>()
 {
-    // 防御
-    { OrangeEntry.FinalDamageReductionFixed, "不朽圣袍" },
-    { OrangeEntry.FinalDamageReductionPercent, "终焉壁垒" },
-    { OrangeEntry.AllReplyAddPercent, "涌泉圣衣" },
-    { OrangeEntry.AddHpForTime, "不息之冠" },
-    { OrangeEntry.AddDefenseForTime, "磐石心甲" },
-    { OrangeEntry.ReplyDeath, "不死羽衣" },
-    { OrangeEntry.DelayDamage, "时砂面甲" },
-    { OrangeEntry.HpReductionReplyAdd50, "背水战袍" },
-    { OrangeEntry.HpReductionAddDefense, "绝境铁盔" },
-
-    // 攻击
-    { OrangeEntry.FinalDamageAddPercent, "裁决吊坠" },
-    { OrangeEntry.KillNormal, "诛灭指环" },
-    { OrangeEntry.AddAttackForTime, "怒意魔戒" },
-    { OrangeEntry.NormalAddDamage, "凡骨逆鳞" },
-    { OrangeEntry.RecudeHpAddAttack, "血戮项链" },
-    { OrangeEntry.JianSuAddAttack, "霜噬战靴" },
-
-    // 普攻
-    { OrangeEntry.FanPuGuiZhen, "归真宝戒" },
-    { OrangeEntry.NoSkill, "禁法颈链" },
-    
-
-    // Dash
-    { OrangeEntry.DashCd, "瞬步战靴" },
-    { OrangeEntry.DashRange, "幻影胫甲" },
-
-    // 特殊
-    { OrangeEntry.MoveSpeedAdd, "追风便靴" },
-    { OrangeEntry.ExAdd, "贤者之靴" },
-    { OrangeEntry.ClothFortureAdd, "命运长袍" },
-    { OrangeEntry.ShoeFortureAdd, "幸运之靴" },
-    { OrangeEntry.CloakFortureAdd, "锦鲤披风" },
-    { OrangeEntry.NecklaceFortureAdd, "天佑项链" },
-    { OrangeEntry.RingFortureAdd, "探宝指环" },
-    { OrangeEntry.HelmetFortureAdd, "探知头盔" },
+    { 1, "不朽圣袍" },   // FinalDamageReductionFixed 衣:最终减伤300
+    { 2, "坚毅头冠" },   // FinalDamageReductionPercent 盔:最终减伤10%
+    { 3, "慈爱法衣" },   // AllReplyAddPercent 衣:治疗+20%
+    { 4, "生命礼赞" },   // AddHpForTime 盔:每5s +3%最大生命
+    { 5, "磐石铠甲" },   // AddDefenseForTime 衣:每5s +2%防御
+    { 6, "重生之靴" },   // ReplyDeath 鞋:免死一次
+    { 7, "缓痛之冠" },   // DelayDamage 盔:延迟伤害30%分摊3s
+    { 8, "血愈披风" },   // HpReductionReplyAdd50 衣:半血+30%回复
+    { 9, "危命护盔" },   // HpReductionAddDefense 盔:半血+15%免伤
+    { 10, "破军之履" },  // FinalDamageAddPercent 鞋:最终伤害+15%
+    { 11, "诛邪指环" },  // KillNormal 戒:5%秒杀小怪
+    { 12, "狂战戒律" },  // AddAttackForTime 戒:每5s +3%攻击
+    { 13, "血契之靴" },  // NormalAddDamage 鞋:-30%攻+50%血
+    { 14, "献祭步履" },  // RecudeHpAddAttack 鞋:-50%血+30%攻
+    { 15, "追猎之鞋" },  // JianSuAddAttack 鞋:对减速敌人+15%伤
+    { 16, "返璞指环" },  // FanPuGuiZhen 戒:白武+200%,绿+150%...
+    { 17, "禁咒魔戒" },  // NoSkill 戒:普攻+100%但禁用技能
+    { 18, "战法斗篷" },  // AddWeaponReduceSkill 披风:武器+50%,技能-50%
+    { 19, "疾影披风" },  // AddAttackSpeedEntry 披风:攻速+50%
+    { 20, "秘法披风" },  // AddSkillReduceWeapon 披风:技能+50%,武器-50%
+    { 21, "闪影之靴" },  // DashCd 鞋:冲刺CD-30%
+    { 22, "追风之履" },  // DashRange 鞋:冲刺距离+30%
+    { 23, "神行靴" },    // MoveSpeedAdd 鞋:移速+25%
+    { 24, "求知靴" },    // ExAdd 鞋:经验+25%
+    { 25, "贪欲法袍" },  // ClothFortureAdd 衣:掉落率+30%
+    { 26, "聚财之靴" },  // ShoeFortureAdd 鞋:掉落率+30%
+    { 27, "幸运斗篷" },  // CloakFortureAdd 披风:掉落率+30%
+    { 28, "命运项链" },  // NecklaceFortureAdd 项链:掉落率+30%
+    { 29, "财富指环" },  // RingFortureAdd 戒:掉落率+30%
+    { 30, "寻宝头盔" },  // HelmetFortureAdd 盔:掉落率+30%
+    { 31, "汲魂披风" },  // AddSoul 披风:灵魂+25%
+    { 32, "传说之证" },  // OrangeEquip 鞋:每传说+5%最终伤
+    { 33, "凡人之志" },  // NoOrangeEquip 鞋:每非传说+15%最终伤
+    { 34, "炎龙披肩" },  // HuoAdd 披风:火掌控+15%
+    { 35, "霜语披风" },  // IceAdd 披风:冰掌控+15%
+    { 36, "雷灵斗篷" },  // DianAdd 披风:雷掌控+15%
+    { 37, "暗影斗篷" },  // HeiAnAdd 披风:暗掌控+15%
+    { 38, "烈火之冠" },  // HuoDamageAdd 盔:火伤+15%
+    { 39, "寒冰面甲" },  // IceDamageAdd 盔:冰伤+15%
+    { 40, "雷霆头盔" },  // DianDamageAdd 盔:雷伤+15%
+    { 41, "暗夜之颅" },  // HeiAnDamageAdd 盔:暗伤+15%
+    { 42, "炎息项链" },  // HuoSkillCdAdd 项链:火技能CD-15%
+    { 43, "冰心吊坠" },  // IceSkillCdAdd 项链:冰技能CD-15%
+    { 44, "雷音项链" },  // DianSkillCdAdd 项链:雷技能CD-15%
+    { 45, "暗语项圈" },  // HeiAnSkillCdAdd 项链:暗技能CD-15%
+    { 46, "火龙指环" },  // HuoSkillDamageAdd 戒:火技能伤+15%
+    { 47, "冰霜之戒" },  // IceSkillDamageAdd 戒:冰技能伤+15%
+    { 48, "雷霆指环" },  // DianSkillDamageAdd 戒:雷技能伤+15%
+    { 49, "暗星戒指" },  // HeiAnSkillDamageAdd 戒:暗技能伤+15%
+    { 50, "焰刃法袍" },  // HuoWeapponDamageAdd 衣:火武器伤+15%
+    { 51, "冰刃圣衣" },  // IceWeapponDamageAdd 衣:冰武器伤+15%
+    { 52, "雷刃战袍" },  // DianWeapponDamageAdd 衣:雷武器伤+15%
+    { 53, "暗刃魔衣" },  // HeiAnWeapponDamageAdd 衣:暗武器伤+15%
+    { 54, "万象之靴" },  // AddAllYuanSu 鞋:全掌控+20%
+    { 55, "极冰之心" },  // IceMaster 项链:冰专精(全转冰)
+    { 56, "烈焰之心" },  // HuoMaster 项链:火专精
+    { 57, "雷霆之心" },  // DianMaster 项链:雷专精
+    { 58, "暗渊之心" },  // HeiAnMaster 项链:暗专精
+    { 59, "寒霜法衣" },  // IceSkill1 衣:冰技1范围伤CD
+    { 60, "冰旋披风" },  // IceSkill2 披风:冰技2转速伤CD
+    { 61, "凛冬之盔" },  // IceSkill3 盔:冰技3范围伤CD
+    { 62, "冰晶指环" },  // IceSkill4 戒:冰技4伤CD
+    { 63, "极寒项链" },  // IceSkill5 项链:冰技5+5冰晶
+    { 64, "炽焰法袍" },  // HuoSkill1 衣:火技1伤CD
+    { 65, "炎爆斗篷" },  // HuoSkill2 披风:火技2持续CD
+    { 66, "陨火头盔" },  // HuoSkill3 盔:火技3+2流星
+    { 67, "焚天指环" },  // HuoSkill4 戒:火技4范围伤CD
+    { 68, "流星项链" },  // HuoSkill5 项链:火技5+2陨石
+    { 69, "雷衣法袍" },  // DianSkill1 衣:雷技1范围伤CD
+    { 70, "雷暴斗篷" },  // DianSkill2 披风:雷技2持续CD
+    { 71, "雷霆之冠" },  // DianSkill3 盔:雷技3+5闪电
+    { 72, "电弧指环" },  // DianSkill4 戒:雷技4范围伤CD
+    { 73, "雷链项链" },  // DianSkill5 项链:雷技5范围伤CD
+    { 74, "暗影法袍" },  // HeiAnSkill1 衣:暗技1范围伤CD
+    { 75, "暗涌斗篷" },  // HeiAnSkill2 披风:暗技2持续CD
+    { 76, "幽暗面甲" },  // HeiAnSkill3 盔:暗技3范围伤CD
+    { 77, "黑涡指环" },  // HeiAnSkill4 戒:暗技4转速伤CD
+    { 78, "深渊项链" },  // HeiAnSkill5 项链:暗技5+2漩涡
 };
 
 
-public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new Dictionary<OrangeEntry, string>()
+public static Dictionary<int, string> OrangeIdDescDic
 {
-    // 防御
-    { OrangeEntry.FinalDamageReductionFixed, "最终伤害减少300" },
-    { OrangeEntry.FinalDamageReductionPercent, "最终伤害减少10%" },
-    { OrangeEntry.AllReplyAddPercent, "所有的治疗效果增加20%" },
-    { OrangeEntry.AddHpForTime, "战斗时每5s增加3%最大生命值，上限100%" },
-    { OrangeEntry.AddDefenseForTime, "战斗时每5s增加2%防御，最多叠加10层" },
-    { OrangeEntry.ReplyDeath, "免疫一次死亡,恢复到30%最大生命值" },
-    { OrangeEntry.DelayDamage, "将收到的伤害的30%存储起来在3s内缓慢施加" },
-    { OrangeEntry.HpReductionReplyAdd50, "血量减少到50%增加30%回复效果" },
-    { OrangeEntry.HpReductionAddDefense, "血量减少到50%增加15%免伤" },
+    get
+    {
+        var dic = new Dictionary<int, string>
+        {
+            { 1, "最终受到的伤害减少300点" },
+            { 2, "最终受到的伤害减少10%" },
+            { 3, "所有治疗效果增加20%" },
+            { 4, "战斗时每5秒增加3%最大生命值，最多增加100%" },
+            { 5, "战斗时每5秒增加2%防御，最多叠加10层" },
+            { 6, "免疫一次死亡，触发后回复30%最大生命值" },
+            { 7, "将受到的伤害的30%储存起来，在3秒内缓慢施加" },
+            { 8, "当生命值减少到50%时，增加30%的回复效果" },
+            { 9, "当生命值减少到50%时，增加15%的免伤" },
+            { 10, "最终造成的伤害增加15%" },
+            { 11, "有5%的几率秒杀普通怪物" },
+            { 12, "战斗时每5秒增加3%攻击力，最多叠加10层" },
+            { 13, "减少30%攻击力，增加50%生命值" },
+            { 14, "减少50%生命值，增加30%攻击力" },
+            { 15, "对被减速的敌人造成的伤害增加15%" },
+            { 16, "根据武器品质提升最终伤害：白色+200%，绿色+150%，蓝色+100%，紫色+50%" },
+            { 17, "普通攻击伤害增加100%，但无法使用技能" },
+            { 18, "武器伤害增加50%，技能伤害减少50%" },
+            { 19, "武器攻击速度增加50%" },
+            { 20, "技能伤害增加50%，武器伤害减少50%" },
+            { 21, "冲刺的基础冷却时间减少30%" },
+            { 22, "冲刺的距离增加30%" },
+            { 23, "移动速度增加25%" },
+            { 24, "获得的经验值增加25%" },
+            { 25, "装备掉落率增加30%" },
+            { 26, "装备掉落率增加30%" },
+            { 27, "装备掉落率增加30%" },
+            { 28, "装备掉落率增加30%" },
+            { 29, "装备掉落率增加30%" },
+            { 30, "装备掉落率增加30%" },
+            { 31, "获得的灵魂数量增加25%" },
+            { 32, "每装备一件传说装备，最终伤害增加5%" },
+            { 33, "每装备一件非传说装备，最终伤害增加15%" },
+            { 34, "火元素掌控增加15%" },
+            { 35, "冰元素掌控增加15%" },
+            { 36, "雷元素掌控增加15%" },
+            { 37, "暗元素掌控增加15%" },
+            { 38, "火元素伤害增加15%" },
+            { 39, "冰元素伤害增加15%" },
+            { 40, "雷元素伤害增加15%" },
+            { 41, "暗元素伤害增加15%" },
+            { 42, "火系技能的冷却时间减少15%" },
+            { 43, "冰系技能的冷却时间减少15%" },
+            { 44, "雷系技能的冷却时间减少15%" },
+            { 45, "暗系技能的冷却时间减少15%" },
+            { 46, "火系技能的伤害增加15%" },
+            { 47, "冰系技能的伤害增加15%" },
+            { 48, "雷系技能的伤害增加15%" },
+            { 49, "暗系技能的伤害增加15%" },
+            { 50, "火属性武器的伤害增加15%" },
+            { 51, "冰属性武器的伤害增加15%" },
+            { 52, "雷属性武器的伤害增加15%" },
+            { 53, "暗属性武器的伤害增加15%" },
+            { 54, "所有属性元素掌控增加20%" },
+            { 55, "将所有元素掌控的数值全部转化为冰元素掌控" },
+            { 56, "将所有元素掌控的数值全部转化为火元素掌控" },
+            { 57, "将所有元素掌控的数值全部转化为雷元素掌控" },
+            { 58, "将所有元素掌控的数值全部转化为暗元素掌控" },
+        };
 
-    // 攻击
-    { OrangeEntry.FinalDamageAddPercent, "最终伤害增加15%" },
-    { OrangeEntry.KillNormal, "5%概率秒杀小怪" },
-    { OrangeEntry.AddAttackForTime, "战斗中每5s增加3%攻击，最多叠加10层" },
-    { OrangeEntry.NormalAddDamage, "每穿戴一件传说以下品质装备增加最终伤害30%" },
-    { OrangeEntry.RecudeHpAddAttack, "减少50%hp增加30%attack" },
-    { OrangeEntry.JianSuAddAttack, "对被减速的敌人增加15%伤害" },
+        // 技能类描述动态获取技能名
+        dic.Add(59, $"{SkillConfig.SkillNameDic[SkillType.Ice1]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
+        dic.Add(60, $"{SkillConfig.SkillNameDic[SkillType.Ice2]}：转速增加25%，伤害增加15%，冷却时间减少15%");
+        dic.Add(61, $"{SkillConfig.SkillNameDic[SkillType.Ice3]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
+        dic.Add(62, $"{SkillConfig.SkillNameDic[SkillType.Ice4]}：伤害增加25%，冷却时间减少25%");
+        dic.Add(63, $"{SkillConfig.SkillNameDic[SkillType.Ice5]}：冰晶数量增加5个，伤害增加15%，冷却时间减少15%");
+        dic.Add(64, $"{SkillConfig.SkillNameDic[SkillType.Huo1]}：伤害增加25%，冷却时间减少25%");
+        dic.Add(65, $"{SkillConfig.SkillNameDic[SkillType.Huo2]}：持续时间增加25%，冷却时间减少25%");
+        dic.Add(66, $"{SkillConfig.SkillNameDic[SkillType.Huo3]}：火焰流星数量增加2个，伤害增加15%，冷却时间减少15%");
+        dic.Add(67, $"{SkillConfig.SkillNameDic[SkillType.Huo4]}：效果范围增加25%，伤害增加15%，冷却时间减少15%");
+        dic.Add(68, $"{SkillConfig.SkillNameDic[SkillType.Huo5]}：陨石数量增加2个，伤害增加15%，冷却时间减少15%");
+        dic.Add(69, $"{SkillConfig.SkillNameDic[SkillType.Dian1]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
+        dic.Add(70, $"{SkillConfig.SkillNameDic[SkillType.Dian2]}：持续时间增加25%，冷却时间减少25%");
+        dic.Add(71, $"{SkillConfig.SkillNameDic[SkillType.Dian3]}：闪电数量增加5个，伤害增加15%，冷却时间减少15%");
+        dic.Add(72, $"{SkillConfig.SkillNameDic[SkillType.Dian4]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
+        dic.Add(73, $"{SkillConfig.SkillNameDic[SkillType.Dian5]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
+        dic.Add(74, $"{SkillConfig.SkillNameDic[SkillType.HeiAn1]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
+        dic.Add(75, $"{SkillConfig.SkillNameDic[SkillType.HeiAn2]}：持续时间增加25%，冷却时间减少25%");
+        dic.Add(76, $"{SkillConfig.SkillNameDic[SkillType.HeiAn3]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
+        dic.Add(77, $"{SkillConfig.SkillNameDic[SkillType.HeiAn4]}：转速增加25%，伤害增加15%，冷却时间减少15%");
+        dic.Add(78, $"{SkillConfig.SkillNameDic[SkillType.HeiAn5]}：黑暗漩涡数量增加2个，伤害增加15%，冷却时间减少15%");
 
-    // 普攻
-    { OrangeEntry.FanPuGuiZhen, "装备白色武器最终伤害增加200%，绿色150%，蓝色100%，紫色50%" },
-    { OrangeEntry.NoSkill, "普通攻击伤害增加100%，但是不能使用技能" },
-    
-
-    // Dash
-    { OrangeEntry.DashCd, "Dash基础Cd减少30%" },
-    { OrangeEntry.DashRange, "Dash距离增加30%" },
-
-    // 特殊
-    { OrangeEntry.MoveSpeedAdd, "移动速度增加25%" },
-    { OrangeEntry.ExAdd, "经验获取增加20%" },
-    { OrangeEntry.ClothFortureAdd, "掉落率增加30%" },
-    { OrangeEntry.ShoeFortureAdd, "掉落率增加30%" },
-    { OrangeEntry.CloakFortureAdd, "掉落率增加30%" },
-    { OrangeEntry.NecklaceFortureAdd, "掉落率增加30%" },
-    { OrangeEntry.RingFortureAdd, "掉落率增加30%" },
-    { OrangeEntry.HelmetFortureAdd, "掉落率增加30%" },
-};
-
+        return dic;
+    }
+}
 
 
     public static List<DefenseEntry> DefenseEntryList = new List<DefenseEntry>()
