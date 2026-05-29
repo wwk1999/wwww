@@ -14,7 +14,6 @@ public class Skill1YiDianDouble :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "Skill1YiDianDouble";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill1YiDianDouble;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
 
         EquipAttributes.orangeid = 34;

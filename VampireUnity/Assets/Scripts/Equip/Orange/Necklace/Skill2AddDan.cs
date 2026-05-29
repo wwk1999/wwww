@@ -14,7 +14,6 @@ public class Skill2AddDan :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "Skill2AddDan";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill2AddDan;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Necklace;
 
         EquipAttributes.orangeid = 28;

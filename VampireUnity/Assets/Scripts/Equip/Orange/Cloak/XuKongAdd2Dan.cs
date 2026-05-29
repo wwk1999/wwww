@@ -14,7 +14,6 @@ public class XuKongAdd2Dan :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "XuKongAdd2Dan";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.XuKongAdd2Dan;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
 
         EquipAttributes.orangeid = 8;

@@ -223,6 +223,173 @@ public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new 
 
         //技能
     }
+    
+    
+    public static Dictionary<int, EntryConfig.OrangeEntry> OrangeIdEntryDic =
+    new Dictionary<int, EntryConfig.OrangeEntry>()
+    {
+        { 1, EntryConfig.OrangeEntry.FinalDamageReductionFixed },
+        { 2, EntryConfig.OrangeEntry.FinalDamageReductionPercent },
+        { 3, EntryConfig.OrangeEntry.AllReplyAddPercent },
+        { 4, EntryConfig.OrangeEntry.AddHpForTime },
+        { 5, EntryConfig.OrangeEntry.AddDefenseForTime },
+        { 6, EntryConfig.OrangeEntry.ReplyDeath },
+        { 7, EntryConfig.OrangeEntry.DelayDamage },
+        { 8, EntryConfig.OrangeEntry.HpReductionReplyAdd50 },
+        { 9, EntryConfig.OrangeEntry.HpReductionAddDefense },
+        { 10, EntryConfig.OrangeEntry.FinalDamageAddPercent },
+        { 11, EntryConfig.OrangeEntry.KillNormal },
+        { 12, EntryConfig.OrangeEntry.AddAttackForTime },
+        { 13, EntryConfig.OrangeEntry.NormalAddDamage },
+        { 14, EntryConfig.OrangeEntry.RecudeHpAddAttack },
+        { 15, EntryConfig.OrangeEntry.JianSuAddAttack },
+        { 16, EntryConfig.OrangeEntry.FanPuGuiZhen },
+        { 17, EntryConfig.OrangeEntry.NoSkill },
+        { 18, EntryConfig.OrangeEntry.AddWeaponReduceSkill },
+        { 19, EntryConfig.OrangeEntry.AddAttackSpeedEntry },
+        { 20, EntryConfig.OrangeEntry.AddSkillReduceWeapon },
+        { 21, EntryConfig.OrangeEntry.DashCd },
+        { 22, EntryConfig.OrangeEntry.DashRange },
+        { 23, EntryConfig.OrangeEntry.MoveSpeedAdd },
+        { 24, EntryConfig.OrangeEntry.ExAdd },
+        { 25, EntryConfig.OrangeEntry.ClothFortureAdd },
+        { 26, EntryConfig.OrangeEntry.ShoeFortureAdd },
+        { 27, EntryConfig.OrangeEntry.CloakFortureAdd },
+        { 28, EntryConfig.OrangeEntry.NecklaceFortureAdd },
+        { 29, EntryConfig.OrangeEntry.RingFortureAdd },
+        { 30, EntryConfig.OrangeEntry.HelmetFortureAdd },
+        { 31, EntryConfig.OrangeEntry.AddSoul },
+        { 32, EntryConfig.OrangeEntry.OrangeEquip },
+        { 33, EntryConfig.OrangeEntry.NoOrangeEquip },
+        { 34, EntryConfig.OrangeEntry.HuoAdd },
+        { 35, EntryConfig.OrangeEntry.IceAdd },
+        { 36, EntryConfig.OrangeEntry.DianAdd },
+        { 37, EntryConfig.OrangeEntry.HeiAnAdd },
+        { 38, EntryConfig.OrangeEntry.HuoDamageAdd },
+        { 39, EntryConfig.OrangeEntry.IceDamageAdd },
+        { 40, EntryConfig.OrangeEntry.DianDamageAdd },
+        { 41, EntryConfig.OrangeEntry.HeiAnDamageAdd },
+        { 42, EntryConfig.OrangeEntry.HuoSkillCdAdd },
+        { 43, EntryConfig.OrangeEntry.IceSkillCdAdd },
+        { 44, EntryConfig.OrangeEntry.DianSkillCdAdd },
+        { 45, EntryConfig.OrangeEntry.HeiAnSkillCdAdd },
+        { 46, EntryConfig.OrangeEntry.HuoSkillDamageAdd },
+        { 47, EntryConfig.OrangeEntry.IceSkillDamageAdd },
+        { 48, EntryConfig.OrangeEntry.DianSkillDamageAdd },
+        { 49, EntryConfig.OrangeEntry.HeiAnSkillDamageAdd },
+        { 50, EntryConfig.OrangeEntry.HuoWeapponDamageAdd },
+        { 51, EntryConfig.OrangeEntry.IceWeapponDamageAdd },
+        { 52, EntryConfig.OrangeEntry.DianWeapponDamageAdd },
+        { 53, EntryConfig.OrangeEntry.HeiAnWeapponDamageAdd },
+        { 54, EntryConfig.OrangeEntry.AddAllYuanSu },
+        { 55, EntryConfig.OrangeEntry.IceMaster },
+        { 56, EntryConfig.OrangeEntry.HuoMaster },
+        { 57, EntryConfig.OrangeEntry.DianMaster },
+        { 58, EntryConfig.OrangeEntry.HeiAnMaster },
+        { 59, EntryConfig.OrangeEntry.IceSkill1 },
+        { 60, EntryConfig.OrangeEntry.IceSkill2 },
+        { 61, EntryConfig.OrangeEntry.IceSkill3 },
+        { 62, EntryConfig.OrangeEntry.IceSkill4 },
+        { 63, EntryConfig.OrangeEntry.IceSkill5 },
+        { 64, EntryConfig.OrangeEntry.HuoSkill1 },
+        { 65, EntryConfig.OrangeEntry.HuoSkill2 },
+        { 66, EntryConfig.OrangeEntry.HuoSkill3 },
+        { 67, EntryConfig.OrangeEntry.HuoSkill4 },
+        { 68, EntryConfig.OrangeEntry.HuoSkill5 },
+        { 69, EntryConfig.OrangeEntry.DianSkill1 },
+        { 70, EntryConfig.OrangeEntry.DianSkill2 },
+        { 71, EntryConfig.OrangeEntry.DianSkill3 },
+        { 72, EntryConfig.OrangeEntry.DianSkill4 },
+        { 73, EntryConfig.OrangeEntry.DianSkill5 },
+        { 74, EntryConfig.OrangeEntry.HeiAnSkill1 },
+        { 75, EntryConfig.OrangeEntry.HeiAnSkill2 },
+        { 76, EntryConfig.OrangeEntry.HeiAnSkill3 },
+        { 77, EntryConfig.OrangeEntry.HeiAnSkill4 },
+        { 78, EntryConfig.OrangeEntry.HeiAnSkill5 },
+    };
+    
+    
+    public static Dictionary<int, PlayerEquipConfig.EquipType> OrangeIdEquipTypeDic = new Dictionary<int, PlayerEquipConfig.EquipType>()
+{
+    { 1, PlayerEquipConfig.EquipType.Cloth },      // FinalDamageReductionFixed
+    { 2, PlayerEquipConfig.EquipType.Helmet },     // FinalDamageReductionPercent
+    { 3, PlayerEquipConfig.EquipType.Cloth },      // AllReplyAddPercent
+    { 4, PlayerEquipConfig.EquipType.Helmet },     // AddHpForTime
+    { 5, PlayerEquipConfig.EquipType.Cloth },      // AddDefenseForTime
+    { 6, PlayerEquipConfig.EquipType.Shoe },       // ReplyDeath
+    { 7, PlayerEquipConfig.EquipType.Helmet },     // DelayDamage
+    { 8, PlayerEquipConfig.EquipType.Cloth },      // HpReductionReplyAdd50
+    { 9, PlayerEquipConfig.EquipType.Helmet },     // HpReductionAddDefense
+    { 10, PlayerEquipConfig.EquipType.Shoe },      // FinalDamageAddPercent
+    { 11, PlayerEquipConfig.EquipType.Ring },      // KillNormal
+    { 12, PlayerEquipConfig.EquipType.Ring },      // AddAttackForTime
+    { 13, PlayerEquipConfig.EquipType.Shoe },      // NormalAddDamage
+    { 14, PlayerEquipConfig.EquipType.Shoe },      // RecudeHpAddAttack
+    { 15, PlayerEquipConfig.EquipType.Shoe },      // JianSuAddAttack
+    { 16, PlayerEquipConfig.EquipType.Ring },      // FanPuGuiZhen
+    { 17, PlayerEquipConfig.EquipType.Ring },      // NoSkill
+    { 18, PlayerEquipConfig.EquipType.Cloak },     // AddWeaponReduceSkill
+    { 19, PlayerEquipConfig.EquipType.Cloak },     // AddAttackSpeedEntry
+    { 20, PlayerEquipConfig.EquipType.Cloak },     // AddSkillReduceWeapon
+    { 21, PlayerEquipConfig.EquipType.Shoe },      // DashCd
+    { 22, PlayerEquipConfig.EquipType.Shoe },      // DashRange
+    { 23, PlayerEquipConfig.EquipType.Shoe },      // MoveSpeedAdd
+    { 24, PlayerEquipConfig.EquipType.Shoe },      // ExAdd
+    { 25, PlayerEquipConfig.EquipType.Cloth },     // ClothFortureAdd
+    { 26, PlayerEquipConfig.EquipType.Shoe },      // ShoeFortureAdd
+    { 27, PlayerEquipConfig.EquipType.Cloak },     // CloakFortureAdd
+    { 28, PlayerEquipConfig.EquipType.Necklace },  // NecklaceFortureAdd
+    { 29, PlayerEquipConfig.EquipType.Ring },      // RingFortureAdd
+    { 30, PlayerEquipConfig.EquipType.Helmet },    // HelmetFortureAdd
+    { 31, PlayerEquipConfig.EquipType.Cloak },     // AddSoul
+    { 32, PlayerEquipConfig.EquipType.Shoe },      // OrangePlayerEquipConfig.Equip
+    { 33, PlayerEquipConfig.EquipType.Shoe },      // NoOrangePlayerEquipConfig.Equip
+    { 34, PlayerEquipConfig.EquipType.Cloak },     // HuoAdd
+    { 35, PlayerEquipConfig.EquipType.Cloak },     // IceAdd
+    { 36, PlayerEquipConfig.EquipType.Cloak },     // DianAdd
+    { 37, PlayerEquipConfig.EquipType.Cloak },     // HeiAnAdd
+    { 38, PlayerEquipConfig.EquipType.Helmet },    // HuoDamageAdd
+    { 39, PlayerEquipConfig.EquipType.Helmet },    // IceDamageAdd
+    { 40, PlayerEquipConfig.EquipType.Helmet },    // DianDamageAdd
+    { 41, PlayerEquipConfig.EquipType.Helmet },    // HeiAnDamageAdd
+    { 42, PlayerEquipConfig.EquipType.Necklace },  // HuoSkillCdAdd
+    { 43, PlayerEquipConfig.EquipType.Necklace },  // IceSkillCdAdd
+    { 44, PlayerEquipConfig.EquipType.Necklace },  // DianSkillCdAdd
+    { 45, PlayerEquipConfig.EquipType.Necklace },  // HeiAnSkillCdAdd
+    { 46, PlayerEquipConfig.EquipType.Ring },      // HuoSkillDamageAdd
+    { 47, PlayerEquipConfig.EquipType.Ring },      // IceSkillDamageAdd
+    { 48, PlayerEquipConfig.EquipType.Ring },      // DianSkillDamageAdd
+    { 49, PlayerEquipConfig.EquipType.Ring },      // HeiAnSkillDamageAdd
+    { 50, PlayerEquipConfig.EquipType.Cloth },     // HuoWeapponDamageAdd
+    { 51, PlayerEquipConfig.EquipType.Cloth },     // IceWeapponDamageAdd
+    { 52, PlayerEquipConfig.EquipType.Cloth },     // DianWeapponDamageAdd
+    { 53, PlayerEquipConfig.EquipType.Cloth },     // HeiAnWeapponDamageAdd
+    { 54, PlayerEquipConfig.EquipType.Shoe },      // AddAllYuanSu
+    { 55, PlayerEquipConfig.EquipType.Necklace },  // IceMaster
+    { 56, PlayerEquipConfig.EquipType.Necklace },  // HuoMaster
+    { 57, PlayerEquipConfig.EquipType.Necklace },  // DianMaster
+    { 58, PlayerEquipConfig.EquipType.Necklace },  // HeiAnMaster
+    { 59, PlayerEquipConfig.EquipType.Cloth },     // IceSkill1
+    { 60, PlayerEquipConfig.EquipType.Cloak },     // IceSkill2
+    { 61, PlayerEquipConfig.EquipType.Helmet },    // IceSkill3
+    { 62, PlayerEquipConfig.EquipType.Ring },      // IceSkill4
+    { 63, PlayerEquipConfig.EquipType.Necklace },  // IceSkill5
+    { 64, PlayerEquipConfig.EquipType.Cloth },     // HuoSkill1
+    { 65, PlayerEquipConfig.EquipType.Cloak },     // HuoSkill2
+    { 66, PlayerEquipConfig.EquipType.Helmet },    // HuoSkill3
+    { 67, PlayerEquipConfig.EquipType.Ring },      // HuoSkill4
+    { 68, PlayerEquipConfig.EquipType.Necklace },  // HuoSkill5
+    { 69, PlayerEquipConfig.EquipType.Cloth },     // DianSkill1
+    { 70, PlayerEquipConfig.EquipType.Cloak },     // DianSkill2
+    { 71, PlayerEquipConfig.EquipType.Helmet },    // DianSkill3
+    { 72, PlayerEquipConfig.EquipType.Ring },      // DianSkill4
+    { 73, PlayerEquipConfig.EquipType.Necklace },  // DianSkill5
+    { 74, PlayerEquipConfig.EquipType.Cloth },     // HeiAnSkill1
+    { 75, PlayerEquipConfig.EquipType.Cloak },     // HeiAnSkill2
+    { 76, PlayerEquipConfig.EquipType.Helmet },    // HeiAnSkill3
+    { 77, PlayerEquipConfig.EquipType.Ring },      // HeiAnSkill4
+    { 78, PlayerEquipConfig.EquipType.Necklace },  // HeiAnSkill5
+};
 
     public enum OrangeEntry
     {
@@ -248,7 +415,7 @@ public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new 
         FanPuGuiZhen,//装备白色武器最终伤害增加200%，绿色武器最终伤害增加150%，蓝色100%，紫色50%    ring
         NoSkill,//普通攻击伤害增加100%，但是不能使用技能（技能伤害）          Ring
         AddWeaponReduceSkill,//增加50%武器伤害，减少50%技能伤害           Cloak
-        AddAttackSpeed,//增加武器攻击速度50%                             Cloak
+        AddAttackSpeedEntry,//增加武器攻击速度50%                             Cloak
         AddSkillReduceWeapon,//增加50%技能伤害，减少50%武器伤害           Cloak
 
         //Dash

@@ -14,7 +14,6 @@ public class BuWangChuXin :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "BuWangChuXin";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.BuWangChuXin;
         EquipAttributes.orangeid = 1;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
         //暂时写死

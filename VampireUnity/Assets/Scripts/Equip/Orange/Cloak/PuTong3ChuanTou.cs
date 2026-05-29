@@ -14,7 +14,6 @@ public class PuTong3ChuanTou :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "PuTong3ChuanTou";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.PuTong3ChuanTou;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
 
         EquipAttributes.orangeid = 7;

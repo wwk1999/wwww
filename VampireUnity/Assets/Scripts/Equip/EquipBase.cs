@@ -71,12 +71,16 @@ public class EquipBase : BagObjectBase
    [NonSerialized]public EquipTable EquipAttributes; // 装备属性
     [NonSerialized]public float speed = 12f; // 装备跟随的速度
     [NonSerialized]public bool isPickUp = false; // 是否被拾取
-    [NonSerialized]public SpriteRenderer SpriteRenderer;
+    public SpriteRenderer SpriteRenderer;
     [NonSerialized]public SuitType suitType = SuitType.None; // 装备套装类型
     
     [NonSerialized]private Coroutine floatEffectCoroutine; // 添加协程引用
     [NonSerialized] private int KongCount = 0;
 
+    public int CreateRandomOrangeId()
+    {
+        return Random.Range(1, 79);
+    }
     public void SetKongCount()
     {
         int random =0;

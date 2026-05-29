@@ -14,7 +14,6 @@ public class LvQuanAddScale :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "LvQuanAddScale";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.LvQuanAddScale;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
 
         EquipAttributes.orangeid = 6;

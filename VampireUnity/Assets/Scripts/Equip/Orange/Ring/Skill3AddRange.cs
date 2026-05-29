@@ -14,7 +14,6 @@ public class Skill3AddRange :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "Skill3AddRange";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.Skill3AddRange;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Ring;
 
         EquipAttributes.orangeid = 36;

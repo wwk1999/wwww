@@ -14,7 +14,6 @@ public class HeiDongAddSpeed :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "HeiDongAddSpeed";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.HeiDongAddSpeed;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
 
         EquipAttributes.orangeid = 5;

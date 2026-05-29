@@ -1038,13 +1038,12 @@ public abstract class MonsterBase : MonoBehaviour
         if (info.orangeEquip)
         {
             float random = Random.Range(0, 100f);
-            if (random <= 0.2f)
+            if (random <= 100f)
             {
                 //生成装备
-                GameObject equip = GameController.S.GetOrangeEquip(GameController.S.GetRandomOrangeEquip());
-                EquipBase equipbase=equip.GetComponent<EquipBase>();
-                QueueController.S.EquipBaseSet.Add(equipbase);
-                equipbase.enabled = true;
+                EquipBase equip = QueueController.S.OrangeEquipQueue.Dequeue();
+                QueueController.S.EquipBaseSet.Add(equip);
+                equip.enabled = true;
                 equip.gameObject.SetActive(true);
                 //设置装备位置为怪物位置
                 equip.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);

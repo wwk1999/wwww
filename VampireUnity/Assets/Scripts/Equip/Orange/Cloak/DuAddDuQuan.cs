@@ -14,7 +14,6 @@ public class DuAddDuQuan :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "DuAddDuQuan";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.DuAddDuQuan;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
 
         EquipAttributes.orangeid = 3;

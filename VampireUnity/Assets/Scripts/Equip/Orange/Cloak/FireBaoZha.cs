@@ -14,7 +14,6 @@ public class FireBaoZha :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "FireBaoZha";
-        EquipAttributes.OrangeEntry1 = EntryConfig.OrangeEntry.FireBaoZha;
         EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloak;
 
         EquipAttributes.orangeid = 4;

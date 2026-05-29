@@ -420,50 +420,8 @@ public class QueueController : XSingleton<QueueController>
     [NonReorderable]public Queue<GameObject>OrangeShoeQueue = new Queue<GameObject>();
     
     //传说装备
-  
-    [NonReorderable]public Queue<GameObject>FinalDamageReductionFixedQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FinalDamageReductionPercentQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>AllReplyAddPercentQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>AddHpForTimeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>AddDefenseForTimeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ReplyDeathQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DelayDamageQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HpReductionReplyAdd50Queue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HpReductionAddDefenseQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FinalDamageAddPercentQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>KillNormalQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>AddAttackForTimeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>NormalAddDamageQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>RecudeHpAddAttackQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>JianSuAddAttackQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FanPuGuiZhenQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>NoSkillQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>BuWangChuXinQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HeiDongAddSpeedQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DuAddDuQuanQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>LvQuanAddScaleQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>XuKongAdd2DanQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>PuTong3ChuanTouQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>FireBaoZhaQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill1ReplaceNormalAttackQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill1YiDianDoubleQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill1AddRangeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill2AddDanQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill2RotateAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill2AddRangeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill3Bian3Queue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>Skill3AddRangeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DashCdQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>DashRangeQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>MoveSpeedAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ExAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ClothFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>ShoeFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>CloakFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>NecklaceFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>RingFortureAddQueue = new Queue<GameObject>();
-    [NonReorderable]public Queue<GameObject>HelmetFortureAddQueue = new Queue<GameObject>();
-
+    [NonSerialized]public Queue<EquipBase>OrangeEquipQueue = new Queue<EquipBase>();
+   
     [NonReorderable]public Queue<BaoShi>BaoShiQueue = new Queue<BaoShi>();
 
 

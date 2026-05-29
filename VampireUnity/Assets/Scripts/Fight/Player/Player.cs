@@ -758,11 +758,6 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButton(0))
         {
-            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
-            {
-                return;
-            }
-
             if (PlayerData.S.playerWeaponType==WeaponType.DianSanShe)
             {
                 DianSanShe.gameObject.SetActive(true);
