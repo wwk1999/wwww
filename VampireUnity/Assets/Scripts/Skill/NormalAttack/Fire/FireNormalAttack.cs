@@ -29,7 +29,7 @@ public class FireNormalAttack : MonoBehaviour
             firebaozha.SetActive(true);
             firebaozha.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.DianYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.DianYuanSuDamage,isCrit,DamageFrom.NormalAttack,YuanSuType.Huo);
             gameObject.SetActive(false);
             QueueController.S.FireQueue.Enqueue(gameObject);
         }

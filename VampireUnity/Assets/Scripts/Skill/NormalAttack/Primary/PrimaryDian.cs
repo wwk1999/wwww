@@ -33,7 +33,7 @@ public class PrimaryDian : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.NormalAttack,YuanSuType.Dian);
             gameObject.SetActive(false);
             QueueController.S.PrimaryDianQueue.Enqueue(this);
             Vector2 closestPoint = other.ClosestPoint(transform.position);

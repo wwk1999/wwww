@@ -21,7 +21,7 @@ public class IceExTrigger : MonoBehaviour
          MonsterBase monster = other.transform.parent.GetComponent<MonsterBase>();
          if (monster != null && !monster.IsDead)
          {
-            monster.Hurt(100,GameController.S.GetIsCrit(),DamageFrom.Skill3,YuanSuType.Dian);
+            monster.Hurt(100,GameController.S.GetIsCrit(),DamageFrom.Skill,YuanSuType.Dian);
          }
       }
    }

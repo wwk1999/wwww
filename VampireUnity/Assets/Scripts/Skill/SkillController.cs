@@ -52,6 +52,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Ice1];
         value*=(1.0f-SkillJiaDian.S.Ice1_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -60,6 +64,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Ice4];
         value*=(1.0f-SkillJiaDian.S.Ice4_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -68,6 +76,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Ice5];
         value*=(1.0f-SkillJiaDian.S.Ice5_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
 
@@ -77,6 +89,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Ice2];
         value*=(1.0f-SkillJiaDian.S.Ice2_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -85,6 +101,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Ice3];
         value*=(1.0f-SkillJiaDian.S.Ice3_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -94,6 +114,11 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Huo1];
         value*=(1.0f-SkillJiaDian.S.Huo1_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillCd);
+        
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -102,6 +127,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Huo2];
         value*=(1.0f-SkillJiaDian.S.Huo2_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -110,6 +139,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Huo3];
         value*=(1.0f-SkillJiaDian.S.Huo3_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -118,6 +151,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Huo4];
         value*=(1.0f-SkillJiaDian.S.Huo4_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
 
@@ -128,6 +165,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Huo5];
         value*=(1.0f-SkillJiaDian.S.Huo5_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
 
@@ -139,7 +180,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.HeiAn1];
         value*=(1.0f-SkillJiaDian.S.HeiAn1_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillCd);
-
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -148,7 +192,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.HeiAn2];
         value*=(1.0f-SkillJiaDian.S.HeiAn2_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillCd);
-
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -157,7 +204,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.HeiAn3];
         value*=(1.0f-SkillJiaDian.S.HeiAn3_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillCd);
-
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -166,7 +216,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.HeiAn4];
         value*=(1.0f-SkillJiaDian.S.HeiAn4_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillCd);
-
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
 
@@ -177,7 +230,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.HeiAn5];
         value*=(1.0f-SkillJiaDian.S.HeiAn5_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillCd);
-
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
 
@@ -188,7 +244,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Dian1];
         value*=(1.0f-SkillJiaDian.S.Dian1_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillCd);
-
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -197,6 +256,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Dian2];
         value*=(1.0f-SkillJiaDian.S.Dian2_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -205,6 +268,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Dian3];
         value*=(1.0f-SkillJiaDian.S.Dian3_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -214,6 +281,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Dian4];
         value*=(1.0f-SkillJiaDian.S.Dian4_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -223,6 +294,10 @@ public class SkillController : XSingleton<SkillController>
         float value = SkillConfig.SkillBaseTime[SkillType.Dian5];
         value*=(1.0f-SkillJiaDian.S.Dian5_1*5/100f);
         value *= (1.0f - GlobalPlayerAttribute.FinalChongWuAttribute.DianSkillCd);
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkillCdAdd))
+        {
+            value *= 0.8f;
+        }
         return value;
     }
     
@@ -992,6 +1067,11 @@ public class SkillController : XSingleton<SkillController>
     //释放技能
     public void ExcuteSkill(SkillType skillType)
     {
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NoSkill))
+        {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"当前不能释放技能");
+            return;
+        }
         switch (skillType)
         {
             case SkillType.Dash:

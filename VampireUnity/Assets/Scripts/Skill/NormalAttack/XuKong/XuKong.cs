@@ -38,7 +38,7 @@ public class XuKong : MonoBehaviour
             hit.SetActive(true);
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.DianYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.DianYuanSuDamage,isCrit,DamageFrom.NormalAttack,YuanSuType.Dian);
         }
     }
 }

@@ -503,65 +503,65 @@ public static Dictionary<int, string> OrangeIdDescDic
         RecudeHpAddAttack,//减少50%hp增加30%attack               Shoe    1111
         JianSuAddAttack,//对被减速的敌人增加15%伤害                 Shoe        1111
         //普通攻击
-        FanPuGuiZhen,//装备白色武器最终伤害增加200%，绿色武器最终伤害增加150%，蓝色100%，紫色50%    ring
-        NoSkill,//普通攻击伤害增加100%，但是不能使用技能（技能伤害）          Ring
-        AddWeaponReduceSkill,//增加50%武器伤害，减少50%技能伤害           Cloak
-        AddAttackSpeedEntry,//增加武器攻击速度50%                             Cloak
-        AddSkillReduceWeapon,//增加50%技能伤害，减少50%武器伤害           Cloak
+        FanPuGuiZhen,//装备非传说武器增加50%最终伤害                ring          1111    
+        NoSkill,//普通攻击伤害增加100%，但是不能使用技能（技能伤害）          Ring     11111
+        AddWeaponReduceSkill,//增加50%武器伤害，减少30%技能伤害           Cloak      111111
+        AddAttackSpeedEntry,//增加武器攻击速度30%                       Cloak      111111
+        AddSkillReduceWeapon,//增加50%技能伤害，减少30%武器伤害           Cloak      11111
 
         //Dash
-        DashCd,//Dash基础Cd减少30%                 shoe                                           1111
-        DashRange,//Dash距离增加30%                shoe                                           1111
+        DashCd,//Dash基础Cd减少30%                 shoe                           1111
+        DashRange,//Dash距离增加30%                shoe                          1111
         //特殊词条
-        MoveSpeedAdd,//移动速度增加25%              shoe                                           1111
-        ExAdd,//经验获取增加25%                     shoe                                           1111
-        ClothFortureAdd,//掉落率增加30%             cloth                                          1111
-        ShoeFortureAdd,//掉落率增加30%              shoe                                           1111
-        CloakFortureAdd,//掉落率增加30%             cloak                                          1111
-        NecklaceFortureAdd,//掉落率增加30%          necklace                                       1111
-        RingFortureAdd,//掉落率增加30%              ring                                           1111
-        HelmetFortureAdd,//掉落率增加30%            helmet                                         1111
-        AddSoul,//增加灵魂获取25%                    Cloak
-        OrangeEquip,//每装备一件传说装备增加5%最终伤害   Shoe
-        NoOrangeEquip,//每装备一件非传说装备增加15%最终伤害    Shoe
+        MoveSpeedAdd,//移动速度增加25%              shoe                          1111
+        ExAdd,//经验获取增加25%                     shoe                         1111
+        ClothFortureAdd,//掉落率增加30%             cloth                         1111
+        ShoeFortureAdd,//掉落率增加30%              shoe                         1111
+        CloakFortureAdd,//掉落率增加30%             cloak                        1111
+        NecklaceFortureAdd,//掉落率增加30%          necklace                     1111
+        RingFortureAdd,//掉落率增加30%              ring                        1111
+        HelmetFortureAdd,//掉落率增加30%            helmet                       1111
+        AddSoul,//增加灵魂获取25%                    Cloak                       1111
+        OrangeEquip,//每装备一件传说装备增加5%最终伤害   Shoe                        1111
+        NoOrangeEquip,//每装备一件非传说装备增加15%最终伤害    Shoe                  1111
         
         
         
         //新加45个
-        HuoAdd,//增加火元素掌控15%        Cloak
-        IceAdd,//增加火元素掌控15%        Cloak
-        DianAdd,//增加火元素掌控15%       Cloak
-        HeiAnAdd,//增加火元素掌控15%      Cloak
+        HuoAdd,//增加火元素掌控15%        Cloak     1111
+        IceAdd,//增加火元素掌控15%        Cloak     1111
+        DianAdd,//增加火元素掌控15%       Cloak     1111
+        HeiAnAdd,//增加火元素掌控15%      Cloak     1111
         
         
-        HuoDamageAdd,//增加火元素伤害15%        Helmet
-        IceDamageAdd,//增加火元素伤害15%        Helmet
-        DianDamageAdd,//增加火元素伤害15%       Helmet
-        HeiAnDamageAdd,//增加火元素伤害15%      Helmet
+        HuoDamageAdd,//增加火元素伤害15%        Helmet     1111
+        IceDamageAdd,//增加火元素伤害15%        Helmet     1111
+        DianDamageAdd,//增加火元素伤害15%       Helmet     1111
+        HeiAnDamageAdd,//增加火元素伤害15%      Helmet     1111
         
         
-        HuoSkillCdAdd,//火技能cd减少15%      Necklace
-        IceSkillCdAdd,//冰技能cd减少15%        Necklace
-        DianSkillCdAdd,//电技能cd减少15%       Necklace
-        HeiAnSkillCdAdd,//黑暗技能cd减少15%     Necklace
+        HuoSkillCdAdd,//火技能cd减少20%      Necklace     1111
+        IceSkillCdAdd,//冰技能cd减少20%        Necklace    1111
+        DianSkillCdAdd,//电技能cd减少20%       Necklace    1111
+        HeiAnSkillCdAdd,//黑暗技能cd减少20%     Necklace    1111
         
         
-        HuoSkillDamageAdd,//火技能cd减少15%      Ring
-        IceSkillDamageAdd,//冰技能cd减少15%        Ring
-        DianSkillDamageAdd,//电技能cd减少15%       Ring
-        HeiAnSkillDamageAdd,//黑暗技能cd减少15%     Ring
+        HuoSkillDamageAdd,//火技能伤害增加25%      Ring       1111
+        IceSkillDamageAdd,//冰技能伤害增加25%        Ring     1111
+        DianSkillDamageAdd,//电技能伤害增加25%       Ring     1111
+        HeiAnSkillDamageAdd,//黑暗技能伤害增加25%     Ring    1111
         
-        HuoWeapponDamageAdd,//火武器伤害增加15%      Cloth
-        IceWeapponDamageAdd,//冰武器伤害增加15%        Cloth
-        DianWeapponDamageAdd,//电武器伤害增加15%       Cloth
-        HeiAnWeapponDamageAdd,//黑暗武器伤害增加15%     Cloth
+        HuoWeapponDamageAdd,//火武器伤害增加25%      Cloth     1111
+        IceWeapponDamageAdd,//冰武器伤害增加25%        Cloth   1111
+        DianWeapponDamageAdd,//电武器伤害增加25%       Cloth   1111
+        HeiAnWeapponDamageAdd,//黑暗武器伤害增加25%     Cloth   1111
         
-        AddAllYuanSu,//增加所有属性元素掌控20%          Shoe
+        AddAllYuanSu,//增加所有属性元素掌控20%          Shoe      1111
         
-        IceMaster,//将所有的元素掌控增加到冰元素上        Necklace
-        HuoMaster,//将所有的元素掌控增加到冰元素上        Necklace
-        DianMaster,//将所有的元素掌控增加到冰元素上        Necklace
-        HeiAnMaster,//将所有的元素掌控增加到冰元素上       Necklace
+        IceMaster,//将所有的元素掌控增加到冰元素上        Necklace    1111
+        HuoMaster,//将所有的元素掌控增加到火元素上        Necklace    1111
+        DianMaster,//将所有的元素掌控增加到电元素上        Necklace    1111
+        HeiAnMaster,//将所有的元素掌控增加到黑暗元素上       Necklace   1111
         
         IceSkill1,//IceSkill1效果范围增加15%，伤害增加15%，cd减少15%       Cloth
         IceSkill2,//IceSkill2转速增加25%，伤害增加15%，cd减少15%          Cloak

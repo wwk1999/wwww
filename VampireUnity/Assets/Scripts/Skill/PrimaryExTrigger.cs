@@ -10,7 +10,7 @@ public class PrimaryExTrigger : MonoBehaviour
             var monster = other.GetComponent<MonsterBase>();
             if (monster != null)
             {
-                monster.Hurt(QueueController.S.GameAttack,GameController.S.GetIsCrit(),DamageFrom.Normal,YuanSuType.Dian);
+                monster.Hurt(QueueController.S.GameAttack,GameController.S.GetIsCrit(),DamageFrom.NormalAttack,YuanSuType.Dian);
             }
         }
     }

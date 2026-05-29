@@ -178,8 +178,60 @@ public class GlobalPlayerAttribute
    public static bool isIceBall = false;
    public static ExitType CurrentExitType = ExitType.FirstGame;
 
-   public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry = new HashSet<EntryConfig.OrangeEntry>();
+   public static HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry => GetPlayerOrangeEntry();
 
+
+   public static HashSet<EntryConfig.OrangeEntry> GetPlayerOrangeEntry()
+   {
+     HashSet<EntryConfig.OrangeEntry> PlayerOrangeEntry1 = new HashSet<EntryConfig.OrangeEntry>();
+     PlayerOrangeEntry1.Clear();
+     if (PlayerEquipConfig.CloakId != 0)
+     {
+         if (BagController.S.EquipIdList[PlayerEquipConfig.CloakId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+         {
+             PlayerOrangeEntry1.Add(BagController.S.EquipIdList[PlayerEquipConfig.CloakId].OrangeEntry1);
+         }
+     }
+       
+     if (PlayerEquipConfig.ClothId != 0)
+     {
+         if (BagController.S.EquipIdList[PlayerEquipConfig.ClothId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+         {
+             PlayerOrangeEntry1.Add(BagController.S.EquipIdList[PlayerEquipConfig.ClothId].OrangeEntry1);
+         }
+     }
+       
+     if (PlayerEquipConfig.RingId != 0)
+     {
+         if (BagController.S.EquipIdList[PlayerEquipConfig.RingId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+         {
+             PlayerOrangeEntry1.Add(BagController.S.EquipIdList[PlayerEquipConfig.RingId].OrangeEntry1);
+         }
+     }
+     if (PlayerEquipConfig.NecklaceId != 0)
+     {
+         if (BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+         {
+             PlayerOrangeEntry1.Add(BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].OrangeEntry1);
+         }
+     }
+     if (PlayerEquipConfig.ShoeId != 0)
+     {
+         if (BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+         {
+             PlayerOrangeEntry1.Add(BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].OrangeEntry1);
+         }
+     }
+     if (PlayerEquipConfig.HelmetId != 0)
+     {
+         if (BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
+         {
+             PlayerOrangeEntry1.Add(BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].OrangeEntry1);
+         }
+     }
+
+     return PlayerOrangeEntry1;
+   }
    public static float NormalAddDamage(float finalDamage)
    {
        if (PlayerEquipConfig.CloakId != 0)
@@ -238,14 +290,105 @@ public class GlobalPlayerAttribute
    public static float GetFinalDamage()
    {
        float finalDamage = 0;//最终伤害
+       int OrangeEquipCount = 0;
+       int NoOrangeEquipCount = 0;
+       if (PlayerData.S.clothid != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerData.S.clothid].Quality < 5)
+           {
+               NoOrangeEquipCount++;
+           }
+           else
+           {
+               OrangeEquipCount++;
+           }
+       }
+       
+       if (PlayerData.S.helmetid != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerData.S.helmetid].Quality < 5)
+           {
+               NoOrangeEquipCount++;
+           }
+           else
+           {
+               OrangeEquipCount++;
+           }
+       }
+       
+       if (PlayerData.S.shoeid != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerData.S.shoeid].Quality < 5)
+           {
+               NoOrangeEquipCount++;
+           }
+           else
+           {
+               OrangeEquipCount++;
+           }
+       }
+       
+       if (PlayerData.S.necklaceid != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerData.S.necklaceid].Quality < 5)
+           {
+               NoOrangeEquipCount++;
+           }
+           else
+           {
+               OrangeEquipCount++;
+           }
+       }
+       
+       if (PlayerData.S.ringid != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerData.S.ringid].Quality < 5)
+           {
+               NoOrangeEquipCount++;
+           }
+           else
+           {
+               OrangeEquipCount++;
+           }
+       }
+       
+       if (PlayerData.S.cloakid != 0)
+       {
+           if (BagController.S.EquipIdList[PlayerData.S.cloakid].Quality < 5)
+           {
+               NoOrangeEquipCount++;
+           }
+           else
+           {
+               OrangeEquipCount++;
+           }
+       }
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FinalDamageAddPercent))
        {
            finalDamage += 0.15f;
        }
 
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.FanPuGuiZhen))
+       {
+           if (WeaponConfig.WeaponQualityDic[PlayerData.S.playerWeaponType] < 5)
+           {
+               finalDamage += 0.5f;
+           }
+       }
+
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NormalAddDamage))
        {
            finalDamage=NormalAddDamage(finalDamage);
+       }
+       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.OrangeEquip))
+       {
+           finalDamage += OrangeEquipCount * 0.05f;
+       }
+       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NoOrangeEquip))
+       {
+           finalDamage += NoOrangeEquipCount * 0.15f;
        }
       
        finalDamage += AA5Count * 0.3f;
@@ -2611,56 +2754,6 @@ public class GlobalPlayerAttribute
        QueueController.S.GameCurrentHp=Math.Min(QueueController.S.GameCurrentHp,QueueController.S.GameMaxHp);
    }
    
-   
-   public static void RefreshOrangeEntry()
-   {
-       PlayerOrangeEntry.Clear();
-       if (PlayerEquipConfig.CloakId != 0)
-       {
-           if (BagController.S.EquipIdList[PlayerEquipConfig.CloakId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
-           {
-               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.CloakId].OrangeEntry1);
-           }
-       }
-       
-       if (PlayerEquipConfig.ClothId != 0)
-       {
-           if (BagController.S.EquipIdList[PlayerEquipConfig.ClothId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
-           {
-               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.ClothId].OrangeEntry1);
-           }
-       }
-       
-       if (PlayerEquipConfig.RingId != 0)
-       {
-           if (BagController.S.EquipIdList[PlayerEquipConfig.RingId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
-           {
-               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.RingId].OrangeEntry1);
-           }
-       }
-       if (PlayerEquipConfig.NecklaceId != 0)
-       {
-           if (BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
-           {
-               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.NecklaceId].OrangeEntry1);
-           }
-       }
-       if (PlayerEquipConfig.ShoeId != 0)
-       {
-           if (BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
-           {
-               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.ShoeId].OrangeEntry1);
-           }
-       }
-       if (PlayerEquipConfig.HelmetId != 0)
-       {
-           if (BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].OrangeEntry1 != EntryConfig.OrangeEntry.None)
-           {
-               PlayerOrangeEntry.Add(BagController.S.EquipIdList[PlayerEquipConfig.HelmetId].OrangeEntry1);
-           }
-       }
-   }
-   
    public static float BloodEnergy
    {
        get => PlayerData.S.bloodEnergy;
@@ -2864,6 +2957,10 @@ public class GlobalPlayerAttribute
        var weaponAttribute = WeaponConfig.WeaponBaseAttributeDic[PlayerData.S.playerWeaponType];
        var value = (weaponAttribute.AttackSpeed  + HunQiAttackSpeed);
        value += FinalChongWuAttribute.AttackSpeed;
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAttackSpeedEntry))
+       {
+           value += 0.3f;
+       }
        value *= (1  + FuJiaDamageSpeed / 100.0f);
        value *= (1  + ShiZhuangAttackSpeed / 100.0f);
        return value;
@@ -3032,7 +3129,10 @@ public class GlobalPlayerAttribute
        float value = 1.0f;
        value += FinalChongWuAttribute.HuoDamage;
        value += SkillJiaDian.S.HuoAll / 100f;
-       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAllYuanSu))
+       {
+           value *= 0.2f;
+       }
        
        if (PlayerData.S.playerChiBangType == ChiBangType.Green4)
        {
@@ -3063,6 +3163,31 @@ public class GlobalPlayerAttribute
        {
            value *= (1.25f);
        }
+
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoAdd))
+       {
+           value *= (1.15f);
+       }
+
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoMaster))
+       {
+           value += (IceYuanSuBase-1);
+           value += (DianYuanSuBase-1);
+           value += (HeiAnYuanSuBase-1);
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnMaster))
+       {
+           value = 1;
+       }
+
        return value;
    }
    public static float GetHeiAnYuanSuBase()
@@ -3070,7 +3195,10 @@ public class GlobalPlayerAttribute
        float value = 1.0f;
        value += FinalChongWuAttribute.HeiAnDamage;
        value += SkillJiaDian.S.HeiAnAll / 100f;
-       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAllYuanSu))
+       {
+           value *= 0.2f;
+       }
        if (PlayerData.S.playerChiBangType == ChiBangType.Green2)
        {
            value *= (1.05f);
@@ -3095,6 +3223,30 @@ public class GlobalPlayerAttribute
        {
            value *= (1.25f);
        }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnAdd))
+       {
+           value *= (1.15f);
+       }
+       
+       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnMaster))
+       {
+           value += (IceYuanSuBase-1);
+           value += (DianYuanSuBase-1);
+           value += (HuoYuanSuBase-1);
+       }
        return value;
    }
    public static float GetIceYuanSuBase()
@@ -3102,7 +3254,10 @@ public class GlobalPlayerAttribute
        float value = 1.0f;
        value += FinalChongWuAttribute.IceDamage;
        value += SkillJiaDian.S.IceAll / 100f;
-       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAllYuanSu))
+       {
+           value *= 0.2f;
+       }
        if (PlayerData.S.playerChiBangType == ChiBangType.Green3)
        {
            value *= (1.05f);
@@ -3127,6 +3282,31 @@ public class GlobalPlayerAttribute
        {
            value *= (1.25f);
        }
+       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceAdd))
+       {
+           value *= (1.15f);
+       }
+       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceMaster))
+       {
+           value += (HeiAnYuanSuBase-1);
+           value += (DianYuanSuBase-1);
+           value += (HuoYuanSuBase-1);
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnMaster))
+       {
+           value = 1;
+       }
+       
        return value;
    }
    
@@ -3135,7 +3315,11 @@ public class GlobalPlayerAttribute
        float value = 1.0f;
        value += FinalChongWuAttribute.DianDamage;
        value += SkillJiaDian.S.DianAll / 100f;
-       
+
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAllYuanSu))
+       {
+           value *= 0.2f;
+       }
        if (PlayerData.S.playerChiBangType == ChiBangType.Blue1)
        {
            value *= (1.1f);
@@ -3155,6 +3339,31 @@ public class GlobalPlayerAttribute
        {
            value *= (1.25f);
        }
+       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianAdd))
+       {
+           value *= (1.15f);
+       }
+       
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoMaster))
+       {
+           value = 1;
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianMaster))
+       {
+           value += (HeiAnYuanSuBase-1);
+           value += (IceYuanSuBase-1);
+           value += (HuoYuanSuBase-1);
+       }
+       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnMaster))
+       {
+           value = 1;
+       }
+       
        return value;
    }
    

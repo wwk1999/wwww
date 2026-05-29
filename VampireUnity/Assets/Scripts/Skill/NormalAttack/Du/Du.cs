@@ -30,7 +30,7 @@ public class Du : MonoBehaviour
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
             QueueController.S.MonsterColliderDic[other].zhuoShaoTime = 3.1f;
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.NormalAttack,YuanSuType.Huo);
             hit.SetActive(true);
             gameObject.SetActive(false);
             QueueController.S.DuQueue.Enqueue(gameObject);

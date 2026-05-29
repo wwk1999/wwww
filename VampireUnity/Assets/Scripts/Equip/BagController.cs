@@ -1538,7 +1538,6 @@ public class BagController : XSingleton<BagController>
             }
         }
 
-        GlobalPlayerAttribute.RefreshOrangeEntry();
     }
 
 

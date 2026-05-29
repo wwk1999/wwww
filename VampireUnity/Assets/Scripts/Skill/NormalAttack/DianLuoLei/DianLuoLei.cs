@@ -34,7 +34,7 @@ public class DianLuoLei : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.NormalAttack,YuanSuType.Dian);
             gameObject.SetActive(false);
             var next = QueueController.S.DianLuoLeiNextQueue.Dequeue();
             next.transform.position = closestPoint;

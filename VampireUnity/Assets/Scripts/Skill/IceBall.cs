@@ -17,7 +17,7 @@ public class IceBall : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillConfig.Ice2Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Skill2,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillConfig.Ice2Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f),isCrit,DamageFrom.Skill,YuanSuType.Ice);
             Vector2 closestPoint = other.ClosestPoint(other.transform.position);
             var hit = QueueController.S.IcePengQueue.Dequeue();
             hit.transform.position = closestPoint;

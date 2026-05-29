@@ -20,7 +20,7 @@ public class NormalAttack : MonoBehaviour
         {
             trail.gameObject.SetActive(false);
             bool isCrit = GameController.S.GetIsCrit();
-            other.transform.parent.GetComponent<MonsterBase>().Hurt(QueueController.S.GameAttack,isCrit,DamageFrom.Normal,YuanSuType.Dian);
+            other.transform.parent.GetComponent<MonsterBase>().Hurt(QueueController.S.GameAttack,isCrit,DamageFrom.NormalAttack,YuanSuType.Dian);
             ParticleSystem ps = GetComponent<ParticleSystem>();
             //获得粒子碰撞位置
             var collisionEvents = new System.Collections.Generic.List<ParticleCollisionEvent>();

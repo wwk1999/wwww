@@ -40,7 +40,7 @@ public class IceExplosion : MonoBehaviour
       if (other.CompareTag("Monster")||other.CompareTag("Boss"))
       {
          bool isCrit = GameController.S.GetIsCrit();
-         QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillConfig.Ice3Damage/100f*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),isCrit,DamageFrom.Skill3,YuanSuType.Ice);
+         QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillConfig.Ice3Damage/100f*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),isCrit,DamageFrom.Skill,YuanSuType.Ice);
          Vector2 closestPoint = other.ClosestPoint(transform.position);
          var hit = QueueController.S.IcePengQueue.Dequeue();
          hit.transform.position = closestPoint;

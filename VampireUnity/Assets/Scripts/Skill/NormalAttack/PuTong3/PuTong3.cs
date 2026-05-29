@@ -38,7 +38,7 @@ public class PuTong3 : MonoBehaviour
         if (other.CompareTag("Monster")||other.CompareTag("Boss"))
         {
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.IceYuanSuDamage,isCrit,DamageFrom.NormalAttack,YuanSuType.Ice);
             gameObject.SetActive(false);
             Vector2 closestPoint = other.ClosestPoint(transform.position);
             var hit = QueueController.S.IcePengQueue.Dequeue();

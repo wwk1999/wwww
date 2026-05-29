@@ -35,10 +35,8 @@ public enum State
 public enum DamageFrom
 {
     None,
-    Normal,
-    Skill1,
-    Skill2,
-    Skill3
+    NormalAttack,
+    Skill,
 }
 
 public class MonsterProp
@@ -565,18 +563,7 @@ public abstract class MonsterBase : MonoBehaviour
         }
     }
     
-
-    /// <summary>
-    /// 生成血能
-    /// </summary>
-    public void CreateBloodEnergy()
-    {
-        //生成血能
-        GameObject bloodEnergy = QueueController.S.BloodEnergyQueue.Dequeue();
-        bloodEnergy.SetActive(true);
-        //设置血能位置为怪物位置
-        bloodEnergy.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-    }
+    
 
     public void AddWeaponEx()
     {
@@ -813,7 +800,14 @@ public abstract class MonsterBase : MonoBehaviour
         int replyHp = Mathf.RoundToInt(QueueController.S.GameMaxHp * GlobalPlayerAttribute.KillReplyHpPercent/100f);
         GlobalPlayerAttribute.ReplyHp(replyHp);
         PlayerData.S.MonsterCount++;
-        PlayerData.S.LinHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun));
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddSoul))
+        {
+            PlayerData.S.LinHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun)*1.25f);
+        }
+        else
+        {
+            PlayerData.S.LinHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun));
+        }
 
         AddWeaponEx();
         GlobalPlayerAttribute.BloodEnergy+=BloodEnergy;
@@ -902,23 +896,6 @@ public abstract class MonsterBase : MonoBehaviour
             finalDamage *= (1 + GlobalPlayerAttribute.DamageAddForNormal/100f);
         }
 
-        switch (damageFrom)
-        {
-            case DamageFrom.Normal:
-                finalDamage*=(1);
-                break;
-            case DamageFrom.Skill1:
-                finalDamage*=(1);
-                break;
-            case DamageFrom.Skill2:
-                finalDamage*=(1);
-                break;
-            case DamageFrom.Skill3:
-                finalDamage*=(1);
-                break;
-        }
-        
-
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.JianSuAddAttack))
         {
             if (JianSuTime > 0)
@@ -940,7 +917,116 @@ public abstract class MonsterBase : MonoBehaviour
         }
         return damage;
     }
-    
+
+    public float SetOrangeEntry(float finalDamage, DamageFrom damageFrom,YuanSuType yuanSuType)
+    {
+        switch (yuanSuType)
+        {
+            case YuanSuType.Dian:
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianDamageAdd))
+                {
+                    finalDamage *= (1.15f);
+                }
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkillDamageAdd)&&damageFrom==DamageFrom.Skill)
+                {
+                    finalDamage *= (1.25f);
+                }
+                
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianWeapponDamageAdd)&&damageFrom==DamageFrom.NormalAttack)
+                {
+                    finalDamage *= (1.25f);
+                }
+                break;
+            
+            case YuanSuType.Ice:
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceDamageAdd))
+                {
+                    finalDamage *= (1.15f);
+                }
+                
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillDamageAdd)&&damageFrom==DamageFrom.Skill)
+                {
+                    finalDamage *= (1.25f);
+                }
+                
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceWeapponDamageAdd)&&damageFrom==DamageFrom.NormalAttack)
+                {
+                    finalDamage *= (1.25f);
+                }
+                break;
+            
+            case YuanSuType.Huo:
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoDamageAdd))
+                {
+                    finalDamage *= (1.15f);
+                }
+                
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillDamageAdd)&&damageFrom==DamageFrom.Skill)
+                {
+                    finalDamage *= (1.25f);
+                }
+                
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoWeapponDamageAdd)&&damageFrom==DamageFrom.NormalAttack)
+                {
+                    finalDamage *= (1.25f);
+                }
+                break;
+            
+            case YuanSuType.HeiAn:
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnDamageAdd))
+                {
+                    finalDamage *= (1.15f);
+                }
+                
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkillDamageAdd)&&damageFrom==DamageFrom.Skill)
+                {
+                    finalDamage *= (1.25f);
+                }
+                
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnWeapponDamageAdd)&&damageFrom==DamageFrom.NormalAttack)
+                {
+                    finalDamage *= (1.25f);
+                }
+                break;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NoSkill))
+        {
+            finalDamage *= 2;
+        }
+        if (damageFrom == DamageFrom.NormalAttack)
+        {
+            finalDamage *= (1.0f + GlobalPlayerAttribute.HunQiDamage);
+        }
+        
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddWeaponReduceSkill))
+        {
+            switch (damageFrom)
+            {
+                case DamageFrom.NormalAttack:
+                    finalDamage *= 1.5f;
+                    break;
+                case DamageFrom.Skill:
+                    finalDamage *= 0.7f;
+                    break;
+            }
+        }
+        
+        
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddSkillReduceWeapon))
+        {
+            switch (damageFrom)
+            {
+                case DamageFrom.Skill:
+                    finalDamage *= 1.5f;
+                    break;
+                case DamageFrom.NormalAttack:
+                    finalDamage *= 0.7f;
+                    break;
+            }
+        }
+        
+        return  finalDamage;
+    }
   
     public virtual void Hurt(float baseDamage,bool isCrit,DamageFrom damageFrom,YuanSuType yuansutype)
     {
@@ -960,11 +1046,7 @@ public abstract class MonsterBase : MonoBehaviour
         
         float finalDamage = GetFinalDamage(baseDamage,isCrit,damageFrom);
         finalDamage *= (1.0f+GlobalPlayerAttribute.FinalDamage);//最终伤害
-        if (damageFrom == DamageFrom.Normal)
-        {
-            finalDamage *= (1.0f + GlobalPlayerAttribute.HunQiDamage);
-        }
-
+        finalDamage=SetOrangeEntry(finalDamage,damageFrom,yuansutype);
         finalDamage *= (1.0f + GlobalPlayerAttribute.AllDamage);
         finalDamage=SetYuanSuSkillDamage(finalDamage,yuansutype);
         GlobalPlayerAttribute.ReplyHp(GlobalPlayerAttribute.BloodSuck/100.0f * finalDamage);
@@ -1038,7 +1120,7 @@ public abstract class MonsterBase : MonoBehaviour
         if (info.orangeEquip)
         {
             float random = Random.Range(0, 100f);
-            if (random <= 100f)
+            if (random <= 0.2f*(1.0f+GlobalPlayerAttribute.Forture))
             {
                 //生成装备
                 EquipBase equip = QueueController.S.OrangeEquipQueue.Dequeue();

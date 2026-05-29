@@ -25,7 +25,7 @@ public class HeiAnSkill4Item : MonoBehaviour
         {
             bool isCrit = GameController.S.GetIsCrit();
             QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillConfig.HeiAn4Damage/100f*
-                                                             (GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillDamage+1.0f),isCrit,DamageFrom.Normal,YuanSuType.HeiAn);
+                                                             (GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillDamage+1.0f),isCrit,DamageFrom.Skill,YuanSuType.HeiAn);
         }
     }
 }

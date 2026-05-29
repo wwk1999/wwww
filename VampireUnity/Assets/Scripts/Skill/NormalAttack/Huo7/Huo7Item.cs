@@ -36,7 +36,7 @@ public class Huo7Item : MonoBehaviour
             var hit = QueueController.S.HuoPengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Huo);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.NormalAttack,YuanSuType.Huo);
             hit.SetActive(true);
             QueueController.S.Huo7Queue.Enqueue(this);
             gameObject.SetActive(false);

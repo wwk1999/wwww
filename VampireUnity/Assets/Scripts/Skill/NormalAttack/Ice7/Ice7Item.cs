@@ -36,7 +36,7 @@ public class Ice7Item : MonoBehaviour
             var hit = QueueController.S.IcePengQueue.Dequeue();
             hit.transform.position = closestPoint;
             bool isCrit = GameController.S.GetIsCrit();
-            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.Normal,YuanSuType.Ice);
+            QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillController.S.HuoYuanSuDamage,isCrit,DamageFrom.NormalAttack,YuanSuType.Ice);
             hit.SetActive(true);
             QueueController.S.Ice7Queue.Enqueue(this);
             gameObject.SetActive(false);
