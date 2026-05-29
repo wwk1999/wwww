@@ -88,7 +88,7 @@ namespace Config
             HeiAnSkill3YuanSu,
         }
 
-        public enum ZhuDongSkillTime
+        public enum ZhuDongSkillType
         {
             None,
             IceSkill1,
@@ -188,6 +188,35 @@ namespace Config
             { SkillType.HeiAn4,200},
             { SkillType.HeiAn5,200},
         };
+        
+        
+        public static Dictionary<SkillType, string> SkillNameDic = new Dictionary<SkillType, string>()
+        {
+            { SkillType.Ice1,"冰龙啸天"},
+            { SkillType.Ice2,"冰晶星轮"},
+            { SkillType.Ice3,"极寒冲击"},
+            { SkillType.Ice4,"极冻冰锥"},
+            { SkillType.Ice5,"万里冰霜"},
+            
+            { SkillType.Huo1,"爆裂弹"},
+            { SkillType.Huo2,"烈焰掌控"},
+            { SkillType.Huo3,"流星坠落"},
+            { SkillType.Huo4,"烈焰冲天"},
+            { SkillType.Huo5,"陨石降落"},
+            
+            { SkillType.Dian1,"爆裂电圈"},
+            { SkillType.Dian2,"雷电掌控"},
+            { SkillType.Dian3,"雷霆万钧"},
+            { SkillType.Dian4,"雷池领域"},
+            { SkillType.Dian5,"灭世雷劫"},
+            
+            { SkillType.HeiAn1,"黑暗吞噬"},
+            { SkillType.HeiAn2,"黑暗掌控"},
+            { SkillType.HeiAn3,"黑暗侵蚀"},
+            { SkillType.HeiAn4,"恶意围绕"},
+            { SkillType.HeiAn5,"黑暗漩涡"},
+        };
+        
 
         public static Dictionary<SkillType, int> SkillUpDamageDic = new Dictionary<SkillType, int>()
         {
@@ -216,33 +245,32 @@ namespace Config
             { SkillType.HeiAn5,20},
         };
 
-        public static Dictionary<ZhuDongSkillTime, float> SkillBaseTime = new Dictionary<ZhuDongSkillTime, float>()
+        public static Dictionary<SkillType, float> SkillBaseTime = new Dictionary<SkillType, float>()
         {
-            { ZhuDongSkillTime.DianSkill1 ,8f},
-            { ZhuDongSkillTime.DianSkill2 ,15f},
-            { ZhuDongSkillTime.DianSkill3 ,12f},
-            { ZhuDongSkillTime.DianSkill4 ,12f},
-            { ZhuDongSkillTime.DianSkill5 ,12f},
+            { SkillType.Dian1 ,8f},
+            { SkillType.Dian2 ,15f},
+            { SkillType.Dian3 ,12f},
+            { SkillType.Dian4 ,12f},
+            { SkillType.Dian5 ,12f},
 
 
-            { ZhuDongSkillTime.HeiAnSkill1 ,8f},
-            { ZhuDongSkillTime.HeiAnSkill2 ,15f},
-            { ZhuDongSkillTime.HeiAnSkill3 ,12f},
-            { ZhuDongSkillTime.HeiAnSkill4 ,15f},
-            { ZhuDongSkillTime.HeiAnSkill5 ,15f},
+            { SkillType.HeiAn1 ,8f},
+            { SkillType.HeiAn2 ,15f},
+            { SkillType.HeiAn3 ,12f},
+            { SkillType.HeiAn4 ,15f},
+            { SkillType.HeiAn5 ,15f},
             
-            { ZhuDongSkillTime.HuoSkill1 ,8f},
-            { ZhuDongSkillTime.HuoSkill2 ,15f},
-            { ZhuDongSkillTime.HuoSkill3 ,12f},
-            { ZhuDongSkillTime.HuoSkill4 ,12f},
-            { ZhuDongSkillTime.HuoSkill5 ,15f},
+            { SkillType.Huo1 ,8f},
+            { SkillType.Huo2 ,15f},
+            { SkillType.Huo3 ,12f},
+            { SkillType.Huo4 ,12f},
+            { SkillType.Huo5 ,15f},
             
-            { ZhuDongSkillTime.IceSkill1 ,8f},
-            { ZhuDongSkillTime.IceSkill2 ,15f},
-            { ZhuDongSkillTime.IceSkill3 ,12f},
-            { ZhuDongSkillTime.IceSkill4 ,12f},
-            { ZhuDongSkillTime.IceSkill5 ,12f},
-
+            { SkillType.Ice1 ,8f},
+            { SkillType.Ice2 ,15f},
+            { SkillType.Ice3 ,12f},
+            { SkillType.Ice4 ,12f},
+            { SkillType.Ice5 ,12f},
         };
 
         public static Dictionary<MonsterType, float> BaseMonsterDic = new Dictionary<MonsterType, float>()

@@ -8,10 +8,6 @@ public class IceBallSkill : MonoBehaviour
    private void Update()
    {
       var iceBallSpeed = SkillController.S.IceBallSpeed;
-      if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill2RotateAdd))
-      {
-         iceBallSpeed *= 1.3f;
-      }
       transform.Rotate(0, 0, iceBallSpeed);
    }
 

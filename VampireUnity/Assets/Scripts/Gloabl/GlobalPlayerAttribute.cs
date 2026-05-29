@@ -247,10 +247,7 @@ public class GlobalPlayerAttribute
        {
            finalDamage=NormalAddDamage(finalDamage);
        }
-       if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack))
-       {
-           finalDamage+=0.5f;
-       }
+      
        finalDamage += AA5Count * 0.3f;
        finalDamage += TitleAttributeAll.FinalDamage;
        finalDamage += FinalChongWuAttribute.FinalDamage;

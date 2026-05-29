@@ -13,7 +13,7 @@ public class ReplyDeath :EquipBase
         SpriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         Random random = new Random();
         EquipAttributes.EquipName = "ReplyDeath";
-        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Cloth;
+        EquipAttributes.EquipType = PlayerEquipConfig.EquipType.Shoe;
 
         EquipAttributes.orangeid = 14;
 

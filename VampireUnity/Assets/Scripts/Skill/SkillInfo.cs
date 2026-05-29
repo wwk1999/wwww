@@ -28,7 +28,7 @@ public class SkillInfo : MonoBehaviour
         {
             case SkillInfoType.Ice1:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Ice1);
-                skillName.text = "冰龙啸天";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Ice1];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice1]}%</color> 冰霜伤害";
@@ -42,7 +42,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Ice2:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Ice2);
-                skillName.text = "冰晶星轮";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Ice2];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice2]}%</color> 冰霜伤害";
@@ -65,7 +65,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Ice3:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Ice3);
-                skillName.text = "极寒冲击";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Ice3];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice3]}%</color> 冰霜伤害";
@@ -88,7 +88,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Ice4:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Ice4);
-                skillName.text = "极冻冰锥";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Ice4];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice4]}%</color> 冰霜伤害";
@@ -111,7 +111,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Ice5:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Ice5);
-                skillName.text = "万里冰霜";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Ice5];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Ice5]}%</color> 冰霜伤害";
@@ -328,7 +328,7 @@ public class SkillInfo : MonoBehaviour
             
             case SkillInfoType.Huo1:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Huo1);
-                skillName.text = "爆裂弹";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Huo1];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo1]}%</color> 火焰伤害";
@@ -342,7 +342,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Huo2:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Huo2);
-                skillName.text = "烈焰掌控";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Huo2];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo2]}%</color> 火焰元素伤害";
@@ -365,7 +365,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Huo3:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Huo3);
-                skillName.text = "流星坠落";
+                skillName.text =SkillConfig.SkillNameDic[global::SkillType.Huo3];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo3]}%</color> 火焰伤害";
@@ -388,7 +388,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Huo4:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Huo4);
-                skillName.text = "烈焰冲天";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Huo4];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo4]}%</color> 火焰伤害";
@@ -411,7 +411,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Huo5:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Huo5);
-                skillName.text = "陨石降落";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Huo5];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Huo5]}%</color> 火焰伤害";
@@ -625,7 +625,7 @@ public class SkillInfo : MonoBehaviour
             
              case SkillInfoType.Dian1:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Dian1);
-                skillName.text = "爆裂电圈";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Dian1];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian1]}%</color> 雷电伤害";
@@ -639,7 +639,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Dian2:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Dian2);
-                skillName.text = "雷电掌控";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Dian2];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian2]}%</color> 雷电元素伤害";
@@ -662,7 +662,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Dian3:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Dian3);
-                skillName.text = "雷霆万钧";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Dian3];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian3]}%</color> 雷电伤害";
@@ -685,7 +685,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Dian4:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Dian4);
-                skillName.text = "雷池领域";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Dian4];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian4]}%</color> 雷电伤害";
@@ -708,7 +708,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.Dian5:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.Dian5);
-                skillName.text = "灭世雷劫";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.Dian5];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.Dian5]}%</color> 雷电伤害";
@@ -923,7 +923,7 @@ public class SkillInfo : MonoBehaviour
             
              case SkillInfoType.HeiAn1:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.HeiAn1);
-                skillName.text = "黑暗吞噬";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.HeiAn1];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn1]}%</color> 黑暗伤害";
@@ -937,7 +937,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.HeiAn2:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.HeiAn2);
-                skillName.text = "黑暗掌控";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.HeiAn2];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn2]}%</color> 黑暗元素伤害";
@@ -960,7 +960,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.HeiAn3:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.HeiAn3);
-                skillName.text = "黑暗侵蚀";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.HeiAn3];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn3]}%</color> 黑暗伤害";
@@ -983,7 +983,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.HeiAn4:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.HeiAn4);
-                skillName.text = "恶意围绕";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.HeiAn4];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn4]}%</color> 黑暗伤害";
@@ -1006,7 +1006,7 @@ public class SkillInfo : MonoBehaviour
 
             case SkillInfoType.HeiAn5:
                 image.sprite = ResourcesConfig.GetSkillSprite(SkillInfoType.HeiAn5);
-                skillName.text = "黑暗漩涡";
+                skillName.text = SkillConfig.SkillNameDic[global::SkillType.HeiAn5];
                 skillType.text = "主动技能";
                 LevelUpText.text =
                     $"每级提升：<color=green>{SkillConfig.SkillUpDamageDic[global::SkillType.HeiAn5]}%</color> 黑暗伤害";

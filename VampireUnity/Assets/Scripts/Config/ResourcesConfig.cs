@@ -3181,42 +3181,6 @@ public class ResourcesConfig : MonoBehaviour
                     return FanPuGuiZhenSprite;
                 case EntryConfig.OrangeEntry.NoSkill:
                     return NoSkillSprite;
-                case EntryConfig.OrangeEntry.BuWangChuXin:
-                    return BuWangChuXinSprite;
-                case EntryConfig.OrangeEntry.HeiDongAddSpeed:
-                    return HeiDongAddSpeedSprite;
-                case EntryConfig.OrangeEntry.DuAddDuQuan:
-                    return DuAddDuQuanSprite;
-                case EntryConfig.OrangeEntry.LvQuanAddScale:
-                    return LvQuanAddScaleSprite;
-                case EntryConfig.OrangeEntry.XuKongAdd2Dan:
-                    return XuKongAdd2DanSprite;
-                case EntryConfig.OrangeEntry.PuTong3ChuanTou:
-                    return PuTong3ChuanTouSprite;
-                case EntryConfig.OrangeEntry.FireBaoZha:
-                    return FireBaoZhaSprite;
-
-                // Skill1
-                case EntryConfig.OrangeEntry.Skill1ReplaceNormalAttack:
-                    return Skill1ReplaceNormalAttackSprite;
-                case EntryConfig.OrangeEntry.Skill1YiDianDouble:
-                    return Skill1YiDianDoubleSprite;
-                case EntryConfig.OrangeEntry.Skill1AddRange:
-                    return Skill1AddRangeSprite;
-
-                // Skill2
-                case EntryConfig.OrangeEntry.Skill2AddDan:
-                    return Skill2AddDanSprite;
-                case EntryConfig.OrangeEntry.Skill2RotateAdd:
-                    return Skill2RotateAddSprite;
-                case EntryConfig.OrangeEntry.Skill2AddRange:
-                    return Skill2AddRangeSprite;
-
-                // Skill3
-                case EntryConfig.OrangeEntry.Skill3Bian3:
-                    return Skill3Bian3Sprite;
-                case EntryConfig.OrangeEntry.Skill3AddRange:
-                    return Skill3AddRangeSprite;
 
                 // Dash
                 case EntryConfig.OrangeEntry.DashCd:

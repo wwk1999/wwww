@@ -98,27 +98,7 @@ public static Dictionary<OrangeEntry, string> OrangeEntryNameDic = new Dictionar
     // 普攻
     { OrangeEntry.FanPuGuiZhen, "归真宝戒" },
     { OrangeEntry.NoSkill, "禁法颈链" },
-    { OrangeEntry.BuWangChuXin, "连星斗篷" },
-    { OrangeEntry.HeiDongAddSpeed, "奇点披风" },
-    { OrangeEntry.DuAddDuQuan, "疫病斗篷" },
-    { OrangeEntry.LvQuanAddScale, "生命披风" },
-    { OrangeEntry.XuKongAdd2Dan, "增生披风" },
-    { OrangeEntry.PuTong3ChuanTou, "贯穿斗篷" },
-    { OrangeEntry.FireBaoZha, "爆炎斗篷" },
-
-    // Skill1
-    { OrangeEntry.Skill1ReplaceNormalAttack, "技极项链" },
-    { OrangeEntry.Skill1YiDianDouble, "蓄雷指环" },
-    { OrangeEntry.Skill1AddRange, "扩散头盔" },
-
-    // Skill2
-    { OrangeEntry.Skill2AddDan, "双子项链" },
-    { OrangeEntry.Skill2RotateAdd, "回旋指环" },
-    { OrangeEntry.Skill2AddRange, "引力头盔" },
-
-    // Skill3
-    { OrangeEntry.Skill3Bian3, "三重项链" },
-    { OrangeEntry.Skill3AddRange, "回响指环" },
+    
 
     // Dash
     { OrangeEntry.DashCd, "瞬步战靴" },
@@ -160,27 +140,7 @@ public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new 
     // 普攻
     { OrangeEntry.FanPuGuiZhen, "装备白色武器最终伤害增加200%，绿色150%，蓝色100%，紫色50%" },
     { OrangeEntry.NoSkill, "普通攻击伤害增加100%，但是不能使用技能" },
-    { OrangeEntry.BuWangChuXin, "原木法杖改为连射发射模式，一次发射的弹道数量*2" },
-    { OrangeEntry.HeiDongAddSpeed, "湮灭之杖的攻击速度增加100%" },
-    { OrangeEntry.DuAddDuQuan, "腐蚀权杖击中敌人在原地留下毒圈" },
-    { OrangeEntry.LvQuanAddScale, "增加源极杖50%大小" },
-    { OrangeEntry.XuKongAdd2Dan, "虚空杖增加2个魔法弹" },
-    { OrangeEntry.PuTong3ChuanTou, "三叉法杖可以穿透敌人" },
-    { OrangeEntry.FireBaoZha, "爆炎杖弹爆炸范围增大50%" },
-
-    // Skill1
-    { OrangeEntry.Skill1ReplaceNormalAttack, "skill1代替普通攻击，最终伤害增加100%，不能普通攻击" },
-    { OrangeEntry.Skill1YiDianDouble, "易电状态伤害增加翻倍" },
-    { OrangeEntry.Skill1AddRange, "skill1范围增加20%" },
-
-    // Skill2
-    { OrangeEntry.Skill2AddDan, "Skill2增加一个魔法弹" },
-    { OrangeEntry.Skill2RotateAdd, "Skill2转速增加30%" },
-    { OrangeEntry.Skill2AddRange, "增加Skill2范围30%,体积增大30%" },
-
-    // Skill3
-    { OrangeEntry.Skill3Bian3, "skill3变为发射3波，每一波伤害减少50%" },
-    { OrangeEntry.Skill3AddRange, "Skill3增加范围30%" },
+    
 
     // Dash
     { OrangeEntry.DashCd, "Dash基础Cd减少30%" },
@@ -271,52 +231,106 @@ public static Dictionary<OrangeEntry, string> OrangeEntryAttributeDescDic = new 
         FinalDamageReductionFixed,//最终伤害减少300              cloth      1111
         FinalDamageReductionPercent,//最终伤害减少10%            helmet     1111
         AllReplyAddPercent,//所有的治疗效果增加20%                cloth      1111
-        AddHpForTime,//战斗时每5s增加3%最大生命值，上限100%         Hlemet     1111
+        AddHpForTime,//战斗时每5s增加3%最大生命值，上限100%         Helmet     1111
         AddDefenseForTime,//战斗时每5s增加2%防御，最多叠加10层         Cloth      1111
-        ReplyDeath,//免疫一次死亡                            Cloth          1111
+        ReplyDeath,//免疫一次死亡                            Shoe          1111
         DelayDamage,//将收到的伤害的30%存储起来在3s内缓慢施加         helmet     1111
         HpReductionReplyAdd50,//血量减少到50%增加30%回复效果        cloth     1111
         HpReductionAddDefense,//血量减少到50%增加15%免伤           helmet    1111
         //攻击词条
-        FinalDamageAddPercent,//最终伤害增加15%                   necklace    1111
+        FinalDamageAddPercent,//最终伤害增加15%                   Shoe    1111
         KillNormal,//5%概率秒杀小怪                               ring        1111
         AddAttackForTime,//战斗中每5s增加3%攻击，最多10层%           ring        1111
-        NormalAddDamage,//每穿戴一件传说以下品质装备增加最终伤害30%    necklace    1111
-        RecudeHpAddAttack,//减少50%hp增加30%attack               necklace    1111
+        NormalAddDamage,//减少30%Attack增加50%hp                 Shoe    1111
+        RecudeHpAddAttack,//减少50%hp增加30%attack               Shoe    1111
         JianSuAddAttack,//对被减速的敌人增加15%伤害                 Shoe        1111
         //普通攻击
         FanPuGuiZhen,//装备白色武器最终伤害增加200%，绿色武器最终伤害增加150%，蓝色100%，紫色50%    ring
-        NoSkill,//普通攻击伤害增加100%，但是不能使用技能（技能伤害）          necklace
-        BuWangChuXin,//最初武器改为连射发射模式，一次发射的弹道数量*2         cloak
-        HeiDongAddSpeed,//黑洞武器的攻击速度增加100%                      cloak
-        DuAddDuQuan,//毒武器击中敌人在原地留下毒圈                         cloak
-        LvQuanAddScale,//增加绿圈武器50%大小                            cloak
-        XuKongAdd2Dan,//虚空武器增加2个魔法弹                            cloak
-        PuTong3ChuanTou,//普通3可以穿透敌人                             cloak
-        FireBaoZha,//火焰弹爆炸范围增大50%                              cloak
-        //skill1
-        Skill1ReplaceNormalAttack,//skill1代替普通攻击，skill1CD减少50%，最终伤害增加50%，不能普通攻击       necklace   1111
-        Skill1YiDianDouble,//易电状态伤害增加翻倍                                 ring              1111
-        Skill1AddRange,//skill1范围增加20%                                      helmet           1111
-        //skill2
-        Skill2AddDan,//Skill2增加一个魔法弹                                       necklace        1111
-        Skill2RotateAdd,//Skill2转速增加30%                                      ring            1111
-        Skill2AddRange,//增加Skill2范围30%,体积增大30%                             helmet          1111
-        //Skill3
-        Skill3Bian3,//skill3变为发射3波，每一波伤害减少30%                           necklace         2222
-        Skill3AddRange,//Skill3增加范围30%                                       ring             1111
+        NoSkill,//普通攻击伤害增加100%，但是不能使用技能（技能伤害）          Ring
+        AddWeaponReduceSkill,//增加50%武器伤害，减少50%技能伤害           Cloak
+        AddAttackSpeed,//增加武器攻击速度50%                             Cloak
+        AddSkillReduceWeapon,//增加50%技能伤害，减少50%武器伤害           Cloak
+
         //Dash
         DashCd,//Dash基础Cd减少30%                 shoe                                           1111
         DashRange,//Dash距离增加30%                shoe                                           1111
         //特殊词条
         MoveSpeedAdd,//移动速度增加25%              shoe                                           1111
-        ExAdd,//经验获取增加20%                     shoe                                           1111
+        ExAdd,//经验获取增加25%                     shoe                                           1111
         ClothFortureAdd,//掉落率增加30%             cloth                                          1111
         ShoeFortureAdd,//掉落率增加30%              shoe                                           1111
         CloakFortureAdd,//掉落率增加30%             cloak                                          1111
         NecklaceFortureAdd,//掉落率增加30%          necklace                                       1111
         RingFortureAdd,//掉落率增加30%              ring                                           1111
         HelmetFortureAdd,//掉落率增加30%            helmet                                         1111
+        AddSoul,//增加灵魂获取25%                    Cloak
+        OrangeEquip,//每装备一件传说装备增加5%最终伤害   Shoe
+        NoOrangeEquip,//每装备一件非传说装备增加15%最终伤害    Shoe
+        
+        
+        
+        //新加45个
+        HuoAdd,//增加火元素掌控15%        Cloak
+        IceAdd,//增加火元素掌控15%        Cloak
+        DianAdd,//增加火元素掌控15%       Cloak
+        HeiAnAdd,//增加火元素掌控15%      Cloak
+        
+        
+        HuoDamageAdd,//增加火元素伤害15%        Helmet
+        IceDamageAdd,//增加火元素伤害15%        Helmet
+        DianDamageAdd,//增加火元素伤害15%       Helmet
+        HeiAnDamageAdd,//增加火元素伤害15%      Helmet
+        
+        
+        HuoSkillCdAdd,//火技能cd减少15%      Necklace
+        IceSkillCdAdd,//冰技能cd减少15%        Necklace
+        DianSkillCdAdd,//电技能cd减少15%       Necklace
+        HeiAnSkillCdAdd,//黑暗技能cd减少15%     Necklace
+        
+        
+        HuoSkillDamageAdd,//火技能cd减少15%      Ring
+        IceSkillDamageAdd,//冰技能cd减少15%        Ring
+        DianSkillDamageAdd,//电技能cd减少15%       Ring
+        HeiAnSkillDamageAdd,//黑暗技能cd减少15%     Ring
+        
+        HuoWeapponDamageAdd,//火武器伤害增加15%      Cloth
+        IceWeapponDamageAdd,//冰武器伤害增加15%        Cloth
+        DianWeapponDamageAdd,//电武器伤害增加15%       Cloth
+        HeiAnWeapponDamageAdd,//黑暗武器伤害增加15%     Cloth
+        
+        AddAllYuanSu,//增加所有属性元素掌控20%          Shoe
+        
+        IceMaster,//将所有的元素掌控增加到冰元素上        Necklace
+        HuoMaster,//将所有的元素掌控增加到冰元素上        Necklace
+        DianMaster,//将所有的元素掌控增加到冰元素上        Necklace
+        HeiAnMaster,//将所有的元素掌控增加到冰元素上       Necklace
+        
+        IceSkill1,//IceSkill1效果范围增加15%，伤害增加15%，cd减少15%       Cloth
+        IceSkill2,//IceSkill2转速增加25%，伤害增加15%，cd减少15%          Cloak
+        IceSkill3,//IceSkill3效果范围增加15%，伤害增加15%，cd减少15%       Helmet
+        IceSkill4,//IceSkill4伤害增加25%，cd减少25%                      Ring
+        IceSkill5,//IceSkill5冰晶数量增加5，伤害增加15%，cd减少15%         Necklace
+
+
+        HuoSkill1,//HuoSkill1伤害增加25%，cd减少25%                     Cloth
+        HuoSkill2,//HuoSkill2持续时间增加25%，cd减少25%                  Cloak
+        HuoSkill3,//HuoSkill3火焰流星数量增加2，伤害增加15%，cd减少15%     Helmet
+        HuoSkill4,//HuoSkill4效果范围增加25%，伤害增加15%，cd减少15%      Ring
+        HuoSkill5,//HuoSkill5陨石数量增加2，伤害增加15%，cd减少15%        Necklace
+        
+        DianSkill1,//DianSkill1效果范围增加15%，伤害增加15%，cd减少15%     Cloth
+        DianSkill2,//DianSkill2持续时间增加25%，cd减少25%                Cloak
+        DianSkill3,//DianSkill3闪电数量增加5，伤害增加15%，cd减少15%       Helmet
+        DianSkill4,//DianSkill4效果范围增加15%，伤害增加15%，cd减少15%     Ring
+        DianSkill5,//DianSkill5效果范围增加15%，伤害增加15%，cd减少15%      Necklace
+        
+        HeiAnSkill1,//HeiAnSkill1效果范围增加15%，伤害增加15%，cd减少15%    Cloth
+        HeiAnSkill2,//HeiAnSkill2持续时间增加25%，cd减少25%               Cloak
+        HeiAnSkill3,//HeiAnSkill3效果范围增加15%，伤害增加15%，cd减少15%    Helmet
+        HeiAnSkill4,//HeiAnSkill4转速增加25%，伤害增加15%，cd减少15%       Ring
+        HeiAnSkill5,//HeiAnSkill5增加2个黑暗漩涡，伤害增加15%，cd减少15%    Necklace
+        
+        
     }
     
     
