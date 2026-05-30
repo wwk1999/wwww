@@ -11,6 +11,13 @@ public class HeiAnSkill3 : MonoBehaviour
     public SkeletonAnimation skeletonAnimation;
     public  Collider2D _collider2D;
 
+    private void Awake()
+    {
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill3))
+        {
+            transform.localScale=new Vector3(transform.localScale.x*(1.15f),transform.localScale.y*(1.15f),transform.localScale.z);
+        }
+    }
     private void OnEnable()
     {
         transform.localScale=new Vector3(transform.localScale.x*(1.0f),transform.localScale.y*(1.0f),transform.localScale.z);
@@ -43,10 +50,14 @@ public class HeiAnSkill3 : MonoBehaviour
             if (col.CompareTag("Monster") || col.CompareTag("Boss"))
             {
                 MonsterBase monster = QueueController.S.MonsterColliderDic[col];
-                monster.Hurt(QueueController.S.GameAttack*SkillConfig.HeiAn3Damage/100f*SkillController.S.HeiAnYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill,YuanSuType.HeiAn);
-                // var hit = GameController.S.HeiDongPengQueue.Dequeue();
-                //hit.transform.position = monster.transform.position;
-                //hit.SetActive(true);
+                float damage = QueueController.S.GameAttack * SkillConfig.HeiAn3Damage / 100f *
+                               SkillController.S.HeiAnYuanSuDamage *
+                               (GlobalPlayerAttribute.FinalChongWuAttribute.HeiAnSkillDamage + 1.0f);
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill3))
+                {
+                    damage *= 1.15f;
+                }
+                monster.Hurt(damage,GameController.S.GetIsCrit(),DamageFrom.Skill,YuanSuType.HeiAn);
             }
         }
     }

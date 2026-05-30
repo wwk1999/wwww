@@ -26,12 +26,18 @@ public class IceExplosion : MonoBehaviour
    {
       skeletonAnimation.AnimationState.Complete -= Complete;
    }
+   private void Awake()
+   {
+      if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill3))
+      {
+         transform.localScale=new Vector3(transform.localScale.x*(1.15f),transform.localScale.y*(1.15f),transform.localScale.z);
+      }
+   }
 
 
    private void OnEnable()
    {
       animator.Play("IceEx",1,0);
-      transform.localScale=new Vector3(transform.localScale.x*(1.0f),transform.localScale.y*(1.0f),transform.localScale.z);
       skeletonAnimation.AnimationState.SetAnimation(0, "animation", false);
    }
    
@@ -40,7 +46,14 @@ public class IceExplosion : MonoBehaviour
       if (other.CompareTag("Monster")||other.CompareTag("Boss"))
       {
          bool isCrit = GameController.S.GetIsCrit();
-         QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillConfig.Ice3Damage/100f*damageCount*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),isCrit,DamageFrom.Skill,YuanSuType.Ice);
+         float damage = QueueController.S.GameAttack * SkillConfig.Ice3Damage / 100f * damageCount *
+                        SkillController.S.IceYuanSuDamage *
+                        (GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage + 1.0f);
+         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill3))
+         {
+            damage *= 1.15f;
+         }
+         QueueController.S.MonsterColliderDic[other].Hurt(damage,isCrit,DamageFrom.Skill,YuanSuType.Ice);
          Vector2 closestPoint = other.ClosestPoint(transform.position);
          var hit = QueueController.S.IcePengQueue.Dequeue();
          hit.transform.position = closestPoint;

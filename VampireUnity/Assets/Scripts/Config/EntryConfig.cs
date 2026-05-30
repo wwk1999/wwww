@@ -227,9 +227,9 @@ public static Dictionary<int, string> OrangeIdDescDic
         dic.Add(59, $"{SkillConfig.SkillNameDic[SkillType.Ice1]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
         dic.Add(60, $"{SkillConfig.SkillNameDic[SkillType.Ice2]}：转速增加25%，伤害增加15%，冷却时间减少15%");
         dic.Add(61, $"{SkillConfig.SkillNameDic[SkillType.Ice3]}：效果范围增加15%，伤害增加15%，冷却时间减少15%");
-        dic.Add(62, $"{SkillConfig.SkillNameDic[SkillType.Ice4]}：伤害增加25%，冷却时间减少25%");
+        dic.Add(62, $"{SkillConfig.SkillNameDic[SkillType.Ice4]}：冰锥数量增加2，伤害增加15%，冷却时间减少15%");
         dic.Add(63, $"{SkillConfig.SkillNameDic[SkillType.Ice5]}：冰晶数量增加5个，伤害增加15%，冷却时间减少15%");
-        dic.Add(64, $"{SkillConfig.SkillNameDic[SkillType.Huo1]}：伤害增加25%，冷却时间减少25%");
+        dic.Add(64, $"{SkillConfig.SkillNameDic[SkillType.Huo1]}：火焰弹数量+2，伤害增加15%，冷却时间减少15%");
         dic.Add(65, $"{SkillConfig.SkillNameDic[SkillType.Huo2]}：持续时间增加25%，冷却时间减少25%");
         dic.Add(66, $"{SkillConfig.SkillNameDic[SkillType.Huo3]}：火焰流星数量增加2个，伤害增加15%，冷却时间减少15%");
         dic.Add(67, $"{SkillConfig.SkillNameDic[SkillType.Huo4]}：效果范围增加25%，伤害增加15%，冷却时间减少15%");
@@ -566,11 +566,11 @@ public static Dictionary<int, string> OrangeIdDescDic
         IceSkill1,//IceSkill1效果范围增加15%，伤害增加15%，cd减少15%       Cloth
         IceSkill2,//IceSkill2转速增加25%，伤害增加15%，cd减少15%          Cloak
         IceSkill3,//IceSkill3效果范围增加15%，伤害增加15%，cd减少15%       Helmet
-        IceSkill4,//IceSkill4伤害增加25%，cd减少25%                      Ring
+        IceSkill4,//IceSkill4冰锥数量增加2，伤害增加15%，cd减少15%                      Ring
         IceSkill5,//IceSkill5冰晶数量增加5，伤害增加15%，cd减少15%         Necklace
 
 
-        HuoSkill1,//HuoSkill1伤害增加25%，cd减少25%                     Cloth
+        HuoSkill1,//HuoSkill1 火焰弹数量增加2，伤害增加15%，cd减少15%                     Cloth
         HuoSkill2,//HuoSkill2持续时间增加25%，cd减少25%                  Cloak
         HuoSkill3,//HuoSkill3火焰流星数量增加2，伤害增加15%，cd减少15%     Helmet
         HuoSkill4,//HuoSkill4效果范围增加25%，伤害增加15%，cd减少15%      Ring

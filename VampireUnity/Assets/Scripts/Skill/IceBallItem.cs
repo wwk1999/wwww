@@ -4,9 +4,4 @@ using UnityEngine;
 
 public class IceBallItem : MonoBehaviour
 {
- 
-    void Start()
-    {
-       
-    }
 }

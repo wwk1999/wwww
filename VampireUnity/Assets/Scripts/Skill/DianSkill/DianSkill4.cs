@@ -12,7 +12,15 @@ public class DianSkill4 : MonoBehaviour
    public Collider2D collider;
    private float time = 0;
 
-   
+
+   private void Awake()
+   {
+      if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill4))
+      {
+         transform.localScale=new Vector3(transform.localScale.x*(1.15f),transform.localScale.y*(1.15f),transform.localScale.z);
+      }
+   }
+
    public void CheckCollisionWithMonsters()
    {
       // 检测所有重叠的碰撞体
@@ -31,7 +39,14 @@ public class DianSkill4 : MonoBehaviour
          if (col.CompareTag("Monster") || col.CompareTag("Boss"))
          {
             MonsterBase monster = QueueController.S.MonsterColliderDic[col];
-            monster.Hurt(QueueController.S.GameAttack*SkillConfig.Dian4Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill,YuanSuType.Dian);
+            float damage = QueueController.S.GameAttack * SkillConfig.Dian4Damage / 100f *
+                           SkillController.S.IceYuanSuDamage *
+                           (GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage + 1.0f);
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill4))
+            {
+               damage *= 1.15f;
+            }
+            monster.Hurt(damage,GameController.S.GetIsCrit(),DamageFrom.Skill,YuanSuType.Dian);
             // var hit = GameController.S.HeiDongPengQueue.Dequeue();
             //hit.transform.position = monster.transform.position;
             //hit.SetActive(true);

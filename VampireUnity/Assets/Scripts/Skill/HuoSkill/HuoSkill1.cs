@@ -38,7 +38,14 @@ public class HuoSkill1 : MonoBehaviour
       var hit = QueueController.S.HuoPengQueue.Dequeue();
       hit.transform.position = closestPoint;
       bool isCrit = GameController.S.GetIsCrit();
-      QueueController.S.MonsterColliderDic[other].Hurt(QueueController.S.GameAttack*SkillConfig.Huo1Damage/100f*(GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillDamage+1.0f)*SkillController.S.HuoYuanSuDamage*(1.0f),isCrit,DamageFrom.Skill,YuanSuType.Huo);
+      float damage = QueueController.S.GameAttack * SkillConfig.Huo1Damage / 100f *
+                     (GlobalPlayerAttribute.FinalChongWuAttribute.HuoSkillDamage + 1.0f) *
+                     SkillController.S.HuoYuanSuDamage;
+      if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill1))
+      {
+        damage += 1.15f;
+      }
+      QueueController.S.MonsterColliderDic[other].Hurt(damage,isCrit,DamageFrom.Skill,YuanSuType.Huo);
       hit.SetActive(true);
     }
   }

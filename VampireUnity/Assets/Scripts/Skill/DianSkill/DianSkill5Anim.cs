@@ -32,7 +32,14 @@ public class DianSkill5Anim : MonoBehaviour
          if (col.CompareTag("Monster") || col.CompareTag("Boss"))
          {
             MonsterBase monster = QueueController.S.MonsterColliderDic[col];
-            monster.Hurt(QueueController.S.GameAttack*SkillConfig.Dian5Damage/100f*SkillController.S.IceYuanSuDamage*(GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage+1.0f)*(1.0f),GameController.S.GetIsCrit(),DamageFrom.Skill,YuanSuType.Dian);
+            float damage = QueueController.S.GameAttack * SkillConfig.Dian5Damage / 100f *
+                           SkillController.S.IceYuanSuDamage *
+                           (GlobalPlayerAttribute.FinalChongWuAttribute.IceSkillDamage + 1.0f);
+            if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill5))
+            {
+               damage *= 1.15f;
+            }
+            monster.Hurt(damage,GameController.S.GetIsCrit(),DamageFrom.Skill,YuanSuType.Dian);
             // var hit = GameController.S.HeiDongPengQueue.Dequeue();
             //hit.transform.position = monster.transform.position;
             //hit.SetActive(true);

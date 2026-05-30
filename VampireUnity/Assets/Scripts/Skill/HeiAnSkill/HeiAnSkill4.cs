@@ -5,13 +5,24 @@ using UnityEngine;
 
 public class HeiAnSkill4 : MonoBehaviour
 {
+    private float speed = 5f;
+
+    private void Awake()
+    {
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill4))
+        {
+            speed *= 1.25f;
+        }
+
+    }
+
     private void Update()
     {
-        QueueController.S.gamePlayer.HeiAnSkill4_4.Rotate(0, 0, 5);
-        QueueController.S.gamePlayer.HeiAnSkill4_5.Rotate(0, 0, 5);
-        QueueController.S.gamePlayer.HeiAnSkill4_6.Rotate(0, 0, 5);
-        QueueController.S.gamePlayer.HeiAnSkill4_7.Rotate(0, 0, 5);
-        QueueController.S.gamePlayer.HeiAnSkill4_8.Rotate(0, 0, 5);
-        QueueController.S.gamePlayer.HeiAnSkill4_9.Rotate(0, 0, 5);
+        QueueController.S.gamePlayer.HeiAnSkill4_4.Rotate(0, 0, speed);
+        QueueController.S.gamePlayer.HeiAnSkill4_5.Rotate(0, 0, speed);
+        QueueController.S.gamePlayer.HeiAnSkill4_6.Rotate(0, 0, speed);
+        QueueController.S.gamePlayer.HeiAnSkill4_7.Rotate(0, 0, speed);
+        QueueController.S.gamePlayer.HeiAnSkill4_8.Rotate(0, 0, speed);
+        QueueController.S.gamePlayer.HeiAnSkill4_9.Rotate(0, 0, speed);
     }
 }

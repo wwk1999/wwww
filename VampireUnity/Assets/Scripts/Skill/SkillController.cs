@@ -16,7 +16,7 @@ public class SkillController : XSingleton<SkillController>
     [NonSerialized]public int CurrentDashCount = 0;
     //技能相关
     [NonSerialized]public GameObject IceExTrigger;
-    [NonSerialized]public float IceBallSpeed = 5f;
+    public float IceBallSpeed  =>GetBallSpeed();
     [NonSerialized]public GameObject IceBallGameObject;
     //技能冷却时间
     public float IceExplosiontime => GetIceSkill3Time();
@@ -47,6 +47,16 @@ public class SkillController : XSingleton<SkillController>
     public float HeiAnSkill5Time => GetHeiAnSkill5Time();
 
 
+    public float GetBallSpeed()
+    {
+        float value = 5;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill2))
+        {
+            value *= 1.25f;
+        }
+
+        return value;
+    }
     public float GetIceSkill1Time()
     {
         float value = SkillConfig.SkillBaseTime[SkillType.Ice1];
@@ -55,6 +65,11 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillCdAdd))
         {
             value *= 0.8f;
+        }
+
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill1))
+        {
+            value *= 0.85f;
         }
         return value;
     }
@@ -68,6 +83,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill4))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
     
@@ -79,6 +98,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill5))
+        {
+            value *= 0.85f;
         }
         return value;
     }
@@ -93,6 +116,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill2))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
     
@@ -104,6 +131,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill3))
+        {
+            value *= 0.85f;
         }
         return value;
     }
@@ -119,6 +150,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill1))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
     
@@ -130,6 +165,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill2))
+        {
+            value *= 0.75f;
         }
         return value;
     }
@@ -143,6 +182,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill3))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
     
@@ -154,6 +197,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill4))
+        {
+            value *= 0.85f;
         }
         return value;
     }
@@ -168,6 +215,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill5))
+        {
+            value *= 0.85f;
         }
         return value;
     }
@@ -184,6 +235,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill1))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
     
@@ -195,6 +250,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill2))
+        {
+            value *= 0.75f;
         }
         return value;
     }
@@ -208,6 +267,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill3))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
     
@@ -219,6 +282,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill4))
+        {
+            value *= 0.85f;
         }
         return value;
     }
@@ -234,6 +301,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill5))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
 
@@ -248,6 +319,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill1))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
     
@@ -260,6 +335,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill2))
+        {
+            value *= 0.75f;
+        }
         return value;
     }
     
@@ -271,6 +350,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill3))
+        {
+            value *= 0.85f;
         }
         return value;
     }
@@ -285,6 +368,10 @@ public class SkillController : XSingleton<SkillController>
         {
             value *= 0.8f;
         }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill4))
+        {
+            value *= 0.85f;
+        }
         return value;
     }
     
@@ -297,6 +384,10 @@ public class SkillController : XSingleton<SkillController>
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkillCdAdd))
         {
             value *= 0.8f;
+        }
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill5))
+        {
+            value *= 0.85f;
         }
         return value;
     }
@@ -371,6 +462,10 @@ public class SkillController : XSingleton<SkillController>
     public float GetHuoSkill2Duration()
     {
         float value = 5f;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill2))
+        {
+            value += 1.25f;
+        }
         value*=(1.0f);
         return value;
     }
@@ -378,6 +473,10 @@ public class SkillController : XSingleton<SkillController>
     public float GetHeiAnSkill2Duration()
     {
         float value = 5f;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill2))
+        {
+            value += 1.25f;
+        }
         value*=(1.0f);
         return value;
     }
@@ -385,6 +484,10 @@ public class SkillController : XSingleton<SkillController>
     public float GetDianSkill2Duration()
     {
         float value = 5f;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill2))
+        {
+            value += 1.25f;
+        }
         value*=(1.0f);
         return value;
     }
@@ -572,6 +675,10 @@ public class SkillController : XSingleton<SkillController>
         DianSkill3Coolingtime = 0;
         float waveOffset = Random.Range(0,30);
         int bulletCount = 12+SkillJiaDian.S.Dian3_2*2;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.DianSkill3))
+        {
+            bulletCount += 5;
+        }
         float angleStep = 360f / bulletCount;
 
         for (int i = 0; i < bulletCount; i++)
@@ -598,6 +705,10 @@ public class SkillController : XSingleton<SkillController>
         IceSkill5Coolingtime = 0;
         float waveOffset = Random.Range(0,30);
         int bulletCount = 12+2*SkillJiaDian.S.Ice5_2;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill5))
+        {
+            bulletCount += 5;
+        }
         float angleStep = 360f / bulletCount;
 
         for (int i = 0; i < bulletCount; i++)
@@ -887,6 +998,10 @@ public class SkillController : XSingleton<SkillController>
         Vector2 baseDir = (worldPos -QueueController.S.gamePlayer.transform.position).normalized;
 
         int bulletCount = 3+SkillJiaDian.S.Huo1_2;
+        if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill1))
+        {
+            bulletCount += 2;
+        }
         // 两个偏移角度：+10° 和 -10°
         Vector2[] dirs3 =
         {
@@ -929,7 +1044,19 @@ public class SkillController : XSingleton<SkillController>
             Quaternion.AngleAxis( 4f, Vector3.forward) * baseDir,
             Quaternion.AngleAxis( -4f, Vector3.forward) * baseDir,
         };
+        
         Vector2[] dirs8 =
+        {
+            Quaternion.AngleAxis( -2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 8f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -8f, Vector3.forward) * baseDir,
+        };
+        Vector2[] dirs9 =
         {
             Quaternion.AngleAxis( 0f, Vector3.forward) * baseDir,
             Quaternion.AngleAxis( -2f, Vector3.forward) * baseDir,
@@ -941,6 +1068,21 @@ public class SkillController : XSingleton<SkillController>
             Quaternion.AngleAxis( -8f, Vector3.forward) * baseDir,
             Quaternion.AngleAxis( 8f, Vector3.forward) * baseDir,
         };
+        
+        Vector2[] dirs10 =
+        {
+            Quaternion.AngleAxis( -2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 2f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 4f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 6f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -8f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 8f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( -10f, Vector3.forward) * baseDir,
+            Quaternion.AngleAxis( 10f, Vector3.forward) * baseDir,
+        };
+        
         Vector2[] dirs = null;
         switch (bulletCount)
         {
@@ -961,6 +1103,12 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case 8:
                 dirs=dirs8;
+                break;
+            case 9:
+                dirs=dirs9;
+                break;
+            case 10:
+                dirs=dirs10;
                 break;
         }
         foreach (Vector2 dir in dirs)
@@ -1130,7 +1278,12 @@ public class SkillController : XSingleton<SkillController>
                 }
 
                 IceSkill4Coolingtime = 0;
-                StartCoroutine(IceSkill4(4+SkillJiaDian.S.Ice4_2,1f,0.3f));
+                int count11 = 4 + SkillJiaDian.S.Ice4_2;
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.IceSkill4))
+                {
+                    count11 += 2;
+                }
+                StartCoroutine(IceSkill4(count11,1f,0.3f));
                 break;
             case SkillType.Ice5:
                 IceSkill5();
@@ -1155,6 +1308,10 @@ public class SkillController : XSingleton<SkillController>
                 break;
             case SkillType.Huo3:
                 int count = 5;
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill3))
+                {
+                    count += 2;
+                }
                 StartCoroutine(HuoSkill3(count,1.3f,0.2f));
                 break;
             case SkillType.Huo4:
@@ -1165,7 +1322,13 @@ public class SkillController : XSingleton<SkillController>
                 {
                     return;
                 }
-                StartCoroutine(HuoSkill5(4+SkillJiaDian.S.Huo5_2,1.5f,0.3f));
+
+                int count12 = 4 + SkillJiaDian.S.Huo5_2;
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HuoSkill5))
+                {
+                    count12 += 2;
+                }
+                StartCoroutine(HuoSkill5(count12,1.5f,0.3f));
                 break;
             case SkillType.HeiAn1:
                 HeiAnSkill1();
@@ -1180,7 +1343,12 @@ public class SkillController : XSingleton<SkillController>
                 HeiAnSkill4(4+SkillJiaDian.S.HeiAn4_2);
                 break;
             case SkillType.HeiAn5:
-                HeiAnSkill5(4+SkillJiaDian.S.HeiAn5_2);
+                int count13 = 4 + SkillJiaDian.S.HeiAn5_2;
+                if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.HeiAnSkill5))
+                {
+                    count13 += 2;
+                }
+                HeiAnSkill5(count13);
                 break;
         }
     }
