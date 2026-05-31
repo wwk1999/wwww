@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Config;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +16,67 @@ public class ShouCangShiWindow : MonoBehaviour
    public Button ChiBangButton;
    public GameObject Content;
 
+   public TextMeshProUGUI Left;
+   public TextMeshProUGUI Right;
+   public TextMeshProUGUI Level;
+   public TextMeshProUGUI Attack;
+   public TextMeshProUGUI Defense;
+   public TextMeshProUGUI Crit;
+   public TextMeshProUGUI Hp;
+
+   public Slider slider;
+
+   public void SetInfo()
+   {
+      int count = 0;
+      foreach (var item in PlayerData.S.ShouCangShiEquipDic)
+      {
+         if (item.Value)
+         {
+            count += ShouCangShiConfig.ShouCangShiQualityCountDic[5];
+         }
+      }
+      
+      foreach (var item in PlayerData.S.ShouCangShiChongWu)
+      {
+         if (item.Value)
+         {
+            int quality = ChongWuConfig.GetChongWuQualityByType(item.Key);
+            count += ShouCangShiConfig.ShouCangShiQualityCountDic[quality];
+         }
+      }
+      
+      
+      foreach (var item in PlayerData.S.ShouCangShiChiBangDic)
+      {
+         if (item.Value)
+         {
+            int quality = ChiBangConfig.GetChiBangQuality(item.Key);
+            count += ShouCangShiConfig.ShouCangShiQualityCountDic[quality];
+         }
+      }
+
+      int level = count / 10;
+      int left = count % 10;
+      int right = 10;
+
+      float attack = level * ShouCangShiConfig.BaseAttack;
+      float defense = level * ShouCangShiConfig.BaseDefense;
+      float crit = level * ShouCangShiConfig.BaseCrit;
+      float hp = level * ShouCangShiConfig.BaseHp;
+
+      Left.text=left.ToString();
+      Right.text=right.ToString();
+      Level.text=level.ToString();
+      Attack.text = attack.ToString();
+      Defense.text = defense.ToString();
+      Crit.text = crit.ToString();
+      Hp.text = hp.ToString();
+
+      slider.maxValue = 10;
+      slider.value = left;
+   }
+   
    public IEnumerator  ShowEquip()
    {
       foreach (Transform item in Content.transform)
@@ -102,6 +165,7 @@ public class ShouCangShiWindow : MonoBehaviour
    {
       SwitchLiang(ShouCangShiItemType.Equip);
       StartCoroutine(ShowEquip());
+      SetInfo();
    }
 
    public void SwitchLiang(ShouCangShiItemType type)

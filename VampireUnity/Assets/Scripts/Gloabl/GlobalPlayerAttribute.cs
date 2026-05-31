@@ -27,6 +27,14 @@ public class TitleAttributeAll
     public float NormalAttackDamage;
     public float MoveSpeed;
 }
+
+public class ShouCangShiAttribute
+{
+    public float Attack;
+    public float Defense;
+    public float Hp;
+    public float Crit;
+}
 public class GlobalPlayerAttribute
 {
 
@@ -2941,6 +2949,52 @@ public class GlobalPlayerAttribute
        get => GetEquipDefense();
    }
    
+   
+   //收藏室属性
+   public static ShouCangShiAttribute ShouCangShiAttribute=>GetShouCangShiAttribute();
+
+   public static ShouCangShiAttribute GetShouCangShiAttribute()
+   {
+       ShouCangShiAttribute shouCangShiAttribute = new ShouCangShiAttribute();
+       int count = 0;
+       foreach (var item in PlayerData.S.ShouCangShiEquipDic)
+       {
+           if (item.Value)
+           {
+               count += ShouCangShiConfig.ShouCangShiQualityCountDic[5];
+           }
+       }
+      
+       foreach (var item in PlayerData.S.ShouCangShiChongWu)
+       {
+           if (item.Value)
+           {
+               int quality = ChongWuConfig.GetChongWuQualityByType(item.Key);
+               count += ShouCangShiConfig.ShouCangShiQualityCountDic[quality];
+           }
+       }
+      
+      
+       foreach (var item in PlayerData.S.ShouCangShiChiBangDic)
+       {
+           if (item.Value)
+           {
+               int quality = ChiBangConfig.GetChiBangQuality(item.Key);
+               count += ShouCangShiConfig.ShouCangShiQualityCountDic[quality];
+           }
+       }
+
+       int level = count / 10;
+       shouCangShiAttribute.Attack = level * ShouCangShiConfig.BaseAttack;
+       shouCangShiAttribute.Defense = level * ShouCangShiConfig.BaseDefense;
+       shouCangShiAttribute.Hp = level * ShouCangShiConfig.BaseHp;
+       shouCangShiAttribute.Crit = level * ShouCangShiConfig.BaseCrit;
+       return shouCangShiAttribute;
+   }
+   
+   
+   
+   
    //总属性
    
    //基础属性
@@ -2970,6 +3024,7 @@ public class GlobalPlayerAttribute
    {
        float value=(PlayerCRIT + EquipCRIT+WeaponCrit+MonsterCrit+TitleAttributeAll.Crit+PlayerData.S.ChiBangCrit);
        value += FinalChongWuAttribute.Crit;
+       value+=ShouCangShiAttribute.Crit;
        value *= (1 ) * (1.0f + BaoShiCrit / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
        if (CDTeXiao5Time > 0)
        {
@@ -3061,6 +3116,7 @@ public class GlobalPlayerAttribute
    {
        float maxhp= Mathf.RoundToInt((PlayerMaxHp + EquipMaxHp+WeaponHp+MonsterHp+TitleAttributeAll.Hp+PlayerData.S.ChiBangHp));
        maxhp += FinalChongWuAttribute.Hp;
+       maxhp += ShouCangShiAttribute.Hp;
        maxhp *= (1.0f + MaxHpPercent / 100f) * (1.0f + BaoShiHp / 100) * (1.0f + TitleAttributeAll.AllBaseAttribute);
        maxhp *= (1.0f + ShiZhuangAttack / 100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.RecudeHpAddAttack))
@@ -3074,6 +3130,7 @@ public class GlobalPlayerAttribute
    {
        float damage = PlayerDamage + EquipDamage+WeaponAttack+MonsterAttack+TitleAttributeAll.Attack+PlayerData.S.ChiBangAttack;
        damage += FinalChongWuAttribute.Attack;
+       damage += ShouCangShiAttribute.Attack;
        damage *= (1f + DamageAddPercent / 100f) * (1.0f + BaoShiAttack / 100) *
                  (1.0f + TitleAttributeAll.AllBaseAttribute);
        damage *= (1.0f + ShiZhuangHp / 100f);
@@ -3090,6 +3147,7 @@ public class GlobalPlayerAttribute
    {
        float defense=PlayerDefense + EquipDefense+WeaponDefense+MonsterDefense+TitleAttributeAll.Defense+PlayerData.S.ChiBangDefense;
        defense += FinalChongWuAttribute.Defence;
+       defense += ShouCangShiAttribute.Defense;
        defense *= (1.0f + MaxDefensePercent / 100f);
        defense *= (1.0f + BaoShiDefense / 100);
        defense *= (1.0f + TitleAttributeAll.AllBaseAttribute);
