@@ -176,6 +176,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\lang.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManJumpTrigger.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong1.cs" />
+    <Compile Include="Assets\Scripts\Config\ShouCangShiConfig.cs" />
     <Compile Include="Assets\Scripts\Skill\FourNormalAttack.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Shoe\ExAdd.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\DianBaoZha\DianBaoZhaNext.cs" />
@@ -421,6 +422,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\kulou2.cs" />
     <Compile Include="Assets\Scripts\Tool\ClearSaveTool.cs" />
     <Compile Include="Assets\Arts\Shaders\LcL\FadeController.cs" />
+    <Compile Include="Assets\Scripts\Window\ShouCangShiItem.cs" />
     <Compile Include="Assets\Scripts\ChongWu\FuChongItem.cs" />
     <Compile Include="Assets\Scripts\Prop\WeaponFragment\RedWeaponFragment.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NecklaceFortureAdd.cs" />
@@ -655,6 +657,7 @@
     <Compile Include="Assets\Scripts\Config\ShangDianConfig.cs" />
     <Compile Include="Assets\Scripts\Skill\SkillController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\yuren2.cs" />
+    <Compile Include="Assets\Scripts\Window\ShouCangShiWindow.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\egg.cs" />
     <Compile Include="Assets\Scripts\Server\SourceStoneServer.cs" />
     <Compile Include="Assets\Scripts\Gun\Pistol.cs" />

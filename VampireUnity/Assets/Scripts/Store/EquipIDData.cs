@@ -40,6 +40,10 @@ public class EquipIDData : XSingleton<EquipIDData>
             BaoShiDic = equip.BaoShiDic,
             orangeid = equip.orangeid,
         };
+        if (equip.orangeid != 0)
+        {
+            PlayerData.S.ShouCangShiEquipDic[equip.orangeid] = true;
+        }
         equipIds.Add(data.equipid,data);
     }
     /// <summary>
@@ -51,6 +55,7 @@ public class EquipIDData : XSingleton<EquipIDData>
     {
         if (prop.PropType == PropConfig.PropType.ChiBangFight)//翅膀道具
         {
+            PlayerData.S.ShouCangShiChiBangDic[prop.ChiBangType]=true;
             if(PlayerData.S.ChiBangList.ContainsKey(prop.ChiBangType))
             {
                 PlayerData.S.ChiBangList[prop.ChiBangType].XjEx++;

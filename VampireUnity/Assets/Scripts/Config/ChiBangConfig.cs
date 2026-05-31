@@ -4,6 +4,14 @@ using UnityEngine;
 public enum ChiBangType
 {
     None,
+    Green1,
+    Green2,
+    Green3,
+    Green4,
+    Green5,
+    Green6,
+    
+    
     Blue1,
     Blue2,
     Blue3,
@@ -12,13 +20,6 @@ public enum ChiBangType
     Blue6,
     Blue7,
     Blue8,
-
-    Green1,
-    Green2,
-    Green3,
-    Green4,
-    Green5,
-    Green6,
     
     Purple1,
     Purple2,

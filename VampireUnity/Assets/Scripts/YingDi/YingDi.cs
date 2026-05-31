@@ -13,6 +13,7 @@ public enum JiaoHuType
     ChongWu,
     ShiZhuangDaShi,
     ChuanSongMen,
+    ShouCangShi,
 }
 public class YingDi : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class YingDi : MonoBehaviour
     public GameObject ShiZhuangDaShi;
     public GameObject ShangRen;
     public GameObject ChuanSongMen;
+    public GameObject ShouCangShi;
 
 
     public GameObject TieJiangJiaoHu;
@@ -39,6 +41,7 @@ public class YingDi : MonoBehaviour
     public GameObject ShiZhuangDaShiJiaoHu;
     public GameObject ShangRenJiaoHu;
     public GameObject ChuanSongMenJiaoHu;
+    public GameObject ShouCangShiJiaoHu;
 
     
     public SpriteRenderer shizhuang;
@@ -153,6 +156,9 @@ public class YingDi : MonoBehaviour
         else if (Vector2.Distance(ChuanSongMen.transform.position, player.transform.position) < 1)
         {
             jiaoHuType=JiaoHuType.ChuanSongMen;
+        }else if (Vector2.Distance(ShouCangShi.transform.position, player.transform.position) < 1)
+        {
+            jiaoHuType=JiaoHuType.ShouCangShi;
         }else if (Vector2.Distance(ShiZhuangDaShi.transform.position, player.transform.position) < 1)
         {
             jiaoHuType=JiaoHuType.ShiZhuangDaShi;
@@ -174,6 +180,7 @@ public class YingDi : MonoBehaviour
         ShiZhuangDaShiJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ShiZhuangDaShi);
         ShangRenJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ShangRen);
         ChuanSongMenJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ChuanSongMen);
+        ShouCangShiJiaoHu.gameObject.SetActive(jiaoHuType == JiaoHuType.ShouCangShi);
 
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -194,6 +201,9 @@ public class YingDi : MonoBehaviour
                     break;
                 case  JiaoHuType.ChuanSongMen:
                     WindowController.S.GameLevelWindow.SetActive(true);
+                    break;
+                case  JiaoHuType.ShouCangShi:
+                    WindowController.S.ShouCangShiWindow.SetActive(true);
                     break;
             }
         }

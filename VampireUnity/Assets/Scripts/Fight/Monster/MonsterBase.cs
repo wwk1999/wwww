@@ -1120,7 +1120,7 @@ public abstract class MonsterBase : MonoBehaviour
         if (info.orangeEquip)
         {
             float random = Random.Range(0, 100f);
-            if (random <= 0.2f*(1.0f+GlobalPlayerAttribute.Forture))
+            if (random <= 100f*(1.0f+GlobalPlayerAttribute.Forture))
             {
                 //生成装备
                 EquipBase equip = QueueController.S.OrangeEquipQueue.Dequeue();

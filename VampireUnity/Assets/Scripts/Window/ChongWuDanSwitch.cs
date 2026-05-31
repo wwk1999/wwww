@@ -57,6 +57,7 @@ public class ChongWuDanSwitch : MonoBehaviour
                             break;
                     }
 
+                    PlayerData.S.ShouCangShiChongWu[chongWuType] = true;
                     ChongWuTable chongWuTable = ChongWuController.S.GetOriginChongWuTable(chongWuType);
                     PlayerData.S.ChongWuDic[chongWuTable.ChongWuId]=chongWuTable;
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "恭喜获得宠物：" + chongWuTable.Name);
@@ -113,6 +114,7 @@ public class ChongWuDanSwitch : MonoBehaviour
                             chongWuType = ChongWuConfig.GetChongWuType(5);
                             break;
                     }
+                    PlayerData.S.ShouCangShiChongWu[chongWuType] = true;
 
                     ChongWuTable chongWuTable = ChongWuController.S.GetOriginChongWuTable(chongWuType);
                     PlayerData.S.ChongWuDic[chongWuTable.ChongWuId]=chongWuTable;
@@ -162,6 +164,8 @@ public class ChongWuDanSwitch : MonoBehaviour
                         chongWuType = ChongWuConfig.GetChongWuType(4);
                         break;
                 }
+                PlayerData.S.ShouCangShiChongWu[chongWuType] = true;
+
                 ChongWuTable chongWuTable = ChongWuController.S.GetOriginChongWuTable(chongWuType);
                 PlayerData.S.ChongWuDic[chongWuTable.ChongWuId]=chongWuTable;
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜获得宠物："+chongWuTable.Name);
@@ -211,6 +215,7 @@ public class ChongWuDanSwitch : MonoBehaviour
                         chongWuType = ChongWuConfig.GetChongWuType(5);
                         break;
                 }
+                PlayerData.S.ShouCangShiChongWu[chongWuType] = true;
                 ChongWuTable chongWuTable = ChongWuController.S.GetOriginChongWuTable(chongWuType);
                 PlayerData.S.ChongWuDic[chongWuTable.ChongWuId]=chongWuTable;
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"恭喜获得宠物："+chongWuTable.Name);

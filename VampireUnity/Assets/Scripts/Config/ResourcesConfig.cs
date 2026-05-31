@@ -8,6 +8,9 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite LingHun;
     public static Sprite EXP;
 
+    public static Sprite ShouCangShiAnNiuLiang;
+    public static Sprite ShouCangShiAnNiuAn;
+
     //弹幕
     public static Sprite DanMu1;
     public static Sprite DanMu2;
@@ -1680,6 +1683,10 @@ public class ResourcesConfig : MonoBehaviour
 
     public static void Init()
     {
+        
+        ShouCangShiAnNiuLiang=Resources.Load<Sprite>("Sprite/ShouCangShi/按钮亮");
+        ShouCangShiAnNiuAn=Resources.Load<Sprite>("Sprite/ShouCangShi/按钮暗");
+
         //弹幕
         DanMu1 = Resources.Load<Sprite>("Sprite/DanMu/DanMu1");
         DanMu2 = Resources.Load<Sprite>("Sprite/DanMu/DanMu2");

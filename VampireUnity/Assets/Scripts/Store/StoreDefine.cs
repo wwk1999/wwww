@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Config;
 using UnityEngine;
 
@@ -61,6 +62,193 @@ public class StoreDefine : XSingleton<StoreDefine>
     [System.Serializable]
     public class PlayData
     {
+        public Dictionary<int, bool> ShouCangShiLastEquipDic = Enumerable.Range(1, 78).ToDictionary(k => k, v => false);
+        public Dictionary<int, bool> ShouCangShiEquipDic = Enumerable.Range(1, 78).ToDictionary(k => k, v => false);
+public Dictionary<ChongWuType, bool> ShouCangShiLastChongWu = new Dictionary<ChongWuType, bool>()
+{
+    { ChongWuType.None, false },
+    { ChongWuType.icewhite1, false },
+    { ChongWuType.huowhite1, false },
+    { ChongWuType.dianwhite1, false },
+    { ChongWuType.heianwhite1, false },
+    { ChongWuType.heianwhite2, false },
+    { ChongWuType.icegreen1, false },
+    { ChongWuType.icegreen2, false },
+    { ChongWuType.icegreen3, false },
+    { ChongWuType.huogreen1, false },
+    { ChongWuType.huogreen2, false },
+    { ChongWuType.diangreen1, false },
+    { ChongWuType.diangreen2, false },
+    { ChongWuType.heiangreen1, false },
+    { ChongWuType.heiangreen2, false },
+    { ChongWuType.heiangreen3, false },
+    { ChongWuType.iceblue1, false },
+    { ChongWuType.iceblue2, false },
+    { ChongWuType.huoblue1, false },
+    { ChongWuType.huoblue2, false },
+    { ChongWuType.huoblue3, false },
+    { ChongWuType.dianblue1, false },
+    { ChongWuType.dianblue2, false },
+    { ChongWuType.heianblue1, false },
+    { ChongWuType.heianblue2, false },
+    { ChongWuType.heianblue3, false },
+    { ChongWuType.icepurple1_q, false },
+    { ChongWuType.icepurple1_h, false },
+    { ChongWuType.icepurple2_q, false },
+    { ChongWuType.icepurple2_h, false },
+    { ChongWuType.icepurple3_q, false },
+    { ChongWuType.icepurple3_h, false },
+    { ChongWuType.huopurple1_q, false },
+    { ChongWuType.huopurple1_h, false },
+    { ChongWuType.huopurple2_q, false },
+    { ChongWuType.huopurple2_h, false },
+    { ChongWuType.huopurple3_q, false },
+    { ChongWuType.huopurple3_h, false },
+    { ChongWuType.dianpurple1_q, false },
+    { ChongWuType.dianpurple1_h, false },
+    { ChongWuType.dianpurple2_q, false },
+    { ChongWuType.dianpurple2_h, false },
+    { ChongWuType.dianpurple3_q, false },
+    { ChongWuType.dianpurple3_h, false },
+    { ChongWuType.heianpurple1_q, false },
+    { ChongWuType.heianpurple1_h, false },
+    { ChongWuType.heianpurple2_q, false },
+    { ChongWuType.heianpurple2_h, false },
+    { ChongWuType.heianpurple3_q, false },
+    { ChongWuType.heianpurple3_h, false },
+    { ChongWuType.iceorange1_q, false },
+    { ChongWuType.iceorange1_h, false },
+    { ChongWuType.huoorange1_q, false },
+    { ChongWuType.huoorange1_h, false },
+    { ChongWuType.dianorange1_q, false },
+    { ChongWuType.dianorange1_h, false },
+    { ChongWuType.heianorange1_q, false },
+    { ChongWuType.heianorange1_h, false },
+};
+    
+     public Dictionary<ChongWuType, bool> ShouCangShiChongWu = new Dictionary<ChongWuType, bool>()
+{
+    { ChongWuType.None, false },
+    { ChongWuType.icewhite1, false },
+    { ChongWuType.huowhite1, false },
+    { ChongWuType.dianwhite1, false },
+    { ChongWuType.heianwhite1, false },
+    { ChongWuType.heianwhite2, false },
+    { ChongWuType.icegreen1, false },
+    { ChongWuType.icegreen2, false },
+    { ChongWuType.icegreen3, false },
+    { ChongWuType.huogreen1, false },
+    { ChongWuType.huogreen2, false },
+    { ChongWuType.diangreen1, false },
+    { ChongWuType.diangreen2, false },
+    { ChongWuType.heiangreen1, false },
+    { ChongWuType.heiangreen2, false },
+    { ChongWuType.heiangreen3, false },
+    { ChongWuType.iceblue1, false },
+    { ChongWuType.iceblue2, false },
+    { ChongWuType.huoblue1, false },
+    { ChongWuType.huoblue2, false },
+    { ChongWuType.huoblue3, false },
+    { ChongWuType.dianblue1, false },
+    { ChongWuType.dianblue2, false },
+    { ChongWuType.heianblue1, false },
+    { ChongWuType.heianblue2, false },
+    { ChongWuType.heianblue3, false },
+    { ChongWuType.icepurple1_q, false },
+    { ChongWuType.icepurple1_h, false },
+    { ChongWuType.icepurple2_q, false },
+    { ChongWuType.icepurple2_h, false },
+    { ChongWuType.icepurple3_q, false },
+    { ChongWuType.icepurple3_h, false },
+    { ChongWuType.huopurple1_q, false },
+    { ChongWuType.huopurple1_h, false },
+    { ChongWuType.huopurple2_q, false },
+    { ChongWuType.huopurple2_h, false },
+    { ChongWuType.huopurple3_q, false },
+    { ChongWuType.huopurple3_h, false },
+    { ChongWuType.dianpurple1_q, false },
+    { ChongWuType.dianpurple1_h, false },
+    { ChongWuType.dianpurple2_q, false },
+    { ChongWuType.dianpurple2_h, false },
+    { ChongWuType.dianpurple3_q, false },
+    { ChongWuType.dianpurple3_h, false },
+    { ChongWuType.heianpurple1_q, false },
+    { ChongWuType.heianpurple1_h, false },
+    { ChongWuType.heianpurple2_q, false },
+    { ChongWuType.heianpurple2_h, false },
+    { ChongWuType.heianpurple3_q, false },
+    { ChongWuType.heianpurple3_h, false },
+    { ChongWuType.iceorange1_q, false },
+    { ChongWuType.iceorange1_h, false },
+    { ChongWuType.huoorange1_q, false },
+    { ChongWuType.huoorange1_h, false },
+    { ChongWuType.dianorange1_q, false },
+    { ChongWuType.dianorange1_h, false },
+    { ChongWuType.heianorange1_q, false },
+    { ChongWuType.heianorange1_h, false },
+};
+
+public Dictionary<ChiBangType, bool> ShouCangShiLastChiBangDic = new Dictionary<ChiBangType, bool>()
+{
+    { ChiBangType.None, false },
+    { ChiBangType.Blue1, false },
+    { ChiBangType.Blue2, false },
+    { ChiBangType.Blue3, false },
+    { ChiBangType.Blue4, false },
+    { ChiBangType.Blue5, false },
+    { ChiBangType.Blue6, false },
+    { ChiBangType.Blue7, false },
+    { ChiBangType.Blue8, false },
+    { ChiBangType.Green1, false },
+    { ChiBangType.Green2, false },
+    { ChiBangType.Green3, false },
+    { ChiBangType.Green4, false },
+    { ChiBangType.Green5, false },
+    { ChiBangType.Green6, false },
+    { ChiBangType.Purple1, false },
+    { ChiBangType.Purple2, false },
+    { ChiBangType.Purple3, false },
+    { ChiBangType.Purple4, false },
+    { ChiBangType.Purple5, false },
+    { ChiBangType.Purple6, false },
+    { ChiBangType.Purple7, false },
+    { ChiBangType.Orange1, false },
+    { ChiBangType.Orange2, false },
+    { ChiBangType.Orange3, false },
+    { ChiBangType.Red1, false },
+};
+
+public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiBangType, bool>()
+{
+    { ChiBangType.None, false },
+    { ChiBangType.Blue1, false },
+    { ChiBangType.Blue2, false },
+    { ChiBangType.Blue3, false },
+    { ChiBangType.Blue4, false },
+    { ChiBangType.Blue5, false },
+    { ChiBangType.Blue6, false },
+    { ChiBangType.Blue7, false },
+    { ChiBangType.Blue8, false },
+    { ChiBangType.Green1, false },
+    { ChiBangType.Green2, false },
+    { ChiBangType.Green3, false },
+    { ChiBangType.Green4, false },
+    { ChiBangType.Green5, false },
+    { ChiBangType.Green6, false },
+    { ChiBangType.Purple1, false },
+    { ChiBangType.Purple2, false },
+    { ChiBangType.Purple3, false },
+    { ChiBangType.Purple4, false },
+    { ChiBangType.Purple5, false },
+    { ChiBangType.Purple6, false },
+    { ChiBangType.Purple7, false },
+    { ChiBangType.Orange1, false },
+    { ChiBangType.Orange2, false },
+    { ChiBangType.Orange3, false },
+    { ChiBangType.Red1, false },
+};
+        
+        
         public ChiBangType playerChiBangType;
         public Dictionary<ChiBangType,ChiBangInfo> ChiBangList = new Dictionary<ChiBangType,ChiBangInfo>();
         public int level;
@@ -199,6 +387,15 @@ public class StoreDefine : XSingleton<StoreDefine>
 
         public void CopyFromRuntime(PlayerData runtime)
         {
+            ShouCangShiEquipDic = runtime.ShouCangShiEquipDic;
+            ShouCangShiLastEquipDic = runtime.ShouCangShiLastEquipDic;
+            
+            ShouCangShiChongWu = runtime.ShouCangShiChongWu;
+            ShouCangShiLastChongWu = runtime.ShouCangShiLastChongWu;
+            
+            ShouCangShiChiBangDic = runtime.ShouCangShiChiBangDic;
+            ShouCangShiLastChiBangDic= runtime.ShouCangShiLastChiBangDic;
+            
             playerChiBangType = runtime.playerChiBangType;
             ChiBangList.Clear();
             foreach (var item in runtime.ChiBangList)
@@ -334,6 +531,17 @@ public class StoreDefine : XSingleton<StoreDefine>
 
         public void ApplyToRuntime(PlayerData runtime)
         {
+            runtime.ShouCangShiEquipDic = ShouCangShiEquipDic;
+            runtime.ShouCangShiLastEquipDic = ShouCangShiLastEquipDic;
+            
+            
+            runtime.ShouCangShiChiBangDic = ShouCangShiChiBangDic;
+            runtime.ShouCangShiLastChiBangDic = ShouCangShiLastChiBangDic;
+            
+            runtime.ShouCangShiChongWu = ShouCangShiChongWu;
+            runtime.ShouCangShiLastChongWu = ShouCangShiLastChongWu;
+            
+            
             runtime.playerChiBangType = playerChiBangType;
 
             runtime.ChiBangList.Clear();
