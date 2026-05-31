@@ -859,6 +859,7 @@
     <None Include="Assets\Arts\Spine\怪物\HuangShu\Enemy_Mouse_patrol.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\json\H043_Special.json" />
     <None Include="Assets\Arts\Spine\宠物\Purple\电purple1——后\mon_torch_03.atlas.txt" />
+    <None Include="Assets\Arts\Spine\燃烧打包\skeleton.json" />
     <None Include="Assets\Arts\Spine\技能\特效\9\2017_liandaolang_effectb.atlas.txt" />
     <None Include="Assets\Packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.xml" />
     <None Include="Assets\Arts\Spine\技能\特效\灼烧\buff_zhuoshao.json" />
@@ -1366,6 +1367,7 @@
     <None Include="Assets\Arts\Spine\第三关\蚊子\wenzi.json" />
     <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\特效\2\2001_Punk_attack.json" />
+    <None Include="Assets\Arts\Spine\燃烧打包\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\黑暗peng1\9005_zhizhu_effecta.json" />
     <None Include="Assets\Arts\Spine\小怪3\cute egg\cuteEgg.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪\小恶魔大\MiniBoss_31_Dungeon_Range_EvilEye.atlas.txt" />

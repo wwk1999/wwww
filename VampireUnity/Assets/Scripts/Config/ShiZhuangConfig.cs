@@ -23,6 +23,11 @@ namespace Config
         OrangeDian,
         OrangeHeiAn,
         OrangeHuo,
+        
+        RedIce,
+        RedDian,
+        RedHeiAn,
+        RedHuo,
     }
 
     public class ShiZhuangJieSuoItem
@@ -70,6 +75,13 @@ namespace Config
                 { ShiZhuangType.OrangeIce ,new ShiZhuangAttributeItem(){Attack = 20,Hp = 35,MoveSpeed = 20,AttackSpeed = 20}},
                 { ShiZhuangType.OrangeHeiAn ,new ShiZhuangAttributeItem(){Attack = 20,Hp = 35,MoveSpeed = 20,AttackSpeed = 20}},
 
+                
+                   
+                { ShiZhuangType.RedHuo ,new ShiZhuangAttributeItem(){Attack = 30,Hp = 50,MoveSpeed = 30,AttackSpeed = 30}},
+                { ShiZhuangType.RedDian ,new ShiZhuangAttributeItem(){Attack = 30,Hp = 50,MoveSpeed = 30,AttackSpeed = 30}},
+                { ShiZhuangType.RedIce ,new ShiZhuangAttributeItem(){Attack = 30,Hp = 50,MoveSpeed = 30,AttackSpeed = 30}},
+                { ShiZhuangType.RedHeiAn ,new ShiZhuangAttributeItem(){Attack = 30,Hp = 50,MoveSpeed = 30,AttackSpeed = 30}},
+
             };
         public static Dictionary<ShiZhuangType, ShiZhuangJieSuoItem> ShiZhuangJieSuoDic =
             new Dictionary<ShiZhuangType, ShiZhuangJieSuoItem>()
@@ -94,6 +106,12 @@ namespace Config
                 {ShiZhuangType.OrangeHuo ,new ShiZhuangJieSuoItem(){level = 75,yuanSuType = YuanSuType.Huo,yuansuDamage = 400,weaponLevel = 100}},
                 {ShiZhuangType.OrangeDian ,new ShiZhuangJieSuoItem(){level = 75,yuanSuType = YuanSuType.Dian,yuansuDamage = 400,weaponLevel = 100}},
 
+                
+                {ShiZhuangType.RedIce ,new ShiZhuangJieSuoItem(){level = 100,yuanSuType = YuanSuType.Ice,yuansuDamage = 500,weaponLevel = 150}},
+                {ShiZhuangType.RedHeiAn ,new ShiZhuangJieSuoItem(){level = 100,yuanSuType = YuanSuType.HeiAn,yuansuDamage = 500,weaponLevel = 150}},
+                {ShiZhuangType.RedHuo ,new ShiZhuangJieSuoItem(){level = 100,yuanSuType = YuanSuType.Huo,yuansuDamage = 500,weaponLevel = 150}},
+                {ShiZhuangType.RedDian ,new ShiZhuangJieSuoItem(){level = 100,yuanSuType = YuanSuType.Dian,yuansuDamage = 500,weaponLevel = 150}},
+
             };
         
         public static Dictionary<ShiZhuangType, string> ShiZhuangNameDic = new Dictionary<ShiZhuangType, string>()
@@ -115,8 +133,13 @@ namespace Config
             
             { ShiZhuangType.OrangeHuo , "炼狱炎魔使" },
             { ShiZhuangType.OrangeIce , "湮灭零度" },
-            { ShiZhuangType.OrangeDian , "原初闪电" },
+            { ShiZhuangType.OrangeDian , "雷电主宰" },
             { ShiZhuangType.OrangeHeiAn , "终末之暗" },
+            
+            { ShiZhuangType.RedHuo , "恶魔之炎" },
+            { ShiZhuangType.RedIce , "冰灵之仙" },
+            { ShiZhuangType.RedDian , "原初闪电" },
+            { ShiZhuangType.RedHeiAn , "黑暗魔女" },
         };
         
         public static Dictionary<ShiZhuangType, int> ShiZhuangQualityDic = new Dictionary<ShiZhuangType, int>()
@@ -140,6 +163,11 @@ namespace Config
             { ShiZhuangType.OrangeIce , 5},
             { ShiZhuangType.OrangeDian , 5},
             { ShiZhuangType.OrangeHeiAn , 5},
+            
+            { ShiZhuangType.RedHuo , 6},
+            { ShiZhuangType.RedIce , 6},
+            { ShiZhuangType.RedDian , 6},
+            { ShiZhuangType.RedHeiAn , 6},
 
         };
     }

@@ -1,0 +1,349 @@
+
+skeleton.png
+size: 2025, 566
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+火1/火1_00000
+  rotate: false
+  xy: 1411, 24
+  size: 83, 116
+  orig: 150, 300
+  offset: 32, 15
+  index: -1
+火1/火1_00001
+  rotate: true
+  xy: 1865, 306
+  size: 76, 157
+  orig: 150, 300
+  offset: 36, 15
+  index: -1
+火1/火1_00002
+  rotate: true
+  xy: 1865, 224
+  size: 80, 155
+  orig: 150, 300
+  offset: 35, 15
+  index: -1
+火1/火1_00003
+  rotate: false
+  xy: 1783, 11
+  size: 82, 114
+  orig: 150, 300
+  offset: 32, 15
+  index: -1
+火1/火1_00004
+  rotate: false
+  xy: 1148, 9
+  size: 79, 126
+  orig: 150, 300
+  offset: 34, 15
+  index: -1
+火1/火1_00005
+  rotate: true
+  xy: 572, 3
+  size: 74, 149
+  orig: 150, 300
+  offset: 37, 15
+  index: -1
+火1/火1_00006
+  rotate: false
+  xy: 1701, 24
+  size: 80, 157
+  orig: 150, 300
+  offset: 33, 15
+  index: -1
+火2/火2_00000
+  rotate: false
+  xy: 1496, 4
+  size: 95, 147
+  orig: 150, 300
+  offset: 28, 44
+  index: -1
+火2/火2_00001
+  rotate: false
+  xy: 1678, 183
+  size: 91, 188
+  orig: 150, 300
+  offset: 30, 43
+  index: -1
+火2/火2_00002
+  rotate: false
+  xy: 1498, 370
+  size: 94, 194
+  orig: 150, 300
+  offset: 28, 43
+  index: -1
+火2/火2_00003
+  rotate: true
+  xy: 1865, 127
+  size: 95, 143
+  orig: 150, 300
+  offset: 28, 43
+  index: -1
+火2/火2_00004
+  rotate: false
+  xy: 1771, 197
+  size: 92, 181
+  orig: 150, 300
+  offset: 30, 43
+  index: -1
+火2/火2_00005
+  rotate: false
+  xy: 1711, 380
+  size: 92, 184
+  orig: 150, 300
+  offset: 30, 43
+  index: -1
+火2/火2_00006
+  rotate: true
+  xy: 1867, 29
+  size: 96, 139
+  orig: 150, 300
+  offset: 28, 43
+  index: -1
+火3/火3_00000
+  rotate: false
+  xy: 1593, 5
+  size: 106, 168
+  orig: 150, 300
+  offset: 30, 7
+  index: -1
+火3/火3_00001
+  rotate: true
+  xy: 723, 2
+  size: 102, 208
+  orig: 150, 300
+  offset: 31, 7
+  index: -1
+火3/火3_00002
+  rotate: false
+  xy: 1058, 351
+  size: 106, 213
+  orig: 150, 300
+  offset: 28, 7
+  index: -1
+火3/火3_00003
+  rotate: false
+  xy: 1918, 409
+  size: 105, 155
+  orig: 150, 300
+  offset: 29, 7
+  index: -1
+火3/火3_00004
+  rotate: false
+  xy: 1460, 153
+  size: 104, 201
+  orig: 150, 300
+  offset: 31, 7
+  index: -1
+火3/火3_00005
+  rotate: false
+  xy: 1023, 131
+  size: 100, 214
+  orig: 150, 300
+  offset: 32, 7
+  index: -1
+火3/火3_00006
+  rotate: false
+  xy: 951, 347
+  size: 105, 217
+  orig: 150, 300
+  offset: 29, 8
+  index: -1
+火4/火4_00000
+  rotate: false
+  xy: 1566, 175
+  size: 110, 193
+  orig: 150, 300
+  offset: 16, 5
+  index: -1
+火4/火4_00001
+  rotate: false
+  xy: 1125, 137
+  size: 107, 212
+  orig: 150, 300
+  offset: 17, 5
+  index: -1
+火4/火4_00002
+  rotate: true
+  xy: 933, 2
+  size: 112, 213
+  orig: 150, 300
+  offset: 13, 4
+  index: -1
+火4/火4_00003
+  rotate: false
+  xy: 1805, 384
+  size: 111, 180
+  orig: 150, 300
+  offset: 14, 5
+  index: -1
+火4/火4_00004
+  rotate: false
+  xy: 1166, 352
+  size: 106, 212
+  orig: 150, 300
+  offset: 17, 5
+  index: -1
+火4/火4_00005
+  rotate: false
+  xy: 1234, 139
+  size: 114, 211
+  orig: 150, 300
+  offset: 14, 6
+  index: -1
+火4/火4_00006
+  rotate: true
+  xy: 1229, 19
+  size: 116, 180
+  orig: 150, 300
+  offset: 10, 5
+  index: -1
+火5/火5_00000
+  rotate: false
+  xy: 1386, 356
+  size: 110, 208
+  orig: 150, 300
+  offset: 23, 7
+  index: -1
+火5/火5_00001
+  rotate: false
+  xy: 683, 106
+  size: 111, 228
+  orig: 150, 300
+  offset: 21, 6
+  index: -1
+火5/火5_00002
+  rotate: false
+  xy: 597, 336
+  size: 114, 228
+  orig: 150, 300
+  offset: 19, 6
+  index: -1
+火5/火5_00003
+  rotate: false
+  xy: 1594, 373
+  size: 115, 191
+  orig: 150, 300
+  offset: 19, 7
+  index: -1
+火5/火5_00004
+  rotate: false
+  xy: 1350, 142
+  size: 108, 209
+  orig: 150, 300
+  offset: 23, 7
+  index: -1
+火5/火5_00005
+  rotate: false
+  xy: 796, 108
+  size: 111, 227
+  orig: 150, 300
+  offset: 20, 7
+  index: -1
+火5/火5_00006
+  rotate: false
+  xy: 713, 337
+  size: 115, 227
+  orig: 150, 300
+  offset: 19, 7
+  index: -1
+火6/火6_00000
+  rotate: false
+  xy: 349, 21
+  size: 109, 258
+  orig: 150, 300
+  offset: 16, 0
+  index: -1
+火6/火6_00001
+  rotate: false
+  xy: 244, 281
+  size: 118, 283
+  orig: 150, 300
+  offset: 12, 0
+  index: -1
+火6/火6_00002
+  rotate: false
+  xy: 909, 116
+  size: 112, 220
+  orig: 150, 300
+  offset: 16, 0
+  index: -1
+火6/火6_00003
+  rotate: false
+  xy: 460, 23
+  size: 110, 256
+  orig: 150, 300
+  offset: 16, 0
+  index: -1
+火6/火6_00004
+  rotate: false
+  xy: 119, 6
+  size: 111, 271
+  orig: 150, 300
+  offset: 14, 0
+  index: -1
+火6/火6_00005
+  rotate: false
+  xy: 1274, 353
+  size: 110, 211
+  orig: 150, 300
+  offset: 17, 0
+  index: -1
+火6/火6_00006
+  rotate: false
+  xy: 572, 79
+  size: 109, 236
+  orig: 150, 300
+  offset: 17, 0
+  index: -1
+火7/火7_00000
+  rotate: false
+  xy: 2, 2
+  size: 115, 275
+  orig: 150, 300
+  offset: 16, 1
+  index: -1
+火7/火7_00001
+  rotate: false
+  xy: 2, 279
+  size: 119, 285
+  orig: 150, 300
+  offset: 15, 3
+  index: -1
+火7/火7_00002
+  rotate: false
+  xy: 830, 338
+  size: 119, 226
+  orig: 150, 300
+  offset: 15, 1
+  index: -1
+火7/火7_00003
+  rotate: false
+  xy: 232, 11
+  size: 115, 266
+  orig: 150, 300
+  offset: 17, 1
+  index: -1
+火7/火7_00004
+  rotate: false
+  xy: 364, 281
+  size: 113, 283
+  orig: 150, 300
+  offset: 19, 1
+  index: -1
+火7/火7_00005
+  rotate: false
+  xy: 123, 279
+  size: 119, 285
+  orig: 150, 300
+  offset: 15, 2
+  index: -1
+火7/火7_00006
+  rotate: false
+  xy: 479, 317
+  size: 116, 247
+  orig: 150, 300
+  offset: 17, 2
+  index: -1

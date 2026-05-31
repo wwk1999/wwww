@@ -262,7 +262,7 @@ public class BagEquipAttributeTool : MonoBehaviour, IPointerEnterHandler, IPoint
                 break;
         }
 
-        if (InstallEquipId != 0)
+        if (InstallEquipId != 0&&equipTable.equipid!=InstallEquipId)
         {
             EquipTable InstallTable = BagController.S.EquipIdList[InstallEquipId];
             ShowEquipAttriute(InstallTable,true);

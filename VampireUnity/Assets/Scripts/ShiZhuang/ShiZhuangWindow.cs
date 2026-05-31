@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class ShiZhuangWindow : MonoBehaviour
 {
   public SkeletonGraphic ske;
+  public SkeletonGraphic redske;
   public GameObject ListContent;
   public GameObject JieSuoContent;
   public GameObject AttributeContent;
@@ -57,6 +58,15 @@ public class ShiZhuangWindow : MonoBehaviour
         return "orangebing";
       case ShiZhuangType.OrangeHeiAn:
         return "orangeheian";
+      
+      case ShiZhuangType.RedDian:
+        return "reddian";
+      case ShiZhuangType.RedHuo:
+        return "redhuo";
+      case ShiZhuangType.RedIce:
+        return "redbing";
+      case ShiZhuangType.RedHeiAn:
+        return "redheian";
     }
     return null;
   }
@@ -64,15 +74,33 @@ public class ShiZhuangWindow : MonoBehaviour
   {
     ShiZhuangType shiZhuangType = (ShiZhuangType)obj[0];
     _shiZhuangType=shiZhuangType;
-    ske.gameObject.SetActive(true);
-    Spine.Skeleton skeleton = ske.Skeleton;
+    Spine.Skeleton skeleton = null;
+    if (ShiZhuangConfig.ShiZhuangQualityDic[shiZhuangType] != 6)
+    {
+      redske.gameObject.SetActive(false);
+      ske.gameObject.SetActive(true);
+      skeleton = ske.Skeleton;
+    }
+    else
+    {
+      ske.gameObject.SetActive(false);
+      redske.gameObject.SetActive(true);
+      skeleton = redske.Skeleton;
+    }
     string skinName = GetSkinNameByType(shiZhuangType);
     Spine.Skin skin = skeleton.Data.FindSkin(skinName);
     if (skin != null)
     {
       skeleton.SetSkin(skin);
       skeleton.SetupPoseSlots();
-      ske.LateUpdate();
+      if (ShiZhuangConfig.ShiZhuangQualityDic[shiZhuangType] != 6)
+      {
+        ske.LateUpdate();
+      }
+      else
+      {
+        redske.LateUpdate();
+      }
     }
     else
     {
@@ -334,6 +362,55 @@ public class ShiZhuangWindow : MonoBehaviour
           }
           PlayerData.S.shiZhuangType=_shiZhuangType;
           break;
+        
+        
+        case ShiZhuangType.RedDian:
+          ShiZhuangJieSuoItem shiZhuangJieSuoItem361 = ShiZhuangConfig.ShiZhuangJieSuoDic[_shiZhuangType];
+          if (PlayerData.S.level < shiZhuangJieSuoItem361.level ||
+              PlayerData.S.DianAllLevel < shiZhuangJieSuoItem361.weaponLevel ||
+              GlobalPlayerAttribute.DianYuanSuBase < shiZhuangJieSuoItem361.yuansuDamage / 100)
+          {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"条件不足");
+            return;
+          }
+          PlayerData.S.shiZhuangType=_shiZhuangType;
+          break;
+        
+        case ShiZhuangType.RedHeiAn:
+          ShiZhuangJieSuoItem shiZhuangJieSuoItem351 = ShiZhuangConfig.ShiZhuangJieSuoDic[_shiZhuangType];
+          if (PlayerData.S.level < shiZhuangJieSuoItem351.level ||
+              PlayerData.S.DianAllLevel < shiZhuangJieSuoItem351.weaponLevel ||
+              GlobalPlayerAttribute.DianYuanSuBase < shiZhuangJieSuoItem351.yuansuDamage / 100)
+          {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"条件不足");
+            return;
+          }
+          PlayerData.S.shiZhuangType=_shiZhuangType;
+          break;
+        
+        case ShiZhuangType.RedHuo:
+          ShiZhuangJieSuoItem shiZhuangJieSuoItem352 = ShiZhuangConfig.ShiZhuangJieSuoDic[_shiZhuangType];
+          if (PlayerData.S.level < shiZhuangJieSuoItem352.level ||
+              PlayerData.S.DianAllLevel < shiZhuangJieSuoItem352.weaponLevel ||
+              GlobalPlayerAttribute.DianYuanSuBase < shiZhuangJieSuoItem352.yuansuDamage / 100)
+          {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"条件不足");
+            return;
+          }
+          PlayerData.S.shiZhuangType=_shiZhuangType;
+          break;
+        
+        case ShiZhuangType.RedIce:
+          ShiZhuangJieSuoItem shiZhuangJieSuoItem353 = ShiZhuangConfig.ShiZhuangJieSuoDic[_shiZhuangType];
+          if (PlayerData.S.level < shiZhuangJieSuoItem353.level ||
+              PlayerData.S.DianAllLevel < shiZhuangJieSuoItem353.weaponLevel ||
+              GlobalPlayerAttribute.DianYuanSuBase < shiZhuangJieSuoItem353.yuansuDamage / 100)
+          {
+            ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"条件不足");
+            return;
+          }
+          PlayerData.S.shiZhuangType=_shiZhuangType;
+          break;
       }
       ObserverModuleManager.S.SendEvent("PlayerHuanZhuang");
     });
@@ -342,6 +419,7 @@ public class ShiZhuangWindow : MonoBehaviour
   private void OnEnable()
   {
     ske.gameObject.SetActive(false);
+    redske.gameObject.SetActive(false);
     foreach (Transform item in AttributeContent.transform)
     {
       Destroy(item.gameObject);
