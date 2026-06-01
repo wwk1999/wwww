@@ -1332,6 +1332,10 @@ public class GameController : XSingleton<GameController>
                 {
                     NormalMonster.Add(item);
                 }
+                if (MonsterConfig.MonsterTypeDic[item] == MonsterType.Elite)
+                {
+                    EliteMonster=item;
+                }
             }
         }
 

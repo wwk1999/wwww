@@ -588,19 +588,19 @@ public class LevelInfoConfig
         new Dictionary<int, float>()
         {
             {3,1f},
-            {6,1f},
-            {9,1f},
-            {12,1f},
-            {15,1f},
+            {6,0.9f},
+            {9,0.9f},
+            {12,0.8f},
+            {15,0.8f},
             
-            {16,1f},
-            {17,1f},
-            {18,1f},
-            {19,1f},
-            {20,1f},
-            {21,1f},
-            {22,1f},
-            {23,1f},
+            {16,0.7f},
+            {17,0.65f},
+            {18,0.6f},
+            {19,0.6f},
+            {20,0.6f},
+            {21,0.55f},
+            {22,0.55f},
+            {23,0.5f},
             {24,1f},
             {25,1f},
             {26,1f},
@@ -702,17 +702,17 @@ public class LevelInfoConfig
         LevelMonsterCount[6] = 60;
         LevelMonsterCount[9] = 90;
         LevelMonsterCount[12] = 100;
-        LevelMonsterCount[15] = 100;
-        LevelMonsterCount[16] = 10;
-        LevelMonsterCount[17] = 10;
-        LevelMonsterCount[18] = 10;
-        LevelMonsterCount[19] = 10;
-        LevelMonsterCount[20] = 10;
-        LevelMonsterCount[21] = 10;
+        LevelMonsterCount[15] = 120;
+        LevelMonsterCount[16] = 150;
+        LevelMonsterCount[17] = 170;
+        LevelMonsterCount[18] = 190;
+        LevelMonsterCount[19] = 210;
+        LevelMonsterCount[20] = 230;
+        LevelMonsterCount[21] = 250;
         
-        LevelMonsterCount[22] = 10;
-        LevelMonsterCount[23] = 10;
-        LevelMonsterCount[24] = 10;
+        LevelMonsterCount[22] = 270;
+        LevelMonsterCount[23] = 290;
+        LevelMonsterCount[24] = 310;
         LevelMonsterCount[25] = 200;
         LevelMonsterCount[26] = 210;
         LevelMonsterCount[27] = 220;

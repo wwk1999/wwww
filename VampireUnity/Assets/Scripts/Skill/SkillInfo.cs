@@ -100,7 +100,7 @@ public class SkillInfo : MonoBehaviour
                 if (PlayerData.S.level < 15)
                 {
                     LevelLimit.gameObject.SetActive(true);
-                    LevelLimit.text = "等级要求：15";
+                    LevelLimit.text = "等级要求：20";
                 }
                 else
                 {
@@ -123,7 +123,7 @@ public class SkillInfo : MonoBehaviour
                 if (PlayerData.S.level < 20)
                 {
                     LevelLimit.gameObject.SetActive(true);
-                    LevelLimit.text = "等级要求：20";
+                    LevelLimit.text = "等级要求：30";
                 }
                 else
                 {
@@ -400,7 +400,7 @@ public class SkillInfo : MonoBehaviour
                 if (PlayerData.S.level < 15)
                 {
                     LevelLimit.gameObject.SetActive(true);
-                    LevelLimit.text = "等级要求：15";
+                    LevelLimit.text = "等级要求：20";
                 }
                 else
                 {
@@ -423,7 +423,7 @@ public class SkillInfo : MonoBehaviour
                 if (PlayerData.S.level < 20)
                 {
                     LevelLimit.gameObject.SetActive(true);
-                    LevelLimit.text = "等级要求：20";
+                    LevelLimit.text = "等级要求：30";
                 }
                 else
                 {
@@ -697,7 +697,7 @@ public class SkillInfo : MonoBehaviour
                 if (PlayerData.S.level < 15)
                 {
                     LevelLimit.gameObject.SetActive(true);
-                    LevelLimit.text = "等级要求：15";
+                    LevelLimit.text = "等级要求：20";
                 }
                 else
                 {
@@ -720,7 +720,7 @@ public class SkillInfo : MonoBehaviour
                 if (PlayerData.S.level < 20)
                 {
                     LevelLimit.gameObject.SetActive(true);
-                    LevelLimit.text = "等级要求：20";
+                    LevelLimit.text = "等级要求：30";
                 }
                 else
                 {
@@ -995,7 +995,7 @@ public class SkillInfo : MonoBehaviour
                 if (PlayerData.S.level < 15)
                 {
                     LevelLimit.gameObject.SetActive(true);
-                    LevelLimit.text = "等级要求：15";
+                    LevelLimit.text = "等级要求：20";
                 }
                 else
                 {
@@ -1018,7 +1018,7 @@ public class SkillInfo : MonoBehaviour
                 if (PlayerData.S.level < 20)
                 {
                     LevelLimit.gameObject.SetActive(true);
-                    LevelLimit.text = "等级要求：20";
+                    LevelLimit.text = "等级要求：30";
                 }
                 else
                 {

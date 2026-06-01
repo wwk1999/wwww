@@ -142,7 +142,7 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public int IceBei3;
     public int IceBei4;
     
-    public int Ice1=2;
+    public int Ice1=1;
     public int Ice1_1;
     public int Ice1_2;
     public int Ice2;
@@ -164,7 +164,7 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public int HuoBei3;
     public int HuoBei4;
     
-    public int Huo1;
+    public int Huo1=1;
     public int Huo1_1;
     public int Huo1_2;
     public int Huo2;
@@ -187,7 +187,7 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public int HeiAnBei3;
     public int HeiAnBei4;
     
-    public int HeiAn1;
+    public int HeiAn1=1;
     public int HeiAn1_1;
     public int HeiAn1_2;
     public int HeiAn2;
@@ -209,7 +209,7 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public int DianBei3;
     public int DianBei4;
     
-    public int Dian1;
+    public int Dian1=1;
     public int Dian1_1;
     public int Dian1_2;
     public int Dian2;
@@ -224,53 +224,13 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public int Dian5;
     public int Dian5_1;
     public int Dian5_2;
-
-
-
-    public int IceZJ1;
-    public int IceZJ2;
-    public int IceZJ3;
-    public int IceZJ4;
-    public int IceZJ5;
-    public int IceZJ6;
     
-    public int HuoZJ1;
-    public int HuoZJ2;
-    public int HuoZJ3;
-    public int HuoZJ4;
-    public int HuoZJ5;
-    public int HuoZJ6;
-    
-    public int DianZJ1;
-    public int DianZJ2;
-    public int DianZJ3;
-    public int DianZJ4;
-    public int DianZJ5;
-    public int DianZJ6;
-    
-    public int HeiAnZJ1;
-    public int HeiAnZJ2;
-    public int HeiAnZJ3;
-    public int HeiAnZJ4;
-    public int HeiAnZJ5;
-    public int HeiAnZJ6;
-
-    public int ZhiYeZJ1;
-    public int ZhiYeZJ2;
-    public int ZhiYeZJ3;
-    public int ZhiYeZJ4;
-    public int ZhiYeZJ5;
-    public int ZhiYeZJ6;
 
     public int IceAll=>GetIceAll();
     public int HuoAll=>GetHuoAll();
     public int DianAll=>GetDianAll();
     public int HeiAnAll=>GetHeiAnAll();
-    public int ZJIceAll=>GetZJIceAll();
-    public int ZJHuoAll=>GetZJHuoAll();
-    public int ZJDianAll=>GetZJDianAll();
-    public int ZJHeiAnAll=>GetZJHeiAnAll();
-    public int ZJZhiYeAll=>GetZJZhiYeAll();
+    
 
     
     public SkillType LMB = SkillType.Normal;
@@ -306,6 +266,117 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
     public bool HeiAn3Auto = false;
     public bool HeiAn4Auto = false;
     public bool HeiAn5Auto = false;
+
+    public void ResetSkillCount()
+    {
+        CurrentSkillCount += IceAll;
+        CurrentSkillCount += HuoAll;
+        CurrentSkillCount += DianAll;
+        CurrentSkillCount += HeiAnAll;
+        IceBei1 = 0;
+        IceBei2 = 0;
+        IceBei3 = 0;
+        IceBei4 = 0;
+        Ice1 = 0;
+        Ice1_1 = 0;
+        Ice1_2 = 0;
+        
+        Ice2 = 0;
+        Ice2_1 = 0;
+        Ice2_2 = 0;
+        
+        Ice3 = 0;
+        Ice3_1 = 0;
+        Ice3_2 = 0;
+        
+        Ice4 = 0;
+        Ice4_1 = 0;
+        Ice4_2 = 0;
+        
+        Ice5 = 0;
+        Ice5_1 = 0;
+        Ice5_2 = 0;
+        
+        
+        
+        HuoBei1 = 0;
+        HuoBei2 = 0;
+        HuoBei3 = 0;
+        HuoBei4 = 0;
+        Huo1 = 0;
+        Huo1_1 = 0;
+        Huo1_2 = 0;
+        
+        Huo2 = 0;
+        Huo2_1 = 0;
+        Huo2_2 = 0;
+        
+        Huo3 = 0;
+        Huo3_1 = 0;
+        Huo3_2 = 0;
+        
+        Huo4 = 0;
+        Huo4_1 = 0;
+        Huo4_2 = 0;
+        
+        Huo5 = 0;
+        Huo5_1 = 0;
+        Huo5_2 = 0;
+        
+        
+        
+        DianBei1 = 0;
+        DianBei2 = 0;
+        DianBei3 = 0;
+        DianBei4 = 0;
+        Dian1 = 0;
+        Dian1_1 = 0;
+        Dian1_2 = 0;
+        
+        Dian2 = 0;
+        Dian2_1 = 0;
+        Dian2_2 = 0;
+        
+        Dian3 = 0;
+        Dian3_1 = 0;
+        Dian3_2 = 0;
+        
+        Dian4 = 0;
+        Dian4_1 = 0;
+        Dian4_2 = 0;
+        
+        Dian5 = 0;
+        Dian5_1 = 0;
+        Dian5_2 = 0;
+        
+        
+        
+        
+        
+        HeiAnBei1 = 0;
+        HeiAnBei2 = 0;
+        HeiAnBei3 = 0;
+        HeiAnBei4 = 0;
+        HeiAn1 = 0;
+        HeiAn1_1 = 0;
+        HeiAn1_2 = 0;
+        
+        HeiAn2 = 0;
+        HeiAn2_1 = 0;
+        HeiAn2_2 = 0;
+        
+        HeiAn3 = 0;
+        HeiAn3_1 = 0;
+        HeiAn3_2 = 0;
+        
+        HeiAn4 = 0;
+        HeiAn4_1 = 0;
+        HeiAn4_2 = 0;
+        
+        HeiAn5 = 0;
+        HeiAn5_1 = 0;
+        HeiAn5_2 = 0;
+    }
     
     public int GetIceAll()
     {
@@ -336,41 +407,6 @@ public class SkillJiaDian : XSingleton<SkillJiaDian>
         return value;
     }
     
-    
-    public int GetZJIceAll()
-    {
-        int value = 0;
-        value+=IceZJ1+IceZJ2+IceZJ3+IceZJ4+IceZJ5+IceZJ6;
-        return value;
-    }
-    
-    public int GetZJHuoAll()
-    {
-        int value = 0;
-        value+=HuoZJ1+HuoZJ2+HuoZJ3+HuoZJ4+HuoZJ5+HuoZJ6;
-        return value;
-    }
-    
-    public int GetZJDianAll()
-    {
-        int value = 0;
-        value+=DianZJ1+DianZJ2+DianZJ3+DianZJ4+DianZJ5+DianZJ6;
-        return value;
-    }
-    
-    public int GetZJHeiAnAll()
-    {
-        int value = 0;
-        value+=HeiAnZJ1+HeiAnZJ2+HeiAnZJ3+HeiAnZJ4+HeiAnZJ5+HeiAnZJ6;
-        return value;
-    }
-    
-    public int GetZJZhiYeAll()
-    {
-        int value = 0;
-        value+=ZhiYeZJ1+ZhiYeZJ2+ZhiYeZJ3+ZhiYeZJ4+ZhiYeZJ5+ZhiYeZJ6;
-        return value;
-    }
 
     protected override void Awake()
     {

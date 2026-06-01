@@ -912,7 +912,7 @@ public abstract class MonsterBase : MonoBehaviour
         switch (yuansutype)
         {
             case YuanSuType.Ice:
-                damage*=(SkillJiaDian.S.IceBei2 + SkillJiaDian.S.IceBei4) * 5 / 100;
+                damage*=((SkillJiaDian.S.IceBei2 + SkillJiaDian.S.IceBei4) * 5 / 100+1f);
                 break;
         }
         return damage;

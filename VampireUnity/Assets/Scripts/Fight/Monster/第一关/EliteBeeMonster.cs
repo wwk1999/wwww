@@ -98,6 +98,10 @@ public class EliteBeeMonster : MonsterBase
         {
              MonsterMove();
         }
+        else
+        {
+            rigidbody2D.velocity = Vector2.zero;
+        }
     }
     
    public override void Hurt(float damage,bool isCrit,DamageFrom damageFrom,YuanSuType yuanSuType)

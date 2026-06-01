@@ -699,219 +699,7 @@ public class SkillWindow1 : MonoBehaviour
   HeiAn5_2LevelBg = transform.Find("Bg/Panel/HeiAnPanel/Ice5/ice2/Level/bg").GetComponent<Image>();
   HeiAn5_2LevelCount = transform.Find("Bg/Panel/HeiAnPanel/Ice5/ice2/Level/level").GetComponent<TextMeshProUGUI>();
   HeiAn5_2XuanZhong = transform.Find("Bg/Panel/HeiAnPanel/Ice5/ice2/xuanzhong").GetComponent<Image>();
-
-  IceZJ1Bg = transform.Find("Bg/Panel/ZJPanel/Ice/1/bg").GetComponent<Image>();
-  IceZJ1Icon = transform.Find("Bg/Panel/ZJPanel/Ice/1/icon").GetComponent<Image>();
-  IceZJ1LevelBg = transform.Find("Bg/Panel/ZJPanel/Ice/1/Level/bg").GetComponent<Image>();
-  IceZJ1LevelCount = transform.Find("Bg/Panel/ZJPanel/Ice/1/Level/level").GetComponent<TextMeshProUGUI>();
-  IceZJ1XuanZhong = transform.Find("Bg/Panel/ZJPanel/Ice/1/xuanzhong").GetComponent<Image>();
-
-
-  IceZJ2Bg = transform.Find("Bg/Panel/ZJPanel/Ice/2/bg").GetComponent<Image>();
-  IceZJ2Icon = transform.Find("Bg/Panel/ZJPanel/Ice/2/icon").GetComponent<Image>();
-  IceZJ2LevelBg = transform.Find("Bg/Panel/ZJPanel/Ice/2/Level/bg").GetComponent<Image>();
-  IceZJ2LevelCount = transform.Find("Bg/Panel/ZJPanel/Ice/2/Level/level").GetComponent<TextMeshProUGUI>();
-  IceZJ2XuanZhong = transform.Find("Bg/Panel/ZJPanel/Ice/2/xuanzhong").GetComponent<Image>();
-
-
-  IceZJ3Bg = transform.Find("Bg/Panel/ZJPanel/Ice/3/bg").GetComponent<Image>();
-  IceZJ3Icon = transform.Find("Bg/Panel/ZJPanel/Ice/3/icon").GetComponent<Image>();
-  IceZJ3LevelBg = transform.Find("Bg/Panel/ZJPanel/Ice/3/Level/bg").GetComponent<Image>();
-  IceZJ3LevelCount = transform.Find("Bg/Panel/ZJPanel/Ice/3/Level/level").GetComponent<TextMeshProUGUI>();
-  IceZJ3XuanZhong = transform.Find("Bg/Panel/ZJPanel/Ice/3/xuanzhong").GetComponent<Image>();
-
-
-  IceZJ4Bg = transform.Find("Bg/Panel/ZJPanel/Ice/4/bg").GetComponent<Image>();
-  IceZJ4Icon = transform.Find("Bg/Panel/ZJPanel/Ice/4/icon").GetComponent<Image>();
-  IceZJ4LevelBg = transform.Find("Bg/Panel/ZJPanel/Ice/4/Level/bg").GetComponent<Image>();
-  IceZJ4LevelCount = transform.Find("Bg/Panel/ZJPanel/Ice/4/Level/level").GetComponent<TextMeshProUGUI>();
-  IceZJ4XuanZhong = transform.Find("Bg/Panel/ZJPanel/Ice/4/xuanzhong").GetComponent<Image>();
-
-
-  IceZJ5Bg = transform.Find("Bg/Panel/ZJPanel/Ice/5/bg").GetComponent<Image>();
-  IceZJ5Icon = transform.Find("Bg/Panel/ZJPanel/Ice/5/icon").GetComponent<Image>();
-  IceZJ5LevelBg = transform.Find("Bg/Panel/ZJPanel/Ice/5/Level/bg").GetComponent<Image>();
-  IceZJ5LevelCount = transform.Find("Bg/Panel/ZJPanel/Ice/5/Level/level").GetComponent<TextMeshProUGUI>();
-  IceZJ5XuanZhong = transform.Find("Bg/Panel/ZJPanel/Ice/5/xuanzhong").GetComponent<Image>();
-
-
-  IceZJ6Bg = transform.Find("Bg/Panel/ZJPanel/Ice/6/bg").GetComponent<Image>();
-  IceZJ6Icon = transform.Find("Bg/Panel/ZJPanel/Ice/6/icon").GetComponent<Image>();
-  IceZJ6LevelBg = transform.Find("Bg/Panel/ZJPanel/Ice/6/Level/bg").GetComponent<Image>();
-  IceZJ6LevelCount = transform.Find("Bg/Panel/ZJPanel/Ice/6/Level/level").GetComponent<TextMeshProUGUI>();
-  IceZJ6XuanZhong = transform.Find("Bg/Panel/ZJPanel/Ice/6/xuanzhong").GetComponent<Image>();
-
-
-  IceZJMainBg = transform.Find("Bg/Panel/ZJPanel/Ice/Main/bg").GetComponent<Image>();
-  IceZJMainIcon = transform.Find("Bg/Panel/ZJPanel/Ice/Main/icon").GetComponent<Image>();
-  IceZJMainLevelBg = transform.Find("Bg/Panel/ZJPanel/Ice/Main/Level/bg").GetComponent<Image>();
-  IceZJMainLevelCount = transform.Find("Bg/Panel/ZJPanel/Ice/Main/Level/level").GetComponent<TextMeshProUGUI>();
-  IceZJMainXuanZhong = transform.Find("Bg/Panel/ZJPanel/Ice/Main/xuanzhong").GetComponent<Image>();
-
-
-
-
-
-  HuoZJ1Bg = transform.Find("Bg/Panel/ZJPanel/Huo/1/bg").GetComponent<Image>();
-  HuoZJ1Icon = transform.Find("Bg/Panel/ZJPanel/Huo/1/icon").GetComponent<Image>();
-  HuoZJ1LevelBg = transform.Find("Bg/Panel/ZJPanel/Huo/1/Level/bg").GetComponent<Image>();
-  HuoZJ1LevelCount = transform.Find("Bg/Panel/ZJPanel/Huo/1/Level/level").GetComponent<TextMeshProUGUI>();
-  HuoZJ1XuanZhong = transform.Find("Bg/Panel/ZJPanel/Huo/1/xuanzhong").GetComponent<Image>();
-
-
-  HuoZJ2Bg = transform.Find("Bg/Panel/ZJPanel/Huo/2/bg").GetComponent<Image>();
-  HuoZJ2Icon = transform.Find("Bg/Panel/ZJPanel/Huo/2/icon").GetComponent<Image>();
-  HuoZJ2LevelBg = transform.Find("Bg/Panel/ZJPanel/Huo/2/Level/bg").GetComponent<Image>();
-  HuoZJ2LevelCount = transform.Find("Bg/Panel/ZJPanel/Huo/2/Level/level").GetComponent<TextMeshProUGUI>();
-  HuoZJ2XuanZhong = transform.Find("Bg/Panel/ZJPanel/Huo/2/xuanzhong").GetComponent<Image>();
-
-
-  HuoZJ3Bg = transform.Find("Bg/Panel/ZJPanel/Huo/3/bg").GetComponent<Image>();
-  HuoZJ3Icon = transform.Find("Bg/Panel/ZJPanel/Huo/3/icon").GetComponent<Image>();
-  HuoZJ3LevelBg = transform.Find("Bg/Panel/ZJPanel/Huo/3/Level/bg").GetComponent<Image>();
-  HuoZJ3LevelCount = transform.Find("Bg/Panel/ZJPanel/Huo/3/Level/level").GetComponent<TextMeshProUGUI>();
-  HuoZJ3XuanZhong = transform.Find("Bg/Panel/ZJPanel/Huo/3/xuanzhong").GetComponent<Image>();
-
-
-  HuoZJ4Bg = transform.Find("Bg/Panel/ZJPanel/Huo/4/bg").GetComponent<Image>();
-  HuoZJ4Icon = transform.Find("Bg/Panel/ZJPanel/Huo/4/icon").GetComponent<Image>();
-  HuoZJ4LevelBg = transform.Find("Bg/Panel/ZJPanel/Huo/4/Level/bg").GetComponent<Image>();
-  HuoZJ4LevelCount = transform.Find("Bg/Panel/ZJPanel/Huo/4/Level/level").GetComponent<TextMeshProUGUI>();
-  HuoZJ4XuanZhong = transform.Find("Bg/Panel/ZJPanel/Huo/4/xuanzhong").GetComponent<Image>();
-
-
-  HuoZJ5Bg = transform.Find("Bg/Panel/ZJPanel/Huo/5/bg").GetComponent<Image>();
-  HuoZJ5Icon = transform.Find("Bg/Panel/ZJPanel/Huo/5/icon").GetComponent<Image>();
-  HuoZJ5LevelBg = transform.Find("Bg/Panel/ZJPanel/Huo/5/Level/bg").GetComponent<Image>();
-  HuoZJ5LevelCount = transform.Find("Bg/Panel/ZJPanel/Huo/5/Level/level").GetComponent<TextMeshProUGUI>();
-  HuoZJ5XuanZhong = transform.Find("Bg/Panel/ZJPanel/Huo/5/xuanzhong").GetComponent<Image>();
-
-
-  HuoZJ6Bg = transform.Find("Bg/Panel/ZJPanel/Huo/6/bg").GetComponent<Image>();
-  HuoZJ6Icon = transform.Find("Bg/Panel/ZJPanel/Huo/6/icon").GetComponent<Image>();
-  HuoZJ6LevelBg = transform.Find("Bg/Panel/ZJPanel/Huo/6/Level/bg").GetComponent<Image>();
-  HuoZJ6LevelCount = transform.Find("Bg/Panel/ZJPanel/Huo/6/Level/level").GetComponent<TextMeshProUGUI>();
-  HuoZJ6XuanZhong = transform.Find("Bg/Panel/ZJPanel/Huo/6/xuanzhong").GetComponent<Image>();
-
-
-  HuoZJMainBg = transform.Find("Bg/Panel/ZJPanel/Huo/Main/bg").GetComponent<Image>();
-  HuoZJMainIcon = transform.Find("Bg/Panel/ZJPanel/Huo/Main/icon").GetComponent<Image>();
-  HuoZJMainLevelBg = transform.Find("Bg/Panel/ZJPanel/Huo/Main/Level/bg").GetComponent<Image>();
-  HuoZJMainLevelCount = transform.Find("Bg/Panel/ZJPanel/Huo/Main/Level/level").GetComponent<TextMeshProUGUI>();
-  HuoZJMainXuanZhong = transform.Find("Bg/Panel/ZJPanel/Huo/Main/xuanzhong").GetComponent<Image>();
-
-
-
-
-
-
-
-  DianZJ1Bg = transform.Find("Bg/Panel/ZJPanel/Dian/1/bg").GetComponent<Image>();
-  DianZJ1Icon = transform.Find("Bg/Panel/ZJPanel/Dian/1/icon").GetComponent<Image>();
-  DianZJ1LevelBg = transform.Find("Bg/Panel/ZJPanel/Dian/1/Level/bg").GetComponent<Image>();
-  DianZJ1LevelCount = transform.Find("Bg/Panel/ZJPanel/Dian/1/Level/level").GetComponent<TextMeshProUGUI>();
-  DianZJ1XuanZhong = transform.Find("Bg/Panel/ZJPanel/Dian/1/xuanzhong").GetComponent<Image>();
-
-
-  DianZJ2Bg = transform.Find("Bg/Panel/ZJPanel/Dian/2/bg").GetComponent<Image>();
-  DianZJ2Icon = transform.Find("Bg/Panel/ZJPanel/Dian/2/icon").GetComponent<Image>();
-  DianZJ2LevelBg = transform.Find("Bg/Panel/ZJPanel/Dian/2/Level/bg").GetComponent<Image>();
-  DianZJ2LevelCount = transform.Find("Bg/Panel/ZJPanel/Dian/2/Level/level").GetComponent<TextMeshProUGUI>();
-  DianZJ2XuanZhong = transform.Find("Bg/Panel/ZJPanel/Dian/2/xuanzhong").GetComponent<Image>();
-
-
-  DianZJ3Bg = transform.Find("Bg/Panel/ZJPanel/Dian/3/bg").GetComponent<Image>();
-  DianZJ3Icon = transform.Find("Bg/Panel/ZJPanel/Dian/3/icon").GetComponent<Image>();
-  DianZJ3LevelBg = transform.Find("Bg/Panel/ZJPanel/Dian/3/Level/bg").GetComponent<Image>();
-  DianZJ3LevelCount = transform.Find("Bg/Panel/ZJPanel/Dian/3/Level/level").GetComponent<TextMeshProUGUI>();
-  DianZJ3XuanZhong = transform.Find("Bg/Panel/ZJPanel/Dian/3/xuanzhong").GetComponent<Image>();
-
-
-  DianZJ4Bg = transform.Find("Bg/Panel/ZJPanel/Dian/4/bg").GetComponent<Image>();
-  DianZJ4Icon = transform.Find("Bg/Panel/ZJPanel/Dian/4/icon").GetComponent<Image>();
-  DianZJ4LevelBg = transform.Find("Bg/Panel/ZJPanel/Dian/4/Level/bg").GetComponent<Image>();
-  DianZJ4LevelCount = transform.Find("Bg/Panel/ZJPanel/Dian/4/Level/level").GetComponent<TextMeshProUGUI>();
-  DianZJ4XuanZhong = transform.Find("Bg/Panel/ZJPanel/Dian/4/xuanzhong").GetComponent<Image>();
-
-
-  DianZJ5Bg = transform.Find("Bg/Panel/ZJPanel/Dian/5/bg").GetComponent<Image>();
-  DianZJ5Icon = transform.Find("Bg/Panel/ZJPanel/Dian/5/icon").GetComponent<Image>();
-  DianZJ5LevelBg = transform.Find("Bg/Panel/ZJPanel/Dian/5/Level/bg").GetComponent<Image>();
-  DianZJ5LevelCount = transform.Find("Bg/Panel/ZJPanel/Dian/5/Level/level").GetComponent<TextMeshProUGUI>();
-  DianZJ5XuanZhong = transform.Find("Bg/Panel/ZJPanel/Dian/5/xuanzhong").GetComponent<Image>();
-
-
-  DianZJ6Bg = transform.Find("Bg/Panel/ZJPanel/Dian/6/bg").GetComponent<Image>();
-  DianZJ6Icon = transform.Find("Bg/Panel/ZJPanel/Dian/6/icon").GetComponent<Image>();
-  DianZJ6LevelBg = transform.Find("Bg/Panel/ZJPanel/Dian/6/Level/bg").GetComponent<Image>();
-  DianZJ6LevelCount = transform.Find("Bg/Panel/ZJPanel/Dian/6/Level/level").GetComponent<TextMeshProUGUI>();
-  DianZJ6XuanZhong = transform.Find("Bg/Panel/ZJPanel/Dian/6/xuanzhong").GetComponent<Image>();
-
-
-  DianZJMainBg = transform.Find("Bg/Panel/ZJPanel/Dian/Main/bg").GetComponent<Image>();
-  DianZJMainIcon = transform.Find("Bg/Panel/ZJPanel/Dian/Main/icon").GetComponent<Image>();
-  DianZJMainLevelBg = transform.Find("Bg/Panel/ZJPanel/Dian/Main/Level/bg").GetComponent<Image>();
-  DianZJMainLevelCount = transform.Find("Bg/Panel/ZJPanel/Dian/Main/Level/level").GetComponent<TextMeshProUGUI>();
-  DianZJMainXuanZhong = transform.Find("Bg/Panel/ZJPanel/Dian/Main/xuanzhong").GetComponent<Image>();
-
-
-
-
-
-
-
-
-
-
-  HeiAnZJ1Bg = transform.Find("Bg/Panel/ZJPanel/HeiAn/1/bg").GetComponent<Image>();
-  HeiAnZJ1Icon = transform.Find("Bg/Panel/ZJPanel/HeiAn/1/icon").GetComponent<Image>();
-  HeiAnZJ1LevelBg = transform.Find("Bg/Panel/ZJPanel/HeiAn/1/Level/bg").GetComponent<Image>();
-  HeiAnZJ1LevelCount = transform.Find("Bg/Panel/ZJPanel/HeiAn/1/Level/level").GetComponent<TextMeshProUGUI>();
-  HeiAnZJ1XuanZhong = transform.Find("Bg/Panel/ZJPanel/HeiAn/1/xuanzhong").GetComponent<Image>();
-
-
-  HeiAnZJ2Bg = transform.Find("Bg/Panel/ZJPanel/HeiAn/2/bg").GetComponent<Image>();
-  HeiAnZJ2Icon = transform.Find("Bg/Panel/ZJPanel/HeiAn/2/icon").GetComponent<Image>();
-  HeiAnZJ2LevelBg = transform.Find("Bg/Panel/ZJPanel/HeiAn/2/Level/bg").GetComponent<Image>();
-  HeiAnZJ2LevelCount = transform.Find("Bg/Panel/ZJPanel/HeiAn/2/Level/level").GetComponent<TextMeshProUGUI>();
-  HeiAnZJ2XuanZhong = transform.Find("Bg/Panel/ZJPanel/HeiAn/2/xuanzhong").GetComponent<Image>();
-
-
-  HeiAnZJ3Bg = transform.Find("Bg/Panel/ZJPanel/HeiAn/3/bg").GetComponent<Image>();
-  HeiAnZJ3Icon = transform.Find("Bg/Panel/ZJPanel/HeiAn/3/icon").GetComponent<Image>();
-  HeiAnZJ3LevelBg = transform.Find("Bg/Panel/ZJPanel/HeiAn/3/Level/bg").GetComponent<Image>();
-  HeiAnZJ3LevelCount = transform.Find("Bg/Panel/ZJPanel/HeiAn/3/Level/level").GetComponent<TextMeshProUGUI>();
-  HeiAnZJ3XuanZhong = transform.Find("Bg/Panel/ZJPanel/HeiAn/3/xuanzhong").GetComponent<Image>();
-
-
-  HeiAnZJ4Bg = transform.Find("Bg/Panel/ZJPanel/HeiAn/4/bg").GetComponent<Image>();
-  HeiAnZJ4Icon = transform.Find("Bg/Panel/ZJPanel/HeiAn/4/icon").GetComponent<Image>();
-  HeiAnZJ4LevelBg = transform.Find("Bg/Panel/ZJPanel/HeiAn/4/Level/bg").GetComponent<Image>();
-  HeiAnZJ4LevelCount = transform.Find("Bg/Panel/ZJPanel/HeiAn/4/Level/level").GetComponent<TextMeshProUGUI>();
-  HeiAnZJ4XuanZhong = transform.Find("Bg/Panel/ZJPanel/HeiAn/4/xuanzhong").GetComponent<Image>();
-
-
-  HeiAnZJ5Bg = transform.Find("Bg/Panel/ZJPanel/HeiAn/5/bg").GetComponent<Image>();
-  HeiAnZJ5Icon = transform.Find("Bg/Panel/ZJPanel/HeiAn/5/icon").GetComponent<Image>();
-  HeiAnZJ5LevelBg = transform.Find("Bg/Panel/ZJPanel/HeiAn/5/Level/bg").GetComponent<Image>();
-  HeiAnZJ5LevelCount = transform.Find("Bg/Panel/ZJPanel/HeiAn/5/Level/level").GetComponent<TextMeshProUGUI>();
-  HeiAnZJ5XuanZhong = transform.Find("Bg/Panel/ZJPanel/HeiAn/5/xuanzhong").GetComponent<Image>();
-
-
-  HeiAnZJ6Bg = transform.Find("Bg/Panel/ZJPanel/HeiAn/6/bg").GetComponent<Image>();
-  HeiAnZJ6Icon = transform.Find("Bg/Panel/ZJPanel/HeiAn/6/icon").GetComponent<Image>();
-  HeiAnZJ6LevelBg = transform.Find("Bg/Panel/ZJPanel/HeiAn/6/Level/bg").GetComponent<Image>();
-  HeiAnZJ6LevelCount = transform.Find("Bg/Panel/ZJPanel/HeiAn/6/Level/level").GetComponent<TextMeshProUGUI>();
-  HeiAnZJ6XuanZhong = transform.Find("Bg/Panel/ZJPanel/HeiAn/6/xuanzhong").GetComponent<Image>();
-
-
-  HeiAnZJMainBg = transform.Find("Bg/Panel/ZJPanel/HeiAn/Main/bg").GetComponent<Image>();
-  HeiAnZJMainIcon = transform.Find("Bg/Panel/ZJPanel/HeiAn/Main/icon").GetComponent<Image>();
-  HeiAnZJMainLevelBg = transform.Find("Bg/Panel/ZJPanel/HeiAn/Main/Level/bg").GetComponent<Image>();
-  HeiAnZJMainLevelCount = transform.Find("Bg/Panel/ZJPanel/HeiAn/Main/Level/level").GetComponent<TextMeshProUGUI>();
-  HeiAnZJMainXuanZhong = transform.Find("Bg/Panel/ZJPanel/HeiAn/Main/xuanzhong").GetComponent<Image>();
-
-
+  
   IceBeiLine1Liang = transform.Find("Bg/Panel/IcePanel/BeiLine1/liang").gameObject;
   IceBeiLine1An = transform.Find("Bg/Panel/IcePanel/BeiLine1/An").gameObject;
   IceBeiLine2Liang = transform.Find("Bg/Panel/IcePanel/BeiLine2/liang").gameObject;
@@ -1034,115 +822,6 @@ public class SkillWindow1 : MonoBehaviour
   HeiAn5Line1Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line1/liang").gameObject;
   HeiAn5Line2An = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line2/An").gameObject;
   HeiAn5Line2Liang = transform.Find("Bg/Panel/HeiAnPanel/Ice5/Line2/liang").gameObject;
-
-
-  IceZJLine1An = transform.Find("Bg/Panel/ZJPanel/Ice/Line1/An").gameObject;
-  IceZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line1/liang").gameObject;
-  IceZJLine2An = transform.Find("Bg/Panel/ZJPanel/Ice/Line2/An").gameObject;
-  IceZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line2/liang").gameObject;
-  IceZJLine3An = transform.Find("Bg/Panel/ZJPanel/Ice/Line3/An").gameObject;
-  IceZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line3/liang").gameObject;
-  IceZJLine4An = transform.Find("Bg/Panel/ZJPanel/Ice/Line4/An").gameObject;
-  IceZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line4/liang").gameObject;
-  IceZJLine5An = transform.Find("Bg/Panel/ZJPanel/Ice/Line5/An").gameObject;
-  IceZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Ice/Line5/liang").gameObject;
-
-
-
-  HuoZJLine1An = transform.Find("Bg/Panel/ZJPanel/Huo/Line1/An").gameObject;
-  HuoZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line1/liang").gameObject;
-  HuoZJLine2An = transform.Find("Bg/Panel/ZJPanel/Huo/Line2/An").gameObject;
-  HuoZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line2/liang").gameObject;
-  HuoZJLine3An = transform.Find("Bg/Panel/ZJPanel/Huo/Line3/An").gameObject;
-  HuoZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line3/liang").gameObject;
-  HuoZJLine4An = transform.Find("Bg/Panel/ZJPanel/Huo/Line4/An").gameObject;
-  HuoZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line4/liang").gameObject;
-  HuoZJLine5An = transform.Find("Bg/Panel/ZJPanel/Huo/Line5/An").gameObject;
-  HuoZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Huo/Line5/liang").gameObject;
-
-
-  DianZJLine1An = transform.Find("Bg/Panel/ZJPanel/Dian/Line1/An").gameObject;
-  DianZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line1/liang").gameObject;
-  DianZJLine2An = transform.Find("Bg/Panel/ZJPanel/Dian/Line2/An").gameObject;
-  DianZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line2/liang").gameObject;
-  DianZJLine3An = transform.Find("Bg/Panel/ZJPanel/Dian/Line3/An").gameObject;
-  DianZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line3/liang").gameObject;
-  DianZJLine4An = transform.Find("Bg/Panel/ZJPanel/Dian/Line4/An").gameObject;
-  DianZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line4/liang").gameObject;
-  DianZJLine5An = transform.Find("Bg/Panel/ZJPanel/Dian/Line5/An").gameObject;
-  DianZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/Dian/Line5/liang").gameObject;
-
-
-
-  HeiAnZJLine1An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line1/An").gameObject;
-  HeiAnZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line1/liang").gameObject;
-  HeiAnZJLine2An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line2/An").gameObject;
-  HeiAnZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line2/liang").gameObject;
-  HeiAnZJLine3An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line3/An").gameObject;
-  HeiAnZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line3/liang").gameObject;
-  HeiAnZJLine4An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line4/An").gameObject;
-  HeiAnZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line4/liang").gameObject;
-  HeiAnZJLine5An = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line5/An").gameObject;
-  HeiAnZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/HeiAn/Line5/liang").gameObject;
-
-
-  ZhiYeZJMainBg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Main/bg").GetComponent<Image>();
-  ZhiYeZJMainIcon = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Main/icon").GetComponent<Image>();
-  ZhiYeZJMainLevelCount = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Main/Level/level").GetComponent<TextMeshProUGUI>();
-  ZhiYeZJMainLevelBg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Main/Level/bg").GetComponent<Image>();
-  ZhiYeZJMainXuanZhong = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Main/xuanzhong").GetComponent<Image>();
-
-  ZhiYeZJ1Bg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/1/bg").GetComponent<Image>();
-  ZhiYeZJ1Icon = transform.Find("Bg/Panel/ZJPanel/ZhiYe/1/icon").GetComponent<Image>();
-  ZhiYeZJ1LevelCount = transform.Find("Bg/Panel/ZJPanel/ZhiYe/1/Level/level").GetComponent<TextMeshProUGUI>();
-  ZhiYeZJ1LevelBg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/1/Level/bg").GetComponent<Image>();
-  ZhiYeZJ1XuanZhong = transform.Find("Bg/Panel/ZJPanel/ZhiYe/1/xuanzhong").GetComponent<Image>();
-
-  ZhiYeZJ2Bg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/2/bg").GetComponent<Image>();
-  ZhiYeZJ2Icon = transform.Find("Bg/Panel/ZJPanel/ZhiYe/2/icon").GetComponent<Image>();
-  ZhiYeZJ2LevelCount = transform.Find("Bg/Panel/ZJPanel/ZhiYe/2/Level/level").GetComponent<TextMeshProUGUI>();
-  ZhiYeZJ2LevelBg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/2/Level/bg").GetComponent<Image>();
-  ZhiYeZJ2XuanZhong = transform.Find("Bg/Panel/ZJPanel/ZhiYe/2/xuanzhong").GetComponent<Image>();
-
-  ZhiYeZJ3Bg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/3/bg").GetComponent<Image>();
-  ZhiYeZJ3Icon = transform.Find("Bg/Panel/ZJPanel/ZhiYe/3/icon").GetComponent<Image>();
-  ZhiYeZJ3LevelCount = transform.Find("Bg/Panel/ZJPanel/ZhiYe/3/Level/level").GetComponent<TextMeshProUGUI>();
-  ZhiYeZJ3LevelBg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/3/Level/bg").GetComponent<Image>();
-  ZhiYeZJ3XuanZhong = transform.Find("Bg/Panel/ZJPanel/ZhiYe/3/xuanzhong").GetComponent<Image>();
-
-  ZhiYeZJ4Bg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/4/bg").GetComponent<Image>();
-  ZhiYeZJ4Icon = transform.Find("Bg/Panel/ZJPanel/ZhiYe/4/icon").GetComponent<Image>();
-  ZhiYeZJ4LevelCount = transform.Find("Bg/Panel/ZJPanel/ZhiYe/4/Level/level").GetComponent<TextMeshProUGUI>();
-  ZhiYeZJ4LevelBg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/4/Level/bg").GetComponent<Image>();
-  ZhiYeZJ4XuanZhong = transform.Find("Bg/Panel/ZJPanel/ZhiYe/4/xuanzhong").GetComponent<Image>();
-
-  ZhiYeZJ5Bg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/5/bg").GetComponent<Image>();
-  ZhiYeZJ5Icon = transform.Find("Bg/Panel/ZJPanel/ZhiYe/5/icon").GetComponent<Image>();
-  ZhiYeZJ5LevelCount = transform.Find("Bg/Panel/ZJPanel/ZhiYe/5/Level/level").GetComponent<TextMeshProUGUI>();
-  ZhiYeZJ5LevelBg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/5/Level/bg").GetComponent<Image>();
-  ZhiYeZJ5XuanZhong = transform.Find("Bg/Panel/ZJPanel/ZhiYe/5/xuanzhong").GetComponent<Image>();
-
-  ZhiYeZJ6Bg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/6/bg").GetComponent<Image>();
-  ZhiYeZJ6Icon = transform.Find("Bg/Panel/ZJPanel/ZhiYe/6/icon").GetComponent<Image>();
-  ZhiYeZJ6LevelCount = transform.Find("Bg/Panel/ZJPanel/ZhiYe/6/Level/level").GetComponent<TextMeshProUGUI>();
-  ZhiYeZJ6LevelBg = transform.Find("Bg/Panel/ZJPanel/ZhiYe/6/Level/bg").GetComponent<Image>();
-  ZhiYeZJ6XuanZhong = transform.Find("Bg/Panel/ZJPanel/ZhiYe/6/xuanzhong").GetComponent<Image>();
-
-  ZhiYeZJLine1Liang = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line1/liang").gameObject;
-  ZhiYeZJLine1An = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line1/An").gameObject;
-
-  ZhiYeZJLine2Liang = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line2/liang").gameObject;
-  ZhiYeZJLine2An = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line2/An").gameObject;
-
-  ZhiYeZJLine3Liang = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line3/liang").gameObject;
-  ZhiYeZJLine3An = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line3/An").gameObject;
-
-  ZhiYeZJLine4Liang = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line4/liang").gameObject;
-  ZhiYeZJLine4An = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line4/An").gameObject;
-
-  ZhiYeZJLine5Liang = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line5/liang").gameObject;
-  ZhiYeZJLine5An = transform.Find("Bg/Panel/ZJPanel/ZhiYe/Line5/An").gameObject;
-
  }
 
  private void SetIcePanelImageColorAndJiaoHuAndLine()
@@ -2055,353 +1734,7 @@ public class SkillWindow1 : MonoBehaviour
   }
 
  }
-
-
- private void SetZJPanelImageColorAndJiaoHuAndLine()
- {
-  if (SkillJiaDian.S.IceZJ1 < 1)
-  {
-   IceZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   IceZJLine1Liang.gameObject.SetActive(false);
-   IceZJLine1An.gameObject.SetActive(true);
-  }
-  else
-  {
-   IceZJ2Icon.color = new Color(1, 1, 1);
-   IceZJLine1Liang.gameObject.SetActive(true);
-   IceZJLine1An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.IceZJ2 < 1)
-  {
-   IceZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   IceZJLine2Liang.gameObject.SetActive(false);
-   IceZJLine2An.gameObject.SetActive(true);
-  }
-  else
-  {
-   IceZJ3Icon.color = new Color(1, 1, 1);
-   IceZJLine2Liang.gameObject.SetActive(true);
-   IceZJLine2An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.IceZJ3 < 1)
-  {
-   IceZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   IceZJLine3Liang.gameObject.SetActive(false);
-   IceZJLine3An.gameObject.SetActive(true);
-  }
-  else
-  {
-   IceZJ4Icon.color = new Color(1, 1, 1);
-   IceZJLine3Liang.gameObject.SetActive(true);
-   IceZJLine3An.gameObject.SetActive(false);
-  }
-
-
-  if (SkillJiaDian.S.IceZJ4 < 1)
-  {
-   IceZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   IceZJLine4Liang.gameObject.SetActive(false);
-   IceZJLine4An.gameObject.SetActive(true);
-  }
-  else
-  {
-   IceZJ5Icon.color = new Color(1, 1, 1);
-   IceZJLine4Liang.gameObject.SetActive(true);
-   IceZJLine4An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.IceZJ5 < 1)
-  {
-   IceZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   IceZJLine5Liang.gameObject.SetActive(false);
-   IceZJLine5An.gameObject.SetActive(true);
-  }
-  else
-  {
-   IceZJ6Icon.color = new Color(1, 1, 1);
-   IceZJLine5Liang.gameObject.SetActive(true);
-   IceZJLine5An.gameObject.SetActive(false);
-  }
-
-
-
-
-
-  if (SkillJiaDian.S.HuoZJ1 < 1)
-  {
-   HuoZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HuoZJLine1Liang.gameObject.SetActive(false);
-   HuoZJLine1An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HuoZJ2Icon.color = new Color(1, 1, 1);
-   HuoZJLine1Liang.gameObject.SetActive(true);
-   HuoZJLine1An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.HuoZJ2 < 1)
-  {
-   HuoZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HuoZJLine2Liang.gameObject.SetActive(false);
-   HuoZJLine2An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HuoZJ3Icon.color = new Color(1, 1, 1);
-   HuoZJLine2Liang.gameObject.SetActive(true);
-   HuoZJLine2An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.HuoZJ3 < 1)
-  {
-   HuoZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HuoZJLine3Liang.gameObject.SetActive(false);
-   HuoZJLine3An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HuoZJ4Icon.color = new Color(1, 1, 1);
-   HuoZJLine3Liang.gameObject.SetActive(true);
-   HuoZJLine3An.gameObject.SetActive(false);
-  }
-
-
-  if (SkillJiaDian.S.HuoZJ4 < 1)
-  {
-   HuoZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HuoZJLine4Liang.gameObject.SetActive(false);
-   HuoZJLine4An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HuoZJ5Icon.color = new Color(1, 1, 1);
-   HuoZJLine4Liang.gameObject.SetActive(true);
-   HuoZJLine4An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.HuoZJ5 < 1)
-  {
-   HuoZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HuoZJLine5Liang.gameObject.SetActive(false);
-   HuoZJLine5An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HuoZJ6Icon.color = new Color(1, 1, 1);
-   HuoZJLine5Liang.gameObject.SetActive(true);
-   HuoZJLine5An.gameObject.SetActive(false);
-  }
-
-
-
-
-  if (SkillJiaDian.S.DianZJ1 < 1)
-  {
-   DianZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   DianZJLine1Liang.gameObject.SetActive(false);
-   DianZJLine1An.gameObject.SetActive(true);
-  }
-  else
-  {
-   DianZJ2Icon.color = new Color(1, 1, 1);
-   DianZJLine1Liang.gameObject.SetActive(true);
-   DianZJLine1An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.DianZJ2 < 1)
-  {
-   DianZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   DianZJLine2Liang.gameObject.SetActive(false);
-   DianZJLine2An.gameObject.SetActive(true);
-  }
-  else
-  {
-   DianZJ3Icon.color = new Color(1, 1, 1);
-   DianZJLine2Liang.gameObject.SetActive(true);
-   DianZJLine2An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.DianZJ3 < 1)
-  {
-   DianZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   DianZJLine3Liang.gameObject.SetActive(false);
-   DianZJLine3An.gameObject.SetActive(true);
-  }
-  else
-  {
-   DianZJ4Icon.color = new Color(1, 1, 1);
-   DianZJLine3Liang.gameObject.SetActive(true);
-   DianZJLine3An.gameObject.SetActive(false);
-  }
-
-
-  if (SkillJiaDian.S.DianZJ4 < 1)
-  {
-   DianZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   DianZJLine4Liang.gameObject.SetActive(false);
-   DianZJLine4An.gameObject.SetActive(true);
-  }
-  else
-  {
-   DianZJ5Icon.color = new Color(1, 1, 1);
-   DianZJLine4Liang.gameObject.SetActive(true);
-   DianZJLine4An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.DianZJ5 < 1)
-  {
-   DianZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   DianZJLine5Liang.gameObject.SetActive(false);
-   DianZJLine5An.gameObject.SetActive(true);
-  }
-  else
-  {
-   DianZJ6Icon.color = new Color(1, 1, 1);
-   DianZJLine5Liang.gameObject.SetActive(true);
-   DianZJLine5An.gameObject.SetActive(false);
-  }
-
-
-
-
-  if (SkillJiaDian.S.HeiAnZJ1 < 1)
-  {
-   HeiAnZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HeiAnZJLine1Liang.gameObject.SetActive(false);
-   HeiAnZJLine1An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HeiAnZJ2Icon.color = new Color(1, 1, 1);
-   HeiAnZJLine1Liang.gameObject.SetActive(true);
-   HeiAnZJLine1An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.HeiAnZJ2 < 1)
-  {
-   HeiAnZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HeiAnZJLine2Liang.gameObject.SetActive(false);
-   HeiAnZJLine2An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HeiAnZJ3Icon.color = new Color(1, 1, 1);
-   HeiAnZJLine2Liang.gameObject.SetActive(true);
-   HeiAnZJLine2An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.HeiAnZJ3 < 1)
-  {
-   HeiAnZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HeiAnZJLine3Liang.gameObject.SetActive(false);
-   HeiAnZJLine3An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HeiAnZJ4Icon.color = new Color(1, 1, 1);
-   HeiAnZJLine3Liang.gameObject.SetActive(true);
-   HeiAnZJLine3An.gameObject.SetActive(false);
-  }
-
-
-  if (SkillJiaDian.S.HeiAnZJ4 < 1)
-  {
-   HeiAnZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HeiAnZJLine4Liang.gameObject.SetActive(false);
-   HeiAnZJLine4An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HeiAnZJ5Icon.color = new Color(1, 1, 1);
-   HeiAnZJLine4Liang.gameObject.SetActive(true);
-   HeiAnZJLine4An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.HeiAnZJ5 < 1)
-  {
-   HeiAnZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   HeiAnZJLine5Liang.gameObject.SetActive(false);
-   HeiAnZJLine5An.gameObject.SetActive(true);
-  }
-  else
-  {
-   HeiAnZJ6Icon.color = new Color(1, 1, 1);
-   HeiAnZJLine5Liang.gameObject.SetActive(true);
-   HeiAnZJLine5An.gameObject.SetActive(false);
-  }
-
-
-
-
-  if (SkillJiaDian.S.ZhiYeZJ1 < 1)
-  {
-   ZhiYeZJ2Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   ZhiYeZJLine1Liang.gameObject.SetActive(false);
-   ZhiYeZJLine1An.gameObject.SetActive(true);
-  }
-  else
-  {
-   ZhiYeZJ2Icon.color = new Color(1, 1, 1);
-   ZhiYeZJLine1Liang.gameObject.SetActive(true);
-   ZhiYeZJLine1An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.ZhiYeZJ2 < 1)
-  {
-   ZhiYeZJ3Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   ZhiYeZJLine2Liang.gameObject.SetActive(false);
-   ZhiYeZJLine2An.gameObject.SetActive(true);
-  }
-  else
-  {
-   ZhiYeZJ3Icon.color = new Color(1, 1, 1);
-   ZhiYeZJLine2Liang.gameObject.SetActive(true);
-   ZhiYeZJLine2An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.ZhiYeZJ3 < 1)
-  {
-   ZhiYeZJ4Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   ZhiYeZJLine3Liang.gameObject.SetActive(false);
-   ZhiYeZJLine3An.gameObject.SetActive(true);
-  }
-  else
-  {
-   ZhiYeZJ4Icon.color = new Color(1, 1, 1);
-   ZhiYeZJLine3Liang.gameObject.SetActive(true);
-   ZhiYeZJLine3An.gameObject.SetActive(false);
-  }
-
-
-  if (SkillJiaDian.S.ZhiYeZJ4 < 1)
-  {
-   ZhiYeZJ5Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   ZhiYeZJLine4Liang.gameObject.SetActive(false);
-   ZhiYeZJLine4An.gameObject.SetActive(true);
-  }
-  else
-  {
-   ZhiYeZJ5Icon.color = new Color(1, 1, 1);
-   ZhiYeZJLine4Liang.gameObject.SetActive(true);
-   ZhiYeZJLine4An.gameObject.SetActive(false);
-  }
-
-  if (SkillJiaDian.S.ZhiYeZJ5 < 1)
-  {
-   ZhiYeZJ6Icon.color = new Color(93 / 255f, 79 / 255f, 79 / 255f, 1f);
-   ZhiYeZJLine5Liang.gameObject.SetActive(false);
-   ZhiYeZJLine5An.gameObject.SetActive(true);
-  }
-  else
-  {
-   ZhiYeZJ6Icon.color = new Color(1, 1, 1);
-   ZhiYeZJLine5Liang.gameObject.SetActive(true);
-   ZhiYeZJLine5An.gameObject.SetActive(false);
-  }
- }
+ 
 
 
  private void SetIcePanelLevel()
@@ -2519,48 +1852,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- private void SetZJPanelLevel()
- {
-  IceZJ1LevelCount.text = SkillJiaDian.S.IceZJ1.ToString();
-  IceZJ2LevelCount.text = SkillJiaDian.S.IceZJ2.ToString();
-  IceZJ3LevelCount.text = SkillJiaDian.S.IceZJ3.ToString();
-  IceZJ4LevelCount.text = SkillJiaDian.S.IceZJ4.ToString();
-  IceZJ5LevelCount.text = SkillJiaDian.S.IceZJ5.ToString();
-  IceZJ6LevelCount.text = SkillJiaDian.S.IceZJ6.ToString();
-  IceZJMainLevelCount.text = SkillJiaDian.S.ZJIceAll.ToString();
-
-  HuoZJ1LevelCount.text = SkillJiaDian.S.HuoZJ1.ToString();
-  HuoZJ2LevelCount.text = SkillJiaDian.S.HuoZJ2.ToString();
-  HuoZJ3LevelCount.text = SkillJiaDian.S.HuoZJ3.ToString();
-  HuoZJ4LevelCount.text = SkillJiaDian.S.HuoZJ4.ToString();
-  HuoZJ5LevelCount.text = SkillJiaDian.S.HuoZJ5.ToString();
-  HuoZJ6LevelCount.text = SkillJiaDian.S.HuoZJ6.ToString();
-  HuoZJMainLevelCount.text = SkillJiaDian.S.ZJHuoAll.ToString();
-
-  DianZJ1LevelCount.text = SkillJiaDian.S.DianZJ1.ToString();
-  DianZJ2LevelCount.text = SkillJiaDian.S.DianZJ2.ToString();
-  DianZJ3LevelCount.text = SkillJiaDian.S.DianZJ3.ToString();
-  DianZJ4LevelCount.text = SkillJiaDian.S.DianZJ4.ToString();
-  DianZJ5LevelCount.text = SkillJiaDian.S.DianZJ5.ToString();
-  DianZJ6LevelCount.text = SkillJiaDian.S.DianZJ6.ToString();
-  DianZJMainLevelCount.text = SkillJiaDian.S.ZJDianAll.ToString();
-
-  HeiAnZJ1LevelCount.text = SkillJiaDian.S.HeiAnZJ1.ToString();
-  HeiAnZJ2LevelCount.text = SkillJiaDian.S.HeiAnZJ2.ToString();
-  HeiAnZJ3LevelCount.text = SkillJiaDian.S.HeiAnZJ3.ToString();
-  HeiAnZJ4LevelCount.text = SkillJiaDian.S.HeiAnZJ4.ToString();
-  HeiAnZJ5LevelCount.text = SkillJiaDian.S.HeiAnZJ5.ToString();
-  HeiAnZJ6LevelCount.text = SkillJiaDian.S.HeiAnZJ6.ToString();
-  HeiAnZJMainLevelCount.text = SkillJiaDian.S.ZJHeiAnAll.ToString();
-
-  ZhiYeZJ1LevelCount.text = SkillJiaDian.S.ZhiYeZJ1.ToString();
-  ZhiYeZJ2LevelCount.text = SkillJiaDian.S.ZhiYeZJ2.ToString();
-  ZhiYeZJ3LevelCount.text = SkillJiaDian.S.ZhiYeZJ3.ToString();
-  ZhiYeZJ4LevelCount.text = SkillJiaDian.S.ZhiYeZJ4.ToString();
-  ZhiYeZJ5LevelCount.text = SkillJiaDian.S.ZhiYeZJ5.ToString();
-  ZhiYeZJ6LevelCount.text = SkillJiaDian.S.ZhiYeZJ6.ToString();
-  ZhiYeZJMainLevelCount.text = SkillJiaDian.S.ZJZhiYeAll.ToString();
- }
+ 
 
 
 
@@ -2765,6 +2057,7 @@ public class SkillWindow1 : MonoBehaviour
 
  private void ShowPanel()
  {
+  skillCount.text = SkillJiaDian.S.CurrentSkillCount.ToString();
   switch (PanelType)
   {
    case 1:
@@ -2832,16 +2125,7 @@ public class SkillWindow1 : MonoBehaviour
  }
 
 
- private void ShowZJPanel()
- {
-  IcePanel.SetActive(false);
-  HuoPanel.SetActive(false);
-  DianPanel.SetActive(false);
-  HeiAnPanel.SetActive(false);
-  ZJPanel.SetActive(true);
-  SetZJPanelImageColorAndJiaoHuAndLine();
-  SetZJPanelLevel();
- }
+
 
  private void OnEnable()
  {
@@ -2852,6 +2136,11 @@ public class SkillWindow1 : MonoBehaviour
 
  private void Start()
  {
+  ResetButton.onClick.AddListener(() =>
+  {
+   SkillJiaDian.S.ResetSkillCount();
+   ShowPanel();
+  });
   exitButton.onClick.AddListener(() =>
   {
     WindowController.S.SkillWindow.gameObject.SetActive(false);
@@ -2866,7 +2155,7 @@ public class SkillWindow1 : MonoBehaviour
 
   HeiAnButton.onClick.AddListener(() => { PanelType = 4;ShowPanel(); });
 
-  ZJButton.onClick.AddListener(() => { ShowZJPanel(); });
+
   
   // IceBei系列
     IceBei1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.IceBei1, (value) => SkillJiaDian.S.IceBei1 = value, 5, "冰霜之杯1"));
@@ -2880,22 +2169,22 @@ public class SkillWindow1 : MonoBehaviour
     Ice1_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice1_2, (value) => SkillJiaDian.S.Ice1_2 = value, 5, "冰霜1-2"));
     
     // Ice2系列
-    Ice2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice2, (value) => SkillJiaDian.S.Ice2 = value, 10, "冰霜2"));
+    Ice2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice2, (value) => SkillJiaDian.S.Ice2 = value, 10, "冰霜2",5));
     Ice2_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice2_1, (value) => SkillJiaDian.S.Ice2_1 = value, 5, "冰霜2-1"));
     Ice2_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice2_2, (value) => SkillJiaDian.S.Ice2_2 = value, 5, "冰霜2-2"));
     
     // Ice3系列
-    Ice3Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice3, (value) => SkillJiaDian.S.Ice3 = value, 10, "冰霜3"));
+    Ice3Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice3, (value) => SkillJiaDian.S.Ice3 = value, 10, "冰霜3",10));
     Ice3_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice3_1, (value) => SkillJiaDian.S.Ice3_1 = value, 5, "冰霜3-1"));
     Ice3_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice3_2, (value) => SkillJiaDian.S.Ice3_2 = value, 5, "冰霜3-2"));
     
     // Ice4系列
-    Ice4Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice4, (value) => SkillJiaDian.S.Ice4 = value, 10, "冰霜4"));
+    Ice4Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice4, (value) => SkillJiaDian.S.Ice4 = value, 10, "冰霜4",20));
     Ice4_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice4_1, (value) => SkillJiaDian.S.Ice4_1 = value, 5, "冰霜4-1"));
     Ice4_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice4_2, (value) => SkillJiaDian.S.Ice4_2 = value, 5, "冰霜4-2"));
     
     // Ice5系列
-    Ice5Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice5, (value) => SkillJiaDian.S.Ice5 = value, 10, "冰霜5"));
+    Ice5Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice5, (value) => SkillJiaDian.S.Ice5 = value, 10, "冰霜5",30));
     Ice5_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice5_1, (value) => SkillJiaDian.S.Ice5_1 = value, 5, "冰霜5-1"));
     Ice5_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Ice5_2, (value) => SkillJiaDian.S.Ice5_2 = value, 5, "冰霜5-2"));
 
@@ -2917,22 +2206,22 @@ private void BindHuoPanelEvents()
     Huo1_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo1_2, (value) => SkillJiaDian.S.Huo1_2 = value, 5, "火焰1-2"));
     
     // Huo2系列
-    Huo2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo2, (value) => SkillJiaDian.S.Huo2 = value, 10, "火焰2"));
+    Huo2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo2, (value) => SkillJiaDian.S.Huo2 = value, 10, "火焰2",5));
     Huo2_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo2_1, (value) => SkillJiaDian.S.Huo2_1 = value, 5, "火焰2-1"));
     Huo2_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo2_2, (value) => SkillJiaDian.S.Huo2_2 = value, 5, "火焰2-2"));
     
     // Huo3系列
-    Huo3Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo3, (value) => SkillJiaDian.S.Huo3 = value, 10, "火焰3"));
+    Huo3Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo3, (value) => SkillJiaDian.S.Huo3 = value, 10, "火焰3",10));
     Huo3_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo3_1, (value) => SkillJiaDian.S.Huo3_1 = value, 5, "火焰3-1"));
     Huo3_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo3_2, (value) => SkillJiaDian.S.Huo3_2 = value, 5, "火焰3-2"));
     
     // Huo4系列
-    Huo4Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo4, (value) => SkillJiaDian.S.Huo4 = value, 10, "火焰4"));
+    Huo4Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo4, (value) => SkillJiaDian.S.Huo4 = value, 10, "火焰4",20));
     Huo4_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo4_1, (value) => SkillJiaDian.S.Huo4_1 = value, 5, "火焰4-1"));
     Huo4_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo4_2, (value) => SkillJiaDian.S.Huo4_2 = value, 5, "火焰4-2"));
     
     // Huo5系列
-    Huo5Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo5, (value) => SkillJiaDian.S.Huo5 = value, 10, "火焰5"));
+    Huo5Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo5, (value) => SkillJiaDian.S.Huo5 = value, 10, "火焰5",30));
     Huo5_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo5_1, (value) => SkillJiaDian.S.Huo5_1 = value, 5, "火焰5-1"));
     Huo5_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Huo5_2, (value) => SkillJiaDian.S.Huo5_2 = value, 5, "火焰5-2"));
 }
@@ -2952,22 +2241,22 @@ private void BindDianPanelEvents()
     Dian1_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian1_2, (value) => SkillJiaDian.S.Dian1_2 = value, 5, "闪电1-2"));
     
     // Dian2系列
-    Dian2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian2, (value) => SkillJiaDian.S.Dian2 = value, 10, "闪电2"));
+    Dian2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian2, (value) => SkillJiaDian.S.Dian2 = value, 10, "闪电2",5));
     Dian2_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian2_1, (value) => SkillJiaDian.S.Dian2_1 = value, 5, "闪电2-1"));
     Dian2_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian2_2, (value) => SkillJiaDian.S.Dian2_2 = value, 5, "闪电2-2"));
     
     // Dian3系列
-    Dian3Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian3, (value) => SkillJiaDian.S.Dian3 = value, 10, "闪电3"));
+    Dian3Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian3, (value) => SkillJiaDian.S.Dian3 = value, 10, "闪电3",10));
     Dian3_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian3_1, (value) => SkillJiaDian.S.Dian3_1 = value, 5, "闪电3-1"));
     Dian3_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian3_2, (value) => SkillJiaDian.S.Dian3_2 = value, 5, "闪电3-2"));
     
     // Dian4系列
-    Dian4Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian4, (value) => SkillJiaDian.S.Dian4 = value, 10, "闪电4"));
+    Dian4Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian4, (value) => SkillJiaDian.S.Dian4 = value, 10, "闪电4",20));
     Dian4_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian4_1, (value) => SkillJiaDian.S.Dian4_1 = value, 5, "闪电4-1"));
     Dian4_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian4_2, (value) => SkillJiaDian.S.Dian4_2 = value, 5, "闪电4-2"));
     
     // Dian5系列
-    Dian5Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian5, (value) => SkillJiaDian.S.Dian5 = value, 10, "闪电5"));
+    Dian5Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian5, (value) => SkillJiaDian.S.Dian5 = value, 10, "闪电5",20));
     Dian5_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian5_1, (value) => SkillJiaDian.S.Dian5_1 = value, 5, "闪电5-1"));
     Dian5_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.Dian5_2, (value) => SkillJiaDian.S.Dian5_2 = value, 5, "闪电5-2"));
 }
@@ -2987,28 +2276,28 @@ private void BindHeiAnPanelEvents()
     HeiAn1_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn1_2, (value) => SkillJiaDian.S.HeiAn1_2 = value, 5, "黑暗1-2"));
     
     // HeiAn2系列
-    HeiAn2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn2, (value) => SkillJiaDian.S.HeiAn2 = value, 10, "黑暗2"));
+    HeiAn2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn2, (value) => SkillJiaDian.S.HeiAn2 = value, 10, "黑暗2",5));
     HeiAn2_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn2_1, (value) => SkillJiaDian.S.HeiAn2_1 = value, 5, "黑暗2-1"));
     HeiAn2_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn2_2, (value) => SkillJiaDian.S.HeiAn2_2 = value, 5, "黑暗2-2"));
     
     // HeiAn3系列
-    HeiAn3Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn3, (value) => SkillJiaDian.S.HeiAn3 = value, 10, "黑暗3"));
+    HeiAn3Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn3, (value) => SkillJiaDian.S.HeiAn3 = value, 10, "黑暗3",10));
     HeiAn3_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn3_1, (value) => SkillJiaDian.S.HeiAn3_1 = value, 5, "黑暗3-1"));
     HeiAn3_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn3_2, (value) => SkillJiaDian.S.HeiAn3_2 = value, 5, "黑暗3-2"));
     
     // HeiAn4系列
-    HeiAn4Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn4, (value) => SkillJiaDian.S.HeiAn4 = value, 10, "黑暗4"));
+    HeiAn4Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn4, (value) => SkillJiaDian.S.HeiAn4 = value, 10, "黑暗4",20));
     HeiAn4_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn4_1, (value) => SkillJiaDian.S.HeiAn4_1 = value, 5, "黑暗4-1"));
     HeiAn4_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn4_2, (value) => SkillJiaDian.S.HeiAn4_2 = value, 5, "黑暗4-2"));
     
     // HeiAn5系列
-    HeiAn5Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn5, (value) => SkillJiaDian.S.HeiAn5 = value, 10, "黑暗5"));
+    HeiAn5Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn5, (value) => SkillJiaDian.S.HeiAn5 = value, 10, "黑暗5",30));
     HeiAn5_1Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn5_1, (value) => SkillJiaDian.S.HeiAn5_1 = value, 5, "黑暗5-1"));
     HeiAn5_2Icon.GetComponent<Button>().onClick.AddListener(() => HandleSkillUpgrade(() => SkillJiaDian.S.HeiAn5_2, (value) => SkillJiaDian.S.HeiAn5_2 = value, 5, "黑暗5-2"));
 }
 
 // 通用技能升级处理方法
-private void HandleSkillUpgrade(Func<int> getSkillLevel, Action<int> setSkillLevel, int maxLevel, string skillName)
+private void HandleSkillUpgrade(Func<int> getSkillLevel, Action<int> setSkillLevel, int maxLevel, string skillName,int Skilllimit=0)
 {
     if (SkillJiaDian.S.CurrentSkillCount <= 0)
     {
@@ -3020,6 +2309,12 @@ private void HandleSkillUpgrade(Func<int> getSkillLevel, Action<int> setSkillLev
     {
         ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "已达等级上限");
         return;
+    }
+
+    if (PlayerData.S.level < Skilllimit)
+    {
+     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast, "等级不足");
+     return;
     }
 
     SkillJiaDian.S.CurrentSkillCount--;
@@ -3792,308 +3087,7 @@ private void UpdateSkillUI(string skillName, int newLevel)
  private GameObject HeiAn5Line2An;
 
 
- [Header("ZJPanel")] private Image IceZJMainBg;
- private Image IceZJMainIcon;
- private TextMeshProUGUI IceZJMainLevelCount;
- private Image IceZJMainLevelBg;
- private Image IceZJMainXuanZhong;
-
-
- private Image IceZJ1Bg;
- private Image IceZJ1Icon;
- private TextMeshProUGUI IceZJ1LevelCount;
- private Image IceZJ1LevelBg;
- private Image IceZJ1XuanZhong;
-
-
- private Image IceZJ2Bg;
- private Image IceZJ2Icon;
- private TextMeshProUGUI IceZJ2LevelCount;
- private Image IceZJ2LevelBg;
- private Image IceZJ2XuanZhong;
-
- private Image IceZJ3Bg;
- private Image IceZJ3Icon;
- private TextMeshProUGUI IceZJ3LevelCount;
- private Image IceZJ3LevelBg;
- private Image IceZJ3XuanZhong;
-
- private Image IceZJ4Bg;
- private Image IceZJ4Icon;
- private TextMeshProUGUI IceZJ4LevelCount;
- private Image IceZJ4LevelBg;
- private Image IceZJ4XuanZhong;
-
- private Image IceZJ5Bg;
- private Image IceZJ5Icon;
- private TextMeshProUGUI IceZJ5LevelCount;
- private Image IceZJ5LevelBg;
- private Image IceZJ5XuanZhong;
-
-
- private Image IceZJ6Bg;
- private Image IceZJ6Icon;
- private TextMeshProUGUI IceZJ6LevelCount;
- private Image IceZJ6LevelBg;
- private Image IceZJ6XuanZhong;
-
-
- private GameObject IceZJLine1Liang;
- private GameObject IceZJLine1An;
- private GameObject IceZJLine2Liang;
- private GameObject IceZJLine2An;
- private GameObject IceZJLine3Liang;
- private GameObject IceZJLine3An;
- private GameObject IceZJLine4Liang;
- private GameObject IceZJLine4An;
- private GameObject IceZJLine5Liang;
- private GameObject IceZJLine5An;
-
-
-
- private Image HuoZJMainBg;
- private Image HuoZJMainIcon;
- private TextMeshProUGUI HuoZJMainLevelCount;
- private Image HuoZJMainLevelBg;
- private Image HuoZJMainXuanZhong;
-
-
-
- private Image HuoZJ1Bg;
- private Image HuoZJ1Icon;
- private TextMeshProUGUI HuoZJ1LevelCount;
- private Image HuoZJ1LevelBg;
- private Image HuoZJ1XuanZhong;
-
-
- private Image HuoZJ2Bg;
- private Image HuoZJ2Icon;
- private TextMeshProUGUI HuoZJ2LevelCount;
- private Image HuoZJ2LevelBg;
- private Image HuoZJ2XuanZhong;
-
- private Image HuoZJ3Bg;
- private Image HuoZJ3Icon;
- private TextMeshProUGUI HuoZJ3LevelCount;
- private Image HuoZJ3LevelBg;
- private Image HuoZJ3XuanZhong;
-
- private Image HuoZJ4Bg;
- private Image HuoZJ4Icon;
- private TextMeshProUGUI HuoZJ4LevelCount;
- private Image HuoZJ4LevelBg;
- private Image HuoZJ4XuanZhong;
-
- private Image HuoZJ5Bg;
- private Image HuoZJ5Icon;
- private TextMeshProUGUI HuoZJ5LevelCount;
- private Image HuoZJ5LevelBg;
- private Image HuoZJ5XuanZhong;
-
-
- private Image HuoZJ6Bg;
- private Image HuoZJ6Icon;
- private TextMeshProUGUI HuoZJ6LevelCount;
- private Image HuoZJ6LevelBg;
- private Image HuoZJ6XuanZhong;
-
- private GameObject HuoZJLine1Liang;
- private GameObject HuoZJLine1An;
- private GameObject HuoZJLine2Liang;
- private GameObject HuoZJLine2An;
- private GameObject HuoZJLine3Liang;
- private GameObject HuoZJLine3An;
- private GameObject HuoZJLine4Liang;
- private GameObject HuoZJLine4An;
- private GameObject HuoZJLine5Liang;
- private GameObject HuoZJLine5An;
-
-
-
-
-
-
- private Image DianZJMainBg;
- private Image DianZJMainIcon;
- private TextMeshProUGUI DianZJMainLevelCount;
- private Image DianZJMainLevelBg;
- private Image DianZJMainXuanZhong;
-
-
- private Image DianZJ1Bg;
- private Image DianZJ1Icon;
- private TextMeshProUGUI DianZJ1LevelCount;
- private Image DianZJ1LevelBg;
- private Image DianZJ1XuanZhong;
-
-
- private Image DianZJ2Bg;
- private Image DianZJ2Icon;
- private TextMeshProUGUI DianZJ2LevelCount;
- private Image DianZJ2LevelBg;
- private Image DianZJ2XuanZhong;
-
- private Image DianZJ3Bg;
- private Image DianZJ3Icon;
- private TextMeshProUGUI DianZJ3LevelCount;
- private Image DianZJ3LevelBg;
- private Image DianZJ3XuanZhong;
-
- private Image DianZJ4Bg;
- private Image DianZJ4Icon;
- private TextMeshProUGUI DianZJ4LevelCount;
- private Image DianZJ4LevelBg;
- private Image DianZJ4XuanZhong;
-
- private Image DianZJ5Bg;
- private Image DianZJ5Icon;
- private TextMeshProUGUI DianZJ5LevelCount;
- private Image DianZJ5LevelBg;
- private Image DianZJ5XuanZhong;
-
-
- private Image DianZJ6Bg;
- private Image DianZJ6Icon;
- private TextMeshProUGUI DianZJ6LevelCount;
- private Image DianZJ6LevelBg;
- private Image DianZJ6XuanZhong;
-
- private GameObject DianZJLine1Liang;
- private GameObject DianZJLine1An;
- private GameObject DianZJLine2Liang;
- private GameObject DianZJLine2An;
- private GameObject DianZJLine3Liang;
- private GameObject DianZJLine3An;
- private GameObject DianZJLine4Liang;
- private GameObject DianZJLine4An;
- private GameObject DianZJLine5Liang;
- private GameObject DianZJLine5An;
-
-
-
-
-
- private Image HeiAnZJMainBg;
- private Image HeiAnZJMainIcon;
- private TextMeshProUGUI HeiAnZJMainLevelCount;
- private Image HeiAnZJMainLevelBg;
- private Image HeiAnZJMainXuanZhong;
-
-
- private Image HeiAnZJ1Bg;
- private Image HeiAnZJ1Icon;
- private TextMeshProUGUI HeiAnZJ1LevelCount;
- private Image HeiAnZJ1LevelBg;
- private Image HeiAnZJ1XuanZhong;
-
-
- private Image HeiAnZJ2Bg;
- private Image HeiAnZJ2Icon;
- private TextMeshProUGUI HeiAnZJ2LevelCount;
- private Image HeiAnZJ2LevelBg;
- private Image HeiAnZJ2XuanZhong;
-
- private Image HeiAnZJ3Bg;
- private Image HeiAnZJ3Icon;
- private TextMeshProUGUI HeiAnZJ3LevelCount;
- private Image HeiAnZJ3LevelBg;
- private Image HeiAnZJ3XuanZhong;
-
- private Image HeiAnZJ4Bg;
- private Image HeiAnZJ4Icon;
- private TextMeshProUGUI HeiAnZJ4LevelCount;
- private Image HeiAnZJ4LevelBg;
- private Image HeiAnZJ4XuanZhong;
-
- private Image HeiAnZJ5Bg;
- private Image HeiAnZJ5Icon;
- private TextMeshProUGUI HeiAnZJ5LevelCount;
- private Image HeiAnZJ5LevelBg;
- private Image HeiAnZJ5XuanZhong;
-
-
- private Image HeiAnZJ6Bg;
- private Image HeiAnZJ6Icon;
- private TextMeshProUGUI HeiAnZJ6LevelCount;
- private Image HeiAnZJ6LevelBg;
- private Image HeiAnZJ6XuanZhong;
-
- private GameObject HeiAnZJLine1Liang;
- private GameObject HeiAnZJLine1An;
- private GameObject HeiAnZJLine2Liang;
- private GameObject HeiAnZJLine2An;
- private GameObject HeiAnZJLine3Liang;
- private GameObject HeiAnZJLine3An;
- private GameObject HeiAnZJLine4Liang;
- private GameObject HeiAnZJLine4An;
- private GameObject HeiAnZJLine5Liang;
- private GameObject HeiAnZJLine5An;
-
-
-
-
-
-
-
- private Image ZhiYeZJMainBg;
- private Image ZhiYeZJMainIcon;
- private TextMeshProUGUI ZhiYeZJMainLevelCount;
- private Image ZhiYeZJMainLevelBg;
- private Image ZhiYeZJMainXuanZhong;
-
-
- private Image ZhiYeZJ1Bg;
- private Image ZhiYeZJ1Icon;
- private TextMeshProUGUI ZhiYeZJ1LevelCount;
- private Image ZhiYeZJ1LevelBg;
- private Image ZhiYeZJ1XuanZhong;
-
-
- private Image ZhiYeZJ2Bg;
- private Image ZhiYeZJ2Icon;
- private TextMeshProUGUI ZhiYeZJ2LevelCount;
- private Image ZhiYeZJ2LevelBg;
- private Image ZhiYeZJ2XuanZhong;
-
- private Image ZhiYeZJ3Bg;
- private Image ZhiYeZJ3Icon;
- private TextMeshProUGUI ZhiYeZJ3LevelCount;
- private Image ZhiYeZJ3LevelBg;
- private Image ZhiYeZJ3XuanZhong;
-
- private Image ZhiYeZJ4Bg;
- private Image ZhiYeZJ4Icon;
- private TextMeshProUGUI ZhiYeZJ4LevelCount;
- private Image ZhiYeZJ4LevelBg;
- private Image ZhiYeZJ4XuanZhong;
-
- private Image ZhiYeZJ5Bg;
- private Image ZhiYeZJ5Icon;
- private TextMeshProUGUI ZhiYeZJ5LevelCount;
- private Image ZhiYeZJ5LevelBg;
- private Image ZhiYeZJ5XuanZhong;
-
-
- private Image ZhiYeZJ6Bg;
- private Image ZhiYeZJ6Icon;
- private TextMeshProUGUI ZhiYeZJ6LevelCount;
- private Image ZhiYeZJ6LevelBg;
- private Image ZhiYeZJ6XuanZhong;
-
- private GameObject ZhiYeZJLine1Liang;
- private GameObject ZhiYeZJLine1An;
- private GameObject ZhiYeZJLine2Liang;
- private GameObject ZhiYeZJLine2An;
- private GameObject ZhiYeZJLine3Liang;
- private GameObject ZhiYeZJLine3An;
- private GameObject ZhiYeZJLine4Liang;
- private GameObject ZhiYeZJLine4An;
- private GameObject ZhiYeZJLine5Liang;
- private GameObject ZhiYeZJLine5An;
-
-
-
- private Button ResetButton;
+ public Button ResetButton;
 
 
 }

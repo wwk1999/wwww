@@ -199,7 +199,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 3, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 10, defence = 10, hp = 20, ex = 10, linghun = 10,speed = 1f,
+                    attack = 10, defence = 10, hp = 20, ex = 10, linghun = 10,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {
                         new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 2), 
@@ -215,7 +215,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 3, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 20, defence = 20, hp = 100, ex = 40, linghun = 40,speed = 1f,
+                    attack = 20, defence = 20, hp = 100, ex = 40, linghun = 40,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                         {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 10), 
                             new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Primary, 10),
@@ -230,7 +230,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 3, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 140, defence = 40, hp = 3000, ex = 200, linghun = 200,speed = 1f,
+                    attack = 50, defence = 20, hp = 1000, ex = 200, linghun = 200,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                         {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.TreeMan, 15), 
                             new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.TreeMan, 15),
@@ -249,7 +249,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 6, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 20, defence = 20, hp = 50, ex = 20, linghun = 20,speed = 1f,
+                    attack = 20, defence = 20, hp = 50, ex = 20, linghun = 20,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Primary, 1), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Primary, 1),
@@ -264,7 +264,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 6, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 50, defence = 50, hp =400, ex = 100, linghun = 100,speed = 1f,
+                    attack = 50, defence = 50, hp =400, ex = 100, linghun = 100,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Green, 5), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Green, 5),
@@ -279,7 +279,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 6, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 180, defence = 80, hp = 10000, ex = 300, linghun = 300,speed = 1f,
+                    attack = 180, defence = 80, hp = 10000, ex = 300, linghun = 300,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.HuoShan, 15), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.HuoShan, 15),
@@ -296,7 +296,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 9, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 30, defence = 30, hp = 100, ex = 30, linghun = 30,speed = 1f,
+                    attack = 30, defence = 30, hp = 100, ex = 30, linghun = 30,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Green, 1), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Green, 1),
@@ -311,7 +311,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 9, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 80, hp = 1000, ex = 200, linghun = 200,speed = 1f,
+                    attack = 100, defence = 80, hp = 1000, ex = 200, linghun = 200,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Green, 4), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Green, 4),
@@ -326,7 +326,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 9, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 300, defence = 120, hp = 15000, ex = 600, linghun = 600,speed = 1f,
+                    attack = 300, defence = 120, hp = 15000, ex = 600, linghun = 600,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.ZhaoZe, 15), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.ZhaoZe, 15),
@@ -345,7 +345,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 12, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 120, defence = 100, hp = 500, ex = 50, linghun = 50,speed = 1f,
+                    attack = 120, defence = 100, hp = 500, ex = 50, linghun = 50,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Blue, 1), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Blue, 1),
@@ -360,7 +360,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 12, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 200, defence = 150, hp = 3000, ex = 300, linghun = 300,speed = 1f,
+                    attack = 200, defence = 150, hp = 3000, ex = 300, linghun = 300,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Blue, 4), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Blue, 4),
@@ -375,7 +375,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 12, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 500, defence = 200, hp = 30000, ex = 1000, linghun = 1000,speed = 1f,
+                    attack = 500, defence = 200, hp = 30000, ex = 1000, linghun = 1000,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.XieZi, 15), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.XieZi, 15),
@@ -395,7 +395,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 15, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 200, defence = 150, hp = 1000, ex = 100, linghun = 100,speed = 1f,
+                    attack = 200, defence = 150, hp = 1000, ex = 100, linghun = 100,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Blue, 1), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Blue, 1),
@@ -411,7 +411,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 15, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 300, defence = 200, hp = 8000, ex = 600, linghun = 600,speed = 1f,
+                    attack = 300, defence = 200, hp = 8000, ex = 600, linghun = 600,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.Blue, 5), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.Blue, 5),
@@ -426,7 +426,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 15, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 80, defence = 30, hp = 5000, ex = 3000, linghun = 3000,speed = 1f,
+                    attack = 80, defence = 30, hp = 5000, ex = 3000, linghun = 3000,speed = 1.2f,
                     MonsterEquipList = new List<MonsterEquip>()
                     {  new MonsterEquip(PlayerEquipConfig.EquipType.Ring, PlayerEquipConfig.EquipLevel.XueRen, 15), 
                         new MonsterEquip(PlayerEquipConfig.EquipType.Necklace, PlayerEquipConfig.EquipLevel.XueRen, 15),
@@ -444,21 +444,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 16, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed = 1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed = 1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 16, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 16, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -470,21 +470,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 17, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 17, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 17, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -497,21 +497,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 18, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 18, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 18, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -524,21 +524,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 19, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 19, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 19, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -551,21 +551,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 20, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 20, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 20, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -578,21 +578,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 21, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 21, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 21, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -606,21 +606,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 22, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 22, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 22, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -631,21 +631,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 23, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 23, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 23, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -659,21 +659,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 24, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 24, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 24, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -686,21 +686,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 25, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 25, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 25, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -713,21 +713,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 26, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 26, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 26, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -740,21 +740,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 27, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 27, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 27, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -766,21 +766,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 28, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 28, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 28, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -792,21 +792,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 29, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 29, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 29, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -820,21 +820,21 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 30, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 30, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             {
                 new MonsterDiaoLuoType() { GameLevel = 30, MonsterType = MonsterType.Boss },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,orangeEquip = true
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,orangeEquip = true
                 }
             },
             
@@ -847,7 +847,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 101, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 50, defence = 50, hp = 100, ex = 20, linghun = 20,speed=1f,
+                    attack = 50, defence = 50, hp = 100, ex = 20, linghun = 20,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),10),
@@ -858,7 +858,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 101, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 500, ex = 100, linghun = 100,speed=1f,
+                    attack = 100, defence = 100, hp = 500, ex = 100, linghun = 100,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,1),50),
@@ -877,7 +877,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 102, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 150, defence = 150, hp = 300, ex = 50, linghun = 50,speed=1f,
+                    attack = 150, defence = 150, hp = 300, ex = 50, linghun = 50,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
@@ -888,7 +888,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 102, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 300, defence = 300, hp = 1500, ex = 250, linghun = 250,speed=1f,
+                    attack = 300, defence = 300, hp = 1500, ex = 250, linghun = 250,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),50),
@@ -906,7 +906,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 103, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 450, defence = 450, hp = 1000, ex = 150, linghun = 150,speed=1f,
+                    attack = 450, defence = 450, hp = 1000, ex = 150, linghun = 150,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),5),
@@ -917,7 +917,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 103, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 900, defence = 900, hp = 5000, ex = 500, linghun = 500,speed=1f,
+                    attack = 900, defence = 900, hp = 5000, ex = 500, linghun = 500,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,3),50),
@@ -936,7 +936,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 104, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
@@ -948,7 +948,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 104, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
@@ -968,7 +968,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 105, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
@@ -980,7 +980,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 105, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
@@ -1002,7 +1002,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 106, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
@@ -1014,7 +1014,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 106, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.WeaponFragment,2),5),
@@ -1035,7 +1035,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 201, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 50, defence = 50, hp = 100, ex = 20, linghun = 20,speed=1f,
+                    attack = 50, defence = 50, hp = 100, ex = 20, linghun = 20,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),1),
@@ -1049,7 +1049,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 201, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 500, ex = 100, linghun = 100,speed=1f,
+                    attack = 100, defence = 100, hp = 500, ex = 100, linghun = 100,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),5),
@@ -1070,7 +1070,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 202, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 150, defence = 150, hp = 300, ex = 50, linghun = 50,speed=1f,
+                    attack = 150, defence = 150, hp = 300, ex = 50, linghun = 50,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),1),
@@ -1083,7 +1083,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 202, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 300, defence = 300, hp = 1500, ex = 250, linghun = 250,speed=1f,
+                    attack = 300, defence = 300, hp = 1500, ex = 250, linghun = 250,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),5),
@@ -1103,7 +1103,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 203, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 450, defence = 450, hp = 1000, ex = 150, linghun = 150,speed=1f,
+                    attack = 450, defence = 450, hp = 1000, ex = 150, linghun = 150,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),1),
@@ -1116,7 +1116,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 203, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 900, defence = 900, hp = 5000, ex = 500, linghun = 500,speed=1f,
+                    attack = 900, defence = 900, hp = 5000, ex = 500, linghun = 500,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),5),
@@ -1137,7 +1137,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 204, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),1),
@@ -1150,7 +1150,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 204, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,3),5),
@@ -1171,7 +1171,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 205, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,5),1),
@@ -1184,7 +1184,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 205, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,5),5),
@@ -1207,7 +1207,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 206, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,5),1),
@@ -1220,7 +1220,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 206, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChongWuDan,5),5),
@@ -1239,7 +1239,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 301, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 10, defence = 10, hp = 100, ex = 10, linghun = 10,speed=1f,
+                    attack = 10, defence = 10, hp = 100, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,2),100),
@@ -1250,7 +1250,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 301, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 100, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 100, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,2),5),
@@ -1265,7 +1265,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 302, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,3),1),
@@ -1276,7 +1276,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 302, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,3),5),
@@ -1294,7 +1294,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 303, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,3),1),
@@ -1305,7 +1305,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 303, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,4),5),
@@ -1322,7 +1322,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 304, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,4),1),
@@ -1333,7 +1333,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 304, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,5),5),
@@ -1351,7 +1351,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 305, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,5),1),
@@ -1362,7 +1362,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 305, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,5),5),
@@ -1380,7 +1380,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 306, MonsterType = MonsterType.Normal },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,5),1),
@@ -1391,7 +1391,7 @@ public class MonsterConfig
                 new MonsterDiaoLuoType() { GameLevel = 306, MonsterType = MonsterType.Elite },
                 new MonsterInfo()
                 {
-                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1f,
+                    attack = 100, defence = 100, hp = 10000, ex = 10, linghun = 10,speed=1.2f,
                     MonsterPropList = new List<MonsterProp>()
                     {
                         new MonsterProp(new PropItem(PropConfig.PropType.ChiBangFight,6),1),

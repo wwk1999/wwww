@@ -47,6 +47,172 @@ public class SkillController : XSingleton<SkillController>
     public float HeiAnSkill5Time => GetHeiAnSkill5Time();
 
 
+    public bool GetSkillAuto(SkillType type)
+    {
+        switch (type)
+        {
+            case SkillType.Ice1:
+                return SkillJiaDian.S.Ice1Auto;
+            case SkillType.Ice2:
+                return SkillJiaDian.S.Ice2Auto;
+            case SkillType.Ice3:
+                return SkillJiaDian.S.Ice3Auto;
+            case SkillType.Ice4:
+                return SkillJiaDian.S.Ice4Auto;
+            case SkillType.Ice5:
+                return SkillJiaDian.S.Ice5Auto;
+            
+            case SkillType.Huo1:
+                return SkillJiaDian.S.Huo1Auto;
+            case SkillType.Huo2:
+                return SkillJiaDian.S.Huo2Auto;
+            case SkillType.Huo3:
+                return SkillJiaDian.S.Huo3Auto;
+            case SkillType.Huo4:
+                return SkillJiaDian.S.Huo4Auto;
+            case SkillType.Huo5:
+                return SkillJiaDian.S.Huo5Auto;
+            
+            case SkillType.Dian1:
+                return SkillJiaDian.S.Dian1Auto;
+            case SkillType.Dian2:
+                return SkillJiaDian.S.Dian2Auto;
+            case SkillType.Dian3:
+                return SkillJiaDian.S.Dian3Auto;
+            case SkillType.Dian4:
+                return SkillJiaDian.S.Dian4Auto;
+            case SkillType.Dian5:
+                return SkillJiaDian.S.Dian5Auto;
+            
+            case SkillType.HeiAn1:
+                return SkillJiaDian.S.HeiAn1Auto;
+            case SkillType.HeiAn2:
+                return SkillJiaDian.S.HeiAn2Auto;
+            case SkillType.HeiAn3:
+                return SkillJiaDian.S.HeiAn3Auto;
+            case SkillType.HeiAn4:
+                return SkillJiaDian.S.HeiAn4Auto;
+            case SkillType.HeiAn5:
+                return SkillJiaDian.S.HeiAn5Auto;
+        }
+
+        return false;
+    }
+    public bool GetSkillActive(SkillType type)
+    {
+        float time = 0;
+        float cooltime = 0;
+        switch (type)
+        {
+            case SkillType.Ice1:
+                time =  IceSkill1Time;
+                cooltime = IceSkill1Coolingtime;
+                break;
+            case SkillType.Ice2:
+                time= IceBalltime;
+                cooltime = IceBallCoolingtime;
+                break;
+            case SkillType.Ice3:
+                time= IceExplosiontime;
+                cooltime = IceExplosionCoolingtime;
+                break;
+            case SkillType.Ice4:
+                time= IceSkill4Time;
+                cooltime = IceSkill4Coolingtime;
+
+                break;
+            case SkillType.Ice5:
+                time= IceSkill5Time;
+                cooltime = IceSkill5Coolingtime;
+
+                break;
+            
+            
+            case SkillType.Huo1:
+                time= HuoSkill1Time;
+                cooltime = HuoSkill1Coolingtime;
+
+                break;
+            case SkillType.Huo2:
+                time= HuoSkill2Time;
+                cooltime = HuoSkill2Coolingtime;
+
+                break;
+            case SkillType.Huo3:
+                time= HuoSkill3Time;
+                cooltime = HuoSkill3Coolingtime;
+
+                break;
+            case SkillType.Huo4:
+                time= HuoSkill4Time;
+                cooltime = HuoSkill4Coolingtime;
+
+                break;
+            case SkillType.Huo5:
+                time= HuoSkill5Time;
+                cooltime = HuoSkill5Coolingtime;
+
+                break;
+            
+            
+            
+            case SkillType.Dian1:
+                time= DianQuantime;
+                cooltime = DianSkill1Coolingtime;
+
+                break;
+            case SkillType.Dian2:
+                time= DianSkill2Time;
+                cooltime = DianSkill2Coolingtime;
+
+                break;
+            case SkillType.Dian3:
+                time= DianSkill3Time;
+                cooltime = DianSkill3Coolingtime;
+
+                break;
+            case SkillType.Dian4:
+                time= DianSkill4Time;
+                cooltime = DianSkill4Coolingtime;
+
+                break;
+            case SkillType.Dian5:
+                time= DianSkill5Time;
+                cooltime = DianSkill5Coolingtime;
+
+                break;
+            
+            
+            case SkillType.HeiAn1:
+                time= HeiAnSkill1Time;
+                cooltime = HeiAnSkill1Coolingtime;
+
+                break;
+            case SkillType.HeiAn2:
+                time= HeiAnSkill2Time;
+                cooltime = HeiAnSkill2Coolingtime;
+
+                break;
+            case SkillType.HeiAn3:
+                time= HeiAnSkill3Time;
+                cooltime = HeiAnSkill3Coolingtime;
+
+                break;
+            case SkillType.HeiAn4:
+                time= HeiAnSkill4Time;
+                cooltime = HeiAnSkill4Coolingtime;
+
+                break;
+            case SkillType.HeiAn5:
+                time= HeiAnSkill5Time;
+                cooltime = HeiAnSkill5Coolingtime;
+
+                break;
+        }
+
+        return cooltime>=time;
+    }
+    
     public float GetBallSpeed()
     {
         float value = 5;
@@ -612,7 +778,14 @@ public class SkillController : XSingleton<SkillController>
                 Vector2 pos = worldPos + dir * redis;
                 var dianquan = QueueController.S.HuoSkill3Queue.Dequeue();
                 dianquan.gameObject.SetActive(true);
-                dianquan.transform.position = pos;
+                if (SkillJiaDian.S.Huo3Auto)
+                {
+                    dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+                }
+                else
+                {
+                    dianquan.transform.position = pos;
+                }
                 dianquan._renderer.sortingOrder = 10001 + i;
                 yield return new WaitForSeconds(time);
             }
@@ -635,7 +808,14 @@ public class SkillController : XSingleton<SkillController>
             Vector2 pos = worldPos + dir * redis;
             var dianquan = QueueController.S.HuoSkill5Queue.Dequeue();
             dianquan.gameObject.SetActive(true);
-            dianquan.transform.position = pos;
+            if (SkillJiaDian.S.Huo5Auto)
+            {
+                dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+            }
+            else
+            {
+                dianquan.transform.position = worldPos;
+            }
             dianquan._renderer.sortingOrder = 10001 + i;
             yield return new WaitForSeconds(time);
         }
@@ -657,7 +837,14 @@ public class SkillController : XSingleton<SkillController>
             Vector2 pos = worldPos + dir * redis;
             var dianquan = QueueController.S.IceSkill4Queue.Dequeue();
             dianquan.gameObject.SetActive(true);
-            dianquan.transform.position = pos;
+            if (SkillJiaDian.S.Ice4Auto)
+            {
+                dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+            }
+            else
+            {
+                dianquan.transform.position = pos;
+            }
             dianquan.render.sortingOrder = 10001 + i;
             yield return new WaitForSeconds(time);
         }
@@ -737,7 +924,14 @@ public class SkillController : XSingleton<SkillController>
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         var dianquan= QueueController.S.IceSkill1Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
-        dianquan.transform.position = worldPos;
+        if (SkillJiaDian.S.Ice1Auto)
+        {
+            dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+        }
+        else
+        {
+            dianquan.transform.position = worldPos;
+        }
         dianquan.transform.localScale = new Vector3(dianquan.transform.localScale.x*(1.0f+SkillJiaDian.S.Ice1_2*5/100f), dianquan.transform.localScale.y*(1.0f+SkillJiaDian.S.Ice1_2*5/100f), 1f);
 
     }
@@ -826,8 +1020,15 @@ public class SkillController : XSingleton<SkillController>
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         var dianquan= QueueController.S.DianSkill4Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
-        dianquan.transform.position = worldPos;
-        dianquan.transform.localPosition =
+        if (SkillJiaDian.S.Dian4Auto)
+        {
+            dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+        }
+        else
+        {
+            dianquan.transform.position = worldPos;
+        }
+        dianquan.transform.localScale =
             new Vector3(dianquan.transform.localPosition.x * (1.0f + SkillJiaDian.S.Dian4_2 * 5 / 100f),
                 dianquan.transform.localPosition.y * (1.0f + SkillJiaDian.S.Dian4_2 * 5 / 100f), 1f);
     }
@@ -862,10 +1063,17 @@ public class SkillController : XSingleton<SkillController>
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         var dianquan= QueueController.S.DianSkill5Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
-        dianquan.transform.position = worldPos;
-        dianquan.transform.localPosition =
-            new Vector3(dianquan.transform.localPosition.x * (1.0f + SkillJiaDian.S.Dian5_2 * 5 / 100f),
-                dianquan.transform.localPosition.y * (1.0f + SkillJiaDian.S.Dian5_2 * 5 / 100f), 1f);
+        if (SkillJiaDian.S.Dian5Auto)
+        {
+            dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+        }
+        else
+        {
+            dianquan.transform.position = worldPos;
+        }
+        dianquan.transform.localScale =
+            new Vector3(dianquan.transform.localScale.x * (1.0f + SkillJiaDian.S.Dian5_2 * 5 / 100f),
+                dianquan.transform.localScale.y * (1.0f + SkillJiaDian.S.Dian5_2 * 5 / 100f), 1f);
     }
     
     public void HuoSkill4()
@@ -882,10 +1090,17 @@ public class SkillController : XSingleton<SkillController>
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         var dianquan= QueueController.S.HuoSkill4Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
-        dianquan.transform.position = worldPos;
-        dianquan.transform.localPosition =
-            new Vector3(dianquan.transform.localPosition.x * (1.0f + SkillJiaDian.S.Huo4_2 * 5 / 100f),
-                dianquan.transform.localPosition.y * (1.0f + SkillJiaDian.S.Huo4_2 * 5 / 100f), 1f);
+        if (SkillJiaDian.S.Huo4Auto)
+        {
+            dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+        }
+        else
+        {
+            dianquan.transform.position = worldPos;
+        }        
+        dianquan.transform.localScale =
+            new Vector3(dianquan.transform.localScale.x * (1.0f + SkillJiaDian.S.Huo4_2 * 5 / 100f),
+                dianquan.transform.localScale.y * (1.0f + SkillJiaDian.S.Huo4_2 * 5 / 100f), 1f);
     }
 
     public void HeiAnSkill1()
@@ -902,10 +1117,17 @@ public class SkillController : XSingleton<SkillController>
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         var dianquan= QueueController.S.HeiAnSkill1Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
-        dianquan.transform.position = worldPos;
-        dianquan.transform.localPosition =
-            new Vector3(dianquan.transform.localPosition.x * (1.0f + SkillJiaDian.S.HeiAn1_2 * 5 / 100f),
-                dianquan.transform.localPosition.y * (1.0f + SkillJiaDian.S.HeiAn1_2 * 5 / 100f), 1f);
+        if (SkillJiaDian.S.HeiAn1Auto)
+        {
+            dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+        }
+        else
+        {
+            dianquan.transform.position = worldPos;
+        }
+        dianquan.transform.localScale =
+            new Vector3(dianquan.transform.localScale.x * (1.0f + SkillJiaDian.S.HeiAn1_2 * 5 / 100f),
+                dianquan.transform.localScale.y * (1.0f + SkillJiaDian.S.HeiAn1_2 * 5 / 100f), 1f);
     }
 
     public void HuoSkill2()
@@ -977,10 +1199,17 @@ public class SkillController : XSingleton<SkillController>
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
         var dianquan= QueueController.S.HeiAnSkill3Queue.Dequeue();
         dianquan.gameObject.SetActive(true);
-        dianquan.transform.position = worldPos;
-        dianquan.transform.localPosition =
-            new Vector3(dianquan.transform.localPosition.x * (1.0f + SkillJiaDian.S.HeiAn3_2 * 5 / 100f),
-                dianquan.transform.localPosition.y * (1.0f + SkillJiaDian.S.HeiAn3_2 * 5 / 100f), 1f);
+        if (SkillJiaDian.S.HeiAn3Auto)
+        {
+            dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+        }
+        else
+        {
+            dianquan.transform.position = worldPos;
+        }
+        dianquan.transform.localScale =
+            new Vector3(dianquan.transform.localScale.x * (1.0f + SkillJiaDian.S.HeiAn3_2 * 5 / 100f),
+                dianquan.transform.localScale.y * (1.0f + SkillJiaDian.S.HeiAn3_2 * 5 / 100f), 1f);
     }
     
     public void HuoSkill1()
@@ -994,6 +1223,10 @@ public class SkillController : XSingleton<SkillController>
         float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
         mouseScreen.z = depth; 
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
+        if (SkillJiaDian.S.Huo1Auto)
+        {
+            worldPos = GameController.S.GetRandomMonsterPos();
+        }
         // 原始方向
         Vector2 baseDir = (worldPos -QueueController.S.gamePlayer.transform.position).normalized;
 
@@ -1234,23 +1467,29 @@ public class SkillController : XSingleton<SkillController>
             case SkillType.Dian1:
                 if (DianQuanCoolingtime>=DianQuantime)
                 {
+                    DianQuanCoolingtime = 0;
                     Vector3 mouseScreen = Input.mousePosition;
                     float depth = Mathf.Abs(Camera.main.transform.position.z - QueueController.S.gamePlayer.transform.position.z);
                     mouseScreen.z = depth; 
                     Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouseScreen);
-                    IceArrowCoolingtime = 0;
-                    DianQuanCoolingtime = 0;
                     var dianquan= QueueController.S.DianQuanQueue.Dequeue();
                     dianquan.gameObject.SetActive(true);
                     dianquan.transform.localScale=new Vector3(dianquan.transform.localScale.x*(1+SkillJiaDian.S.Dian1_2*5/100f),dianquan.transform.localScale.y*(1+SkillJiaDian.S.Dian1_2*5/100f),1);
-                    dianquan.transform.position = worldPos;
+                    if (SkillJiaDian.S.Dian1Auto)
+                    {
+                        dianquan.transform.position = GameController.S.GetRandomMonsterPos();
+                    }
+                    else
+                    {
+                        dianquan.transform.position = worldPos;
+                    }
                 }
                 break;
             case SkillType.Ice2:
                 if (IceBallCoolingtime >= IceBalltime)
                 {
-                    AudioController.S.PlayIceBall();
                     IceBallCoolingtime=0;
+                    AudioController.S.PlayIceBall();
                     int count1 = 4 + SkillJiaDian.S.Ice2_2;
                     StartIceBallSkill(count1);
                 }
@@ -1399,20 +1638,32 @@ public class SkillController : XSingleton<SkillController>
         HeiAnSkill5Coolingtime+= Time.deltaTime;
 
         //自动
-        if (DianQuanCoolingtime >= DianQuantime && SkillJiaDian.S.Dian1 >= 1&&SkillJiaDian.S.Dian1Auto)
+
+        if (GetSkillAuto(SkillJiaDian.S.Alpha1))
         {
-            ExcuteSkill(SkillType.Dian1);
+            ExcuteSkill(SkillJiaDian.S.Alpha1);
         }
         
-        if (IceBallCoolingtime >= IceBalltime && SkillJiaDian.S.Ice2 >= 1&&SkillJiaDian.S.Ice2Auto)
+        if (GetSkillAuto(SkillJiaDian.S.Alpha2))
         {
-            ExcuteSkill(SkillType.Ice2);
+            ExcuteSkill(SkillJiaDian.S.Alpha2);
         }
         
-        if (IceExplosionCoolingtime >= IceExplosiontime && SkillJiaDian.S.Ice3 >= 1&&SkillJiaDian.S.Ice3Auto)
+        if (GetSkillAuto(SkillJiaDian.S.Alpha3))
         {
-            ExcuteSkill(SkillType.Ice3);
+            ExcuteSkill(SkillJiaDian.S.Alpha3);
         }
+        
+        if (GetSkillAuto(SkillJiaDian.S.Alpha4))
+        {
+            ExcuteSkill(SkillJiaDian.S.Alpha4);
+        }
+        
+        if (GetSkillAuto(SkillJiaDian.S.Alpha5))
+        {
+            ExcuteSkill(SkillJiaDian.S.Alpha5);
+        }
+       
         
         
         //技能CD

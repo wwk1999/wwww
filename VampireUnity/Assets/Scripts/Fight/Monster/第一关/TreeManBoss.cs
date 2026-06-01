@@ -128,7 +128,7 @@ public class TreeManBoss : MonsterBase
 
     public void Skill2()
     {
-        Vector2 center = QueueController.S.gamePlayer.transform.position;   // (0,0)
+        Vector2 center = Vector2.zero;   // (0,0)
         float radius = 10f;
 
         for (int i = 0; i < 20; i++)

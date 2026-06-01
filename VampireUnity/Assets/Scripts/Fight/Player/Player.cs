@@ -352,6 +352,10 @@ public class Player : MonoBehaviour
 
     public void OnAnimationComplete(TrackEntry trackEntry)
     {
+        if (IsDie)
+        {
+            return;
+        }
         if (trackEntry.Animation.Name =="hit")
         {
             playerSkeleton.AnimationState.SetAnimation(0, "move", true);
@@ -616,13 +620,14 @@ public class Player : MonoBehaviour
             // 如果已经死亡，不再处理后续逻辑
             if (QueueController.S.GameCurrentHp <= 0)
             {
+                IsDie=true;
                 return;
             }
         }
        
         //打印调用这个方法的脚本name
         AudioController.S.PlayPlayerHurt();
-        CameraContraller.S.CameraShake(0.05f, 0.005f);
+        //CameraContraller.S.CameraShake(0.05f, 0.005f);
         var playerhit = FightBGController.S.PlayerHitQueue.Dequeue();
         playerhit.gameObject.SetActive(true);
         if (playerSkeleton.AnimationState.GetCurrent(0).Animation.Name == "idle" ||

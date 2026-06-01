@@ -1021,41 +1021,6 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
     Dian5_1 = runtime.Dian5_1;
     Dian5_2 = runtime.Dian5_2;
     
-    IceZJ1 = runtime.IceZJ1;
-    IceZJ2 = runtime.IceZJ2;
-    IceZJ3 = runtime.IceZJ3;
-    IceZJ4 = runtime.IceZJ4;
-    IceZJ5 = runtime.IceZJ5;
-    IceZJ6 = runtime.IceZJ6;
-    
-    HuoZJ1 = runtime.HuoZJ1;
-    HuoZJ2 = runtime.HuoZJ2;
-    HuoZJ3 = runtime.HuoZJ3;
-    HuoZJ4 = runtime.HuoZJ4;
-    HuoZJ5 = runtime.HuoZJ5;
-    HuoZJ6 = runtime.HuoZJ6;
-    
-    DianZJ1 = runtime.DianZJ1;
-    DianZJ2 = runtime.DianZJ2;
-    DianZJ3 = runtime.DianZJ3;
-    DianZJ4 = runtime.DianZJ4;
-    DianZJ5 = runtime.DianZJ5;
-    DianZJ6 = runtime.DianZJ6;
-    
-    HeiAnZJ1 = runtime.HeiAnZJ1;
-    HeiAnZJ2 = runtime.HeiAnZJ2;
-    HeiAnZJ3 = runtime.HeiAnZJ3;
-    HeiAnZJ4 = runtime.HeiAnZJ4;
-    HeiAnZJ5 = runtime.HeiAnZJ5;
-    HeiAnZJ6 = runtime.HeiAnZJ6;
-    
-    ZhiYeZJ1 = runtime.ZhiYeZJ1;
-    ZhiYeZJ2 = runtime.ZhiYeZJ2;
-    ZhiYeZJ3 = runtime.ZhiYeZJ3;
-    ZhiYeZJ4 = runtime.ZhiYeZJ4;
-    ZhiYeZJ5 = runtime.ZhiYeZJ5;
-    ZhiYeZJ6 = runtime.ZhiYeZJ6;
-    
     // 注意：只读属性（IceAll等）不能直接赋值，它们是从其他字段计算得来的
     // 所以不需要复制它们
     
@@ -1180,40 +1145,7 @@ runtime.Dian5 = Dian5;
 runtime.Dian5_1 = Dian5_1;
 runtime.Dian5_2 = Dian5_2;
 
-runtime.IceZJ1 = IceZJ1;
-runtime.IceZJ2 = IceZJ2;
-runtime.IceZJ3 = IceZJ3;
-runtime.IceZJ4 = IceZJ4;
-runtime.IceZJ5 = IceZJ5;
-runtime.IceZJ6 = IceZJ6;
 
-runtime.HuoZJ1 = HuoZJ1;
-runtime.HuoZJ2 = HuoZJ2;
-runtime.HuoZJ3 = HuoZJ3;
-runtime.HuoZJ4 = HuoZJ4;
-runtime.HuoZJ5 = HuoZJ5;
-runtime.HuoZJ6 = HuoZJ6;
-
-runtime.DianZJ1 = DianZJ1;
-runtime.DianZJ2 = DianZJ2;
-runtime.DianZJ3 = DianZJ3;
-runtime.DianZJ4 = DianZJ4;
-runtime.DianZJ5 = DianZJ5;
-runtime.DianZJ6 = DianZJ6;
-
-runtime.HeiAnZJ1 = HeiAnZJ1;
-runtime.HeiAnZJ2 = HeiAnZJ2;
-runtime.HeiAnZJ3 = HeiAnZJ3;
-runtime.HeiAnZJ4 = HeiAnZJ4;
-runtime.HeiAnZJ5 = HeiAnZJ5;
-runtime.HeiAnZJ6 = HeiAnZJ6;
-
-runtime.ZhiYeZJ1 = ZhiYeZJ1;
-runtime.ZhiYeZJ2 = ZhiYeZJ2;
-runtime.ZhiYeZJ3 = ZhiYeZJ3;
-runtime.ZhiYeZJ4 = ZhiYeZJ4;
-runtime.ZhiYeZJ5 = ZhiYeZJ5;
-runtime.ZhiYeZJ6 = ZhiYeZJ6;
 
 // 注意：只读属性（IceAll等）不能赋值，因为它们是只读的
 // runtime.IceAll = IceAll; // 这行会报错，因为IceAll只有getter
