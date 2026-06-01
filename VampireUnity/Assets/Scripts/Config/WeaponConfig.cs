@@ -147,10 +147,14 @@ namespace Config
             { WeaponType.IceBaoZha, 2 },//冰
             { WeaponType.HuoBaoZha, 2 },//火
             { WeaponType.HeiAnBaoZha, 2 },//黑暗
+            
+            
             { WeaponType.XuKong, 3 },//黑暗
             { WeaponType.PuTong3, 3 },//冰
             { WeaponType.Fire, 3 },//电
             { WeaponType.LvQuan, 3 },//火
+            
+            
             { WeaponType.DianJiSu, 4 },//电
             { WeaponType.DianSanShe, 4 },//电
             { WeaponType.Huo7, 4 },//火
@@ -160,6 +164,8 @@ namespace Config
             { WeaponType.Ice7, 4 },//冰
             { WeaponType.Ice4BaoZha, 4 },//冰
             { WeaponType.JianQi, 4 },//火
+            
+            
             { WeaponType.HuoDiPen, 5 },//火
             { WeaponType.IcePen, 5 },//冰
             { WeaponType.HeiDong, 5 },//黑暗
@@ -468,27 +474,31 @@ namespace Config
                 { WeaponType.PrimaryDian ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
                 { WeaponType.PrimaryHuo ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
                 { WeaponType.PrimaryHeiAn ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
-                { WeaponType.DianBaoZha ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
-                { WeaponType.IceBaoZha ,new WeaponAttribute(){Attack = 10,Crit = 10,Hp = 30,Defense = 5,AttackSpeed = 1}},
-                { WeaponType.HuoBaoZha ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 10,AttackSpeed = 1}},
-                { WeaponType.PuTong3 ,new WeaponAttribute(){Attack = 40,Crit = 40,Hp = 100,Defense = 20,AttackSpeed = 1}},
-                { WeaponType.XuKong ,new WeaponAttribute(){Attack = 60,Crit = 60,Hp = 150,Defense = 30,AttackSpeed = 1}},
-                { WeaponType.HeiAnBaoZha ,new WeaponAttribute(){Attack = 60,Crit = 60,Hp = 150,Defense = 30,AttackSpeed = 1f}},
-                { WeaponType.Fire ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1}},
-                { WeaponType.LvQuan ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 0.7f}},
-                { WeaponType.DianSanShe ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-                { WeaponType.HuoFenLie ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-                { WeaponType.Huo7 ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-                { WeaponType.Ice4BaoZha ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-                { WeaponType.Ice7 ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-                { WeaponType.DianJiSu ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-                { WeaponType.HeiAnQuXian ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-                { WeaponType.HuoDiPen ,new WeaponAttribute(){Attack = 150,Crit = 150,Hp = 500,Defense = 80,AttackSpeed = 1f}},
-                { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1000,Defense = 150,AttackSpeed = 0.7f}},
-                { WeaponType.JianQi ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
-                { WeaponType.IcePen ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
-                { WeaponType.DianLuoLei5 ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
-                { WeaponType.HeiAnHuiXuan ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 7000,Defense = 100,AttackSpeed = 3f}},
+                
+                { WeaponType.DianBaoZha ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 15,AttackSpeed = 1}},
+                { WeaponType.IceBaoZha ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 15,AttackSpeed = 1}},
+                { WeaponType.HuoBaoZha ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 15,AttackSpeed = 1}},
+                { WeaponType.HeiAnBaoZha ,new WeaponAttribute(){Attack = 20,Crit = 20,Hp = 50,Defense = 15,AttackSpeed = 1f}},
+
+                { WeaponType.PuTong3 ,new WeaponAttribute(){Attack = 50,Crit = 50,Hp = 200,Defense = 30,AttackSpeed = 1}},
+                { WeaponType.XuKong ,new WeaponAttribute(){Attack = 50,Crit = 50,Hp = 200,Defense = 30,AttackSpeed = 1}},
+                { WeaponType.Fire ,new WeaponAttribute(){Attack = 50,Crit = 50,Hp = 200,Defense = 30,AttackSpeed = 1}},
+                { WeaponType.LvQuan ,new WeaponAttribute(){Attack = 70,Crit = 70,Hp = 300,Defense = 50,AttackSpeed = 0.7f}},
+                
+                { WeaponType.DianSanShe ,new WeaponAttribute(){Attack = 100,Crit = 100,Hp = 500,Defense = 60,AttackSpeed = 1f}},
+                { WeaponType.HuoFenLie ,new WeaponAttribute(){Attack = 100,Crit = 100,Hp = 500,Defense = 60,AttackSpeed = 1f}},
+                { WeaponType.Huo7 ,new WeaponAttribute(){Attack = 100,Crit = 100,Hp = 500,Defense = 60,AttackSpeed = 1f}},
+                { WeaponType.Ice4BaoZha ,new WeaponAttribute(){Attack = 100,Crit = 100,Hp = 500,Defense = 60,AttackSpeed = 1f}},
+                { WeaponType.Ice7 ,new WeaponAttribute(){Attack = 100,Crit = 100,Hp = 500,Defense = 60,AttackSpeed = 1f}},
+                { WeaponType.DianJiSu ,new WeaponAttribute(){Attack = 70,Crit = 70,Hp = 300,Defense = 40,AttackSpeed = 2f}},
+                { WeaponType.HeiAnQuXian ,new WeaponAttribute(){Attack = 100,Crit = 100,Hp = 500,Defense = 60,AttackSpeed = 1f}},
+                { WeaponType.JianQi ,new WeaponAttribute(){Attack = 70,Crit = 70,Hp = 300,Defense = 40,AttackSpeed = 2f}},
+                { WeaponType.HeiAnHuiXuan ,new WeaponAttribute(){Attack = 100,Crit = 100,Hp = 500,Defense = 60,AttackSpeed = 1f}},
+                
+                { WeaponType.HeiDong ,new WeaponAttribute(){Attack = 300,Crit = 300,Hp = 1500,Defense = 130,AttackSpeed = 0.7f}},
+                { WeaponType.HuoDiPen ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 1000,Defense = 100,AttackSpeed = 1f}},
+                { WeaponType.IcePen ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 1000,Defense = 100,AttackSpeed = 1f}},
+                { WeaponType.DianLuoLei5 ,new WeaponAttribute(){Attack = 200,Crit = 200,Hp = 1000,Defense = 100,AttackSpeed = 1f}},
             };
 
         public static Dictionary<WeaponType, YuanSuType> WeaponYuanSuTypeDic = new Dictionary<WeaponType, YuanSuType>()

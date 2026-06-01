@@ -2097,6 +2097,19 @@ public class Entrance : MonoBehaviour
         QueueController.S.transform.Find("FightBG(Clone)").gameObject.SetActive(true);
         QueueController.S.transform.Find("FightBG(Clone)/ChuanSongZhen").gameObject.SetActive(false);
 
+        QueueController.S.transform.Find("FightBG(Clone)/Level1").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/Level2").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/Level3").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/Level4").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/Level5").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/MiJing1").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/MiJing2").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/MiJing3").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/MiJing4").gameObject.SetActive(false);
+        QueueController.S.transform.Find("FightBG(Clone)/MiJing5").gameObject.SetActive(false);
+
+        
+        
         if (LevelInfoConfig.CurrentGameLevel > 100 && LevelInfoConfig.CurrentGameLevel < 200)
         {
             QueueController.S.transform.Find("FightBG(Clone)/MiJing3").gameObject.SetActive(true);

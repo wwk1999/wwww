@@ -84,6 +84,10 @@ public class GameController : XSingleton<GameController>
 
         foreach (var item in monsters)
         {
+            if (item == null)
+            {
+                continue;
+            }
             if (item.gameObject.activeSelf &&
                 Vector2.Distance(QueueController.S.gamePlayer.transform.position, item.transform.position) < 6)
             {

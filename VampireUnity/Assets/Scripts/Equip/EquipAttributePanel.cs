@@ -104,6 +104,27 @@ public class EquipAttributePanel : MonoBehaviour
         }
         equipImage.sprite=ResourcesConfig.GetEquipSprite(equip);
         level.text = equip.EquipLevel.ToString();
+        switch (equip.Quality)
+        {
+            case 1:
+                equipBg.sprite = ResourcesConfig.WhiteBg;
+                break;
+            case 2:
+                equipBg.sprite = ResourcesConfig.GreenBg;
+                break;
+            case 3:
+                equipBg.sprite = ResourcesConfig.BlueBg;
+                break;
+            case 4:
+                equipBg.sprite = ResourcesConfig.PurpleBg;
+                break;
+            case 5:
+                equipBg.sprite = ResourcesConfig.OrangeBg;
+                break;
+            case 6:
+                equipBg.sprite = ResourcesConfig.RedBg;
+                break;
+        }
 
         //基础属性
         if (equip.EquipType == PlayerEquipConfig.EquipType.Necklace || equip.EquipType == PlayerEquipConfig.EquipType.Cloak || equip.EquipType == PlayerEquipConfig.EquipType.Ring)
@@ -120,6 +141,8 @@ public class EquipAttributePanel : MonoBehaviour
             baseAttributeCount1.text = Mathf.RoundToInt(equip.HP).ToString();
             baseAttributeCount2.text = Mathf.RoundToInt(equip.Defense).ToString();
         }
+        
+        SetFuJiaAttribute(equip);
     }
     
     
@@ -288,7 +311,6 @@ public class EquipAttributePanel : MonoBehaviour
             }
             grid.transform.Find("parent/EquipGridBG").GetComponent<Image>().color =new Color(1, 1, 1, 0);
             grid.transform.Find("parent/BagGridImage").GetComponent<Image>().color = new Color(1, 1, 1, 0);
-            grid.transform.Find("parent/Count").GetComponent<Text>().text = null;
             BagController.S.EquipIdList.Remove(equip.equipid);
             switch (equip.Quality)
             {

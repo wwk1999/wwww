@@ -716,6 +716,8 @@ public class DuanZaoWindow : MonoBehaviour
                         BagController.S.PropList.Add(102,new PropTable(PropConfig.PropType.WeaponFragment,1,"",2,"GreenWeaponFragment"));
                     }
                 }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             case HeChengType.BlueWeaponFragment:
@@ -748,7 +750,10 @@ public class DuanZaoWindow : MonoBehaviour
                     else
                     {
                         BagController.S.PropList.Add(103,new PropTable(PropConfig.PropType.WeaponFragment,1,"",3,"BlueWeaponFragment"));
-                    }                       }
+                    }
+                }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             case HeChengType.PurpleWeaponFragment:
@@ -784,6 +789,8 @@ public class DuanZaoWindow : MonoBehaviour
                         BagController.S.PropList.Add(104,new PropTable(PropConfig.PropType.WeaponFragment,1,"",4,"PurpleWeaponFragment"));
                     }                       
                 }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             case HeChengType.OrangeWeaponFragment:
@@ -817,7 +824,10 @@ public class DuanZaoWindow : MonoBehaviour
                     else
                     {
                         BagController.S.PropList.Add(105,new PropTable(PropConfig.PropType.WeaponFragment,1,"",5,"OrangeWeaponFragment"));
-                    }                          }
+                    }                          
+                }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             case HeChengType.RedWeaponFragment:
@@ -853,6 +863,8 @@ public class DuanZaoWindow : MonoBehaviour
                         BagController.S.PropList.Add(106,new PropTable(PropConfig.PropType.WeaponFragment,1,"",6,"RedWeaponFragment"));
                     }                   
                 }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             
@@ -895,6 +907,8 @@ public class DuanZaoWindow : MonoBehaviour
                         BagController.S.PropList.Add(202,new PropTable(PropConfig.PropType.JingCui,1,"",2,"GreenJingCui"));
                     }
                 }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             case HeChengType.BlueJingCui:
@@ -927,7 +941,11 @@ public class DuanZaoWindow : MonoBehaviour
                     else
                     {
                         BagController.S.PropList.Add(203,new PropTable(PropConfig.PropType.JingCui,1,"",3,"BlueJingCui"));
-                    }                       }
+                    }
+                }
+                
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             case HeChengType.PurpleJingCui:
@@ -961,7 +979,10 @@ public class DuanZaoWindow : MonoBehaviour
                     else
                     {
                         BagController.S.PropList.Add(204,new PropTable(PropConfig.PropType.JingCui,1,"",4,"PurpleJingCui"));
-                    }                       }
+                    }
+                }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             case HeChengType.OrangeJingCui:
@@ -995,7 +1016,10 @@ public class DuanZaoWindow : MonoBehaviour
                     else
                     {
                         BagController.S.PropList.Add(205,new PropTable(PropConfig.PropType.JingCui,1,"",5,"OrangeJingCui"));
-                    }                          }
+                    }
+                }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             case HeChengType.RedJingCui:
@@ -1031,6 +1055,8 @@ public class DuanZaoWindow : MonoBehaviour
                         BagController.S.PropList.Add(206,new PropTable(PropConfig.PropType.JingCui,1,"",6,"RedJingCui"));
                     }                   
                 }
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
             
             
@@ -1103,6 +1129,9 @@ public class DuanZaoWindow : MonoBehaviour
                         BagController.S.PropList.Add(305,new PropTable(PropConfig.PropType.ShenHuaCaiLiao,1,"",6));
                     }                
                 }
+                
+                ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"合成成功");
+
                 break;
         }
         
