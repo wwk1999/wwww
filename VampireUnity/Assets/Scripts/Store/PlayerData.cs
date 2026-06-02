@@ -318,33 +318,33 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
     public bool GuanKa5 = false;
     public bool GuanKa6 = false;
 
-    public bool HeiAn1 = false;
-    public bool HeiAn2 = false;
-    public bool HeiAn3 = false;
-    public bool HeiAn4 = false;
-    public bool HeiAn5 = false;
-    public bool HeiAn6 = false;
+    public bool HeiAn1 => HeiAnAllLevel > 10;
+    public bool HeiAn2 => HeiAnAllLevel > 20;
+    public bool HeiAn3 => HeiAnAllLevel > 40;
+    public bool HeiAn4 => HeiAnAllLevel > 80;
+    public bool HeiAn5 => HeiAnAllLevel > 150;
+    public bool HeiAn6 => HeiAnAllLevel > 300;
     
-    public bool Huo1 = false;
-    public bool Huo2 = false;
-    public bool Huo3 = false;
-    public bool Huo4 = false;
-    public bool Huo5 = false;
-    public bool Huo6 = false;
+    public bool Huo1 => HuoAllLevel > 10;
+    public bool Huo2 => HuoAllLevel > 20;
+    public bool Huo3 => HuoAllLevel > 40;
+    public bool Huo4 => HuoAllLevel > 80;
+    public bool Huo5 => HuoAllLevel > 150;
+    public bool Huo6 => HuoAllLevel > 300;
     
-    public bool Ice1 = false;
-    public bool Ice2 = false;
-    public bool Ice3 = false;
-    public bool Ice4 = false;
-    public bool Ice5 = false;
-    public bool Ice6 = false;
+    public bool Ice1 => IceAllLevel > 10;
+    public bool Ice2 => IceAllLevel > 20;
+    public bool Ice3 => IceAllLevel > 40;
+    public bool Ice4 => IceAllLevel > 80;
+    public bool Ice5 => IceAllLevel > 150;
+    public bool Ice6 => IceAllLevel > 300;
     
-    public bool Dian1 = false;
-    public bool Dian2 = false;
-    public bool Dian3 = false;
-    public bool Dian4 = false;
-    public bool Dian5 = false;
-    public bool Dian6 = false;
+    public bool Dian1 => DianAllLevel > 10;
+    public bool Dian2 => DianAllLevel > 20;
+    public bool Dian3 => DianAllLevel > 40;
+    public bool Dian4 => DianAllLevel > 80;
+    public bool Dian5 => DianAllLevel > 150;
+    public bool Dian6 => DianAllLevel > 300;
     
     public bool DiaoLuo = false;
 

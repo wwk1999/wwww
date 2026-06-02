@@ -357,34 +357,7 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
         public bool GuanKa4 = false;
         public bool GuanKa5 = false;
         public bool GuanKa6 = false;
-
-        public bool HeiAn1 = false;
-        public bool HeiAn2 = false;
-        public bool HeiAn3 = false;
-        public bool HeiAn4 = false;
-        public bool HeiAn5 = false;
-        public bool HeiAn6 = false;
-    
-        public bool Huo1 = false;
-        public bool Huo2 = false;
-        public bool Huo3 = false;
-        public bool Huo4 = false;
-        public bool Huo5 = false;
-        public bool Huo6 = false;
-    
-        public bool Ice1 = false;
-        public bool Ice2 = false;
-        public bool Ice3 = false;
-        public bool Ice4 = false;
-        public bool Ice5 = false;
-        public bool Ice6 = false;
-    
-        public bool Dian1 = false;
-        public bool Dian2 = false;
-        public bool Dian3 = false;
-        public bool Dian4 = false;
-        public bool Dian5 = false;
-        public bool Dian6 = false;
+        
     
         public bool DiaoLuo = false;
 
@@ -535,33 +508,7 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
             GuanKa5 = runtime.GuanKa5;
             GuanKa6 = runtime.GuanKa6;
 
-            Dian1 = runtime.Dian1;
-            Dian2 = runtime.Dian2;
-            Dian3 = runtime.Dian3;
-            Dian4 = runtime.Dian4;
-            Dian5 = runtime.Dian5;
-            Dian6 = runtime.Dian6;
-            
-            Huo1 = runtime.Huo1;
-            Huo2 = runtime.Huo2;
-            Huo3 = runtime.Huo3;
-            Huo4 = runtime.Huo4;
-            Huo5 = runtime.Huo5;
-            Huo6 = runtime.Huo6;
-            
-            Ice1 = runtime.Ice1;
-            Ice2 = runtime.Ice2;
-            Ice3 = runtime.Ice3;
-            Ice4 = runtime.Ice4;
-            Ice5 = runtime.Ice5;
-            Ice6 = runtime.Ice6;
-            
-            HeiAn1 = runtime.HeiAn1;
-            HeiAn2 = runtime.HeiAn2;
-            HeiAn3 = runtime.HeiAn3;
-            HeiAn4 = runtime.HeiAn4;
-            HeiAn5 = runtime.HeiAn5;
-            HeiAn6 = runtime.HeiAn6;
+           
             
             DiaoLuo = runtime.DiaoLuo;
 
@@ -716,34 +663,6 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
             runtime.GuanKa4 = GuanKa4;
             runtime.GuanKa5 = GuanKa5;
             runtime.GuanKa6 = GuanKa6;
-
-            runtime.Dian1 = Dian1;
-            runtime.Dian2 = Dian2;
-            runtime.Dian3 = Dian3;
-            runtime.Dian4 = Dian4;
-            runtime.Dian5 = Dian5;
-            runtime.Dian6 = Dian6;
-            
-            runtime.Huo1 = Huo1;
-            runtime.Huo2 = Huo2;
-            runtime.Huo3 = Huo3;
-            runtime.Huo4 = Huo4;
-            runtime.Huo5 = Huo5;
-            runtime.Huo6 = Huo6;
-            
-            runtime.Ice1 = Ice1;
-            runtime.Ice2 = Ice2;
-            runtime.Ice3 = Ice3;
-            runtime.Ice4 = Ice4;
-            runtime.Ice5 = Ice5;
-            runtime.Ice6 = Ice6;
-            
-            runtime.HeiAn1 = HeiAn1;
-            runtime.HeiAn2 = HeiAn2;
-            runtime.HeiAn3 = HeiAn3;
-            runtime.HeiAn4 = HeiAn4;
-            runtime.HeiAn5 = HeiAn5;
-            runtime.HeiAn6 = HeiAn6;
             
             runtime.DiaoLuo = DiaoLuo;
 

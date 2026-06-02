@@ -21,11 +21,12 @@ public class TitleAttributeAll
     public float FinalDamage;
     public float AllBaseAttribute;
     public float AllDamage;
-    public float BaoShiTeXiao;
     public float DiaoLuo;
     public float LinHun;
-    public float NormalAttackDamage;
-    public float MoveSpeed;
+    public float Huo;
+    public float Ice;
+    public float HeiAn;
+    public float Dian;
 }
 
 public class ShouCangShiAttribute
@@ -129,7 +130,6 @@ public class GlobalPlayerAttribute
    public static float WeaponAttackSpeed=>GetWeaponAttackSpeed();
    public static float WeaponShenJiPercent = 0.2f;
 
-   public static float HunQiDamage => GetHunQiDamage();
    public static float HunQiAttackSpeed => GetHunQiAttackSpeed();
 
 
@@ -474,6 +474,22 @@ public class GlobalPlayerAttribute
                case TitleAttributeType.FinalDamage:
                    titleAttributeAll.FinalDamage += Level5item1.Value;
                    break;
+               
+               case TitleAttributeType.Huo:
+                   titleAttributeAll.Huo += Level5item1.Value;
+                   break;
+               
+               case TitleAttributeType.Ice:
+                   titleAttributeAll.Ice += Level5item1.Value;
+                   break;
+               
+               case TitleAttributeType.HeiAn:
+                   titleAttributeAll.HeiAn += Level5item1.Value;
+                   break;
+               
+               case TitleAttributeType.Dian:
+                   titleAttributeAll.Dian += Level5item1.Value;
+                   break;
               
            }
        }
@@ -532,6 +548,14 @@ public class GlobalPlayerAttribute
        }
        
 
+       if (PlayerData.S.GuanKa1)
+       {
+           JiHuoAttribute(TitleType.GuanKa1, titleAttributeAll);
+       }
+       if (PlayerData.S.GuanKa2)
+       {
+           JiHuoAttribute(TitleType.GuanKa2, titleAttributeAll);
+       }
        if (PlayerData.S.GuanKa3)
        {
            JiHuoAttribute(TitleType.GuanKa3, titleAttributeAll);
@@ -543,6 +567,154 @@ public class GlobalPlayerAttribute
        if (PlayerData.S.GuanKa5)
        {
            JiHuoAttribute(TitleType.GuanKa5, titleAttributeAll);
+       }
+       if (PlayerData.S.GuanKa6)
+       {
+           JiHuoAttribute(TitleType.GuanKa6, titleAttributeAll);
+       }
+       
+       
+       if (PlayerData.S.LingHun1)
+       {
+           JiHuoAttribute(TitleType.LingHun1, titleAttributeAll);
+       }
+       if (PlayerData.S.LingHun2)
+       {
+           JiHuoAttribute(TitleType.LingHun2, titleAttributeAll);
+       }
+       if (PlayerData.S.LingHun3)
+       {
+           JiHuoAttribute(TitleType.LingHun3, titleAttributeAll);
+       }
+       if (PlayerData.S.LingHun4)
+       {
+           JiHuoAttribute(TitleType.LingHun4, titleAttributeAll);
+       }
+       if (PlayerData.S.LingHun5)
+       {
+           JiHuoAttribute(TitleType.LingHun5, titleAttributeAll);
+       }
+       if (PlayerData.S.LingHun6)
+       {
+           JiHuoAttribute(TitleType.LingHun6, titleAttributeAll);
+       }
+       
+       
+       
+       
+       if (PlayerData.S.Ice1)
+       {
+           JiHuoAttribute(TitleType.Ice1, titleAttributeAll);
+       }
+       if (PlayerData.S.Ice2)
+       {
+           JiHuoAttribute(TitleType.Ice2, titleAttributeAll);
+       }
+       if (PlayerData.S.Ice3)
+       {
+           JiHuoAttribute(TitleType.Ice3, titleAttributeAll);
+       }
+       if (PlayerData.S.Ice4)
+       {
+           JiHuoAttribute(TitleType.Ice4, titleAttributeAll);
+       }
+       if (PlayerData.S.Ice5)
+       {
+           JiHuoAttribute(TitleType.Ice5, titleAttributeAll);
+       }
+       if (PlayerData.S.Ice6)
+       {
+           JiHuoAttribute(TitleType.Ice6, titleAttributeAll);
+       }
+       
+       
+       
+       
+       
+       
+       if (PlayerData.S.HeiAn1)
+       {
+           JiHuoAttribute(TitleType.HeiAn1, titleAttributeAll);
+       }
+       if (PlayerData.S.HeiAn2)
+       {
+           JiHuoAttribute(TitleType.HeiAn2, titleAttributeAll);
+       }
+       if (PlayerData.S.HeiAn3)
+       {
+           JiHuoAttribute(TitleType.HeiAn3, titleAttributeAll);
+       }
+       if (PlayerData.S.HeiAn4)
+       {
+           JiHuoAttribute(TitleType.HeiAn4, titleAttributeAll);
+       }
+       if (PlayerData.S.HeiAn5)
+       {
+           JiHuoAttribute(TitleType.HeiAn5, titleAttributeAll);
+       }
+       if (PlayerData.S.HeiAn6)
+       {
+           JiHuoAttribute(TitleType.HeiAn6, titleAttributeAll);
+       }
+       
+       
+       
+       
+       
+       
+       if (PlayerData.S.Dian1)
+       {
+           JiHuoAttribute(TitleType.Dian1, titleAttributeAll);
+       }
+       if (PlayerData.S.Dian2)
+       {
+           JiHuoAttribute(TitleType.Dian2, titleAttributeAll);
+       }
+       if (PlayerData.S.Dian3)
+       {
+           JiHuoAttribute(TitleType.Dian3, titleAttributeAll);
+       }
+       if (PlayerData.S.Dian4)
+       {
+           JiHuoAttribute(TitleType.Dian4, titleAttributeAll);
+       }
+       if (PlayerData.S.Dian5)
+       {
+           JiHuoAttribute(TitleType.Dian5, titleAttributeAll);
+       }
+       if (PlayerData.S.Dian6)
+       {
+           JiHuoAttribute(TitleType.Dian6, titleAttributeAll);
+       }
+       
+       
+       
+       
+       
+       
+       if (PlayerData.S.Huo1)
+       {
+           JiHuoAttribute(TitleType.Huo1, titleAttributeAll);
+       }
+       if (PlayerData.S.Huo2)
+       {
+           JiHuoAttribute(TitleType.Huo2, titleAttributeAll);
+       }
+       if (PlayerData.S.Huo3)
+       {
+           JiHuoAttribute(TitleType.Huo3, titleAttributeAll);
+       }
+       if (PlayerData.S.Huo4)
+       {
+           JiHuoAttribute(TitleType.Huo4, titleAttributeAll);
+       }
+       if (PlayerData.S.Huo5)
+       {
+           JiHuoAttribute(TitleType.Huo5, titleAttributeAll);
+       }
+       if (PlayerData.S.Huo6)
+       {
+           JiHuoAttribute(TitleType.Huo6, titleAttributeAll);
        }
        
       
@@ -587,6 +759,22 @@ public class GlobalPlayerAttribute
                            break;
                        case TitleAttributeType.FinalDamage:
                            titleAttributeAll.FinalDamage += installItem.Value;
+                           break;
+                       
+                       case TitleAttributeType.HeiAn:
+                           titleAttributeAll.HeiAn += installItem.Value;
+                           break;
+                       
+                       case TitleAttributeType.Ice:
+                           titleAttributeAll.Ice += installItem.Value;
+                           break;
+                       
+                       case TitleAttributeType.Huo:
+                           titleAttributeAll.Huo += installItem.Value;
+                           break;
+                       
+                       case TitleAttributeType.Dian:
+                           titleAttributeAll.Dian += installItem.Value;
                            break;
                        
                    }
@@ -635,6 +823,12 @@ public class GlobalPlayerAttribute
            case TitleType.MonsterCount6:
                InstallAttribute(TitleType.MonsterCount6, titleAttributeAll);
                break;
+           case TitleType.GuanKa1:
+               InstallAttribute(TitleType.GuanKa1, titleAttributeAll);
+               break;
+           case TitleType.GuanKa2:
+               InstallAttribute(TitleType.GuanKa2, titleAttributeAll);
+               break;
            case TitleType.GuanKa3:
                InstallAttribute(TitleType.GuanKa3, titleAttributeAll);
                break;
@@ -644,6 +838,116 @@ public class GlobalPlayerAttribute
            case TitleType.GuanKa5:
                InstallAttribute(TitleType.GuanKa5, titleAttributeAll);
                break;
+           case TitleType.GuanKa6:
+               InstallAttribute(TitleType.GuanKa6, titleAttributeAll);
+               break;
+           
+           
+           
+           case TitleType.LingHun1:
+               InstallAttribute(TitleType.LingHun1, titleAttributeAll);
+               break;
+           case TitleType.LingHun2:
+               InstallAttribute(TitleType.LingHun2, titleAttributeAll);
+               break;
+           case TitleType.LingHun3:
+               InstallAttribute(TitleType.LingHun3, titleAttributeAll);
+               break;
+           case TitleType.LingHun4:
+               InstallAttribute(TitleType.LingHun4, titleAttributeAll);
+               break;
+           case TitleType.LingHun5:
+               InstallAttribute(TitleType.LingHun5, titleAttributeAll);
+               break;
+           case TitleType.LingHun6:
+               InstallAttribute(TitleType.LingHun6, titleAttributeAll);
+               break;
+           
+           
+           
+           case TitleType.HeiAn1:
+               InstallAttribute(TitleType.HeiAn1, titleAttributeAll);
+               break;
+           case TitleType.HeiAn2:
+               InstallAttribute(TitleType.HeiAn2, titleAttributeAll);
+               break;
+           case TitleType.HeiAn3:
+               InstallAttribute(TitleType.HeiAn3, titleAttributeAll);
+               break;
+           case TitleType.HeiAn4:
+               InstallAttribute(TitleType.HeiAn4, titleAttributeAll);
+               break;
+           case TitleType.HeiAn5:
+               InstallAttribute(TitleType.HeiAn5, titleAttributeAll);
+               break;
+           case TitleType.HeiAn6:
+               InstallAttribute(TitleType.HeiAn6, titleAttributeAll);
+               break;
+           
+           
+           
+           case TitleType.Dian1:
+               InstallAttribute(TitleType.Dian1, titleAttributeAll);
+               break;
+           case TitleType.Dian2:
+               InstallAttribute(TitleType.Dian2, titleAttributeAll);
+               break;
+           case TitleType.Dian3:
+               InstallAttribute(TitleType.Dian3, titleAttributeAll);
+               break;
+           case TitleType.Dian4:
+               InstallAttribute(TitleType.Dian4, titleAttributeAll);
+               break;
+           case TitleType.Dian5:
+               InstallAttribute(TitleType.Dian5, titleAttributeAll);
+               break;
+           case TitleType.Dian6:
+               InstallAttribute(TitleType.Dian6, titleAttributeAll);
+               break;
+           
+           
+           
+           case TitleType.Huo1:
+               InstallAttribute(TitleType.Huo1, titleAttributeAll);
+               break;
+           case TitleType.Huo2:
+               InstallAttribute(TitleType.Huo2, titleAttributeAll);
+               break;
+           case TitleType.Huo3:
+               InstallAttribute(TitleType.Huo3, titleAttributeAll);
+               break;
+           case TitleType.Huo4:
+               InstallAttribute(TitleType.Huo4, titleAttributeAll);
+               break;
+           case TitleType.Huo5:
+               InstallAttribute(TitleType.Huo5, titleAttributeAll);
+               break;
+           case TitleType.Huo6:
+               InstallAttribute(TitleType.Huo6, titleAttributeAll);
+               break;
+           
+           
+           
+           
+           case TitleType.Ice1:
+               InstallAttribute(TitleType.Ice1, titleAttributeAll);
+               break;
+           case TitleType.Ice2:
+               InstallAttribute(TitleType.Ice2, titleAttributeAll);
+               break;
+           case TitleType.Ice3:
+               InstallAttribute(TitleType.Ice3, titleAttributeAll);
+               break;
+           case TitleType.Ice4:
+               InstallAttribute(TitleType.Ice4, titleAttributeAll);
+               break;
+           case TitleType.Ice5:
+               InstallAttribute(TitleType.Ice5, titleAttributeAll);
+               break;
+           case TitleType.Ice6:
+               InstallAttribute(TitleType.Ice6, titleAttributeAll);
+               break;
+           
            case TitleType.DiaoLuo:
                InstallAttribute(TitleType.DiaoLuo, titleAttributeAll);
                break;
@@ -653,12 +957,7 @@ public class GlobalPlayerAttribute
    }
 
 
-   public static float GetHunQiDamage()
-   {
-       float value = 0;
-       value += TitleAttributeAll.NormalAttackDamage;
-       return 0;
-   }
+   
    
    
    public static float GetHunQiAttackSpeed()
@@ -672,7 +971,6 @@ public class GlobalPlayerAttribute
    {
        float value=BaoShiTeXiao3Count * 0.1f;
        value += HC5Count * 0.7f;
-       value += TitleAttributeAll.BaoShiTeXiao;
        return value;
    }
 
@@ -3017,7 +3315,7 @@ public class GlobalPlayerAttribute
    
    public static float GetPlayerMoveSpeed()
    {
-       float speed=(_baseMoveSpeed+TitleAttributeAll.MoveSpeed);
+       float speed=(_baseMoveSpeed);
        speed += FinalChongWuAttribute.MoveSpeed;
        speed *= (1+ShiZhuangMoveSpeed/100f);
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.MoveSpeedAdd))
@@ -3123,6 +3421,7 @@ public class GlobalPlayerAttribute
    public static float GetHuoYuanSuBase()
    {
        float value = 1.0f;
+       value += TitleAttributeAll.Huo;
        value += FinalChongWuAttribute.HuoDamage;
        value += SkillJiaDian.S.HuoAll / 100f;
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAllYuanSu))
@@ -3189,6 +3488,7 @@ public class GlobalPlayerAttribute
    public static float GetHeiAnYuanSuBase()
    {
        float value = 1.0f;
+       value += TitleAttributeAll.HeiAn;
        value += FinalChongWuAttribute.HeiAnDamage;
        value += SkillJiaDian.S.HeiAnAll / 100f;
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAllYuanSu))
@@ -3248,6 +3548,7 @@ public class GlobalPlayerAttribute
    public static float GetIceYuanSuBase()
    {
        float value = 1.0f;
+       value += TitleAttributeAll.Ice;
        value += FinalChongWuAttribute.IceDamage;
        value += SkillJiaDian.S.IceAll / 100f;
        if (PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddAllYuanSu))
@@ -3309,6 +3610,7 @@ public class GlobalPlayerAttribute
    public static float GetDianYuanSuBase()
    {
        float value = 1.0f;
+       value += TitleAttributeAll.Dian;
        value += FinalChongWuAttribute.DianDamage;
        value += SkillJiaDian.S.DianAll / 100f;
 

@@ -150,7 +150,7 @@ public class TitleConfig : MonoBehaviour
         { TitleType.GuanKa2 ,"通关迷雾沼泽关卡"},
         { TitleType.GuanKa3 ,"通关无尽雪域关卡"},
         { TitleType.GuanKa4 ,"通关异界超难难度"},
-        { TitleType.GuanKa5 ,"通关异界神话难度"},
+        { TitleType.GuanKa5 ,"通关异界神话Ⅰ难度"},
         { TitleType.GuanKa6 ,"通关异界神话Ⅴ难度"},
         
         { TitleType.Level5 ,"人物等级>5"},
