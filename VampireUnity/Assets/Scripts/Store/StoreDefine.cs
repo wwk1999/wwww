@@ -336,7 +336,7 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
         public bool Level50 = false;
         public bool Level75 = false;
         public bool Level100 = false;
-
+    
         public bool MonsterCount1 = false;
         public bool MonsterCount2 = false;
         public bool MonsterCount3 = false;
@@ -344,16 +344,48 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
         public bool MonsterCount5 = false;
         public bool MonsterCount6 = false;
 
-        public bool LingHun = false;
-        public bool BaoShi = false;
+        public bool LingHun1 = false;
+        public bool LingHun2 = false;
+        public bool LingHun3 = false;
+        public bool LingHun4 = false;
+        public bool LingHun5 = false;
+        public bool LingHun6 = false;
+
+        public bool GuanKa1 = false;
+        public bool GuanKa2 = false;
         public bool GuanKa3 = false;
         public bool GuanKa4 = false;
         public bool GuanKa5 = false;
-        public bool HunQi3 = false;
-        public bool HunQi4 = false;
-        public bool HunQi5 = false;
-        public bool ChiBang4 = false;
-        public bool ChiBang5 = false;
+        public bool GuanKa6 = false;
+
+        public bool HeiAn1 = false;
+        public bool HeiAn2 = false;
+        public bool HeiAn3 = false;
+        public bool HeiAn4 = false;
+        public bool HeiAn5 = false;
+        public bool HeiAn6 = false;
+    
+        public bool Huo1 = false;
+        public bool Huo2 = false;
+        public bool Huo3 = false;
+        public bool Huo4 = false;
+        public bool Huo5 = false;
+        public bool Huo6 = false;
+    
+        public bool Ice1 = false;
+        public bool Ice2 = false;
+        public bool Ice3 = false;
+        public bool Ice4 = false;
+        public bool Ice5 = false;
+        public bool Ice6 = false;
+    
+        public bool Dian1 = false;
+        public bool Dian2 = false;
+        public bool Dian3 = false;
+        public bool Dian4 = false;
+        public bool Dian5 = false;
+        public bool Dian6 = false;
+    
         public bool DiaoLuo = false;
 
 
@@ -489,20 +521,52 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
             MonsterCount5 = runtime.MonsterCount5;
             MonsterCount6 = runtime.MonsterCount6;
 
-            LingHun = runtime.LingHun;
-            BaoShi = runtime.BaoShi;
+            LingHun1 = runtime.LingHun1;
+            LingHun2 = runtime.LingHun2;
+            LingHun3 = runtime.LingHun3;
+            LingHun4 = runtime.LingHun4;
+            LingHun5 = runtime.LingHun5;
+            LingHun6 = runtime.LingHun6;
+
+            GuanKa1 = runtime.GuanKa1;
+            GuanKa2 = runtime.GuanKa2;
             GuanKa3 = runtime.GuanKa3;
             GuanKa4 = runtime.GuanKa4;
             GuanKa5 = runtime.GuanKa5;
-            HunQi3 = runtime.HunQi3;
-            HunQi4 = runtime.HunQi4;
-            HunQi5 = runtime.HunQi5;
-            ChiBang4 = runtime.ChiBang4;
-            ChiBang5 = runtime.ChiBang5;
+            GuanKa6 = runtime.GuanKa6;
+
+            Dian1 = runtime.Dian1;
+            Dian2 = runtime.Dian2;
+            Dian3 = runtime.Dian3;
+            Dian4 = runtime.Dian4;
+            Dian5 = runtime.Dian5;
+            Dian6 = runtime.Dian6;
+            
+            Huo1 = runtime.Huo1;
+            Huo2 = runtime.Huo2;
+            Huo3 = runtime.Huo3;
+            Huo4 = runtime.Huo4;
+            Huo5 = runtime.Huo5;
+            Huo6 = runtime.Huo6;
+            
+            Ice1 = runtime.Ice1;
+            Ice2 = runtime.Ice2;
+            Ice3 = runtime.Ice3;
+            Ice4 = runtime.Ice4;
+            Ice5 = runtime.Ice5;
+            Ice6 = runtime.Ice6;
+            
+            HeiAn1 = runtime.HeiAn1;
+            HeiAn2 = runtime.HeiAn2;
+            HeiAn3 = runtime.HeiAn3;
+            HeiAn4 = runtime.HeiAn4;
+            HeiAn5 = runtime.HeiAn5;
+            HeiAn6 = runtime.HeiAn6;
+            
             DiaoLuo = runtime.DiaoLuo;
 
             MonsterCount = runtime.MonsterCount;
-            LinHun = runtime.LinHun;
+            LinHun = runtime.AllLingHun;
             CurrentInstallTitle = runtime.CurrentInstallTitle;
 
             ChongWuDic = runtime.ChongWuDic;
@@ -631,6 +695,7 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
             runtime.Level50 = Level50;
             runtime.Level75 = Level75;
             runtime.Level100 = Level100;
+
             runtime.MonsterCount1 = MonsterCount1;
             runtime.MonsterCount2 = MonsterCount2;
             runtime.MonsterCount3 = MonsterCount3;
@@ -638,21 +703,53 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
             runtime.MonsterCount5 = MonsterCount5;
             runtime.MonsterCount6 = MonsterCount6;
 
-            runtime.LingHun = LingHun;
-            runtime.BaoShi = BaoShi;
+            runtime.LingHun1 = LingHun1;
+            runtime.LingHun2 = LingHun2;
+            runtime.LingHun3 = LingHun3;
+            runtime.LingHun4 = LingHun4;
+            runtime.LingHun5 = LingHun5;
+            runtime.LingHun6 = LingHun6;
+
+            runtime.GuanKa1 = GuanKa1;
+            runtime.GuanKa2 = GuanKa2;
             runtime.GuanKa3 = GuanKa3;
             runtime.GuanKa4 = GuanKa4;
             runtime.GuanKa5 = GuanKa5;
-            runtime.HunQi3 = HunQi3;
-            runtime.HunQi4 = HunQi4;
-            runtime.HunQi5 = HunQi5;
-            runtime.ChiBang4 = ChiBang4;
-            runtime.ChiBang5 = ChiBang5;
+            runtime.GuanKa6 = GuanKa6;
+
+            runtime.Dian1 = Dian1;
+            runtime.Dian2 = Dian2;
+            runtime.Dian3 = Dian3;
+            runtime.Dian4 = Dian4;
+            runtime.Dian5 = Dian5;
+            runtime.Dian6 = Dian6;
+            
+            runtime.Huo1 = Huo1;
+            runtime.Huo2 = Huo2;
+            runtime.Huo3 = Huo3;
+            runtime.Huo4 = Huo4;
+            runtime.Huo5 = Huo5;
+            runtime.Huo6 = Huo6;
+            
+            runtime.Ice1 = Ice1;
+            runtime.Ice2 = Ice2;
+            runtime.Ice3 = Ice3;
+            runtime.Ice4 = Ice4;
+            runtime.Ice5 = Ice5;
+            runtime.Ice6 = Ice6;
+            
+            runtime.HeiAn1 = HeiAn1;
+            runtime.HeiAn2 = HeiAn2;
+            runtime.HeiAn3 = HeiAn3;
+            runtime.HeiAn4 = HeiAn4;
+            runtime.HeiAn5 = HeiAn5;
+            runtime.HeiAn6 = HeiAn6;
+            
             runtime.DiaoLuo = DiaoLuo;
 
 
             runtime.MonsterCount = MonsterCount;
-            runtime.LinHun = LinHun;
+            runtime.AllLingHun = LinHun;
 
             runtime.CurrentInstallTitle = CurrentInstallTitle;
             runtime.ChongWuDic = ChongWuDic;

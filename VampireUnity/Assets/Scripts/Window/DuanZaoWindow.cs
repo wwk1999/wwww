@@ -1962,7 +1962,6 @@ public class DuanZaoWindow : MonoBehaviour
                 BagController.S.PropList[code].Count--;
                 RefreshBaoshi(ClickBaoShi, BagController.S.PropList[code].Count);
                 XiangQianEquip(XiangQianEquipTable);
-                BagController.S.CheckBaoShiTitle();
                 return;
             }
         }

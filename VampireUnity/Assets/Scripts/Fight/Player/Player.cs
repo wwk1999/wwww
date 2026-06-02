@@ -194,12 +194,7 @@ public class Player : MonoBehaviour
             case TitleType.MonsterCount6:
                 MonsterCount6Title.gameObject.SetActive(true);
                 break;
-            case TitleType.LinHun:
-                LinHunTitle.gameObject.SetActive(true);
-                break;
-            case TitleType.BaoShi:
-                BaoShiTitle.gameObject.SetActive(true);
-                break;
+           
             case TitleType.GuanKa3:
                 GuanKa3Title.gameObject.SetActive(true);
                 break;
@@ -209,21 +204,7 @@ public class Player : MonoBehaviour
             case TitleType.GuanKa5:
                 GuanKa5Title.gameObject.SetActive(true);
                 break;
-            case TitleType.HunQi3:
-                HunQi3Title.gameObject.SetActive(true);
-                break;
-            case TitleType.HunQi4:
-                HunQi4Title.gameObject.SetActive(true);
-                break;
-            case TitleType.HunQi5:
-                HunQi5Title.gameObject.SetActive(true);
-                break;
-            case TitleType.ChiBang4:
-                ChiBang4Title.gameObject.SetActive(true);
-                break;
-            case TitleType.ChiBang5:
-                ChiBang5Title.gameObject.SetActive(true);
-                break;
+           
             case TitleType.DiaoLuo:
                 DiaoLuoTitle.gameObject.SetActive(true);
                 break;

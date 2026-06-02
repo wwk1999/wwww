@@ -462,17 +462,11 @@ public class GlobalPlayerAttribute
                case TitleAttributeType.LinHun:
                    titleAttributeAll.LinHun += Level5item1.Value;
                    break;
-               case TitleAttributeType.BaoShiTeXiao:
-                   titleAttributeAll.BaoShiTeXiao += Level5item1.Value;
-                   break;
                case TitleAttributeType.AllBaseAttribute:
                    titleAttributeAll.AllBaseAttribute += Level5item1.Value;
                    break;
                case TitleAttributeType.AllDamage:
                    titleAttributeAll.AllDamage += Level5item1.Value;
-                   break;
-               case TitleAttributeType.NormalAttackDamage:
-                   titleAttributeAll.NormalAttackDamage += Level5item1.Value;
                    break;
                case TitleAttributeType.DiaoLuo:
                    titleAttributeAll.DiaoLuo += Level5item1.Value;
@@ -480,9 +474,7 @@ public class GlobalPlayerAttribute
                case TitleAttributeType.FinalDamage:
                    titleAttributeAll.FinalDamage += Level5item1.Value;
                    break;
-               case TitleAttributeType.MoveSpeed:
-                   titleAttributeAll.MoveSpeed += Level5item1.Value;
-                   break;
+              
            }
        }
    }
@@ -538,26 +530,7 @@ public class GlobalPlayerAttribute
        {
            JiHuoAttribute(TitleType.MonsterCount6, titleAttributeAll);
        }
-       if (PlayerData.S.LingHun)
-       {
-           JiHuoAttribute(TitleType.LinHun, titleAttributeAll);
-       }
-       if (PlayerData.S.BaoShi)
-       {
-           JiHuoAttribute(TitleType.BaoShi, titleAttributeAll);
-       }
-       if (PlayerData.S.HunQi3)
-       {
-           JiHuoAttribute(TitleType.HunQi3, titleAttributeAll);
-       }
-       if (PlayerData.S.HunQi4)
-       {
-           JiHuoAttribute(TitleType.HunQi4, titleAttributeAll);
-       }
-       if (PlayerData.S.HunQi5)
-       {
-           JiHuoAttribute(TitleType.HunQi5, titleAttributeAll);
-       }
+       
 
        if (PlayerData.S.GuanKa3)
        {
@@ -572,15 +545,7 @@ public class GlobalPlayerAttribute
            JiHuoAttribute(TitleType.GuanKa5, titleAttributeAll);
        }
        
-       if (PlayerData.S.ChiBang4)
-       {
-           JiHuoAttribute(TitleType.ChiBang5, titleAttributeAll);
-       }
-       
-       if (PlayerData.S.ChiBang5)
-       {
-           JiHuoAttribute(TitleType.ChiBang5, titleAttributeAll);
-       }
+      
        
        if (PlayerData.S.DiaoLuo)
        {
@@ -609,27 +574,21 @@ public class GlobalPlayerAttribute
                        case TitleAttributeType.LinHun:
                            titleAttributeAll.LinHun += installItem.Value;
                            break;
-                       case TitleAttributeType.BaoShiTeXiao:
-                           titleAttributeAll.BaoShiTeXiao += installItem.Value;
-                           break;
+                       
                        case TitleAttributeType.AllBaseAttribute:
                            titleAttributeAll.AllBaseAttribute += installItem.Value;
                            break;
                        case TitleAttributeType.AllDamage:
                            titleAttributeAll.AllDamage += installItem.Value;
                            break;
-                       case TitleAttributeType.NormalAttackDamage:
-                           titleAttributeAll.NormalAttackDamage += installItem.Value;
-                           break;
+                       
                        case TitleAttributeType.DiaoLuo:
                            titleAttributeAll.DiaoLuo += installItem.Value;
                            break;
                        case TitleAttributeType.FinalDamage:
                            titleAttributeAll.FinalDamage += installItem.Value;
                            break;
-                       case TitleAttributeType.MoveSpeed:
-                           titleAttributeAll.MoveSpeed += installItem.Value;
-                           break;
+                       
                    }
                }
    }
@@ -676,21 +635,6 @@ public class GlobalPlayerAttribute
            case TitleType.MonsterCount6:
                InstallAttribute(TitleType.MonsterCount6, titleAttributeAll);
                break;
-           case TitleType.LinHun:
-               InstallAttribute(TitleType.LinHun, titleAttributeAll);
-               break;
-           case TitleType.BaoShi:
-               InstallAttribute(TitleType.BaoShi, titleAttributeAll);
-               break;
-           case TitleType.HunQi3:
-               InstallAttribute(TitleType.HunQi3, titleAttributeAll);
-               break;
-           case TitleType.HunQi4:
-               InstallAttribute(TitleType.HunQi4, titleAttributeAll);
-               break;
-           case TitleType.HunQi5:
-               InstallAttribute(TitleType.HunQi5, titleAttributeAll);
-               break;
            case TitleType.GuanKa3:
                InstallAttribute(TitleType.GuanKa3, titleAttributeAll);
                break;
@@ -702,12 +646,6 @@ public class GlobalPlayerAttribute
                break;
            case TitleType.DiaoLuo:
                InstallAttribute(TitleType.DiaoLuo, titleAttributeAll);
-               break;
-           case TitleType.ChiBang4:
-               InstallAttribute(TitleType.ChiBang4, titleAttributeAll);
-               break;
-           case TitleType.ChiBang5:
-               InstallAttribute(TitleType.ChiBang5, titleAttributeAll);
                break;
        }
 

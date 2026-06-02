@@ -288,6 +288,8 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
 
     public int zhuanjinCount = 0;
     
+    
+    //称号属性
     public bool Level5 = false;
     public bool Level15 = false;
     public bool Level30 = false;
@@ -302,22 +304,53 @@ public Dictionary<ChiBangType, bool> ShouCangShiChiBangDic = new Dictionary<ChiB
     public bool MonsterCount5 = false;
     public bool MonsterCount6 = false;
 
-    public bool LingHun = false;
-    public bool BaoShi = false;
+    public bool LingHun1 = false;
+    public bool LingHun2 = false;
+    public bool LingHun3 = false;
+    public bool LingHun4 = false;
+    public bool LingHun5 = false;
+    public bool LingHun6 = false;
+
+    public bool GuanKa1 = false;
+    public bool GuanKa2 = false;
     public bool GuanKa3 = false;
     public bool GuanKa4 = false;
     public bool GuanKa5 = false;
-    public bool HunQi3 = false;
-    public bool HunQi4 = false;
-    public bool HunQi5 = false;
-    public bool ChiBang4 = false;
-    public bool ChiBang5 = false;
+    public bool GuanKa6 = false;
+
+    public bool HeiAn1 = false;
+    public bool HeiAn2 = false;
+    public bool HeiAn3 = false;
+    public bool HeiAn4 = false;
+    public bool HeiAn5 = false;
+    public bool HeiAn6 = false;
+    
+    public bool Huo1 = false;
+    public bool Huo2 = false;
+    public bool Huo3 = false;
+    public bool Huo4 = false;
+    public bool Huo5 = false;
+    public bool Huo6 = false;
+    
+    public bool Ice1 = false;
+    public bool Ice2 = false;
+    public bool Ice3 = false;
+    public bool Ice4 = false;
+    public bool Ice5 = false;
+    public bool Ice6 = false;
+    
+    public bool Dian1 = false;
+    public bool Dian2 = false;
+    public bool Dian3 = false;
+    public bool Dian4 = false;
+    public bool Dian5 = false;
+    public bool Dian6 = false;
+    
     public bool DiaoLuo = false;
 
 
     public int MonsterCount = 0;
-    public int LinHun = 0;
-    public int HunQiCount = 0;
+    public int AllLingHun = 0;
     public int OrangeCount = 0;
     
     public TitleType CurrentInstallTitle = TitleType.None;

@@ -265,13 +265,13 @@ public class FightBGController : XSingleton<FightBGController>
                 PlayerData.S.MonsterCount6 = true;
             }
 
-            if (PlayerData.S.LinHun >= 100000)
+            if (PlayerData.S.AllLingHun >= 100000)
             {
-                if (PlayerData.S.LingHun == false)
+                if (PlayerData.S.LingHun5 == false)
                 {
                     ObserverModuleManager.S.SendEvent(ConstKeys.ShowUIToast,"激活新称号");
                 }
-                PlayerData.S.LingHun = true;
+                PlayerData.S.LingHun5 = true;
             }
             StoreController.S.SaveStoreData();
         }

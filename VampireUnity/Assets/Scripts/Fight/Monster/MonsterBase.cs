@@ -802,11 +802,11 @@ public abstract class MonsterBase : MonoBehaviour
         PlayerData.S.MonsterCount++;
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddSoul))
         {
-            PlayerData.S.LinHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun)*1.25f);
+            PlayerData.S.AllLingHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun)*1.25f);
         }
         else
         {
-            PlayerData.S.LinHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun));
+            PlayerData.S.AllLingHun += Mathf.RoundToInt(BloodEnergy*(1.0f+GlobalPlayerAttribute.LinHun));
         }
 
         AddWeaponEx();

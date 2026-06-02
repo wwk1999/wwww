@@ -280,7 +280,7 @@ public class EquipBase : BagObjectBase
                 PlayerData.S.OrangeCount++;
             }
 
-            if (PlayerData.S.DiaoLuo == false&&PlayerData.S.OrangeCount>=100)
+            if (PlayerData.S.DiaoLuo == false&&PlayerData.S.OrangeCount>=50)
             {
                 ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"激活新称号");
                 PlayerData.S.DiaoLuo = true;

@@ -173,6 +173,7 @@
     <Compile Include="Assets\Scripts\Config\ResourcesConfig.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleHelmet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Scripts\Title\TitleCiTiaoItem.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\lang.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\TreeManJumpTrigger.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\LanLong1.cs" />
