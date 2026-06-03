@@ -202,8 +202,8 @@
     <Compile Include="Assets\Scripts\Window\WeaponWindowRole1.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvXuanFen.cs" />
     <Compile Include="Assets\Scripts\Equip\XieZi\XieZiHelmet.cs" />
-    <Compile Include="Assets\Scripts\Equip\Orange\Cloak\DuAddDuQuan.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\niguai3.cs" />
+    <Compile Include="Assets\Scripts\Equip\Orange\Cloak\DuAddDuQuan.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuDanButtonRight.cs" />
     <Compile Include="Assets\Number Themes\Scripts\ScrollItemManager.cs" />
     <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill5.cs" />
@@ -284,8 +284,8 @@
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\fengheguai.cs" />
     <Compile Include="Assets\Scripts\Tool\QueueController.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\XieZiSkill4.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\YeShouZhanShi.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火兽\HuoShouDiPen.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\YeShouZhanShi.cs" />
     <Compile Include="Assets\Scripts\Tool\PlayerEquipAttribute.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\mogu.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\EliteMonster\shifuboss.cs" />
@@ -297,6 +297,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeCloth.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\xiezi2.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple1\PurpleNecklace1.cs" />
+    <Compile Include="Assets\Scripts\Window\PlayerChiBangFight.cs" />
     <Compile Include="Assets\Scripts\Equip\Purple\PurpleCloth.cs" />
     <Compile Include="Assets\Scripts\Prop\ChiBang\PurpleChiBang.cs" />
     <Compile Include="Assets\Scripts\Tool\Entrance.cs" />
@@ -367,9 +368,9 @@
     <Compile Include="Assets\Scripts\Tool\MouseRightListen.cs" />
     <Compile Include="Assets\Scripts\Equip\FightEquipAttribute.cs" />
     <Compile Include="Assets\Scripts\ChongWu\ChongWuController.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\小怪\niguai2.cs" />
     <Compile Include="Assets\Scripts\Fight\UI\yuyiinfo.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\OrangeHelmet.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\小怪\niguai2.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipAttributePanel.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火兽\CiTri.cs" />
     <Compile Include="Assets\Scripts\Window\SceneLoading1.cs" />
@@ -475,8 +476,8 @@
     <Compile Include="Assets\Scripts\Equip\XiangQianGrid.cs" />
     <Compile Include="Assets\Scripts\Tool\UpgradeButton.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill3BaoZha.cs" />
-    <Compile Include="Assets\Scripts\Prop\PropBase.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火兽\HuoShouDiPenAnim.cs" />
+    <Compile Include="Assets\Scripts\Prop\PropBase.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\tujiu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\Scripts\Equip\BagGrid.cs" />
@@ -569,8 +570,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalUserInfo.cs" />
     <Compile Include="Assets\Scripts\Fight\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Equip\Blue\BlueShoe.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\xuelaoshu.cs" />
+    <Compile Include="Assets\Scripts\Equip\Blue\BlueShoe.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\Window\GameLevelInfo.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\HuoBaoZha\HuoYanBaoZhaNext.cs" />
@@ -612,8 +613,8 @@
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Huo7\Huo7Item.cs" />
     <Compile Include="Assets\Scripts\Equip\XueRen\XueRenCloak.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第五关\XueRenBoss.cs" />
-    <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvZhuiZong.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\树妖\ShuYaoBoss.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\豹子\LvZhuiZong.cs" />
     <Compile Include="Assets\Scripts\Gloabl\GlobalPlayerAttribute.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBallItem.cs" />
     <Compile Include="Assets\Scripts\Skill\HuoSkill\HuoSkill5.cs" />

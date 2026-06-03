@@ -364,6 +364,7 @@ public class ChiBangWindow : MonoBehaviour
       {
          PlayerData.S.playerChiBangType = CurrentClickChiBangType;
          ShowChiBangList();
+         ObserverModuleManager.S.SendEvent("ShowChiBang");
       });
    }
 }

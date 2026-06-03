@@ -5,6 +5,7 @@ using Config;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -1448,6 +1449,10 @@ public class SkillController : XSingleton<SkillController>
     //释放技能
     public void ExcuteSkill(SkillType skillType)
     {
+        if (SceneManager.GetActiveScene().name != "FightScene")
+        {
+            return;
+        }
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.NoSkill))
         {
             ObserverModuleManager.S.SendEvent(ConstKeys.ShowToast,"当前不能释放技能");
@@ -1607,6 +1612,10 @@ public class SkillController : XSingleton<SkillController>
     }
     void Update()
     {
+        if (SceneManager.GetActiveScene().name != "FightScene")
+        {
+            return;
+        }
         //技能冷却时间
         IceArrowCoolingtime+= Time.deltaTime;
         IceExplosionCoolingtime+=Time.deltaTime;

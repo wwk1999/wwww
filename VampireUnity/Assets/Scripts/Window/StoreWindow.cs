@@ -253,6 +253,7 @@ public class StoreWindow : MonoBehaviour
                LevelInfoConfig.InitGameLevel();
                StoreController.S.LoadStoreData();
                ObserverModuleManager.S.SendEvent("ShowTitle");
+               ObserverModuleManager.S.SendEvent("ShowChiBang");
                gameObject.SetActive(false);
                StoreController.S.IsGame=true;
                Screen.SetResolution(PlayerData.S.RateX, PlayerData.S.RateY, PlayerData.S.IsQuanPing);

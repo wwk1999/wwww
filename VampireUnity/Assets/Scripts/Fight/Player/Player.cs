@@ -166,6 +166,7 @@ public class Player : MonoBehaviour
     }
     private void Awake()
     {
+        ObserverModuleManager.S.SendEvent("ShowChiBang");
         playerSkeleton.AnimationState.SetAnimation(0, "idle", true);
         currentGun = Instantiate(Resources.Load<GameObject>("Prefabs/Gun/Pistol").GetComponent<GunBase>(),transform);
         playerSkeleton.AnimationState.Complete += OnAnimationComplete;
