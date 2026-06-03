@@ -786,10 +786,7 @@ public abstract class MonsterBase : MonoBehaviour
         {
             finalDamage *= 2;
         }
-        if (damageFrom == DamageFrom.NormalAttack)
-        {
-            finalDamage *= (1.0f + GlobalPlayerAttribute.HunQiDamage);
-        }
+        
         
         if (GlobalPlayerAttribute.PlayerOrangeEntry.Contains(EntryConfig.OrangeEntry.AddWeaponReduceSkill))
         {

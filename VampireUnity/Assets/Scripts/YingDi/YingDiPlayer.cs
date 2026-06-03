@@ -12,6 +12,7 @@ public class YingDiPlayer : MonoBehaviour
    public Rigidbody2D rg;
    public GameObject parent;
    public GameObject bodyparent;
+
    public string GetSkinNameByType(ShiZhuangType shiZhuangType)
    {
       switch (shiZhuangType)
@@ -66,6 +67,8 @@ public class YingDiPlayer : MonoBehaviour
          playerSkeleton.LateUpdate();
       }
    }
+
+  
 
    private void OnDestroy()
    {

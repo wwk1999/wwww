@@ -574,13 +574,17 @@ public class TitleWindow : MonoBehaviour
             
             ResetTitleGou(CurrentTitleType);
             PlayerData.S.CurrentInstallTitle = CurrentTitleType;
+            ObserverModuleManager.S.SendEvent("ShowTitle");
         });
         ObserverModuleManager.S.RegisterEvent("TitleInfo", TitleInfo);
     }
 
     public void ResetTitleGou(TitleType type)
     {
-        TitleItemDic[PlayerData.S.CurrentInstallTitle].Gou.gameObject.SetActive(false);
+        if (PlayerData.S.CurrentInstallTitle != TitleType.None)
+        {
+            TitleItemDic[PlayerData.S.CurrentInstallTitle].Gou.gameObject.SetActive(false);
+        }
         TitleItemDic[type].Gou.gameObject.SetActive(true);
     }
 

@@ -252,6 +252,7 @@ public class StoreWindow : MonoBehaviour
                WindowController.S.RoleWindow.gameObject.SetActive(true);
                LevelInfoConfig.InitGameLevel();
                StoreController.S.LoadStoreData();
+               ObserverModuleManager.S.SendEvent("ShowTitle");
                gameObject.SetActive(false);
                StoreController.S.IsGame=true;
                Screen.SetResolution(PlayerData.S.RateX, PlayerData.S.RateY, PlayerData.S.IsQuanPing);

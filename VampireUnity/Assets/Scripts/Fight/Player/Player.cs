@@ -68,13 +68,7 @@ public class Player : MonoBehaviour
     
     [NonSerialized] public bool MoveJian = false;
     [NonSerialized] public bool MouseDown = false;
-
-    public Animator whiteChiBang;
-    public Animator greenChiBang;
-    public Animator blueChiBang;
-    public Animator purpleChiBang;
-    public Animator orangeChiBang;
-    public Animator redChiBang;
+    
 
     public GameObject IceBall4;
     public GameObject IceBall5;
@@ -82,34 +76,7 @@ public class Player : MonoBehaviour
     public GameObject IceBall7;
     public GameObject IceBall8;
     public GameObject IceBall9;
-
     
-    
-    
-    public GameObject Level5Title;
-    public GameObject Level15Title;
-    public GameObject Level30Title;
-    public GameObject Level50Title;
-    public GameObject Level75Title;
-    public GameObject Level100Title;
-    public GameObject MonsterCount1Title;
-    public GameObject MonsterCount2Title;
-    public GameObject MonsterCount3Title;
-    public GameObject MonsterCount4Title;
-    public GameObject MonsterCount5Title;
-    public GameObject MonsterCount6Title;
-    public GameObject LinHunTitle;
-    public GameObject BaoShiTitle;
-    public GameObject GuanKa3Title;
-    public GameObject GuanKa4Title;
-    public GameObject GuanKa5Title;
-    public GameObject HunQi3Title;
-    public GameObject HunQi4Title;
-    public GameObject HunQi5Title;
-    public GameObject DiaoLuoTitle;
-    public GameObject ChiBang4Title;
-    public GameObject ChiBang5Title;
-
 
     public GameObject HuoSkill2;
     public GameObject DianSkill2;
@@ -119,8 +86,8 @@ public class Player : MonoBehaviour
 
     public GameObject parent;
     public GameObject Bodyparent;
-    public GameObject Shouparent;
     public GameObject fasheTrans;
+    public SpriteRenderer WeaponSprite;
 
     public Transform HeiAnSkill4_4;
     public Transform HeiAnSkill4_5;
@@ -129,87 +96,7 @@ public class Player : MonoBehaviour
     public Transform HeiAnSkill4_8;
     public Transform HeiAnSkill4_9;
 
-
-    public void ShowTitle()
-    {
-        Level5Title.gameObject.SetActive(false);
-        Level15Title.gameObject.SetActive(false);
-        Level30Title.gameObject.SetActive(false);
-        Level50Title.gameObject.SetActive(false);
-        Level75Title.gameObject.SetActive(false);
-        Level100Title.gameObject.SetActive(false);
-        MonsterCount1Title.gameObject.SetActive(false);
-        MonsterCount2Title.gameObject.SetActive(false);
-        MonsterCount3Title.gameObject.SetActive(false);
-        MonsterCount4Title.gameObject.SetActive(false);
-        MonsterCount5Title.gameObject.SetActive(false);
-        MonsterCount6Title.gameObject.SetActive(false);
-        LinHunTitle.gameObject.SetActive(false);
-        BaoShiTitle.gameObject.SetActive(false);
-        GuanKa3Title.gameObject.SetActive(false);
-        GuanKa4Title.gameObject.SetActive(false);
-        GuanKa5Title.gameObject.SetActive(false);
-        HunQi3Title.gameObject.SetActive(false);
-        HunQi4Title.gameObject.SetActive(false);
-        HunQi5Title.gameObject.SetActive(false);
-        DiaoLuoTitle.gameObject.SetActive(false);
-        ChiBang4Title.gameObject.SetActive(false);
-        ChiBang5Title.gameObject.SetActive(false);
-
-        switch (PlayerData.S.CurrentInstallTitle)
-        {
-            case TitleType.Level5:
-                Level5Title.gameObject.SetActive(true);
-                break;
-            case TitleType.Level15:
-                Level15Title.gameObject.SetActive(true);
-                break;
-            case TitleType.Level30:
-                Level30Title.gameObject.SetActive(true);
-                break;
-            case TitleType.Level50:
-                Level50Title.gameObject.SetActive(true);
-                break;
-            case TitleType.Level75:
-                Level75Title.gameObject.SetActive(true);
-                break;
-            case TitleType.Level100:
-                Level100Title.gameObject.SetActive(true);
-                break;
-            case TitleType.MonsterCount1:
-                MonsterCount1Title.gameObject.SetActive(true);
-                break;
-            case TitleType.MonsterCount2:
-                MonsterCount2Title.gameObject.SetActive(true);
-                break;
-            case TitleType.MonsterCount3:
-                MonsterCount3Title.gameObject.SetActive(true);
-                break;
-            case TitleType.MonsterCount4:
-                MonsterCount4Title.gameObject.SetActive(true);
-                break;
-            case TitleType.MonsterCount5:
-                MonsterCount5Title.gameObject.SetActive(true);
-                break;
-            case TitleType.MonsterCount6:
-                MonsterCount6Title.gameObject.SetActive(true);
-                break;
-           
-            case TitleType.GuanKa3:
-                GuanKa3Title.gameObject.SetActive(true);
-                break;
-            case TitleType.GuanKa4:
-                GuanKa4Title.gameObject.SetActive(true);
-                break;
-            case TitleType.GuanKa5:
-                GuanKa5Title.gameObject.SetActive(true);
-                break;
-           
-            case TitleType.DiaoLuo:
-                DiaoLuoTitle.gameObject.SetActive(true);
-                break;
-        }
-    }
+    
 
     // 延迟伤害信息结构
     private struct DelayedDamageInfo
@@ -284,7 +171,7 @@ public class Player : MonoBehaviour
         playerSkeleton.AnimationState.Complete += OnAnimationComplete;
         playerSkeleton.AnimationState.Event += OnSpineEvent;
         ObserverModuleManager.S.RegisterEvent(ConstKeys.LevelUpAnim, PlayLevelUpAnim);
-        ShowTitle();
+        
         Skeleton skeleton = playerSkeleton.Skeleton;
         string skinName = GetSkinNameByType(PlayerData.S.shiZhuangType);
         Skin skin = skeleton.Data.FindSkin(skinName);
@@ -729,6 +616,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         SetOrder();
+        WeaponSprite.sortingOrder=meshRenderer.sortingOrder;
         CurrentAttackTime+=Time.deltaTime;
         Vector2 dir = (Vector2.zero - new Vector2(transform.position.x, transform.position.y)).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;

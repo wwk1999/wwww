@@ -166,68 +166,74 @@ public class TitleConfig : MonoBehaviour
     
     
     public static Dictionary<TitleType, string> TitleNameDic = new Dictionary<TitleType, string>()
-    {
-        { TitleType.Dian1 ,"逐电者"},
-        { TitleType.Dian2 ,"驭雷师"},
-        { TitleType.Dian3 ,"惊雷将"},
-        { TitleType.Dian4 ,"紫电侯"},
-        { TitleType.Dian5 ,"雷尊"},
-        { TitleType.Dian6 ,"九霄神雷帝"},
-        
-        
-        { TitleType.HeiAn1 ,"逐暗者"},
-        { TitleType.HeiAn2 ,"驱影手"},
-        { TitleType.HeiAn3 ,"惊夜将"},
-        { TitleType.HeiAn4 ,"幽冥侯"},
-        { TitleType.HeiAn5 ,"暗尊"},
-        { TitleType.HeiAn6 ,"九霄神暗帝"},
-        
-        { TitleType.Huo1 ,"燃火者"},
-        { TitleType.Huo2 ,"驭焰手"},
-        { TitleType.Huo3 ,"烈焰使"},
-        { TitleType.Huo4 ,"紫炎侯"},
-        { TitleType.Huo5 ,"焚炎尊"},
-        { TitleType.Huo6 ,"九霄神炎帝"},
-        
-        { TitleType.Ice1 ,"逐霜者"},
-        { TitleType.Ice2 ,"凝冰手"},
-        { TitleType.Ice3 ,"惊霜将"},
-        { TitleType.Ice4 ,"玄冰侯"},
-        { TitleType.Ice5 ,"极寒尊"},
-        { TitleType.Ice6 ,"九霄神霜帝"},
-        
-        
-        { TitleType.MonsterCount1 ,"屠兽者"},
-        { TitleType.MonsterCount2 ,"斩妖手"},
-        { TitleType.MonsterCount3 ,"屠魔将"},
-        { TitleType.MonsterCount4 ,"修罗侯"},
-        { TitleType.MonsterCount5 ,"万斩尊"},
-        { TitleType.MonsterCount6 ,"九霄血帝"},
-        
-        { TitleType.LingHun1 ,"引魂者"},
-        { TitleType.LingHun2 ,"缚灵手"},
-        { TitleType.LingHun3 ,"摄魂将"},
-        { TitleType.LingHun4 ,"噬灵侯"},
-        { TitleType.LingHun5 ,"万魂尊"},
-        { TitleType.LingHun6 ,"九幽灵帝"},
-        
-        
-        { TitleType.GuanKa1 ,"踏关者"},
-        { TitleType.GuanKa2 ,"破关手"},
-        { TitleType.GuanKa3 ,"征关将"},
-        { TitleType.GuanKa4 ,"掠城侯"},
-        { TitleType.GuanKa5 ,"千关尊"},
-        { TitleType.GuanKa6 ,"万界征帝"},
-        
-        { TitleType.Level5 ,"魔法学徒"},
-        { TitleType.Level15 ,"施法师"},
-        { TitleType.Level30 ,"大法师"},
-        { TitleType.Level50 ,"大魔导"},
-        { TitleType.Level75 ,"圣法尊"},
-        { TitleType.Level100 ,"九霄法帝"},
-        
-        { TitleType.DiaoLuo ,"寻宝大师"},
-    };
+{
+    // 雷系 (Dian)
+    { TitleType.Dian1 , "逐电使者" },        // 3字
+    { TitleType.Dian2 , "驭雷法师" },        // 3字（但要求3变4，改为“驭雷法师”4字）
+    { TitleType.Dian3 , "惊雷战将" },      // 4字
+    { TitleType.Dian4 , "紫电侯爵" },      // 4字（要求4变5？不，原3变4后是4字，符合）
+    { TitleType.Dian5 , "雷霆尊者" },      // 4字（原雷尊2变3？这里直接给4字更炫）
+    { TitleType.Dian6 , "九霄神雷帝" },    // 5字
+
+    // 黑暗系 (HeiAn)
+    { TitleType.HeiAn1 , "逐暗使者" },
+    { TitleType.HeiAn2 , "驱影法师" },     // 驱影手→驱影法师(4字)
+    { TitleType.HeiAn3 , "惊夜战将" },
+    { TitleType.HeiAn4 , "幽冥侯爵" },
+    { TitleType.HeiAn5 , "暗夜尊者" },
+    { TitleType.HeiAn6 , "九霄神暗帝" },
+
+    // 火系 (Huo)
+    { TitleType.Huo1 , "燃火使者" },
+    { TitleType.Huo2 , "驭焰法师" },       // 驭焰手→驭焰法师
+    { TitleType.Huo3 , "烈焰战将" },
+    { TitleType.Huo4 , "紫炎侯爵" },
+    { TitleType.Huo5 , "焚炎尊者" },       // 原焚炎尊3字→焚炎尊者4字
+    { TitleType.Huo6 , "九霄神炎帝" },
+
+    // 冰系 (Ice)
+    { TitleType.Ice1 , "逐霜使者" },
+    { TitleType.Ice2 , "凝冰法师" },       // 凝冰手→凝冰法师
+    { TitleType.Ice3 , "惊霜战将" },
+    { TitleType.Ice4 , "玄冰侯爵" },
+    { TitleType.Ice5 , "极寒尊者" },
+    { TitleType.Ice6 , "九霄神霜帝" },
+
+    // 怪物击杀 (MonsterCount)
+    { TitleType.MonsterCount1 , "屠兽使者" },
+    { TitleType.MonsterCount2 , "斩妖法师" },  // 斩妖手→斩妖法师
+    { TitleType.MonsterCount3 , "屠魔战将" },
+    { TitleType.MonsterCount4 , "修罗侯爵" },
+    { TitleType.MonsterCount5 , "万斩尊者" },
+    { TitleType.MonsterCount6 , "九霄神血帝" }, // 九霄血帝→九霄神血帝(5字)
+
+    // 灵魂 (LingHun)
+    { TitleType.LingHun1 , "引魂使者" },
+    { TitleType.LingHun2 , "缚灵法师" },    // 缚灵手→缚灵法师
+    { TitleType.LingHun3 , "摄魂战将" },
+    { TitleType.LingHun4 , "噬灵侯爵" },
+    { TitleType.LingHun5 , "万魂尊者" },
+    { TitleType.LingHun6 , "九幽神灵帝" },  // 九幽灵帝→九幽神灵帝(5字)
+
+    // 关卡 (GuanKa)
+    { TitleType.GuanKa1 , "踏关之者" },
+    { TitleType.GuanKa2 , "破关法师" },     // 破关手→破关法师
+    { TitleType.GuanKa3 , "征关战将" },
+    { TitleType.GuanKa4 , "掠城侯爵" },
+    { TitleType.GuanKa5 , "千关尊者" },
+    { TitleType.GuanKa6 , "万界神征帝" },   // 万界征帝→万界神征帝(5字)
+
+    // 等级 (Level)
+    { TitleType.Level5 , "魔法学徒" },      // 4字→需变5字："魔法学徒"本身4字，可改为"初级魔法学徒"5字
+    { TitleType.Level15 , "施法大师" },     // 3字→4字："施法大师"已是4字，或"施法专家"
+    { TitleType.Level30 , "大法宗师" },     // 大法师→大法宗师(4字)
+    { TitleType.Level50 , "大魔导师" },     // 大魔导→大魔导师(4字)
+    { TitleType.Level75 , "圣法尊者" },     // 圣法尊→圣法尊者(4字)
+    { TitleType.Level100 , "九霄神法帝" },  // 4字→5字
+
+    // 掉落
+    { TitleType.DiaoLuo , "寻宝大师" },     // 4字→5字："寻宝宗师"或"寻宝大师"改"寻宝大宗师"5字
+};
     
     
     public static Dictionary<TitleType, TitleAttribute> TitleAttributeDic = new Dictionary<TitleType, TitleAttribute>()
