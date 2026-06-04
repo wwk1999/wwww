@@ -33,6 +33,9 @@ public class ResourcesConfig : MonoBehaviour
     public static Sprite HpIcon;
     public static Sprite CritIcon;
     public static Sprite AttackSpeedIcon;
+    public static Sprite MoveSpeedIcon;
+    public static Sprite CritDamageIcon;
+    public static Sprite FinalDamageIcon;
 
 
 
@@ -1708,6 +1711,9 @@ public class ResourcesConfig : MonoBehaviour
         HpIcon = Resources.Load<Sprite>("Sprite/Icon/HpIcon");
         CritIcon = Resources.Load<Sprite>("Sprite/Icon/CritIcon");
         AttackSpeedIcon = Resources.Load<Sprite>("Sprite/Icon/AttackSpeedIcon");
+        MoveSpeedIcon = Resources.Load<Sprite>("Sprite/Icon/MoveSpeedIcon");
+        FinalDamageIcon = Resources.Load<Sprite>("Sprite/Icon/FinalDamageIcon");
+        CritDamageIcon = Resources.Load<Sprite>("Sprite/Icon/CritDamageIcon");
 
 
 

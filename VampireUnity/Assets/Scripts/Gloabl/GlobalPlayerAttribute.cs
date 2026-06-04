@@ -36,6 +36,23 @@ public class ShouCangShiAttribute
     public float Hp;
     public float Crit;
 }
+
+public enum PlayerBaseAttribute
+{
+    None,
+    Attack,
+    Defense,
+    Hp,
+    Crit,
+    CritDamage,
+    Huo,
+    Ice,
+    Dian,
+    HeiAn,
+    FinalDamage,
+    MoveSpeed,
+    AttackSpeed,
+}
 public class GlobalPlayerAttribute
 {
 
