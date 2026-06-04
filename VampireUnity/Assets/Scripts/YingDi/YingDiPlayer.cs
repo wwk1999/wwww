@@ -9,6 +9,8 @@ using UnityEngine.EventSystems;
 public class YingDiPlayer : MonoBehaviour
 {
    public SkeletonAnimation playerSkeleton;
+   public SkeletonAnimation ShengHuaSkeleton;
+
    public Rigidbody2D rg;
    public GameObject parent;
    public GameObject bodyparent;
@@ -52,12 +54,34 @@ public class YingDiPlayer : MonoBehaviour
             return "orangebing";
          case ShiZhuangType.OrangeHeiAn:
             return "orangeheian";
+         
+         case ShiZhuangType.RedDian:
+            return "reddian";
+         case ShiZhuangType.RedHuo:
+            return "redhuo";
+         case ShiZhuangType.RedIce:
+            return "redbing";
+         case ShiZhuangType.RedHeiAn:
+            return "redheian";
       }
       return null;
    }
    public void PlayerHuanZhuang(object[] obj)
    {
-      Spine.Skeleton skeleton = playerSkeleton.Skeleton;
+      Spine.Skeleton skeleton = null;
+      if (PlayerData.S.shiZhuangType == ShiZhuangType.RedDian || PlayerData.S.shiZhuangType == ShiZhuangType.RedIce ||
+          PlayerData.S.shiZhuangType == ShiZhuangType.RedHeiAn || PlayerData.S.shiZhuangType == ShiZhuangType.RedHuo)
+      {
+         playerSkeleton.gameObject.SetActive(false);
+         ShengHuaSkeleton.gameObject.SetActive(true);
+         skeleton = ShengHuaSkeleton.skeleton;
+      }
+      else
+      {
+         playerSkeleton.gameObject.SetActive(true);
+         ShengHuaSkeleton.gameObject.SetActive(false);
+         skeleton = playerSkeleton.Skeleton;
+      }
       string skinName = GetSkinNameByType(PlayerData.S.shiZhuangType);
       Spine.Skin skin = skeleton.Data.FindSkin(skinName);
       if (skin != null)
@@ -78,6 +102,7 @@ public class YingDiPlayer : MonoBehaviour
    private void Start()
    {
       ObserverModuleManager.S.RegisterEvent("PlayerHuanZhuang",PlayerHuanZhuang);
+      ObserverModuleManager.S.SendEvent("PlayerHuanZhuang");
       playerSkeleton.AnimationState.SetAnimation(0, "idle",true);
    }
 
