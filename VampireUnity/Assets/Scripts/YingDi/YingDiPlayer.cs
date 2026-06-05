@@ -66,31 +66,97 @@ public class YingDiPlayer : MonoBehaviour
       }
       return null;
    }
-   public void PlayerHuanZhuang(object[] obj)
-   {
-      Spine.Skeleton skeleton = null;
-      if (PlayerData.S.shiZhuangType == ShiZhuangType.RedDian || PlayerData.S.shiZhuangType == ShiZhuangType.RedIce ||
-          PlayerData.S.shiZhuangType == ShiZhuangType.RedHeiAn || PlayerData.S.shiZhuangType == ShiZhuangType.RedHuo)
-      {
-         playerSkeleton.gameObject.SetActive(false);
-         ShengHuaSkeleton.gameObject.SetActive(true);
-         skeleton = ShengHuaSkeleton.skeleton;
-      }
-      else
-      {
-         playerSkeleton.gameObject.SetActive(true);
-         ShengHuaSkeleton.gameObject.SetActive(false);
-         skeleton = playerSkeleton.Skeleton;
-      }
-      string skinName = GetSkinNameByType(PlayerData.S.shiZhuangType);
-      Spine.Skin skin = skeleton.Data.FindSkin(skinName);
-      if (skin != null)
-      {
-         skeleton.SetSkin(skin);
-         skeleton.SetupPoseSlots();
-         playerSkeleton.LateUpdate();
-      }
-   }
+  public void PlayerHuanZhuang(object[] obj)
+{
+    // 1. 确定使用的骨骼组件
+    Spine.Skeleton skeleton = null;
+    if (PlayerData.S.shiZhuangType == ShiZhuangType.RedDian ||
+        PlayerData.S.shiZhuangType == ShiZhuangType.RedIce ||
+        PlayerData.S.shiZhuangType == ShiZhuangType.RedHeiAn ||
+        PlayerData.S.shiZhuangType == ShiZhuangType.RedHuo)
+    {
+        if (ShengHuaSkeleton == null)
+        {
+            Debug.LogError("PlayerHuanZhuang: ShengHuaSkeleton 为空，无法切换至升华皮肤");
+            return;
+        }
+        playerSkeleton.gameObject.SetActive(false);
+        ShengHuaSkeleton.gameObject.SetActive(true);
+        skeleton = ShengHuaSkeleton.skeleton;
+    }
+    else
+    {
+        if (playerSkeleton == null)
+        {
+            Debug.LogError("PlayerHuanZhuang: playerSkeleton 为空");
+            return;
+        }
+        playerSkeleton.gameObject.SetActive(true);
+        ShengHuaSkeleton.gameObject.SetActive(false);
+        skeleton = playerSkeleton.Skeleton;
+    }
+
+    // 2. 检查 skeleton 有效性
+    if (skeleton == null)
+    {
+        Debug.LogError($"PlayerHuanZhuang: 未获取到有效的 Skeleton 对象 (当前时装类型: {PlayerData.S.shiZhuangType})");
+        return;
+    }
+
+    // 3. 检查 SkeletonData
+    Spine.SkeletonData skeletonData = skeleton.Data;
+    if (skeletonData == null)
+    {
+        Debug.LogError($"PlayerHuanZhuang: skeleton.Data 为空，Spine 资源可能未加载完成。时装类型: {PlayerData.S.shiZhuangType}");
+        return;
+    }
+
+    // 4. 检查 Skins 列表 (防御性)
+    if (skeletonData.Skins == null)
+    {
+        Debug.LogError($"PlayerHuanZhuang: skeletonData.Skins 为 null，Spine 数据异常。时装类型: {PlayerData.S.shiZhuangType}");
+        return;
+    }
+
+    // 5. 获取皮肤名称
+    string skinName = GetSkinNameByType(PlayerData.S.shiZhuangType);
+    if (skinName == null)
+    {
+       return;
+    }
+    if (string.IsNullOrEmpty(skinName))
+    {
+        Debug.LogError($"PlayerHuanZhuang: 无效的皮肤名称，时装类型: {PlayerData.S.shiZhuangType}");
+        return;
+    }
+
+    // 6. 查找皮肤
+    Spine.Skin skin = skeletonData.FindSkin(skinName);
+    if (skin == null)
+    {
+        // 输出可用的皮肤列表，方便调试
+        Debug.LogError($"PlayerHuanZhuang: 未找到皮肤 '{skinName}'。当前时装类型: {PlayerData.S.shiZhuangType}");
+        return;
+    }
+
+    // 7. 应用皮肤
+    skeleton.SetSkin(skin);
+    skeleton.SetupPoseSlots();
+
+    // 8. 强制刷新（如果 playerSkeleton 组件存在）
+    if (playerSkeleton != null)
+    {
+        playerSkeleton.LateUpdate();
+    }
+    else if (ShengHuaSkeleton != null)
+    {
+        ShengHuaSkeleton.LateUpdate();
+    }
+    else
+    {
+        Debug.LogWarning("PlayerHuanZhuang: 没有可用的 SkeletonAnimation 组件调用 LateUpdate，但皮肤已更换");
+    }
+}
 
   
 

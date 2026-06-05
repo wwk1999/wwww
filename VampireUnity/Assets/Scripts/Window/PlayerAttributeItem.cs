@@ -26,7 +26,7 @@ public class PlayerAttributeItem : MonoBehaviour
                 break;
             case PlayerBaseAttribute.Crit:
                 Icon.sprite = ResourcesConfig.CritIcon;
-                Text.text = "暴击率：" + (int)GlobalPlayerAttribute.TotalCRIT+"%";
+                Text.text = "暴击率：" + (int)(GlobalPlayerAttribute.TotalCRIT/100)+"%";
                 break;
             case PlayerBaseAttribute.Hp:
                 Icon.sprite = ResourcesConfig.HpIcon;
