@@ -1429,6 +1429,223 @@ public class Entrance : MonoBehaviour
             MonsterBase yuren3monsterBase = yuren3.GetComponent<MonsterBase>();
             QueueController.S.MonsterColliderDic.Add(yuren3monsterBase.collider2D, yuren3monsterBase);
             break;
+        
+        
+        
+        
+        
+        case MonsterTypeByName.Emo1:
+            int Emo1Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.Emo1] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > Emo1Count) break;
+            var Emo1 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/Emo1").GetComponent<EMo1>(),
+                QueueController.S.transform);
+            Emo1.gameObject.SetActive(false);
+            QueueController.S.Emo1Queue.Enqueue(Emo1);
+            MonsterBase Emo1monsterBase = Emo1.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(Emo1monsterBase.collider2D, Emo1monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.Emo2:
+            int Emo2Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.Emo2] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > Emo2Count) break;
+            var Emo2 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/Emo2").GetComponent<EMo2>(),
+                QueueController.S.transform);
+            Emo2.gameObject.SetActive(false);
+            QueueController.S.Emo2Queue.Enqueue(Emo2);
+            MonsterBase Emo2monsterBase = Emo2.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(Emo2monsterBase.collider2D, Emo2monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.Emo3:
+            int Emo3Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.Emo3] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > Emo3Count) break;
+            var Emo3 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/Emo3").GetComponent<EMo3>(),
+                QueueController.S.transform);
+            Emo3.gameObject.SetActive(false);
+            QueueController.S.Emo3Queue.Enqueue(Emo3);
+            MonsterBase Emo3monsterBase = Emo3.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(Emo3monsterBase.collider2D, Emo3monsterBase);
+            break;
+        
+        
+        
+        case MonsterTypeByName.HongLong1:
+            int HongLong1Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.HongLong1] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > HongLong1Count) break;
+            var HongLong1 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong1").GetComponent<HongLong1>(),
+                QueueController.S.transform);
+            HongLong1.gameObject.SetActive(false);
+            QueueController.S.HongLong1Queue.Enqueue(HongLong1);
+            MonsterBase HongLong1monsterBase = HongLong1.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(HongLong1monsterBase.collider2D, HongLong1monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.HongLong2:
+            int HongLong2Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.HongLong2] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > HongLong2Count) break;
+            var HongLong2 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong2").GetComponent<HongLong2>(),
+                QueueController.S.transform);
+            HongLong2.gameObject.SetActive(false);
+            QueueController.S.HongLong2Queue.Enqueue(HongLong2);
+            MonsterBase HongLong2monsterBase = HongLong2.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(HongLong2monsterBase.collider2D, HongLong2monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.HongLong3:
+            int HongLong3Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.HongLong3] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > HongLong3Count) break;
+            var HongLong3 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/HongLong3").GetComponent<HongLong3>(),
+                QueueController.S.transform);
+            HongLong3.gameObject.SetActive(false);
+            QueueController.S.HongLong3Queue.Enqueue(HongLong3);
+            MonsterBase HongLong3monsterBase = HongLong3.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(HongLong3monsterBase.collider2D, HongLong3monsterBase);
+            break;
+        
+        
+        
+        
+        case MonsterTypeByName.LanLong1:
+            int LanLong1Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.LanLong1] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > LanLong1Count) break;
+            var LanLong1 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong1").GetComponent<LanLong1>(),
+                QueueController.S.transform);
+            LanLong1.gameObject.SetActive(false);
+            QueueController.S.LanLong1Queue.Enqueue(LanLong1);
+            MonsterBase LanLong1monsterBase = LanLong1.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(LanLong1monsterBase.collider2D, LanLong1monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.LanLong2:
+            int LanLong2Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.LanLong2] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > LanLong2Count) break;
+            var LanLong2 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong2").GetComponent<LanLong2>(),
+                QueueController.S.transform);
+            LanLong2.gameObject.SetActive(false);
+            QueueController.S.LanLong2Queue.Enqueue(LanLong2);
+            MonsterBase LanLong2monsterBase = LanLong2.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(LanLong2monsterBase.collider2D, LanLong2monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.LanLong3:
+            int LanLong3Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.LanLong3] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > LanLong3Count) break;
+            var LanLong3 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/LanLong3").GetComponent<LanLong3>(),
+                QueueController.S.transform);
+            LanLong3.gameObject.SetActive(false);
+            QueueController.S.LanLong3Queue.Enqueue(LanLong3);
+            MonsterBase LanLong3monsterBase = LanLong3.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(LanLong3monsterBase.collider2D, LanLong3monsterBase);
+            break;
+        
+        
+        
+        case MonsterTypeByName.LvLong1:
+            int LvLong1Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.LvLong1] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > LvLong1Count) break;
+            var LvLong1 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong1").GetComponent<LvLong1>(),
+                QueueController.S.transform);
+            LvLong1.gameObject.SetActive(false);
+            QueueController.S.LvLong1Queue.Enqueue(LvLong1);
+            MonsterBase LvLong1monsterBase = LvLong1.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(LvLong1monsterBase.collider2D, LvLong1monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.LvLong2:
+            int LvLong2Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.LvLong2] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > LvLong2Count) break;
+            var LvLong2 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong2").GetComponent<LvLong2>(),
+                QueueController.S.transform);
+            LvLong2.gameObject.SetActive(false);
+            QueueController.S.LvLong2Queue.Enqueue(LvLong2);
+            MonsterBase LvLong2monsterBase = LvLong2.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(LvLong2monsterBase.collider2D, LvLong2monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.LvLong3:
+            int LvLong3Count = MonsterConfig.MonsterTypeDic[MonsterTypeByName.LvLong3] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > LvLong3Count) break;
+            var LvLong3 = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLong3").GetComponent<LvLong3>(),
+                QueueController.S.transform);
+            LvLong3.gameObject.SetActive(false);
+            QueueController.S.LvLong3Queue.Enqueue(LvLong3);
+            MonsterBase LvLong3monsterBase = LvLong3.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(LvLong3monsterBase.collider2D, LvLong3monsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.LvLang:
+            int LvLangCount = MonsterConfig.MonsterTypeDic[MonsterTypeByName.LvLang] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > LvLangCount) break;
+            var LvLang = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/LvLang").GetComponent<LvLang>(),
+                QueueController.S.transform);
+            LvLang.gameObject.SetActive(false);
+            QueueController.S.LvLangQueue.Enqueue(LvLang);
+            MonsterBase LvLangmonsterBase = LvLang.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(LvLangmonsterBase.collider2D, LvLangmonsterBase);
+            break;
+        
+        
+        case MonsterTypeByName.DaLong:
+            int DaLangCount = MonsterConfig.MonsterTypeDic[MonsterTypeByName.DaLong] == MonsterType.Elite
+                ? LevelInfoConfig.EliteMonsterQueueCount
+                : LevelInfoConfig.NormalMonsterQueueCount;
+            if (QueueController.S.yuren3Queue.Count > DaLangCount) break;
+            var DaLang = Instantiate(
+                Resources.Load<GameObject>("Prefabs/Monster/MJ/DaLong").GetComponent<DaLong>(),
+                QueueController.S.transform);
+            DaLang.gameObject.SetActive(false);
+            QueueController.S.DaLongQueue.Enqueue(DaLang);
+            MonsterBase DaLangmonsterBase = DaLang.GetComponent<MonsterBase>();
+            QueueController.S.MonsterColliderDic.Add(DaLangmonsterBase.collider2D, DaLangmonsterBase);
+            break;
     }
 }
 

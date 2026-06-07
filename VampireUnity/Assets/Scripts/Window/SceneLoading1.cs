@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Fight.Monster.秘境.LuRen;
 using Spine;
 using Spine.Unity;
 using UnityEngine;
@@ -429,6 +430,68 @@ public class SceneLoading1 : MonoBehaviour
                             QueueController.S.transform);
                     Monster8.gameObject.SetActive(false);
                     QueueController.S.TreeManSkillQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+        }
+
+
+        if (LevelInfoConfig.CurrentGameLevel == 24)
+        {
+            if (QueueController.S.LuRenDanQueue.Count < 50)
+            {
+                for (int i = 0; i < 50; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LuRen/LuRenDan")
+                                .GetComponent<LuRenDan>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.LuRenDanQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+            
+            if (QueueController.S.LuRenDanPengQueue.Count < 10)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LuRen/LuRenDanPeng")
+                                .GetComponent<LuRenDanPeng>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.LuRenDanPengQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+            
+            
+            if (QueueController.S.LuRenDiCiQueue.Count < 10)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/LuRen/LuRenDiCi")
+                                .GetComponent<LuRenDiCi>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.LuRenDiCiQueue.Enqueue(Monster8);
                     count++;
                     if (count % perFrame == 0)
                     {

@@ -43,8 +43,8 @@ public class LanLong1 : MonsterBase
         Speed += randomSpeed;
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hurt";
-        MonsterSpineName.MoveName = "walk";
-        MonsterSpineName.DieName = "die";
+        MonsterSpineName.MoveName = "run";
+        MonsterSpineName.DieName = "death";
     }
 
     private void RandomDelayDie()

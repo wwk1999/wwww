@@ -36793,7 +36793,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6199524330965595247}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.905329
+  m_Size: 0.79905117
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

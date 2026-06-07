@@ -42,8 +42,8 @@ public class EMo3 : MonsterBase
         var randomSpeed = Random.Range(-0.1f, 0.1f);
         Speed += randomSpeed;
         MonsterSpineName.AttackName = "attack";
-        MonsterSpineName.HitName = "hurt";
-        MonsterSpineName.MoveName = "walk";
+        MonsterSpineName.HitName = "hit";
+        MonsterSpineName.MoveName = "walking";
         MonsterSpineName.DieName = "die";
     }
 

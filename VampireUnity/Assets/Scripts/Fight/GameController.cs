@@ -1176,6 +1176,15 @@ public class GameController : XSingleton<GameController>
                     sk7.AnimationState.SetAnimation(0,"move",false);
                     QueueController.S.MonsterColliderDic.Add(ShuYaoBoss.collider2D,ShuYaoBoss);
                     break;
+                
+                case MJLevel.Red4:
+                    LuRenBoss LuRenoBoss = Instantiate(Resources.Load<LuRenBoss>("Prefabs/Monster/MJ/LuRen/LuRenBoss"));
+                    LuRenoBoss.gameObject.SetActive(true);
+                    LuRenoBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk8 = LuRenoBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk8.AnimationState.SetAnimation(0,"move",false);
+                    QueueController.S.MonsterColliderDic.Add(LuRenoBoss.collider2D,LuRenoBoss);
+                    break;
             }
         }
     }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Fight.Monster.秘境.LuRen;
 using Prop.BaoShi;
 using Skill.NormalAttack.Primary;
 using UnityEngine;
@@ -178,9 +179,9 @@ public class QueueController : XSingleton<QueueController>
     
     //秘境怪物
     [NonSerialized] public Queue<DaLong> DaLongQueue = new Queue<DaLong>();
-    [NonSerialized] public Queue<EMo1> EMo1Queue = new Queue<EMo1>();
-    [NonSerialized] public Queue<EMo2> EMo2Queue = new Queue<EMo2>();
-    [NonSerialized] public Queue<EMo3> EMo3Queue = new Queue<EMo3>();
+    [NonSerialized] public Queue<EMo1> Emo1Queue = new Queue<EMo1>();
+    [NonSerialized] public Queue<EMo2> Emo2Queue = new Queue<EMo2>();
+    [NonSerialized] public Queue<EMo3> Emo3Queue = new Queue<EMo3>();
     [NonSerialized] public Queue<HongLong1> HongLong1Queue = new Queue<HongLong1>();
     [NonSerialized] public Queue<HongLong2> HongLong2Queue = new Queue<HongLong2>();
     [NonSerialized] public Queue<HongLong3> HongLong3Queue = new Queue<HongLong3>();
@@ -215,7 +216,10 @@ public class QueueController : XSingleton<QueueController>
     [NonSerialized] public Queue<DaEYuBaoZha> DaEYuBaoZhaQueue = new Queue<DaEYuBaoZha>();
 
 
-    
+    [NonSerialized] public Queue<LuRenDiCi> LuRenDiCiQueue = new Queue<LuRenDiCi>();
+    [NonSerialized] public Queue<LuRenDan> LuRenDanQueue = new Queue<LuRenDan>();
+    [NonSerialized] public Queue<LuRenDanPeng> LuRenDanPengQueue = new Queue<LuRenDanPeng>();
+
     
     
     //子弹队列

@@ -44,7 +44,7 @@ public class LvLong2 : MonsterBase
         MonsterSpineName.AttackName = "attack";
         MonsterSpineName.HitName = "hurt";
         MonsterSpineName.MoveName = "walk";
-        MonsterSpineName.DieName = "die";
+        MonsterSpineName.DieName = "dead";
     }
 
     private void RandomDelayDie()

@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 1550242213392908826}
   - component: {fileID: 7493966942052883993}
   m_Layer: 6
-  m_Name: EMo2
+  m_Name: Emo2
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1287,7 +1287,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 206178546990571850}
@@ -1334,7 +1334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346b09fcfd8f4582a193d7c1942269d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bingkuai: {fileID: 6451819463866877494}
   du: {fileID: 1487287103017489773}
   jiansu: {fileID: 257172466153236245}
   yidian: {fileID: 6938279019509537305}

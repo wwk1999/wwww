@@ -124,6 +124,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo2.cs" />
     <Compile Include="Assets\Scripts\Fight\FightBGController.cs" />
     <Compile Include="Assets\Scripts\Equip\XieZi\XieZiShoe.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LuRen\LuRenDiCiAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\火狼\HuoLangSkill3Dan.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\NormalMonster\shuangtoulong2.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeHelmet.cs" />
@@ -205,6 +206,7 @@
     <Compile Include="Assets\Scripts\Equip\XieZi\XieZiHelmet.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\niguai3.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloak\DuAddDuQuan.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LuRen\LuRenBoss.cs" />
     <Compile Include="Assets\Scripts\Window\ChongWuDanButtonRight.cs" />
     <Compile Include="Assets\Number Themes\Scripts\ScrollItemManager.cs" />
     <Compile Include="Assets\Scripts\Skill\DianSkill\DianSkill5.cs" />
@@ -344,6 +346,7 @@
     <Compile Include="Assets\Scripts\Tool\ChuanSongMen.cs" />
     <Compile Include="Assets\Scripts\Equip\Green\GreenShoe.cs" />
     <Compile Include="Assets\Scripts\Skill\IceBallSkill.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LuRen\LuRenDanPengAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\雷兽\LeiShouShunYiAnim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\ShaNiao.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\zibaolaoshu.cs" />
@@ -533,6 +536,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\第四关\Huangzhu.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipKong.cs" />
     <Compile Include="Assets\Scripts\Equip\EquipAttribute.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LuRen\LuRenDan.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\xiaohuoling.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第一关\BatMonsterWarning.cs" />
     <Compile Include="Assets\Scripts\Tool\UnityMainThreadDispatcher.cs" />
@@ -606,10 +610,12 @@
     <Compile Include="Assets\Scripts\Tool\SequenceFrameAnimationGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\Title\TitleItem.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LuRen\LuRenDiCi.cs" />
     <Compile Include="Assets\Scripts\Tool\BossQuan.cs" />
     <Compile Include="Assets\Scripts\Equip\XieZi\XieZiRing.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\第三关\ZhaoZeBossSkill2.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NoSkill.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\LuRen\LuRenDanPeng.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\IcePen\IcePenAnim.cs" />
     <Compile Include="Assets\Scripts\Window\StoreWindow.cs" />
     <Compile Include="Assets\Scripts\ChongWu\ChongWuList.cs" />
@@ -877,12 +883,15 @@
     <None Include="Assets\Arts\Spine\小怪2\wuyaozhiwang\wuyaozhiwang1.json" />
     <None Include="Assets\Arts\Spine\宠物\Orange\电orange1——前\mon_wind_dragon_02.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪2\shishigui\shishigui.atlas.txt" />
+    <None Include="Assets\Arts\Spine\火怪\Monster_Ifrit_Boss_A.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\冰purple3——后\pet_9311.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\White\黑暗white2\Anima_Small_Skeleton_M7.json" />
+    <None Include="Assets\Arts\Spine\火怪\Monster_Ifrit_Boss_A.json" />
     <None Include="Assets\Arts\Spine\技能\特效\黑暗冲击\2066_niumowang_1_effectb.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\宠物\Orange\电orange1——后\mon_wind_dragon_03.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\特效\15\2040_wumaomao_attack.json" />
+    <None Include="Assets\Arts\Spine\鹿人打包\Enemy_Boss_deer.json" />
     <None Include="Assets\Arts\Spine\小怪2\shanzei1\shanzei1.json" />
     <None Include="Assets\Arts\Spine\技能\鬼火\9005_zhizhu_attacka.json" />
     <None Include="Assets\Arts\Spine\宠物\Blue\电blue2\pet_9303.atlas.txt" />
@@ -1002,6 +1011,7 @@
     <None Include="Assets\Arts\Spine\技能\特效\火冲击\2066_niumowang_effectb.json" />
     <None Include="Assets\Arts\Spine\第四关\ShaXiYi\shamoxiyi.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\Boss1\Enemy_Panther_warrior.atlas.txt" />
+    <None Include="Assets\Arts\Spine\鳄鱼\Enemy_Boss_alligator.json" />
     <None Include="Assets\Arts\Spine\爆血\暴血3(1)\暴血3\skeleton.atlas.txt" />
     <None Include="Assets\Arts\Shaders\LightDissolve.shader" />
     <None Include="Assets\Arts\Spine\小怪2\kulou2\kulou1.json" />
@@ -1202,6 +1212,7 @@
     <None Include="Assets\Arts\Spine\技能\火skill5\Enemy_Demon_goat_skill1_BD.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
     <None Include="Assets\Arts\Spine\技能\LanShui\action.atlas.txt" />
+    <None Include="Assets\Arts\Spine\鳄鱼\Enemy_Boss_alligator.atlas.txt" />
     <None Include="Assets\Arts\Spine\飞行道具\冰飞行道具\bing dan.atlas.txt" />
     <None Include="Assets\Arts\Spine\怪物\HuangShu\Enemy_Mouse_patrol.json" />
     <None Include="Assets\Arts\Spine\技能\特效\黑暗魔法弹1\2025_nongyaoxiong_attack.json" />
@@ -1423,6 +1434,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\3普通\3普通Peng\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\技能\json4\skeleton.json" />
     <None Include="Assets\Arts\Spine\小怪2\rongyanguai\rongyanyuansu.json" />
+    <None Include="Assets\Arts\Spine\泥人\Enemy_Boss_swamp.json" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Arts\Spine\宠物\Orange\冰orange1——后\mon_icicle_dragon_03.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪2\wuya\wuya.json" />
@@ -1467,6 +1479,7 @@
     <None Include="Assets\Arts\Spine\fly\5\fly5.json" />
     <None Include="Assets\Arts\Spine\技能\HuoDan\H043_Special.json" />
     <None Include="Assets\Arts\Shaders\tongdaopianyi.shader" />
+    <None Include="Assets\Arts\Spine\泥人\Enemy_Boss_swamp.atlas.txt" />
     <None Include="Assets\Arts\Spine\小怪3\小蜘蛛\zhizhu.json" />
     <None Include="Assets\Arts\Spine\普通攻击\Spine\Du\action.atlas.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\火purple1——后\pet_9309.atlas.txt" />
@@ -1686,6 +1699,7 @@
     <None Include="Assets\Arts\Spine\普通攻击\Spine\虚空peng\action.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\Arts\Spine\宠物\Purple\火purple2——前\pet_9212.atlas.txt" />
+    <None Include="Assets\Arts\Spine\鹿人打包\Enemy_Boss_deer.atlas.txt" />
     <None Include="Assets\Arts\Spine\Loading\加载画面打包（森林）\zj.atlas.txt" />
     <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\package.json" />
     <None Include="Assets\Arts\Spine\小怪2\kuangshimuzhu\kuangshimuzhu.json" />
