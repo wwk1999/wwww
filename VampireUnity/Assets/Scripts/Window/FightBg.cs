@@ -175,7 +175,7 @@ public class FightBg : MonoBehaviour
         });
     }
 
-    private void OnEnable()
+    public void InitSkillLan()
     {
         if (SkillController.S.Alpha1 == SkillType.None)
         {
@@ -223,6 +223,10 @@ public class FightBg : MonoBehaviour
         {
             skill5.sprite=ResourcesConfig.GetZhuDongSkillSprite(SkillController.S.Alpha5);
         }
+    }
+    private void OnEnable()
+    {
+       //InitSkillLan();
     }
 
     private void OnDestroy()

@@ -910,6 +910,7 @@ public class GameController : XSingleton<GameController>
         RegisterEvent();
         GameOver = false;
         var _ = SkillController.S;//激活SkillController
+        QueueController.S.fightBG.GetComponent<FightBg>().InitSkillLan();
     }
 
     public int[] SelectTwoUniqueNumbers()
