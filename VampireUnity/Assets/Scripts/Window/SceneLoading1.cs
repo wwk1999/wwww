@@ -442,9 +442,9 @@ public class SceneLoading1 : MonoBehaviour
 
         if (LevelInfoConfig.CurrentGameLevel == 24)
         {
-            if (QueueController.S.LuRenDanQueue.Count < 50)
+            if (QueueController.S.LuRenDanQueue.Count < 80)
             {
-                for (int i = 0; i < 50; i++)
+                for (int i = 0; i < 80; i++)
                 {
                     var Monster8 =
                         Instantiate(
@@ -492,6 +492,29 @@ public class SceneLoading1 : MonoBehaviour
                             QueueController.S.transform);
                     Monster8.gameObject.SetActive(false);
                     QueueController.S.LuRenDiCiQueue.Enqueue(Monster8);
+                    count++;
+                    if (count % perFrame == 0)
+                    {
+                        yield return null;
+                    }
+                }
+            }
+        }
+
+
+        if (LevelInfoConfig.CurrentGameLevel == 25)
+        {
+            if (QueueController.S.NiRenDiPenQueue.Count < 10)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    var Monster8 =
+                        Instantiate(
+                            Resources.Load<GameObject>("Prefabs/Monster/MJ/NiRen/NiRenDiPen")
+                                .GetComponent<NiRenDiPen>(),
+                            QueueController.S.transform);
+                    Monster8.gameObject.SetActive(false);
+                    QueueController.S.NiRenDiPenQueue.Enqueue(Monster8);
                     count++;
                     if (count % perFrame == 0)
                     {

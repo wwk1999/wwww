@@ -168,6 +168,7 @@ public enum MonsterTypeByName
     DaEYu,
     ShuYao,
     LuRen,
+    NiRen,
 }
 public class BaoShiDiaoLuo
 {
@@ -404,27 +405,27 @@ public class LevelInfoConfig
         case MonsterTypeByName.Emo1:
             return QueueController.S.Emo1Queue.Dequeue();
         case MonsterTypeByName.Emo2:
-            return QueueController.S.Emo1Queue.Dequeue();
+            return QueueController.S.Emo2Queue.Dequeue();
         case MonsterTypeByName.Emo3:
-            return QueueController.S.Emo1Queue.Dequeue();
+            return QueueController.S.Emo3Queue.Dequeue();
         case MonsterTypeByName.LvLong1:
             return QueueController.S.LvLong1Queue.Dequeue();
         case MonsterTypeByName.LvLong2:
-            return QueueController.S.LvLong1Queue.Dequeue();
+            return QueueController.S.LvLong2Queue.Dequeue();
         case MonsterTypeByName.LvLong3:
-            return QueueController.S.LvLong1Queue.Dequeue();
+            return QueueController.S.LvLong3Queue.Dequeue();
         case MonsterTypeByName.HongLong1:
             return QueueController.S.HongLong1Queue.Dequeue();
         case MonsterTypeByName.HongLong2:
-            return QueueController.S.HongLong1Queue.Dequeue();
+            return QueueController.S.HongLong2Queue.Dequeue();
         case MonsterTypeByName.HongLong3:
-            return QueueController.S.HongLong1Queue.Dequeue();
+            return QueueController.S.HongLong3Queue.Dequeue();
         case MonsterTypeByName.LanLong1:
             return QueueController.S.LanLong1Queue.Dequeue();
         case MonsterTypeByName.LanLong2:
-            return QueueController.S.LanLong1Queue.Dequeue();
+            return QueueController.S.LanLong2Queue.Dequeue();
         case MonsterTypeByName.LanLong3:
-            return QueueController.S.LanLong1Queue.Dequeue();
+            return QueueController.S.LanLong3Queue.Dequeue();
         case MonsterTypeByName.LvLang:
             return QueueController.S.LvLangQueue.Dequeue();
         case MonsterTypeByName.DaLong:

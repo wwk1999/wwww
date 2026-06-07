@@ -95,7 +95,7 @@ public class HongLong2 : MonsterBase
         if (!IsDead)
         {
             MonsterMove();
-            SpriteFlipX(true);
+            SpriteFlipX(false);
         }
     }
 

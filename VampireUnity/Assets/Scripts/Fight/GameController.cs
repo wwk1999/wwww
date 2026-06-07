@@ -1185,6 +1185,15 @@ public class GameController : XSingleton<GameController>
                     sk8.AnimationState.SetAnimation(0,"move",false);
                     QueueController.S.MonsterColliderDic.Add(LuRenoBoss.collider2D,LuRenoBoss);
                     break;
+                
+                case MJLevel.Red5:
+                    NiRenBoss NiRenoBoss = Instantiate(Resources.Load<NiRenBoss>("Prefabs/Monster/MJ/NiRen/NiRenBoss"));
+                    NiRenoBoss.gameObject.SetActive(true);
+                    NiRenoBoss.transform.position = new Vector3(0, 0, 0f);
+                    SkeletonAnimation sk9 = NiRenoBoss.transform.Find("parent/SkeletonAnimation").GetComponent<SkeletonAnimation>();
+                    sk9.AnimationState.SetAnimation(0,"move",false);
+                    QueueController.S.MonsterColliderDic.Add(NiRenoBoss.collider2D,NiRenoBoss);
+                    break;
             }
         }
     }

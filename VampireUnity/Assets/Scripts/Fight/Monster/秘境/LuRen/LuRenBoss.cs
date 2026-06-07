@@ -7,14 +7,14 @@ using Random = UnityEngine.Random;
 
 public class LuRenBoss : MonsterBase
 {
-    public LuRenBoss() : base(MonsterTypeByName.ShuYao){
+    public LuRenBoss() : base(MonsterTypeByName.LuRen){
     }
 
     public Transform attackTrans;
-    private float skill1Time = 8;
+    private float skill1Time = 15;
     private float skill2Time = 20;
-    private float skill3Time = 12;
-    private float skill4Time = 15;
+    private float skill3Time = 10;
+    private float skill4Time = 12;
 
     private float currentSkill1Time = 5;
     private float currentSkill2Time = 0;
@@ -209,7 +209,7 @@ public class LuRenBoss : MonsterBase
         
         if (e.Data.Name == "skill4_1")
         {
-            StartCoroutine(Skill4Dan(50, 0.05f));
+            StartCoroutine(Skill4Dan(80, 0.03f));
         }
         
         if (e.Data.Name == "skill2_2")

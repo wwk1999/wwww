@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\双刀\ShuangDaoSkill2Anim.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\雷兽\LeiShouShunYi.cs" />
     <Compile Include="Assets\Scripts\Config\SkillConfig.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\NiRen\NiRenBoss.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\小怪\banrenma3.cs" />
     <Compile Include="Assets\Scripts\ChongWu\ShiWuItem.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Cloth\HpReductionReplyAdd50.cs" />
@@ -437,6 +438,7 @@
     <Compile Include="Assets\Scripts\Equip\Orange\Necklace\NecklaceFortureAdd.cs" />
     <Compile Include="Assets\Scripts\Equip\Orange\Ring\AddAttackForTime.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Scripts\ARPGFXLightFade.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\NiRen\NiRenDiPenAnim.cs" />
     <Compile Include="Assets\Scripts\Equip\ZhaoZe\ZhaoZeShoe.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Ice4BaoZha\Ice4BaoZhaItem.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\EMo3.cs" />
@@ -451,6 +453,7 @@
     <Compile Include="Assets\Scripts\ShiZhuang\ShiZhuangItem.cs" />
     <Compile Include="Assets\Number Themes\Scripts\FloatingTextManager.cs" />
     <Compile Include="Assets\Scripts\Fight\Monster\秘境\大鳄鱼\DaEYuBaoZha.cs" />
+    <Compile Include="Assets\Scripts\Fight\Monster\秘境\NiRen\NiRenDiPen.cs" />
     <Compile Include="Assets\Scripts\Skill\NormalAttack\Du\DuPeng.cs" />
     <Compile Include="Assets\Scripts\Equip\Blue\BlueNecklace.cs" />
     <Compile Include="Assets\Arts\ARPG Effects\Demo\Scripts\ARPGFXCycler.cs" />

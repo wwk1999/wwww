@@ -221,6 +221,8 @@ public class QueueController : XSingleton<QueueController>
     [NonSerialized] public Queue<LuRenDanPeng> LuRenDanPengQueue = new Queue<LuRenDanPeng>();
 
     
+    [NonSerialized] public Queue<NiRenDiPen> NiRenDiPenQueue = new Queue<NiRenDiPen>();
+
     
     //子弹队列
     [NonReorderable]public Queue<GameObject>ThreeNormalAttackQueue = new Queue<GameObject>();

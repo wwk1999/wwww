@@ -8,7 +8,7 @@ namespace Fight.Monster.秘境.LuRen
     {
         public Rigidbody2D rg;
         [NonSerialized]public float Damage;
-        [NonSerialized]public float MoveSpeed=6;
+        [NonSerialized]public float MoveSpeed=7;
         [NonSerialized]public Vector2 MoveDirection;
         public Animator Animator;
         public GameObject bullet;
