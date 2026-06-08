@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Fight.Monster.秘境.HuoGuai;
 using Fight.Monster.秘境.LuRen;
 using Prop.BaoShi;
 using Skill.NormalAttack.Primary;
@@ -224,6 +225,13 @@ public class QueueController : XSingleton<QueueController>
     [NonSerialized] public Queue<NiRenDiPen> NiRenDiPenQueue = new Queue<NiRenDiPen>();
 
     
+    
+    [NonSerialized] public Queue<HuoGuaiQiu> HuoGuaiQiuQueue = new Queue<HuoGuaiQiu>();
+    [NonSerialized] public Queue<HuoGuaiQiuBaoZha> HuoGuaiQiuBaoZhaQueue = new Queue<HuoGuaiQiuBaoZha>();
+    [NonSerialized] public Queue<HuoGuaiDiPen> HuoGuaiDiPenQueue = new Queue<HuoGuaiDiPen>();
+    [NonSerialized] public Queue<HuoGuaiDan> HuoGuaiDanQueue = new Queue<HuoGuaiDan>();
+    [NonSerialized] public Queue<HuoGuaiDanPeng> HuoGuaiDanPengQueue = new Queue<HuoGuaiDanPeng>();
+
     //子弹队列
     [NonReorderable]public Queue<GameObject>ThreeNormalAttackQueue = new Queue<GameObject>();
     [NonReorderable]public Queue<GameObject>ThreeNormalAttackHitQueue = new Queue<GameObject>();
